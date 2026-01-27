@@ -1,0 +1,54 @@
+{
+  "event_template": {
+    "id": null,
+    "url": "",
+    "slug": "",
+    "title": "",
+    "description": "",
+    "category": [],
+    "image_url": "",
+    "city": "",
+    "location_name": "",
+    "location_address": "",
+    "location_coords": {
+      "lat": null,
+      "lng": null
+    },
+    "price": "",
+    "date_start": "YYYY-MM-DD",
+    "date_end": "YYYY-MM-DD",
+    "date_display": "",
+    "time_start": "HH:MM",
+    "time_end": "HH:MM",
+    "time_info": "",
+    "schedule": "",
+    "weekdays": "",
+    "dates": [
+      {
+        "date": "YYYY-MM-DD",
+        "weekday": "",
+        "time_start": "HH:MM",
+        "time_end": "HH:MM"
+      }
+    ],
+    "website": "",
+    "scraped_at": "ISO8601",
+    "source": "zero_eu | city_today"
+  },
+  "sources": {
+    "zero_eu": {
+      "fields": ["id", "url", "slug", "title", "description", "category", "image_url", "city", "location_name", "location_coords", "location_address", "price", "date_start", "date_end", "date_display", "time_start", "time_end", "date_scope", "scraped_at"]
+    },
+    "city_today": {
+      "fields": ["url", "title", "category", "image_url", "city", "location_name", "location_address", "price", "description", "website", "date_start", "date_end", "time_info", "schedule", "weekdays", "dates", "scraped_at"]
+    }
+  },
+  "field_mapping": {
+    "category": "Array in zero_eu, String in city_today - normalize to Array",
+    "time_start/time_end": "Direct in zero_eu, inside dates[] in city_today",
+    "location_coords": "Only in zero_eu",
+    "dates": "Only in city_today - array of individual dates with times",
+    "website": "Only in city_today",
+    "slug": "Only in zero_eu"
+  }
+}

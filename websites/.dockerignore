@@ -1,0 +1,29 @@
+# Virtual environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Output files
+output/
+*.json
+
+# IDE
+.idea/
+.vscode/
+
+# Git
+.git/
+.gitignore
+
+# Scrapy cache
+.scrapy/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Templates
+templates.json
