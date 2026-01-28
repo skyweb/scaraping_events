@@ -149,7 +149,7 @@ ORDER BY date_start;
 
 ## Comandi Utili
 
-
+```bash
 # Avvia tutto
 $ docker-compose up -d
 
@@ -187,28 +187,6 @@ Dopo l'avvio, crea la connection PostgreSQL in Airflow:
    - Password: `events_secret_2026`
    - Port: `5432`
 
-Stato servizi:                                                                                                                                                                                                                             
-  ┌──────────────────────────┬────────────┬───────┐                                                                                                                                                                                          
-  │        Container         │   Status   │ Porta │                                                                                                                                                                                          
-  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
-  │ events-postgres          │ ✅ healthy │ 5432  │                                                                                                                                                                                          
-  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
-  │ events-redis             │ ✅ healthy │ 6379  │                                                                                                                                                                                          
-  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
-  │ events-airflow-webserver │ ✅ healthy │ 8080  │                                                                                                                                                                                          
-  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
-  │ events-airflow-scheduler │ ✅ healthy │ -     │                                                                                                                                                                                          
-  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
-  │ events-airflow-triggerer │ ✅ healthy │ -     │                                                                                                                                                                                          
-  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
-  │ scrapy-events            │ ✅ built   │ -     │                                                                                                                                                                                          
-  └──────────────────────────┴────────────┴───────┘                                                                                                                                                                                          
-  
-  Tabelle DB create:                                                                                                                                                                                                                         
-  - events_data.staging_events                                                                                                                                                                                                                    
-  - events_data.production_events                                                                                                                                                                                                                 
-  - events_data.etl_runs                                                                                                                                                                                                                          
-                                                                                                                                                                                                                                             
   Funzioni SQL:                                                                                                                                                                                                                              
   - events_data.truncate_staging()                                                                                                                                                                                                                
   - events_data.upsert_from_staging()                                                                                                                                                                                                             
