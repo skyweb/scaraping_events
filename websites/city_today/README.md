@@ -1,6 +1,6 @@
-# Milano Today Events Scraper
+# Today Events Scraper
 
-Progetto Scrapy per estrarre gli eventi da [MilanoToday.it](https://www.milanotoday.it/eventi/).
+Progetto Scrapy per estrarre gli eventi
 
 ## Struttura del progetto
 
@@ -20,9 +20,7 @@ milano_today/scraping/
 
 ```bash
 # Attiva il virtual environment
-source venv/bin/activate
-
-# Le dipendenze sono già installate (scrapy)
+$ source venv/bin/activate
 ```
 
 ## Utilizzo
@@ -31,13 +29,13 @@ source venv/bin/activate
 
 ```bash
 # Attiva l'ambiente virtuale
-source venv/bin/activate
+$ source venv/bin/activate
 
 # Metodo 1: Usa lo script Python
-python run_spider.py
+$ python run_spider.py
 
 # Metodo 2: Usa il comando Scrapy direttamente
-scrapy crawl events -o eventi.json
+$ scrapy crawl events -o eventi.json
 ```
 
 ### Output

@@ -1,6 +1,7 @@
 import scrapy
 import json
 import re
+import hashlib
 from datetime import datetime
 from zero_scraper.items import EventItem
 
@@ -181,6 +182,11 @@ class EventsSpider(scrapy.Spider):
                 dont_filter=True
             )
         else:
+            # Genera UUID e content_hash anche per item senza URL
+            uuid_string = f"{item.get('title', '')}{item.get('date_start', '')}{item.get('location_name', '')}"
+            item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+            content_string = f"{item.get('description', '')}{item.get('price', '')}{item.get('time_start', '')}"
+            item["content_hash"] = hashlib.sha256(content_string.encode('utf-8')).hexdigest()[:16]
             yield item
 
     def parse_event_page(self, response):
@@ -215,7 +221,15 @@ class EventsSpider(scrapy.Spider):
         if when_text:
             cleaned_date = " ".join(when_text.strip().split())
             item["date_display"] = cleaned_date
-            
+
+        # Genera UUID dall'hash di titolo + date_start + location_name (come city_today)
+        uuid_string = f"{item.get('title', '')}{item.get('date_start', '')}{item.get('location_name', '')}"
+        item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+
+        # Genera content_hash dall'hash di descrizione + prezzo + time_start
+        content_string = f"{item.get('description', '')}{item.get('price', '')}{item.get('time_start', '')}"
+        item["content_hash"] = hashlib.sha256(content_string.encode('utf-8')).hexdigest()[:16]
+
         yield item
 
     def _clean_text(self, text):

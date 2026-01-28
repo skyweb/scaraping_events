@@ -9,16 +9,16 @@ Stack Docker per la gestione degli eventi:
 ## Quick Start
 
 ```bash
-cd infrastructures
+$ cd infrastructures
 
 # 1. Build immagine Scrapy
-docker-compose build scrapy-events
+$ docker-compose build scrapy-events
 
 # 2. Avvia i servizi
-docker-compose up -d
+$ docker-compose up -d
 
 # 3. Verifica lo stato
-docker-compose ps
+$ docker-compose ps
 ```
 
 ## Servizi
@@ -38,28 +38,28 @@ L'immagine `scrapy-events:latest` contiene tutti gli spider.
 
 ```bash
 # Build
-docker-compose build scrapy-events
+$ docker-compose build scrapy-events
 
 # Esegui city_today per Milano
-docker run --rm -v $(pwd)/data:/data/output scrapy-events:latest \
+$ docker run --rm -v $(pwd)/data:/data/output scrapy-events:latest \
     city_today milano --periodo=questa-settimana
 
 # Esegui zero_eu per Roma e Bologna
-docker run --rm -v $(pwd)/data:/data/output scrapy-events:latest \
+$ docker run --rm -v $(pwd)/data:/data/output scrapy-events:latest \
     zero_eu roma bologna
 
 # Mostra help
-docker run --rm scrapy-events:latest city_today
+$ docker run --rm scrapy-events:latest city_today
 ```
 
 ### Comandi disponibili
 
 ```bash
 # city_today
-scrapy-events city_today <città> [--periodo=PERIODO]
+$ scrapy-events city_today <città> [--periodo=PERIODO]
 
 # zero_eu
-scrapy-events zero_eu <città>
+$ scrapy-events zero_eu <città>
 ```
 
 **Periodi city_today**: oggi, domani, weekend, questa-settimana, prossima-settimana, questo-mese
@@ -112,7 +112,7 @@ infrastructures/
 │   └── redis/
 │       └── redis.conf
 ├── dags/
-│   └── scrape_events.py
+│   └── scrape_events_data.py
 ├── data/                    # Output JSON dagli spider
 ├── logs/
 └── plugins/
@@ -129,10 +129,10 @@ websites/
 
 ```sql
 -- Schema: events
--- Tabella: events.eventi
+-- Tabella: events_data.eventi
 
 SELECT uuid, title, city, date_start, source
-FROM events.eventi
+FROM events_data.eventi
 ORDER BY date_start;
 ```
 
@@ -149,27 +149,27 @@ ORDER BY date_start;
 
 ## Comandi Utili
 
-```bash
+
 # Avvia tutto
-docker-compose up -d
+$ docker-compose up -d
 
 # Build immagine scrapy
-docker-compose build scrapy-events
+$ docker-compose build scrapy-events
 
 # Stop tutto
-docker-compose down
+$ docker-compose down
 
 # Visualizza log
-docker-compose logs -f airflow-scheduler
+$ docker-compose logs -f airflow-scheduler
 
 # Test scraping manuale
-docker run --rm --network events-network \
+$ docker run --rm --network events-network \
     -v $(pwd)/data:/data/output \
     scrapy-events:latest city_today milano
 
 # Query eventi
-docker exec -it events-postgres psql -U events -d today_events \
-    -c "SELECT COUNT(*), city FROM events.eventi GROUP BY city;"
+$ docker exec -it events-postgres psql -U events -d today_events \
+    -c "SELECT COUNT(*), city FROM events_data.eventi GROUP BY city;"
 ```
 
 ## Configurazione Airflow Connection
@@ -186,3 +186,43 @@ Dopo l'avvio, crea la connection PostgreSQL in Airflow:
    - Login: `events`
    - Password: `events_secret_2026`
    - Port: `5432`
+
+Stato servizi:                                                                                                                                                                                                                             
+  ┌──────────────────────────┬────────────┬───────┐                                                                                                                                                                                          
+  │        Container         │   Status   │ Porta │                                                                                                                                                                                          
+  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
+  │ events-postgres          │ ✅ healthy │ 5432  │                                                                                                                                                                                          
+  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
+  │ events-redis             │ ✅ healthy │ 6379  │                                                                                                                                                                                          
+  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
+  │ events-airflow-webserver │ ✅ healthy │ 8080  │                                                                                                                                                                                          
+  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
+  │ events-airflow-scheduler │ ✅ healthy │ -     │                                                                                                                                                                                          
+  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
+  │ events-airflow-triggerer │ ✅ healthy │ -     │                                                                                                                                                                                          
+  ├──────────────────────────┼────────────┼───────┤                                                                                                                                                                                          
+  │ scrapy-events            │ ✅ built   │ -     │                                                                                                                                                                                          
+  └──────────────────────────┴────────────┴───────┘                                                                                                                                                                                          
+  
+  Tabelle DB create:                                                                                                                                                                                                                         
+  - events_data.staging_events                                                                                                                                                                                                                    
+  - events_data.production_events                                                                                                                                                                                                                 
+  - events_data.etl_runs                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                             
+  Funzioni SQL:                                                                                                                                                                                                                              
+  - events_data.truncate_staging()                                                                                                                                                                                                                
+  - events_data.upsert_from_staging()                                                                                                                                                                                                             
+  - events_data.mark_missing_inactive()                                                                                                                                                                                                           
+                                                                                                                                                                                                                                             
+  Accesso:                                                                                                                                                                                                                                   
+  - Airflow: http://localhost:8080 (admin / admin_secret_2026)                                                                                                                                                                               
+  - PostgreSQL: psql -h localhost -U events -d today_events                                                                                                                                                                                  
+                                                                                                                                                                                                                                             
+  Prossimo passo: Configura la connection PostgreSQL in Airflow:                                                                                                                                                                             
+  1. http://localhost:8080 → Admin → Connections → +                                                                                                                                                                                         
+  2. Connection Id: events_postgres                                                                                                                                                                                                          
+  3. Type: Postgres                                                                                                                                                                                                                          
+  4. Host: postgres, Port: 5432                                                                                                                                                                                                              
+  5. Schema: today_events                                                                                                                                                                                                                    
+  6. Login: events, Password: events_secret_2026                                                                                                                                                                                             
+                                      

@@ -19,6 +19,7 @@ from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.utils.task_group import TaskGroup
+from airflow.utils.trigger_rule import TriggerRule
 from airflow.exceptions import AirflowSkipException
 from docker.types import Mount
 
@@ -36,7 +37,14 @@ SCRAPY_IMAGE = 'scrapy-events:latest'
 POSTGRES_CONN_ID = 'events_postgres'
 DATA_DIR = '/data'
 
-CITIES_TODAY = ['milano', 'roma', 'bologna', 'napoli', 'firenze', 'venezia']
+CITIES_TODAY = [
+    'milano', 'torino', 'genova', 'venezia', 'bologna', 'verona', 'treviso', 'trento', 'udine', 'pordenone',
+    'vicenza', 'padova', 'monza', 'lecco', 'sondrio', 'novara', 'brescia', 'parma', 'rimini', 'ravenna',
+    'forli', 'cesena', 'como', 'piacenza', 'trieste', 'roma', 'firenze', 'pisa', 'livorno', 'perugia',
+    'terni', 'ancona', 'latina', 'frosinone', 'viterbo', 'arezzo', 'pescara', 'napoli', 'palermo',
+    'catania', 'messina', 'bari', 'foggia', 'salerno', 'avellino', 'reggio-calabria', 'lecce', 'brindisi',
+    'agrigento', 'caserta'
+]
 CITIES_ZERO = ['milano', 'roma', 'bologna', 'napoli', 'firenze', 'venezia', 'torino']
 
 # Unione di tutte le città univoche per l'iterazione
@@ -95,70 +103,116 @@ class FilterableDockerOperator(DockerOperator):
 # FUNZIONI ETL
 # =============================================================================
 
+def log_etl_error(cursor, error_type, source, json_file, record_data, error_message, dag_run_id):
+    """Helper per loggare errori nella tabella etl_errors"""
+    try:
+        cursor.execute("""
+            INSERT INTO events_data.etl_errors (error_type, source, json_file, record_data, error_message, dag_run_id)
+            VALUES (%s, %s, %s, %s, %s, %s)
+        """, (error_type, source, os.path.basename(json_file), json.dumps(record_data) if record_data else None, error_message, dag_run_id))
+    except Exception as e:
+        print(f"Warning: Could not log error to etl_errors: {e}")
+
+
 def load_json_to_staging(**context):
     """
     STEP 3: Carica i JSON files nella tabella staging_events
+    Logga record problematici nella tabella etl_errors
     """
     hook = PostgresHook(postgres_conn_id=POSTGRES_CONN_ID)
     conn = hook.get_conn()
     cursor = conn.cursor()
 
+    dag_run_id = context['dag_run'].run_id
+
     json_files = glob.glob(f'{DATA_DIR}/*.json')
     loaded_count = 0
+    skipped_count = 0
+    error_count = 0
 
     for json_file in json_files:
+        filename = os.path.basename(json_file).lower()
+        source = 'zero_eu' if 'zero' in filename else 'city_today'
+
         try:
             with open(json_file, 'r', encoding='utf-8') as f:
                 events = json.load(f)
 
-            # Determina source dal nome file
-            filename = os.path.basename(json_file).lower()
-            if 'zero' in filename:
-                source = 'zero_eu'
-            else:
-                source = 'city_today'
-
             for event in events:
+                # Validazione campi obbligatori
+                missing_fields = []
+                if not event.get('uuid'):
+                    missing_fields.append('uuid')
+                if not event.get('title'):
+                    missing_fields.append('title')
+
+                if missing_fields:
+                    skipped_count += 1
+                    error_count += 1
+                    log_etl_error(
+                        cursor,
+                        error_type='missing_required_fields',
+                        source=source,
+                        json_file=json_file,
+                        record_data=event,
+                        error_message=f"Missing fields: {', '.join(missing_fields)}",
+                        dag_run_id=dag_run_id
+                    )
+                    continue
+
                 # Normalizza category come array
                 category = event.get('category')
                 if category and not isinstance(category, list):
                     category = [category]
 
-                cursor.execute("""
-                    INSERT INTO events.staging_events (
-                        uuid, content_hash, source, url, title, description,
-                        category, image_url, city, location_name, location_address,
-                        price, website, date_start, date_end, time_info,
-                        schedule, weekdays, raw_data, scraped_at
-                    ) VALUES (
-                        %s, %s, %s, %s, %s, %s,
-                        %s, %s, %s, %s, %s,
-                        %s, %s, %s, %s, %s,
-                        %s, %s, %s, %s
+                try:
+                    cursor.execute("""
+                        INSERT INTO events_data.staging_events (
+                            uuid, content_hash, source, url, title, description,
+                            category, image_url, city, location_name, location_address,
+                            price, website, date_start, date_end, time_info,
+                            schedule, weekdays, raw_data, scraped_at
+                        ) VALUES (
+                            %s, %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s, %s,
+                            %s, %s, %s, %s
+                        )
+                    """, (
+                        event.get('uuid'),
+                        event.get('content_hash'),
+                        source,
+                        event.get('url'),
+                        event.get('title'),
+                        event.get('description'),
+                        category,
+                        event.get('image_url'),
+                        event.get('city'),
+                        event.get('location_name'),
+                        event.get('location_address'),
+                        event.get('price'),
+                        event.get('website'),
+                        event.get('date_start'),
+                        event.get('date_end'),
+                        event.get('time_info'),
+                        event.get('schedule'),
+                        event.get('weekdays'),
+                        json.dumps(event),
+                        event.get('scraped_at')
+                    ))
+                    loaded_count += 1
+                except Exception as db_err:
+                    error_count += 1
+                    log_etl_error(
+                        cursor,
+                        error_type='db_insert_error',
+                        source=source,
+                        json_file=json_file,
+                        record_data=event,
+                        error_message=str(db_err),
+                        dag_run_id=dag_run_id
                     )
-                """, (
-                    event.get('uuid'),
-                    event.get('content_hash'),
-                    source,
-                    event.get('url'),
-                    event.get('title'),
-                    event.get('description'),
-                    category,
-                    event.get('image_url'),
-                    event.get('city'),
-                    event.get('location_name'),
-                    event.get('location_address'),
-                    event.get('price'),
-                    event.get('website'),
-                    event.get('date_start'),
-                    event.get('date_end'),
-                    event.get('time_info'),
-                    event.get('schedule'),
-                    event.get('weekdays'),
-                    json.dumps(event),
-                    event.get('scraped_at')
-                ))
-                loaded_count += 1
+                    conn.rollback()
 
             conn.commit()
 
@@ -166,6 +220,20 @@ def load_json_to_staging(**context):
             archive_path = json_file.replace('.json', f'.{datetime.now().strftime("%Y%m%d%H%M%S")}.processed')
             os.rename(json_file, archive_path)
 
+        except json.JSONDecodeError as e:
+            error_count += 1
+            log_etl_error(
+                cursor,
+                error_type='invalid_json',
+                source=source,
+                json_file=json_file,
+                record_data=None,
+                error_message=str(e),
+                dag_run_id=dag_run_id
+            )
+            conn.commit()
+            print(f"Logged corrupted JSON file {json_file}: {e}")
+            continue
         except Exception as e:
             print(f"Errore processando {json_file}: {e}")
             conn.rollback()
@@ -176,7 +244,8 @@ def load_json_to_staging(**context):
 
     # Push count per XCom
     context['ti'].xcom_push(key='staging_count', value=loaded_count)
-    print(f"Loaded {loaded_count} events to staging")
+    context['ti'].xcom_push(key='error_count', value=error_count)
+    print(f"Loaded {loaded_count} events to staging (skipped {skipped_count}, errors logged: {error_count})")
     return loaded_count
 
 
@@ -189,7 +258,7 @@ def upsert_to_production(**context):
     cursor = conn.cursor()
 
     # Chiama la funzione upsert
-    cursor.execute("SELECT * FROM events.upsert_from_staging()")
+    cursor.execute("SELECT * FROM events_data.upsert_from_staging()")
     result = cursor.fetchone()
 
     inserted, updated, unchanged = result if result else (0, 0, 0)
@@ -224,7 +293,7 @@ def log_etl_run(**context):
     cursor = conn.cursor()
 
     cursor.execute("""
-        INSERT INTO events.etl_runs (
+        INSERT INTO events_data.etl_runs (
             run_type, staging_count, inserted_count, updated_count,
             unchanged_count, status, upsert_completed_at
         ) VALUES (%s, %s, %s, %s, %s, %s, CURRENT_TIMESTAMP)
@@ -265,16 +334,19 @@ def create_common_tasks(dag_obj):
     load = PythonOperator(
         task_id='load_to_staging',
         python_callable=load_json_to_staging,
+        trigger_rule=TriggerRule.NONE_FAILED,
         dag=dag_obj,
     )
     upsert = PythonOperator(
         task_id='upsert_to_production',
         python_callable=upsert_to_production,
+        trigger_rule=TriggerRule.NONE_FAILED,
         dag=dag_obj,
     )
     log = PythonOperator(
         task_id='log_etl_run',
         python_callable=log_etl_run,
+        trigger_rule=TriggerRule.NONE_FAILED,
         dag=dag_obj,
     )
     return load, upsert, log
@@ -310,6 +382,7 @@ def generate_city_tasks(dag_obj, periodo, include_zero=False):
                     ],
                     network_mode='events-network',
                     auto_remove=True,
+                    force_pull=False,
                     docker_url='unix://var/run/docker.sock',
                     dag=dag_obj,
                 )
@@ -327,6 +400,7 @@ def generate_city_tasks(dag_obj, periodo, include_zero=False):
                     ],
                     network_mode='events-network',
                     auto_remove=True,
+                    force_pull=False,
                     docker_url='unix://var/run/docker.sock',
                     dag=dag_obj,
                 )
@@ -352,13 +426,14 @@ with DAG(
     truncate_staging = PostgresOperator(
         task_id='truncate_staging',
         postgres_conn_id=POSTGRES_CONN_ID,
-        sql="SELECT events.truncate_staging();",
+        sql="SELECT events_data.truncate_staging();",
     )
 
     load, upsert, log = create_common_tasks(dag_daily)
     cleanup = PythonOperator(
         task_id='cleanup_old_files',
         python_callable=cleanup_old_files,
+        trigger_rule=TriggerRule.NONE_FAILED,
         dag=dag_daily
     )
 
@@ -385,7 +460,7 @@ with DAG(
     truncate_staging_w = PostgresOperator(
         task_id='truncate_staging',
         postgres_conn_id=POSTGRES_CONN_ID,
-        sql="SELECT events.truncate_staging();",
+        sql="SELECT events_data.truncate_staging();",
     )
 
     load_w, upsert_w, log_w = create_common_tasks(dag_weekly)
@@ -412,7 +487,7 @@ with DAG(
     truncate_staging_m = PostgresOperator(
         task_id='truncate_staging',
         postgres_conn_id=POSTGRES_CONN_ID,
-        sql="SELECT events.truncate_staging();",
+        sql="SELECT events_data.truncate_staging();",
     )
 
     load_m, upsert_m, log_m = create_common_tasks(dag_monthly)
