@@ -120,13 +120,13 @@ def main():
         stats = crawler.stats
         total_count = stats.get_value('item_scraped_count', 0)
 
-        print(f"\n" + "=" * 40)
-        print(f"{'REPORT SCRAPING':^40}")
-        print("=" * 40)
+        print(f"\n" + "=" * 10)
+        print(f"{'REPORT SCRAPING':^10}")
+        print("=" * 10)
         print(f"Periodo: {periodo}")
-        print("-" * 40)
+        print("-" * 10)
         print(f"{'Città':<25} | {'Eventi':>10}")
-        print("-" * 40)
+        print("-" * 10)
 
         all_stats = stats.get_stats()
         city_stats = []
@@ -142,12 +142,12 @@ def main():
         if not city_stats and total_count > 0:
             print(f"{'Dettaglio non disponibile':<25} | {total_count:>10}")
 
-        print("-" * 40)
+        print("-" * 10)
         print(f"{'TOTALE':<25} | {total_count:>10}")
 
-        print("-" * 40)
-        print(f"File: {output_file}")
-        print("=" * 40 + "\n")
+        print("-" * 10)
+        print(f"File: {output_file}\n")
+        print("=" * 10 + "\n")
     except (IndexError, AttributeError):
         print(f"\nScraping completato. File: {output_file}\n")
 

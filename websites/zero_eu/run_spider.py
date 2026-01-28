@@ -96,12 +96,12 @@ def main():
 
     process.start()
 
-    print(f"\n" + "=" * 40)
-    print(f"{'REPORT SCRAPING':^40}")
-    print("=" * 40)
-    print(f"Città scaricate: {', '.join([c.capitalize() for c in requested_cities])}")
-    print(f"File: {output_file}")
-    print("=" * 40 + "\n")
+    print(f"\n" + "=" * 10)
+    print(f"{'REPORT SCRAPING':^10}")
+    print("=" * 10)
+    print(f"Città scaricate: {', '.join([c.capitalize() for c in requested_cities])}\n")
+    print(f"File: {output_file} \n")
+    print("=" * 10 + "\n")
 
 
 if __name__ == "__main__":

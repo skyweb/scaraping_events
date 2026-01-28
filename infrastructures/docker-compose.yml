@@ -27,20 +27,18 @@ x-airflow-common:
     - events-network
 
 services:
-  # Scrapy Spider Container (build only)
+  # Scrapy Spider Image Builder - builds and exits
   scrapy-events:
     build:
       context: ../websites
       dockerfile: Dockerfile
     image: scrapy-events:latest
     container_name: scrapy-events-build
-    command: ["city_today"]  # Just to verify build works
-    volumes:
-      - ./data:/data/output
+    entrypoint: ["echo", "Scrapy image built successfully"]
+    command: []
     networks:
       - events-network
-    profiles:
-      - build  # Only build, don't run continuously
+    restart: "no"
 
   # PostgreSQL con PostGIS
   postgres:
@@ -98,8 +96,18 @@ services:
           --lastname User \
           --role Admin \
           --email ${AIRFLOW_ADMIN_EMAIL}
+        airflow connections add events_postgres \
+          --conn-type postgres \
+          --conn-host postgres \
+          --conn-login ${POSTGRES_USER} \
+          --conn-password ${POSTGRES_PASSWORD} \
+          --conn-port 5432 \
+          --conn-schema ${POSTGRES_DB} || true
         echo "Airflow initialized successfully"
     restart: "no"
+    depends_on:
+      scrapy-events:
+        condition: service_completed_successfully
 
   # Airflow Webserver
   airflow-webserver:

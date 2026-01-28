@@ -8,12 +8,12 @@ CREATE EXTENSION IF NOT EXISTS fuzzystrmatch;
 CREATE EXTENSION IF NOT EXISTS postgis_tiger_geocoder;
 
 -- Crea schema per gli eventi
-CREATE SCHEMA IF NOT EXISTS events;
+CREATE SCHEMA IF NOT EXISTS events_data;
 
 -- =============================================================================
 -- TABELLA PRODUCTION: eventi finali validati
 -- =============================================================================
-CREATE TABLE IF NOT EXISTS events.production_events (
+CREATE TABLE IF NOT EXISTS events_data.production_events (
     id SERIAL PRIMARY KEY,
     uuid VARCHAR(16) UNIQUE NOT NULL,
     content_hash VARCHAR(16),
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS events.production_events (
     location_name VARCHAR(255),
     location_address TEXT,
     location_coords GEOMETRY(Point, 4326),
-    price VARCHAR(100),
+    price TEXT,
     website TEXT,
     date_start DATE,
     date_end DATE,
@@ -44,19 +44,19 @@ CREATE TABLE IF NOT EXISTS events.production_events (
 );
 
 -- Indici production
-CREATE INDEX IF NOT EXISTS idx_prod_uuid ON events.production_events(uuid);
-CREATE INDEX IF NOT EXISTS idx_prod_city ON events.production_events(city);
-CREATE INDEX IF NOT EXISTS idx_prod_date_start ON events.production_events(date_start);
-CREATE INDEX IF NOT EXISTS idx_prod_date_end ON events.production_events(date_end);
-CREATE INDEX IF NOT EXISTS idx_prod_source ON events.production_events(source);
-CREATE INDEX IF NOT EXISTS idx_prod_active ON events.production_events(is_active);
-CREATE INDEX IF NOT EXISTS idx_prod_coords ON events.production_events USING GIST(location_coords);
-CREATE INDEX IF NOT EXISTS idx_prod_category ON events.production_events USING GIN(category);
+CREATE INDEX IF NOT EXISTS idx_prod_uuid ON events_data.production_events(uuid);
+CREATE INDEX IF NOT EXISTS idx_prod_city ON events_data.production_events(city);
+CREATE INDEX IF NOT EXISTS idx_prod_date_start ON events_data.production_events(date_start);
+CREATE INDEX IF NOT EXISTS idx_prod_date_end ON events_data.production_events(date_end);
+CREATE INDEX IF NOT EXISTS idx_prod_source ON events_data.production_events(source);
+CREATE INDEX IF NOT EXISTS idx_prod_active ON events_data.production_events(is_active);
+CREATE INDEX IF NOT EXISTS idx_prod_coords ON events_data.production_events USING GIST(location_coords);
+CREATE INDEX IF NOT EXISTS idx_prod_category ON events_data.production_events USING GIN(category);
 
 -- =============================================================================
 -- TABELLA STAGING: eventi temporanei dallo scraping
 -- =============================================================================
-CREATE TABLE IF NOT EXISTS events.staging_events (
+CREATE TABLE IF NOT EXISTS events_data.staging_events (
     id SERIAL PRIMARY KEY,
     uuid VARCHAR(16) NOT NULL,
     content_hash VARCHAR(16),
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS events.staging_events (
     location_name VARCHAR(255),
     location_address TEXT,
     location_coords GEOMETRY(Point, 4326),
-    price VARCHAR(100),
+    price TEXT,
     website TEXT,
     date_start DATE,
     date_end DATE,
@@ -85,12 +85,12 @@ CREATE TABLE IF NOT EXISTS events.staging_events (
 );
 
 -- Indice staging per performance upsert
-CREATE INDEX IF NOT EXISTS idx_staging_uuid ON events.staging_events(uuid);
+CREATE INDEX IF NOT EXISTS idx_staging_uuid ON events_data.staging_events(uuid);
 
 -- =============================================================================
 -- TABELLA TRACKING: log delle esecuzioni ETL
 -- =============================================================================
-CREATE TABLE IF NOT EXISTS events.etl_runs (
+CREATE TABLE IF NOT EXISTS events_data.etl_runs (
     id SERIAL PRIMARY KEY,
     run_type VARCHAR(50) NOT NULL,  -- 'daily', 'weekly', 'monthly', 'manual'
     source VARCHAR(50),
@@ -108,12 +108,30 @@ CREATE TABLE IF NOT EXISTS events.etl_runs (
 );
 
 -- =============================================================================
+-- TABELLA ERRORI: log dei record problematici
+-- =============================================================================
+CREATE TABLE IF NOT EXISTS events_data.etl_errors (
+    id SERIAL PRIMARY KEY,
+    error_type VARCHAR(50) NOT NULL,  -- 'missing_required_fields', 'invalid_json', 'db_insert_error'
+    source VARCHAR(50),               -- 'city_today', 'zero_eu'
+    json_file VARCHAR(255),           -- nome del file JSON
+    record_data JSONB,                -- dati del record problematico
+    error_message TEXT,               -- messaggio di errore
+    dag_run_id VARCHAR(255),          -- ID del DAG run
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_etl_errors_type ON events_data.etl_errors(error_type);
+CREATE INDEX IF NOT EXISTS idx_etl_errors_source ON events_data.etl_errors(source);
+CREATE INDEX IF NOT EXISTS idx_etl_errors_created ON events_data.etl_errors(created_at);
+
+-- =============================================================================
 -- FUNZIONE: Truncate staging
 -- =============================================================================
-CREATE OR REPLACE FUNCTION events.truncate_staging()
+CREATE OR REPLACE FUNCTION events_data.truncate_staging()
 RETURNS void AS $$
 BEGIN
-    TRUNCATE TABLE events.staging_events;
+    TRUNCATE TABLE events_data.staging_events;
     RAISE NOTICE 'Staging table truncated';
 END;
 $$ LANGUAGE plpgsql;
@@ -122,7 +140,7 @@ $$ LANGUAGE plpgsql;
 -- FUNZIONE: Upsert da staging a production
 -- Confronta content_hash per aggiornare solo se cambiato
 -- =============================================================================
-CREATE OR REPLACE FUNCTION events.upsert_from_staging()
+CREATE OR REPLACE FUNCTION events_data.upsert_from_staging()
 RETURNS TABLE(inserted INT, updated INT, unchanged INT) AS $$
 DECLARE
     v_inserted INT := 0;
@@ -130,12 +148,17 @@ DECLARE
     v_unchanged INT := 0;
     v_total INT := 0;
 BEGIN
-    -- Conta totale staging
-    SELECT COUNT(*) INTO v_total FROM events.staging_events;
+    -- Conta totale staging (deduplicati)
+    SELECT COUNT(DISTINCT uuid) INTO v_total FROM events_data.staging_events;
 
-    -- UPSERT con confronto hash
-    WITH upsert_result AS (
-        INSERT INTO events.production_events (
+    -- UPSERT con confronto hash (usando DISTINCT ON per deduplicare)
+    WITH deduplicated AS (
+        SELECT DISTINCT ON (uuid) *
+        FROM events_data.staging_events
+        ORDER BY uuid, scraped_at DESC NULLS LAST
+    ),
+    upsert_result AS (
+        INSERT INTO events_data.production_events (
             uuid, content_hash, source, url, title, description,
             category, image_url, city, location_name, location_address,
             location_coords, price, website, date_start, date_end,
@@ -148,7 +171,7 @@ BEGIN
             s.location_coords, s.price, s.website, s.date_start, s.date_end,
             s.time_start, s.time_end, s.time_info, s.schedule, s.weekdays,
             s.raw_data, s.scraped_at, TRUE
-        FROM events.staging_events s
+        FROM deduplicated s
         ON CONFLICT (uuid)
         DO UPDATE SET
             content_hash = EXCLUDED.content_hash,
@@ -163,9 +186,9 @@ BEGIN
             scraped_at = EXCLUDED.scraped_at,
             updated_at = CURRENT_TIMESTAMP,
             is_active = TRUE
-        WHERE events.production_events.content_hash IS DISTINCT FROM EXCLUDED.content_hash
+        WHERE events_data.production_events_data.content_hash IS DISTINCT FROM EXCLUDED.content_hash
         RETURNING
-            (xmax = 0) AS is_insert  -- TRUE se INSERT, FALSE se UPDATE
+            (xmax = 0) AS is_insert
     )
     SELECT
         COUNT(*) FILTER (WHERE is_insert = TRUE),
@@ -187,18 +210,18 @@ $$ LANGUAGE plpgsql;
 -- FUNZIONE: Marca eventi non più presenti come inattivi
 -- (opzionale, per eventi scaduti non più nello scraping)
 -- =============================================================================
-CREATE OR REPLACE FUNCTION events.mark_missing_inactive(p_source VARCHAR, p_city VARCHAR DEFAULT NULL)
+CREATE OR REPLACE FUNCTION events_data.mark_missing_inactive(p_source VARCHAR, p_city VARCHAR DEFAULT NULL)
 RETURNS INT AS $$
 DECLARE
     v_count INT;
 BEGIN
-    UPDATE events.production_events p
+    UPDATE events_data.production_events p
     SET is_active = FALSE, updated_at = CURRENT_TIMESTAMP
     WHERE p.source = p_source
       AND (p_city IS NULL OR p.city = p_city)
       AND p.is_active = TRUE
       AND NOT EXISTS (
-          SELECT 1 FROM events.staging_events s
+          SELECT 1 FROM events_data.staging_events s
           WHERE s.uuid = p.uuid
       );
 
@@ -212,7 +235,7 @@ $$ LANGUAGE plpgsql;
 -- =============================================================================
 -- TRIGGER: updated_at automatico
 -- =============================================================================
-CREATE OR REPLACE FUNCTION events.update_updated_at()
+CREATE OR REPLACE FUNCTION events_data.update_updated_at()
 RETURNS TRIGGER AS $$
 BEGIN
     NEW.updated_at = CURRENT_TIMESTAMP;
@@ -220,22 +243,22 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-DROP TRIGGER IF EXISTS trigger_prod_updated_at ON events.production_events;
+DROP TRIGGER IF EXISTS trigger_prod_updated_at ON events_data.production_events;
 CREATE TRIGGER trigger_prod_updated_at
-    BEFORE UPDATE ON events.production_events
+    BEFORE UPDATE ON events_data.production_events
     FOR EACH ROW
-    EXECUTE FUNCTION events.update_updated_at();
+    EXECUTE FUNCTION events_data.update_updated_at();
 
 -- =============================================================================
 -- VIEW: Eventi attivi (comoda per le query)
 -- =============================================================================
-CREATE OR REPLACE VIEW events.active_events AS
-SELECT * FROM events.production_events WHERE is_active = TRUE;
+CREATE OR REPLACE VIEW events_data.active_events AS
+SELECT * FROM events_data.production_events WHERE is_active = TRUE;
 
 -- =============================================================================
 -- VIEW: Statistiche ETL
 -- =============================================================================
-CREATE OR REPLACE VIEW events.etl_stats AS
+CREATE OR REPLACE VIEW events_data.etl_stats AS
 SELECT
     run_type,
     source,
@@ -246,11 +269,11 @@ SELECT
     unchanged_count,
     status,
     EXTRACT(EPOCH FROM (upsert_completed_at - started_at)) as duration_seconds
-FROM events.etl_runs
+FROM events_data.etl_runs
 ORDER BY started_at DESC;
 
 -- Grant permissions
-GRANT ALL PRIVILEGES ON SCHEMA events TO events;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA events TO events;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA events TO events;
-GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA events TO events;
+GRANT ALL PRIVILEGES ON SCHEMA events_data TO events;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA events_data TO events;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA events_data TO events;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA events_data TO events;

@@ -8,21 +8,134 @@ from events.items import EventItem
 
 # Configurazione città supportate
 CITIES = {
+    # Nord
     "milano": {
         "domain": "www.milanotoday.it",
         "start_url": "https://www.milanotoday.it/eventi/",
         "name": "Milano"
     },
-    "napoli": {
-        "domain": "www.napolitoday.it",
-        "start_url": "https://www.napolitoday.it/eventi/",
-        "name": "Napoli"
+    "torino": {
+        "domain": "www.torinotoday.it",
+        "start_url": "https://www.torinotoday.it/eventi/",
+        "name": "Torino"
+    },
+    "genova": {
+        "domain": "www.genovatoday.it",
+        "start_url": "https://www.genovatoday.it/eventi/",
+        "name": "Genova"
+    },
+    "venezia": {
+        "domain": "www.veneziatoday.it",
+        "start_url": "https://www.veneziatoday.it/eventi/",
+        "name": "Venezia"
     },
     "bologna": {
         "domain": "www.bolognatoday.it",
         "start_url": "https://www.bolognatoday.it/eventi/",
         "name": "Bologna"
     },
+    "verona": {
+        "domain": "www.veronasera.it",
+        "start_url": "https://www.veronasera.it/eventi/",
+        "name": "Verona"
+    },
+    "treviso": {
+        "domain": "www.trevisotoday.it",
+        "start_url": "https://www.trevisotoday.it/eventi/",
+        "name": "Treviso"
+    },
+    "trento": {
+        "domain": "www.trentotoday.it",
+        "start_url": "https://www.trentotoday.it/eventi/",
+        "name": "Trento"
+    },
+    "udine": {
+        "domain": "www.udinetoday.it",
+        "start_url": "https://www.udinetoday.it/eventi/",
+        "name": "Udine"
+    },
+    "pordenone": {
+        "domain": "www.pordenonetoday.it",
+        "start_url": "https://www.pordenonetoday.it/eventi/",
+        "name": "Pordenone"
+    },
+    "vicenza": {
+        "domain": "www.vicenzatoday.it",
+        "start_url": "https://www.vicenzatoday.it/eventi/",
+        "name": "Vicenza"
+    },
+    "padova": {
+        "domain": "www.padovatoday.it",
+        "start_url": "https://www.padovatoday.it/eventi/",
+        "name": "Padova"
+    },
+    "monza": {
+        "domain": "www.monzatoday.it",
+        "start_url": "https://www.monzatoday.it/eventi/",
+        "name": "Monza"
+    },
+    "lecco": {
+        "domain": "www.leccotoday.it",
+        "start_url": "https://www.leccotoday.it/eventi/",
+        "name": "Lecco"
+    },
+    "sondrio": {
+        "domain": "www.sondriotoday.it",
+        "start_url": "https://www.sondriotoday.it/eventi/",
+        "name": "Sondrio"
+    },
+    "novara": {
+        "domain": "www.novaratoday.it",
+        "start_url": "https://www.novaratoday.it/eventi/",
+        "name": "Novara"
+    },
+    "brescia": {
+        "domain": "www.bresciatoday.it",
+        "start_url": "https://www.bresciatoday.it/eventi/",
+        "name": "Brescia"
+    },
+    "parma": {
+        "domain": "www.parmatoday.it",
+        "start_url": "https://www.parmatoday.it/eventi/",
+        "name": "Parma"
+    },
+    "rimini": {
+        "domain": "www.riminitoday.it",
+        "start_url": "https://www.riminitoday.it/eventi/",
+        "name": "Rimini"
+    },
+    "ravenna": {
+        "domain": "www.ravennatoday.it",
+        "start_url": "https://www.ravennatoday.it/eventi/",
+        "name": "Ravenna"
+    },
+    "forli": {
+        "domain": "www.forlitoday.it",
+        "start_url": "https://www.forlitoday.it/eventi/",
+        "name": "Forlì"
+    },
+    "cesena": {
+        "domain": "www.cesenatoday.it",
+        "start_url": "https://www.cesenatoday.it/eventi/",
+        "name": "Cesena"
+    },
+    "como": {
+        "domain": "www.quicomo.it",
+        "start_url": "https://www.quicomo.it/eventi/",
+        "name": "Como"
+    },
+    "piacenza": {
+        "domain": "www.ilpiacenza.it",
+        "start_url": "https://www.ilpiacenza.it/eventi/",
+        "name": "Piacenza"
+    },
+    "trieste": {
+        "domain": "www.triesteprima.it",
+        "start_url": "https://www.triesteprima.it/eventi/",
+        "name": "Trieste"
+    },
+
+    # Centro
     "roma": {
         "domain": "www.romatoday.it",
         "start_url": "https://www.romatoday.it/eventi/",
@@ -33,10 +146,122 @@ CITIES = {
         "start_url": "https://www.firenzetoday.it/eventi/",
         "name": "Firenze"
     },
-    "venezia": {
-        "domain": "www.veneziatoday.it",
-        "start_url": "https://www.veneziatoday.it/eventi/",
-        "name": "Venezia"
+    "pisa": {
+        "domain": "www.pisatoday.it",
+        "start_url": "https://www.pisatoday.it/eventi/",
+        "name": "Pisa"
+    },
+    "livorno": {
+        "domain": "www.livornotoday.it",
+        "start_url": "https://www.livornotoday.it/eventi/",
+        "name": "Livorno"
+    },
+    "perugia": {
+        "domain": "www.perugiatoday.it",
+        "start_url": "https://www.perugiatoday.it/eventi/",
+        "name": "Perugia"
+    },
+    "terni": {
+        "domain": "www.ternitoday.it",
+        "start_url": "https://www.ternitoday.it/eventi/",
+        "name": "Terni"
+    },
+    "ancona": {
+        "domain": "www.anconatoday.it",
+        "start_url": "https://www.anconatoday.it/eventi/",
+        "name": "Ancona"
+    },
+    "latina": {
+        "domain": "www.latinatoday.it",
+        "start_url": "https://www.latinatoday.it/eventi/",
+        "name": "Latina"
+    },
+    "frosinone": {
+        "domain": "www.frosinonetoday.it",
+        "start_url": "https://www.frosinonetoday.it/eventi/",
+        "name": "Frosinone"
+    },
+    "viterbo": {
+        "domain": "www.viterbotoday.it",
+        "start_url": "https://www.viterbotoday.it/eventi/",
+        "name": "Viterbo"
+    },
+    "arezzo": {
+        "domain": "www.arezzonotizie.it",
+        "start_url": "https://www.arezzonotizie.it/eventi/",
+        "name": "Arezzo"
+    },
+    "pescara": {
+        "domain": "www.ilpescara.it",
+        "start_url": "https://www.ilpescara.it/eventi/",
+        "name": "Pescara"
+    },
+
+    # Sud e Isole
+    "napoli": {
+        "domain": "www.napolitoday.it",
+        "start_url": "https://www.napolitoday.it/eventi/",
+        "name": "Napoli"
+    },
+    "palermo": {
+        "domain": "www.palermotoday.it",
+        "start_url": "https://www.palermotoday.it/eventi/",
+        "name": "Palermo"
+    },
+    "catania": {
+        "domain": "www.cataniatoday.it",
+        "start_url": "https://www.cataniatoday.it/eventi/",
+        "name": "Catania"
+    },
+    "messina": {
+        "domain": "www.messinatoday.it",
+        "start_url": "https://www.messinatoday.it/eventi/",
+        "name": "Messina"
+    },
+    "bari": {
+        "domain": "www.baritoday.it",
+        "start_url": "https://www.baritoday.it/eventi/",
+        "name": "Bari"
+    },
+    "foggia": {
+        "domain": "www.foggiatoday.it",
+        "start_url": "https://www.foggiatoday.it/eventi/",
+        "name": "Foggia"
+    },
+    "salerno": {
+        "domain": "www.salernotoday.it",
+        "start_url": "https://www.salernotoday.it/eventi/",
+        "name": "Salerno"
+    },
+    "avellino": {
+        "domain": "www.avellinotoday.it",
+        "start_url": "https://www.avellinotoday.it/eventi/",
+        "name": "Avellino"
+    },
+    "reggio-calabria": {
+        "domain": "www.reggiotoday.it",
+        "start_url": "https://www.reggiotoday.it/eventi/",
+        "name": "Reggio Calabria"
+    },
+    "lecce": {
+        "domain": "www.lecceprima.it",
+        "start_url": "https://www.lecceprima.it/eventi/",
+        "name": "Lecce"
+    },
+    "brindisi": {
+        "domain": "www.brindisireport.it",
+        "start_url": "https://www.brindisireport.it/eventi/",
+        "name": "Brindisi"
+    },
+    "agrigento": {
+        "domain": "www.agrigentonotizie.it",
+        "start_url": "https://www.agrigentonotizie.it/eventi/",
+        "name": "Agrigento"
+    },
+    "caserta": {
+        "domain": "www.casertanews.it",
+        "start_url": "https://www.casertanews.it/eventi/",
+        "name": "Caserta"
     },
 }
 
@@ -184,8 +409,8 @@ class EventsSpider(scrapy.Spider):
                         all_links = lazy_selector.css("a::attr(href)").getall()
                     if not title:
                         title = (
-                            lazy_selector.css("img::attr(title)").get()
-                            or lazy_selector.css("img::attr(alt)").get()
+                                lazy_selector.css("img::attr(title)").get()
+                                or lazy_selector.css("img::attr(alt)").get()
                         )
                     if not category:
                         category = lazy_selector.xpath('.//*[contains(@class, "kicker")]/text()').get()
