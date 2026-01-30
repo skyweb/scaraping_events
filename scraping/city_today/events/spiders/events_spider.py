@@ -265,14 +265,6 @@ CITIES = {
     },
 }
 
-# Mapping giorni italiano -> numero
-WEEKDAYS_IT = {
-    "lunedì": 0, "martedì": 1, "mercoledì": 2, "giovedì": 3,
-    "venerdì": 4, "sabato": 5, "domenica": 6
-}
-
-WEEKDAYS_IT_NAMES = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
-
 # Periodi disponibili
 PERIODI = ["oggi", "domani", "weekend", "questa-settimana", "prossima-settimana", "questo-mese"]
 
@@ -382,40 +374,95 @@ class EventsSpider(scrapy.Spider):
         self.logger.info(f"Periodo: {self.periodo} ({date_start} - {date_end})")
 
     def _get_city_from_url(self, url):
-        """Estrae la città dall'URL"""
+        """Estrae il nome della città dall'URL"""
         for city_key, city_info in CITIES.items():
             if city_info["domain"] in url:
                 return city_info["name"]
         return None
 
+    def _get_city_key_from_url(self, url):
+        """Estrae la chiave della città dall'URL"""
+        for city_key, city_info in CITIES.items():
+            if city_info["domain"] in url:
+                return city_key
+        return None
+
     def parse(self, response):
-        """Parse la pagina principale degli eventi"""
+        """Parse la pagina principale degli eventi - estrae dati grezzi dalla lista"""
         city_name = self._get_city_from_url(response.url)
         event_cards = response.css("article.c-card")
         seen_urls = set()
 
         for card in event_cards:
-            all_links = card.css("a::attr(href)").getall()
-            title = card.xpath('.//*[contains(@class, "heading")]/text()').get()
-            category = card.xpath('.//*[contains(@class, "kicker")]/text()').get()
-            image_url = card.css("img::attr(src)").get()
+            # Inizializza raw_data per dati dalla lista
+            raw_list = {
+                "image": None,
+                "category": None,
+                "title": None,
+                "stars": None,
+                "date": None,
+                "location": None
+            }
 
-            if not all_links or not image_url:
-                async_html = card.css('script[type="text/async-html"]::text').get()
-                if async_html:
-                    decoded_html = html_lib.unescape(async_html)
-                    lazy_selector = Selector(text=decoded_html)
-                    if not all_links:
-                        all_links = lazy_selector.css("a::attr(href)").getall()
-                    if not title:
-                        title = (
-                                lazy_selector.css("img::attr(title)").get()
-                                or lazy_selector.css("img::attr(alt)").get()
-                        )
-                    if not category:
-                        category = lazy_selector.xpath('.//*[contains(@class, "kicker")]/text()').get()
-                    if not image_url:
-                        image_url = lazy_selector.css("img::attr(src)").get()
+            all_links = card.css("a::attr(href)").getall()
+            raw_list["title"] = card.xpath('.//*[contains(@class, "heading")]/text()').get()
+            raw_list["category"] = card.xpath('.//*[contains(@class, "kicker")]/text()').get()
+            raw_list["image"] = card.css("img::attr(src)").get()
+
+            # Cerca stelle/rating (conta svg.c-rating.c-rating--filled)
+            stars_count = len(card.css("svg.c-rating.c-rating--filled").getall())
+            if stars_count > 0:
+                raw_list["stars"] = stars_count
+
+            # Cerca data e location nella card (ul.c-card__list-details)
+            details_list = card.css("ul.c-card__list-details li.c-card__item-details")
+            for detail_item in details_list:
+                # Estrai l'attributo href dall'elemento use (può essere xlink:href)
+                use_elem = detail_item.css("use")
+                if use_elem:
+                    # Prova a ottenere xlink:href o href
+                    href_val = use_elem.xpath("@*").getall()
+                    href_str = " ".join(href_val) if href_val else ""
+
+                    if "calendar" in href_str:
+                        date_text = detail_item.css("span.u-label-07::text").get()
+                        raw_list["date"] = self._clean_text(date_text)
+                    elif "map-pin" in href_str:
+                        location_text = detail_item.css("span.u-label-07::text").get()
+                        raw_list["location"] = self._clean_text(location_text)
+
+            # Gestione contenuti lazy-loaded
+            async_html = card.css('script[type="text/async-html"]::text').get()
+            if async_html:
+                decoded_html = html_lib.unescape(async_html)
+                lazy_selector = Selector(text=decoded_html)
+                if not all_links:
+                    all_links = lazy_selector.css("a::attr(href)").getall()
+                if not raw_list["title"]:
+                    raw_list["title"] = (
+                            lazy_selector.css("img::attr(title)").get()
+                            or lazy_selector.css("img::attr(alt)").get()
+                    )
+                if not raw_list["category"]:
+                    raw_list["category"] = lazy_selector.xpath('.//*[contains(@class, "kicker")]/text()').get()
+                if not raw_list["image"]:
+                    raw_list["image"] = lazy_selector.css("img::attr(src)").get()
+
+                # Estrai date e location da lazy-loaded se non già trovati
+                if not raw_list["date"] or not raw_list["location"]:
+                    lazy_details = lazy_selector.css("ul.c-card__list-details li.c-card__item-details")
+                    for detail_item in lazy_details:
+                        use_elem = detail_item.css("use")
+                        if use_elem:
+                            href_val = use_elem.xpath("@*").getall()
+                            href_str = " ".join(href_val) if href_val else ""
+
+                            if "calendar" in href_str and not raw_list["date"]:
+                                date_text = detail_item.css("span.u-label-07::text").get()
+                                raw_list["date"] = self._clean_text(date_text)
+                            elif "map-pin" in href_str and not raw_list["location"]:
+                                location_text = detail_item.css("span.u-label-07::text").get()
+                                raw_list["location"] = self._clean_text(location_text)
 
             event_link = None
             for link in all_links:
@@ -432,69 +479,142 @@ class EventsSpider(scrapy.Spider):
                 continue
             seen_urls.add(full_url)
 
-            item = EventItem()
-            item["url"] = full_url
-            item["title"] = self._clean_text(title)
-            item["category"] = self._clean_text(category)
-            item["image_url"] = image_url
-            item["city"] = city_name
-            item["scraped_at"] = datetime.now().isoformat()
+            # Pulisci i dati grezzi della lista
+            for key in raw_list:
+                if isinstance(raw_list[key], str):
+                    raw_list[key] = self._clean_text(raw_list[key])
+
+            # Ottieni city_key per lookup city_id
+            city_key = self._get_city_key_from_url(response.url)
 
             yield response.follow(
                 event_link,
                 callback=self.parse_event_detail,
-                meta={"item": item},
+                meta={
+                    "raw_list": raw_list,
+                    "url": full_url,
+                    "city": city_name,
+                    "city_key": city_key,
+                    "city_id": CITIES.get(city_key, {}).get("city_id") if city_key else None
+                },
             )
 
     def parse_event_detail(self, response):
-        """Parse la pagina di dettaglio dell'evento"""
-        item = response.meta["item"]
+        """Parse la pagina di dettaglio dell'evento - estrae dati grezzi e mappa al JSON finale"""
+        raw_list = response.meta["raw_list"]
 
-        # Titolo
-        title = response.css("h1.l-entry__title::text").get()
-        if title:
-            item["title"] = self._clean_text(title)
-
-        # Categoria
-        if not item.get("category"):
-            category = response.css(".c-card__kicker::text").get()
-            if not category:
-                category = response.xpath('//meta[@property="article:section"]/@content').get()
-            item["category"] = self._clean_text(category)
-
-        # Immagine
-        if not item.get("image_url"):
-            image = response.css("figure.l-entry__media img::attr(src)").get()
-            if not image:
-                image = response.xpath('//meta[@property="og:image"]/@content').get()
-            item["image_url"] = image
+        # Inizializza raw_data per dati dal dettaglio
+        raw_detail = {
+            "dove": None,
+            "quando": None,
+            "prezzo": None,
+            "altre_informazioni": None,
+            "descrizione": None,
+            "image": None
+        }
 
         # Cerca la griglia info
         info_grid = response.css("div.l-grid.l-grid--square")
         if not info_grid:
             info_grid = response.css("section.l-entry__body")
 
-        # Location
-        self._extract_location(response, info_grid, item)
+        # Estrai "Dove" (location completa)
+        raw_detail["dove"] = self._extract_raw_dove(response, info_grid)
 
-        # Prezzo
-        self._extract_price(response, info_grid, item)
+        # Estrai "Quando" (date e orari)
+        raw_detail["quando"] = self._extract_raw_quando(response, info_grid)
+
+        # Estrai "Prezzo"
+        raw_detail["prezzo"] = self._extract_raw_prezzo(response, info_grid)
+
+        # Estrai "Altre informazioni"
+        raw_detail["altre_informazioni"] = self._extract_raw_altre_info(response, info_grid)
+
+        # Estrai descrizione
+        raw_detail["descrizione"] = self._extract_raw_descrizione(response)
+
+        # Estrai immagine dal dettaglio
+        image = response.css("figure.l-entry__media img::attr(src)").get()
+        if not image:
+            image = response.xpath('//meta[@property="og:image"]/@content').get()
+        raw_detail["image"] = image
+
+        # Estrai titolo dal dettaglio (più accurato)
+        title_detail = response.css("h1.l-entry__title::text").get()
+        if title_detail:
+            title_detail = self._clean_text(title_detail)
+
+        # Estrai categoria dal dettaglio
+        category_detail = response.css(".c-card__kicker::text").get()
+        if not category_detail:
+            category_detail = response.xpath('//meta[@property="article:section"]/@content').get()
+        if category_detail:
+            category_detail = self._clean_text(category_detail)
+
+        # Combina raw_data
+        raw_data = {
+            "list": raw_list,
+            "detail": raw_detail
+        }
+
+        # Crea l'item e mappa i campi
+        item = EventItem()
+
+        # Dati grezzi completi
+        item["raw_data"] = raw_data
+
+        # Metadati Fonte
+        item["source"] = "city_today"
+        item["url"] = response.meta["url"]
+
+        # Event ID: estrai dall'URL (parte finale senza .html)
+        url_path = response.meta["url"].rstrip("/")
+        event_id = url_path.split("/")[-1].replace(".html", "")
+        item["event_id"] = event_id
+
+        # Titolo: preferisci dettaglio, fallback a lista
+        item["title"] = title_detail or raw_list.get("title")
 
         # Descrizione
-        self._extract_description(response, item)
+        item["description"] = raw_detail.get("descrizione")
 
-        # Sito web
-        self._extract_website(response, info_grid, item)
+        # Categoria: converti in array (TEXT[])
+        category_value = category_detail or raw_list.get("category")
+        if category_value:
+            item["category"] = [category_value]  # Array con singolo elemento
+        else:
+            item["category"] = []
 
-        # Date e orari (genera array di date)
-        self._extract_dates(response, info_grid, item)
+        # Immagine: preferisci dettaglio, fallback a lista
+        item["image_url"] = raw_detail.get("image") or raw_list.get("image")
+
+        # Location
+        dove = raw_detail.get("dove") or {}
+        item["city"] = response.meta["city"]
+        item["city_id"] = response.meta.get("city_id")  # FK a comuni_italiani.comuni.id
+        item["location_name"] = dove.get("name")
+        item["location_address"] = dove.get("address")
+
+        # Dettagli
+        item["price"] = raw_detail.get("prezzo")
+        altre_info = raw_detail.get("altre_informazioni") or {}
+        item["website"] = altre_info.get("website")
+
+        # Date
+        quando = raw_detail.get("quando") or {}
+        item["date_start"] = quando.get("date_start")
+        item["date_end"] = quando.get("date_end")
+        item["date_display"] = raw_list.get("date")  # Testo leggibile dalla lista
+
+        # Metadata
+        item["scraped_at"] = datetime.now().isoformat()
 
         # Genera UUID dall'hash di titolo + data_start + location_name
         uuid_string = f"{item.get('title', '')}{item.get('date_start', '')}{item.get('location_name', '')}"
         item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
 
-        # Genera content_hash dall'hash di descrizione + prezzo + ora
-        content_string = f"{item.get('description', '')}{item.get('price', '')}{item.get('time_info', '')}"
+        # Genera content_hash dall'hash di descrizione
+        content_string = f"{item.get('description', '')}"
         item["content_hash"] = hashlib.sha256(content_string.encode('utf-8')).hexdigest()[:16]
 
         # Incrementa contatore per città
@@ -503,191 +623,82 @@ class EventsSpider(scrapy.Spider):
 
         yield item
 
-    def _extract_location(self, response, info_grid, item):
-        """Estrae informazioni sulla location"""
+    def _extract_raw_dove(self, response, info_grid):
+        """Estrae dati grezzi della sezione 'Dove'"""
+        dove = {
+            "raw_text": None,
+            "name": None,
+            "address": None
+        }
+
         location_section = info_grid.xpath('.//span[contains(text(), "Dove")]/parent::div')
         if not location_section:
             location_section = response.xpath(
                 '//span[contains(text(), "Dove")]/parent::div[contains(@class, "l-grid__item")]'
             )
+
         if location_section:
-            item["location_name"] = self._clean_text(
-                location_section.css("a.o-link-primary::text").get()
-            )
+            # Testo grezzo completo
+            dove["raw_text"] = self._clean_text(location_section.xpath("string()").get())
+
+            # Nome location
+            name = location_section.css("a.o-link-primary::text").get()
+            dove["name"] = self._clean_text(name)
+
+            # Indirizzo
             address = location_section.xpath('.//p//a[@href="#map"]/text()').get()
             if not address:
                 address = location_section.xpath(".//p/a/text()").get()
             if not address:
                 address = location_section.xpath(".//p/text()").get()
-            item["location_address"] = self._clean_text(address)
+            dove["address"] = self._clean_text(address)
 
-    def _extract_dates(self, response, info_grid, item):
-        """Estrae le date e genera array di giorni con orari"""
+        return dove
+
+    def _extract_raw_quando(self, response, info_grid):
+        """Estrae dati grezzi della sezione 'Quando'"""
+        quando = {
+            "raw_text": None,
+            "date_start": None,
+            "date_end": None,
+            "schedule": None
+        }
+
         date_section = info_grid.xpath('.//span[contains(text(), "Quando")]/parent::div')
         if not date_section:
             date_section = response.xpath(
                 '//span[contains(text(), "Quando")]/parent::div[contains(@class, "l-grid__item")]'
             )
 
-        if not date_section:
-            item["dates"] = []
-            return
+        if date_section:
+            # Testo grezzo completo
+            date_text = date_section.xpath("string()").get()
+            quando["raw_text"] = self._clean_text(date_text)
 
-        date_text = date_section.xpath("string()").get()
-        if not date_text:
-            item["dates"] = []
-            return
+            if date_text:
+                # Estrai date DD/MM/YYYY
+                date_matches = re.findall(r"(\d{2}/\d{2}/\d{4})", date_text)
 
-        # Estrai date DD/MM/YYYY
-        date_matches = re.findall(r"(\d{2}/\d{2}/\d{4})", date_text)
-        date_start = None
-        date_end = None
+                if len(date_matches) >= 1:
+                    date_start = self._parse_date(date_matches[0])
+                    if date_start:
+                        quando["date_start"] = date_start.strftime("%Y-%m-%d")
 
-        if len(date_matches) >= 1:
-            date_start = self._parse_date(date_matches[0])
-        if len(date_matches) >= 2:
-            date_end = self._parse_date(date_matches[1])
-        elif date_start:
-            date_end = date_start
+                if len(date_matches) >= 2:
+                    date_end = self._parse_date(date_matches[1])
+                    if date_end:
+                        quando["date_end"] = date_end.strftime("%Y-%m-%d")
+                elif quando["date_start"]:
+                    quando["date_end"] = quando["date_start"]
 
-        if not date_start:
-            item["dates"] = []
-            return
+            # Schedule/orari
+            schedule_text = date_section.css("span.u-label-011::text").get()
+            quando["schedule"] = self._clean_text(schedule_text)
 
-        # Salva date originali in formato YYYY-MM-DD
-        item["date_start"] = date_start.strftime("%Y-%m-%d")
-        item["date_end"] = date_end.strftime("%Y-%m-%d")
+        return quando
 
-        # Estrai il testo dello schedule (orari dettagliati)
-        schedule_text = date_section.css("span.u-label-011::text").get()
-        schedule_text = self._clean_text(schedule_text) if schedule_text else ""
-
-        # Salva schedule originale se contiene giorni
-        if schedule_text and any(day.lower() in schedule_text.lower() for day in WEEKDAYS_IT_NAMES):
-            item["schedule"] = schedule_text
-
-        # Trova i giorni della settimana specificati
-        allowed_weekdays = self._extract_weekdays(date_text + " " + schedule_text)
-
-        # Salva weekdays
-        if allowed_weekdays:
-            item["weekdays"] = ", ".join(allowed_weekdays)
-
-        # Estrai orari per giorno
-        day_times = self._parse_schedule(schedule_text)
-
-        # Estrai orario sintetico
-        time_match = re.search(r"(\d{1,2}[.:]\d{2})\s*[-–]\s*(\d{1,2}[.:]\d{2})", schedule_text)
-        if time_match:
-            item["time_info"] = f"{time_match.group(1).replace('.', ':')}-{time_match.group(2).replace('.', ':')}"
-        elif schedule_text and not any(day.lower() in schedule_text.lower() for day in WEEKDAYS_IT_NAMES):
-            item["time_info"] = schedule_text
-
-        # Genera array di date
-        dates_array = []
-        current_date = date_start
-
-        while current_date <= date_end:
-            weekday_num = current_date.weekday()
-            weekday_name = WEEKDAYS_IT_NAMES[weekday_num]
-
-            # Se ci sono giorni specificati, filtra
-            if allowed_weekdays and weekday_name.lower() not in [d.lower() for d in allowed_weekdays]:
-                current_date += timedelta(days=1)
-                continue
-
-            # Trova orario per questo giorno
-            time_start, time_end = self._get_time_for_day(weekday_name, day_times, schedule_text)
-
-            date_entry = {
-                "date": current_date.strftime("%Y-%m-%d"),
-                "weekday": weekday_name,
-            }
-
-            if time_start:
-                date_entry["time_start"] = time_start
-            if time_end:
-                date_entry["time_end"] = time_end
-
-            dates_array.append(date_entry)
-            current_date += timedelta(days=1)
-
-        item["dates"] = dates_array
-
-    def _parse_date(self, date_str):
-        """Converte DD/MM/YYYY in oggetto datetime"""
-        try:
-            return datetime.strptime(date_str, "%d/%m/%Y")
-        except ValueError:
-            return None
-
-    def _extract_weekdays(self, text):
-        """Estrae i giorni della settimana menzionati nel testo"""
-        found_days = []
-        text_lower = text.lower()
-        for day in WEEKDAYS_IT_NAMES:
-            if day.lower() in text_lower:
-                found_days.append(day)
-        return found_days
-
-    def _parse_schedule(self, schedule_text):
-        """Parsa lo schedule per estrarre orari specifici per giorno"""
-        day_times = {}
-
-        if not schedule_text:
-            return day_times
-
-        # Pattern: "Sabato: 10:00-20:00" o "Sabato 10:00-20:00"
-        for day in WEEKDAYS_IT_NAMES:
-            pattern = rf"{day}[:\s]+(\d{{1,2}}[.:]\d{{2}})\s*[-–]\s*(\d{{1,2}}[.:]\d{{2}})"
-            match = re.search(pattern, schedule_text, re.IGNORECASE)
-            if match:
-                time_start = match.group(1).replace(".", ":")
-                time_end = match.group(2).replace(".", ":")
-                day_times[day.lower()] = (time_start, time_end)
-
-        # Pattern per gruppi: "dal lunedì al venerdì 9:30-19:30"
-        group_pattern = r"dal?\s+(\w+)\s+al?\s+(\w+)\s+(\d{1,2}[.:]\d{2})\s*[-–]\s*(\d{1,2}[.:]\d{2})"
-        match = re.search(group_pattern, schedule_text, re.IGNORECASE)
-        if match:
-            start_day = match.group(1).lower()
-            end_day = match.group(2).lower()
-            time_start = match.group(3).replace(".", ":")
-            time_end = match.group(4).replace(".", ":")
-
-            if start_day in WEEKDAYS_IT and end_day in WEEKDAYS_IT:
-                start_idx = WEEKDAYS_IT[start_day]
-                end_idx = WEEKDAYS_IT[end_day]
-                for i in range(start_idx, end_idx + 1):
-                    day_name = WEEKDAYS_IT_NAMES[i].lower()
-                    if day_name not in day_times:
-                        day_times[day_name] = (time_start, time_end)
-
-        return day_times
-
-    def _get_time_for_day(self, weekday_name, day_times, schedule_text):
-        """Ottiene l'orario per un giorno specifico"""
-        weekday_lower = weekday_name.lower()
-
-        # Prima cerca orario specifico per giorno
-        if weekday_lower in day_times:
-            return day_times[weekday_lower]
-
-        # Poi cerca un orario generico nel testo
-        time_pattern = r"(\d{1,2}[.:]\d{2})\s*[-–]\s*(\d{1,2}[.:]\d{2})"
-        match = re.search(time_pattern, schedule_text)
-        if match:
-            return (match.group(1).replace(".", ":"), match.group(2).replace(".", ":"))
-
-        # Cerca solo orario singolo
-        single_time = re.search(r"(\d{1,2}[.:]\d{2})", schedule_text)
-        if single_time:
-            return (single_time.group(1).replace(".", ":"), None)
-
-        return (None, None)
-
-    def _extract_price(self, response, info_grid, item):
-        """Estrae informazioni sul prezzo"""
+    def _extract_raw_prezzo(self, response, info_grid):
+        """Estrae dati grezzi della sezione 'Prezzo'"""
         price_section = info_grid.xpath('.//span[contains(text(), "Prezzo")]/parent::div')
         if not price_section:
             price_section = response.xpath(
@@ -710,10 +721,36 @@ class EventsSpider(scrapy.Spider):
                         price_match = re.search(r"€\s*[\d,]+", price_text)
                         if price_match:
                             price = price_match.group(0)
-            item["price"] = self._clean_text(price) if price else None
+            return self._clean_text(price) if price else None
 
-    def _extract_description(self, response, item):
-        """Estrae la descrizione dell'evento"""
+        return None
+
+    def _extract_raw_altre_info(self, response, info_grid):
+        """Estrae dati grezzi della sezione 'Altre informazioni'"""
+        altre_info = {
+            "raw_text": None,
+            "website": None
+        }
+
+        other_info_section = info_grid.xpath(
+            './/span[contains(text(), "Altre informazioni")]/parent::div'
+        )
+        if not other_info_section:
+            other_info_section = response.xpath(
+                '//span[contains(text(), "Altre informazioni")]/parent::div[contains(@class, "l-grid__item")]'
+            )
+
+        if other_info_section:
+            altre_info["raw_text"] = self._clean_text(other_info_section.xpath("string()").get())
+
+            website = other_info_section.css("a::attr(href)").get()
+            if website and website.startswith("http"):
+                altre_info["website"] = website
+
+        return altre_info
+
+    def _extract_raw_descrizione(self, response):
+        """Estrae la descrizione grezza dell'evento"""
         paragraphs = []
         description_div = response.css("div.c-entry[data-content--body]")
         if description_div:
@@ -729,21 +766,16 @@ class EventsSpider(scrapy.Spider):
 
         if paragraphs:
             desc = " ".join([self._clean_text(p) for p in paragraphs if p and p.strip()])
-            item["description"] = desc if desc else None
+            return desc if desc else None
 
-    def _extract_website(self, response, info_grid, item):
-        """Estrae il sito web dell'evento"""
-        other_info_section = info_grid.xpath(
-            './/span[contains(text(), "Altre informazioni")]/parent::div'
-        )
-        if not other_info_section:
-            other_info_section = response.xpath(
-                '//span[contains(text(), "Altre informazioni")]/parent::div[contains(@class, "l-grid__item")]'
-            )
-        if other_info_section:
-            website = other_info_section.css("a::attr(href)").get()
-            if website and website.startswith("http"):
-                item["website"] = website
+        return None
+
+    def _parse_date(self, date_str):
+        """Converte DD/MM/YYYY in oggetto datetime"""
+        try:
+            return datetime.strptime(date_str, "%d/%m/%Y")
+        except ValueError:
+            return None
 
     def _clean_text(self, text):
         """Pulisce il testo da spazi extra e caratteri speciali"""

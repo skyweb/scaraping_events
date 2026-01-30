@@ -10,33 +10,37 @@ class EventItem(scrapy.Item):
     """Item per gli eventi di *Today.it"""
 
     # Identificativi
+    event_id = scrapy.Field()  # ID originale dalla fonte (estratto dall'URL)
     uuid = scrapy.Field()  # Hash di titolo + data_start + location_name
-    content_hash = scrapy.Field()  # Hash di descrizione + prezzo + ora (per rilevare modifiche)
+    content_hash = scrapy.Field()  # Hash di descrizione (per rilevare modifiche)
 
-    # Info base dalla lista
+    # Metadati Fonte
+    source = scrapy.Field()  # Es: "city_today"
     url = scrapy.Field()
-    title = scrapy.Field()
-    category = scrapy.Field()
-    image_url = scrapy.Field()
-    city = scrapy.Field()  # Città dell'evento (Milano, Roma, etc.)
 
-    # Info dettaglio
+    # Dati grezzi estratti dalle pagine
+    raw_data = scrapy.Field()  # Dict con tutti i dati grezzi
+
+    # Info base (mappate da raw_data)
+    title = scrapy.Field()
+    description = scrapy.Field()
+    category = scrapy.Field()  # Array di stringhe
+    image_url = scrapy.Field()
+
+    # Location
+    city = scrapy.Field()  # Nome città (Milano, Roma, etc.)
+    city_id = scrapy.Field()  # FK a comuni_italiani.comuni.id
     location_name = scrapy.Field()
     location_address = scrapy.Field()
+
+    # Dettagli
     price = scrapy.Field()
-    description = scrapy.Field()
     website = scrapy.Field()
 
-    # Date e orari - campi originali
+    # Date
     date_start = scrapy.Field()  # Data inizio (YYYY-MM-DD)
     date_end = scrapy.Field()  # Data fine (YYYY-MM-DD)
-    weekdays = scrapy.Field()  # Giorni della settimana (es. "Lunedì, Mercoledì")
-    time_info = scrapy.Field()  # Orario sintetico
-    schedule = scrapy.Field()  # Dettaglio completo orari/giorni
-
-    # Date e orari - array dettagliato
-    # Array di oggetti: {"date": "2026-01-31", "weekday": "Sabato", "time_start": "10:00", "time_end": "20:00"}
-    dates = scrapy.Field()
+    date_display = scrapy.Field()  # Testo leggibile (es: "dal 31 gennaio al 1 febbraio")
 
     # Metadata
     scraped_at = scrapy.Field()
