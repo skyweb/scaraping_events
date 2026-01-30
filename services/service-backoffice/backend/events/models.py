@@ -2,6 +2,47 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
 
+class ComuneItaliano(models.Model):
+    """Comuni italiani - tabella di lookup"""
+    comune = models.CharField(max_length=255, primary_key=True)
+    codice_catastale = models.CharField(max_length=10, blank=True, null=True)
+    cap = models.CharField(max_length=10, blank=True, null=True)
+    popolazione = models.IntegerField(blank=True, null=True)
+    pro_com_t = models.CharField(max_length=20, blank=True, null=True)
+    cod_uts = models.IntegerField(blank=True, null=True)
+    geom = models.TextField(blank=True, null=True)
+    centroid = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'comuni_italiani"."comuni'
+        ordering = ['comune']
+        verbose_name = 'Comune'
+        verbose_name_plural = 'Comuni'
+
+    def __str__(self):
+        return self.comune
+
+
+class ProvinciaItaliana(models.Model):
+    """Province italiane - tabella di lookup"""
+    den_uts = models.CharField(max_length=255, primary_key=True)
+    sigla = models.CharField(max_length=10, blank=True, null=True)
+    tipo_uts = models.CharField(max_length=100, blank=True, null=True)
+    shape_area = models.FloatField(blank=True, null=True)
+    geom = models.TextField(blank=True, null=True)  # PostGIS geometry stored as text for display
+
+    class Meta:
+        managed = False
+        db_table = 'comuni_italiani"."province'
+        ordering = ['den_uts']
+        verbose_name = 'Provincia'
+        verbose_name_plural = 'Province'
+
+    def __str__(self):
+        return self.den_uts
+
+
 class ProductionEvent(models.Model):
     """Eventi finali validati - tabella esistente"""
     uuid = models.CharField(max_length=16, unique=True)
@@ -124,3 +165,44 @@ class EtlError(models.Model):
 
     def __str__(self):
         return f"{self.error_type} - {self.source}"
+
+
+class ScrapingCategoria(models.Model):
+    """Categorie uniche dagli eventi - vista aggregata"""
+    categoria = models.CharField(max_length=255, primary_key=True)
+    count = models.IntegerField(default=0)
+
+    class Meta:
+        managed = False
+        db_table = 'events_data"."v_categorie'
+        ordering = ['categoria']
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorie'
+
+    def __str__(self):
+        return self.categoria
+
+
+class ScrapingLocation(models.Model):
+    """Location uniche dagli eventi - vista aggregata"""
+    location_name = models.CharField(max_length=512, primary_key=True)  # Contiene location|||city
+    city = models.CharField(max_length=100, blank=True, null=True)
+    count = models.IntegerField(default=0)
+
+    class Meta:
+        managed = False
+        db_table = 'events_data"."v_locations'
+        ordering = ['location_name']
+        verbose_name = 'Location'
+        verbose_name_plural = 'Locations'
+
+    @property
+    def nome_location(self):
+        """Estrae il nome location dalla chiave composta"""
+        if '|||' in self.location_name:
+            return self.location_name.split('|||')[0]
+        return self.location_name
+
+    def __str__(self):
+        nome = self.nome_location
+        return f"{nome} ({self.city})" if self.city else nome

@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.forms',
     'rest_framework',
     'oauth2_provider',
     'rest_framework_tracking',
@@ -99,6 +100,9 @@ STORAGES = {
 FRONTEND_DIR = BASE_DIR / 'staticfiles' / 'frontend'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Form Renderer
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 # REST Framework
 REST_FRAMEWORK = {
@@ -250,6 +254,38 @@ UNFOLD = {
                         "title": "Staging Events",
                         "icon": "schedule",
                         "link": "/admin/events/stagingevent/",
+                    },
+                ],
+            },
+            {
+                "title": "Comuni",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Comuni italiani",
+                        "icon": "location_city",
+                        "link": "/admin/events/comuneitaliano/",
+                    },
+                    {
+                        "title": "Province",
+                        "icon": "map",
+                        "link": "/admin/events/provinciaitaliana/",
+                    },
+                ],
+            },
+            {
+                "title": "Scraping",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Categorie",
+                        "icon": "category",
+                        "link": "/admin/events/scrapingcategoria/",
+                    },
+                    {
+                        "title": "Location",
+                        "icon": "place",
+                        "link": "/admin/events/scrapinglocation/",
                     },
                 ],
             },
