@@ -117,7 +117,7 @@ infrastructures/
 ├── logs/
 └── plugins/
 
-websites/
+scraping/
 ├── Dockerfile              # Immagine scrapy-events
 ├── entrypoint.sh
 ├── requirements.txt

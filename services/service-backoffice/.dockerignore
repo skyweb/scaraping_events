@@ -1,0 +1,24 @@
+**/__pycache__
+**/*.pyc
+**/*.pyo
+*.egg-info
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+*.md
+.vscode
+.idea
+
+# Frontend
+frontend/node_modules
+frontend/dist
+frontend/.env
+frontend/.env.*
+
+# Backend
+backend/staticfiles
+backend/*.sqlite3
+backend/.coverage
+backend/htmlcov
