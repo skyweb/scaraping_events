@@ -8,19 +8,13 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     container_name: backoffice-backend-dev
+    env_file:
+      - .env
     volumes:
       - ./backend:/app
     environment:
       POSTGRES_HOST: host.docker.internal
-      POSTGRES_PORT: 5432
-      POSTGRES_DB: today_events
-      POSTGRES_USER: events
-      POSTGRES_PASSWORD: events_secret_2026
-      DJANGO_SECRET_KEY: dev-secret-key
       DJANGO_DEBUG: "True"
-      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
-      CORS_ALLOWED_ORIGINS: http://localhost:3000
-      CSRF_TRUSTED_ORIGINS: http://localhost:3000,http://localhost:8000
     ports:
       - "8000:8000"
     command: python manage.py runserver 0.0.0.0:8000

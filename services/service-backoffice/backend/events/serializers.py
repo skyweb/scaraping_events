@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import ProductionEvent, StagingEvent, EtlRun, EtlError
+from .models import ProductionEvent, StagingEvent
+from etl.models import EtlRun, EtlError
 
 
 class ProductionEventSerializer(serializers.ModelSerializer):

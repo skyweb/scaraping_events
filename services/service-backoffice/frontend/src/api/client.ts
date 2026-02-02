@@ -8,6 +8,18 @@ const api = axios.create({
   withCredentials: true,
 })
 
+// Add a response interceptor to handle auth errors
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && [401, 403].includes(error.response.status)) {
+      // Redirect to admin login if unauthorized
+      window.location.href = `/admin/login/?next=${encodeURIComponent(window.location.pathname)}`
+    }
+    return Promise.reject(error)
+  }
+)
+
 export interface Event {
   id: number
   uuid: string

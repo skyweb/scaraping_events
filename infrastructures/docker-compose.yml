@@ -51,7 +51,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres-data:/var/lib/postgresql/data
-      - ./config/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./config/postgres/init.d:/docker-entrypoint-initdb.d:ro
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     healthcheck:
@@ -77,6 +77,21 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - events-network
+
+  # Redis UI (RedisInsight)
+  redis-ui:
+    image: redis/redisinsight:latest
+    container_name: events-redis-ui
+    restart: unless-stopped
+    ports:
+      - "${REDIS_UI_PORT:-5540}:5540"
+    volumes:
+      - redis-ui-data:/data
+    depends_on:
+      redis:
+        condition: service_healthy
     networks:
       - events-network
 
@@ -189,7 +204,7 @@ services:
       postgres:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/api/"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/admin/')"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -215,6 +230,8 @@ volumes:
     name: events-postgres-data
   redis-data:
     name: events-redis-data
+  redis-ui-data:
+    name: events-redis-ui-data
 
 networks:
   events-network:

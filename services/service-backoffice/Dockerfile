@@ -47,6 +47,7 @@ done\n\
 echo "Database ready!"\n\
 \n\
 echo "Running migrations..."\n\
+python manage.py makemigrations --noinput\n\
 python manage.py migrate --noinput\n\
 \n\
 echo "Collecting static files..."\n\

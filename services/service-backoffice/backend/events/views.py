@@ -11,7 +11,8 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter, OpenApiExample
 from drf_spectacular.types import OpenApiTypes
 
-from .models import ProductionEvent, StagingEvent, EtlRun, EtlError
+from .models import ProductionEvent, StagingEvent
+from etl.models import EtlRun, EtlError
 from .serializers import (
     ProductionEventSerializer,
     ProductionEventListSerializer,

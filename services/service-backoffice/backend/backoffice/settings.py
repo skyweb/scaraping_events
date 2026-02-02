@@ -25,6 +25,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'drf_spectacular',
+    'comuni_italiani',
+    'etl',
+    'scraping',
     'events',
 ]
 
@@ -264,12 +267,12 @@ UNFOLD = {
                     {
                         "title": "Comuni italiani",
                         "icon": "location_city",
-                        "link": "/admin/events/comuneitaliano/",
+                        "link": "/admin/comuni_italiani/comuneitaliano/",
                     },
                     {
                         "title": "Province",
                         "icon": "map",
-                        "link": "/admin/events/provinciaitaliana/",
+                        "link": "/admin/comuni_italiani/provinciaitaliana/",
                     },
                 ],
             },
