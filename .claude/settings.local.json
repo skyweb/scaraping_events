@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose build:*)",
+      "Bash(docker compose:*)",
+      "WebSearch",
+      "Bash(docker ps:*)",
+      "Bash(docker image inspect:*)",
+      "Bash(docker manifest inspect:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(source:*)",
+      "Bash(scrapy crawl:*)",
+      "Bash(PYTHONPATH=/Users/skyweb/Sites/dev/scaraping_events/scraping scrapy crawl:*)",
+      "Bash(PYTHONPATH=/Users/skyweb/Sites/dev/scaraping_events/scraping scrapy genspider:*)",
+      "Bash(PYTHONPATH=/Users/skyweb/Sites/dev/scaraping_events/scraping scrapy list:*)",
+      "Bash(/bin/ls:*)",
+      "Bash(python3 -m py_compile:*)",
+      "Bash(PYTHONPATH=/Users/skyweb/Sites/dev/scaraping_events/services/service-scraping/src scrapy crawl:*)",
+      "Bash(../venv/bin/python:*)",
+      "Bash(/bin/echo:*)"
+    ]
+  }
+}

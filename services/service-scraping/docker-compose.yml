@@ -1,0 +1,51 @@
+# =============================================================================
+# Events Scraper - Docker Compose
+# =============================================================================
+
+services:
+  # Scrapyd Server
+  scrapyd:
+    build:
+      context: src
+      dockerfile: src/Dockerfile
+    image: events-scraper:latest
+    container_name: events-scrapyd
+    restart: unless-stopped
+    ports:
+      - "6800:6800"
+    environment:
+      # Database PostgreSQL
+      POSTGRES_HOST: ${POSTGRES_HOST:-postgres}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      POSTGRES_DB: ${POSTGRES_DB:-events}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      # Scrapy settings
+      SCRAPY_LOG_LEVEL: ${SCRAPY_LOG_LEVEL:-INFO}
+      SCRAPY_CONCURRENT_REQUESTS: ${SCRAPY_CONCURRENT_REQUESTS:-8}
+    volumes:
+      # Output degli spider
+      - scraper-output:/data/output
+      # Logs Scrapyd
+      - scraper-logs:/var/lib/scrapyd/logs
+      # Per development: monta il codice sorgente
+      - ./src:/app/events_scraper:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6800/daemonstatus.json"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - events-network
+
+volumes:
+  scraper-output:
+    name: events-scraper-output
+  scraper-logs:
+    name: events-scraper-logs
+
+networks:
+  events-network:
+    name: events-network
+    external: true

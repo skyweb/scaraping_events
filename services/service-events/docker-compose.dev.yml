@@ -1,0 +1,33 @@
+# Docker Compose per sviluppo locale del backoffice
+# Usa: docker compose -f docker-compose.dev.yml up
+# Nota: richiede che postgres sia già in esecuzione dal docker-compose principale
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: backoffice-backend-dev
+    env_file:
+      - .env
+    volumes:
+      - ./backend:/app
+    environment:
+      POSTGRES_HOST: host.docker.internal
+      DJANGO_DEBUG: "True"
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    image: node:20-alpine
+    container_name: backoffice-frontend-dev
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
+    environment:
+      - VITE_API_URL=http://localhost:8000
