@@ -1,0 +1,691 @@
+[2026-01-28T22:21:14.437+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_trento.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:21:14.445+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_trento.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:21:14.445+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-28T22:21:14.455+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_trento.scrape_city_today> on 2026-01-28 22:19:44.377550+00:00
+[2026-01-28T22:21:14.458+0000] {standard_task_runner.py:60} INFO - Started process 2602 to run task
+[2026-01-28T22:21:14.461+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_trento.scrape_city_today', 'manual__2026-01-28T22:19:44.377550+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpqp0rg34x']
+[2026-01-28T22:21:14.463+0000] {standard_task_runner.py:88} INFO - Job 196: Subtask process_trento.scrape_city_today
+[2026-01-28T22:21:14.479+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T22:21:14.520+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_trento.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [running]> on host a9aac56aef94
+[2026-01-28T22:21:14.614+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_trento.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T22:19:44.377550+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T22:19:44.377550+00:00'
+[2026-01-28T22:21:14.632+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-28T22:21:14.638+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-28T22:21:15.130+0000] {docker.py:429} INFO - Avvio scraping per: Trento
+Periodo: questa-settimana
+[2026-01-28T22:21:15.134+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-28T22:21:15.138+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-01-28 22:21:15 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-28T22:21:15.140+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [events] INFO: Scraping città: Trento
+2026-01-28 22:21:15 [events] INFO: Periodo: questa-settimana (2026-01-28 - 2026-02-01)
+2026-01-28 22:21:15 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-28T22:21:15.141+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-28T22:21:15.141+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-28 22:21:15 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-28T22:21:15.145+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.extensions.telnet] INFO: Telnet Password: 002c222f13cdb31f
+[2026-01-28T22:21:15.186+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-01-28T22:21:15.186+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-28T22:21:15.236+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-28T22:21:15.238+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-28T22:21:15.238+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-28T22:21:15.238+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_trento_questa-settimana_20260128_222115.json
+[2026-01-28T22:21:15.239+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.core.engine] INFO: Spider opened
+[2026-01-28T22:21:15.245+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-28T22:21:15.246+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-28T22:21:15.391+0000] {docker.py:429} INFO - 2026-01-28 22:21:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/robots.txt> (referer: None)
+[2026-01-28T22:21:17.729+0000] {docker.py:429} INFO - 2026-01-28 22:21:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/eventi/dal/2026-01-28/al/2026-02-01/> (referer: None)
+[2026-01-28T22:21:18.521+0000] {docker.py:429} INFO - 2026-01-28 22:21:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/eventi/claudio-orlandi-ultimate-landscapes-riva.html> (referer: https://www.trentotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:21:18.664+0000] {docker.py:429} INFO - 2026-01-28 22:21:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.trentotoday.it/eventi/claudio-orlandi-ultimate-landscapes-riva.html>
+{'category': None,
+ 'city': 'Trento',
+ 'content_hash': 'b5f1748cffe07d54',
+ 'date_end': '2026-06-14',
+ 'date_start': '2025-11-29',
+ 'dates': [{'date': '2025-11-29', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'weekday': 'Martedì'},
+           {'date': '2026-04-15', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'weekday': 'Sabato'},
+           {'date': '2026-04-19', 'weekday': 'Domenica'},
+           {'date': '2026-04-20', 'weekday': 'Lunedì'},
+           {'date': '2026-04-21', 'weekday': 'Martedì'},
+           {'date': '2026-04-22', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-23', 'weekday': 'Giovedì'},
+           {'date': '2026-04-24', 'weekday': 'Venerdì'},
+           {'date': '2026-04-25', 'weekday': 'Sabato'},
+           {'date': '2026-04-26', 'weekday': 'Domenica'},
+           {'date': '2026-04-27', 'weekday': 'Lunedì'},
+           {'date': '2026-04-28', 'weekday': 'Martedì'},
+           {'date': '2026-04-29', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-30', 'weekday': 'Giovedì'},
+           {'date': '2026-05-01', 'weekday': 'Venerdì'},
+           {'date': '2026-05-02', 'weekday': 'Sabato'},
+           {'date': '2026-05-03', 'weekday': 'Domenica'},
+           {'date': '2026-05-04', 'weekday': 'Lunedì'},
+           {'date': '2026-05-05', 'weekday': 'Martedì'},
+           {'date': '2026-05-06', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-07', 'weekday': 'Giovedì'},
+           {'date': '2026-05-08', 'weekday': 'Venerdì'},
+           {'date': '2026-05-09', 'weekday': 'Sabato'},
+           {'date': '2026-05-10', 'weekday': 'Domenica'},
+           {'date': '2026-05-11', 'weekday': 'Lunedì'},
+           {'date': '2026-05-12', 'weekday': 'Martedì'},
+           {'date': '2026-05-13', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-14', 'weekday': 'Giovedì'},
+           {'date': '2026-05-15', 'weekday': 'Venerdì'},
+           {'date': '2026-05-16', 'weekday': 'Sabato'},
+           {'date': '2026-05-17', 'weekday': 'Domenica'},
+           {'date': '2026-05-18', 'weekday': 'Lunedì'},
+           {'date': '2026-05-19', 'weekday': 'Martedì'},
+           {'date': '2026-05-20', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-21', 'weekday': 'Giovedì'},
+           {'date': '2026-05-22', 'weekday': 'Venerdì'},
+           {'date': '2026-05-23', 'weekday': 'Sabato'},
+           {'date': '2026-05-24', 'weekday': 'Domenica'},
+           {'date': '2026-05-25', 'weekday': 'Lunedì'},
+           {'date': '2026-05-26', 'weekday': 'Martedì'},
+           {'date': '2026-05-27', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-28', 'weekday': 'Giovedì'},
+           {'date': '2026-05-29', 'weekday': 'Venerdì'},
+           {'date': '2026-05-30', 'weekday': 'Sabato'},
+           {'date': '2026-05-31', 'weekday': 'Domenica'},
+           {'date': '2026-06-01', 'weekday': 'Lunedì'},
+           {'date': '2026-06-02', 'weekday': 'Martedì'},
+           {'date': '2026-06-03', 'weekday': 'Mercoledì'},
+           {'date': '2026-06-04', 'weekday': 'Giovedì'},
+           {'date': '2026-06-05', 'weekday': 'Venerdì'},
+           {'date': '2026-06-06', 'weekday': 'Sabato'},
+           {'date': '2026-06-07', 'weekday': 'Domenica'},
+           {'date': '2026-06-08', 'weekday': 'Lunedì'},
+           {'date': '2026-06-09', 'weekday': 'Martedì'},
+           {'date': '2026-06-10', 'weekday': 'Mercoledì'},
+           {'date': '2026-06-11', 'weekday': 'Giovedì'},
+           {'date': '2026-06-12', 'weekday': 'Venerdì'},
+           {'date': '2026-06-13', 'weekday': 'Sabato'},
+           {'date': '2026-06-14', 'weekday': 'Domenica'}],
+ 'description': 'Dopo diciassette anni di ricerca tra le vette e le ferite del '
+                'paesaggio alpino, dal 29 novembre 2025 al 14 giugno 2026, '
+                'Claudio Orlandi porta al Museo Alto Garda di Riva del Garda '
+                'il corpus completo di Ultimate Landscapes, progetto '
+                'fotografico d’arte che indaga la metamorfosi dei ghiacciai in '
+                'un tempo di crisi climatica. Un racconto visivo che '
+                'attraversa le Alpi dal Presena alla Marmolada, trasformando i '
+                'segni dell’uomo – i teli geotessili stesi a protezione del '
+                'ghiaccio – in simboli di un gesto ambivalente, sospeso tra '
+                'cura e accanimento, tra difesa e illusione. Con la curatela '
+                'di Matteo Rapanà e Alessia Locatelli, in occasione dell’Anno '
+                'Internazionale della Preservazione dei Ghiacciai, il Museo '
+                'Alto Garda dedica così all’artista romano la mostra “Claudio '
+                'Orlandi. Ultimate Landscapes. L’illusione del ghiaccio”, '
+                'accogliendo nella Pinacoteca del museo e per la prima volta '
+                'in un’istituzione pubblica l’intera produzione del progetto, '
+                'articolata in tredici serie fotografiche che raccontano un '
+                'viaggio durato quasi due decenni. Sin dal 2008 Orlandi '
+                'esplora i ghiacciai delle Alpi costruendo un linguaggio che '
+                'fonde documentazione e visione estetica. Le sue immagini non '
+                'si limitano a registrare il ritiro del ghiaccio, ma ne '
+                'svelano la complessità attraverso dettagli che diventano '
+                'materia narrativa: pieghe, strappi, cuciture dei teli '
+                'artificiali si confondono con la trama naturale del ghiaccio, '
+                'generando forme quasi astratte, ma intrise di senso. In '
+                'questi paesaggi estremi, ciò che emerge è la fragilità del '
+                'rapporto tra uomo e natura, la tensione tra conservazione e '
+                'controllo, tra la volontà di salvare e quella – forse '
+                'inconsapevole – di perpetuare un modello non più sostenibile. '
+                'Il percorso espositivo restituisce la profondità di questa '
+                'ricerca, in cui ogni serie diventa un capitolo autonomo di un '
+                'racconto in continua evoluzione. Dal Rhonegletscher svizzero '
+                'allo Stelvio, fino alla recente salita in Marmolada, “Regina '
+                'delle Dolomiti”, Orlandi cattura la trasformazione del '
+                'paesaggio alpino con un linguaggio di malinconica bellezza. '
+                'Nei suoi scatti, la luce disegna trame mutevoli, i teli si '
+                'ripiegano come sudari, la montagna respira e si ritrae, '
+                'lasciando intravedere la fine di un’era. Come ha scritto '
+                'Maria Fratelli, “sono sudari” – veli di una memoria che si '
+                'scioglie. La mostra si inserisce nel percorso di riflessione '
+                'che il Museo Alto Garda dedica alle trasformazioni ambientali '
+                'e sociali contemporanee. “I musei oggi sono luoghi di dialogo '
+                'e di interpretazione del presente – affermano i curatori – '
+                'capaci di interrogare la realtà e di immaginare il futuro. Il '
+                'progetto di Orlandi ci invita a fermarci, a osservare, a '
+                'interrogarci su quale modello di sviluppo vogliamo per la '
+                'montagna e per il pianeta che abitiamo”. Con Ultimate '
+                'Landscapes la fotografia si fa linguaggio etico, strumento di '
+                'conoscenza e di partecipazione, capace di tradurre l’urgenza '
+                'ambientale in esperienza emotiva. Ogni immagine diventa una '
+                'soglia, un varco tra la bellezza e la perdita, tra la forza '
+                'della natura e la vulnerabilità dell’uomo. E in questa '
+                'sospensione – tra ciò che resta e ciò che si scioglie – si '
+                'apre lo spazio di una consapevolezza nuova: il paesaggio, '
+                'ultimo, è anche il primo segno del nostro futuro. In '
+                'occasione della mostra, la narrazione fotografica di Claudio '
+                'Orlandi incontra l’installazione sonora creata dal sud '
+                'designer Alessio Mosti che si fa “voce” dello stesso '
+                'ghiacciaio, suono fisico dello sgretolamento registrato, '
+                'ripetuto e reso musica. Per la composizione del sound '
+                'Katabasis, Alessio Mosti ha utilizzato dei campionamenti '
+                'sonori rilevati in Antartide relativi al collasso delle '
+                'piattaforme di ghiaccio, fenomeno ormai conosciuto come '
+                'calving: il materiale sonoro è stato rielaborato, manipolato '
+                'e inserito all’interno di una composizione elettroacustica di '
+                '8 minuti e 22 secondi.',
+ 'image_url': '//citynews-trentotoday.stgy.ovh/~media/horizontal-mid/61759525587755/museoaltogarda-2.jpg',
+ 'location_address': 'Piazza Cesare Battisti, 3/A',
+ 'location_name': 'Museo Alto Garda',
+ 'price': 'intero €5 – ridotto €4',
+ 'scraped_at': '2026-01-28T22:21:17.839290',
+ 'time_info': 'Orario non disponibile',
+ 'title': "Ultimate landscapes: l'illusione del ghiaccio al Museo Alto Garda "
+          'secondo Claudio Orlandi',
+ 'url': 'https://www.trentotoday.it/eventi/claudio-orlandi-ultimate-landscapes-riva.html',
+ 'uuid': '280af1e62ee16541'}
+[2026-01-28T22:21:20.419+0000] {docker.py:429} INFO - 2026-01-28 22:21:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/eventi/krampus-programma-sfilate-quando-dove.html> (referer: https://www.trentotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:21:20.535+0000] {docker.py:429} INFO - 2026-01-28 22:21:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.trentotoday.it/eventi/krampus-programma-sfilate-quando-dove.html>
+{'category': 'Fiere',
+ 'city': 'Trento',
+ 'content_hash': '66e65eb06e611e4d',
+ 'date_end': '2026-02-14',
+ 'date_start': '2025-10-31',
+ 'dates': [{'date': '2025-10-31', 'weekday': 'Venerdì'},
+           {'date': '2025-11-01', 'weekday': 'Sabato'},
+           {'date': '2025-11-02', 'weekday': 'Domenica'},
+           {'date': '2025-11-03', 'weekday': 'Lunedì'},
+           {'date': '2025-11-04', 'weekday': 'Martedì'},
+           {'date': '2025-11-05', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-06', 'weekday': 'Giovedì'},
+           {'date': '2025-11-07', 'weekday': 'Venerdì'},
+           {'date': '2025-11-08', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'weekday': 'Martedì'},
+           {'date': '2025-11-12', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'weekday': 'Martedì'},
+           {'date': '2025-11-19', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'weekday': 'Martedì'},
+           {'date': '2025-11-26', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'}],
+ 'description': 'Lunghe corna, visi feroci scolpiti nel legno, mantelli di '
+                'pelliccia e un frastuono di campanacci che riecheggia tra '
+                'vicoli e piazze: i Krampus stanno per tornare. Anche '
+                'quest’anno, tra fine novembre e dicembre, il Trentino Alto '
+                'Adige si trasforma nel palcoscenico naturale di una delle '
+                'tradizioni più affascinanti e suggestive delle Alpi. Le '
+                'sfilate, sempre più attese da residenti e turisti, colorano '
+                'l’inverno di mistero, folklore e un pizzico di sana paura '
+                'scenografica. La storia dei Krampus affonda le radici in '
+                'antichi culti pagani, legati ai riti dell’inverno e al '
+                'dualismo tra luce e oscurità. Creature metà uomo e metà '
+                'bestia, i Krampus incarnavano lo spirito selvatico che, '
+                'secondo le credenze popolari, accompagnava San Nicolò nella '
+                'notte del 5 dicembre: il Santo premiava i bambini buoni, '
+                'mentre il suo inquietante seguito ammoniva i più monelli. Con '
+                'maschere lignee finemente intagliate — celebri quelle delle '
+                'Valli di Tures e Aurina — e pelli di capra dalle quali a '
+                'volte si sprigiona ancora l’odore acre della tradizione, i '
+                'Krampus evocano il fascino primordiale delle montagne. '
+                'Catene, fruste e campanacci completano l’iconografia di un '
+                'rito antico che in Val di Fiemme si arricchisce di figure '
+                'diverse: dal diavolo fuligginoso con lingua mobile alle '
+                'maschere cornute dai tratti deformi. Una delle storie più '
+                'raccontate narra di un gruppo di ragazzi che, in tempi di '
+                'carestia, si travestiva da creature mostruose per spaventare '
+                'gli abitanti dei villaggi vicini e sottrarre loro le '
+                'provviste. Finché, un giorno, si accorsero che tra le loro '
+                'file si nascondeva un intruso: il diavolo in persona, '
+                'riconoscibile solo dagli zoccoli caprini. Fu l’intervento di '
+                'San Nicolò a scacciarlo con un esorcismo, dando origine alla '
+                'tradizione delle sfilate che ogni vigilia del Santo ricordano '
+                'quel confronto simbolico tra bene e male. Dal capoluogo alla '
+                'montagna, passando per borghi e mercatini natalizi, il '
+                'Trentino offre un fitto cartellone di eventi dedicati ai '
+                'Krampus. Ecco dove incontrarli: È in Alto Adige che la '
+                'tradizione raggiunge i suoi momenti più scenografici, con '
+                'alcune tra le sfilate più famose dell’arco alpino. Tra tutte '
+                'spicca Dobbiaco, la più antica del territorio, che ogni anno '
+                'richiama centinaia di Krampus e Perchten. Ecco gli '
+                'appuntamenti principali: Che si tratti dei gruppi più '
+                'scenografici dell’Alto Adige o delle sfilate intime e '
+                'suggestive dei borghi trentini, l’arrivo dei Krampus resta '
+                'uno degli eventi più attesi dell’inverno alpino. Una festa di '
+                'luci, suoni e radici culturali profonde, capace ogni anno di '
+                'incantare — e spaventare quel tanto che basta — adulti e '
+                'bambini. Il consiglio è uno solo: preparatevi a incontrarli. '
+                'E quando sentirete in lontananza il rintocco metallico dei '
+                'campanacci, saprete che stanno arrivando. Il clima natalizio '
+                'comincia a diffondersi e, come ogni anno, il territorio si '
+                'prepara ad accogliere visitatori e curiosi con atmosfere '
+                'suggestive, luci e profumi d’inverno. Tutte le iniziative '
+                'dedicate ai mercatini sono raccolte nella nostra rubrica '
+                'stagionale , per accompagnarvi lungo il periodo più magico '
+                'dell’anno.',
+ 'image_url': '//citynews-trentotoday.stgy.ovh/~media/horizontal-mid/50426121075007/krampus-7.jpeg',
+ 'location_address': None,
+ 'location_name': None,
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:21:17.838825',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Quando e dove compariranno: tutte le sfilate dei Krampus da non '
+          'perdere',
+ 'url': 'https://www.trentotoday.it/eventi/krampus-programma-sfilate-quando-dove.html',
+ 'uuid': 'eac21b12127f8598'}
+[2026-01-28T22:21:20.776+0000] {docker.py:429} INFO - 2026-01-28 22:21:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/eventi/passaggio-fiamma-olimpica-29-gennaio.html> (referer: https://www.trentotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:21:20.886+0000] {docker.py:429} INFO - 2026-01-28 22:21:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.trentotoday.it/eventi/passaggio-fiamma-olimpica-29-gennaio.html>
+{'category': 'Sport',
+ 'city': 'Trento',
+ 'content_hash': 'b40d8bb2b6d7f1df',
+ 'date_end': '2026-01-29',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29',
+            'time_end': '19:30',
+            'time_start': '17:00',
+            'weekday': 'Giovedì'}],
+ 'description': 'Trento si prepara ad accogliere uno dei momenti più '
+                'emozionanti del percorso verso i XXV Giochi Olimpici '
+                'Invernali di Milano Cortina 2026. Il 29 gennaio , infatti, la '
+                'Torcia Olimpica attraverserà le strade della città, portando '
+                'con sé un messaggio universale di speranza, inclusione e '
+                'unità. Il Viaggio della Fiamma Olimpica , è una bella '
+                'occasione per celebrare lo sport e dei suoi valori fondanti, '
+                "nonché per vivere la magia dell'Olimpismo, lungo un tragitto "
+                'che collegherà 110 province italiane dal 6 dicembre 2025 al 6 '
+                'febbraio 2026 . È con orgoglio ch e Coca-Cola , ancora una '
+                'volta, accompagna questo Viaggio, rinsaldando il suo legame '
+                'con la Fiamma Olimpica, risalente ai Giochi Olimpici di '
+                'Barcellona 1992. Da quella volta, Coca-Cola ha sponsorizzato '
+                'per ben sedici volte il Viaggio della Fiamma Olimpica, '
+                'portandola attraverso più di cinquanta Paesi. La partnership '
+                'tra il Movimento Olimpico e Coca-Cola è, però, precedente e '
+                'affonda le radici nel lontano 1928, ai Giochi Olimpici di '
+                'Amsterdam, quando il celebre brand si è posto a fianco degli '
+                'atleti: ciò lo ha reso il partner più duraturo nella storia '
+                'delle Olimpiadi. È iniziato così l’impegno costante nel '
+                'portare ovunque i valori dello sport, che è stato rinnovato '
+                'fino al 2032. Questo è anche l’obiettivo del Viaggio della '
+                "Fiamma Olimpica: 61 giorni lungo l'Italia durante i quali "
+                '10.001 tedofori diventeranno portatori di un messaggio '
+                'potente di speranza, inclusività e unità, mostrando come lo '
+                'sport sia in grado di ispirare il mondo. Coca-Cola sarà lì '
+                'per celebrare ogni tedoforo e per regalare un momento '
+                'memorabile e di gioia condivisa. Il Truck Coca-Cola sarà tra '
+                'gli elementi più iconici del Viaggio della Fiamma Olimpica di '
+                'Milano Cortina 2026 : un’esperienza itinerante di luce, suono '
+                'e movimento che accompagnerà i tedofori lungo il percorso , '
+                'accendendo l’entusiasmo del pubblico e trasformando ogni '
+                'tappa in un momento di festa condivisa. Il Main Truck si '
+                'ispira al design delle auto italiane vintage, simbolo di '
+                'stile, eleganza e artigianalità. Grazie a schermi LED '
+                'dinamici, installazioni luminose e a un sistema audio di '
+                'grande impatto, il Convoglio trasformerà ogni arrivo della '
+                'Fiamma Olimpica in una celebrazione collettiva, animata da '
+                'oltre 80 persone tra Brand Ambassador, DJ e MC che '
+                'coinvolgeranno il pubblico in un crescendo di musica, energia '
+                'e partecipazione. Coca-Cola accompagna Il Viaggio della '
+                'Fiamma Olimpica scegliendo tedofori capaci di raccontare '
+                'messaggi diversi: l’impegno sociale, lo sport, la musica e la '
+                'cultura pop; ciascuno di loro incarna un modo unico di vivere '
+                'e raccontare i valori olimpici, dimostrando come la passione, '
+                'la determinazione e l’inclusione possano ispirare e unire le '
+                'persone. Attraverso questa selezione eterogenea, Coca-Cola '
+                'celebra un viaggio di valori e di storie, che unisce persone, '
+                'passioni e territori, lasciando un’eredità di impatto sociale '
+                'e umano, fondata sulla collaborazione, sull’inclusione e '
+                'sulla condivisione. Coca-Cola è un vero e proprio simbolo di '
+                'condivisione e ha deciso di impegnarsi per far vivere '
+                'esperienze memorabili a chi prenderà parte all’evento '
+                'mettendo in risalto i suoi pilastri fondamentali: Iconicità, '
+                'Musica e Condivisione. Sorgerà così il Coca-Cola Village, un '
+                'epicentro di energia dove musica, cibo e intrattenimento si '
+                'fonderanno per regalare emozioni a tutta la comunità. Il '
+                'cuore della celebrazione della città sarà il Warm-Up Stage , '
+                'dove un DJ set coinvolgente e un mega karaoke trasformeranno '
+                'la piazza in una festa collettiva. In un angolo speciale sarà '
+                'possibile conoscere la storia del legame di Coca-Cola con il '
+                'Movimento Olimpico. Durante il Viaggio della Fiamma Olimpica '
+                'e nel Villaggio Coca-Cola, saranno distribuite mini-lattine '
+                'in alluminio di Coca-Cola Original e Coca-Cola Zero Zuccheri. '
+                'La raccolta sarà gestita in collaborazione con CiAl – '
+                'Consorzio Nazionale Imballaggi Alluminio , grazie a un mezzo '
+                'dedicato presente nel Convoglio e tramite presidi specifici '
+                'all’interno del Village nelle diverse città ospitanti . Nel '
+                'quadro dell’impegno sociale in vista dei Giochi Olimpici e '
+                'Paralimpici Invernali Milano Cortina 2026 , Coca-Cola '
+                'collaborerà nuovamente con Banco Alimentare : durante le City '
+                'Celebration sarà possibile gustare dell’ottima pizza '
+                'accompagnata da Coca-Cola e sostenere le attività '
+                'dell’organizzazione con una donazione . Lo sport rimane il '
+                'protagonista indiscusso, quindi non poteva mancare l’ Area '
+                'Sport - Powerade , uno spazio interattivo per provare '
+                "l'emozione degli sport Olimpici attraverso esperienze "
+                'coinvolgenti. Nella simulazione di hockey su ghiaccio si '
+                'potrà provare a segnare il goal più veloce, sfidando amici e '
+                'familiari. La VR Experience permetterà di immergersi negli '
+                'sport invernali grazie ai visori di realtà virtuale, '
+                'scegliendo tra discipline olimpiche e paralimpiche. Il '
+                "simulatore di sci offrirà, invece, l'adrenalina di una "
+                'discesa olimpica. Il Coca-Cola Village ha in serbo molte '
+                'altre sorprese e aprirà le porte per accogliere tutti coloro '
+                'che vorranno partecipare a questa giornata imperdibile. '
+                "Un'occasione per sentirsi parte di qualcosa di più grande, "
+                'per condividere emozioni e per portare in tutta Italia i '
+                'valori dello sport. Trento è pronta a scrivere la sua pagina '
+                'in questo Viaggio straordinario verso Milano Cortina 2026.',
+ 'image_url': '//citynews-trentotoday.stgy.ovh/~media/horizontal-mid/47276356415212/copertina.jpg',
+ 'location_address': None,
+ 'location_name': 'Piazza duomo',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:21:17.838210',
+ 'time_info': '17:00-19:30',
+ 'title': 'Musica, sport e condivisione per celebrare l’arrivo della Fiamma '
+          'Olimpica a Trento',
+ 'url': 'https://www.trentotoday.it/eventi/passaggio-fiamma-olimpica-29-gennaio.html',
+ 'uuid': '481b5b6a0b7234cd',
+ 'website': 'https://www.coca-cola.com/it/it/offerings/segui-la-magia-della-fiamma-olimpica-con-coca-cola'}
+[2026-01-28T22:21:20.887+0000] {docker.py:429} INFO - 2026-01-28 22:21:20 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-28T22:21:20.888+0000] {docker.py:429} INFO - 2026-01-28 22:21:20 [scrapy.extensions.feedexport] INFO: Stored json feed (3 items) in: /app/city_today/output/eventi_trento_questa-settimana_20260128_222115.json
+[2026-01-28T22:21:20.888+0000] {docker.py:429} INFO - 2026-01-28 22:21:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1922,
+ 'downloader/request_count': 5,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/response_bytes': 582666,
+ 'downloader/response_count': 5,
+ 'downloader/response_status_count/200': 5,
+ 'elapsed_time_seconds': 5.642231,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 28, 22, 21, 20, 886421, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 2955954,
+ 'httpcompression/response_count': 5,
+ 'item_scraped_count': 3,
+ 'items_per_city/Trento': 3,
+ 'items_per_minute': 36.0,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 3,
+ 'memusage/max': 69246976,
+ 'memusage/startup': 69246976,
+ 'request_depth_max': 1,
+ 'response_received_count': 5,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 4,
+ 'scheduler/dequeued/memory': 4,
+ 'scheduler/enqueued': 4,
+ 'scheduler/enqueued/memory': 4,
+ 'start_time': datetime.datetime(2026, 1, 28, 22, 21, 15, 244190, tzinfo=datetime.timezone.utc)}
+2026-01-28 22:21:20 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-28T22:21:20.910+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_trento_questa-settimana_20260128_222115.json
+[2026-01-28T22:21:21.274+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_trento.scrape_city_today, execution_date=20260128T221944, start_date=20260128T222114, end_date=20260128T222121
+[2026-01-28T22:21:21.327+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T22:21:21.408+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

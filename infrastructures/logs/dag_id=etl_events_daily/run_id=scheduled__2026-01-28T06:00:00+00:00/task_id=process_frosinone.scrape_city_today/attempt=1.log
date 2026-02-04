@@ -1,0 +1,2412 @@
+[2026-01-29T18:20:00.918+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_frosinone.scrape_city_today scheduled__2026-01-28T06:00:00+00:00 [queued]>
+[2026-01-29T18:20:00.934+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_frosinone.scrape_city_today scheduled__2026-01-28T06:00:00+00:00 [queued]>
+[2026-01-29T18:20:00.934+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-29T18:20:00.982+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_frosinone.scrape_city_today> on 2026-01-28 06:00:00+00:00
+[2026-01-29T18:20:01.003+0000] {standard_task_runner.py:60} INFO - Started process 210 to run task
+[2026-01-29T18:20:01.021+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_frosinone.scrape_city_today', 'scheduled__2026-01-28T06:00:00+00:00', '--job-id', '217', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmp9khzhsh1']
+[2026-01-29T18:20:01.027+0000] {standard_task_runner.py:88} INFO - Job 217: Subtask process_frosinone.scrape_city_today
+[2026-01-29T18:20:01.106+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-29T18:20:01.270+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_frosinone.scrape_city_today scheduled__2026-01-28T06:00:00+00:00 [running]> on host a9aac56aef94
+[2026-01-29T18:20:01.769+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_frosinone.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-28T06:00:00+00:00'
+[2026-01-29T18:20:01.918+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-29T18:20:01.933+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-29T18:20:03.970+0000] {docker.py:429} INFO - Avvio scraping per: Frosinone
+Periodo: questa-settimana
+[2026-01-29T18:20:03.976+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-29T18:20:03.986+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+[2026-01-29T18:20:03.986+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-29T18:20:03.989+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [events] INFO: Scraping città: Frosinone
+[2026-01-29T18:20:03.989+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [events] INFO: Periodo: questa-settimana (2026-01-29 - 2026-02-01)
+[2026-01-29T18:20:03.990+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-29T18:20:03.992+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-29T18:20:03.992+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-29 18:20:03 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-29T18:20:03.999+0000] {docker.py:429} INFO - 2026-01-29 18:20:03 [scrapy.extensions.telnet] INFO: Telnet Password: 70e294b02fc9904a
+[2026-01-29T18:20:04.311+0000] {docker.py:429} INFO - 2026-01-29 18:20:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2026-01-29 18:20:04 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-29T18:20:04.655+0000] {docker.py:429} INFO - 2026-01-29 18:20:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-29T18:20:04.675+0000] {docker.py:429} INFO - 2026-01-29 18:20:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-29T18:20:04.677+0000] {docker.py:429} INFO - 2026-01-29 18:20:04 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-29T18:20:04.677+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_frosinone_questa-settimana_20260129_182003.json
+[2026-01-29T18:20:04.681+0000] {docker.py:429} INFO - 2026-01-29 18:20:04 [scrapy.core.engine] INFO: Spider opened
+[2026-01-29T18:20:04.717+0000] {docker.py:429} INFO - 2026-01-29 18:20:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-29T18:20:04.717+0000] {docker.py:429} INFO - 2026-01-29 18:20:04 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-29T18:20:06.554+0000] {docker.py:429} INFO - 2026-01-29 18:20:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/robots.txt> (referer: None)
+[2026-01-29T18:20:09.139+0000] {docker.py:429} INFO - 2026-01-29 18:20:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/> (referer: None)
+[2026-01-29T18:20:12.800+0000] {docker.py:429} INFO - 2026-01-29 18:20:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/mostre/sora-contro-la-guerra-mostra-al-museo-della-valle-del-liri.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:12.924+0000] {docker.py:429} INFO - 2026-01-29 18:20:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/mostre/sora-contro-la-guerra-mostra-al-museo-della-valle-del-liri.html>
+{'category': 'Mostre',
+ 'city': 'Frosinone',
+ 'content_hash': '0fdec3b54e0c53e4',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-24',
+ 'dates': [{'date': '2026-01-24',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-01-25',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-26',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Lunedì'},
+           {'date': '2026-01-30',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-01-31',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-01',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-02',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Lunedì'},
+           {'date': '2026-02-06',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-02-07',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-08',
+            'time_end': '13:00',
+            'time_start': '9:00',
+            'weekday': 'Domenica'}],
+ 'description': 'Dal 24 gennaio all’8 febbraio 2026 il Museo della Media Valle '
+                'del Liri di Sora ospiterà la mostra collettiva “CONTRO LA '
+                'GUERRA”, un progetto artistico e culturale di forte valore '
+                'civile che coinvolge 44 artisti chiamati a confrontarsi, '
+                'attraverso il linguaggio visivo, con uno dei temi più '
+                'drammatici e attuali del nostro tempo. Lo rendono noto il '
+                'Sindaco Luca Di Stefano ed il Consigliere Comunale delegato '
+                'alle Politiche Giovanili Francesco Monorchio. L’iniziativa si '
+                'inserisce nel quadro del progetto “Giovani Visioni”, promosso '
+                'dalle Politiche Giovanili del Comune di Sora, volto a '
+                'sostenere percorsi creativi contemporanei, favorire '
+                'l’espressione dei talenti del territorio e stimolare una '
+                'partecipazione attiva delle nuove generazioni alla vita '
+                'culturale della città. La mostra è curata da Fabio Landolfi e '
+                'realizzata in collaborazione con l’Associazione “Officina '
+                'della Cultura”, realtà culturale attiva nella diffusione di '
+                'esperienze artistiche condivise. Il progetto espositivo nasce '
+                'da un esercizio di sintesi concettuale: a ciascun artista è '
+                'stata affidata una parola legata all’esperienza del conflitto '
+                '– dal dolore alla speranza, dalla distruzione alla resistenza '
+                '– da tradurre in un’opera grafica o pittorica. Il risultato è '
+                'un mosaico di visioni differenti ma unite da una comune '
+                'urgenza etica. Tutte le opere, realizzate nel formato 50x50 '
+                'cm, compongono un percorso visivo rigoroso e ritmato che '
+                'invita il visitatore a un confronto diretto e personale con '
+                'il significato profondo di ogni parola rappresentata. Con '
+                'questa iniziativa, il Museo della Media Valle del Liri si '
+                'conferma spazio vivo di dialogo tra memoria storica, identità '
+                'territoriale e sensibilità contemporanea, offrendo alla '
+                'comunità un’occasione di riflessione condivisa su temi di '
+                'rilevanza globale. Il Comune di Sora desidera esprimere un '
+                'sentito ringraziamento a Fabio Landolfi per la qualità del '
+                'progetto curatoriale, per l’impegno profuso e per la capacità '
+                'di aver saputo costruire un percorso artistico capace di '
+                'unire sensibilità diverse attorno a un tema così complesso e '
+                'necessario. INFO MOSTRA Titolo: Contro la guerra Dove: Museo '
+                'della Media Valle del Liri – Sora (FR) Inaugurazione: sabato '
+                '24 gennaio 2026, ore 18.00 Periodo: dal 24 gennaio all’8 '
+                'febbraio 2026 Orari di apertura: Lunedì–venerdì: 9.00–13.00 '
+                'Sabato: 9.00–13.00 e 15.00–19.00 Domenica 25 gennaio: '
+                '10.30–12.30 Domenica 1 febbraio: 17.00–19.00 Domenica 8 '
+                'febbraio: 10.30–12.30 e 17.00–19.00',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/33326869916110/mostra-landolfi.jpg',
+ 'location_address': None,
+ 'location_name': 'Museo della Media Valle del Liri',
+ 'price': 'Prezzo non disponibile',
+ 'schedule': 'Lunedì–venerdì: 9.00–13.00 Sabato: 9.00–13.00 e 15.00–19.00 '
+             'Domenica 25 gennaio: 10.30–12.30 Domenica 1 febbraio: '
+             '17.00–19.00 Domenica 8 febbraio: 10.30–12.30 e 17.00–19.00',
+ 'scraped_at': '2026-01-29T18:20:09.255128',
+ 'time_info': '9:00-13:00',
+ 'title': 'Sora, "Contro la guerra", mostra al Museo della Valle del Liri',
+ 'url': 'https://www.frosinonetoday.it/eventi/mostre/sora-contro-la-guerra-mostra-al-museo-della-valle-del-liri.html',
+ 'uuid': '3f73a8499178bebb',
+ 'weekdays': 'Lunedì, Venerdì, Sabato, Domenica'}
+[2026-01-29T18:20:15.514+0000] {docker.py:429} INFO - 2026-01-29 18:20:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/frosinone-libri-in-accademia-2025-2026-i-nomi-e-i-volti-della-storia-dell-arte-e-non-solo.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:15.637+0000] {docker.py:429} INFO - 2026-01-29 18:20:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/frosinone-libri-in-accademia-2025-2026-i-nomi-e-i-volti-della-storia-dell-arte-e-non-solo.html>
+{'category': 'Incontri',
+ 'city': 'Frosinone',
+ 'content_hash': '2f779eb0aad76e8a',
+ 'date_end': '2026-05-20',
+ 'date_start': '2025-10-28',
+ 'dates': [{'date': '2025-10-28', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-10-29',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-10-30', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-10-31', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-01', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-02', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-03', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-04', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-05',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-06', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-07', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-08', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-12',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-19',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-26',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-03',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-10',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-17',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-24',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-31',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-07',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-14',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-21',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-25',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-03-04',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-03-11',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-03-18',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-03-25',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-04-01',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-04-08',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'time_start': '17:
+[2026-01-29T18:20:15.638+0000] {docker.py:429} INFO - 00', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-04-15',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-04-19', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-04-20', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-04-21', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-04-22',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-23', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-04-24', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-04-25', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-04-26', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-04-27', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-04-28', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-04-29',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-30', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-05-01', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-05-02', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-05-03', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-05-04', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-05-05', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-05-06',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-05-07', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-05-08', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-05-09', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-05-10', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-05-11', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-05-12', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-05-13',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-05-14', 'time_start': '17:00', 'weekday': 'Giovedì'},
+           {'date': '2026-05-15', 'time_start': '17:00', 'weekday': 'Venerdì'},
+           {'date': '2026-05-16', 'time_start': '17:00', 'weekday': 'Sabato'},
+           {'date': '2026-05-17', 'time_start': '17:00', 'weekday': 'Domenica'},
+           {'date': '2026-05-18', 'time_start': '17:00', 'weekday': 'Lunedì'},
+           {'date': '2026-05-19', 'time_start': '17:00', 'weekday': 'Martedì'},
+           {'date': '2026-05-20',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'}],
+ 'description': 'Prende il via una nuova stagione della rassegna culturale '
+                '“Libri in Accademia” che, giunta alla sua VI edizione, si '
+                'propone come uno spazio di dialogo e approfondimento intorno '
+                'a testi di rilievo nel campo della storia dell’arte, delle '
+                'arti visive, e dei linguaggi contemporanei. La rassegna è '
+                'curata da Loredana Finicelli e Maria Stella Bottai e '
+                'realizzata in collaborazione fra le sedi dell’Accademia di '
+                'Belle Arti di Frosinone e di Macerata. Tutti gli incontri si '
+                'svolgeranno online, tramite piattaforma Microsoft Teams: i '
+                'link di accesso saranno pubblicati sul sito dell’Accademia di '
+                'Frosinone alcuni giorni prima di ciascun appuntamento. La '
+                'formula è pensata non solo per studenti e docenti ma anche '
+                'per studiosi, ricercatori e più in generale per chiunque '
+                'desideri ampliare le proprie conoscenze nell’ambito delle '
+                'arti. Agli studenti interessati sarà riconosciuto 1 CFA '
+                '(seguendo almeno il 75% degli incontri). La rassegna offre '
+                'un’opportunità di aggiornamento e confronto per gli studenti '
+                'delle Accademie e per i docenti, promuovendo una riflessione '
+                'ampia che tocca tanto la storia dell’arte quanto i linguaggi '
+                'emergenti (videoarte, fotografia, intelligenza artificiale) e '
+                'i temi interdisciplinari legati alle arti visive e al '
+                'patrimonio culturale. Inoltre, la sinergia fra le due sedi '
+                'accademiche consolida un dialogo territoriale e nazionale, '
+                'contribuendo alla vitalità culturale e alla condivisione '
+                'accademica. Programma 2025-2026 28 ottobre, ore 17:00 – Verrà '
+                'trattato il volume Rewind Italia: Early Video Art in Italy. I '
+                'primi anni della videoarte in Italia (John Libbey & Co, '
+                'Bloomington, Indiana 2015), con la partecipazione della '
+                'prof.ssa Laura Leuzzi (Università di Glasgow) e del '
+                'collezionista/editor Stephen Partridge. 12 novembre, ore '
+                '17:00 – Restituzione. Dialogo su resti, eredità, gratitudini '
+                '(Magonza 2025) con le studiose Maria Letizia Proietti e '
+                'Silvia Manca. 26 novembre, ore 17:00 – In dialogo con Desirée '
+                'Vacirca e Nicolette Mandarano il volume Io, mostro. '
+                'conforme/difforme. misure di realtà nella pratica espositiva '
+                '(Mimesis 2024). 3 dicembre, ore 17:00 – Con Maddalena Carli: '
+                'Vedere il fascismo. Arte e politica nelle esposizioni del '
+                'regime (1928-1942) (Carocci 2021). 14 gennaio, ore 17:00 – '
+                'Con Natalia Rea, Desirée Vacirca e Loredana Rea: Photography, '
+                'Architecture, and the Modern Italian Landscape (Routledge '
+                '2024). 11 marzo, ore 17:00 – Con Valentina Tanni: '
+                'Conversazioni con la macchina. Il dialogo dell’arte con le '
+                'intelligenze artificiali (Tlon 2025). 22 aprile, ore 17:00 – '
+                'Con Sara Garaventa: Jacopa dei sette soli. La ricca amica di '
+                'Francesco (Città Nuova 2022) di Lucia Tancredi. 20 maggio, '
+                'ore 17:00 – Con Agnese Sferrazza e Maria Grazia Gargiulo: Il '
+                'tesoro di Boscoreale. Il catalogo dei pezzi. La storia della '
+                'misteriosa donna custode del tesoro (Il Quaderno Edizioni '
+                '2025) di Lucia Oliva e Adriano Conato. Modalità di '
+                'partecipazione Gli incontri sono accessibili gratuitamente '
+                'online tramite Teams, previa registrazione o tramite il link '
+                'pubblicato sul sito dell’Accademia di Belle Arti di '
+                'Frosinone. Il calendario integrale e gli eventuali '
+                'aggiornamenti sono disponibili al seguente link: '
+                'https://www.accademiabellearti.fr.it/news/libri-in-accademia-2025-2026/',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/56002038319080/accademia-belle-arti-2.jpg',
+ 'location_address': None,
+ 'location_name': 'evento online',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.254631',
+ 'time_info': '17.00',
+ 'title': 'Frosinone, “Libri in Accademia 2025-2026 – I nomi e i volti della '
+          'storia dell’arte … e non solo”',
+ 'url': 'https://www.frosinonetoday.it/eventi/frosinone-libri-in-accademia-2025-2026-i-nomi-e-i-volti-della-storia-dell-arte-e-non-solo.html',
+ 'uuid': '5434931222cb7193'}
+[2026-01-29T18:20:17.487+0000] {docker.py:429} INFO - 2026-01-29 18:20:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/alvito-e-frosinone-torna-la-rassegna-il-teatro-dei-piccoli.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:17.609+0000] {docker.py:429} INFO - 2026-01-29 18:20:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/alvito-e-frosinone-torna-la-rassegna-il-teatro-dei-piccoli.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': '12ebca347a0deef9',
+ 'date_end': '2026-03-15',
+ 'date_start': '2025-12-14',
+ 'dates': [{'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'}],
+ 'description': 'Al via la 10* edizione della storica Rassegna di Teatro '
+                'Ragazzi IL TEATRO DEI PICCOLI, al Teatro Comunale di Alvito e '
+                'al Teatro Vittoria di Frosinone. L’amatissima Rassegna, '
+                'totalmente dedicata al teatro per l’infanzia e le famiglie, '
+                'organizzata da Errare Persona con la direzione artista di '
+                'Damiana Leone, dal 2014 porta in Ciociaria le più importanti '
+                'Compagnie di Teatro Ragazzi che operano in Italia e gli '
+                'spettacoli più premiati del settore. Per questa edizione '
+                'speciale saranno previsti anche premi e votazioni da parte '
+                'del pubblico di piccoli spettatori, che seguiranno i 10 '
+                'appuntamenti disseminati tra Frosinone e Alvito. Si parte '
+                'direttamente questo fine settimana, sabato 13 dicembre ad '
+                'Alvito h 17.30 e domenica 14 dicembre al Teatro Vittoria di '
+                'Frosinone h 17.30, con uno storico spettacolo di Errare '
+                'Persona, TOPALIA Un grande piccolo MOUsicall, spettacolo '
+                "adatto a un pubblico dai 4 anni in su', con musica e video "
+                'mapping, testo e regia Damiana Leone, con Damiana Leone e '
+                'Anna Mingarelli, video mapping di Giuseppe Treppiedi, grafica '
+                'di Noemi Bisegna, foto di Gioia Onorati. Questa la trama: due '
+                'topoline, fuggono dalle fogne per avere il loro riscatto '
+                'nella vita e approdano in un teatro. Quando improvvisamente '
+                'il misterioso signore degli umani vuole rispedirle nello '
+                'mondo di sotto, loro chiedono di avere una possibilità. Quale '
+                'occasione migliore per esibirsi e dimostrare di essere '
+                'all’altezza della situazione, come una qualsiasi artista '
+                "umana, cantando, ballando e dimostrando di essere all'altezza "
+                'del mondo di sopra. Il Musical diventerà un vero MOUSicall '
+                'perché tutti i brani avranno come tema, il mondo dei '
+                'topolini, un mondo parallelo a quello degli umani, ma '
+                'altrettanto, vitale, un mondo diverso ma pur sempre un mondo '
+                'pieno di vita. Si, perché il vero scopo delle nostre eroine è '
+                'quello di essere accettate tra gli umani ed ottenere la '
+                '“cittadinanza umana”. Tra canzoni, balli e gag, si inducono i '
+                'bambini ad una riflessione sul diverso e alla accettazione '
+                'dell’altro..... e tante risate! (Parola di Topine!) Prossimi '
+                'appuntamenti della Rassegna saranno LA SIRENETTA di Errare '
+                'Persona (10 gennaio Alvito e 11 gennaio a Frosinone). La più '
+                'piccola delle figlie del Re del Mare, compiuti 16 anni per la '
+                'prima volta sale sulla superficie delle acque e vede il mondo '
+                'degli umani. Eppure la sua attenzione è colpita da un veliero '
+                'con dentro un principe. Scoppia la tempesta e la sirenetta '
+                'riesce a salvare il principe riportandolo a riva. Ma tornata '
+                'nel regno del mare decide non riesce a dimenticare il giovane '
+                'umano e così decide di farsi aiutare dalla strega del mare a '
+                'diventare una ragazza umana per poterlo amare. Riuscirà la '
+                'piccola sirenetta a farsi riconoscere e amare dal principe? '
+                'La Musica dal Vivo accompagna la narrazione e il Teatro delle '
+                'ombre in un suggestivo viaggio attraverso la Fiaba di '
+                'Andersen . Testo e Regia Damiana Leone; Con Damiana Leone e '
+                'Anna Mingarelli e al pianoforte Giordano Cedrone. IL '
+                'PESCIOLINO D’ORO della Compagnia Portacenere ( il 31 gennaio '
+                'ad Alvito e il 1 febbraio a Frosinone). Il 21 febbraio a '
+                'Frosinone la programmazione continua con CAPPUCCETTO '
+                'KAMISHIBAI della storica Compagnia Teatrop, il 28 febbraio '
+                'sempre con CAPPUCCETO ROSSO ma della Compagnia Teatro '
+                'dell’Acquario di Cosenza, già vincitrice del Premio UBU '
+                'speciale, per chiudere a Frosinone il 15 marzo con il Circo '
+                'Contemporaneo di Stefano Brino URACULM, in ritorno dai FRINGE '
+                'Festival del mondo. Tutti gli appuntamenti sono alle 17.30 '
+                'con apertura biglietteria alle 16.30 e ingresso gratuito fino '
+                'a 3 anni. IL TEATRO DEI PICCOLI è sostenuto da ATCL, Circuito '
+                'Multidisciplinare della Regione Lazio, con il Patrocinio di '
+                'Comune di Frosinone e Comune di Alvito. Per info e '
+                'prenotazioni: Email: officinacasadarte@gmail.com Cell-392 '
+                '1494568 FB E IG: Compagnia Errare Persona',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/17796308290446/manifesto_teatrodeipiccoli.jpg',
+ 'location_address': None,
+ 'location_name': 'Alvito e Frosinone',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.254193',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Alvito e Frosinone, torna la rassegna "Il teatro dei piccoli"',
+ 'url': 'https://www.frosinonetoday.it/eventi/alvito-e-frosinone-torna-la-rassegna-il-teatro-dei-piccoli.html',
+ 'uuid': '39b3722ba2116a8c'}
+[2026-01-29T18:20:25.098+0000] {docker.py:429} INFO - 2026-01-29 18:20:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/veroli-festival-della-filosofia-winter-edition.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:25.209+0000] {docker.py:429} INFO - 2026-01-29 18:20:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/veroli-festival-della-filosofia-winter-edition.html>
+{'category': 'Incontri',
+ 'city': 'Frosinone',
+ 'content_hash': 'ff1460f5fb1aaddc',
+ 'date_end': '2026-02-03',
+ 'date_start': '2026-01-15',
+ 'dates': [{'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'}],
+ 'description': 'Il Festival della Filosofia di Veroli inaugura la Winter '
+                'Edition, un’anteprima che apre il percorso verso la VII '
+                'Edizione 2026, dedicata al tema “Intelligenza Artificiale. '
+                'Rischi, opportunità, conoscenza, creatività”. Un ciclo di tre '
+                'incontri che, tra gennaio e marzo, avvia un confronto '
+                'pubblico su una delle trasformazioni più profonde del nostro '
+                'tempo, l’intelligenza artificiale. Opportunità e rischi si '
+                'intrecciano, imponendo nuove domande e nuove responsabilità '
+                'alle quali la filosofia è chiamata a rispondere. Il primo '
+                'appuntamento è in programma il 15 gennaio alle ore 18.00 '
+                'presso la Sala Trulli, dove Mario De Caro presenterà il '
+                'volume “Intelligenze. Etica e politica dell’IA”, offrendo una '
+                'riflessione critica sulle implicazioni morali e politiche '
+                'dell’intelligenza artificiale Si continuerà il 3 febbraio, '
+                'con un incontro alle ore 11.00 presso il Liceo Sulpicio, '
+                'dedicato al rapporto tra tecnologie emergenti e cura della '
+                'persona. A dialogo su “AI e medicina, il futuro della dignità '
+                'umana” saranno il direttore artistico del Festival Fabrizio '
+                'Vona e Fabrizia Abbate. La Winter Edition si concluderà il 5 '
+                'marzo alle ore 18.00, nuovamente nella Sala Trulli, con '
+                'l’intervento di Maurizio Ferraris che presenterà il suo libro '
+                '“Comunismo digitale” attraverso un’analisi sulle declinazioni '
+                'contemporanee di equità e libertà. “Questa anteprima '
+                'invernale – dichiara il sindaco Germano Caperna – testimonia '
+                'un percorso culturale ormai solido, che si sviluppa lungo '
+                'tutto l’arco dell’anno e continua a investire nel pensiero '
+                'critico come strumento per comprendere il presente e '
+                'immaginare il futuro”. “La Winter Edition conferma il '
+                'Festival della Filosofia come progetto culturale permanente '
+                'della città.- come sottolinea la vicesindaca e assessora alla '
+                'cultura Francesca Cerquozzi - il Festival non è legato a una '
+                'stagione, ma a un’idea di città che fa del pensiero uno '
+                'spazio di confronto permanente”. “Per la prima volta – spiega '
+                'il direttore artistico Fabrizio Vona – il Festival inaugura '
+                'una sezione invernale per iniziare a riflettere sul tema '
+                'della prossima edizione. L’Intelligenza Artificiale è una '
+                'rivoluzione senza precedenti, che presenta grandi opportunità '
+                'ma anche seri rischi. Discuterne insieme significa rafforzare '
+                'il pensiero critico e una consapevolezza condivisa”.',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/13029992647690/festival-filosofia-3.jpg',
+ 'location_address': None,
+ 'location_name': None,
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:20:09.253674',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Veroli, Festival della Filosofia winter edition',
+ 'url': 'https://www.frosinonetoday.it/eventi/veroli-festival-della-filosofia-winter-edition.html',
+ 'uuid': 'e88767deca995a51'}
+[2026-01-29T18:20:34.870+0000] {docker.py:429} INFO - 2026-01-29 18:20:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/teatro/fiuggi-quarta-edizione-della-rassegna-teatrale-denominata-stracci-canovacci.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:34.991+0000] {docker.py:429} INFO - 2026-01-29 18:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/teatro/fiuggi-quarta-edizione-della-rassegna-teatrale-denominata-stracci-canovacci.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': 'a66c40da60dae639',
+ 'date_end': '2026-05-10',
+ 'date_start': '2025-11-30',
+ 'dates': [{'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'weekday': 'Martedì'},
+           {'date': '2026-04-15', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'weekday': 'Sabato'},
+           {'date': '2026-04-19', 'weekday': 'Domenica'},
+           {'date': '2026-04-20', 'weekday': 'Lunedì'},
+           {'date': '2026-04-21', 'weekday': 'Martedì'},
+           {'date': '2026-04-22', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-23', 'weekday': 'Giovedì'},
+           {'date': '2026-04-24', 'weekday': 'Venerdì'},
+           {'date': '2026-04-25', 'weekday': 'Sabato'},
+           {'date': '2026-04-26', 'weekday': 'Domenica'},
+           {'date': '2026-04-27', 'weekday': 'Lunedì'},
+           {'date': '2026-04-28', 'weekday': 'Martedì'},
+           {'date': '2026-04-29', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-30', 'weekday': 'Giovedì'},
+           {'date': '2026-05-01', 'weekday': 'Venerdì'},
+           {'date': '2026-05-02', 'weekday': 'Sabato'},
+           {'date': '2026-05-03', 'weekday': 'Domenica'},
+           {'date': '2026-05-04', 'weekday': 'Lunedì'},
+           {'date': '2026-05-05', 'weekday': 'Martedì'},
+           {'date': '2026-05-06', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-07', 'weekday': 'Giovedì'},
+           {'date': '2026-05-08', 'weekday': 'Venerdì'},
+           {'date': '2026-05-09', 'weekday': 'Sabato'},
+           {'date': '2026-05-10', 'weekday': 'Domenica'}],
+ 'description': 'Al via la quarta edizione della rassegna teatrale denominata: '
+                '“Stracci & Canovacci”. Tale proposta culturale, ideata e '
+                'realizzata da questa compagnia teatrale, oltre a significare '
+                'una continuità mai venuta meno in questi anni, si pone come '
+                'un tentativo, ormai consolidato, di proporre nuove idee '
+                'teatrali. La rassegna, infatti, persegue i suoi scopi che '
+                'contemplano una costante presenza dell’arte scenica nel '
+                'territorio attraverso la valorizzazione di nuove proposte '
+                'culturali. Anche quest’anno si svolgerà all’interno del '
+                'Teatro Comunale di Fiuggi, arricchendo la già importante '
+                'programmazione della struttura teatrale della città, di '
+                'spettacoli maggiormente sensibili a linguaggi scenici '
+                'innovativi. Tutti i quattro spettacoli proposti dalla '
+                'compagnia TDO sono in prima assoluta mentre sono due le '
+                'compagnie ospitate in questa edizione. Inoltre '
+                'Stracci&Canovacci 2025/26 propone iniziative collaterali '
+                'come: “Confetti musicali”; “Fiocchetto Lilla” e la prima '
+                'edizione de la “Festa della Scienza e del Teatro '
+                'Scientifico”. Questa nuova edizione, che inizia nel mese di '
+                'novembre 2025 e termina nel mese di maggio 2026, si propone '
+                'quindi con nuove ed importanti iniziative così come '
+                'specificato nelle indicazioni a seguire. Programma 30 '
+                'NOVEMBRE ORE 18,30 TEATRO COMUNALE DI FIUGGI TRASSMISSIONI, '
+                'PLAYLIST DI UNA SONDA UMANA – di Sara Carapellotti. Prima '
+                'assoluta “Trasmissioni” nasce dall’osservazione delle sonde '
+                'Voyager 1 e 2, lanciate negli anni ’70 per esplorare lo '
+                'spazio profondo e trasportare con sé il Golden Record: una '
+                'raccolta di suoni e musiche della Terra destinata a chiunque '
+                'potesse incontrarla. Lo spettacolo prende la voce di una di '
+                'queste sonde come punto di vista, trasformandola in una '
+                'metafora dell’essere umano: curioso, fragile, solitario, ma '
+                'capace di lasciare tracce che vanno oltre il tempo. '
+                'Attraverso parole, immagini e musica, si esplora il desiderio '
+                'di comunicare, la solitudine e la forza delle emozioni, '
+                'spesso più potenti delle parole stesse. Un testo scritto e '
+                'interpretato da Sara Carapellotti che intreccia diversi stili '
+                'narrativi, recitazione, teatro danza, video proiezioni. Un '
+                'testo di pura poesia che non mancherà di coinvolgere il '
+                'pubblico sul senso dell’esistenza. Debutto assoluto nel '
+                'Teatro Comunale di Fiuggi all’interno della rassegna: '
+                '“Stracci&Canovacci 25/26” a cura della compagnia TDO. 18 '
+                'DICEMBRE ore 10,00 TEATRO COMUNALE DI FIUGGI FESTA DELLA '
+                'SCIENZA E DEL TEATRO SCIENTIFICO – ANTEPRIMA In previsione '
+                'della prima “Festa della Scienza e del Teatro Scientifico” in '
+                'calendario il 9 e il 10 maggio 2026 si prevede una mattinata '
+                'dedicata al mondo scolastico di promozione dell’iniziativa di '
+                'maggio. 27 DICEMBRE ore 21,00 e 28 DICEMBRE ore 17,00 TEATRO '
+                'COMUNALE DI FIUGGI IL MIO AMORE È NATO A MALAGA – di Luca '
+                'Simonelli. Prima assoluta. Tradizionale appuntamento con la '
+                'commedia vernacolare durante le festività natalizie. Una '
+                'nuova ed originale proposta teatrale della compagnia TDO che '
+                'non mancherà di divertire una platea eterogenea. La vicenda '
+                'narra le vicissitudini di una famiglia locale alle prese con '
+                'la festa di fine anno ma soprattutto con le complicate '
+                'dinamiche che regolano la nostra quotidianità. Testo in '
+                'vernacolo scritto e diretto da Luca Simonelli, con Pino De '
+                'Carolis,Piero Frattarelli, Bernadette Incocciati, Nicole '
+                'Pirazzi, Francesca Orsatti, Gianlorenzo Ciminelli, Gianmarco '
+                'De Santis, Lorenzo Sileri, Alessio Talone, Lorenzo Sileri. '
+                'Debutto assoluto nel Teatro Comunale di Fiuggi all’interno '
+                'della rassegna: “Stracci&Canovacci 25/26”. 4 GENNAIO ORE '
+[2026-01-29T18:20:34.992+0000] {docker.py:429} INFO - '18,00 TEATRO COMUNALE DI FIUGGI COWBOYS #2 di Sam Shepard Con '
+                'Rachele Spinozzi e Francesco Terranegra lo spettacolo '
+                'racconta una storia fresca, interpretata da due giovani '
+                'protagonisti della scena italiana. Quando una scatola '
+                'misteriosa invade lo spazio scenico, due figure indefinite, '
+                'desiderose di scoprirne il contenuto, svelano il suo interno '
+                'venendone irrimediabilmente contagiate, fino a trasformarsi '
+                'nell’entità più tipica dell’immaginario americano: il Cowboy. '
+                'A 60 anni dalla scrittura di Cowboys#2 appare evidente che '
+                'quella che Shepard contestava era la società del consumismo '
+                'sfrenato, dello spreco, del benessere ostentato. Chet e Stu '
+                'ci mostrano quella che potrebbe verosimilmente accadere '
+                'all’intera umanità, quasi essi fossero gli ultimi '
+                'sopravvissuti sul pianeta. Cowboys #2 è molto vicino a '
+                'Beckett, da cui Shepard prende l’essenzialità dei dialoghi e '
+                'il contesto da teatro dell’assurdo in cui installa questi due '
+                'personaggi. Lo spettacolo presenta un carattere interattivo '
+                'in quanto in alcuni punti si è scelto di coinvolgere '
+                'direttamente il pubblico al fine di provocare uno stupore e '
+                'un ritorno all’infanzia del tutto inaspettati. 8 FEBBRAIO '
+                '2026 ore 18 TEATRO COMUNALE DI FIUGGI ATTENTI AL LUPO omaggio '
+                'a Stefano Benni. Prima assoluta A pochi mesi dalla sua '
+                'scomparsa la rassegna intende omaggiare Stefano Benni. È '
+                'stato autore di vari romanzi e antologie di racconti di '
+                'successo, tra i quali Bar Sport, Elianto, Terra!, La '
+                'compagnia dei celestini, Baol, Comici spaventati guerrieri, '
+                'Saltatempo, Margherita Dolcevita, Spiriti, Il bar sotto il '
+                'mare e Pane e tempesta. I suoi libri sono stati tradotti in '
+                'più di 30 lingue. Giornalista e autore televisivo, fu '
+                '"battutista" di Beppe Grillo agli esordi. La sua opera '
+                'contiene una forte satira della società italiana degli ultimi '
+                'decenni. Il suo stile di scrittura fa ampio uso di giochi di '
+                'parole, neologismi e parodie di altri stili letterari. Benni '
+                "è morto il 9 settembre 2025 all'età di 78 anni, dopo una "
+                "lunga e invalidante malattia, che gli aveva anche tolto l'uso "
+                'della parola. Uno spettacolo teatrale che ripercorre la sua '
+                'poesia, tra umorismo e ilarità, cercando di riconsegnare al '
+                'pubblico un affabulatore mai banale e narratore di una '
+                'società caotica a cavallo tra due secoli. FUORI RASSEGNA Da '
+                'questa edizione la rassegna presenta alcune iniziative “FUORI '
+                'RASSEGNA”, legate a particolari occasioni. 15 MARZO 2026 ore '
+                '18,00 TEATRO COMUNALE Per la Giornata nazionale del '
+                'FIOCCHETTO LILLA, dedicata ai disturbi della nutrizione e '
+                "dell'alimentazione, purtroppo estremamente diffusi anche "
+                'nelle fasce più giovani della popolazione la compagnia TDO '
+                'presenta un testo originale dal titolo: “SONO STATA UNA BIMBA '
+                'BUONA” scritto e interpretato da Giulia Talone per la regia '
+                'di Sara Carapellotti. Uno spietato diario personale in cui si '
+                'racconta la vicenda di una giovanissima ragazza alle prese '
+                'con problematiche legate alla crescita e all’alimentazione. 5 '
+                'APRILE ORE 18,00 TEATRO COMUNALE DI FIUGGI MOLTO RUMORE PER '
+                'NULLA di William Shakespeare - nuova versione Molto rumore '
+                'per nulla (titolo originale in inglese: Much Ado About '
+                'Nothing) è una commedia teatrale scritta da William '
+                "Shakespeare tra l'estate del 1598 e la primavera del 1599, "
+                'ambientata a Messina. Considerata a lungo commedia romantica '
+                'per i temi amorosi e per la struttura ricca di elementi '
+                "farseschi e giocosi, l'opera rientra a pieno titolo nel "
+                "novero delle tragicommedie, nelle quali l'elemento comico si "
+                'fonde a quello tragico e propriamente drammatico, qui '
+                'rappresentato dalla finta morte di una delle protagoniste, la '
+                'bella Ero, e dal complotto ordito da Don Juan per tentare di '
+                'sviare la storia dal lieto fine cui tuttavia volge. Commedia '
+                'breve e brillante, è stata fortunata sul versante della '
+                'rappresentazione teatrale e a seguire in adattamenti '
+                'cinematografici, restando nei secoli una delle commedie di '
+                "Shakespeare più conosciute e portate sulle scene. L'efficacia "
+                'della macchina teatrale è stata riconosciuta come '
+                'tecnicamente magistrale, anche nei suoi aspetti secondari e '
+                'nei particolari apparentemente insignificanti. La locuzione '
+                '"molto rumore per nulla" è entrata nel gergo comune, ben al '
+                "di fuori della sfera anglofona, come frase d'autore per "
+                "indicare un'esagerazione o un'assurdità riferita ad un fatto "
+                'del tutto trascurabile o inconsistente. La rassegna presenta '
+                'quindi un classico del teatro mondiale in una nuova versione, '
+                'a partire dall’originale traduzione e adattamento. In scena '
+                'gli attori della compagnia TDO. 26 APRILE ore 18,00 e ORE '
+                '19,00 SALA BOMBONIERA (evento destinato a 40 spettatori per '
+                'replica) THE OF FUCK MOMENT di Chris Thorpe traduzione di '
+                'Jacopo Gassman In scena: Maria Alberta Navello e Luchino '
+                'Giordana Regia: Nicoletta Robello Chi non ha mai vissuto quel '
+                'singolare momento in cui diventa chiaro che non ci sia più '
+                'nulla che possa rimediare a quanto si è appena detto o fatto? '
+                'Imbarazzo, confusione, voglia di scomparire, in un attimo '
+                'capiamo che da quel momento in poi nulla sarà più come prima. '
+                "Sintetizzando diciamo di avere fatto una ' cazzata ' e "
+                "definiamo come ' momento del ' cazzo ' quell' attimo che "
+                "prescinde dalla nostra volontà e dal nostro controllo. 'The "
+                "oh fuck moment' è un game interattivo per 25 spettatori che, "
+                "riuniti intorno ad un tavolo da una coppia di addetti alle ' "
+                "risorse umane ', partecipano ad un incontro particolare e "
+                "intimo nel corso del quale ridiscutere il concerto di ' "
+                "errore ' , con l' obiettivo di riconoscere che «sbagliare» è "
+                'la più pura espressione della natura umana. Lo lavoro è '
+                'affidato interamente alla performance degli attori ed è '
+                'pensato per essere realizzato in spazi non convenzionali. '
+                'Nessuna scenografia né luci di scena. Solo un tavolo con 27 '
+                'sedie intorno al quale gli spettatori saranno invitati a '
+                'sedersi, tazze da tè, qualche foglio e cartellina, il '
+                'modellino di un aereo. Il dispositivo è firmato di Chris '
+                'Thorpe, scrittore e attore inglese, ad oggi una delle voci '
+                'più originali del teatro britannico. CONFETTI MUSICALI LE '
+                'PROPOSTE MUSICALI DELLA RASSEGNA Congiuntamente a quanto '
+                'finora indicato la TDO quest’anno propone 4 appuntamenti con '
+                'la musica da eseguirsi presso la sala bomboniera (altrimenti '
+                'detta “Confetto”) del Teatro Comunale di Fiuggi. Si tratta di '
+                'concerti di pianoforte con voce cantante o recitante. I '
+                'concerti si terranno una volta al mese la domenica alle ore '
+                '18,00 e spazieranno dalla musica classica a quella più '
+                'popolare. Con Elena Domasheva e Bernadette Incocciati. Sabato '
+                '3 gennaio ore 18,00 BACH Domenica 15 febbraio ore 18,00 '
+                'CHOPIN Domenica 1 marzo ore 18,00 RACHMANINOV Domenica 19 '
+                'aprile ore 18,00 TRADIZIONE ITALIA 9 e 10 MAGGIO 2026 FIUGGI '
+                'FESTA DELLA SCIENZA E DEL TEATRO SCIENTIFICO Novità assoluta '
+                'della rassegna la prima FESTA DELLA SCIENZA destinata ad una '
+                'platea eterogena ma con particolare interesse rivolta agli '
+                'istituti Scolastici con indirizzi scientifici. La festa, '
+                'articolata in due giorni, si terrà all’interno del Teatro '
+                'Comunale e prevede incontri tematici alla presenza di '
+                'scienziati, presentazione delle nuove frontiere scientifiche, '
+                'installazione del planetario presso la Sala Bomboniera, '
+                'spettacoli e altri eventi collaterali in via di definizione.',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/44240553254451/fiuggi-teatro-comunale-interno.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Comunale',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.253228',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Fiuggi, quarta edizione della rassegna teatrale denominata: '
+          '“Stracci & Canovacci”',
+ 'url': 'https://www.frosinonetoday.it/eventi/teatro/fiuggi-quarta-edizione-della-rassegna-teatrale-denominata-stracci-canovacci.html',
+ 'uuid': '775fe84c9b8ef180'}
+[2026-01-29T18:20:37.725+0000] {docker.py:429} INFO - 2026-01-29 18:20:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/teatro/frosinone-la-stagione-teatrale-del-teatro-vittoria.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:37.865+0000] {docker.py:429} INFO - 2026-01-29 18:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/teatro/frosinone-la-stagione-teatrale-del-teatro-vittoria.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': '53c2189a905f3e60',
+ 'date_end': '2026-05-09',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'weekday': 'Martedì'},
+           {'date': '2026-04-15', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'weekday': 'Sabato'},
+           {'date': '2026-04-19', 'weekday': 'Domenica'},
+           {'date': '2026-04-20', 'weekday': 'Lunedì'},
+           {'date': '2026-04-21', 'weekday': 'Martedì'},
+           {'date': '2026-04-22', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-23', 'weekday': 'Giovedì'},
+           {'date': '2026-04-24', 'weekday': 'Venerdì'},
+           {'date': '2026-04-25', 'weekday': 'Sabato'},
+           {'date': '2026-04-26', 'weekday': 'Domenica'},
+           {'date': '2026-04-27', 'weekday': 'Lunedì'},
+           {'date': '2026-04-28', 'weekday': 'Martedì'},
+           {'date': '2026-04-29', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-30', 'weekday': 'Giovedì'},
+           {'date': '2026-05-01', 'weekday': 'Venerdì'},
+           {'date': '2026-05-02', 'weekday': 'Sabato'},
+           {'date': '2026-05-03', 'weekday': 'Domenica'},
+           {'date': '2026-05-04', 'weekday': 'Lunedì'},
+           {'date': '2026-05-05', 'weekday': 'Martedì'},
+           {'date': '2026-05-06', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-07', 'weekday': 'Giovedì'},
+           {'date': '2026-05-08', 'weekday': 'Venerdì'},
+           {'date': '2026-05-09', 'weekday': 'Sabato'}],
+ 'description': 'Il Comune di Frosinone e ATCL , circuito multidisciplinare '
+                'del Lazio sostenuto da MIC – Ministero della Cultura e '
+                'Regione Lazio , propongono, per la stagione teatrale '
+                '2025-2026 del Teatro Vittoria, otto spettacoli in '
+                'abbonamento. “Il sipario si alza, anche quest’anno, sulla '
+                'stagione di prosa che si terrà nuovamente negli spazi del '
+                'rinnovato teatro comunale Vittoria, per farci vivere tutta la '
+                'magia e le emozioni dell’arte scenica – ha dichiarato il '
+                'Sindaco di Frosinone Riccardo Mastrangeli - Tanti gli '
+                'appuntamenti in cartellone da gennaio a maggio con alcuni '
+                'degli artisti più celebri e apprezzati del panorama '
+                'nazionale, che condurranno gli spettatori in un viaggio alla '
+                'scoperta di pièces che faranno riflettere, ridere e '
+                'sorridere. Dal 2013, del resto, la programmazione allestita '
+                'dall’Amministrazione comunale ha portato nel nostro Capoluogo '
+                'gli interpreti e i registi italiani più importanti, '
+                'suscitando una partecipazione calorosa e appassionata da '
+                'parte degli amanti dello spettacolo dal vivo provenienti da '
+                'tutta la Regione. Il Comune di Frosinone crede, fermamente, '
+                'che l’investimento sulla cultura crei valore aggiunto, come '
+                'moltiplicatore di energie sane per l’intera società e di '
+                'promozione del territorio, e costituisca un elemento di '
+                'identità, di crescita e di coesione sociale da promuovere '
+                'soprattutto tra i giovani e nelle famiglie”. “Anche '
+                'quest’anno, con il prezioso supporto dell’Atcl, abbiamo '
+                'costruito una stagione che unisce tradizione e '
+                'contemporaneità, proponendo titoli capaci di parlare a '
+                'pubblici diversi: grandi classici, produzioni di impegno '
+                'civile, monologhi intensi, spettacoli capaci di parlare alla '
+                'società di oggi. L’obiettivo è offrire un cartellone che '
+                'rispecchi la ricchezza del teatro italiano e la pluralità dei '
+                'suoi linguaggi, senza rinunciare alla qualità artistica – ha '
+                'dichiarato l’assessore alla cultura Simona Geralico - Il '
+                'Teatro Vittoria continua ad essere un luogo vivo, aperto, '
+                'capace di accogliere e di avvicinare soprattutto i più '
+                'giovani al teatro, uno dei pilastri della nostra identità '
+                'culturale, capace di farci emozionare e sognare, oltre che di '
+                'rafforzare il legame con la comunità”. “La nuova stagione del '
+                'Teatro Vittoria rappresenta un valore aggiunto per il nostro '
+                'centro storico, che continua a rafforzarsi come luogo '
+                'dinamico e accogliente per cittadini e visitatori – ha '
+                'dichiarato l’assessore al centro storico Rossella Testa - '
+                'Eventi di questa fattura contribuiscono a rendere l’area viva '
+                'durante tutto l’anno, favorendo la presenza di persone e '
+                'sostenendo le attività che operano quotidianamente nella '
+                'parte alta della città. Stiamo lavorando per migliorare '
+                'sempre di più i servizi e la fruibilità degli spazi, così da '
+                'trasformare ogni appuntamento in un’esperienza piacevole e '
+                'completa per chi sceglie di trascorrere il proprio tempo nel '
+                'cuore della città. Invito tutti a partecipare alla nuova, '
+                'coinvolgente stagione teatrale, un’ulteriore occasione per '
+                'vivere e condividere emozioni nel nostro centro storico”. '
+                '“Per la stagione 2025/2026 il Comune di Frosinone e ATCL '
+                'presentano un cartellone pensato per coinvolgere, sorprendere '
+                'e offrire al pubblico una vasta gamma di emozioni. Abbiamo '
+                'immaginato il Teatro Vittoria come un crocevia di storie, un '
+                'luogo in cui le idee prendono forma e dialogano con la città. '
+                'Quest’anno la scena si popola di artisti affermati e di '
+                'talenti in crescita, di linguaggi che si contaminano e si '
+                'rinnovano, di narrazioni che parlano al cuore e '
+                'all’immaginazione. Ogni spettacolo è un invito ad '
+                'attraversare mondi differenti, a lasciarsi interrogare e a '
+                'condividere delle esperienze irripetibili. Al pubblico '
+                'rivolgiamo il nostro invito più sincero: il Teatro Vittoria '
+                'vi aspetta!” hanno dichiarato l’amministratore delegato di '
+                'ATCL , Luca Fornari e la direttrice artistica di ATCL , '
+                'Isabella Di Cola . Ad aprire la stagione, sabato 17 gennaio '
+                'alle ore 21.00 , A.M.O.R.I. & A.M.O.R.E. di David Conati , '
+                'con Matilde Brandi e Francesco Branchetti e con Isabella '
+                'Giannone , regia di Francesco Branchetti . L’amore, sì, '
+                'certo, ma non sempre l’amore platonico, idilliaco, poetico, '
+                'illusorio. No, qui si parla di quel groviglio complesso di '
+                'sentimenti e situazioni che ci fanno perdere la testa, ma che '
+                'in sostanza si potrebbe ricondurre a una serie di reazioni '
+                'chimiche determinate dai ferormoni. Coloro che si sono presi '
+                'la briga di analizzare scientificamente la “costruzione di un '
+                'amore” hanno stabilito che questo percorso ha cinque fasi. In '
+                'questo percorso alla scoperta delle ardimentose manovre '
+                'dell’amore, in modo ironico, assisteremo ad una serie di '
+                'quadri che ripercorrono tutte le epoche arrivando ai giorni '
+                'nostri. Un viaggio tra le schermaglie amorose di epoche e '
+                'stili teatrali diverse che ci farà immedesimare '
+                "nell'evoluzione del gioco delle relazioni nel quale ci "
+                'possiamo riconoscere tutti. Sabato 31 gennaio alle ore 21.00 '
+                ', Il Berretto a Sonagli , di Luigi Pirandello , con Irma '
+                'Ciaramella , Ivano Falco , Gino Auriuso , Marina Zanchi , '
+                'Ottavia Orticello , Gioele Rotini , regia di Gino Auriuso . '
+                '‘A birritta cu ‘i ciancianeddi è il titolo originale '
+                'dell’opera che Luigi Pirandello scrisse nel 1916 in dialetto '
+                'catanese e che poi trasformò in italiano nel 1918 con il nome '
+                'de Il berretto a sonagli e che riprende le tematiche delle '
+                'due novelle La verità ( 1912 ) e Certi obblighi (1912). '
+                'Questo testo, considerato uno dei capolavori del grande '
+                'drammaturgo siciliano, tratta la vicenda di una donna, '
+                'Beatrice Fiorica, la quale viene a sapere che il marito la '
+                'tradisce con la moglie di Ciampa, scrivano del cavalier '
+                'Fiorica, e che decide di farsi aiutare dal delegato Spanò per '
+                'sorprendere in flagrante i due amanti. Così Beatrice Fiorica, '
+                'offesa, decide di allontanare Ciampa mandandolo a Palermo per '
+                'sbrigare certe commissioni per far scoppiare lo scandalo poco '
+                'dopo; ma la soddisfazione di Beatrice ha breve durata poiché '
+                'dal verbale risultano solo elementi negativi e non vi è '
+                'alcuna prova di adulterio. Nonostante tutto, Ciampa, che si '
+                'ipotizza fosse a conoscenza della relazione tra i due, in '
+                'città viene tacciato come “becco” e dunque non gli resterebbe '
+                'altro da fare che uccidere i due amanti; ma la soluzione che '
+                'egli propone è un’altra: che la signora Fiorica si faccia '
+                'credere pazza e venga internata. Così cerca di convincerla, '
+                'giacché solo in questo modo il suo onore e quello del marito '
+                'potranno essere salvi. Venerdì 20 febbraio alle ore 21.00 , '
+                'Genitori vs Figli – Don’t worry, stay Chill , con Federico '
+                'Perrotta e Valentina Olla e con Maria Teresa Pascale , Miloud '
+                'Mourad Benamara , Sofia Graiani e Luca La Ginestra , scritto '
+                'e diretto da Antonio Pisu . Con un deciso “io quitto” il '
+                'figlio diciannovenne, stanco di sentirsi incompreso, decide '
+                'di andarsene di casa. La famiglia, disperata, si lancerà in '
+                'una frenetica corsa per farlo restare. In una serie di '
+                'divertenti e rocamboleschi eventi scopriranno che l’amore '
+                'autentico nasce dall’accettare le proprie fragilità e andare '
+                'oltre le apparenze. Domenica 1° marzo alle ore 18.00 , Made '
+                'in Italy , testo di David Norisco, regia di Francesco '
+                'Branchetti , con Barbara De Rossi , Simona Bettoni , Ilaria '
+                'Giorgi , Samanta Chieffallo . Se il Gran Tour del 700/800 '
+                'portava nella nostra penisola turbe di poeti, musicisti, '
+                'scrittori e nobili dell’Europa, presi da una fervida emozione '
+                'culturale, vogliamo oggi percorrere con curiosa '
+                'determinazione alcune regioni della nostra Italia con un volo '
+                'planare all’insegna di una curiosa rivisitazione per '
+                'approfondire e non dimenticare luoghi, monumenti e musica che '
+                'sono pure il bagaglio che ci ha fatto crescere. Se si corre a '
+                'Dubai, a New York o Calcutta per stordirci nel rumore, nelle '
+                'visioni di grattacieli svettanti, torniamo un attimo tra noi '
+                'e il viaggio non avrà mai fine perché conoscere è volare '
+                'oltre la soglia fisica consentita. Sabato 14 marzo alle ore '
+                '21.00 , Piccole Donne non devono morire di e con Francesca '
+                'Pica e Maria Scorza , regia di Francesca Pica e Maria Scorza '
+                '. Sud Italia. Oggi. Due sorelle, Margherita e Pina, sono in '
+                'un cimitero per la riesumazione della sorella Bettina. '
+                'Margherita è la maggiore, felicemente sposata con Giovanni, '
+                'completamente assorbita dalla vita familiare. Pina, la '
+                'secondogenita, scrittrice, ha pubblicato un romanzo di '
+                'successo, ma le opere successive non sono all’altezza. Le due '
+                'sorelle attendono Emilia, la piccola di casa, che è in '
+                'ritardo. Il cimitero, luogo dell’attesa, diventa un '
+                'contenitore di ricordi, confessioni, discussioni, verità. '
+                'Ispirato ai romanzi Piccole donne e Piccole donne crescono di '
+                'Louisa May Alcott, è un viaggio a ritroso delle piccole '
+                'donne, ora quarantenni, che ricordando, riflettono su cosa le '
+                'ha fatte diventare le donne che sono, su cosa hanno ancora '
+                'bisogno di dire e di fare per sentirsi libere. Domenica 29 '
+                'marzo alle ore 18.00 , Brigitte Bardot – Scandalo e '
+                'Solitudine di P. Bellucci , F. Lombardi e F. Catalano, con '
+                'Patrizia Bellucci, regia e musica di Fabio Lombardi . Un '
+                "soffuso moltiplicarsi di veli s'apre sulla camera della diva "
+                "che in Europa ha più d'ogni altra segnato la rivoluzione "
+                "sessuale. Che più d'ogni altra, anche attraverso errori e "
+                "ingenuità, ha spalancato la porta dell'emancipazione "
+                'femminile. Superata la soglia della maturità e della '
+                'coscienza, allontanatasi dai riflettori ma sempre pronta a '
+                'far ascoltare le proprie opinioni, circondata dagli amati '
+                'animali, BB ci svela emozioni ed errori, vittorie e '
+                'sconfitte, delusioni e amori, passioni deflagranti e dolori '
+                'repressi, e ci racconta come il successo, molto spesso, sia '
+                'sinonimo di solitudine. Questo monologo è un modo per far i '
+                'conti coi cambiamenti del costume in Europa, ma anche con '
+                "l'idea che ognuno di noi ha di libertà. Sabato 18 aprile alle "
+                'ore 21.00 , El Fùtbol , testo di Gianvito Pulzone , regia di '
+                'Francesco Branchetti , con Ettore Bassi , Gianvito Pulzone , '
+                'Oscar Bellomo. Uno spettacolo dedicato allo spirito del '
+                'calcio. Ettore Bassi interpreta un uomo dalla passione '
+                'calcistica più pura, ed evoca alcuni tra i più grandi '
+                'calciatori della storia del calcio mondiale, uomini che hanno '
+                'fatto sognare e hanno dato coraggio a migliaia di persone con '
+                'la loro generosità, il loro coraggio. Oggi vengono i brividi '
+                'a ricordare le magie delle loro imprese: racconti, ricordi di '
+                'ieri e di oggi, rievocano il mondo che gira intorno al calcio '
+                'e che è una metafora a volte dolorosa e a volte esaltante '
+                'della nostra vita e della nostra società. Una storia dai '
+                'tratti epici, piena di poesia, in cui l’attenta regia di '
+                'Francesco Branchetti restituisce al testo la capacità di '
+                'evocare lo spirito del calcio, lo spirito del gioco in sé '
+                'attraverso atmosfere fascinose, colori, luci, suoni. Infine, '
+                'a chiudere la stagione teatrale 2025-2026 del Teatro '
+                'Vittoria, sabato 9 maggio alle ore 21.00 , Meglio di Niente , '
+                'di e con Daniele Graziani e Lucio Dal Maso , regia di Daniele '
+                'Graziani e Lucio Dal Maso . Dopo Anche meno tornano I Carta '
+                'Bianca con uno spettacolo che incarna alla perfezione il '
+                'momento storico che stiamo vivendo: Meglio di niente . In '
+                'questo lavoro i due portano sul palco un viaggio dentro le '
+                'piccole e grandi mancanze della vita quotidiana, '
+                'trasformandole in carburante per la risata. Viviamo in un '
+                'mondo in cui siamo sempre alla ricerca di qualcosa: più '
+                'tempo, più denaro, più successo, più attenzioni. Eppure, '
+                'spesso ci ritroviamo con molto meno di quanto desideriamo. È '
+                'proprio in quel divario, tra l’aspettativa e la realtà, che i '
+                'Carta Bianca inseriscono la loro comicità: leggera, '
+                'spiazzante, a tratti surreale, ma sempre diretta e '
+                'universale. Lo spettacolo si sviluppa come un susseguirsi di '
+                'quadri comici, in cui i due si divertono a ribaltare '
+                'situazioni comuni: l’attesa infinita al telefono con la '
+                'segreteria automatica, le promesse mai mantenute di politici '
+                'e pubblicità, gli imbarazzi dei rapporti umani, persino le '
+                '“tragedie” teatrali e quelle storiche. Ogni mancanza, ogni '
+                'piccola frustrazione diventa il punto di partenza per una '
+                'gag, un dialogo paradossale, un crescendo di comicità. Con il '
+                'loro stile fatto di tempi perfetti, improvvisazioni calibrate '
+                'e un continuo gioco di botta e risposta, i Carta Bianca '
+                'riescono a trasformare la precarietà e le contraddizioni del '
+                'presente in un grande motore di divertimento. Perché, se è '
+                'vero che spesso non abbiamo tutto quello che vorremmo, è '
+                'altrettanto vero che una risata al momento giusto vale più di '
+                '“molto”. Meglio di niente è quindi uno spettacolo che non '
+                'racconta solo la mancanza, ma celebra l’arte '
+                'dell’accontentarsi e la capacità di trovare comicità anche '
+                'nel vuoto. Un invito a ridere delle nostre insoddisfazioni '
+                'quotidiane, a scoprire che persino i momenti “minori” hanno '
+                'un valore, e che alla fine, come dicono i due protagonisti, '
+                'se dalla vita non si può avere tutto, va bene lo stesso, '
+                'perché ridere è sempre meglio di niente. ABBONAMENTI E '
+                'BIGLIETTI Abbonamento platea Tariffa unica € 110 Abbonamento '
+                'galleria Tariffa unica € 80 Vendita abbonamenti: sabato 13 '
+                'dicembre ore 15.00/17.00 mercoledì 17 dicembre ore '
+                '17.30/19.00 sabato 20 dicembre ore 15.00/17.00 domenica 21 '
+                'dicembre ore 10.00/12.00 martedì 23 dicembre ore 17.30/19.00 '
+                'mercoledì 7 gennaio ore 17.30/19.00 venerdì 9 gennaio ore '
+                '17.30/19.00 Biglietti platea Biglietto intero € 18 Biglietto '
+                'ridotto € 15 Biglietti galleria Biglietto intero € 15 '
+                'Biglietto ridotto € 13 Biglietti online : dal 12 gennaio su '
+                'ciaotickets Biglietti presso il botteghino : il giorno '
+                "dell'evento a partire da due ore prima dell'inizio dello "
+                'spettacolo TEATRO VITTORIA Via Giovanni Amendola, 3 03100 '
+                'Frosinone FR biglietterie@paloreventi.it 348/1813715',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/43309939479798/stagione-teatro-vittoria-1.jpg',
+ 'location_address': 'Via Giovanni Amendola, 3',
+ 'location_name': 'Teatro Vittoria',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.252755',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Frosinone, la stagione teatrale del Teatro Vittoria',
+ 'url': 'https://www.frosinonetoday.it/eventi/teatro/frosinone-la-stagione-teatrale-del-teatro-vittoria.html',
+ 'uuid': '5bbaea79737171ad'}
+[2026-01-29T18:20:41.711+0000] {docker.py:429} INFO - 2026-01-29 18:20:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/anagni-uno-splendido-gennaio-a-casa-barnekow.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:41.828+0000] {docker.py:429} INFO - 2026-01-29 18:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/anagni-uno-splendido-gennaio-a-casa-barnekow.html>
+{'category': 'Incontri',
+ 'city': 'Frosinone',
+ 'content_hash': '9e44d1ad85d06599',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Dopo il concerto del Trio Tiento il 10 gennaio, continuano '
+                'gli appuntamento per un gennaio indimenticabile a Casa '
+                'Barnekow ad Anagni. Sabato 17 gennaio , alle ore 17:00, il '
+                'prof. Tommaso di Carpegna Falconieri, docente di Storia '
+                'Medievale presso l’Università di Urbino, presenta il suo '
+                'ultimo libro “La storia al contrario”, edito dalla Salerno '
+                'Editrice: un insolito viaggio in quattro movimenti in cui si '
+                'intrecciano leggende, ipotesi audaci e racconti visionari su '
+                'personaggi fuori posto, fuori tempo, fuori norma. Dialoga con '
+                'l’autore il prof. Gioacchino Giammaria. Scrive di questo '
+                'testo il prof. Gioacchino Giammaria, che sabato dialogherà '
+                'con l\'autore: "Oltre alla storia di uomini, paesi, stati e '
+                'tante altre realtà la storia si scrive anche di entità mai '
+                'esistite ma che qualcuno ritiene che da qualche parte della '
+                'terra esse abbiano avuto vita. Non solo si sono scritte '
+                'storie su storie di queste inesistenze ma qualcuno ha pensato '
+                'di dare spazio e menzionare anche altre false inesistenze '
+                'come i fantasmi di cui si danno vita e si ricostruiscono '
+                'ambiti e storie di vita. Ma si è fatto di più, si sono '
+                'inventati nani, persone con un piedone, con unico grande '
+                'orecchio e con altre malformazioni elevate a tratto '
+                'peculiare. Di questo e tanto altro tratta l’ultimo libro di '
+                'Tommaso di Carpegna Falconieri, professore di storia '
+                'medioevale all’Università di Urbino Carlo Bo e presidente '
+                'della Società romana di storia patria, La storia al '
+                'contrario, Salerno editrice. Pagine che si leggono con molto '
+                'interesse perché cambia parametri, intreccia ipotesi a volte '
+                '“sconvolgenti” le verità acclarate ed accettate. Una sfida '
+                'che fa balenare la possibilità di una storia al contrario" '
+                'Sabato 24 gennaio, alle ore 19:00, Algeciras Flamenco e '
+                'Incontro all’Arte portano in scena un suggestivo reading '
+                'teatrale, “Il pozzo e il pendolo”, tratto dai Racconti del '
+                'terrore di E. A. Poe. Con Manfredi Gelmetti (voce recitante) '
+                'e Paolo Monaldi (percussioni ed effetti sonori). Da Venerdì '
+                '30 gennaio a domenica 1 febbraio , dalle 17:00, si apre la '
+                'mostra del pittore e performer Alessandro Zaccheo “Filtrando '
+                'la realtà: il vernissage sarà arricchito da una performance '
+                'poetica dell’artista stesso. In Mostra le opere di Alessandro '
+                'Zaccheo, poeta, attore, pittore Alle ore 17:30 performance '
+                'poetica I SOGNI SMARRITI Alessandro Zaccheo classe 66 nato a '
+                "Merano figlio di un ufficiale dell'Esercito e di un "
+                "insegnante di inglese trascorre l'adolescenza e l'infanzia "
+                'tra Nord Europa e Sud America con un bagaglio culturale di '
+                'cinque lingue. Tappa fondamentale Brasilia dove sorge la sua '
+                'attività artistica in qualità di poeta musicista e frequenta '
+                "il biennio del corso di teatro dell'università nazionale. "
+                'Approdato in Italia nel 1985 ad oggi ha al suo attivo più di '
+                "500 poesie e più di 200 tele in acrilico. L'artista svolge "
+                'come principale attività la recitazione cinematografica. La '
+                'frase chiave che contraddistingue la sua arte e la sua '
+                'persona è: "C\'è sempre il motivo per un sorriso e tanti '
+                'auguri a chi è innamorato della vita" Per avere informazioni '
+                'o prenotare questi eventi è possibile contattare, anche '
+                'tramite WhatsApp, il numero 328.83.50.889',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/30434725035106/gennaio-casa-barnekow.jpg',
+ 'location_address': None,
+ 'location_name': 'Casa Barnekow',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.252273',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Anagni, uno splendido gennaio a Casa Barnekow',
+ 'url': 'https://www.frosinonetoday.it/eventi/anagni-uno-splendido-gennaio-a-casa-barnekow.html',
+ 'uuid': '66c10f185a1b025e'}
+[2026-01-29T18:20:44.418+0000] {docker.py:429} INFO - 2026-01-29 18:20:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/cultura/teatro-manzoni-cassino-cartellone-2025-2026.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:44.532+0000] {docker.py:429} INFO - 2026-01-29 18:20:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/cultura/teatro-manzoni-cassino-cartellone-2025-2026.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': '1cc5007e8671e620',
+ 'date_end': '2026-03-23',
+ 'date_start': '2025-10-23',
+ 'dates': [{'date': '2025-10-23', 'weekday': 'Giovedì'},
+           {'date': '2025-10-24', 'weekday': 'Venerdì'},
+           {'date': '2025-10-25', 'weekday': 'Sabato'},
+           {'date': '2025-10-26', 'weekday': 'Domenica'},
+           {'date': '2025-10-27', 'weekday': 'Lunedì'},
+           {'date': '2025-10-28', 'weekday': 'Martedì'},
+           {'date': '2025-10-29', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-31', 'weekday': 'Venerdì'},
+           {'date': '2025-11-01', 'weekday': 'Sabato'},
+           {'date': '2025-11-02', 'weekday': 'Domenica'},
+           {'date': '2025-11-03', 'weekday': 'Lunedì'},
+           {'date': '2025-11-04', 'weekday': 'Martedì'},
+           {'date': '2025-11-05', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-06', 'weekday': 'Giovedì'},
+           {'date': '2025-11-07', 'weekday': 'Venerdì'},
+           {'date': '2025-11-08', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'weekday': 'Martedì'},
+           {'date': '2025-11-12', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'weekday': 'Martedì'},
+           {'date': '2025-11-19', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'weekday': 'Martedì'},
+           {'date': '2025-11-26', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'}],
+ 'description': 'Radio Cassino, direzione artistica del Teatro Manzoni '
+                'Cassino, il Comune di Cassino e ATCL, circuito '
+                'multidisciplinare regionale sostenuto da MIC – Ministero '
+                'della Cultura e Regione Lazio, hanno presentato una stagione '
+                'di altissimo livello con otto spettacoli in abbonamento che '
+                'si muovono tra grandi classici, nuova drammaturgia, commedia, '
+                'con in scena importanti interpreti del nostro panorama '
+                'teatrale. Un cartellone che saprà appassionare e coinvolgere '
+                'il pubblico in serate sempre sorprendenti. Giunto alla sua '
+                'quinta stagione consecutiva, il Teatro Manzoni di Cassino ha '
+                'dimostrato di amare le sfide con un sinergico lavoro di '
+                'squadra proteso a consolidare gli ottimi risultati delle '
+                'stagioni precedenti. Il cartellone 2025-2026, reso pubblico '
+                'come tradizione nella Sala Restagno del Comune, ha già '
+                'raccolto consenso unanime per la selezione degli otto '
+                'spettacoli, tutti sapientemente calibrati per un pubblico '
+                'variegato. Si preannunciano, dunque, un sold out dietro '
+                'l’altro come già nello scorso anno, che ha fatto registrare '
+                'il tutto esaurito anche in occasione degli special event. La '
+                'direzione artistica di Marco Pagano, unita al meticoloso '
+                'impegno dell’Editore Enzo Pagano, con la preziosa '
+                "collaborazione dell'Associazione Teatrale Comuni del Lazio, "
+                'Circuito multidisciplinare del Lazio sostenuto da MIC , '
+                'produce non solo ottimi risultati, ma crea un senso di '
+                'appartenenza sempre più radicato con un motore culturale '
+                'interregionale. "Un grande lavoro realizzato insieme alle '
+                'istituzioni pubbliche, ai partner commerciali e al nostro '
+                'pubblico, che si caratterizza per sensibilità, fiducia e '
+                'partecipazione sempre più viva - sottolinea il direttore '
+                'artistico Marco Pagano. Il nostro obiettivo? Farvi uscire dal '
+                'teatro ogni volta con una nuova consapevolezza, con una nuova '
+                'emozione addosso che allarghi la vostra prospettiva e vi '
+                'lasci qualcosa in più, serata dopo serata. Quest’anno Il filo '
+                'che lega tutti gli spettacoli è chiaro e molto potente: '
+                'l’umanità. Quella che ci commuove, ci fa ridere, ci sorprende '
+                'e ci costringe a guardare dentro". Come ogni anno, il '
+                "supervisor del Manzoni, l'avvocato Beniamino Papa, ha messo "
+                'in rilievo i risultati raggiunti e la crescita costante del '
+                "Teatro di Cassino: “Il cartellone è la punta dell'iceberg di "
+                'una proposta molto più ampia e di livello. Nel 2025 gli '
+                'spettacoli minimi, previsti da contratto, erano già stati '
+                'raggiunti nel mese di marzo”. Di questo ‘creare la cultura '
+                "del teatro’ è giustamente orgogliosa l'amministrazione "
+                'comunale, che ha creduto fin dal primo momento in una '
+                'gestione caratterizzata da impegno e grande professionalità. '
+                'E che oggi, attraverso il Sindaco Enzo Salera, la presidente '
+                "del consiglio Barbara Di Rollo, l'Assessora alla Cultura "
+                'Gabriella Vacca e l’assessora alla pubblica istruzione Maria '
+                'Concetta Tamburrini, fa quadrato intorno al Teatro Manzoni '
+                'unitamente ad altre due fondamentali realtà territoriali, '
+                "l'Unicas ed il main sponsor Banca Popolare del Cassinate. "
+                'Senza tralasciare un altro, fondamentale pilastro: il '
+                'tribunale di Cassino. Il suo presidente, Dott. Lucio '
+                'Aschettino, ha voluto testimoniare come il ‘valore teatro’ '
+                'sia un fattore di protezione per una società sana. Il '
+                'Magnifico Rettore UNICAS, prof. Marco Dell’Isola, ha messo in '
+                'luce non solo le indubbie capacità imprenditoriali '
+                'dell’editore Enzo Pagano, ma anche la valenza del Cut di '
+                'Giorgio Mennoia, che tanto si spende per il teatro e per la '
+                'comunità. Di esempio di “eccellente collaborazione tra '
+                'pubblico e privato” ha parlato il sindaco Salera, così come '
+                'il presidente della BPC, il prof. Formisano, ha rinnovato non '
+                'solo la fiducia dell’ente che rappresenta, ma ha evidenziato '
+                'quella “cultura dello stare insieme che è un grande '
+                'patrimonio e che, attraverso forze giovani, darà vita ad una '
+                'prosecuzione virtuosa per portare avanti ciò che di buono si '
+                'è realizzato”. Non sono mancati alcuni spunti per rafforzare '
+                'il già solido percorso di spettacoli e iniziative per le '
+                'scuole, attraverso le quali l’assessora Tamburrini riafferma '
+                'una crescita sostanziale: “Non si è più obbligati ad andare '
+                'fuori città e i bambini vanno a teatro a piedi per vivere '
+                'un’esperienza formativa. Non a caso, le scuole già dal mese '
+                'di maggio chiedono di conoscere il programma loro destinato '
+                'dal Manzoni”. Dall’assessora Vacca è giunta una riflessione '
+                'sul valore del teatro e anche del cinema, “che permettono ai '
+                "giovani di allontanarsi dai cellulari per vivere un'emozione "
+                'autentica”. Tutta una serie di interventi, dunque, che hanno '
+                'sottolineato la valenza di un obiettivo raggiunto grazie ad '
+                'una vera unità di intenti. E quando ha preso la parola la '
+                'direttrice artistica dell’ATCL, Isabella di Cola, non poteva '
+                'che mettere in evidenza proprio questo aspetto, parlando di '
+                '“un’alleanza per formare il pubblico e rafforzare il rapporto '
+                'di fiducia che si sta via via consolidando. L’ATCL - prosegue '
+                'la direttrice Di Cola - è dunque lieta di presentare la nuova '
+                'stagione teatrale 2025-2026, che conferma la volontà, '
+                'condivisa con l’amministrazione comunale e con la gestione '
+                'del Teatro curata in maniera egregia da Enzo e Marco Pagano, '
+                'di rendere sempre più il Teatro Manzoni un punto di '
+                'riferimento culturale attraente e accogliente per la città e '
+                'il territorio. La stagione 2025/2026 nasce dal dialogo '
+                'costante tra ATCL e Marco ed Enzo Pagano, con l’obiettivo di '
+                'offrire al pubblico una proposta artistica di qualità, capace '
+                'di coniugare nomi di prestigio e nuove voci della scena '
+                'contemporanea. Il cartellone riflette l’identità di un teatro '
+                'aperto, inclusivo, attento alle trasformazioni della società '
+                'e alla valorizzazione dei linguaggi del presente. Cassino è '
+                'una realtà viva, con un pubblico curioso e partecipe: a loro '
+                'dedichiamo questa stagione, con l’augurio che il teatro '
+                'continui a essere un luogo di incontro, riflessione e '
+                'bellezza.” La presentazione del cartellone, in una sala '
+                'Restagno affollata di cittadini e non solo di addetti ai '
+                'lavori, svolta così tempestivamente rispetto alle date degli '
+                'spettacoli, permetterà ora al pubblico di rinnovare '
+                "l'abbonamento fin da oggi. Dal 1° agosto, al via le "
+                'sottoscrizioni per i nuovi abbonati. E dal 25 agosto la '
+                'vendita dei biglietti singoli. 23 ottobre – ILIADE – Il gioco '
+                'degli dèi Un grande classico riscritto con sguardo '
+                'contemporaneo. Sul palco Alessio Boni e Antonella Attili, con '
+                'un cast corale straordinario. L’Iliade diventa specchio del '
+                'nostro tempo: un mondo dominato dalla forza, dagli impulsi '
+                'irrazionali, dal potere, dove la libertà è ancora tutta da '
+                'conquistare. Un progetto ambizioso che nasce dalla '
+                'collaborazione di quattro maestri della scena – Francesco '
+                'Niccolini, Roberto Aldorasi, Alessio Boni e Marcello Prayer – '
+                'per raccontare la guerra eterna degli uomini sotto lo sguardo '
+                'imperscrutabile degli dèi. Un inizio di stagione potente, '
+                'suggestivo e profondamente umano. 14 novembre – I MAGNIFICI '
+                'TRE – Morricone, Rota, Piovani Ennio Morricone, Nino Rota, '
+                'Nicola Piovani: tre giganti che hanno reso la musica da film '
+                'un’arte colta e popolare allo stesso tempo. Hanno scritto '
+                'pagine sonore indimenticabili per capolavori del cinema '
+                'italiano e mondiale. Con la voce del soprano Silvia Dolfi, '
+                'un’orchestra dal vivo e gli arrangiamenti del M° Zammit e del '
+                'M° Cavalieri, questo concerto è un viaggio emozionante dentro '
+                'le nostre memorie cinematografiche, da “C’era una volta in '
+                'America” a “La Vita è Bella”, da “Amarcord” a “Il Postino”. '
+                'Una serata di pura meraviglia. 12 dicembre – PERFETTI '
+                'SCONOSCIUTI Il film italiano più tradotto al mondo. Quello '
+                'con il maggior numero di remake internazionali. Ora, '
+                'finalmente, diventa spettacolo teatrale con la regia dello '
+                'stesso Paolo Genovese e un cast stellare che include Dino '
+                'Abbrescia, Paolo Calabresi, Paolo Briguglia, Lorenza '
+                'Indovina, Valeria Solarino, tra gli altri. Una cena tra '
+                'amici. Un gioco di messaggi e telefonate in diretta. Una '
+                'commedia brillante e spietatamente attuale, che ci costringe '
+                'a chiederci: quanto conosciamo davvero le persone che amiamo? '
+                'Un testo incisivo, lucido e sorprendente. Assolutamente '
+                'imperdibile. 9 gennaio – BOLLICINE con Max Giusti Max Giusti '
+                'torna sul palco da protagonista assoluto, tra satira, '
+                'confessioni e imitazioni che fanno centro. Con lui una band '
+                'dal vivo e uno spettacolo che, come le bollicine, scivola '
+                'leggero ma lascia il segno. È uno show che diverte e spiazza, '
+                'in cui Max si mette a nudo con ironia e lucidità. Un brindisi '
+                'teatrale che parla di noi, dei nostri pensieri '
+                'inconfessabili… e delle nostre risate più vere. 22 gennaio – '
+                'BENVENUTI IN CASA ESPOSITO Dal bestseller che ha conquistato '
+                'l’Italia arriva una commedia esilarante, intelligente, '
+                'pungente. Con la regia di Alessandro Siani e '
+                'l’interpretazione brillante di Giovanni Esposito e Nunzia '
+                'Schiano, la camorra viene raccontata con ironia e umanità, '
+                'restituendoci un racconto che fa riflettere attraverso il '
+                'sorriso. Un cast eccezionale per uno spettacolo che riprende '
+                'la grande tradizione comica napoletana, capace di far ridere, '
+                'pensare… e commuovere. 17 febbraio – MALINCONICO – '
+                'Moderatamente felice Dal successo straordinario della serie '
+                'televisiva RAI che ha conquistato pubblico e critica, arriva '
+                'sul palco Vincenzo Malinconico, l’avvocato dell’incertezza, '
+                'della goffaggine e delle grandi verità dette piano. '
+                'Massimiliano Gallo, con la regia di Biagio Musella, dà corpo '
+                'e anima a un personaggio unico, che vive ogni giorno come una '
+                'sfida al buon senso e alla normalità. Un racconto ironico, '
+                'profondo e toccante. Un inno alla bellezza del sentirsi '
+                'imperfettamente vivi. 5 marzo – L’ARTE DELLA TRUFFA Una '
+                'commedia dagli ingranaggi perfetti, tra colpi di scena, '
+                'ironia e un cast affiatatissimo guidato da Biagio Izzo. Un '
+                'imprenditore onesto e un cognato truffatore agli arresti '
+                'domiciliari. Una famiglia travolta dagli eventi e un grande '
+                'raggiro da smascherare. Un testo brillante per uno spettacolo '
+                'che diverte, ma fa anche riflettere su ciò che è vero, su ciò '
+                'che sembra… e su chi riesce davvero a cavarsela. 23 marzo – '
+                'FORTE E CHIARA con Chiara Francini Un viaggio autobiografico, '
+                'femminile, potente. Chiara Francini si racconta con '
+                'sincerità, ironia e coraggio. In scena, insieme a lei, anche '
+                'il musicista Francesco Leineri, che accompagna dal vivo ogni '
+                'passaggio emotivo, trasformando lo spettacolo in un’intima '
+                'sinfonia di parole e note. Uno sguardo lucido sull’identità, '
+                'sui sogni, sulla femminilità, sulla complessità dell’essere '
+                'donna oggi. Un finale di stagione profondo, brillante e '
+                'sorprendentemente autentico. Per info abbonamenti e '
+                'spettacoli: teatromanzonicassino.it o tel. 0776864914',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/48514361381623/teatro-13.jpg',
+ 'location_address': None,
+ 'location_name': 'cinema teatro Manzoni',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.251757',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Teatro Manzoni Cassino, stagione 2025-2026',
+ 'url': 'https://www.frosinonetoday.it/eventi/cultura/teatro-manzoni-cassino-cartellone-2025-2026.html',
+ 'uuid': 'bd379ce8a8a2c88c'}
+[2026-01-29T18:20:47.248+0000] {docker.py:429} INFO - 2026-01-29 18:20:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/teatro/sulla-riva-di-un-cappello-ripi.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:47.360+0000] {docker.py:429} INFO - 2026-01-29 18:20:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/teatro/sulla-riva-di-un-cappello-ripi.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': 'd6208741dae7ef41',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '17:00',
+            'weekday': 'Domenica'}],
+ 'description': 'Il teatro Vittorio Gassman è lieto di ospitare domenica 1 '
+                'febbraio alle ore 17:00 due giovani artisti, Raffaele Palmese '
+                'e Auro Cardillo che daranno vita ad uno spettacolo di Clown e '
+                'Magia per bambini, ragazzi e famiglie. “Sulla riva di un '
+                'cappello” è la nuova produzione della "Compagnia del '
+                'Monello", uno spettacolo dove i due giovani interpreti '
+                'mescolano mimo, clown e magia per creare un universo onirico '
+                'dove le regole della realtà si piegano al gioco. In scena due '
+                'pescatori bizzarri e surreali raggiungono la loro spiaggia '
+                'immaginaria e iniziano a lavorare in attesa che qualcosa '
+                'abbocchi. Ma la giornata è avara di pesci e, mentre l’amo '
+                'resta ostinatamente vuoto, è la noia a mordere per prima. '
+                'Proprio da questa assenza nasce il divertimento: i due si '
+                'lasciano distrarre da ogni minimo dettaglio, trasformando '
+                'oggetti e imprevisti in piccole storie e grandi conflitti '
+                'comici, in una continua battaglia contro l’attesa e il tempo '
+                'che non passa. “Sulla riva di un cappello” esplora i lati più '
+                'comici e delicati dell’essere umano dentro un mondo solo '
+                'apparentemente distante dalla quotidianità: attraverso '
+                'l’impossibile, il poetico e il bizzarro, la scena diventa uno '
+                'specchio deformante che, paradossalmente, racconta proprio la '
+                'nostra vita di tutti i giorni. info e prenotazioni 375 744 '
+                '9094 Posto unico ragazzi accompagnati da adulti € 10:00 '
+                'Convenzioni attive',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/10670432755618/sulla-riva-di-un-cappello.jpg',
+ 'location_address': 'Piazza Luciano Manara, 1',
+ 'location_name': 'Teatro Vittorio Gassman Ripi',
+ 'price': '10:00',
+ 'scraped_at': '2026-01-29T18:20:09.251330',
+ 'time_info': '17:00',
+ 'title': 'Ripi, in scena "Sulla riva di un cappello"',
+ 'url': 'https://www.frosinonetoday.it/eventi/teatro/sulla-riva-di-un-cappello-ripi.html',
+ 'uuid': '9ff26e2e9460d53d',
+ 'website': 'https://www.teatrovittoriogassmanripi.it/sulla-riva-di-un-cappello/'}
+[2026-01-29T18:20:49.597+0000] {docker.py:429} INFO - 2026-01-29 18:20:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/teatro/veroli-in-scena-l-ispettore-generale.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:49.705+0000] {docker.py:429} INFO - 2026-01-29 18:20:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/teatro/veroli-in-scena-l-ispettore-generale.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': 'ad26593c41ec72e9',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '18:00',
+            'weekday': 'Domenica'}],
+ 'description': 'Continua domenica 1 febbraio la straordinaria stagione al '
+                'Teatro Comunale Veroli, collezionando sold-out e affetto del '
+                'pubblico, con uno spettacolo che vi terrà incollati al palco, '
+                'quasi ipnotizzati dai cambi scenografici che avvengono sulla '
+                'scena. La sapiente regia di Andrea Di Palma propone, infatti, '
+                'uno spettacolo non statico in cui pezzi di Tetris scorrono '
+                'sullo sfondo, incastrandosi e scompaginandosi come le '
+                'menzogne dei protagonisti. Negli sfavillanti anni ’80, tra '
+                'disco music, colori fluo, videogame arcade e corruzione '
+                'politica dilagante, si svolge la versione pop-grottesca de '
+                '“L\'Ispettore Generale" . Quello proposto è un adattamento '
+                'che decide di ambientare lo spettacolo negli anni ’80 per '
+                'mantenere viva e rendere ancora più attuale la feroce satira '
+                'di Gogol, collocandola in un’epoca storica che, in Italia, ha '
+                'segnato il progressivo disvelamento della corruzione '
+                'politica, il crollo delle illusioni istituzionali e '
+                'l’esplosione del potere mediatico. In una cittadina di '
+                'provincia, il piccolo "reuccio" Sindaco Anton, la sua '
+                'eccentrica famiglia e la sua banda di funzionari comunali '
+                'vivono immersi in tangenti finto lusso, tra champagne e '
+                "giacche vaporwave, finché l'arrivo di un Ispettore Generale "
+                'dalla Capitale non sconvolge i loro sporchi equilibri. Sul '
+                'palco, inondato da una scenografia modulare di blocchi Tetris '
+                "pronti a ricomporre all'infinito stanze, strade e uffici, "
+                'prende vita il più grande degli equivoci: il presunto '
+                'ispettore Chlestakov, un dandy "che anela alla cultura", si '
+                'lascia riverire, colleziona favori e corteggia a più non '
+                'posso, grazie alla reverenza di sindaco e compari. Il delirio '
+                'in 8-bit ci mostrerà la vera faccia corrotta e servile di '
+                'questo paesuncolo. Tuttavia, il gran finale è dietro '
+                "l'angolo: siamo davvero sicuri che Chlestakov sia chi loro "
+                'credono? Vi aspettiamo domenica 1 febbraio alle ore 18.00, '
+                'con apertura botteghino alle ore 17.30, per questo '
+                'affascinante spettacolo della compagnia “ Madeinterraneo ”. '
+                'BIGLIETTO: € 10.00 Per info e prenotazioni: 3513917931 '
+                'teatrocomunaleveroli2019@ gmail.com --',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/61854857656747/ispettore-generale.jpeg',
+ 'location_address': 'Via Lucio Alfio, 5',
+ 'location_name': 'Teatro Comunale',
+ 'price': '€ 10.00',
+ 'scraped_at': '2026-01-29T18:20:09.250879',
+ 'time_info': '18.00',
+ 'title': 'Veroli, in scena “L\'Ispettore Generale"',
+ 'url': 'https://www.frosinonetoday.it/eventi/teatro/veroli-in-scena-l-ispettore-generale.html',
+ 'uuid': '2e724df074543c49'}
+[2026-01-29T18:20:51.644+0000] {docker.py:429} INFO - 2026-01-29 18:20:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/filettino-ciaspolata-in-notturna.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:51.752+0000] {docker.py:429} INFO - 2026-01-29 18:20:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/filettino-ciaspolata-in-notturna.html>
+{'category': 'Escursioni',
+ 'city': 'Frosinone',
+ 'content_hash': 'e26ef7ffb583febc',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '18:30', 'weekday': 'Sabato'}],
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/8859090158641/ciaspolata-42.jpg',
+ 'location_address': None,
+ 'location_name': 'Campo Staffi',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.250268',
+ 'time_info': '18.30',
+ 'title': 'Filettino, ciaspolata in notturna',
+ 'url': 'https://www.frosinonetoday.it/eventi/filettino-ciaspolata-in-notturna.html',
+ 'uuid': '610db64dbb19d8c8'}
+[2026-01-29T18:20:54.388+0000] {docker.py:429} INFO - 2026-01-29 18:20:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/teatro/fiuggi-in-scena-enrico-lo-vero-in-uno-nessuno-centomila.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:54.496+0000] {docker.py:429} INFO - 2026-01-29 18:20:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/teatro/fiuggi-in-scena-enrico-lo-vero-in-uno-nessuno-centomila.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': '04f812a2df089fea',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '18:00',
+            'weekday': 'Domenica'}],
+ 'description': 'Domenica 01 Febbraio 2026, alle ore 18.00, presso il Teatro '
+                'Comunale di Fiuggi va in scena UNO, NESSUNO, CENTOMILA di '
+                'Luigi Pirandello, con Enrico Lo Verso. Nel 2026 si celebrano '
+                'i cento anni del romanzo e i dieci anni di uno spettacolo che '
+                'ha saputo rinnovarne il pensiero sul palcoscenico. Un '
+                'monologo intenso e sorprendente che, con ironia e modernità, '
+                'attraversa la crisi dell’io e le maschere sociali di '
+                'Vitangelo Moscarda, diventando in un decennio un punto di '
+                'riferimento del teatro italiano. Apertura botteghino solo nei '
+                'giorni lavorativi: aperto il lunedì dalle ore 9.00 alle ore '
+                '13.00 il martedì e giovedì dalle ore 9.00 alle ore 13.00 e '
+                'dalle ore 15.00 alle ore 18.00 il venerdì dalle ore 9.00 alle '
+                'ore 13.00 Teatro Comunale di Fiuggi Piazza Trento e Trieste 1 '
+                '0775 5461 242/369',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/18636216854126/lo-verso.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Comunale',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.249827',
+ 'time_info': '18.00',
+ 'title': 'Fiuggi, in scena Enrico Lo Vero in "Uno, nessuno, centomila"',
+ 'url': 'https://www.frosinonetoday.it/eventi/teatro/fiuggi-in-scena-enrico-lo-vero-in-uno-nessuno-centomila.html',
+ 'uuid': '11f22e63b0be7f7e'}
+[2026-01-29T18:20:57.254+0000] {docker.py:429} INFO - 2026-01-29 18:20:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/ceccano-presentazione-del-libro-di-filippo-cannizzo-scampoli-di-felicita-bellezza-gentilezza-cura-per-rammendare-l-orizzonte.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:20:57.363+0000] {docker.py:429} INFO - 2026-01-29 18:20:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/ceccano-presentazione-del-libro-di-filippo-cannizzo-scampoli-di-felicita-bellezza-gentilezza-cura-per-rammendare-l-orizzonte.html>
+{'category': 'Incontri',
+ 'city': 'Frosinone',
+ 'content_hash': 'b06a3d1293e18847',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio 2026, alle ore 17:30, a Ceccano, presso il '
+                'bar/pasticceria "Al Solito Posto" (in Via Anime Sante, 82), '
+                'si terrà la presentazione del nuovo libro del filosofo '
+                'Filippo Cannizzo, "Scampoli di felicità: bellezza, '
+                'gentilezza, cura per rammendare l\'orizzonte". L\'iniziativa, '
+                'insieme agli interventi musicali di Federico Palladini e alle '
+                "letture di Felicita Fusiello, vedrà l'esposizione delle opere "
+                "dell'artista Fabiana Fioretti. Dopo i successi editoriali "
+                '“Lacrime di gentilezza" e "Briciole di bellezza", il nuovo '
+                'libro di Cannizzo - "Scampoli di felicità: bellezza, '
+                'gentilezza, cura per rammendare l\'orizzonte" - è un racconto '
+                'animato dal desiderio di non rassegnarsi di fronte ai tanti '
+                'problemi che attanagliano i Paesi e le città, più o meno '
+                'grandi che siano, in cui ogni persona vive i propri giorni, e '
+                'dalla volontà di offrire una trama in cui intessere un futuro '
+                'di benessere collettivo. Idee e proposte concrete, sono '
+                'raccontate con uno sguardo che sa parlare alla mente con '
+                'l’analisi approfondita e al cuore con una caldo coraggio '
+                'fatto di speranza, mostrano che, solamente insieme, è '
+                'possibile iniziare a costruire una felicità condivisa. '
+                "L'orizzonte si apre dal Bel Paese per abbracciare l'Europa e "
+                'andare oltre.',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/65481392727517/locandina-ceccano-0.jpg',
+ 'location_address': None,
+ 'location_name': 'bar/pasticceria "Al Solito Posto"',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:20:09.249299',
+ 'time_info': '17,30',
+ 'title': 'Ceccano, presentazione del libro di Filippo Cannizzo, "Scampoli di '
+          'felicità: bellezza, gentilezza, cura per rammendare l\'orizzonte"',
+ 'url': 'https://www.frosinonetoday.it/eventi/ceccano-presentazione-del-libro-di-filippo-cannizzo-scampoli-di-felicita-bellezza-gentilezza-cura-per-rammendare-l-orizzonte.html',
+ 'uuid': '6ad1114ddee4e139'}
+[2026-01-29T18:21:02.867+0000] {docker.py:429} INFO - 2026-01-29 18:21:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/il-carnevale-di-arce.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:21:02.974+0000] {docker.py:429} INFO - 2026-01-29 18:21:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/il-carnevale-di-arce.html>
+{'category': 'Incontri',
+ 'city': 'Frosinone',
+ 'content_hash': 'd936bd84f951fb82',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '13:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Colori, maschere, musica, carri allegorici, ballerine '
+                'brasiliane e street band stanno per invadere Piazza e Corso '
+                'Umberto I. Domenica 1° febbraio Arce torna a fare quello che '
+                'le riesce meglio: fare festa insieme. Appuntamento in Piazza '
+                'e Corso Umberto I. Dalle ore 13.30 in attesa della sfilata '
+                'dei carri allegorici ci saranno esibizioni di street band e '
+                'ballerine brasiliane che animeranno la festa con colori e il '
+                'loro travolgente ritmo! Ogni giorno un motivo in più per non '
+                'prendere impegni. Il Carnevale ad Arce vi aspetta.',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/11254647363998/carnevale-arce-2.jpg',
+ 'location_address': "Corso Umberto I'",
+ 'location_name': None,
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.248773',
+ 'time_info': '13.30',
+ 'title': 'Il Carnevale di Arce',
+ 'url': 'https://www.frosinonetoday.it/eventi/il-carnevale-di-arce.html',
+ 'uuid': 'e250ec2ed8066873'}
+[2026-01-29T18:21:04.713+0000] {docker.py:429} INFO - 2026-01-29 18:21:04 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 16 pages/min), scraped 14 items (at 14 items/min)
+[2026-01-29T18:21:04.745+0000] {docker.py:429} INFO - 2026-01-29 18:21:04 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 0 pages/min), scraped 14 items (at 0 items/min)
+[2026-01-29T18:21:06.013+0000] {docker.py:429} INFO - 2026-01-29 18:21:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/teatro/ceccano-giornata-della-memoria-2026-in-scena-le-carlottine.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:21:06.122+0000] {docker.py:429} INFO - 2026-01-29 18:21:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/teatro/ceccano-giornata-della-memoria-2026-in-scena-le-carlottine.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': '0e8d39fa99d681c7',
+ 'date_end': '2026-01-29',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'time_start': '18:00', 'weekday': 'Giovedì'}],
+ 'description': 'In occasione della Giornata della Memoria, il Comune di '
+                'Ceccano presenta “Le Carlottine”, spettacolo in musica '
+                'sull’olocausto a cura della Compagnia Errare Persona, con '
+                'adattamento e regia di Damiana Leone, in programma giovedì 29 '
+                'gennaio 2026 alle ore 18.00 presso l’Auditorium della '
+                'Biblioteca Comunale di Ceccano, con ingresso gratuito. '
+                'Liberamente tratto da un testo di Elsa Morante, Le Carlottine '
+                'è una rappresentazione adatta a un pubblico dai 5 anni in su, '
+                'che affronta il tema della Shoah attraverso un linguaggio '
+                'poetico, musicale e giocoso, capace di parlare anche ai più '
+                'piccoli con delicatezza e profondità. La protagonista, '
+                'Carlottina, è una bambina che interpreta la realtà con '
+                'l’immaginazione tipica dell’infanzia: i termini della '
+                'propaganda nazista vengono trasformati in parole buffe, i '
+                'potenti diventano caricature, e la tragedia della '
+                'discriminazione viene filtrata attraverso l’amicizia e il '
+                'gioco. Quando la sua amica Carlotta è costretta a indossare '
+                'la stella gialla, Carlottina immagina un piano per “salvare '
+                'il mondo”, riempiendolo di stelle. Lo spettacolo alterna '
+                'musica e narrazione, dando voce alle vittime dei lager come '
+                'se a raccontare fossero, da un lato, le anime dei morti e, '
+                'dall’altro, i bambini, per i quali le stelle gialle diventano '
+                'stelle del cielo. Le immagini proiettate durante la '
+                'rappresentazione sono tratte dai disegni originali dei '
+                'bambini internati nel Lager di Terezín, frutto di un '
+                'approfondito lavoro di ricerca condotto dalla compagnia. Le '
+                'Carlottine rappresenta un’importante occasione educativa e '
+                'culturale, pensata per accompagnare i più giovani alla '
+                'comprensione della memoria storica e dei valori di '
+                'solidarietà, empatia e rispetto, in un contesto accessibile e '
+                'coinvolgente.',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/53655572008525/locandina-le-carlottine.jpg',
+ 'location_address': None,
+ 'location_name': 'Auditorium della Biblioteca Comunale',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.248170',
+ 'time_info': '18.00',
+ 'title': 'Ceccano, Giornata della Memoria 2026, in scena "Le Carlottine"',
+ 'url': 'https://www.frosinonetoday.it/eventi/teatro/ceccano-giornata-della-memoria-2026-in-scena-le-carlottine.html',
+ 'uuid': '534a27448e9c77e2'}
+[2026-01-29T18:21:08.610+0000] {docker.py:429} INFO - 2026-01-29 18:21:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/pontecorvo-a-carnevale-ogni-pranzo-vale-2026.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:21:08.720+0000] {docker.py:429} INFO - 2026-01-29 18:21:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/pontecorvo-a-carnevale-ogni-pranzo-vale-2026.html>
+{'category': 'Incontri',
+ 'city': 'Frosinone',
+ 'content_hash': '863f72b249f19862',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '11:00',
+            'weekday': 'Domenica'}],
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/64542261251363/carnevale-1-febbraio.jpg',
+ 'location_address': 'Via Aldo Moro',
+ 'location_name': None,
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:20:09.247550',
+ 'time_info': '11.00',
+ 'title': 'Pontecorvo, A Carnevale ogni pranzo vale…!',
+ 'url': 'https://www.frosinonetoday.it/eventi/pontecorvo-a-carnevale-ogni-pranzo-vale-2026.html',
+ 'uuid': '1311301ed8857b8a'}
+[2026-01-29T18:21:10.468+0000] {docker.py:429} INFO - 2026-01-29 18:21:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/teatro/frosinone-in-scena-il-berretto-a-sonagli.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:21:10.577+0000] {docker.py:429} INFO - 2026-01-29 18:21:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/teatro/frosinone-in-scena-il-berretto-a-sonagli.html>
+{'category': 'Teatri',
+ 'city': 'Frosinone',
+ 'content_hash': '0cb122351e0a93a5',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '21:00', 'weekday': 'Sabato'}],
+ 'description': 'Dopo il tutto esaurito registrato dalla “prima”, tornerà '
+                'sabato 31 gennaio alle 21 l’atteso appuntamento con la '
+                'stagione teatrale 2025-26 al Teatro Vittoria, organizzata da '
+                'Comune di Frosinone e ATCL, circuito multidisciplinare del '
+                'Lazio sostenuto da MIC – Ministero della Cultura e Regione '
+                'Lazio. Sabato 31 gennaio alle ore 21 andrà in scena “Il '
+                'Berretto a Sonagli”, di Luigi Pirandello, con Irma '
+                'Ciaramella, Ivano Falco, Gino Auriuso, Marina Zanchi, Ottavia '
+                'Orticello, Gioele Rotini, regia di Gino Auriuso. Questo '
+                'testo, considerato uno dei capolavori del grande drammaturgo '
+                'siciliano, tratta la vicenda di una donna, Beatrice Fiorica, '
+                'la quale viene a sapere che il marito la tradisce con la '
+                'moglie di Ciampa, scrivano del cavalier Fiorica, e che decide '
+                'di farsi aiutare dal delegato Spanò per sorprendere in '
+                'flagrante i due amanti. “Il successo registrato dalla prima '
+                'serata – ha dichiarato il Sindaco di Frosinone, Riccardo '
+                'Mastrangeli - conferma quanto il Teatro Vittoria rappresenti '
+                'un presidio culturale fondamentale per la nostra città. La '
+                'stagione teatrale, realizzata insieme ad ATCL, dimostra come '
+                'la collaborazione tra enti possa offrire proposte di alto '
+                'livello, capaci di attrarre pubblico e rafforzare l’identità '
+                'culturale di Frosinone”. “La presenza in cartellone di uno '
+                'dei capolavori di Pirandello – ha dichiarato l’assessore alla '
+                'cultura Simona Geralico - testimonia l’attenzione che abbiamo '
+                'voluto riservare alla grande drammaturgia italiana. Il '
+                'Berretto a Sonagli è un’opera di straordinaria attualità, '
+                'capace di parlare al pubblico contemporaneo attraverso temi '
+                'universali come identità, verità e apparenza. Il calore '
+                'dimostrato dagli spettatori ci incoraggia a proseguire su una '
+                'linea artistica che coniughi qualità, accessibilità e '
+                'coinvolgimento culturale della comunità”. “Ogni appuntamento '
+                'della stagione teatrale contribuisce a rendere il centro '
+                'storico un luogo ancora più vivo e attrattivo. Il Teatro '
+                'Vittoria è un punto di riferimento non solo culturale, ma '
+                'anche sociale ed economico, capace di generare movimento e '
+                'valorizzare le attività del territorio, all’interno di '
+                'un’area completamente riqualificata che comprende i Piloni e '
+                'piazza Turriziani. Eventi di questo livello rafforzano il '
+                'legame con la valorizzazione urbana, obiettivo strategico per '
+                'la nostra azione amministrativa”. Biglietti online: '
+                'ciaotickets.com Biglietti presso il botteghino: il giorno '
+                "dell'evento a partire da due ore prima dell'inizio dello "
+                'spettacolo',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/63704228475238/berretto-foto.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Vittoria',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.246889',
+ 'time_info': '21.00',
+ 'title': 'Frosinone, in scena "Il berretto a sonagli"',
+ 'url': 'https://www.frosinonetoday.it/eventi/teatro/frosinone-in-scena-il-berretto-a-sonagli.html',
+ 'uuid': 'fa4cbb16339cd126'}
+[2026-01-29T18:21:11.549+0000] {docker.py:429} INFO - 2026-01-29 18:21:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/morolo-polentata-di-sant-antonio.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:21:11.666+0000] {docker.py:429} INFO - 2026-01-29 18:21:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/morolo-polentata-di-sant-antonio.html>
+{'category': 'Cibo e Vino',
+ 'city': 'Frosinone',
+ 'content_hash': '5f2322cdd8185b5e',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '12:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Aggiornamento del 23/01/2026 EVENTO RIMANDATO AL 01/02/26, '
+                "CAUSA PIOGGIA La Pro Loco Morolo organizza anche quest'anno "
+                'la tradizionale polentata di Sant’Antonio, che si terrà '
+                'domenica 25 gennaio 2026 a partire dalle ore 12:30 in un '
+                'luogo del paese che rappresenta un ritorno al passato in '
+                'fatto di polentata: la passeggiata di Sant’Antonio (presso il '
+                'parcheggio che precede il semaforo). Oltre alla polenta '
+                'preparata secondo la ricetta tramandata di generazione in '
+                'generazione, sarà presente uno stand gastronomico con panini, '
+                'vino e bibite. SERVIZIO NAVETTA GRATUITO che porterà chiunque '
+                'ne voglia usufruire dal piazzale del mercato in località '
+                'Madonna del Piano fino a P.zza della Libertà (la Porta) e '
+                'ritorno.',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/41021493221308/polenta-7.jpg',
+ 'location_address': None,
+ 'location_name': None,
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.246519',
+ 'time_info': '12.30',
+ 'title': 'Morolo, polentata di Sant’Antonio',
+ 'url': 'https://www.frosinonetoday.it/eventi/morolo-polentata-di-sant-antonio.html',
+ 'uuid': 'c5d5c8e32447073e'}
+[2026-01-29T18:21:12.819+0000] {docker.py:429} INFO - 2026-01-29 18:21:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/cassino-laboratorio-di-lettura-il-barone-rampante-1-incontro.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:21:12.928+0000] {docker.py:429} INFO - 2026-01-29 18:21:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/cassino-laboratorio-di-lettura-il-barone-rampante-1-incontro.html>
+{'category': 'Incontri',
+ 'city': 'Frosinone',
+ 'content_hash': '1c98d09cdf6d71ac',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '15:30', 'weekday': 'Venerdì'}],
+ 'description': 'Appuntamento al Palazzo della cultura il 30 gennaio alle ore '
+                '15,30 con il laboratorio di lettura “Il barone rampante” - 1° '
+                'Incontro. Saltando di ramo in ramo, Cosimo approda al Palazzo '
+                'della Cultura di Cassino, diventando protagonista del '
+                'laboratorio di lettura organizzato da Librìza in '
+                'collaborazione con Apeiron Caffè Letterario. L’iniziativa è '
+                'nata pensando proprio agli studenti e alle studentesse delle '
+                'scuole superiori: un’occasione per scoprire insieme quanto la '
+                'scelta radicale di Cosimo Piovasco di Rondò sia attuale '
+                'ancora oggi. Cosa significa essere liberi? Come si costruisce '
+                "la propria identità senza scendere a compromessi? L'incontro "
+                'è aperto a TUTTI: la bellezza del laboratorio sta proprio nel '
+                'dialogo tra generazioni. Studenti, lettori appassionati o '
+                "semplici curiosi... c'è un posto per ognuno di voi! Info: "
+                '3295812111 (Mariarosaria Ianni) Porta il tuo libro, la tua '
+                "curiosità e la voglia di guardare il mondo da un'altra "
+                'prospettiva. Ricordiamo che è possibile acquistare una copia '
+                'de "Il barone rampante" ad un prezzo scontato presso '
+                'Mondadori Bookstore di Cassino',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/49401492236962/barone-rampante-2.jpg',
+ 'location_address': None,
+ 'location_name': 'palazzo della cultura',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.246180',
+ 'time_info': '15.30',
+ 'title': 'Cassino, Laboratorio di Lettura “Il barone rampante” - 1° Incontro',
+ 'url': 'https://www.frosinonetoday.it/eventi/cassino-laboratorio-di-lettura-il-barone-rampante-1-incontro.html',
+ 'uuid': 'f6b5891abd0d63bf'}
+[2026-01-29T18:21:13.844+0000] {docker.py:429} INFO - 2026-01-29 18:21:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.frosinonetoday.it/eventi/mercatino-a-frosinone-alta-febbraio-2026.html> (referer: https://www.frosinonetoday.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:21:13.953+0000] {docker.py:429} INFO - 2026-01-29 18:21:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.frosinonetoday.it/eventi/mercatino-a-frosinone-alta-febbraio-2026.html>
+{'category': 'Mercatini',
+ 'city': 'Frosinone',
+ 'content_hash': 'cb6f6c12267b1e6f',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'time_start': '9:30', 'weekday': 'Domenica'}],
+ 'description': 'Il 1° febbraio spazio al Mercatino di Frosinone Alta dalle '
+                '9.30 alle 18. L’iniziativa, organizzata dall’associazione '
+                'Artigiani nel Borgo in collaborazione con l’amministrazione '
+                "Mastrangeli mediante l’assessorato all'artigianato di "
+                'Rossella Testa, si terrà ogni prima e terza domenica del mese '
+                'in Piazza Turriziani. “La nostra amministrazione – ha '
+                'dichiarato il Sindaco di Frosinone, Riccardo Mastrangeli - '
+                'intende favorire tutte quelle iniziative capaci di coniugare '
+                'tradizione, aggregazione ed economia locale, creando '
+                'occasioni di incontro e di crescita per la comunità”. '
+                '“Diventato ormai un appuntamento consolidato per il centro '
+                'storico, il Mercatino di Frosinone Alta rappresenta '
+                'un’importante opportunità di promozione, sviluppo e '
+                'valorizzazione delle eccellenze dell’artigianato locale e, al '
+                'tempo stesso, un’occasione di incontro", ha dichiarato '
+                'l’assessore Rossella Testa.',
+ 'image_url': '//citynews-frosinonetoday.stgy.ovh/~media/horizontal-mid/64221867116163/mercatino-frosinone-6.jpg',
+ 'location_address': None,
+ 'location_name': None,
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-29T18:20:09.245629',
+ 'time_info': 'dalle ore 9.30 alle ore 18',
+ 'title': 'Mercatino a Frosinone Alta',
+ 'url': 'https://www.frosinonetoday.it/eventi/mercatino-a-frosinone-alta-febbraio-2026.html',
+ 'uuid': 'b1323b490608bb55'}
+[2026-01-29T18:21:13.954+0000] {docker.py:429} INFO - 2026-01-29 18:21:13 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-29T18:21:13.955+0000] {docker.py:429} INFO - 2026-01-29 18:21:13 [scrapy.extensions.feedexport] INFO: Stored json feed (20 items) in: /app/city_today/output/eventi_frosinone_questa-settimana_20260129_182003.json
+[2026-01-29T18:21:13.955+0000] {docker.py:429} INFO - 2026-01-29 18:21:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 9612,
+ 'downloader/request_count': 22,
+ 'downloader/request_method_count/GET': 22,
+ 'downloader/response_bytes': 3284608,
+ 'downloader/response_count': 22,
+ 'downloader/response_status_count/200': 22,
+ 'elapsed_time_seconds': 69.241023,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 29, 18, 21, 13, 953432, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 17742126,
+ 'httpcompression/response_count': 22,
+ 'item_scraped_count': 20,
+ 'items_per_city/Frosinone': 20,
+ 'items_per_minute': 17.39130434782609,
+ 'log_count/DEBUG': 42,
+ 'log_count/INFO': 5,
+ 'memusage/max': 113336320,
+ 'memusage/startup': 67256320,
+ 'request_depth_max': 1,
+ 'response_received_count': 22,
+ 'responses_per_minute': 19.1304347826087,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 21,
+ 'scheduler/dequeued/memory': 21,
+ 'scheduler/enqueued': 21,
+ 'scheduler/enqueued/memory': 21,
+ 'start_time': datetime.datetime(2026, 1, 29, 18, 20, 4, 712409, tzinfo=datetime.timezone.utc)}
+2026-01-29 18:21:13 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-29T18:21:14.010+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_frosinone_questa-settimana_20260129_182003.json
+[2026-01-29T18:21:14.331+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_frosinone.scrape_city_today, execution_date=20260128T060000, start_date=20260129T182000, end_date=20260129T182114
+[2026-01-29T18:21:14.375+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-29T18:21:14.459+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

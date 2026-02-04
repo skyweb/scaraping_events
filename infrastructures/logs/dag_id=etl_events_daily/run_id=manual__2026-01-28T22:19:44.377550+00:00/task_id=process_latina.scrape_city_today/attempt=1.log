@@ -1,0 +1,1865 @@
+[2026-01-28T22:20:19.975+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_latina.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:20:19.984+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_latina.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:20:19.985+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-28T22:20:19.995+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_latina.scrape_city_today> on 2026-01-28 22:19:44.377550+00:00
+[2026-01-28T22:20:19.999+0000] {standard_task_runner.py:60} INFO - Started process 2533 to run task
+[2026-01-28T22:20:20.002+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_latina.scrape_city_today', 'manual__2026-01-28T22:19:44.377550+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpxpv3a384']
+[2026-01-28T22:20:20.004+0000] {standard_task_runner.py:88} INFO - Job 170: Subtask process_latina.scrape_city_today
+[2026-01-28T22:20:20.021+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T22:20:20.075+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_latina.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [running]> on host a9aac56aef94
+[2026-01-28T22:20:20.186+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_latina.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T22:19:44.377550+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T22:19:44.377550+00:00'
+[2026-01-28T22:20:20.207+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-28T22:20:20.214+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-28T22:20:20.850+0000] {docker.py:429} INFO - Avvio scraping per: Latina
+Periodo: questa-settimana
+[2026-01-28T22:20:20.852+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-28T22:20:20.857+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-01-28 22:20:20 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-28T22:20:20.859+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [events] INFO: Scraping città: Latina
+2026-01-28 22:20:20 [events] INFO: Periodo: questa-settimana (2026-01-28 - 2026-02-01)
+[2026-01-28T22:20:20.859+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-28T22:20:20.861+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-28T22:20:20.861+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-28 22:20:20 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-28T22:20:20.866+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [scrapy.extensions.telnet] INFO: Telnet Password: ee5c78d154c3aa1f
+[2026-01-28T22:20:20.999+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-01-28T22:20:21.000+0000] {docker.py:429} INFO - 2026-01-28 22:20:20 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-28T22:20:21.067+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-28T22:20:21.068+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-28T22:20:21.068+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_latina_questa-settimana_20260128_222020.json
+[2026-01-28T22:20:21.069+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-28T22:20:21.069+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.core.engine] INFO: Spider opened
+[2026-01-28T22:20:21.075+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-28T22:20:21.076+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-28T22:20:21.256+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/robots.txt> (referer: None)
+[2026-01-28T22:20:23.084+0000] {docker.py:429} INFO - 2026-01-28 22:20:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/> (referer: None)
+[2026-01-28T22:20:23.402+0000] {docker.py:429} INFO - 2026-01-28 22:20:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/carnevale-2026-pontinia.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:23.519+0000] {docker.py:429} INFO - 2026-01-28 22:20:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/carnevale-2026-pontinia.html>
+{'category': 'Manifestazioni',
+ 'city': 'Latina',
+ 'content_hash': '5f4d69df371f6e6a',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '14:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Proseguono gli appuntamenti del Carnevale Pontino che sta '
+                'animando tutta la provincia già da un paio di fine settimana '
+                'e che vedrà il suo gran finale a Latina il giorno di martedì '
+                'grasso ovvero il 17 febbraio. Domenica 1° febbraio la sfilata '
+                'di carri allegorici farà tappa a Pontinia in un pomeriggio di '
+                'festa, musica e colore. A partire dalle 14.30 ben dodici '
+                "carri colorati, realizzati dall'Associazione Amici in Festa, "
+                'sfileranno tra le vie del centro portando allegria e '
+                'divertimento per grandi e piccini. Tra le varie iniziative il '
+                'tributo a Sandro Micheli, patron di SL48 il canale televisivo '
+                'locale che ha sempre dato tantissimo spazio al Carnevale, '
+                'tanto che lo stesso Micheli ne era mattatore presentando i '
+                'vari carri, intervistando adulti e bambini durante i '
+                'festeggiamenti, in una parola: animando le giornate di festa '
+                'in prima persona. L’associazione P.cap presieduta da Daniela '
+                'Lombardi ne ha organizzato l’omaggio: i commercianti del '
+                'centro infatti doneranno ai vari carri, ai loro animatori e '
+                'creatori, un attestato di partecipazione recante il ricordo '
+                'di Sandro Micheli. Madrina del Carnevale di Pontinia sarà '
+                "Maria Rita D'Alessio, assessora alla Cultura e alle "
+                'Manifestazioni del Comune di Pontinia. È dunque per domenica '
+                '1° febbraio a partire dalle 14.30 nel centro di Pontinia.',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/60641360587522/carri-a-pontinia-2025.jpeg',
+ 'location_address': None,
+ 'location_name': 'Centro cittadino',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:23.197213',
+ 'time_info': 'ore 14.30',
+ 'title': 'Carnevale 2026: la sfilata dei carri allegorici a Pontinia',
+ 'url': 'https://www.latinatoday.it/eventi/carnevale-2026-pontinia.html',
+ 'uuid': 'bb43cdccddb37984'}
+[2026-01-28T22:20:24.938+0000] {docker.py:429} INFO - 2026-01-28 22:20:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/risonanze-dimensioni-musicali-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:25.066+0000] {docker.py:429} INFO - 2026-01-28 22:20:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/risonanze-dimensioni-musicali-latina.html>
+{'category': 'Manifestazioni',
+ 'city': 'Latina',
+ 'content_hash': '991411ea541fb6b3',
+ 'date_end': '2026-06-06',
+ 'date_start': '2025-11-08',
+ 'dates': [{'date': '2025-11-08', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'weekday': 'Martedì'},
+           {'date': '2025-11-12', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'weekday': 'Martedì'},
+           {'date': '2025-11-19', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'weekday': 'Martedì'},
+           {'date': '2025-11-26', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'weekday': 'Martedì'},
+           {'date': '2026-04-15', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'weekday': 'Sabato'},
+           {'date': '2026-04-19', 'weekday': 'Domenica'},
+           {'date': '2026-04-20', 'weekday': 'Lunedì'},
+           {'date': '2026-04-21', 'weekday': 'Martedì'},
+           {'date': '2026-04-22', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-23', 'weekday': 'Giovedì'},
+           {'date': '2026-04-24', 'weekday': 'Venerdì'},
+           {'date': '2026-04-25', 'weekday': 'Sabato'},
+           {'date': '2026-04-26', 'weekday': 'Domenica'},
+           {'date': '2026-04-27', 'weekday': 'Lunedì'},
+           {'date': '2026-04-28', 'weekday': 'Martedì'},
+           {'date': '2026-04-29', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-30', 'weekday': 'Giovedì'},
+           {'date': '2026-05-01', 'weekday': 'Venerdì'},
+           {'date': '2026-05-02', 'weekday': 'Sabato'},
+           {'date': '2026-05-03', 'weekday': 'Domenica'},
+           {'date': '2026-05-04', 'weekday': 'Lunedì'},
+           {'date': '2026-05-05', 'weekday': 'Martedì'},
+           {'date': '2026-05-06', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-07', 'weekday': 'Giovedì'},
+           {'date': '2026-05-08', 'weekday': 'Venerdì'},
+           {'date': '2026-05-09', 'weekday': 'Sabato'},
+           {'date': '2026-05-10', 'weekday': 'Domenica'},
+           {'date': '2026-05-11', 'weekday': 'Lunedì'},
+           {'date': '2026-05-12', 'weekday': 'Martedì'},
+           {'date': '2026-05-13', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-14', 'weekday': 'Giovedì'},
+           {'date': '2026-05-15', 'weekday': 'Venerdì'},
+           {'date': '2026-05-16', 'weekday': 'Sabato'},
+           {'date': '2026-05-17', 'weekday': 'Domenica'},
+           {'date': '2026-05-18', 'weekday': 'Lunedì'},
+           {'date': '2026-05-19', 'weekday': 'Martedì'},
+           {'date': '2026-05-20', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-21', 'weekday': 'Giovedì'},
+           {'date': '2026-05-22', 'weekday': 'Venerdì'},
+           {'date': '2026-05-23', 'weekday': 'Sabato'},
+           {'date': '2026-05-24', 'weekday': 'Domenica'},
+           {'date': '2026-05-25', 'weekday': 'Lunedì'},
+           {'date': '2026-05-26', 'weekday': 'Martedì'},
+           {'date': '2026-05-27', 'weekday': 'Mercoledì'},
+           {'date': '2026-05-28', 'weekday': 'Giovedì'},
+           {'date': '2026-05-29', 'weekday': 'Venerdì'},
+           {'date': '2026-05-30', 'weekday': 'Sabato'},
+           {'date': '2026-05-31', 'weekday': 'Domenica'},
+           {'date': '2026-06-01', 'weekday': 'Lunedì'},
+           {'date': '2026-06-02', 'weekday': 'Martedì'},
+           {'date': '2026-06-03', 'weekday': 'Mercoledì'},
+           {'date': '2026-06-04', 'weekday': 'Giovedì'},
+           {'date': '2026-06-05', 'weekday': 'Venerdì'},
+           {'date': '2026-06-06', 'weekday': 'Sabato'}],
+ 'description': 'L’associazione Dimensioni Musicali di Latina compie dieci '
+                'anni e vuole festeggiare offrendo alla città, in particolare '
+                'ai bambini e alle famiglie, una stagione di eventi gratuiti. '
+                'La rassegna, dal titolo Risonanze, prevede eventi per bambini '
+                'di tutte le età, seminari di formazione per docenti e '
+                'collaborazioni con numerose realtà che in questi dieci anni '
+                'hanno collaborato e contribuito alla crescita di questa '
+                'associazione. I docenti per la formazione degli adulti '
+                'saranno: Ciro Paduano (sabato 8 novembre 2025), vice '
+                'presidente dell’OSI Orff-Schulwerk Italiano e docente di body '
+                'percussion, Paola Anselmi (24 gennaio 2026), presidente '
+                'dell’Associazione Internazionale Musica in Culla e fondatrice '
+                'della metodologia, Elisa Rossi (7 marzo 2026), cantante jazz '
+                'di Latina specializzata nella didattica del canto. Saranno '
+                'ben sette gli spettacoli per bambini e tre gli eventi '
+                'formativi di elevato livello ma alla portata di tutti in '
+                'varie location della città: dall’accogliente Teatro di Opera '
+                'Prima all’auditorium dell’Istituto Giuseppe Giuliano, dalla '
+                'sede stessa dell’associazione alla libreria A Testa in Giù, '
+                'passando per palazzo M e il parco Le Querce. Gli appuntamenti '
+                'proseguiranno fino a giugno e saranno gratuiti si per gli '
+                'adulti che per i bambini. Per ricevere maggiori informazioni '
+                'e prenotare il proprio posto sono a disposizione il numero '
+                '3756152669 e l’indirizzo email info@dimensionimusicali.com',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/1074706799082/ciro-paudano-corso-body-percussion-per-dimensioni-musicali.jpg',
+ 'location_address': None,
+ 'location_name': 'varie location',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:23.196779',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Risonanze la rassegna di Dimensioni musicali',
+ 'url': 'https://www.latinatoday.it/eventi/risonanze-dimensioni-musicali-latina.html',
+ 'uuid': '953bca60fa5e83c8'}
+[2026-01-28T22:20:26.080+0000] {docker.py:429} INFO - 2026-01-28 22:20:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/musica-in-casa-gennaio-febbraio-2026-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:26.189+0000] {docker.py:429} INFO - 2026-01-28 22:20:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/musica-in-casa-gennaio-febbraio-2026-latina.html>
+{'category': 'Concerti',
+ 'city': 'Latina',
+ 'content_hash': 'b3628fcae5e27b21',
+ 'date_end': '2026-02-28',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-21',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-25',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '21:00', 'weekday': 'Sabato'}],
+ 'description': 'Musica in Casa è una rassegna di concerti che esplorano '
+                'differenti mondi sonori, dal jazz alla musica latin, dal pop '
+                'alla musica dei cantautori, le musiche dal mondo. L’idea '
+                'nasce in seno a un laboratorio di musica di insieme che si '
+                'tiene alla casa di quartiere da due anni a questa parte. I '
+                'musicisti invitati ai concerti possono essere sia elementi '
+                'del laboratorio musicale della Casa di Quartiere di Borgo '
+                'Piave, sia ospiti esterni specializzati nello stile musicale '
+                'tema della serata. I concerti avranno cadenza quindicinale '
+                'fino a giugno 2026. I concerti sono a cura di Mimmo Di '
+                'Francesco e dell’Associazione Culturale Musicale LOUIS in '
+                'collaborazione con la Casa di Quartiere di Borgo Piave. '
+                'L’iniziativa nasce con l’intento di promuovere la cultura '
+                'musicale e favorire l’incontro tra generi e tradizioni '
+                'diverse, coinvolgendo un pubblico ampio e valorizzando il '
+                'territorio. Il programma prevede concerti con artisti di '
+                'rilievo nello stile musicale oggetto dei singoli concerti e '
+                'momenti di incontro con il pubblico, offrendo un’esperienza '
+                'di alta qualità artistica e di forte impatto culturale. La '
+                'Casa di Quartiere di Borgo Piave vuole essere un punto di '
+                'riferimento della vita comunitaria e si rivolge a tutti i '
+                'cittadini del territorio comunale per stimolare la '
+                'partecipazione a iniziative e attività generando relazioni e '
+                'scambi culturali e sociali. L’ACM LOUIS promuove attività '
+                'culturali, artistiche, musicali ed educative senza scopo di '
+                'lucro, rivolte a soci e non soci. Organizza concerti, '
+                'spettacoli, corsi, laboratori e iniziative di aggregazione '
+                'sociale, anche in collaborazione con enti pubblici e privati. '
+                'Sabato 17 gennaio Cafè de Paris – Valzer Musette et Chansons '
+                'Sabato 31 gennaio Por Causa do Amor – Omaggio ad Antonio '
+                'Carlos Jobim Sabato 14 febbraio Marechiaro, marechiaro – '
+                'Omaggio a Salvatore Di Giacomo Sabato 28 febbraio Irish Music '
+                'Ceíli Band - Musica irlandese',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/14138529797260/musica-in-casa-2.png',
+ 'location_address': 'Via Arturo Codignola, 1',
+ 'location_name': 'Casa di Quartiere di Borgo Piave',
+ 'price': '€ 7',
+ 'scraped_at': '2026-01-28T22:20:23.196311',
+ 'time_info': '21:00',
+ 'title': 'Musica in casa: la rassegna della Casa di Quartiere di Borgo Piave',
+ 'url': 'https://www.latinatoday.it/eventi/musica-in-casa-gennaio-febbraio-2026-latina.html',
+ 'uuid': '4c36abbe569ee5d9'}
+[2026-01-28T22:20:27.172+0000] {docker.py:429} INFO - 2026-01-28 22:20:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/bestiario-contemporaneo-mauro-molinari-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:27.280+0000] {docker.py:429} INFO - 2026-01-28 22:20:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/bestiario-contemporaneo-mauro-molinari-latina.html>
+{'category': 'Mostre',
+ 'city': 'Latina',
+ 'content_hash': 'e52c541bc101489d',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'Dopo la pausa delle festività, riaprono le porte dello Spazio '
+                'COMEL che ospita nel mese di gennaio “Bestiario '
+                'Contemporaneo” la personale di Mauro Molinari. Artista romano '
+                'dalla lunga e variegata carriera, oltre 50 anni di '
+                'sperimentazione creativa, che oggi arriva nell’elegante '
+                'galleria di Latina con una serie di opere inedite realizzate '
+                'tra il 2012 e il 2020. Si tratta di lavori di grandi '
+                'dimensioni realizzati in acrilico su tela, legno e cartone '
+                'che raffigurano donne e uomini che presentano sorrisi amari, '
+                'espressioni sbeffeggianti, atteggiamenti pensosi o urlanti. '
+                'Molinari con ironia e sagacia propone al pubblico il suo '
+                'sguardo sulla contemporaneità, non un giudizio morale quanto '
+                'un racconto che spesso parla di isolamento e solitudine. La '
+                'mostra, a cura di Claudia Zaccagnini, sarà inaugurata sabato '
+                '17 gennaio e sarà aperta al pubblico tutti i giorni dalle 17 '
+                'alle 20 fino al 1° febbraio. Cenni biografici: Mauro Molinari '
+                'è un artista romano con oltre cinquant’anni di carriera alle '
+                'spalle, caratterizzata da un percorso creativo articolato in '
+                'cicli differenti, tra cui la Pittura scritta, i Libri '
+                'd’artista e il design tessile. Dal 1995 cura la collana '
+                'Orditi & Trame, una serie di cataloghi editi in proprio. '
+                'Negli ultimi vent’anni si è dedicato al racconto della città '
+                'e della sua caotica umanità, con un linguaggio figurativo '
+                'originale e ironico. Ha partecipato a oltre 1500 mostre tra '
+                'personali e collettive, in gallerie e musei in Italia e '
+                'all’estero, tra cui il Museo Didattico della Seta di Como, il '
+                'Museo di Palazzo Mocenigo a Venezia, il Museo Carlo Bilotti '
+                'di Roma (con installazione permanente), il Musée de '
+                'l’Impression sur Etoffes di Mulhouse e il Museo Jean Lurçat '
+                'di Angers. Le sue opere sono state acquisite da collezioni '
+                'pubbliche e private, e l’artista si è avvalso della '
+                'presentazione di noti critici d’arte. È considerato uno dei '
+                'fondatori storici della Fiber Art in Italia.',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/10469957652211/whatsapp-image-2026-01-08-at-19-28-15-2.jpeg',
+ 'location_address': 'Via Neghelli, 68',
+ 'location_name': 'Spazio COMEL Arte Contemporanea',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:23.195810',
+ 'time_info': 'inaugurazione ore 18, tutti i giorni dalle 17 alle 20',
+ 'title': 'Bestiario Contemporaneo: l’arte di Mauro Molinari allo Spazio COMEL',
+ 'url': 'https://www.latinatoday.it/eventi/bestiario-contemporaneo-mauro-molinari-latina.html',
+ 'uuid': '3c3e61793af2102b'}
+[2026-01-28T22:20:28.177+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/street-spirit-nicolosi-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:28.287+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/street-spirit-nicolosi-latina.html>
+{'category': 'Mostre',
+ 'city': 'Latina',
+ 'content_hash': '6447ef4b33d820a1',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-16',
+ 'dates': [{'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'}],
+ 'description': 'Da sempre la fotografia è l’arte che ferma un istante, in '
+                'particolare la street photography perpetua un momento e '
+                'racconta luoghi, persone, situazioni e in un quartiere come '
+                'il Nicolosi di Latina può diventare un racconto che è storia, '
+                'ma anche accoglienza, integrazione, diversità a confronto. '
+                'Così nell’attivissimo Spazio Nicolosi arriva la prima '
+                'edizione Street Spirit Nicolosi un festival organizzato in '
+                'collaborazione con EFFE 4.0 – Associazione Culturale di '
+                'Street Photography. Dal 16 gennaio all’8 febbraio si terrà la '
+                'mostra dell’Effestival 2025 di Anagni: 150 scatti di strada '
+                'provenienti da tutto il mondo e in stretto dialogo con il '
+                'variegato tessuto umano del quartiere che la ospita. La '
+                'mostra farà da cornice a una serie di eventi collaterali: '
+                'workshop, photowalk, laboratori e momenti di confronto che '
+                'coinvolgeranno fotografi affermati, appassionati, residenti, '
+                'adulti, bambini e curiosi, in un progetto che mette al centro '
+                'la strada come luogo di relazione, ascolto e verità. '
+                'l’inaugurazione si terrà venerdì 16 gennaio alle ore 18.30 '
+                'alla presenza di Tullio Cesario, fotografo, divulgatore, '
+                'musicista e fondatore di EFFE 4.0, che terrà un dibattito '
+                'sulla percezione dell’osservatore. Si partirà già sabato 17 '
+                'gennaio con un workshop intensivo con Salvatore Matarazzo, '
+                'tra i fotografi di strada più riconosciuti a livello '
+                'nazionale e internazionale. Fondatore della pagina Street '
+                'Photography Versilia, punto di riferimento per appassionati e '
+                'addetti ai lavori, Matarazzo è membro del collettivo '
+                'internazionale Full Frontal Flash e del collettivo Elephant '
+                'Gun. Le sue fotografie sono state pubblicate su riviste e '
+                'portali internazionali, tra cui LensCulture, Huffington Post, '
+                'Street Photography Magazine, ISP – International Street '
+                'Photography, e sono state esposte in festival e spazi '
+                'prestigiosi in Italia e all’estero, dagli Stati Uniti alla '
+                'Corea del Sud. Nel workshop intensivo di sabato 17 gennaio '
+                '(evento su prenotazione), Matarazzo guiderà fotografi e '
+                'curiosi in un percorso teorico e pratico dedicato al ritratto '
+                'di strada e all’uso del flash nella street photography. Il '
+                'laboratorio si fonda su un rapporto diretto e paritario con i '
+                'partecipanti, privilegiando l’esperienza individuale, '
+                'l’osservazione lenta, l’empatia e la consapevolezza del gesto '
+                'fotografico. Camminare, osservare, riflettere e poi scattare: '
+                'una fotografia pensata, mai casuale, che parla di chi la '
+                'realizza prima ancora che del soggetto ritratto. Domenica 18 '
+                'gennaio, sarà la volta di Mario Mencacci, fotografo FIAF e '
+                'architetto, che curerà una sessione di lettura portfolio, '
+                'accompagnata da un approfondimento sul rapporto tra '
+                'fotografia, spazio urbano e identità del quartiere Nicolosi. '
+                'Il secondo week end (24–25 gennaio) vedrà protagonista '
+                'Lilliana Ranalletta, fotografa di fama internazionale, '
+                'vincitrice di numerosi festival, autrice di libri fotografici '
+                'e pubblicata su importanti riviste. Ranalletta sarà la '
+                'curatrice del progetto corale Street Spirit Nicolosi: un '
+                'photowalk partecipato dedicato al territorio, durante il '
+                'quale i fotografi documenteranno il quartiere sotto la sua '
+                'supervisione. Da questo percorso nascerà il libro fotografico '
+                'ufficiale del festival. Il terzo week end (31 gennaio – 1 '
+                'febbraio) sarà dedicato ai laboratori e alle attività '
+                'educative, con l’obiettivo di avvicinare bambini, ragazzi e '
+                'giovani del quartiere al linguaggio visivo e alla fotografia '
+                'come strumento di espressione e consapevolezza. In '
+                'particolare, domenica 1 febbraio, si terrà un laboratorio di '
+                'fotografia per bambini e ragazzi, a cura di EFFE 4.0, pensato '
+                'come primo contatto con lo sguardo fotografico e con la '
+                'possibilità di raccontare il proprio mondo. Il festival si '
+                'concluderà nel week end del 6–8 febbraio con l’editing e la '
+                'presentazione del libro “Street Spirit Nicolosi” e un '
+                'incontro aperto con la comunità, momento di restituzione '
+                'collettiva e dialogo tra immagini, autori e abitanti. È '
+                'dunque dal 16 gennaio all’8 febbraio presso lo Spazio '
+                'Nicolosi di Latina. Per avere maggiori informazioni e '
+                'partecipare ai workshop sono a disposizione i numeri WhatApp '
+                '348 8929030 e 350 0337918 e l’indirizzo email '
+                'info@spazioculturalenicolosi.it',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/62405992506057/salvatore_matarazzo_001.jpg',
+ 'location_address': 'Via Filippo Corridoni',
+ 'location_name': 'Spazio Culturale Nicolosi',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:20:23.195293',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Street Spirit Nicolosi: a Latina il festival dedicato alla '
+          'fotografia di strada',
+ 'url': 'https://www.latinatoday.it/eventi/street-spirit-nicolosi-latina.html',
+ 'uuid': 'b7a725b02bb9785a'}
+[2026-01-28T22:20:29.520+0000] {docker.py:429} INFO - 2026-01-28 22:20:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/teatro-d-annunzio-stagione-di-prosa-2025-2026-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:29.634+0000] {docker.py:429} INFO - 2026-01-28 22:20:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/teatro-d-annunzio-stagione-di-prosa-2025-2026-latina.html>
+{'category': 'Teatri',
+ 'city': 'Latina',
+ 'content_hash': '2c657b5a46307448',
+ 'date_end': '2026-04-18',
+ 'date_start': '2025-10-22',
+ 'dates': [{'date': '2025-10-22', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-23', 'weekday': 'Giovedì'},
+           {'date': '2025-10-24', 'weekday': 'Venerdì'},
+           {'date': '2025-10-25', 'weekday': 'Sabato'},
+           {'date': '2025-10-26', 'weekday': 'Domenica'},
+           {'date': '2025-10-27', 'weekday': 'Lunedì'},
+           {'date': '2025-10-28', 'weekday': 'Martedì'},
+           {'date': '2025-10-29', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-31', 'weekday': 'Venerdì'},
+           {'date': '2025-11-01', 'weekday': 'Sabato'},
+           {'date': '2025-11-02', 'weekday': 'Domenica'},
+           {'date': '2025-11-03', 'weekday': 'Lunedì'},
+           {'date': '2025-11-04', 'weekday': 'Martedì'},
+           {'date': '2025-11-05', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-06', 'weekday': 'Giovedì'},
+           {'date': '2025-11-07', 'weekday': 'Venerdì'},
+           {'date': '2025-11-08', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'weekday': 'Martedì'},
+           {'date': '2025-11-12', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'weekday': 'Martedì'},
+           {'date': '2025-11-19', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'weekday': 'Martedì'},
+           {'date': '2025-11-26', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'weekday': 'Martedì'},
+           {'date': '2026-04-15', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'weekday': 'Sabato'}],
+ 'description': 'Prende il via la stagione di prosa 2025-2026 del Teatro '
+                'D’Annunzio: un ricco cartellone che comprende dieci '
+                'spettacoli organizzati dal Comune di Latina in collaborazione '
+                'con ATCL – Circuito Multidisciplinare del Lazio. Sul palco '
+                'del teatro principale della città si alterneranno grandi '
+                'protagonisti del mondo dello spettacolo da Alessio Boni a '
+                'Emilio Solfrizzi, da Mariagrazia Cucinotta a Luca Bizzarri, '
+                'Milena Vukotic e molti altri ancora, con i principali '
+                'professionisti locali: si parla di compagnie storiche di '
+                'Latina ormai conosciute e apprezzate non solo in città come '
+                'Latitudine Teatro, Elisabetta Femiano e Danilo Proia della '
+                'Compagnia il Gruppo dell’Arte o Clemente Pernarella e Melania '
+                'Maccaferri. Una stagione che propone classici della '
+                'drammaturgia come il Macbeth o l’Iliade, rivisitate in chiave '
+                'moderna con particolare attenzione per la messa in scena e i '
+                'legami con il mondo di oggi, classici moderni come L’Anatra '
+                'all’Arancia o A Spasso con Daisy. Accanto alla stagione di '
+                "prosa, il D’Annunzio sarà inoltre animato da un'ampia e varia "
+                'programmazione che comprende la stagione di danza, quella '
+                'concertistica, incontri con personaggi importanti, palco '
+                'comico e svariati appuntamenti fuori dagli abbonamenti. È '
+                'dunque al Teatro D’Annunzio di Latina dal 22 ottobre 2025 al '
+                '18 aprile 2026. I biglietti sono disponibili presso il '
+                'botteghino e online su Ticketone, per maggiori informazioni '
+                'sono a disposizione il numero 0773/652642 e l’indirizzo email '
+                'teatrodannunziolatina@gmail.com Stagione di prosa - biglietti '
+                'Platea: Intero € 27 + d.p. | Ridotto over 65 € 25 + d.p. '
+                'Ridotto promo abbonati danza e musica: € 23 + d.p. Palchi '
+                'platea, I Galleria, Palchi galleria I ord: Intero € 25+ d.p. '
+                '| Ridotto over 65 € 23+ d.p. Ridotto promo abbonati danza e '
+                'musica: € 21 + d.p. Ridotto under 35: € 17 + d.p. II '
+                'Galleria, Palchi galleria II ord: Intero € 22 + d.p. | '
+                'Ridotto over 65 € 20+ d.p. Ridotto promo abbonati danza e '
+                'musica: € 18 + d.p. Ridotto under 35: € 10 + d.p. 22 '
+                'MERCOLEDÌ OTTOBRE 2025 ore 21.00 ILIADE - IL GIOCO DEGLI DÈI '
+                'Alessio Boni, Antonella Attili liberamente ispirato '
+                'all’Iliade di Omero di Francesco Niccolini, regia Roberto '
+                'Aldorasi, Alessio Boni e Marcello Prayer e con Haroun Fall, '
+                'Jun Ichikawa, Liliana Massari, Francesco Meoni, Elena Nico, '
+                'Marcello Prayer Iliade canta di un mondo in cui l’etica del '
+                'successo non lascia spazio alla giustizia e gli uomini non '
+                'decidono nulla, ma sono agiti dagli dèi in una lunga e '
+                'terribile guerra senza vincitori né vinti. La coscienza e la '
+                'scelta non sono ancora cose che riguardano gli umani: la '
+                'civiltà dovrà attendere l’età della Tragedia per conoscere la '
+                'responsabilità personale e tutto il peso della libertà da '
+                'quegli dèi che sono causa di tutto ma non hanno colpa di '
+                'nulla. In quel mondo arcaico dominato dalla forza, dal Fato '
+                'ineluttabile e da dèi capricciosi non è difficile specchiarci '
+                'e riconoscere il nostro: le nostre vite dominate dalla paura, '
+                'dal desiderio di ricchezza, dall’ossessione del nemico, dai '
+                'giochi di potere e da tutte le forze distruttive che ci '
+                'sprofondano nell’irrazionale e rendono possibile la guerra. 9 '
+                'DOMENICA NOVEMBRE 2025 ore 18:00 D’ANNUNZIO JAZZ Elisabetta '
+                'Femiano, Danilo Proia, Emanuele Vezzoli da “La Figlia di '
+                'Iorio” di Gabriele D’Annunzio adattamento e regia Danilo '
+                'Proia chitarra Simone Salvatori, sassofono Laura Venditti In '
+                'uno spazio post-moderno al termine di una festa '
+                'pre-matrimoniale lo sposo rimane solo in una notte di luna '
+                'piena. Frastornato dall’improvviso mutamento di atmosfera i '
+                'versi dannunziani lo proiettano in una dimensione di sogno. '
+                'Intorno a lui frammenti di musica, voci, presenze lo rendono '
+                'protagonista e non più spettatore. Musica e versi lo '
+                'travolgono vorticosamente, realizzando una mirabile '
+                'consonanza tra realtà e immaginazione. Ed è qui che irrompono '
+                'con forza il testo ‘’La Figlia di Iorio’’ e la sapiente e '
+                'pura forma creativa della musica jazz. In una sorta di '
+                'iniziazione di sapore misterico l’uomo vivrà un intenso '
+                'viaggio di conoscenza. Al primo sorgere del sole si troverà '
+                'di nuovo solo. Rotti gli schemi, può finalmente diventare il '
+                'poeta della sua stessa vita celebrando così un nuovo '
+                'battesimo. 22 SABATO NOVEMBRE 2025 ore 21.00 MACBETH Daniele '
+                'Pecci, Laura Marinoni regia Daniele Pecci Macbeth è una fra '
+                'le più note tragedie shakespeariane. Essa drammatizza i '
+                'catastrofici effetti fisici e psichici della ricerca del '
+                'potere per il proprio interesse personale Nelle sue note di '
+                'regia Daniele Pecci, che è alla sua seconda avventura '
+                'shakespeariana dopo “Amleto” ci racconta il suo pensiero: '
+                '“Ciò che è fatto, non si può disfare”, perché l’atto '
+                'stabilisce un punto di non ritorno. Questo accade nel '
+                'Macbeth: una volta entrati nel sangue bisogna per forza '
+                'proseguire in una spirale omicidiaria che non può avere fine. '
+                'È un incubo dal quale ci si vorrebbe svegliare, ma ad un '
+                'certo punto diventa difficile districarsi fra stato di veglia '
+                'e sonno. Nella più esoterica delle tragedie shakespeariane il '
+                '“viaggio” non può che essere all’interno della mente, '
+                'dell’inconscio, del sogno del protagonista. Desolate lande '
+                'metafisiche, tramonti surreali di sangue, paesaggi distorti, '
+                'deformati dal sogno, saranno il tentativo di un’indagine '
+                'sulla natura omicida dell’uomo. Daniele Pecci affronta questo '
+                'testo sia come regista che come attore con Laura Marinoni nel '
+                'ruolo di Lady Macbeth 5 VENERDÌ DICEMBRE 2025 ore 21.00 '
+                'L’ANATRA ALL’ARANCIA Irene Ferri, Emilio Solfrizzi di W. D. '
+                'Home e M. G. Sauvajon regia Claudio Greg Gregori e con Ruben '
+                'Rigillo, Beatrice Schiaffino, Antonella Piccolo “L’Anatra '
+                'all’Arancia” è un classico feuilleton dove i personaggi si '
+                'muovono algidi ed eleganti su una scacchiera irta di '
+                'trabocchetti. Ogni mossa dei protagonisti, però, ne rivela le '
+                'emozioni, le mette a nudo a poco a poco e il cinismo lascia '
+                'il passo ai timori, all’acredine, alla rivalità, alla '
+                'gelosia; in una parola all’Amore, poiché è di questo che si '
+                'parla. “L’Anatra all’Arancia” è una commedia che ti afferra '
+                'immediatamente e ti trascina nel suo vortice di battute '
+                'sagaci, solo apparentemente casuali, perché tutto è '
+                'architettato come una partita a scacchi. La trasformazione '
+                'dei personaggi avviene morbida, grazie a una regia che la '
+                'modella con cromatismi e movimenti talvolta sinuosi, talvolta '
+                'repentini, ma sempre nel rispetto di un racconto sofisticato '
+                'in cui le meschinità dell’animo umano ci servano a sorridere, '
+                'ma anche a suggerirci il modo di sbarazzarsene. 24 SABATO '
+                'GENNAIO 2026 ore 21.00 IL MEDICO DEI MAIALI Luca Bizzarri, '
+                'Francesco Montanari, David Sebasti, Mauro Marino, Luigi '
+                'Cosimelli testo e regia Davide Sacco La morte improvvisa del '
+                're d’Inghilterra mostra tutta la debolezza della monarchia '
+                'quando la corona finisce nelle mani del principe ereditario, '
+                'un ragazzo sciocco e sprovveduto. Tra il potere e il nuovo '
+                're, un medico veterinario pronto a cogliere un’occasione che '
+                'forse, poi, non si rivelerà tale. Il re d’Inghilterra muore '
+                'all’improvviso durante l’inaugurazione di un albergo in '
+                'Scozia. Fuori, il temporale impedisce al medico di palazzo '
+                'per arrivare a constatare il decesso. Tale compito viene '
+                'assegnato all’unico medico presente presso la struttura, ma '
+                'il caso vuole che sia un veterinario, specializzato in '
+                'maiali. Il veterinario capisce che il re non è morto '
+                'd’infarto come i consiglieri vogliono far credere, ma sta al '
+                'gioco. Nel frattempo, arriva in albergo il principe '
+                'ereditario, un giovane scialbo e, a suo stesso dire, stupido, '
+                'vestito da nazista perché stava partecipando a una festa a '
+                'tema durante il gay pride.Il principe chiede di rimanere solo '
+                'con il medico. Deve preparare il suo primo discorso alla '
+                'nazione e non sa dove mettere le mani. Il veterinario capisce '
+                'che ha un’opportunità, ma deve giocarsi bene le sue carte... '
+                '14 SABATO FEBBRAIO 2026 ore 21.00 TRAFFICO Morris Sarra di '
+                'Sergio Blanco produzione Latitudine Teatro, regia Stefano '
+                'Furlan È un monologo intenso che racconta la vita di Alex, un '
+                'giovane prostituto ai margini della città, intrappolato in '
+                'una rete di desiderio, violenza e criminalità. La sua moto '
+                'sportiva, simbolo del sogno di libertà, rappresenta '
+                'un’ambizione inafferrabile, l’illusione di poter fuggire da '
+                'una realtà difficile e dolorosa. Il legame ambiguo con un '
+                'cliente misterioso, chiamato “il francese”, trascina Alex in '
+                'una spirale di incontri erotici e violenti, dove il desiderio '
+                'si mescola al pericolo e l’ingenuità alla disperazione. Una '
+                'storia che esplora i confini della marginalità e il bisogno, '
+                'spesso ingenuo, di riscatto. L’allestimento si concentra su '
+                'una rappresentazione essenziale, capace di evocare il mondo '
+                'interiore del protagonista senza cedere al naturalismo. La '
+                'moto, elemento chiave dell’immaginario di Alex, non è '
+                'ricreata in modo realistico, ma frammentata in simboli '
+                'scenici che suggeriscono un desiderio mai realizzato. 21 '
+                'SABATO FEBBRAIO 2026 ore 21.00 UN SOGNO A ISTANBUL Ballata '
+                'per tre uomini e una donna Maddalena Crippa, Maximilian Nisi, '
+                'Mario Incudine, Adriano Giraldi tratto da “La Cotogna di '
+                'Istanbul” di Paolo Rumiz, ed. Feltrinelli di Alberto Bassetti '
+                'regia Alessio Pizzech Un sogno a Istanbul racconta di Max e '
+                'Maša, e del loro amore. Maximilian von Altenberg, ingegnere '
+                'austriaco, viene mandato a Sarajevo per un sopralluogo '
+                'nell’inverno del ’97. Un amico gli presenta la misteriosa '
+                'Maša Dizdarević, “occhio tartaro e femori lunghi”, austera e '
+                'selvaggia, splendida e inaccessibile, vedova e divorziata, '
+                'due figlie che vivono lontane da lei. Scatta qualcosa. '
+                'Un’attrazione potente che però non ha il tempo di '
+                'concretizzarsi. Max torna in patria e, per quanto faccia, '
+                'prima di ritrovarla passano tre anni. Sono i tre anni '
+                'fatidici di cui parlava “La Gialla Cotogna di Istanbul”, la '
+                'canzone d’amore che Maša gli ha cantato. Maša ora è malata, '
+                'ma l’amore finalmente si accende. Da lì in poi si leva un '
+                'vento che muove le anime e i sensi, che strappa lacrime e '
+                'sogni. Da lì in poi comincia un’avventura che porta Max nei '
+                'luoghi magici di Maša, in un viaggio che è rito, scoperta e '
+                'resurrezione. 20 VENERDÌ MARZO 2026 ore 21.00 LA MOGLIE '
+                'FANTASMA Mariagrazia Cucinotta, Pino Quartullo di David '
+                'Tristram regia Marco Rampoldi e con Gianmarco Pozzoli, '
+                'Giorgio Verduci, Roberta Petrozzi Edward, scrittore di teatro '
+                'in crisi, non ha superato la morte della moglie, ma proprio '
+                'quando sembra affacciarsi una nuova possibilità (quella di '
+                'Glenda, giovane affascinante attrice) come un novello Amleto, '
+                'riceve la visita dello spirito della moglie morte, Ruby. '
+                'Questa non si presenta in modo molto shakespeariano, al '
+                'contrario: ha conservato i modi burberi, schietti, il cinismo '
+                'e l’arroganza di quand’era viva. Inoltre è tornata '
+                'dall’aldilà per una grande confessione: non è morta per aver '
+                'accidentalmente mischiato cocktail e droghe, ma è stata '
+                'assassinata ed Edward deve aiutarla a scoprire chi è '
+                'stato!... La moglie fantasma è un mix di Spirito allegro e '
+                'Amleto. La figura di Ruby è esilarante, un fantasma molto '
+                'distante dai soliti cliché. E il giallo riserva delle belle '
+                'sorprese, con l’entrata in scena nel secondo atto di vari '
+                'personaggi per arrivare poi a un finale con un colpo di '
+                'scena... e che, naturalmente, scatena l’ilarità. David '
+                'Tristram si supera in una commedia divertente, piena di '
+                'ironia, giochi di parole e di godibili rimandi al grande '
+                'bardo. Mariagrazia Cucinotta torna al suo amore per il teatro '
+                'in una commedia di grande successo all’estero, affiancata da '
+                'un talento come Pino Quartullo, tra gli attori più amati del '
+                'panorama italiano, per la direzione di Marco Rampoldi, firma '
+                'da anni impegnata nelle edizioni di preziosi testi ancora '
+                'sconosciuti in Italia. La sfida è intrigante... 18 SABATO '
+                'APRILE 2026 ore 21.00 A SPASSO CON DAISY Milena Vukotic, '
+                'Salvatore Marino, Maximilian Nisi di Alfred Uhry adattamento '
+                'di Mario Scaletta regia Guglielmo Ferro La bravissima Milena '
+                'Vukotic dà vita all’anziana Daisy in una storia delicata e '
+                'divertente capace di raccontare con umorismo un tema '
+                'complesso come quello del razzismo dell’America del '
+                'dopoguerra. Daisy, anziana maestra in pensione è una ricca '
+                'signora ebrea che vuole apparire povera, dal piglio forte: '
+                'ironica, diretta, scontrosa, capricciosa e avara. È vitale ed '
+                'indipendente nonostante l’età ed è assolutamente mal disposta '
+                'verso la decisione presa dal figlio. Boolie di assumere un '
+                'autista. Daisy non vuole in casa qualcuno che tocchi le sue '
+                'cose, che la privi del gusto di guidare, che la faccia vedere '
+                'in giro accompagnata da uno chauffeur, come una donna ricca. '
+                'Per fortuna Hoke, l’autista di colore affezionato e '
+                'analfabeta è paziente e capace di sopportare tutte le '
+                'stranezze di Daisy e rimanere dignitosamente in disparte. '
+                'Giorno dopo giorno, la diffidenza iniziale lascia il posto a '
+                'un rapporto fatto di battibecchi e battute pungenti che cela '
+                'in realtà un affetto profondo. In fondo A Spasso con Daisy '
+                'non è che questo: la storia di un’amicizia profonda nata '
+                'nonostante i pregiudizi e le classi sociali. Emozionarsi non '
+                'è mai stato così divertente.',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/25902128412030/macbeth-pecci.jpg',
+ 'location_address': 'Viale Umberto I',
+ 'location_name': "Teatro Gabriele D'Annunzio",
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:20:23.194860',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Liberi di Scegliere: la stagione di prosa 2025-2026 del Teatro '
+          'D’Annunzio di Latina',
+ 'url': 'https://www.latinatoday.it/eventi/teatro-d-annunzio-stagione-di-prosa-2025-2026-latina.html',
+ 'uuid': '518aa6cbe583c7e3',
+ 'website': 'https://www.comune.latina.it/notizie/Stagione-di-Prosa-2025-2026.html#_16e69eb7-adea-4453-9163-255b3406fc3c'}
+[2026-01-28T22:20:30.408+0000] {docker.py:429} INFO - 2026-01-28 22:20:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/redenzione-dell-arte-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:30.526+0000] {docker.py:429} INFO - 2026-01-28 22:20:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/redenzione-dell-arte-latina.html>
+{'category': 'Mostre',
+ 'city': 'Latina',
+ 'content_hash': '9f272d6effdf5f7e',
+ 'date_end': '2026-03-08',
+ 'date_start': '2025-05-04',
+ 'dates': [{'date': '2025-05-04', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-05-05', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-05-06', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-05-07', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-05-08', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-05-09', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-05-10', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-05-11', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-05-12', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-05-13', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-05-14', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-05-15', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-05-16', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-05-17', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-05-18', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-05-19', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-05-20', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-05-21', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-05-22', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-05-23', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-05-24', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-05-25', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-05-26', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-05-27', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-05-28', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-05-29', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-05-30', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-05-31', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-06-01', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-06-02', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-06-03', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-06-04', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-06-05', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-06-06', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-06-07', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-06-08', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-06-09', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-06-10', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-06-11', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-06-12', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-06-13', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-06-14', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-06-15', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-06-16', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-06-17', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-06-18', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-06-19', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-06-20', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-06-21', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-06-22', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-06-23', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-06-24', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-06-25', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-06-26', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-06-27', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-06-28', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-06-29', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-06-30', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-07-01', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-07-02', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-07-03', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-07-04', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-07-05', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-07-06', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-07-07', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-07-08', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-07-09', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-07-10', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-07-11', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-07-12', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-07-13', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-07-14', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-07-15', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-07-16', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-07-17', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-07-18', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-07-19', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-07-20', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-07-21', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-07-22', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-07-23', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-07-24', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-07-25', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-07-26', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-07-27', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-07-28', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-07-29', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-07-30', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-07-31', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-08-01', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-08-02', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-08-03', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-08-04', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-08-05', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-08-06', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-08-07', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-08-08', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-08-09', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-08-10', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-08-11', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-08-12', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-08-13', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-08-14', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-08-15', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-08-16', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-08-17', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-08-18', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-08-19', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-08-20', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-08-21', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-08-22', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-08-23', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-08-24', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-08-25', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-08-26', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-08-27', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-08-28', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-08-29', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-08-30', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-08-31', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-09-01', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-09-02', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-09-03', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-09-04', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-09-05', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-09-06', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-09-07', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-09-08', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-09-09', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-09-10', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-09-11', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-09-12', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-09-13', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-09-14', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-09-15', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-09-16', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-09-17', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-09-18', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-09-19', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-09-20', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-09-21', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-09-22', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-09-23', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-09-24', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-09-25', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-09-26', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-09-27', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-09-28', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-09-29', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-09-30', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-10-01', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-02', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-03', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-10-04', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-10-05', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-10-06', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-10-07', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-10-08', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-09', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-10', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-10-11', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-10-12', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-10-13', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-10-14', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-10-15', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-16', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-17', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-10-18', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-10-19', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-10-20', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-10-21', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-10-22', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-23', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-24', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-10-25', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-10-26', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-10-27', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-10-28', 'time_start': '9:30', 'weekday': '
+[2026-01-28T22:20:30.526+0000] {docker.py:429} INFO - Martedì'},
+           {'date': '2025-10-29', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-30', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-31', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-11-01', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-11-02', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-11-03', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-11-04', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-11-05', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-06', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-11-07', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-11-08', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-11-12', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-11-19', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-11-26', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '9:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '9:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '9:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'time_start': '9:30', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '9:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '9:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '9:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'time_start': '9:30', 'weekday': 'Domenica'}],
+ 'description': 'Tra le opere più rappresentative della bonifica dell’agro '
+                'pontino, dalla quale è stata tratta anche la copertina di '
+                'Canale Mussolini, il romanzo di Antonio Pennacchi che ha '
+                'raccontato l’epopea della nascita di Latina e le vicende dei '
+                'suoi primi abitanti, c’è L’Agro Redento di Duilio Cambellotti '
+                'che orna la sala a lui dedicata all’interno del Palazzo del '
+                'Governo, sede dell’attuale Provincia di Latina. Una sala '
+                'maestosa, che non è quasi mai aperta al pubblico, oggi '
+                'diventa protagonista di una rassegna che unisce la storia '
+                'della città, l’arte di Cambellotti e la fervida attività '
+                'degli artisti di Latina. Nel più ampio progetto “Arte a Porte '
+                'Aperte” per il quale la Provincia intende rendere gli spazi '
+                'istituzionali veri e propri luoghi di cultura in cui il '
+                'patrimonio storico dialoga con la contemporaneità, arriva la '
+                'rassegna “Redenzione dell’Arte”. Ogni prima domenica del mese '
+                'alle 9.30, 10.30 e 11.30 dal 4 maggio 2025 all’8 marzo 2026 '
+                'la sala Cambellotti sarà aperta al pubblico e si terranno '
+                'delle visite guidate alla scoperta dell’arte di Cambellotti. '
+                'Ad arricchire questi appuntamenti ci saranno una serie di '
+                'mostre di artisti pontini selezionati da Fabio D’Achille per '
+                'MAD Museo d’Arte Diffusa: ogni mese nel foyer della sala '
+                'Cambellotti si potranno ammirare opere di pittura, scultura, '
+                'mosaici, ceramiche e altro ancora visitabili su appuntamento '
+                'da concordare contattando Mad al numero 3933242424 o alla '
+                'mail eventi@madarte.it. Le mostre e le visite guidate sono '
+                'gratuite ma l’ingresso è solo su prenotazione. È dunque dal 4 '
+                'maggio 2025 all’8 marzo 2026 presso la Sala Cambellotti del '
+                'Palazzo della Provincia di Latina. La prenotazione è da '
+                'effettuare su Evenbrite. Domenica 4 maggio 2025 Tommaso '
+                'Andreocci Domenica 1° giugno 2025 Emilia Isabella (scultura e '
+                'pittura) Domenica 6 luglio 2025 Patrizio Marafini, Alberto '
+                'Serarcangeli (pittura e incisione) Domenica 3 agosto 2025 '
+                'Antonio Farina, Gabriele Casale (pittura e mosaico) Domenica '
+                '7 settembre 2025 Alberto Manzetti, Cruciano Nasca (pittura e '
+                'scultura) Domenica 5 ottobre 2025 Marcello Trabucco, Michele '
+                'Volpe (pittura e incisione) Domenica 9 novembre 2025 '
+                'Francesco Paolo Martelli, Riccardo Parisi (pittura e mosaico) '
+                'Domenica 7 dicembre 2025 Luigi Menichelli, Massimo Palumbo '
+                '(pittura e installazioni) Domenica 4 gennaio 2026 Roberto '
+                'Andreatini, Claudio Cecconi (disegno, pittura e scultura) '
+                'Domenica 1° febbraio 2026 Alessandra Chicarella, Fabrizio '
+                'Gargano (pittura e fumetto) Domenica 8 marzo 2026 MAD Donna – '
+                'Simonetta Massironi, Alena Panchishin (ceramica raku e '
+                'pittura',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/39179727344771/prefettura-di-latina-2-2.jpg',
+ 'location_address': 'Piazza della Libertà',
+ 'location_name': 'Palazzo della Provincia',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:23.194344',
+ 'time_info': 'visite guidate 9.30, 10.30 e 11.30',
+ 'title': 'Redenzione dell’arte: visite guidate alla Sala Cambellotti e mostre '
+          'd’arte contemporanea',
+ 'url': 'https://www.latinatoday.it/eventi/redenzione-dell-arte-latina.html',
+ 'uuid': 'cb50b8e05926c3df',
+ 'website': 'https://www.eventbrite.it/e/biglietti-visite-guidate-sala-cambellotti-1248391495569?aff=ebdssbdestsearch'}
+[2026-01-28T22:20:31.181+0000] {docker.py:429} INFO - 2026-01-28 22:20:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/sagra-della-polenta-2026-sermoneta.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:31.290+0000] {docker.py:429} INFO - 2026-01-28 22:20:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/sagra-della-polenta-2026-sermoneta.html>
+{'category': 'Cibo e Vino',
+ 'city': 'Latina',
+ 'content_hash': '5c6420cef12fe2b9',
+ 'date_end': '2026-02-15',
+ 'date_start': '2026-01-18',
+ 'dates': [{'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'}],
+ 'description': 'Torna uno degli appuntamenti più attesi dell’inverno pontino: '
+                'la Sagra della Polenta di Sermoneta. Domenica 18 gennaio si '
+                'torna indietro nel tempo e si celebra sia il piatto invernale '
+                'per eccellenza che Sant’Antonio Abate protettore degli '
+                'animali. Una giornata di festa nel borgo medievale di '
+                'Sermoneta organizzata dall’associazione Festeggiamenti che da '
+                'quasi 50 anni unisce storia, tradizioni, gastronomia e '
+                'divertimento per grandi e piccini. Tornano gli ormai celebri '
+                'paioli di rame dove verrà cotta la polenta sul fuoco a legna, '
+                'torna la benedizione del pane, e torna la distribuzione della '
+                'polenta in piazza: un rito conviviale che è ormai d’obbligo '
+                'per i buongustai pontini e non. La polenta sarà condita con '
+                'il sugo di salsiccia preparato secondo la ricetta tramandata '
+                'di generazione in generazione dai mastri polentari a '
+                'Sermoneta. Lo stesso giorno ci sarà anche la Polenta anche '
+                'nella borgata di Doganella di Ninfa. E come è ormai '
+                'tradizione la Festa della Polenta proseguirà per i fine '
+                'settimana successivi nelle varie borgate di Sermoneta. È '
+                'dunque per domenica 18 gennaio nel borgo medievale di '
+                'Sermoneta e a Doganella di Ninfa. 25 gennaio Sermoneta Scalo '
+                '1° febbraio Tufette 8 febbraio Pontenuovo 15 febbraio '
+                'Monticchio',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/2147708725111/polenta.jpg',
+ 'location_address': None,
+ 'location_name': 'Borgo medievale e borgate',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:23.193893',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'A Sermoneta la Sagra della Polenta',
+ 'url': 'https://www.latinatoday.it/eventi/sagra-della-polenta-2026-sermoneta.html',
+ 'uuid': '523e49cfac6fd47a'}
+[2026-01-28T22:20:32.147+0000] {docker.py:429} INFO - 2026-01-28 22:20:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/carnevale-pontino-2026-latina-cisterna-pontinia-sabaudia-san-felice.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:32.255+0000] {docker.py:429} INFO - 2026-01-28 22:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/carnevale-pontino-2026-latina-cisterna-pontinia-sabaudia-san-felice.html>
+{'category': 'Manifestazioni',
+ 'city': 'Latina',
+ 'content_hash': '6efce58519927093',
+ 'date_end': '2026-02-17',
+ 'date_start': '2026-01-25',
+ 'dates': [{'date': '2026-01-25', 'time_start': '14:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '14:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '14:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '14:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '14:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '14:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '14:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '14:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '14:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '14:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '14:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '14:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '14:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '14:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '14:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '14:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '14:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '14:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '14:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '14:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '14:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '14:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '14:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '14:30', 'weekday': 'Martedì'}],
+ 'description': 'Arriva una festa molto amata dai bambini: il Carnevale. È '
+                'giunto il momento di mascherarsi, tirare coriandoli e stelle '
+                'filanti, mangiare le frappe, conosciute anche come '
+                'chiacchiere, e farsi affascinare dai colori, dalla musica e '
+                'dal divertimento che questa manifestazione porta con sé. '
+                'Immancabili tornano anche le sfilate dei carri allegorici '
+                'realizzate dall’Associazione Amici in Festa, anima del '
+                'Carnevale Pontino, che dal 25 gennaio al 17 febbraio '
+                'gireranno per i vari comuni della provincia con gran finale a '
+                'Latina. Ogni fine settimana i carri si sposteranno tra '
+                'Pontinia, Sabaudia, Cisterna, San Felice Circeo e poi Latina, '
+                'le sfilate inizieranno nel primo pomeriggio del sabato o '
+                'della domenica nel centro cittadino per poi sostare nelle '
+                'piazze principali e animare la festa. Si partirà da Borgo '
+                'Vodice e Borgo Montenero, per poi passare a Pontina e una '
+                'prima tappa a Latina, fermarsi per due giorni a Cisterna, '
+                'spostarsi a Sabaudia e San Felice e chiudere la '
+                'manifestazione a Latina il martedì grasso che quest’anno sarà '
+                'il 17 febbraio. È dunque nei fine settimana dal 25 gennaio a '
+                'martedì 17 febbraio nei comuni della provincia di Latina. '
+                'Domenica 25 gennaio Ore 14.30 Borgo Vodice Sabato 31 gennaio '
+                'Ore 14.30 Borgo Montenero Sabato 7 febbraio Ore 14.30 Latina '
+                'Domenica 8 febbraio Ore 14.30 Cisterna Giovedì 12 febbraio '
+                'Ore 14.30 Cisterna Sabato 14 febbraio Ore 14.30 San Felice '
+                'Circeo Domenica 15 febbraio Ore 14.30 Sabaudia Martedì 17 '
+                'febbraio Ore 14.30 Latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/13672821915507/carnevale_sabaudia_2019_1-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Latina, Cisterna, Pontinia, Sabaudia, San Felice, Borgo '
+                  'Vodice, Borgo Montenero',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:23.193413',
+ 'time_info': 'ore 14.30',
+ 'title': 'Carnevale Pontino 2026: le sfilate dei carri nella provincia di '
+          'Latina',
+ 'url': 'https://www.latinatoday.it/eventi/carnevale-pontino-2026-latina-cisterna-pontinia-sabaudia-san-felice.html',
+ 'uuid': '823553e93ba9e322',
+ 'website': 'https://www.facebook.com/AmiciinfestaStradaSegreta'}
+[2026-01-28T22:20:33.407+0000] {docker.py:429} INFO - 2026-01-28 22:20:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/maratona-maga-circe-eventi-collaterali-san-felice-sabaudia.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:33.514+0000] {docker.py:429} INFO - 2026-01-28 22:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/maratona-maga-circe-eventi-collaterali-san-felice-sabaudia.html>
+{'category': 'Incontri',
+ 'city': 'Latina',
+ 'content_hash': 'dc97d5bfd35e542b',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'In occasione della Maratona Maga Circe che si terrà nel fine '
+                'settimana a San Felice, arrivano una serie di attività ed '
+                'eventi collaterali per vivere appieno questi giorni di sport '
+                'e valorizzare il territorio alla scoperta della sua storia e '
+                'delle sue bellezze naturali. Dal 30 gennaio al 1° febbraio si '
+                'terranno una serie di visite guidate, attività inclusive '
+                'all’aria aperta adatte a tutte le età. Venerdì 30 gennaio a '
+                'partire dalle ore 15.00 si terrà la visita guidata Area dei '
+                'Quattro Venti, area archeologica dove ammirare resti di una '
+                'imponente villa e altri edifici risalenti al periodo a '
+                'cavallo tra il II e I secolo a.C. Sabato 31 doppio '
+                'appuntamento: alle 10.30 in piazza Italo Gemini per '
+                'raggiungere l’ormai celebre Grotta Guattari, inestimabile '
+                'testimonianza dell’evoluzione geologica del territorio e di '
+                'tutta l’Italia centrale e della presenza umana con il '
+                'ritrovamento di resti di uomini di Neandethal; nel pomeriggio '
+                'alle 16.30 si svolgerà la visita guidata al Palazzo Baronale '
+                'con partenza da Piazza Lanzuisi. Si terranno anche due '
+                'sessioni di plogging, corsa o camminata combinata con '
+                'raccolta di rifiuti in luoghi naturali, in programma per '
+                'sabato 31 gennaio alle 10.00 con partenza da Torre Paola e '
+                'alle 12.00 all’interno del Parco Nazionale del Circeo. Sempre '
+                'all’interno del Parco sabato alle 12 si terrà anche il '
+                'Giocabosco, una attività ludico didattica a cura '
+                'dell’Associazione Meraviglia dedicata ai bambini. La '
+                'partecipazione alle attività è gratuita ma con prenotazione '
+                'obbligatoria fino a esaurimento posti. Per prenotare e '
+                'ricevere maggiori informazioni sono a disposizione i numeri '
+                '0773547770 e 3299166914 e l’indirizzo email '
+                'info@prolococirceo.it . Anche l’Istituto Pangea partecipa a '
+                'questo fitto programma di appuntamenti con la visita guidata '
+                'alla Villa di Domiziano in programma per sabato 31 alle 9.15. '
+                'Per partecipare è necessaria la prenotazione da effettuare ai '
+                'numeri 0773 511352 e 348 3617966. Gran finale domenica 1 '
+                'febbraio con l’escursione in dragon boat sul lago di Paola, '
+                'per informazioni e prenotazione contattare il numero 338 '
+                '9685797 o l’indirizzo email meraviglia.aps@gmail.com . È '
+                'dunque a San Felice e Sabaudia tra il 30 gennaio e il 1° '
+                'febbraio. undefined',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/16364659332142/san_felice_circeo_centro-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Diverse location a San Felice e Sabaudia',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:23.192975',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Visite guidate, escursioni, attività alla scoperta di San Felice e '
+          'Sabaudia',
+ 'url': 'https://www.latinatoday.it/eventi/maratona-maga-circe-eventi-collaterali-san-felice-sabaudia.html',
+ 'uuid': '4594e6e890144c94'}
+[2026-01-28T22:20:34.497+0000] {docker.py:429} INFO - 2026-01-28 22:20:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/por-causa-do-amor-musica-in-casa-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:34.604+0000] {docker.py:429} INFO - 2026-01-28 22:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/por-causa-do-amor-musica-in-casa-latina.html>
+{'category': 'Concerti',
+ 'city': 'Latina',
+ 'content_hash': '53247e3832263c18',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '21:00', 'weekday': 'Sabato'}],
+ 'description': 'Nuovo appuntamento con Musica in Casa, la rassegna di '
+                'concerti che esplora mondi sonori diversi: dal jazz alla '
+                'musica latin, dal pop ai cantautori e musiche dal mondo. Por '
+                'Causa do Amor: un concerto omaggio ad Antonio Carlos Jobim, '
+                'compositore e anima della bossa nova, che ha saputo unire la '
+                'raffinatezza armonica del jazz alla poesia della musica '
+                'brasiliana. Un viaggio sonoro elegante e coinvolgente tra '
+                'melodie senza tempo, ritmi morbidi e atmosfere intime, da '
+                'Garota de Ipanema ai capolavori meno noti, nel segno della '
+                'bellezza, della semplicità e della profondità musicale. A '
+                'esibirsi: Laura Fantasia alla voce, Mimmo Di Francesco voce e '
+                'chitarra, Roberto Zorzo alla fisarmonica, Enrico Marchiori al '
+                'basso. È per sabato 31 gennaio alla Casa di Quartiere di '
+                "Borgo Piave, Latina alle ore 21.00. L'ingresso è riservato ai "
+                'soci.',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/68473609567257/por-causa-do-amor.png',
+ 'location_address': 'Via Arturo Codignola, 1',
+ 'location_name': 'Casa di Quartiere di Borgo Piave',
+ 'price': '€ 7',
+ 'scraped_at': '2026-01-28T22:20:23.192475',
+ 'time_info': '21:00',
+ 'title': "Por causa do amor: l'omaggio ad Antonio Carlos Jobim",
+ 'url': 'https://www.latinatoday.it/eventi/por-causa-do-amor-musica-in-casa-latina.html',
+ 'uuid': 'a728051a0c94c1a5'}
+[2026-01-28T22:20:35.975+0000] {docker.py:429} INFO - 2026-01-28 22:20:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/reset-anfiteatro-academy-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:36.082+0000] {docker.py:429} INFO - 2026-01-28 22:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/reset-anfiteatro-academy-latina.html>
+{'category': 'Teatri',
+ 'city': 'Latina',
+ 'content_hash': '897a639c01190047',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '18:00',
+            'weekday': 'Domenica'}],
+ 'description': 'Prosegue con successo la stagione Liberi di Scegliere che '
+                'prevede spettacoli di prosa, monologhi, incontri speciali con '
+                'personaggi legati all’attualità, concerti e spettacoli di '
+                'danza, alternando sul palco del Teatro D’Annunzio '
+                'protagonisti del mondo dello spettacolo italiano e '
+                'professionisti di talento ed esperienza del territorio. '
+                'Domenica 1° febbraio andrà in scena lo spettacolo Reset '
+                'ideato e coreografato da Valeria Vallone. Il corpo di ballo '
+                'dell’Anfiteatro Academy danzerà su musiche di Demetrio '
+                'Stratos e Prokofiev. Lo spettacolo è ispirato al "Discorso '
+                'sull’origine della diseguaglianza" di Rousseau e attraverso i '
+                'corpi, i loro movimenti, si porta avanti una riflessione '
+                'sulla nascita dei conflitti tra essere umani, sull’egoismo, '
+                'la falsità e l’ipocrisia alla base di molti dei comportamenti '
+                'delle persone. Reset vuole scuotere lo spettatore, svegliare '
+                'le coscienze sopite, fuorviate dalle maschere di benevolenza '
+                'che spesso l’essere umano indossa per nascondere invidia, '
+                'rivalità e ambizioni sfrenate. È per domenica 1° febbraio '
+                'alle ore 18.00 presso il D’Annunzio di Latina. I biglietti '
+                'sono disponibili presso il botteghino del teatro e online su '
+                'Ticketone. undefined',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/12285134679207/reset-anfiteatro-academy.jpg',
+ 'location_address': 'Viale Umberto I, 43',
+ 'location_name': "Teatro Gabriele D'Annunzio",
+ 'price': 'da € 20.00 a € 25.00',
+ 'scraped_at': '2026-01-28T22:20:23.191896',
+ 'time_info': 'ore 18.00',
+ 'title': 'Al D’Annunzio lo spettacolo “Reset”',
+ 'url': 'https://www.latinatoday.it/eventi/reset-anfiteatro-academy-latina.html',
+ 'uuid': '70ddb6519af6e09f',
+ 'website': 'https://www.facebook.com/Anfiteatroacademyasd'}
+[2026-01-28T22:20:37.232+0000] {docker.py:429} INFO - 2026-01-28 22:20:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/policromie-sonore-bianchini-caracci-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:37.339+0000] {docker.py:429} INFO - 2026-01-28 22:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/policromie-sonore-bianchini-caracci-latina.html>
+{'category': 'Concerti',
+ 'city': 'Latina',
+ 'content_hash': '3ebab04dda9154b7',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '18:30', 'weekday': 'Sabato'}],
+ 'description': 'Torna la rassegna Policromie Sonore al Circolo Cittadino di '
+                'Latina: la rassegna che promuove l’incontro tra le arti '
+                'attraverso eventi multidisciplinari. Sabato 31 gennaio alle '
+                '18.30 si terrà il concerto presso l’auditorium Orazio Di '
+                'Pietro si esibirà il duo Filippo Bianchini e Giuseppe '
+                'Caracci. I due musicisti proporranno al pubblico delle loro '
+                'composizioni originali alternate a grandi classici del '
+                'repertorio jazz degli anni ’50 e ’60 e dal Great American '
+                'Songbook. Filippo Bianchini è un sassofonista attivo da anni '
+                'nella scena jazz europea, con una lunga esperienza '
+                'internazionale tra festival, jazz club e produzioni '
+                'discografiche. Giuseppe Caracci, nonostante la giovane età, '
+                'ha già maturato un’intensa attività concertistica, coniugando '
+                'un forte interesse per la tradizione e allo stesso tempo per '
+                'la composizione e le influenze del jazz contemporaneo. Il '
+                'concerto sarà seguito da una degustazione di vini offerta da '
+                'La Valle dell’Usignolo. È dunque per sabato 31 gennaio alle '
+                'ore 18.30 presso il Circolo Cittadino. Per informazioni e '
+                'prenotazioni sono a disposizione l’indirizzo email '
+                'policromiesonore@gmail.com e il numero WhatsApp: 331 9502776. '
+                'undefined',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/55164941954095/circolo_cittadino_latina-4.jpg',
+ 'location_address': 'Piazza del Popolo',
+ 'location_name': 'Circolo Cittadino "Sante Palumbo"',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:20:23.191576',
+ 'time_info': 'ore 18.30',
+ 'title': 'Policromie Sonore: al Circolo Cittadino Filippo Bianchini e '
+          'Giuseppe Caracci in concerto',
+ 'url': 'https://www.latinatoday.it/eventi/policromie-sonore-bianchini-caracci-latina.html',
+ 'uuid': 'b606466385fd2653',
+ 'website': 'https://www.facebook.com/events/895929073128139?active_tab=about'}
+[2026-01-28T22:20:38.416+0000] {docker.py:429} INFO - 2026-01-28 22:20:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/prova-del-nove-maurizio-casagrande-aprilia.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:38.524+0000] {docker.py:429} INFO - 2026-01-28 22:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/prova-del-nove-maurizio-casagrande-aprilia.html>
+{'category': 'Teatri',
+ 'city': 'Latina',
+ 'content_hash': '592363fa2d9e903f',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '21:00', 'weekday': 'Sabato'}],
+ 'description': 'Nuovo divertente appuntamento al Teatro Europa di Aprilia con '
+                'il nuovo spettacolo di Maurizio Casagrande “La prova del '
+                'Nove”. Casagrande decide di portare a teatro uno spettacolo '
+                'fatto di musica e sketch ma si trova che a remare contro di '
+                "lui c'è il produttore che non si fida del suo lavoro e i "
+                'musicisti che neanche si ricordano il suo nome. La prima '
+                'dello spettacolo sarà la prova del nove per dimostrare chi è '
+                'e il suo talento, ma non sempre le cose vanno come previsto. '
+                'Le gag divertenti non mancheranno, ma arriveranno insieme a '
+                'musica dal vivo, racconto e tantissime risate. Casagrande, da '
+                'vero mattatore, recita, canta e suona con grande talento e '
+                'farà passare al pubblico una serata di grande spettacolo, '
+                'divertente, leggero, scacciapensieri. In scena accanto a '
+                'Casagrande anche Ania Cecilia e Bruno Galasso e i musicisti '
+                'Giuseppe Iervolino, Sergio Dileo, Salvatore Rainone È per '
+                'sabato 31 gennaio al Teatro Europa di Aprilia. I biglietti '
+                'sono disponibili presso il botteghino e online su '
+                'Ciaotickets.',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/22323518238238/maurizio-casagrande-2.jpg',
+ 'location_address': 'Largo Giovanni XXIII',
+ 'location_name': 'Teatro Europa',
+ 'price': '€ 25.00 galleria, € 30.00 platea',
+ 'scraped_at': '2026-01-28T22:20:23.191229',
+ 'time_info': 'ore 21.00',
+ 'title': 'Casagrande ad Aprilia ne “La Prova del Nove”',
+ 'url': 'https://www.latinatoday.it/eventi/prova-del-nove-maurizio-casagrande-aprilia.html',
+ 'uuid': 'bc21eb5248c9ee47'}
+[2026-01-28T22:20:39.153+0000] {docker.py:429} INFO - 2026-01-28 22:20:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/festa-della-polenta-2026-tufette-sermoneta.html> (referer: https://www.latinatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:39.264+0000] {docker.py:429} INFO - 2026-01-28 22:20:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/festa-della-polenta-2026-tufette-sermoneta.html>
+{'category': 'Cibo e Vino',
+ 'city': 'Latina',
+ 'content_hash': 'e1bd1c6157347976',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'time_start': '7:00', 'weekday': 'Domenica'}],
+ 'description': 'Dopo il successo della Sagra della Polenta nel borgo '
+                'medievale, proseguono tra le borgate di Sermoneta le Feste '
+                'della Polenta: un modo semplici e conviviale di gustare il '
+                'piatto invernale per eccellenza. Domenica 1° febbraio sarà la '
+                'volta della borgata Tufette dove i grandi paioli in rame '
+                'saranno posti sui bracieri già dalle 7 del mattino e i mastri '
+                'polentari inizieranno a preparare il ragù di salsiccia per '
+                'condire la gustosa polenta: un’antica ricetta tramandata di '
+                'generazione in generazione che ancora oggi è amata e '
+                'apprezzata in tutta la provincia e oltre. Le celebrazioni '
+                'prevedranno la santa messa con la benedizione dei pani e '
+                'della polenta prima che intorno alle 12.30 inizierà la '
+                'distribuzione del prelibato piatto. La festa è organizzata '
+                'dal Comitato di Tufette in collaborazione con '
+                'l’Amministrazione Comunale. È dunque per domenica 1° febbraio '
+                'presso la borgata Tufette a Sermoneta.',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/68446161205878/festa-della-polenta-di-tufette-2018-2.jpg',
+ 'location_address': None,
+ 'location_name': 'località Tufette',
+ 'price': 'ingresso libero',
+ 'scraped_at': '2026-01-28T22:20:23.190811',
+ 'time_info': 'dalle ore 7.00',
+ 'title': 'A Tufette la Festa della Polenta',
+ 'url': 'https://www.latinatoday.it/eventi/festa-della-polenta-2026-tufette-sermoneta.html',
+ 'uuid': '9afdc4d3088ebfc1'}
+[2026-01-28T22:20:39.265+0000] {docker.py:429} INFO - 2026-01-28 22:20:39 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-28T22:20:39.267+0000] {docker.py:429} INFO - 2026-01-28 22:20:39 [scrapy.extensions.feedexport] INFO: Stored json feed (15 items) in: /app/city_today/output/eventi_latina_questa-settimana_20260128_222020.json
+[2026-01-28T22:20:39.268+0000] {docker.py:429} INFO - 2026-01-28 22:20:39 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7063,
+ 'downloader/request_count': 17,
+ 'downloader/request_method_count/GET': 17,
+ 'downloader/response_bytes': 2459953,
+ 'downloader/response_count': 17,
+ 'downloader/response_status_count/200': 17,
+ 'elapsed_time_seconds': 18.189881,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 28, 22, 20, 39, 264303, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 13300135,
+ 'httpcompression/response_count': 17,
+ 'item_scraped_count': 15,
+ 'items_per_city/Latina': 15,
+ 'items_per_minute': 50.0,
+ 'log_count/DEBUG': 32,
+ 'log_count/INFO': 3,
+ 'memusage/max': 69132288,
+ 'memusage/startup': 69132288,
+ 'request_depth_max': 1,
+ 'response_received_count': 17,
+ 'responses_per_minute': 56.66666666666667,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 16,
+ 'scheduler/dequeued/memory': 16,
+ 'scheduler/enqueued': 16,
+ 'scheduler/enqueued/memory': 16,
+ 'start_time': datetime.datetime(2026, 1, 28, 22, 20, 21, 74422, tzinfo=datetime.timezone.utc)}
+2026-01-28 22:20:39 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-28T22:20:39.301+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_latina_questa-settimana_20260128_222020.json
+[2026-01-28T22:20:39.682+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_latina.scrape_city_today, execution_date=20260128T221944, start_date=20260128T222019, end_date=20260128T222039
+[2026-01-28T22:20:39.730+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T22:20:39.775+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

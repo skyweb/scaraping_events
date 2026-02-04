@@ -1,0 +1,2741 @@
+[2026-01-30T14:24:51.536+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_ravenna.scrape_city_today scheduled__2026-01-29T06:00:00+00:00 [queued]>
+[2026-01-30T14:24:51.544+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_ravenna.scrape_city_today scheduled__2026-01-29T06:00:00+00:00 [queued]>
+[2026-01-30T14:24:51.545+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-30T14:24:51.555+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_ravenna.scrape_city_today> on 2026-01-29 06:00:00+00:00
+[2026-01-30T14:24:51.560+0000] {standard_task_runner.py:60} INFO - Started process 348 to run task
+[2026-01-30T14:24:51.563+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_ravenna.scrape_city_today', 'scheduled__2026-01-29T06:00:00+00:00', '--job-id', '332', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpqebzx_l8']
+[2026-01-30T14:24:51.565+0000] {standard_task_runner.py:88} INFO - Job 332: Subtask process_ravenna.scrape_city_today
+[2026-01-30T14:24:51.585+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-30T14:24:51.634+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_ravenna.scrape_city_today scheduled__2026-01-29T06:00:00+00:00 [running]> on host a9aac56aef94
+[2026-01-30T14:24:51.725+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_ravenna.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-29T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-29T06:00:00+00:00'
+[2026-01-30T14:24:51.744+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-30T14:24:51.750+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-30T14:24:52.268+0000] {docker.py:429} INFO - Avvio scraping per: Ravenna
+Periodo: questa-settimana
+[2026-01-30T14:24:52.270+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-30T14:24:52.274+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-01-30 14:24:52 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-30T14:24:52.276+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [events] INFO: Scraping città: Ravenna
+2026-01-30 14:24:52 [events] INFO: Periodo: questa-settimana (2026-01-30 - 2026-02-01)
+[2026-01-30T14:24:52.276+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-30T14:24:52.277+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-30T14:24:52.277+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-30 14:24:52 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-30T14:24:52.280+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.extensions.telnet] INFO: Telnet Password: 51bdd3f35a077884
+[2026-01-30T14:24:52.322+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-01-30T14:24:52.323+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-30T14:24:52.368+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-30T14:24:52.369+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-30T14:24:52.370+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-30T14:24:52.370+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_ravenna_questa-settimana_20260130_142452.json
+[2026-01-30T14:24:52.370+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.core.engine] INFO: Spider opened
+[2026-01-30T14:24:52.375+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-30T14:24:52.376+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-30T14:24:52.534+0000] {docker.py:429} INFO - 2026-01-30 14:24:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/robots.txt> (referer: None)
+[2026-01-30T14:24:56.106+0000] {docker.py:429} INFO - 2026-01-30 14:24:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/> (referer: None)
+[2026-01-30T14:24:56.321+0000] {docker.py:429} INFO - 2026-01-30 14:24:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/marianne-mirage-in-concerto-al-teatro-socjale-piangipane-stagione-2026.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:24:56.438+0000] {docker.py:429} INFO - 2026-01-30 14:24:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/marianne-mirage-in-concerto-al-teatro-socjale-piangipane-stagione-2026.html>
+{'category': 'Concerti',
+ 'city': 'Ravenna',
+ 'content_hash': 'be545e1e1b9170d9',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '21:30', 'weekday': 'Venerdì'}],
+ 'description': 'Proseguono i concerti della seconda parte della 36esima '
+                'stagione del Teatro Socjale di Piangipane. Oggi, venerdì 30 '
+                'gennaio, a salire sul palco è Marianne Mirage, cantautrice e '
+                'musicista, cresciuta tra Billie Holiday, Edith Piaf e Milva. '
+                'Dopo aver viaggiato il mondo in compagnia della sua chitarra '
+                'suonando nei pub e componendo canzoni in italiano, inglese e '
+                'francese, partecipa al Festival di Sanremo nel 2017 con il '
+                'brano “Le canzoni fanno male”. I suoi testi e la sua musica '
+                'colpiscono grandi artisti italiani e internazionali (Brunori '
+                'Sas, Patti Smith, Benjamin Clementine) che scelgono Marianne '
+                'come apertura dei propri concerti e nel 2019 vince il Nastro '
+                'd’Argento per la colonna sonora composta per il film “The '
+                'Place” di Paolo Genovese. Un’artista dalle mille '
+                'sfaccettature pronta a presentare i suoi successi e anche '
+                'l’ultimo album “Teatro”. Evento riservato ai soci del Circolo '
+                'Arci.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/4706062865252/marianne-mirage-2.jpg',
+ 'location_address': 'Via Piangipane, 153',
+ 'location_name': 'Teatro Socjale di Piangipane',
+ 'price': '15 euro',
+ 'scraped_at': '2026-01-30T14:24:56.226112',
+ 'time_info': 'Alle 21:30',
+ 'title': 'Marianne Mirage in concerto con il suo nuovo album "Teatro"',
+ 'url': 'https://www.ravennatoday.it/eventi/marianne-mirage-in-concerto-al-teatro-socjale-piangipane-stagione-2026.html',
+ 'uuid': '4f3abf6cc9b45041'}
+[2026-01-30T14:24:56.971+0000] {docker.py:429} INFO - 2026-01-30 14:24:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/vite-che-non-sono-la-mia-finissage-teatro-dell-ascolto-il-volto-dell-artista.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:24:57.079+0000] {docker.py:429} INFO - 2026-01-30 14:24:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/vite-che-non-sono-la-mia-finissage-teatro-dell-ascolto-il-volto-dell-artista.html>
+{'category': 'Mostre',
+ 'city': 'Ravenna',
+ 'content_hash': '75b8f67d31ed52a9',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Domenica 1 febbraio si conclude la mostra del Festival delle '
+                'Arti di Cervia “Il Volto dell’Artista” che ha dato spazio e '
+                'visibilità alle opere di 50 diversi artisti, con lo '
+                'spettacolo “Vite che non sono la mia". Un reading a più voci '
+                "interpretato dal Gruppo di lettura del Teatro dell'Ascolto di "
+                'Bologna, che dalla sua nascita nel 1997 si cimenta in letture '
+                'espressive di classici, scrittori contemporanei e testi '
+                'poetici, composto da Nadia Ballestri, Petronella Ortmann, '
+                'Maria Antonietta Branca, Santina Ceriotti, Angela Paioli, '
+                "Giovanna Pezzi e Patrizia Ramari. Per l'occasione, verranno "
+                'affrontate letture al femminile ispirate a parole che '
+                'delineano il volto "interiore" di diverse artiste. Donne come '
+                'Dora Maar, Carol Rama, Maria Lai, Lisetta Carmi e molte '
+                'altre, dal Novecento fino ai nostri giorni, sono '
+                'interpretate, identificate e restituite al pubblico '
+                'attraverso la performance. A ingresso libero.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/40332942363557/musa-magazzini-del-sale-cervia.jpg',
+ 'location_address': None,
+ 'location_name': 'Magazzino del Sale Torre',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.225692',
+ 'time_info': 'Alle 17',
+ 'title': 'La performance “Vite che non sono la mia“ chiude la mostra Il Volto '
+          "dell'Artista",
+ 'url': 'https://www.ravennatoday.it/eventi/vite-che-non-sono-la-mia-finissage-teatro-dell-ascolto-il-volto-dell-artista.html',
+ 'uuid': 'd9166906e8e20162'}
+[2026-01-30T14:24:58.130+0000] {docker.py:429} INFO - 2026-01-30 14:24:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/ravenna-musica-off-incontri-di-introduzione-all-ascolto-dei-concerti-della-stagione.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:24:58.240+0000] {docker.py:429} INFO - 2026-01-30 14:24:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/ravenna-musica-off-incontri-di-introduzione-all-ascolto-dei-concerti-della-stagione.html>
+{'category': 'Incontri',
+ 'city': 'Ravenna',
+ 'content_hash': 'fbe290ad22c6b69d',
+ 'date_end': '2026-05-05',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-25',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-04',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-11',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-18',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-25',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-04-01',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-04-08',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-04-15',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-04-19', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-04-20', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-04-21', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-04-22',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-23', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-04-24', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-04-25', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-04-26', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-04-27', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-04-28', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-04-29',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-30', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-05-01', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-05-02', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-05-03', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-05-04', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-05-05', 'time_start': '16:30', 'weekday': 'Martedì'}],
+ 'description': 'Raccontare la musica sinfonica alle nuove generazioni, e '
+                "farle innamorare. L'Associazione “Angelo Mariani” prosegue "
+                'con gli appuntamenti del nuovo format “Ravenna musica off '
+                '2026”: nove lezioni-concerto per ispirare nei giovani '
+                'studenti il desiderio di bellezza, affinare il gusto estetico '
+                'musicale e sviluppare una coscienza critica. Il nuovo '
+                "obiettivo dell'Associazione diventa così oggi quello di unire "
+                'le eccellenze musicali del territorio con la missione di '
+                'educare e formare i giovani. Sabato 31 gennaio sarà '
+                "protagonista l'Orchestra da Camera di Mantova, con Ilya "
+                'Gringolts al violino e Lawrence Power alla viola, il tutto a '
+                "cura di Nicola Valentini. Quella di quest'anno è un'edizione "
+                "rinnovata degli incontri di introduzione all'ascolto dei "
+                'concerti della stagione sinfonica. Gli interventi dei '
+                'relatori saranno supportati da musica dal vivo, attraverso il '
+                'coinvolgimento di giovani artisti, allievi dei Conservatori e '
+                'delle Istituzioni di Alta Formazione Artistica del '
+                "territorio. L'innovazione riguarda appunto il coinvolgimento, "
+                'oltre al pubblico di appassionati, dei tre livelli attraverso '
+                'i quali si articolano oggi gli studi musicali nel nostro '
+                'paese: la Scuola Media a Indirizzo musicale, il Liceo '
+                'musicale e il Conservatorio. Gli Antichi Chiostri Francescani '
+                'saranno la sede dei nove incontri in programma, che si '
+                'terranno il sabato precedente i concerti in cartellone, alle '
+                '16:30, dal 31 gennaio al 5 maggio. Il calendario completo e '
+                'dettagliato di incontri e concerti è consultabile sul sito '
+                "dell'Associazione. Ingresso libero.",
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/54109340136137/angelo-mariani-2.jpg',
+ 'location_address': 'Via Dante Alighieri, 4',
+ 'location_name': 'Antichi Chiostri Francescani',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.224910',
+ 'time_info': 'Dalle 16:30',
+ 'title': 'Ravenna Musica Off: nove lezioni-concerto per avvicinare i giovani '
+          'alla musica sinfonica',
+ 'url': 'https://www.ravennatoday.it/eventi/ravenna-musica-off-incontri-di-introduzione-all-ascolto-dei-concerti-della-stagione.html',
+ 'uuid': '7f28b91cf3d2797a'}
+[2026-01-30T14:24:59.088+0000] {docker.py:429} INFO - 2026-01-30 14:24:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/il-pinocchio-di-wolfango-peretti-poggi-mostra-classense-ravenna.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:24:59.197+0000] {docker.py:429} INFO - 2026-01-30 14:24:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/il-pinocchio-di-wolfango-peretti-poggi-mostra-classense-ravenna.html>
+{'category': 'Mostre',
+ 'city': 'Ravenna',
+ 'content_hash': 'dd6f7756f8621450',
+ 'date_end': '2026-04-04',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-25',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-04',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-11',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-18',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-25',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'time_start': '17:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'time_start': '17:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'time_start': '17:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'time_start': '17:30', 'weekday': 'Martedì'},
+           {'date': '2026-04-01',
+            'time_start': '17:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'time_start': '17:30', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'time_start': '17:30', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'time_start': '17:30', 'weekday': 'Sabato'}],
+ 'description': 'Venerdì 30 gennaio, alla Manica Lunga della Biblioteca '
+                'Classense, inaugura la mostra “Il Pinocchio di Wolfango”, a '
+                'cura di Sebastiana Nobili e Alighiera Peretti Poggi. '
+                'L’esposizione, aperta fino al 4 aprile, celebra il pittore '
+                'Wolfango Peretti Poggi (Bologna, 1926–2017) nel centenario '
+                'della sua nascita e si inserisce nella rassegna di eventi '
+                'intitolata “Wolfango 100-100 Wolfango”, che si sviluppa lungo '
+                'l’intero arco del 2026, in varie città dell’Emilia-Romagna. '
+                'Nel bicentenario della nascita di Collodi, la mostra intende '
+                'valorizzare Wolfango nel suo ruolo di illustratore di '
+                'Pinocchio , personaggio al quale il Maestro era appassionato '
+                'dalla più tenera infanzia. La storia del burattino di legno '
+                'che aspira a diventare un bambino vero continua a parlare a '
+                'lettori di ogni età e l’interpretazione di Wolfango occupa un '
+                'posto di assoluto rilievo all’interno di un ricchissimo '
+                'patrimonio iconografico generato dal capolavoro collodiano. '
+                'L’artista dà vita a un Pinocchio dalla presenza fisica '
+                'intensa e irrequieta, costruito attraverso cromie accese, '
+                'contrasti luminosi e deformazioni cariche di tensione. In '
+                'mostra saranno presenti alcune tavole originali realizzate da '
+                'Wolfango tra il 1961 e il 1980 e che confluirono in una '
+                'prestigiosa edizione fuori commercio Le avventure di '
+                'Pinocchio (Banca Popolare dell’Etruria, 1980). Per firmare le '
+                'illustrazioni il Maestro scelse lo pseudonimo di Golpe; le '
+                'opere esposte sono accompagnate da disegni preparatori e '
+                'bozzetti che ne documentano il processo creativo. Il percorso '
+                'espositivo permette inoltre di scoprire un Pinocchio che si '
+                'interfaccia con personaggi della letteratura, della mitologia '
+                'e del fumetto. Queste creazioni, eseguite su carta da '
+                'macellaio tra il 2014 e il 2016 sono siglate dall’autore '
+                '“post ictum”, poiché realizzate dopo un ictus che colpì il '
+                'Maestro, nel 2014, a 88 anni, senza intaccarne le facoltà '
+                'intellettuali e artistiche. Si tratta di opere inedite, che '
+                'costituiscono l’ultimo lavoro del pittore e che escono per la '
+                'prima volta dalla casa-studio di Bologna, riconosciuta tra le '
+                'Case e Studi delle Persone Illustri della Regione '
+                'Emilia-Romagna. Orari: da martedì a venerdì 15 - 18:30; '
+                'sabato 10 - 13 e 15 - 18:30.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/44332131032450/pinocchio-di-wolfango-2-2.jpg',
+ 'location_address': 'Via Alfredo Baccarini, 3',
+ 'location_name': 'Biblioteca Classense',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.224490',
+ 'time_info': 'Alle 17:30',
+ 'title': 'Pinocchio di Collodi prende vita nei disegni inediti di Wolfango '
+          'Peretti Poggi',
+ 'url': 'https://www.ravennatoday.it/eventi/il-pinocchio-di-wolfango-peretti-poggi-mostra-classense-ravenna.html',
+ 'uuid': '0e108d180e9aaf3d'}
+[2026-01-30T14:25:00.273+0000] {docker.py:429} INFO - 2026-01-30 14:25:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/al-teatro-goldoni-la-rassegna-teatro-per-le-scuole-2025-2026-tutti-gli-spettacoli.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:00.384+0000] {docker.py:429} INFO - 2026-01-30 14:25:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/al-teatro-goldoni-la-rassegna-teatro-per-le-scuole-2025-2026-tutti-gli-spettacoli.html>
+{'category': 'Teatri',
+ 'city': 'Ravenna',
+ 'content_hash': '31a3d19bc3a64568',
+ 'date_end': '2026-04-15',
+ 'date_start': '2025-11-27',
+ 'dates': [{'date': '2025-11-27', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'time_start': '9:45', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'time_start': '9:45', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'time_start': '9:45', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'time_start': '9:45', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'time_start': '9:45', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'time_start': '9:45', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'time_start': '9:45', 'weekday': 'Martedì'},
+           {'date': '2026-04-15',
+            'time_start': '9:45',
+            'weekday': 'Mercoledì'}],
+ 'description': 'Prende il via giovedì 27 e venerdì 28 novembre la rassegna di '
+                'Teatro per le Scuole organizzata da Accademia Perduta/Romagna '
+                'Teatri al Teatro Goldoni di Bagnacavallo. Sette spettacoli '
+                '(per 14 repliche), in scena fino ad aprile 2026, destinati ai '
+                'bambini e bambine delle Materne e ai ragazzi e ragazze delle '
+                'Scuole Primarie e Secondarie di I grado. A inaugurare la '
+                'rassegna sarà lo spettacolo “Il paese senza parole” di Rosso '
+                'Teatro, uno spettacolo di narrazione e danza, un racconto '
+                'sull’importanza delle parole e delle storie. Segue, il 10 e '
+                '11 dicembre, per i ragazzi e le ragazze delle Scuole '
+                'Secondarie di I grado, “Tuttatesta” della compagnia '
+                'Fontemaggiore, una performance di video-teatro in cui si '
+                'racconta la vita di una città, composta e ordinata, dove un '
+                'giorno arriva un ospite inatteso che turba la tranquillità di '
+                'tutti: la diffidenza iniziale cederà il passo a un '
+                'cambiamento che migliorerà la vita di tutti gli abitanti. La '
+                'Fondazione Teatro Ragazzi e Giovani onlus presenta, il 22 e '
+                '23 gennaio, “Cenerentola - Rossini all’Opera”, spettacolo che '
+                'vuole avvicinare il giovane pubblico alla musica tramite il '
+                'confronto tra le forme musicali classiche e le forme '
+                'narrative teatrali. Il Teatro Perdavvero sarà poi in scena, '
+                'il 12 e 13 febbraio con “Sorpresa! Un incontro senza parole”, '
+                'ultima produzione di Accademia Perduta, spettacolo per '
+                'Materne e Scuole Primarie che tratta il tema delle relazioni '
+                "e di cosa può nascere dall'incontro fra le diversità di "
+                'ciascun individuo, passando attraverso la scoperta, il gioco, '
+                "la condivisione di uno spazio, il conflitto e l'accoglienza. "
+                'Il 24 e 25 febbraio sarà la volta di “Smile. Un sorriso e '
+                'forse una lacrima” di Factory Compagnia Transadriatica. Una '
+                'storia al confine tra “l’al di qua e l’aldilà”, un percorso '
+                'che ripercorre l’amore oltre il tempo e lo spazio grazie alla '
+                'potenza dei ricordi. “Smile” prende forma da una semplice, ma '
+                'potente domanda: cosa rimane delle persone che abbiamo amato? '
+                'In chiusura di rassegna, altre due nuove produzioni di '
+                'Accademia Perduta: “Il vestito nuovo dell’Imperatopo” della '
+                'compagnia Tcp tanti cosi progetti e “L’oca Lucia” di '
+                'Vladimiro Strinati. Il primo, in scena il 12 e 13 marzo,
+[2026-01-30T14:25:00.385+0000] {docker.py:429} INFO - '
+                'prende le mosse dal racconto di Hans Christian Andersen. La '
+                'particolare scrittura di Andersen riesce, in forma di fiaba, '
+                'a inserire, nel tessuto della realtà quotidiana, aspetti, '
+                'considerazioni e temi di sconcertante attualità e di profonda '
+                'riflessione. “L’oca Lucia” è invece una storia che parla di '
+                'gentilezza, ospitalità e del valore dell’amicizia e sarà '
+                'presentato al pubblico delle Scuole Materne e Primarie il 14 '
+                'e 15 aprile. Informazioni e prenotazioni al 0545 64330.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/63482748473207/teatro-scuola-smile-photo-credits-francesco-mattiello-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Goldoni',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-30T14:24:56.224009',
+ 'time_info': 'Alle 9:45',
+ 'title': 'Al Teatro Goldoni torna la rassegna "Teatro per le Scuole": tutti '
+          'gli spettacoli',
+ 'url': 'https://www.ravennatoday.it/eventi/al-teatro-goldoni-la-rassegna-teatro-per-le-scuole-2025-2026-tutti-gli-spettacoli.html',
+ 'uuid': '0bd329e86698f9d3'}
+[2026-01-30T14:25:01.292+0000] {docker.py:429} INFO - 2026-01-30 14:25:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/inaugurazione-immagini-nello-spazio-nataly-maier-fondazione-sabe-ravenna.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:01.401+0000] {docker.py:429} INFO - 2026-01-30 14:25:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/inaugurazione-immagini-nello-spazio-nataly-maier-fondazione-sabe-ravenna.html>
+{'category': 'Mostre',
+ 'city': 'Ravenna',
+ 'content_hash': '080491980e655cae',
+ 'date_end': '2026-04-12',
+ 'date_start': '2026-01-24',
+ 'dates': [{'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'}],
+ 'description': 'Sabato 24 gennaio alle 11, la Fondazione Sabe per l’arte '
+                'inaugura Immagini nello spazio , mostra personale '
+                'dell’artista Nataly Maier (Monaco di Baviera, 1957), a cura '
+                "di Cristina Casero. Sin dagli anni '80, Nataly Maier ha "
+                'sperimentato la forma espressiva della fotoscultura, una '
+                'soluzione per mettere a confronto l’immagine fotografica con '
+                'la “forma” del suo soggetto. Maier ha praticato nel corso dei '
+                'decenni anche la fotografia e la pittura, con l’obiettivo di '
+                'verificare la relazione tra immagine e realtà. Il titolo '
+                'della mostra, Immagini nello spazio , sottolinea il rapporto '
+                'tra le due e le tre dimensioni sperimentate dall’artista: '
+                'superare la bidimensionalità dell’immagine fotografica '
+                'restituendole un’estensione fisica che coincida con l’oggetto '
+                'stesso della fotografia. Sono esempi di questa pratica le '
+                'opere Albero girevole (1991), Agrumi, arancio, limone (1992) '
+                'o Mare in scatola (1994). Una riflessione sullo statuto '
+                'oggettuale della fotografia è invece al centro di opere quali '
+                'Fotoscultura con salice (1994) e Sampietrini (1995). '
+                'Completano il percorso espositivo alcuni dittici basati '
+                'sull’accostamento tra fotografia in bianconero e pittura '
+                'monocroma. La mostra resterà aperta al pubblico fino al 12 '
+                'aprile 2026, tutte le settimane, da giovedì a domenica dalle '
+                '16 alle 19.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/44119318322968/5-nataly-maier-mare-in-scatola-1994-fotografia-virata-lamiera-zincata-100x200x300-cm.jpg',
+ 'location_address': 'Via Giovanni Pascoli, 31',
+ 'location_name': "Fondazione Sabe per l'arte",
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.223517',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': '"Immagini nello spazio": la fotoscultura di Nataly Maier in '
+          'Fondazione',
+ 'url': 'https://www.ravennatoday.it/eventi/inaugurazione-immagini-nello-spazio-nataly-maier-fondazione-sabe-ravenna.html',
+ 'uuid': '473bb33ae72f751e'}
+[2026-01-30T14:25:02.246+0000] {docker.py:429} INFO - 2026-01-30 14:25:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/festa-madonna-del-fuoco-patrono-glorie-bagnacavallo-benedizione-briscola-vini-messa.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:02.359+0000] {docker.py:429} INFO - 2026-01-30 14:25:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/festa-madonna-del-fuoco-patrono-glorie-bagnacavallo-benedizione-briscola-vini-messa.html>
+{'category': 'Manifestazioni',
+ 'city': 'Ravenna',
+ 'content_hash': '6b5f777cd82b2fe2',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'}],
+ 'description': None,
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/26916075352190/villa-savoia-3-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Glorie di Bagnacavallo',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.222983',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': 'Festa della Madonna del Fuoco: briscola del cappelletto, '
+          'degustazioni e musica',
+ 'url': 'https://www.ravennatoday.it/eventi/festa-madonna-del-fuoco-patrono-glorie-bagnacavallo-benedizione-briscola-vini-messa.html',
+ 'uuid': '0f15d71f396d9470'}
+[2026-01-30T14:25:02.938+0000] {docker.py:429} INFO - 2026-01-30 14:25:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/macbeth-e-il-destino-immutabile-stagione-opera-e-danza-teatro-alighieri-ravenna.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:03.049+0000] {docker.py:429} INFO - 2026-01-30 14:25:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/macbeth-e-il-destino-immutabile-stagione-opera-e-danza-teatro-alighieri-ravenna.html>
+{'category': 'Teatri',
+ 'city': 'Ravenna',
+ 'content_hash': 'cb4b2665b860dfc9',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Venerdì 30 gennaio e domenica 1 febbraio, il Macbeth di '
+                'Giuseppe Verdi torna in scena al Teatro Alighieri di Ravenna, '
+                "inaugurando così la nuova stagione d'opera e danza del "
+                'teatro. Lo spettacolo, diretto da Fabio Ceresa e con '
+                'l’Orchestra Giovanile Luigi Cherubini sotto la guida di '
+                'Giuseppe Finzi, esplora il tema del destino e della volontà '
+                'umana attraverso l’interpretazione della tragica storia di '
+                'Macbeth e Lady Macbeth. Con il libretto di Francesco Maria '
+                "Piave e Andrea Maffei, quest'opera segna l'inizio del dialogo "
+                'fra Verdi e l’universo shakespeariano, un incontro che '
+                'avrebbe influenzato profondamente la carriera del '
+                'compositore. I protagonisti che saliranno sul palco '
+                "dell'Alighieri sono Franco Vassallo nel ruolo di Macbeth e "
+                'Marily Santoro in quello di Lady Macbeth. Accanto a loro, '
+                'Roberto Scandiuzzi vestirà i panni di Banco, mentre Erica '
+                'Cortese sarà la dama della Lady. I ruoli di Macduff e Malcolm '
+                'sono affidati a Matteo Falcier e Francesco Pittari, mentre '
+                'Alin Anca interpreterà diverse figure secondarie. Il Coro '
+                'Lirico di Modena, preparato da Giovanni Farina, e la '
+                "compagnia di danza Fattoria Vittadini completano l'ensemble, "
+                'con l’Orchestra Giovanile Luigi Cherubini diretta da Giuseppe '
+                'Finzi. Dal punto di vista visivo, la regia di Ceresa gioca '
+                "con l'idea di un universo che si compenetra tra ordine "
+                'materiale e dimensione astratta. Le scene, a cura di Tiziano '
+                'Santi, si caratterizzano per la loro geometria rigorosa, '
+                'mentre i costumi di Giuseppe Palella evocano la dimensione '
+                'mitologica, arricchendo il racconto con simbolismi visivi di '
+                'grande impatto. Le coreografie di Mattia Agatiello, infine, '
+                'aggiungono un ulteriore strato di espressività al dramma, '
+                'creando un’atmosfera in cui la tragedia si intreccia con il '
+                'sacro e il mitologico. Prima dell’Opera: un percorso di '
+                'approfondimento Giovedì 29 gennaio, alle 18, il pubblico avrà '
+                'l’opportunità di partecipare a un incontro di approfondimento '
+                'dal titolo Prima dell’opera , in programma al Salone Nobile '
+                'di Palazzo Rasponi, in Piazza Kennedy. Il critico musicale '
+                'Carla Moreni guiderà una riflessione sul Macbeth e sul legame '
+                'fra Verdi e Shakespeare, offrendo uno spunto di lettura per '
+                'il pubblico prima dello spettacolo. Prossimi appuntamenti La '
+                'stagione proseguirà il 13 e 15 marzo con L’italiana in Algeri '
+                'di Gioachino Rossini, e il 24 e 26 aprile sarà il turno di '
+                'Carmen di Georges Bizet. Entrambe le produzioni saranno '
+                'dirette dall’Orchestra dell’Emilia Romagna Arturo Toscanini, '
+                'rispettivamente sotto la direzione di Alessandro Cadario e '
+                'Audrey Saint-Gil.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/59770458681436/macbeth-teatro-verdi-di-pisa-la-prima-31-10-2025-10.jpg',
+ 'location_address': 'Via Angelo Mariani, 2',
+ 'location_name': 'Teatro Alighieri',
+ 'price': 'da 15 a 45 euro; 5 euro under 18',
+ 'scraped_at': '2026-01-30T14:24:56.222552',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': '"Macbeth e il destino immutabile": Verdi inaugura la stagione '
+          "d'opera e danza",
+ 'url': 'https://www.ravennatoday.it/eventi/macbeth-e-il-destino-immutabile-stagione-opera-e-danza-teatro-alighieri-ravenna.html',
+ 'uuid': '24d9903c890fb1aa'}
+[2026-01-30T14:25:04.366+0000] {docker.py:429} INFO - 2026-01-30 14:25:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/torna-la-capanna-del-bambinello-mostra-presepi-sostenibili-ecomuseo-villanova-bagnacavallo.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:04.475+0000] {docker.py:429} INFO - 2026-01-30 14:25:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/torna-la-capanna-del-bambinello-mostra-presepi-sostenibili-ecomuseo-villanova-bagnacavallo.html>
+{'category': 'Mostre',
+ 'city': 'Ravenna',
+ 'content_hash': '92e126e3aaf61b9e',
+ 'date_end': '2026-01-31',
+ 'date_start': '2025-12-08',
+ 'dates': [{'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'Inaugura lunedì 8 dicembre all’Ecomuseo delle Erbe Palustri '
+                'di Villanova di Bagnacavallo la nuova edizione della mostra '
+                '“La Capanna del Bambinello”, visitabile fino al 31 gennaio. '
+                'L’iniziativa, ormai appuntamento tradizionale del periodo '
+                'natalizio, valorizza una forma creativa profondamente legata '
+                'alla memoria locale: il presepe di patate con le figure '
+                'tratte dalle carte da briscola, realizzato un tempo dai '
+                'bambini in mancanza delle statuine. Una pratica semplice, '
+                'nata nelle case contadine, che negli anni è diventata simbolo '
+                'di ingegno, sostenibilità e radicamento comunitario. La '
+                'mostra, che si è arricchita stagione dopo stagione di nuove '
+                'interpretazioni della natività, accoglie opere realizzate con '
+                'materiali naturali o di recupero, in un percorso espositivo '
+                'che si sviluppa fra le sale del museo e le suggestive capanne '
+                'in canna palustre dell’etnoparco. Alle composizioni più '
+                'fedeli alla tradizione si affiancano installazioni originali, '
+                'frutto della creatività di appassionati, famiglie, scuole e '
+                'associazioni del territorio, che ogni anno contribuiscono con '
+                'nuove idee e manufatti. Come di consueto, l’esposizione '
+                'accompagnerà il periodo delle festività proponendo '
+                'un’occasione di incontro per la comunità locale e per i '
+                'visitatori che desiderano conoscere da vicino un patrimonio '
+                'materiale e immateriale che appartiene profondamente alla '
+                'storia di Villanova. Anche in questa edizione, è prevista la '
+                '“Notte dei Presepi”, in programma il 19 dicembre con una '
+                'serata conviviale. Per tutta la durata dell’esposizione sarà '
+                'possibile visitare anche l’Ecomuseo, sempre a ingresso '
+                'libero. Per informazioni: Ecomuseo delle Erbe Palustri (via '
+                'Ungaretti 1). Tel. 0545 280920 - '
+                'erbepalustri.associazione@gmail.com',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/5217197095203/presepe-di-patate-ecomuseo-villanova.jpg',
+ 'location_address': 'Via Giuseppe Ungaretti, 1',
+ 'location_name': 'Ecomuseo delle Erbe Palustri - Villanova di Bagnacavallo',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.222074',
+ 'time_info': 'Dalle 10',
+ 'title': '"La Capanna del Bambinello": una nuova mostra di presepi '
+          'sostenibili',
+ 'url': 'https://www.ravennatoday.it/eventi/torna-la-capanna-del-bambinello-mostra-presepi-sostenibili-ecomuseo-villanova-bagnacavallo.html',
+ 'uuid': 'da78e275c55646ea'}
+[2026-01-30T14:25:07.670+0000] {docker.py:429} INFO - 2026-01-30 14:25:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/anime-de-li-mortacci-quiz-cinegrinder-rassegna-ultimi-appuntamenti-2026-ravenna.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:07.779+0000] {docker.py:429} INFO - 2026-01-30 14:25:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/anime-de-li-mortacci-quiz-cinegrinder-rassegna-ultimi-appuntamenti-2026-ravenna.html>
+{'category': 'Cinema',
+ 'city': 'Ravenna',
+ 'content_hash': 'eccfa68d1a062840',
+ 'date_end': '2026-03-10',
+ 'date_start': '2026-01-13',
+ 'dates': [{'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'}],
+ 'description': 'Si avvia alla conclusione la rassegna cinematografica “ Anime '
+                'de li mortacci ”, il ciclo di proiezioni ideato e presentato '
+                'da Grinder Coffee Lab, Andrea Giunchi e Francesco Santoro, '
+                'che negli ultimi mesi ha animato le serate ravennati con una '
+                'selezione di film cult e d’animazione. Gli ultimi tre '
+                'appuntamenti si terranno presso Grinder Coffee Lab, con '
+                'inizio degli eventi a partire dalle 20 circa. Come da '
+                'tradizione della rassegna, prima di ogni proiezione il '
+                'pubblico potrà partecipare al Quiz del Cinegrinder , un '
+                'momento di gioco e condivisione dedicato al cinema, che mette '
+                'in palio due buoni colazione Grinder . A seguire, un '
+                'intervento di Giunchi e Santoro ricco aneddoti divertenti. '
+                'Popcorn e caramelle gommose garantite. Martedì 13 gennaio - '
+                'Un sacco bello di Carlo Verdone (1980). Martedì 10 febbraio - '
+                'Your Name di Makoto Shinkai (2017). Martedì 10 marzo - Febbre '
+                'da cavallo di Steno (1976). Ingresso libero. Non è richiesta '
+                'la prenotazione. Per informazioni e aggiornamenti è possibile '
+                'seguire i canali social di Grinder Coffee Lab.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/16608178966105/febbre-da-cavallo-di-steno-frame-film.jpg',
+ 'location_address': 'Via di Roma, 178',
+ 'location_name': 'Grinder Coffee Lab',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.221630',
+ 'time_info': 'Dalle 20',
+ 'title': '"Anime de li mortacci": gli ultimi appuntamenti tra film cult, quiz '
+          'e popcorn al Grinder',
+ 'url': 'https://www.ravennatoday.it/eventi/anime-de-li-mortacci-quiz-cinegrinder-rassegna-ultimi-appuntamenti-2026-ravenna.html',
+ 'uuid': 'e9bc30cbee30c717'}
+[2026-01-30T14:25:08.869+0000] {docker.py:429} INFO - 2026-01-30 14:25:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/a-ca-atti-scenici-in-luoghi-privati-tutti-gli-appuntamenti-a-ravenna-2026.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:08.979+0000] {docker.py:429} INFO - 2026-01-30 14:25:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/a-ca-atti-scenici-in-luoghi-privati-tutti-gli-appuntamenti-a-ravenna-2026.html>
+{'category': 'Teatri',
+ 'city': 'Ravenna',
+ 'content_hash': '1348ce8206641c27',
+ 'date_end': '2026-03-08',
+ 'date_start': '2026-01-09',
+ 'dates': [{'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'}],
+ 'description': 'Portare il teatro dentro le abitazioni, trasformando luoghi '
+                'privati in spazi di incontro e ascolto, è l’idea alla base di '
+                'A Ca’ – atti scenici in luoghi privati , la rassegna ideata e '
+                'curata dalla compagnia Spazio A Teatro. La compagnia è già '
+                'promotrice della rassegna estiva Ra-dici, che da cinque '
+                'edizioni si svolge alla Vecchia Pesa di Classe. Gli '
+                'spettacoli nascono dalla collaborazione tra i membri di '
+                'Spazio A Teatro e diversi artisti e artiste del territorio. '
+                'Il progetto prende il via questo weekend del 9, 10 e 11 '
+                'gennaio con Colloquio notturno con un uomo disprezzato , '
+                'liberamente tratto dal radiodramma di Friedrich Dürrenmatt, '
+                'con regia e montaggio audio di Massimiliano Rassu e in scena '
+                'Marco Montanari e Marco Saccomandi. Le prime date risultano '
+                "già sold out. Gli eventi di A Ca’ si svolgono per l'appunto "
+                'all’interno di abitazioni private che, per l’occasione, si '
+                'aprono al pubblico grazie alla disponibilità di cittadini e '
+                'cittadine ravennati. In ogni data la location cambia, '
+                'esattamente come lo spettacolo in programma, così da creare '
+                'un itinerario eterogeneo sia fisico che artistico. I posti '
+                'sono limitati e la prenotazione è obbligatoria all’indirizzo '
+                'info@spazioateatro.it . Una volta confermata la '
+                'partecipazione, l’organizzazione comunicherà il punto di '
+                'ritrovo da cui il pubblico verrà accompagnato alla location. '
+                'Gli eventi sono a tesseramento e l’intero ricavato sarà '
+                'destinato a sostenere la rassegna Ra-dici 2026. Venerdì 16 '
+                'gennaio , ore 18:30 e 21 Dal profondo viaggio all’interno del '
+                'De Profundis di Oscar Wilde adattamento testuale Silvia '
+                'Rossetti letture Rendy Anoh e Camilla Berardi scelte musicali '
+                'Valerio Quaranta violino Valerio Quaranta handpan e '
+                'percussioni Giulio Quaranta Sabato 31 gennaio , ore 21 e '
+                'domenica 1 febbraio , ore 18:30 e 21 Scorar reading di poesie '
+                'in dialetto romagnolo a cura di Roberto Magnani Sabato 14 '
+                'febbraio , ore 21 e domenica 15 febbraio , ore 18:30 e 21 El '
+                'sapo y la paloma dalle lettere di Frida Kahlo a Diego Rivera '
+                'adattamento testuale Camilla Berardi letture Camilla Berardi '
+                'e Silvia Rossetti Sabato 21 febbraio , ore 21 e domenica 22 '
+                'febbraio , ore 18:30 e 21 Carne per carbone Biglietto di sola '
+                'andata per Marcinelle di Eugenio Sideri con Irene De Simone '
+                'Sabato 7 marzo , ore 21 e domenica 8 marzo , ore 18:30 e 21 '
+                'Fabulatorio Adriatico liberamente tratto da “Abbecedario '
+                'Adriatico” di Fabio Fiori con Marco Montanari e Alessandro De '
+                'Lorenzi musiche originali di Alessandro De Lorenzi tratte da '
+                '“Distretto Adriatico” Il programma potrebbe subire modifiche '
+                'e ampliamenti qualora altre cittadine e cittadini fossero '
+                'interessati a ospitare uno spettacolo A Ca’. Si consiglia '
+                'quindi di controllare le pagine social della compagnia per '
+                'restare aggiornati - Facebook: Spazio A / Instagram: '
+                '@spazioateatro.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/5418901552870/a-ca-2026-2.jpg',
+ 'location_address': None,
+ 'location_name': 'varie location',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-30T14:24:56.221134',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': "Atti scenici in luoghi privati. A Ca' porta il teatro nelle case: "
+          'tutti gli appuntamenti',
+ 'url': 'https://www.ravennatoday.it/eventi/a-ca-atti-scenici-in-luoghi-privati-tutti-gli-appuntamenti-a-ravenna-2026.html',
+ 'uuid': 'd2529787557cb31b'}
+[2026-01-30T14:25:09.389+0000] {docker.py:429} INFO - 2026-01-30 14:25:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/rocca-di-riolo-calendario-gennaio-2026-giochi-escape-famiglie-bambini.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:09.498+0000] {docker.py:429} INFO - 2026-01-30 14:25:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/rocca-di-riolo-calendario-gennaio-2026-giochi-escape-famiglie-bambini.html>
+{'category': 'Incontri',
+ 'city': 'Ravenna',
+ 'content_hash': 'ebcab766cb1fb415',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-18',
+ 'dates': [{'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'Le antiche mura della Rocca di Riolo aprono il nuovo anno con '
+                'un calendario eventi ricco di suggestioni, misteri e '
+                'avventure pensate per famiglie, bambine, bambini e adulti, '
+                'trasformando ogni visita in un’esperienza immersiva capace di '
+                'unire gioco, storia e immaginazione. Il mese di gennaio si '
+                'apre con Junior Rocca Escape – Mistero a Hogwarts , in '
+                'programma domenica 18 gennaio dalle 10:30. Questo gioco '
+                'escape dedicato a famiglie conduce i partecipanti all’interno '
+                'della torre quadrata, dove il tempo diventa un avversario da '
+                'battere: un’ora soltanto per risolvere enigmi ispirati al '
+                'magico mondo di Hogwarts e trovare la chiave della libertà. '
+                'Domenica 25 gennaio alle 15, Alla corte di Caterina '
+                'accompagna il pubblico in un affascinante viaggio nel tempo, '
+                'guidato dalla carismatica Caterina Sforza, una delle donne '
+                'più discusse della storia romagnola. La visita narrata '
+                'ripercorre le vicende della Rocca di Riolo, dalla costruzione '
+                'dell’imponente mastio alle trasformazioni volute dalla '
+                'famiglia Riario Sforza, offrendo uno sguardo approfondito sul '
+                'contesto storico e politico dell’epoca. A chiudere il mese, '
+                'sabato 31 gennaio dalle 19, arriva Rocca Escape - Maledetta , '
+                'un gioco escape per adulti ambientato nel Medioevo e ispirato '
+                'alla leggendaria figura di Caterina Sforza. I partecipanti '
+                'vengono accolti nel cortile da una presenza inquietante che '
+                'evoca il fantasma della contessa e condotti all’interno della '
+                'torre, dove inizia una corsa contro il tempo. Enigmi, rebus e '
+                'indovinelli si susseguono tra le sale del mastio, fino alla '
+                'sala del pozzo, ultimo ostacolo prima della libertà. '
+                'Un’esperienza intensa e carica di mistero, che riporta '
+                'indietro nel tempo e invita a confrontarsi con i segreti più '
+                'oscuri della Rocca. I biglietti sono acquistabili su Shop '
+                'Atlantide nella sezione dedicata alla Rocca di Riolo. Per '
+                'maggiori informazioni: 335 1209933 - 0546 77450 - '
+                'roccadiriolo@atlantide.net .',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/4381485451133/rocca-riolo-terme-3.jpg',
+ 'location_address': None,
+ 'location_name': 'Rocca di Riolo',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-30T14:24:56.220708',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': 'La Rocca dei segreti: tre appuntamenti con enigmi, escape room e '
+          'storia',
+ 'url': 'https://www.ravennatoday.it/eventi/rocca-di-riolo-calendario-gennaio-2026-giochi-escape-famiglie-bambini.html',
+ 'uuid': '6832aa31ecdcd974'}
+[2026-01-30T14:25:10.885+0000] {docker.py:429} INFO - 2026-01-30 14:25:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/inaugura-9-gennaio-la-24esima-edizione-della-mostra-festival-delle-arti-50-artisti-al-magazzino-del-sale.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:10.993+0000] {docker.py:429} INFO - 2026-01-30 14:25:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/inaugura-9-gennaio-la-24esima-edizione-della-mostra-festival-delle-arti-50-artisti-al-magazzino-del-sale.html>
+{'category': 'Mostre',
+ 'city': 'Ravenna',
+ 'content_hash': '8bf817cc14943dd4',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-01-09',
+ 'dates': [{'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Inaugura venerdì 9 gennaio alle 18:30 “Il Volto '
+                'dell’artista”, 24^ edizione della mostra del “Festival delle '
+                'arti”, aperta fino al 1 febbraio negli spazi del Magazzino '
+                'del Sale “Torre” di Cervia. Curata da Silvana Costa, in '
+                'collaborazione con il Comune di Cervia, l’esposizione ospita '
+                'le opere di 50 artisti che hanno espresso la propria '
+                'creatività al Festival delle Arti di Cervia che si svolge '
+                'ogni estate sul Porto Canale della città balneare. Tema della '
+                "mostra è il ritratto nell'arte, argomento che dà sempre è "
+                'materia prima per gli artisti e che in questo caso si '
+                'trasforma in opere pittoriche, scultoree, installazioni a '
+                'pareti e a terra, mosaici, ceramiche e gioielli. Gli artisti '
+                'in mostra sono: Daniela Albani, Margherita Amicucci, Paolo '
+                'Ancarani, Asia Antonioli, Irene Balducci, Marcella Belletti, '
+                'Luciana Bellotti, Erica Borghi, Elena Butmalai, Eliseo '
+                'Calcinari Ansidei, Serena Candoli, Ugo Capriani, Silvana '
+                'Cardinale, Barbara Casabianca, Sergio Catitti, Luisella '
+                'Ceredi, Luca Colangelo, Leda Dall’Olio, Letizia Di '
+                'Bartolomeo, Massimo Di Bartolomeo, Milva Fantini, Fausto '
+                'Ferri, Laura Gamberini, Paolo Graziani, Susanna Lega, Paola '
+                'Maltoni, Yailen Manresa, Mascia Margotti, Maria Mazzotti, '
+                'Petronella Ortmann, Fabrizio Pavolucci, Serena Pironi, '
+                'Stefano Pironi, Gregorio Prada Castillo, Liliana Quadrelli, '
+                'Eufemia Rampi, Marina Ravaioli, Arianna Ricciotti, Monica '
+                'Righetti, Cinzia Rinaldi, Maria Luisa Romani, Laura '
+                'Rondinini, Melania Salvi, Darya Tsaptsyna, Raffaella Vaccari, '
+                'Sara Valenti, Elisa Zaghini, Veronica Zavoli, Ossigeno Rosso. '
+                'La mostra è aperta tutti i giorni dalle 15 alle 18, festivi e '
+                'prefestivi dalle 9 alle 12 e dalle 15 alle 18.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/51507600051277/cerviamagazzinidelsale.jpg',
+ 'location_address': None,
+ 'location_name': 'Magazzino del Sale Torre',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.220244',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': '50 artisti in mostra al Magazzino del Sale per la 24esima edizione '
+          'del "Festival delle arti"',
+ 'url': 'https://www.ravennatoday.it/eventi/inaugura-9-gennaio-la-24esima-edizione-della-mostra-festival-delle-arti-50-artisti-al-magazzino-del-sale.html',
+ 'uuid': 'bfa0a66a068d3ef9'}
+[2026-01-30T14:25:12.057+0000] {docker.py:429} INFO - 2026-01-30 14:25:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/prossimi-concerti-al-duomo-jazz-club-gennaio-febbraio-2026.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:12.167+0000] {docker.py:429} INFO - 2026-01-30 14:25:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/prossimi-concerti-al-duomo-jazz-club-gennaio-febbraio-2026.html>
+{'category': 'Concerti',
+ 'city': 'Ravenna',
+ 'content_hash': 'c52236b56480afa9',
+ 'date_end': '2026-02-20',
+ 'date_start': '2026-01-09',
+ 'dates': [{'date': '2026-01-09', 'time_start': '21:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'time_start': '21:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'time_start': '21:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'time_start': '21:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'time_start': '21:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-14',
+            'time_start': '21:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'time_start': '21:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'time_start': '21:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'time_start': '21:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '21:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '21:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '21:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-21',
+            'time_start': '21:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '21:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '21:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '21:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '21:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '21:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '21:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '21:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '21:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '21:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '21:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '21:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '21:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '21:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '21:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '21:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '21:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '21:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '21:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '21:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '21:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '21:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '21:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '21:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '21:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '21:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '21:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '21:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '21:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '21:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '21:30', 'weekday': 'Venerdì'}],
+ 'description': 'Con l’avvio del nuovo anno, Duomo Jazz Club riaccende i '
+                'riflettori sulla musica jazz dal vivo. Nella cornice della '
+                'pizzeria L’Étoile riparte la rassegna dedicata alle sonorità '
+                'jazz, curata dalla direzione artistica di Matteo Zaccherini e '
+                'Gianni Corbari. Tutti i concerti hanno inizio alle 21:30, '
+                'preceduti dall’introduzione di Gianni Corbari, e prevedono un '
+                'piccolo intervallo. Il primo appuntamento è venerdì 9 gennaio '
+                'con il duo formato da Elena Lodovici, pianoforte e voce, '
+                'accompagnata dal contrabbasso di Eros Rambaldi. Si continua '
+                'venerdì 23 gennaio con il Mauro Mussoni Trio con il '
+                'contrabbassista Mauro Mussoni, affiancato da Nico Tangherlini '
+                'al pianoforte e Enrico Smiderle alla batteria. Poi a '
+                'febbraio, venerdì 6 , di scena il pianismo di Nico Menci che '
+                'incontra il sassofono di Alessandro Scala. A chiudere il '
+                'ciclo di febbraio, venerdì 20 protagonisti la voce di Maria '
+                'Giulia Lombardi accompagnata da Matteo Zaccherini al '
+                'pianoforte. Data la limitata disponibilità di posti, la '
+                'prenotazione è obbligatoria al numero 375 8151070.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/28653313176481/duomojazz.jpg',
+ 'location_address': 'Via Gioacchino Rasponi, 43',
+ 'location_name': "Duomo Jazz Club - Pizzeria L'Étoile",
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-30T14:24:56.219804',
+ 'time_info': 'Alle 21:30',
+ 'title': 'Il Duomo Jazz Club riparte: quattro concerti nel salotto musicale '
+          'della pizzeria L’Étoile',
+ 'url': 'https://www.ravennatoday.it/eventi/prossimi-concerti-al-duomo-jazz-club-gennaio-febbraio-2026.html',
+ 'uuid': '777b603fb9e1d527'}
+[2026-01-30T14:25:13.898+0000] {docker.py:429} INFO - 2026-01-30 14:25:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/festa-della-patrona-sant-agata-sul-santerno-iniziative-2026.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:14.006+0000] {docker.py:429} INFO - 2026-01-30 14:25:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/festa-della-patrona-sant-agata-sul-santerno-iniziative-2026.html>
+{'category': 'Manifestazioni',
+ 'city': 'Ravenna',
+ 'content_hash': '22be88e04110b0c7',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'}],
+ 'description': 'Sant’Agata sul Santerno si prepara a celebrare la propria '
+                'patrona con una serie di eventi tradizionali e appuntamenti '
+                "comunitari. Dal 31 gennaio all'8 febbraio, la cittadina sarà "
+                'animata da momenti religiosi e gastronomici, bancarelle e '
+                'attività per famiglie, tra cui processioni, spettacoli e '
+                'iniziative culturali dedicate alla storia e alle tradizioni '
+                "locali. L'inizio degli eventi è fissato per sabato 31 gennaio "
+                ': alle 20:45 nella sala della Comunità la Filodrammatica di '
+                'Casola Canina porterà in scena la dialettale At voj bé... da '
+                "murí di Luciano Lunghi. A seguire, l'estrazione della "
+                'lotteria. La festa della Patrona è in programma domenica 1 '
+                'febbraio , a partire dalle 10, quando verranno allestite le '
+                'bancarelle del mercatino di “ Artigiano & friends ” e quelle '
+                "del mercatino dei bambini, in piazza Ercole I Duca d'Este, "
+                'mentre in largo Margerita di Savoia si animerà un piccolo '
+                'luna park. A mezzogiorno aprirà lo stand gastromico della Pro '
+                'Loco e partirà anche la musica di Dj Fighèt. Alle 15:30, in '
+                'piazza Umberto I, Andrea Marchi porterà in scena lo '
+                'spettacolo di Paggio e Paggetto, tra musica, teatro e '
+                "comicità, per grandi e piccini, organizzato dall'associazione "
+                'i Compagni della Scuola. Alle 17, infine, è in programma la '
+                'maccheronata offerta dalla Pro Loco.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/50006383675113/paccheri_al_sugo_di_calamari-2.jpg',
+ 'location_address': None,
+ 'location_name': 'sedi varie - vedi articolo',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-30T14:24:56.219266',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': 'Maccheronata, mercatini, luna park, dj set e spettacoli per la '
+          'festa della Patrona',
+ 'url': 'https://www.ravennatoday.it/eventi/festa-della-patrona-sant-agata-sul-santerno-iniziative-2026.html',
+ 'uuid': '00321c4e30415b33'}
+[2026-01-30T14:25:14.689+0000] {docker.py:429} INFO - 2026-01-30 14:25:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/la-classense-e-le-biblioteche-del-territorio-ravennate-tutti-gli-appuntamenti-natale-2025-2026.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:14.800+0000] {docker.py:429} INFO - 2026-01-30 14:25:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/la-classense-e-le-biblioteche-del-territorio-ravennate-tutti-gli-appuntamenti-natale-2025-2026.html>
+{'category': 'Incontri',
+ 'city': 'Ravenna',
+ 'content_hash': 'a998e7907a9d9bc3',
+ 'date_end': '2026-04-14',
+ 'date_start': '2025-12-13',
+ 'dates': [{'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'weekday': 'Martedì'}],
+ 'description': 'Anche la Biblioteca Classense di Ravenna e le altre '
+                'biblioteche del territorio festeggiano il Natale, con un '
+                'ricco calendario di appuntamenti tra visite guidate e '
+                'laboratori a tema per grandi e piccoli. Da dicembre ritornano '
+                'inoltre le letture “Io leggo a te, tu leggi a me” a cura del '
+                'gruppo volontario Nati per leggere. Verranno proposte '
+                'gratuitamente per tutte le famiglie con bambini e bambine dai '
+                '3 a i 6 anni attività di lettura ad alta voce. Gli '
+                'appuntamenti proseguiranno anche nel 2026. Sabato 13 dicembre '
+                'e 3 gennaio , dalle 16 alle 18, le famiglie potranno '
+                'partecipare a delle visite guidate che si concluderanno con '
+                'il laboratorio “Copisti all’opera” con cui bambine e bambini '
+                'dai 9 agli 11 anni potranno sperimentare i metodi di '
+                'scrittura del passato. Sabato 20 dicembre , 3 e 17 gennaio '
+                'alle 11 si potrà approfondire la vita culturale del '
+                'monastero, oltre ad ammirare alcuni dei più prestigiosi '
+                'volumi manoscritti e a stampa della collezione voluta '
+                'dall’abate Pietro Canneti, prendendo parte alle visite '
+                'guidate gratuite tenute dalle bibliotecarie (prenotazione '
+                'obbligatoria al 0544482112). Sabato 20 dicembre, dalle 10 '
+                'alle 13, ci sarà in Classense l’ultimo appuntamento con il '
+                'mercatino dei libri a offerta libera curato dall’associazione '
+                'Amici della Biblioteca Classense, per chi volesse acquistare '
+                'gli ultimi regali dando una seconda vita ai volumi in '
+                'esposizione. Sempre sabato 20 dicembre, alle 16:30, si '
+                'concluderà il mese di festeggiamenti dedicati ai trent’anni '
+                'di attività di Casa Vignuzzi con una torta speciale. Nelle '
+                'biblioteche decentrate, in collaborazione con l’associazione '
+                'Fatabuttega, si svolgeranno invece le letture per bambini e '
+                'bambine dai 5 ai 10 anni seguite da laboratori di manualità '
+                'creativa a tema. Si parte sabato 13 dicembre , alla '
+                'Biblioteca Olindo Guerrini di Sant’Alberto, con un '
+                'appuntamento dedicato al libro “Tra le nevi del Polo Nord” di '
+                'Polly Faber per concludere nell’anno nuovo con “Una festa '
+                'inaspettata” di Akiko Miyakoshi alla Biblioteca Manara '
+                'Valgimigli di Santo Stefano. Per conoscere tutte le '
+                'iniziative, è possibile consultare il sito della biblioteca '
+                'di riferimento. Fino al 17 gennaio, alla Biblioteca Classense '
+                'è possibile visitare liberamente le mostre “Gaem – Giovani '
+                'artisti e mosaico”, in Manica Lunga, e la Libreria dei '
+                'Camaldolesi a Ravenna - Una mostra sulla storia della '
+                'biblioteca dell’abbazia di Classe, nel Corridoio grande e '
+                'l’Aula Magna. Sabato 20 dicembre, 3 e 17 gennaio, alle 11 ci '
+                'saranno delle visite guidate alla mostra La Libreria dei '
+                'Camaldolesi a Ravenna. Ingresso gratuito con prenotazione '
+                'obbligatoria al 0544 482112 (lunedì 14-19, martedì-sabato '
+                '9-19). Sempre per sabato 20 dicembre, ma dalle 10 alle 13 è '
+                'stato organizzato “Sette vite… per un libro”, il mercatino '
+                'dei libri a offerta libera in collaborazione con '
+                'l’Associazione Amici della Biblioteca Classense. Biblioteca '
+                'di Sant’ Alberto 13 dicembre alle 10:30 Tra le nevi del Polo '
+                'Nord di Polly Faber Ed. Sassi. Biblioteca di Piangipane 17 '
+                'dicembre – alle 16:30 Il Natale sono io! di Olivier Tallec '
+                'Ed. Clichy Biblioteca di Marina di Ravenna 19 dicembre – alle '
+                '16:30 Babbo Natale e la notte magica di Erika Cunja Ed. La '
+                'Margherita. Casa Vignuzzi 20 dicembre – alle 16:30 Grande '
+                'festa in biblioteca. Una torta speciale per Casa Vignuzzi '
+                'Biblioteca di Castiglione di Ravenna 20 dicembre – alle 10 '
+                'Giocattoli di Alice Barberini Ed. Orecchio Acerbo. Biblioteca '
+                'di Santo Stefano 10 gennaio – alle 16 Una festa inaspettata '
+                'di Akiko Miyakoshi Ed. Salani. Casa Vignuzzi – Ravenna – alle '
+                '10:30 10 e 24 gennaio / 7 e 21 febbraio / 7 e 21 marzo / 11 '
+                'aprile Biblioteca “Celso Omicini” – Castiglione di Ravenna – '
+                'alle 10:30 6 dicembre / 10 gennaio / 7 febbraio / 7 marzo / '
+                '11 aprile Biblioteca “Ada Ottolenghi” – Marina di Ravenna – '
+                'alle 10:30 6 dicembre / 10 gennaio / 7 febbraio / 7 marzo / '
+                '11 aprile Biblioteca “Fuori legge” – Piangipane – alle 10:30 '
+                '13 dicembre / 17 gennaio / 14 febbraio / 14 marzo / 18 aprile '
+                'Biblioteca “Olindo Guerrini” – Sant’Alberto – alle 10:30 20 '
+                'dicembre / 17 gennaio / 14 febbraio / 14 marzo / 18 aprile '
+                'Biblioteca “Manara Valgimigli” – Santo Stefano – ore 16:30 3 '
+                'gennaio / 28 marzo / 14 aprile',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/38204752250812/letture-bambini-2023-nuova.jpg',
+ 'location_address': None,
+ 'location_name': 'sedi varie - vedi articolo',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.218792',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': 'Nati per leggere, mercatino dei libri e visite: tutti gli eventi '
+          'delle biblioteche del territorio',
+ 'url': 'https://www.ravennatoday.it/eventi/la-classense-e-le-biblioteche-del-territorio-ravennate-tutti-gli-appuntamenti-natale-2025-2026.html',
+ 'uuid': 'f19f7599d3b51224'}
+[2026-01-30T14:25:16.121+0000] {docker.py:429} INFO - 2026-01-30 14:25:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/musica-dal-vivo-mercato-coperto-ravenna-tre-domeniche-alessandro-scala-fabrizio-tarroni.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:16.230+0000] {docker.py:429} INFO - 2026-01-30 14:25:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/musica-dal-vivo-mercato-coperto-ravenna-tre-domeniche-alessandro-scala-fabrizio-tarroni.html>
+{'category': 'Concerti',
+ 'city': 'Ravenna',
+ 'content_hash': 'fa7487f266dd93d5',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-18',
+ 'dates': [{'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'}],
+ 'description': 'Il Mercato Coperto di Ravenna prosegue la sua programmazione '
+                'culturale e musicale con una serie di appuntamenti di musica '
+                'dal vivo, confermando una formula gratuita e aperta al '
+                'pubblico. I concerti, fruibili senza obbligo di sedersi a '
+                'pranzo, sono pensati per accompagnare le domeniche nel centro '
+                'storico, offrendo l’occasione di una sosta per un caffè, un '
+                'aperitivo o il pranzo. Domenica 18 e 25 gennaio e domenica 8 '
+                'febbraio è in programma il ritorno del duo composto da '
+                'Alessandro Scala al sax e Fabrizio Tarroni alla chitarra. Il '
+                'concerto propone un repertorio che attraversa jazz, '
+                'bossanova, standard internazionali e soul-pop. Durante gli '
+                'appuntamenti sarà possibile fermarsi per un calice di vino o '
+                'una piadina, oppure scegliere tra le diverse proposte delle '
+                'botteghe del mercato. Sono inoltre previsti lo speciale '
+                'carrello dei bolliti e quello dei dolci curati dagli chef '
+                'Vincenzo e Marco.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/27812623117996/platea-mercato-coperto-2.jpg',
+ 'location_address': 'Piazza Andrea Costa, 6',
+ 'location_name': 'Mercato Coperto',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.217882',
+ 'time_info': 'Dalle 12 alle 15',
+ 'title': 'Jazz, bossanova e soul-pop: tre domeniche con Alessandro Scala e '
+          'Fabrizio Tarroni',
+ 'url': 'https://www.ravennatoday.it/eventi/musica-dal-vivo-mercato-coperto-ravenna-tre-domeniche-alessandro-scala-fabrizio-tarroni.html',
+ 'uuid': 'aa4c1364d6a5f33e'}
+[2026-01-30T14:25:16.820+0000] {docker.py:429} INFO - 2026-01-30 14:25:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/civic-off-conselice-2025-programma-spettacoli.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:16.933+0000] {docker.py:429} INFO - 2026-01-30 14:25:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/civic-off-conselice-2025-programma-spettacoli.html>
+{'category': 'Incontri',
+ 'city': 'Ravenna',
+ 'content_hash': 'c1baca63b65c4bb8',
+ 'date_end': '2026-03-08',
+ 'date_start': '2025-10-03',
+ 'dates': [{'date': '2025-10-03', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-10-04', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-10-05', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-10-06', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-10-07', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-10-08',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-10-09', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-10-10', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-10-11', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-10-12', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-10-13', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-10-14', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-10-15',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-10-16', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-10-17', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-10-18', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-10-19', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-10-20', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-10-21', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-10-22',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-10-23', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-10-24', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-10-25', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-10-26', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-10-27', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-10-28', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-10-29',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-10-30', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-10-31', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-01', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-02', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-03', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-04', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-05',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-06', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-07', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-08', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-12',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-19',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-11-26',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-03',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-10',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-17',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-24',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2025-12-31',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-07',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-14',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-21',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-02-25',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '21:00', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '21:00', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '21:00', 'weekday': 'Martedì'},
+           {'date': '2026-03-04',
+            'time_start': '21:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '21:00', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '21:00', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '21:00', 'weekday': 'Sabato'},
+           {'date': '2026-03-08',
+            'time_start': '21:00',
+            'weekday': 'Domenica'}],
+ 'description': 'Il centro civico Gino Pellegrini di Conselice si prepara ad '
+                'accogliere nuovamente CivicOff, la rassegna artistica che ha '
+                'visto la luce nel 2024, pensata per colmare il vuoto lasciato '
+                'dal teatro cittadino, attualmente in fase di '
+                'ristrutturazione. Ben cinque gli appuntamenti in programma '
+                'per questo autunno-inverno, tra musica leggera, musica '
+                'classica, grandi ospiti e anche comicità, per coinvolgere '
+                'tutti. Si parte venerdì 3 ottobre alle 21 con Concita De '
+                'Gregorio ed Erica Mou in occasione del Festival per la '
+                'libertà di stampa conselicese. La giornalista legge alcuni '
+                'brani tratti dal suo libro In mezzo a un milione di rane e '
+                'farfalle (Giangiacomo Feltrinelli Editore), accompagnata da '
+                'voce e chitarra di Erica Mou, in un recital che trasporta il '
+                'pubblico in un viaggio intimo e universale. Venerdì 14 '
+                'novembre alle 21, sempre nell’ambito del Festival per la '
+                'libertà di stampa, Paola Turci accompagnata da Gino Castaldo '
+                'porta in scena “La rivoluzione delle donne”, un excursus di '
+                'parole e musica sulle donne che hanno cambiato la storia '
+                '(spettacolo fuori abbonamento e a ingresso libero, con '
+                'diritto di prelazione agli abbonati). Si prosegue con '
+                'l’appuntamento natalizio: arriva sabato 20 dicembre alle 21 '
+                'l’energia di “A Christmas Welcome” dei talentuosi cantanti '
+                'della Bernstein School of musical, che tra gospel, tip-tap e '
+                'accenni di hip-hop, salutano l’arrivo del Natale con una '
+                'carica di entusiasmo incontenibile. Nel nuovo anno si passa a '
+                'un aperitivo con musica classica. Venerdì 13 febbraio 2026 '
+                'alle 21 al centro civico ci saranno Pietro Beltrani al '
+                'pianoforte, Daniele Negrini al violino e Tiziano Guerzoni al '
+                'violoncello per il progetto “Beltrani modern piano trio”, un '
+                'omaggio a tre grandi compositori di ieri e di oggi quali '
+                'Piazzolla, Gershwin e Ezio Bosso. A conclusione della '
+                'rassegna, un appuntamento tutto da ridere con Maria Pia Timo '
+                'che, in occasione della festa delle donne, domenica 8 marzo '
+                '2026 alle 21 racconterà di “Una donna di prim’ordine”, ovvero '
+                'una guida pratica su come sistemare l’armadio, il cane e il '
+                'marito, per la regia di Roberto Pozzi. La rassegna CivicOff, '
+                'ideata e curata dal direttore artistico Matteo Penazzi, è '
+                'organizzata dal Comune di Conselice con il contributo della '
+                'fondazione Cassa di risparmio di Ravenna. Ingresso 15 euro '
+                'intero e 7 euro fino ai 25 anni. Solo per lo spettacolo di '
+                'Concita De Gregorio ingresso 20 euro e ridotto 10 euro. '
+                'Ingresso gratuito per lo spettacolo “La rivoluzione delle '
+                'donne” con Paola Turci. Prenotazione obbligatoria al 366 '
+                '1434658 (fino al 31 ottobre, priorità a chi ha '
+                'l’abbonamento). L’abbonamento a tutti gli spettacoli costa 55 '
+                'euro (20 euro fino a 25 anni). Biglietti su Vivaticket, alla '
+                'Tabaccheria centrale e nei punti vendita autorizzati, sul '
+                'posto 30 minuti prima dello spettacolo (posti disponibili). '
+                'Informazioni al 346 3116714 (da lunedì a giovedì dalle 10 '
+                'alle 12).',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/23950473643227/civico-off.jpeg',
+ 'location_address': 'Piazza Felice Eleuterio Foresti, 25',
+ 'location_name': 'Centro Civico Gino Pellegrini',
+ 'price': 'da 7 a 15 euro, abbonamento da 20 a 55 euro',
+ 'scraped_at': '2026-01-30T14:24:56.217248',
+ 'time_info': 'alle 21.00',
+ 'title': 'CivicOff, cinque appuntamenti in programma: tra gli ospiti Concita '
+          'De Gregorio, Paola Turci e Gino Castaldo',
+ 'url': 'https://www.ravennatoday.it/eventi/civic-off-conselice-2025-programma-spettacoli.html',
+ 'uuid': 'c83072bcde03c427'}
+[2026-01-30T14:25:18.406+0000] {docker.py:429} INFO - 2026-01-30 14:25:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/rassegna-teatro-socjale-piangipane-programma-2025-2026.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:18.524+0000] {docker.py:429} INFO - 2026-01-30 14:25:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/rassegna-teatro-socjale-piangipane-programma-2025-2026.html>
+{'category': 'Teatri',
+ 'city': 'Ravenna',
+ 'content_hash': '7c62b9d37256334d',
+ 'date_end': '2026-04-27',
+ 'date_start': '2025-10-14',
+ 'dates': [{'date': '2025-10-14', 'weekday': 'Martedì'},
+           {'date': '2025-10-15', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-16', 'weekday': 'Giovedì'},
+           {'date': '2025-10-17', 'weekday': 'Venerdì'},
+           {'date': '2025-10-18', 'weekday': 'Sabato'},
+           {'date': '2025-10-19', 'weekday': 'Domenica'},
+           {'date': '2025-10-20', 'weekday': 'Lunedì'},
+           {'date': '2025-10-21', 'weekday': 'Martedì'},
+           {'date': '2025-10-22', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-23', 'weekday': 'Giovedì'},
+           {'date': '2025-10-24', 'weekday': 'Venerdì'},
+           {'date': '2025-10-25', 'weekday': 'Sabato'},
+           {'date': '2025-10-26', 'weekday': 'Domenica'},
+           {'date': '2025-10-27', 'weekday': 'Lunedì'},
+           {'date': '2025-10-28', 'weekday': 'Martedì'},
+           {'date': '2025-10-29', 'weekday': 'Mercoledì'},
+           {'date': '2025-10-30', 'weekday': 'Giovedì'},
+           {'date': '2025-10-31', 'weekday': 'Venerdì'},
+           {'date': '2025-11-01', 'weekday': 'Sabato'},
+           {'date': '2025-11-02', 'weekday': 'Domenica'},
+           {'date': '2025-11-03', 'weekday': 'Lunedì'},
+           {'date': '2025-11-04', 'weekday': 'Martedì'},
+           {'date': '2025-11-05', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-06', 'weekday': 'Giovedì'},
+           {'date': '2025-11-07', 'weekday': 'Venerdì'},
+           {'date': '2025-11-08', 'weekday': 'Sabato'},
+           {'date': '2025-11-09', 'weekday': 'Domenica'},
+           {'date': '2025-11-10', 'weekday': 'Lunedì'},
+           {'date': '2025-11-11', 'weekday': 'Martedì'},
+           {'date': '2025-11-12', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-13', 'weekday': 'Giovedì'},
+           {'date': '2025-11-14', 'weekday': 'Venerdì'},
+           {'date': '2025-11-15', 'weekday': 'Sabato'},
+           {'date': '2025-11-16', 'weekday': 'Domenica'},
+           {'date': '2025-11-17', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'weekday': 'Martedì'},
+           {'date': '2025-11-19', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'weekday': 'Martedì'},
+           {'date': '2025-11-26', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'},
+           {'date': '2026-04-12', 'weekday': 'Domenica'},
+           {'date': '2026-04-13', 'weekday': 'Lunedì'},
+           {'date': '2026-04-14', 'weekday': 'Martedì'},
+           {'date': '2026-04-15', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-16', 'weekday': 'Giovedì'},
+           {'date': '2026-04-17', 'weekday': 'Venerdì'},
+           {'date': '2026-04-18', 'weekday': 'Sabato'},
+           {'date': '2026-04-19', 'weekday': 'Domenica'},
+           {'date': '2026-04-20', 'weekday': 'Lunedì'},
+           {'date': '2026-04-21', 'weekday': 'Martedì'},
+           {'date': '2026-04-22', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-23', 'weekday': 'Giovedì'},
+           {'date': '2026-04-24', 'weekday': 'Venerdì'},
+           {'date': '2026-04-25', 'weekday': 'Sabato'},
+           {'date': '2026-04-26', 'weekday': 'Domenica'},
+           {'date': '2026-04-27', 'weekday': 'Lunedì'}],
+ 'description': 'È iniziato al teatro Socjale di Piangipane il cartellone di '
+                'spettacoli che Ravenna Teatro organizza fino ad aprile: '
+                'sedici gli appuntamenti previsti, per una stagione che '
+                'conferma e alimenta il legame tra Ravenna Teatro e un luogo '
+                "emblema dell'essenza cooperativa, e che nella collaborazione "
+                'con Fondazione Teatro Socjale raccoglie idealmente il '
+                'testimone lasciato dai cooperatori oltre cento anni fa: '
+                'portare avanti una semina che continui a regalare cultura. Un '
+                'piccolo teatro che, oltre a tenere saldo e fecondo il '
+                'rapporto tra città e forese, offre anche alle giovani '
+                'compagnie e ai giovani artisti la possibilità di poter '
+                'condividere spettacoli e creazioni che spesso non trovano '
+                'spazio nei grandi circuiti. Dopo Guido Guidi per La Stagione '
+                'dei Teatri e Cesare Fabbri per la rassegna Famiglie e Scuole, '
+                'per “Al Socjale” è stata scelta una immagine di Francesca '
+                'Gardini. Quest’anno Ravenna Teatro propone un cartellone '
+                'ancora più ricco, che accoglie nuovamente anche gli '
+                'spettacoli dedicati ai bambini e ragazzi de La Stagione dei '
+                'Teatri - Famiglie e Scuole, per offrire le stesse opportunità '
+                'al giovane pubblico di città e forese. La nuova stagione '
+                'teatrale organizzata da Ravenna Teatro al Teatro Socjale di '
+                'Piangipane ha preso avvio domenica 5 ottobre, si prosegue con '
+                'Non siamo niente saremo tutto di Alessandro Renda/ Albe, Zona '
+                'K, che vede in scena anche l’attore ravennate Matteo Gatta, '
+                'un affondo esistenziale e sociologico sul mondo del lavoro, '
+                'un invito alla riflessione, all’azione e all’idea di poter '
+                'essere ancora connessi, essere “coro”. Lo spettacolo/indagine '
+                'vede in scena cittadini ravennati di qualunque ambito '
+                'lavorativo con le loro esperienze e storie, ad alimentare una '
+                'drammaturgia ogni sera diversa, creata insieme a Renda '
+                'attraverso un piccolo laboratorio aperto a tutti. La tappa '
+                'ravennate di Non siamo niente saremo tutto è in '
+                'collaborazione con Cgil Ravenna ed è dal 14 al 26 ottobre. Il '
+                '4 novembre si tiene una Serata d’onore dedicata a Nevio '
+                'Spadoni, poeta cardine del Novecento profondamente radicato '
+                "nella nostra terra, di cui ha saputo cogliere l'anima più "
+                'autentica,
+[2026-01-30T14:25:18.525+0000] {docker.py:429} INFO - e al suo peculiare stile che mescola lessico '
+                'quotidiano e lampi di verticale intensità; una serata di '
+                'dialogo e ascolto a cura del giornalista letterario di Rai '
+                'Radio3 Graziano Graziani. Seguirà Veglia, della compagnia '
+                'Menoventi, in cui il pubblico si immergerà in racconti '
+                'caratterizzati da umorismo filosofico, spunti di riflessione '
+                'sul mondo in cui viviamo, intrecciati a elementi ludici, con '
+                'indovinelli, sfide, scommesse. Il mese si chiuderà con il '
+                'primo appuntamento dedicato all’infanzia, Viaggio in aereo di '
+                'Drammatico Vegetale. I due spettacoli in calendario a '
+                'dicembre saranno L’Europa non cade dal cielo di Albe/Ravenna '
+                'Teatro e Quando le stelle caddero dal cielo della Compagnia '
+                'del sole con i Teatri di Bari. Un lavoro, il primo, che prova '
+                'a raccontare - attraverso gli occhi di due ventenni - '
+                'l’integrazione europea attraverso la vita delle persone, '
+                'raccontandone anche le spaccature, i nodi dolenti, e quelle '
+                'reti di scambio formate dalle persone in movimento, dalle '
+                'idee in circolo, dalle necessità della vita e dai sogni di '
+                'cambiamento. A gennaio Catalyst presenta Pelle d’asino, '
+                'mentre il mese di febbraio vede in scena un altro spettacolo '
+                'per l’infanzia, Abcd ’Emozioni di Compagnia '
+                'Melarancio/Dispari Teatro, e Dodici stanze per Elsa Morante, '
+                'di Michele Di Giacomo con Tamara Balducci, un ritratto intimo '
+                'e potente di Elsa Morante attinto da diverse opere e diari. '
+                'Marzo vede altri due appuntamenti de La Stagione dei Teatri - '
+                'Famiglie e Scuole: Pensieri sottili di Teatro all’improvviso '
+                'e Non è stata la mano di Dio di Teatro dei Cipis. L’ultimo '
+                'mese, aprile , si apre con Studio Doiz/Accademia '
+                'Perduta/Romagna Teatri in scena con Ombrelloni, un monologo '
+                'dal tratto grottesco che mette sotto la lente d’ingrandimento '
+                'la vita balneare, nella sua specifica accezione romagnola, '
+                'microcosmo schizofrenico, intimo e allo stesso tempo '
+                'esibizionista. Drammatico vegetale ripropone poi Che sì che '
+                'no, spettacolo storico della compagnia. Sarà poi la volta di '
+                'Ultimi Fuochi Teatro, Albe/ Ravenna Teatro con Non una voce: '
+                'gli spettatori salgono su un’auto e sono chiamati a pensarsi '
+                'testimoni della sparizione del genere umano insieme a un '
+                'guidatore che li accompagna in questo viaggio notturno, in '
+                'cui la sua solitudine, forse nella sua coscienza, assume una '
+                'forma iperbolica e post-apocalittica. La Stagione si chiude '
+                'con Breviario di situazioni in cui occorrerebbe avere qualche '
+                'fondamento di Tao di Tristeza Ensemble, uno spettacolo che, '
+                'tra le pieghe comiche, fa passare un dilemma esistenziale '
+                "sull'identità, ispirandosi al filosofo taoista Zhuang-zi. I "
+                'nostri sogni sono solo forse il riflesso del nostro ego '
+                'smisurato? Tutte le informazioni su '
+                'https://ravennateatro.com/stagioni/al-socjale/. da martedì 14 '
+                'a sabato 25 ottobre ore 21, domenica 19 e 26 ottobre ore 16 '
+                '(pausa lunedì 20) Alessandro Renda/Albe, Matteo Gatta, Zona K '
+                'Non siamo niente saremo tutto martedì 4 novembre ore 21 '
+                'Serata d’onore Nevio Spadoni in dialogo con Graziano Graziani '
+                'giovedì 13 novembre ore 21 Menoventi, ospite musicale Muni '
+                "Veglia evento inserito anche nell'ambito di Schiusa lunedì "
+                '24, martedì 25, mercoledì 26 novembre ore 10 scuole '
+                'Drammatico Vegetale/Ravenna Teatro Viaggio in aereo domenica '
+                '14 dicembre ore 11 famiglie, lunedì 15 dicembre ore 20, '
+                'martedì 16 dicembre ore 10scuole Albe/Ravenna Teatro L’Europa '
+                'non cade dal cielo mercoledì 17 dicembre ore 21, giovedì 18 '
+                'dicembre ore 10 scuole Compagnia del sole, Teatri di Bari '
+                'Quando le stelle caddero dal cielo domenica 18 gennaio ore '
+                '16, lunedì 19 gennaio ore 10 scuole Catalyst Pelle d’asino '
+                'domenica 1 febbraio ore 16, lunedì 2 febbraio ore 9.15 e '
+                '10.30 scuole Compagnia Melarancio, Dispari Teatro Abcd '
+                'Emozioni martedì 17 febbraio ore 21 Michele Di Giacomo, '
+                'Tamara Balducci Dodici stanze per Elsa Morante domenica 22 '
+                'marzo ore 16, lunedì 23 marzo ore 10 scuole Teatro '
+                'all’improvviso Pensieri sottili mercoledì 25 marzo ore 10 '
+                'scuole Teatro dei Cipis Non è stata la mano di Dio martedì 14 '
+                'aprile ore 21 Studio Doiz, Accademia Perduta/Romagna Teatri '
+                'Ombrelloni domenica 19 aprile ore 16, lunedì 20 e martedì 21 '
+                'aprile ore 10 scuole Drammatico Vegetale/Ravenna Teatro Che '
+                'sì che no da domenica 19 a venerdì 24 aprile ore 19.30, 21, '
+                '22.30 Ultimi Fuochi Teatro, Albe/Ravenna Teatro Non una voce '
+                '(posti limitati, prenotazione obbligatoria) lunedì 27 aprile '
+                'ore 21 Tristeza Ensemble Breviario di situazioni in cui '
+                'occorrerebbe avere qualche fondamento di Tao Intero 12 euro '
+                'Ridotto 10 euro (under26, abbonati a La Stagione dei Teatri, '
+                'residenti a Piangipane) Carnet 5 spettacoli 40 euro Gaza Ora '
+                'ingresso unico 10 euro incasso destinato a EducAid ONG '
+                'L’Europa non cade dal cielo ingresso unico 7 euro | under30 '
+                'ingresso gratuito Famiglie Intero 7 euro Ridotto 5 euro '
+                'bambini e over 65 Nucleo familiare 20 euro (2 adulti + 2 '
+                'bambini) Scuole Ingresso unico 5 euro Trasporto 7 euro a '
+                'persona I biglietti sono in vendita on line su '
+                'ravennateatro.com, presso il Teatro Rasi il giovedì dalle 16 '
+                'alle 18 e al Socjale da un’ora prima dello spettacolo. '
+                'Informazioni e prenotazioni per le repliche dedicate alle '
+                'scuole su ravennateatro.com.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/29457416074101/teatro-socjale-esterno.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Socjale di Piangipane',
+ 'price': 'da 5 a 12 euro',
+ 'scraped_at': '2026-01-30T14:24:56.216738',
+ 'time_info': 'vedi articolo',
+ 'title': '"Al Socjale", al via la rassegna teatrale con spettacoli per tutte '
+          'le età',
+ 'url': 'https://www.ravennatoday.it/eventi/rassegna-teatro-socjale-piangipane-programma-2025-2026.html',
+ 'uuid': '3a98ad5d92bd8c29'}
+[2026-01-30T14:25:19.332+0000] {docker.py:429} INFO - 2026-01-30 14:25:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/missione-chase-skye-paw-patrol-maioliche.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:19.440+0000] {docker.py:429} INFO - 2026-01-30 14:25:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/missione-chase-skye-paw-patrol-maioliche.html>
+{'category': 'Incontri',
+ 'city': 'Ravenna',
+ 'content_hash': '0ccfcb3fd5890754',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '15:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Domenica 1 febbraio al centro commerciale Le Maioliche di '
+                'Faenza è in programma una missione avventurosa per tutti i '
+                'piccoli fan: arrivano i Paw Patrol per uno speciale meet and '
+                'greet con Chase e Skye. Gli adorabili cuccioli in divisa '
+                'incontrano i piccoli ospiti del centro per foto, sorrisi e '
+                'momenti da ricordare insieme. Ad accompagnare l’evento, un '
+                'corner con laboratori creativi a tema. Gli orari del Meet & '
+                'Greet: 15.30, 16.30, 17.30, 18.30. Compilare il form per '
+                'ricevere un gadget speciale.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/47447269623260/paw-patrol-maioliche-2.jpeg',
+ 'location_address': 'Via Bisaura, 1',
+ 'location_name': 'Centro Commerciale Le Maioliche',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.216025',
+ 'time_info': 'dalle 15.30',
+ 'title': 'Una missione avventurosa con Chase e Skye: tante emozioni con i Paw '
+          'Patrol',
+ 'url': 'https://www.ravennatoday.it/eventi/missione-chase-skye-paw-patrol-maioliche.html',
+ 'uuid': '1719b5a794521a06'}
+[2026-01-30T14:25:20.827+0000] {docker.py:429} INFO - 2026-01-30 14:25:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/ballo-maschera-intrighi-giochi-premi-buffet.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:20.936+0000] {docker.py:429} INFO - 2026-01-30 14:25:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/ballo-maschera-intrighi-giochi-premi-buffet.html>
+{'category': 'Incontri',
+ 'city': 'Ravenna',
+ 'content_hash': 'afbfde371acb31c4',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'Un avvenimento davvero sfarzoso prende forma al centro '
+                'commerciale Le Maioliche di Faenza. Il 31 gennaio, dalle ore '
+                '16, arriva "Il Ballo in maschera". Ci sarà un portale '
+                'fiorito, varcato il quale ogni ospite riceverà una maschera, '
+                'indispensabile per accedere al salone. All’interno sarà la '
+                'Regina ad aprire il ballo e dare il via a un intrigante '
+                'gioco: 3 corteggiatori e una serie di indizi disseminati con '
+                'astuzia. Sarà compito degli astanti osservare e votare chi '
+                'conquisterà il cuore del Diamante. La soirée continuerà con '
+                'valzer collettivi e un buffet delizioso, ma il ballo non '
+                'trascura nemmeno i più giovani. Infatti, i piccoli ospiti '
+                'potranno decorare la propria maschera e farsi realizzare '
+                'pettinature eleganti da un’acconciatrice esperta. E per un '
+                'gran finale, la Regina tornerà in scena per rivelare '
+                'l’identità del corteggiatore segreto e premiare chi avrà '
+                'intuito la verità. Per partecipare occorre registrarsi a '
+                'questo link .',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/13593170189516/ballo-in-maschera-maioliche-2.jpeg',
+ 'location_address': 'Via Bisaura, 1',
+ 'location_name': 'Centro Commerciale Le Maioliche',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.215395',
+ 'time_info': 'Dalle 16',
+ 'title': 'Un "Ballo in maschera" tra intrighi, giochi, premi e buffet',
+ 'url': 'https://www.ravennatoday.it/eventi/ballo-maschera-intrighi-giochi-premi-buffet.html',
+ 'uuid': 'bcc4cd2a27193352'}
+[2026-01-30T14:25:22.312+0000] {docker.py:429} INFO - 2026-01-30 14:25:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/erf-teatro-masini-musica-pomeriggi-musicali-al-mic-pianista-fiorenzo-pascalucci-faenza.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:22.419+0000] {docker.py:429} INFO - 2026-01-30 14:25:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/erf-teatro-masini-musica-pomeriggi-musicali-al-mic-pianista-fiorenzo-pascalucci-faenza.html>
+{'category': 'Concerti',
+ 'city': 'Ravenna',
+ 'content_hash': '5588ddbfb929ef8a',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '15:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Per il secondo dei “Pomeriggi musicali al Mic”, domenica 1 '
+                'febbraio - nell’ambito della 14^ stagione di '
+                'ERF&TeatroMasiniMusica e in collaborazione con la Scuola di '
+                'Musica Sarti - un recital pianistico con Fiorenzo Pascalucci '
+                'che intraprenderà un viaggio musicale attraverso epoche e '
+                'linguaggi diversi, intrecciando la modernità di oggi con le '
+                'radici del primo Novecento. Dal dialogo tra memoria e '
+                'invenzione di Danilo Comitini , qui con Ruìnas e una '
+                'selezione da Fogli sparsi , alla sensibilità impressionista '
+                'di Claude Debussy , con le Estampes , tre quadri dal fascino '
+                'esotico dove il suono si fa pittura e sogno: le armonie '
+                'sospese di Pagodes , il languore andaluso di La soirée dans '
+                'Grenade e la leggerezza danzante di Jardins sous la pluie . '
+                'Si prosegue poi con La Valse di Maurice Ravel , in versione '
+                'pianistica, per chiudere Rhapsody in Blue di George Gershwin '
+                ', manifesto luminoso di un’epoca in cui jazz e musica colta '
+                'si incontrano. Parte integrante della stagione invernale '
+                'faentina è il progetto Educational “Musica a 1 Euro”, pensato '
+                'per avvicinare le giovani generazioni alla musica dal vivo. '
+                'Il cuore del progetto: per tutti i ragazzi e le ragazze delle '
+                'scuole faentine fino a 19 anni, l’accesso ai concerti sarà '
+                'possibile con un biglietto simbolico di 1 euro. A questo si '
+                'affianca un calendario di incontri-concerto e prove aperte, '
+                'in cui i musicisti dialogano con gli studenti, raccontano il '
+                'repertorio, rispondono a domande e condividono l’esperienza '
+                'artistica. Intero 12 euro Ridotti* 10 euro *Biglietti ridotti '
+                'per: – abbonati stagione teatrale del Teatro Angelo Masini – '
+                'possessori MIC Card Faenza – over 65 anni e fino a 25 anni – '
+                'allievi e insegnanti Scuola di Musica Sarti – titolari della '
+                'YoungER Card Emilia-Romagna – titolari Card Cultura Bologna – '
+                'associati CNA Forlì-Cesena – soci T.I.L.T. – Imola – Iscritti '
+                'Touring Club Italiano I settore 17 euro – II settore 14 euro '
+                '– Loggione 10 euro Prevendite su Vivaticket. Informazioni: '
+                'Emilia Romagna Festival - tel. 0542 25747.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/35173013565507/fiorenzopascalucci_3.jpg',
+ 'location_address': 'Viale Alfredo Baccarini, 19',
+ 'location_name': 'Museo Internazionale delle Ceramiche',
+ 'price': 'Da 10 a 17 euro',
+ 'scraped_at': '2026-01-30T14:24:56.214901',
+ 'time_info': 'Alle 15:30',
+ 'title': 'Pomeriggi musicali: il pianista Fiorenzo Pascalucci interpreta '
+          'Debussy, Ravel e Gershwin',
+ 'url': 'https://www.ravennatoday.it/eventi/erf-teatro-masini-musica-pomeriggi-musicali-al-mic-pianista-fiorenzo-pascalucci-faenza.html',
+ 'uuid': '7dbbc4f084fe6eff'}
+[2026-01-30T14:25:24.076+0000] {docker.py:429} INFO - 2026-01-30 14:25:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/teatro-telaio-spettacolo-seggioline-masini-faenza-un-viaggio-surreale.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:24.184+0000] {docker.py:429} INFO - 2026-01-30 14:25:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/teatro-telaio-spettacolo-seggioline-masini-faenza-un-viaggio-surreale.html>
+{'category': 'Teatri',
+ 'city': 'Ravenna',
+ 'content_hash': '993bf970f0820de5',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Per la rassegna dedicata alle Favole del Teatro Masini di '
+                'Faenza, la compagnia Teatro Telaio presenta, domenica 1 '
+                'febbraio, lo spettacolo "Seggioline", scritto e interpretato '
+                'da Michele Beltrami e Paola Cannizzaro. Lui è molto ordinato. '
+                'Costruisce sedie per stare seduti, fermi, composti. Per stare '
+                'come si deve stare. Per fare quello che si deve fare. Ma '
+                'all’improvviso arriva Lei, che sembra volare di qua e di là, '
+                'col suo sacchetto pieno di strane cose: oggetti e colori '
+                'diversi come diverse sono le cose di cui è fatto il mondo. E '
+                'queste cose servono a completare, a trasfigurare, a fare '
+                'crescere e diventare grandi. Un viaggio surreale tra due '
+                'emozioni… anzi tante quante ne possono nascere dall’incontro '
+                'di due persone che sembrano distanti tra loro ma forse, anche '
+                'se non lo sanno, hanno bisogno l’una dell’altra. È così che, '
+                'con un po’ di fantasia in mezzo a tutto quell’ordine e un po’ '
+                'di ordine in mezzo a tanta fantasia, i due personaggi '
+                'inizieranno a trasformare le sedie che hanno intorno e a '
+                'trasformarsi, a scoprire che l’altro non è così lontano da '
+                'noi, che qualcosa che “Lui” o “Lei” hanno è un pezzo di ciò '
+                'che a noi manca, di ciò di cui sentiamo nostalgia. Perché il '
+                'mondo è pieno di cose, di sorprese, di incontri inaspettati. '
+                'A volte vorremmo che tutto rimanesse uguale e invece dobbiamo '
+                'cambiare, a volte vorremmo che tutto cambiasse e invece ci '
+                'viene chiesta l’attesa e la pazienza. Sempre, dove c’è un io '
+                'e un tu, qualcosa di bello e inatteso fiorisce o nasce. È lì, '
+                'proprio lì, che può cominciare il gioco e la festa, che può '
+                'nascere ciò che da soli non avremmo potuto immaginare, che '
+                'possono nascere nuovi sguardi e nuovi pensieri. E i bambini '
+                'del pubblico? E gli spettatori? Beh… anche loro sono seduti: '
+                'fermi, zitti e composti, a guardare lo spettacolo. Ma '
+                'potranno volare con la fantasia, quella capace di immaginare '
+                'il mondo non solo per quello che è, ma per quello che '
+                'potrebbe essere. Biglietti: la vendita sarà effettuata il '
+                'pomeriggio di spettacolo a partire dalle 15 presso la '
+                'biglietteria del Teatro Masini. Prevendita online su '
+                'Vivaticket. Ai biglietti acquistati online sarà applicata una '
+                'maggiorazione da parte del fornitore del servizio. Per '
+                'informazioni contattare 0546 21306.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/2780677409858/seggioline3.jpg',
+ 'location_address': 'Piazza Nenni, 3',
+ 'location_name': 'Teatro Masini',
+ 'price': '5 euro; gratuito 0-3 anni',
+ 'scraped_at': '2026-01-30T14:24:56.214233',
+ 'time_info': 'Alle 16',
+ 'title': 'Teatro Telaio presenta "Seggioline": sedie, colori e piccoli '
+          'miracoli di fantasia',
+ 'url': 'https://www.ravennatoday.it/eventi/teatro-telaio-spettacolo-seggioline-masini-faenza-un-viaggio-surreale.html',
+ 'uuid': '08e99dca4379299c'}
+[2026-01-30T14:25:24.525+0000] {docker.py:429} INFO - 2026-01-30 14:25:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/spettacoli-nancy-brilli-il-padrone-gianni-clementi-teatro-walter-chiari-cervia.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:24.634+0000] {docker.py:429} INFO - 2026-01-30 14:25:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/spettacoli-nancy-brilli-il-padrone-gianni-clementi-teatro-walter-chiari-cervia.html>
+{'category': 'Teatri',
+ 'city': 'Ravenna',
+ 'content_hash': '65d12abe910ff35c',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Riprende la rassegna Prosa del Teatro Walter Chiari di '
+                'Cervia. In scena, giovedì 29 e venerdì 30 gennaio, “Il '
+                'padrone” di Gianni Clementi, interpretato da Nancy Brilli '
+                'insieme a Fabio Bussotti e Claudio Mazzenga. Nel testo '
+                'albergano diversi temi storicamente legati a un tempo '
+                'apparentemente lontano che risultano ancora oggi attuali. È '
+                "stato annullato l'Incontro con gli Artisti previsto alle ore "
+                '18 nel secondo giorno della loro permanenza in città, venerdì '
+                '30 gennaio . Lo spettacolo, con l’entrata in vigore delle '
+                'leggi razziali italiane nel 1938, racconta come si diffuse '
+                'tra gli ebrei la pratica di intestare a prestanome fidati i '
+                'propri beni per metterli al riparo da probabili espropri, per '
+                'poi rientrarne in possesso in tempi migliori. Per questo '
+                'motivo Marcello e Immacolata Consalvi si ritrovano ricchi '
+                'dall’oggi al domani, intestatari di quattro appartamenti e '
+                'due negozi del loro padrone, catturato e deportato lontano '
+                'dall’Italia. La fine della guerra coincide con l’inizio '
+                'dell’attesa per i coniugi Consalvi. L’azione si svolge nel '
+                '1956: nevica a Roma e le esitazioni di Marcello, ligio '
+                'dipendente che mai aveva dubitato del ritorno del padrone, '
+                'cominciano pian piano a sciogliersi sotto le certezze di '
+                'Immacolata, sicura invece della sua morte. Proprio mentre si '
+                'consolida la loro nuova condizione sociale ed economica, dopo '
+                'tredici anni, il Padrone bussa alla porta per reclamare le '
+                'sue proprietà. Immacolata però non intende rinunciare a '
+                'quella vita cui ben presto si è abituata e convince il marito '
+                'a barricarsi in casa, negandosi anche a conoscenti e amici. '
+                'Sull’orlo di una crisi di nervi, dopo giornate trascorse come '
+                'reclusi, la donna decide che l’unico modo per porre fine '
+                'all’incubo sia eliminare l’ebreo. Da quel momento si '
+                'susseguono i colpi di scena fino ad arrivare al finale della '
+                'pièce con un evento tanto imprevedibile quanto inaspettato. '
+                'Biglietti: prevendite e prenotazioni telefoniche al numero '
+                '0544 975166 da mercoledì 28 gennaio dalle 10 alle 13 presso '
+                'gli uffici del Teatro Comunale (ingresso dal Viale della '
+                'Stazione); nelle sere di spettacolo dalle 20 presso la '
+                'biglietteria del Teatro. Prevendite online su Vivaticket. Sui '
+                'biglietti acquistati o prenotati telefonicamente in '
+                'prevendita sarà applicato un diritto di prevendita di 1 euro, '
+                'non previsto per i biglietti acquistati la sera dello '
+                'spettacolo; sugli acquisti online è prevista una '
+                'maggiorazione da parte del fornitore del servizio. '
+                'Informazioni: 0544 975166.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/54543101334791/nancy-brilli-il-padrone.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Comunale Walter Chiari di Cervia',
+ 'price': 'Da 15 a 26 euro',
+ 'scraped_at': '2026-01-30T14:24:56.213652',
+ 'time_info': 'Alle 21',
+ 'title': 'Nancy Brilli interpreta "Il padrone": una commedia noir '
+          'sull’eredità delle leggi razziali',
+ 'url': 'https://www.ravennatoday.it/eventi/spettacoli-nancy-brilli-il-padrone-gianni-clementi-teatro-walter-chiari-cervia.html',
+ 'uuid': 'a7991d785e1b3818'}
+[2026-01-30T14:25:25.359+0000] {docker.py:429} INFO - 2026-01-30 14:25:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/walter-veltroni-presenta-a-ravenna-il-suo-ultimo-romanzo-buonvino-e-l-omicidio-dei-ragazzi.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:25.466+0000] {docker.py:429} INFO - 2026-01-30 14:25:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/walter-veltroni-presenta-a-ravenna-il-suo-ultimo-romanzo-buonvino-e-l-omicidio-dei-ragazzi.html>
+{'category': 'Incontri',
+ 'city': 'Ravenna',
+ 'content_hash': 'c7e83803d8b36790',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio, alle 16:30, Walter Veltroni presenta il '
+                'suo ultimo romanzo “Buonvino e l’omicidio dei ragazzi”, '
+                'presso Palazzo Rasponi dalle Teste a Ravenna, in dialogo con '
+                'Alberto Cassani. Il romanzo segna il ritorno dell’amato '
+                'Commissario Giovanni Buonvino, alle prese con un’indagine tra '
+                'le più simboliche della serie pubblicata da Marsilio. '
+                'Apertura porte ore 16. Ingresso libero fino a esaurimento '
+                'posti. Un altro orribile delitto lacera la quiete del '
+                '“polmone verde” di Roma. Un nuovo caso particolarmente '
+                'complesso e doloroso per il commissario Buonvino e i suoi '
+                'magnifici sette al contrario. La nuova indagine di Buonvino, '
+                'al commissariato di Villa Borghese, comincia con un suono '
+                'misterioso. Buonvino, mentre con i suoi festeggia il ritorno '
+                'di Ivano, il barista, al suo chiosco, sente qualcosa che lo '
+                'inquieta, potrebbe essere una risata, un pianto, potrebbe '
+                'essere anche un grido d’aiuto. È mattina presto, è sabato, '
+                'Villa Borghese ha appena aperto i battenti, il commissario '
+                'manda i suoi a controllare, ma non trovano niente. Eppure, la '
+                'memoria di quel suono non svanisce. Così, quando la domenica '
+                'all’alba lo chiamano perché hanno trovato una ragazza, '
+                'giovane, giovanissima, sedici o forse diciassette anni, '
+                'impiccata all’orologio ad acqua del Pincio, il commissario '
+                'sa, con l’intuito che lo contraddistingue, che quel grido, '
+                'riso o pianto, è stato una premonizione. Buonvino non ha '
+                'avuto figli e, davanti al corpo della ragazza, capisce che i '
+                'figli sono di tutta la società e che gli assassini dei figli '
+                'vanno trovati. In un’indagine che spazia dal cuore di Roma a '
+                'Centocelle e il cui centro non sarà in un luogo geografico, '
+                'ma in un luogo digitale, un universo di fotografie, messaggi '
+                'e commenti, Walter Veltroni, muovendosi tra comicità e '
+                'tragedia, ci accompagna nella solitudine di una generazione: '
+                'i ragazzi che muoiono.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/34111419605861/veltroni_walter_credit_maria-laura-antonelli-agf.jpg',
+ 'location_address': 'Piazza John Fitzgerald Kennedy',
+ 'location_name': 'Palazzo Rasponi dalle Teste',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-30T14:24:56.213316',
+ 'time_info': 'Alle 16',
+ 'title': 'Walter Veltroni presenta il suo ultimo romanzo "Buonvino e '
+          'l’omicidio dei ragazzi"',
+ 'url': 'https://www.ravennatoday.it/eventi/walter-veltroni-presenta-a-ravenna-il-suo-ultimo-romanzo-buonvino-e-l-omicidio-dei-ragazzi.html',
+ 'uuid': '10558520d0edda7a'}
+[2026-01-30T14:25:26.246+0000] {docker.py:429} INFO - 2026-01-30 14:25:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/spettacolo-teatro-masini-walter-veltroni-le-emozioni-che-abbiamo-vissuto-gli-anni-60-quando-tutto-sembrava-possibile.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:26.356+0000] {docker.py:429} INFO - 2026-01-30 14:25:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/spettacolo-teatro-masini-walter-veltroni-le-emozioni-che-abbiamo-vissuto-gli-anni-60-quando-tutto-sembrava-possibile.html>
+{'category': 'Teatri',
+ 'city': 'Ravenna',
+ 'content_hash': '913273135d019971',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio Walter Veltroni è in scena al Teatro '
+                'Masini di Faenza con “Le emozioni che abbiamo vissuto. Gli '
+                'anni 60, quando tutto sembrava possibile”, un progetto con '
+                'cui ha deciso di mettersi in gioco per raccontarsi e '
+                'raccontare gli ultimi decenni del secolo scorso. Le parole di '
+                'Veltroni sono accompagnate da una selezione di video e '
+                'immagini, a volte inedite, che sono parte attiva e integrante '
+                'della scenografia. Sul palco con Veltroni il pianista '
+                'torinese Gabriele Rossi. Lo spettacolo abbraccia un lungo '
+                'arco temporale: dagli anni Sessanta fino agli anni Duemila, '
+                'dalla Seicento alle Torri Gemelle, un viaggio che mette al '
+                'centro il fattore umano e personale come chiave di lettura '
+                'dei fatti storici. Si parte quindi con gli anni ‘60, '
+                'dall’Italia confusa e alla ricerca di un’identità degli anni '
+                '‘50, passando per il fervore creativo della ricostruzione del '
+                'paese e descrivendo l’onda di energia creativa e libertà che '
+                'coinvolse una generazione di giovani. Gli anni ‘60 si '
+                'mostrano in scena come un decennio fondamentale che si apre '
+                'sorridendo con Gagarin, Giovanni XXIII e l’atmosfera di '
+                'Sapore di sale e si chiude con le bombe di Piazza Fontana e '
+                'lo scioglimento dei Beatles. La narrazione di Walter Veltroni '
+                'ripercorre lo sbarco sulla Luna, gli assassini di Martin '
+                'Luther King e di John e Robert Kennedy, la guerra in Vietnam '
+                'e la contestazione giovanile, la televisione nelle case degli '
+                'italiani e il terrorismo. Un filo rosso di storia personale e '
+                'familiare tiene insieme e rende emotivamente coinvolgenti '
+                'fatti, storie e persone di un decennio indimenticabile. '
+                'Contribuiscono a questa ricostruzione il ricorso alla '
+                'cronaca, agli oggetti più usati – diventati proprio a partire '
+                'dagli anni ’60 oggetti di desiderio consumistico collettivo – '
+                'dalla musica, ai giornali e alle immagini d’archivio. Le '
+                'prevendite sono attive da giovedì 29 gennaio dalle 10 alle 13 '
+                'presso la biglietteria del Teatro Masini; le prenotazioni '
+                'telefoniche (0546 21306) sono disponibili da giovedì 29 '
+                'gennaio dalle 11 alle 13. Il diritto di prevendita e di '
+                'prenotazione telefonica è di 1 euro. I biglietti online sono '
+                'acquistabili su Vivaticket; ai biglietti acquistati online '
+                'sarà applicata una maggiorazione da parte del fornitore del '
+                'servizio. Nella sera di spettacolo la biglietteria del Teatro '
+                'Masini aprirà alle 20. Informazioni al 0546 21306.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/52536868588845/walter-veltroni-gabriele-rossi-le-emozioni-che-abbiamo-vissuto.jpg',
+ 'location_address': 'Piazza Nenni, 3',
+ 'location_name': 'Teatro Masini',
+ 'price': 'Da 16 a 29 euro',
+ 'scraped_at': '2026-01-30T14:24:56.213009',
+ 'time_info': 'Alle 21',
+ 'title': 'Walter Veltroni racconta a teatro "Le emozioni che abbiamo vissuto. '
+          'Gli anni 60, quando tutto sembrava possibile”',
+ 'url': 'https://www.ravennatoday.it/eventi/spettacolo-teatro-masini-walter-veltroni-le-emozioni-che-abbiamo-vissuto-gli-anni-60-quando-tutto-sembrava-possibile.html',
+ 'uuid': '1c4f88e279190b85'}
+[2026-01-30T14:25:27.817+0000] {docker.py:429} INFO - 2026-01-30 14:25:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ravennatoday.it/eventi/nasce-bagnacavallo-in-un-bicchiere-due-giorni-dedicati-al-vino.html> (referer: https://www.ravennatoday.it/eventi/dal/2026-01-30/al/2026-02-01/)
+[2026-01-30T14:25:27.924+0000] {docker.py:429} INFO - 2026-01-30 14:25:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ravennatoday.it/eventi/nasce-bagnacavallo-in-un-bicchiere-due-giorni-dedicati-al-vino.html>
+{'category': 'Cibo e Vino',
+ 'city': 'Ravenna',
+ 'content_hash': '5c80aac8e305e0f0',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'A Bagnacavallo è nata una nuova iniziativa dedicata al vino. '
+                'Sabato 31 gennaio e domenica 1 febbraio è in programma '
+                '“Bagnacavallo in un bicchiere – Esplora, assaggia, '
+                'condividi”, due giorni di degustazioni, per appassionati e '
+                'addetti ai lavori, proposte da oltre quaranta aziende '
+                'italiane e internazionali in quello che si propone come “il '
+                'nuovo salotto del vino tra la Bassa Romagna e l’Europa” negli '
+                'spazi riqualificati dell’ex mercato coperto.',
+ 'image_url': '//citynews-ravennatoday.stgy.ovh/~media/horizontal-mid/70145128293986/vini-locali-al-mercato-coperto.jpg',
+ 'location_address': 'Via Francesco Baracca, 8',
+ 'location_name': 'Ex mercato coperto',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-30T14:24:56.212611',
+ 'time_info': 'Dalle 10 alle 19',
+ 'title': '“Bagnacavallo in un bicchiere”: il vino protagonista in due giorni '
+          'di degustazioni',
+ 'url': 'https://www.ravennatoday.it/eventi/nasce-bagnacavallo-in-un-bicchiere-due-giorni-dedicati-al-vino.html',
+ 'uuid': 'f48ab88a44b36fc6'}
+[2026-01-30T14:25:27.925+0000] {docker.py:429} INFO - 2026-01-30 14:25:27 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-30T14:25:27.925+0000] {docker.py:429} INFO - 2026-01-30 14:25:27 [scrapy.extensions.feedexport] INFO: Stored json feed (27 items) in: /app/city_today/output/eventi_ravenna_questa-settimana_20260130_142452.json
+[2026-01-30T14:25:27.926+0000] {docker.py:429} INFO - 2026-01-30 14:25:27 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 13156,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 4373887,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'elapsed_time_seconds': 35.549642,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 30, 14, 25, 27, 924582, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 23764288,
+ 'httpcompression/response_count': 29,
+ 'item_scraped_count': 27,
+ 'items_per_city/Ravenna': 27,
+ 'items_per_minute': 46.285714285714285,
+ 'log_count/DEBUG': 56,
+ 'log_count/INFO': 3,
+ 'memusage/max': 69070848,
+ 'memusage/startup': 69070848,
+ 'request_depth_max': 1,
+ 'response_received_count': 29,
+ 'responses_per_minute': 49.71428571428571,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 28,
+ 'scheduler/dequeued/memory': 28,
+ 'scheduler/enqueued': 28,
+ 'scheduler/enqueued/memory': 28,
+ 'start_time': datetime.datetime(2026, 1, 30, 14, 24, 52, 374940, tzinfo=datetime.timezone.utc)}
+2026-01-30 14:25:27 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-30T14:25:27.963+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_ravenna_questa-settimana_20260130_142452.json
+[2026-01-30T14:25:28.206+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_ravenna.scrape_city_today, execution_date=20260129T060000, start_date=20260130T142451, end_date=20260130T142528
+[2026-01-30T14:25:28.243+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-30T14:25:28.280+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

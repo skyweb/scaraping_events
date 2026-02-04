@@ -1,0 +1,287 @@
+[2026-02-02T19:45:35.761+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_terni.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:45:35.768+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_terni.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:45:35.768+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-02-02T19:45:35.778+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_terni.scrape_city_today> on 2026-02-01 06:00:00+00:00
+[2026-02-02T19:45:35.782+0000] {standard_task_runner.py:60} INFO - Started process 255 to run task
+[2026-02-02T19:45:35.785+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_terni.scrape_city_today', 'scheduled__2026-02-01T06:00:00+00:00', '--job-id', '402', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpw5uj5c_6']
+[2026-02-02T19:45:35.787+0000] {standard_task_runner.py:88} INFO - Job 402: Subtask process_terni.scrape_city_today
+[2026-02-02T19:45:35.804+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-02-02T19:45:35.862+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_terni.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [running]> on host d1594f2b36ec
+[2026-02-02T19:45:35.974+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_terni.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-02-01T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-01T06:00:00+00:00'
+[2026-02-02T19:45:35.994+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-02-02T19:45:36.001+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-02-02T19:45:36.566+0000] {docker.py:429} INFO - Avvio scraping per: Terni
+Periodo: questa-settimana
+[2026-02-02T19:45:36.569+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-02-02T19:45:36.573+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-02-02 19:45:36 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-02-02T19:45:36.575+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [events] INFO: Scraping città: Terni
+2026-02-02 19:45:36 [events] INFO: Periodo: questa-settimana (2026-02-02 - 2026-02-08)
+[2026-02-02T19:45:36.575+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-02-02T19:45:36.576+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-02-02T19:45:36.577+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+[2026-02-02T19:45:36.577+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-02-02T19:45:36.580+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.extensions.telnet] INFO: Telnet Password: a284ceb57a0c8099
+[2026-02-02T19:45:36.637+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-02-02T19:45:36.637+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-02-02T19:45:36.691+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-02-02T19:45:36.694+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-02-02T19:45:36.694+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-02-02T19:45:36.695+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_terni_questa-settimana_20260202_194536.json
+[2026-02-02T19:45:36.695+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.core.engine] INFO: Spider opened
+[2026-02-02T19:45:36.700+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-02-02T19:45:36.701+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-02-02T19:45:36.918+0000] {docker.py:429} INFO - 2026-02-02 19:45:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ternitoday.it/robots.txt> (referer: None)
+[2026-02-02T19:45:38.353+0000] {docker.py:429} INFO - 2026-02-02 19:45:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ternitoday.it/eventi/dal/2026-02-02/al/2026-02-08/> (referer: None)
+[2026-02-02T19:45:39.654+0000] {docker.py:429} INFO - 2026-02-02 19:45:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ternitoday.it/eventi/cinema/terni-proieizione-incontri-ravvicinati-terzo-tipo-politeama-lucioli-3-febbraio-2026.html> (referer: https://www.ternitoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:39.782+0000] {docker.py:429} INFO - 2026-02-02 19:45:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ternitoday.it/eventi/cinema/terni-proieizione-incontri-ravvicinati-terzo-tipo-politeama-lucioli-3-febbraio-2026.html>
+{'category': ['Cinema'],
+ 'city': 'Terni',
+ 'city_id': None,
+ 'content_hash': '8f8e5a387a0376ed',
+ 'date_display': 'dal 3 al 2 febbraio 2026',
+ 'date_end': '2026-02-03',
+ 'date_start': '2026-02-03',
+ 'description': 'Torna nelle sale italiane Incontri ravvicinati del terzo tipo '
+                ', il capolavoro realizzato nel 1977 da Steven Spielberg e una '
+                'proiezione è in programma al cinema Politeama Lucioli di '
+                'Terni la sera del 3 febbraio, preceduto alle 20.30 da una '
+                'introduzione storico-critica a cura di Sentieri del cinema. '
+                'L’altro è il protagonista indiscusso del cinema di Spielberg, '
+                'il suo cuore pulsante, il suo motore segreto. La sua visione '
+                'è sempre duplice, ambigua: può produrre inquietudine e paura, '
+                'ma anche meraviglia, stupore, speranza. Per potersi '
+                'avvicinare all’altro - l’alieno, in questo caso - per poter '
+                'accogliere la rivelazione della sua esistenza, il '
+                'protagonista di Incontri ravvicinati del terzo tipo , Roy, '
+                'deve rinunciare ad essere adulto, abbracciare la sua parte '
+                'infantile e irrazionale, anche a costo di sconvolgere '
+                'l’equilibrio familiare. In un microcosmo così chiuso e '
+                'intimorito dalla paura nei confronti dell’altro come è quello '
+                'in cui oggi viviamo, rivedere questo film, che racconta di un '
+                'desiderio di comprensione e comunicazione universale, è, per '
+                'questo, come respirare una boccata di aria fresca. Ma non è '
+                'solo per questo che questo capolavoro che ha ridisegnato '
+                'completamente i contorni e le coordinate del genere '
+                'fantascientifico merita di essere rivisto. È perché è un film '
+                'sulla gioia dell’infanzia, sul fatto che gli adulti '
+                'dovrebbero un po’ più spesso porsi al livello dei più piccoli '
+                'per osservare la vita con occhi diversi, da punti di vista '
+                '“dimenticati”, correndo forse il rischio di essere osteggiati '
+                'e derisi - come accade a Roy - ma sperimentando anche una '
+                'libertà senza eguali. È perché è una testimonianza, '
+                'splendida, di come Spielberg sia un maestro nel fondere reale '
+                'e fantastico, creando storie che partono da basi realistiche '
+                'per esplorare mondi immaginari, per accostarsi a creature '
+                'fantastiche. È perché rivedendolo potremo incontrare di nuovo '
+                'il volto amabile e stupito di Truffaut che, come Spielberg, '
+                'aveva un canale privilegiato di comunicazione con i bambini e '
+                'che non a caso è chiamato in questo film a interpretare un '
+                'personaggio che come è proprio dei più piccoli non tenta di '
+                'assorbire l’altro (l’extraterrestre) a sé, spogliandolo della '
+                'sua alterità, ma lo accoglie e cerca di comprenderlo con '
+                'cuore sincero. È per ricordarci come erano una volta gli '
+                'effetti speciali, qui curati da quel Douglas Trumbull che '
+                'solo qualche anno prima aveva creato gli incanti visivi di '
+                '2001 Odissea nello spazio di Kubrick: sudati, ingegnosi, '
+                'fantasiosi prodotti artigianali. La versione proposta è '
+                'quella originale sottotitolata.',
+ 'event_id': 'terni-proieizione-incontri-ravvicinati-terzo-tipo-politeama-lucioli-3-febbraio-2026',
+ 'image_url': '//citynews-ternitoday.stgy.ovh/~media/horizontal-low/46053686416565/incontri-ravvicinati-del-terzo-tipo.jpg',
+ 'location_address': None,
+ 'location_name': 'Cinema Politeama Lucioli',
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'cinemapoliteamaterni.it '
+                                                            'Evento per '
+                                                            'bambini',
+                                                'website': 'https://www.cinemapoliteamaterni.it/index.php'},
+                         'descrizione': 'Torna nelle sale italiane Incontri '
+                                        'ravvicinati del terzo tipo , il '
+                                        'capolavoro realizzato nel 1977 da '
+                                        'Steven Spielberg e una proiezione è '
+                                        'in programma al cinema Politeama '
+                                        'Lucioli di Terni la sera del 3 '
+                                        'febbraio, preceduto alle 20.30 da una '
+                                        'introduzione storico-critica a cura '
+                                        'di Sentieri del cinema. L’altro è il '
+                                        'protagonista indiscusso del cinema di '
+                                        'Spielberg, il suo cuore pulsante, il '
+                                        'suo motore segreto. La sua visione è '
+                                        'sempre duplice, ambigua: può produrre '
+                                        'inquietudine e paura, ma anche '
+                                        'meraviglia, stupore, speranza. Per '
+                                        'potersi avvicinare all’altro - '
+                                        'l’alieno, in questo caso - per poter '
+                                        'accogliere la rivelazione della sua '
+                                        'esistenza, il protagonista di '
+                                        'Incontri ravvicinati del terzo tipo , '
+                                        'Roy, deve rinunciare ad essere '
+                                        'adulto, abbracciare la sua parte '
+                                        'infantile e irrazionale, anche a '
+                                        'costo di sconvolgere l’equilibrio '
+                                        'familiare. In un microcosmo così '
+                                        'chiuso e intimorito dalla paura nei '
+                                        'confronti dell’altro come è quello in '
+                                        'cui oggi viviamo, rivedere questo '
+                                        'film, che racconta di un desiderio di '
+                                        'comprensione e comunicazione '
+                                        'universale, è, per questo, come '
+                                        'respirare una boccata di aria fresca. '
+                                        'Ma non è solo per questo che questo '
+                                        'capolavoro che ha ridisegnato '
+                                        'completamente i contorni e le '
+                                        'coordinate del genere '
+                                        'fantascientifico merita di essere '
+                                        'rivisto. È perché è un film sulla '
+                                        'gioia dell’infanzia, sul fatto che '
+                                        'gli adulti dovrebbero un po’ più '
+                                        'spesso porsi al livello dei più '
+                                        'piccoli per osservare la vita con '
+                                        'occhi diversi, da punti di vista '
+                                        '“dimenticati”, correndo forse il '
+                                        'rischio di essere osteggiati e derisi '
+                                        '- come accade a Roy - ma '
+                                        'sperimentando anche una libertà senza '
+                                        'eguali. È perché è una testimonianza, '
+                                        'splendida, di come Spielberg sia un '
+                                        'maestro nel fondere reale e '
+                                        'fantastico, creando storie che '
+                                        'partono da basi realistiche per '
+                                        'esplorare mondi immaginari, per '
+                                        'accostarsi a creature fantastiche. È '
+                                        'perché rivedendolo potremo incontrare '
+                                        'di nuovo il volto amabile e stupito '
+                                        'di Truffaut che, come Spielberg, '
+                                        'aveva un canale privilegiato di '
+                                        'comunicazione con i bambini e che non '
+                                        'a caso è chiamato in questo film a '
+                                        'interpretare un personaggio che come '
+                                        'è proprio dei più piccoli non tenta '
+                                        'di assorbire l’altro '
+                                        '(l’extraterrestre) a sé, spogliandolo '
+                                        'della sua alterità, ma lo accoglie e '
+                                        'cerca di comprenderlo con cuore '
+                                        'sincero. È per ricordarci come erano '
+                                        'una volta gli effetti speciali, qui '
+                                        'curati da quel Douglas Trumbull che '
+                                        'solo qualche anno prima aveva creato '
+                                        'gli incanti visivi di 2001 Odissea '
+                                        'nello spazio di Kubrick: sudati, '
+                                        'ingegnosi, fantasiosi prodotti '
+                                        'artigianali. La versione proposta è '
+                                        'quella originale sottotitolata.',
+                         'dove': {'address': None,
+                                  'name': 'Cinema Politeama Lucioli',
+                                  'raw_text': 'Dove Cinema Politeama Lucioli '
+                                              'Indirizzo non disponibile'},
+                         'image': '//citynews-ternitoday.stgy.ovh/~media/horizontal-low/46053686416565/incontri-ravvicinati-del-terzo-tipo.jpg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-02-03',
+                                    'date_start': '2026-02-03',
+                                    'raw_text': 'Quando Dal 03/02/2026 20.30',
+                                    'schedule': '20.30'}},
+              'list': {'category': 'Cinema',
+                       'date': 'dal 3 al 2 febbraio 2026',
+                       'image': '//citynews-ternitoday.stgy.ovh/~media/horizontal-mid/46053686416565/incontri-ravvicinati-del-terzo-tipo.jpg',
+                       'location': 'Cinema Politeama Lucioli',
+                       'stars': 4,
+                       'title': 'Al cinema Politeama Lucioli di Terni si '
+                                'possono fare “Incontri ravvicinati del terzo '
+                                'tipo”: appuntamento il 3 febbraio con il '
+                                'capolavoro di Steven Spielberg'}},
+ 'scraped_at': '2026-02-02T19:45:39.780041',
+ 'source': 'city_today',
+ 'title': 'Al cinema Politeama Lucioli di Terni si possono fare “Incontri '
+          'ravvicinati del terzo tipo”: appuntamento il 3 febbraio con il '
+          'capolavoro di Steven Spielberg',
+ 'url': 'https://www.ternitoday.it/eventi/cinema/terni-proieizione-incontri-ravvicinati-terzo-tipo-politeama-lucioli-3-febbraio-2026.html',
+ 'uuid': 'a60cc47f6467ef55',
+ 'website': 'https://www.cinemapoliteamaterni.it/index.php'}
+[2026-02-02T19:45:39.785+0000] {docker.py:429} INFO - 2026-02-02 19:45:39 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-02-02T19:45:39.786+0000] {docker.py:429} INFO - 2026-02-02 19:45:39 [scrapy.extensions.feedexport] INFO: Stored json feed (1 items) in: /app/city_today/output/eventi_terni_questa-settimana_20260202_194536.json
+[2026-02-02T19:45:39.786+0000] {docker.py:429} INFO - 2026-02-02 19:45:39 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1121,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 284886,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/200': 3,
+ 'elapsed_time_seconds': 3.085166,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 2, 2, 19, 45, 39, 784717, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 1437299,
+ 'httpcompression/response_count': 3,
+ 'item_scraped_count': 1,
+ 'items_per_city/Terni': 1,
+ 'items_per_minute': 20.0,
+ 'log_count/DEBUG': 4,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68988928,
+ 'memusage/startup': 68988928,
+ 'request_depth_max': 1,
+ 'response_received_count': 3,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2026, 2, 2, 19, 45, 36, 699551, tzinfo=datetime.timezone.utc)}
+2026-02-02 19:45:39 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-02-02T19:45:39.852+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_terni_questa-settimana_20260202_194536.json
+[2026-02-02T19:45:40.205+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_terni.scrape_city_today, execution_date=20260201T060000, start_date=20260202T194535, end_date=20260202T194540
+[2026-02-02T19:45:40.225+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-02T19:45:40.305+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

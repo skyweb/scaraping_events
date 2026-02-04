@@ -1,0 +1,2268 @@
+[2026-01-28T20:49:48.111+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_milano.scrape_zero_eu manual__2026-01-28T20:44:23.219435+00:00 [queued]>
+[2026-01-28T20:49:48.119+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_milano.scrape_zero_eu manual__2026-01-28T20:44:23.219435+00:00 [queued]>
+[2026-01-28T20:49:48.119+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 4
+[2026-01-28T20:49:48.130+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_milano.scrape_zero_eu> on 2026-01-28 20:44:23.219435+00:00
+[2026-01-28T20:49:48.134+0000] {standard_task_runner.py:60} INFO - Started process 247 to run task
+[2026-01-28T20:49:48.137+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_milano.scrape_zero_eu', 'manual__2026-01-28T20:44:23.219435+00:00', '--job-id', '92', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpn6ftezmf']
+[2026-01-28T20:49:48.139+0000] {standard_task_runner.py:88} INFO - Job 92: Subtask process_milano.scrape_zero_eu
+[2026-01-28T20:49:48.157+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T20:49:48.206+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_milano.scrape_zero_eu manual__2026-01-28T20:44:23.219435+00:00 [running]> on host a9aac56aef94
+[2026-01-28T20:49:48.300+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_milano.scrape_zero_eu' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T20:44:23.219435+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T20:44:23.219435+00:00'
+[2026-01-28T20:49:48.321+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-28T20:49:48.329+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-28T20:49:48.928+0000] {docker.py:429} INFO - Avvio scraping Zero.eu per: Milano
+[2026-01-28T20:49:48.931+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: zero_scraper)
+[2026-01-28T20:49:48.937+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-01-28 20:49:48 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-28T20:49:48.939+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-28T20:49:48.941+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-28T20:49:48.942+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-28 20:49:48 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-28T20:49:48.946+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [scrapy.extensions.telnet] INFO: Telnet Password: 83fbdb81e10cb55e
+[2026-01-28T20:49:48.996+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-01-28T20:49:48.996+0000] {docker.py:429} INFO - 2026-01-28 20:49:48 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'zero_scraper',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 0.5,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'zero_scraper.spiders',
+ 'SPIDER_MODULES': ['zero_scraper.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-28T20:49:49.043+0000] {docker.py:429} INFO - 2026-01-28 20:49:49 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-28T20:49:49.045+0000] {docker.py:429} INFO - 2026-01-28 20:49:49 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-28T20:49:49.045+0000] {docker.py:429} INFO - 2026-01-28 20:49:49 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-28T20:49:49.046+0000] {docker.py:429} INFO - Output file: /app/zero_eu/output/eventi_zero_milano_20260128_204948.json
+[2026-01-28T20:49:49.046+0000] {docker.py:429} INFO - 2026-01-28 20:49:49 [scrapy.core.engine] INFO: Spider opened
+[2026-01-28T20:49:49.053+0000] {docker.py:429} INFO - 2026-01-28 20:49:49 [py.warnings] WARNING: /usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py:490: ScrapyDeprecationWarning: zero_scraper.spiders.events_spider.EventsSpider defines the deprecated start_requests() method. start_requests() has been deprecated in favor of a new method, start(), to support asynchronous code execution. start_requests() will stop being called in a future version of Scrapy. If you use Scrapy 2.13 or higher only, replace start_requests() with start(); note that start() is a coroutine (async def). If you need to maintain compatibility with lower Scrapy versions, when overriding start_requests() in a spider class, override start() as well; you can use super() to reuse the inherited start() implementation without copy-pasting. See the release notes of Scrapy 2.13 for details: https://docs.scrapy.org/en/2.13/news.html
+  warn(
+[2026-01-28T20:49:49.053+0000] {docker.py:429} INFO - 2026-01-28 20:49:49 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-28T20:49:49.054+0000] {docker.py:429} INFO - 2026-01-28 20:49:49 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-28T20:50:17.860+0000] {docker.py:429} INFO - 2026-01-28 20:50:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/api/wp/v2/citta?per_page=100> (referer: None)
+[2026-01-28T20:50:17.977+0000] {docker.py:429} INFO - 2026-01-28 20:50:17 [events] INFO: Found city ID for 'milano': 2
+[2026-01-28T20:50:21.666+0000] {docker.py:429} INFO - 2026-01-28 20:50:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true> (referer: https://zero.eu/api/wp/v2/citta?per_page=100)
+[2026-01-28T20:50:23.516+0000] {docker.py:429} INFO - 2026-01-28 20:50:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/355740-slavas-snowshow-teatro-strehler,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:23.623+0000] {docker.py:429} INFO - 2026-01-28 20:50:23 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/355740-slavas-snowshow-teatro-strehler,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:24.837+0000] {docker.py:429} INFO - 2026-01-28 20:50:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356761-silvia-camporesi-uno-strappo-nel-cielo-di-carta,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:24.946+0000] {docker.py:429} INFO - 2026-01-28 20:50:24 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356761-silvia-camporesi-uno-strappo-nel-cielo-di-carta,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:26.148+0000] {docker.py:429} INFO - 2026-01-28 20:50:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356814-ned-ensemble-fanfulla-gennaio-2026,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:26.258+0000] {docker.py:429} INFO - 2026-01-28 20:50:26 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356814-ned-ensemble-fanfulla-gennaio-2026,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:27.319+0000] {docker.py:429} INFO - 2026-01-28 20:50:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356945-saverio-la-ruina-miracolo-a-crotone,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:27.424+0000] {docker.py:429} INFO - 2026-01-28 20:50:27 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356945-saverio-la-ruina-miracolo-a-crotone,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:28.701+0000] {docker.py:429} INFO - 2026-01-28 20:50:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357076-sona-gennaio-2026-3,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:28.806+0000] {docker.py:429} INFO - 2026-01-28 20:50:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357076-sona-gennaio-2026-3,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:29.896+0000] {docker.py:429} INFO - 2026-01-28 20:50:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357088-rebel-rebel-nuovo-olimpia-4,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:30.000+0000] {docker.py:429} INFO - 2026-01-28 20:50:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357088-rebel-rebel-nuovo-olimpia-4,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:30.919+0000] {docker.py:429} INFO - 2026-01-28 20:50:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357315-fatur-monk,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:31.022+0000] {docker.py:429} INFO - 2026-01-28 20:50:31 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357315-fatur-monk,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:31.924+0000] {docker.py:429} INFO - 2026-01-28 20:50:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357307-gianni-berengo-gardin-lo-studio-di-giorgio-di-morandi,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:32.028+0000] {docker.py:429} INFO - 2026-01-28 20:50:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357307-gianni-berengo-gardin-lo-studio-di-giorgio-di-morandi,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:32.961+0000] {docker.py:429} INFO - 2026-01-28 20:50:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357639-oltre-teatro-studio-melato,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:33.065+0000] {docker.py:429} INFO - 2026-01-28 20:50:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357639-oltre-teatro-studio-melato,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:33.862+0000] {docker.py:429} INFO - 2026-01-28 20:50:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357973-metafisica-metafisiche-milano-metafisica,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:33.966+0000] {docker.py:429} INFO - 2026-01-28 20:50:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357973-metafisica-metafisiche-milano-metafisica,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:34.796+0000] {docker.py:429} INFO - 2026-01-28 20:50:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357975-white-out-the-future-of-winter-sports,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:34.900+0000] {docker.py:429} INFO - 2026-01-28 20:50:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357975-white-out-the-future-of-winter-sports,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:35.752+0000] {docker.py:429} INFO - 2026-01-28 20:50:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358231-stand-up-comedy-roma-2026-b-folk-2,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:35.856+0000] {docker.py:429} INFO - 2026-01-28 20:50:35 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358231-stand-up-comedy-roma-2026-b-folk-2,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:36.792+0000] {docker.py:429} INFO - 2026-01-28 20:50:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/359172-alien-alien-piano,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:36.899+0000] {docker.py:429} INFO - 2026-01-28 20:50:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/359172-alien-alien-piano,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:37.989+0000] {docker.py:429} INFO - 2026-01-28 20:50:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358417-rome-as-you-are,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:38.093+0000] {docker.py:429} INFO - 2026-01-28 20:50:38 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358417-rome-as-you-are,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:38.999+0000] {docker.py:429} INFO - 2026-01-28 20:50:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358434-zu-santeria-toscana-2,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:39.102+0000] {docker.py:429} INFO - 2026-01-28 20:50:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358434-zu-santeria-toscana-2,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:39.899+0000] {docker.py:429} INFO - 2026-01-28 20:50:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358483-sport-design-talk-interni-triennale,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:40.003+0000] {docker.py:429} INFO - 2026-01-28 20:50:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358483-sport-design-talk-interni-triennale,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:40.823+0000] {docker.py:429} INFO - 2026-01-28 20:50:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358577-earth-circolo-magnolia-2026,segrate/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:40.928+0000] {docker.py:429} INFO - 2026-01-28 20:50:40 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358577-earth-circolo-magnolia-2026,segrate/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:41.644+0000] {docker.py:429} INFO - 2026-01-28 20:50:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358679-ilan-manouach-tarwar,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:41.750+0000] {docker.py:429} INFO - 2026-01-28 20:50:41 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358679-ilan-manouach-tarwar,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:42.546+0000] {docker.py:429} INFO - 2026-01-28 20:50:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/359045-federico-ferrari-ritratti,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:42.650+0000] {docker.py:429} INFO - 2026-01-28 20:50:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/359045-federico-ferrari-ritratti,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:43.400+0000] {docker.py:429} INFO - 2026-01-28 20:50:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358982-collettivo-unterbahn-vocodia,bologna/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:43.504+0000] {docker.py:429} INFO - 2026-01-28 20:50:43 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358982-collettivo-unterbahn-vocodia,bologna/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:44.251+0000] {docker.py:429} INFO - 2026-01-28 20:50:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356757-carrozzeria-orfeo-misurare-il-salto-delle-rane,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:44.355+0000] {docker.py:429} INFO - 2026-01-28 20:50:44 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356757-carrozzeria-orfeo-misurare-il-salto-delle-rane,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:45.068+0000] {docker.py:429} INFO - 2026-01-28 20:50:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356774-gruppo-della-creta-la-stanza-di-julio-cortazar,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:45.171+0000] {docker.py:429} INFO - 2026-01-28 20:50:45 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356774-gruppo-della-creta-la-stanza-di-julio-cortazar,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:45.823+0000] {docker.py:429} INFO - 2026-01-28 20:50:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356997-paolo-maria-congi-il-gigante,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:45.928+0000] {docker.py:429} INFO - 2026-01-28 20:50:45 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356997-paolo-maria-congi-il-gigante,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:46.592+0000] {docker.py:429} INFO - 2026-01-28 20:50:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357022-compagnia-licia-lanera-con-la-carabina-ottobre-2023-spazio-diamante-2026,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:46.696+0000] {docker.py:429} INFO - 2026-01-28 20:50:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357022-compagnia-licia-lanera-con-la-carabina-ottobre-2023-spazio-diamante-2026,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:47.548+0000] {docker.py:429} INFO - 2026-01-28 20:50:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/357925-tre-studi-per-una-crocifissione,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:47.655+0000] {docker.py:429} INFO - 2026-01-28 20:50:47 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/357925-tre-studi-per-una-crocifissione,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:48.381+0000] {docker.py:429} INFO - 2026-01-28 20:50:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/325253-baronato-quattro-bellezze-week,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:48.486+0000] {docker.py:429} INFO - 2026-01-28 20:50:48 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/325253-baronato-quattro-bellezze-week,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:49.055+0000] {docker.py:429} INFO - 2026-01-28 20:50:49 [scrapy.extensions.logstats] INFO: Crawled 28 pages (at 28 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-28T20:50:49.241+0000] {docker.py:429} INFO - 2026-01-28 20:50:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/347268-rhizome-week,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:49.348+0000] {docker.py:429} INFO - 2026-01-28 20:50:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/347268-rhizome-week,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:50.152+0000] {docker.py:429} INFO - 2026-01-28 20:50:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356966-life-is-life-espisodio-3,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:50.257+0000] {docker.py:429} INFO - 2026-01-28 20:50:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356966-life-is-life-espisodio-3,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:51.135+0000] {docker.py:429} INFO - 2026-01-28 20:50:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358687-sentimental-value,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:51.242+0000] {docker.py:429} INFO - 2026-01-28 20:50:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358687-sentimental-value,milano/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:51.981+0000] {docker.py:429} INFO - 2026-01-28 20:50:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/356983-migliore-2026,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:52.088+0000] {docker.py:429} INFO - 2026-01-28 20:50:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/356983-migliore-2026,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:52.887+0000] {docker.py:429} INFO - 2026-01-28 20:50:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/358294-niccolo-fettarappa-orgasmo,bologna/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:52.992+0000] {docker.py:429} INFO - 2026-01-28 20:50:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/358294-niccolo-fettarappa-orgasmo,bologna/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:53.748+0000] {docker.py:429} INFO - 2026-01-28 20:50:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/50502-cineclub-alphaville-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:53.853+0000] {docker.py:429} INFO - 2026-01-28 20:50:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/50502-cineclub-alphaville-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:54.737+0000] {docker.py:429} INFO - 2026-01-28 20:50:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/281973-casa-del-cinema-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:54.841+0000] {docker.py:429} INFO - 2026-01-28 20:50:54 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/281973-casa-del-cinema-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:55.673+0000] {docker.py:429} INFO - 2026-01-28 20:50:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/230437-cinema-torisi-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:55.778+0000] {docker.py:429} INFO - 2026-01-28 20:50:55 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/230437-cinema-torisi-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:56.910+0000] {docker.py:429} INFO - 2026-01-28 20:50:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/125944-cinema-aquila-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:57.015+0000] {docker.py:429} INFO - 2026-01-28 20:50:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/125944-cinema-aquila-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:57.918+0000] {docker.py:429} INFO - 2026-01-28 20:50:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/90720-nuovo-sacher-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:58.022+0000] {docker.py:429} INFO - 2026-01-28 20:50:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/90720-nuovo-sacher-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:58.739+0000] {docker.py:429} INFO - 2026-01-28 20:50:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://zero.eu/it/eventi/75053-cinema-farnese-persol-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+[2026-01-28T20:50:58.847+0000] {docker.py:429} INFO - 2026-01-28 20:50:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://zero.eu/it/eventi/75053-cinema-farnese-persol-la-programmazione,roma/> (referer: https://zero.eu/api/v2/events?per_page=100&citta=2&_embed=true)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/defer.py", line 355, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/utils/python.py", line 311, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/depth.py", line 61, in process_spider_output
+    yield from super().process_spider_output(response, result)
+  File "/usr/local/lib/python3.11/site-packages/scrapy/spidermiddlewares/base.py", line 60, in process_spider_output
+    for o in result:
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 183, in process_sync
+    self._process_spider_exception(
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 256, in _process_spider_exception
+    raise exception
+  File "/usr/local/lib/python3.11/site-packages/scrapy/core/spidermw.py", line 179, in process_sync
+    yield from iterable
+  File "/app/zero_eu/zero_scraper/spiders/events_spider.py", line 227, in parse_event_page
+    item["uuid"] = hashlib.sha256(uuid_string.encode('utf-8')).hexdigest()[:16]
+    ~~~~^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scrapy/item.py", line 98, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'EventItem does not support field: uuid'
+[2026-01-28T20:50:58.848+0000] {docker.py:429} INFO - 2026-01-28 20:50:58 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-28T20:50:58.850+0000] {docker.py:429} INFO - 2026-01-28 20:50:58 [scrapy.extensions.feedexport] INFO: Stored json feed (0 items) in: /app/zero_eu/output/eventi_zero_milano_20260128_204948.json
+[2026-01-28T20:50:58.851+0000] {docker.py:429} INFO - 2026-01-28 20:50:58 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 17365,
+ 'downloader/request_count': 39,
+ 'downloader/request_method_count/GET': 39,
+ 'downloader/response_bytes': 3095248,
+ 'downloader/response_count': 39,
+ 'downloader/response_status_count/200': 39,
+ 'elapsed_time_seconds': 69.795108,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 28, 20, 50, 58, 847639, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 2987816,
+ 'httpcompression/response_count': 37,
+ 'items_per_minute': 0.0,
+ 'log_count/DEBUG': 39,
+ 'log_count/ERROR': 37,
+ 'log_count/INFO': 5,
+ 'memusage/max': 82210816,
+ 'memusage/startup': 68452352,
+ 'request_depth_max': 2,
+ 'response_received_count': 39,
+ 'responses_per_minute': 33.913043478260875,
+ 'scheduler/dequeued': 39,
+ 'scheduler/dequeued/memory': 39,
+ 'scheduler/enqueued': 39,
+ 'scheduler/enqueued/memory': 39,
+ 'spider_exceptions/KeyError': 37,
+ 'spider_exceptions/count': 37,
+ 'start_time': datetime.datetime(2026, 1, 28, 20, 49, 49, 52531, tzinfo=datetime.timezone.utc)}
+2026-01-28 20:50:58 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-28T20:50:58.913+0000] {docker.py:429} INFO - ========================================
+            REPORT SCRAPING             
+========================================
+Città scaricate: Milano
+File: /app/zero_eu/output/eventi_zero_milano_20260128_204948.json
+========================================
+[2026-01-28T20:50:59.165+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_milano.scrape_zero_eu, execution_date=20260128T204423, start_date=20260128T204948, end_date=20260128T205059
+[2026-01-28T20:50:59.192+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T20:50:59.221+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

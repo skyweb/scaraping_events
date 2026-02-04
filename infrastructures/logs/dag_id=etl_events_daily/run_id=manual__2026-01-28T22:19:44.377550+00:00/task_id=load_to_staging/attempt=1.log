@@ -1,0 +1,16 @@
+[2026-01-28T22:22:22.573+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.load_to_staging manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:22:22.582+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.load_to_staging manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:22:22.583+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-28T22:22:22.592+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_to_staging> on 2026-01-28 22:19:44.377550+00:00
+[2026-01-28T22:22:22.596+0000] {standard_task_runner.py:60} INFO - Started process 2649 to run task
+[2026-01-28T22:22:22.598+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'load_to_staging', 'manual__2026-01-28T22:19:44.377550+00:00', '--job-id', '205', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmprburtxqb']
+[2026-01-28T22:22:22.600+0000] {standard_task_runner.py:88} INFO - Job 205: Subtask load_to_staging
+[2026-01-28T22:22:22.617+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T22:22:22.659+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.load_to_staging manual__2026-01-28T22:19:44.377550+00:00 [running]> on host a9aac56aef94
+[2026-01-28T22:22:22.753+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='load_to_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T22:19:44.377550+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T22:19:44.377550+00:00'
+[2026-01-28T22:22:22.769+0000] {base.py:83} INFO - Using connection ID 'events_postgres' for task execution.
+[2026-01-28T22:22:24.265+0000] {logging_mixin.py:188} INFO - Loaded 1292 events to staging (skipped 328, errors logged: 328)
+[2026-01-28T22:22:24.266+0000] {python.py:201} INFO - Done. Returned value was: 1292
+[2026-01-28T22:22:24.302+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=load_to_staging, execution_date=20260128T221944, start_date=20260128T222222, end_date=20260128T222224
+[2026-01-28T22:22:24.356+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T22:22:24.488+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

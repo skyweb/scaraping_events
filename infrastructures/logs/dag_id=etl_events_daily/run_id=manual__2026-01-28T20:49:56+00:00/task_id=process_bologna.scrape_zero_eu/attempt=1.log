@@ -1,0 +1,15 @@
+[2026-01-28T20:50:00.491+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_bologna.scrape_zero_eu manual__2026-01-28T20:49:56+00:00 [queued]>
+[2026-01-28T20:50:00.498+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_bologna.scrape_zero_eu manual__2026-01-28T20:49:56+00:00 [queued]>
+[2026-01-28T20:50:00.499+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-28T20:50:00.510+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_bologna.scrape_zero_eu> on 2026-01-28 20:49:56+00:00
+[2026-01-28T20:50:00.513+0000] {standard_task_runner.py:60} INFO - Started process 263 to run task
+[2026-01-28T20:50:00.516+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_bologna.scrape_zero_eu', 'manual__2026-01-28T20:49:56+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmph104k_ml']
+[2026-01-28T20:50:00.518+0000] {standard_task_runner.py:88} INFO - Job 99: Subtask process_bologna.scrape_zero_eu
+[2026-01-28T20:50:00.533+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T20:50:00.579+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_bologna.scrape_zero_eu manual__2026-01-28T20:49:56+00:00 [running]> on host a9aac56aef94
+[2026-01-28T20:50:00.669+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_bologna.scrape_zero_eu' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T20:49:56+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T20:49:56+00:00'
+[2026-01-28T20:50:00.670+0000] {logging_mixin.py:188} INFO - Skipping bologna. Reason: Global 'city' filter set to firenze
+[2026-01-28T20:50:00.670+0000] {taskinstance.py:2360} INFO - Skipped: Global 'city' filter set to firenze
+[2026-01-28T20:50:00.684+0000] {taskinstance.py:1138} INFO - Marking task as SKIPPED. dag_id=etl_events_daily, task_id=process_bologna.scrape_zero_eu, execution_date=20260128T204956, start_date=20260128T205000, end_date=20260128T205000
+[2026-01-28T20:50:00.735+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T20:50:00.764+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

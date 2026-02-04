@@ -1,0 +1,2574 @@
+[2026-02-02T19:45:47.056+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_latina.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:45:47.071+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_latina.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:45:47.073+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-02-02T19:45:47.093+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_latina.scrape_city_today> on 2026-02-01 06:00:00+00:00
+[2026-02-02T19:45:47.100+0000] {standard_task_runner.py:60} INFO - Started process 284 to run task
+[2026-02-02T19:45:47.104+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_latina.scrape_city_today', 'scheduled__2026-02-01T06:00:00+00:00', '--job-id', '412', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmp74suohi3']
+[2026-02-02T19:45:47.108+0000] {standard_task_runner.py:88} INFO - Job 412: Subtask process_latina.scrape_city_today
+[2026-02-02T19:45:47.128+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-02-02T19:45:47.176+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_latina.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [running]> on host d1594f2b36ec
+[2026-02-02T19:45:47.287+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_latina.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-02-01T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-01T06:00:00+00:00'
+[2026-02-02T19:45:47.309+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-02-02T19:45:47.318+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-02-02T19:45:47.989+0000] {docker.py:429} INFO - Avvio scraping per: Latina
+Periodo: questa-settimana
+[2026-02-02T19:45:47.993+0000] {docker.py:429} INFO - 2026-02-02 19:45:47 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-02-02T19:45:47.999+0000] {docker.py:429} INFO - 2026-02-02 19:45:47 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-02-02 19:45:47 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-02-02T19:45:48.000+0000] {docker.py:429} INFO - 2026-02-02 19:45:47 [events] INFO: Scraping città: Latina
+2026-02-02 19:45:47 [events] INFO: Periodo: questa-settimana (2026-02-02 - 2026-02-08)
+2026-02-02 19:45:47 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-02-02T19:45:48.002+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-02-02T19:45:48.002+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-02-02 19:45:48 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-02-02T19:45:48.006+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.extensions.telnet] INFO: Telnet Password: 135fb94dd8a99b91
+[2026-02-02T19:45:48.056+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-02-02T19:45:48.058+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-02-02T19:45:48.128+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-02-02T19:45:48.131+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-02-02T19:45:48.133+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-02-02T19:45:48.133+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_latina_questa-settimana_20260202_194547.json
+[2026-02-02T19:45:48.134+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.core.engine] INFO: Spider opened
+[2026-02-02T19:45:48.141+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-02-02T19:45:48.142+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-02-02T19:45:48.334+0000] {docker.py:429} INFO - 2026-02-02 19:45:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/robots.txt> (referer: None)
+[2026-02-02T19:45:50.472+0000] {docker.py:429} INFO - 2026-02-02 19:45:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/> (referer: None)
+[2026-02-02T19:45:50.832+0000] {docker.py:429} INFO - 2026-02-02 19:45:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/di-vento-simona-ballesio-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:50.953+0000] {docker.py:429} INFO - 2026-02-02 19:45:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/di-vento-simona-ballesio-latina.html>
+{'category': ['Mostre'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '8c384f429a812379',
+ 'date_display': 'dal 7 al 22 febbraio 2026',
+ 'date_end': '2026-02-22',
+ 'date_start': '2026-02-07',
+ 'description': 'Nel mese di febbraio arriva allo Spazio COMEL di Latina '
+                '“di-vento” la personale di Simona Ballesio. In esposizione un '
+                'progetto fotografico di grande atmosfera che fissa '
+                'l’attenzione sul tempo e le trasformazioni che esso implica '
+                'sulle cose. Simona Ballesio non ferma l’attimo come è tipico '
+                'della fotografia ma osserva ciò che muta senza manifestarsi '
+                'apertamente, l’artista romana non descrive ma suggerisce una '
+                'trasformazione, uno stato d’animo, un mutamento. La sua '
+                'fotografia non racconta ma contempla in silenzio. Il divenire '
+                'diventa essenza e senso della vita, ciò che siamo e siamo '
+                'destinati a essere, è un processo che dona valore alla vita e '
+                'a ogni suo momento proprio perché segno di precarietà e '
+                'continuo cambiamento. Allo Spazio COMEL si potranno ammirare '
+                'scatti realizzati con tecniche artigianali ai sali d’argento '
+                'stesi a pennello su carta, alluminio e vetro. È un progetto '
+                'che vuole sottolineare l’unicità del processo fatto a mano, '
+                'la bellezza dell’imperfezione, le tracce che l’artista lascia '
+                'sulla fotografia. La mostra, curata da Augusto Pieroni, tra i '
+                'principali storici e critici della fotografia italiana, sarà '
+                'presentata dalla giornalista e storica dell’arte Linda De '
+                'Sanctis. “di-vento” sarà inaugurata sabato 7 febbraio alle '
+                'ore 18.00 e rimarrà aperta al pubblico tutti i giorni dalle '
+                '17 alle 20 fino a domenica 22 febbraio. Cenni biografici: '
+                'Simona Ballesio, fotografa romana, sviluppa una ricerca '
+                'fotografica che indaga la distanza sottile tra ciò che è '
+                'visibile e ciò che viene percepito interiormente. Il suo '
+                'lavoro non mira alla rappresentazione del reale, ma alla '
+                'costruzione di un’esperienza sensibile in cui l’immagine '
+                'diventa luogo di risonanza emotiva e temporale. La pratica '
+                'dell’artista si articola tra fotografia analogica e digitale. '
+                'La sua ricerca si colloca in una zona di soglia, dove '
+                'immagine e materia dialogano con il tempo e con l’emozione, '
+                'generando opere che richiedono uno sguardo lento e partecipe. '
+                'Negli anni ha esposto in spazi storici e gallerie, costruendo '
+                'un percorso coerente e profondo.',
+ 'event_id': 'di-vento-simona-ballesio-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/14242307268771/video_di-vento_29-2.jpg',
+ 'location_address': 'Via Neghelli, 68',
+ 'location_name': 'Spazio COMEL Arte Contemporanea',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Nel mese di febbraio arriva allo '
+                                        'Spazio COMEL di Latina “di-vento” la '
+                                        'personale di Simona Ballesio. In '
+                                        'esposizione un progetto fotografico '
+                                        'di grande atmosfera che fissa '
+                                        'l’attenzione sul tempo e le '
+                                        'trasformazioni che esso implica sulle '
+                                        'cose. Simona Ballesio non ferma '
+                                        'l’attimo come è tipico della '
+                                        'fotografia ma osserva ciò che muta '
+                                        'senza manifestarsi apertamente, '
+                                        'l’artista romana non descrive ma '
+                                        'suggerisce una trasformazione, uno '
+                                        'stato d’animo, un mutamento. La sua '
+                                        'fotografia non racconta ma contempla '
+                                        'in silenzio. Il divenire diventa '
+                                        'essenza e senso della vita, ciò che '
+                                        'siamo e siamo destinati a essere, è '
+                                        'un processo che dona valore alla vita '
+                                        'e a ogni suo momento proprio perché '
+                                        'segno di precarietà e continuo '
+                                        'cambiamento. Allo Spazio COMEL si '
+                                        'potranno ammirare scatti realizzati '
+                                        'con tecniche artigianali ai sali '
+                                        'd’argento stesi a pennello su carta, '
+                                        'alluminio e vetro. È un progetto che '
+                                        'vuole sottolineare l’unicità del '
+                                        'processo fatto a mano, la bellezza '
+                                        'dell’imperfezione, le tracce che '
+                                        'l’artista lascia sulla fotografia. La '
+                                        'mostra, curata da Augusto Pieroni, '
+                                        'tra i principali storici e critici '
+                                        'della fotografia italiana, sarà '
+                                        'presentata dalla giornalista e '
+                                        'storica dell’arte Linda De Sanctis. '
+                                        '“di-vento” sarà inaugurata sabato 7 '
+                                        'febbraio alle ore 18.00 e rimarrà '
+                                        'aperta al pubblico tutti i giorni '
+                                        'dalle 17 alle 20 fino a domenica 22 '
+                                        'febbraio. Cenni biografici: Simona '
+                                        'Ballesio, fotografa romana, sviluppa '
+                                        'una ricerca fotografica che indaga la '
+                                        'distanza sottile tra ciò che è '
+                                        'visibile e ciò che viene percepito '
+                                        'interiormente. Il suo lavoro non mira '
+                                        'alla rappresentazione del reale, ma '
+                                        'alla costruzione di un’esperienza '
+                                        'sensibile in cui l’immagine diventa '
+                                        'luogo di risonanza emotiva e '
+                                        'temporale. La pratica dell’artista si '
+                                        'articola tra fotografia analogica e '
+                                        'digitale. La sua ricerca si colloca '
+                                        'in una zona di soglia, dove immagine '
+                                        'e materia dialogano con il tempo e '
+                                        'con l’emozione, generando opere che '
+                                        'richiedono uno sguardo lento e '
+                                        'partecipe. Negli anni ha esposto in '
+                                        'spazi storici e gallerie, costruendo '
+                                        'un percorso coerente e profondo.',
+                         'dove': {'address': 'Via Neghelli, 68',
+                                  'name': 'Spazio COMEL Arte Contemporanea',
+                                  'raw_text': 'Dove Spazio COMEL Arte '
+                                              'Contemporanea Via Neghelli, 68'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/14242307268771/video_di-vento_29-2.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-22',
+                                    'date_start': '2026-02-07',
+                                    'raw_text': 'Quando Dal 07/02/2026 al '
+                                                '22/02/2026 inaugurazione ore '
+                                                '18.00, tutti i giorni dalle '
+                                                '17 alle 20',
+                                    'schedule': 'inaugurazione ore 18.00, '
+                                                'tutti i giorni dalle 17 alle '
+                                                '20'}},
+              'list': {'category': 'Mostre',
+                       'date': 'dal 7 al 22 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/14242307268771/video_di-vento_29-2.jpg',
+                       'location': 'Spazio COMEL Arte Contemporanea',
+                       'stars': 4,
+                       'title': '“di-vento” la mostra fotografica di Simona '
+                                'Ballesio allo Spazio COMEL'}},
+ 'scraped_at': '2026-02-02T19:45:50.950304',
+ 'source': 'city_today',
+ 'title': '“di-vento” la mostra fotografica di Simona Ballesio allo Spazio '
+          'COMEL',
+ 'url': 'https://www.latinatoday.it/eventi/di-vento-simona-ballesio-latina.html',
+ 'uuid': 'd14c5a1298ec2537',
+ 'website': None}
+[2026-02-02T19:45:52.395+0000] {docker.py:429} INFO - 2026-02-02 19:45:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/festa-della-polenta-2026-pontenuovo-sermoneta.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:52.503+0000] {docker.py:429} INFO - 2026-02-02 19:45:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/festa-della-polenta-2026-pontenuovo-sermoneta.html>
+{'category': ['Cibo e Vino'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '76efb34aebfa7d65',
+ 'date_display': '8 febbraio 2026',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-02-08',
+ 'description': 'Proseguono di fine settimana in fine settimana le Feste della '
+                'Polenta che celebrano antiche tradizioni e la nostra migliore '
+                'gastronomia e animano le varie borgate di Sermoneta. In '
+                'particolare la Sagra della Polenta, che ha avuto un inizio '
+                'scoppiettante nel centro storico, propone al pubblico il '
+                'piatto invernale per eccellenza preparato secondo l’antica '
+                'ricetta tramandata da generazione. Domenica 8 febbraio ci si '
+                'sposta a Pontenuovo dove sin dal mattino presto sarà messo a '
+                'cuocere il sugo di salsiccia e saranno approntati i bracieri '
+                'con i grandi paioli di rame dove sarà preparata la polenta. '
+                'Dopo la messa e la benedizione dei pani e della polenta, alle '
+                'ore 12.30 sarà distribuito il gustoso piatto. Un’occasione '
+                'per mangiare bene e festeggiare in modo semplice e conviviale '
+                'le antiche usanze. È per domenica 8 febbraio a partire dalle '
+                '12.30 nel piazzale della Chiesa di San Tommaso nella borgata '
+                'Pontenuovo di Sermoneta.',
+ 'event_id': 'festa-della-polenta-2026-pontenuovo-sermoneta',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/6666939370385/polenta-con-sasicchie-e-spuntature-2.jpg',
+ 'location_address': None,
+ 'location_name': "Chiesa San Tommaso D'Aquino - Pontenuovo",
+ 'price': 'ingresso libero',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Proseguono di fine settimana in fine '
+                                        'settimana le Feste della Polenta che '
+                                        'celebrano antiche tradizioni e la '
+                                        'nostra migliore gastronomia e animano '
+                                        'le varie borgate di Sermoneta. In '
+                                        'particolare la Sagra della Polenta, '
+                                        'che ha avuto un inizio scoppiettante '
+                                        'nel centro storico, propone al '
+                                        'pubblico il piatto invernale per '
+                                        'eccellenza preparato secondo l’antica '
+                                        'ricetta tramandata da generazione. '
+                                        'Domenica 8 febbraio ci si sposta a '
+                                        'Pontenuovo dove sin dal mattino '
+                                        'presto sarà messo a cuocere il sugo '
+                                        'di salsiccia e saranno approntati i '
+                                        'bracieri con i grandi paioli di rame '
+                                        'dove sarà preparata la polenta. Dopo '
+                                        'la messa e la benedizione dei pani e '
+                                        'della polenta, alle ore 12.30 sarà '
+                                        'distribuito il gustoso piatto. '
+                                        'Un’occasione per mangiare bene e '
+                                        'festeggiare in modo semplice e '
+                                        'conviviale le antiche usanze. È per '
+                                        'domenica 8 febbraio a partire dalle '
+                                        '12.30 nel piazzale della Chiesa di '
+                                        'San Tommaso nella borgata Pontenuovo '
+                                        'di Sermoneta.',
+                         'dove': {'address': None,
+                                  'name': "Chiesa San Tommaso D'Aquino - "
+                                          'Pontenuovo',
+                                  'raw_text': 'Dove Chiesa San Tommaso '
+                                              "D'Aquino - Pontenuovo Indirizzo "
+                                              'non disponibile Sermoneta'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/6666939370385/polenta-con-sasicchie-e-spuntature-2.jpg',
+                         'prezzo': 'ingresso libero',
+                         'quando': {'date_end': '2026-02-08',
+                                    'date_start': '2026-02-08',
+                                    'raw_text': 'Quando Dal 08/02/2026 al '
+                                                '08/02/2026 dalle ore 7.00',
+                                    'schedule': 'dalle ore 7.00'}},
+              'list': {'category': 'Cibo e Vino',
+                       'date': '8 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/6666939370385/polenta-con-sasicchie-e-spuntature-2.jpg',
+                       'location': "Chiesa San Tommaso D'Aquino - Pontenuovo",
+                       'stars': 4,
+                       'title': 'Arriva a Pontenuovo la Festa della Polenta'}},
+ 'scraped_at': '2026-02-02T19:45:52.501733',
+ 'source': 'city_today',
+ 'title': 'Arriva a Pontenuovo la Festa della Polenta',
+ 'url': 'https://www.latinatoday.it/eventi/festa-della-polenta-2026-pontenuovo-sermoneta.html',
+ 'uuid': '62c930195da46848',
+ 'website': None}
+[2026-02-02T19:45:52.986+0000] {docker.py:429} INFO - 2026-02-02 19:45:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/quasi-quasi-ci-ripenso-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:53.095+0000] {docker.py:429} INFO - 2026-02-02 19:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/quasi-quasi-ci-ripenso-latina.html>
+{'category': ['Teatri'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': 'fc4bd793c7f9bba1',
+ 'date_display': 'dal 6 al 8 febbraio 2026',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-02-06',
+ 'description': 'Nuovo divertente appuntamento al Teatro Moderno con la '
+                'commedia Quasi Quasi ci Ripenso, scritta da Gianni Quinto, '
+                'Alessandro Tirocchi e Maurizio Paniconi per la regia di '
+                'Andrea Palotto. Riccardo e Gea vogliono sposarsi e decidono '
+                'di farlo in chiesa per usufruire di un bonus in denaro messo '
+                'a disposizione dal Papa per sopperire alla crisi dei '
+                'matrimoni religiosi. Per accedere al bonus prima di sposarsi '
+                'devono partecipare a un ritiro spirituale di tre giorni dove '
+                'incontreranno l’originale Don Nino, prete sui generis. Tra '
+                'dubbi sentimentali, segreti del prete e situazioni assurde e '
+                'divertenti non mancherà nemmeno la possibilità di riflettere '
+                'sull’amore in tutti i suoi significati. In scena gli stessi '
+                'Alessandro Tirocchi e Maurizio Paniconi affiancati da Valeria '
+                'Monetti. È come si consueto al Teatro Moderno per ben quattro '
+                'repliche: venerdì 6 febbraio alle ore 21.00, sabato 7 alle 17 '
+                'e alle 21 e domenica 8 febbraio alle 17.30. I biglietti sono '
+                'disponibili presso il botteghino e online su Ticketone. '
+                'undefined',
+ 'event_id': 'quasi-quasi-ci-ripenso-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/66734458265555/quasi-quasi-ci-ripenso-teatro-moderno-2.jpg',
+ 'location_address': 'Via Sisto V',
+ 'location_name': 'Teatro Moderno',
+ 'price': '€ 28.00 platea € 25.00 galleria',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Nuovo divertente appuntamento al '
+                                        'Teatro Moderno con la commedia Quasi '
+                                        'Quasi ci Ripenso, scritta da Gianni '
+                                        'Quinto, Alessandro Tirocchi e '
+                                        'Maurizio Paniconi per la regia di '
+                                        'Andrea Palotto. Riccardo e Gea '
+                                        'vogliono sposarsi e decidono di farlo '
+                                        'in chiesa per usufruire di un bonus '
+                                        'in denaro messo a disposizione dal '
+                                        'Papa per sopperire alla crisi dei '
+                                        'matrimoni religiosi. Per accedere al '
+                                        'bonus prima di sposarsi devono '
+                                        'partecipare a un ritiro spirituale di '
+                                        'tre giorni dove incontreranno '
+                                        'l’originale Don Nino, prete sui '
+                                        'generis. Tra dubbi sentimentali, '
+                                        'segreti del prete e situazioni '
+                                        'assurde e divertenti non mancherà '
+                                        'nemmeno la possibilità di riflettere '
+                                        'sull’amore in tutti i suoi '
+                                        'significati. In scena gli stessi '
+                                        'Alessandro Tirocchi e Maurizio '
+                                        'Paniconi affiancati da Valeria '
+                                        'Monetti. È come si consueto al Teatro '
+                                        'Moderno per ben quattro repliche: '
+                                        'venerdì 6 febbraio alle ore 21.00, '
+                                        'sabato 7 alle 17 e alle 21 e domenica '
+                                        '8 febbraio alle 17.30. I biglietti '
+                                        'sono disponibili presso il botteghino '
+                                        'e online su Ticketone. undefined',
+                         'dove': {'address': 'Via Sisto V',
+                                  'name': 'Teatro Moderno',
+                                  'raw_text': 'Dove Teatro Moderno Via Sisto '
+                                              'V'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/66734458265555/quasi-quasi-ci-ripenso-teatro-moderno-2.jpg',
+                         'prezzo': '€ 28.00 platea € 25.00 galleria',
+                         'quando': {'date_end': '2026-02-08',
+                                    'date_start': '2026-02-06',
+                                    'raw_text': 'Quando Dal 06/02/2026 al '
+                                                '08/02/2026 venerdì ore 21.00, '
+                                                'sabato ore 17 e ore 21, '
+                                                'domenica ore 17.30',
+                                    'schedule': 'venerdì ore 21.00, sabato ore '
+                                                '17 e ore 21, domenica ore '
+                                                '17.30'}},
+              'list': {'category': 'Teatri',
+                       'date': 'dal 6 al 8 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/66734458265555/quasi-quasi-ci-ripenso-teatro-moderno-2.jpg',
+                       'location': 'Teatro Moderno',
+                       'stars': 4,
+                       'title': 'Quasi Quasi ci Ripenso in scena al Teatro '
+                                'Moderno'}},
+ 'scraped_at': '2026-02-02T19:45:53.094174',
+ 'source': 'city_today',
+ 'title': 'Quasi Quasi ci Ripenso in scena al Teatro Moderno',
+ 'url': 'https://www.latinatoday.it/eventi/quasi-quasi-ci-ripenso-latina.html',
+ 'uuid': 'bd108c17e597a1b6',
+ 'website': None}
+[2026-02-02T19:45:54.385+0000] {docker.py:429} INFO - 2026-02-02 19:45:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/cornuti-e-contenti-marco-travaglio-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:54.494+0000] {docker.py:429} INFO - 2026-02-02 19:45:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/cornuti-e-contenti-marco-travaglio-latina.html>
+{'category': ['Teatri'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': 'fd3c0251080a16a5',
+ 'date_display': '5 febbraio 2026',
+ 'date_end': '2026-02-05',
+ 'date_start': '2026-02-05',
+ 'description': 'Tra gli Incontri Speciali inseriti nella variegata rassegna '
+                'Liberi di Scegliere organizzata dall’Amministrazione Comunale '
+                'in collaborazione con ATCL, arriva il recital Cornuti e '
+                'Contenti di e con Marco Travaglio. Il giornalista, con la sua '
+                'solita ironia graffiante che ci permette di sorridere '
+                'amaramente di cose sulle quali purtroppo c’è poco da ridere, '
+                'tenta di rispondere con le sue opinioni a interrogativi che '
+                'oggi in molti si pongono: “Perché milioni di italiani votano '
+                'sempre per chi poi li tradisce, o addirittura li ha già '
+                'traditi e si propone di rifarlo? Perché milioni di persone '
+                'premiano, dalla carta stampata ai social, dalla televisione '
+                'alla radio, quei media e quei programmi che sfornano '
+                'sistematicamente bufale e bugie?”. L’italiano medio sembra '
+                'godere nell’affidare la soluzione di molti problemi del Paese '
+                'a chi di solito ne è la causa, ma perché? E come fare a '
+                'uscire da questo circolo vizioso? Un monologo che tocca '
+                'importanti temi di attualità, dalle guerre ancora in corso al '
+                'referendum sulla magistratura, dal grave problema '
+                'dell’astensionismo visto come massima forma di ribellione ai '
+                'voti di scambio e delle “tifoserie” e molto altro ancora. '
+                'Travaglio si ripropone di offrire al pubblico un manuale di '
+                'autodifesa per provare a invertire la rotta intrapresa dal '
+                'nostro Paese dal basso e smettere di essere un popolo di '
+                'cornuti e contenti. È per giovedì 5 febbraio alle ore 21.00 '
+                'presso il D’Annunzio di Latina. I biglietti sono disponibili '
+                'online su Ticketone e presso il botteghino del teatro.',
+ 'event_id': 'cornuti-e-contenti-marco-travaglio-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/39031258244821/marco_travaglio.jpg',
+ 'location_address': 'Viale Umberto I, 43',
+ 'location_name': "Teatro D'Annunzio",
+ 'price': 'da € 30.00',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Tra gli Incontri Speciali inseriti '
+                                        'nella variegata rassegna Liberi di '
+                                        'Scegliere organizzata '
+                                        'dall’Amministrazione Comunale in '
+                                        'collaborazione con ATCL, arriva il '
+                                        'recital Cornuti e Contenti di e con '
+                                        'Marco Travaglio. Il giornalista, con '
+                                        'la sua solita ironia graffiante che '
+                                        'ci permette di sorridere amaramente '
+                                        'di cose sulle quali purtroppo c’è '
+                                        'poco da ridere, tenta di rispondere '
+                                        'con le sue opinioni a interrogativi '
+                                        'che oggi in molti si pongono: “Perché '
+                                        'milioni di italiani votano sempre per '
+                                        'chi poi li tradisce, o addirittura li '
+                                        'ha già traditi e si propone di '
+                                        'rifarlo? Perché milioni di persone '
+                                        'premiano, dalla carta stampata ai '
+                                        'social, dalla televisione alla radio, '
+                                        'quei media e quei programmi che '
+                                        'sfornano sistematicamente bufale e '
+                                        'bugie?”. L’italiano medio sembra '
+                                        'godere nell’affidare la soluzione di '
+                                        'molti problemi del Paese a chi di '
+                                        'solito ne è la causa, ma perché? E '
+                                        'come fare a uscire da questo circolo '
+                                        'vizioso? Un monologo che tocca '
+                                        'importanti temi di attualità, dalle '
+                                        'guerre ancora in corso al referendum '
+                                        'sulla magistratura, dal grave '
+                                        'problema dell’astensionismo visto '
+                                        'come massima forma di ribellione ai '
+                                        'voti di scambio e delle “tifoserie” e '
+                                        'molto altro ancora. Travaglio si '
+                                        'ripropone di offrire al pubblico un '
+                                        'manuale di autodifesa per provare a '
+                                        'invertire la rotta intrapresa dal '
+                                        'nostro Paese dal basso e smettere di '
+                                        'essere un popolo di cornuti e '
+                                        'contenti. È per giovedì 5 febbraio '
+                                        'alle ore 21.00 presso il D’Annunzio '
+                                        'di Latina. I biglietti sono '
+                                        'disponibili online su Ticketone e '
+                                        'presso il botteghino del teatro.',
+                         'dove': {'address': 'Viale Umberto I, 43',
+                                  'name': "Teatro D'Annunzio",
+                                  'raw_text': "Dove Teatro D'Annunzio Viale "
+                                              'Umberto I, 43'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/39031258244821/marco_travaglio.jpg',
+                         'prezzo': 'da € 30.00',
+                         'quando': {'date_end': '2026-02-05',
+                                    'date_start': '2026-02-05',
+                                    'raw_text': 'Quando Dal 05/02/2026 al '
+                                                '05/02/2026 ore 21.00',
+                                    'schedule': 'ore 21.00'}},
+              'list': {'category': 'Teatri',
+                       'date': '5 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/39031258244821/marco_travaglio.jpg',
+                       'location': "Teatro D'Annunzio",
+                       'stars': 4,
+                       'title': 'Cornuti e Contenti: Marco Travaglio porta il '
+                                'nuovo spettacolo al D’Annunzio'}},
+ 'scraped_at': '2026-02-02T19:45:54.492533',
+ 'source': 'city_today',
+ 'title': 'Cornuti e Contenti: Marco Travaglio porta il nuovo spettacolo al '
+          'D’Annunzio',
+ 'url': 'https://www.latinatoday.it/eventi/cornuti-e-contenti-marco-travaglio-latina.html',
+ 'uuid': '45c5771b3fbd0863',
+ 'website': None}
+[2026-02-02T19:45:55.870+0000] {docker.py:429} INFO - 2026-02-02 19:45:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/live-painting-laura-zampieri-sonneblom-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:55.983+0000] {docker.py:429} INFO - 2026-02-02 19:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/live-painting-laura-zampieri-sonneblom-latina.html>
+{'category': ['Incontri'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': 'e282e1dd8f639920',
+ 'date_display': '7 febbraio 2026',
+ 'date_end': '2026-02-07',
+ 'date_start': '2026-02-07',
+ 'description': 'Alla OmniArt Open Gallery di Latina, l’arte nomade di '
+                'Sonneblom in un live painting dedicato al femminile e alla '
+                'natura. Nell’ambito del ciclo Incontri d’Arte: l’artista si '
+                'racconta, parte del progetto dei Pomeriggi culturali Immersi '
+                'nell’arte, la Galleria OmniArt di Latina ospita GEA (a cura '
+                'di Sara Taffoni e Marianna Scuderi), un evento di live '
+                'painting che vedrà protagonista l’artista Laura Zampieri, in '
+                'arte Sonneblom. Sonneblom si esibirà in una sessione di '
+                'pittura dal vivo di circa cinquanta minuti, offrendo al '
+                'pubblico una traduzione visiva del tema portante della '
+                'serata. Al centro della performance vi è l’esplorazione della '
+                'dimensione femminile atavica e sacrale, indissolubilmente '
+                'legata ai ritmi e alle forme della natura. L’artista nasce '
+                "nel 1996 a Velletri. Fin dall'infanzia trova nel disegno il "
+                'proprio linguaggio spontaneo, un mezzo per tradurre le '
+                'emozioni con immediatezza e sincerità. La sua crescita e '
+                'formazione, arricchite da studi in lingue e turismo, la '
+                'portano a collaborare a progetti di respiro nazionale, come '
+                'Space Tor Pignattara, e internazionale, come Youhood Melilla. '
+                'Oggi, l’attività professionale nel settore turistico alimenta '
+                'in lei una dimensione artistica nomade: il viaggio è ricerca '
+                'che trasforma il gesto creativo in un costante processo di '
+                'esplorazione. La sua sperimentazione spazia tra linguaggi '
+                'differenti, dai dipinti su tela ai murales, muovendosi con '
+                'versatilità tra la consistenza pastosa degli acrilici e la '
+                'trasparenza degli acquerelli e non solo. Ogni opera diventa '
+                'così un percorso aperto, attualmente, concentrato sulla forza '
+                'simbolica della donna e sul suo legame ancestrale con la '
+                'terra. È per sabato 7 febbraio alle ore 17.00 alla OmniArt '
+                'Open Gallery.',
+ 'event_id': 'live-painting-laura-zampieri-sonneblom-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/7366578318146/gea-l-o-ve-painting-con-sonneblom.jpg',
+ 'location_address': 'Via Legnano, 65',
+ 'location_name': 'Omni Art Open Gallery',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Alla OmniArt Open Gallery di Latina, '
+                                        'l’arte nomade di Sonneblom in un live '
+                                        'painting dedicato al femminile e alla '
+                                        'natura. Nell’ambito del ciclo '
+                                        'Incontri d’Arte: l’artista si '
+                                        'racconta, parte del progetto dei '
+                                        'Pomeriggi culturali Immersi '
+                                        'nell’arte, la Galleria OmniArt di '
+                                        'Latina ospita GEA (a cura di Sara '
+                                        'Taffoni e Marianna Scuderi), un '
+                                        'evento di live painting che vedrà '
+                                        'protagonista l’artista Laura '
+                                        'Zampieri, in arte Sonneblom. '
+                                        'Sonneblom si esibirà in una sessione '
+                                        'di pittura dal vivo di circa '
+                                        'cinquanta minuti, offrendo al '
+                                        'pubblico una traduzione visiva del '
+                                        'tema portante della serata. Al centro '
+                                        'della performance vi è l’esplorazione '
+                                        'della dimensione femminile atavica e '
+                                        'sacrale, indissolubilmente legata ai '
+                                        'ritmi e alle forme della natura. '
+                                        'L’artista nasce nel 1996 a Velletri. '
+                                        "Fin dall'infanzia trova nel disegno "
+                                        'il proprio linguaggio spontaneo, un '
+                                        'mezzo per tradurre le emozioni con '
+                                        'immediatezza e sincerità. La sua '
+                                        'crescita e formazione, arricchite da '
+                                        'studi in lingue e turismo, la portano '
+                                        'a collaborare a progetti di respiro '
+                                        'nazionale, come Space Tor Pignattara, '
+                                        'e internazionale, come Youhood '
+                                        'Melilla. Oggi, l’attività '
+                                        'professionale nel settore turistico '
+                                        'alimenta in lei una dimensione '
+                                        'artistica nomade: il viaggio è '
+                                        'ricerca che trasforma il gesto '
+                                        'creativo in un costante processo di '
+                                        'esplorazione. La sua sperimentazione '
+                                        'spazia tra linguaggi differenti, dai '
+                                        'dipinti su tela ai murales, '
+                                        'muovendosi con versatilità tra la '
+                                        'consistenza pastosa degli acrilici e '
+                                        'la trasparenza degli acquerelli e non '
+                                        'solo. Ogni opera diventa così un '
+                                        'percorso aperto, attualmente, '
+                                        'concentrato sulla forza simbolica '
+                                        'della donna e sul suo legame '
+                                        'ancestrale con la terra. È per sabato '
+                                        '7 febbraio alle ore 17.00 alla '
+                                        'OmniArt Open Gallery.',
+                         'dove': {'address': 'Via Legnano, 65',
+                                  'name': 'Omni Art Open Gallery',
+                                  'raw_text': 'Dove Omni Art Open Gallery Via '
+                                              'Legnano, 65'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/7366578318146/gea-l-o-ve-painting-con-sonneblom.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-07',
+                                    'date_start': '2026-02-07',
+                                    'raw_text': 'Quando Dal 07/02/2026 al '
+                                                '07/02/2026 ore 17.00',
+                                    'schedule': 'ore 17.00'}},
+              'list': {'category': 'Incontri',
+                       'date': '7 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/7366578318146/gea-l-o-ve-painting-con-sonneblom.jpg',
+                       'location': 'Omni Art Open Gallery',
+                       'stars': 4,
+                       'title': 'Alla OmniArt il live painting di Laura '
+                                'Zampieri, in arte Sonneblom'}},
+ 'scraped_at': '2026-02-02T19:45:55.979913',
+ 'source': 'city_today',
+ 'title': 'Alla OmniArt il live painting di Laura Zampieri, in arte Sonneblom',
+ 'url': 'https://www.latinatoday.it/eventi/live-painting-laura-zampieri-sonneblom-latina.html',
+ 'uuid': '0b7099d25fc67fe1',
+ 'website': None}
+[2026-02-02T19:45:57.523+0000] {docker.py:429} INFO - 2026-02-02 19:45:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/risonanze-dimensioni-musicali-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:57.638+0000] {docker.py:429} INFO - 2026-02-02 19:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/risonanze-dimensioni-musicali-latina.html>
+{'category': ['Manifestazioni'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': 'dc5cab7bebd4ae44',
+ 'date_display': 'dal 8 novembre 2025 al 6 giugno 2026',
+ 'date_end': '2026-06-06',
+ 'date_start': '2025-11-08',
+ 'description': 'L’associazione Dimensioni Musicali di Latina compie dieci '
+                'anni e vuole festeggiare offrendo alla città, in particolare '
+                'ai bambini e alle famiglie, una stagione di eventi gratuiti. '
+                'La rassegna, dal titolo Risonanze, prevede eventi per bambini '
+                'di tutte le età, seminari di formazione per docenti e '
+                'collaborazioni con numerose realtà che in questi dieci anni '
+                'hanno collaborato e contribuito alla crescita di questa '
+                'associazione. I docenti per la formazione degli adulti '
+                'saranno: Ciro Paduano (sabato 8 novembre 2025), vice '
+                'presidente dell’OSI Orff-Schulwerk Italiano e docente di body '
+                'percussion, Paola Anselmi (24 gennaio 2026), presidente '
+                'dell’Associazione Internazionale Musica in Culla e fondatrice '
+                'della metodologia, Elisa Rossi (7 marzo 2026), cantante jazz '
+                'di Latina specializzata nella didattica del canto. Saranno '
+                'ben sette gli spettacoli per bambini e tre gli eventi '
+                'formativi di elevato livello ma alla portata di tutti in '
+                'varie location della città: dall’accogliente Teatro di Opera '
+                'Prima all’auditorium dell’Istituto Giuseppe Giuliano, dalla '
+                'sede stessa dell’associazione alla libreria A Testa in Giù, '
+                'passando per palazzo M e il parco Le Querce. Gli appuntamenti '
+                'proseguiranno fino a giugno e saranno gratuiti si per gli '
+                'adulti che per i bambini. Per ricevere maggiori informazioni '
+                'e prenotare il proprio posto sono a disposizione il numero '
+                '3756152669 e l’indirizzo email info@dimensionimusicali.com',
+ 'event_id': 'risonanze-dimensioni-musicali-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/1074706799082/ciro-paudano-corso-body-percussion-per-dimensioni-musicali.jpg',
+ 'location_address': None,
+ 'location_name': 'varie location',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'L’associazione Dimensioni Musicali di '
+                                        'Latina compie dieci anni e vuole '
+                                        'festeggiare offrendo alla città, in '
+                                        'particolare ai bambini e alle '
+                                        'famiglie, una stagione di eventi '
+                                        'gratuiti. La rassegna, dal titolo '
+                                        'Risonanze, prevede eventi per bambini '
+                                        'di tutte le età, seminari di '
+                                        'formazione per docenti e '
+                                        'collaborazioni con numerose realtà '
+                                        'che in questi dieci anni hanno '
+                                        'collaborato e contribuito alla '
+                                        'crescita di questa associazione. I '
+                                        'docenti per la formazione degli '
+                                        'adulti saranno: Ciro Paduano (sabato '
+                                        '8 novembre 2025), vice presidente '
+                                        'dell’OSI Orff-Schulwerk Italiano e '
+                                        'docente di body percussion, Paola '
+                                        'Anselmi (24 gennaio 2026), presidente '
+                                        'dell’Associazione Internazionale '
+                                        'Musica in Culla e fondatrice della '
+                                        'metodologia, Elisa Rossi (7 marzo '
+                                        '2026), cantante jazz di Latina '
+                                        'specializzata nella didattica del '
+                                        'canto. Saranno ben sette gli '
+                                        'spettacoli per bambini e tre gli '
+                                        'eventi formativi di elevato livello '
+                                        'ma alla portata di tutti in varie '
+                                        'location della città: '
+                                        'dall’accogliente Teatro di Opera '
+                                        'Prima all’auditorium dell’Istituto '
+                                        'Giuseppe Giuliano, dalla sede stessa '
+                                        'dell’associazione alla libreria A '
+                                        'Testa in Giù, passando per palazzo M '
+                                        'e il parco Le Querce. Gli '
+                                        'appuntamenti proseguiranno fino a '
+                                        'giugno e saranno gratuiti si per gli '
+                                        'adulti che per i bambini. Per '
+                                        'ricevere maggiori informazioni e '
+                                        'prenotare il proprio posto sono a '
+                                        'disposizione il numero 3756152669 e '
+                                        'l’indirizzo email '
+                                        'info@dimensionimusicali.com',
+                         'dove': {'address': None,
+                                  'name': 'varie location',
+                                  'raw_text': 'Dove varie location Indirizzo '
+                                              'non disponibile'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/1074706799082/ciro-paudano-corso-body-percussion-per-dimensioni-musicali.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-06-06',
+                                    'date_start': '2025-11-08',
+                                    'raw_text': 'Quando Dal 08/11/2025 al '
+                                                '06/06/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Manifestazioni',
+                       'date': 'dal 8 novembre 2025 al 6 giugno 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/1074706799082/ciro-paudano-corso-body-percussion-per-dimensioni-musicali.jpg',
+                       'location': 'varie location',
+                       'stars': 4,
+                       'title': 'Risonanze la rassegna di Dimensioni '
+                                'musicali'}},
+ 'scraped_at': '2026-02-02T19:45:57.635769',
+ 'source': 'city_today',
+ 'title': 'Risonanze la rassegna di Dimensioni musicali',
+ 'url': 'https://www.latinatoday.it/eventi/risonanze-dimensioni-musicali-latina.html',
+ 'uuid': '953bca60fa5e83c8',
+ 'website': None}
+[2026-02-02T19:45:58.828+0000] {docker.py:429} INFO - 2026-02-02 19:45:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/musica-in-casa-gennaio-febbraio-2026-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:58.944+0000] {docker.py:429} INFO - 2026-02-02 19:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/musica-in-casa-gennaio-febbraio-2026-latina.html>
+{'category': ['Concerti'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '497ef3743c1228fc',
+ 'date_display': 'dal 17 gennaio al 28 febbraio 2026',
+ 'date_end': '2026-02-28',
+ 'date_start': '2026-01-17',
+ 'description': 'Musica in Casa è una rassegna di concerti che esplorano '
+                'differenti mondi sonori, dal jazz alla musica latin, dal pop '
+                'alla musica dei cantautori, le musiche dal mondo. L’idea '
+                'nasce in seno a un laboratorio di musica di insieme che si '
+                'tiene alla casa di quartiere da due anni a questa parte. I '
+                'musicisti invitati ai concerti possono essere sia elementi '
+                'del laboratorio musicale della Casa di Quartiere di Borgo '
+                'Piave, sia ospiti esterni specializzati nello stile musicale '
+                'tema della serata. I concerti avranno cadenza quindicinale '
+                'fino a giugno 2026. I concerti sono a cura di Mimmo Di '
+                'Francesco e dell’Associazione Culturale Musicale LOUIS in '
+                'collaborazione con la Casa di Quartiere di Borgo Piave. '
+                'L’iniziativa nasce con l’intento di promuovere la cultura '
+                'musicale e favorire l’incontro tra generi e tradizioni '
+                'diverse, coinvolgendo un pubblico ampio e valorizzando il '
+                'territorio. Il programma prevede concerti con artisti di '
+                'rilievo nello stile musicale oggetto dei singoli concerti e '
+                'momenti di incontro con il pubblico, offrendo un’esperienza '
+                'di alta qualità artistica e di forte impatto culturale. La '
+                'Casa di Quartiere di Borgo Piave vuole essere un punto di '
+                'riferimento della vita comunitaria e si rivolge a tutti i '
+                'cittadini del territorio comunale per stimolare la '
+                'partecipazione a iniziative e attività generando relazioni e '
+                'scambi culturali e sociali. L’ACM LOUIS promuove attività '
+                'culturali, artistiche, musicali ed educative senza scopo di '
+                'lucro, rivolte a soci e non soci. Organizza concerti, '
+                'spettacoli, corsi, laboratori e iniziative di aggregazione '
+                'sociale, anche in collaborazione con enti pubblici e privati. '
+                'Sabato 17 gennaio Cafè de Paris – Valzer Musette et Chansons '
+                'Sabato 31 gennaio Por Causa do Amor – Omaggio ad Antonio '
+                'Carlos Jobim Sabato 14 febbraio Marechiaro, marechiaro – '
+                'Omaggio a Salvatore Di Giacomo Sabato 28 febbraio Irish Music '
+                'Ceíli Band - Musica irlandese',
+ 'event_id': 'musica-in-casa-gennaio-febbraio-2026-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/14138529797260/musica-in-casa-2.png',
+ 'location_address': 'Via Arturo Codignola, 1',
+ 'location_name': 'Casa di Quartiere di Borgo Piave',
+ 'price': '€ 7',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Musica in Casa è una rassegna di '
+                                        'concerti che esplorano differenti '
+                                        'mondi sonori, dal jazz alla musica '
+                                        'latin, dal pop alla musica dei '
+                                        'cantautori, le musiche dal mondo. '
+                                        'L’idea nasce in seno a un laboratorio '
+                                        'di musica di insieme che si tiene '
+                                        'alla casa di quartiere da due anni a '
+                                        'questa parte. I musicisti invitati ai '
+                                        'concerti possono essere sia elementi '
+                                        'del laboratorio musicale della Casa '
+                                        'di Quartiere di Borgo Piave, sia '
+                                        'ospiti esterni specializzati nello '
+                                        'stile musicale tema della serata. I '
+                                        'concerti avranno cadenza quindicinale '
+                                        'fino a giugno 2026. I concerti sono a '
+                                        'cura di Mimmo Di Francesco e '
+                                        'dell’Associazione Culturale Musicale '
+                                        'LOUIS in collaborazione con la Casa '
+                                        'di Quartiere di Borgo Piave. '
+                                        'L’iniziativa nasce con l’intento di '
+                                        'promuovere la cultura musicale e '
+                                        'favorire l’incontro tra generi e '
+                                        'tradizioni diverse, coinvolgendo un '
+                                        'pubblico ampio e valorizzando il '
+                                        'territorio. Il programma prevede '
+                                        'concerti con artisti di rilievo nello '
+                                        'stile musicale oggetto dei singoli '
+                                        'concerti e momenti di incontro con il '
+                                        'pubblico, offrendo un’esperienza di '
+                                        'alta qualità artistica e di forte '
+                                        'impatto culturale. La Casa di '
+                                        'Quartiere di Borgo Piave vuole essere '
+                                        'un punto di riferimento della vita '
+                                        'comunitaria e si rivolge a tutti i '
+                                        'cittadini del territorio comunale per '
+                                        'stimolare la partecipazione a '
+                                        'iniziative e attività generando '
+                                        'relazioni e scambi culturali e '
+                                        'sociali. L’ACM LOUIS promuove '
+                                        'attività culturali, artistiche, '
+                                        'musicali ed educative senza scopo di '
+                                        'lucro, rivolte a soci e non soci. '
+                                        'Organizza concerti, spettacoli, '
+                                        'corsi, laboratori e iniziative di '
+                                        'aggregazione sociale, anche in '
+                                        'collaborazione con enti pubblici e '
+                                        'privati. Sabato 17 gennaio Cafè de '
+                                        'Paris – Valzer Musette et Chansons '
+                                        'Sabato 31 gennaio Por Causa do Amor – '
+                                        'Omaggio ad Antonio Carlos Jobim '
+                                        'Sabato 14 febbraio Marechiaro, '
+                                        'marechiaro – Omaggio a Salvatore Di '
+                                        'Giacomo Sabato 28 febbraio Irish '
+                                        'Music Ceíli Band - Musica irlandese',
+                         'dove': {'address': 'Via Arturo Codignola, 1',
+                                  'name': 'Casa di Quartiere di Borgo Piave',
+                                  'raw_text': 'Dove Casa di Quartiere di Borgo '
+                                              'Piave Via Arturo Codignola, 1'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/14138529797260/musica-in-casa-2.png',
+                         'prezzo': '€ 7',
+                         'quando': {'date_end': '2026-02-28',
+                                    'date_start': '2026-01-17',
+                                    'raw_text': 'Quando Dal 17/01/2026 al '
+                                                '28/02/2026 21:00',
+                                    'schedule': '21:00'}},
+              'list': {'category': 'Concerti',
+                       'date': 'dal 17 gennaio al 28 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/14138529797260/musica-in-casa-2.png',
+                       'location': 'Casa di Quartiere di Borgo Piave',
+                       'stars': 4,
+                       'title': 'Musica in casa: la rassegna della Casa di '
+                                'Quartiere di Borgo Piave'}},
+ 'scraped_at': '2026-02-02T19:45:58.941010',
+ 'source': 'city_today',
+ 'title': 'Musica in casa: la rassegna della Casa di Quartiere di Borgo Piave',
+ 'url': 'https://www.latinatoday.it/eventi/musica-in-casa-gennaio-febbraio-2026-latina.html',
+ 'uuid': '4c36abbe569ee5d9',
+ 'website': None}
+[2026-02-02T19:45:59.804+0000] {docker.py:429} INFO - 2026-02-02 19:45:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/rocco-art-lancia-pop-art-4-mayer-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:59.913+0000] {docker.py:429} INFO - 2026-02-02 19:45:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/rocco-art-lancia-pop-art-4-mayer-latina.html>
+{'category': ['Mostre'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': 'd1725d7f55a52fd7',
+ 'date_display': 'dal 30 gennaio al 31 marzo 2026',
+ 'date_end': '2026-03-31',
+ 'date_start': '2026-01-30',
+ 'description': "“Rocco Art Lancia - Pop Art 4 Mayer”: mostra d'arte "
+                'contemporanea nella sede del Gruppo Mayer, in via San Carlo '
+                "da Sezze 5, Latina Il vernissage dell'esposizione che celebra "
+                'il linguaggio vibrante e iconico della Pop Art attraverso le '
+                'opere di Rocco Lancia è in programma nel pomeriggio di '
+                'venerdì 30 gennaio (dalle 18 alle 20); un evento promosso dal '
+                'Gruppo Mayer, in collaborazione con M.D. – Museo Diffuso '
+                'd’Arte e Giorgio Pecora Vini. Il vernissage è accompagnato da '
+                'una sessione di live painting e durante l’evento è prevista '
+                'una degustazione dei vini della cantina Giorgio Pecora, in un '
+                'incontro che unisce arte, performance e convivialità. La '
+                'mostra sarà in esposizione dal 30 gennaio al 31 marzo 2026 ed '
+                'è curata da Fabio D’Achille. Le opere raccontano un universo '
+                'cromatico intenso e contemporaneo, in cui volti, simboli e '
+                'stratificazioni materiche dialogano con la cultura pop e '
+                'l’immaginario collettivo, restituendo una visione potente e '
+                'immediata dell’arte come esperienza condivisa. “Pop Art 4 '
+                'Mayer”” si inserisce nel percorso del Gruppo Mayer di '
+                'promozione della cultura artistica contemporanea all’interno '
+                'di spazi non convenzionali, favorendo l’incontro tra impresa, '
+                'creatività e territorio. Ingresso su invito.',
+ 'event_id': 'rocco-art-lancia-pop-art-4-mayer-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/15060769247551/rocco-art-lancia-pop-art-4-mayer-vernissage-live-painting-e-degustazione-vini.jpg',
+ 'location_address': 'Via San Carlo da Sezze, 5',
+ 'location_name': 'sede del Gruppo Mayer,',
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': '“Rocco Art Lancia - Pop Art 4 Mayer”: '
+                                        "mostra d'arte contemporanea nella "
+                                        'sede del Gruppo Mayer, in via San '
+                                        'Carlo da Sezze 5, Latina Il '
+                                        "vernissage dell'esposizione che "
+                                        'celebra il linguaggio vibrante e '
+                                        'iconico della Pop Art attraverso le '
+                                        'opere di Rocco Lancia è in programma '
+                                        'nel pomeriggio di venerdì 30 gennaio '
+                                        '(dalle 18 alle 20); un evento '
+                                        'promosso dal Gruppo Mayer, in '
+                                        'collaborazione con M.D. – Museo '
+                                        'Diffuso d’Arte e Giorgio Pecora Vini. '
+                                        'Il vernissage è accompagnato da una '
+                                        'sessione di live painting e durante '
+                                        'l’evento è prevista una degustazione '
+                                        'dei vini della cantina Giorgio '
+                                        'Pecora, in un incontro che unisce '
+                                        'arte, performance e convivialità. La '
+                                        'mostra sarà in esposizione dal 30 '
+                                        'gennaio al 31 marzo 2026 ed è curata '
+                                        'da Fabio D’Achille. Le opere '
+                                        'raccontano un universo cromatico '
+                                        'intenso e contemporaneo, in cui '
+                                        'volti, simboli e stratificazioni '
+                                        'materiche dialogano con la cultura '
+                                        'pop e l’immaginario collettivo, '
+                                        'restituendo una visione potente e '
+                                        'immediata dell’arte come esperienza '
+                                        'condivisa. “Pop Art 4 Mayer”” si '
+                                        'inserisce nel percorso del Gruppo '
+                                        'Mayer di promozione della cultura '
+                                        'artistica contemporanea all’interno '
+                                        'di spazi non convenzionali, favorendo '
+                                        'l’incontro tra impresa, creatività e '
+                                        'territorio. Ingresso su invito.',
+                         'dove': {'address': 'Via San Carlo da Sezze, 5',
+                                  'name': 'sede del Gruppo Mayer,',
+                                  'raw_text': 'Dove sede del Gruppo Mayer, Via '
+                                              'San Carlo da Sezze, 5'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/15060769247551/rocco-art-lancia-pop-art-4-mayer-vernissage-live-painting-e-degustazione-vini.jpg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-03-31',
+                                    'date_start': '2026-01-30',
+                                    'raw_text': 'Quando Dal 30/01/2026 al '
+                                                '31/03/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Mostre',
+                       'date': 'dal 30 gennaio al 31 marzo 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/15060769247551/rocco-art-lancia-pop-art-4-mayer-vernissage-live-painting-e-degustazione-vini.jpg',
+                       'location': 'sede del Gruppo Mayer,',
+                       'stars': 4,
+                       'title': 'Rocco Lancia in "Pop art 4 mayer": la mostra '
+                                'a Latina'}},
+ 'scraped_at': '2026-02-02T19:45:59.910697',
+ 'source': 'city_today',
+ 'title': 'Rocco Lancia in "Pop art 4 mayer": la mostra a Latina',
+ 'url': 'https://www.latinatoday.it/eventi/rocco-art-lancia-pop-art-4-mayer-latina.html',
+ 'uuid': '820eee8d677325ee',
+ 'website': None}
+[2026-02-02T19:46:00.966+0000] {docker.py:429} INFO - 2026-02-02 19:46:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/street-spirit-nicolosi-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:01.074+0000] {docker.py:429} INFO - 2026-02-02 19:46:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/street-spirit-nicolosi-latina.html>
+{'category': ['Mostre'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '5b6a0a2c5cf0b2c6',
+ 'date_display': 'dal 16 gennaio al 8 febbraio 2026',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-16',
+ 'description': 'Da sempre la fotografia è l’arte che ferma un istante, in '
+                'particolare la street photography perpetua un momento e '
+                'racconta luoghi, persone, situazioni e in un quartiere come '
+                'il Nicolosi di Latina può diventare un racconto che è storia, '
+                'ma anche accoglienza, integrazione, diversità a confronto. '
+                'Così nell’attivissimo Spazio Nicolosi arriva la prima '
+                'edizione Street Spirit Nicolosi un festival organizzato in '
+                'collaborazione con EFFE 4.0 – Associazione Culturale di '
+                'Street Photography. Dal 16 gennaio all’8 febbraio si terrà la '
+                'mostra dell’Effestival 2025 di Anagni: 150 scatti di strada '
+                'provenienti da tutto il mondo e in stretto dialogo con il '
+                'variegato tessuto umano del quartiere che la ospita. La '
+                'mostra farà da cornice a una serie di eventi collaterali: '
+                'workshop, photowalk, laboratori e momenti di confronto che '
+                'coinvolgeranno fotografi affermati, appassionati, residenti, '
+                'adulti, bambini e curiosi, in un progetto che mette al centro '
+                'la strada come luogo di relazione, ascolto e verità. '
+                'l’inaugurazione si terrà venerdì 16 gennaio alle ore 18.30 '
+                'alla presenza di Tullio Cesario, fotografo, divulgatore, '
+                'musicista e fondatore di EFFE 4.0, che terrà un dibattito '
+                'sulla percezione dell’osservatore. Si partirà già sabato 17 '
+                'gennaio con un workshop intensivo con Salvatore Matarazzo, '
+                'tra i fotografi di strada più riconosciuti a livello '
+                'nazionale e internazionale. Fondatore della pagina Street '
+                'Photography Versilia, punto di riferimento per appassionati e '
+                'addetti ai lavori, Matarazzo è membro del collettivo '
+                'internazionale Full Frontal Flash e del collettivo Elephant '
+                'Gun. Le sue fotografie sono state pubblicate su riviste e '
+                'portali internazionali, tra cui LensCulture, Huffington Post, '
+                'Street Photography Magazine, ISP – International Street '
+                'Photography, e sono state esposte in festival e spazi '
+                'prestigiosi in Italia e all’estero, dagli Stati Uniti alla '
+                'Corea del Sud. Nel workshop intensivo di sabato 17 gennaio '
+                '(evento su prenotazione), Matarazzo guiderà fotografi e '
+                'curiosi in un percorso teorico e pratico dedicato al ritratto '
+                'di strada e all’uso del flash nella street photography. Il '
+                'laboratorio si fonda su un rapporto diretto e paritario con i '
+                'partecipanti, privilegiando l’esperienza individuale, '
+                'l’osservazione lenta, l’empatia e la consapevolezza del gesto '
+                'fotografico. Camminare, osservare, riflettere e poi scattare: '
+                'una fotografia pensata, mai casuale, che parla di chi la '
+                'realizza prima ancora che del soggetto ritratto. Domenica 18 '
+                'gennaio, sarà la volta di Mario Mencacci, fotografo FIAF e '
+                'architetto, che curerà una sessione di lettura portfolio, '
+                'accompagnata da un approfondimento sul rapporto tra '
+                'fotografia, spazio urbano e identità del quartiere Nicolosi. '
+                'Il secondo week end (24–25 gennaio) vedrà protagonista '
+                'Lilliana Ranalletta, fotografa di fama internazionale, '
+                'vincitrice di numerosi festival, autrice di libri fotografici '
+                'e pubblicata su importanti riviste. Ranalletta sarà la '
+                'curatrice del progetto corale Street Spirit Nicolosi: un '
+                'photowalk partecipato dedicato al territorio, durante il '
+                'quale i fotografi documenteranno il quartiere sotto la sua '
+                'supervisione. Da questo percorso nascerà il libro fotografico '
+                'ufficiale del festival. Il terzo week end (31 gennaio – 1 '
+                'febbraio) sarà dedicato ai laboratori e alle attività '
+                'educative, con l’obiettivo di avvicinare bambini, ragazzi e '
+                'giovani del quartiere al linguaggio visivo e alla fotografia '
+                'come strumento di espressione e consapevolezza. In '
+                'particolare, domenica 1 febbraio, si terrà un laboratorio di '
+                'fotografia per bambini e ragazzi, a cura di EFFE 4.0, pensato '
+                'come primo contatto con lo sguardo fotografico e con la '
+                'possibilità di raccontare il proprio mondo. Il festival si '
+                'concluderà nel week end del 6–8 febbraio con l’editing e la '
+                'presentazione del libro “Street Spirit Nicolosi” e un '
+                'incontro aperto con la comunità, momento di restituzione '
+                'collettiva e dialogo tra immagini, autori e abitanti. È '
+                'dunque dal 16 gennaio all’8 febbraio presso lo Spazio '
+                'Nicolosi di Latina. Per avere maggiori informazioni e '
+                'partecipare ai workshop sono a disposizione i numeri WhatApp '
+                '348 8929030 e 350 0337918 e l’indirizzo email '
+                'info@spazioculturalenicolosi.it',
+ 'event_id': 'street-spirit-nicolosi-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/62405992506057/salvatore_matarazzo_001.jpg',
+ 'location_address': 'Via Filippo Corridoni',
+ 'location_name': 'Spazio Culturale Nicolosi',
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Da sempre la fotografia è l’arte che '
+                                        'ferma un istante, in particolare la '
+                                        'street photography perpetua un '
+                                        'momento e racconta luoghi, persone, '
+                                        'situazioni e in un quartiere come il '
+                                        'Nicolosi di Latina può diventare un '
+                                        'racconto che è storia, ma anche '
+                                        'accoglienza, integrazione, diversità '
+                                        'a confronto. Così nell’attivissimo '
+                                        'Spazio Nicolosi arriva la prima '
+                                        'edizione Street Spirit Nicolosi un '
+                                        'festival organizzato in '
+                                        'collaborazione con EFFE 4.0 – '
+                                        'Associazione Culturale di Street '
+                                        'Photography. Dal 16 gennaio all’8 '
+                                        'febbraio si terrà la mostra '
+                                        'dell’Effestival 2025 di Anagni: 150 '
+                                        'scatti di strada provenienti da tutto '
+                                        'il mondo e in stretto dialogo con il '
+                                        'variegato tessuto umano del quartiere '
+                                        'che la ospita. La mostra farà da '
+                                        'cornice a una serie di eventi '
+                                        'collaterali: workshop, photowalk, '
+                                        'laboratori e momenti di confronto che '
+                                        'coinvolgeranno fotografi affermati, '
+                                        'appassionati, residenti, adulti, '
+                                        'bambini e curiosi, in un progetto che '
+                                        'mette al centro la strada come luogo '
+                                        'di relazione, ascolto e verità. '
+                                        'l’inaugurazione si terrà venerdì 16 '
+                                        'gennaio alle ore 18.30 alla presenza '
+                                        'di Tullio Cesario, fotografo, '
+                                        'divulgatore, musicista e fondatore di '
+                                        'EFFE 4.0, che terrà un dibattito '
+                                        'sulla percezione dell’osservatore. Si '
+                                        'partirà già sabato 17 gennaio con un '
+                                        'workshop intensivo con Salvatore '
+                                        'Matarazzo, tra i fotografi di strada '
+                                        'più riconosciuti a livello nazionale '
+                                        'e internazionale. Fondatore della '
+                                        'pagina Street Photography Versilia, '
+                                        'punto di riferimento per appassionati '
+                                        'e addetti ai lavori, Matarazzo è '
+                                        'membro del collettivo internazionale '
+                                        'Full Frontal Flash e del collettivo '
+                                        'Elephant Gun. Le sue fotografie sono '
+                                        'state pubblicate su riviste e portali '
+                                        'internazionali, tra cui LensCulture, '
+                                        'Huffington Post, Street Photography '
+                                        'Magazine, ISP – International Street '
+                                        'Photography, e sono state esposte in '
+                                        'festival e spazi prestigiosi in '
+                                        'Italia e all’estero, dagli Stati '
+                                        'Uniti alla Corea del Sud. Nel '
+                                        'workshop intensivo di sabato 17 '
+                                        'gennaio (evento su prenotazione), '
+                                        'Matarazzo guiderà fotografi e curiosi '
+                                        'in un percorso teorico e pratico '
+                                        'dedicato al ritratto di strada e '
+                                        'all’uso del flash nella street '
+                                        'photography. Il laboratorio si fonda '
+                                        'su un rapporto diretto e paritario '
+                                        'con i partecipanti, privilegiando '
+                                        'l’esperienza individuale, '
+                                        'l’osservazione lenta, l’empatia e la '
+                                        'consapevolezza del gesto fotografico. '
+                                        'Camminare, osservare, riflettere e '
+                                        'poi scattare: una fotografia pensata, '
+                                        'mai casuale, che parla di chi la '
+                                        'realizza prima ancora che del '
+                                        'soggetto ritratto. Domenica 18 '
+                                        'gennaio, sarà la volta di Mario '
+                                        'Mencacci, fotografo FIAF e '
+                                        'architetto, che curerà una sessione '
+                                        'di lettura portfolio, accompagnata da '
+                                        'un approfondimento sul rapporto tra '
+                                        'fotografia, spazio urbano e identità '
+                                        'del quartiere Nicolosi. Il secondo '
+                                        'week end (24–25 gennaio) vedrà '
+                                        'protagonista Lilliana Ranalletta, '
+                                        'fotografa di fama internazionale, '
+                                        'vincitrice di numerosi festival, '
+                                        'autrice di libri fotografici e '
+                                        'pubblicata su importanti riviste. '
+                                        'Ranalletta sarà la curatrice del '
+                                        'progetto corale Street Spirit '
+                                        'Nicolosi: un photowalk partecipato '
+                                        'dedicato al territorio, durante il '
+                                        'quale i fotografi documenteranno il '
+                                        'quartiere sotto la sua supervisione. '
+                                        'Da questo percorso nascerà il libro '
+                                        'fotografico ufficiale del festival. '
+                                        'Il terzo week end (31 gennaio – 1 '
+                                        'febbraio) sarà dedicato ai laboratori '
+                                        'e alle attività educative, con '
+                                        'l’obiettivo di avvicinare bambini, '
+                                        'ragazzi e giovani del quartiere al '
+                                        'linguaggio visivo e alla fotografia '
+                                        'come strumento di espressione e '
+                                        'consapevolezza. In particolare, '
+                                        'domenica 1 febbraio, si terrà un '
+                                        'laboratorio di fotografia per bambini '
+                                        'e ragazzi, a cura di EFFE 4.0, '
+                                        'pensato come primo contatto con lo '
+                                        'sguardo fotografico e con la '
+                                        'possibilità di raccontare il proprio '
+                                        'mondo. Il festival si concluderà nel '
+                                        'week end del 6–8 febbraio con '
+                                        'l’editing e la presentazione del '
+                                        'libro “Street Spirit Nicolosi” e un '
+                                        'incontro aperto con la comunità, '
+                                        'momento di restituzione collettiva e '
+                                        'dialogo tra immagini, autori e '
+                                        'abitanti. È dunque dal 16 gennaio '
+                                        'all’8 febbraio presso lo Spazio '
+                                        'Nicolosi di Latina. Per avere '
+                                        'maggiori informazioni e partecipare '
+                                        'ai workshop sono a disposizione i '
+                                        'numeri WhatApp 348 8929030 e 350 '
+                                        '0337918 e l’indirizzo email '
+                                        'info@spazioculturalenicolosi.it',
+                         'dove': {'address': 'Via Filippo Corridoni',
+                                  'name': 'Spazio Culturale Nicolosi',
+                                  'raw_text': 'Dove Spazio Culturale Nicolosi '
+                                              'Via Filippo Corridoni'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/62405992506057/salvatore_matarazzo_001.jpg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-02-08',
+                                    'date_start': '2026-01-16',
+                                    'raw_text': 'Quando Dal 16/01/2026 al '
+                                                '08/02/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Mostre',
+                       'date': 'dal 16 gennaio al 8 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/62405992506057/salvatore_matarazzo_001.jpg',
+                       'location': 'Spazio Culturale Nicolosi',
+                       'stars': 4,
+                       'title': 'Street Spirit Nicolosi: a Latina il festival '
+                                'dedicato alla fotografia di strada'}},
+ 'scraped_at': '2026-02-02T19:46:01.072350',
+ 'source': 'city_today',
+ 'title': 'Street Spirit Nicolosi: a Latina il festival dedicato alla '
+          'fotografia di strada',
+ 'url': 'https://www.latinatoday.it/eventi/street-spirit-nicolosi-latina.html',
+ 'uuid': 'b7a725b02bb9785a',
+ 'website': None}
+[2026-02-02T19:46:02.291+0000] {docker.py:429} INFO - 2026-02-02 19:46:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/teatro-d-annunzio-stagione-di-prosa-2025-2026-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:02.402+0000] {docker.py:429} INFO - 2026-02-02 19:46:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/teatro-d-annunzio-stagione-di-prosa-2025-2026-latina.html>
+{'category': ['Teatri'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '99f1a7a2e69af18e',
+ 'date_display': 'dal 22 ottobre 2025 al 18 aprile 2026',
+ 'date_end': '2026-04-18',
+ 'date_start': '2025-10-22',
+ 'description': 'Prende il via la stagione di prosa 2025-2026 del Teatro '
+                'D’Annunzio: un ricco cartellone che comprende dieci '
+                'spettacoli organizzati dal Comune di Latina in collaborazione '
+                'con ATCL – Circuito Multidisciplinare del Lazio. Sul palco '
+                'del teatro principale della città si alterneranno grandi '
+                'protagonisti del mondo dello spettacolo da Alessio Boni a '
+                'Emilio Solfrizzi, da Mariagrazia Cucinotta a Luca Bizzarri, '
+                'Milena Vukotic e molti altri ancora, con i principali '
+                'professionisti locali: si parla di compagnie storiche di '
+                'Latina ormai conosciute e apprezzate non solo in città come '
+                'Latitudine Teatro, Elisabetta Femiano e Danilo Proia della '
+                'Compagnia il Gruppo dell’Arte o Clemente Pernarella e Melania '
+                'Maccaferri. Una stagione che propone classici della '
+                'drammaturgia come il Macbeth o l’Iliade, rivisitate in chiave '
+                'moderna con particolare attenzione per la messa in scena e i '
+                'legami con il mondo di oggi, classici moderni come L’Anatra '
+                'all’Arancia o A Spasso con Daisy. Accanto alla stagione di '
+                "prosa, il D’Annunzio sarà inoltre animato da un'ampia e varia "
+                'programmazione che comprende la stagione di danza, quella '
+                'concertistica, incontri con personaggi importanti, palco '
+                'comico e svariati appuntamenti fuori dagli abbonamenti. È '
+                'dunque al Teatro D’Annunzio di Latina dal 22 ottobre 2025 al '
+                '18 aprile 2026. I biglietti sono disponibili presso il '
+                'botteghino e online su Ticketone, per maggiori informazioni '
+                'sono a disposizione il numero 0773/652642 e l’indirizzo email '
+                'teatrodannunziolatina@gmail.com Stagione di prosa - biglietti '
+                'Platea: Intero € 27 + d.p. | Ridotto over 65 € 25 + d.p. '
+                'Ridotto promo abbonati danza e musica: € 23 + d.p. Palchi '
+                'platea, I Galleria, Palchi galleria I ord: Intero € 25+ d.p. '
+                '| Ridotto over 65 € 23+ d.p. Ridotto promo abbonati danza e '
+                'musica: € 21 + d.p. Ridotto under 35: € 17 + d.p. II '
+                'Galleria, Palchi galleria II ord: Intero € 22 + d.p. | '
+                'Ridotto over 65 € 20+ d.p. Ridotto promo abbonati danza e '
+                'musica: € 18 + d.p. Ridotto under 35: € 10 + d.p. 22 '
+                'MERCOLEDÌ OTTOBRE 2025 ore 21.00 ILIADE - IL GIOCO DEGLI DÈI '
+                'Alessio Boni, Antonella Attili liberamente ispirato '
+                'all’Iliade di Omero di Francesco Niccolini, regia Roberto '
+                'Aldorasi, Alessio Boni e Marcello Prayer e con Haroun Fall, '
+                'Jun Ichikawa, Liliana Massari, Francesco Meoni, Elena Nico, '
+                'Marcello Prayer Iliade canta di un mondo in cui l’etica del '
+                'successo non lascia spazio alla giustizia e gli uomini non '
+                'decidono nulla, ma sono agiti dagli dèi in una lunga e '
+                'terribile guerra senza vincitori né vinti. La coscienza e la '
+                'scelta non sono ancora cose che riguardano gli umani: la '
+                'civiltà dovrà attendere l’età della Tragedia per conoscere la '
+                'responsabilità personale e tutto il peso della libertà da '
+                'quegli dèi che sono causa di tutto ma non hanno colpa di '
+                'nulla. In quel mondo arcaico dominato dalla forza, dal Fato '
+                'ineluttabile e da dèi capricciosi non è difficile specchiarci '
+                'e riconoscere il nostro: le nostre vite dominate dalla paura, '
+                'dal desiderio di ricchezza, dall’ossessione del nemico, dai '
+                'giochi di potere e da tutte le forze distruttive che ci '
+                'sprofondano nell’irrazionale e rendono possibile la guerra. 9 '
+                'DOMENICA NOVEMBRE 2025 ore 18:00 D’ANNUNZIO JAZZ Elisabetta '
+                'Femiano, Danilo Proia, Emanuele Vezzoli da “La Figlia di '
+                'Iorio” di Gabriele D’Annunzio adattamento e regia Danilo '
+                'Proia chitarra Simone Salvatori, sassofono Laura Venditti In '
+                'uno spazio post-moderno al termine di una festa '
+                'pre-matrimoniale lo sposo rimane solo in una notte di luna '
+                'piena. Frastornato dall’improvviso mutamento di atmosfera i '
+                'versi dannunziani lo proiettano in una dimensione di sogno. '
+                'Intorno a lui frammenti di musica, voci, presenze lo rendono '
+                'protagonista e non più spettatore. Musica e versi lo '
+                'travolgono vorticosamente, realizzando una mirabile '
+                'consonanza tra realtà e immaginazione. Ed è qui che irrompono '
+                'con forza il testo ‘’La Figlia di Iorio’’ e la sapiente e '
+                'pura forma creativa della musica jazz. In una sorta di '
+                'iniziazione di sapore misterico l’uomo vivrà un intenso '
+                'viaggio di conoscenza. Al primo sorgere del sole si troverà '
+                'di nuovo solo. Rotti gli schemi, può finalmente diventare il '
+                'poeta della sua stessa vita celebrando così un nuovo '
+                'battesimo. 22 SABATO NOVEMBRE 2025 ore 21.00 MACBETH Daniele '
+                'Pecci, Laura Marinoni regia Daniele Pecci Macbeth è una fra '
+                'le più note tragedie shakespeariane. Essa drammatizza i '
+                'catastrofici effetti fisici e psichici della ricerca del '
+                'potere per il proprio interesse personale Nelle sue note di '
+                'regia Daniele Pecci, che è alla sua seconda avventura '
+                'shakespeariana dopo “Amleto” ci racconta il suo pensiero: '
+                '“Ciò che è fatto, non si può disfare”, perché l’atto '
+                'stabilisce un punto di non ritorno. Questo accade nel '
+                'Macbeth: una volta entrati nel sangue bisogna per forza '
+                'proseguire in una spirale omicidiaria che non può avere fine. '
+                'È un incubo dal quale ci si vorrebbe svegliare, ma ad un '
+                'certo punto diventa difficile districarsi fra stato di veglia '
+                'e sonno. Nella più esoterica delle tragedie shakespeariane il '
+                '“viaggio” non può che essere all’interno della mente, '
+                'dell’inconscio, del sogno del protagonista. Desolate lande '
+                'metafisiche, tramonti surreali di sangue, paesaggi distorti, '
+                'deformati dal sogno, saranno il tentativo di un’indagine '
+                'sulla natura omicida dell’uomo. Daniele Pecci affronta questo '
+                'testo sia come regista che come attore con Laura Marinoni nel '
+                'ruolo di Lady Macbeth 5 VENERDÌ DICEMBRE 2025 ore 21.00 '
+                'L’ANATRA ALL’ARANCIA Irene Ferri, Emilio Solfrizzi di W. D. '
+                'Home e M. G. Sauvajon regia Claudio Greg Gregori e con Ruben '
+                'Rigillo, Beatrice Schiaffino, Antonella Piccolo “L’Anatra '
+                'all’Arancia” è un classico feuilleton dove i personaggi si '
+                'muovono algidi ed eleganti su una scacchiera irta di '
+                'trabocchetti. Ogni mossa dei protagonisti, però, ne rivela le '
+                'emozioni, le mette a nudo a poco a poco e il cinismo lascia '
+                'il passo ai timori, all’acredine, alla rivalità, alla '
+                'gelosia; in una parola all’Amore, poiché è di questo che si '
+                'parla. “L’Anatra all’Arancia” è una commedia che ti afferra '
+                'immediatamente e ti trascina nel suo vortice di battute '
+                'sagaci, solo apparentemente casuali, perché tutto è '
+                'architettato come una partita a scacchi. La trasformazione '
+                'dei personaggi avviene morbida, grazie a una regia che la '
+                'modella con cromatismi e movimenti talvolta sinuosi, talvolta '
+                'repentini, ma sempre nel rispetto di un racconto sofisticato '
+                'in cui le meschinità dell’animo umano ci servano a sorridere, '
+                'ma anche a suggerirci il modo di sbarazzarsene. 24 SABATO '
+                'GENNAIO 2026 ore 21.00 IL MEDICO DEI MAIALI Luca Bizzarri, '
+                'Francesco Montanari, David Sebasti, Mauro Marino, Luigi '
+                'Cosimelli testo e regia Davide Sacco La morte improvvisa del '
+                're d’Inghilterra mostra tutta la debolezza della monarchia '
+                'quando la corona finisce nelle mani del principe ereditario, '
+                'un ragazzo sciocco e sprovveduto. Tra il potere e il nuovo '
+                're, un medico veterinario pronto a cogliere un’occasione che '
+                'forse, poi, non si rivelerà tale. Il re d’Inghilterra muore '
+                'all’improvviso durante l’inaugurazione di un albergo in '
+                'Scozia. Fuori, il temporale impedisce al medico di palazzo '
+                'per arrivare a constatare il decesso. Tale compito viene '
+                'assegnato all’unico medico presente presso la struttura, ma '
+                'il caso vuole che sia un veterinario, specializzato in '
+                'maiali. Il veterinario capisce che il re non è morto '
+                'd’infarto come i consiglieri vogliono far credere, ma sta al '
+                'gioco. Nel frattempo, arriva in albergo il principe '
+                'ereditario, un giovane scialbo e, a suo stesso dire, stupido, '
+                'vestito da nazista perché stava partecipando a una festa a '
+                'tema durante il gay pride.Il principe chiede di rimanere solo '
+                'con il medico. Deve preparare il suo primo discorso alla '
+                'nazione e non sa dove mettere le mani. Il veterinario capisce '
+                'che ha un’opportunità, ma deve giocarsi bene le sue carte... '
+                '14 SABATO FEBBRAIO 2026 ore 21.00 TRAFFICO Morris Sarra di '
+                'Sergio Blanco produzione Latitudine Teatro, regia Stefano '
+                'Furlan È un monologo intenso che racconta la vita di Alex, un '
+                'giovane prostituto ai margini della città, intrappolato in '
+                'una rete di desiderio, violenza e criminalità. La sua moto '
+                'sportiva, simbolo del sogno di libertà, rappresenta '
+                'un’ambizione inafferrabile, l’illusione di poter fuggire da '
+                'una realtà difficile e dolorosa. Il legame ambiguo con un '
+                'cliente misterioso, chiamato “il francese”, trascina Alex in '
+                'una spirale di incontri erotici e violenti, dove il desiderio '
+                'si mescola al pericolo e l’ingenuità alla disperazione. Una '
+                'storia che esplora i confini della marginalità e il bisogno, '
+                'spesso ingenuo, di riscatto. L’allestimento si concentra su '
+                'una rappresentazione essenziale, capace di evocare il mondo '
+                'interiore del protagonista senza cedere al naturalismo. La '
+                'moto, elemento chiave dell’immaginario di Alex, non è '
+                'ricreata in modo realistico, ma frammentata in simboli '
+                'scenici che suggeriscono un desiderio mai realizzato. 21 '
+                'SABATO FEBBRAIO 2026 ore 21.00 UN SOGNO A ISTANBUL Ballata '
+                'per tre uomini e una donna Maddalena Crippa, Maximilian Nisi, '
+                'Mario Incudine, Adriano Giraldi tratto da “La Cotogna di '
+                'Istanbul” di Paolo Rumiz, ed. Feltrinelli di Alberto Bassetti '
+                'regia Alessio Pizzech Un sogno a Istanbul racconta di Max e '
+                'Maša, e del loro amore. Maximilian von Altenberg, ingegnere '
+                'austriaco, viene mandato a Sarajevo per un sopralluogo '
+                'nell’inverno del ’97. Un amico gli presenta la misteriosa '
+                'Maša Dizdarević, “occhio tartaro e femori lunghi”, austera e '
+                'selvaggia, splendida e inaccessibile, vedova e divorziata, '
+                'due figlie che vivono lontane da lei. Scatta qualcosa. '
+                'Un’attrazione potente che però non ha il tempo di '
+                'concretizzarsi. Max torna in patria e, per quanto faccia, '
+                'prima di ritrovarla passano tre anni. Sono i tre anni '
+                'fatidici di cui parlava “La Gialla Cotogna di Istanbul”, la '
+                'canzone d’amore che Maša gli ha cantato. Maša ora è malata, '
+                'ma l’amore finalmente si accende. Da lì in poi si leva un '
+                'vento che muove le anime e i sensi, che strappa lacrime e '
+                'sogni. Da lì in poi comincia un’avventura che porta Max nei '
+                'luoghi magici di Maša, in un viaggio che è rito, scoperta e '
+                'resurrezione. 20 VENERDÌ MARZO 2026 ore 21.00 LA MOGLIE '
+                'FANTASMA Mariagrazia Cucinotta, Pino Quartullo di David '
+                'Tristram regia Marco Rampoldi e con Gianmarco Pozzoli, '
+                'Giorgio Verduci, Roberta Petrozzi Edward, scrittore di teatro '
+                'in crisi, non ha superato la morte della moglie, ma proprio '
+                'quando sembra affacciarsi una nuova possibilità (quella di '
+                'Glenda, giovane affascinante attrice) come un novello Amleto, '
+                'riceve la visita dello spirito della moglie morte, Ruby. '
+                'Questa non si presenta in modo molto shakespeariano, al '
+[2026-02-02T19:46:02.404+0000] {docker.py:429} INFO - 'contrario: ha conservato i modi burberi, schietti, il cinismo '
+                'e l’arroganza di quand’era viva. Inoltre è tornata '
+                'dall’aldilà per una grande confessione: non è morta per aver '
+                'accidentalmente mischiato cocktail e droghe, ma è stata '
+                'assassinata ed Edward deve aiutarla a scoprire chi è '
+                'stato!... La moglie fantasma è un mix di Spirito allegro e '
+                'Amleto. La figura di Ruby è esilarante, un fantasma molto '
+                'distante dai soliti cliché. E il giallo riserva delle belle '
+                'sorprese, con l’entrata in scena nel secondo atto di vari '
+                'personaggi per arrivare poi a un finale con un colpo di '
+                'scena... e che, naturalmente, scatena l’ilarità. David '
+                'Tristram si supera in una commedia divertente, piena di '
+                'ironia, giochi di parole e di godibili rimandi al grande '
+                'bardo. Mariagrazia Cucinotta torna al suo amore per il teatro '
+                'in una commedia di grande successo all’estero, affiancata da '
+                'un talento come Pino Quartullo, tra gli attori più amati del '
+                'panorama italiano, per la direzione di Marco Rampoldi, firma '
+                'da anni impegnata nelle edizioni di preziosi testi ancora '
+                'sconosciuti in Italia. La sfida è intrigante... 18 SABATO '
+                'APRILE 2026 ore 21.00 A SPASSO CON DAISY Milena Vukotic, '
+                'Salvatore Marino, Maximilian Nisi di Alfred Uhry adattamento '
+                'di Mario Scaletta regia Guglielmo Ferro La bravissima Milena '
+                'Vukotic dà vita all’anziana Daisy in una storia delicata e '
+                'divertente capace di raccontare con umorismo un tema '
+                'complesso come quello del razzismo dell’America del '
+                'dopoguerra. Daisy, anziana maestra in pensione è una ricca '
+                'signora ebrea che vuole apparire povera, dal piglio forte: '
+                'ironica, diretta, scontrosa, capricciosa e avara. È vitale ed '
+                'indipendente nonostante l’età ed è assolutamente mal disposta '
+                'verso la decisione presa dal figlio. Boolie di assumere un '
+                'autista. Daisy non vuole in casa qualcuno che tocchi le sue '
+                'cose, che la privi del gusto di guidare, che la faccia vedere '
+                'in giro accompagnata da uno chauffeur, come una donna ricca. '
+                'Per fortuna Hoke, l’autista di colore affezionato e '
+                'analfabeta è paziente e capace di sopportare tutte le '
+                'stranezze di Daisy e rimanere dignitosamente in disparte. '
+                'Giorno dopo giorno, la diffidenza iniziale lascia il posto a '
+                'un rapporto fatto di battibecchi e battute pungenti che cela '
+                'in realtà un affetto profondo. In fondo A Spasso con Daisy '
+                'non è che questo: la storia di un’amicizia profonda nata '
+                'nonostante i pregiudizi e le classi sociali. Emozionarsi non '
+                'è mai stato così divertente.',
+ 'event_id': 'teatro-d-annunzio-stagione-di-prosa-2025-2026-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/25902128412030/macbeth-pecci.jpg',
+ 'location_address': 'Viale Umberto I',
+ 'location_name': "Teatro Gabriele D'Annunzio",
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web latina.it',
+                                                'website': 'https://www.comune.latina.it/notizie/Stagione-di-Prosa-2025-2026.html#_16e69eb7-adea-4453-9163-255b3406fc3c'},
+                         'descrizione': 'Prende il via la stagione di prosa '
+                                        '2025-2026 del Teatro D’Annunzio: un '
+                                        'ricco cartellone che comprende dieci '
+                                        'spettacoli organizzati dal Comune di '
+                                        'Latina in collaborazione con ATCL – '
+                                        'Circuito Multidisciplinare del Lazio. '
+                                        'Sul palco del teatro principale della '
+                                        'città si alterneranno grandi '
+                                        'protagonisti del mondo dello '
+                                        'spettacolo da Alessio Boni a Emilio '
+                                        'Solfrizzi, da Mariagrazia Cucinotta a '
+                                        'Luca Bizzarri, Milena Vukotic e molti '
+                                        'altri ancora, con i principali '
+                                        'professionisti locali: si parla di '
+                                        'compagnie storiche di Latina ormai '
+                                        'conosciute e apprezzate non solo in '
+                                        'città come Latitudine Teatro, '
+                                        'Elisabetta Femiano e Danilo Proia '
+                                        'della Compagnia il Gruppo dell’Arte o '
+                                        'Clemente Pernarella e Melania '
+                                        'Maccaferri. Una stagione che propone '
+                                        'classici della drammaturgia come il '
+                                        'Macbeth o l’Iliade, rivisitate in '
+                                        'chiave moderna con particolare '
+                                        'attenzione per la messa in scena e i '
+                                        'legami con il mondo di oggi, classici '
+                                        'moderni come L’Anatra all’Arancia o A '
+                                        'Spasso con Daisy. Accanto alla '
+                                        'stagione di prosa, il D’Annunzio sarà '
+                                        "inoltre animato da un'ampia e varia "
+                                        'programmazione che comprende la '
+                                        'stagione di danza, quella '
+                                        'concertistica, incontri con '
+                                        'personaggi importanti, palco comico e '
+                                        'svariati appuntamenti fuori dagli '
+                                        'abbonamenti. È dunque al Teatro '
+                                        'D’Annunzio di Latina dal 22 ottobre '
+                                        '2025 al 18 aprile 2026. I biglietti '
+                                        'sono disponibili presso il botteghino '
+                                        'e online su Ticketone, per maggiori '
+                                        'informazioni sono a disposizione il '
+                                        'numero 0773/652642 e l’indirizzo '
+                                        'email teatrodannunziolatina@gmail.com '
+                                        'Stagione di prosa - biglietti Platea: '
+                                        'Intero € 27 + d.p. | Ridotto over 65 '
+                                        '€ 25 + d.p. Ridotto promo abbonati '
+                                        'danza e musica: € 23 + d.p. Palchi '
+                                        'platea, I Galleria, Palchi galleria I '
+                                        'ord: Intero € 25+ d.p. | Ridotto over '
+                                        '65 € 23+ d.p. Ridotto promo abbonati '
+                                        'danza e musica: € 21 + d.p. Ridotto '
+                                        'under 35: € 17 + d.p. II Galleria, '
+                                        'Palchi galleria II ord: Intero € 22 + '
+                                        'd.p. | Ridotto over 65 € 20+ d.p. '
+                                        'Ridotto promo abbonati danza e '
+                                        'musica: € 18 + d.p. Ridotto under 35: '
+                                        '€ 10 + d.p. 22 MERCOLEDÌ OTTOBRE 2025 '
+                                        'ore 21.00 ILIADE - IL GIOCO DEGLI DÈI '
+                                        'Alessio Boni, Antonella Attili '
+                                        'liberamente ispirato all’Iliade di '
+                                        'Omero di Francesco Niccolini, regia '
+                                        'Roberto Aldorasi, Alessio Boni e '
+                                        'Marcello Prayer e con Haroun Fall, '
+                                        'Jun Ichikawa, Liliana Massari, '
+                                        'Francesco Meoni, Elena Nico, Marcello '
+                                        'Prayer Iliade canta di un mondo in '
+                                        'cui l’etica del successo non lascia '
+                                        'spazio alla giustizia e gli uomini '
+                                        'non decidono nulla, ma sono agiti '
+                                        'dagli dèi in una lunga e terribile '
+                                        'guerra senza vincitori né vinti. La '
+                                        'coscienza e la scelta non sono ancora '
+                                        'cose che riguardano gli umani: la '
+                                        'civiltà dovrà attendere l’età della '
+                                        'Tragedia per conoscere la '
+                                        'responsabilità personale e tutto il '
+                                        'peso della libertà da quegli dèi che '
+                                        'sono causa di tutto ma non hanno '
+                                        'colpa di nulla. In quel mondo arcaico '
+                                        'dominato dalla forza, dal Fato '
+                                        'ineluttabile e da dèi capricciosi non '
+                                        'è difficile specchiarci e riconoscere '
+                                        'il nostro: le nostre vite dominate '
+                                        'dalla paura, dal desiderio di '
+                                        'ricchezza, dall’ossessione del '
+                                        'nemico, dai giochi di potere e da '
+                                        'tutte le forze distruttive che ci '
+                                        'sprofondano nell’irrazionale e '
+                                        'rendono possibile la guerra. 9 '
+                                        'DOMENICA NOVEMBRE 2025 ore 18:00 '
+                                        'D’ANNUNZIO JAZZ Elisabetta Femiano, '
+                                        'Danilo Proia, Emanuele Vezzoli da “La '
+                                        'Figlia di Iorio” di Gabriele '
+                                        'D’Annunzio adattamento e regia Danilo '
+                                        'Proia chitarra Simone Salvatori, '
+                                        'sassofono Laura Venditti In uno '
+                                        'spazio post-moderno al termine di una '
+                                        'festa pre-matrimoniale lo sposo '
+                                        'rimane solo in una notte di luna '
+                                        'piena. Frastornato dall’improvviso '
+                                        'mutamento di atmosfera i versi '
+                                        'dannunziani lo proiettano in una '
+                                        'dimensione di sogno. Intorno a lui '
+                                        'frammenti di musica, voci, presenze '
+                                        'lo rendono protagonista e non più '
+                                        'spettatore. Musica e versi lo '
+                                        'travolgono vorticosamente, '
+                                        'realizzando una mirabile consonanza '
+                                        'tra realtà e immaginazione. Ed è qui '
+                                        'che irrompono con forza il testo ‘’La '
+                                        'Figlia di Iorio’’ e la sapiente e '
+                                        'pura forma creativa della musica '
+                                        'jazz. In una sorta di iniziazione di '
+                                        'sapore misterico l’uomo vivrà un '
+                                        'intenso viaggio di conoscenza. Al '
+                                        'primo sorgere del sole si troverà di '
+                                        'nuovo solo. Rotti gli schemi, può '
+                                        'finalmente diventare il poeta della '
+                                        'sua stessa vita celebrando così un '
+                                        'nuovo battesimo. 22 SABATO NOVEMBRE '
+                                        '2025 ore 21.00 MACBETH Daniele Pecci, '
+                                        'Laura Marinoni regia Daniele Pecci '
+                                        'Macbeth è una fra le più note '
+                                        'tragedie shakespeariane. Essa '
+                                        'drammatizza i catastrofici effetti '
+                                        'fisici e psichici della ricerca del '
+                                        'potere per il proprio interesse '
+                                        'personale Nelle sue note di regia '
+                                        'Daniele Pecci, che è alla sua seconda '
+                                        'avventura shakespeariana dopo '
+                                        '“Amleto” ci racconta il suo pensiero: '
+                                        '“Ciò che è fatto, non si può '
+                                        'disfare”, perché l’atto stabilisce un '
+                                        'punto di non ritorno. Questo accade '
+                                        'nel Macbeth: una volta entrati nel '
+                                        'sangue bisogna per forza proseguire '
+                                        'in una spirale omicidiaria che non '
+                                        'può avere fine. È un incubo dal quale '
+                                        'ci si vorrebbe svegliare, ma ad un '
+                                        'certo punto diventa difficile '
+                                        'districarsi fra stato di veglia e '
+                                        'sonno. Nella più esoterica delle '
+                                        'tragedie shakespeariane il “viaggio” '
+                                        'non può che essere all’interno della '
+                                        'mente, dell’inconscio, del sogno del '
+                                        'protagonista. Desolate lande '
+                                        'metafisiche, tramonti surreali di '
+                                        'sangue, paesaggi distorti, deformati '
+                                        'dal sogno, saranno il tentativo di '
+                                        'un’indagine sulla natura omicida '
+                                        'dell’uomo. Daniele Pecci affronta '
+                                        'questo testo sia come regista che '
+                                        'come attore con Laura Marinoni nel '
+                                        'ruolo di Lady Macbeth 5 VENERDÌ '
+                                        'DICEMBRE 2025 ore 21.00 L’ANATRA '
+                                        'ALL’ARANCIA Irene Ferri, Emilio '
+                                        'Solfrizzi di W. D. Home e M. G. '
+                                        'Sauvajon regia Claudio Greg Gregori e '
+                                        'con Ruben Rigillo, Beatrice '
+                                        'Schiaffino, Antonella Piccolo '
+                                        '“L’Anatra all’Arancia” è un classico '
+                                        'feuilleton dove i personaggi si '
+                                        'muovono algidi ed eleganti su una '
+                                        'scacchiera irta di trabocchetti. Ogni '
+                                        'mossa dei protagonisti, però, ne '
+                                        'rivela le emozioni, le mette a nudo a '
+                                        'poco a poco e il cinismo lascia il '
+                                        'passo ai timori, all’acredine, alla '
+                                        'rivalità, alla gelosia; in una parola '
+                                        'all’Amore, poiché è di questo che si '
+                                        'parla. “L’Anatra all’Arancia” è una '
+                                        'commedia che ti afferra '
+                                        'immediatamente e ti trascina nel suo '
+                                        'vortice di battute sagaci, solo '
+                                        'apparentemente casuali, perché tutto '
+                                        'è architettato come una partita a '
+                                        'scacchi. La trasformazione dei '
+                                        'personaggi avviene morbida, grazie a '
+                                        'una regia che la modella con '
+                                        'cromatismi e movimenti talvolta '
+                                        'sinuosi, talvolta repentini, ma '
+                                        'sempre nel rispetto di un racconto '
+                                        'sofisticato in cui le meschinità '
+[2026-02-02T19:46:02.405+0000] {docker.py:429} INFO - 'dell’animo umano ci servano a '
+                                        'sorridere, ma anche a suggerirci il '
+                                        'modo di sbarazzarsene. 24 SABATO '
+                                        'GENNAIO 2026 ore 21.00 IL MEDICO DEI '
+                                        'MAIALI Luca Bizzarri, Francesco '
+                                        'Montanari, David Sebasti, Mauro '
+                                        'Marino, Luigi Cosimelli testo e regia '
+                                        'Davide Sacco La morte improvvisa del '
+                                        're d’Inghilterra mostra tutta la '
+                                        'debolezza della monarchia quando la '
+                                        'corona finisce nelle mani del '
+                                        'principe ereditario, un ragazzo '
+                                        'sciocco e sprovveduto. Tra il potere '
+                                        'e il nuovo re, un medico veterinario '
+                                        'pronto a cogliere un’occasione che '
+                                        'forse, poi, non si rivelerà tale. Il '
+                                        're d’Inghilterra muore all’improvviso '
+                                        'durante l’inaugurazione di un albergo '
+                                        'in Scozia. Fuori, il temporale '
+                                        'impedisce al medico di palazzo per '
+                                        'arrivare a constatare il decesso. '
+                                        'Tale compito viene assegnato '
+                                        'all’unico medico presente presso la '
+                                        'struttura, ma il caso vuole che sia '
+                                        'un veterinario, specializzato in '
+                                        'maiali. Il veterinario capisce che il '
+                                        're non è morto d’infarto come i '
+                                        'consiglieri vogliono far credere, ma '
+                                        'sta al gioco. Nel frattempo, arriva '
+                                        'in albergo il principe ereditario, un '
+                                        'giovane scialbo e, a suo stesso dire, '
+                                        'stupido, vestito da nazista perché '
+                                        'stava partecipando a una festa a tema '
+                                        'durante il gay pride.Il principe '
+                                        'chiede di rimanere solo con il '
+                                        'medico. Deve preparare il suo primo '
+                                        'discorso alla nazione e non sa dove '
+                                        'mettere le mani. Il veterinario '
+                                        'capisce che ha un’opportunità, ma '
+                                        'deve giocarsi bene le sue carte... 14 '
+                                        'SABATO FEBBRAIO 2026 ore 21.00 '
+                                        'TRAFFICO Morris Sarra di Sergio '
+                                        'Blanco produzione Latitudine Teatro, '
+                                        'regia Stefano Furlan È un monologo '
+                                        'intenso che racconta la vita di Alex, '
+                                        'un giovane prostituto ai margini '
+                                        'della città, intrappolato in una rete '
+                                        'di desiderio, violenza e criminalità. '
+                                        'La sua moto sportiva, simbolo del '
+                                        'sogno di libertà, rappresenta '
+                                        'un’ambizione inafferrabile, '
+                                        'l’illusione di poter fuggire da una '
+                                        'realtà difficile e dolorosa. Il '
+                                        'legame ambiguo con un cliente '
+                                        'misterioso, chiamato “il francese”, '
+                                        'trascina Alex in una spirale di '
+                                        'incontri erotici e violenti, dove il '
+                                        'desiderio si mescola al pericolo e '
+                                        'l’ingenuità alla disperazione. Una '
+                                        'storia che esplora i confini della '
+                                        'marginalità e il bisogno, spesso '
+                                        'ingenuo, di riscatto. L’allestimento '
+                                        'si concentra su una rappresentazione '
+                                        'essenziale, capace di evocare il '
+                                        'mondo interiore del protagonista '
+                                        'senza cedere al naturalismo. La moto, '
+                                        'elemento chiave dell’immaginario di '
+                                        'Alex, non è ricreata in modo '
+                                        'realistico, ma frammentata in simboli '
+                                        'scenici che suggeriscono un desiderio '
+                                        'mai realizzato. 21 SABATO FEBBRAIO '
+                                        '2026 ore 21.00 UN SOGNO A ISTANBUL '
+                                        'Ballata per tre uomini e una donna '
+                                        'Maddalena Crippa, Maximilian Nisi, '
+                                        'Mario Incudine, Adriano Giraldi '
+                                        'tratto da “La Cotogna di Istanbul” di '
+                                        'Paolo Rumiz, ed. Feltrinelli di '
+                                        'Alberto Bassetti regia Alessio '
+                                        'Pizzech Un sogno a Istanbul racconta '
+                                        'di Max e Maša, e del loro amore. '
+                                        'Maximilian von Altenberg, ingegnere '
+                                        'austriaco, viene mandato a Sarajevo '
+                                        'per un sopralluogo nell’inverno del '
+                                        '’97. Un amico gli presenta la '
+                                        'misteriosa Maša Dizdarević, “occhio '
+                                        'tartaro e femori lunghi”, austera e '
+                                        'selvaggia, splendida e inaccessibile, '
+                                        'vedova e divorziata, due figlie che '
+                                        'vivono lontane da lei. Scatta '
+                                        'qualcosa. Un’attrazione potente che '
+                                        'però non ha il tempo di '
+                                        'concretizzarsi. Max torna in patria '
+                                        'e, per quanto faccia, prima di '
+                                        'ritrovarla passano tre anni. Sono i '
+                                        'tre anni fatidici di cui parlava “La '
+                                        'Gialla Cotogna di Istanbul”, la '
+                                        'canzone d’amore che Maša gli ha '
+                                        'cantato. Maša ora è malata, ma '
+                                        'l’amore finalmente si accende. Da lì '
+                                        'in poi si leva un vento che muove le '
+                                        'anime e i sensi, che strappa lacrime '
+                                        'e sogni. Da lì in poi comincia '
+                                        'un’avventura che porta Max nei luoghi '
+                                        'magici di Maša, in un viaggio che è '
+                                        'rito, scoperta e resurrezione. 20 '
+                                        'VENERDÌ MARZO 2026 ore 21.00 LA '
+                                        'MOGLIE FANTASMA Mariagrazia '
+                                        'Cucinotta, Pino Quartullo di David '
+                                        'Tristram regia Marco Rampoldi e con '
+                                        'Gianmarco Pozzoli, Giorgio Verduci, '
+                                        'Roberta Petrozzi Edward, scrittore di '
+                                        'teatro in crisi, non ha superato la '
+                                        'morte della moglie, ma proprio quando '
+                                        'sembra affacciarsi una nuova '
+                                        'possibilità (quella di Glenda, '
+                                        'giovane affascinante attrice) come un '
+                                        'novello Amleto, riceve la visita '
+                                        'dello spirito della moglie morte, '
+                                        'Ruby. Questa non si presenta in modo '
+                                        'molto shakespeariano, al contrario: '
+                                        'ha conservato i modi burberi, '
+                                        'schietti, il cinismo e l’arroganza di '
+                                        'quand’era viva. Inoltre è tornata '
+                                        'dall’aldilà per una grande '
+                                        'confessione: non è morta per aver '
+                                        'accidentalmente mischiato cocktail e '
+                                        'droghe, ma è stata assassinata ed '
+                                        'Edward deve aiutarla a scoprire chi è '
+                                        'stato!... La moglie fantasma è un mix '
+                                        'di Spirito allegro e Amleto. La '
+                                        'figura di Ruby è esilarante, un '
+                                        'fantasma molto distante dai soliti '
+                                        'cliché. E il giallo riserva delle '
+                                        'belle sorprese, con l’entrata in '
+                                        'scena nel secondo atto di vari '
+                                        'personaggi per arrivare poi a un '
+                                        'finale con un colpo di scena... e '
+                                        'che, naturalmente, scatena l’ilarità. '
+                                        'David Tristram si supera in una '
+                                        'commedia divertente, piena di ironia, '
+                                        'giochi di parole e di godibili '
+                                        'rimandi al grande bardo. Mariagrazia '
+                                        'Cucinotta torna al suo amore per il '
+                                        'teatro in una commedia di grande '
+                                        'successo all’estero, affiancata da un '
+                                        'talento come Pino Quartullo, tra gli '
+                                        'attori più amati del panorama '
+                                        'italiano, per la direzione di Marco '
+                                        'Rampoldi, firma da anni impegnata '
+                                        'nelle edizioni di preziosi testi '
+                                        'ancora sconosciuti in Italia. La '
+                                        'sfida è intrigante... 18 SABATO '
+                                        'APRILE 2026 ore 21.00 A SPASSO CON '
+                                        'DAISY Milena Vukotic, Salvatore '
+                                        'Marino, Maximilian Nisi di Alfred '
+                                        'Uhry adattamento di Mario Scaletta '
+                                        'regia Guglielmo Ferro La bravissima '
+                                        'Milena Vukotic dà vita all’anziana '
+                                        'Daisy in una storia delicata e '
+                                        'divertente capace di raccontare con '
+                                        'umorismo un tema complesso come '
+                                        'quello del razzismo dell’America del '
+                                        'dopoguerra. Daisy, anziana maestra in '
+                                        'pensione è una ricca signora ebrea '
+                                        'che vuole apparire povera, dal piglio '
+                                        'forte: ironica, diretta, scontrosa, '
+                                        'capricciosa e avara. È vitale ed '
+                                        'indipendente nonostante l’età ed è '
+                                        'assolutamente mal disposta verso la '
+                                        'decisione presa dal figlio. Boolie di '
+                                        'assumere un autista. Daisy non vuole '
+                                        'in casa qualcuno che tocchi le sue '
+                                        'cose, che la privi del gusto di '
+                                        'guidare, che la faccia vedere in giro '
+                                        'accompagnata da uno chauffeur, come '
+                                        'una donna ricca. Per fortuna Hoke, '
+                                        'l’autista di colore affezionato e '
+                                        'analfabeta è paziente e capace di '
+                                        'sopportare tutte le stranezze di '
+                                        'Daisy e rimanere dignitosamente in '
+                                        'disparte. Giorno dopo giorno, la '
+                                        'diffidenza iniziale lascia il posto a '
+                                        'un rapporto fatto di battibecchi e '
+                                        'battute pungenti che cela in realtà '
+                                        'un affetto profondo. In fondo A '
+                                        'Spasso con Daisy non è che questo: la '
+                                        'storia di un’amicizia profonda nata '
+                                        'nonostante i pregiudizi e le classi '
+                                        'sociali. Emozionarsi non è mai stato '
+                                        'così divertente.',
+                         'dove': {'address': 'Viale Umberto I',
+                                  'name': "Teatro Gabriele D'Annunzio",
+                                  'raw_text': "Dove Teatro Gabriele D'Annunzio "
+                                              'Viale Umberto I'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/25902128412030/macbeth-pecci.jpg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-04-18',
+                                    'date_start': '2025-10-22',
+                                    'raw_text': 'Quando Dal 22/10/2025 al '
+                                                '18/04/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Teatri',
+                       'date': 'dal 22 ottobre 2025 al 18 aprile 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/25902128412030/macbeth-pecci.jpg',
+                       'location': "Teatro Gabriele D'Annunzio",
+                       'stars': 4,
+                       'title': 'Liberi di Scegliere: la stagione di prosa '
+                                '2025-2026 del Teatro D’Annunzio di Latina'}},
+ 'scraped_at': '2026-02-02T19:46:02.398338',
+ 'source': 'city_today',
+ 'title': 'Liberi di Scegliere: la stagione di prosa 2025-2026 del Teatro '
+          'D’Annunzio di Latina',
+ 'url': 'https://www.latinatoday.it/eventi/teatro-d-annunzio-stagione-di-prosa-2025-2026-latina.html',
+ 'uuid': '518aa6cbe583c7e3',
+ 'website': 'https://www.comune.latina.it/notizie/Stagione-di-Prosa-2025-2026.html#_16e69eb7-adea-4453-9163-255b3406fc3c'}
+[2026-02-02T19:46:03.804+0000] {docker.py:429} INFO - 2026-02-02 19:46:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/carnevale-2026-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:03.913+0000] {docker.py:429} INFO - 2026-02-02 19:46:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/carnevale-2026-latina.html>
+{'category': ['Manifestazioni'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '730005ff31fe9961',
+ 'date_display': 'dal 7 al 17 febbraio 2026',
+ 'date_end': '2026-02-17',
+ 'date_start': '2026-02-07',
+ 'description': 'Sono appena finite le festività natalizie ma già si pensa '
+                'all’imminente Carnevale, non a caso il Comune di Latina ha in '
+                'programma un ricco calendario di eventi per festeggiare '
+                'insieme. Grazie alla collaborazione tra istituzioni e '
+                'associazioni arriveranno spettacoli, attrazioni e feste che '
+                'faranno felici grandi e piccini per il Carnevale 2026 di '
+                'Latina . Davanti l’ex intendenza di finanza rimarrà montata '
+                'la ruota panoramica, amata e odiata che tanto ha fatto '
+                'discutere durante il periodo natalizio, e che anzi sarà '
+                'affiancata da altre tre attrazioni adatte ad adulti e '
+                'bambini. In giro per il centro ci saranno inoltre degli stand '
+                'di dolciumi carnevaleschi e articoli a tema. Il programma '
+                'avrà inizio sabato 7 febbraio con la grande sfilata '
+                'inaugurale dei carri allegorici: ben 12, ricchi di colori, '
+                'che sfileranno per le vie cittadine, dalle ore 14.30 alle ore '
+                '19, alternandosi a eventi di strada. Ad accompagnare la '
+                'sfilata saranno majorettes, cheerleader, bande musicali e la '
+                'Eco Band “Drum Dance & Sing”, che con strumenti realizzati '
+                'con materiali di riciclo porterà in scena un messaggio di '
+                'creatività e attenzione all’ambiente. Domenica 8 febbraio, '
+                'dalle ore 15 alle ore 19, in piazza del Popolo, a cura della '
+                'Pro Loco, ci saranno animazioni, mascotte, Truccabimbi e '
+                'cosplay, e a chiudere il pomeriggio di divertimento uno '
+                'spettacolo di teatro e “fuoco”, pronto a sorprendere il '
+                'pubblico e a trasformare il centro di Latina in un luogo di '
+                'meraviglia e divertimento per tutta la famiglia. Domenica 15 '
+                'febbraio, il Carnevale continuerà, dalle ore 16 alle ore 19, '
+                'con un evento del tutto singolare: lungo corso della '
+                'Repubblica andrà in scena uno spettacolo inedito per la '
+                'città, accompagnato da una band che riproporrà le più amate '
+                'sigle dei telefilm e dei film cult, come Supercar, CHiPs, '
+                'A-Team, Ritorno al Futuro e tante altre. Il pubblico potrà '
+                'ammirare una straordinaria esposizione di mezzi iconici del '
+                'cinema e della televisione, dalla celebre auto di Supercar '
+                'alla DeLorean di Ritorno al Futuro, fino al furgone '
+                'dell’A-Team, con la presenza dei sosia degli attori che hanno '
+                'reso quei personaggi indimenticabili. A completare la '
+                'giornata, esibizioni di Line Dance e Western Dance, nonché il '
+                'motoraduno del gruppo Tuareg vestiti a tema della Carica dei '
+                '101. Martedì 17 febbraio, il Carnevale di Latina 2026 si '
+                'chiuderà con un gran finale ad alta energia: la sfilata '
+                'conclusiva dei carri allegorici, sempre dalle ore 14.30 alle '
+                'ore 19, sarà accompagnata dal DJ set di Antonello Bottolotto, '
+                'da ballerine e percussionisti provenienti dal Brasile, e da '
+                'un travolgente schiuma party. In sfilata anche la Banda '
+                'Rossini, majorettes, cheerleader e numerosi gruppi artistici. '
+                'È dunque dal 7 al 17 febbraio nel centro cittadino a Latina.',
+ 'event_id': 'carnevale-2026-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/9282945022943/carnevale-latina-4-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Centro cittadino',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Tema '
+                                                            'Carnevale Evento '
+                                                            'per bambini',
+                                                'website': None},
+                         'descrizione': 'Sono appena finite le festività '
+                                        'natalizie ma già si pensa '
+                                        'all’imminente Carnevale, non a caso '
+                                        'il Comune di Latina ha in programma '
+                                        'un ricco calendario di eventi per '
+                                        'festeggiare insieme. Grazie alla '
+                                        'collaborazione tra istituzioni e '
+                                        'associazioni arriveranno spettacoli, '
+                                        'attrazioni e feste che faranno felici '
+                                        'grandi e piccini per il Carnevale '
+                                        '2026 di Latina . Davanti l’ex '
+                                        'intendenza di finanza rimarrà montata '
+                                        'la ruota panoramica, amata e odiata '
+                                        'che tanto ha fatto discutere durante '
+                                        'il periodo natalizio, e che anzi sarà '
+                                        'affiancata da altre tre attrazioni '
+                                        'adatte ad adulti e bambini. In giro '
+                                        'per il centro ci saranno inoltre '
+                                        'degli stand di dolciumi carnevaleschi '
+                                        'e articoli a tema. Il programma avrà '
+                                        'inizio sabato 7 febbraio con la '
+                                        'grande sfilata inaugurale dei carri '
+                                        'allegorici: ben 12, ricchi di colori, '
+                                        'che sfileranno per le vie cittadine, '
+                                        'dalle ore 14.30 alle ore 19, '
+                                        'alternandosi a eventi di strada. Ad '
+                                        'accompagnare la sfilata saranno '
+                                        'majorettes, cheerleader, bande '
+                                        'musicali e la Eco Band “Drum Dance & '
+                                        'Sing”, che con strumenti realizzati '
+                                        'con materiali di riciclo porterà in '
+                                        'scena un messaggio di creatività e '
+                                        'attenzione all’ambiente. Domenica 8 '
+                                        'febbraio, dalle ore 15 alle ore 19, '
+                                        'in piazza del Popolo, a cura della '
+                                        'Pro Loco, ci saranno animazioni, '
+                                        'mascotte, Truccabimbi e cosplay, e a '
+                                        'chiudere il pomeriggio di '
+                                        'divertimento uno spettacolo di teatro '
+                                        'e “fuoco”, pronto a sorprendere il '
+                                        'pubblico e a trasformare il centro di '
+                                        'Latina in un luogo di meraviglia e '
+                                        'divertimento per tutta la famiglia. '
+                                        'Domenica 15 febbraio, il Carnevale '
+                                        'continuerà, dalle ore 16 alle ore 19, '
+                                        'con un evento del tutto singolare: '
+                                        'lungo corso della Repubblica andrà in '
+                                        'scena uno spettacolo inedito per la '
+                                        'città, accompagnato da una band che '
+                                        'riproporrà le più amate sigle dei '
+                                        'telefilm e dei film cult, come '
+                                        'Supercar, CHiPs, A-Team, Ritorno al '
+                                        'Futuro e tante altre. Il pubblico '
+                                        'potrà ammirare una straordinaria '
+                                        'esposizione di mezzi iconici del '
+                                        'cinema e della televisione, dalla '
+                                        'celebre auto di Supercar alla '
+                                        'DeLorean di Ritorno al Futuro, fino '
+                                        'al furgone dell’A-Team, con la '
+                                        'presenza dei sosia degli attori che '
+                                        'hanno reso quei personaggi '
+                                        'indimenticabili. A completare la '
+                                        'giornata, esibizioni di Line Dance e '
+                                        'Western Dance, nonché il motoraduno '
+                                        'del gruppo Tuareg vestiti a tema '
+                                        'della Carica dei 101. Martedì 17 '
+                                        'febbraio, il Carnevale di Latina 2026 '
+                                        'si chiuderà con un gran finale ad '
+                                        'alta energia: la sfilata conclusiva '
+                                        'dei carri allegorici, sempre dalle '
+                                        'ore 14.30 alle ore 19, sarà '
+                                        'accompagnata dal DJ set di Antonello '
+                                        'Bottolotto, da ballerine e '
+                                        'percussionisti provenienti dal '
+                                        'Brasile, e da un travolgente schiuma '
+                                        'party. In sfilata anche la Banda '
+                                        'Rossini, majorettes, cheerleader e '
+                                        'numerosi gruppi artistici. È dunque '
+                                        'dal 7 al 17 febbraio nel centro '
+                                        'cittadino a Latina.',
+                         'dove': {'address': None,
+                                  'name': 'Centro cittadino',
+                                  'raw_text': 'Dove Centro cittadino Indirizzo '
+                                              'non disponibile'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/9282945022943/carnevale-latina-4-2.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-17',
+                                    'date_start': '2026-02-07',
+                                    'raw_text': 'Quando Dal 07/02/2026 al '
+                                                '17/02/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Manifestazioni',
+                       'date': 'dal 7 al 17 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/9282945022943/carnevale-latina-4-2.jpg',
+                       'location': 'Centro cittadino',
+                       'stars': 4,
+                       'title': 'Carnevale 2026: quattro giorni di eventi a '
+                                'Latina'}},
+ 'scraped_at': '2026-02-02T19:46:03.911143',
+ 'source': 'city_today',
+ 'title': 'Carnevale 2026: quattro giorni di eventi a Latina',
+ 'url': 'https://www.latinatoday.it/eventi/carnevale-2026-latina.html',
+ 'uuid': 'c37624865afb411e',
+ 'website': None}
+[2026-02-02T19:46:04.543+0000] {docker.py:429} INFO - 2026-02-02 19:46:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/redenzione-dell-arte-latina.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:04.652+0000] {docker.py:429} INFO - 2026-02-02 19:46:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/redenzione-dell-arte-latina.html>
+{'category': ['Mostre'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': 'fc5b9fabb0fcd5d5',
+ 'date_display': 'dal 4 maggio 2025 al 8 marzo 2026',
+ 'date_end': '2026-03-08',
+ 'date_start': '2025-05-04',
+ 'description': 'Tra le opere più rappresentative della bonifica dell’agro '
+                'pontino, dalla quale è stata tratta anche la copertina di '
+                'Canale Mussolini, il romanzo di Antonio Pennacchi che ha '
+                'raccontato l’epopea della nascita di Latina e le vicende dei '
+                'suoi primi abitanti, c’è L’Agro Redento di Duilio Cambellotti '
+                'che orna la sala a lui dedicata all’interno del Palazzo del '
+                'Governo, sede dell’attuale Provincia di Latina. Una sala '
+                'maestosa, che non è quasi mai aperta al pubblico, oggi '
+                'diventa protagonista di una rassegna che unisce la storia '
+                'della città, l’arte di Cambellotti e la fervida attività '
+                'degli artisti di Latina. Nel più ampio progetto “Arte a Porte '
+                'Aperte” per il quale la Provincia intende rendere gli spazi '
+                'istituzionali veri e propri luoghi di cultura in cui il '
+                'patrimonio storico dialoga con la contemporaneità, arriva la '
+                'rassegna “Redenzione dell’Arte”. Ogni prima domenica del mese '
+                'alle 9.30, 10.30 e 11.30 dal 4 maggio 2025 all’8 marzo 2026 '
+                'la sala Cambellotti sarà aperta al pubblico e si terranno '
+                'delle visite guidate alla scoperta dell’arte di Cambellotti. '
+                'Ad arricchire questi appuntamenti ci saranno una serie di '
+                'mostre di artisti pontini selezionati da Fabio D’Achille per '
+                'MAD Museo d’Arte Diffusa: ogni mese nel foyer della sala '
+                'Cambellotti si potranno ammirare opere di pittura, scultura, '
+                'mosaici, ceramiche e altro ancora visitabili su appuntamento '
+                'da concordare contattando Mad al numero 3933242424 o alla '
+                'mail eventi@madarte.it. Le mostre e le visite guidate sono '
+                'gratuite ma l’ingresso è solo su prenotazione. È dunque dal 4 '
+                'maggio 2025 all’8 marzo 2026 presso la Sala Cambellotti del '
+                'Palazzo della Provincia di Latina. La prenotazione è da '
+                'effettuare su Evenbrite. Domenica 4 maggio 2025 Tommaso '
+                'Andreocci Domenica 1° giugno 2025 Emilia Isabella (scultura e '
+                'pittura) Domenica 6 luglio 2025 Patrizio Marafini, Alberto '
+                'Serarcangeli (pittura e incisione) Domenica 3 agosto 2025 '
+                'Antonio Farina, Gabriele Casale (pittura e mosaico) Domenica '
+                '7 settembre 2025 Alberto Manzetti, Cruciano Nasca (pittura e '
+                'scultura) Domenica 5 ottobre 2025 Marcello Trabucco, Michele '
+                'Volpe (pittura e incisione) Domenica 9 novembre 2025 '
+                'Francesco Paolo Martelli, Riccardo Parisi (pittura e mosaico) '
+                'Domenica 7 dicembre 2025 Luigi Menichelli, Massimo Palumbo '
+                '(pittura e installazioni) Domenica 4 gennaio 2026 Roberto '
+                'Andreatini, Claudio Cecconi (disegno, pittura e scultura) '
+                'Domenica 1° febbraio 2026 Alessandra Chicarella, Fabrizio '
+                'Gargano (pittura e fumetto) Domenica 8 marzo 2026 MAD Donna – '
+                'Simonetta Massironi, Alena Panchishin (ceramica raku e '
+                'pittura',
+ 'event_id': 'redenzione-dell-arte-latina',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/39179727344771/prefettura-di-latina-2-2.jpg',
+ 'location_address': 'Piazza della Libertà',
+ 'location_name': 'Palazzo della Provincia',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web eventbrite.it',
+                                                'website': 'https://www.eventbrite.it/e/biglietti-visite-guidate-sala-cambellotti-1248391495569?aff=ebdssbdestsearch'},
+                         'descrizione': 'Tra le opere più rappresentative '
+                                        'della bonifica dell’agro pontino, '
+                                        'dalla quale è stata tratta anche la '
+                                        'copertina di Canale Mussolini, il '
+                                        'romanzo di Antonio Pennacchi che ha '
+                                        'raccontato l’epopea della nascita di '
+                                        'Latina e le vicende dei suoi primi '
+                                        'abitanti, c’è L’Agro Redento di '
+                                        'Duilio Cambellotti che orna la sala a '
+                                        'lui dedicata all’interno del Palazzo '
+                                        'del Governo, sede dell’attuale '
+                                        'Provincia di Latina. Una sala '
+                                        'maestosa, che non è quasi mai aperta '
+                                        'al pubblico, oggi diventa '
+                                        'protagonista di una rassegna che '
+                                        'unisce la storia della città, l’arte '
+                                        'di Cambellotti e la fervida attività '
+                                        'degli artisti di Latina. Nel più '
+                                        'ampio progetto “Arte a Porte Aperte” '
+                                        'per il quale la Provincia intende '
+                                        'rendere gli spazi istituzionali veri '
+                                        'e propri luoghi di cultura in cui il '
+                                        'patrimonio storico dialoga con la '
+                                        'contemporaneità, arriva la rassegna '
+                                        '“Redenzione dell’Arte”. Ogni prima '
+                                        'domenica del mese alle 9.30, 10.30 e '
+                                        '11.30 dal 4 maggio 2025 all’8 marzo '
+                                        '2026 la sala Cambellotti sarà aperta '
+                                        'al pubblico e si terranno delle '
+                                        'visite guidate alla scoperta '
+                                        'dell’arte di Cambellotti. Ad '
+                                        'arricchire questi appuntamenti ci '
+                                        'saranno una serie di mostre di '
+                                        'artisti pontini selezionati da Fabio '
+                                        'D’Achille per MAD Museo d’Arte '
+                                        'Diffusa: ogni mese nel foyer della '
+                                        'sala Cambellotti si potranno ammirare '
+                                        'opere di pittura, scultura, mosaici, '
+                                        'ceramiche e altro ancora visitabili '
+                                        'su appuntamento da concordare '
+                                        'contattando Mad al numero 3933242424 '
+                                        'o alla mail eventi@madarte.it. Le '
+                                        'mostre e le visite guidate sono '
+                                        'gratuite ma l’ingresso è solo su '
+                                        'prenotazione. È dunque dal 4 maggio '
+                                        '2025 all’8 marzo 2026 presso la Sala '
+                                        'Cambellotti del Palazzo della '
+                                        'Provincia di Latina. La prenotazione '
+                                        'è da effettuare su Evenbrite. '
+                                        'Domenica 4 maggio 2025 Tommaso '
+                                        'Andreocci Domenica 1° giugno 2025 '
+                                        'Emilia Isabella (scultura e pittura) '
+                                        'Domenica 6 luglio 2025 Patrizio '
+                                        'Marafini, Alberto Serarcangeli '
+                                        '(pittura e incisione) Domenica 3 '
+                                        'agosto 2025 Antonio Farina, Gabriele '
+                                        'Casale (pittura e mosaico) Domenica 7 '
+                                        'settembre 2025 Alberto Manzetti, '
+                                        'Cruciano Nasca (pittura e scultura) '
+                                        'Domenica 5 ottobre 2025 Marcello '
+                                        'Trabucco, Michele Volpe (pittura e '
+                                        'incisione) Domenica 9 novembre 2025 '
+                                        'Francesco Paolo Martelli, Riccardo '
+                                        'Parisi (pittura e mosaico) Domenica 7 '
+                                        'dicembre 2025 Luigi Menichelli, '
+                                        'Massimo Palumbo (pittura e '
+                                        'installazioni) Domenica 4 gennaio '
+                                        '2026 Roberto Andreatini, Claudio '
+                                        'Cecconi (disegno, pittura e scultura) '
+                                        'Domenica 1° febbraio 2026 Alessandra '
+                                        'Chicarella, Fabrizio Gargano (pittura '
+                                        'e fumetto) Domenica 8 marzo 2026 MAD '
+                                        'Donna – Simonetta Massironi, Alena '
+                                        'Panchishin (ceramica raku e pittura',
+                         'dove': {'address': 'Piazza della Libertà',
+                                  'name': 'Palazzo della Provincia',
+                                  'raw_text': 'Dove Palazzo della Provincia '
+                                              'Piazza della Libertà'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/39179727344771/prefettura-di-latina-2-2.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-03-08',
+                                    'date_start': '2025-05-04',
+                                    'raw_text': 'Quando Dal 04/05/2025 al '
+                                                '08/03/2026 visite guidate '
+                                                '9.30, 10.30 e 11.30',
+                                    'schedule': 'visite guidate 9.30, 10.30 e '
+                                                '11.30'}},
+              'list': {'category': 'Mostre',
+                       'date': 'dal 4 maggio 2025 al 8 marzo 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/39179727344771/prefettura-di-latina-2-2.jpg',
+                       'location': 'Palazzo della Provincia',
+                       'stars': 4,
+                       'title': 'Redenzione dell’arte: visite guidate alla '
+                                'Sala Cambellotti e mostre d’arte '
+                                'contemporanea'}},
+ 'scraped_at': '2026-02-02T19:46:04.649810',
+ 'source': 'city_today',
+ 'title': 'Redenzione dell’arte: visite guidate alla Sala Cambellotti e mostre '
+          'd’arte contemporanea',
+ 'url': 'https://www.latinatoday.it/eventi/redenzione-dell-arte-latina.html',
+ 'uuid': 'cb50b8e05926c3df',
+ 'website': 'https://www.eventbrite.it/e/biglietti-visite-guidate-sala-cambellotti-1248391495569?aff=ebdssbdestsearch'}
+[2026-02-02T19:46:05.999+0000] {docker.py:429} INFO - 2026-02-02 19:46:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/sagra-della-polenta-2026-sermoneta.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:06.109+0000] {docker.py:429} INFO - 2026-02-02 19:46:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/sagra-della-polenta-2026-sermoneta.html>
+{'category': ['Cibo e Vino'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': 'c6ac2a44e9e360cb',
+ 'date_display': 'dal 18 gennaio al 15 febbraio 2026',
+ 'date_end': '2026-02-15',
+ 'date_start': '2026-01-18',
+ 'description': 'Torna uno degli appuntamenti più attesi dell’inverno pontino: '
+                'la Sagra della Polenta di Sermoneta. Domenica 18 gennaio si '
+                'torna indietro nel tempo e si celebra sia il piatto invernale '
+                'per eccellenza che Sant’Antonio Abate protettore degli '
+                'animali. Una giornata di festa nel borgo medievale di '
+                'Sermoneta organizzata dall’associazione Festeggiamenti che da '
+                'quasi 50 anni unisce storia, tradizioni, gastronomia e '
+                'divertimento per grandi e piccini. Tornano gli ormai celebri '
+                'paioli di rame dove verrà cotta la polenta sul fuoco a legna, '
+                'torna la benedizione del pane, e torna la distribuzione della '
+                'polenta in piazza: un rito conviviale che è ormai d’obbligo '
+                'per i buongustai pontini e non. La polenta sarà condita con '
+                'il sugo di salsiccia preparato secondo la ricetta tramandata '
+                'di generazione in generazione dai mastri polentari a '
+                'Sermoneta. Lo stesso giorno ci sarà anche la Polenta anche '
+                'nella borgata di Doganella di Ninfa. E come è ormai '
+                'tradizione la Festa della Polenta proseguirà per i fine '
+                'settimana successivi nelle varie borgate di Sermoneta. È '
+                'dunque per domenica 18 gennaio nel borgo medievale di '
+                'Sermoneta e a Doganella di Ninfa. 25 gennaio Sermoneta Scalo '
+                '1° febbraio Tufette 8 febbraio Pontenuovo 15 febbraio '
+                'Monticchio',
+ 'event_id': 'sagra-della-polenta-2026-sermoneta',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/2147708725111/polenta.jpg',
+ 'location_address': None,
+ 'location_name': 'Borgo medievale e borgate',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Torna uno degli appuntamenti più '
+                                        'attesi dell’inverno pontino: la Sagra '
+                                        'della Polenta di Sermoneta. Domenica '
+                                        '18 gennaio si torna indietro nel '
+                                        'tempo e si celebra sia il piatto '
+                                        'invernale per eccellenza che '
+                                        'Sant’Antonio Abate protettore degli '
+                                        'animali. Una giornata di festa nel '
+                                        'borgo medievale di Sermoneta '
+                                        'organizzata dall’associazione '
+                                        'Festeggiamenti che da quasi 50 anni '
+                                        'unisce storia, tradizioni, '
+                                        'gastronomia e divertimento per grandi '
+                                        'e piccini. Tornano gli ormai celebri '
+                                        'paioli di rame dove verrà cotta la '
+                                        'polenta sul fuoco a legna, torna la '
+                                        'benedizione del pane, e torna la '
+                                        'distribuzione della polenta in '
+                                        'piazza: un rito conviviale che è '
+                                        'ormai d’obbligo per i buongustai '
+                                        'pontini e non. La polenta sarà '
+                                        'condita con il sugo di salsiccia '
+                                        'preparato secondo la ricetta '
+                                        'tramandata di generazione in '
+                                        'generazione dai mastri polentari a '
+                                        'Sermoneta. Lo stesso giorno ci sarà '
+                                        'anche la Polenta anche nella borgata '
+                                        'di Doganella di Ninfa. E come è ormai '
+                                        'tradizione la Festa della Polenta '
+                                        'proseguirà per i fine settimana '
+                                        'successivi nelle varie borgate di '
+                                        'Sermoneta. È dunque per domenica 18 '
+                                        'gennaio nel borgo medievale di '
+                                        'Sermoneta e a Doganella di Ninfa. 25 '
+                                        'gennaio Sermoneta Scalo 1° febbraio '
+                                        'Tufette 8 febbraio Pontenuovo 15 '
+                                        'febbraio Monticchio',
+                         'dove': {'address': None,
+                                  'name': 'Borgo medievale e borgate',
+                                  'raw_text': 'Dove Borgo medievale e borgate '
+                                              'Indirizzo non disponibile '
+                                              'Sermoneta'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/2147708725111/polenta.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-15',
+                                    'date_start': '2026-01-18',
+                                    'raw_text': 'Quando Dal 18/01/2026 al '
+                                                '15/02/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Cibo e Vino',
+                       'date': 'dal 18 gennaio al 15 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/2147708725111/polenta.jpg',
+                       'location': 'Borgo medievale e borgate',
+                       'stars': 4,
+                       'title': 'A Sermoneta la Sagra della Polenta'}},
+ 'scraped_at': '2026-02-02T19:46:06.106981',
+ 'source': 'city_today',
+ 'title': 'A Sermoneta la Sagra della Polenta',
+ 'url': 'https://www.latinatoday.it/eventi/sagra-della-polenta-2026-sermoneta.html',
+ 'uuid': '523e49cfac6fd47a',
+ 'website': None}
+[2026-02-02T19:46:07.441+0000] {docker.py:429} INFO - 2026-02-02 19:46:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/carnevale-pontino-2026-latina-cisterna-pontinia-sabaudia-san-felice.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:07.554+0000] {docker.py:429} INFO - 2026-02-02 19:46:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/carnevale-pontino-2026-latina-cisterna-pontinia-sabaudia-san-felice.html>
+{'category': ['Manifestazioni'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '7c84d3079692c976',
+ 'date_display': 'dal 25 gennaio al 17 febbraio 2026',
+ 'date_end': '2026-02-17',
+ 'date_start': '2026-01-25',
+ 'description': 'Arriva una festa molto amata dai bambini: il Carnevale. È '
+                'giunto il momento di mascherarsi, tirare coriandoli e stelle '
+                'filanti, mangiare le frappe, conosciute anche come '
+                'chiacchiere, e farsi affascinare dai colori, dalla musica e '
+                'dal divertimento che questa manifestazione porta con sé. '
+                'Immancabili tornano anche le sfilate dei carri allegorici '
+                'realizzate dall’Associazione Amici in Festa, anima del '
+                'Carnevale Pontino, che dal 25 gennaio al 17 febbraio '
+                'gireranno per i vari comuni della provincia con gran finale a '
+                'Latina. Ogni fine settimana i carri si sposteranno tra '
+                'Pontinia, Sabaudia, Cisterna, San Felice Circeo e poi Latina, '
+                'le sfilate inizieranno nel primo pomeriggio del sabato o '
+                'della domenica nel centro cittadino per poi sostare nelle '
+                'piazze principali e animare la festa. Si partirà da Borgo '
+                'Vodice e Borgo Montenero, per poi passare a Pontina e una '
+                'prima tappa a Latina, fermarsi per due giorni a Cisterna, '
+                'spostarsi a Sabaudia e San Felice e chiudere la '
+                'manifestazione a Latina il martedì grasso che quest’anno sarà '
+                'il 17 febbraio. È dunque nei fine settimana dal 25 gennaio a '
+                'martedì 17 febbraio nei comuni della provincia di Latina. '
+                'Domenica 25 gennaio Ore 14.30 Borgo Vodice Sabato 31 gennaio '
+                'Ore 14.30 Borgo Montenero Sabato 7 febbraio Ore 14.30 Latina '
+                'Domenica 8 febbraio Ore 14.30 Cisterna Giovedì 12 febbraio '
+                'Ore 14.30 Cisterna Sabato 14 febbraio Ore 14.30 San Felice '
+                'Circeo Domenica 15 febbraio Ore 14.30 Sabaudia Martedì 17 '
+                'febbraio Ore 14.30 Latina',
+ 'event_id': 'carnevale-pontino-2026-latina-cisterna-pontinia-sabaudia-san-felice',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/13672821915507/carnevale_sabaudia_2019_1-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Latina, Cisterna, Pontinia, Sabaudia, San Felice, Borgo '
+                  'Vodice, Borgo Montenero',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web facebook.com '
+                                                            'Tema Carnevale',
+                                                'website': 'https://www.facebook.com/AmiciinfestaStradaSegreta'},
+                         'descrizione': 'Arriva una festa molto amata dai '
+                                        'bambini: il Carnevale. È giunto il '
+                                        'momento di mascherarsi, tirare '
+                                        'coriandoli e stelle filanti, mangiare '
+                                        'le frappe, conosciute anche come '
+                                        'chiacchiere, e farsi affascinare dai '
+                                        'colori, dalla musica e dal '
+                                        'divertimento che questa '
+                                        'manifestazione porta con sé. '
+                                        'Immancabili tornano anche le sfilate '
+                                        'dei carri allegorici realizzate '
+                                        'dall’Associazione Amici in Festa, '
+                                        'anima del Carnevale Pontino, che dal '
+                                        '25 gennaio al 17 febbraio gireranno '
+                                        'per i vari comuni della provincia con '
+                                        'gran finale a Latina. Ogni fine '
+                                        'settimana i carri si sposteranno tra '
+                                        'Pontinia, Sabaudia, Cisterna, San '
+                                        'Felice Circeo e poi Latina, le '
+                                        'sfilate inizieranno nel primo '
+                                        'pomeriggio del sabato o della '
+                                        'domenica nel centro cittadino per poi '
+                                        'sostare nelle piazze principali e '
+                                        'animare la festa. Si partirà da Borgo '
+                                        'Vodice e Borgo Montenero, per poi '
+                                        'passare a Pontina e una prima tappa a '
+                                        'Latina, fermarsi per due giorni a '
+                                        'Cisterna, spostarsi a Sabaudia e San '
+                                        'Felice e chiudere la manifestazione a '
+                                        'Latina il martedì grasso che '
+                                        'quest’anno sarà il 17 febbraio. È '
+                                        'dunque nei fine settimana dal 25 '
+                                        'gennaio a martedì 17 febbraio nei '
+                                        'comuni della provincia di Latina. '
+                                        'Domenica 25 gennaio Ore 14.30 Borgo '
+                                        'Vodice Sabato 31 gennaio Ore 14.30 '
+                                        'Borgo Montenero Sabato 7 febbraio Ore '
+                                        '14.30 Latina Domenica 8 febbraio Ore '
+                                        '14.30 Cisterna Giovedì 12 febbraio '
+                                        'Ore 14.30 Cisterna Sabato 14 febbraio '
+                                        'Ore 14.30 San Felice Circeo Domenica '
+                                        '15 febbraio Ore 14.30 Sabaudia '
+                                        'Martedì 17 febbraio Ore 14.30 Latina',
+                         'dove': {'address': None,
+                                  'name': 'Latina, Cisterna, Pontinia, '
+                                          'Sabaudia, San Felice, Borgo Vodice, '
+                                          'Borgo Montenero',
+                                  'raw_text': 'Dove Latina, Cisterna, '
+                                              'Pontinia, Sabaudia, San Felice, '
+                                              'Borgo Vodice, Borgo Montenero '
+                                              'Indirizzo non disponibile'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/13672821915507/carnevale_sabaudia_2019_1-2.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-17',
+                                    'date_start': '2026-01-25',
+                                    'raw_text': 'Quando Dal 25/01/2026 al '
+                                                '17/02/2026 ore 14.30',
+                                    'schedule': 'ore 14.30'}},
+              'list': {'category': 'Manifestazioni',
+                       'date': 'dal 25 gennaio al 17 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/13672821915507/carnevale_sabaudia_2019_1-2.jpg',
+                       'location': 'Latina, Cisterna, Pontinia, Sabaudia, San '
+                                   'Felice, Borgo Vodice, Borgo Montenero',
+                       'stars': 4,
+                       'title': 'Carnevale Pontino 2026: le sfilate dei carri '
+                                'nella provincia di Latina'}},
+ 'scraped_at': '2026-02-02T19:46:07.551432',
+ 'source': 'city_today',
+ 'title': 'Carnevale Pontino 2026: le sfilate dei carri nella provincia di '
+          'Latina',
+ 'url': 'https://www.latinatoday.it/eventi/carnevale-pontino-2026-latina-cisterna-pontinia-sabaudia-san-felice.html',
+ 'uuid': '823553e93ba9e322',
+ 'website': 'https://www.facebook.com/AmiciinfestaStradaSegreta'}
+[2026-02-02T19:46:08.346+0000] {docker.py:429} INFO - 2026-02-02 19:46:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.latinatoday.it/eventi/sagra-del-cappelletto-ferrarese-febbraio-2026-pontinia.html> (referer: https://www.latinatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:08.457+0000] {docker.py:429} INFO - 2026-02-02 19:46:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.latinatoday.it/eventi/sagra-del-cappelletto-ferrarese-febbraio-2026-pontinia.html>
+{'category': ['Manifestazioni'],
+ 'city': 'Latina',
+ 'city_id': None,
+ 'content_hash': '800f9cb9a093a249',
+ 'date_display': 'dal 7 al 8 febbraio 2026',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-02-07',
+ 'description': 'Annullata a dicembre per via del maltempo, torna finalmente a '
+                'Pontinia la seconda edizione della Sagra del Cappelletto '
+                'Ferrarese dell’Agro Pontino. La sagra nasce dalla '
+                'collaborazione dell’associazione Ferraresi dell’Agro Pontino '
+                'con la Pro Loco e il Comune di Pontinia. Una manifestazione '
+                'che affonda le radici nella recente storia della nostra terra '
+                'e in particolare nelle tradizioni gastronomiche dei coloni '
+                'che hanno partecipato alla bonifica della palude pontina. La '
+                'comunità dei ferraresi fu numerosa e ancora oggi condivide '
+                'con le nuove generazioni antichi saperi e ricette. Presso gli '
+                'stand gastronomici oltre ai Cappelletti in brodo si potranno '
+                'gustare anche lasagne di vario tipo, polenta, capra al sugo, '
+                'bufaletta, oltre che le carni come stinco e wurstel, '
+                'arrosticini e caldarrose. Non mancheranno i taglieri e '
+                'cocktail per antipasto o aperitivo e ovviamente dolci come '
+                'crepes, bombe, ciambelle e frappe, oltre che zuppa inglese, '
+                'profiterole a vari gusti, pan brioche con crema chantilly. Un '
+                'evento che non solo è l’occasione per gustare ottimi piatti '
+                'ma anche per ascoltare musica dal vivo, danzare e divertirsi, '
+                'impreziosito da laboratori del gusto per imparare a fare i '
+                'cappelletti a mano e un grande ballo in maschera per grandi e '
+                'piccini, approfittando del periodo carnevalesco. È a Pontinia '
+                'in piazza Indipendenza sabato 7 e domenica 8 febbraio. SABATO '
+                '7 FEBBRAIO Ore 16:00 – Inaugurazione ufficiale presso il '
+                'Centro Sociale. Ore 16:15 – Laboratorio del gusto: '
+                'dimostrazione e realizzazione del cappelletto a cura '
+                'dell’Associazione Ferraresi e della Pro Loco. DOMENICA 8 '
+                'FEBBRAIO Ore 12:00 – Apertura degli stand gastronomici. Ore '
+                '12:30 – Degustazione dei Cappelletti Ferraresi in brodo (a '
+                "cura dell'Associazione Ferraresi e Pro Loco). Contributo "
+                'volontario: € 5,00 a porzione. Ore 13:00 – Musica live con il '
+                'Quintetto Swing anni ’50 “Le Swingeresse”. Ore 15:00 – Ballo '
+                'in maschera per grandi e piccini! Musica del Duo Sole&Luna e '
+                'animazione a cura de La Fabbrica del Cioccolato.',
+ 'event_id': 'sagra-del-cappelletto-ferrarese-febbraio-2026-pontinia',
+ 'image_url': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/42636658348745/cappelletto.jpg',
+ 'location_address': 'Piazza Indipendenza',
+ 'location_name': 'Centro cittadino',
+ 'price': 'ingresso libero',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni '
+                                                            'Evento per '
+                                                            'bambini',
+                                                'website': None},
+                         'descrizione': 'Annullata a dicembre per via del '
+                                        'maltempo, torna finalmente a Pontinia '
+                                        'la seconda edizione della Sagra del '
+                                        'Cappelletto Ferrarese dell’Agro '
+                                        'Pontino. La sagra nasce dalla '
+                                        'collaborazione dell’associazione '
+                                        'Ferraresi dell’Agro Pontino con la '
+                                        'Pro Loco e il Comune di Pontinia. Una '
+                                        'manifestazione che affonda le radici '
+                                        'nella recente storia della nostra '
+                                        'terra e in particolare nelle '
+                                        'tradizioni gastronomiche dei coloni '
+                                        'che hanno partecipato alla bonifica '
+                                        'della palude pontina. La comunità dei '
+                                        'ferraresi fu numerosa e ancora oggi '
+                                        'condivide con le nuove generazioni '
+                                        'antichi saperi e ricette. Presso gli '
+                                        'stand gastronomici oltre ai '
+                                        'Cappelletti in brodo si potranno '
+                                        'gustare anche lasagne di vario tipo, '
+                                        'polenta, capra al sugo, bufaletta, '
+                                        'oltre che le carni come stinco e '
+                                        'wurstel, arrosticini e caldarrose. '
+                                        'Non mancheranno i taglieri e cocktail '
+                                        'per antipasto o aperitivo e '
+                                        'ovviamente dolci come crepes, bombe, '
+                                        'ciambelle e frappe, oltre che zuppa '
+                                        'inglese, profiterole a vari gusti, '
+                                        'pan brioche con crema chantilly. Un '
+                                        'evento che non solo è l’occasione per '
+                                        'gustare ottimi piatti ma anche per '
+                                        'ascoltare musica dal vivo, danzare e '
+                                        'divertirsi, impreziosito da '
+                                        'laboratori del gusto per imparare a '
+                                        'fare i cappelletti a mano e un grande '
+                                        'ballo in maschera per grandi e '
+                                        'piccini, approfittando del periodo '
+                                        'carnevalesco. È a Pontinia in piazza '
+                                        'Indipendenza sabato 7 e domenica 8 '
+                                        'febbraio. SABATO 7 FEBBRAIO Ore 16:00 '
+                                        '– Inaugurazione ufficiale presso il '
+                                        'Centro Sociale. Ore 16:15 – '
+                                        'Laboratorio del gusto: dimostrazione '
+                                        'e realizzazione del cappelletto a '
+                                        'cura dell’Associazione Ferraresi e '
+                                        'della Pro Loco. DOMENICA 8 FEBBRAIO '
+                                        'Ore 12:00 – Apertura degli stand '
+                                        'gastronomici. Ore 12:30 – '
+                                        'Degustazione dei Cappelletti '
+                                        'Ferraresi in brodo (a cura '
+                                        "dell'Associazione Ferraresi e Pro "
+                                        'Loco). Contributo volontario: € 5,00 '
+                                        'a porzione. Ore 13:00 – Musica live '
+                                        'con il Quintetto Swing anni ’50 “Le '
+                                        'Swingeresse”. Ore 15:00 – Ballo in '
+                                        'maschera per grandi e piccini! Musica '
+                                        'del Duo Sole&Luna e animazione a cura '
+                                        'de La Fabbrica del Cioccolato.',
+                         'dove': {'address': 'Piazza Indipendenza',
+                                  'name': 'Centro cittadino',
+                                  'raw_text': 'Dove Centro cittadino Piazza '
+                                              'Indipendenza Pontinia'},
+                         'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-low/42636658348745/cappelletto.jpg',
+                         'prezzo': 'ingresso libero',
+                         'quando': {'date_end': '2026-02-08',
+                                    'date_start': '2026-02-07',
+                                    'raw_text': 'Quando Dal 07/02/2026 al '
+                                                '08/02/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Manifestazioni',
+                       'date': 'dal 7 al 8 febbraio 2026',
+                       'image': '//citynews-latinatoday.stgy.ovh/~media/horizontal-mid/42636658348745/cappelletto.jpg',
+                       'location': 'Centro cittadino',
+                       'stars': 4,
+                       'title': 'A Pontinia la Sagra del Cappelletto Ferrarese '
+                                'dell’Agro Pontino'}},
+ 'scraped_at': '2026-02-02T19:46:08.454076',
+ 'source': 'city_today',
+ 'title': 'A Pontinia la Sagra del Cappelletto Ferrarese dell’Agro Pontino',
+ 'url': 'https://www.latinatoday.it/eventi/sagra-del-cappelletto-ferrarese-febbraio-2026-pontinia.html',
+ 'uuid': 'f7971c7a29051e24',
+ 'website': None}
+[2026-02-02T19:46:08.458+0000] {docker.py:429} INFO - 2026-02-02 19:46:08 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-02-02T19:46:08.459+0000] {docker.py:429} INFO - 2026-02-02 19:46:08 [scrapy.extensions.feedexport] INFO: Stored json feed (15 items) in: /app/city_today/output/eventi_latina_questa-settimana_20260202_194547.json
+[2026-02-02T19:46:08.459+0000] {docker.py:429} INFO - 2026-02-02 19:46:08 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7046,
+ 'downloader/request_count': 17,
+ 'downloader/request_method_count/GET': 17,
+ 'downloader/response_bytes': 2448644,
+ 'downloader/response_count': 17,
+ 'downloader/response_status_count/200': 17,
+ 'elapsed_time_seconds': 20.316428,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 2, 2, 19, 46, 8, 456411, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 13186299,
+ 'httpcompression/response_count': 17,
+ 'item_scraped_count': 15,
+ 'items_per_city/Latina': 15,
+ 'items_per_minute': 45.0,
+ 'log_count/DEBUG': 32,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68685824,
+ 'memusage/startup': 68685824,
+ 'request_depth_max': 1,
+ 'response_received_count': 17,
+ 'responses_per_minute': 51.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 16,
+ 'scheduler/dequeued/memory': 16,
+ 'scheduler/enqueued': 16,
+ 'scheduler/enqueued/memory': 16,
+ 'start_time': datetime.datetime(2026, 2, 2, 19, 45, 48, 139983, tzinfo=datetime.timezone.utc)}
+2026-02-02 19:46:08 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-02-02T19:46:08.540+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_latina_questa-settimana_20260202_194547.json
+[2026-02-02T19:46:08.792+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_latina.scrape_city_today, execution_date=20260201T060000, start_date=20260202T194547, end_date=20260202T194608
+[2026-02-02T19:46:08.830+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-02T19:46:08.868+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

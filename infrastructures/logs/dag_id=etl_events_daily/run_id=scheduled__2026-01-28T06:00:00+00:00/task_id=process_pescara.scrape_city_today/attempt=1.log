@@ -1,0 +1,1338 @@
+[2026-01-29T18:22:12.388+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_pescara.scrape_city_today scheduled__2026-01-28T06:00:00+00:00 [queued]>
+[2026-01-29T18:22:12.403+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_pescara.scrape_city_today scheduled__2026-01-28T06:00:00+00:00 [queued]>
+[2026-01-29T18:22:12.404+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-29T18:22:12.422+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_pescara.scrape_city_today> on 2026-01-28 06:00:00+00:00
+[2026-01-29T18:22:12.429+0000] {standard_task_runner.py:60} INFO - Started process 330 to run task
+[2026-01-29T18:22:12.433+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_pescara.scrape_city_today', 'scheduled__2026-01-28T06:00:00+00:00', '--job-id', '257', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpiob0gnv1']
+[2026-01-29T18:22:12.436+0000] {standard_task_runner.py:88} INFO - Job 257: Subtask process_pescara.scrape_city_today
+[2026-01-29T18:22:12.460+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-29T18:22:12.537+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_pescara.scrape_city_today scheduled__2026-01-28T06:00:00+00:00 [running]> on host a9aac56aef94
+[2026-01-29T18:22:12.744+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_pescara.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-01-28T06:00:00+00:00'
+[2026-01-29T18:22:12.780+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-29T18:22:12.788+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-29T18:22:13.584+0000] {docker.py:429} INFO - Avvio scraping per: Pescara
+Periodo: questa-settimana
+[2026-01-29T18:22:13.586+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-29T18:22:13.591+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-01-29 18:22:13 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-29T18:22:13.593+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [events] INFO: Scraping città: Pescara
+2026-01-29 18:22:13 [events] INFO: Periodo: questa-settimana (2026-01-29 - 2026-02-01)
+[2026-01-29T18:22:13.593+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-29T18:22:13.594+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-29T18:22:13.595+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-29 18:22:13 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-29T18:22:13.600+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.extensions.telnet] INFO: Telnet Password: b36640c3a01c6568
+[2026-01-29T18:22:13.649+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-01-29T18:22:13.650+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-29T18:22:13.709+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-29T18:22:13.713+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-29T18:22:13.714+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-29T18:22:13.714+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_pescara_questa-settimana_20260129_182213.json
+[2026-01-29T18:22:13.715+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.core.engine] INFO: Spider opened
+[2026-01-29T18:22:13.722+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-29T18:22:13.724+0000] {docker.py:429} INFO - 2026-01-29 18:22:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-29T18:22:14.254+0000] {docker.py:429} INFO - 2026-01-29 18:22:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/robots.txt> (referer: None)
+[2026-01-29T18:22:17.061+0000] {docker.py:429} INFO - 2026-01-29 18:22:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/> (referer: None)
+[2026-01-29T18:22:17.889+0000] {docker.py:429} INFO - 2026-01-29 18:22:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/mostre/mostra-stars-tears-marco-vespasiani.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:18.009+0000] {docker.py:429} INFO - 2026-01-29 18:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/mostre/mostra-stars-tears-marco-vespasiani.html>
+{'category': 'Mostre',
+ 'city': 'Pescara',
+ 'content_hash': 'a3c151c9749b971f',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'time_start': '9:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '9:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '9:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-23', 'time_start': '9:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '9:00', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '9:00', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '9:00', 'weekday': 'Lunedì'},
+           {'date': '2026-01-30', 'time_start': '9:00', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '9:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '9:00', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '9:00', 'weekday': 'Lunedì'},
+           {'date': '2026-02-06', 'time_start': '9:00', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '9:00', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '9:00', 'weekday': 'Domenica'}],
+ 'description': 'Al museo delle Genti d’Abruzzo è possibile visitare, fino al '
+                'prossimo 8 febbraio, la mostra di Marco Vespasiani, dal '
+                'titolo “Stars and tears”. L’esposizione è a cura di Francesco '
+                'Binetti e Giuseppe Bacci. Il progetto raccoglie le opere '
+                'realizzate dall’artista negli ultimi tre mesi, successivi '
+                'alla scomparsa del padre. I dipinti raccontano un passaggio: '
+                'la continuità che si manifesta in potenti forme simboliche e '
+                'visionarie. Rappresentati cieli stellati, tigri, velieri, '
+                'cori angelici e musica cosmica. Una mostra da vedere e '
+                'vivere.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/19943340616845/vespasiani-mostra.jpg',
+ 'location_address': 'Via delle Caserme',
+ 'location_name': "Museo delle Genti d'Abruzzo",
+ 'price': 'Adulti: €12,00; Ridotto (sotto i 18 e sopra i 65 anni): €8,00',
+ 'schedule': 'Da lunedì a venerdì dalle 9:00 alle 13:00 Sabato e Domenica '
+             'dalle 16:00 alle 20:00',
+ 'scraped_at': '2026-01-29T18:22:17.173948',
+ 'title': 'Mostra “Stars and tears” di Marco Vespasiani',
+ 'url': 'https://www.ilpescara.it/eventi/mostre/mostra-stars-tears-marco-vespasiani.html',
+ 'uuid': 'ea74c0516e72b2fd',
+ 'weekdays': 'Lunedì, Venerdì, Sabato, Domenica'}
+[2026-01-29T18:22:19.037+0000] {docker.py:429} INFO - 2026-01-29 18:22:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/cultura/carnival-village-2026-eventi-programma-outlet-santangelo.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:19.150+0000] {docker.py:429} INFO - 2026-01-29 18:22:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/cultura/carnival-village-2026-eventi-programma-outlet-santangelo.html>
+{'category': 'Manifestazioni',
+ 'city': 'Pescara',
+ 'content_hash': '023fce52c7efd147',
+ 'date_end': '2026-02-17',
+ 'date_start': '2026-01-24',
+ 'dates': [{'date': '2026-01-24',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Sabato'},
+           {'date': '2026-01-25',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-26',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Lunedì'},
+           {'date': '2026-01-27',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Giovedì'},
+           {'date': '2026-01-30',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Venerdì'},
+           {'date': '2026-01-31',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-01',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-02',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Lunedì'},
+           {'date': '2026-02-03',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Giovedì'},
+           {'date': '2026-02-06',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Venerdì'},
+           {'date': '2026-02-07',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-08',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-09',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Lunedì'},
+           {'date': '2026-02-10',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Giovedì'},
+           {'date': '2026-02-13',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Venerdì'},
+           {'date': '2026-02-14',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-15',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-16',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Lunedì'},
+           {'date': '2026-02-17',
+            'time_end': '12:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'}],
+ 'description': 'In attesa del Carnevale, il Santangelo outlet village si '
+                'colora di allegria e fantasia con l’inizio del Carnival '
+                'Village, il grande contenitore di eventi, che ha preso il via '
+                'sabato 24 gennaio, registrando sin da subito un’ottima '
+                'partecipazione di pubblico, e che terminerà il prossimo 17 '
+                'febbraio, nel giorno di martedì grasso. Un progetto pensato '
+                'per stupire grandi e bambini, capace di trasformare una '
+                'giornata di shopping in un’esperienza coinvolgente e '
+                'memorabile, tra scenografie a tema, laboratori creativi e '
+                'momenti di intrattenimento. Il cuore pulsante della '
+                'manifestazione sono le unità 132–133 del Village, due spazi '
+                'completamente trasformati in ambientazioni scenografiche a '
+                'tema carnevalesco, pronte ad accogliere i più piccoli in un '
+                'mondo di colori, creatività e immaginazione. Protagonisti del '
+                'Carnival village sono i laboratori creativi a tema, in '
+                'programma con doppia fascia oraria (10:30–12:30 e '
+                '15:00–19:00) nei weekend del 24/25 gennaio, 31 gennaio/1 '
+                'febbraio, 7/8 febbraio, 14/15 febbraio, fino al gran finale '
+                'di martedì 17 febbraio. Il calendario delle attività prevede: '
+                '· Sabato 31 gennaio: maschere da clown personalizzate · '
+                'Sabato 7 febbraio e domenica 15 febbraio: il tendone del '
+                'circo · Domenica 8 febbraio e sabato 14 febbraio: cornici '
+                'portafoto a tema circense · Martedì 17 febbraio: '
+                'sparacoriandoli Sabato 14 febbraio, in occasione di San '
+                'Valentino, il Village celebrerà l’amore in tutte le sue forme '
+                'con un ospite d’eccezione: il Meet & Greet con la mascotte '
+                'dei Care Bears (Orsetti del cuore). Un appuntamento speciale '
+                'per incontrare i personaggi più amati di sempre e scattare '
+                'foto ricordo. Orari delle uscite della mascotte (Ogni uscita '
+                'durerà circa 25 minuti): Mattina: 10:30 – 11:30 – 12:30 '
+                'Pomeriggio: 15:00 – 16:00 – 17:00 – 18:00 Il divertimento '
+                'prosegue sabato 14 e domenica 15 febbraio con truccabimbi a '
+                'tema e degustazioni gratuite di popcorn caldi e soffice '
+                'zucchero filato, per una pausa golosa tra un’attività e '
+                'l’altra. Gran chiusura domenica 15 febbraio con la sfilata '
+                'delle mascherine di Carnevale, un momento di festa dedicato '
+                'alla creatività e all’originalità dei piccoli partecipanti. '
+                'Tra shopping, laboratori, spettacolo e momenti golosi, il '
+                'Santangelo outlet village si conferma ancora una volta come '
+                'destinazione ideale per vivere il Carnevale in famiglia e '
+                'lasciarsi conquistare dalla magia del Carnival village.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/54121332584301/carnival-village.jpg',
+ 'location_address': 'Via Moscarola',
+ 'location_name': 'Santangelo outlet village',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:22:17.173379',
+ 'time_info': '10:30-12:30',
+ 'title': 'Carnival village: gli eventi in programma all’outlet Santangelo',
+ 'url': 'https://www.ilpescara.it/eventi/cultura/carnival-village-2026-eventi-programma-outlet-santangelo.html',
+ 'uuid': 'f9d780614f136999'}
+[2026-01-29T18:22:21.659+0000] {docker.py:429} INFO - 2026-01-29 18:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/cultura/premio-battistelli-cerimonia-premiazione-concorso-poesia-inedita-2026.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:21.768+0000] {docker.py:429} INFO - 2026-01-29 18:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/cultura/premio-battistelli-cerimonia-premiazione-concorso-poesia-inedita-2026.html>
+{'category': 'Manifestazioni',
+ 'city': 'Pescara',
+ 'content_hash': '2a2b0b0993e65f7a',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'A Pescara il prossimo 1° febbraio si terrà la premiazione '
+                'della prima edizione del premio Battistelli dedicato alla '
+                'poesia inedita. L’evento avrà luogo nella sala consiliare del '
+                'comune di Pescara. L’evento "Nel cuore del viaggio dove le '
+                'poesie si incontrano", segna l’inizio di un percorso '
+                'culturale volto a celebrare il talento poetico nazionale e a '
+                'ricordare la figura della professoressa Adalgisa Battistelli '
+                'attraverso la forza evocativa dei versi. Il cuore di questa '
+                "manifestazione inaugurale sarà l'annuncio dei vincitori del "
+                'premio e la presentazione ufficiale della silloge poetica '
+                'edita dalla Casa Editrice Drakon (Villa Raspa di Spoltore) di '
+                'Nicolina Galassi che raccoglie le opere selezionate in questa '
+                'prima e fortunata edizione. La pubblicazione rappresenta un '
+                'omaggio al tema del "viaggio", inteso come esplorazione '
+                'dell’anima e ritorno verso sé stessi, ricalcando '
+                "l'insegnamento intellettuale e umano della professoressa "
+                'Battistelli. Ogni componimento presente nel volume testimonia '
+                "la volontà dell'associazione di trasformare l’esperienza del "
+                'concorso in un lascito duraturo di bellezza e conoscenza. La '
+                'direzione artistica del premio con relativa pubblicazione è '
+                'affidata a Melisa Di Federico, presidente dell’associazione '
+                'Adalgisa Battistelli ets. Melisa Di Federico, professionista '
+                'impegnata nella promozione scientifica e artistica con una '
+                'solida esperienza nel campo del sociale e dell’imprenditoria '
+                'sostenibile, ha voluto dare una forte impronta valoriale a '
+                'questo primo concorso, vedendo nella poesia uno strumento di '
+                'trasformazione e benessere. Durante l’incontro, la curatrice '
+                'illustrerà il processo creativo che ha portato alla nascita '
+                'di questa silloge e l’importanza di aver istituito un premio '
+                'che diventi punto di riferimento per la cultura '
+                'contemporanea. Il programma della serata prevede interventi '
+                'di rilievo istituzionale e accademico, con il contributo di '
+                'Carlo Odoardi dell’università di Firenze, Valeria Toppetti '
+                'per il comune di Pescara, Nicolina Galassi per Drakon '
+                'Edizioni e Marco Recchia dell’università “G. d’Annunzio”. A '
+                'sottolineare l’emozione di questa cerimonia inaugurale sarà '
+                'l’intervento musicale curato dalla maestra Simona Capozucco. '
+                'L’appuntamento si configura come un evento imperdibile per la '
+                'cittadinanza, invitata a celebrare la nascita di un premio '
+                'che guarda al futuro con passione e coraggio.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/8434736870787/adalgisa-battistelli-v2.jpg',
+ 'location_address': 'Piazza Italia',
+ 'location_name': 'Sala Consiliare del Comune',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:22:17.172855',
+ 'time_info': '16',
+ 'title': 'Premio Battistelli: cerimonia di premiazione del concorso di poesia '
+          'inedita',
+ 'url': 'https://www.ilpescara.it/eventi/cultura/premio-battistelli-cerimonia-premiazione-concorso-poesia-inedita-2026.html',
+ 'uuid': 'a2cf8697f68171a2'}
+[2026-01-29T18:22:22.468+0000] {docker.py:429} INFO - 2026-01-29 18:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/teatro/grande-richiesta-torna-spettacolo-teatrale-morto-un-morto-se-ne-fa-un-altro.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:22.578+0000] {docker.py:429} INFO - 2026-01-29 18:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/teatro/grande-richiesta-torna-spettacolo-teatrale-morto-un-morto-se-ne-fa-un-altro.html>
+{'category': 'Teatri',
+ 'city': 'Pescara',
+ 'content_hash': '74f76efb93f751d1',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '18:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Dopo la rappresentazione messa in scena lo scorso 14 dicembre '
+                '2025, torna a grande richiesta la replica dello spettacolo '
+                'teatrale “Morto un morto se ne fa un altro” della compagnia '
+                '“Velocità5” del centro teatro studi di Pescara. Testo e regia '
+                'di Pietrunti Daniela. Lo show, che aveva ottenuto consensi '
+                'entusiasti da pubblico e critica, torna il prossimo 1° '
+                'febbraio 2026, alle ore 18.30, al teatro comunale di Città '
+                'Sant’Angelo. Ingresso libero. Considerato il precedente sold '
+                'out, e la capienza limitata di posti a sedere, si consiglia '
+                'al pubblico di arrivare in teatro con il dovuto anticipo '
+                'rispetto all’orario di inizio delle 18.30. Donazione liberale '
+                'a partire da 5 euro. Parte del ricavato andrà a sostegno '
+                "dell'associazione animalista Arrogatti&Co odv.",
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/30371281089198/morto-un-morto-se-ne-fa-un-altro.jpeg',
+ 'location_address': 'Piazza IV Novembre',
+ 'location_name': 'teatro comunale di Città Sant’Angelo',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:22:17.172070',
+ 'time_info': '18.30',
+ 'title': 'A grande richiesta torna lo spettacolo teatrale “Morto un morto se '
+          'ne fa un altro”',
+ 'url': 'https://www.ilpescara.it/eventi/teatro/grande-richiesta-torna-spettacolo-teatrale-morto-un-morto-se-ne-fa-un-altro.html',
+ 'uuid': '888c6e9db495eb62'}
+[2026-01-29T18:22:23.437+0000] {docker.py:429} INFO - 2026-01-29 18:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/cultura/presentazioni-antologie-non-nel-nostro-nome-chi-e-carneade.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:23.547+0000] {docker.py:429} INFO - 2026-01-29 18:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/cultura/presentazioni-antologie-non-nel-nostro-nome-chi-e-carneade.html>
+{'category': 'Incontri',
+ 'city': 'Pescara',
+ 'content_hash': '5f8cda830c1cada8',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Il prossimo 30 gennaio si terranno, a Pescara, negli spazi '
+                'della fondazione La Rocca (via Paolucci), le presentazioni '
+                'dell’antologia della poesia italiana “Non nel nostro nome” a '
+                'cura di Massimo Pamio e Adam Vaccaro e dell’antologia di '
+                'racconti “Chi è Carneade” a cura di Massimo Pamio, pubblicate '
+                'dai tipi delle Edizioni mondo nuovo, nell’ambito delle '
+                'manifestazioni organizzate dalla casa della poesia in Abruzzo '
+                '“G. D’Annunzio”. La serata sarà introdotta da Ottorino La '
+                'Rocca, Presidente della Fondazione La Rocca e da Dante '
+                'Marianacci, Presidente della casa della Poesia. '
+                'Interverranno: Massimo Pamio, Giuliano Corrado, Bruno Nasuti. '
+                'Letture di Grazia Di Lisio. La prima antologia include 124 '
+                'poeti di rilievo nazionale e internazionale che si sono '
+                'misurati sul tema dell’impegno civile rispetto alle guerre e '
+                'agli orrori che ci circondano, nella seconda 37 racconti '
+                'cercano di rispondere alla domanda posta da Don Abbondio '
+                'nell’VIII capitolo dei Promessi Sposi e diventata '
+                'proverbiale: “Carneade, chi era costui?”. Con la provocazione '
+                'di un racconto realizzato dall’Intelligenza Artificiale, di '
+                'notevole impatto letterario e perfino emotivo. L’incontro, '
+                'aperto al pubblico, è mirato a creare un dibattito '
+                'sull’attuale momento di crisi della letteratura italiana e '
+                'delle istituzioni culturali. Massimo Pamio si è interessato, '
+                'di recente, di filosofia dell’arte in “Arte, l’impossibile '
+                'natura” (2025), e in “Sensibili alle forme. Che cos’è l’arte” '
+                '(2019), di archeologia neurocognitiva in “Sentirsi sentire. '
+                'Che cos’è il pensare” (2020), di Gabriele D’Annunzio in tre '
+                'studi, di Ennio Flaiano, di Francesco Paolo Michetti. Ha '
+                'curato “Donne, uomini e burattini” di Ugo Ojetti, e “La mia '
+                'vita” di Benito Mussolini e numerose monografie sull’opera di '
+                'artisti e scrittori. Giuliano Corrado, già docente di '
+                'Estetica presso l’Università Centrale del Venezuela, da anni '
+                'è impegnato nella divulgazione della lettura poetica '
+                'attraverso laboratori e incontri in Italia e all’estero. '
+                'Bruno Nasuti, di formazione umanistica, ha lavorato come '
+                'insegnante in scuole Medie, Magistrali e Licei. Già attivo '
+                'come ricercatore nell’Università di Chieti e come formatore '
+                'in corsi Irrsae e della comunità europea, si interessa dei '
+                'fenomeni della complessità, delle neuroscienze e della '
+                'Comunicazione in tutte le sue forme. Per il Media Museum di '
+                'Pescara, a partire dal 2010, ha curato numerosi corsi di '
+                'interpretazione antropologica di film a tema. Attualmente '
+                'coordina vari gruppi di lettura e cura un proprio canale su '
+                'Youtube. Tra i volumi pubblicati: “Stili di vita. Quanto '
+                'libere sono le nostre scelte?” (con A. Colaiacovo e M. '
+                'Giacintucci), “Diogene; e Il senso del multiforme. Saggi di '
+                'cultura e letteratura italiana” (con M. Giacintucci). Di '
+                'recente è uscito “Come si legge la realtà”. Grazia Di Lisio è '
+                'nata a Cabras e vive tra Teramo e Pescara. Poetessa, '
+                'scrittrice, si è dedicata all’insegnamento e '
+                'all’approfondimento di linguaggi espressivi. Ha partecipato a '
+                'varie rassegne di Teatro-Scuola, “Giostra di Orlando”, '
+                '“Cavallo di Troia”, “Progetto Ilio”, creando l’elaborazione '
+                'drammaturgica dei testi con la collaborazione di Enti '
+                'teatrali, l’IRRE Abruzzo, Lazio e l’ETI di Udine. Oltre al '
+                'premio Pirandello (Agrigento 2003-2004), conferito ai suoi '
+                'alunni per le sezioni teatro e cortometraggio, ha ricevuto il '
+                'Premio Didattica “Raffaele La Porta” (Pescara). Per la '
+                'poesia, ha pubblicato numerose raccolte, la più recente: '
+                '“Sentirsi foglia. Cento sfumature”. Tra i riconoscimenti per '
+                'la poesia edita, il primo premio “Ida Baruzzi Bertozzi” 2011 '
+                '(Chiavari) e il secondo premio “Astrolabio” 2014 (Pisa). Ha '
+                'ricevuto, inoltre, il secondo premio per il saggio in lingua '
+                'campidanese “Sa terra sonadora”.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/28670286308012/copertina-non-nel-nostro-nome-2.jpg',
+ 'location_address': 'Via R. Paolucci',
+ 'location_name': 'Fondazione La Rocca',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:22:17.170726',
+ 'time_info': '17',
+ 'title': 'Presentazioni delle antologie della “Non nel nostro nome” e “Chi è '
+          'Carneade”',
+ 'url': 'https://www.ilpescara.it/eventi/cultura/presentazioni-antologie-non-nel-nostro-nome-chi-e-carneade.html',
+ 'uuid': 'd24261cc28e5856c'}
+[2026-01-29T18:22:24.627+0000] {docker.py:429} INFO - 2026-01-29 18:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/cultura/poetry-house-festival-2026-programma-terza-edizione.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:24.739+0000] {docker.py:429} INFO - 2026-01-29 18:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/cultura/poetry-house-festival-2026-programma-terza-edizione.html>
+{'category': 'Manifestazioni',
+ 'city': 'Pescara',
+ 'content_hash': 'ee8369454aef9111',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '20:40', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio a Pescara nella casa cultura Pasquinelli, '
+                'dopo lo straordinario successo delle prime due edizioni, la '
+                'cultura si riaccende con Phf3 Poetry house festival (il '
+                'potere delle parole). Un ricco programma composto da cinque '
+                'serate e quattro progetti speciali. Il festival di poesia '
+                'andrà avanti fino a maggio e ospiterà nomi eccellenti della '
+                'nuova scrittura italiana contemporanea, e scrittori e '
+                'scrittrici emergenti. Ospiti della prima serata Cam Lecce '
+                '(attrice, performer) ed Enrico Maria Guerra (poeta) in '
+                '“Florilegio di un amore”, un appassionante intreccio e '
+                'rincorrersi di voci. Il Phf3 è patrocinato dal comune e dalla '
+                'provincia di Pescara, dalla presidenza del consiglio '
+                'regionale. Con gli auspici del Centro per il libro e la '
+                'lettura del ministero della cultura. Promosso da '
+                'Bibliodrammatica aps, in collaborazione con il museo Lettera '
+                'd’amore, e il festival delle biblioteche sociali. Il festival '
+                'vuole innescare una potente riflessione sulla scrittura '
+                'poetica e la poesia, sugli spazi di fruizione e ascolto '
+                'sempre più rari e poco programmati. Direzione artistica '
+                'Beniamino Cardines, coordinamento Annarita Pasquinelli. In '
+                'casa, in un salotto, vicinissimi perché abbiamo bisogno di '
+                'toccare con mano le parole del poeta o della poetessa. La '
+                'poesia è fatta di cuore e passioni, di libertà e '
+                'rivendicazioni, di partecipazione e democrazia, di esistenza '
+                'e vitalità. Beniamino Cardines, direttore artistico: '
+                '“Rimettiamo al centro il gesto della scrittura come luogo di '
+                'socialità, socializzazione, e restituiamo alla parola scritta '
+                'il potere di innescare confronti, dialoghi e relazioni. '
+                'Cercare insieme è ritrovarsi e mettere in moto un dialogo '
+                'attivo. Non c’è solo chi scrive, ma anche chi ascolta, '
+                'entrambi parlano. Le parole hanno un peso, un significato, '
+                'sono la continua esplorazione della nostra capacità di '
+                'esprimerci, comunicare, entrare in relazione con gli altri. '
+                'La cultura è qualcosa da desiderare, da volere, non solo '
+                'qualcosa da fruire come spettatori in luoghi preposti e per '
+                'il resto del tempo vuoti e silenziosi. La cultura nasce e '
+                'cresce in ogni casa, è dalle nostre case che immaginiamo una '
+                'società, che la rinnoviamo o la regrediamo.” Annarita '
+                'Pasquinelli, promotrice culturale: “Un festival in un luogo '
+                'protetto? No piuttosto un festival in un luogo dove non siamo '
+                'mai stati prima. Una casa che diventa luogo pubblico, che '
+                'accoglie attraverso il potere aggregativo dell’arte. Posti '
+                'limitati? Certo, posti da prenotare esprimendo una volontà di '
+                'esserci, di partecipare, di entrare nel vivo di una '
+                'germinazione letteraria e culturale. Riapro la casa dei miei '
+                'genitori, una casa che è sempre vissuta immersa nella '
+                'cultura.” Di seguito il programma. Ogni venerdì alle 20,40: - '
+                '30 gennaio: Cam Lecce – Enrico Maria Guerra - 27 febbraio: '
+                'Vittorina Castellano – Marco Tabellione - 27 marzo: Nicoletta '
+                'Di Gregorio – Stevka Smitran - 17 aprile: Flora Amelia Suarez '
+                'Cardenas – Raffaele Rubino - 22 maggio: Annamaria Di Lorenzo '
+                '– Maria Carinta Naccarella Autori e autrici della terza '
+                'edizione del Phf3 Progetti speciali: -venerdì 13 marzo '
+                '“Parole di notte” (ore 20:40 Fbs/Festival Biblioteche '
+                'Sociali) -sabato 21 marzo “Notte dei Ricordi/2” (ore 20:40 '
+                '#pasquinellicasacultura) -sabato 18 aprile “poeti '
+                'controguerre/6” (ore 16:30 Ci vuole un Villaggio aps - '
+                'ArtGallery) -mercoledì 3 giugno “Premio Vita e Culture 2026” '
+                '(ore 16:30 Fondazione La Rocca)',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/65834192051293/poetry-house-2026.jpg',
+ 'location_address': 'Via Nicola Fabrizi, 14',
+ 'location_name': 'Casa Pasquinelli',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:22:17.169795',
+ 'time_info': '20.40',
+ 'title': 'Poetry house festival 2026: il programma della terza edizione',
+ 'url': 'https://www.ilpescara.it/eventi/cultura/poetry-house-festival-2026-programma-terza-edizione.html',
+ 'uuid': '8576ca272954d9d8'}
+[2026-01-29T18:22:25.740+0000] {docker.py:429} INFO - 2026-01-29 18:22:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/mostre/enjoy-my-brain-mostra-personale-stefania-barile.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:25.858+0000] {docker.py:429} INFO - 2026-01-29 18:22:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/mostre/enjoy-my-brain-mostra-personale-stefania-barile.html>
+{'category': 'Mostre',
+ 'city': 'Pescara',
+ 'content_hash': 'f1a0b1873dabefde',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-15',
+ 'dates': [{'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Dal 15 al 30 gennaio si terrà la mostra personale di Stefania '
+                'Barile dal titolo “Enjoy my brain. Goditi pure il mio '
+                'cervello!”, al Cosimetti mensa e bar. La mostra, che verrà '
+                'inaugurata giovedì 15 gennaio alle ore 18, è curata da kK, '
+                'con una nota critica di Nadia Di Bernardo la quale, a '
+                'proposito dei lavori dell’artista, scrive: “ Alcuni processi '
+                'sociopsicologici volti al controllo di più individui possono '
+                'produrre profondi cambiamenti nell’identità delle persone '
+                'prese di mira, cambiando letteralmente il loro cervello. '
+                'Stefania Barile, percependosi come soggetto di un laboratorio '
+                'collettivo, si lascia inizialmente manipolare per poi reagire '
+                'contemplando l’osservatore stesso, disgregandolo, '
+                'purificandolo e riconnettendolo alla propria identità”. '
+                'L’artista, dunque, torna a interpretare la realtà nei suoi '
+                'lati nascosti, talvolta oscuri, che riguardano sia il '
+                'subconscio individuale che collettivo, come nelle sue '
+                'installazioni del 2001 dal titolo “One in my head” (Uno nella '
+                'mia testa), per invitare gli spettatori a riflettere, come '
+                'lei stessa afferma, “sulla visione degli individui da parte '
+                'di poteri non sempre dichiarati che vorrebbero allontanarci '
+                'dalla nostra condizione di umanità per relegarci al ruolo di '
+                'semplici consumatori, produttori di dati mercificabili, '
+                'burattini inconsapevoli da muovere, a proprio piacimento, sul '
+                'palcoscenico della vita”. Stefania Barile, su instagram '
+                '@stephania_on_earth, classe ‘79, continua quindi a dialogare '
+                'con l’arte utilizzando mezzi espressivi differenti (pittura, '
+                'video, opere-installazioni), ma rimanendo fedele al tema '
+                'dell’osservazione dei soggetti all’interno del sistema '
+                'sociale e dell’ipercontrollo liquido. La mostra sarà '
+                'visitabile dal 15 al 30 gennaio, dal mercoledì alla domenica, '
+                'dalle 18 alle 24.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/16288018022322/stefania-barile.jpg',
+ 'location_address': 'Via Carlo Poerio, 16',
+ 'location_name': 'Cosimetti mensa e bar',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:22:17.169167',
+ 'time_info': 'Inaugurazione ore 18',
+ 'title': 'Enjoy my brain: la mostra personale di Stefania Barile',
+ 'url': 'https://www.ilpescara.it/eventi/mostre/enjoy-my-brain-mostra-personale-stefania-barile.html',
+ 'uuid': '048f06d0e72057f6'}
+[2026-01-29T18:22:27.758+0000] {docker.py:429} INFO - 2026-01-29 18:22:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/teatro/itinerdante-siamo-inferno-esperienza-immersiva-cerulli.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:27.914+0000] {docker.py:429} INFO - 2026-01-29 18:22:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/teatro/itinerdante-siamo-inferno-esperienza-immersiva-cerulli.html>
+{'category': 'Teatri',
+ 'city': 'Pescara',
+ 'content_hash': 'ae20da2898556407',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '21:00', 'weekday': 'Venerdì'}],
+ 'description': 'Un viaggio dentro l’inferno, per viverlo sulla pelle. '
+                '“ItinerDante: Siamo Inferno” arriva a Pescara venerdì 30 '
+                'gennaio 2026, alle ore 21, all’auditorium Cerulli. Una '
+                'performance teatrale costruita come esperienza emotiva e '
+                'immersiva, capace di arrivare dritto al cuore della poesia e '
+                'dello spettatore. Al centro c’è la voce dell’attore Eugenio '
+                'Di Fraia, che restituisce la forza dei versi come materia '
+                'viva, mentre la musica originale eseguita dal vivo da maestro '
+                'Angelo Marrone costruisce atmosfere e ritmo in un dialogo '
+                'serrato tra parola e musica. La serata prevede, inoltre, un '
+                'momento speciale: il canto conclusivo del paradiso con la '
+                'partecipazione del Coro polifonico Beato Nunzio e del Coro '
+                'Polyphonia, diretti dal maestro Gianni Golini. C’è un modo di '
+                'avvicinarsi all’opera di Dante che non passa dalla cattedra '
+                'né dalla parafrasi: passa dal corpo, dal fiato, dal suono. È '
+                'un’esperienza che somiglia a un attraversamento, più che a '
+                'una lezione; un’immersione in cui la parola antica torna '
+                'improvvisamente presente, urgente, umana. “ItinerDante: Siamo '
+                'Inferno” fa proprio questo: apre la Divina Commedia come si '
+                'apre una porta, e invita il pubblico a varcarla.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/25884509113202/itinerdante-siamo-inferno.jpg',
+ 'location_address': 'Via Francesco Verrotti, 42',
+ 'location_name': 'Auditorium Cerulli',
+ 'price': '15€',
+ 'scraped_at': '2026-01-29T18:22:17.168398',
+ 'time_info': '21:00',
+ 'title': "ItinerDante: siamo inferno, un'esperienza immersiva al Cerulli",
+ 'url': 'https://www.ilpescara.it/eventi/teatro/itinerdante-siamo-inferno-esperienza-immersiva-cerulli.html',
+ 'uuid': '7cb6c6c65f68ef9d'}
+[2026-01-29T18:22:28.763+0000] {docker.py:429} INFO - 2026-01-29 18:22:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/cultura/ciambella-moscatello-si-rinnova-tradizione-castiglione-casauria.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:28.872+0000] {docker.py:429} INFO - 2026-01-29 18:22:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/cultura/ciambella-moscatello-si-rinnova-tradizione-castiglione-casauria.html>
+{'category': 'Manifestazioni',
+ 'city': 'Pescara',
+ 'content_hash': '58f7231c3dbc74c6',
+ 'date_end': '2026-02-04',
+ 'date_start': '2026-01-25',
+ 'dates': [{'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'}],
+ 'description': 'Domenica 25 gennaio, alle 15.30, nella cantina di Tenuta '
+                'secondo IX si terrà la terza edizione di “La ciambelle de San '
+                'Biasce” organizzata da Interpromium in collaborazione con '
+                'l’azienda vitivinicola. L’evento si concluderà il 4 febbraio '
+                'alle ore 17.30 con il IX Premio del Moscatello al palazzo De '
+                'Petris-Fraggianni. L’iniziativa rientra nei festeggiamenti in '
+                'onore di San Biagio, con il patrocinio del comune di '
+                'Castiglione a Casauria. L’intento è quello di rilanciare le '
+                'due tipicità enogastronomiche del paese attraverso '
+                'l’istituzione di due premi, due momenti per riconoscere il '
+                'merito dei produttori amatoriali della ciambella '
+                'castiglionese e del Moscatello di Castiglione. Un’iniziativa '
+                'che vuole riportare al centro i "custodi della ricetta": le '
+                'famiglie e i produttori amatoriali. I produttori che '
+                'desiderano mettere alla prova la propria abilità, potranno '
+                'iscriversi gratuitamente. Due giurie apposite, nei due '
+                'giorni, valuteranno i prodotti e decreteranno i vincitori. '
+                '"Con queste iniziative non vogliamo solo premiare la '
+                'ciambella o il Moscatello migliori, ma riattivare i forni e '
+                'le cantine della nostra memoria collettiva" , dichiarano i '
+                'rappresentanti delle associazioni. “ Vogliamo che sia la '
+                'comunità stessa a farsi portavoce della bellezza e della '
+                'bontà dei nostri prodotti."',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/32311562345127/moscatello-e-ciambelle-1.jpg',
+ 'location_address': None,
+ 'location_name': 'Cantina di Tenuta secondo IX e palazzo De Petris-Fraggianni',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-29T18:22:17.167662',
+ 'time_info': 'consultare il programma',
+ 'title': 'Ciambella e moscatello: si rinnova la tradizione a Castiglione a '
+          'Casauria',
+ 'url': 'https://www.ilpescara.it/eventi/cultura/ciambella-moscatello-si-rinnova-tradizione-castiglione-casauria.html',
+ 'uuid': '2a6c7d435c487157'}
+[2026-01-29T18:22:29.682+0000] {docker.py:429} INFO - 2026-01-29 18:22:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/mostre/sculture-vito-pancella-mostra-2025-2026.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:29.793+0000] {docker.py:429} INFO - 2026-01-29 18:22:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/mostre/sculture-vito-pancella-mostra-2025-2026.html>
+{'category': 'Mostre',
+ 'city': 'Pescara',
+ 'content_hash': 'c35ac5907d248288',
+ 'date_end': '2026-03-08',
+ 'date_start': '2025-12-05',
+ 'dates': [{'date': '2025-12-05',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2025-12-06',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2025-12-07',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-10',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-12',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2025-12-13',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2025-12-14',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-17',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-19',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2025-12-20',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2025-12-21',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-24',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-26',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2025-12-27',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2025-12-28',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-31',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-02',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-01-03',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-01-04',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-07',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-09',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-01-10',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-01-11',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-14',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-16',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-01-17',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-01-18',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-21',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-23',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-01-24',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-01-25',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-28',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-30',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-01-31',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-01',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-04',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-06',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-02-07',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-08',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-11',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-13',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-02-14',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-15',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-18',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-20',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-02-21',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-02-22',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-25',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-27',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-02-28',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-03-01',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-03-04',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-06',
+            'time_end': '20:00',
+            'time_start': '17:00',
+            'weekday': 'Venerdì'},
+           {'date': '2026-03-07',
+            'time_end': '20:00',
+            'time_start': '16:00',
+            'weekday': 'Sabato'},
+           {'date': '2026-03-08',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Il prossimo 5 dicembre si terrà l’inaugurazione della mostra '
+                '“Vito Pancella: dare vita alla materia”, a ottant’anni dalla '
+                'nascita e vent’anni dalla scomparsa dello scultore abruzzese '
+                '(Lanciano, 1945 – 2005). L’esposizione sarà allestita a '
+                'Maison des Arts, promossa da fondazione Pescarabruzzo. Il '
+                'vernissage si terrà il 5 dicembre, alle ore 17.30, a ingresso '
+                'libero, e la mostra sarà visitabile fino al prossimo 8 marzo '
+                '2026. Curata dalla storica e critica d’arte, Ida Mitrano, la '
+                'mostra propone una lettura rinnovata della ricerca di '
+                'Pancella e del suo rapporto profondo con la natura, la forma '
+                'e il “respiro” della materia. Come sottolinea il presidente '
+                'della Pescarabruzzo Nicola Mattoscio, l’esposizione nasce dal '
+                'principio che guidava l’artista: la necessità di “dare la '
+                'vita, il respiro alla materia”, trasformando bronzo, marmo e '
+                'gesso in forme animate, vibranti e cariche di tensione '
+                'poetica. L’esposizione presenta 55 opere complessive, di cui: '
+                '33 sculture in bronzo, marmo e gesso, che documentano '
+                'l’evoluzione stilistica dell’artista dai primi lavori degli '
+                'anni ‘70 alla piena maturità, e 22 opere grafiche, tra '
+                'incisioni e disegni, specialmente degli anni ‘80, che '
+                'dialogano con le sculture evidenziando la libertà espressiva '
+                'e la padronanza tecnica dell’autore. Due gessi degli anni ‘70 '
+                'legati agli studi romani presso Pericle Fazzini, aprono il '
+                'percorso, mentre un nucleo di opere dedicate ai fenomeni '
+                'naturali – dall’alba alla luna, dal vento alla primavera – '
+                'restituisce lo sguardo umano e poetico dell’artista, capace '
+                'di trasformare gli elementi in forme che raccontano la '
+                'ciclicità della vita e l’intimo legame tra uomo e natura. '
+                'Nelle parole della curatrice Ida Mitrano, le sculture di '
+                'Pancella rivelano un sentimento della natura» che è '
+                'esperienza interiore e vibrazione emotiva, tra leggerezza, '
+                'tensione e fragilità. Al vernissage, dopo i saluti '
+                'istituzionali di Nicola Mattoscio, e Carlo Masci, '
+                'interverranno gli autori dei testi del catalogo: Ida Mitrano, '
+                'curatrice della mostra, e Alessandro Masi, storico dell’arte '
+                'e segretario generale della società Dante Alighieri di Roma. '
+                'Saranno presenti i familiari dell’artista. Un artista tra '
+                'mito, natura e forma. Il percorso espositivo mostra un’opera '
+                'sospesa tra classicità e inquietudine contemporanea: figure '
+                'femminili enigmatiche, corpi attraversati dal vento, '
+                'superfici vibrate, forme che sembrano emergere e dissolversi '
+                'allo stesso tempo. Come osserva Mitrano, Pancella «non vuole '
+                'rappresentare, ma essere», restituendo alla scultura una '
+                'dimensione esistenziale che unisce etica, estetica e umanità '
+                'profonda. Nel suo saggio, Alessandro Masi amplia lo sguardo '
+                'sulla figura dell’artista e sulla sua appartenenza alla '
+                'grande stagione della scultura italiana della seconda metà '
+                'del Novecento, erede della lezione di Pericle Fazzini e '
+                'interprete originale del rapporto tra forma, mito e natura. '
+                'Vito Pancella nasce a Lanciano nel 1945, dove compie gli '
+                'studi artistici prima di trasferirsi a Roma per frequentare '
+                'l’Accademia di Belle Arti. Qui si forma alla scuola dello '
+                'scultore Pericle Fazzini e dell’incisore Lino Bianchi '
+                'Barriviera. Per oltre vent’anni insegna nei licei artistici '
+                'di Bari e di Roma, città dove mantiene a lungo il proprio '
+                'studio e partecipa attivamente alla vita culturale. Nel 1989 '
+                'torna stabilmente a Lanciano, pur continuando a lavorare tra '
+                'le fonderie di Verona e i laboratori del marmo di '
+                'Pietrasanta. La sua intensa attività espositiva, durata quasi '
+                'quarant’anni, lo vede presente in numerose personali e '
+                'collettive in Italia e all’estero, con riconoscimenti e premi '
+                'significativi. Muore il 12 giugno 2005, dopo una lunga '
+                'malattia.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/14556323710682/invito-web_mostra-vito-pancella.jpg',
+ 'location_address': 'Corso Umberto I, 83',
+ 'location_name': 'Maison des Arts | Fondazione Pescarabruzzo',
+ 'price': 'Gratis',
+ 'schedule': 'Mercoledì – Venerdì: 17:00 – 20:00 - Sabato: 16:00 – 20:00 - '
+             'Domenica: 10:30 – 13:30 | 16:00 – 20:00',
+ 'scraped_at': '2026-01-29T18:22:17.167365',
+ 'time_info': '17:00-20:00',
+ 'title': 'Le sculture di Vito Pancella in mostra',
+ 'url': 'https://www.ilpescara.it/eventi/mostre/sculture-vito-pancella-mostra-2025-2026.html',
+ 'uuid': '332ca28b19d6b337',
+ 'weekdays': 'Mercoledì, Venerdì, Sabato, Domenica'}
+[2026-01-29T18:22:30.690+0000] {docker.py:429} INFO - 2026-01-29 18:22:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/cultura/escursione-domenicale-casa-d-annunzio.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:30.797+0000] {docker.py:429} INFO - 2026-01-29 18:22:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/cultura/escursione-domenicale-casa-d-annunzio.html>
+{'category': 'Escursioni',
+ 'city': 'Pescara',
+ 'content_hash': '14591b5cea0f4ccd',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Si terrà domenica 1° febbraio, dalle 10 alle 12 circa, '
+                'un’escursione all’insegna della cultura e alla scoperta di '
+                'una delle personalità italiane più geniali del secolo scorso: '
+                'Gabriele D’Annunzio. Accolti nella casa D’Annunzio, per '
+                'conoscere i suoi genitori, Don Francesco Paolo e Donna Luisa, '
+                'i suoi fratelli e le sue sorelle. Girovagando per le stanze, '
+                'che videro Gabriele D’Annunzio prima bambino e poi '
+                'adolescente, all’interno di una dimensione più intima e '
+                'familiare che, grazie alle memorabilia esposte, quella di '
+                'poeta dal grandissimo successo prima e di combattente poi. In '
+                'queste stanze tutto parla ancora delle sue opere letterarie '
+                'giovanili, della sua precoce genialità, della sua '
+                'caleidoscopica infanzia. Il biglietto di ingresso al museo è '
+                'gratuito, grazie al progetto “Domenica al museo” del '
+                'ministero della cultura.',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/27429512178526/museo-casa-natale-d-annunzio.jpg',
+ 'location_address': 'Corso Gabriele Manthone, 116',
+ 'location_name': 'Casa D’Annunzio',
+ 'price': '€ 15,00 a persona (inclusi gli auricolari utilizzati durante la '
+          'visita guidata)',
+ 'scraped_at': '2026-01-29T18:22:17.167052',
+ 'time_info': 'Dalle 10 alle 12 circa',
+ 'title': 'Escursione domenicale a Casa D’Annunzio',
+ 'url': 'https://www.ilpescara.it/eventi/cultura/escursione-domenicale-casa-d-annunzio.html',
+ 'uuid': 'f3e4aabb1390696d'}
+[2026-01-29T18:22:33.161+0000] {docker.py:429} INFO - 2026-01-29 18:22:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ilpescara.it/eventi/mostre/mostra-michelangelo-pistoletto-sculture-disegni.html> (referer: https://www.ilpescara.it/eventi/dal/2026-01-29/al/2026-02-01/)
+[2026-01-29T18:22:33.273+0000] {docker.py:429} INFO - 2026-01-29 18:22:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ilpescara.it/eventi/mostre/mostra-michelangelo-pistoletto-sculture-disegni.html>
+{'category': 'Mostre',
+ 'city': 'Pescara',
+ 'content_hash': '68085b72c244dbbf',
+ 'date_end': '2026-05-31',
+ 'date_start': '2025-11-24',
+ 'dates': [{'date': '2025-11-25',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2025-11-30',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-02',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2025-12-07',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-09',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2025-12-14',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-16',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2025-12-21',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-23',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2025-12-28',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-30',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-01-04',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-06',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-01-11',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-13',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-01-18',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-20',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-01-25',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-27',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-02-01',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-03',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-02-08',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-10',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-02-15',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-17',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-02-22',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-24',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-03-01',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-03-03',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-03-08',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-03-10',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-03-15',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-03-17',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-03-22',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-03-24',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-03-29',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-03-31',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-04-05',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-04-07',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-04-12',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-04-14',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-04-19',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-04-21',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-04-26',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-04-28',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-05-03',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-05-05',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-05-10',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-05-12',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-05-17',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-05-19',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-05-24',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-05-26',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Martedì'},
+           {'date': '2026-05-31',
+            'time_end': '13:30',
+            'time_start': '10:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Fondazione Pescarabruzzo presenta “Michelangelo Pistoletto. '
+                'Sculture e disegni (1982–1986)” a cura di Zerynthia – '
+                'associazione per l’arte Contemporanea odv. La mostra è stata '
+                'inaugurata lo scorso 24 novembre e sarà visitabile fino al 30 '
+                'maggio 2026 al MicHub di Pescara. Si tratta di un nuovo '
+                'capitolo del progetto “Arte povera e oltre”, dedicato alla '
+                'ricerca di Michelangelo Pistoletto e, in particolare, al '
+                'nucleo di opere realizzate tra il 1982 e il 1986. Insieme '
+                'alla ricostruzione delle installazioni di Luciano Fabro, '
+                'Jannis Kounellis, Mario Merz e Vettor Pisani, esposte da '
+                'Mario Pieroni al "Bagno Borbonico", via delle Caserme, '
+                'Pescara 1975-1978, la nuova esposizione temporanea mira a '
+                'proporre alla città di Pescara un periodo specifico di '
+                'Michelangelo Pistoletto, denominato anche Quarta Generazione '
+                'e definito nella sua pubblicazione, Poetica Dura. Apre la '
+                'rassegna La Spalla, una scultura che sembra avere due '
+                'momenti, un lato prospetticamente levigato, piatto, che '
+                'evidenzia l’assemblaggio dei blocchi, un altro sbozzato e '
+                'smussato, tracciando le linee di un’ipotetica forma in '
+                'formazione. Le altre opere in mostra – in totale cinque '
+                'sculture e dieci disegni – furono presentate per la prima '
+                'volta nell’esposizione Arte dello Squallore nella Galleria di '
+                'Giorgio Persano nel 1985 e nel 1986 proprio nella Galleria '
+                'Pieroni di Roma e sono costituite da superfici e volumi dai '
+                "colori scuri e cupi, grandi blocchi di poliuretano. L'artista "
+                "ha spesso utilizzato per questi lavori anche l'espressione "
+                '“materiale anonimo”, lavori che stanno in un campo indefinito '
+                'tra pittura e scultura. Tra i volumi imponenti e la serie di '
+                'carboncini - che ripetono sul piano a due dimensioni quello '
+                'che i blocchi scultorei interpretano all’interno dello spazio '
+                'reale – si scopre una sorta di contraltare visivo e '
+                'concettuale alle opere specchianti, tanto celebri dello '
+                'stesso artista. Si sono trasformati in immagine esattamente '
+                'come le persone e gli oggetti comuni sulle superfici '
+                'specchianti dei periodi successivi di Michelangelo '
+                'Pistoletto. «Con questa esposizione», afferma Nicola '
+                'Mattoscio, presidente della Fondazione Pescarabruzzo , '
+                '«continua la missione di promozione culturale e di diffusione '
+                'della conoscenza anche attraverso il nuovo polo MicHub, luogo '
+                'di ricerca, sperimentazione e approfondimento dedicato ai '
+                'linguaggi creativi, artistici, tecnologici e scientifici. Per '
+                'la nuova e straordinaria opportunità resa possibile '
+                'sviluppando il progetto Imago Museum / Arte Povera e oltre, '
+                'si deve essere pubblicamente riconoscenti agli infaticabili '
+                'coniugi Dora Stiefelmeier e Mario Pieroni e alla '
+                'disponibilità di Michelangelo Pistoletto, uno dei '
+                'protagonisti più significativi dell’arte contemporanea, come '
+                'gli viene riconosciuto in tutto il mondo».',
+ 'image_url': '//citynews-ilpescara.stgy.ovh/~media/horizontal-mid/31332711309727/pistoletto.jpg',
+ 'location_address': 'Via Michelangelo',
+ 'location_name': 'MicHub',
+ 'price': 'Prezzo non disponibile',
+ 'schedule': 'Orari di apertura dal martedì alla domenica 10.30 - 13.30 - '
+             '13.00; 16.00 - 20.00',
+ 'scraped_at': '2026-01-29T18:22:17.166591',
+ 'time_info': '10:30-13:30',
+ 'title': 'Mostra Michelangelo Pistoletto, sculture e disegni',
+ 'url': 'https://www.ilpescara.it/eventi/mostre/mostra-michelangelo-pistoletto-sculture-disegni.html',
+ 'uuid': '9909c7da48d4b7c6',
+ 'website': 'https://www.rp-press.it/portfolio/michelangelo-pistoletto-sculture-e-disegni-1982-1986-24-novembre-2025-michub-pescara/',
+ 'weekdays': 'Martedì, Domenica'}
+[2026-01-29T18:22:33.278+0000] {docker.py:429} INFO - 2026-01-29 18:22:33 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-29T18:22:33.279+0000] {docker.py:429} INFO - 2026-01-29 18:22:33 [scrapy.extensions.feedexport] INFO: Stored json feed (12 items) in: /app/city_today/output/eventi_pescara_questa-settimana_20260129_182213.json
+[2026-01-29T18:22:33.280+0000] {docker.py:429} INFO - 2026-01-29 18:22:33 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 5961,
+ 'downloader/request_count': 14,
+ 'downloader/request_method_count/GET': 14,
+ 'downloader/response_bytes': 2002052,
+ 'downloader/response_count': 14,
+ 'downloader/response_status_count/200': 14,
+ 'elapsed_time_seconds': 19.552056,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 29, 18, 22, 33, 273299, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 10724847,
+ 'httpcompression/response_count': 14,
+ 'item_scraped_count': 12,
+ 'items_per_city/Pescara': 12,
+ 'items_per_minute': 37.89473684210527,
+ 'log_count/DEBUG': 26,
+ 'log_count/INFO': 3,
+ 'memusage/max': 69070848,
+ 'memusage/startup': 69070848,
+ 'request_depth_max': 1,
+ 'response_received_count': 14,
+ 'responses_per_minute': 44.21052631578947,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 13,
+ 'scheduler/dequeued/memory': 13,
+ 'scheduler/enqueued': 13,
+ 'scheduler/enqueued/memory': 13,
+ 'start_time': datetime.datetime(2026, 1, 29, 18, 22, 13, 721243, tzinfo=datetime.timezone.utc)}
+[2026-01-29T18:22:33.281+0000] {docker.py:429} INFO - 2026-01-29 18:22:33 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-29T18:22:33.457+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_pescara_questa-settimana_20260129_182213.json
+[2026-01-29T18:22:33.765+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_pescara.scrape_city_today, execution_date=20260128T060000, start_date=20260129T182212, end_date=20260129T182233
+[2026-01-29T18:22:33.796+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-29T18:22:33.840+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

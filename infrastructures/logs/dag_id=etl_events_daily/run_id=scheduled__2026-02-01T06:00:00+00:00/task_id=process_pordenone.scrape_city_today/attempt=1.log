@@ -1,0 +1,2281 @@
+[2026-02-02T19:46:12.261+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_pordenone.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:46:12.269+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_pordenone.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:46:12.270+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-02-02T19:46:12.281+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_pordenone.scrape_city_today> on 2026-02-01 06:00:00+00:00
+[2026-02-02T19:46:12.285+0000] {standard_task_runner.py:60} INFO - Started process 298 to run task
+[2026-02-02T19:46:12.287+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_pordenone.scrape_city_today', 'scheduled__2026-02-01T06:00:00+00:00', '--job-id', '418', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmp4dqmq47q']
+[2026-02-02T19:46:12.289+0000] {standard_task_runner.py:88} INFO - Job 418: Subtask process_pordenone.scrape_city_today
+[2026-02-02T19:46:12.305+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-02-02T19:46:12.355+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_pordenone.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [running]> on host d1594f2b36ec
+[2026-02-02T19:46:12.446+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_pordenone.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-02-01T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-01T06:00:00+00:00'
+[2026-02-02T19:46:12.468+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-02-02T19:46:12.476+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-02-02T19:46:13.034+0000] {docker.py:429} INFO - Avvio scraping per: Pordenone
+Periodo: questa-settimana
+[2026-02-02T19:46:13.039+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-02-02T19:46:13.045+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+[2026-02-02T19:46:13.047+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-02-02T19:46:13.050+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [events] INFO: Scraping città: Pordenone
+2026-02-02 19:46:13 [events] INFO: Periodo: questa-settimana (2026-02-02 - 2026-02-08)
+[2026-02-02T19:46:13.052+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-02-02T19:46:13.054+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-02-02T19:46:13.055+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-02-02 19:46:13 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-02-02T19:46:13.059+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.extensions.telnet] INFO: Telnet Password: ccf548b443e62cf2
+[2026-02-02T19:46:13.107+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-02-02T19:46:13.107+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-02-02T19:46:13.153+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-02-02T19:46:13.155+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-02-02T19:46:13.156+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-02-02T19:46:13.156+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_pordenone_questa-settimana_20260202_194613.json
+[2026-02-02T19:46:13.157+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.core.engine] INFO: Spider opened
+[2026-02-02T19:46:13.163+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-02-02T19:46:13.163+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-02-02T19:46:13.349+0000] {docker.py:429} INFO - 2026-02-02 19:46:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/robots.txt> (referer: None)
+[2026-02-02T19:46:14.760+0000] {docker.py:429} INFO - 2026-02-02 19:46:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/> (referer: None)
+[2026-02-02T19:46:15.904+0000] {docker.py:429} INFO - 2026-02-02 19:46:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/tenda-rossa-pordenone-giulia-mion-13397499.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:16.025+0000] {docker.py:429} INFO - 2026-02-02 19:46:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/tenda-rossa-pordenone-giulia-mion-13397499.html>
+{'category': [],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': '06509923bc6144e7',
+ 'date_display': 'dal 14 novembre 2025 al 15 maggio 2026',
+ 'date_end': '2026-05-15',
+ 'date_start': '2025-11-14',
+ 'description': 'A Pordenone un ciclo di incontri dedicato al Sacro Femminile '
+                'e Maschile A partire dal 14 novembre, Pordenone ospita '
+                '“Incontrarsi nel cuore – la danza del Femminile e Maschile '
+                'interiori”, un ciclo di sette incontri esperienziali rivolto '
+                'a donne e uomini adulti, dedicato al risveglio e '
+                'all’integrazione delle energie del Sacro Femminile e del '
+                'Sacro Maschile. Il percorso, condotto da Giulia Mion, si '
+                'propone di accompagnare i partecipanti in un cammino di '
+                'consapevolezza e crescita personale attraverso pratiche '
+                'corporee, meditazione, ritualità e momenti di condivisione, '
+                'con l’obiettivo di favorire relazioni più autentiche e un '
+                'maggiore equilibrio interiore. Gli incontri si terranno il '
+                'venerdì sera, una volta al mese, dalle 20:30 alle 22:30, '
+                'presso Accademia A.N.E.A., in via San Francesco 1/C a '
+                'Pordenone. Le date previste sono: 14 novembre, 5 dicembre '
+                '2025; 16 gennaio, 13 febbraio, 13 marzo, 17 aprile e 15 '
+                'maggio 2026. Il percorso è aperto anche a chi non ha '
+                'esperienza pregressa. È possibile partecipare ai singoli '
+                'incontri o aderire all’intero ciclo con una formula '
+                'agevolata. Per informazioni e iscrizioni: 📞 347 3365063 ✉️ '
+                'giulia@danzadelladea.it',
+ 'event_id': 'tenda-rossa-pordenone-giulia-mion-13397499',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/15693320364561/tenda-rossa-pordenone.png',
+ 'location_address': 'Via San Francesco, 1',
+ 'location_name': 'ACCADEMIA ANEA',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web giuliamion.it',
+                                                'website': 'https://www.giuliamion.it'},
+                         'descrizione': 'A Pordenone un ciclo di incontri '
+                                        'dedicato al Sacro Femminile e '
+                                        'Maschile A partire dal 14 novembre, '
+                                        'Pordenone ospita “Incontrarsi nel '
+                                        'cuore – la danza del Femminile e '
+                                        'Maschile interiori”, un ciclo di '
+                                        'sette incontri esperienziali rivolto '
+                                        'a donne e uomini adulti, dedicato al '
+                                        'risveglio e all’integrazione delle '
+                                        'energie del Sacro Femminile e del '
+                                        'Sacro Maschile. Il percorso, condotto '
+                                        'da Giulia Mion, si propone di '
+                                        'accompagnare i partecipanti in un '
+                                        'cammino di consapevolezza e crescita '
+                                        'personale attraverso pratiche '
+                                        'corporee, meditazione, ritualità e '
+                                        'momenti di condivisione, con '
+                                        'l’obiettivo di favorire relazioni più '
+                                        'autentiche e un maggiore equilibrio '
+                                        'interiore. Gli incontri si terranno '
+                                        'il venerdì sera, una volta al mese, '
+                                        'dalle 20:30 alle 22:30, presso '
+                                        'Accademia A.N.E.A., in via San '
+[2026-02-02T19:46:16.026+0000] {docker.py:429} INFO - 'Francesco 1/C a Pordenone. Le date '
+                                        'previste sono: 14 novembre, 5 '
+                                        'dicembre 2025; 16 gennaio, 13 '
+                                        'febbraio, 13 marzo, 17 aprile e 15 '
+                                        'maggio 2026. Il percorso è aperto '
+                                        'anche a chi non ha esperienza '
+                                        'pregressa. È possibile partecipare ai '
+                                        'singoli incontri o aderire all’intero '
+                                        'ciclo con una formula agevolata. Per '
+                                        'informazioni e iscrizioni: 📞 347 '
+                                        '3365063 ✉️ giulia@danzadelladea.it',
+                         'dove': {'address': 'Via San Francesco, 1',
+                                  'name': 'ACCADEMIA ANEA',
+                                  'raw_text': 'Dove ACCADEMIA ANEA Via San '
+                                              'Francesco, 1'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/15693320364561/tenda-rossa-pordenone.png',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-05-15',
+                                    'date_start': '2025-11-14',
+                                    'raw_text': 'Quando Dal 14/11/2025 al '
+                                                '15/05/2026 20:30',
+                                    'schedule': '20:30'}},
+              'list': {'category': None,
+                       'date': 'dal 14 novembre 2025 al 15 maggio 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/15693320364561/tenda-rossa-pordenone.png',
+                       'location': 'ACCADEMIA ANEA',
+                       'stars': None,
+                       'title': 'Incontrarsi nel cuore – la danza del '
+                                'Femminile e Maschile interiori'}},
+ 'scraped_at': '2026-02-02T19:46:16.022880',
+ 'source': 'city_today',
+ 'title': 'Incontrarsi nel cuore – la danza del Femminile e Maschile interiori',
+ 'url': 'https://www.pordenonetoday.it/eventi/tenda-rossa-pordenone-giulia-mion-13397499.html',
+ 'uuid': '2f51656a2340cd58',
+ 'website': 'https://www.giuliamion.it'}
+[2026-02-02T19:46:16.762+0000] {docker.py:429} INFO - 2026-02-02 19:46:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/Paul-Pillns-history-of-a-kiss-close-to-the-bone-solo-concert-paul-millns-13528320.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:16.873+0000] {docker.py:429} INFO - 2026-02-02 19:46:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/Paul-Pillns-history-of-a-kiss-close-to-the-bone-solo-concert-paul-millns-13528320.html>
+{'category': [],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': 'e225b19f23dcc009',
+ 'date_display': '3 febbraio 2026',
+ 'date_end': '2026-02-03',
+ 'date_start': '2026-02-03',
+ 'description': 'Un evento speciale per festeggiare la lunga carriera e la '
+                'musica del pianista inglese Paul Millns, tra brani storici e '
+                'nuove emozioni. Il tour che celebra i 60 anni di carriera del '
+                'pianista e songwriter inglese inizia a San Vito al '
+                'Tagliamento con un imperdibile, emozionante concerto in piano '
+                'solo in cui ascoltare i brani dei suoi due nuovi album, '
+                '"Close to the Bone" e "History Of A Kiss" nella loro versione '
+                'più intensa e intima. La pubblicazione di un nuovo album è '
+                'sempre una grande notizia per un artista: pubblicarne ben due '
+                'nel corso di un anno lo è ancora di più. Farlo celebrando '
+                'anche 60 anni di onorata e illustre carriera, diventa un '
+                'evento imperdibile. Dopo aver festeggiato il suo 80esimo '
+                'compleanno con un concerto memorabile alla presenza di più di '
+                '500 spettatori al Castello di Goseck in Germania, Paul Millns '
+                "dimostra ancora una volta un'energia inesauribile. Due album "
+                'che ancora una volta confermano il suo talento e la sua '
+                'creatività: come songwriter, come pianista, come artista. '
+                'Paul Millns è tra quei musicisti che possono cambiare il '
+                'corso di una serata, che lasciano traccia nel cuore del '
+                'pubblico per lungo tempo. La sua voce porta tutti i segni di '
+                'chi è cresciuto ascoltando e affiancando i grandi del rhythm '
+                'and blues. La lista delle sue collaborazioni è colma di nomi '
+                'venerabili come Eric Burdon e John Martyn, ma come solista '
+                'Paul Millns è riconoscibile come un autentico talento di quel '
+                '“british blues”, a cui continua ad infondere freschezza e '
+                'potenza. Sul palco: Paul Millns - Pianoforte, Voce Evento '
+                'organizzato da ArteRitmi in collaborazione con il Comune di '
+                'San Vito al Tagliamento e Jazzinsieme',
+ 'event_id': 'Paul-Pillns-history-of-a-kiss-close-to-the-bone-solo-concert-paul-millns-13528320',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/24086187835847/paul-millns-history-of-a-kiss-close-to-the-bone-solo-concert.png',
+ 'location_address': 'Piazza del Popolo, 13',
+ 'location_name': 'Antico Teatro “Gian Giacomo Arrigoni”',
+ 'price': '€ 15',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web fvg.it',
+                                                'website': 'https://sanvitoaltagliamento.fvg.it/it/paul-millns-history-of-a-kiss-28690'},
+                         'descrizione': 'Un evento speciale per festeggiare la '
+                                        'lunga carriera e la musica del '
+                                        'pianista inglese Paul Millns, tra '
+                                        'brani storici e nuove emozioni. Il '
+                                        'tour che celebra i 60 anni di '
+                                        'carriera del pianista e songwriter '
+                                        'inglese inizia a San Vito al '
+                                        'Tagliamento con un imperdibile, '
+                                        'emozionante concerto in piano solo in '
+                                        'cui ascoltare i brani dei suoi due '
+                                        'nuovi album, "Close to the Bone" e '
+                                        '"History Of A Kiss" nella loro '
+                                        'versione più intensa e intima. La '
+                                        'pubblicazione di un nuovo album è '
+                                        'sempre una grande notizia per un '
+                                        'artista: pubblicarne ben due nel '
+                                        'corso di un anno lo è ancora di più. '
+                                        'Farlo celebrando anche 60 anni di '
+                                        'onorata e illustre carriera, diventa '
+                                        'un evento imperdibile. Dopo aver '
+                                        'festeggiato il suo 80esimo compleanno '
+                                        'con un concerto memorabile alla '
+                                        'presenza di più di 500 spettatori al '
+                                        'Castello di Goseck in Germania, Paul '
+                                        'Millns dimostra ancora una volta '
+                                        "un'energia inesauribile. Due album "
+                                        'che ancora una volta confermano il '
+                                        'suo talento e la sua creatività: come '
+                                        'songwriter, come pianista, come '
+                                        'artista. Paul Millns è tra quei '
+                                        'musicisti che possono cambiare il '
+                                        'corso di una serata, che lasciano '
+                                        'traccia nel cuore del pubblico per '
+                                        'lungo tempo. La sua voce porta tutti '
+                                        'i segni di chi è cresciuto ascoltando '
+                                        'e affiancando i grandi del rhythm and '
+                                        'blues. La lista delle sue '
+                                        'collaborazioni è colma di nomi '
+                                        'venerabili come Eric Burdon e John '
+                                        'Martyn, ma come solista Paul Millns è '
+                                        'riconoscibile come un autentico '
+                                        'talento di quel “british blues”, a '
+                                        'cui continua ad infondere freschezza '
+                                        'e potenza. Sul palco: Paul Millns - '
+                                        'Pianoforte, Voce Evento organizzato '
+                                        'da ArteRitmi in collaborazione con il '
+                                        'Comune di San Vito al Tagliamento e '
+                                        'Jazzinsieme',
+                         'dove': {'address': 'Piazza del Popolo, 13',
+                                  'name': 'Antico Teatro “Gian Giacomo '
+                                          'Arrigoni”',
+                                  'raw_text': 'Dove Antico Teatro “Gian '
+                                              'Giacomo Arrigoni” Piazza del '
+                                              'Popolo, 13 San Vito al '
+                                              'Tagliamento'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/24086187835847/paul-millns-history-of-a-kiss-close-to-the-bone-solo-concert.png',
+                         'prezzo': '€ 15',
+                         'quando': {'date_end': '2026-02-03',
+                                    'date_start': '2026-02-03',
+                                    'raw_text': 'Quando Dal 03/02/2026 al '
+                                                '03/02/2026 solo domani 21:00',
+                                    'schedule': '21:00'}},
+              'list': {'category': None,
+                       'date': '3 febbraio 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/24086187835847/paul-millns-history-of-a-kiss-close-to-the-bone-solo-concert.png',
+                       'location': 'Antico Teatro “Gian Giacomo Arrigoni”',
+                       'stars': None,
+                       'title': 'Paul Millns | history of a kiss, close to the '
+                                'bone - solo concert'}},
+ 'scraped_at': '2026-02-02T19:46:16.870621',
+ 'source': 'city_today',
+ 'title': 'Paul Millns | history of a kiss, close to the bone - solo concert',
+ 'url': 'https://www.pordenonetoday.it/eventi/Paul-Pillns-history-of-a-kiss-close-to-the-bone-solo-concert-paul-millns-13528320.html',
+ 'uuid': '23d157dc480d0a5a',
+ 'website': 'https://sanvitoaltagliamento.fvg.it/it/paul-millns-history-of-a-kiss-28690'}
+[2026-02-02T19:46:17.697+0000] {docker.py:429} INFO - 2026-02-02 19:46:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/cinema/visually-love-rassegna-cinemazero-16-gennaio-2026.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:17.807+0000] {docker.py:429} INFO - 2026-02-02 19:46:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/cinema/visually-love-rassegna-cinemazero-16-gennaio-2026.html>
+{'category': ['Cinema'],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': 'd37f5b778a503750',
+ 'date_display': 'dal 16 gennaio al 8 aprile 2026',
+ 'date_end': '2026-04-08',
+ 'date_start': '2026-01-16',
+ 'description': 'Ritorna a Cinemazero la rassegna organizzata dal Cinemazero '
+                'Young Club , il gruppo di appassionati e appassionate di '
+                'cinema under 30 che, grazie al supporto di Cinemazero, '
+                'progetta rassegne, incontri ed eventi e partecipa attivamente '
+                'alla vita culturale e ai festival. Dopo tre anni dedicati al '
+                'tema del “visibilmente insolito”, questa nuova edizione '
+                'cambia rotta senza perdere la propria identità e vira verso '
+                'il romanticismo, mantenendo però uno sguardo libero, laterale '
+                'e non convenzionale. Nasce così Visually in Love , un '
+                'percorso che attraversa cinque storie d’amore diverse, '
+                'fragili, intense e tavolta ironiche, capaci di sorprendere e '
+                'di lasciare il segno. Si parte venerdì 16 gennaio alle 20.45 '
+                'con Buffalo ’66 di Vincent Gallo, racconto spiazzante di '
+                'Billy Brown, uomo pieno di rabbia che, appena uscito di '
+                'prigione, torna in una famiglia soffocante e costruita su '
+                'bugie, rapendo una giovane ballerina per farle interpretare '
+                'il ruolo della moglie perfetta davanti ai genitori: tra '
+                'silenzi, goffaggini e ferite mai rimarginate, ciò che nasce '
+                'come un inganno si trasforma lentamente in un legame '
+                'autentico, fragile e inatteso, capace di aprire uno spiraglio '
+                'di salvezza per entrambi. Il film sarà in versione originale '
+                'con sottotitoli in italiano e a ingresso gratuito. Venerdì 13 '
+                'febbraio è la volta di Orfeo di Virgilio Villoresi, '
+                'rivisitazione contemporanea del mito in cui un giovane '
+                'pianista incontra Eura e con lei vive un amore luminoso e '
+                'improvviso, destinato però a spezzarsi quando la ragazza '
+                'scompare misteriosamente: seguendola oltre una porta che '
+                'conduce in un mondo sotterraneo, Orfeo intraprende una '
+                'discesa visionaria agli inferi, tra diavoli, scheletri, '
+                'incubi e ricordi, spinto solo dalla forza del sentimento e '
+                'dalla necessità di ritrovarla. Venerdì 13 marzo arriva Happy '
+                'Together di Wong Kar-wai, struggente ritratto di Po-wing e '
+                'Yiu-fai, coppia che lascia Hong Kong per l’Argentina '
+                'inseguendo l’illusione di una nuova vita, ma che finisce '
+                'intrappolata in una relazione fatta di slanci, tradimenti, '
+                'separazioni e ritorni, in cui l’amore si consuma tra camere '
+                'd’albergo, lavori precari e notti solitarie, accompagnato da '
+                'una malinconia che trasforma ogni gesto in una danza sospesa '
+                'tra il desiderio di restare insieme e la necessità di '
+                'perdersi. Venerdì 10 aprile il pubblico ritroverà Travolti da '
+                'un insolito destino nell’azzurro mare d’agosto di Lina '
+                'Wertmüller, dove l’incontro-scontro tra una ricca e '
+                'provocatoria radical chic e un marinaio siciliano, prima '
+                'confinato al ruolo di servo umiliato, esplode quando un '
+                'naufragio li costringe a convivere su un’isola deserta: '
+                'privati delle maschere sociali, i ruoli si ribaltano, il '
+                'potere cambia mani e l’odio si trasforma in attrazione, dando '
+                'vita a una relazione feroce, ambigua e primitiva che mette a '
+                'nudo identità, desiderio e contraddizioni. Chiude la rassegna '
+                'venerdì 8 aprile Ubriaco d’amore di Paul Thomas Anderson, '
+                'storia di Barry Egan, uomo goffo e solitario, schiacciato '
+                'dall’ansia, da un lavoro alienante e da sette sorelle '
+                'invadenti, che vive in un costante stato di frustrazione '
+                'emotiva fino a quando l’incontro con Lena apre uno spazio '
+                'nuovo e inatteso: attraverso piccoli gesti, silenzi e slanci '
+                'improvvisi, Barry scopre che l’amore può trasformare la '
+                'fragilità in forza e diventare un atto di coraggio, in una '
+                'commedia romantica intima e fuori dagli schemi. Per '
+                'informazioni: didattica@cinemazero.it PordenoneToday è anche '
+                'su WhatsApp. Iscriviti al nostro canale',
+ 'event_id': 'visually-love-rassegna-cinemazero-16-gennaio-2026',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/57476973519308/buffalo-66.jpg',
+ 'location_address': None,
+ 'location_name': 'Cinemazero',
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web cinemazero.it',
+                                                'website': 'https://www.cinemazero.it'},
+                         'descrizione': 'Ritorna a Cinemazero la rassegna '
+                                        'organizzata dal Cinemazero Young Club '
+                                        ', il gruppo di appassionati e '
+                                        'appassionate di cinema under 30 che, '
+                                        'grazie al supporto di Cinemazero, '
+                                        'progetta rassegne, incontri ed eventi '
+                                        'e partecipa attivamente alla vita '
+                                        'culturale e ai festival. Dopo tre '
+                                        'anni dedicati al tema del '
+                                        '“visibilmente insolito”, questa nuova '
+                                        'edizione cambia rotta senza perdere '
+                                        'la propria identità e vira verso il '
+                                        'romanticismo, mantenendo però uno '
+                                        'sguardo libero, laterale e non '
+                                        'convenzionale. Nasce così Visually in '
+                                        'Love , un percorso che attraversa '
+                                        'cinque storie d’amore diverse, '
+                                        'fragili, intense e tavolta ironiche, '
+                                        'capaci di sorprendere e di lasciare '
+                                        'il segno. Si parte venerdì 16 gennaio '
+                                        'alle 20.45 con Buffalo ’66 di Vincent '
+                                        'Gallo, racconto spiazzante di Billy '
+                                        'Brown, uomo pieno di rabbia che, '
+                                        'appena uscito di prigione, torna in '
+                                        'una famiglia soffocante e costruita '
+                                        'su bugie, rapendo una giovane '
+                                        'ballerina per farle interpretare il '
+                                        'ruolo della moglie perfetta davanti '
+                                        'ai genitori: tra silenzi, goffaggini '
+                                        'e ferite mai rimarginate, ciò che '
+                                        'nasce come un inganno si trasforma '
+                                        'lentamente in un legame autentico, '
+                                        'fragile e inatteso, capace di aprire '
+                                        'uno spiraglio di salvezza per '
+                                        'entrambi. Il film sarà in versione '
+                                        'originale con sottotitoli in italiano '
+                                        'e a ingresso gratuito. Venerdì 13 '
+                                        'febbraio è la volta di Orfeo di '
+                                        'Virgilio Villoresi, rivisitazione '
+                                        'contemporanea del mito in cui un '
+                                        'giovane pianista incontra Eura e con '
+                                        'lei vive un amore luminoso e '
+                                        'improvviso, destinato però a '
+                                        'spezzarsi quando la ragazza scompare '
+                                        'misteriosamente: seguendola oltre una '
+                                        'porta che conduce in un mondo '
+                                        'sotterraneo, Orfeo intraprende una '
+                                        'discesa visionaria agli inferi, tra '
+                                        'diavoli, scheletri, incubi e ricordi, '
+                                        'spinto solo dalla forza del '
+                                        'sentimento e dalla necessità di '
+                                        'ritrovarla. Venerdì 13 marzo arriva '
+                                        'Happy Together di Wong Kar-wai, '
+                                        'struggente ritratto di Po-wing e '
+                                        'Yiu-fai, coppia che lascia Hong Kong '
+                                        'per l’Argentina inseguendo '
+                                        'l’illusione di una nuova vita, ma che '
+                                        'finisce intrappolata in una relazione '
+                                        'fatta di slanci, tradimenti, '
+                                        'separazioni e ritorni, in cui l’amore '
+                                        'si consuma tra camere d’albergo, '
+                                        'lavori precari e notti solitarie, '
+                                        'accompagnato da una malinconia che '
+                                        'trasforma ogni gesto in una danza '
+                                        'sospesa tra il desiderio di restare '
+                                        'insieme e la necessità di perdersi. '
+                                        'Venerdì 10 aprile il pubblico '
+                                        'ritroverà Travolti da un insolito '
+                                        'destino nell’azzurro mare d’agosto di '
+                                        'Lina Wertmüller, dove '
+                                        'l’incontro-scontro tra una ricca e '
+                                        'provocatoria radical chic e un '
+                                        'marinaio siciliano, prima confinato '
+                                        'al ruolo di servo umiliato, esplode '
+                                        'quando un naufragio li costringe a '
+                                        'convivere su un’isola deserta: '
+                                        'privati delle maschere sociali, i '
+                                        'ruoli si ribaltano, il potere cambia '
+                                        'mani e l’odio si trasforma in '
+                                        'attrazione, dando vita a una '
+                                        'relazione feroce, ambigua e primitiva '
+                                        'che mette a nudo identità, desiderio '
+                                        'e contraddizioni. Chiude la rassegna '
+                                        'venerdì 8 aprile Ubriaco d’amore di '
+                                        'Paul Thomas Anderson, storia di Barry '
+                                        'Egan, uomo goffo e solitario, '
+                                        'schiacciato dall’ansia, da un lavoro '
+                                        'alienante e da sette sorelle '
+                                        'invadenti, che vive in un costante '
+                                        'stato di frustrazione emotiva fino a '
+                                        'quando l’incontro con Lena apre uno '
+                                        'spazio nuovo e inatteso: attraverso '
+                                        'piccoli gesti, silenzi e slanci '
+                                        'improvvisi, Barry scopre che l’amore '
+                                        'può trasformare la fragilità in forza '
+                                        'e diventare un atto di coraggio, in '
+                                        'una commedia romantica intima e fuori '
+                                        'dagli schemi. Per informazioni: '
+                                        'didattica@cinemazero.it '
+                                        'PordenoneToday è anche su WhatsApp. '
+                                        'Iscriviti al nostro canale',
+                         'dove': {'address': None,
+                                  'name': 'Cinemazero',
+                                  'raw_text': 'Dove Cinemazero Indirizzo non '
+                                              'disponibile'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/57476973519308/buffalo-66.jpg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-04-08',
+                                    'date_start': '2026-01-16',
+                                    'raw_text': 'Quando Dal 16/01/2026 al '
+                                                '08/04/2026 20.45',
+                                    'schedule': '20.45'}},
+              'list': {'category': 'Cinema',
+                       'date': 'dal 16 gennaio al 8 aprile 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/57476973519308/buffalo-66.jpg',
+[2026-02-02T19:46:17.808+0000] {docker.py:429} INFO - 'location': 'Cinemazero',
+                       'stars': 5,
+                       'title': 'Visually in Love, al via a Cinemazero cinque '
+                                'storie d’amore diverse capaci di lasciare il '
+                                'segno'}},
+ 'scraped_at': '2026-02-02T19:46:17.804263',
+ 'source': 'city_today',
+ 'title': 'Visually in Love, al via a Cinemazero cinque storie d’amore diverse '
+          'capaci di lasciare il segno',
+ 'url': 'https://www.pordenonetoday.it/eventi/cinema/visually-love-rassegna-cinemazero-16-gennaio-2026.html',
+ 'uuid': '43968491b2fdc3ca',
+ 'website': 'https://www.cinemazero.it'}
+[2026-02-02T19:46:18.533+0000] {docker.py:429} INFO - 2026-02-02 19:46:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/presentazione-volume-fiabe-dialetto-creazioni-indigeste-31-gennaio-2026.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:18.644+0000] {docker.py:429} INFO - 2026-02-02 19:46:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/presentazione-volume-fiabe-dialetto-creazioni-indigeste-31-gennaio-2026.html>
+{'category': ['Mostre'],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': '5359e6d454195ff2',
+ 'date_display': 'dal 31 gennaio al 6 marzo 2026',
+ 'date_end': '2026-03-06',
+ 'date_start': '2026-01-31',
+ 'description': 'Dopo il successo di Gera ’na volta, il libro uscito nel 2022 '
+                'che ha raccolto fiabe, leggende e racconti popolari in '
+                'dialetto dei territori di Pasiano di Pordenone e Azzano '
+                'Decimo e premiato a Roma come Miglior libro in dialetto '
+                'dell’anno, l’associazione Creazioni Indigeste torna con un '
+                'nuovo, ambizioso volume intitolato Gera ’n’antra volta . Il '
+                'progetto, concepito per recuperare e valorizzare il '
+                'patrimonio orale di questi territori friulani influenzati '
+                'dalla parlata del vicino Veneto, propone una nuova raccolta '
+                'di racconti — fiabe, favole, leggende e filastrocche — '
+                'riportate nella loro voce più autentica, il dialetto locale '
+                'delle comunità di Azzano Decimo, Chions, Pasiano di Pordenone '
+                'e Prata di Pordenone. Questa iniziativa si inserisce in un '
+                'più ampio filone di tutela delle lingue minoritarie, tra cui '
+                'quella venetofona parlata in Friuli e sostenute dalla Regione '
+                'Autonoma Friuli-Venezia Giulia, partner del progetto insieme '
+                'ai quattro comuni della bassa pordenonese, che non solo '
+                'puntano a salvare dall’oblio narrazioni uniche e particolari, '
+                'ma aiutano anche a costruire ponti tra passato e futuro, '
+                'puntando a far conoscere questi racconti che possono ancora '
+                'affascinare e divertire. Gera ’n’antra volta non è solo un '
+                'libro, ma anche un progetto educativo: il volume verrà donato '
+                'a tutti gli alunni delle scuole primarie dei quattro Comuni '
+                'coinvolti, un modo per far conoscere ai più piccoli le radici '
+                'narrative del proprio territorio. Accanto alla distribuzione '
+                'nelle scuole, il progetto prevede una serie di presentazioni '
+                'aperte al pubblico, con il volume a disposizione anche dei '
+                '“più grandi”, un invito rivolto a tutta la comunità per '
+                'riscoprire la ricchezza delle proprie radici culturali. Il '
+                'libro verrà presentato al pubblico a Pasiano il 31 gennaio , '
+                'ore 17.30 alla Biblioteca Civica, ad Azzano martedì 3 '
+                'febbraio , ore 20.30 alla Sala Enal di Tiezzo, a Prata '
+                'giovedì 19 febbraio , ore 20:30 al Teatro Pileo e a Chions '
+                'venerdì 6 marzo , ore 20.30 a Villa Perotti. Fissata per '
+                'domenica 1° febbraio alle 11.30 l’inaugurazione della mostra '
+                'delle illustrazioni al Palazzo del Fumetto di Pordenone , a '
+                'cui seguiranno disegni e dediche da parte degli artisti '
+                'presenti e un brindisi conviviale. La mostra sarà visitabile '
+                'fino al 15 febbraio. I racconti di Gera ’n’antra volta sono '
+                'vere e proprie perle narrative: storie di bimbi avventurosi e '
+                'paurosi, animali parlanti, mostri fantastici, sant’uomini e '
+                'poveri diavoli, re, briganti e maghi tutte contraddistinte da '
+                'quel sapore di saggezza contadina che caratterizza le '
+                'tradizioni popolari e che sanno parlare soprattutto ai più '
+                'piccoli. Le storie proposte sia nel dialetto locale che '
+                'tradotte in italiano, restituiscono il ritmo, l’ironia e la '
+                'musicalità tipici delle zone, che seppur non distanti fra '
+                'loro hanno parole, termini e soprattutto pronuncia diverse. '
+                'Il lavoro di raccolta è stato frutto di una vera e propria '
+                'opera sul campo: studiosi, appassionati e cittadini hanno '
+                'contribuito a raccogliere le versioni dei racconti, molte '
+                'delle quali tornate alla memoria dopo la pubblicazione del '
+                'primo volume e raccolte anche con una “call to action” nei '
+                'quattro Comuni interessati. I curatori David Benvenuto e '
+                'Marco Tonus di Creazioni Indigeste, commentano così: «Le '
+                'frasi ricorrenti dopo l’uscita del primo libro sono state '
+                '“Parché no vée mes sta qua?” oppure “Mi ne savevo ’n’antra!”, '
+                'segno che il fiume delle storie non aveva mai smesso di '
+                'scorrere, pronto a riempirsi ancora di parole e immagini». Il '
+                'volume è impreziosito dalle illustrazioni realizzate da 24 '
+                'selezionati artisti, tra professionisti affermati e talenti '
+                'emergenti provenienti da tutta Italia nonché dalla regione. '
+                'Ogni racconto è accompagnato dai disegni che ne esaltano la '
+                'dimensione visiva e simbolica. Tra le firme Adriano '
+                'Carnevali, fumettista autore dei Ronfi, pubblicati dal 1981 '
+                'al 1995 sul Corriere dei Piccoli e protagonisti di una serie '
+                'animata su Rai YoYo, i fumettisti Kanjano, Antonio Zeoli e '
+                'Tiziano Angri, autori per diversi editori italiani, i '
+                'friulani Stefano Dorigo, Dimitri Fogolin, Alessio Rizzo, Sara '
+                'Michieli, Elisa “Upata” Turrin, i giovani talenti emergenti '
+                'Caterina Cappelli, Caterina Gherghi, Alice Guidi, Elisa '
+                'Lipizzi, Vittoria “Moloko” Margheri, Leonardo Papa, Irene '
+                'Senno, e altri professionisti del fumetto e dell’editoria '
+                'come Niccolò Castro Cedeno, Paolo Moscheni, Sofia Corsi, '
+                'Filippo Paparelli, Claudi Pescia, Lia Tuia. Il libro si apre '
+                'inoltre con una mappa dei luoghi di Gera ’n’antra volta, '
+                'illustrata dal tatuatore portogruarese Bischoff. Il gruppo di '
+                'artisti è stato coordinato da Marco Tonus, che ha curato '
+                'oltre ad alcune illustrazioni anche la veste grafica del '
+                'libro. Oltre alla Regione e ai quattro Comuni, tra i sostegni '
+                'a Gera ’n’antra volta c’è il contributo di Fondazione Friuli, '
+                'la partnership con il Palazzo del Fumetto, Verso Pordenone '
+                'Capitale della Cultura 2027 e Màcheri di Andreis, che si '
+                'aggiunge al sostegno di diverse realtà imprenditoriali del '
+                "territorio: la Farmacia Romor, lo Studio BZ e l'azienda "
+                'vinicola La Gre di Pasiano, BM Decora di Prata e le aziende '
+                'di arredamento Eureka e Pointhouse. (in foto: El slacai e la '
+                'volp disegnati da Marco Tonus ) PordenoneToday è anche su '
+                'WhatsApp. Iscriviti al nostro canale',
+ 'event_id': 'presentazione-volume-fiabe-dialetto-creazioni-indigeste-31-gennaio-2026',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/14275105726080/el-slacai-e-la-volp-disegnati-da-marco-tonus-jpg.jpg',
+ 'location_address': None,
+ 'location_name': 'Varie',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Dopo il successo di Gera ’na volta, '
+                                        'il libro uscito nel 2022 che ha '
+                                        'raccolto fiabe, leggende e racconti '
+                                        'popolari in dialetto dei territori di '
+                                        'Pasiano di Pordenone e Azzano Decimo '
+                                        'e premiato a Roma come Miglior libro '
+                                        'in dialetto dell’anno, l’associazione '
+                                        'Creazioni Indigeste torna con un '
+                                        'nuovo, ambizioso volume intitolato '
+                                        'Gera ’n’antra volta . Il progetto, '
+                                        'concepito per recuperare e '
+                                        'valorizzare il patrimonio orale di '
+                                        'questi territori friulani influenzati '
+                                        'dalla parlata del vicino Veneto, '
+                                        'propone una nuova raccolta di '
+                                        'racconti — fiabe, favole, leggende e '
+                                        'filastrocche — riportate nella loro '
+                                        'voce più autentica, il dialetto '
+                                        'locale delle comunità di Azzano '
+                                        'Decimo, Chions, Pasiano di Pordenone '
+                                        'e Prata di Pordenone. Questa '
+                                        'iniziativa si inserisce in un più '
+                                        'ampio filone di tutela delle lingue '
+                                        'minoritarie, tra cui quella '
+                                        'venetofona parlata in Friuli e '
+                                        'sostenute dalla Regione Autonoma '
+                                        'Friuli-Venezia Giulia, partner del '
+                                        'progetto insieme ai quattro comuni '
+                                        'della bassa pordenonese, che non solo '
+                                        'puntano a salvare dall’oblio '
+                                        'narrazioni uniche e particolari, ma '
+                                        'aiutano anche a costruire ponti tra '
+                                        'passato e futuro, puntando a far '
+                                        'conoscere questi racconti che possono '
+                                        'ancora affascinare e divertire. Gera '
+                                        '’n’antra volta non è solo un libro, '
+                                        'ma anche un progetto educativo: il '
+                                        'volume verrà donato a tutti gli '
+                                        'alunni delle scuole primarie dei '
+                                        'quattro Comuni coinvolti, un modo per '
+                                        'far conoscere ai più piccoli le '
+                                        'radici narrative del proprio '
+                                        'territorio. Accanto alla '
+                                        'distribuzione nelle scuole, il '
+                                        'progetto prevede una serie di '
+                                        'presentazioni aperte al pubblico, con '
+                                        'il volume a disposizione anche dei '
+                                        '“più grandi”, un invito rivolto a '
+                                        'tutta la comunità per riscoprire la '
+                                        'ricchezza delle proprie radici '
+                                        'culturali. Il libro verrà presentato '
+                                        'al pubblico a Pasiano il 31 gennaio , '
+                                        'ore 17.30 alla Biblioteca Civica, ad '
+                                        'Azzano martedì 3 febbraio , ore 20.30 '
+                                        'alla Sala Enal di Tiezzo, a Prata '
+                                        'giovedì 19 febbraio , ore 20:30 al '
+                                        'Teatro Pileo e a Chions venerdì 6 '
+                                        'marzo , ore 20.30 a Villa Perotti. '
+                                        'Fissata per domenica 1° febbraio alle '
+                                        '11.30 l’inaugurazione della mostra '
+                                        'delle illustrazioni al Palazzo del '
+                                        'Fumetto di Pordenone , a cui '
+                                        'seguiranno disegni e dediche da parte '
+                                        'degli artisti presenti e un brindisi '
+                                        'conviviale. La mostra sarà visitabile '
+                                        'fino al 15 febbraio. I racconti di '
+                                        'Gera ’n’antra volta sono vere e '
+                                        'proprie perle narrative: storie di '
+                                        'bimbi avventurosi e paurosi, animali '
+                                        'parlanti, mostri fantastici, '
+                                        'sant’uomini e poveri diavoli, re, '
+                                        'briganti e maghi tutte '
+                                        'contraddistinte da quel sapore di '
+                                        'saggezza contadina che caratterizza '
+                                        'le tradizioni popolari e che sanno '
+                                        'parlare soprattutto ai più piccoli. '
+                                        'Le storie proposte sia nel dialetto '
+                                        'locale che tradotte in italiano, '
+                                        'restituiscono il ritmo, l’ironia e la '
+                                        'musicalità tipici delle zone, che '
+                                        'seppur non distanti fra loro hanno '
+                                        'parole, termini e soprattutto '
+                                        'pronuncia diverse. Il lavoro di '
+                                        'raccolta è stato frutto di una vera e '
+                                        'propria opera sul campo: studiosi, '
+                                        'appassionati e cittadini hanno '
+                                        'contribuito a raccogliere le versioni '
+                                        'dei racconti, molte delle quali '
+                                        'tornate alla memoria dopo la '
+                                        'pubblicazione del primo volume e '
+                                        'raccolte anche con una “call to '
+                                        'action” nei quattro Comuni '
+                                        'interessati. I curatori David '
+                                        'Benvenuto e Marco Tonus di Creazioni '
+                                        'Indigeste, commentano così: «Le frasi '
+                                        'ricorrenti dopo l’uscita del primo '
+                                        'libro sono state “Parché no vée mes '
+                                        'sta qua?” oppure “Mi ne savevo '
+                                        '’n’antra!”, segno che il fiume delle '
+                                        'storie non aveva mai smesso di '
+                                        'scorrere, pronto a riempirsi ancora '
+                                        'di parole e immagini». Il volume è '
+                                        'impreziosito dalle illustrazioni '
+                                        'realizzate da 24 selezionati artisti, '
+                                        'tra professionisti affermati e '
+                                        'talenti emergenti provenienti da '
+                                        'tutta Italia nonché dalla regione. '
+                                        'Ogni racconto è accompagnato dai '
+                                        'disegni che ne esaltano la dimensione '
+                                        'visiva e simbolica. Tra le firme '
+                                        'Adriano Carnevali, fumettista autore '
+                                        'dei Ronfi, pubblicati dal 1981 al '
+                                        '1995 sul Corriere dei Piccoli e '
+                                        'protagonisti di una serie animata su '
+                                        'Rai YoYo, i fumettisti Kanjano, '
+                                        'Antonio Zeoli e Tiziano Angri, autori '
+                                        'per diversi editori italiani, i '
+                                        'friulani Stefano Dorigo, Dimitri '
+                                        'Fogolin, Alessio Rizzo, Sara '
+                                        'Michieli, Elisa “Upata” Turrin, i '
+                                        'giovani talenti emergenti Caterina '
+                                        'Capp
+[2026-02-02T19:46:18.646+0000] {docker.py:429} INFO - elli, Caterina Gherghi, Alice '
+                                        'Guidi, Elisa Lipizzi, Vittoria '
+                                        '“Moloko” Margheri, Leonardo Papa, '
+                                        'Irene Senno, e altri professionisti '
+                                        'del fumetto e dell’editoria come '
+                                        'Niccolò Castro Cedeno, Paolo '
+                                        'Moscheni, Sofia Corsi, Filippo '
+                                        'Paparelli, Claudi Pescia, Lia Tuia. '
+                                        'Il libro si apre inoltre con una '
+                                        'mappa dei luoghi di Gera ’n’antra '
+                                        'volta, illustrata dal tatuatore '
+                                        'portogruarese Bischoff. Il gruppo di '
+                                        'artisti è stato coordinato da Marco '
+                                        'Tonus, che ha curato oltre ad alcune '
+                                        'illustrazioni anche la veste grafica '
+                                        'del libro. Oltre alla Regione e ai '
+                                        'quattro Comuni, tra i sostegni a Gera '
+                                        '’n’antra volta c’è il contributo di '
+                                        'Fondazione Friuli, la partnership con '
+                                        'il Palazzo del Fumetto, Verso '
+                                        'Pordenone Capitale della Cultura 2027 '
+                                        'e Màcheri di Andreis, che si aggiunge '
+                                        'al sostegno di diverse realtà '
+                                        'imprenditoriali del territorio: la '
+                                        'Farmacia Romor, lo Studio BZ e '
+                                        "l'azienda vinicola La Gre di Pasiano, "
+                                        'BM Decora di Prata e le aziende di '
+                                        'arredamento Eureka e Pointhouse. (in '
+                                        'foto: El slacai e la volp disegnati '
+                                        'da Marco Tonus ) PordenoneToday è '
+                                        'anche su WhatsApp. Iscriviti al '
+                                        'nostro canale',
+                         'dove': {'address': None,
+                                  'name': 'Varie',
+                                  'raw_text': 'Dove Varie Indirizzo non '
+                                              'disponibile Pasiano di '
+                                              'Pordenone'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/14275105726080/el-slacai-e-la-volp-disegnati-da-marco-tonus-jpg.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-03-06',
+                                    'date_start': '2026-01-31',
+                                    'raw_text': 'Quando Dal 31/01/2026 al '
+                                                '06/03/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Mostre',
+                       'date': 'dal 31 gennaio al 6 marzo 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/14275105726080/el-slacai-e-la-volp-disegnati-da-marco-tonus-jpg.jpg',
+                       'location': 'Varie',
+                       'stars': 5,
+                       'title': '“Gera ’n’antra volta”: il ritorno delle fiabe '
+                                'in dialetto illustrate'}},
+ 'scraped_at': '2026-02-02T19:46:18.640571',
+ 'source': 'city_today',
+ 'title': '“Gera ’n’antra volta”: il ritorno delle fiabe in dialetto '
+          'illustrate',
+ 'url': 'https://www.pordenonetoday.it/eventi/presentazione-volume-fiabe-dialetto-creazioni-indigeste-31-gennaio-2026.html',
+ 'uuid': '8e59d3a663d37006',
+ 'website': None}
+[2026-02-02T19:46:19.994+0000] {docker.py:429} INFO - 2026-02-02 19:46:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/mostre/sentieri-illustrati-mostra-casa-zanussi-29-novembre-2025-7-febbraio-2026.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:20.103+0000] {docker.py:429} INFO - 2026-02-02 19:46:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/mostre/sentieri-illustrati-mostra-casa-zanussi-29-novembre-2025-7-febbraio-2026.html>
+{'category': ['Mostre'],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': '66e2d885da2b6274',
+ 'date_display': 'dal 29 novembre 2025 al 7 febbraio 2026',
+ 'date_end': '2026-02-07',
+ 'date_start': '2025-11-29',
+ 'description': 'Con un’edizione dedicata ai grandi artisti del Nord, per '
+                'estendere e arricchire la nostra visione mediterranea nel '
+                'confronto con un mondo narrativo diverso e ricchissimo di '
+                'suggestioni, torna a Pordenone , negli spazi della Galleria '
+                'Sagittaria a Casa Zanussi, l’annuale rassegna espositiva '
+                'Sentieri Illustrati, dedicata all’ illustrazione per '
+                'l’infanzia come sempre organizzata dal Centro Iniziative '
+                'Culturali Pordenone. Sarà questa la 17 a edizione di quello '
+                'che, nel tempo, è diventato un “osservatorio” internazionale '
+                'sulla creatività degli illustratori per l’infanzia, sulla '
+                'varietà e vivacità della proposta contemporanea in Italia e '
+                'in Europa, sull’evoluzione e le tendenze delle tavole che '
+                '“parlano” ai più piccoli con i loro disegni. Appuntamento '
+                'sabato 29 novembre, alle 17.30 nella Galleria Sagittaria, per '
+                'scoprire le suggestioni della mostra Dal Grande Nord. '
+                'Illustratori dalla Svezia: Emma AdBåge, Sven Nordqvist e '
+                'Marit Törnqvist sono i protagonisti del percorso espositivo '
+                'curato da Silvia Pignat con la collaborazione di Angelo '
+                'Bertani, 511°mostra d’arte del Centro Iniziative Culturali '
+                'Pordenone, su progetto grafico e allestimento di Silvia '
+                'Pignat per il coordinamento del Presidente Cicp Fulvio '
+                'Dell’Agnese. La mostra è visitabile gratuitamente fino al 7 '
+                'febbraio 2026 (dal lunedì al sabato, dalle 9.00 alle 19.00. '
+                'Chiuso lunedì 8 dicembre e dal 24 dicembre 2025 al 6 gennaio '
+                '2026, fuori orario inviando mail a '
+                'cicp@centroculturapordenone.it ). L’esposizione prevede anche '
+                'laboratori per le scuole con la partecipazione di '
+                'illustratori dal 26 gennaio al 7 febbraio 2026, a richiesta '
+                'visite guidate per gruppi. Info e dettagli '
+                'https://centroculturapordenone.it/cicp PordenoneToday è anche '
+                'su WhatsApp. Iscriviti al nostro canale',
+ 'event_id': 'sentieri-illustrati-mostra-casa-zanussi-29-novembre-2025-7-febbraio-2026',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/15674637826572/tornqvist-tutto-dormira.jpg',
+ 'location_address': None,
+ 'location_name': 'Casa Zanussi - Galleria Sagittaria',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'centroculturapordenone.it '
+                                                            'Evento per '
+                                                            'bambini',
+                                                'website': 'https://www.centroculturapordenone.it'},
+                         'descrizione': 'Con un’edizione dedicata ai grandi '
+                                        'artisti del Nord, per estendere e '
+                                        'arricchire la nostra visione '
+                                        'mediterranea nel confronto con un '
+                                        'mondo narrativo diverso e ricchissimo '
+                                        'di suggestioni, torna a Pordenone , '
+                                        'negli spazi della Galleria Sagittaria '
+                                        'a Casa Zanussi, l’annuale rassegna '
+                                        'espositiva Sentieri Illustrati, '
+                                        'dedicata all’ illustrazione per '
+                                        'l’infanzia come sempre organizzata '
+                                        'dal Centro Iniziative Culturali '
+                                        'Pordenone. Sarà questa la 17 a '
+                                        'edizione di quello che, nel tempo, è '
+                                        'diventato un “osservatorio” '
+                                        'internazionale sulla creatività degli '
+                                        'illustratori per l’infanzia, sulla '
+                                        'varietà e vivacità della proposta '
+                                        'contemporanea in Italia e in Europa, '
+                                        'sull’evoluzione e le tendenze delle '
+                                        'tavole che “parlano” ai più piccoli '
+                                        'con i loro disegni. Appuntamento '
+                                        'sabato 29 novembre, alle 17.30 nella '
+                                        'Galleria Sagittaria, per scoprire le '
+                                        'suggestioni della mostra Dal Grande '
+                                        'Nord. Illustratori dalla Svezia: Emma '
+                                        'AdBåge, Sven Nordqvist e Marit '
+                                        'Törnqvist sono i protagonisti del '
+                                        'percorso espositivo curato da Silvia '
+                                        'Pignat con la collaborazione di '
+                                        'Angelo Bertani, 511°mostra d’arte del '
+                                        'Centro Iniziative Culturali '
+                                        'Pordenone, su progetto grafico e '
+                                        'allestimento di Silvia Pignat per il '
+                                        'coordinamento del Presidente Cicp '
+                                        'Fulvio Dell’Agnese. La mostra è '
+                                        'visitabile gratuitamente fino al 7 '
+                                        'febbraio 2026 (dal lunedì al sabato, '
+                                        'dalle 9.00 alle 19.00. Chiuso lunedì '
+                                        '8 dicembre e dal 24 dicembre 2025 al '
+                                        '6 gennaio 2026, fuori orario inviando '
+                                        'mail a cicp@centroculturapordenone.it '
+                                        '). L’esposizione prevede anche '
+                                        'laboratori per le scuole con la '
+                                        'partecipazione di illustratori dal 26 '
+                                        'gennaio al 7 febbraio 2026, a '
+                                        'richiesta visite guidate per gruppi. '
+                                        'Info e dettagli '
+                                        'https://centroculturapordenone.it/cicp '
+                                        'PordenoneToday è anche su WhatsApp. '
+                                        'Iscriviti al nostro canale',
+                         'dove': {'address': None,
+                                  'name': 'Casa Zanussi - Galleria Sagittaria',
+                                  'raw_text': 'Dove Casa Zanussi - Galleria '
+                                              'Sagittaria Indirizzo non '
+                                              'disponibile'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/15674637826572/tornqvist-tutto-dormira.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-07',
+                                    'date_start': '2025-11-29',
+                                    'raw_text': 'Quando Dal 29/11/2025 al '
+                                                '07/02/2026 Lun-Sab: 9-19',
+                                    'schedule': 'Lun-Sab: 9-19'}},
+              'list': {'category': 'Mostre',
+                       'date': 'dal 29 novembre 2025 al 7 febbraio 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/15674637826572/tornqvist-tutto-dormira.jpg',
+                       'location': 'Casa Zanussi - Galleria Sagittaria',
+                       'stars': 5,
+                       'title': 'Sentieri illustrati, dalla Svezia alla '
+                                'Galleria Sagittaria in mostra i grandi '
+                                'artisti del Nord'}},
+ 'scraped_at': '2026-02-02T19:46:20.100950',
+ 'source': 'city_today',
+ 'title': 'Sentieri illustrati, dalla Svezia alla Galleria Sagittaria in '
+          'mostra i grandi artisti del Nord',
+ 'url': 'https://www.pordenonetoday.it/eventi/mostre/sentieri-illustrati-mostra-casa-zanussi-29-novembre-2025-7-febbraio-2026.html',
+ 'uuid': '406bea8a28e78045',
+ 'website': 'https://www.centroculturapordenone.it'}
+[2026-02-02T19:46:21.193+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/giornata-memoria-programma-pordenone-2026.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:21.304+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/giornata-memoria-programma-pordenone-2026.html>
+{'category': ['Manifestazioni'],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': 'cea19af546774d6f',
+ 'date_display': 'dal 22 gennaio al 3 febbraio 2026',
+ 'date_end': '2026-02-03',
+ 'date_start': '2026-01-22',
+ 'description': 'Anche quest’anno il Comune di Pordenone ha organizzato un '
+                'fitto programma di iniziative gratuite per commemorare La '
+                'Giornata della Memoria, la ricorrenza internazionale che si '
+                'celebra il 27 gennaio in ricordo delle vittime '
+                'dell’Olocausto. E proprio martedì 27 si svolgerà la cerimonia '
+                'ufficiale per la Giornata della Memoria con la deposizione '
+                'delle corone alle 9.30 davanti al monumento dei Deportati in '
+                'piazza Maestri del Lavoro e alle 10.00 ai piedi della Targa '
+                'commemorativa nel cortile dell’ex Provincia in corso '
+                'Garibaldi. La mattinata proseguirà con “Qui era. Qui è.”, '
+                'spettacolo teatrale per le scuole che andrà in scena alle ore '
+                '11.00 al Teatro Verdi, recitato dagli studenti del Liceo '
+                'Leopardi Majorana i quali, dopo aver effettuato un percorso '
+                'di formazione e interpretando la drammaturgia originale di '
+                'Alessandro Maione, raccontano le storie di alcune delle '
+                'persone a cui sono state dedicate le Pietre d’Inciampo nella '
+                'nostra città. Lo spettacolo verrà replicato per l’intera '
+                'cittadinanza alle ore 20.00, con ingresso gratuito ma '
+                'prenotazione obbligatoria presso la biglietteria del Teatro '
+                'Verdi oppure al sito www.teatroverdipordenone.it . Sempre '
+                'martedì 27, alle ore 15.00 avrà luogo “Ritratto di una città '
+                'in pezzi”, un itinerario proposto gratuitamente ai cittadini '
+                'nei luoghi che ricordano la deportazione pordenonese: dall’ex '
+                'Caserma di via Montereale alle cosiddette “Casermette” di via '
+                'Molinari, dall’Albergo Moderno al Carcere, per arrivare alle '
+                'Pietre d’Inciampo, deposte negli ultimi anni in varie parti '
+                'della nostra città. Un percorso che, attraverso un’audioguida '
+                'suggestiva ed emotivamente coinvolgente, aiuta a ripercorrere '
+                'con consapevolezza ciò che accadde oltre 80 anni fa. '
+                'L’esperienza, fruibile con cuffie wi-fi, è pensata per gruppi '
+                'fino a 45 partecipanti e ha una durata di circa 2 ore. Per '
+                'prenotazioni scrivere a info@deportatipordenone.it o chiamare '
+                'l’ANED 334 9255783 / 334 2006309. Nei giorni seguenti si '
+                'terranno diverse attività per i ragazzi e le ragazze delle '
+                'scuole. Mercoledì 28 gennaio alle 9.00 e in replica alle '
+                '11.00 presso l’ex Convento di San Francesco l’Associazione '
+                'Filarmonica di Pordenone proporrà il recital musicale “La '
+                'valigia dei disegni. Friedl e i bambini di Terezín”, che '
+                'racconta le vicende di Friedl Di¬cker-Brandeis, artista e '
+                'pioniera dell’arteterapia che, durante le persecuzioni '
+                'naziste, trasformò l’ar¬te in un mezzo di libertà, dignità e '
+                'speranza. Inter¬nata nel ghetto di Theresienstadt, offrì ai '
+                'bambini deportati la possibilità di esprimere emozioni e '
+                'desideri attraverso il disegno. Prima di essere deportata ad '
+                'Auschwitz nascose quasi 5.000 opere, oggi conservate al Museo '
+                'Ebraico di Praga, che rap¬presentano una testimonianza unica '
+                'di resilienza e umanità. Già sold out i due appuntamenti di '
+                'Giovedì 29 gennaio a Cinemazero per i ragazzi delle scuole. '
+                'Alle 9.00 verrà proiettato “Il bene più prezioso” di Michel '
+                'Hazanavicius, un toccante film d’animazione che racconta la '
+                'storia di una coppia di contadini che trova e salva un '
+                'neonato ebreo abbandonato nel bosco durante la Shoah. '
+                'Attraverso un linguaggio semplice ma emotivamente potente, il '
+                'film introduce i bambini ai temi dell’empatia, della '
+                'solidarietà e della memoria. Alle 11.00 “Elena del Ghetto” di '
+                'Cinzia TH Torrini, ripercorre la vera storia di una giovane '
+                'ragazza ebrea che vive a Roma durante l’occupazio¬ne nazista. '
+                'Una testimonianza che mette in luce le discriminazioni, le '
+                'paure e il coraggio di una genera¬zione travolta dagli orrori '
+                'della persecuzione. Venerdì 30 gennaio alle ore 11.00 in Sala '
+                'Degan della Biblioteca sarà presentato ufficialmente il '
+                'portale web di “Pietre d’Inciampo”, primo in regione e ideato '
+                'per raccontare e valorizzare le Pietre d’Inciampo presenti a '
+                'Pordenone e Ronchi dei Legionari. Il progetto, curato da '
+                'Mediastudio, è realizzato in collaborazione con Aned, col '
+                'Comune di Ronchi dei Legionari e col Liceo Leopardi Majorana. '
+                'A partire dal 2020 infatti il nostro Comune ha posato sul '
+                'territorio cittadino 29 Pietre grazie al prezioso lavoro di '
+                'studio e ricerca svolto dagli studenti del Liceo Leopardi '
+                'Majorana che hanno attinto preziose informazioni '
+                'dall’Archivio Storico comunale. A Ronchi dei Legionari, '
+                'Comune del goriziano considerato tra gli epicentri della '
+                'Resistenza italiana, sono invece presenti 43 Pietre '
+                'd’inciampo, posate tra il 2019 e il 2025. L’evento sarà '
+                'aperto a tutti. Sempre in Sala Degan martedì 3 febbraio sarà '
+                'presentato il progetto educativo dedicato alle scuole '
+                'primarie e secondarie di 1° grado “Adotta una pietra”, '
+                'iniziativa nata con l’obiettivo di far conoscere le Pietre '
+                'd’inciampo posate in città negli ultimi anni, sensibilizzando '
+                'alla cura di questo “monumento diffuso” e alla scoperta delle '
+                'vicende familiari che ogni pietra custodisce. In questa '
+                'occasione verranno inoltre consegnati alle scuole gli '
+                'attestati di “Adozione delle Pietre”. Le iniziative dedicate '
+                'ai ragazzi continuano col laboratorio didattico “…più tedesco '
+                'dei tedeschi” che si terrà dal 19 al 30 gennaio presso '
+                'l’Archivio di Stato di Pordenone con l’intento di avvicinare '
+                'i giovani delle scuole secondarie di 1° e 2° grado alle fonti '
+                'archivistiche e ai documenti relativi all’espro¬priazione dei '
+                'beni della famiglia ebrai¬ca triestina Morpurgo de Nilma '
+                'presenti sul territorio pordenonese. Si affronte¬rà il tema '
+                'della persecuzione dei membri delle comunità israelitiche '
+                'italiane attraverso la ri¬costruzione di un fenomeno molto '
+                'diffuso ma poco noto quale il sequestro delle proprietà in '
+                'seguito all’8 settembre 1943. Tra gennaio e febbraio si '
+                'svolgeranno diverse attività promosse e organizzate dall’Aned '
+                'con la collaborazione del Comune. I ragazzi delle scuole '
+                'potranno quindi incontrare il testimone Ib Katznelson, '
+                'de¬portato con la madre a Ravensbruck all’età di 2 anni e '
+                'verranno proiettati documentari e distribuiti materiali sulla '
+                'de¬portazione pordenonese, con documenti recen¬temente '
+                'acquisiti. Anche per gli studenti delle scuole secondarie di '
+                '1° e 2° grado sarà organizzato l’itinerario “Ritratto di una '
+                'città in pezzi” lungo i luoghi pordenonesi della Memoria. '
+                'Infine saranno organizzate diverse visite guidate: quella '
+                'virtuale su piattaforma Zoom ai campi di Auschwitz e Birkenau '
+                'attraverso un intreccio di parole e immagini, fotografie '
+                'do¬cumentaristiche e testimonianze dei sopravvissuti; quella '
+                'per insegnanti al Memoriale Italiano di Auschwitz riallestito '
+                'e ospitato ora nello spazio ex3 di Gavinana (Firenze) dopo un '
+                'accurato restauro; e infine i viaggi di istruzione a Trieste '
+                'alla Risiera di San Sabba e ad altri luoghi significativi del '
+                'capoluogo regionale. Questa visita sarà preceduta da degli '
+                'incontri preparatori sulla storia dei totalitarismi e della '
+                'deportazione politica ed ebraica in Friuli Ve¬nezia Giulia, '
+                'realizzati dall’Associazione 4704 di Go¬rizia in '
+                'collaborazione con Aned. Fino al 31 gennaio, infine, la '
+                'Biblioteca Civica ospita la mostra “Testimoni Giudici '
+                'Spettatori. Il processo della Risiera di San Sabba, Trieste '
+                '1976”. L’esposizione, curata da Franco Cecotti e Dunja Nanut '
+                '(Aned Trieste) e realizzata in collaborazione con Irsrec Fvg, '
+                'Sezione storica della Biblioteca Nazionale Slovena e degli '
+                'Studi e Civici Musei di Storia e Arte di Trieste, ripercorre '
+                'il processo della Risiera, riportando le testimonianze e '
+                'mettendo in evidenza le responsabilità delle persecuzioni '
+                'naziste sul Litorale Adriatico. La mostra sarà visitabile in '
+                'Biblioteca il lunedì dalle 14.00 alle 18.45 e da martedì a '
+                'sabato dalle 9.00 alle 18.45 con ingresso gratuito. Il '
+                'programma completo è disponibile sul sito web del Comune di '
+                'Pordenone alla pagina “Pordenone e la Memoria (2026)”. '
+                'PordenoneToday è anche su WhatsApp. Iscriviti al nostro '
+                'canale',
+ 'event_id': 'giornata-memoria-programma-pordenone-2026',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/67926090596908/giornata-memoria-4.jpg',
+ 'location_address': None,
+ 'location_name': 'Varie',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web pordenone.it',
+                                                'website': 'https://www.comune.pordenone.it'},
+                         'descrizione': 'Anche quest’anno il Comune di '
+                                        'Pordenone ha organizzato un fitto '
+                                        'programma di iniziative gratuite per '
+                                        'commemorare La Giornata della '
+                                        'Memoria, la ricorrenza internazionale '
+                                        'che si celebra il 27 gennaio in '
+                                        'ricordo delle vittime dell’Olocausto. '
+                                        'E proprio martedì 27 si svolgerà la '
+                                        'cerimonia ufficiale per la Giornata '
+                                        'della Memoria con la deposizione '
+                                        'delle corone alle 9.30 davanti al '
+                                        'monumento dei Deportati in piazza '
+                                        'Maestri del Lavoro e alle 10.00 ai '
+                                        'piedi della Targa commemorativa nel '
+                                        'cortile dell’ex Provincia in corso '
+                                        'Garibaldi. La mattinata proseguirà '
+                                        'con “Qui era. Qui è.”, spettacolo '
+                                        'teatrale per le scuole che andrà in '
+                                        'scena alle ore 11.00 al Teatro Verdi, '
+                                        'recitato dagli studenti del Liceo '
+                                        'Leopardi Majorana i quali, dopo aver '
+                                        'effettuato un percorso di formazione '
+                                        'e interpretando la drammaturgia '
+                                        'originale di Alessandro Maione, '
+                                        'raccontano le storie di alcune delle '
+                                        'persone a cui sono state dedicate le '
+                                        'Pietre d’Inciampo nella nostra città. '
+                                        'Lo spettacolo verrà replicato per '
+                                        'l’intera cittadinanza alle ore 20.00, '
+                                        'con ingresso gratuito ma prenotazione '
+                                        'obbligatoria presso la biglietteria '
+                                        'del Teatro Verdi oppure al sito '
+                                        'www.teatroverdipordenone.it . Sempre '
+                                        'martedì 27, alle ore 15.00 avrà luogo '
+                                        '“Ritratto di una città in pezzi”, un '
+                                        'itinerario proposto gratuitamente ai '
+                                        'cittadini nei luoghi che ricordano la '
+                                        'deportazione pordenonese: dall’ex '
+                                        'Caserma di via Montereale alle '
+                                        'cosiddette “Casermette” di via '
+                                        'Molinari, dall’Albergo Moderno al '
+                                        'Carcere, per arrivare alle Pietre '
+                                        'd’Inciampo, deposte negli ultimi anni '
+                                        'in varie parti della nostra città. Un '
+                                        'percorso che, attraverso '
+                                        'un’audioguida suggestiva ed '
+                                        'emotivamente coinvolgente, aiuta a '
+                                        'ripercorrere con consapevolezza ciò '
+                                        'che accadde oltre 80 anni fa. '
+                                        'L’esperienza, fruibile con cuffie '
+                                        'wi-fi, è pensata per gruppi fino a 45 '
+                                        'partecipanti e ha una durata di circa '
+                                        '2 ore. Per prenotazioni scrivere a '
+                                        'info@deportatipordenone.it o chiamare '
+                                        'l’ANED 334 9255783 / 334 2006309. Nei '
+                                        'giorni seguenti si terranno diverse '
+                                        'attività per i ragazzi e le ragazze '
+                                        'delle scuole. Mercoledì 28 gennaio '
+                                        'alle 9.00 e in replica alle 11.00 '
+                                        'presso l’ex Convento di San Francesco '
+                                        'l’Associazione Filarmonica di '
+                                        'Pordenone proporrà il recital '
+                                        'musicale “La valigia dei disegni. '
+                                        'Friedl e i bambini di Terezín”, che '
+                                        'racconta le vicende di Friedl '
+                                        'Di¬cker-Brandeis, artista e pioniera '
+                                        'dell’arteterapia che, durante le '
+                                        'persecuzioni naziste, trasformò '
+                                        'l’ar¬te in un mezzo di libertà, '
+                                        'dignità e speranza. Inter¬nata nel '
+                                        'ghetto di Theresienstadt, offrì ai '
+                                        'bambini deportati la possibilità di '
+                                        'esprimere emozioni e desideri '
+                                        'attraverso il disegno. Prima di '
+                                        'essere deportata ad Auschwitz nascose '
+                                        'quasi 5.000 opere, oggi conservate al '
+                                        'Museo Ebraico di Praga, che '
+                                        'rap¬presentano una testimonianza '
+                                        'unica di resilienza e umanità. Già '
+                                        'sold out i due appuntamenti di '
+                                        'Giovedì 29 gennaio a Cinemazero per i '
+                                        'ragazzi delle scuole. Alle 9.00 verrà '
+                                        'proiettato “Il bene più prezioso” di '
+                                        'Michel Hazanavicius, un toccante film '
+                                        'd’animazione che racconta la storia '
+                                        'di una coppia di contadini che trova '
+                                        'e salva un neonato ebreo abbandonato '
+                                        'nel bosco durante la Shoah. '
+                                        'Attraverso un linguaggio semplice ma '
+                                        'emotivamente potente, il film '
+                                        'introduce i bambini ai temi '
+                                        'dell’empatia, della solidarietà e '
+                                        'della memoria. Alle 11.00 “Elena del '
+                                        'Ghetto” di Cinzia TH Torrini, '
+                                        'ripercorre la vera storia di una '
+                                        'giovane ragazza ebrea che vive a Roma '
+                                        'durante l’occupazio¬ne nazista. Una '
+                                        'testimonianza che mette in luce le '
+                                        'discriminazioni, le paure e il '
+                                        'coraggio di una genera¬zione travolta '
+                                        'dagli orrori della persecuzione. '
+                                        'Venerdì 30 gennaio alle ore 11.00 in '
+                                        'Sala Degan della Biblioteca sarà '
+                                        'presentato ufficialmente il portale '
+                                        'web di “Pietre d’Inciampo”, primo in '
+                                        'regione e ideato per raccontare e '
+                                        'valorizzare le Pietre d’Inciampo '
+                                        'presenti a Pordenone e Ronchi dei '
+                                        'Legionari. Il progetto, curato da '
+                                        'Mediastudio, è realizzato in '
+                                        'collaborazione con Aned, col Comune '
+                                        'di Ronchi dei Legionari e col Liceo '
+                                        'Leopardi Majorana. A partire dal 2020 '
+                                        'infatti il nostro Comune ha posato '
+[2026-02-02T19:46:21.306+0000] {docker.py:429} INFO - 'sul territorio cittadino 29 Pietre '
+                                        'grazie al prezioso lavoro di studio e '
+                                        'ricerca svolto dagli studenti del '
+                                        'Liceo Leopardi Majorana che hanno '
+                                        'attinto preziose informazioni '
+                                        'dall’Archivio Storico comunale. A '
+                                        'Ronchi dei Legionari, Comune del '
+                                        'goriziano considerato tra gli '
+                                        'epicentri della Resistenza italiana, '
+                                        'sono invece presenti 43 Pietre '
+                                        'd’inciampo, posate tra il 2019 e il '
+                                        '2025. L’evento sarà aperto a tutti. '
+                                        'Sempre in Sala Degan martedì 3 '
+                                        'febbraio sarà presentato il progetto '
+                                        'educativo dedicato alle scuole '
+                                        'primarie e secondarie di 1° grado '
+                                        '“Adotta una pietra”, iniziativa nata '
+                                        'con l’obiettivo di far conoscere le '
+                                        'Pietre d’inciampo posate in città '
+                                        'negli ultimi anni, sensibilizzando '
+                                        'alla cura di questo “monumento '
+                                        'diffuso” e alla scoperta delle '
+                                        'vicende familiari che ogni pietra '
+                                        'custodisce. In questa occasione '
+                                        'verranno inoltre consegnati alle '
+                                        'scuole gli attestati di “Adozione '
+                                        'delle Pietre”. Le iniziative dedicate '
+                                        'ai ragazzi continuano col laboratorio '
+                                        'didattico “…più tedesco dei tedeschi” '
+                                        'che si terrà dal 19 al 30 gennaio '
+                                        'presso l’Archivio di Stato di '
+                                        'Pordenone con l’intento di avvicinare '
+                                        'i giovani delle scuole secondarie di '
+                                        '1° e 2° grado alle fonti '
+                                        'archivistiche e ai documenti relativi '
+                                        'all’espro¬priazione dei beni della '
+                                        'famiglia ebrai¬ca triestina Morpurgo '
+                                        'de Nilma presenti sul territorio '
+                                        'pordenonese. Si affronte¬rà il tema '
+                                        'della persecuzione dei membri delle '
+                                        'comunità israelitiche italiane '
+                                        'attraverso la ri¬costruzione di un '
+                                        'fenomeno molto diffuso ma poco noto '
+                                        'quale il sequestro delle proprietà in '
+                                        'seguito all’8 settembre 1943. Tra '
+                                        'gennaio e febbraio si svolgeranno '
+                                        'diverse attività promosse e '
+                                        'organizzate dall’Aned con la '
+                                        'collaborazione del Comune. I ragazzi '
+                                        'delle scuole potranno quindi '
+                                        'incontrare il testimone Ib '
+                                        'Katznelson, de¬portato con la madre a '
+                                        'Ravensbruck all’età di 2 anni e '
+                                        'verranno proiettati documentari e '
+                                        'distribuiti materiali sulla '
+                                        'de¬portazione pordenonese, con '
+                                        'documenti recen¬temente acquisiti. '
+                                        'Anche per gli studenti delle scuole '
+                                        'secondarie di 1° e 2° grado sarà '
+                                        'organizzato l’itinerario “Ritratto di '
+                                        'una città in pezzi” lungo i luoghi '
+                                        'pordenonesi della Memoria. Infine '
+                                        'saranno organizzate diverse visite '
+                                        'guidate: quella virtuale su '
+                                        'piattaforma Zoom ai campi di '
+                                        'Auschwitz e Birkenau attraverso un '
+                                        'intreccio di parole e immagini, '
+                                        'fotografie do¬cumentaristiche e '
+                                        'testimonianze dei sopravvissuti; '
+                                        'quella per insegnanti al Memoriale '
+                                        'Italiano di Auschwitz riallestito e '
+                                        'ospitato ora nello spazio ex3 di '
+                                        'Gavinana (Firenze) dopo un accurato '
+                                        'restauro; e infine i viaggi di '
+                                        'istruzione a Trieste alla Risiera di '
+                                        'San Sabba e ad altri luoghi '
+                                        'significativi del capoluogo '
+                                        'regionale. Questa visita sarà '
+                                        'preceduta da degli incontri '
+                                        'preparatori sulla storia dei '
+                                        'totalitarismi e della deportazione '
+                                        'politica ed ebraica in Friuli '
+                                        'Ve¬nezia Giulia, realizzati '
+                                        'dall’Associazione 4704 di Go¬rizia in '
+                                        'collaborazione con Aned. Fino al 31 '
+                                        'gennaio, infine, la Biblioteca Civica '
+                                        'ospita la mostra “Testimoni Giudici '
+                                        'Spettatori. Il processo della Risiera '
+                                        'di San Sabba, Trieste 1976”. '
+                                        'L’esposizione, curata da Franco '
+                                        'Cecotti e Dunja Nanut (Aned Trieste) '
+                                        'e realizzata in collaborazione con '
+                                        'Irsrec Fvg, Sezione storica della '
+                                        'Biblioteca Nazionale Slovena e degli '
+                                        'Studi e Civici Musei di Storia e Arte '
+                                        'di Trieste, ripercorre il processo '
+                                        'della Risiera, riportando le '
+                                        'testimonianze e mettendo in evidenza '
+                                        'le responsabilità delle persecuzioni '
+                                        'naziste sul Litorale Adriatico. La '
+                                        'mostra sarà visitabile in Biblioteca '
+                                        'il lunedì dalle 14.00 alle 18.45 e da '
+                                        'martedì a sabato dalle 9.00 alle '
+                                        '18.45 con ingresso gratuito. Il '
+                                        'programma completo è disponibile sul '
+                                        'sito web del Comune di Pordenone alla '
+                                        'pagina “Pordenone e la Memoria '
+                                        '(2026)”. PordenoneToday è anche su '
+                                        'WhatsApp. Iscriviti al nostro canale',
+                         'dove': {'address': None,
+                                  'name': 'Varie',
+                                  'raw_text': 'Dove Varie Indirizzo non '
+                                              'disponibile'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/67926090596908/giornata-memoria-4.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-03',
+                                    'date_start': '2026-01-22',
+                                    'raw_text': 'Quando Dal 22/01/2026 al '
+                                                '03/02/2026 fino a domani '
+                                                'Orario non disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Manifestazioni',
+                       'date': 'dal 22 gennaio al 3 febbraio 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/67926090596908/giornata-memoria-4.jpg',
+                       'location': 'Varie',
+                       'stars': 5,
+                       'title': 'Giornata della Memoria, a Pordenone un ricco '
+                                'programma per non dimenticare'}},
+ 'scraped_at': '2026-02-02T19:46:21.300921',
+ 'source': 'city_today',
+ 'title': 'Giornata della Memoria, a Pordenone un ricco programma per non '
+          'dimenticare',
+ 'url': 'https://www.pordenonetoday.it/eventi/giornata-memoria-programma-pordenone-2026.html',
+ 'uuid': 'c474bac2e3d08317',
+ 'website': 'https://www.comune.pordenone.it'}
+[2026-02-02T19:46:22.406+0000] {docker.py:429} INFO - 2026-02-02 19:46:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/lupo-alberto-mostra-palazzo-del-fumetto.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:22.520+0000] {docker.py:429} INFO - 2026-02-02 19:46:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/lupo-alberto-mostra-palazzo-del-fumetto.html>
+{'category': [],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': '5a79a5995c76e196',
+ 'date_display': 'dal 8 novembre 2025 al 3 maggio 2026',
+ 'date_end': '2026-05-03',
+ 'date_start': '2025-11-08',
+ 'description': 'L’Eroica Fifa Blu è il titolo della nuova mostra al Palazzo '
+                'del Fumetto di Pordenone. Protagonista è il personaggio Lupo '
+                'Alberto, il più iconico e conosciuto lupo della storia dei '
+                'fumetti nato dalla matita e dalla creatività di Silver. '
+                "L'esposizione, curata da Luca Raffaelli e da Marco Dabbà, "
+                'sarà aperta al pubblico da sabato 8 novembre fino a domenica '
+                '3 maggio 2026 con i seguenti orari di apertura: giovedì e '
+                'venerdì dalle 15 alle 19; sabato e domenica dalle 10 alle 19. '
+                '{"type":"gallery","object":{"title":"Le foto della mostra su '
+                'Lupo Alberto a '
+                'Pordenone","description":"","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/","medias":[{"title":"lupo '
+                'alberto mostra '
+                '1","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/12305033926093\\/lupo-alberto-mostra-1.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-1.html"},{"title":"lupo '
+                'alberto mostra '
+                '2","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/49717472490763\\/lupo-alberto-mostra-2.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-2.html"},{"title":"lupo '
+                'alberto mostra '
+                '3","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/33169916621972\\/lupo-alberto-mostra-3.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-3.html"},{"title":"lupo '
+                'alberto mostra '
+                '4","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/46454602378771\\/lupo-alberto-mostra-4.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-4.html"},{"title":"lupo '
+                'alberto '
+                'mostra","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/9561549698313\\/lupo-alberto-mostra.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra.html"}]}} '
+                'L’idea del personaggio di Lupo Alberto nasce 52 anni fa dalla '
+                'mente di un giovanissimo Guido Silvestri. A 22 anni viene '
+                'invitato da Alfredo Castelli e Bonvi a creare una sua '
+                'striscia, intitolata La Fattoria McKenzie. La rivista non è '
+                'mai uscita, ma le strisce rimaste nel cassetto sono state poi '
+                'pubblicate sul Corriere dei Ragazzi l’anno dopo con il titolo '
+                'Lupo Alberto. Le storie di questo simpatico personaggio sono '
+                'state subito accolte positivamente dal pubblico. Un affetto '
+                'smisurato che ha segnato la cultura del fumetto. Uno degli '
+                'elementi di successo del personaggio è senz’altro il colore '
+                'che lo contraddistingue: Silver ha immaginato che dovesse '
+                'avere il colore di un lupo siberiano, grigio con riflessi '
+                'azzurri. Ma alla fine Silver prese la decisione definitiva: '
+                'doveva essere solo blu. E così è stato. Nel 1983 nasce l’albo '
+                'in formato orizzontale (celebrato anche nel Museo del Palazzo '
+                'del Fumetto), scelto di persona da Silver. Il noto '
+                'personaggio inizia ad apparire in qualunque accessorio, a '
+                'cominciare dal telo da mare. Lupo Alberto è ovunque: nei '
+                'quaderni della Pigna, nelle magliette, i biglietti d’auguri, '
+                'nelle caramelle e tanto altro ancora. Lupo Alberto è entrato '
+                'ufficialmente nell’immaginario collettivo attraversando ogni '
+                'generazione di lettori che si sono immedesimati in lui. Nei '
+                'suoi racconti emergono il coraggio, le proprie fragilità e, '
+                'non per ultima, la fifa eroica, caratteristica che ha dato il '
+                'nome alla mostra al Palazzo del Fumetto. L’Eroica Fifa Blu '
+                'accoglie un centinaio di opere realizzate da Silver, capace '
+                'di mettere in scena l’espressività dei suoi personaggi. '
+                '“Basta spostare la pupilla di un millimetro ed è tutta '
+                'un’altra emozione”, ha affermato Silver. Ma ciò che emergerà '
+                'nel percorso sono anche l’evoluzione del personaggio, '
+                'l’aspetto via via migliorato, l’eleganza grafica, la sua '
+                'dinamicità. "Ogni pagina, ogni striscia, ogni dialogo sono '
+                'tracce indelebili del mio cammino nel quale mi hanno '
+                'accompagnato e sostenuto i miei lettori a cui spero di aver '
+                'regalato qualche istante di leggerezza. Sono loro che '
+                'ringrazio dal più profondo del cuore”, ha dichiarato '
+                "l'autore. Non si sarà solo Lupo Alberto ad accompagnare il "
+                'visitatore nella mostra. Questo personaggio non può esistere '
+                'senza gli altri buffi protagonisti che hanno saputo esaltare '
+                'le sue caratteristiche: dal cane Mosè alla gallina Marta, da '
+                'Enrico La Talpa alla moglie Cesira, tutti hanno un ruolo '
+                'importante e una precisa personalità. Infine, ci sarà uno '
+                'spazio dedicato agli altri grandi autori che hanno saputo '
+                'dimostrare vicinanza, affetto e stima nei confronti '
+                'dell’amato personaggio. Tra questi spiccano i nomi di Moreno '
+                'Burattini, Casty, Francesco Artibani, Piero Lusso, Tito '
+                'Faraci, Bruno Cannucciari, Giacomo Michelon, Massimo '
+                'Bonfatti, Giancarlo Malagutti, Giorgio Sommacal. Una parte '
+                'della mostra sarà dedicata a Tutto un altro Lupo, una sezione '
+                'del magazine nata nel febbraio del 2022 da un’idea di Lorenzo '
+                'La Neve, in cui storie del personaggio di Silver sono '
+                'realizzate da altri autori con il loro stile grafico. Questa '
+                'iniziativa editoriale Neve ha ricevuto il prestigioso Premio '
+                'Gran Guinigi per un’iniziativa editoriale – Premio Stefano '
+                'Beani al Lucca Comics and Games. Un riconoscimento assegnato '
+                'ai migliori prodotti del settore del fumetto in Italia. '
+                'PordenoneToday è anche su WhatsApp. Iscriviti al nostro '
+                'canale',
+ 'event_id': 'lupo-alberto-mostra-palazzo-del-fumetto',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/59802979093556/lupo-alberto-mostra-cover.jpeg',
+ 'location_address': 'Viale Dante',
+ 'location_name': 'Palazzo del Fumetto',
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'L’Eroica Fifa Blu è il titolo della '
+                                        'nuova mostra al Palazzo del Fumetto '
+                                        'di Pordenone. Protagonista è il '
+                                        'personaggio Lupo Alberto, il più '
+                                        'iconico e conosciuto lupo della '
+                                        'storia dei fumetti nato dalla matita '
+                                        'e dalla creatività di Silver. '
+                                        "L'esposizione, curata da Luca "
+                                        'Raffaelli e da Marco Dabbà, sarà '
+                                        'aperta al pubblico da sabato 8 '
+                                        'novembre fino a domenica 3 maggio '
+                                        '2026 con i seguenti orari di '
+                                        'apertura: giovedì e venerdì dalle 15 '
+                                        'alle 19; sabato e domenica dalle 10 '
+                                        'alle 19. '
+                                        '{"type":"gallery","object":{"title":"Le '
+                                        'foto della mostra su Lupo Alberto a '
+                                        'Pordenone","description":"","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/","medias":[{"title":"lupo '
+                                        'alberto mostra '
+                                        '1","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/12305033926093\\/lupo-alberto-mostra-1.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-1.html"},{"title":"lupo '
+                                        'alberto mostra '
+                                        '2","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/49717472490763\\/lupo-alberto-mostra-2.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-2.html"},{"title":"lupo '
+                                        'alberto mostra '
+                                        '3","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/33169916621972\\/lupo-alberto-mostra-3.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-3.html"},{"title":"lupo '
+                                        'alberto mostra '
+                                        '4","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/46454602378771\\/lupo-alberto-mostra-4.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra-4.html"},{"title":"lupo '
+                                        'alberto '
+                                        'mostra","description":"","image":"https:\\/\\/citynews-pordenonetoday.stgy.ovh\\/~media\\/horizontal-hi\\/9561549698313\\/lupo-alberto-mostra.jpeg","uri":"https:\\/\\/www.pordenonetoday.it\\/foto\\/eventi\\/le-foto-della-mostra-su-lupo-alberto-a-pordenone\\/lupo-alberto-mostra.html"}]}} '
+                                        'L’idea del personaggio di Lupo '
+                                        'Alberto nasce 52 anni fa dalla mente '
+                                        'di un giovanissimo Guido Silvestri. A '
+                                        '22 anni viene invitato da Alfredo '
+                                        'Castelli e Bonvi a creare una sua '
+                                        'striscia, intitolata La Fattoria '
+                                        'McKenzie. La rivista non è mai '
+                                        'uscita, ma le strisce rimaste nel '
+                                        'cassetto sono state poi pubblicate '
+                                        'sul Corriere dei Ragazzi l’anno dopo '
+                                        'con il titolo Lupo Alberto. Le storie '
+                                        'di questo simpatico personaggio sono '
+                                        'state subito accolte positivamente '
+                                        'dal pubblico. Un affetto smisurato '
+                                        'che ha segnato la cultura del '
+                                        'fumetto. Uno degli elementi di '
+                                        'successo del personaggio è senz’altro '
+                                        'il colore che lo contraddistingue: '
+                                        'Silver ha immaginato che dovesse '
+                                        'avere il colore di un lupo siberiano, '
+                                        'grigio con riflessi azzurri. Ma alla '
+                                        'fine Silver prese la decisione '
+                                        'definitiva: doveva essere solo blu. E '
+                                        'così è stato. Nel 1983 nasce l’albo '
+                                        'in formato orizzontale (celebrato '
+                                        'anche nel Museo del Palazzo del '
+                                        'Fumetto), scelto di persona da '
+                                        'Silver. Il noto personaggio inizia ad '
+                                        'apparire in qualunque accessorio, a '
+                                        'cominciare dal telo da mare. Lupo '
+                                        'Alberto è ovunque: nei quaderni della '
+                                        'Pigna, nelle magliette, i biglietti '
+                                        'd’auguri, nelle caramelle e tanto '
+                                        'altro ancora. Lupo Alberto è entrato '
+                                        'ufficialmente nell’immaginario '
+                                        'collettivo attraversando ogni '
+                                        'generazione di lettori che si sono '
+                                        'immedesimati in lui. Nei suoi '
+                                        'racconti emergono il coraggio, le '
+                                        'proprie fragilità e, non per ultima, '
+                                        'la fifa eroica, caratteristica che ha '
+                                        'dato il nome alla mostra al Palazzo '
+                                        'del Fumetto. L’Eroica Fifa Blu '
+                                        'accoglie un centinaio di opere '
+                                        'realizzate da Silver, capace di '
+                                        'mettere in scena l’espressività dei '
+                                        'suoi personaggi. “Basta spostare la '
+                                        'pupilla di un millimetro ed è tutta '
+                                        'un’altra emozione”, ha affermato '
+                                        'Silver. Ma ciò che emergerà nel '
+                                        'percorso sono anche l’evoluzione del '
+                                        'personaggio, l’aspetto via via '
+                                        'migliorato, l’eleganza grafica, la '
+                                        'sua dinamicità. "Ogni pagina, ogni '
+                                        'striscia, ogni dialogo sono tracce '
+                                        'indelebili del mio cammino nel quale '
+                                        'mi hanno accompagnato e sostenuto i '
+                                        'miei lettori a cui spero di aver '
+                                        'regalato qualche istante di '
+                                        'leggerezza. Sono loro che ringrazio '
+                                        'dal più profondo del cuore”, ha '
+                                        "dichiarato l'autore. Non si sarà solo "
+                                        'Lupo Alberto ad accompagnare il '
+                                        'visitatore nella mostra. Questo '
+                                        'personaggio non può esistere senza '
+                                        'gli altri buffi protagonisti che '
+                                        'hanno saputo esaltare le sue '
+                                        'caratteristiche: dal cane Mosè alla '
+                                        'gallina Marta, da Enrico La Talpa '
+                                        'alla moglie Cesira, tutti hanno un '
+                                        'ruolo importante e una precisa '
+                                        'personalità. Infine, ci sarà uno '
+                                        'spazio dedicato agli altri grandi '
+                                        'autori che hanno saputo dimostrare '
+                                        'vicinanza, affetto e stima nei '
+                                        'confronti dell’amato personaggio. Tra '
+                                        'questi spiccano i nomi di Moreno '
+                                        'Burattini, Casty, Francesco Artibani, '
+                                        'Piero Lusso, Tito Faraci, Bruno '
+                                        'Cannucciari, Giacomo Michelon, '
+                                        'Massimo Bonfatti, Giancarlo '
+                                        'Malagutti, Giorgio Sommacal. Una '
+                                        'parte della mostra sarà dedicata a '
+                                        'Tutto un altro Lupo, una sezione del '
+                                        'magazine nata nel febbraio del 2022 '
+                                        'da un’idea di Lorenzo La Neve, in cui '
+                                        'storie del personaggio di Silver sono '
+                                        'realizzate da altri autori con il '
+                                        'loro stile grafico. Questa iniziativa '
+                                        'editoriale Neve ha ricevuto il '
+                                        'prestigioso Premio Gran Guinigi per '
+                                        'un’iniziativa editoriale – Premio '
+                                        'Stefano Beani al Lucca Comics and '
+                                        'Games. Un riconoscimento assegnato ai '
+                                        'migliori prodotti del settore del '
+                                        'fumetto in Italia. PordenoneToday è '
+                                        'anche su WhatsApp. Iscriviti al '
+                                        'nostro canale',
+                         'dove': {'address': 'Viale Dante',
+                                  'name': 'Palazzo del Fumetto',
+                                  'raw_text': 'Dove Palazzo del Fumetto Viale '
+                                              'Dante'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/59802979093556/lupo-alberto-mostra-cover.jpeg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-05-03',
+                                    'date_start': '2025-11-08',
+                                    'raw_text': 'Quando Dal 08/11/2025 al '
+                                                '03/05/2026 giovedì e venerdì '
+                                                'dalle 15.00 alle 19.00, '
+                                                'sabato e domenica dalle 10.00 '
+                                                'alle 19.00',
+                                    'schedule': 'giovedì e venerdì dalle 15.00 '
+                                                'alle 19.00, sabato e domenica '
+                                                'dalle 10.00 alle 19.00'}},
+              'list': {'category': None,
+                       'date': 'dal 8 novembre 2025 al 3 maggio 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/59802979093556/lupo-alberto-mostra-cover.jpeg',
+                       'location': 'Palazzo del Fumetto',
+                       'stars': 4,
+                       'title': 'Il mondo di Lupo Alberto in mostra al Palazzo '
+                                'del Fumetto'}},
+ 'scraped_at': '2026-02-02T19:46:22.517160',
+ 'source': 'city_today',
+ 'title': 'Il mondo di Lupo Alberto in mostra al Palazzo del Fumetto',
+ 'url': 'https://www.pordenonetoday.it/eventi/lupo-alberto-mostra-palazzo-del-fumetto.html',
+ 'uuid': '3fca32d9faa29864',
+ 'website': None}
+[2026-02-02T19:46:24.171+0000] {docker.py:429} INFO - 2026-02-02 19:46:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/teatro/piccoli-palchi-stagione-2025-2026.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:24.287+0000] {docker.py:429} INFO - 2026-02-02 19:46:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/teatro/piccoli-palchi-stagione-2025-2026.html>
+{'category': ['Teatri'],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': '5913b06c8b004163',
+ 'date_display': 'dal 29 novembre 2025 al 15 marzo 2026',
+ 'date_end': '2026-03-15',
+ 'date_start': '2025-11-29',
+ 'description': 'Piccolipalchi, la rassegna teatrale per il pubblico delle '
+                'famiglie curata dall’Ente Regionale Teatrale del Friuli '
+                'Venezia Giulia, presenta il programma della sua 19^ edizione: '
+                'un cartellone come da tradizione diffuso su tutto il '
+                'territorio regionale con 19 spettacoli complessivi nei Comuni '
+                'di Codroipo, Latisana, Monfalcone, Muggia, San Vito al '
+                'Tagliamento e Tolmezzo. In scena una selezione accurata delle '
+                'migliori produzioni nazionali, con spettacoli capaci di '
+                'coinvolgere bambini, ragazzi e adulti in un’esperienza '
+                'teatrale da vivere insieme con meraviglia e partecipazione. '
+                'Elemento distintivo e valore aggiunto del cartellone di '
+                'Piccolipalchi è l’attenzione rivolta alla primissima '
+                'infanzia, con cinque appuntamenti pensati per i bambini da 1 '
+                'a 4 anni. Il Centro Polifunzionale Ottagono di Codroipo e '
+                'l’Antico Teatro Arrigoni di San Vito al Tagliamento '
+                'accoglieranno spettacoli e performance interattive che '
+                'intrecciano musica, danza e narrazione, offrendo ai più '
+                'piccoli e ai loro accompagnatori esperienze sensoriali e '
+                'relazionali di grande intensità. L’edizione 2025/2026 di '
+                'Piccolipalchi è realizzata grazie alla collaborazione e al '
+                'contributo della Regione Friuli Venezia Giulia e dei Comuni '
+                'coinvolti, con il prezioso sostegno della Fondazione Friuli, '
+                'da molti anni al fianco del progetto nel promuovere la '
+                'crescita culturale e la partecipazione delle giovani '
+                'generazioni. “ Con questa diciannovesima edizione della '
+                'rassegna Piccolipalchi - commenta il presidente dell’Ert '
+                'Fabrizio Pitton - prosegue con orgoglio l’attività dell’Ente '
+                'Regionale Teatrale del Friuli Venezia Giulia nella formazione '
+                'del pubblico più giovane, dai 12 mesi in su, e nella '
+                'diffusione della cultura del teatro e dell’educazione al '
+                'linguaggio teatrale e artistico. Un ringraziamento sentito va '
+                'alla Fondazione Friuli per il suo prezioso sostegno, alle '
+                'associazioni locali e ai Comuni partner in questa edizione, '
+                'Codroipo, Latisana, Monfalcone, Muggia, San Vito al '
+                'Tagliamento e Tolmezzo: grazie alla loro collaborazione e al '
+                'loro contributo continuiamo, anche grazie all’importante '
+                'sostegno della Regione Autonoma Friuli Venezia Giulia, a '
+                'condividere una linea comune che invita le famiglie del '
+                'Friuli Venezia Giulia ad avvicinarsi alla magica esperienza '
+                'del teatro. In programma per la rassegna 2025/2026 ben 19 '
+                'repliche, che spazieranno da performance di danza e musica al '
+                'teatro d’attore, dal teatro d’ombre, clownerie e nouvelle '
+                'magie, fino a una proposta di spettacolo in lingua friulana e '
+                'italiana ”. Il primo sipario ad aprirsi sarà quello '
+                'dell’Antico Teatro Arrigoni di San Vito al Tagliamento che '
+                'ospiterà sabato 29 e domenica 30 novembre la compagnia ABC – '
+                'Allegra Brigata Cinematografica con PlayJam, una performance '
+                'interattiva di danza e musica per bambini da 1 a 3 anni. '
+                'Doppia replica in entrambe le giornate, alle 16 e alle 17.30, '
+                'solo su prenotazione. Domenica 30 novembre (ore 17.30) '
+                'appuntamento anche al Teatro Verdi di Muggia con Claudio '
+                'Milani e Arianna Pollini ne La conta di Natale, una '
+                'narrazione con pupazzi che accompagnerà nell’atmosfera '
+                'natalizia i bambini dai 3 anni su. Maestro nell’arte della '
+                'narrazione, Claudio Milani si avvale di pochissimi elementi '
+                'scenici e utilizzando la parola, la voce e la mimica riesce a '
+                'creare mondi fantastici che catturano la curiosità dei più '
+                'piccoli. Domenica 7 dicembre Piccolipalchi porterà al Teatro '
+                'Candoni di Tolmezzo lo spettacolo per i bambini dai 4 anni '
+                'Rosaluna e i lupi, ispirato al libro di Magali Le Huche e '
+                'firmato dalla Compagnia Progetto g.g., ovvero Consuelo '
+                'Ghiretti e Francesca Grisenti, per Accademia Perduta/Romagna '
+                'Teatri. Attraverso i corpi degli attori e l’uso delle '
+                'maschere e del pupazzo mosso a vista, lo spettacolo vuole '
+                'stimolare l’immaginario dei piccolissimi esplorando i temi '
+                'della paura, del coraggio e della libertà. Doppio '
+                'appuntamento per domenica 14 dicembre. Alle 16 e alle 17.30 '
+                'per i bambini dai 2 ai 5 anni, l’Ottagono di Codroipo '
+                'ospiterà la storica compagnia bolognese La Baracca/Testoni '
+                'Ragazzi con A un metro da te, uno spettacolo delicato e '
+                'poetico che mette in scena l’incontro tra due persone '
+                'solitarie e diverse tra loro, capaci però di riconoscersi e '
+                'di trovare una famiglia l’una nell’altra. Alle 17 al Teatro '
+                'comunale Marlena Bonezzi di Monfalcone , invece, sarà la '
+                'volta di Ape Pina, dedicato ai bambini dai 3 anni. Tra '
+                'narrazione, immagini realizzate dal vivo e musica, la storia '
+                'della piccola ape Pina invita i bambini a scoprire '
+                'l’importanza del lavoro di squadra, del rispetto per la '
+                'natura e della scoperta di sé. Un racconto semplice, tenero e '
+                'divertente che si svolge come in un albo illustrato che '
+                'prende vita, pagina dopo pagina. Dopo la pausa per le '
+                'festività natalizie la rassegna riprenderà sabato 17 gennaio '
+                'con Onde, spettacolo musicale per i bambini da 1 a 6 anni in '
+                'programma all’Antico Teatro Arrigoni di San Vito al '
+                'Tagliamento con una doppia replica, alle 11 e alle 16, su '
+                'prenotazione. Ispirato al celebre albo illustrato L’Onda di '
+                'Suzy Lee, lo spettacolo nasce da un percorso di ricerca '
+                'musicale e pedagogica dedicato alla primissima infanzia e '
+                'propone un’opera sensoriale che oltre all’udito coinvolge '
+                'anche la vista, il tatto e il movimento. Il giorno seguente, '
+                'domenica 18 gennaio, si torna al Verdi di Muggia per Le '
+                'stagioni di Pallina, storico spettacolo del Teatro '
+                'all’Improvviso per i bambini dai 3 anni. Lo spettacolo è un '
+                'piccolo capolavoro di teatro visuale e narrazione andato in '
+                'scena in tutto il mondo. Un inno alla fantasia e alla '
+                'scoperta del colore, un viaggio sensoriale che trascina '
+                'bambini e adulti in un gioco da vivere insieme. Due '
+                'appuntamenti in cartellone anche per il fine settimana '
+                'successivo. Sabato 24 gennaio (ore 17) il Teatro Odeon di '
+                'Latisana avrà l’onore di ospitare il vincitore del Premio del '
+                'Pubblico nella scorsa edizione di Piccolipalchi. Le '
+                'rocambolesche avventure dell’orso Nicola, del ragnetto '
+                'Eugenio e del moscerino che voleva vedere il mondo e che rese '
+                'tutti felici è l’originale titolo proposto dalla Compagnia '
+                'Arione de Falco per i bambini dai 5 anni in su. Lo spettacolo '
+                'racconta una storia che insegna a superare la diffidenza '
+                'verso gli altri, ad abbracciare le differenze e ad affrontare '
+                'con curiosità e coraggio le avventure della vita. Domenica 25 '
+                'gennaio la compagnia Il Teatro nel Baule porterà all’Ottagono '
+                'di Codroipo La scatola, spettacolo per i bambini da 1 a 5 '
+                'anni ispirato all’omonimo albo illustrato di Isabella Paglia: '
+                'una storia che parla di gentilezza e della pazienza '
+                'dell’amore e dell’amicizia. Sono previste due repliche, alle '
+                '16 e alle 17.30, su prenotazione. Domenica 1° febbraio (ore '
+                '17) Alice Bossi porterà sul palco del Candoni di Tolmezzo Il '
+                'nuovo vestito dell’imperatrice, spettacolo di teatro fisico e '
+                'clown rivolto ai bambini dai 6 anni. Prodotto da Teatro '
+                'Evento, lo spettacolo riflette sul delicato rapporto tra '
+                'immagine estetica e mondo interiore e con ironia e '
+                'sensibilità vuole comunicare ai più piccoli l’importanza di '
+                'scoprire la propria autenticità, fidarsi di se stessi e '
+                'imparare ad esprimersi liberamente, senza timore del giudizio '
+                'degli altri. Sempre domenica 1° febbraio il palcoscenico del '
+                'Teatro Bonezzi di Monfalcone accoglierà Sphera, spettacolo '
+                'immersivo che si svolge all’interno di un piccolo chapiteau, '
+                'dove un flusso sorprendente di ombre, luci, colori e suoni '
+                'trasporta gli spettatori in un viaggio poetico e suggestivo '
+                'alla scoperta delle meraviglie del mondo. Anche in questo '
+                'caso per la particolarità dell’installazione è previsto un '
+                'numero limitato di spettatori. Repliche alle 16 e alle 17.30 '
+                'per i bambini dai 3 anni, è necessaria la prenotazione. '
+                'Magia, bolle di sapone e clownerie sono gli ingredienti di '
+                'SonoSolo, spettacolo che Michele Cafaggi, primo artista '
+                'italiano a creare uno spettacolo interamente dedicato alle '
+                'bolle di sapone, porterà all’Auditorium Centro Civico di San '
+                'Vito al Tagliamento domenica 7 febbraio (ore 17). Un '
+                'appuntamento che, tra divertimento e stupore, coinvolgerà il '
+                'pubblico di ogni età. L’ultimo appuntamento per i '
+                'piccolissimi si terrà domenica 22 febbraio all’Ottagono di '
+                'Codroipo . Tana del TPO di Prato è uno spettacolo immersivo, '
+                'che nella poetica distintiva della compagnia, unisce una '
+                'forte componente visiva (grazie anche al digital design) a '
+                'una dimensione tattile e sensoriale. Metafora della ricerca '
+                'interiore e dell’esplorazione personale, Tana coinvolge '
+                'attivamente il pubblico di bambini e adulti in un viaggio '
+                'emozionale e un’esperienza collettiva interattiva. Repliche '
+                'alle 16 e alle 17.30, su prenotazione. Sempre il 22 febbraio '
+                'la compagnia Drogheria Rabelot sarà all’Odeon di Latisana '
+                '(ore 17) con Caro lupo, spettacolo per i bambini dai 4 anni '
+                'che coniuga il misterioso ed evanescente linguaggio del '
+                'teatro d’ombre con quello immaginifico del teatro su nero. '
+                'Con un continuo alternarsi di punti di vista e l’utilizzo di '
+                'una drammaturgia anche musicale e luminosa, lo spettacolo '
+                'affronta il tema della paura, che accomuna bambini e adulti. '
+                'Domenica 1° marzo (ore 17) il Teatro Gioco Vita, compagnia '
+                'piacentina di teatro d’ombre riconosciuta a livello '
+                'internazionale, porterà al Teatro Bonezzi di Monfalcone '
+                'Piccolo Asmodeo, il suo storico spettacolo premiato nel 2013 '
+                'con l’Eolo Award. Piccolo Asmodeo è una favola sul bene e sul '
+                'male di Ulf Stark, uno dei più importanti autori '
+                'contemporanei di letteratura per ragazzi. Con sottile ironia, '
+                'delicata poesia, sana comicità, Stark affronta temi complessi '
+                'raccontando un meraviglioso e sorprendente viaggio di '
+                'formazione. Al Teatro Candoni di Tolmezzo andrà invece in '
+                'scena Luna e Zenzero della Compagnia Teatro Giovani Teatro '
+                'Pirata. Appuntamento sempre domenica 1° marzo alle 17 per i '
+                'bambini dai 3 anni in su. Attraverso il linguaggio del teatro '
+                'di figura con marionette portate, marionette ibride e ombre, '
+                'lo spettacolo affronta con delicatezza e fantasia temi '
+                'fondamentali come il valore dell’amicizia, la crescita '
+                'personale e il superamento delle proprie paure. Domenica 7 '
+                'marzo, al Teatro Odeon di Latisana , Piccolipalchi ospiterà '
+                'un altro storico spettacolo premiato con l’Eolo Award nel '
+                '2010 e da allora tra i più rappresentanti e apprezzati della '
+                'scena nazionale: Storia di un uomo e della sua ombra di '
+                'Principio Attivo Teatro Con pochissimi artifici scenici e '
+                'l’originale uso della musica dal vivo, lo spettacolo racconta '
+                'in maniera semplice una storia vecchia come il mondo, quella '
+                'dei conflitti tra gli esseri umani. Uno spettacolo che fa '
+                'ridere, riflettere e commuovere con gag divertenti e allo '
+                'stesso tempo poetiche. Piccolipalchi 24/25 si concluderà '
+                'domenica 15 marzo con un doppio appuntamento. Alle 17 il '
+                'Teatro Benois De Cecco di Codroipo ospiterà Metamorfosi. '
+                'Contimi crassigne, spettacolo di teatro d’attore con pupazzi '
+                'prodotto dal Teatri Stabil Furlan e dal CTA di Gorizia che '
+                'utilizza la lingua italiana e quella friulana. Infine, alle '
+                '17.30 al Verdi di Muggia andrà in scena Sciopero! Ovvero '
+                'quella volta che il lupo smise di lavorare, spettacolo di '
+                'narrazione prodotto da Schedìa Teatro dedicato ai bambini dai '
+                '6 anni. In scena Riccardo Colombini gioca con l’immaginario '
+                'delle fiabe e crea un racconto divertente e ricco di spunti '
+                'sul tema della paura. Biglietti: intero 6 euro, ridotto '
+                '(abbonati e convenzioni ERT) 5 euro, pacchetto famiglia (4 '
+                'ingressi) 20 euro. Biglietti disponibili anche online su '
+                'biglietti.ertfvg.it. Per ulteriori informazioni contattare la '
+                'Biglietteria ERT allo 0432 224246 o biglietteria@ertfvg.it . '
+                'Per gli spettacoli a numero chiuso con prenotazione '
+                'obbligatoria scrivere a prenotazioni@ertfvg.it . Tutto il '
+                'programma di Piccolipalchi è consultabile al sito '
+                'www.ertfvg.it nella sezione dedicata. PordenoneToday è anche '
+                'su WhatsApp. Iscriviti al nostro canale',
+ 'event_id': 'piccoli-palchi-stagione-2025-2026',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/47289531991458/il-nuovo-vestito-dell-imperatrice-3.jpg',
+ 'location_address': None,
+ 'location_name': 'Varie',
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web ertfvg.it '
+                                                            'Evento per '
+                                                            'bambini',
+                                                'website': 'https://www.ertfvg.it'},
+                         'descrizione': 'Piccolipalchi, la rassegna teatrale '
+                                        'per il pubblico delle famiglie curata '
+                                        'dall’Ente Regionale Teatrale del '
+                                        'Friuli Venezia Giulia, presenta il '
+                                        'programma della sua 19^ edizione: un '
+                                        'cartellone come da tradizione diffuso '
+                                        'su tutto il territorio regionale con '
+                                        '19 spettacoli complessivi nei Comuni '
+                                        'di Codroipo, Latisana, Monfalcone, '
+                                        'Muggia, San Vito al Tagliamento e '
+                                        'Tolmezzo. In scena una selezione '
+                                        'accurata delle migliori produzioni '
+                                        'nazionali, con spettacoli capaci di '
+                                        'coinvolgere bambini, ragazzi e adulti '
+                                        'in un’esperienza teatrale da vivere '
+                                        'insieme con meraviglia e '
+                                        'partecipazione. Elemento distintivo e '
+                                        'valore aggiunto del cartellone di '
+                                        'Piccolipalchi è l’attenzione rivolta '
+                                        'alla primissima infanzia, con cinque '
+                                        'appuntamenti pensati per i bambini da '
+                                        '1 a 4 anni. Il Centro Polifunzionale '
+                                        'Ottagono di Codroipo e l’Antico '
+                                        'Teatro Arrigoni di San Vito al '
+                                        'Tagliamento accoglieranno spettacoli '
+                                        'e performance interattive che '
+                                        'intrecciano musica, danza e '
+                                        'narrazione, offrendo ai più piccoli e '
+                                        'ai loro accompagnatori esperienze '
+                                        'sensoriali e relazionali di grande '
+                                        'intensità. L’edizione 2025/2026 di '
+                                        'Piccolipalchi è realizzata grazie '
+                                        'alla collaborazione e al contributo '
+                                        'della Regione Friuli Venezia Giulia e '
+                                        'dei Comuni coinvolti, con il prezioso '
+                                        'sostegno della Fondazione Friuli, da '
+                                        'molti anni al fianco del progetto nel '
+                                        'promuovere la crescita culturale e la '
+                                        'partecipazione delle giovani '
+                                        'generazioni. “ Con questa '
+                                        'diciannovesima edizione della '
+                                        'rassegna Piccolipalchi - commenta il '
+                                        'presidente dell’Ert Fabrizio Pitton - '
+                                        'prosegue con orgoglio l’attività '
+                                        'dell’Ente Regionale Teatrale del '
+                                        'Friuli Venezia Giulia nella '
+                                        'formazione del pubblico più giovane, '
+                                        'dai 12 mesi in su, e nella diffusione '
+                                        'della cultura del teatro e '
+                                        'dell’educazione al linguaggio '
+                                        'teatrale e artistico. Un '
+                                        'ringraziamento sentito va alla '
+                                        'Fondazione Friuli per il suo prezioso '
+                                        'sostegno, alle associazioni locali e '
+                                        'ai Comuni partner in questa edizione, '
+                                        'Codroipo, Latisana, Monfalcone, '
+                                        'Muggia, San Vito al Tagliamento e '
+                                        'Tolmezzo: grazie alla loro '
+                                        'collaborazione e al loro contributo '
+                                        'continuiamo, anche grazie '
+                                        'all’importante sostegno della Regione '
+                                        'Autonoma Friuli Venezia Giulia, a '
+                                        'condividere una linea comune che '
+                                        'invita le famiglie del Friuli Venezia '
+                                        'Giulia ad avvicinarsi alla magica '
+                                        'esperienza del teatro. In programma '
+                                        'per la rassegna 2025/2026 ben 19 '
+                                        'repliche, che spazieranno da '
+                                        'performance di danza e musica al '
+                                        'teatro d’attore, dal teatro d’ombre, '
+                                        'clownerie e nouvelle magie, fino a '
+                                        'una proposta di spettacolo in lingua '
+                                        'friulana e italiana ”. Il primo '
+                                        'sipario ad aprirsi sarà quello '
+                                        'dell’Antico Teatro Arrigoni di San '
+                                        'Vito al Tagliamento che ospiterà '
+[2026-02-02T19:46:24.289+0000] {docker.py:429} INFO - 'sabato 29 e domenica 30 novembre la '
+                                        'compagnia ABC – Allegra Brigata '
+                                        'Cinematografica con PlayJam, una '
+                                        'performance interattiva di danza e '
+                                        'musica per bambini da 1 a 3 anni. '
+                                        'Doppia replica in entrambe le '
+                                        'giornate, alle 16 e alle 17.30, solo '
+                                        'su prenotazione. Domenica 30 novembre '
+                                        '(ore 17.30) appuntamento anche al '
+                                        'Teatro Verdi di Muggia con Claudio '
+                                        'Milani e Arianna Pollini ne La conta '
+                                        'di Natale, una narrazione con pupazzi '
+                                        'che accompagnerà nell’atmosfera '
+                                        'natalizia i bambini dai 3 anni su. '
+                                        'Maestro nell’arte della narrazione, '
+                                        'Claudio Milani si avvale di '
+                                        'pochissimi elementi scenici e '
+                                        'utilizzando la parola, la voce e la '
+                                        'mimica riesce a creare mondi '
+                                        'fantastici che catturano la curiosità '
+                                        'dei più piccoli. Domenica 7 dicembre '
+                                        'Piccolipalchi porterà al Teatro '
+                                        'Candoni di Tolmezzo lo spettacolo per '
+                                        'i bambini dai 4 anni Rosaluna e i '
+                                        'lupi, ispirato al libro di Magali Le '
+                                        'Huche e firmato dalla Compagnia '
+                                        'Progetto g.g., ovvero Consuelo '
+                                        'Ghiretti e Francesca Grisenti, per '
+                                        'Accademia Perduta/Romagna Teatri. '
+                                        'Attraverso i corpi degli attori e '
+                                        'l’uso delle maschere e del pupazzo '
+                                        'mosso a vista, lo spettacolo vuole '
+                                        'stimolare l’immaginario dei '
+                                        'piccolissimi esplorando i temi della '
+                                        'paura, del coraggio e della libertà. '
+                                        'Doppio appuntamento per domenica 14 '
+                                        'dicembre. Alle 16 e alle 17.30 per i '
+                                        'bambini dai 2 ai 5 anni, l’Ottagono '
+                                        'di Codroipo ospiterà la storica '
+                                        'compagnia bolognese La '
+                                        'Baracca/Testoni Ragazzi con A un '
+                                        'metro da te, uno spettacolo delicato '
+                                        'e poetico che mette in scena '
+                                        'l’incontro tra due persone solitarie '
+                                        'e diverse tra loro, capaci però di '
+                                        'riconoscersi e di trovare una '
+                                        'famiglia l’una nell’altra. Alle 17 al '
+                                        'Teatro comunale Marlena Bonezzi di '
+                                        'Monfalcone , invece, sarà la volta di '
+                                        'Ape Pina, dedicato ai bambini dai 3 '
+                                        'anni. Tra narrazione, immagini '
+                                        'realizzate dal vivo e musica, la '
+                                        'storia della piccola ape Pina invita '
+                                        'i bambini a scoprire l’importanza del '
+                                        'lavoro di squadra, del rispetto per '
+                                        'la natura e della scoperta di sé. Un '
+                                        'racconto semplice, tenero e '
+                                        'divertente che si svolge come in un '
+                                        'albo illustrato che prende vita, '
+                                        'pagina dopo pagina. Dopo la pausa per '
+                                        'le festività natalizie la rassegna '
+                                        'riprenderà sabato 17 gennaio con '
+                                        'Onde, spettacolo musicale per i '
+                                        'bambini da 1 a 6 anni in programma '
+                                        'all’Antico Teatro Arrigoni di San '
+                                        'Vito al Tagliamento con una doppia '
+                                        'replica, alle 11 e alle 16, su '
+                                        'prenotazione. Ispirato al celebre '
+                                        'albo illustrato L’Onda di Suzy Lee, '
+                                        'lo spettacolo nasce da un percorso di '
+                                        'ricerca musicale e pedagogica '
+                                        'dedicato alla primissima infanzia e '
+                                        'propone un’opera sensoriale che oltre '
+                                        'all’udito coinvolge anche la vista, '
+                                        'il tatto e il movimento. Il giorno '
+                                        'seguente, domenica 18 gennaio, si '
+                                        'torna al Verdi di Muggia per Le '
+                                        'stagioni di Pallina, storico '
+                                        'spettacolo del Teatro all’Improvviso '
+                                        'per i bambini dai 3 anni. Lo '
+                                        'spettacolo è un piccolo capolavoro di '
+                                        'teatro visuale e narrazione andato in '
+                                        'scena in tutto il mondo. Un inno alla '
+                                        'fantasia e alla scoperta del colore, '
+                                        'un viaggio sensoriale che trascina '
+                                        'bambini e adulti in un gioco da '
+                                        'vivere insieme. Due appuntamenti in '
+                                        'cartellone anche per il fine '
+                                        'settimana successivo. Sabato 24 '
+                                        'gennaio (ore 17) il Teatro Odeon di '
+                                        'Latisana avrà l’onore di ospitare il '
+                                        'vincitore del Premio del Pubblico '
+                                        'nella scorsa edizione di '
+                                        'Piccolipalchi. Le rocambolesche '
+                                        'avventure dell’orso Nicola, del '
+                                        'ragnetto Eugenio e del moscerino che '
+                                        'voleva vedere il mondo e che rese '
+                                        'tutti felici è l’originale titolo '
+                                        'proposto dalla Compagnia Arione de '
+                                        'Falco per i bambini dai 5 anni in su. '
+                                        'Lo spettacolo racconta una storia che '
+                                        'insegna a superare la diffidenza '
+                                        'verso gli altri, ad abbracciare le '
+                                        'differenze e ad affrontare con '
+                                        'curiosità e coraggio le avventure '
+                                        'della vita. Domenica 25 gennaio la '
+                                        'compagnia Il Teatro nel Baule porterà '
+                                        'all’Ottagono di Codroipo La scatola, '
+                                        'spettacolo per i bambini da 1 a 5 '
+                                        'anni ispirato all’omonimo albo '
+                                        'illustrato di Isabella Paglia: una '
+                                        'storia che parla di gentilezza e '
+                                        'della pazienza dell’amore e '
+                                        'dell’amicizia. Sono previste due '
+                                        'repliche, alle 16 e alle 17.30, su '
+                                        'prenotazione. Domenica 1° febbraio '
+                                        '(ore 17) Alice Bossi porterà sul '
+                                        'palco del Candoni di Tolmezzo Il '
+                                        'nuovo vestito dell’imperatrice, '
+                                        'spettacolo di teatro fisico e clown '
+                                        'rivolto ai bambini dai 6 anni. '
+                                        'Prodotto da Teatro Evento, lo '
+                                        'spettacolo riflette sul delicato '
+                                        'rapporto tra immagine estetica e '
+                                        'mondo interiore e con ironia e '
+                                        'sensibilità vuole comunicare ai più '
+                                        'piccoli l’importanza di scoprire la '
+                                        'propria autenticità, fidarsi di se '
+                                        'stessi e imparare ad esprimersi '
+                                        'liberamente, senza timore del '
+                                        'giudizio
+[2026-02-02T19:46:24.290+0000] {docker.py:429} INFO - degli altri. Sempre domenica '
+                                        '1° febbraio il palcoscenico del '
+                                        'Teatro Bonezzi di Monfalcone '
+                                        'accoglierà Sphera, spettacolo '
+                                        'immersivo che si svolge all’interno '
+                                        'di un piccolo chapiteau, dove un '
+                                        'flusso sorprendente di ombre, luci, '
+                                        'colori e suoni trasporta gli '
+                                        'spettatori in un viaggio poetico e '
+                                        'suggestivo alla scoperta delle '
+                                        'meraviglie del mondo. Anche in questo '
+                                        'caso per la particolarità '
+                                        'dell’installazione è previsto un '
+                                        'numero limitato di spettatori. '
+                                        'Repliche alle 16 e alle 17.30 per i '
+                                        'bambini dai 3 anni, è necessaria la '
+                                        'prenotazione. Magia, bolle di sapone '
+                                        'e clownerie sono gli ingredienti di '
+                                        'SonoSolo, spettacolo che Michele '
+                                        'Cafaggi, primo artista italiano a '
+                                        'creare uno spettacolo interamente '
+                                        'dedicato alle bolle di sapone, '
+                                        'porterà all’Auditorium Centro Civico '
+                                        'di San Vito al Tagliamento domenica 7 '
+                                        'febbraio (ore 17). Un appuntamento '
+                                        'che, tra divertimento e stupore, '
+                                        'coinvolgerà il pubblico di ogni età. '
+                                        'L’ultimo appuntamento per i '
+                                        'piccolissimi si terrà domenica 22 '
+                                        'febbraio all’Ottagono di Codroipo . '
+                                        'Tana del TPO di Prato è uno '
+                                        'spettacolo immersivo, che nella '
+                                        'poetica distintiva della compagnia, '
+                                        'unisce una forte componente visiva '
+                                        '(grazie anche al digital design) a '
+                                        'una dimensione tattile e sensoriale. '
+                                        'Metafora della ricerca interiore e '
+                                        'dell’esplorazione personale, Tana '
+                                        'coinvolge attivamente il pubblico di '
+                                        'bambini e adulti in un viaggio '
+                                        'emozionale e un’esperienza collettiva '
+                                        'interattiva. Repliche alle 16 e alle '
+                                        '17.30, su prenotazione. Sempre il 22 '
+                                        'febbraio la compagnia Drogheria '
+                                        'Rabelot sarà all’Odeon di Latisana '
+                                        '(ore 17) con Caro lupo, spettacolo '
+                                        'per i bambini dai 4 anni che coniuga '
+                                        'il misterioso ed evanescente '
+                                        'linguaggio del teatro d’ombre con '
+                                        'quello immaginifico del teatro su '
+                                        'nero. Con un continuo alternarsi di '
+                                        'punti di vista e l’utilizzo di una '
+                                        'drammaturgia anche musicale e '
+                                        'luminosa, lo spettacolo affronta il '
+                                        'tema della paura, che accomuna '
+                                        'bambini e adulti. Domenica 1° marzo '
+                                        '(ore 17) il Teatro Gioco Vita, '
+                                        'compagnia piacentina di teatro '
+                                        'd’ombre riconosciuta a livello '
+                                        'internazionale, porterà al Teatro '
+                                        'Bonezzi di Monfalcone Piccolo '
+                                        'Asmodeo, il suo storico spettacolo '
+                                        'premiato nel 2013 con l’Eolo Award. '
+                                        'Piccolo Asmodeo è una favola sul bene '
+                                        'e sul male di Ulf Stark, uno dei più '
+                                        'importanti autori contemporanei di '
+                                        'letteratura per ragazzi. Con sottile '
+                                        'ironia, delicata poesia, sana '
+                                        'comicità, Stark affronta temi '
+                                        'complessi raccontando un meraviglioso '
+                                        'e sorprendente viaggio di formazione. '
+                                        'Al Teatro Candoni di Tolmezzo andrà '
+                                        'invece in scena Luna e Zenzero della '
+                                        'Compagnia Teatro Giovani Teatro '
+                                        'Pirata. Appuntamento sempre domenica '
+                                        '1° marzo alle 17 per i bambini dai 3 '
+                                        'anni in su. Attraverso il linguaggio '
+                                        'del teatro di figura con marionette '
+                                        'portate, marionette ibride e ombre, '
+                                        'lo spettacolo affronta con '
+                                        'delicatezza e fantasia temi '
+                                        'fondamentali come il valore '
+                                        'dell’amicizia, la crescita personale '
+                                        'e il superamento delle proprie paure. '
+                                        'Domenica 7 marzo, al Teatro Odeon di '
+                                        'Latisana , Piccolipalchi ospiterà un '
+                                        'altro storico spettacolo premiato con '
+                                        'l’Eolo Award nel 2010 e da allora tra '
+                                        'i più rappresentanti e apprezzati '
+                                        'della scena nazionale: Storia di un '
+                                        'uomo e della sua ombra di Principio '
+                                        'Attivo Teatro Con pochissimi artifici '
+                                        'scenici e l’originale uso della '
+                                        'musica dal vivo, lo spettacolo '
+                                        'racconta in maniera semplice una '
+                                        'storia vecchia come il mondo, quella '
+                                        'dei conflitti tra gli esseri umani. '
+                                        'Uno spettacolo che fa ridere, '
+                                        'riflettere e commuovere con gag '
+                                        'divertenti e allo stesso tempo '
+                                        'poetiche. Piccolipalchi 24/25 si '
+                                        'concluderà domenica 15 marzo con un '
+                                        'doppio appuntamento. Alle 17 il '
+                                        'Teatro Benois De Cecco di Codroipo '
+                                        'ospiterà Metamorfosi. Contimi '
+                                        'crassigne, spettacolo di teatro '
+                                        'd’attore con pupazzi prodotto dal '
+                                        'Teatri Stabil Furlan e dal CTA di '
+                                        'Gorizia che utilizza la lingua '
+                                        'italiana e quella friulana. Infine, '
+                                        'alle 17.30 al Verdi di Muggia andrà '
+                                        'in scena Sciopero! Ovvero quella '
+                                        'volta che il lupo smise di lavorare, '
+                                        'spettacolo di narrazione prodotto da '
+                                        'Schedìa Teatro dedicato ai bambini '
+                                        'dai 6 anni. In scena Riccardo '
+                                        'Colombini gioca con l’immaginario '
+                                        'delle fiabe e crea un racconto '
+                                        'divertente e ricco di spunti sul tema '
+                                        'della paura. Biglietti: intero 6 '
+                                        'euro, ridotto (abbonati e convenzioni '
+                                        'ERT) 5 euro, pacchetto famiglia (4 '
+                                        'ingressi) 20 euro. Biglietti '
+                                        'disponibili anche online su '
+                                        'biglietti.ertfvg.it. Per ulteriori '
+                                        'informazioni contattare la '
+                                        'Biglietteria ERT allo 0432 224246 o '
+                                        'biglietteria@ertfvg.it . Per gli '
+                                        'spettacoli a numero chiuso con '
+                                        'prenotazione obbligatoria scrivere a '
+                                        'prenotazioni@ertfvg.it . Tutto il '
+                                        'programma di Piccolipalchi è '
+                                        'consultabile al sito www.ertfvg.it '
+                                        'nella sezione dedicata. '
+                                        'PordenoneToday è anche su WhatsApp. '
+                                        'Iscriviti al nostro canale',
+                         'dove': {'address': None,
+                                  'name': 'Varie',
+                                  'raw_text': 'Dove Varie Indirizzo non '
+                                              'disponibile'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/47289531991458/il-nuovo-vestito-dell-imperatrice-3.jpg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-03-15',
+                                    'date_start': '2025-11-29',
+                                    'raw_text': 'Quando Dal 29/11/2025 al '
+                                                '15/03/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Teatri',
+                       'date': 'dal 29 novembre 2025 al 15 marzo 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/47289531991458/il-nuovo-vestito-dell-imperatrice-3.jpg',
+                       'location': 'Varie',
+                       'stars': 5,
+                       'title': 'Parte da San Vito al Tagliamento la nuova '
+                                'stagione di Piccolipalchi, ecco tutto il '
+                                'calendario'}},
+ 'scraped_at': '2026-02-02T19:46:24.282386',
+ 'source': 'city_today',
+ 'title': 'Parte da San Vito al Tagliamento la nuova stagione di '
+          'Piccolipalchi, ecco tutto il calendario',
+ 'url': 'https://www.pordenonetoday.it/eventi/teatro/piccoli-palchi-stagione-2025-2026.html',
+ 'uuid': 'b6b8672ebfc7fc02',
+ 'website': 'https://www.ertfvg.it'}
+[2026-02-02T19:46:25.131+0000] {docker.py:429} INFO - 2026-02-02 19:46:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.pordenonetoday.it/eventi/federico-basso-pordenone-2-febbaio-2026.html> (referer: https://www.pordenonetoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:25.241+0000] {docker.py:429} INFO - 2026-02-02 19:46:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.pordenonetoday.it/eventi/federico-basso-pordenone-2-febbaio-2026.html>
+{'category': [],
+ 'city': 'Pordenone',
+ 'city_id': None,
+ 'content_hash': '9ada2cd85a8b8058',
+ 'date_display': '7 febbraio 2026',
+ 'date_end': '2026-02-07',
+ 'date_start': '2026-02-07',
+ 'description': "Federico Basso porta sul palco dell'auditorium Concordia la "
+                'sua esperienza di comico prestato ai social, in un monologo '
+                'che raccoglie gli anni di esperienza accumulati sui palchi e '
+                "nelle trasmissioni più popolari. L'appuntamento è im "
+                'programma per il 7 febbraio alle 21 a Pordenone. Attraverso '
+                'il suo sguardo vedremo la vita di tutti i giorni sotto '
+                'diverse sfaccettature: un filtro del tutto originale che vi '
+                'consentirà di cogliere aspetti della vita quotidiana spesso '
+                'trascurati. Lasciatevi accompagnare nel suggestivo mondo di '
+                'Federico e fatevi un giro sulla giostra piena di ironia, '
+                'leggerezza e divertimento. Mettetevi comodi e godetevi un '
+                'viaggio all’insegna del “beato chi sa ridere di se stesso '
+                'perché non finirà mai di divertirsi”. PordenoneToday è anche '
+                'su WhatsApp. Iscriviti al nostro canale',
+ 'event_id': 'federico-basso-pordenone-2-febbaio-2026',
+ 'image_url': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/17316377130900/federico-basso-in-profilo-basso-pordenone.png',
+ 'location_address': None,
+ 'location_name': 'Auditorium Concordia',
+ 'price': '€39',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'scoppiospettacoli.it',
+                                                'website': 'https://www.scoppiospettacoli.it/spettacolo/federico-basso-pordenone/'},
+                         'descrizione': 'Federico Basso porta sul palco '
+                                        "dell'auditorium Concordia la sua "
+                                        'esperienza di comico prestato ai '
+                                        'social, in un monologo che raccoglie '
+                                        'gli anni di esperienza accumulati sui '
+                                        'palchi e nelle trasmissioni più '
+                                        "popolari. L'appuntamento è im "
+                                        'programma per il 7 febbraio alle 21 a '
+                                        'Pordenone. Attraverso il suo sguardo '
+                                        'vedremo la vita di tutti i giorni '
+                                        'sotto diverse sfaccettature: un '
+                                        'filtro del tutto originale che vi '
+                                        'consentirà di cogliere aspetti della '
+                                        'vita quotidiana spesso trascurati. '
+                                        'Lasciatevi accompagnare nel '
+                                        'suggestivo mondo di Federico e fatevi '
+                                        'un giro sulla giostra piena di '
+                                        'ironia, leggerezza e divertimento. '
+                                        'Mettetevi comodi e godetevi un '
+                                        'viaggio all’insegna del “beato chi sa '
+                                        'ridere di se stesso perché non finirà '
+                                        'mai di divertirsi”. PordenoneToday è '
+                                        'anche su WhatsApp. Iscriviti al '
+                                        'nostro canale',
+                         'dove': {'address': None,
+                                  'name': 'Auditorium Concordia',
+                                  'raw_text': 'Dove Auditorium Concordia '
+                                              'Indirizzo non disponibile'},
+                         'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-low/17316377130900/federico-basso-in-profilo-basso-pordenone.png',
+                         'prezzo': '€39',
+                         'quando': {'date_end': '2026-02-07',
+                                    'date_start': '2026-02-07',
+                                    'raw_text': 'Quando Dal 07/02/2026 al '
+                                                '07/02/2026 21:00',
+                                    'schedule': '21:00'}},
+              'list': {'category': None,
+                       'date': '7 febbraio 2026',
+                       'image': '//citynews-pordenonetoday.stgy.ovh/~media/horizontal-mid/17316377130900/federico-basso-in-profilo-basso-pordenone.png',
+                       'location': 'Auditorium Concordia',
+                       'stars': 4,
+                       'title': 'Al Concordia un monologo di Federico Basso '
+                                'tutto da ridere'}},
+ 'scraped_at': '2026-02-02T19:46:25.238376',
+ 'source': 'city_today',
+ 'title': 'Al Concordia un monologo di Federico Basso tutto da ridere',
+ 'url': 'https://www.pordenonetoday.it/eventi/federico-basso-pordenone-2-febbaio-2026.html',
+ 'uuid': 'c5f709176407b682',
+ 'website': 'https://www.scoppiospettacoli.it/spettacolo/federico-basso-pordenone/'}
+[2026-02-02T19:46:25.243+0000] {docker.py:429} INFO - 2026-02-02 19:46:25 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-02-02T19:46:25.245+0000] {docker.py:429} INFO - 2026-02-02 19:46:25 [scrapy.extensions.feedexport] INFO: Stored json feed (9 items) in: /app/city_today/output/eventi_pordenone_questa-settimana_20260202_194613.json
+[2026-02-02T19:46:25.247+0000] {docker.py:429} INFO - 2026-02-02 19:46:25 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 4679,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 1538196,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'elapsed_time_seconds': 12.079257,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 2, 2, 19, 46, 25, 241329, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 8199998,
+ 'httpcompression/response_count': 11,
+ 'item_scraped_count': 9,
+ 'items_per_city/Pordenone': 9,
+ 'items_per_minute': 45.0,
+ 'log_count/DEBUG': 20,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68775936,
+ 'memusage/startup': 68775936,
+ 'request_depth_max': 1,
+ 'response_received_count': 11,
+ 'responses_per_minute': 55.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'start_time': datetime.datetime(2026, 2, 2, 19, 46, 13, 162072, tzinfo=datetime.timezone.utc)}
+2026-02-02 19:46:25 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-02-02T19:46:25.290+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_pordenone_questa-settimana_20260202_194613.json
+[2026-02-02T19:46:25.613+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_pordenone.scrape_city_today, execution_date=20260201T060000, start_date=20260202T194612, end_date=20260202T194625
+[2026-02-02T19:46:25.641+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-02T19:46:25.675+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

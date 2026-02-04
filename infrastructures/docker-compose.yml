@@ -30,10 +30,10 @@ services:
   # Scrapy Spider Image Builder - builds and exits
   scrapy-events:
     build:
-      context: ../scraping
+      context: ../services/service-scraping
       dockerfile: Dockerfile
-    image: scrapy-events:latest
-    container_name: scrapy-events-build
+    image: events-scrapy:latest
+    container_name: events-scrapy
     entrypoint: ["echo", "Scrapy image built successfully"]
     command: []
     networks:

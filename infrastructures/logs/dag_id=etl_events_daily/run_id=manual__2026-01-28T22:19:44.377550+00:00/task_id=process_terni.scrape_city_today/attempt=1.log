@@ -1,0 +1,169 @@
+[2026-01-28T22:21:09.436+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_terni.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:21:09.446+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_terni.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:21:09.447+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-28T22:21:09.457+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_terni.scrape_city_today> on 2026-01-28 22:19:44.377550+00:00
+[2026-01-28T22:21:09.464+0000] {standard_task_runner.py:60} INFO - Started process 2596 to run task
+[2026-01-28T22:21:09.468+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_terni.scrape_city_today', 'manual__2026-01-28T22:19:44.377550+00:00', '--job-id', '193', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpalz2tndg']
+[2026-01-28T22:21:09.471+0000] {standard_task_runner.py:88} INFO - Job 193: Subtask process_terni.scrape_city_today
+[2026-01-28T22:21:09.487+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T22:21:09.532+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_terni.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [running]> on host a9aac56aef94
+[2026-01-28T22:21:09.629+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_terni.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T22:19:44.377550+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T22:19:44.377550+00:00'
+[2026-01-28T22:21:09.649+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-28T22:21:09.655+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-28T22:21:10.124+0000] {docker.py:429} INFO - Avvio scraping per: Terni
+Periodo: questa-settimana
+[2026-01-28T22:21:10.126+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-28T22:21:10.130+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-01-28 22:21:10 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-28T22:21:10.134+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [events] INFO: Scraping città: Terni
+2026-01-28 22:21:10 [events] INFO: Periodo: questa-settimana (2026-01-28 - 2026-02-01)
+[2026-01-28T22:21:10.134+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-28T22:21:10.135+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-28T22:21:10.135+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+[2026-01-28T22:21:10.135+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-28T22:21:10.137+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.extensions.telnet] INFO: Telnet Password: 7de51ba959fff415
+[2026-01-28T22:21:10.178+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-01-28T22:21:10.178+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-28T22:21:10.228+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-28T22:21:10.229+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-28T22:21:10.230+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-28T22:21:10.231+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_terni_questa-settimana_20260128_222110.json
+[2026-01-28T22:21:10.231+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.core.engine] INFO: Spider opened
+[2026-01-28T22:21:10.237+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-28T22:21:10.237+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-28T22:21:10.389+0000] {docker.py:429} INFO - 2026-01-28 22:21:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ternitoday.it/robots.txt> (referer: None)
+[2026-01-28T22:21:12.128+0000] {docker.py:429} INFO - 2026-01-28 22:21:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ternitoday.it/eventi/dal/2026-01-28/al/2026-02-01/> (referer: None)
+[2026-01-28T22:21:13.120+0000] {docker.py:429} INFO - 2026-01-28 22:21:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.ternitoday.it/eventi/libreria-ubik-alterocca-terni-presentazione-nel-corpo-di-me-2026.html> (referer: https://www.ternitoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:21:13.238+0000] {docker.py:429} INFO - 2026-01-28 22:21:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.ternitoday.it/eventi/libreria-ubik-alterocca-terni-presentazione-nel-corpo-di-me-2026.html>
+{'category': None,
+ 'city': 'Terni',
+ 'content_hash': 'a15195e4086acf75',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '18:00', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio alle ore 18,00 la libreria Ubik Alterocca '
+                'in Corso Cornelio Tacito 16/18 a Terni, ospiterà la '
+                'presentazione del libro NEL CORPO DI ME di Aurora Piaggesi. '
+                'Un racconto che unisce realismo e visione, corpo e metafora, '
+                'per interrogarsi su cosa significhi davvero “dare la vita” e '
+                'su quanto siamo disposti a comprendere ciò che sfugge alla '
+                'logica. L’incontro sarà moderato dall’attrice Graziana '
+                'Allegra che curerà anche le letture. Interviene la Psicologa '
+                'e Psicoterapeuta Alessandra Testi. Come è possibile che '
+                'Silvia, la donna con la quale Giada ha condiviso solo poche '
+                'settimane di passione e che non riesce a dimenticare, si '
+                'scopra improvvisamente incinta, senza mai essere stata con un '
+                'uomo in tutta la sua vita? Tutto ha inizio durante un '
+                'misterioso incidente nautico che vede entrambe coinvolte e, '
+                'da quel momento, le vite delle due donne tornano loro '
+                'malgrado a intrecciarsi, portandole a mettere in discussione '
+                'ciò che le aveva un tempo allontanate. Mentre Silvia cerca di '
+                'dare un senso alla propria gravidanza impossibile, Giada è '
+                'chiamata ad affrontare paure, desideri e contraddizioni che '
+                'credeva sopite. Intorno a loro, un mondo brulicante di '
+                'opinioni — scienziati, media, curiosi — trasforma l’intimità '
+                'in spettacolo collettivo, amplificando la tensione tra '
+                'mistero e giudizio, amore e identità. ll romanzo, finalista '
+                'al Premio Clara Sereni 2022 per la letteratura al femminile '
+                'con il titolo In umana concezione, affronta il tema della '
+                'maternità queer attraverso una prospettiva surreale e '
+                'profondamente simbolica. L’autrice ne fa occasione per un '
+                'dialogo aperto sul rapporto tra l’identità e il generare '
+                'vita, ma anche sulla violenza sottile che nasce '
+                'dall’incomprensione e dalla spettacolarizzazione di '
+                'un’esperienza intima come la maternità. A SEGUIRE APERITIVO.',
+ 'image_url': '//citynews-ternitoday.stgy.ovh/~media/horizontal-mid/63149800331030/nel-corpo-di-me.jpg',
+ 'location_address': 'Corso Cornelio Tacito, 16',
+ 'location_name': 'Libreria Ubik',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:21:12.232921',
+ 'time_info': '18:00',
+ 'title': 'Alla libreria Ubik Alterocca di Terni la presentazione di "Nel '
+          'corpo di me"',
+ 'url': 'https://www.ternitoday.it/eventi/libreria-ubik-alterocca-terni-presentazione-nel-corpo-di-me-2026.html',
+ 'uuid': 'a444d934d0b4051c'}
+[2026-01-28T22:21:13.240+0000] {docker.py:429} INFO - 2026-01-28 22:21:13 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-28T22:21:13.241+0000] {docker.py:429} INFO - 2026-01-28 22:21:13 [scrapy.extensions.feedexport] INFO: Stored json feed (1 items) in: /app/city_today/output/eventi_terni_questa-settimana_20260128_222110.json
+[2026-01-28T22:21:13.242+0000] {docker.py:429} INFO - 2026-01-28 22:21:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1095,
+ 'downloader/request_count': 3,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/response_bytes': 282466,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/200': 3,
+ 'elapsed_time_seconds': 3.004532,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 28, 22, 21, 13, 240427, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 1429521,
+ 'httpcompression/response_count': 3,
+ 'item_scraped_count': 1,
+ 'items_per_city/Terni': 1,
+ 'items_per_minute': 20.0,
+ 'log_count/DEBUG': 4,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68739072,
+ 'memusage/startup': 68739072,
+ 'request_depth_max': 1,
+ 'response_received_count': 3,
+ 'responses_per_minute': 60.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2026, 1, 28, 22, 21, 10, 235895, tzinfo=datetime.timezone.utc)}
+2026-01-28 22:21:13 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-28T22:21:13.364+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_terni_questa-settimana_20260128_222110.json
+[2026-01-28T22:21:13.654+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_terni.scrape_city_today, execution_date=20260128T221944, start_date=20260128T222109, end_date=20260128T222113
+[2026-01-28T22:21:13.703+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T22:21:13.750+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

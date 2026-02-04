@@ -1,0 +1,2647 @@
+[2026-01-28T22:19:46.890+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_cesena.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:19:46.909+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_cesena.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:19:46.911+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-28T22:19:46.928+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_cesena.scrape_city_today> on 2026-01-28 22:19:44.377550+00:00
+[2026-01-28T22:19:46.942+0000] {standard_task_runner.py:60} INFO - Started process 2501 to run task
+[2026-01-28T22:19:46.947+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_cesena.scrape_city_today', 'manual__2026-01-28T22:19:44.377550+00:00', '--job-id', '157', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpsr_xznet']
+[2026-01-28T22:19:46.951+0000] {standard_task_runner.py:88} INFO - Job 157: Subtask process_cesena.scrape_city_today
+[2026-01-28T22:19:46.980+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T22:19:47.050+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_cesena.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [running]> on host a9aac56aef94
+[2026-01-28T22:19:47.267+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_cesena.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T22:19:44.377550+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T22:19:44.377550+00:00'
+[2026-01-28T22:19:47.428+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-28T22:19:47.454+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-28T22:19:49.162+0000] {docker.py:429} INFO - Avvio scraping per: Cesena
+[2026-01-28T22:19:49.165+0000] {docker.py:429} INFO - 
+[2026-01-28T22:19:49.170+0000] {docker.py:429} INFO - Periodo: questa-settimana
+[2026-01-28T22:19:49.171+0000] {docker.py:429} INFO - 
+[2026-01-28T22:19:49.172+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-28T22:19:49.175+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+[2026-01-28T22:19:49.175+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-28T22:19:49.181+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [events] INFO: Scraping città: Cesena
+[2026-01-28T22:19:49.183+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [events] INFO: Periodo: questa-settimana (2026-01-28 - 2026-02-01)
+[2026-01-28T22:19:49.191+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-28T22:19:49.192+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-28T22:19:49.196+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-28 22:19:49 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-28T22:19:49.202+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.extensions.telnet] INFO: Telnet Password: 4dcc2bab2196adac
+[2026-01-28T22:19:49.364+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2026-01-28 22:19:49 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-28T22:19:49.479+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-28T22:19:49.482+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_cesena_questa-settimana_20260128_221949.json
+[2026-01-28T22:19:49.482+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-01-28 22:19:49 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-28T22:19:49.482+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.core.engine] INFO: Spider opened
+[2026-01-28T22:19:49.499+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-28T22:19:49.500+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-28T22:19:49.630+0000] {docker.py:429} INFO - 2026-01-28 22:19:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/robots.txt> (referer: None)
+[2026-01-28T22:19:52.585+0000] {docker.py:429} INFO - 2026-01-28 22:19:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/> (referer: None)
+[2026-01-28T22:19:52.846+0000] {docker.py:429} INFO - 2026-01-28 22:19:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/in-superficie-mostra-galleria-pescheria-31-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:19:52.963+0000] {docker.py:429} INFO - 2026-01-28 22:19:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/in-superficie-mostra-galleria-pescheria-31-gennaio-2026.html>
+{'category': 'Mostre',
+ 'city': 'Cesena',
+ 'content_hash': '1b49b5d39ef4099f',
+ 'date_end': '2026-03-15',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'}],
+ 'description': 'La Galleria Pescheria di Cesena a partire da sabato 31 '
+                'gennaio ospita la mostra fotografica "In superficie", '
+                'progetto caratterizzato dalle fotografe di Gio Blonde e Lulù '
+                'Withheld, curato da Lorenzo Piccinini. La mostra nasce dal '
+                'progetto Wild Romagna, sviluppato tra il 2021 e il 2023 e '
+                'attualmente seguito solo da Gio Blonde e propone un percorso '
+                'visivo che esplora il legame tra sguardo, luogo e corpo, '
+                'attraverso l’arte della fotografia, in cui la superficie '
+                'diventa il piano di incontro tra osservatore e osservato. '
+                'Ispirandosi al mito di Diana e Atteone, che racconta della '
+                'trasformazione di Atteone in cervo dopo aver colto la dea '
+                'nuda, la mostra indaga il delicato equilibrio tra sguardo e '
+                'corpo, tra esaltazione e tragedia, tra desiderio e rispetto. '
+                'La fotografia qui diventa mezzo per leggere la realtà e i '
+                'corpi che la abitano, evidenziando la superficie come confine '
+                'e al tempo stesso come spazio di esistenza e percezione. '
+                'L’esposizione, in corso fino al 15 marzo, si struttura '
+                'intorno a tre assi principali: Sguardo (conoscenza), Luogo '
+                '(connessione) e Corpo (contatto). Qui pubblico è invitato a '
+                'vivere un’esperienza doppia, alternando i ruoli di chi guarda '
+                'e di chi viene osservato, entrando in un dialogo sensibile '
+                'con l’opera. Come spiegano le artiste, la superficie “non è '
+                'solo ciò che mostra, ma anche ciò che nasconde, un mezzo per '
+                'comprendere l’interazione tra realtà, corpo e percezione”. '
+                'L’inaugurazione è prevista sabato 31 gennaio alle ore 18.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/38107064416258/gioblonde_wildromagna.jpeg',
+ 'location_address': None,
+ 'location_name': 'Galleria Pescheria',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.707212',
+ 'time_info': 'Inaugurazione alle 18',
+ 'title': 'Corpi, tra desiderio e tragedia: in galleria Pescheria la mostra '
+          'fotografica "In superficie"',
+ 'url': 'https://www.cesenatoday.it/eventi/in-superficie-mostra-galleria-pescheria-31-gennaio-2026.html',
+ 'uuid': '83d7ab64630d5c43'}
+[2026-01-28T22:19:54.311+0000] {docker.py:429} INFO - 2026-01-28 22:19:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/teatro-verdi-festa-dino-moroni-arcano-sosia-di-vasco-rossi-29-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:19:54.419+0000] {docker.py:429} INFO - 2026-01-28 22:19:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/teatro-verdi-festa-dino-moroni-arcano-sosia-di-vasco-rossi-29-gennaio-2026.html>
+{'category': 'Disco&Feste',
+ 'city': 'Cesena',
+ 'content_hash': '39080fca4ef37a71',
+ 'date_end': '2026-01-29',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'time_start': '20:30', 'weekday': 'Giovedì'}],
+ 'description': 'Giovedi 29 gennaio alle ore 20.30 al Teatro verdi di Cesena '
+                'una serata di grande musica. Carlo Frisi, Luca Bergamini con '
+                'la moglie Novella Vandi, Genio, Gianni Drudi e Gilberto '
+                'Gattei si esibiranno in onore di Dino Moroni “Arcano”, il '
+                'sosia di Vasco Rossi, in occasione della grande festa '
+                "organizzata dalla Patron di Spledida d'Italia Franca "
+                'Venturini per i 30 anni di discografia con lo pseudomino di '
+                'Arcano e i 55 anni di militanza sul palco. Quella proposta '
+                'sarà una serata di puro intrattenimento, con la musica di '
+                'Moroni ma anche la sfilata delle ragazze di Splendida '
+                "d'Italia, legata alla lotta contro il femminicidio. Dino "
+                'Moroni racconterà la sua singolare storia di sosia del più '
+                'grande rocker italiano di tutti i tempi, di come sia riuscito '
+                'a ritagliarsi un suo spazio discografico. Canterà canzoni '
+                'sue, ma anche brani tra i più amati del repertorio di Vasco. '
+                'Per raccontare questo lungo percorso, ha scelto un narratore '
+                "speciale: l'amico Gilberto Gattei e dj storico del riminese. "
+                "Sarà anche l'occasione per ufficializzare il Premio alla "
+                'carriera, che Moroni ha ricevuto qualche anno fa dalle '
+                'autorità della sua città di nascita Montescudo.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/55874935009418/dino-moroni-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Verdi',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.706739',
+ 'time_info': '20.30',
+ 'title': 'Al Verdi una grande festa in onore dei 30 anni di carriera di Dino '
+          'Moroni "Arcano", sosia di Vasco Rossi',
+ 'url': 'https://www.cesenatoday.it/eventi/teatro-verdi-festa-dino-moroni-arcano-sosia-di-vasco-rossi-29-gennaio-2026.html',
+ 'uuid': 'c6d0cfcf40bf25ad'}
+[2026-01-28T22:19:55.014+0000] {docker.py:429} INFO - 2026-01-28 22:19:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/chromogen-spazio-marte-concerto-30-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:19:55.124+0000] {docker.py:429} INFO - 2026-01-28 22:19:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/chromogen-spazio-marte-concerto-30-gennaio-2026.html>
+{'category': 'Concerti',
+ 'city': 'Cesena',
+ 'content_hash': 'c162731ac359e0f4',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio, il palco dello Spazio Marte torna a '
+                'ospitare la musica dal vivo con i Chromogen, trio jazz di '
+                'stanza a Bologna. La band è costituita da basso, sax e '
+                "batteria: un'essenzialità che si traduce in costante stimolo "
+                'per una ricerca sonora che parte dal jazz ma prende a piene '
+                'mani da psichedelia, funk, progressive e suggestioni '
+                'elettroniche, cercando di bilanciare una grande attenzione ai '
+                'dettagli compositivi con un grosso spazio lasciato '
+                'all’improvvisazione e all’estemporaneità. I componenti della '
+                'band hanno una formazione musicale che passa da Istituti di '
+                'formazione accademica: Matteo Magnaterra, basso elettrico e '
+                'composizioni, classe 1995, è il timoniere del progetto; il '
+                'batterista è Vincenzo Messina, classe 1992; la parte melodica '
+                'è affidata al ventiseienne Matteo Diego Scarcella e al suo '
+                "sax tenore. I Chromogen hanno debuttato nell'autunno del 2024 "
+                "con l'omonimo EP, pubblicato per l'etichetta bolognese "
+                'Sghetto Records, dal 2022 punto di riferimento per le '
+                'produzioni di artisti inediti dal sound innovativo, in '
+                "particolare nell'ambito del jazz. L’ingresso è a offerta "
+                'libera alla cassa.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/67813833801386/chromogen.jpg',
+ 'location_address': 'Via Silvio Corbari, 175',
+ 'location_name': 'Spazio Marte',
+ 'price': 'offerta libera',
+ 'scraped_at': '2026-01-28T22:19:52.706294',
+ 'time_info': '21',
+ 'title': 'Psichedelia, funk e improvvisazione jazz di scena a Spazio Marte '
+          'con i Chromogen',
+ 'url': 'https://www.cesenatoday.it/eventi/chromogen-spazio-marte-concerto-30-gennaio-2026.html',
+ 'uuid': '23718b86f7de2835'}
+[2026-01-28T22:19:56.263+0000] {docker.py:429} INFO - 2026-01-28 22:19:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/focus-sul-mondo-dell-editoria-moderna-con-marino-biondi.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:19:56.371+0000] {docker.py:429} INFO - 2026-01-28 22:19:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/focus-sul-mondo-dell-editoria-moderna-con-marino-biondi.html>
+{'category': 'Incontri',
+ 'city': 'Cesena',
+ 'content_hash': 'e574c2538e10e956',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '16:30', 'weekday': 'Sabato'}],
+ 'description': "Sabato 31 gennaio, alle ore 16.30, nell'Aula Magna della "
+                'Biblioteca Malatestiana, è in programma la seconda conferenza '
+                'di Marino Biondi nell\'ambito del ciclo "La civiltà del '
+                'leggere", promosso dagli Amici della Biblioteca Malatestiana. '
+                'In questo incontro, dal titolo "L\'Italia dei libri", il '
+                "professor Biondi parlerà dell'editoria italiana, con "
+                'particolare riferimento a tre importanti case editrici: '
+                'Adelphi, Einaudi, Mondadori. Tramite fra scrittori e lettori, '
+                'l’editore è “colui che il libro trasforma, con larghi e '
+                'copiosi investimenti di virtù varie, che non sono soltanto '
+                'denaro, ma curiosità, una certa dose di azzardo, intuizione, '
+                'gusto della sfida”. Nel corso dell’incontro si parlerà del '
+                'mestiere dell’editore, “tra i più originali, difficili, e a '
+                'rischio, fra quelli contemplati nell’ambito delle attività a '
+                'matrice intellettuale”, come lo definisce il professor '
+                'Biondi, del ruolo giocato dalle case editrici nel corso del '
+                'tempo per la circolazione della cultura, delle sfide attuali, '
+                'che devono fare i conti con le profonde mutazioni del sistema '
+                'mediatico.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/69806860868012/professore-marino-biondi.jpg',
+ 'location_address': None,
+ 'location_name': 'Aula Magna della Biblioteca Malatestiana',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.705810',
+ 'time_info': '16.30',
+ 'title': "Focus sul mondo dell'editoria moderna con Marino Biondi",
+ 'url': 'https://www.cesenatoday.it/eventi/focus-sul-mondo-dell-editoria-moderna-con-marino-biondi.html',
+ 'uuid': 'bf430dc3b4553778'}
+[2026-01-28T22:19:57.734+0000] {docker.py:429} INFO - 2026-01-28 22:19:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/la-favola-di-peter-teatro-per-bambini-cesenatico-1-febbraio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:19:57.842+0000] {docker.py:429} INFO - 2026-01-28 22:19:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/la-favola-di-peter-teatro-per-bambini-cesenatico-1-febbraio-2026.html>
+{'category': 'Teatri',
+ 'city': 'Cesena',
+ 'content_hash': '413545d816fc576f',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Nuovo appuntamento con Sciroppo di teatro e le favole della '
+                'domenica pomeriggio. Il progetto di Ater fa ancora tappa al '
+                'teatro Comunale di Cesenatico questa volta con “La favola di '
+                'Peter”. Lo spettacolo, in programma per domenica 1 febbraio '
+                'alle 16, racconta di Peter e la sua gemella: l’ombra. '
+                'Entrambi sono “venuti alla luce” assieme, sono cresciuti '
+                'assieme e hanno giocato assieme. Col passare degli anni Peter '
+                'però è cresciuto e ha iniziato a non avere più tempo per la '
+                'sua cara ombra, che però ha continuato a seguirlo, in attesa '
+                'di essere guardata di nuovo. In scena, un attore e la sua '
+                'ombra su uno sfondo bianco giocano e interagiscono creando '
+                'numerosi personaggi e mondi immaginari. Un linguaggio visivo '
+                'onirico, poetico e ironico che parla a tutte le età con il '
+                'linguaggio magico delle ombre. Lo spettacolo è consigliato '
+                'per i bambini dai 6 anni in su e il biglietto è in prevendita '
+                'su Vivaticket. Biglietti a 6 euro. La biglietteria del teatro '
+                'sarà aperta il giorno dello spettacolo a partire dalle 15.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/47315890311991/peter_ph-2.jpeg',
+ 'location_address': None,
+ 'location_name': 'Teatro Comunale Cesenatico',
+ 'price': '6 euro',
+ 'scraped_at': '2026-01-28T22:19:52.705353',
+ 'time_info': '16',
+ 'title': 'Sciroppo di Teatro porta in scena un viaggio onirico per piccoli e '
+          'famiglie, al Comunale di Cesenatico arriva "La favola di Peter"',
+ 'url': 'https://www.cesenatoday.it/eventi/la-favola-di-peter-teatro-per-bambini-cesenatico-1-febbraio-2026.html',
+ 'uuid': '07d590e0c76f5253'}
+[2026-01-28T22:19:58.736+0000] {docker.py:429} INFO - 2026-01-28 22:19:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/chi-resta-teatro-turroni-sogliano-al-rubicone-30-novembre-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:19:58.844+0000] {docker.py:429} INFO - 2026-01-28 22:19:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/chi-resta-teatro-turroni-sogliano-al-rubicone-30-novembre-2026.html>
+{'category': 'Teatri',
+ 'city': 'Cesena',
+ 'content_hash': '1058882ae7ca7727',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio, per la rassegna “Prova d’Attore” del '
+                'Teatro Elisabetta Turroni, a Sogliano al Rubicone arriva in '
+                'scena “Chi resta”, uno spettacolo di intensa forza emotiva e '
+                'visiva con Matilde Vigna e Daniela Piperno, per la regia di '
+                'Anna Zanetti. “Cosa resta, quando nulla va come previsto? Chi '
+                'resta, dopo il viaggio più grande?”. Da queste domande prende '
+                'forma uno spettacolo che attraversa il dolore, la memoria e '
+                'la solitudine, raccontando la storia di una giovane donna che '
+                'non sarà mai madre, che ha perso l’ultimo genitore e si '
+                'ritrova sola a ricostruire la propria vita a partire dalle '
+                'macerie di quella precedente. In scena una distesa di '
+                'detriti: polvere, regolite lunare, il suolo di un pianeta '
+                'sconosciuto. Sotto questa coperta di cocci c’è Matilde, da '
+                'cui emerge una voce che chiama “mamma?”, prima fioca, poi '
+                'sempre più forte. È un dolore assoluto a farsi protagonista, '
+                'un dolore che, in assenza di qualcuno che reclami cure e '
+                'attenzioni, diventa insopportabile e riporta all’infanzia. I '
+                'ricordi così arrivano all’improvviso, si fanno concreti, e la '
+                'madre torna a esistere tra le piccole cose della vita di '
+                'prima apparendo quasi per magia per aiutare la figlia a '
+                'uscire da tenebre che sembrano non finire mai. Biglietto '
+                'intero a 18 euro, ridotto a 15 euro. La biglietteria è attiva '
+                'i giorni di spettacolo dalle ore 20. Per informazioni '
+                'contattare il 370 3685093 o spettatore@sillaba.org.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/53412928292143/chi-resta-ph-luca-del-pia.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Elisabetta Turroni',
+ 'price': '15-18 euro',
+ 'scraped_at': '2026-01-28T22:19:52.704723',
+ 'time_info': '21',
+ 'title': "Solitudini generazionali e il dolore dell'abbandono, a teatro il "
+          'viaggio di una giovane donna in "Chi resta"',
+ 'url': 'https://www.cesenatoday.it/eventi/chi-resta-teatro-turroni-sogliano-al-rubicone-30-novembre-2026.html',
+ 'uuid': 'e7e07b35724e450c'}
+[2026-01-28T22:20:00.283+0000] {docker.py:429} INFO - 2026-01-28 22:20:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/il-gutai-mostra-avanguardia-giapponese-galleria-ridotto-31-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:00.396+0000] {docker.py:429} INFO - 2026-01-28 22:20:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/il-gutai-mostra-avanguardia-giapponese-galleria-ridotto-31-gennaio-2026.html>
+{'category': 'Mostre',
+ 'city': 'Cesena',
+ 'content_hash': '67c4fd9359a1eace',
+ 'date_end': '2026-03-15',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-04',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-06', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-11',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-13', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-18',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-20', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-25',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-27', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-04',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-06', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-11',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-13', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'time_start': '12:30', 'weekday': 'Sabato'}],
+ 'description': 'Sabato 31 gennaio, alle ore 17, alla Galleria d’arte del '
+                'Ridotto si apre le porte alla mostra "Il Gutai" dedicata a '
+                'due protagonisti storici dell’avanguardia giapponese del '
+                'secondo dopoguerra: Shozo Shimamoto (1928–2013) e Yasuo Sumi '
+                '(1925–2015). Nel contesto delle più significative avanguardie '
+                'artistiche del Novecento, il movimento Gutai nasce in '
+                'Giappone nel secondo dopoguerra come una delle più radicali '
+                'espressioni di libertà creativa, anticipando di decenni la '
+                'performance art e l’arte concettuale occidentale. I profondi '
+                'fermenti culturali che attraversano il Paese del Sol Levante '
+                'in quegli anni favoriscono un ripensamento totale della '
+                'tradizione pittorica e dei linguaggi artistici. Il Gutai si '
+                'propone infatti di superare le avanguardie europee e '
+                'occidentali, bandendo l’uso convenzionale del pennello, '
+                'rifiutando la figurazione e sperimentando soluzioni '
+                'linguistiche nuove, incentrate sull’atto creativo, sul gesto '
+                'e sulla materia. Attraverso l’impiego di elementi d’uso '
+                'quotidiano trasformati in veicoli espressivi – carta, '
+                'tessuti, fango, vetro – il movimento reinventa i canoni '
+                'dell’arte, ponendo al centro l’artista nella sua fisicità e '
+                'nella libertà del movimento. Anche il corpo umano diventa '
+                'strumento creativo, lasciando impronte dirette nel colore e '
+                'nella materia: nessun mezzo è precluso. L’arte si apre così a '
+                'performance ed esibizioni dal vivo, capaci di coinvolgere e '
+                'sorprendere lo spettatore. Accanto al fondatore Jiro '
+                'Yoshihara e a Shozo Shimamoto, che ideò il nome del '
+                'Movimento, aderiscono al Gruppo Gutai artisti come Yasuo '
+                'Sumi, Kazuo Shiraga, Saburo Murakami, Jozo Ukita e molti '
+                'altri. La mostra nasce grazie alla collaborazione con '
+                'importanti collezionisti e, considerati gli spazi della '
+                'Galleria del Ridotto, propone un focus su Shimamoto e Sumi, '
+                'due artisti di fama internazionale che hanno contribuito in '
+                'modo decisivo alla nascita e allo sviluppo del Gutai fin '
+                'dalle origini. Le opere esposte ripercorrono la storia del '
+                'Movimento dalla fondazione fino agli anni Duemila, includendo '
+                'anche una riflessione sul periodo successivo allo '
+                'scioglimento del gruppo, avvenuto nel 1972, per evidenziare '
+                'quanto l’esperienza Gutai abbia continuato a influenzare gli '
+                'artisti che ne fecero parte. L’esposizione, a cura di Maria '
+                'Grazia Melandri, organizzata dal Comune di Cesena – '
+                'Assessorato alla Cultura in collaborazione con L’Immagine '
+                'Arte, e patrocinata dalla Regione Emilia-Romagna, sarà '
+                'visitabile dal 31 gennaio al 15 marzo. In mostra sono '
+                'presentate carte, tele, tele retate, tecniche miste, smalti e '
+                'opere con inclusioni (Bottle Crash), derivate anche da '
+                'performance realizzate in Italia, oltre ad alcuni lavori '
+                'esposti alla Biennale di Venezia del 1993 e a una rara opera '
+                'del 1980. Completa il percorso espositivo un video che '
+                'documenta una performance di Shimamoto e Sumi realizzata in '
+                'Italia, già trasmessa da Sky Arte. Le opere dei due artisti '
+                'sono oggi presenti nelle collezioni dei maggiori musei '
+                'internazionali. L’inaugurazione vedrà l’introduzione alla '
+                "mostra di Matteo Galbiati, con l'intervento di Roberto "
+                'Mazzacurati e rimarrà visitabile, con ingresso gratuito, nei '
+                'seguenti orari: mercoledì dalle ore 10 alle ore 12.30; '
+                'venerdì, dalle 15.30 alle 18.30; sabato e festivi, dalle 10 '
+                'alle 12 e dalle 15.30 alle 18.30.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/50951729781471/shozo-in-performance.jpg',
+ 'location_address': None,
+ 'location_name': 'Galleria del Ridotto',
+ 'price': 'Prezzo non disponibile',
+ 'schedule': 'Mercoledì dalle ore 10 alle ore 12.30; venerdì, dalle 15.30 alle '
+             '18.30; sabato e festivi, dalle 10 alle 12 e dalle 15.30 alle '
+             '18.30',
+ 'scraped_at': '2026-01-28T22:19:52.704189',
+ 'title': 'La grande tradizione pittorica del movimento Gutai in mostra con le '
+          'opere di Shozo Shimamoto e Yasuo Sumi',
+ 'url': 'https://www.cesenatoday.it/eventi/il-gutai-mostra-avanguardia-giapponese-galleria-ridotto-31-gennaio-2026.html',
+ 'uuid': 'da06d30b992450a9',
+ 'weekdays': 'Mercoledì, Venerdì, Sabato'}
+[2026-01-28T22:20:01.961+0000] {docker.py:429} INFO - 2026-01-28 22:20:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/mostra-costellazioni-lia-briganti-cesenatico-21-dicembre-2025.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:02.073+0000] {docker.py:429} INFO - 2026-01-28 22:20:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/mostra-costellazioni-lia-briganti-cesenatico-21-dicembre-2025.html>
+{'category': 'Mostre',
+ 'city': 'Cesena',
+ 'content_hash': 'c1707d97c8a706fb',
+ 'date_end': '2026-02-20',
+ 'date_start': '2025-12-21',
+ 'dates': [{'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'}],
+ 'description': 'A Cesenatico, domenica 21 dicembre alle ore 16, nello spazio '
+                'espositivo Roma42 Spazio Arte si inaugura la nuova mostra di '
+                'astrofotografia di Lia Briganti sulla costellazione del '
+                'Sagittario. La mostra é dedicata alla madre Clelia Elia '
+                'Rossetti a 105 anni dalla nascita e al padre Edorado Mario '
+                'Briganti a 110 anni dalla nascita. Lia Briganti ha voluto '
+                'onorare la memoria dei genitori, poiché proprio grazie al '
+                'padre Edoardo, astrofilo, ha iniziato a osservare il cielo '
+                'con il suo cannocchiale dal terrazzino di casa, per la prima '
+                "volta, già all'età di tre anni. Ed è proprio dal terrazzino "
+                'della sua abitazione nel centro storico di Cesenatico che Lia '
+                'Briganti ha scattato le fotografie della costellazione del '
+                'Sagittario e della galassia, in particolare la nebulosa di '
+                'gas e polveri stellari Sagittarius B2, il famoso buco nero '
+                'Sagittarius A e il teorizzato buco bianco, originato dal buco '
+                'nero. Il viaggio osservativo e fotografico nella '
+                'costellazione del Sagittario è stato realizzato da Lia '
+                'Briganti nella notte del 20 agosto 2025 a Cesenatico, dopo un '
+                'accurato studio delle mappe stellari e una quotidiana '
+                'osservazione del cielo agostano. La mostra "Origo Foramini '
+                'Albi" si pone in ideale continuità con la mostra di '
+                'astrofotografia "Ubi Sagitta Vadit? Ad Infinitos Fines '
+                'Universi Dei" (Dove va la freccia? Ai confini infiniti '
+                "dell'Universo di Dio) dedicata al padre Edoardo e in chiusura "
+                'il 20 dicembre. "Origo Foramini Albi" sarà visibile fino al '
+                '20 febbraio con i seguenti orari di apertura: martedì, '
+                "venerdì, sabato: 16-18; mercoledì: 10-12. L' ingresso è "
+                'gratuito.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/21919498326175/sagittarius-b-e-buco-nero.jpg',
+ 'location_address': None,
+ 'location_name': 'Roma42 Spazio Arte Auditorium Lucio Briganti, Palazzo '
+                  'Rossetti Briganti',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.703422',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': 'Tra costellazioni e galassie Lia Briganti va alla ricerca dei '
+          'legami familiari con la mostra "Origine del Buco Bianco"',
+ 'url': 'https://www.cesenatoday.it/eventi/mostra-costellazioni-lia-briganti-cesenatico-21-dicembre-2025.html',
+ 'uuid': '6914884db5d07061'}
+[2026-01-28T22:20:02.908+0000] {docker.py:429} INFO - 2026-01-28 22:20:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/profezie-di-pace-la-mostra-che-celebra-la-fratellanza-e-la-non-violenza.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:03.017+0000] {docker.py:429} INFO - 2026-01-28 22:20:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/profezie-di-pace-la-mostra-che-celebra-la-fratellanza-e-la-non-violenza.html>
+{'category': 'Mostre',
+ 'city': 'Cesena',
+ 'content_hash': '851a80cae372838e',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': "Da sabato 17 gennaio, nei locali dell'associazione Amici di "
+                'don Baronio di Savignano sul Rubicone, viene aperta al '
+                'pubblico la mostra "Profezia di pace", frutto della '
+                'collaborazione tra Bernardo Cedone, Tommaso Sperotto insieme '
+                'e i docenti e gli studenti di Gioventù Studentesca. '
+                'L’iniziativa fa parte della rassegna “Chi sono io senza di '
+                'te? L’altro: risorsa o nemico?” e vede protagonisti ragazzi e '
+                'professori di Gioventù studentesca che hanno cercato un '
+                'contatto con persone impegnate per la pace in contesti di '
+                'guerra. Tra queste il cardinale Pierbattista Pizzaballa, '
+                'patriarca di Gerusalemme, e il vescovo ausiliare di Sarajevo, '
+                'Pero Sudar, fondatore delle "Scuole per l\'Europa" dedicate '
+                'alla pace e alla convivenza multietnica. La motivazione alla '
+                'base del progetto, spiega Giovanna Gobbi della Commissione '
+                'cultura dell’Unità pastorale di Savignano sul Rubicone “è '
+                'quella di aiutare a comprendere la ragione dei conflitti e '
+                'conoscere le persone che nonostante la guerra stanno '
+                'costruendo la pace”. La mostra, composta da 20 pannelli e un '
+                'video, è stata inaugurata sabato 17 gennaio alle 17 alla '
+                'presenza dei promotori, del parroco don Pier Giorgio Farina e '
+                'del sindaco Nicola Dellapasqua e sarà aperta al pubblico '
+                'anche domenica 18 e domenica 25 gennaio dalle 15.30 alle '
+                '18.30. Nei giorni feriali dal 17 al 31 gennaio sarà aperta '
+                'per le scuole o per singoli visitatori, su richiesta, al '
+                'numero 346-5982095. L’ingresso è libero e gratuito.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/53854462543072/20260117_inaugprofeziedipace_savignano.jpg',
+ 'location_address': 'Via Matteotti, 28',
+ 'location_name': 'Associazione Amici di Don Baroni',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.702931',
+ 'time_info': 'Inaugurazione alle 17',
+ 'title': '"Profezie di pace", la mostra che celebra la fratellanza e la non '
+          'violenza',
+ 'url': 'https://www.cesenatoday.it/eventi/profezie-di-pace-la-mostra-che-celebra-la-fratellanza-e-la-non-violenza.html',
+ 'uuid': '40964c012714a22d'}
+[2026-01-28T22:20:04.391+0000] {docker.py:429} INFO - 2026-01-28 22:20:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/biblioteca-ragazzi-malatestiana-laboratori-letture-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:04.499+0000] {docker.py:429} INFO - 2026-01-28 22:20:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/biblioteca-ragazzi-malatestiana-laboratori-letture-gennaio-2026.html>
+{'category': 'Hobby',
+ 'city': 'Cesena',
+ 'content_hash': 'e4e30ba8f95f3fec',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-16',
+ 'dates': [{'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'La Biblioteca Malatestiana Ragazzi, che rinnova il suo '
+                'impegno come punto di riferimento culturale per Cesena, si '
+                'apre a un mese ricco programma di letture animate e '
+                'laboratori, rivolti a diverse fasce d’età, con lo scopo di '
+                'stimolare l’immaginazione e creare occasioni di incontro e '
+                'scambio tra i più piccoli e gli adulti che li accompagnano. '
+                'Il programma si apre venerdì 16 gennaio con “La casa '
+                'perfetta”, una lettura per bambine e bambini dai 4 anni, che '
+                'accompagna il topolino Argento nella ricerca di un luogo '
+                'sicuro dove sognare e sentirsi a casa. Martedì 20 gennaio '
+                'seguirà “Teniamoci stretti”, laboratorio su prenotazione per '
+                'bambine e bambini dai 5 anni, dedicato alla scoperta di un '
+                '‘segreto’ prezioso per affrontare difficoltà e giornate '
+                'storte, attraverso il gioco e la condivisione. Non '
+                'mancheranno gli appuntamenti per i più piccoli: venerdì 23 '
+                'gennaio sarà la volta di “Ià Ià Oh”, letture dai 3 anni per '
+                'conoscere gli animali della fattoria e i loro segreti, e '
+                'venerdì 30 gennaio di “Tutto al contrario”, un incontro che '
+                'invita a giocare con i libri e a leggerli da punti di vista '
+                'inaspettati, anche “sottosopra”. Il mese si arricchisce '
+                'inoltre di “Quel giorno”, un momento di lettura che si terrà '
+                'martedì 27 gennaio e pensato per avvicinare i più piccoli '
+                'alla Giornata della Memoria, con parole e storie tese a '
+                'ricordare e imparare a non dimenticare. Le attività avranno '
+                'inizio alle ore 17. Tutte le letture sono a ingresso libero e '
+                'gratuito. I laboratori invece sono su prenotazione. È '
+                'possibile contattare la Biblioteca Ragazzi allo 0547 610892 '
+                'oppure scrivendo a malatestianaragazzi@comune.cesena.fc.it.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/18009037891306/malatestiana-ragazzi-laboratori.jpg',
+ 'location_address': None,
+ 'location_name': 'Biblioteca Ragazzi della Malatestiana',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.702502',
+ 'time_info': '17',
+ 'title': 'In Biblioteca Malatestiana Ragazzi un mese di laboratori e letture '
+          'per bambini di tutte le età',
+ 'url': 'https://www.cesenatoday.it/eventi/biblioteca-ragazzi-malatestiana-laboratori-letture-gennaio-2026.html',
+ 'uuid': 'dfd093852f319095'}
+[2026-01-28T22:20:06.188+0000] {docker.py:429} INFO - 2026-01-28 22:20:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/claudia-castellucci-lezioni-teatro-comandini-21-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:06.297+0000] {docker.py:429} INFO - 2026-01-28 22:20:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/claudia-castellucci-lezioni-teatro-comandini-21-gennaio-2026.html>
+{'category': 'Corsi',
+ 'city': 'Cesena',
+ 'content_hash': 'f02756aad0ff5de0',
+ 'date_end': '2026-03-25',
+ 'date_start': '2026-01-21',
+ 'dates': [{'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'}],
+ 'description': 'Si è aperto, al Teatro Comandini di Cesena, il programma di '
+                'residenze artistiche Catalysi della compagnia Societas '
+                'mprontato allo studio, alla realizzazione e alla messa in '
+                'prova di opere che riguardano il contesto scenico. Sono state '
+                'fino a ora selezionate, dalla commissione composta da Claudia '
+                'Castellucci e Guillermo de Cabanyes, tre formazioni '
+                'artistiche che realizzeranno le residenze entro marzo – '
+                'Stefania Rovatti/Cospicua, Monia Montali e François '
+                'Bodeux/Òmero.Studio, Erica Meucci/Lagaam – ed è in corso il '
+                'bando per le residenze aprile-luglio. In questo contesto di '
+                'grande fervore – mentre la prima delle artiste in programma, '
+                'Stefania Rovatti/Cospicua, è in sala per portare avanti la '
+                'propria ricerca – si dà il via mercoledì 21 gennaio alle 18 '
+                'alle lezioni teoriche di Claudia Castellucci. “Le lezioni non '
+                'sono in alcun modo un’interpretazione antesignana del lavoro '
+                'delle artiste e artisti in residenza, piuttosto si muoveranno '
+                'parallele al procedere delle messe in scena dimostrando '
+                'semplicemente l’azione catalitica insita anche in un solo '
+                'disegno abbozzato, e praticando una convivenza discreta tra '
+                'lettura e arte”, afferma la drammaturga e coreografa. La '
+                'prima lezione è intitolata “La luce nel poema di Theodor '
+                'Däubler L’aurora boreale” e come tutte le successive è a '
+                'ingresso gratuito. Mercoledì, 21 gennaio 18-19 La luce nel '
+                'poema di Theodor Däubler L’aurora boreale. Parte Prima. '
+                'D’après Stefania Rovatti/Cospicua Mercoledì, 28 gennaio 18-19 '
+                'La vita trascende continuamente se stessa secondo la visione '
+                'di Hans Jonas in Organismo e libertà. Parte Prima D’après '
+                'Monia Montali & François Bodeux/Òmero.Studio Mercoledì, 4 '
+                'febbraio 18-19 La luce nel poema di Theodor Däubler L’aurora '
+                'boreale. Parte Seconda. Mercoledì, 25 febbraio 18-19 La vita '
+                'trascende continuamente se stessa secondo la visione di Hans '
+                'Jonas in Organismo e libertà. Parte Seconda. Mercoledì, 4 '
+                'marzo 18-19 La vita trascende continuamente se stessa secondo '
+                'la visione di Hans Jonas in Organismo e libertà. Parte Terza. '
+                'Mercoledì, 11 marzo 18-19 L’invio del serpente nel Paradiso, '
+                'trattato in Gnosi e spirito tardoantico di Hans Jonas. Parte '
+                'Prima. D’après Erica Meucci/Lagaam Mercoledì, 18 marzo 18-19 '
+                'L’invio del serpente nel Paradiso, trattato in Gnosi e '
+                'spirito tardoantico di Hans Jonas. Parte Seconda. Mercoledì, '
+                '25 marzo 18-19 L’invio del serpente nel Paradiso, trattato in '
+                'Gnosi e spirito tardoantico di Hans Jonas. Parte Terza.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/30692172251222/francois-bodeux.jpg',
+ 'location_address': 'Corte del Volontariato, 22',
+ 'location_name': 'Teatro Comandini',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.702014',
+ 'time_info': '18-19',
+ 'title': 'Arti sceniche, al Teatro Comandini il ciclo di lezioni guidate da '
+          'Claudia Castellucci',
+ 'url': 'https://www.cesenatoday.it/eventi/claudia-castellucci-lezioni-teatro-comandini-21-gennaio-2026.html',
+ 'uuid': '627665e024503d9d'}
+[2026-01-28T22:20:07.138+0000] {docker.py:429} INFO - 2026-01-28 22:20:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/disordine-mondiale-ciclo-conferenze-biblioteca-malatestiana-2025-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:07.248+0000] {docker.py:429} INFO - 2026-01-28 22:20:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/disordine-mondiale-ciclo-conferenze-biblioteca-malatestiana-2025-2026.html>
+{'category': 'Corsi',
+ 'city': 'Cesena',
+ 'content_hash': 'b8366ef9a96c2bbb',
+ 'date_end': '2026-03-12',
+ 'date_start': '2025-12-11',
+ 'dates': [{'date': '2025-12-11', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-17',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-24',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-07',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-14',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-21',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-25',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-04',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '16:30', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '16:30', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '16:30', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'time_start': '16:30', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'time_start': '16:30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'time_start': '16:30', 'weekday': 'Martedì'},
+           {'date': '2026-03-11',
+            'time_start': '16:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'time_start': '16:30', 'weekday': 'Giovedì'}],
+ 'description': 'L’Associazione ‘Amici della Biblioteca Malatestiana’ dà il '
+                'via a un nuovo ciclo di conferenze dal titolo ‘Il grande '
+                'disordine mondiale’, un percorso di approfondimento dedicato '
+                'alle trasformazioni geopolitiche, economiche e culturali che '
+                'stanno ridisegnando gli equilibri globali. In un contesto '
+                'internazionale segnato da crisi politiche, tensioni regionali '
+                'e nuovi attori globali, il ciclo propone cinque appuntamenti '
+                'con studiosi di primo piano della scena accademica italiana e '
+                'internazionale. L’obiettivo è offrire strumenti di '
+                'interpretazione e spunti di riflessione su fenomeni che '
+                'influenzano in profondità la vita politica, sociale e '
+                'culturale contemporanea. Dopo un primo incontro, giovedì 27 '
+                'novembre, il ciclo di appuntamenti riparte giovedì 11 '
+                'dicembre con Paolo Maria Maggiolini (Università Cattolica del '
+                'Sacro Cuore di Milano) che parlerà di ‘Israele e Palestina: '
+                'il conflitto, la regione e il contesto internazionale’. La '
+                'lezione offrirà una lettura ampia e aggiornata di uno dei '
+                'conflitti più radicati e sensibili della politica mondiale, '
+                'con particolare attenzione alle ricadute regionali e alle '
+                'dinamiche diplomatiche globali. Il ciclo riprenderà venerdì '
+                '10 gennaio con l’intervento di Mario Del Pero, docente al '
+                'Sciences Po di Parigi, intitolato ‘Alla ricerca della '
+                'sovranità perduta. La politica estera di Trump’. Del Pero '
+                'approfondirà gli orientamenti della politica estera '
+                'statunitense durante l’era Trump, discutendo continuità, '
+                'rotture e implicazioni per il sistema internazionale. Giovedì '
+                '22 gennaio sarà ospite Matteo Dian dell’Università di '
+                'Bologna, con la conferenza ‘L’ascesa cinese e il futuro '
+                'dell’ordine internazionale’. Al centro dell’incontro ci sarà '
+                'l’espansione del ruolo globale della Cina e il suo impatto '
+                'sugli equilibri di potere, sui modelli di governance '
+                'internazionale e sulle relazioni tra le grandi potenze. Il '
+                'ciclo si concluderà giovedì 12 marzo con Sergio Fabbrini '
+                '(Università Luiss Guido Carli di Roma) e la conferenza '
+                '‘Nazionalismi e disordine globale: la situazione europea’. '
+                'Fabbrini offrirà un’analisi delle tendenze nazionaliste che '
+                'attraversano il continente, interrogandosi sul futuro '
+                'dell’Unione Europea e sulla sua capacità di rispondere alle '
+                'sfide globali. Gli incontri si terranno tutti alle ore 16.30, '
+                'nell’Aula Magna della Biblioteca Malatestiana. L’ingresso è '
+                'libero.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/25013677077173/ciclo-conferenze-amici-della-biblioteca-malatestiana.jpg',
+ 'location_address': None,
+ 'location_name': 'Aula Magna della Biblioteca Malatestiana',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.701582',
+ 'time_info': '16.30',
+ 'title': 'Geopolitica e nuovi attori globali: al via un nuovo ciclo di '
+          'conferenze aperte al pubblico',
+ 'url': 'https://www.cesenatoday.it/eventi/disordine-mondiale-ciclo-conferenze-biblioteca-malatestiana-2025-2026.html',
+ 'uuid': 'a32eee9a9932c809'}
+[2026-01-28T22:20:08.571+0000] {docker.py:429} INFO - 2026-01-28 22:20:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/lady-sara-workshop-pittura-mercato-saraceno-18-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:08.678+0000] {docker.py:429} INFO - 2026-01-28 22:20:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/lady-sara-workshop-pittura-mercato-saraceno-18-gennaio-2026.html>
+{'category': 'Hobby',
+ 'city': 'Cesena',
+ 'content_hash': 'cc2f537aeefe1f8b',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-01-18',
+ 'dates': [{'date': '2026-01-18', 'time_start': '12:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '12:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '12:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-21',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '12:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '12:30', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '12:30', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '12:30', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '12:30', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '12:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '12:30', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '12:30', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '12:30',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '12:30', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '12:30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '12:30', 'weekday': 'Sabato'},
+           {'date': '2026-02-08',
+            'time_start': '12:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Pittura estemporanea e buon vino si incontrano per quattro '
+                'domeniche in Valle del Savio per dar vita ad altrettante '
+                'esperienze rivolte al mondo della creatività, del gusto e '
+                'della socializzazione. Nell’ambito delle collaborazioni '
+                'territoriali mirate a promuovere “Mercato Saraceno-Città del '
+                'Vino” la tatuatrice e artista Lady Sara e Tenuta Casali '
+                'organizzano dei workshop di pittura in cui i partecipanti '
+                'potranno scoprire qualcosa di loro stessi e del mondo che li '
+                'circonda attraverso l’arte, spaziando tra tecniche e '
+                'superfici diverse, e socializzare tra una colazione a base di '
+                'tè, caffè e biscotteria e un aperitivo a base di spumante '
+                'metodo classico di Sangiovese “Villa Zappi”, Famoso e '
+                'Cabernet Sauvignon “Damianus”. Dal 18 gennaio all’8 febbraio '
+                'per quattro domeniche consecutive l’appuntamento sarà sempre '
+                'dalle ore 9 alle 12.30 nell’atelier privato di Lady Sara a '
+                'Mercato Saraceno, con la possibilità di partecipare a una o '
+                'più mattine. Nella prima giornata il workshop di pittura '
+                'astratta e materica condurrà i partecipanti a sperimentarsi '
+                'con carta, nuvola e cotone, acqua e inchiostri, pennelli '
+                'giapponesi di bambù, gomma e carboncino. Tela pittorica, '
+                'cemento e cazzuola, bombolette spray, piume e foglia d’oro '
+                'saranno invece protagonisti dei due incontri centrali, mentre '
+                'nell’ultimo laboratorio sarà dato spazio ad acrilici e '
+                'pastelli a cera, marker e collage su dischi di legno. I '
+                'quattro elementi fondamentali – acqua, aria, terra e fuoco – '
+                'al centro dei diversi laboratori saranno richiamati anche al '
+                'momento dell’aperitivo in un abbinamento arte-vino che '
+                'metterà al centro legami primordiali presenti in natura. Gli '
+                'organizzatori forniranno tutti i materiali necessari ai '
+                'partecipanti, che al termine dei singoli incontri potranno '
+                'portare a casa la propria opera. I posti sono limitati, per '
+                'info e iscrizioni visitare il sito '
+                'https://ladysaratattoo.it/test/painting-a-catz/.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/66116814758870/lady-sara-e-silvia-casali-arte-e-vino-a-mercato-saraceno.jpg',
+ 'location_address': None,
+ 'location_name': 'vedi programma',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.700914',
+ 'time_info': '9-12.30',
+ 'title': "Full immersion nel mondo dell'arte e della creatività, al via i "
+          'workshop di pittura di Lady Sara',
+ 'url': 'https://www.cesenatoday.it/eventi/lady-sara-workshop-pittura-mercato-saraceno-18-gennaio-2026.html',
+ 'uuid': 'e481e66ba95d0e14',
+ 'website': 'https://ladysaratattoo.it/test/painting-a-catz/'}
+[2026-01-28T22:20:09.851+0000] {docker.py:429} INFO - 2026-01-28 22:20:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/mostra-stamperia-pascucci-coperte-da-buoi-17-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:09.959+0000] {docker.py:429} INFO - 2026-01-28 22:20:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/mostra-stamperia-pascucci-coperte-da-buoi-17-gennaio-2026.html>
+{'category': 'Mostre',
+ 'city': 'Cesena',
+ 'content_hash': 'aa5d25834bbed5b9',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': '“Quando i buoi vestivano a festa. Una tradizione romagnola '
+                'tra arte e fede” è il titolo della mostra che rende omaggio '
+                'alle radici della cultura popolare romagnola. L’esposizione, '
+                'che sarà allestita dal 17 gennaio al 1° febbraio al Centro '
+                'Culturale Fellini di Gambettola, ed è organizzata e curata '
+                'dalla Stamperia Pascucci di Gambettola in occasione dei 200 '
+                'anni di attività, racconta un capitolo significativo della '
+                'storia contadina romagnola attraverso le coperte da buoi, '
+                'drappi in canapa decorati a mano con la tradizionale stampa a '
+                'ruggine. Manufatti di grande valore storico e simbolico che '
+                'testimoniano un mondo in cui lavoro agricolo, devozione '
+                'religiosa e senso della festa erano profondamente '
+                'intrecciati, e rappresentano una delle espressioni più '
+                'autentiche della cultura popolare del territorio. Nate tra il '
+                'Settecento e l’Ottocento e tessute su telai domestici, le '
+                'coperte da buoi avevano una funzione pratica e simbolica: '
+                'proteggevano gli animali dal freddo durante fiere, mercati e '
+                'processioni e al tempo stesso li adornavano con motivi legati '
+                'alla vita rurale e alla fede popolare. Tra i soggetti più '
+                'ricorrenti figurano Sant’Antonio Abate, galletti, spighe di '
+                'grano, grappoli d’uva, tralci di vite e bordature '
+                'geometriche, stampati nella tipica tonalità “ruggine” e in '
+                'altre cromie naturali. In Romagna queste coperte assumevano '
+                'anche un valore magico-religioso. Si riteneva che le '
+                'iconografie sacre, in particolare quelle di Sant’Antonio '
+                'Abate spesso collocate agli angoli dei drappi, proteggessero '
+                'il bestiame dall’invidia e dal malocchio, considerati causa '
+                'di malattie o disgrazie nelle stalle. Custode di questa '
+                'tradizione è la Stamperia Pascucci di Gambettola, attiva da '
+                'oltre due secoli. Nel tempo il laboratorio ha ampliato la '
+                'propria produzione a tessuti d’arredo, tovaglie e tende da '
+                'spiaggia, continuando a utilizzare la stampa a ruggine e '
+                'conservando un patrimonio di oltre 6 milastampi in legno. Tra '
+                'questi, numerosi stampi dedicati a Sant’Antonio, dai più '
+                'antichi a quelli moderni realizzati su richiesta di Riccardo '
+                'Pascucci da artisti come Dario Fo, Tinin Mantegazza, Ilario '
+                'Fioravanti, Tonino Guerra, Gianfranco Zavalloni e Vittorio '
+                'Belli e tanti altri. La mostra offre l’opportunità di '
+                'riscoprire una tradizione oggi quasi scomparsa e il ruolo '
+                'centrale della Stamperia Pascucci nella conservazione di '
+                'questo sapere artigianale. "Questa mostra rappresenta per la '
+                'nostra famiglia un momento di profonda emozione e di '
+                'restituzione alla comunità – dichiarano Giuseppe e Riccardo '
+                'Pascucci –. Le coperte da buoi raccontano le radici della '
+                'nostra storia, intrecciata a quella della Romagna contadina. '
+                'Inaugurare nel giorno di Sant’Antonio la rende ancora più '
+                'significativa. Siamo inoltre molto soddisfatti dell’interesse '
+                'dimostrato dalle scuole, con le quali abbiamo già avviato un '
+                'dialogo". Durante il periodo espositivo, in collaborazione '
+                'con l’Istituto Comprensivo, saranno organizzate visite '
+                'guidate per le scuole, con l’obiettivo di trasmettere e '
+                'valorizzare la memoria collettiva del territorio. La mostra '
+                'sarà visitabile al sabato dalle 15 alle 19 e alla domenica '
+                'dalle 10 alle 12 e dalle 15 alle 19 durante la settimana '
+                'visite guidate su appuntamento sia per le scuole che per '
+                'gruppi.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/27460504140335/caat-8.jpg',
+ 'location_address': None,
+ 'location_name': 'Centro Culturale Fellini',
+ 'price': 'Prezzo non disponibile',
+ 'schedule': 'Inaugurazione alle 15, poi sabato dalle 15 alle 19 e domenica '
+             'dalle 10 alle 12 e dalle 15 alle 19',
+ 'scraped_at': '2026-01-28T22:19:52.700482',
+ 'title': 'La Romagna contadina in mostra con i manufatti della Stamperia '
+          'Pascucci',
+ 'url': 'https://www.cesenatoday.it/eventi/mostra-stamperia-pascucci-coperte-da-buoi-17-gennaio-2026.html',
+ 'uuid': '471d81965c44c522',
+ 'weekdays': 'Sabato, Domenica'}
+[2026-01-28T22:20:11.133+0000] {docker.py:429} INFO - 2026-01-28 22:20:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/savignano-cinema-moderno-programmazione-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:11.244+0000] {docker.py:429} INFO - 2026-01-28 22:20:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/savignano-cinema-moderno-programmazione-gennaio-2026.html>
+{'category': 'Cinema',
+ 'city': 'Cesena',
+ 'content_hash': '1abd64c89eba0133',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-03',
+ 'dates': [{'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'Il Cinema del Teatro Moderno di Savignano sul Rubicone apre '
+                'il nuovo anno con una programmazione ricca e articolata. Ad '
+                'aprire il mese, sabato 3 gennaio, è "Primavera", un film '
+                'intenso e delicato che racconta il passaggio, spesso '
+                'complesso, verso una nuova fase della vita. Il titolo torna '
+                'anche domenica 4 gennaio. Nello stesso weekend e nel giorno '
+                'dell’Epifania spazio a "Zootropolis", avventura animata '
+                'ambientata in una metropoli animale, capace di divertire e '
+                'far riflettere grandi e piccoli. Venerdì 9 e domenica 11 '
+                'gennaio arriva "Norimberga", un’opera di forte impatto civile '
+                'che affronta temi di giustizia, memoria e responsabilità '
+                'storica. Le domeniche pomeriggio dell’11 e 18 gennaio sono '
+                'invece dedicate a "Un topolino sotto l’albero", una tenera '
+                'storia animata pensata per il pubblico più giovane. Il 17 e '
+                '18 gennaio è la volta di "Father Mother Sister Brother", un '
+                'racconto corale e contemporaneo sui legami familiari, tra '
+                'silenzi, distanze e tentativi di riconciliazione. Venerdì 23 '
+                'e domenica 25 gennaio il Cinema Moderno propone invece "La '
+                'mia famiglia a Taipei", un film intimo e attuale che esplora '
+                'identità, appartenenza e relazioni familiari in un contesto '
+                'multiculturale. Nel pomeriggio di domenica 25 gennaio spazio '
+                'al divertimento con "Spongebob – Un’avventura da pirati", '
+                'colorata avventura animata all’insegna dell’amicizia e '
+                'dell’immaginazione. A chiudere il mese, sabato 31 gennaio e '
+                'domenica 1 febbraio, è "La Grazia", un film poetico e intenso '
+                'che riflette su fede, fragilità e speranza, accompagnato nel '
+                'pomeriggio dall’ultimo appuntamento per famiglie con '
+                '"Spongebob – Un’avventura da pirati". Biglietto a 7 euro '
+                '(intero) e 6 euro (ridotto) disponibili anche di Liveticket. '
+                'Per informazioni 370 3685093.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/29018685689836/russel-crowe-nuremberg.jpg',
+ 'location_address': None,
+ 'location_name': 'Cinema Teatro Moderno',
+ 'price': 'Da 6 a 7 euro',
+ 'scraped_at': '2026-01-28T22:19:52.699937',
+ 'time_info': 'Orario non disponibile',
+ 'title': 'Savignano, al Cinema Moderno il 2026 si apre con ricco calendario '
+          'di proiezioni: tra i titoli "Norimberga", "Zootropolis 2" e "La '
+          'Grazia"',
+ 'url': 'https://www.cesenatoday.it/eventi/savignano-cinema-moderno-programmazione-gennaio-2026.html',
+ 'uuid': 'b687f297cc6477e6'}
+[2026-01-28T22:20:11.915+0000] {docker.py:429} INFO - 2026-01-28 22:20:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/emanuela-presepi-e-il-suono-dell-anima-mostra-caffe-malatestiana.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:12.024+0000] {docker.py:429} INFO - 2026-01-28 22:20:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/emanuela-presepi-e-il-suono-dell-anima-mostra-caffe-malatestiana.html>
+{'category': 'Mostre',
+ 'city': 'Cesena',
+ 'content_hash': '46f3aeb17c4da9f3',
+ 'date_end': '2026-02-14',
+ 'date_start': '2025-12-06',
+ 'dates': [{'date': '2025-12-07',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-14',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-21',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2025-12-28',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-04',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-11',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-18',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-01-25',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-01',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'},
+           {'date': '2026-02-08',
+            'time_end': '19:30',
+            'time_start': '14:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Emanuela Presepi ha una lunga esperienza come psicoterapeuta, '
+                "ma da diverso tempo a quella clinica accompagna l'attività "
+                'artistica. Il connubio fra i due mondi ha dato origine a '
+                'pubblicazioni che integrano la pittura a testi in forma '
+                'poetica. Una delle sue ultime opere, “Il respiro della vita”, '
+                "è parte integrante dell'allestimento che fino a domenica 14 "
+                'dicembre viene ospitato dal Caffè della Malatestiana, a pochi '
+                "passi dalla biblioteca. L'artista scopre la passione per la "
+                'pittura dopo un lungo percorso di sperimentazione personale. '
+                "L'interesse per nuove modalità espressive, il desiderio di "
+                'vivere la propria creatività a tutto tondo, la conduce a '
+                "confrontarsi con l'espressione artistica e la pittura in "
+                "particolare. Dipingere è per l'artista un modo speciale di "
+                "rappresentare il suo mondo interiore, un'azione attraverso "
+                'cui portare alla luce dimensioni di sé nascoste o '
+                'dimenticate. “Ogni creatura porta dentro di sé il suono '
+                "dell'anima - spiega Presepi -. Diventare consapevoli del "
+                'suono della coscienza e tradurlo in pensiero, parola e '
+                'rappresentazione pittorica, fa parte dello scopo di un '
+                'artista. Se quello che percepiamo non è altro che la '
+                'manifestazione di quello che siamo, ogni nostra creazione è '
+                'la rappresentazione di una parte di noi, la rivelazione della '
+                'complessità che ci abita, che è in gran parte inconsapevole".',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/10099895292788/emanuela-presepi-e-il-suono-dell-anima.jpg',
+ 'location_address': "Via Nicolo' Masini, 16",
+ 'location_name': 'Caffè della Malatestiana',
+ 'price': 'Gratis',
+ 'schedule': 'Da martedi a domenica 8 – 13 e 14.30 – 19.30',
+ 'scraped_at': '2026-01-28T22:19:52.699388',
+ 'time_info': '14:30-19:30',
+ 'title': 'Da psicoterapeuta a pittrice, i due volti di Emanuela Presepi nella '
+          'mostra "Il suono dell\'anima"',
+ 'url': 'https://www.cesenatoday.it/eventi/emanuela-presepi-e-il-suono-dell-anima-mostra-caffe-malatestiana.html',
+ 'uuid': 'd300452be218a08b',
+ 'weekdays': 'Domenica'}
+[2026-01-28T22:20:13.289+0000] {docker.py:429} INFO - 2026-01-28 22:20:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/cine-teatro-victor-stagione-teatrale-programma-2025-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:13.398+0000] {docker.py:429} INFO - 2026-01-28 22:20:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/cine-teatro-victor-stagione-teatrale-programma-2025-2026.html>
+{'category': 'Teatri',
+ 'city': 'Cesena',
+ 'content_hash': 'a24acf17c7dc5833',
+ 'date_end': '2026-03-13',
+ 'date_start': '2025-11-22',
+ 'dates': [{'date': '2025-11-22', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2025-11-26',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2025-12-03',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2025-12-10',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2025-12-17',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2025-12-24',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2025-12-31',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-01-07',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-01-14',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-01-21',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-01-28',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-02-04',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-02-11',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-02-18',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-02-25',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-03-04',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'time_start': '21:15', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'time_start': '21:15', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'time_start': '21:15', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'time_start': '21:15', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'time_start': '21:15', 'weekday': 'Martedì'},
+           {'date': '2026-03-11',
+            'time_start': '21:15',
+            'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'time_start': '21:15', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'time_start': '21:15', 'weekday': 'Venerdì'}],
+ 'description': 'Ai nastri di partenza la quarta edizione della rassegna '
+                '“Teatro Fuoricittà”, promossa dal Teatro delle Lune con il '
+                'cine teatro Victor. La rassegna, che partirà con il primo '
+                'spettacolo sabato 22 novembre, si propone di utilizzare gli '
+                'spazi deputati alla cultura già presenti nel territorio e '
+                'situati fuori dal centro storico della città, avvicinando al '
+                'teatro e alla musica anche gli abitanti del territorio '
+                'circostante, portando il teatro dal centro alla periferia, '
+                'tra la gente, con spettacoli di qualità. Otto i titoli in '
+                'programma da novembre a marzo, che spaziano dalla musica alla '
+                'prosa. Da segnalare la presenza in cartellone anche di uno '
+                'spettacolo di rilevanza nazionale: il 13 marzo 2026, infatti, '
+                'l’attore e regista Francesco Branchetti porterà al Victor lo '
+                'spettacolo “L’onorevole, il poeta e la signora” che vede fra '
+                'gli interpreti l’attore Lorenzo Flaherty, interprete di '
+                'fiction di successo sia per la Rai che per Mediaset. Si '
+                'comincia sabato 22 novembre con “Mi chiamano Mimì”: omaggio a '
+                'Mia Martini a trent’anni dalla sua scomparsa. La vita '
+                'dell’artista è raccontata in prima persona attraverso i '
+                'ricordi, gli aneddoti, le riflessioni e le interviste che ha '
+                'rilasciato durante la sua carriera: la famiglia, la passione '
+                'per la musica, il successo, la crisi, le maldicenze e il '
+                'ritorno al successo. Accanto al racconto, lo spettacolo '
+                'propone una carrellata dell’emozionante repertorio di Mimì. '
+                'La voce recitante è di Monica Briganti, le canzoni sono '
+                'affidate a Elisa Solferino accompagnata da Lucia Solferino al '
+                'violino e da Michele Scarabattoli al pianoforte. Lo '
+                'spettacolo è stato selezionato per il Cartellone Off del '
+                'Festival “L’eredità delle donne” con la direzione artistica '
+                'di Serena Dandini, in programma il 21 e il 22 novembre, in '
+                'occasione della Giornata Internazionale contro la violenza '
+                'sulle donne. Sabato 20 dicembre, in programma il concerto di '
+                'natale con il Surprise Christmas Choir, che offrirà una '
+                'selezione dei più amati brani natalizi, da "White Christmas" '
+                'a "Happy Xmas (War Is Over)", a "Jingle Bell Rock" e tanti '
+                'altri grandi classici, tutti riarrangiati con armonizzazioni '
+                'originali. Il 9 gennaio ci sarà “Il sogno di Orfeo”, ideato e '
+                'diretto da Liana Mussoni. Si tratta di un’opera in musica '
+                'liberamente ispirata alla poesia "Orfeo ed Euridice" del '
+                'poeta premio Nobel Czeslaw Milosz con la voce narrante di '
+                'Liana Mussoni accompagnata da Luca Fol, chitarra, voce ed '
+                'elettronica. Il 17 gennaio arriva la compagnia “Gli '
+                'scalcagnati” con lo spettacolo “Fino a domani” diretto da '
+                'Mirco Gennari: un uomo potente, nonostante la ricchezza, '
+                'soffre enormemente la propria solitudine, e per le feste '
+                'natalizie decide di assumere una compagnia di attori per '
+                'interpretare la "famiglia perfetta" che ha sempre sognato di '
+                'avere. Ma le cose non vanno esattamente come previsto. Lo '
+                'spettacolo è liberamente ispirato al film: “Una famiglia '
+                'perfetta” del regista Paolo Genovese. Si intitola '
+                '“Promemoria” lo spettacolo di teatro-poesia-canzone che andrà '
+                'in scena il 23 gennaio, in occasione del Giorno della '
+                'memoria. Sul palco Giacomo Toni (pianoforte e voce) e Lorenzo '
+                'Bartolini (voce). Attraverso canzoni e poesie di alcuni dei '
+                'migliori cantautori e poeti si rievocano gli avvenimenti che '
+                'hanno sconvolto il 900 e allo stesso tempo si riflette per '
+                'capirne le cause e interrogarsi sul presente. Il 20 febbraio '
+                'sarà la volta di “fleurS - Battiato ed esempi affini di '
+                'scritture”, con Andrea Amati – voce e Stefano Zambardino – '
+                'pianoforte. Uscito nel 1999, l’album “Fleurs” è il personale '
+                'viaggio sentimentale di Franco Battiato fra le grandi canzoni '
+                'di autori in qualche modo a lui “vicini”: con questo concerto '
+                'Andrea Amati e Stefano Zambardino recuperano l’essenza di '
+                'quel capolavoro aggiungendo ai brani degli artisti omaggiati '
+                'da Battiato alcune personali rivisitazioni tratte dal '
+                'repertorio originale del cantautore siciliano. Il 6 marzo il '
+                'Teatro delle Lune porta in scena “Dalida, ciao amore ciao”, '
+                'omaggio alla figura della grande cantante italo-francese '
+                'dalla vita tormentata. La voce narrante di Monica Briganti '
+                '(che firma anche l’adattamento e la regia) è accompagnata da '
+                'Andrea Amati, dalla cantautrice Francesca Romana Perrotta, da '
+                'Fabrizio Flisi al pianoforte e Mirko Guerra alla chitarra. '
+                'Selezione musicale a cura di Francesca Romana Perrotta. '
+                'Finale di stagione il 13 marzo, quando l’Associazione '
+                'culturale Foxtrot Golf porterà sul palcoscnico del Victor '
+                '“L’Onorevole il Poeta e la Signora” di Aldo De Benedetti. In '
+                'scena Lorenzo Flaherty (l’onorevole), Francesco Branchetti '
+                '(il poeta) e Isabella Giannone (la signora). Una commedia '
+                'brillante fatta di equivoci, imprevisti e scambi di identità, '
+                'con un testo classico ma al tempo stesso attuale.Una '
+                'rappresentazione dei salotti dell’Italia pieni di uomini di '
+                'mezzo potere, girotondi di relazioni, svendita di talento '
+                'vero o presunto, ambizioni uno specchio di una società a noi '
+                'ancora purtroppo molto attuale. Per informazioni e '
+                'prenotazioni 375 6700022 e 339 2427674.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/236010160153/teatro-fuoricitta.jpg',
+ 'location_address': 'Via San Vittore, 1680',
+ 'location_name': 'Cineteatro Victor',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.698852',
+ 'time_info': '21.15',
+ 'title': 'Al via la nuova stagione del cine teatro Victor: tra musica, prosa '
+          'e grandi ospiti',
+ 'url': 'https://www.cesenatoday.it/eventi/cine-teatro-victor-stagione-teatrale-programma-2025-2026.html',
+ 'uuid': '8b31fffdf8e6e99e'}
+[2026-01-28T22:20:14.737+0000] {docker.py:429} INFO - 2026-01-28 22:20:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/teatro-elisabetta-turroni-sogliano-stagione-2025-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:14.844+0000] {docker.py:429} INFO - 2026-01-28 22:20:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/teatro-elisabetta-turroni-sogliano-stagione-2025-2026.html>
+{'category': 'Teatri',
+ 'city': 'Cesena',
+ 'content_hash': '08ef6502aa130c28',
+ 'date_end': '2026-04-11',
+ 'date_start': '2025-12-06',
+ 'dates': [{'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'},
+           {'date': '2026-03-17', 'weekday': 'Martedì'},
+           {'date': '2026-03-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-19', 'weekday': 'Giovedì'},
+           {'date': '2026-03-20', 'weekday': 'Venerdì'},
+           {'date': '2026-03-21', 'weekday': 'Sabato'},
+           {'date': '2026-03-22', 'weekday': 'Domenica'},
+           {'date': '2026-03-23', 'weekday': 'Lunedì'},
+           {'date': '2026-03-24', 'weekday': 'Martedì'},
+           {'date': '2026-03-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-26', 'weekday': 'Giovedì'},
+           {'date': '2026-03-27', 'weekday': 'Venerdì'},
+           {'date': '2026-03-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-29', 'weekday': 'Domenica'},
+           {'date': '2026-03-30', 'weekday': 'Lunedì'},
+           {'date': '2026-03-31', 'weekday': 'Martedì'},
+           {'date': '2026-04-01', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-02', 'weekday': 'Giovedì'},
+           {'date': '2026-04-03', 'weekday': 'Venerdì'},
+           {'date': '2026-04-04', 'weekday': 'Sabato'},
+           {'date': '2026-04-05', 'weekday': 'Domenica'},
+           {'date': '2026-04-06', 'weekday': 'Lunedì'},
+           {'date': '2026-04-07', 'weekday': 'Martedì'},
+           {'date': '2026-04-08', 'weekday': 'Mercoledì'},
+           {'date': '2026-04-09', 'weekday': 'Giovedì'},
+           {'date': '2026-04-10', 'weekday': 'Venerdì'},
+           {'date': '2026-04-11', 'weekday': 'Sabato'}],
+ 'description': 'Il teatro Elisabetta Turroni di Sogliano al Rubicone, che da '
+                'ventisette anni propone una ricca selezione di spettacoli, '
+                'torna con la 27esima edizione della rassegna “Prova '
+                "d'attore”, in cui narrazione, musica e linguaggi della "
+                'tradizione si intrecciano in una forma teatrale essenziale e '
+                'diretta. L’apertura di stagione, sabato 6 dicembre, è '
+                'affidata a Roberto Mercadini con “Animali umani”, un racconto '
+                'che attraversa l’epopea della nostra specie con la consueta '
+                'ironia e profondità del narratore. Mercadini conduce il '
+                'pubblico in un viaggio che intreccia antropologia e comicità, '
+                'filosofia e racconto, per scoprire cosa ci rende ciò che '
+                'siamo e quanto, in fondo, restiamo parte della Natura. Il 9 '
+                'gennaio sarà la volta di Alessandro Fullin, affiancato da '
+                'Ussi Alzati e Alessandra Ierse, con la commedia “Tre sedie '
+                'ovvero la scenografia”. Una pièce esilarante e surreale che '
+                'racconta, con ironia pungente e ritmo brillante, l’amicizia, '
+                'il tempo che passa e le piccole verità nascoste nella vita '
+                'quotidiana di tre attrici alle prese con una scena minima e '
+                'un mondo che cambia. A seguire, venerdì 30 gennaio, Matilde '
+                'Vigna e Daniela Piperno portano in scena “Chi resta”, scritto '
+                'da Matilde Vigna insieme ad Anna Zanetti. Uno spettacolo '
+                'poetico e visionario che parla del legame fra madre e figlia, '
+                'di assenze che continuano a esistere e di viaggi cosmici che '
+                'diventano metafora del lutto e della memoria. Non una '
+                'riflessione sulla morte, ma su ciò che resta, su chi rimane a '
+                'terra mentre gli affetti si spingono “oltre la gravità '
+                'terrestre”. La stagione prosegue venerdì 13 febbraio con “Nel '
+                'blu. Avere tra le braccia tanta felicità” di Mario Perrotta, '
+                'un racconto intenso e musicale dedicato a Domenico Modugno. '
+                'Con il sostegno di un ensemble di musicisti (Vanni Crociani, '
+                'Giuseppe Franchellucci, Massimo Marches), Perrotta intreccia '
+                'parole e canzoni per restituire l’immagine di un’Italia che, '
+                'negli anni del boom economico, imparava a credere nella '
+                'felicità e nel futuro. Sabato 14 marzo il palcoscenico ospita '
+                'Lorenzo Carpinelli con “Ombrelloni”, monologo scritto da '
+                'Iacopo Gardelli che racconta la Riviera Romagnola come '
+                'specchio dell’Italia contemporanea. Tra umorismo e '
+                'malinconia, la spiaggia diventa metafora di un Paese in cui '
+                'il divertimento, l’attesa e la nostalgia convivono sotto lo '
+                'stesso ombrellone, mentre il mare, fragile e minacciato, '
+                'riflette la precarietà del nostro tempo. Tra gli appuntamenti '
+                'più attesi, venerdì 27 marzo arriva Elio, accompagnato al '
+                'pianoforte da Alberto Tafuri, con il suo nuovo spettacolo “La '
+                'rivalutazione della tristezza”. Un viaggio ironico e '
+                'sorprendente attraverso parole e note che esplorano la '
+                'tristezza come sentimento vitale, necessario, profondamente '
+                'umano. Da Catullo a Virginia Woolf, da Munch a Paperino, lo '
+                'spettacolo restituisce dignità e bellezza a un’emozione che '
+                'troppo spesso la società rimuove. A chiudere la stagione, '
+                'sabato 11 aprile, sarà Francesco Piccolo con “Il Gattopardo”. '
+                'Una storia incredibile: un racconto appassionante e '
+                'divertente sulla nascita, le difficoltà editoriali e il '
+                'destino del celebre romanzo di Tomasi di Lampedusa e della '
+                'sua trasposizione cinematografica firmata da Visconti. Un '
+                'viaggio dentro la cultura italiana del Novecento, tra '
+                'aneddoti, politica, cinema e letteratura, che rivela la '
+                'straordinaria forza di un’opera destinata a diventare '
+                'immortale. A completare il cartellone, torna anche la '
+                'rassegna “FuoriLuogo. Il teatro fuori dal teatro”, con tre '
+                'appuntamenti nel segno del teatro diffuso, dedicati ai '
+                'linguaggi più sperimentali e alle nuove forme di narrazione '
+                'scenica. Il rinnovo degli abbonamenti avviene dal 20 al 27 '
+                'novembre. Le nuove sottoscrizioni sono aperte dal 28 novembre '
+                'al 5 dicembre scrivendo al 370 3685093 o a '
+                'spettatore@sillaba.org.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/62347316980067/elio_sogliano.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Elisabetta Turroni',
+ 'price': 'prezzi vari',
+ 'scraped_at': '2026-01-28T22:19:52.698420',
+ 'time_info': '21',
+ 'title': 'Sogliano, il teatro Elisabetta Turroni si apre a una nuova stagione '
+          'di spettacoli: tra gli ospiti Elio e Roberto Mercadini',
+ 'url': 'https://www.cesenatoday.it/eventi/teatro-elisabetta-turroni-sogliano-stagione-2025-2026.html',
+ 'uuid': '528c93a7e349f1ac'}
+[2026-01-28T22:20:16.155+0000] {docker.py:429} INFO - 2026-01-28 22:20:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/fotografo-franco-riceputi-mostra-la-buona-luce-savignano.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:16.268+0000] {docker.py:429} INFO - 2026-01-28 22:20:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/fotografo-franco-riceputi-mostra-la-buona-luce-savignano.html>
+{'category': 'Mostre',
+ 'city': 'Cesena',
+ 'content_hash': 'e98f0ccb5fe67bb8',
+ 'date_end': '2026-01-31',
+ 'date_start': '2025-12-13',
+ 'dates': [{'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'Alla fototeca comunale "Marco Pesaresi" di Savignano sul '
+                'Rubicone, fino al 31 gennaio rimane visitabile la mostra '
+                "fotografica di Franco Riceputi. L'esposizione, dal titolo “La "
+                'buona luce. Franco Riceputi: un fotoamatore savignanese”, a '
+                'cura di Mario Beltrambini e Giuseppe Pazzaglia, è promossa '
+                'dalla fototeca Marco Pesaresi, dalla Biblioteca comunale, '
+                'dall’associazione Savignano Immagini e da SI Fest, festival '
+                'di fotografia, e rappresenta un omaggio a Franco Riceputi '
+                '(1939 – 2006), fotoamatore savignanese, socio fondatore del '
+                'Circolo fotografico “Cultura e Immagine”, in occasione della '
+                'donazione dell’archivio al Comune di Savignano sul Rubicone '
+                'da parte della figlia Francesca. La mostra, in corso '
+                'Vendemini 57, è aperta il giovedì dalle 15 alle 18 e il '
+                'sabato dalle 10 alle 13. Ingresso gratuito. Per informazioni '
+                'contattare lo 0541 944017.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/69446962345651/riceputi-04-carnevale-di-venezia-03.jpg',
+ 'location_address': 'Corso Gino Vendemini, 75',
+ 'location_name': 'Fototeca Marco Pesaresi',
+ 'price': 'Prezzo non disponibile',
+ 'schedule': 'Giovedì 15-18, sabato 10-13',
+ 'scraped_at': '2026-01-28T22:19:52.697876',
+ 'title': 'Savignano ricorda il fotografo locale Franco Riceputi con la mostra '
+          '"La buona luce"',
+ 'url': 'https://www.cesenatoday.it/eventi/fotografo-franco-riceputi-mostra-la-buona-luce-savignano.html',
+ 'uuid': '67904551300c95f0',
+ 'weekdays': 'Giovedì, Sabato'}
+[2026-01-28T22:20:17.083+0000] {docker.py:429} INFO - 2026-01-28 22:20:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/rassegna-teatro-petrella-longiano-nessun-dorma-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:17.193+0000] {docker.py:429} INFO - 2026-01-28 22:20:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/rassegna-teatro-petrella-longiano-nessun-dorma-2026.html>
+{'category': 'Teatri',
+ 'city': 'Cesena',
+ 'content_hash': '90c440dcc24f355b',
+ 'date_end': '2026-03-06',
+ 'date_start': '2026-01-18',
+ 'dates': [{'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'}],
+ 'description': 'Al teatro Petrella di Longiano il 2026 si apre con il ricco '
+                "calendario di appuntamenti promossi all'interno della "
+                'rassegna Nessun Dorma. Tra gli artisti che faranno tappa al '
+                'teatro longianese ci saranno Rodrigo D’Erasmo e Roberto '
+                'Angelini, Ascanio Celestini, Niccolò Fettarappa e Lorenzo '
+                'Guerrieri, Stefano Pilia e il Collettivo Soundtracks 2024 con '
+                'un dialogo tra arti che intreccerà teatro e letteratura, '
+                'musica, arti visive, danza e linguaggio cinematografico. La '
+                'rassegna prenderà il via sabato 24 gennaio (ore 21) con "Il '
+                'dominio della luce" frutto della collaborazione tra Rodrigo '
+                'D’Erasmo e Roberto Angelini, tornati a lavorare insieme '
+                'intorno a un progetto multidisciplinare e multiforme. Nata '
+                'come opera musical-letteraria, composta da album strumentale '
+                'più libro con i contributi di autori e autrici di varia '
+                'provenienza (Vasco Brondi, Chiara Gamberale, Filippo Timi, '
+                'Emanuele Trevi), ora il progetto prosegue il proprio cammino '
+                'con uno spettacolo dal vivo che unisce musica, parole, '
+                'immagini. Mercoledì 4 febbraio per “Nessun dorma!” torna '
+                'invece al Teatro Petrella di Longiano Ascanio Celestini con '
+                'lo spettacolo "Poveri cristi", una manciata di storie e '
+                'personaggi di periferie in cui vivono gli ultimi. Sabato 21 '
+                'febbraio la rassegna prosegue con “La sparanoia” di e con '
+                'Niccolò Fettarappa, sul palco con Lorenzo Guerrieri in una '
+                'impietosa fotografia di una generazione oppressa, sfruttata, '
+                'addomesticata. “Nessun dorma!” si chiuderà venerdì 6 marzo '
+                'con la sonorizzazione dal vivo del film I"l Gabinetto del '
+                'dottor Caligari", che tratta il tema del controllo del '
+                'potere, con Stefano Pilia chitarrista degli Afterhours e il '
+                'Collettivo Soundtracks 2024, nell’ambito del circuito '
+                'regionale BIGLIA – palchi in pista di ATER Fondazione. '
+                'Venerdì 10 e sabato 11 aprile sono invece le date definite '
+                'per il debutto del nuovo progetto “La Collina del Leopardo” '
+                'frutto del rapporto di collaborazione con RetroPop Live di '
+                'Cesena, in collaborazione con la rete Biglia – palchi in '
+                'pista di Ater Fondazione. Sarà un festival di musica e arti '
+                'visive che “esplora il presente attraverso suono, visione e '
+                'corpo – spiega Piero Mantengoli, direttore artistico di '
+                'RetroPop Live - Come un leopardo dal passo felpato, il '
+                'festival riunisce artisti e linguaggi diversi, e le sue '
+                'macchie disegnano percorsi unici di scrittura, suono e '
+                'immagine. Due giorni di esperienze artistiche contemporanee '
+                'in dialogo con il teatro. Due giorni per seguire l’energia '
+                'del leopardo, tra musica, visual e percorsi inaspettati, '
+                'nell’aria fresca di una primavera creativa”. La '
+                'programmazione di teatro per famiglie del Teatro Petrella di '
+                'Longiano anche quest’anno aderisce a Sciroppo di Teatro, il '
+                'progetto di welfare culturale di ATER Fondazione che mette in '
+                'rete gli Assessorati alla Cultura, alla Sanità e al Welfare '
+                'della Regione Emilia-Romagna per promuovere il teatro per '
+                'famiglie. Tre gli spettacoli per età diverse, con il comune '
+                'denominatore del linguaggio del corpo, in programma in '
+                'altrettante domeniche pomeriggio (ore 16). Il 18 gennaio il '
+                '“Pollicino Show” di Artemis Danza, uno spettacolo di teatro '
+                'danza e musica che rilegge i temi classici della fiaba; l’8 '
+                'febbraio arriverà a Longiano “Le lacrime del principe” della '
+                'Compagnia teatrale Mattioli, una storia delicata e '
+                'sorprendente che racconta il potere delle emozioni e della '
+                'scoperta; per chiudere l’8 marzo il coreografo giapponese '
+                'Kenji Shinohe porta in scena “K(A)O”, una produzione della '
+                'Fondazione Sipario Toscana. A chiudere la stagione, come di '
+                'consueto, sarà il progetto comune avviato nel 2016 da '
+                'Cronopios e L’arboreto - Teatro Dimora di Mondaino | Centro '
+                'di Residenza Emilia-Romagna nell’ambito della ricerca e della '
+                'creazione coreografica “Vorrei fare con te quello che la '
+                'primavera fa con i ciliegi”, giunto all’undicesima edizione. '
+                'Per questa stagione verranno individuate tre giovani '
+                'compagnie di danza che, tra maggio e giugno, dopo un periodo '
+                'di residenza al Teatro Petrella mostreranno al pubblico in '
+                'prova aperta il loro lavoro e presenteranno il loro progetto '
+                'artistico. Per informazioni e biglietti '
+                'info@ilteatropetrella.it.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/63170951719763/1_-angelini_d_erasmo_foto-di-annapaola-martin.jpg',
+ 'location_address': None,
+ 'location_name': 'Teatro Petrella',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.697414',
+ 'time_info': 'vari orari - vedi programma',
+ 'title': 'Longiano, al teatro Petrella un 2026 di musica, letteratura e arti '
+          'visive: al via il calendario di spettacoli',
+ 'url': 'https://www.cesenatoday.it/eventi/rassegna-teatro-petrella-longiano-nessun-dorma-2026.html',
+ 'uuid': '75814f499101faf9'}
+[2026-01-28T22:20:18.610+0000] {docker.py:429} INFO - 2026-01-28 22:20:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/ciclo-conferenze-giornate-particolari-storia-cesena-franco-spazzoli-programma.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:18.719+0000] {docker.py:429} INFO - 2026-01-28 22:20:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/ciclo-conferenze-giornate-particolari-storia-cesena-franco-spazzoli-programma.html>
+{'category': 'Corsi',
+ 'city': 'Cesena',
+ 'content_hash': 'b593b3935707dba3',
+ 'date_end': '2026-03-16',
+ 'date_start': '2025-11-17',
+ 'dates': [{'date': '2025-11-17', 'weekday': 'Lunedì'},
+           {'date': '2025-11-18', 'weekday': 'Martedì'},
+           {'date': '2025-11-19', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-20', 'weekday': 'Giovedì'},
+           {'date': '2025-11-21', 'weekday': 'Venerdì'},
+           {'date': '2025-11-22', 'weekday': 'Sabato'},
+           {'date': '2025-11-23', 'weekday': 'Domenica'},
+           {'date': '2025-11-24', 'weekday': 'Lunedì'},
+           {'date': '2025-11-25', 'weekday': 'Martedì'},
+           {'date': '2025-11-26', 'weekday': 'Mercoledì'},
+           {'date': '2025-11-27', 'weekday': 'Giovedì'},
+           {'date': '2025-11-28', 'weekday': 'Venerdì'},
+           {'date': '2025-11-29', 'weekday': 'Sabato'},
+           {'date': '2025-11-30', 'weekday': 'Domenica'},
+           {'date': '2025-12-01', 'weekday': 'Lunedì'},
+           {'date': '2025-12-02', 'weekday': 'Martedì'},
+           {'date': '2025-12-03', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-12', 'weekday': 'Giovedì'},
+           {'date': '2026-02-13', 'weekday': 'Venerdì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-15', 'weekday': 'Domenica'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-17', 'weekday': 'Martedì'},
+           {'date': '2026-02-18', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-19', 'weekday': 'Giovedì'},
+           {'date': '2026-02-20', 'weekday': 'Venerdì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'},
+           {'date': '2026-02-22', 'weekday': 'Domenica'},
+           {'date': '2026-02-23', 'weekday': 'Lunedì'},
+           {'date': '2026-02-24', 'weekday': 'Martedì'},
+           {'date': '2026-02-25', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-26', 'weekday': 'Giovedì'},
+           {'date': '2026-02-27', 'weekday': 'Venerdì'},
+           {'date': '2026-02-28', 'weekday': 'Sabato'},
+           {'date': '2026-03-01', 'weekday': 'Domenica'},
+           {'date': '2026-03-02', 'weekday': 'Lunedì'},
+           {'date': '2026-03-03', 'weekday': 'Martedì'},
+           {'date': '2026-03-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-05', 'weekday': 'Giovedì'},
+           {'date': '2026-03-06', 'weekday': 'Venerdì'},
+           {'date': '2026-03-07', 'weekday': 'Sabato'},
+           {'date': '2026-03-08', 'weekday': 'Domenica'},
+           {'date': '2026-03-09', 'weekday': 'Lunedì'},
+           {'date': '2026-03-10', 'weekday': 'Martedì'},
+           {'date': '2026-03-11', 'weekday': 'Mercoledì'},
+           {'date': '2026-03-12', 'weekday': 'Giovedì'},
+           {'date': '2026-03-13', 'weekday': 'Venerdì'},
+           {'date': '2026-03-14', 'weekday': 'Sabato'},
+           {'date': '2026-03-15', 'weekday': 'Domenica'},
+           {'date': '2026-03-16', 'weekday': 'Lunedì'}],
+ 'description': 'Per il terzo anno consecutivo, a partire da lunedì 17 '
+                'novembre, sarà riproposto ‘Giornate particolari nella storia '
+                'di Cesena’, ciclo di conferenze a cura del professore Franco '
+                'Spazzoli, organizzato con lo scopo di approfondire e far '
+                'conoscere l’arte, la cultura, la storia di Cesena. Questo '
+                'ciclo di lezioni, nato dalla collaborazione tra '
+                'l’Associazione di promozione sociale Auser e il Comune di '
+                'Cesena, riserverà un’attenzione particolare all’arte cesenate '
+                'nelle figure del pittore e xilografo Gino Barbieri, dello '
+                'scultore Mauro Benini e della pittrice Caterina Baratelli. '
+                'Per quanto riguarda la storia, tre incontri saranno dedicati '
+                'alle vicende del Risorgimento che vide svolgersi a Cesena '
+                'alcuni dei suoi eventi più importanti. In occasione '
+                'dell’800esimo anniversario della morte di San Francesco, un '
+                'incontro verrà dedicato alla figura del Santo di Assisi che, '
+                'forse, sostò a Cesena e all’importante ruolo dei francescani '
+                'in città. Al ciclo di incontri in Biblioteca Malatestiana '
+                'seguiranno inoltre tre visite di cui due legate ai temi delle '
+                'conferenze (personaggi del Risorgimento e Osservanza) e una '
+                'visita al palazzo comunale, in occasione dell’80esimo '
+                'anniversario della nascita della Repubblica italiana. Lunedì '
+                '17 novembre, alle ore 17, si comincia con la conferenza ‘17 '
+                'novembre 1885 – Gino Barbieri, artista in trincea’. Il 17 '
+                'novembre 1917, in una feroce battaglia sull’Altopiano di '
+                'Asiago, poco tempo dopo Caporetto, moriva Gino Barbieri, nato '
+                'a Cesena il 26 novembre 1885, uno dei più promettenti artisti '
+                'italiani. Barbieri fu pittore e, soprattutto, xilografo, in '
+                'grado di esprimere un linguaggio figurativo ora raffinato ora '
+                'potente ma sempre originale e suggestivo come era la sua '
+                'personalità eclettica e ricca di fascino. Singolari le '
+                'analogie tra l’esperienza di Barbieri e del contemporaneo '
+                'Renato Serra di fronte alla guerra che fu, per entrambi, uno '
+                'spartiacque dal punto di vista umano e artistico. Entrambi '
+                'vennero prematuramente uccisi in battaglia quando avevano '
+                'appena dato prova delle loro grandi potenzialità nel campo '
+                'della scrittura e dell’arte. Lunedì 1 dicembre, alle ore 17, '
+                '‘13 gennaio 1915 – Mauro Benini, eccellente scultore’. Mauro '
+                'Benini fu uno dei più importanti e valenti scultori '
+                'dell’Ottocento italiano, autore di notevoli opere presenti a '
+                'Cesena, in particolare quelle destinate ad abbellire alcune '
+                'tombe della parte monumentale del Cimitero (il Genio del '
+                'dolore nella tomba Pasolini Zanelli, l’immagine '
+                'dell’agricoltura nella tomba Genocchi, i busti di Pio '
+                'Battistini e del conte Antonio Aldini e altre) e a Roma dove '
+                'sue statue sono in luoghi di grande prestigio: all’esterno '
+                'del Palazzo di Giustizia, nell’Altare della Patria '
+                '(l’immagine dell’Emilia Romagna), al Pincio. Lunedì 19 '
+                'gennaio 2026, alle ore 17, ‘20 gennaio 1832 - La battaglia '
+                'del Monte’. Un ruolo importante nelle vicende del '
+                'Risorgimento successe a Cesena dove nel 1815, a Porta Santi e '
+                'al Ponte Vecchio, vennero sparati i primi colpi di cannone '
+                'per l’Indipendenza italiana, in occasione dell’arrivo di '
+                'Gioacchino Murat. Cesena fu, poi, teatro della battaglia dal '
+                'Monte, la prima sanguinosa battaglia tra liberali e papalini '
+                '(20 gennaio 1832) a cui seguì un terribile saccheggio che '
+                'richiama quello operato dai Bretoni nel 1377. La battaglia fu '
+                'uno scontro tra liberali, ricchi di ideali ma poveri di armi '
+                'e un esercito più numeroso, meglio armato e formato da '
+                'spietati e violenti avanzi di galera. Lunedì 2 febbraio 2026, '
+                'ore 17, ‘5 dicembre 1848 – Garibaldi a Cesena’. La narrazione '
+                'dell’arrivo in città e della breve permanenza di Giuseppe '
+                'Garibaldi con il suo piccolo esercito che si dirigeva verso '
+                'Roma per difendere la Repubblica consentirà di conoscere la '
+                'figura di Gaetano Maldini, il cosiddetto “paggio di Anita” e '
+                'la tragica vicenda del duello, sulle pendici del Monte, tra i '
+                'garibaldini Risso e Ramorino, giovani valorosi che dedicarono '
+                'la vita all’ideale di un’Italia migliore. Verranno presentate '
+                'le tracce garibaldine presenti a Cesena e verrà raccontata la '
+                'singolare vicenda dell’inaugurazione del busto di Garibaldi '
+                'che si trova sotto il Loggiato del Comune. Lunedì 16 febbraio '
+                '2026, ore 17, ‘20 giugno 1859 – La giornata liberatrice’. Un '
+                'momento importante per la storia città perché segnò la fine '
+                'del governo papale e pose le basi per l’ingresso di Cesena '
+                'nel Regno d’Italia. Fu una giornata tutt’altro che tranquilla '
+                'che ebbe il suo momento di maggiore tensione nell’incontro '
+                'tra il conte Pietro Pasolini Zanelli, la figura di maggior '
+                'prestigio tra i liberali cesenati e il repubblicano Eugenio '
+                'Valzania, arrivato a Cesena con un piccolo esercito. L’intesa '
+                'tra i due importanti cesenati consentirà un ordinato '
+                'svolgimento di quella che Trovanelli definì ‘la giornata '
+                'liberatrice’. Verranno raccontate anche alcune vicende che '
+                'precedettero quella giornata come la diffusione del colera e '
+                'il passaggio in città di un funebre personaggio tutto vestito '
+                'di nero, Mastro Impicca, il boia dello Stato della chiesa e '
+                'altre che seguirono, come il passaggio di re Vittorio '
+                'Emanuele II. Lunedì 2 marzo 2026, ore 17, ‘20 luglio 1903 – '
+                'Caterina Baratelli, donna determinata e pittrice '
+                'd’eccezione’. Caterina Baratelli è stata la più importante '
+                'pittrice cesenate del secolo scorso e ha potuto dedicarsi '
+                'alla sua passione artistica soprattutto grazie al suo '
+                'temperamento determinato. Visse, infatti, in un periodo in '
+[2026-01-28T22:20:18.720+0000] {docker.py:429} INFO - 'cui rare erano le pittrici che dovevano affrontare pregiudizi '
+                'e ostilità, soprattutto in città di periferia. Caterina '
+                'Baratelli vinse ogni ostacolo perfezionandosi prima a Milano '
+                'per poi trasferirsi, dopo la guerra, a Rio de Janeiro dove '
+                'conobbe il successo e divenne apprezzata maestra di una '
+                'generazione di artisti brasiliani. Rimase, tuttavia, sempre '
+                'legata a Cesena dove volle essere sepolta e al cui Municipio '
+                'regalò numerose sue opere. Lunedì 16 marzo 2026, ore 17, ‘San '
+                'Francesco e i francescani a Cesena (in occasione '
+                'dell’800esimo anniversario della morte del santo)’. Il '
+                'cesenate Francesco Zarletti scrisse che San Francesco sarebbe '
+                'stato a Cesena e avrebbe fatto costruire un piccolo oratorio '
+                'dove poi venne costruita la chiesa di San Francesco. Nel '
+                'corso dell’incontro verrà riaffermata l’attualità del '
+                'messaggio francescano e verrà esaminata l’importanza '
+                'dell’ordine francescano nella storia della città che ha visto '
+                'la presenza sia dei frati minori conventuali che degli '
+                'osservanti e dei cappuccini che hanno dato origine a chiese e '
+                'conventi importanti nella vita, arte e cultura di Cesena. '
+                'Novità di questa terza edizione del ciclo di lezioni sono le '
+                'visite guidate, sempre a cura del professore Spazzoli e in '
+                'programma ad aprile (alla chiesa della Santissima Annunziata '
+                'detta Osservanza), domenica 3 maggio (ore 10, al Cimitero e '
+                'alle tombe dei protagonisti del Risorgimento cesenate) e '
+                'martedì 2 giugno (alle ore 10, a Palazzo Albornoz, in '
+                'occasione dell’80esimo anniversario del referendum che diede '
+                'vita alla Repubblica Italiana).',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/20466024232182/luciano-bigi-franco-spazzoli-e-assessore-camillo-acerbi.jpg',
+ 'location_address': None,
+ 'location_name': 'Biblioteca Malatestiana',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.696801',
+ 'time_info': '17',
+ 'title': 'Cesena e le sue "sette giornate particolari", al via il ciclo di '
+          'conferenze guidate da Franco Spazzoli',
+ 'url': 'https://www.cesenatoday.it/eventi/ciclo-conferenze-giornate-particolari-storia-cesena-franco-spazzoli-programma.html',
+ 'uuid': '05d51b325220e26f'}
+[2026-01-28T22:20:19.826+0000] {docker.py:429} INFO - 2026-01-28 22:20:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/Palatombolone-savignano-edizione-2025-ospiti-valeria-marini.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:19.937+0000] {docker.py:429} INFO - 2026-01-28 22:20:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/Palatombolone-savignano-edizione-2025-ospiti-valeria-marini.html>
+{'category': None,
+ 'city': 'Cesena',
+ 'content_hash': 'eec96c89a1b14df9',
+ 'date_end': '2026-02-11',
+ 'date_start': '2025-12-04',
+ 'dates': [{'date': '2025-12-04', 'weekday': 'Giovedì'},
+           {'date': '2025-12-05', 'weekday': 'Venerdì'},
+           {'date': '2025-12-06', 'weekday': 'Sabato'},
+           {'date': '2025-12-07', 'weekday': 'Domenica'},
+           {'date': '2025-12-08', 'weekday': 'Lunedì'},
+           {'date': '2025-12-09', 'weekday': 'Martedì'},
+           {'date': '2025-12-10', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-11', 'weekday': 'Giovedì'},
+           {'date': '2025-12-12', 'weekday': 'Venerdì'},
+           {'date': '2025-12-13', 'weekday': 'Sabato'},
+           {'date': '2025-12-14', 'weekday': 'Domenica'},
+           {'date': '2025-12-15', 'weekday': 'Lunedì'},
+           {'date': '2025-12-16', 'weekday': 'Martedì'},
+           {'date': '2025-12-17', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-18', 'weekday': 'Giovedì'},
+           {'date': '2025-12-19', 'weekday': 'Venerdì'},
+           {'date': '2025-12-20', 'weekday': 'Sabato'},
+           {'date': '2025-12-21', 'weekday': 'Domenica'},
+           {'date': '2025-12-22', 'weekday': 'Lunedì'},
+           {'date': '2025-12-23', 'weekday': 'Martedì'},
+           {'date': '2025-12-24', 'weekday': 'Mercoledì'},
+           {'date': '2025-12-25', 'weekday': 'Giovedì'},
+           {'date': '2025-12-26', 'weekday': 'Venerdì'},
+           {'date': '2025-12-27', 'weekday': 'Sabato'},
+           {'date': '2025-12-28', 'weekday': 'Domenica'},
+           {'date': '2025-12-29', 'weekday': 'Lunedì'},
+           {'date': '2025-12-30', 'weekday': 'Martedì'},
+           {'date': '2025-12-31', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-01', 'weekday': 'Giovedì'},
+           {'date': '2026-01-02', 'weekday': 'Venerdì'},
+           {'date': '2026-01-03', 'weekday': 'Sabato'},
+           {'date': '2026-01-04', 'weekday': 'Domenica'},
+           {'date': '2026-01-05', 'weekday': 'Lunedì'},
+           {'date': '2026-01-06', 'weekday': 'Martedì'},
+           {'date': '2026-01-07', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-08', 'weekday': 'Giovedì'},
+           {'date': '2026-01-09', 'weekday': 'Venerdì'},
+           {'date': '2026-01-10', 'weekday': 'Sabato'},
+           {'date': '2026-01-11', 'weekday': 'Domenica'},
+           {'date': '2026-01-12', 'weekday': 'Lunedì'},
+           {'date': '2026-01-13', 'weekday': 'Martedì'},
+           {'date': '2026-01-14', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-15', 'weekday': 'Giovedì'},
+           {'date': '2026-01-16', 'weekday': 'Venerdì'},
+           {'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-18', 'weekday': 'Domenica'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-20', 'weekday': 'Martedì'},
+           {'date': '2026-01-21', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-22', 'weekday': 'Giovedì'},
+           {'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-25', 'weekday': 'Domenica'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-27', 'weekday': 'Martedì'},
+           {'date': '2026-01-28', 'weekday': 'Mercoledì'},
+           {'date': '2026-01-29', 'weekday': 'Giovedì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-03', 'weekday': 'Martedì'},
+           {'date': '2026-02-04', 'weekday': 'Mercoledì'},
+           {'date': '2026-02-05', 'weekday': 'Giovedì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-08', 'weekday': 'Domenica'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-10', 'weekday': 'Martedì'},
+           {'date': '2026-02-11', 'weekday': 'Mercoledì'}],
+ 'description': 'Savignano sul Rubicone si veste a festa e propone un ricco '
+                'calendario di iniziative che hanno al centro il tradizionale '
+                'Palatombolone. Musica e ospiti speciali, tra i quali la show '
+                'girl Valeria Marini che sarà a Savignano sul Rubicone il 22 '
+                'dicembre, saranno al cuore del mese di iniziative proposte. '
+                'Il 5 dicembre i Moka Club inaugureranno la stagione dei live, '
+                'mentre il 12 dicembre arriverà lo show Roxy Bar Live, celebre '
+                'tributo a Vasco Rossi. Il 13 e il 21 dicembre l’arena '
+                'ospiterà “Tombole & show” seguite il 15 dicembre dalla serata '
+                'della solidarietà con le tombole di beneficenza dedicate alle '
+                'associazioni di volontariato. Le tombole amarcord vedranno '
+                'protagonista la comicità di Sgabanaza il 10 dicembre e il 7 '
+                'gennaio mentre il 19 dicembre l’appuntamento sarà con il '
+                'grande tributo a Cesare Cremonini, con i Marmellata25. Un '
+                'momento speciale è previsto il 22 dicembre con la serata '
+                '“Vacanze di Natale al Pala” che vedrà come ospite la showgirl '
+                'Valeria Marini. La star ripercorrerà la sua lunga carriera '
+                'tra racconti e aneddoti. Gli ultimi giorni dell’anno '
+                'offriranno infine “Tombole & DJ Set” il 23 dicembre, '
+                'l’atmosfera di festa della vigilia il 24 con tombole fino '
+                'oltre la mezzanotte, l’esibizione delle ginnaste della '
+                'Ritmica Rubicone il 21 e lo spettacolo delle Sirene Danzanti '
+                'del 28 dicembre, oltre al Capodanno in anticipo il 30 '
+                'dicembre accompagnato da Gianni Drudi. Il veglione del 31 '
+                'dicembre vedrà il ritorno del format “Capodanno in famiglia”, '
+                'con cenone, tombole e lo show dei Discoinferno, band torinese '
+                'che da oltre 20 anni porta divertimento in tutta Italia e che '
+                'sarà in Romagna per la prima volta. I live ripartiranno poi '
+                'il 4 gennaio con i Caiman e la serata speciale dedicata alle '
+                'tombole de Los Reyes. Il 5 gennaio sarà il turno della Rimini '
+                'Dance Company con “Tombole & show” mentre il 10 gennaio sarà '
+                'protagonista il grande tributo ai Nomadi. Il cuore del '
+                'programma resta la tradizione delle tombole, proposte in '
+                'forme diverse e spesso arricchite da collaborazioni e premi '
+                'speciali. Dicembre debutterà il 4 con la festa di apertura e '
+                'la prima tombola gratuita per tutti, seguita da una lunga '
+                'sequenza di serate dedicate che saranno inaugurate il 13 '
+                'dicembre con la supertombola di Santa Lucia condotta da '
+                'Ermanno Pasolini. Poi via alle “Tombole su tombole” in '
+                'programma il 6, 11, 17, 18, 20, 27 dicembre, spesso '
+                'accompagnate dalla caccia al prosciutto e il 17 dicembre con '
+                'la speciale partecipazione della Savignanese Calcio. L’8 '
+                'dicembre sarà il turno della Maratona dell’Immacolata, mentre '
+                'il 9 e il 16 dicembre il pubblico potrà partecipare al format '
+                '“Un carrello di tombole”, che vedrà in palio premi '
+                'gastronomici e carrelli della spesa. Il periodo natalizio '
+                'offrirà ulteriori occasioni: il 25 dicembre andrà in scena la '
+                'Maratona di Tombole di Natale, il 26 dicembre la Festa dei '
+                'piccoli con tombole dedicate ai bambini e la partecipazione '
+                'speciale di Bimbobell (ore 18) e il 29 dicembre il ritorno '
+                'della Tombola Jukebox. L’anno nuovo si aprirà con le “Tombole '
+                'del buon auspicio” del 1° gennaio mentre la festività '
+                'dell’Epifania sarà celebrata il 6 gennaio con la Maratona di '
+                'tombole della Befana. Il 7 gennaio tornerà l’appuntamento '
+                'amarcord con Sgabanaza. Numerose serate saranno dedicate al '
+                'format “Tombole su tombole” con appuntamenti il 2, 3 e 9 '
+                'gennaio. L’8 gennaio tornerà l’iniziativa “Un carrello di '
+                'tombole”, mentre l’Epifania vedrà protagonista ancora una '
+                'volta la Maratona della Befana. La manifestazione si avvierà '
+                'alla conclusione con l’ultima grande serata dell’11 gennaio '
+                'condotta da Ermanno Pasolini.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/17506720700332/2025_lanciopalatombolone-o.jpg',
+ 'location_address': 'Viale della Resistenza',
+ 'location_name': 'Palatombolone',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.695823',
+ 'time_info': 'Orari vari',
+ 'title': 'Valeria Marini, Sgabanaza e i Moka Club tra i grandi ospiti del '
+          'Palatombolone di Savignano',
+ 'url': 'https://www.cesenatoday.it/eventi/Palatombolone-savignano-edizione-2025-ospiti-valeria-marini.html',
+ 'uuid': 'a02e67d83c2947a1'}
+[2026-01-28T22:20:21.106+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/i-giovani-ciceroni-del-liceo-classico-guidano-le-visite-alla-pinacoteca-comunale.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:21.214+0000] {docker.py:429} INFO - 2026-01-28 22:20:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/i-giovani-ciceroni-del-liceo-classico-guidano-le-visite-alla-pinacoteca-comunale.html>
+{'category': 'Turismo',
+ 'city': 'Cesena',
+ 'content_hash': '47b5e519c1ac944f',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '17:30', 'weekday': 'Sabato'}],
+ 'description': 'Sabato 31 gennaio, alle ore 16 e alle ore 17.30, torna la '
+                'rassegna ‘Tracce del Seicento’, il ciclo di visite guidate '
+                'alla Pinacoteca comunale di Cesena (via Aldini 26) a cura '
+                'degli studenti del Liceo classico ‘Vincenzo Monti’. '
+                'Protagonista dell’incontro sarà il dipinto ‘Estasi di San '
+                'Guarino’ di Giovan Battista Razzani, che verrà raccontato e '
+                'interpretato dagli studenti attraverso un percorso guidato '
+                'arricchito dalla lettura dell’opera. Il progetto ‘Tracce’, '
+                'avviato lo scorso dicembre dal Liceo classico in '
+                'collaborazione con il Servizio Musei e Gallerie del Comune, '
+                'nasce con l’obiettivo di valorizzare la Pinacoteca comunale e '
+                'il patrimonio artistico in essa custodito, rafforzando il '
+                'legame tra scuola, istituzioni culturali e territorio. Il '
+                'percorso vede protagonisti gli studenti del triennio che, '
+                'dopo uno studio approfondito guidato dalle docenti di Storia '
+                'dell’arte Stella Ricci e Francesca Renzi, condurranno visite '
+                'guidate aperte al pubblico. L’iniziativa rientra nelle '
+                'attività di formazione scuola-lavoro, permettendo agli '
+                'studenti di sviluppare competenze trasversali come la '
+                'comunicazione in pubblico, il lavoro di gruppo e la gestione '
+                'di un progetto culturale, avvicinandoli in modo attivo alla '
+                'storia e all’arte del territorio. Tutte le visite si '
+                'svolgeranno nelle sale espositive della Pinacoteca comunale, '
+                'in due turni alle ore 16 e alle ore 17.30: a seguito '
+                'dell’appuntamento di sabato 31 gennaio, le visite saranno '
+                'riproposte sabato 14 marzo, con al centro la ‘Madonna con '
+                'Bambino’ e ‘Annunciazione’ del Sassoferrato, sabato 18 '
+                'aprile, incentrata sul Suicidio di Sofonisba o Artemisia che '
+                'beve le ceneri del marito’ di Giovanni Forabosco e a maggio '
+                '2026, in occasione della Notte Europea dei Musei Per '
+                'ulteriori informazioni contattare lo 0547 610892 oppure '
+                'scrivere a cesenacultura@comune.cesena.fc.it.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/25809787383840/estasi-di-san-guarino-di-giovan-battista-razzani.jpg',
+ 'location_address': 'Via Aldini, 26',
+ 'location_name': 'Pinacoteca Comunale',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.695360',
+ 'time_info': '16-17.30',
+ 'title': 'I giovani "ciceroni" del Liceo classico guidano le visite alla '
+          'Pinacoteca comunale',
+ 'url': 'https://www.cesenatoday.it/eventi/i-giovani-ciceroni-del-liceo-classico-guidano-le-visite-alla-pinacoteca-comunale.html',
+ 'uuid': '12a8d43de06e36ce'}
+[2026-01-28T22:20:22.271+0000] {docker.py:429} INFO - 2026-01-28 22:20:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/sfilate-espositori-e-location-al-grand-hotel-una-giornata-dedicata-ai-futuri-sposi.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:22.378+0000] {docker.py:429} INFO - 2026-01-28 22:20:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/sfilate-espositori-e-location-al-grand-hotel-una-giornata-dedicata-ai-futuri-sposi.html>
+{'category': 'Incontri',
+ 'city': 'Cesena',
+ 'content_hash': 'edbe57e03bcf7869',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '15:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Domenica 1 febbraio il Grand Hotel da Vinci di Cesenatico '
+                'ospiterà il "Wedding Day", un appuntamento dedicato al '
+                'settore nuziale e rivolto alle coppie in procinto di '
+                "sposarsi. L'evento, organizzato nella struttura del Gruppo "
+                'Batani, si propone come una vetrina per scoprire le novità '
+                'legate al mondo dei matrimoni, attraverso esposizioni, '
+                'sfilate e momenti di approfondimento sulle location, sia '
+                'interne che esterne. Il programma della giornata prenderà il '
+                'via alle 15.30 con l’apertura dell’area espositiva: un '
+                'percorso che permetterà ai visitatori di incontrare diversi '
+                'professionisti del settore wedding, con un accompagnamento di '
+                'musica dal vivo. Dalle 15.30 alle 17.00 è previsto il '
+                '"Wedding Gallery Tour", una fase dedicata al confronto '
+                'diretto con gli espositori e alla visita guidata degli spazi '
+                'della struttura ricettiva. Il pomeriggio proseguirà alle 17 '
+                'con i saluti istituzionali della famiglia Batani, seguiti da '
+                'un "Fashion Show" che porterà in passerella abiti da sposa e '
+                "da cerimonia. A chiudere l'evento, nella fascia oraria tra le "
+                '18 e le 21, sarà un aperitivo con dj set pensato come momento '
+                'di networking e convivialità per i partecipanti.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/53816888087481/grand-hotel-da-vinci-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Grand Hotel da Vinci',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.694707',
+ 'time_info': 'dalle 15.30',
+ 'title': 'Sfilate, espositori e location: al Grand Hotel una giornata '
+          'dedicata ai futuri sposi',
+ 'url': 'https://www.cesenatoday.it/eventi/sfilate-espositori-e-location-al-grand-hotel-una-giornata-dedicata-ai-futuri-sposi.html',
+ 'uuid': '1296630e003be923'}
+[2026-01-28T22:20:23.642+0000] {docker.py:429} INFO - 2026-01-28 22:20:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/adrian-fartade-gatteo-spettacolo-30-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:23.749+0000] {docker.py:429} INFO - 2026-01-28 22:20:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/adrian-fartade-gatteo-spettacolo-30-gennaio-2026.html>
+{'category': 'Teatri',
+ 'city': 'Cesena',
+ 'content_hash': 'f3e4fe617fec8dc1',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'weekday': 'Venerdì'}],
+ 'description': 'Da martedì 20 gennaio, alla Biblioteca Ceccarelli di Gatteo '
+                'aprono le prenotazioni per “In genere capirsi per capirci” '
+                'con Adrian Fartade, primo appuntamento della nuova rassegna '
+                'culturale “Magmatica – Un ribollire di idee”. Il primo '
+                'appuntamento è in programma venerdì 30 gennaio alle ore 21 '
+                'all’Oratorio San Rocco dove il divulgatore scientifico Adrian '
+                'Fartade interverrà sul tema “In genere capirsi per capirci”. '
+                '"Nel corso della storia abbiamo sempre creato parole, '
+                'categorie ed etichette per provare a capire noi stessi e il '
+                'mondo - si legge in una nota -. Oggi non è diverso: termini '
+                'legati a genere e sessualità possono sembrare complessi o '
+                'lontani, ma raccontano esperienze reali. Un incontro per '
+                'spiegare questi concetti in modo chiaro, capire perché '
+                'contano e riflettere su come la disinformazione generi solo '
+                'paura e conflitto. Filosofia, scienza e cultura sono '
+                'strumenti indispensabili per leggere meglio la realtà". La '
+                'rassegna è promossa dal Comune di Gatteo, in collaborazione '
+                'con Sillaba, e si rivolge in particolare le nuove generazioni '
+                'ma è aperta a tutta la cittadinanza. Ingresso gratuito con '
+                'prenotazione obbligatoria. Per informazioni 0541 932377.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/7481939673607/adrian_bianco_20232162_edited-copy.jpg',
+ 'location_address': None,
+ 'location_name': 'Oratorio San Rocco',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.693681',
+ 'time_info': '21',
+ 'title': 'Gatteo, al via la rassegna "Magmatica" dedicata alle nuove '
+          'generazioni: primo appuntamento con Adrian Fartade',
+ 'url': 'https://www.cesenatoday.it/eventi/adrian-fartade-gatteo-spettacolo-30-gennaio-2026.html',
+ 'uuid': '60aa681afbd33e91'}
+[2026-01-28T22:20:24.784+0000] {docker.py:429} INFO - 2026-01-28 22:20:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/brunch-corso-pittura-art-by-mbt-cesenatico-31-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:24.904+0000] {docker.py:429} INFO - 2026-01-28 22:20:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/brunch-corso-pittura-art-by-mbt-cesenatico-31-gennaio-2026.html>
+{'category': 'Corsi',
+ 'city': 'Cesena',
+ 'content_hash': '5d8449a6ba8dcfcc',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'A Cesenatico arriva “Brunch & Paint”, l’esperienza che unisce '
+                'il piacere del brunch alla voglia di mettersi in gioco con '
+                'colori e idee. Sabato 31 gennaio, a partire dalle ore 11, gli '
+                'spazi di ART by MBT sul lungomare Carducci si trasformano in '
+                'un atelier informale: ogni partecipante avrà una propria '
+                'postazione, con materiale artistico incluso - pennelli, '
+                'tavolozze, matite e tutto l’occorrente - per realizzare '
+                'un’opera personale, mentre si assaporano le prelibatezze '
+                'offerte dal brunch della casa. A guidare il gruppo, passo '
+                'dopo passo, sarà Giulia Gazzo: non una lezione “da manuale”, '
+                'ma un percorso coinvolgente pensato per far emergere la '
+                'visione artistica di ciascuno, anche di chi non ha mai '
+                'disegnato o dipinto. Alla fine, ogni partecipante potrà '
+                "portarsi l'opera realizzata a casa, un ricordo da appendere, "
+                'regalare o semplicemente riguardare con orgoglio. Per '
+                'informazioni e prenotazioni 347 3719177.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/46002494371010/giulia-gazzo.jpg',
+ 'location_address': 'Viale Giosuè Carducci, 97B',
+ 'location_name': 'Art Mbt',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.693373',
+ 'time_info': '11',
+ 'title': '"Brunch and paint", a Cesenatico il corso di pittura guidato da '
+          'Giulia Gazzo',
+ 'url': 'https://www.cesenatoday.it/eventi/brunch-corso-pittura-art-by-mbt-cesenatico-31-gennaio-2026.html',
+ 'uuid': 'ade9986f2185e204'}
+[2026-01-28T22:20:26.016+0000] {docker.py:429} INFO - 2026-01-28 22:20:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/conservatorio-maderna-lettimini-in-concerto-vittime-del-campo-di-sterminio-theresienstadt-1-febbraio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:26.122+0000] {docker.py:429} INFO - 2026-01-28 22:20:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/conservatorio-maderna-lettimini-in-concerto-vittime-del-campo-di-sterminio-theresienstadt-1-febbraio-2026.html>
+{'category': 'Concerti',
+ 'city': 'Cesena',
+ 'content_hash': '0ad6b412eef521be',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01',
+            'time_start': '15:30',
+            'weekday': 'Domenica'}],
+ 'description': 'Domenica 1 febbraio, alle ore 15.30, nella sala Sozzi del '
+                'palazzo del Ridotto, si terrà l’evento musicale "Fra cielo e '
+                'terra. Theresienstadt e la musica dei bambini", parte della '
+                'rassegna "I suoni del pensiero" promossa dal Conservatorio '
+                'Maderna-Lettimi in occasione della Giornata della Memoria. Il '
+                'concerto è dedicato ai bambini e ai ragazzi del campo di '
+                'concentramento nazista di Theresienstadt, vittime innocenti '
+                'di un sistema che, oltre alla persecuzione e allo sterminio, '
+                'mise in atto un uso propagandistico della loro attività '
+                'musicale. Dei circa 15 mila bambini passati dal campo, solo '
+                '1.800 sopravvissero. Protagonista dell’evento sarà l’Ensemble '
+                'da camera del Conservatorio Maderna-Lettimi, diretto dal '
+                'maestro Paolo Chiavacci, con la partecipazione della soprano '
+                'Gaia Baioni Buttafarro. In programma la Sinfonia n. 4 in sol '
+                'maggiore di Gustav Mahler, proposta nella versione per '
+                'ensemble da camera realizzata da Erwin Stein – sotto la '
+                'supervisione di Arnold Schoenberg, di cui Stein fu allievo – '
+                'e poi rielaborata da Paolo Chiavacci per un organico di 23 '
+                'elementi. Il quarto movimento della sinfonia, intitolato ‘Ciò '
+                'che un bambino mi dice’, affida alla voce della soprano il '
+                'canto Das himmlische Leben (La vita celestiale), composto da '
+                'Mahler nel 1892 su un testo tratto dalla raccolta popolare Il '
+                'corno magico del fanciullo, a sua volta ispirato a un antico '
+                'canto cattolico bavarese: Der Himmel hängt voll Geigen (Il '
+                'paradiso è pieno di violini). L’ingresso al concerto è '
+                'gratuito. Per ulteriori informazioni scrivere a '
+                'produzione@madernalettimi.it oppure contattare lo 0547 28679.',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/26119810121237/conservatorio-maderna-lettimi-2.jpg',
+ 'location_address': None,
+ 'location_name': 'Sala Sozzi del Palazzo del Ridotto',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:19:52.692895',
+ 'time_info': '15.30',
+ 'title': 'Il Conservatorio Maderna-Lettimini in concerto ricorda le giovani '
+          'vittime del campo di concentramento di Theresienstadt',
+ 'url': 'https://www.cesenatoday.it/eventi/conservatorio-maderna-lettimini-in-concerto-vittime-del-campo-di-sterminio-theresienstadt-1-febbraio-2026.html',
+ 'uuid': '723421864d2f10c1'}
+[2026-01-28T22:20:27.266+0000] {docker.py:429} INFO - 2026-01-28 22:20:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cesenatoday.it/eventi/giorno-della-memoria-al-petrella-stupidorisiko-emergency-teatro-31-gennaio-2026.html> (referer: https://www.cesenatoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:27.374+0000] {docker.py:429} INFO - 2026-01-28 22:20:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.cesenatoday.it/eventi/giorno-della-memoria-al-petrella-stupidorisiko-emergency-teatro-31-gennaio-2026.html>
+{'category': 'Teatri',
+ 'city': 'Cesena',
+ 'content_hash': '22cd9b538cfeadd8',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'}],
+ 'description': 'In occasione della Giornata della Memoria, il Comune di '
+                'Longiano promuove un momento di riflessione dedicato alle '
+                'giovani generazioni attraverso il teatro civile e '
+                'l’educazione alla pace. Sabato 31 gennaio alle ore 11, al '
+                'Teatro Petrella, andrà in scena lo spettacolo “Stupidorisiko. '
+                'Una geografia di guerra” realizzato da Emergency Teatro. Lo '
+                'spettacolo, pensato per studenti dai 12 anni in su, propone '
+                'una critica lucida e ironica della guerra e delle sue '
+                'conseguenze. Il racconto attraversa i principali conflitti '
+                'del Novecento – dalla Prima alla Seconda Guerra Mondiale – '
+                'fino ad arrivare alle guerre contemporanee, stimolando il '
+                'pubblico a interrogarsi sul valore della memoria e sulla '
+                'costruzione di una cultura di pace. All’iniziativa '
+                'parteciperanno gli alunni delle classi seconde e terze della '
+                'Scuola secondaria di primo grado di Longiano. Saranno '
+                'presenti anche rappresentanti dell’Amministrazione comunale, '
+                'Luca Bussandri, Presidente di Anpi Rubicone, e una '
+                'delegazione del Gruppo territoriale Emergency di '
+                'Forlì-Cesena, che allestirà un banchetto informativo per '
+                'approfondire i temi affrontati. "Inserire questo appuntamento '
+                'nel contesto della Giornata della Memoria – dichiara il '
+                'sindaco del Comune di Longiano, Mauro Graziano – significa '
+                'offrire ai nostri ragazzi un’occasione concreta per '
+                'riflettere sulle tragedie del passato e sulle responsabilità '
+                'del presente. Il teatro è uno strumento potente per '
+                'trasmettere consapevolezza, senso critico e rispetto dei '
+                'diritti umani. Ringrazio Emergency, Anpi e la scuola per la '
+                'collaborazione in un percorso educativo che mette al centro '
+                'la pace e la solidarietà".',
+ 'image_url': '//citynews-cesenatoday.stgy.ovh/~media/horizontal-mid/44937489164733/longiano_giornata-memoria-spettacolo-emergency.jpeg',
+ 'location_address': None,
+ 'location_name': 'Teatro Petrella',
+ 'price': 'Prezzo non disponibile',
+ 'scraped_at': '2026-01-28T22:19:52.692468',
+ 'time_info': '11',
+ 'title': 'Giorno della Memoria, al Petrella una riflessione sulla cultura '
+          'della guerra con lo show "Stupidorisiko" di Emergency Teatro',
+ 'url': 'https://www.cesenatoday.it/eventi/giorno-della-memoria-al-petrella-stupidorisiko-emergency-teatro-31-gennaio-2026.html',
+ 'uuid': 'f0a9b3513fe828f9'}
+[2026-01-28T22:20:27.374+0000] {docker.py:429} INFO - 2026-01-28 22:20:27 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-28T22:20:27.375+0000] {docker.py:429} INFO - 2026-01-28 22:20:27 [scrapy.extensions.feedexport] INFO: Stored json feed (28 items) in: /app/city_today/output/eventi_cesena_questa-settimana_20260128_221949.json
+[2026-01-28T22:20:27.375+0000] {docker.py:429} INFO - 2026-01-28 22:20:27 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 13272,
+ 'downloader/request_count': 30,
+ 'downloader/request_method_count/GET': 30,
+ 'downloader/response_bytes': 4495960,
+ 'downloader/response_count': 30,
+ 'downloader/response_status_count/200': 30,
+ 'elapsed_time_seconds': 37.877772,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 28, 22, 20, 27, 374105, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 24204367,
+ 'httpcompression/response_count': 30,
+ 'item_scraped_count': 28,
+ 'items_per_city/Cesena': 28,
+ 'items_per_minute': 45.4054054054054,
+ 'log_count/DEBUG': 58,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68157440,
+ 'memusage/startup': 68157440,
+ 'request_depth_max': 1,
+ 'response_received_count': 30,
+ 'responses_per_minute': 48.648648648648646,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 29,
+ 'scheduler/dequeued/memory': 29,
+ 'scheduler/enqueued': 29,
+ 'scheduler/enqueued/memory': 29,
+ 'start_time': datetime.datetime(2026, 1, 28, 22, 19, 49, 496333, tzinfo=datetime.timezone.utc)}
+2026-01-28 22:20:27 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-28T22:20:27.398+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_cesena_questa-settimana_20260128_221949.json
+[2026-01-28T22:20:27.644+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_cesena.scrape_city_today, execution_date=20260128T221944, start_date=20260128T221946, end_date=20260128T222027
+[2026-01-28T22:20:27.664+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T22:20:27.709+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

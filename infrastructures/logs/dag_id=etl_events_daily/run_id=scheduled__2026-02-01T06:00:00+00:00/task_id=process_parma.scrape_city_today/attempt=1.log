@@ -1,0 +1,1491 @@
+[2026-02-02T19:46:21.090+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_parma.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:46:21.097+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_parma.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:46:21.098+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-02-02T19:46:21.106+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_parma.scrape_city_today> on 2026-02-01 06:00:00+00:00
+[2026-02-02T19:46:21.109+0000] {standard_task_runner.py:60} INFO - Started process 322 to run task
+[2026-02-02T19:46:21.111+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_parma.scrape_city_today', 'scheduled__2026-02-01T06:00:00+00:00', '--job-id', '424', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmp_029l79n']
+[2026-02-02T19:46:21.113+0000] {standard_task_runner.py:88} INFO - Job 424: Subtask process_parma.scrape_city_today
+[2026-02-02T19:46:21.128+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-02-02T19:46:21.187+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_parma.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [running]> on host d1594f2b36ec
+[2026-02-02T19:46:21.281+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_parma.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-02-01T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-01T06:00:00+00:00'
+[2026-02-02T19:46:21.300+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-02-02T19:46:21.309+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-02-02T19:46:21.864+0000] {docker.py:429} INFO - Avvio scraping per: Parma
+Periodo: questa-settimana
+[2026-02-02T19:46:21.867+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-02-02T19:46:21.872+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-02-02 19:46:21 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-02-02T19:46:21.873+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [events] INFO: Scraping città: Parma
+2026-02-02 19:46:21 [events] INFO: Periodo: questa-settimana (2026-02-02 - 2026-02-08)
+[2026-02-02T19:46:21.874+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-02-02T19:46:21.875+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-02-02T19:46:21.875+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-02-02 19:46:21 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-02-02T19:46:21.878+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.extensions.telnet] INFO: Telnet Password: 13a7576bfdcc214a
+[2026-02-02T19:46:21.917+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-02-02T19:46:21.918+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-02-02T19:46:21.985+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-02-02T19:46:21.987+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-02-02T19:46:21.988+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-02-02T19:46:21.988+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_parma_questa-settimana_20260202_194621.json
+[2026-02-02T19:46:21.989+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.core.engine] INFO: Spider opened
+[2026-02-02T19:46:21.994+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-02-02T19:46:21.995+0000] {docker.py:429} INFO - 2026-02-02 19:46:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-02-02T19:46:22.177+0000] {docker.py:429} INFO - 2026-02-02 19:46:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/robots.txt> (referer: None)
+[2026-02-02T19:46:23.665+0000] {docker.py:429} INFO - 2026-02-02 19:46:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/> (referer: None)
+[2026-02-02T19:46:24.309+0000] {docker.py:429} INFO - 2026-02-02 19:46:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/lo-sport-e-business-il-business-e-sport-una-storia-olimpica.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:24.458+0000] {docker.py:429} INFO - 2026-02-02 19:46:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/lo-sport-e-business-il-business-e-sport-una-storia-olimpica.html>
+{'category': ['Promozioni'],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': 'bd26cabeb0a09e22',
+ 'date_display': '5 febbraio 2026',
+ 'date_end': '2026-02-05',
+ 'date_start': '2026-02-05',
+ 'description': 'Michael Payne è stato per oltre vent’anni il responsabile '
+                'della strategia commerciale del Comitato Olimpico '
+                'Internazionale. Ha creato il programma TOP, che ha '
+                'trasformato i Giochi da evento in crisi a brand '
+                'multimiliardario. In seguito ha lavorato al fianco di Bernie '
+                'Ecclestone per rilanciare la Formula 1 e fondato una società '
+                'di consulenza che ha seguito le principali istituzioni '
+                'sportive mondiali. Oggi è considerato una delle figure più '
+                'influenti nello sport business. È autore di Olympic '
+                'Turnaround e Toon In!, e collabora con Financial Times, CNN e '
+                'CNBC.',
+ 'event_id': 'lo-sport-e-business-il-business-e-sport-una-storia-olimpica',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/32332190167512/whatsapp-image-2026-01-28-at-21-34-11.jpeg',
+ 'location_address': 'Piazzale San Francesco, 1',
+ 'location_name': 'Casa della Musica',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Michael Payne è stato per oltre '
+                                        'vent’anni il responsabile della '
+                                        'strategia commerciale del Comitato '
+                                        'Olimpico Internazionale. Ha creato il '
+                                        'programma TOP, che ha trasformato i '
+                                        'Giochi da evento in crisi a brand '
+                                        'multimiliardario. In seguito ha '
+                                        'lavorato al fianco di Bernie '
+                                        'Ecclestone per rilanciare la Formula '
+                                        '1 e fondato una società di consulenza '
+                                        'che ha seguito le principali '
+                                        'istituzioni sportive mondiali. Oggi è '
+                                        'considerato una delle figure più '
+                                        'influenti nello sport business. È '
+                                        'autore di Olympic Turnaround e Toon '
+                                        'In!, e collabora con Financial Times, '
+                                        'CNN e CNBC.',
+                         'dove': {'address': 'Piazzale San Francesco, 1',
+                                  'name': 'Casa della Musica',
+                                  'raw_text': 'Dove Casa della Musica Piazzale '
+                                              'San Francesco, 1'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/32332190167512/whatsapp-image-2026-01-28-at-21-34-11.jpeg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-05',
+                                    'date_start': '2026-02-05',
+                                    'raw_text': 'Quando Dal 05/02/2026 al '
+                                                '05/02/2026 17:30',
+                                    'schedule': '17:30'}},
+              'list': {'category': 'Promozioni',
+                       'date': '5 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/32332190167512/whatsapp-image-2026-01-28-at-21-34-11.jpeg',
+                       'location': 'Casa della Musica',
+                       'stars': 5,
+                       'title': 'Lo sport è business, il business è sport. Una '
+                                'storia olimpica'}},
+ 'scraped_at': '2026-02-02T19:46:24.456991',
+ 'source': 'city_today',
+ 'title': 'Lo sport è business, il business è sport. Una storia olimpica',
+ 'url': 'https://www.parmatoday.it/eventi/lo-sport-e-business-il-business-e-sport-una-storia-olimpica.html',
+ 'uuid': '7d272466d7432eee',
+ 'website': None}
+[2026-02-02T19:46:25.665+0000] {docker.py:429} INFO - 2026-02-02 19:46:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/sorpresa_storia-di-un-incontro-senza-parole.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:25.774+0000] {docker.py:429} INFO - 2026-02-02 19:46:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/sorpresa_storia-di-un-incontro-senza-parole.html>
+{'category': ['Teatri'],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': '078a4b453145fb6e',
+ 'date_display': '8 febbraio 2026',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-02-08',
+ 'description': 'Domenica 8 febbraio alle ore 16:30 Europa Teatri ospita '
+                'Sorpresa_Storia di un incontro senza parole, con Rita '
+                'Felicetti e Marco Cantori, scenografie Nives Storci, tecnica '
+                'Erio Lugli, regia Marco Cantori e Diego Gavioli, Produzione '
+                'Accademia Perduta Romagna Teatri. “Sorpresa!” è la storia '
+                'dell’incontro fra due personaggi molto diversi fra loro. '
+                'Provate ad immaginare che il giorno del vostro compleanno '
+                'qualcuno bussi alla porta di casa e lasci un grande pacco. '
+                'Non si tratta questa volta di un regalo come tutti gli altri, '
+                'ma di un regalo fantastico: un amico! Ma come si fa a giocare '
+                'insieme, ad andare d’accordo e a fare la pace dopo aver '
+                'litigato? Forse ci vorrebbe un libretto d’istruzioni che ci '
+                'spiegasse come funziona l’altra persona, ma anche se ci fosse '
+                'sarebbe sicuramente troppo complicato da capire. Non resta '
+                'dunque che fare degli esperimenti. Lo spettacolo tratta il '
+                "tema delle relazioni e di cosa scaturisce dall'incontro fra "
+                'le diversità di ciascun individuo, passando attraverso la '
+                'scoperta, il gioco, la condivisione di uno spazio, il '
+                "conflitto e l'accoglienza. Spettacolo adatto a bambini e "
+                'bambine dai 3 anni in poi biglietteria stagione ragazzi: '
+                'intero 10 € ridotto 6 € (under 18 | over 65 | universitari | '
+                'cartaeffe | soci: coop, avis , colserad).',
+ 'event_id': 'sorpresa_storia-di-un-incontro-senza-parole',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/40274427623748/sorpresa-_emanuela-caselli-3.jpg',
+ 'location_address': 'Via Oradour, 14',
+ 'location_name': 'Europa Teatri',
+ 'price': 'intero 10 € ridotto 6 € (under 18 | over 65 | universitari | '
+          'cartaeffe | soci: coop, avis , colserad)',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'europateatri.it '
+                                                            'Tema Carnevale '
+                                                            'Evento per '
+                                                            'bambini',
+                                                'website': 'https://www.europateatri.it'},
+                         'descrizione': 'Domenica 8 febbraio alle ore 16:30 '
+                                        'Europa Teatri ospita Sorpresa_Storia '
+                                        'di un incontro senza parole, con Rita '
+                                        'Felicetti e Marco Cantori, '
+                                        'scenografie Nives Storci, tecnica '
+                                        'Erio Lugli, regia Marco Cantori e '
+                                        'Diego Gavioli, Produzione Accademia '
+                                        'Perduta Romagna Teatri. “Sorpresa!” è '
+                                        'la storia dell’incontro fra due '
+                                        'personaggi molto diversi fra loro. '
+                                        'Provate ad immaginare che il giorno '
+                                        'del vostro compleanno qualcuno bussi '
+                                        'alla porta di casa e lasci un grande '
+                                        'pacco. Non si tratta questa volta di '
+                                        'un regalo come tutti gli altri, ma di '
+                                        'un regalo fantastico: un amico! Ma '
+                                        'come si fa a giocare insieme, ad '
+                                        'andare d’accordo e a fare la pace '
+                                        'dopo aver litigato? Forse ci vorrebbe '
+                                        'un libretto d’istruzioni che ci '
+                                        'spiegasse come funziona l’altra '
+                                        'persona, ma anche se ci fosse sarebbe '
+                                        'sicuramente troppo complicato da '
+                                        'capire. Non resta dunque che fare '
+                                        'degli esperimenti. Lo spettacolo '
+                                        'tratta il tema delle relazioni e di '
+                                        "cosa scaturisce dall'incontro fra le "
+                                        'diversità di ciascun individuo, '
+                                        'passando attraverso la scoperta, il '
+                                        'gioco, la condivisione di uno spazio, '
+                                        "il conflitto e l'accoglienza. "
+                                        'Spettacolo adatto a bambini e bambine '
+                                        'dai 3 anni in poi biglietteria '
+                                        'stagione ragazzi: intero 10 € ridotto '
+                                        '6 € (under 18 | over 65 | '
+                                        'universitari | cartaeffe | soci: '
+                                        'coop, avis , colserad).',
+                         'dove': {'address': 'Via Oradour, 14',
+                                  'name': 'Europa Teatri',
+                                  'raw_text': 'Dove Europa Teatri Via Oradour, '
+                                              '14'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/40274427623748/sorpresa-_emanuela-caselli-3.jpg',
+                         'prezzo': 'intero 10 € ridotto 6 € (under 18 | over '
+                                   '65 | universitari | cartaeffe | soci: '
+                                   'coop, avis , colserad)',
+                         'quando': {'date_end': '2026-02-08',
+                                    'date_start': '2026-02-08',
+                                    'raw_text': 'Quando Dal 08/02/2026 al '
+                                                '08/02/2026 16:30',
+                                    'schedule': '16:30'}},
+              'list': {'category': 'Teatri',
+                       'date': '8 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/40274427623748/sorpresa-_emanuela-caselli-3.jpg',
+                       'location': 'Europa Teatri',
+                       'stars': 5,
+                       'title': 'Sorpresa_Storia di un incontro senza parole'}},
+ 'scraped_at': '2026-02-02T19:46:25.773046',
+ 'source': 'city_today',
+ 'title': 'Sorpresa_Storia di un incontro senza parole',
+ 'url': 'https://www.parmatoday.it/eventi/sorpresa_storia-di-un-incontro-senza-parole.html',
+ 'uuid': '12123a1be7ceea87',
+ 'website': 'https://www.europateatri.it'}
+[2026-02-02T19:46:26.992+0000] {docker.py:429} INFO - 2026-02-02 19:46:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/the-foreign-resort-e-date-at-midnight-live-all-arcistella-the-foreign-resort-e-date-at-midnight-13580673.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:27.115+0000] {docker.py:429} INFO - 2026-02-02 19:46:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/the-foreign-resort-e-date-at-midnight-live-all-arcistella-the-foreign-resort-e-date-at-midnight-13580673.html>
+{'category': [],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': 'e2c9da13af46f76e',
+ 'date_display': '7 febbraio 2026',
+ 'date_end': '2026-02-07',
+ 'date_start': '2026-02-07',
+ 'description': 'The Foreign Resort! 🇩🇰🎸 Direttamente da Copenhagen, il trio '
+                'che sta ridefinendo i confini del post-punk e dello shoegaze '
+                'arriva sul palco dell’Arcistella per una data che promette '
+                'scintille. Se cercate chitarre riverberate, bassi ipnotici e '
+                'quell’energia scura che solo loro sanno sprigionare, questo è '
+                'il vostro posto. Date at Midnight! 🇮🇹🎸 Direttamente dalle '
+                'ombre di Roma, la band che incarna l’essenza più pura del '
+                'gothic rock e del post-punk arriva sul palco dell’Arcistella '
+                'per una data all’insegna del fascino decadente. Se cercate '
+                'atmosfere cupe, linee di basso ossessive e quella voce '
+                'profonda che scava nell’anima tra romanticismo e oscurità, '
+                'non potete mancare. Preparatevi a un viaggio sonoro nel cuore '
+                'della notte romana: sarà un’esperienza intensa e travolgente. '
+                'AFTERSHOW BY DARKITALIA La festa non finisce con l’ultima '
+                'nota del live! Insieme agli amici di Darkitalia, trasformiamo '
+                'la serata in un rito collettivo con un aftershow da urlo. In '
+                'consolle per il DJ SET: Black Ossian Moon DieNiel (Darkwave, '
+                'Post-Punk, Gothic & more) INFO E COSTI QUANDO: Sabato 07 '
+                'Febbraio ORE: Dalle 22:00 DOVE: Arcistella - Piazza Fontana '
+                '6, Trecasali (PR) TICKETS: € 10 online fino a venerdì 06/02 '
+                '(vendita dal 30/01) € 15 alla cassa INGRESSO: Riservato ai '
+                'soci ARCI CENA CON NOI? Non arrivare a stomaco vuoto! Prenota '
+                'il tuo tavolo per la cena al: 347 448 8060 Contatti: '
+                'info@arcistella.it',
+ 'event_id': 'the-foreign-resort-e-date-at-midnight-live-all-arcistella-the-foreign-resort-e-date-at-midnight-13580673',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/12523226134415/the-foreign-resort-e-date-at-midnight-live-all-arcistella.png',
+ 'location_address': 'Piazza Fontana, 6',
+ 'location_name': 'Arcistella',
+ 'price': '€ 10 online € 15 alla cassa',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web arcistella.it',
+                                                'website': 'https://www.arcistella.it/etn/foreignresort/'},
+                         'descrizione': 'The Foreign Resort! 🇩🇰🎸 Direttamente '
+                                        'da Copenhagen, il trio che sta '
+                                        'ridefinendo i confini del post-punk e '
+                                        'dello shoegaze arriva sul palco '
+                                        'dell’Arcistella per una data che '
+                                        'promette scintille. Se cercate '
+                                        'chitarre riverberate, bassi ipnotici '
+                                        'e quell’energia scura che solo loro '
+                                        'sanno sprigionare, questo è il vostro '
+                                        'posto. Date at Midnight! 🇮🇹🎸 '
+                                        'Direttamente dalle ombre di Roma, la '
+                                        'band che incarna l’essenza più pura '
+                                        'del gothic rock e del post-punk '
+                                        'arriva sul palco dell’Arcistella per '
+                                        'una data all’insegna del fascino '
+                                        'decadente. Se cercate atmosfere cupe, '
+                                        'linee di basso ossessive e quella '
+                                        'voce profonda che scava nell’anima '
+                                        'tra romanticismo e oscurità, non '
+                                        'potete mancare. Preparatevi a un '
+                                        'viaggio sonoro nel cuore della notte '
+                                        'romana: sarà un’esperienza intensa e '
+                                        'travolgente. AFTERSHOW BY DARKITALIA '
+                                        'La festa non finisce con l’ultima '
+                                        'nota del live! Insieme agli amici di '
+                                        'Darkitalia, trasformiamo la serata in '
+                                        'un rito collettivo con un aftershow '
+                                        'da urlo. In consolle per il DJ SET: '
+                                        'Black Ossian Moon DieNiel (Darkwave, '
+                                        'Post-Punk, Gothic & more) INFO E '
+                                        'COSTI QUANDO: Sabato 07 Febbraio ORE: '
+                                        'Dalle 22:00 DOVE: Arcistella - Piazza '
+                                        'Fontana 6, Trecasali (PR) TICKETS: € '
+                                        '10 online fino a venerdì 06/02 '
+                                        '(vendita dal 30/01) € 15 alla cassa '
+                                        'INGRESSO: Riservato ai soci ARCI CENA '
+                                        'CON NOI? Non arrivare a stomaco '
+                                        'vuoto! Prenota il tuo tavolo per la '
+                                        'cena al: 347 448 8060 Contatti: '
+                                        'info@arcistella.it',
+                         'dove': {'address': 'Piazza Fontana, 6',
+                                  'name': 'Arcistella',
+                                  'raw_text': 'Dove Arcistella Piazza Fontana, '
+                                              '6 Trecasali'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/12523226134415/the-foreign-resort-e-date-at-midnight-live-all-arcistella.png',
+                         'prezzo': '€ 10 online € 15 alla cassa',
+                         'quando': {'date_end': '2026-02-07',
+                                    'date_start': '2026-02-07',
+                                    'raw_text': 'Quando Dal 07/02/2026 al '
+                                                '07/02/2026 22:00',
+                                    'schedule': '22:00'}},
+              'list': {'category': None,
+                       'date': '7 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/12523226134415/the-foreign-resort-e-date-at-midnight-live-all-arcistella.png',
+                       'location': 'Arcistella',
+                       'stars': None,
+                       'title': 'The Foreign Resort e Date at Midnight live '
+                                "all'Arcistella di Trecasali"}},
+ 'scraped_at': '2026-02-02T19:46:27.107043',
+ 'source': 'city_today',
+ 'title': "The Foreign Resort e Date at Midnight live all'Arcistella di "
+          'Trecasali',
+ 'url': 'https://www.parmatoday.it/eventi/the-foreign-resort-e-date-at-midnight-live-all-arcistella-the-foreign-resort-e-date-at-midnight-13580673.html',
+ 'uuid': '143e9a50c261211f',
+ 'website': 'https://www.arcistella.it/etn/foreignresort/'}
+[2026-02-02T19:46:28.343+0000] {docker.py:429} INFO - 2026-02-02 19:46:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/j-t-b-lorenzo-garozzo-13395564.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:28.468+0000] {docker.py:429} INFO - 2026-02-02 19:46:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/j-t-b-lorenzo-garozzo-13395564.html>
+{'category': [],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': '580ff9bc44062c0f',
+ 'date_display': 'dal 5 al 7 febbraio 2026',
+ 'date_end': '2026-02-07',
+ 'date_start': '2026-02-05',
+ 'description': 'Debutto nazionale Di Lorenzo Garozzo Premio Hystrio Scritture '
+                'di Scena 2013 Finalista al 52° Premio Riccione per il Teatro '
+                'Regia Massimiliano Burini Assistente e dramaturg di scena '
+                'Giuseppe Albert Montalto Con Michele Bandini – il giornalista '
+                'Maurizio Bercini – il vecchio Dalila Cozzolino – la madre '
+                'Alfonso Postiglione – l’agente Ludovico Röhl – il fan Luci '
+                'Gianni Staropoli Musiche Riccardo Schippa Scene Dino Serra '
+                'Costumi Ilaria Carannante Produzione Solares Fondazione delle '
+                'Arti – Teatro delle Briciole Con il contributo di Ministero '
+                'della Cultura, Regione Emilia-Romagna, Comune di Parma Foto '
+                'credits Elisa Buonomo “Nel futuro ognuno sarà famoso al mondo '
+                'per quindici minuti” Andy Warhol” La pièce “J.T.B.” di '
+                'Lorenzo Garozzo è un testo complesso, una parabola spietata, '
+                'un primissimo piano sulla decadenza dei nostri giorni e sul '
+                'culto della celebrità, rivelazione e al tempo stesso '
+                'esasperazione del vuoto delle relazioni, '
+                'dell’iperprotettività e del narcisismo che portano ad un '
+                'isolamento dell’individuo. È un testo che ci pone davanti ad '
+                'un enorme interrogativo sul valore e sul concetto di reale, '
+                'in un’era della comunicazione virtuale dove i fatti '
+                'scompaiono e cedono il posto ad una apparenza che è il loro '
+                'esatto contrario. La rinuncia allo strumento del dialogo e la '
+                'sua alternanza tra presente e passato, ricorda la tecnica '
+                'della “anagnorisis” utilizzata nella tragedia greca per '
+                'svelare la vera natura dei personaggi e portarli alla '
+                'consapevolezza dei propri errori. La sua anti-teatralità '
+                'apparente ne potenzia a mio avviso le possibilità di '
+                'racconto, chiedendoci di lavorare lo spazio scenico, di '
+                'renderlo capace di contenerlo, di immaginarne un dispositivo '
+                'drammaturgico che possa significarlo e non rappresentarlo. '
+                '“J.T.B.” può essere considerato una moderna “tragedia greca” '
+                'che ci offre la possibilità di guardarci come non vorremmo '
+                'mai averci visti. Massimiliano Burini Note dell’autore del '
+                'testo Ho scritto J.T.B. nel 2012, mentre lavoravo in un '
+                'centro estivo per bambini. Di loro mi colpiva la semplicità, '
+                'la purezza, la facilità che avevano nel divertirsi, nello '
+                'stare assieme, nel ridere, nel piangere, la sincerità delle '
+                'loro emozioni. Allora mi sono chiesto quando sarebbe iniziato '
+                'quel lento processo di corruzione che avrebbe cominciato a '
+                'condurli nel mondo adulto, quando avrebbero perso la loro '
+                'innocenza, quando ciò che non era nato con loro avrebbe avuto '
+                'il sopravvento. Inevitabilmente però la domanda si è rivolta '
+                'a me: mi è già successo? E se sì, perché? In nome di cosa? È '
+                'nato un viaggio nel tempo, passato e presente, per chiedermi '
+                'cosa sia cambiato negli ultimi trenta anni e come noi siamo '
+                'cambiati con lui. La ricerca della celebrità, una delle più '
+                'forti ossessioni e distorsioni del nostro oggi, è emersa '
+                'allora in tutta la sua forza, come uno tra i più potenti '
+                'elementi scatenanti per il mio testo. Un testo nel quale '
+                'vivono personaggi che desiderano essere qualcuno, essere '
+                'famosi anche a costo di diventare sconosciuti a sé stessi.',
+ 'event_id': 'j-t-b-lorenzo-garozzo-13395564',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/8114569008595/j-t-b.jpg',
+ 'location_address': 'Parco Ducale, 1',
+ 'location_name': 'Teatro al Parco',
+ 'price': '€18',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'solaresdellearti.it',
+                                                'website': 'https://www.solaresdellearti.it/appuntamenti/j-t-b/'},
+                         'descrizione': 'Debutto nazionale Di Lorenzo Garozzo '
+                                        'Premio Hystrio Scritture di Scena '
+                                        '2013 Finalista al 52° Premio Riccione '
+                                        'per il Teatro Regia Massimiliano '
+                                        'Burini Assistente e dramaturg di '
+                                        'scena Giuseppe Albert Montalto Con '
+                                        'Michele Bandini – il giornalista '
+                                        'Maurizio Bercini – il vecchio Dalila '
+                                        'Cozzolino – la madre Alfonso '
+                                        'Postiglione – l’agente Ludovico Röhl '
+                                        '– il fan Luci Gianni Staropoli '
+                                        'Musiche Riccardo Schippa Scene Dino '
+                                        'Serra Costumi Ilaria Carannante '
+                                        'Produzione Solares Fondazione delle '
+                                        'Arti – Teatro delle Briciole Con il '
+                                        'contributo di Ministero della '
+                                        'Cultura, Regione Emilia-Romagna, '
+                                        'Comune di Parma Foto credits Elisa '
+                                        'Buonomo “Nel futuro ognuno sarà '
+                                        'famoso al mondo per quindici minuti” '
+                                        'Andy Warhol” La pièce “J.T.B.” di '
+                                        'Lorenzo Garozzo è un testo complesso, '
+                                        'una parabola spietata, un primissimo '
+                                        'piano sulla decadenza dei nostri '
+                                        'giorni e sul culto della celebrità, '
+                                        'rivelazione e al tempo stesso '
+                                        'esasperazione del vuoto delle '
+                                        'relazioni, dell’iperprotettività e '
+                                        'del narcisismo che portano ad un '
+                                        'isolamento dell’individuo. È un testo '
+                                        'che ci pone davanti ad un enorme '
+                                        'interrogativo sul valore e sul '
+                                        'concetto di reale, in un’era della '
+                                        'comunicazione virtuale dove i fatti '
+                                        'scompaiono e cedono il posto ad una '
+                                        'apparenza che è il loro esatto '
+                                        'contrario. La rinuncia allo strumento '
+                                        'del dialogo e la sua alternanza tra '
+                                        'presente e passato, ricorda la '
+                                        'tecnica della “anagnorisis” '
+                                        'utilizzata nella tragedia greca per '
+                                        'svelare la vera natura dei personaggi '
+                                        'e portarli alla consapevolezza dei '
+                                        'propri errori. La sua anti-teatralità '
+                                        'apparente ne potenzia a mio avviso le '
+                                        'possibilità di racconto, chiedendoci '
+                                        'di lavorare lo spazio scenico, di '
+                                        'renderlo capace di contenerlo, di '
+                                        'immaginarne un dispositivo '
+                                        'drammaturgico che possa significarlo '
+                                        'e non rappresentarlo. “J.T.B.” può '
+                                        'essere considerato una moderna '
+                                        '“tragedia greca” che ci offre la '
+                                        'possibilità di guardarci come non '
+                                        'vorremmo mai averci visti. '
+                                        'Massimiliano Burini Note dell’autore '
+                                        'del testo Ho scritto J.T.B. nel 2012, '
+                                        'mentre lavoravo in un centro estivo '
+                                        'per bambini. Di loro mi colpiva la '
+                                        'semplicità, la purezza, la facilità '
+                                        'che avevano nel divertirsi, nello '
+                                        'stare assieme, nel ridere, nel '
+                                        'piangere, la sincerità delle loro '
+                                        'emozioni. Allora mi sono chiesto '
+                                        'quando sarebbe iniziato quel lento '
+                                        'processo di corruzione che avrebbe '
+                                        'cominciato a condurli nel mondo '
+                                        'adulto, quando avrebbero perso la '
+                                        'loro innocenza, quando ciò che non '
+                                        'era nato con loro avrebbe avuto il '
+                                        'sopravvento. Inevitabilmente però la '
+                                        'domanda si è rivolta a me: mi è già '
+                                        'successo? E se sì, perché? In nome di '
+                                        'cosa? È nato un viaggio nel tempo, '
+                                        'passato e presente, per chiedermi '
+                                        'cosa sia cambiato negli ultimi trenta '
+                                        'anni e come noi siamo cambiati con '
+                                        'lui. La ricerca della celebrità, una '
+                                        'delle più forti ossessioni e '
+                                        'distorsioni del nostro oggi, è emersa '
+                                        'allora in tutta la sua forza, come '
+                                        'uno tra i più potenti elementi '
+                                        'scatenanti per il mio testo. Un testo '
+                                        'nel quale vivono personaggi che '
+                                        'desiderano essere qualcuno, essere '
+                                        'famosi anche a costo di diventare '
+                                        'sconosciuti a sé stessi.',
+                         'dove': {'address': 'Parco Ducale, 1',
+                                  'name': 'Teatro al Parco',
+                                  'raw_text': 'Dove Teatro al Parco Parco '
+                                              'Ducale, 1'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/8114569008595/j-t-b.jpg',
+                         'prezzo': '€18',
+                         'quando': {'date_end': '2026-02-07',
+                                    'date_start': '2026-02-05',
+                                    'raw_text': 'Quando Dal 05/02/2026 al '
+                                                '07/02/2026 21:00',
+                                    'schedule': '21:00'}},
+              'list': {'category': None,
+                       'date': 'dal 5 al 7 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/8114569008595/j-t-b.jpg',
+                       'location': 'Teatro al Parco',
+                       'stars': None,
+                       'title': '“J.T.B.” di Lorenzo Garozzo al Teatro al '
+                                'Parco'}},
+ 'scraped_at': '2026-02-02T19:46:28.458717',
+ 'source': 'city_today',
+ 'title': '“J.T.B.” di Lorenzo Garozzo al Teatro al Parco',
+ 'url': 'https://www.parmatoday.it/eventi/j-t-b-lorenzo-garozzo-13395564.html',
+ 'uuid': '5aff94ccd166e018',
+ 'website': 'https://www.solaresdellearti.it/appuntamenti/j-t-b/'}
+[2026-02-02T19:46:29.304+0000] {docker.py:429} INFO - 2026-02-02 19:46:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/faboo-oscar-vidal-13395579.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:29.416+0000] {docker.py:429} INFO - 2026-02-02 19:46:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/faboo-oscar-vidal-13395579.html>
+{'category': [],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': '30f0297d463b5bd3',
+ 'date_display': '8 febbraio 2026',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-02-08',
+ 'description': 'dai 3 anni Regia Oscar Vidal drammaturgia Oscar Vidal – '
+                'Daniele Segalin – Parisi Graziana attori Parisi Graziana – '
+                'Daniele Segalin musiche originali Josè Redondo Garcia Faboo, '
+                'il fascino della fantasia. Basta un corpo umano, alcuni '
+                'oggetti di uso quotidiano e una buona dose di creatività per '
+                'dare vita a Faboo. Il personaggio interpreta, si trasforma e '
+                'ci coinvolge nelle sue emozioni. Lo spettatore smette '
+                'lentamente di percepire la semplicità degli oggetti da '
+                'catturare, lasciandosi trasportare dal piacere '
+                'dell’illusione. Chi è Fabo? Faboo è un essere con l’anima di '
+                'un bambino. Nasce e da quel momento in poi non smette di '
+                'esplorare e scoprire. È curiosa di tutto ciò che lo circonda '
+                'e questa curiosità lo spinge a relazionarsi con il suo mondo '
+                'in modo creativo e giocoso. Impara attraverso il gioco e '
+                'scopre un mondo pieno di possibilità. Faboo ha una '
+                'particolarità: al posto della testata ha un bidone. Ciò rende '
+                'la sua espressione facciale del tutto neutra, permettendo '
+                'allo spettatore di compiere inconsciamente un esercizio di '
+                'empatia con il personaggio, riempiendo l’assenza di '
+                'espressione con le proprie emozioni, creando così un legame '
+                'molto coinvolgente. È uno spettacolo visivo per tutte le età, '
+                'della durata di circa 50 minuti. Attraverso il corpo e la '
+                'voce, due attori interpretano il personaggio e danno vita '
+                'agli oggetti con cui si relaziona. Il tema dello spettacolo '
+                'ruota attorno alla scoperta vitale di vari oggetti nelle '
+                'diverse fasi di crescita del personaggio. Conoscendolo, '
+                'osserviamo le infinite possibilità che ha un corpo '
+                'nell’esprimersi e nel comunicare. Rompe con ciò che è '
+                'convenzionale ed enfatizza parti del corpo insolite '
+                'nell’espressione quotidiana. La scenografia minimalista '
+                'invita lo spettatore alla concentrazione, focalizzando '
+                'l’attenzione sul personaggio.',
+ 'event_id': 'faboo-oscar-vidal-13395579',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/16260114174230/faboo.png',
+ 'location_address': 'Parco Ducale, 1',
+ 'location_name': 'Teatro al Parco',
+ 'price': '€18',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'solaresdellearti.it',
+                                                'website': 'https://www.solaresdellearti.it/appuntamenti/faboo/'},
+                         'descrizione': 'dai 3 anni Regia Oscar Vidal '
+                                        'drammaturgia Oscar Vidal – Daniele '
+                                        'Segalin – Parisi Graziana attori '
+                                        'Parisi Graziana – Daniele Segalin '
+                                        'musiche originali Josè Redondo Garcia '
+                                        'Faboo, il fascino della fantasia. '
+                                        'Basta un corpo umano, alcuni oggetti '
+                                        'di uso quotidiano e una buona dose di '
+                                        'creatività per dare vita a Faboo. Il '
+                                        'personaggio interpreta, si trasforma '
+                                        'e ci coinvolge nelle sue emozioni. Lo '
+                                        'spettatore smette lentamente di '
+                                        'percepire la semplicità degli oggetti '
+                                        'da catturare, lasciandosi trasportare '
+                                        'dal piacere dell’illusione. Chi è '
+                                        'Fabo? Faboo è un essere con l’anima '
+                                        'di un bambino. Nasce e da quel '
+                                        'momento in poi non smette di '
+                                        'esplorare e scoprire. È curiosa di '
+                                        'tutto ciò che lo circonda e questa '
+                                        'curiosità lo spinge a relazionarsi '
+                                        'con il suo mondo in modo creativo e '
+                                        'giocoso. Impara attraverso il gioco e '
+                                        'scopre un mondo pieno di possibilità. '
+                                        'Faboo ha una particolarità: al posto '
+                                        'della testata ha un bidone. Ciò rende '
+                                        'la sua espressione facciale del tutto '
+                                        'neutra, permettendo allo spettatore '
+                                        'di compiere inconsciamente un '
+                                        'esercizio di empatia con il '
+                                        'personaggio, riempiendo l’assenza di '
+                                        'espressione con le proprie emozioni, '
+                                        'creando così un legame molto '
+                                        'coinvolgente. È uno spettacolo visivo '
+                                        'per tutte le età, della durata di '
+                                        'circa 50 minuti. Attraverso il corpo '
+                                        'e la voce, due attori interpretano il '
+                                        'personaggio e danno vita agli oggetti '
+                                        'con cui si relaziona. Il tema dello '
+                                        'spettacolo ruota attorno alla '
+                                        'scoperta vitale di vari oggetti nelle '
+                                        'diverse fasi di crescita del '
+                                        'personaggio. Conoscendolo, osserviamo '
+                                        'le infinite possibilità che ha un '
+                                        'corpo nell’esprimersi e nel '
+                                        'comunicare. Rompe con ciò che è '
+                                        'convenzionale ed enfatizza parti del '
+                                        'corpo insolite nell’espressione '
+                                        'quotidiana. La scenografia '
+                                        'minimalista invita lo spettatore alla '
+                                        'concentrazione, focalizzando '
+                                        'l’attenzione sul personaggio.',
+                         'dove': {'address': 'Parco Ducale, 1',
+                                  'name': 'Teatro al Parco',
+                                  'raw_text': 'Dove Teatro al Parco Parco '
+                                              'Ducale, 1'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/16260114174230/faboo.png',
+                         'prezzo': '€18',
+                         'quando': {'date_end': '2026-02-08',
+                                    'date_start': '2026-02-08',
+                                    'raw_text': 'Quando Dal 08/02/2026 al '
+                                                '08/02/2026 16:30',
+                                    'schedule': '16:30'}},
+              'list': {'category': None,
+                       'date': '8 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/16260114174230/faboo.png',
+                       'location': 'Teatro al Parco',
+                       'stars': None,
+                       'title': "'Faboo, il fascino della fantasia' al Teatro "
+                                'al Parco'}},
+ 'scraped_at': '2026-02-02T19:46:29.413421',
+ 'source': 'city_today',
+ 'title': "'Faboo, il fascino della fantasia' al Teatro al Parco",
+ 'url': 'https://www.parmatoday.it/eventi/faboo-oscar-vidal-13395579.html',
+ 'uuid': '92f50ba7c1fd18be',
+ 'website': 'https://www.solaresdellearti.it/appuntamenti/faboo/'}
+[2026-02-02T19:46:31.060+0000] {docker.py:429} INFO - 2026-02-02 19:46:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/il-jazz-contemporaneo-di-giacomo-papetti-a-sounds-stories-13547232.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:31.169+0000] {docker.py:429} INFO - 2026-02-02 19:46:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/il-jazz-contemporaneo-di-giacomo-papetti-a-sounds-stories-13547232.html>
+{'category': [],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': '8b8c537bab94a187',
+ 'date_display': '8 febbraio 2026',
+ 'date_end': '2026-02-08',
+ 'date_start': '2026-02-08',
+ 'description': 'Prosegue la rassegna Sounds & Stories, organizzata dalla '
+                'Jazz’on Parma Orchestra, con un nuovo appuntamento dedicato '
+                'al jazz contemporaneo. Domenica 8 febbraio alle ore 17, è in '
+                'programma il concerto di The Loom, quartetto guidato dal '
+                'contrabbassista Giacomo Papetti. Accanto a Papetti, il '
+                'progetto riunisce tre tra i più attivi e originali '
+                'improvvisatori della scena italiana: Achille Succi al '
+                'clarinetto basso, Fulvio Sigurtà alla tromba e flicorno e '
+                'Nelide Bandello alla batteria. The Loom è un progetto che si '
+                'muove tra jazz, musica antica, folk e improvvisazione libera, '
+                'traendo ispirazione dalla polifonia pre-tonale e '
+                'rinascimentale. L’assenza di uno strumento armonico '
+                'tradizionale lascia ampio spazio a un intreccio di linee '
+                'melodiche autonome, che si sviluppano in forma corale e in '
+                'costante dialogo. I ruoli strumentali sono fluidi e in '
+                'continuo mutamento: l’improvvisazione diventa elemento '
+                'centrale nello sviluppo della forma musicale, in un '
+                'equilibrio basato sull’ascolto reciproco e sulla costruzione '
+                'collettiva del suono. L’immagine del telaio – da cui il nome '
+                'del progetto – richiama il rapporto tra intreccio tessile e '
+                'contrappunto musicale. Il quartetto ha pubblicato nel 2024 '
+                'l’album d’esordio “Chorale”, per Barly Records / Encore '
+                "Music. L'evento si terrà presso la sede dell'associazione "
+                "Jazz'on Parma Orchestra, in via Leonardo Sciascia 4/a, Parma. "
+                'Ingresso 10 euro. Prenotazione obbligatoria '
+                'www.vivaticket.com/it/ticket/giacomo-papetti-the-loom/285920 '
+                'Programma completo della rassegna su '
+                'www.jazzonparmaorchestra.it/soundsandstories',
+ 'event_id': 'il-jazz-contemporaneo-di-giacomo-papetti-a-sounds-stories-13547232',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/38584643734241/il-jazz-contemporaneo-di-giacomo-papetti-a-sounds-stories.jpg',
+ 'location_address': 'Via Leonardo Sciascia, 4a',
+ 'location_name': "Associazione Jazz'on Parma Orchestra",
+ 'price': 'EUR 10,00',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'jazzonparmaorchestra.it',
+                                                'website': 'https://www.jazzonparmaorchestra.it'},
+                         'descrizione': 'Prosegue la rassegna Sounds & '
+                                        'Stories, organizzata dalla Jazz’on '
+                                        'Parma Orchestra, con un nuovo '
+                                        'appuntamento dedicato al jazz '
+                                        'contemporaneo. Domenica 8 febbraio '
+                                        'alle ore 17, è in programma il '
+                                        'concerto di The Loom, quartetto '
+                                        'guidato dal contrabbassista Giacomo '
+                                        'Papetti. Accanto a Papetti, il '
+                                        'progetto riunisce tre tra i più '
+                                        'attivi e originali improvvisatori '
+                                        'della scena italiana: Achille Succi '
+                                        'al clarinetto basso, Fulvio Sigurtà '
+                                        'alla tromba e flicorno e Nelide '
+                                        'Bandello alla batteria. The Loom è un '
+                                        'progetto che si muove tra jazz, '
+                                        'musica antica, folk e improvvisazione '
+                                        'libera, traendo ispirazione dalla '
+                                        'polifonia pre-tonale e '
+                                        'rinascimentale. L’assenza di uno '
+                                        'strumento armonico tradizionale '
+                                        'lascia ampio spazio a un intreccio di '
+                                        'linee melodiche autonome, che si '
+                                        'sviluppano in forma corale e in '
+                                        'costante dialogo. I ruoli strumentali '
+                                        'sono fluidi e in continuo mutamento: '
+                                        'l’improvvisazione diventa elemento '
+                                        'centrale nello sviluppo della forma '
+                                        'musicale, in un equilibrio basato '
+                                        'sull’ascolto reciproco e sulla '
+                                        'costruzione collettiva del suono. '
+                                        'L’immagine del telaio – da cui il '
+                                        'nome del progetto – richiama il '
+[2026-02-02T19:46:31.171+0000] {docker.py:429} INFO - 'rapporto tra intreccio tessile e '
+                                        'contrappunto musicale. Il quartetto '
+                                        'ha pubblicato nel 2024 l’album '
+                                        'd’esordio “Chorale”, per Barly '
+                                        "Records / Encore Music. L'evento si "
+                                        'terrà presso la sede '
+                                        "dell'associazione Jazz'on Parma "
+                                        'Orchestra, in via Leonardo Sciascia '
+                                        '4/a, Parma. Ingresso 10 euro. '
+                                        'Prenotazione obbligatoria '
+                                        'www.vivaticket.com/it/ticket/giacomo-papetti-the-loom/285920 '
+                                        'Programma completo della rassegna su '
+                                        'www.jazzonparmaorchestra.it/soundsandstories',
+                         'dove': {'address': 'Via Leonardo Sciascia, 4a',
+                                  'name': "Associazione Jazz'on Parma "
+                                          'Orchestra',
+                                  'raw_text': "Dove Associazione Jazz'on Parma "
+                                              'Orchestra Via Leonardo '
+                                              'Sciascia, 4a'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/38584643734241/il-jazz-contemporaneo-di-giacomo-papetti-a-sounds-stories.jpg',
+                         'prezzo': 'EUR 10,00',
+                         'quando': {'date_end': '2026-02-08',
+                                    'date_start': '2026-02-08',
+                                    'raw_text': 'Quando Dal 08/02/2026 al '
+                                                '08/02/2026 17:00',
+                                    'schedule': '17:00'}},
+              'list': {'category': None,
+                       'date': '8 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/38584643734241/il-jazz-contemporaneo-di-giacomo-papetti-a-sounds-stories.jpg',
+                       'location': "Associazione Jazz'on Parma Orchestra",
+                       'stars': None,
+                       'title': 'Il jazz contemporaneo di Giacomo Papetti a '
+                                'Sounds & Stories'}},
+ 'scraped_at': '2026-02-02T19:46:31.167319',
+ 'source': 'city_today',
+ 'title': 'Il jazz contemporaneo di Giacomo Papetti a Sounds & Stories',
+ 'url': 'https://www.parmatoday.it/eventi/il-jazz-contemporaneo-di-giacomo-papetti-a-sounds-stories-13547232.html',
+ 'uuid': '90294a4561188e38',
+ 'website': 'https://www.jazzonparmaorchestra.it'}
+[2026-02-02T19:46:32.586+0000] {docker.py:429} INFO - 2026-02-02 19:46:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/teatro/teatro-para-minutos.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:32.700+0000] {docker.py:429} INFO - 2026-02-02 19:46:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/teatro/teatro-para-minutos.html>
+{'category': ['Teatri'],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': 'd63793ff528f028b',
+ 'date_display': 'dal 7 al 14 febbraio 2026',
+ 'date_end': '2026-02-14',
+ 'date_start': '2026-02-07',
+ 'description': 'Il teatro del drammaturgo spagnolo Juan Mayorga ha qualcosa '
+                'di enciclopedico, di matematico, soprattutto di filosofico. '
+                'Le possibilità, le apparenze e le diversità vengono indagate '
+                'con un rigore e un metodo tali da rendere i suoi testi dei '
+                'piccoli capolavori di precisione. Tanto più questa '
+                'caratteristica si può osservare in Teatro para minutos, una '
+                'serie di piccolissime quanto preziose produzioni testuali, in '
+                'cui l’estrema semplicità delle situazioni nasconde un '
+                'universo di domande e di sfaccettature, alcune delle quali '
+                'sorprendenti, esilaranti, violente o inquietanti. Gigi '
+                'Dall’Aglio, regista scomparso nel 2020 cui si devono molti '
+                'capolavori prodotti da Fondazione Teatro Due, aveva stretto '
+                'con Juan Mayorga un sodalizio intellettuale che era sfociato '
+                'nella messa in scena di molti suoi testi, fra i quali, nel '
+                '2017 per la prima volta in Italia, questi piccoli gioiellini '
+                'di breve durata. Ora sei di questi, La biblioteca del '
+                'diavolo, Brgs, Il concerto fatale, Giustizia!, Il buon '
+                'vicino, Le candidate, vengono ripresi e interpretati da '
+                'Roberto Abbati, Cristina Cattellani, Laura Cleri, Davide '
+                'Gagliardini, Salvatore Iaia, Luca Nucera, Bruna Rossi, '
+                'Massimiliano Sbarsi, Francesca Tripaldi e messi in scena uno '
+                'di seguito all’altro nell’ambito di un’unica serata dal 7 al '
+                '14 febbraio 2026, in un viaggio itinerante negli spazi del '
+                'Teatro Due. Teatro Para Minutos è una curiosità perfettamente '
+                'coerente col mondo di Juan Mayorga, autore madrileno '
+                'eclettico, matematico, filosofo, traduttore considerato uno '
+                'dei drammaturghi più rappresentativi della sua generazione e '
+                'insignito d’importanti riconoscimenti, fra cui quello di '
+                'miglior drammaturgo nel suo Paese. Il grande successo della '
+                'sua scrittura risiede nella capacità di trattare temi spinosi '
+                'ed attuali in maniera non esplicita. Per Mayorga infatti il '
+                'teatro ha il compito di mostrare una realtà non evidente e i '
+                'suoi strumenti sono la pura potenza delle parole e il '
+                'linguaggio, affidati allo spettatore e alla sua '
+                'immaginazione. Mayorga – aveva affermato Gigi Dall’Aglio - è '
+                'contro un teatro puramente commerciale e quindi a favore di '
+                'una creazione in qualche modo dissidente; nei testi di Teatro '
+                'Para Minutos la dissidenza sta nell’idea di tempo. Si tratta '
+                'di esperienze teatrali che durano dai quindici minuti in giù '
+                '(Para minutos significa per pochi minuti). Qui la creatività '
+                'dell’autore si sbizzarrisce, e realizza testi divertenti '
+                'sulla cronaca politica, su famosi eventi storici, su problemi '
+                'di attualità, ma anche su esperienze esistenziali, sulle '
+                'favole, sulla laicità…E, proprio come se si avesse di fronte '
+                'un’enorme scaffalatura piena di libri, ci si ferma a leggere '
+                'i titoli, si sfogliano le pagine, e ci si rende conto di '
+                'essere davanti a un campionario di tutto ciò che è umano, '
+                'anche nei suoi risvolti più disumani. Teatro para minutos è '
+                'una serie di aperture fulminee all’interno di universi '
+                'piccoli e grandissimi, uno sguardo fugace in stanze che '
+                'possono contenere universi privati o i massimi sistemi del '
+                'nostro Pianeta, è un percorso nel Bene e nel Male. Poetici e '
+                'scientifici allo stesso tempo, questi sketch parlano di '
+                'situazioni di ordinaria crudeltà come Le candidate su tre '
+                'donne che si fanno la guerra, le due inservienti che parlano '
+                'di destra e sinistra in Giustizia!, l’uomo che accusa l’altro '
+                'per tenerlo in pugno ne Il buon vicino, la guerra all’ultimo '
+                'libro fra due lettori di BRGS, la guerra civile spagnola che '
+                'riecheggia tra le mura di una casa alla fine del mondo de La '
+                'biblioteca del diavolo e la guerra che non può fermare la '
+                'musica di Il concerto fatale. Senza dubbio, nell’ambiente '
+                'teatrale - ha detto Juan Mayorga - domina l’opinione che un '
+                'testo debba durare oltre l’ora e mezza. Di sicuro c’è che il '
+                'valore di un’opera teatrale non dipende dalla sua estensione, '
+                'ma dalla sua intensità. Dipende dalla sua capacità di '
+                'assorbire e trasmettere esperienza. Dalla generosità con la '
+                'quale arricchisce in esperienza i suoi spettatori. Ciascuno '
+                'dei testi che costituiscono questa raccolta di “Teatro para '
+                'minutos” vuole essere letto non come abbozzo o spunto per un '
+                'testo più ampio, e ancora meno come residuo di un lungo testo '
+                'mancato. Ciascuno di questi testi è un’opera completa. Forse '
+                'la messa in scena può svelare passaggi nascosti che mettono '
+                'in relazione questi brevi testi, connessioni segrete più '
+                'visibili agli spettatori che a chi le ha scritte. Alla fin '
+                'fine, un testo sa sempre cose che il suo autore ignora. Dello '
+                'stesso autore nel mese di aprile (dal 20 al 30), verrà messo '
+                'in scena anche Himmelweg, la via del cielo, regia di Gigi '
+                'Dall’Aglio, ripreso e interpretato da Roberto Abbati, Luca '
+                'Nucera e Massimiliano Sbarsi. Informazioni e biglietteria: '
+                'Tel. 0521/230242 – biglietteria@teatrodue.org - '
+                'www.teatrodue.org',
+ 'event_id': 'teatro-para-minutos',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/59327346047110/teatro-para-minutos_da-sx_cleri-cattellani.jpg',
+ 'location_address': 'Viale Francesco Basetti, 12/a',
+ 'location_name': 'Teatro Due',
+ 'price': 'Informazioni e biglietteria: Tel. 0521/230242 – '
+          'biglietteria@teatrodue.org - www.teatrodue.org',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web teatrodue.org '
+                                                            'Tema San '
+                                                            'valentino',
+                                                'website': 'https://www.teatrodue.org'},
+                         'descrizione': 'Il teatro del drammaturgo spagnolo '
+                                        'Juan Mayorga ha qualcosa di '
+                                        'enciclopedico, di matematico, '
+                                        'soprattutto di filosofico. Le '
+                                        'possibilità, le apparenze e le '
+                                        'diversità vengono indagate con un '
+                                        'rigore e un metodo tali da rendere i '
+                                        'suoi testi dei piccoli capolavori di '
+                                        'precisione. Tanto più questa '
+                                        'caratteristica si può osservare in '
+                                        'Teatro para minutos, una serie di '
+                                        'piccolissime quanto preziose '
+                                        'produzioni testuali, in cui l’estrema '
+                                        'semplicità delle situazioni nasconde '
+                                        'un universo di domande e di '
+                                        'sfaccettature, alcune delle quali '
+                                        'sorprendenti, esilaranti, violente o '
+                                        'inquietanti. Gigi Dall’Aglio, regista '
+                                        'scomparso nel 2020 cui si devono '
+                                        'molti capolavori prodotti da '
+                                        'Fondazione Teatro Due, aveva stretto '
+                                        'con Juan Mayorga un sodalizio '
+                                        'intellettuale che era sfociato nella '
+                                        'messa in scena di molti suoi testi, '
+                                        'fra i quali, nel 2017 per la prima '
+                                        'volta in Italia, questi piccoli '
+                                        'gioiellini di breve durata. Ora sei '
+                                        'di questi, La biblioteca del diavolo, '
+                                        'Brgs, Il concerto fatale, Giustizia!, '
+                                        'Il buon vicino, Le candidate, vengono '
+                                        'ripresi e interpretati da Roberto '
+                                        'Abbati, Cristina Cattellani, Laura '
+                                        'Cleri, Davide Gagliardini, Salvatore '
+                                        'Iaia, Luca Nucera, Bruna Rossi, '
+                                        'Massimiliano Sbarsi, Francesca '
+                                        'Tripaldi e messi in scena uno di '
+                                        'seguito all’altro nell’ambito di '
+                                        'un’unica serata dal 7 al 14 febbraio '
+                                        '2026, in un viaggio itinerante negli '
+                                        'spazi del Teatro Due. Teatro Para '
+                                        'Minutos è una curiosità perfettamente '
+                                        'coerente col mondo di Juan Mayorga, '
+                                        'autore madrileno eclettico, '
+                                        'matematico, filosofo, traduttore '
+                                        'considerato uno dei drammaturghi più '
+                                        'rappresentativi della sua generazione '
+                                        'e insignito d’importanti '
+                                        'riconoscimenti, fra cui quello di '
+                                        'miglior drammaturgo nel suo Paese. Il '
+                                        'grande successo della sua scrittura '
+                                        'risiede nella capacità di trattare '
+                                        'temi spinosi ed attuali in maniera '
+                                        'non esplicita. Per Mayorga infatti il '
+                                        'teatro ha il compito di mostrare una '
+                                        'realtà non evidente e i suoi '
+                                        'strumenti sono la pura potenza delle '
+                                        'parole e il linguaggio, affidati allo '
+                                        'spettatore e alla sua immaginazione. '
+                                        'Mayorga – aveva affermato Gigi '
+                                        'Dall’Aglio - è contro un teatro '
+                                        'puramente commerciale e quindi a '
+                                        'favore di una creazione in qualche '
+                                        'modo dissidente; nei testi di Teatro '
+                                        'Para Minutos la dissidenza sta '
+                                        'nell’idea di tempo. Si tratta di '
+                                        'esperienze teatrali che durano dai '
+                                        'quindici minuti in giù (Para minutos '
+                                        'significa per pochi minuti). Qui la '
+                                        'creatività dell’autore si '
+                                        'sbizzarrisce, e realizza testi '
+                                        'divertenti sulla cronaca politica, su '
+                                        'famosi eventi storici, su problemi di '
+                                        'attualità, ma anche su esperienze '
+                                        'esistenziali, sulle favole, sulla '
+                                        'laicità…E, proprio come se si avesse '
+                                        'di fronte un’enorme scaffalatura '
+                                        'piena di libri, ci si ferma a leggere '
+                                        'i titoli, si sfogliano le pagine, e '
+                                        'ci si rende conto di essere davanti a '
+                                        'un campionario di tutto ciò che è '
+                                        'umano, anche nei suoi risvolti più '
+                                        'disumani. Teatro para minutos è una '
+                                        'serie di aperture fulminee '
+                                        'all’interno di universi piccoli e '
+                                        'grandissimi, uno sguardo fugace in '
+                                        'stanze che possono contenere universi '
+                                        'privati o i massimi sistemi del '
+                                        'nostro Pianeta, è un percorso nel '
+                                        'Bene e nel Male. Poetici e '
+[2026-02-02T19:46:32.737+0000] {docker.py:429} INFO - 'scientifici allo stesso tempo, questi '
+                                        'sketch parlano di situazioni di '
+                                        'ordinaria crudeltà come Le candidate '
+                                        'su tre donne che si fanno la guerra, '
+                                        'le due inservienti che parlano di '
+                                        'destra e sinistra in Giustizia!, '
+                                        'l’uomo che accusa l’altro per tenerlo '
+                                        'in pugno ne Il buon vicino, la guerra '
+                                        'all’ultimo libro fra due lettori di '
+                                        'BRGS, la guerra civile spagnola che '
+                                        'riecheggia tra le mura di una casa '
+                                        'alla fine del mondo de La biblioteca '
+                                        'del diavolo e la guerra che non può '
+                                        'fermare la musica di Il concerto '
+                                        'fatale. Senza dubbio, nell’ambiente '
+                                        'teatrale - ha detto Juan Mayorga - '
+                                        'domina l’opinione che un testo debba '
+                                        'durare oltre l’ora e mezza. Di sicuro '
+                                        'c’è che il valore di un’opera '
+                                        'teatrale non dipende dalla sua '
+                                        'estensione, ma dalla sua intensità. '
+                                        'Dipende dalla sua capacità di '
+                                        'assorbire e trasmettere esperienza. '
+                                        'Dalla generosità con la quale '
+                                        'arricchisce in esperienza i suoi '
+                                        'spettatori. Ciascuno dei testi che '
+                                        'costituiscono questa raccolta di '
+                                        '“Teatro para minutos” vuole essere '
+                                        'letto non come abbozzo o spunto per '
+                                        'un testo più ampio, e ancora meno '
+                                        'come residuo di un lungo testo '
+                                        'mancato. Ciascuno di questi testi è '
+                                        'un’opera completa. Forse la messa in '
+                                        'scena può svelare passaggi nascosti '
+                                        'che mettono in relazione questi brevi '
+                                        'testi, connessioni segrete più '
+                                        'visibili agli spettatori che a chi le '
+                                        'ha scritte. Alla fin fine, un testo '
+                                        'sa sempre cose che il suo autore '
+                                        'ignora. Dello stesso autore nel mese '
+                                        'di aprile (dal 20 al 30), verrà messo '
+                                        'in scena anche Himmelweg, la via del '
+                                        'cielo, regia di Gigi Dall’Aglio, '
+                                        'ripreso e interpretato da Roberto '
+                                        'Abbati, Luca Nucera e Massimiliano '
+                                        'Sbarsi. Informazioni e biglietteria: '
+                                        'Tel. 0521/230242 – '
+                                        'biglietteria@teatrodue.org - '
+                                        'www.teatrodue.org',
+                         'dove': {'address': 'Viale Francesco Basetti, 12/a',
+                                  'name': 'Teatro Due',
+                                  'raw_text': 'Dove Teatro Due Viale Francesco '
+                                              'Basetti, 12/a'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/59327346047110/teatro-para-minutos_da-sx_cleri-cattellani.jpg',
+                         'prezzo': 'Informazioni e biglietteria: Tel. '
+                                   '0521/230242 – biglietteria@teatrodue.org - '
+                                   'www.teatrodue.org',
+                         'quando': {'date_end': '2026-02-14',
+                                    'date_start': '2026-02-07',
+                                    'raw_text': 'Quando Dal 07/02/2026 al '
+                                                '14/02/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Teatri',
+                       'date': 'dal 7 al 14 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/59327346047110/teatro-para-minutos_da-sx_cleri-cattellani.jpg',
+                       'location': 'Teatro Due',
+                       'stars': 5,
+                       'title': 'Teatro para minutos'}},
+ 'scraped_at': '2026-02-02T19:46:32.697066',
+ 'source': 'city_today',
+ 'title': 'Teatro para minutos',
+ 'url': 'https://www.parmatoday.it/eventi/teatro/teatro-para-minutos.html',
+ 'uuid': '1a806f379197579a',
+ 'website': 'https://www.teatrodue.org'}
+[2026-02-02T19:46:33.223+0000] {docker.py:429} INFO - 2026-02-02 19:46:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/orizzonti-parmigiani-una-personale-di-ermanno-mazza-inaugurazione-sabato-31-gennaio-ore-17-00-ermanno-mazza-13478364.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:33.344+0000] {docker.py:429} INFO - 2026-02-02 19:46:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/orizzonti-parmigiani-una-personale-di-ermanno-mazza-inaugurazione-sabato-31-gennaio-ore-17-00-ermanno-mazza-13478364.html>
+{'category': [],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': '1cebe7eb3dd3f95e',
+ 'date_display': 'dal 31 gennaio al 12 febbraio 2026',
+ 'date_end': '2026-02-12',
+ 'date_start': '2026-01-31',
+ 'description': 'Questa rassegna presenta una selezione di paesaggi del '
+                'territorio parmense letti attraverso la sensibilità di '
+                'Ermanno Mazza, autore che ha attraversato tecniche e '
+                'linguaggi con libertà e misura, senza mai trasformare lo '
+                'stile in un fine. Nei suoi lavori il paesaggio non è un '
+                'soggetto da descrivere, ma un luogo da ascoltare: colline, '
+                'strade, margini urbani e naturali diventano occasioni per '
+                'restituire atmosfere, memorie, stati interiori.',
+ 'event_id': 'orizzonti-parmigiani-una-personale-di-ermanno-mazza-inaugurazione-sabato-31-gennaio-ore-17-00-ermanno-mazza-13478364',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/51819412079723/orizzonti-parmigiani-una-personale-di-ermanno-mazza-inaugurazione-sabato-31-gennaio-ore-17-00.jpg',
+ 'location_address': 'Strada Giordano Cavestro, 6',
+ 'location_name': "Galleria Sant'Andrea",
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web ucai-parma.it',
+                                                'website': 'https://www.ucai-parma.it'},
+                         'descrizione': 'Questa rassegna presenta una '
+                                        'selezione di paesaggi del territorio '
+                                        'parmense letti attraverso la '
+                                        'sensibilità di Ermanno Mazza, autore '
+                                        'che ha attraversato tecniche e '
+                                        'linguaggi con libertà e misura, senza '
+                                        'mai trasformare lo stile in un fine. '
+                                        'Nei suoi lavori il paesaggio non è un '
+                                        'soggetto da descrivere, ma un luogo '
+                                        'da ascoltare: colline, strade, '
+                                        'margini urbani e naturali diventano '
+                                        'occasioni per restituire atmosfere, '
+                                        'memorie, stati interiori.',
+                         'dove': {'address': 'Strada Giordano Cavestro, 6',
+                                  'name': "Galleria Sant'Andrea",
+                                  'raw_text': "Dove Galleria Sant'Andrea "
+                                              'Strada Giordano Cavestro, 6'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/51819412079723/orizzonti-parmigiani-una-personale-di-ermanno-mazza-inaugurazione-sabato-31-gennaio-ore-17-00.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-02-12',
+                                    'date_start': '2026-01-31',
+                                    'raw_text': 'Quando Dal 31/01/2026 al '
+                                                '12/02/2026 da martedì a '
+                                                'sabato dalle 10:00 alle 12:00 '
+                                                'e dalle 16:00 alle 19:00 '
+                                                'Domenica dalle 16:00 alle '
+                                                '19:00 Lunedì chiuso',
+                                    'schedule': 'da martedì a sabato dalle '
+                                                '10:00 alle 12:00 e dalle '
+                                                '16:00 alle 19:00 Domenica '
+                                                'dalle 16:00 alle 19:00 Lunedì '
+                                                'chiuso'}},
+              'list': {'category': None,
+                       'date': 'dal 31 gennaio al 12 febbraio 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/51819412079723/orizzonti-parmigiani-una-personale-di-ermanno-mazza-inaugurazione-sabato-31-gennaio-ore-17-00.jpg',
+                       'location': "Galleria Sant'Andrea",
+                       'stars': None,
+                       'title': 'Orizzonti parmigiani , una personale di '
+                                'Ermanno Mazza'}},
+ 'scraped_at': '2026-02-02T19:46:33.339942',
+ 'source': 'city_today',
+ 'title': 'Orizzonti parmigiani , una personale di Ermanno Mazza',
+ 'url': 'https://www.parmatoday.it/eventi/orizzonti-parmigiani-una-personale-di-ermanno-mazza-inaugurazione-sabato-31-gennaio-ore-17-00-ermanno-mazza-13478364.html',
+ 'uuid': 'ed858a2957e3810e',
+ 'website': 'https://www.ucai-parma.it'}
+[2026-02-02T19:46:34.298+0000] {docker.py:429} INFO - 2026-02-02 19:46:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/music-club-feltrinelli-parma.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:34.410+0000] {docker.py:429} INFO - 2026-02-02 19:46:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/music-club-feltrinelli-parma.html>
+{'category': ['Concerti'],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': '10e3b5c319e53ac3',
+ 'date_display': 'dal 24 settembre 2025 al 10 marzo 2026',
+ 'date_end': '2026-03-10',
+ 'date_start': '2025-09-24',
+ 'description': 'Dopo il successo della passata edizione, riparte il 24 '
+                'settembre Music Club – Quali libri leggono i musicisti? la '
+                'rassegna ideata dalla Fondazione Toscanini in collaborazione '
+                'con Feltrinelli Librerie, che unisce musica, libri e '
+                'conversazioni con artisti e protagonisti del panorama '
+                'musicale contemporaneo. Il primo appuntamento è in programma '
+                'mercoledì 24 settembre 2025, ore 18 presso Feltrinelli '
+                'Librerie di Parma (via Farini 17). La serata sarà dedicata a '
+                'Erik Satie, nel centenario della sua morte, con un incontro- '
+                'dialogo con Luca Boero, musicista polistrumentista e '
+                'responsabile dell’archivio musicale della Fondazione '
+                'Toscanini, autore del volume “Rida senza dare nell’occhio. '
+                'Erik Satie tra umorismo e ironia” (LeMus edizioni). A rendere '
+                'l’incontro ancora più coinvolgente sarà la musica dal vivo di '
+                'Elisabetta Piras al pianoforte, che permetterà al pubblico di '
+                'ascoltare una selezione di brani di Satie. L’ingresso è '
+                'gratuito fino a esaurimento posti, con prenotazione a '
+                'biglietteria@latoscanini.it Il calendario di Music Club '
+                '2025/26 Dopo l’incontro di settembre, la rassegna proseguirà '
+                'fino a marzo con altri appuntamenti, tutti a ingresso '
+                'gratuito, che porteranno alla Feltrinelli artisti di diversi '
+                'linguaggi e generazioni, ospiti della Stagione 2025/26 della '
+                'Filarmonica Toscanini all’Auditorium Paganini di Parma: '
+                '\uf0b7 22 ottobre 2025, ore 18 – Simone Rubino, '
+                'percussionista, solista nel concerto inaugurale di stagione '
+                'il 25 ottobre 2025 ore 18 (e nell’Anteprima Giovani il 24 '
+                'ottobre ore 20.30, serata dedicata agli under 5) \uf0b7 6 '
+                'novembre 2025, ore 18 – Valentina Scheldhofen Ciardelli, '
+                'contrabbassista e compositrice, autrice del brano in '
+                'programma il 7 novembre ore 20.30) \uf0b7 10 febbraio 2026, '
+                'ore 18 – Nicolò Umberto Foron, direttore d’orchestra, sul '
+                'podio della Filarmonica il 12 febbraio ore 20.30 \uf0b7 10 '
+                'marzo 2026, ore 18 – Stefania Panighini, regista e '
+                'drammaturga, e Virginia Guastella, compositrice, pianista e '
+                'direttrice d’orchestra, protagoniste di “Le sorelle '
+                'Boulanger” l’11 marzo ore 20.30 al CPM Toscanini, uno '
+                'spettacolo tra musica, danza, parole e immagini dedicato alla '
+                'storia delle due sorelle. Anche i grandi artisti amano avere '
+                'tra le mani o ascoltare un buon libro, che sia un romanzo, un '
+                'saggio storico o sociologico, un fantasy o un’autobiografia. '
+                'Seguire i gusti letterari dei nostri artisti preferiti può '
+                'rivelarsi sorprendentemente illuminante: possiamo scoprire le '
+                'origini di certi generi musicali o le vite di grandi artisti '
+                'rimasti ai margini della scena, conoscere nuovi gruppi o '
+                'cantanti da seguire, e persino approfondire le passioni e le '
+                'preferenze personali dei nostri idoli. Allora perché non '
+                'lasciarci ispirare e farci suggerire una buona lettura? Music '
+                'Club si conferma un momento di incontro e scambio: '
+                'un’occasione per ascoltare da vicino i protagonisti della '
+                'scena musicale contemporanea e per scoprire la musica in '
+                'dialogo con letteratura, teatro e nuove prospettive '
+                'artistiche. Per informazioni Biglietteria La Toscanini Parco '
+                'della Musica | Viale Barilla, 27/A - 43121 (Parma) Telefono: '
+                '0521 391339 (attivo negli orari di biglietteria) E-mail: '
+                'biglietteria@latoscanini.it Orari di apertura: martedì e '
+                'mercoledì dalle 10 alle 13; giovedì e venerdì dalle 10 alle '
+                '13 e dalle 15 alle 18. www.latoscanini.it',
+ 'event_id': 'music-club-feltrinelli-parma',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/1518810852822/music-club-2024.jpg',
+ 'location_address': 'Via Farini, 17',
+ 'location_name': 'La Feltrinelli',
+ 'price': 'Gratis',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web '
+                                                            'latoscanini.it',
+                                                'website': 'https://www.latoscanini.it'},
+                         'descrizione': 'Dopo il successo della passata '
+                                        'edizione, riparte il 24 settembre '
+                                        'Music Club – Quali libri leggono i '
+                                        'musicisti? la rassegna ideata dalla '
+                                        'Fondazione Toscanini in '
+                                        'collaborazione con Feltrinelli '
+                                        'Librerie, che unisce musica, libri e '
+                                        'conversazioni con artisti e '
+                                        'protagonisti del panorama musicale '
+                                        'contemporaneo. Il primo appuntamento '
+                                        'è in programma mercoledì 24 settembre '
+                                        '2025, ore 18 presso Feltrinelli '
+                                        'Librerie di Parma (via Farini 17). La '
+                                        'serata sarà dedicata a Erik Satie, '
+                                        'nel centenario della sua morte, con '
+                                        'un incontro- dialogo con Luca Boero, '
+                                        'musicista polistrumentista e '
+                                        'responsabile dell’archivio musicale '
+                                        'della Fondazione Toscanini, autore '
+                                        'del volume “Rida senza dare '
+                                        'nell’occhio. Erik Satie tra umorismo '
+                                        'e ironia” (LeMus edizioni). A rendere '
+                                        'l’incontro ancora più coinvolgente '
+                                        'sarà la musica dal vivo di Elisabetta '
+                                        'Piras al pianoforte, che permetterà '
+                                        'al pubblico di ascoltare una '
+                                        'selezione di brani di Satie. '
+                                        'L’ingresso è gratuito fino a '
+                                        'esaurimento posti, con prenotazione a '
+                                        'biglietteria@latoscanini.it Il '
+                                        'calendario di Music Club 2025/26 Dopo '
+                                        'l’incontro di settembre, la rassegna '
+                                        'proseguirà fino a marzo con altri '
+                                        'appuntamenti, tutti a ingresso '
+                                        'gratuito, che porteranno alla '
+                                        'Feltrinelli artisti di diversi '
+                                        'linguaggi e generazioni, ospiti della '
+                                        'Stagione 2025/26 della Filarmonica '
+                                        'Toscanini all’Auditorium Paganini di '
+                                        'Parma: \uf0b7 22 ottobre 2025, ore 18 '
+                                        '– Simone Rubino, percussionista, '
+                                        'solista nel concerto inaugurale di '
+                                        'stagione il 25 ottobre 2025 ore 18 (e '
+                                        'nell’Anteprima Giovani il 24 ottobre '
+                                        'ore 20.30, serata dedicata agli under '
+                                        '5) \uf0b7 6 novembre 2025, ore 18 – '
+                                        'Valentina Scheldhofen Ciardelli, '
+                                        'contrabbassista e compositrice, '
+                                        'autrice del brano in programma il 7 '
+                                        'novembre ore 20.30) \uf0b7 10 '
+                                        'febbraio 2026, ore 18 – Nicolò '
+                                        'Umberto Foron, direttore d’orchestra, '
+                                        'sul podio della Filarmonica il 12 '
+                                        'febbraio ore 20.30 \uf0b7 10 marzo '
+                                        '2026, ore 18 – Stefania Panighini, '
+                                        'regista e drammaturga, e Virginia '
+                                        'Guastella, compositrice, pianista e '
+                                        'direttrice d’orchestra, protagoniste '
+                                        'di “Le sorelle Boulanger” l’11 marzo '
+                                        'ore 20.30 al CPM Toscanini, uno '
+                                        'spettacolo tra musica, danza, parole '
+                                        'e immagini dedicato alla storia delle '
+                                        'due sorelle. Anche i grandi artisti '
+                                        'amano avere tra le mani o ascoltare '
+                                        'un buon libro, che sia un romanzo, un '
+                                        'saggio storico o sociologico, un '
+                                        'fantasy o un’autobiografia. Seguire i '
+                                        'gusti letterari dei nostri artisti '
+                                        'preferiti può rivelarsi '
+                                        'sorprendentemente illuminante: '
+                                        'possiamo scoprire le origini di certi '
+                                        'generi musicali o le vite di grandi '
+                                        'artisti rimasti ai margini della '
+                                        'scena, conoscere nuovi gruppi o '
+                                        'cantanti da seguire, e persino '
+                                        'approfondire le passioni e le '
+                                        'preferenze personali dei nostri '
+                                        'idoli. Allora perché non lasciarci '
+                                        'ispirare e farci suggerire una buona '
+                                        'lettura? Music Club si conferma un '
+                                        'momento di incontro e scambio: '
+                                        'un’occasione per ascoltare da vicino '
+                                        'i protagonisti della scena musicale '
+                                        'contemporanea e per scoprire la '
+                                        'musica in dialogo con letteratura, '
+                                        'teatro e nuove prospettive '
+                                        'artistiche. Per informazioni '
+                                        'Biglietteria La Toscanini Parco della '
+                                        'Musica | Viale Barilla, 27/A - 43121 '
+                                        '(Parma) Telefono: 0521 391339 (attivo '
+                                        'negli orari di biglietteria) E-mail: '
+                                        'biglietteria@latoscanini.it Orari di '
+                                        'apertura: martedì e mercoledì dalle '
+                                        '10 alle 13; giovedì e venerdì dalle '
+                                        '10 alle 13 e dalle 15 alle 18. '
+                                        'www.latoscanini.it',
+                         'dove': {'address': 'Via Farini, 17',
+                                  'name': 'La Feltrinelli',
+                                  'raw_text': 'Dove La Feltrinelli Via Farini, '
+                                              '17'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/1518810852822/music-club-2024.jpg',
+                         'prezzo': 'Gratis',
+                         'quando': {'date_end': '2026-03-10',
+                                    'date_start': '2025-09-24',
+                                    'raw_text': 'Quando Dal 24/09/2025 al '
+                                                '10/03/2026 18',
+                                    'schedule': '18'}},
+              'list': {'category': 'Concerti',
+                       'date': 'dal 24 settembre 2025 al 10 marzo 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/1518810852822/music-club-2024.jpg',
+                       'location': 'La Feltrinelli',
+                       'stars': 4,
+                       'title': 'Riparte Music Club: tra parole e musica alla '
+                                'Feltrinelli di Parma'}},
+ 'scraped_at': '2026-02-02T19:46:34.406399',
+ 'source': 'city_today',
+ 'title': 'Riparte Music Club: tra parole e musica alla Feltrinelli di Parma',
+ 'url': 'https://www.parmatoday.it/eventi/music-club-feltrinelli-parma.html',
+ 'uuid': '2bcde6fda0b5319f',
+ 'website': 'https://www.latoscanini.it'}
+[2026-02-02T19:46:35.228+0000] {docker.py:429} INFO - 2026-02-02 19:46:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.parmatoday.it/eventi/mostra-Steve-McCurry-palazzo-pigorini.html> (referer: https://www.parmatoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:46:35.345+0000] {docker.py:429} INFO - 2026-02-02 19:46:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.parmatoday.it/eventi/mostra-Steve-McCurry-palazzo-pigorini.html>
+{'category': ['Mostre'],
+ 'city': 'Parma',
+ 'city_id': None,
+ 'content_hash': '4292ffe8f5a32e22',
+ 'date_display': 'dal 22 novembre 2025 al 12 aprile 2026',
+ 'date_end': '2026-04-12',
+ 'date_start': '2025-11-22',
+ 'description': 'Steve McCurry non è soltanto uno dei più grandi maestri della '
+                'fotografia contemporanea, pluripremiato con il prestigioso '
+                'World Press Photo Award – spesso considerato il “Premio '
+                'Nobel” della fotografia –, ma continua ad essere un punto di '
+                'riferimento per un vastissimo pubblico, specialmente tra i '
+                'giovani. Nelle sue immagini, molti riconoscono un modo unico '
+                'di guardare il mondo e, in qualche modo, se stessi. Dal 22 '
+                'novembre 2025 al 12 aprile 2026, Steve McCurry sarà '
+                'protagonista a Parma con una grande mostra allestita a '
+                'Palazzo Pigorini, nei suggestivi spazi del primo e secondo '
+                'piano. Le fotografie non seguiranno un criterio cronologico o '
+                'geografico, ma saranno accostate per affinità di soggetti, '
+                'emozioni e atmosfere, cercando quei fili invisibili che '
+                'legano persone e luoghi, anche lontanissimi tra loro. '
+                'L’allestimento evocherà quel senso profondo di umanità che si '
+                'respira in ogni scatto di McCurry. In mostra non mancheranno '
+                'le sue immagini più celebri, come l’indimenticabile ritratto '
+                'della ragazza afghana, fotografie realizzate in oltre '
+                'quarant’anni di carriera: scatti intensi dal Sud-Est '
+                'asiatico, dalla Cina, dal Sud America e da molte altre parti '
+                'del mondo. Ogni volto ritratto da McCurry è un concentrato di '
+                'storie, emozioni, dolore, speranza, paura e bellezza. «Ho '
+                'imparato a essere paziente. Se aspetti abbastanza, le persone '
+                'dimenticano la macchina fotografica e la loro anima comincia '
+                'a librarsi verso di te», racconta il fotografo. Instancabile '
+                'viaggiatore, McCurry ha fatto del movimento una filosofia di '
+                'vita: «Il solo fatto di viaggiare e conoscere culture diverse '
+                'mi dà gioia e una carica inesauribile». A cura di Biba '
+                'Giacchetti con il Team Mostre di Orion57 Mostra organizzata '
+                'da ARTIKA, con il patrocinio del Comune di Parma I biglietti '
+                'possono essere acquistati direttamente in mostra o su '
+                'www.midaticket.it',
+ 'event_id': 'mostra-Steve-McCurry-palazzo-pigorini',
+ 'image_url': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/18009037891306/immagine-2025-11-05-114946.jpg',
+ 'location_address': 'Strada della Repubblica, 29A',
+ 'location_name': 'Palazzo Pigorini',
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Sito '
+                                                            'web artika.it',
+                                                'website': 'https://www.artika.it/mostra/steve-mccurry-orizzonti-lontani'},
+                         'descrizione': 'Steve McCurry non è soltanto uno dei '
+                                        'più grandi maestri della fotografia '
+                                        'contemporanea, pluripremiato con il '
+                                        'prestigioso World Press Photo Award – '
+                                        'spesso considerato il “Premio Nobel” '
+                                        'della fotografia –, ma continua ad '
+                                        'essere un punto di riferimento per un '
+                                        'vastissimo pubblico, specialmente tra '
+                                        'i giovani. Nelle sue immagini, molti '
+                                        'riconoscono un modo unico di guardare '
+                                        'il mondo e, in qualche modo, se '
+                                        'stessi. Dal 22 novembre 2025 al 12 '
+                                        'aprile 2026, Steve McCurry sarà '
+                                        'protagonista a Parma con una grande '
+                                        'mostra allestita a Palazzo Pigorini, '
+                                        'nei suggestivi spazi del primo e '
+                                        'secondo piano. Le fotografie non '
+                                        'seguiranno un criterio cronologico o '
+                                        'geografico, ma saranno accostate per '
+                                        'affinità di soggetti, emozioni e '
+                                        'atmosfere, cercando quei fili '
+                                        'invisibili che legano persone e '
+                                        'luoghi, anche lontanissimi tra loro. '
+                                        'L’allestimento evocherà quel senso '
+                                        'profondo di umanità che si respira in '
+                                        'ogni scatto di McCurry. In mostra non '
+                                        'mancheranno le sue immagini più '
+                                        'celebri, come l’indimenticabile '
+                                        'ritratto della ragazza afghana, '
+                                        'fotografie realizzate in oltre '
+                                        'quarant’anni di carriera: scatti '
+                                        'intensi dal Sud-Est asiatico, dalla '
+                                        'Cina, dal Sud America e da molte '
+                                        'altre parti del mondo. Ogni volto '
+                                        'ritratto da McCurry è un concentrato '
+                                        'di storie, emozioni, dolore, '
+                                        'speranza, paura e bellezza. «Ho '
+                                        'imparato a essere paziente. Se '
+                                        'aspetti abbastanza, le persone '
+                                        'dimenticano la macchina fotografica e '
+                                        'la loro anima comincia a librarsi '
+                                        'verso di te», racconta il fotografo. '
+                                        'Instancabile viaggiatore, McCurry ha '
+                                        'fatto del movimento una filosofia di '
+                                        'vita: «Il solo fatto di viaggiare e '
+                                        'conoscere culture diverse mi dà gioia '
+                                        'e una carica inesauribile». A cura di '
+                                        'Biba Giacchetti con il Team Mostre di '
+                                        'Orion57 Mostra organizzata da ARTIKA, '
+                                        'con il patrocinio del Comune di Parma '
+                                        'I biglietti possono essere acquistati '
+                                        'direttamente in mostra o su '
+                                        'www.midaticket.it',
+                         'dove': {'address': 'Strada della Repubblica, 29A',
+                                  'name': 'Palazzo Pigorini',
+                                  'raw_text': 'Dove Palazzo Pigorini Strada '
+                                              'della Repubblica, 29A'},
+                         'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-low/18009037891306/immagine-2025-11-05-114946.jpg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-04-12',
+                                    'date_start': '2025-11-22',
+                                    'raw_text': 'Quando Dal 22/11/2025 al '
+                                                '12/04/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Mostre',
+                       'date': 'dal 22 novembre 2025 al 12 aprile 2026',
+                       'image': '//citynews-parmatoday.stgy.ovh/~media/horizontal-mid/18009037891306/immagine-2025-11-05-114946.jpg',
+                       'location': 'Palazzo Pigorini',
+                       'stars': 5,
+                       'title': 'La grande mostra dedicata a Steve McCurry a '
+                                'Palazzo Pigorini'}},
+ 'scraped_at': '2026-02-02T19:46:35.341769',
+ 'source': 'city_today',
+ 'title': 'La grande mostra dedicata a Steve McCurry a Palazzo Pigorini',
+ 'url': 'https://www.parmatoday.it/eventi/mostra-Steve-McCurry-palazzo-pigorini.html',
+ 'uuid': 'c8c16eccff6091f0',
+ 'website': 'https://www.artika.it/mostra/steve-mccurry-orizzonti-lontani'}
+[2026-02-02T19:46:35.349+0000] {docker.py:429} INFO - 2026-02-02 19:46:35 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-02-02T19:46:35.353+0000] {docker.py:429} INFO - 2026-02-02 19:46:35 [scrapy.extensions.feedexport] INFO: Stored json feed (10 items) in: /app/city_today/output/eventi_parma_questa-settimana_20260202_194621.json
+[2026-02-02T19:46:35.354+0000] {docker.py:429} INFO - 2026-02-02 19:46:35 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 5031,
+ 'downloader/request_count': 12,
+ 'downloader/request_method_count/GET': 12,
+ 'downloader/response_bytes': 1695071,
+ 'downloader/response_count': 12,
+ 'downloader/response_status_count/200': 12,
+ 'elapsed_time_seconds': 13.354785,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 2, 2, 19, 46, 35, 347719, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 9135136,
+ 'httpcompression/response_count': 12,
+ 'item_scraped_count': 10,
+ 'items_per_city/Parma': 10,
+ 'items_per_minute': 46.15384615384615,
+ 'log_count/DEBUG': 22,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68235264,
+ 'memusage/startup': 68235264,
+ 'request_depth_max': 1,
+ 'response_received_count': 12,
+ 'responses_per_minute': 55.38461538461538,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'start_time': datetime.datetime(2026, 2, 2, 19, 46, 21, 992934, tzinfo=datetime.timezone.utc)}
+[2026-02-02T19:46:35.356+0000] {docker.py:429} INFO - 2026-02-02 19:46:35 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-02-02T19:46:35.416+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_parma_questa-settimana_20260202_194621.json
+[2026-02-02T19:46:35.767+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_parma.scrape_city_today, execution_date=20260201T060000, start_date=20260202T194621, end_date=20260202T194635
+[2026-02-02T19:46:35.790+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-02T19:46:35.831+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

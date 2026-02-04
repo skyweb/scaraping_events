@@ -1,0 +1,913 @@
+[2026-01-28T22:20:28.248+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_livorno.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:20:28.255+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_livorno.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [queued]>
+[2026-01-28T22:20:28.256+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-01-28T22:20:28.267+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_livorno.scrape_city_today> on 2026-01-28 22:19:44.377550+00:00
+[2026-01-28T22:20:28.270+0000] {standard_task_runner.py:60} INFO - Started process 2544 to run task
+[2026-01-28T22:20:28.273+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_livorno.scrape_city_today', 'manual__2026-01-28T22:19:44.377550+00:00', '--job-id', '173', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmpfezz8sht']
+[2026-01-28T22:20:28.275+0000] {standard_task_runner.py:88} INFO - Job 173: Subtask process_livorno.scrape_city_today
+[2026-01-28T22:20:28.292+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-01-28T22:20:28.336+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_livorno.scrape_city_today manual__2026-01-28T22:19:44.377550+00:00 [running]> on host a9aac56aef94
+[2026-01-28T22:20:28.434+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_livorno.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-01-28T22:19:44.377550+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-01-28T22:19:44.377550+00:00'
+[2026-01-28T22:20:28.453+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-01-28T22:20:28.459+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-01-28T22:20:28.897+0000] {docker.py:429} INFO - Avvio scraping per: Livorno
+Periodo: questa-settimana
+[2026-01-28T22:20:28.899+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-01-28T22:20:28.903+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-01-28 22:20:28 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-01-28T22:20:28.904+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [events] INFO: Scraping città: Livorno
+2026-01-28 22:20:28 [events] INFO: Periodo: questa-settimana (2026-01-28 - 2026-02-01)
+[2026-01-28T22:20:28.905+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-01-28T22:20:28.906+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-01-28T22:20:28.906+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-28 22:20:28 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-01-28T22:20:28.909+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.extensions.telnet] INFO: Telnet Password: 7170bab887d94826
+[2026-01-28T22:20:28.949+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-01-28T22:20:28.949+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-01-28T22:20:28.995+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-01-28T22:20:28.997+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-01-28T22:20:28.997+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_livorno_questa-settimana_20260128_222028.json
+[2026-01-28T22:20:28.998+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-01-28T22:20:28.998+0000] {docker.py:429} INFO - 2026-01-28 22:20:28 [scrapy.core.engine] INFO: Spider opened
+[2026-01-28T22:20:29.003+0000] {docker.py:429} INFO - 2026-01-28 22:20:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-01-28T22:20:29.004+0000] {docker.py:429} INFO - 2026-01-28 22:20:29 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-01-28T22:20:29.219+0000] {docker.py:429} INFO - 2026-01-28 22:20:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/robots.txt> (referer: None)
+[2026-01-28T22:20:31.346+0000] {docker.py:429} INFO - 2026-01-28 22:20:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/> (referer: None)
+[2026-01-28T22:20:31.906+0000] {docker.py:429} INFO - 2026-01-28 22:20:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/mostra-rachele-carol-odello-melograno-art-gallery-livorno.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:32.022+0000] {docker.py:429} INFO - 2026-01-28 22:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/mostra-rachele-carol-odello-melograno-art-gallery-livorno.html>
+{'category': 'Mostre',
+ 'city': 'Livorno',
+ 'content_hash': '07aeb286474f6ace',
+ 'date_end': '2026-02-04',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-02-01', 'time_start': '12:30', 'weekday': 'Domenica'},
+           {'date': '2026-02-02', 'time_start': '12:30', 'weekday': 'Lunedì'}],
+ 'description': 'Dal 29 gennaio al 4 febbraio (vernissage sabato 31 alle 18) '
+                'la Melograno Art Gallery ospiterà “Astri e astrologia '
+                'biblica” la nuova mostra personale di Rachele Carol Odello '
+                '(in arte Seventeen), un percorso pittorico che intreccia '
+                'simboli celesti, tradizioni antiche e ricerca spirituale. In '
+                "occasione del vernissage, l'artista presenterà anche il suo "
+                'nuovo libro, che porta lo stesso titolo della mostra. Durante '
+                "l'incontro, Rachele guiderà il pubblico attraverso le sue "
+                'opere e i temi del volume, offrendo una lettura personale e '
+                'contemporanea del rapporto tra cielo, spiritualità e identità '
+                "interiore. Le opere nascono dall'incontro tra pittura, "
+                'simbolismo e meditazione. Il progetto esplora il linguaggio '
+                'delle costellazioni e il loro riflesso nella dimensione '
+                "spirituale dell'essere umano. Le tele diventano mappe "
+                'interiori, costellazioni emotive, spazi in cui luce e colore '
+                'si intrecciano per raccontare un cammino di consapevolezza. '
+                "L'artista indaga il modo in cui gli astri, nella tradizione "
+                'biblica e nelle antiche narrazioni, non siano forze che '
+                'determinano il destino, ma strumenti simbolici che '
+                "accompagnano l'individuo nella scoperta della propria "
+                'missione personale. Ogni opera è una porta, un segno, un '
+                'invito a riconoscere la propria unicità. Il libro “Astri e '
+                'astrologia biblica” approfondisce i temi presenti nella '
+                'mostra, proponendo un percorso che attraversa mistica ebraica '
+                'e tradizione cristiana, racconti dei Magi e simbolismo delle '
+                "costellazioni, e introduce l'idea delle “stelle interiori” "
+                'come guida alla crescita personale. Il volume offre una '
+                'visione che unisce spiritualità e conoscenza cosmica, '
+                'invitando il lettore a esplorare se stesso, sanare ferite e '
+                'valorizzare il proprio potenziale. Gli astri diventano '
+                'strumenti di comprensione e portatori di un “DNA spirituale” '
+                'che parla di identità, vocazione e cammino personale. La '
+                'sequenza dei segni zodiacali, interpretata secondo la '
+                'profezia biblica, offre una prospettiva originale sul futuro '
+                'e sulla spiritualità, favorendo un contatto più profondo con '
+                'la propria interiorità.',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/69090074185973/unnamed-1-23.jpg',
+ 'location_address': 'Via Giovanni Marradi, 62',
+ 'location_name': 'Melograno Art Gallery',
+ 'price': 'Gratis',
+ 'schedule': 'Tutti i giorni 10-12.30 e 16-20. Domenica e festivi 10-12.30 e '
+             '17-20. Chiusura il lunedì mattina',
+ 'scraped_at': '2026-01-28T22:20:31.458217',
+ 'title': '"Astri e astrologia biblica", dal 29 gennaio al 4 febbraio la '
+          'mostra di Rachele Carol Odello alla Melograno Art Gallery',
+ 'url': 'https://www.livornotoday.it/eventi/mostra-rachele-carol-odello-melograno-art-gallery-livorno.html',
+ 'uuid': '794a1163212f7e06',
+ 'weekdays': 'Lunedì, Domenica'}
+[2026-01-28T22:20:33.293+0000] {docker.py:429} INFO - 2026-01-28 22:20:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/troublekidd-concerto-cage-livorno-31-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:33.402+0000] {docker.py:429} INFO - 2026-01-28 22:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/troublekidd-concerto-cage-livorno-31-gennaio.html>
+{'category': 'Concerti',
+ 'city': 'Livorno',
+ 'content_hash': 'd5bf9f4661a2ff31',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '22:30', 'weekday': 'Sabato'}],
+ 'description': 'Sabato 31 gennaio, al The Cage, serata speciale dedicata a '
+                "Troublekidd, nome d'arte del livornese Michele Buonamini, "
+                'resident dj del live club cittadino. Per una notte, Michele '
+                'uscirà dal consueto ruolo di after show per prendersi il '
+                'palco tutto per sé e guidare il pubblico in un viaggio sonoro '
+                'senza filtri con un live set in vinile. La serata è '
+                "organizzata da The Cage e dall'associazione fiorentina "
+                'Musicus Concentus. Attivo da anni sul territorio labronico e '
+                'nelle aree limitrofe, Troublekidd è una delle figure più '
+                'riconoscibili della scena locale. Il suo percorso musicale '
+                'inizia prestissimo: pianoforte, ascolti compulsivi di jazz e '
+                'disco grazie alla collezione di vinili dello zio, poi la '
+                "scoperta dell'hip hop a soli 12 anni e l'approdo al djing a "
+                "15. Un'evoluzione naturale che trasforma la passione in "
+                'linguaggio personale. A 17 anni arrivano i primi eventi, con '
+                'set già caratterizzati da una forte attitudine street. '
+                'Intorno ai 19, le esibizioni diventano una presenza costante '
+                "nei locali livornesi. Nel 2022 l'ingresso al The Cage segna "
+                'una svolta: prima come graphic designer e dj outdoor per il '
+                'sabato di My Generation, sotto il tendone esterno insieme a '
+                'Ghera dei Bunker44, poi come figura sempre più centrale. Dal '
+                '2023 è resident ufficiale del club e contribuisce in modo '
+                'decisivo anche alla sua identità visiva. I suoi set, in '
+                'digitale e in vinile, attraversano italo-disco, funk, '
+                'elettronica, soul e hip hop, mescolando ricerca e '
+                'immediatezza, groove e professionalità, senza mai perdere il '
+                'contatto con la pista. Per Troublekidd il club è prima di '
+                'tutto un luogo di condivisione: uno spazio in cui il dialogo '
+                'tra dj e pubblico passa solo dalla musica, senza '
+                'sovrastrutture. Una serata che celebra un percorso, una '
+                'visione e un legame profondo con la città. Info Apertura '
+                'porte alle 22, inizio alle 22:30. Biglietti disponibili in '
+                'prevendita su TicketSms a partire da 10 euro più i diritti di '
+                'prevendita. A seguire il tradizionale My Generation - Cage '
+                'Night Party del sabato sera, con i biglietti che si possono '
+                'acquistare direttamente in cassa al costo di 10 euro, prima '
+                'consumazione inclusa.',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/47259234114536/troublekidd.jpeg',
+ 'location_address': 'Via del Vecchio Lazzeretto, 20',
+ 'location_name': 'The Cage Theatre',
+ 'price': '10 euro più diritti di prevendita',
+ 'scraped_at': '2026-01-28T22:20:31.457667',
+ 'time_info': '22.30',
+ 'title': 'The Cage, sabato 31 gennaio Troublekidd in concerto',
+ 'url': 'https://www.livornotoday.it/eventi/troublekidd-concerto-cage-livorno-31-gennaio.html',
+ 'uuid': '0ea4e9a055921eca',
+ 'website': 'https://www.thecagetheatre.it/'}
+[2026-01-28T22:20:35.594+0000] {docker.py:429} INFO - 2026-01-28 22:20:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/hachiko-concerto-cage-livorno-30-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:35.703+0000] {docker.py:429} INFO - 2026-01-28 22:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/hachiko-concerto-cage-livorno-30-gennaio.html>
+{'category': 'Concerti',
+ 'city': 'Livorno',
+ 'content_hash': 'c2a878f7d17f9639',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '22:30', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 30 gennaio appuntamento al The Cage con il concerto '
+                'di Hachiko, progetto artistico capace di fondere rap, '
+                'performance e digital in un linguaggio personale, diretto e '
+                "riconoscibile. Un'identità fluida che si muove tra club, "
+                'rave, spazi indipendenti e sottoculture urbane e che porta in '
+                'scena una visione radicale e inclusiva, pronta a dare la sua '
+                '"benedizione" a outsider, anime tossiche e spiriti inquieti '
+                'della notte. Nei testi e nelle performance combatte gli '
+                "stereotipi di genere ribaltando i codici narrativi dell'urban "
+                'contemporaneo: parla degli uomini come molti trap boy parlano '
+                'delle donne, smonta il machismo tossico e mette al centro '
+                'fragilità, dipendenze emotive, disfunzioni relazionali e '
+                'daddy issues, con un mix di ironia tagliente e brutalità '
+                'sincera. Suoi l\'album "Memorie di una troia", l\'ep "Memorie '
+                'di una technotroia", i singoli "Bona Vez" e "Sesso Gay": un '
+                'linguaggio che è sì volgare ma che fa del suo essere senza '
+                'filtri la sua forza, che è lontano da qualsiasi '
+                'romanticizzazione e che rifiuta la poesia edulcorata per '
+                'restituire esperienze vere e trasversali. Al centro del '
+                "progetto c'è un'attenzione costante alle esperienze delle "
+                'donne e delle persone Lgbt+, poco visibili nella musica '
+                'mainstream o ridotte a stereotipo. Hachiko costruisce invece '
+                'uno spazio sicuro e libero, in cui identità, desideri e '
+                'contraddizioni possono esistere senza essere normalizzati o '
+                "censurati. Dietro l'estetica provocatoria e l'attitudine "
+                'giocosa si nasconde una precisa consapevolezza politica e '
+                'culturale: raccontare una generazione che fatica a '
+                'riconoscersi nei modelli dominanti e che cerca nuovi '
+                'linguaggi per esprimersi. Info Apertura porte alle 22 inizio '
+                'concerto alle 22:30. Biglietti disponibili in prevendita su '
+                'TicketSms al costo di 12 euro più i diritti di prevendita. A '
+                'seguire, per restare insieme e ballare fino a tarda notte, '
+                'spazio a Into the groove, con Leo Dessi in veste di guest. Dj '
+                'dello storico Tenax Club di Firenze, Leo è tra i nomi di '
+                'riferimento della scena elettronica toscana e ha condiviso la '
+                'console con artisti di calibro internazionale portando il suo '
+                'inconfondibile sound nei club e negli eventi che lo hanno '
+                'visto emergere. I biglietti sono acquistabili direttamente in '
+                'cassa a 10 euro con prima consumazione inclusa.',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/69880669735683/hachiko-1.jpg',
+ 'location_address': 'Via del Vecchio Lazzeretto, 20',
+ 'location_name': 'The Cage Theatre',
+ 'price': '12 euro più diritti di prevendita',
+ 'scraped_at': '2026-01-28T22:20:31.457141',
+ 'time_info': '22.30',
+ 'title': 'The Cage, venerdì 30 gennaio il concerto di Hachiko',
+ 'url': 'https://www.livornotoday.it/eventi/hachiko-concerto-cage-livorno-30-gennaio.html',
+ 'uuid': 'ae2f6279a039a6ed',
+ 'website': 'https://www.thecagetheatre.it/'}
+[2026-01-28T22:20:35.992+0000] {docker.py:429} INFO - 2026-01-28 22:20:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/mostra-diego-azzola-asya-dellomodarme-fortezza-nuova-livorno.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:36.099+0000] {docker.py:429} INFO - 2026-01-28 22:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/mostra-diego-azzola-asya-dellomodarme-fortezza-nuova-livorno.html>
+{'category': 'Mostre',
+ 'city': 'Livorno',
+ 'content_hash': '39578cbd5610fed2',
+ 'date_end': '2026-02-21',
+ 'date_start': '2026-01-17',
+ 'dates': [{'date': '2026-01-17', 'weekday': 'Sabato'},
+           {'date': '2026-01-19', 'weekday': 'Lunedì'},
+           {'date': '2026-01-24', 'weekday': 'Sabato'},
+           {'date': '2026-01-26', 'weekday': 'Lunedì'},
+           {'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-02', 'weekday': 'Lunedì'},
+           {'date': '2026-02-07', 'weekday': 'Sabato'},
+           {'date': '2026-02-09', 'weekday': 'Lunedì'},
+           {'date': '2026-02-14', 'weekday': 'Sabato'},
+           {'date': '2026-02-16', 'weekday': 'Lunedì'},
+           {'date': '2026-02-21', 'weekday': 'Sabato'}],
+ 'description': 'Sabato 17 gennaio, alle 18, si terrà nella Sala del Forno in '
+                'Fortezza Nuova l\'inaugurazione di " Nautilus - Sezioni di '
+                'Zoologia Comparata", mostra bipersonale che riunisce le opere '
+                "di Diego Azzola (Bergamo, 2000) e Asya Dell'Omodarme "
+                '(Livorno, 1997), a cura di Sara Poli e Cecilia Faleni. La '
+                'mostra, organizzata da Forno Project, il project-space di '
+                'Galleria Fidanda, con il Patrocinio del Comune di Livorno e '
+                'Regione Toscana, trae ispirazione dal celebre nautilus aperto '
+                "e sezionato dall'esploratore e naturalista Nicolò Gualtieri "
+                '(1688-1744), il cui lavoro scientifico rappresenta un punto '
+                'di riferimento nella storia della malacologia. Come il '
+                'nautilus di Gualtieri rivela la geometria interna della '
+                'conchiglia attraverso la dissezione metodica, lo spazio '
+                'espositivo non si organizza secondo un ordine gerarchico o '
+                'tassonomico, ma come una sequenza di compartimenti contigui, '
+                'in cui le opere abitano una condizione di coesistenza e '
+                'risonanza. La mostra sarà aperta nella Sala del Forno in '
+                'Fortezza Nuova tutti i giorni dal lunedì al sabato dalle 9 '
+                'alle 13 e dalle 14 alle 17 (lunedì mattina chiusi). Sarà '
+                'possibile visitare le opere fino al 21 febbraio, giorno di '
+                "chiusura dell'esposizione. L'esposizione comprende pitture e "
+                'installazioni che dialogano concettualmente con esemplari e '
+                'reperti provenienti dal mondo marino e terrestre, in '
+                'particolare dalla malacologia – grazie alla collaborazione '
+                'con il Museo della Certosa di Calci – e dalla tassidermia, '
+                'con il contributo del Museo di Storia Naturale del '
+                'Mediterraneo di Livorno. Gli artisti costruiscono una '
+                'catalogazione volutamente instabile e bizzarra, in cui i '
+                'criteri scientifici tradizionali vengono sovvertiti e le '
+                'tassonomie si rivelano fragili, aperte a nuove possibilità di '
+                'relazione tra le specie e i regni naturali. "Nautilus - '
+                'Sezioni di Zoologia Comparata" interroga i limiti della '
+                'classificazione scientifica e propone un sistema di '
+                "conoscenza alternativo, dove l'impossibilità di catalogare "
+                'definitivamente diventa strumento espressivo e concettuale.',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/26899072534913/nautilus-2.jpeg',
+ 'location_address': 'Scali della Fortezza Nuova',
+ 'location_name': 'Sala del Forno - Fortezza Nuova',
+ 'price': 'Gratis',
+ 'schedule': 'Tutti i giorni dal lunedì al sabato dalle 9 alle 13 e dalle 14 '
+             'alle 17 (lunedì mattina chiusi)',
+ 'scraped_at': '2026-01-28T22:20:31.456601',
+ 'title': '"Nautilus", dal 17 gennaio la mostra di Diego Azzola e Asya '
+          "Dell'Omodarme in Fortezza Nuova",
+ 'url': 'https://www.livornotoday.it/eventi/mostra-diego-azzola-asya-dellomodarme-fortezza-nuova-livorno.html',
+ 'uuid': 'a2095decef1f4628',
+ 'weekdays': 'Lunedì, Sabato'}
+[2026-01-28T22:20:37.306+0000] {docker.py:429} INFO - 2026-01-28 22:20:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/lezioni-cinema-miss-marx-centro-artistico-grattacielo-31-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:37.412+0000] {docker.py:429} INFO - 2026-01-28 22:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/lezioni-cinema-miss-marx-centro-artistico-grattacielo-31-gennaio.html>
+{'category': 'Cinema',
+ 'city': 'Livorno',
+ 'content_hash': 'cfe4fd20d03b2e05',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '17:30', 'weekday': 'Sabato'}],
+ 'description': 'Per la nona edizione del progetto Lezioni di Cinema, che ha '
+                'come tema i personaggi della storia o della letteratura, '
+                'sabato 31 gennaio, alle 17.30, sarà proiettato al Centro '
+                'Artistico Il Grattacielo il film "Miss Marx" (Italia 2020, '
+                "107') di Susanna Nicchiarelli. Introducono il film Elena "
+                "Franchini . Miss Marx, ambientato nell'Inghilterra del XIX "
+                'secolo, è incentrato sulla vita della figlia più piccola di '
+                'Karl Marx, Eleanor. Soprannominata in famiglia come "Tussy", '
+                'Eleanor era una donna intelligente, determinata e libera. '
+                'Traduttrice e attrice, si impegnò su vari fronti. È stata '
+                "infatti un'attivista per i diritti dei bambini e una delle "
+                'prime donne ad accostarsi ai temi del femminismo e del '
+                'socialismo. Instancabile e piena di energia, ha portato '
+                'avanti con passione e motivazione il lavoro di suo padre. '
+                'Nella sua vita privata, tuttavia, era una donna vulnerabile. '
+                "L'incontro e la lunga relazione con il compagno di lotte "
+                'Edward Aveling condizionerà la sua intera vita. (Fonte: '
+                'comingsoon.it). Il film nel 2020 ha partecipato in concorso '
+                "alla 77a Mostra internazionale d'arte cinematografica di "
+                'Venezia. Susanna Nicchiarelli ha spiegato: "Con la sua '
+                'apparente incongruenza tra dimensione pubblica e privata, la '
+                'storia di Eleanor Marx apre un abisso sulla complessità '
+                "dell'animo umano, sulla fragilità delle illusioni e sulla "
+                'tossicità di certe relazioni sentimentali. Raccontare la vita '
+                'di Eleanor vuol dire parlare di temi talmente moderni da '
+                'essere ancora oggi, oltre un secolo dopo, rivoluzionari. In '
+                "un momento in cui la questione dell'emancipazione è più che "
+                'mai centrale, la vicenda di Eleanor ne delinea tutte le '
+                'difficoltà e le contraddizioni: contraddizioni, credo, più '
+                'che mai attuali per cercare di "afferrare" alcuni tratti '
+                'dell\'epoca che stiamo vivendo". Susanna Nicchiarelli, '
+                'regista, attrice e sceneggiatrice italiana, nata a Roma nel '
+                '1975, è nota per la sua formazione in filosofia e regia, e '
+                'per film come Cosmonauta (2009), Nico, 1988 (2017) e Miss '
+                "Marx (2020). Ha vinto il Nastro d'Argento per il "
+                "cortometraggio d'animazione Sputnik 5 e ha ottenuto numerosi "
+                'riconoscimenti, tra cui quattro David di Donatello e il '
+                'Premio Orizzonti per Nico, 1988. Elena Franchini, nata a '
+                'Pisa, è laureata in Lettere. Lavora presso la biblioteca di '
+                "Storia delle arti dell'Università di Pisa, che possiede una "
+                'ricca collezione di libri e riviste sulla storia del cinema. '
+                'Fa parte del consiglio direttivo della Biblioteca Franco '
+                'Serantini - Istituto di storia sociale, della Resistenza e '
+                "dell'età contemporanea della provincia di Pisa. Info "
+                "L'ingresso è di 6 euro (necessaria tessera Kinoglaz al prezzo "
+                'simbolico di 1 euro oppure essere associati a 50&Più, Centro '
+                "Studi Commedia all'Italiana, Ass. FiPiLi Horror). Prevendita "
+                'su https://shop.kinoglaz.info - INFO: tel. 0586 881128 – 342 '
+                '0459699 - mail livornouniversita@gmail.com .',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/47651042801857/oip.jpg',
+ 'location_address': 'Via del Platano, 6',
+ 'location_name': 'Centro Artistico Il Grattacielo',
+ 'price': '6 euro (necessaria tessera Kinoglaz al prezzo simbolico di 1 euro '
+          'oppure essere associati a 50&Più, Centro Studi Commedia '
+          'all’Italiana, Ass. FiPiLi Horror)',
+ 'scraped_at': '2026-01-28T22:20:31.456094',
+ 'time_info': '17.30',
+ 'title': 'Lezioni di cinema, sabato 31 gennaio "Miss Marx" al Centro '
+          'artistico Il Grattacielo',
+ 'url': 'https://www.livornotoday.it/eventi/lezioni-cinema-miss-marx-centro-artistico-grattacielo-31-gennaio.html',
+ 'uuid': 'ec55dd4b349ec872'}
+[2026-01-28T22:20:38.496+0000] {docker.py:429} INFO - 2026-01-28 22:20:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/teatro-vertigo-livorno-un-giorno-come-altri-31-gennaio-1-febbraio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:38.608+0000] {docker.py:429} INFO - 2026-01-28 22:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/teatro-vertigo-livorno-un-giorno-come-altri-31-gennaio-1-febbraio.html>
+{'category': 'Teatri',
+ 'city': 'Livorno',
+ 'content_hash': '27f7ee2c41f211ff',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'weekday': 'Sabato'},
+           {'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Sabato 31 gennaio alle 21 e domenica 1 febbraio alle 17 andrà '
+                'in scena al Teatro Vertigo lo spettacolo “Un giorno come gli '
+                'altri”, una commedia esistenzialista che coniuga situazioni '
+                'spassose al confine con la commedia nera e momenti romantici '
+                'e riflessioni profonde. Al debutto nella regia Anna Arbore, '
+                'attrice veterana della compagnia Vertigo, che ha affrontato '
+                'sempre con dimestichezza ruoli comici, drammatici e perfino '
+                'vernacolari. Lo spettacolo La protagonista vive una vita '
+                'tranquilla, ripetitiva senza scosse ma anche senza lasciare '
+                'il segno della propria esistenza. Un giorno come gli altri '
+                'scopre di non essere protagonista della sua vita e che questa '
+                'è guidata dalla volontà di una voce misteriosa, che scandisce '
+                'con assoluta precisione tutti le fasi della sua vita. Non si '
+                'tratta quindi di una condizione patologica, bensì una voce, '
+                'che solo la protagonista Maria Rossi sente, che descrive, '
+                'quasi come una “telecronoca diretta” ogni attimo della sua '
+                'vita. A chi appartiene questa voce? E come fa a conoscere '
+                'ogni attimo? Questo mistero verrà svelato durante la storia '
+                "un po' surreale, ma che contiene anche un potente messaggio "
+                'sulla nostra esistenza e su come le nostre scelte possono '
+                'condizionare il nostro destino. In scena oltre ad Anna '
+                "Arbore, Alessia D'Alessandro, Sara Brilli, Elisa Puccini, Eva "
+                'Chiama, Fabio Favilli. Voce off di Marco Conte e Sara Brilli. '
+                'Scenografia di Patrizia Coli. Luci Di Ugo Zammit e Luigi '
+                'Liberti, audio di Roberto Pacini. Assistenza tecnica Laura '
+                'Persico e Andrea Brenna. Grafica Anna Arbore. Info Per '
+                'prenotazioni 0586210120 con segreteria telefonica, oppure con '
+                'solo messaggio whatsapp 3805842291. Ingresso 12 euro intero, '
+                '7 euro ridotto (per gli allievi della scuola di arti '
+                'sceniche)',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/50331085529291/whatsapp-image-2026-01-21-at-14-13-50.jpeg',
+ 'location_address': 'Via del Pallone, 2',
+ 'location_name': 'Teatro Vertigo',
+ 'price': '12 euro intero, 7 euro ridotto',
+ 'schedule': 'Sabato 31 alle 21, domenica 1 alle 17',
+ 'scraped_at': '2026-01-28T22:20:31.455553',
+ 'title': 'Teatro Vertigo, sabato 31 gennaio e domenica 1 febbraio lo '
+          'spettacolo "Un giorno come gli altri"',
+ 'url': 'https://www.livornotoday.it/eventi/teatro-vertigo-livorno-un-giorno-come-altri-31-gennaio-1-febbraio.html',
+ 'uuid': 'e5b6abcd7e1a3484',
+ 'weekdays': 'Sabato, Domenica'}
+[2026-01-28T22:20:39.914+0000] {docker.py:429} INFO - 2026-01-28 22:20:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/signore-anelli-michele-innocenti-symphony-livorno-30-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:40.031+0000] {docker.py:429} INFO - 2026-01-28 22:20:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/signore-anelli-michele-innocenti-symphony-livorno-30-gennaio.html>
+{'category': 'Incontri',
+ 'city': 'Livorno',
+ 'content_hash': '836407c0c09d4deb',
+ 'date_end': '2026-01-30',
+ 'date_start': '2026-01-30',
+ 'dates': [{'date': '2026-01-30', 'time_start': '18:30', 'weekday': 'Venerdì'}],
+ 'description': "A venticinque anni dall'uscita nelle sale cinematografiche "
+                'italiane, “Il Signore degli Anelli” continua a esercitare un '
+                'fascino profondo e trasversale, capace di unire generazioni '
+                'diverse di spettatori e appassionati. La trilogia diretta da '
+                "Peter Jackson, tratta dall'opera immortale di J.R.R. Tolkien, "
+                'non è soltanto un capolavoro del cinema fantasy, ma un vero e '
+                'proprio fenomeno culturale che ha segnato in modo indelebile '
+                "l'immaginario collettivo. Per celebrare questo importante "
+                'anniversario, venerdì 30 gennaio alle 18.30 da Symphony si '
+                'terrà un incontro speciale dal titolo “The lord of the rings '
+                "- 25 anni dopo”, dedicato all'eredità cinematografica e "
+                "culturale della saga. L'evento vedrà la presentazione di "
+                'Michele Innocenti, che guiderà il pubblico in un percorso di '
+                "analisi e riflessione sull'impatto de “Il Signore degli "
+                'Anelli” a distanza di un quarto di secolo dalla sua prima '
+                "apparizione nelle sale italiane. Sarà un'occasione per "
+                'ripercorrere la genesi del progetto, il suo valore artistico, '
+                "il successo internazionale e l'influenza duratura esercitata "
+                'sul cinema, sulla letteratura fantasy e sulla cultura pop '
+                "contemporanea. L'iniziativa è realizzata in collaborazione "
+                'con il FIPILI Horror Festival, a sottolineare il dialogo tra '
+                'cinema di genere, grandi saghe e narrazione epica, in un '
+                "contesto che valorizza l'approfondimento culturale e la "
+                'condivisione tra appassionati. Un appuntamento imperdibile '
+                'per chi ama il cinema, la letteratura e le grandi storie '
+                'senza tempo, e per chi desidera riscoprire “Il Signore degli '
+                'Anelli” con uno sguardo nuovo, consapevole e attuale, a '
+                'venticinque anni da quel primo viaggio nella Terra di Mezzo. '
+                'Intanto prosegue sempre da Symphony la mostra di Giorgio '
+                "Salesi “L'orrore disegnato - Viaggio nel cinema horror”. La "
+                'mostra che rimarrà visibile fino a venerdì 6 febbraio, è un '
+                "percorso visivo intenso e suggestivo attraverso l'immaginario "
+                'del cinema horror, reinterpretato dal segno e dalla '
+                'sensibilità artistica di Giorgio Salesi. I visitatori '
+                "potranno farsi guidare nelle immagini dall'autore. INFO: "
+                'Symphony piazza Cavour, 23, 0586 1754832 – 37111449537 – '
+                'info@symphonyshop.it',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/44541233448881/0-1-4-4.jpg',
+ 'location_address': 'Piazza Cavour, 23',
+ 'location_name': 'Symphony Record Shop',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:31.454841',
+ 'time_info': '18.30',
+ 'title': 'Symphony, venerdì 30 gennaio incontro con Michele Innocenti '
+          'sull\'eredità cinematografica e culturale de "Il signore degli '
+          'anelli"',
+ 'url': 'https://www.livornotoday.it/eventi/signore-anelli-michele-innocenti-symphony-livorno-30-gennaio.html',
+ 'uuid': '4ead6281ee20e17d'}
+[2026-01-28T22:20:41.267+0000] {docker.py:429} INFO - 2026-01-28 22:20:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/teatro-ablondi-livorno-spettacolo-1-febbraio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:41.376+0000] {docker.py:429} INFO - 2026-01-28 22:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/teatro-ablondi-livorno-spettacolo-1-febbraio.html>
+{'category': 'Teatri',
+ 'city': 'Livorno',
+ 'content_hash': 'e62a06d5c77b7840',
+ 'date_end': '2026-02-01',
+ 'date_start': '2026-02-01',
+ 'dates': [{'date': '2026-02-01', 'weekday': 'Domenica'}],
+ 'description': 'Domenica 1 febbraio, alle 17, andrà in scena al Teatro '
+                'Ablondi " Mannaggiaffeisbucc!", una commedia frizzante e '
+                'sorprendentemente attuale che, con ironia e leggerezza, '
+                'racconta vizi, virtù e trappole della vita virtuale. '
+                'Protagonista della storia è Nonno Antonio, un uomo anziano ma '
+                "tutt'altro che ingenuo, che apre un profilo Facebook falso "
+                'fingendosi Romano, un affascinante fotomodello toscano. '
+                'Dietro lo schermo, tra chat, messaggi e foto ingannevoli, '
+                'entra in contatto con Alice, una giovane e bellissima '
+                'ragazza… o almeno così sembra. Da questo innocente gioco '
+                'nasce una catena di fraintendimenti, bugie e situazioni '
+                'esilaranti, in cui la linea tra realtà e finzione si fa '
+                'sempre più sottile. Ogni personaggio contribuisce ad '
+                'alimentare una vera e propria girandola di equivoci, che '
+                'trascina il pubblico in un crescendo di comicità e colpi di '
+                'scena. Ma, come insegna la vita (e il teatro), le bugie hanno '
+                'le gambe corte. Quello che era iniziato come uno scherzo si '
+                'trasforma presto in un vortice incontrollabile che porterà, '
+                'inevitabilmente, alla scoperta della verità. '
+                '"Mannaggiaffeisbucc!" è una commedia brillante e '
+                'contemporanea che fa ridere di gusto, ma invita anche a '
+                "riflettere — senza mai appesantire — sui temi dell'identità "
+                'online, delle apparenze, del bisogno di sentirsi visti e '
+                "amati e sulla fragilità dei rapporti umani nell'era digitale. "
+                'Un racconto ironico e umano che dimostra come, dietro ogni '
+                'profilo, si nasconda sempre una persona reale. Uno spettacolo '
+                'coinvolgente, attuale e accessibile, capace di divertire il '
+                'pubblico di tutte le età, confermando ancora una volta la '
+                'forza del teatro comico quando sa parlare del presente con '
+                "intelligenza e leggerezza. Modalità d'ingresso A partire dal "
+                "mese di gennaio, l'accesso agli spettacoli del Teatro Ablondi "
+                'è riservato ai soci A.N.S.P.I. (Associazione Nazionale San '
+                'Paolo Italia). Il tesseramento annuale ha un costo di 5 euro '
+                'a persona e la tessera è personale e nominale, con validità '
+                "per tutto l'anno 2026. La tessera viene rilasciata "
+                'direttamente a teatro durante le giornate di '
+                'rappresentazione. Il costo dello spettacolo per i nuovi soci '
+                'è di 13 euro (5 euro tesseramento + 8 euro biglietto), mentre '
+                'per i già tesserati è richiesto solo il pagamento del '
+                'biglietto (8 euro). Per poter accedere agli spettacoli è '
+                'necessario compilare il modulo di tesseramento, disponibile '
+                'sul sito www.teatroablondi.it ed inviare il modulo compilato '
+                "all'indirizzo email prenotazioni@teatroablondi.it.",
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/21284808458671/foto-1-febbraio.jpeg',
+ 'location_address': 'Via Olanda, 44',
+ 'location_name': 'Teatro Ablondi',
+ 'price': 'Nuovi soci 13 euro (5 euro tesseramento + 8 euro biglietto), per i '
+          'già tesserati è richiesto solo il pagamento del biglietto (8 euro)',
+ 'scraped_at': '2026-01-28T22:20:31.454321',
+ 'time_info': '17',
+ 'title': 'Teatro Ablondi, domenica 1 febbraio la commedia '
+          '"Mannaggiaffeisbucc!"',
+ 'url': 'https://www.livornotoday.it/eventi/teatro-ablondi-livorno-spettacolo-1-febbraio.html',
+ 'uuid': '2e43a1cc1189c240',
+ 'website': 'https://www.teatroablondi.it/'}
+[2026-01-28T22:20:42.070+0000] {docker.py:429} INFO - 2026-01-28 22:20:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/appuntamento-palcoscenico-teatro-ablondi-livorno-31-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:42.178+0000] {docker.py:429} INFO - 2026-01-28 22:20:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/appuntamento-palcoscenico-teatro-ablondi-livorno-31-gennaio.html>
+{'category': 'Teatri',
+ 'city': 'Livorno',
+ 'content_hash': '8c5c893dc42dbfa0',
+ 'date_end': '2026-01-31',
+ 'date_start': '2026-01-31',
+ 'dates': [{'date': '2026-01-31', 'time_start': '21:15', 'weekday': 'Sabato'}],
+ 'description': 'Sabato 31 gennaio, alle 21.15, andrà in scena al Teatro '
+                'Salone Ablondi "Appuntamento in palcoscenico", spettacolo che '
+                "r iporta il pubblico nell'atmosfera frizzante e popolare "
+                "dell'avanspettacolo, il genere teatrale comico che ha fatto "
+                'la storia dello spettacolo italiano tra gli anni Trenta e '
+                "Cinquanta. Nato come evoluzione del varietà, l'avanspettacolo "
+                "si sviluppò per accompagnare l'avvento del cinematografo: "
+                'brevi spettacoli comici e musicali che intrattenevano il '
+                'pubblico prima della proiezione del film. Ma da quelle tavole '
+                'nacquero giganti della scena italiana: Totò, Peppino De '
+                'Filippo, Aldo Fabrizi, Anna Magnani, Erminio Macario, Franco '
+                'Franchi, Lino Banfi, Alberto Sordi, solo per citarne alcuni. '
+                'Un genere popolare, irriverente, vivace, capace di parlare a '
+                'tutti con leggerezza e intelligenza. Lo spettacolo '
+                '"Appuntamento in Palcoscenico" si presenta come una piccola '
+                "Rivista anni '40, ricca di macchiette, canzoni e situazioni "
+                'comiche esilaranti. Sul palco si alterneranno personaggi '
+                "tipici dell'epoca: un Commendatore impresario, furbo e "
+                'marpione, un comico scapestrato e squattrinato, sempre a '
+                'corto di denaro, una soubrette svampita, tutta pepe, lustrini '
+                'e irresistibile energia, un tenore attempato, dalle '
+                'improbabili origini americane, tra celebri macchiette e brani '
+                'classici del Café Chantant. Lo spettacolo è curato dalla '
+                'Compagnia Lirica Livornese e vede la partecipazione del '
+                'comico Matteo Micheli, nel ruolo del comico sfortunato, '
+                'capace di conquistare il pubblico con battute e personaggi '
+                'irresistibili. Accanto a lui, la frizzante e pepata Paola '
+                'Pacelli, nei panni della soubrette, e il tenore Massimo '
+                'Gentili, reduce dalla trasmissione televisiva Io Canto Senior '
+                'condotta da Jerry Scotti. A condurre la serata sarà Franco '
+                'Bocci, profondo conoscitore e appassionato di Avanspettacolo, '
+                'che guiderà il pubblico proprio come accadeva nei teatri '
+                'degli anni Trenta. La direzione musicale è affidata a '
+                'Stefania Casu, mentre la regia è di Matteo Micheli. Uno '
+                'spettacolo pensato per chi ama il teatro popolare, la '
+                "comicità d'altri tempi e il piacere di una serata "
+                'spensierata, ma anche per chi vuole scoprire una pagina '
+                'fondamentale della nostra tradizione teatrale. Informazioni e '
+                'prenotazioni: www.teatroablondi.it o al 334 5971913 Modalità '
+                "d'ingresso A partire dal mese di gennaio, l'accesso agli "
+                'spettacoli del Teatro Ablondi è riservato ai soci A.N.S.P.I. '
+                '(Associazione Nazionale San Paolo Italia). Il tesseramento '
+                'annuale ha un costo di 5 euro a persona e la tessera è '
+                "personale e nominale, con validità per tutto l'anno 2026. La "
+                'tessera viene rilasciata direttamente a teatro durante le '
+                'giornate di rappresentazione. Il costo dello spettacolo per i '
+                'nuovi soci è di 13 euro (5 euro tesseramento + 8 euro '
+                'biglietto), mentre per i già tesserati è richiesto solo il '
+                'pagamento del biglietto (8 euro). Per poter accedere agli '
+                'spettacoli è necessario compilare il modulo di tesseramento, '
+                'disponibile sul sito www.teatroablondi.it ed inviare il '
+                "modulo compilato all'indirizzo email "
+                'prenotazioni@teatroablondi.it.',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/23157241103778/foto-31-gennaio-2.jpeg',
+ 'location_address': 'Via Olanda, 44',
+ 'location_name': 'Teatro Salone Ablondi',
+ 'price': 'Nuovi soci 13 euro (5 euro tesseramento + 8 euro biglietto), per i '
+          'già tesserati è richiesto solo il pagamento del biglietto (8 euro)',
+ 'scraped_at': '2026-01-28T22:20:31.453851',
+ 'time_info': '21.15',
+ 'title': 'Teatro Ablondi, sabato 31 gennaio lo spettacolo "Appuntamento in '
+          'palcoscenico"',
+ 'url': 'https://www.livornotoday.it/eventi/appuntamento-palcoscenico-teatro-ablondi-livorno-31-gennaio.html',
+ 'uuid': '1edceb6f2b7fa012',
+ 'website': 'https://www.teatroablondi.it/'}
+[2026-01-28T22:20:43.208+0000] {docker.py:429} INFO - 2026-01-28 22:20:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/gruppo-lettura-vespucci-colombo-29-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:43.316+0000] {docker.py:429} INFO - 2026-01-28 22:20:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/gruppo-lettura-vespucci-colombo-29-gennaio.html>
+{'category': 'Incontri',
+ 'city': 'Livorno',
+ 'content_hash': '52f89d603f823a2d',
+ 'date_end': '2026-01-29',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'weekday': 'Giovedì'}],
+ 'description': 'Riprendono gli incontri del Gruppo di Lettura “Milton” della '
+                'Biblioteca Vespucci-Colombo. Il prossimo appuntamento si '
+                'svolgerà giovedì 29 gennaio alle 18 nella biblioteca di '
+                'piazza Vigo. Il libro selezionato dai componenti del gruppo è '
+                '“Soldati di Salamina” dello scrittore e saggista spagnolo '
+                'Javier Cercas. Per partecipare non importa aver letto il '
+                "libro, l'intento è quello di confrontarsi sui temi, sulla "
+                'scrittura, sugli autori e su opere analoghe a quella '
+                'selezionata attraverso discussioni e letture ad alta voce, in '
+                'modo che la lettura costituisca un momento di condivisione e '
+                'di riflessione. Il libro Sul finire della Guerra civile '
+                'spagnola, vicino al confine con la Francia, le truppe '
+                'repubblicane in ritirata decisero di fucilare un gruppo di '
+                'prigionieri franchisti. Nella confusione, uno di loro riuscì '
+                'a scappare. Venne raggiunto nella boscaglia da un giovane '
+                'miliziano che lo riconobbe ma lo lasciò fuggire, di fatto '
+                'graziandolo. Il prigioniero era Rafael Sánchez Mazas, '
+                "fondatore e ideologo della Falange. Sessant'anni dopo, un "
+                'giornalista viene casualmente a conoscenza di questa storia, '
+                'ne rimane affascinato e decide di capire come siano andati '
+                "realmente i fatti: è l'inizio di un'avventura fatta di "
+                'ricerca delle fonti, interviste a testimoni, momenti di '
+                'sconforto, di speranza e di commozione. Con una perfetta '
+                'simbiosi tra realtà e finzione, Javier Cercas intreccia '
+                'cronaca e interpretazione e, trascinando il lettore verso un '
+                'finale emozionante, riconferma che la realtà è spesso più '
+                'sorprendente del romanzesco e che la Storia è fatta anche del '
+                "sacrificio misconosciuto dei singoli. L'ingresso al Gruppo di "
+                'Lettura “Milton” è libero ed è rivolto a tutta la '
+                "cittadinanza. L'autore Javier Cercas (1962) è uno scrittore "
+                "spagnolo, collaboratore abituale dell'edizione catalana di "
+                '"El País" e del supplemento del sabato, oltre che dal 1989 '
+                "docente di letteratura spagnola all'Università di Gerona. Ha "
+                'raggiunto il successo con Soldati di Salamina (Guanda 2002); '
+                'Il movente (Guanda 2004); La velocità della luce (Guanda '
+                '2006); La donna del ritratto (Guanda 2008); Anatomia di un '
+                'istante (Guanda 2010); Il nuovo inquilino (Guanda 2011); La '
+                'verità di Agamennone (Guanda, 2012); Le leggi della frontiera '
+                "(Guanda, 2013); L'impostore (Guanda 2015, vincitore "
+                "dell'European Book Prize 2016); Il punto cieco (Guanda 2016), "
+                'Terra Alta (Guanda 2020), Indipendenza (2021). Per '
+                'informazioni e adesioni: francescacordi@vespucci.edu.it .',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/41780657531628/0-3-9.jpg',
+ 'location_address': 'Piazza Pietro Vigo, 1',
+ 'location_name': 'Biblioteca Istituto Vespucci-Colombo',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:31.453297',
+ 'time_info': '18',
+ 'title': 'Vespucci-Colombo, giovedì 29 gennaio nuovo incontro con il gruppo '
+          'di lettura',
+ 'url': 'https://www.livornotoday.it/eventi/gruppo-lettura-vespucci-colombo-29-gennaio.html',
+ 'uuid': '22a5087c506f2b1e'}
+[2026-01-28T22:20:44.970+0000] {docker.py:429} INFO - 2026-01-28 22:20:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/angelo-tonelli-vespucci-colombo-livorno-29-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:45.078+0000] {docker.py:429} INFO - 2026-01-28 22:20:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/angelo-tonelli-vespucci-colombo-livorno-29-gennaio.html>
+{'category': 'Incontri',
+ 'city': 'Livorno',
+ 'content_hash': 'f2eaeb67c553c0ad',
+ 'date_end': '2026-01-29',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'weekday': 'Giovedì'}],
+ 'description': 'Per gli incontri culturali a cura della Biblioteca '
+                "dell'Istituto “Vespucci-Colombo”, giovedì 29 gennaio, alle 18 "
+                "nell'aula magna della sede di Piazza Vigo, Angelo Tonelli "
+                'accompagnerà in una riflessione dal titolo "I Greci in noi. '
+                "L'attualità ‘inattuale' della Sapienza greca per affrontare "
+                'la (in)civiltà contemporanea". L\'incontro sarà introdotto da '
+                "Cristiano Cei, docente di Lettere dell'Istituto. L'evento, a "
+                'ingresso libero e rivolto a tutta la cittadinanza, è '
+                'realizzato in collaborazione con la Libreria Feltrinelli e '
+                'con il finanziamento del Centro per il libro e la lettura. '
+                'Angelo Tonelli, considerato tra i più importanti grecisti '
+                'viventi, è studioso di filosofia antica, filologo, poeta, '
+                'traduttore, autore e regista teatrale (direttore della '
+                'Compagnia Teatro Iniziatico) nonché intellettuale attento '
+                'alla crisi e le derive della società contemporanea. Ha '
+                'studiato Filosofia antica a Pisa, con Giorgio Colli, e '
+                'seguendo le orme del suo maestro si è sempre interessato al '
+                'recupero della originaria Sapienza greca, illuminandone le '
+                "connessioni con l'Oriente e l'antichissima Tradizione "
+                'spirituale della terra. I suoi studi cinquantennali sono '
+                'stati coronati da numerose pubblicazioni monografiche dei '
+                'testi e dei frammenti pervenutici del corpus filosofico greco '
+                'e non solo, spaziando in molti campi di indagine: i Sapienti '
+                'e i filosofi presocratici, le religioni misteriche, la '
+                "tradizione orfica, dionisiaca e sciamanica, l'alchimia "
+                'greco-egizia e la tradizione magico-oracolare. A questi '
+                'lavori si aggiungono traduzioni di lirici e autori greci e '
+                'latini, dei grandi tragici, con incursioni financo nella '
+                'poesia novecentesca. La costante frequentazione degli '
+                "Antichi, coniugata all'interesse verso la psicanalisi "
+                'junghiana e alla personale pratica esistenziale lo ha '
+                'condotto a un costante dialogo tra passato e presente, dove '
+                "quest'ultimo è osservato con lo sguardo arcano degli antichi "
+                'Sapienti, ancora palpitante e vivente sotto le ceneri del '
+                "vuoto, dell'assenza e del nichilismo contemporanei. Di qui la "
+                'sua ricerca creativa e intellettuale. Inoltre ha dedicato '
+                'acute riflessioni alle tematiche umane universali e al '
+                'crepuscolo della nostra civiltà, proponendo un messaggio di '
+                'consapevolezza e presenza integrale, per far fronte alla '
+                'barbarie sempre più dilagante e poter rifondare il vivere '
+                'sociale sui valori della “filosofia perenne” che ispirò un '
+                "tempo i grandi spiriti dell'Antichità. Come poeta ha "
+                'pubblicato quattro volumi (Canti del tempo, 1988; Frammenti '
+                'del perpetuo poema, 1998; Poemi dal Golfo degli Dei,2003; '
+                "Canti di apocalisse e d'estasi, 2008) vincendo nel 2012 il "
+                'Premio Montale per la poesia. Per i “Classici” Feltrinelli ha '
+                "tradotto e curato Dell'Origine (1993) di Eraclito, La terra "
+                'desolata. Quattro quartetti (1995) di T.S. Eliot, il primo '
+                'volume di Le parole dei Sapienti (2010), dedicato a Senofane, '
+                'Parmenide, Zenone, Melisso, Eleusis e Orfismo. I Misteri e la '
+                'tradizione iniziatica greca (2015), Negli abissi luminosi. '
+                'Sciamanesimo, trance ed estasi nella Grecia antica (2021), '
+                "Dell'Origine (2023) di Parmenide, Pitagora, il Maestro "
+                'segreto. Il padre della Sapienza tra misticismo, scienza e '
+                "politica (2025). L'ultimo lavoro di Tonelli, I sofisti e "
+                "l'eclissi della sapienza, dedicato a Gorgia e Protagora e "
+                'conclusivo del decennale ciclo dedicato alla fase più antica '
+                'della filosofia greca, sarà nelle librerie il 27 gennaio, due '
+                'giorni prima del nostro incontro. Per informazioni: '
+                'biblioteca@vespucci.edu.it .',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/64572021474793/angelo-tonelli.jpg',
+ 'location_address': 'Piazza Pietro Vigo, 1',
+ 'location_name': 'Biblioteca Istituto Vespucci-Colombo',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:31.452548',
+ 'time_info': '18',
+ 'title': 'Vespucci-Colombo, giovedì 29 gennaio incontro con Angelo Tonelli',
+ 'url': 'https://www.livornotoday.it/eventi/angelo-tonelli-vespucci-colombo-livorno-29-gennaio.html',
+ 'uuid': '1453583e9a501035'}
+[2026-01-28T22:20:45.706+0000] {docker.py:429} INFO - 2026-01-28 22:20:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/dario-ballantini-studio-74-livorno-24-gennaio.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:45.813+0000] {docker.py:429} INFO - 2026-01-28 22:20:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/dario-ballantini-studio-74-livorno-24-gennaio.html>
+{'category': 'Mostre',
+ 'city': 'Livorno',
+ 'content_hash': '545406964b06441d',
+ 'date_end': '2026-01-29',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'time_start': '17:30', 'weekday': 'Giovedì'}],
+ 'description': None,
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/23901415870966/talk-29-gennaio.jpg',
+ 'location_address': 'Via Leonardo Cambini, 30',
+ 'location_name': 'Studio 74',
+ 'price': 'Gratis',
+ 'scraped_at': '2026-01-28T22:20:31.452260',
+ 'time_info': '17.30',
+ 'title': 'Studio 74, giovedì 29 gennaio incontro con Dario Ballantini',
+ 'url': 'https://www.livornotoday.it/eventi/dario-ballantini-studio-74-livorno-24-gennaio.html',
+ 'uuid': '99ee2eb319057459'}
+[2026-01-28T22:20:46.691+0000] {docker.py:429} INFO - 2026-01-28 22:20:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/vernacolo-livorno-teatro-4-mori-consoceri-ripafratta.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:46.800+0000] {docker.py:429} INFO - 2026-01-28 22:20:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/vernacolo-livorno-teatro-4-mori-consoceri-ripafratta.html>
+{'category': 'Teatri',
+ 'city': 'Livorno',
+ 'content_hash': '470b4fc95dbbd2ea',
+ 'date_end': '2026-01-29',
+ 'date_start': '2026-01-29',
+ 'dates': [{'date': '2026-01-29', 'weekday': 'Giovedì'}],
+ 'description': 'Appuntamento col vernacolo livornese al Cinema Teatro 4 Mori '
+                'dove giovedi 29 gennaio andrà in scena “I consoceri di '
+                'Ripafratta”, commedia in due atti, scritta da Luigi Bertoni e '
+                'Milena Pardini, per la regia della stessa Milena Pardini, '
+                "della compagnia teatrale “L'urtimi arrivati”. Al centro della "
+                "vicenda c'è la famiglia livornese Lonzi che deve ricevere, a "
+                'malincuore, la visita dei nuovi consuoceri di Ripafratta, e '
+                'quindi pisani, per festeggiare il fidanzamento del figlio con '
+                "Angelica, proprio il giorno in cui allo stadio c'è il derby "
+                'Livorno-Pisa con il padrone di casa che ha da tempo comprato '
+                'il biglietto per vedere la partita. La famiglia Lonzi non è '
+                'contenta che il figlio si fidanzi con lei perché vorrebbe '
+                'dargli in sposa la figlia della panaia del quartiere, che '
+                'però a lui non piace assolutamente. Per di più ci si mette '
+                'anche la vicina di casa a commentare il tutto. Ma attenti '
+                'perché.… il diavolo fa le pentole ma non i coperchi. Nel cast '
+                'figurano: Flavio Camera, Grazia Cecere, Luca Comelli, '
+                'Federico Del Nista, Luca Filippi, Raffaele Forgione, Cinzia '
+                'Giannoni, Milena Pardini, Francesca Pesci, Carolina Tani, '
+                'Maria Grazia Torracca e Riccardo Campopiano. Accompagnamento '
+                'musicale: Adriana Donati PER INFO: 335.160.44.98 Stefania',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/63406596714247/teatro-2.jpeg',
+ 'location_address': 'Via Pietro Tacca, 16',
+ 'location_name': 'Cinema Teatro Quattro Mori',
+ 'price': 'Spettacolo delle 16: 15 euro. Spettacolo delle 21: 20 euro',
+ 'scraped_at': '2026-01-28T22:20:31.451968',
+ 'time_info': 'Alle 16 e alle 21',
+ 'title': 'Teatro, giovedì 29 gennaio ai 4 Mori la commedia in vernacolo "I '
+          'consoceri di Ripafratta"',
+ 'url': 'https://www.livornotoday.it/eventi/vernacolo-livorno-teatro-4-mori-consoceri-ripafratta.html',
+ 'uuid': 'f285ae6dc62b4a81'}
+[2026-01-28T22:20:48.030+0000] {docker.py:429} INFO - 2026-01-28 22:20:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.livornotoday.it/eventi/mostra-giorgio-salise-symphony-livorno.html> (referer: https://www.livornotoday.it/eventi/dal/2026-01-28/al/2026-02-01/)
+[2026-01-28T22:20:48.138+0000] {docker.py:429} INFO - 2026-01-28 22:20:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.livornotoday.it/eventi/mostra-giorgio-salise-symphony-livorno.html>
+{'category': 'Mostre',
+ 'city': 'Livorno',
+ 'content_hash': 'bc62d90e1b7aa97e',
+ 'date_end': '2026-02-06',
+ 'date_start': '2026-01-23',
+ 'dates': [{'date': '2026-01-23', 'weekday': 'Venerdì'},
+           {'date': '2026-01-30', 'weekday': 'Venerdì'},
+           {'date': '2026-02-06', 'weekday': 'Venerdì'}],
+ 'description': 'Venerdì 23 gennaio, alle 18 da Symphony Record Shop, '
+                'appuntamento con il vernissage della mostra di Giorgio Salise '
+                '"L\'orrore disegnato - Viaggio nel cinema horror". La mostra, '
+                'che rimarrà visibile fino a venerdì 6 febbraio, è un percorso '
+                "visivo intenso e suggestivo attraverso l'immaginario del "
+                'cinema horror, reinterpretato dal segno e dalla sensibilità '
+                'artistica di Giorgio Salise. Questa esposizione ci accompagna '
+                'in un viaggio che attraversa epoche, stili e atmosfere del '
+                'grande schermo, trasformando immagini iconiche e suggestioni '
+                'cinematografiche in opere grafiche capaci di evocare paura, '
+                "tensione, mistero, ma anche fascino e bellezza. L'orrore, "
+                'qui, non è solo spavento, diventa linguaggio, memoria '
+                'collettiva, racconto visivo. Il lavoro di Giorgio Salise si '
+                "distingue per la capacità di sintetizzare l'essenza dei film "
+                'horror, andando oltre la semplice citazione. Attraverso il '
+                "disegno, l'artista rielabora personaggi, scenari e simboli, "
+                'restituendoci una visione personale e profonda, che dialoga '
+                "con la storia del cinema e con l'immaginario di chi lo ha "
+                'amato e vissuto. "L\'orrore disegnato" è quindi un omaggio al '
+                'cinema horror, ma anche un invito a guardarlo con occhi '
+                "diversi: non solo come genere, ma come forma d'arte capace di "
+                'riflettere le paure, i sogni e le ossessioni di ogni epoca. '
+                'Giorgio Salesi, disegna fin da quando andavo alle medie. È un '
+                'autodidatta con la forte passione per i libri, il cinema, i '
+                'fumetti e molto altro. Per lui disegnare è sempre stata una '
+                'terapia; un modo per esprimere quel potenziale nascosto, che '
+                'nella vita di tutti i giorni, a causa della sua indole, non '
+                'riusciva a tirare fuori. I visitatori sono invitati a '
+                'prendere il tempo necessario per osservare le opere, '
+                "lasciandosi guidare dalle immagini e dall'autore, e, perché "
+                'no, ritrovare frammenti di film, emozioni e ricordi '
+                'personali. Info: Symphony piazza Cavour, 23, 0586 1754832 – '
+                '37111449537 – info@symphonyshop.it',
+ 'image_url': '//citynews-livornotoday.stgy.ovh/~media/horizontal-mid/32786941698637/salo-120-giornate-di-sodoma.jpg',
+ 'location_address': 'Piazza Cavour, 23',
+ 'location_name': 'Symphony Record Shop',
+ 'price': 'Gratis',
+ 'schedule': 'Vernissage venerdì 23 gennaio alle 18',
+ 'scraped_at': '2026-01-28T22:20:31.451544',
+ 'title': '"L\'orrore disegnato", dal 23 gennaio la mostra di Giorgio Salise '
+          'da Symphony Record Shop',
+ 'url': 'https://www.livornotoday.it/eventi/mostra-giorgio-salise-symphony-livorno.html',
+ 'uuid': '6b756c9e6fc1dfa3',
+ 'weekdays': 'Venerdì'}
+[2026-01-28T22:20:48.140+0000] {docker.py:429} INFO - 2026-01-28 22:20:48 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-01-28T22:20:48.140+0000] {docker.py:429} INFO - 2026-01-28 22:20:48 [scrapy.extensions.feedexport] INFO: Stored json feed (14 items) in: /app/city_today/output/eventi_livorno_questa-settimana_20260128_222028.json
+[2026-01-28T22:20:48.141+0000] {docker.py:429} INFO - 2026-01-28 22:20:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6816,
+ 'downloader/request_count': 16,
+ 'downloader/request_method_count/GET': 16,
+ 'downloader/response_bytes': 2312926,
+ 'downloader/response_count': 16,
+ 'downloader/response_status_count/200': 16,
+ 'elapsed_time_seconds': 19.136316,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 1, 28, 22, 20, 48, 138957, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 12416961,
+ 'httpcompression/response_count': 16,
+ 'item_scraped_count': 14,
+ 'items_per_city/Livorno': 14,
+ 'items_per_minute': 44.21052631578947,
+ 'log_count/DEBUG': 30,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68939776,
+ 'memusage/startup': 68939776,
+ 'request_depth_max': 1,
+ 'response_received_count': 16,
+ 'responses_per_minute': 50.526315789473685,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 15,
+ 'scheduler/dequeued/memory': 15,
+ 'scheduler/enqueued': 15,
+ 'scheduler/enqueued/memory': 15,
+ 'start_time': datetime.datetime(2026, 1, 28, 22, 20, 29, 2641, tzinfo=datetime.timezone.utc)}
+2026-01-28 22:20:48 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-01-28T22:20:48.184+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_livorno_questa-settimana_20260128_222028.json
+[2026-01-28T22:20:48.547+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_livorno.scrape_city_today, execution_date=20260128T221944, start_date=20260128T222028, end_date=20260128T222048
+[2026-01-28T22:20:48.592+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-01-28T22:20:48.629+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

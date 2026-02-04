@@ -1,0 +1,531 @@
+[2026-02-02T19:45:26.458+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_events_daily.process_trento.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:45:26.465+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_events_daily.process_trento.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [queued]>
+[2026-02-02T19:45:26.465+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 4
+[2026-02-02T19:45:26.475+0000] {taskinstance.py:2191} INFO - Executing <Task(FilterableDockerOperator): process_trento.scrape_city_today> on 2026-02-01 06:00:00+00:00
+[2026-02-02T19:45:26.479+0000] {standard_task_runner.py:60} INFO - Started process 247 to run task
+[2026-02-02T19:45:26.481+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'etl_events_daily', 'process_trento.scrape_city_today', 'scheduled__2026-02-01T06:00:00+00:00', '--job-id', '398', '--raw', '--subdir', 'DAGS_FOLDER/scrape_events.py', '--cfg-path', '/tmp/tmp1n4qd2ys']
+[2026-02-02T19:45:26.483+0000] {standard_task_runner.py:88} INFO - Job 398: Subtask process_trento.scrape_city_today
+[2026-02-02T19:45:26.500+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.11/site-packages/airflow/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-02-02T19:45:26.551+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_events_daily.process_trento.scrape_city_today scheduled__2026-02-01T06:00:00+00:00 [running]> on host d1594f2b36ec
+[2026-02-02T19:45:26.714+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_events_daily' AIRFLOW_CTX_TASK_ID='process_trento.scrape_city_today' AIRFLOW_CTX_EXECUTION_DATE='2026-02-01T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-01T06:00:00+00:00'
+[2026-02-02T19:45:26.752+0000] {docker.py:359} INFO - Starting docker container from image scrapy-events:latest
+[2026-02-02T19:45:26.762+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2026-02-02T19:45:27.379+0000] {docker.py:429} INFO - Avvio scraping per: Trento
+Periodo: questa-settimana
+[2026-02-02T19:45:27.382+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: events)
+[2026-02-02T19:45:27.387+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Jan 13 2026, 03:12:14) [GCC 14.2.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.12.54-linuxkit-x86_64-with-glibc2.41'}
+2026-02-02 19:45:27 [scrapy.crawler] DEBUG: Using CrawlerProcess
+[2026-02-02T19:45:27.388+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [events] INFO: Scraping città: Trento
+2026-02-02 19:45:27 [events] INFO: Periodo: questa-settimana (2026-02-02 - 2026-02-08)
+[2026-02-02T19:45:27.388+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.addons] INFO: Enabled addons:
+[]
+[2026-02-02T19:45:27.390+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [asyncio] DEBUG: Using selector: EpollSelector
+[2026-02-02T19:45:27.391+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-02-02 19:45:27 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2026-02-02T19:45:27.393+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.extensions.telnet] INFO: Telnet Password: f7fea0a3d6220731
+[2026-02-02T19:45:27.436+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+[2026-02-02T19:45:27.437+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'events',
+ 'CONCURRENT_REQUESTS': 2,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'DOWNLOAD_DELAY': 1,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'events.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['events.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+               'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 '
+               'Safari/537.36'}
+[2026-02-02T19:45:27.487+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+[2026-02-02T19:45:27.489+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+[2026-02-02T19:45:27.489+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+[2026-02-02T19:45:27.490+0000] {docker.py:429} INFO - Output file: /app/city_today/output/eventi_trento_questa-settimana_20260202_194527.json
+[2026-02-02T19:45:27.490+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.core.engine] INFO: Spider opened
+[2026-02-02T19:45:27.496+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+[2026-02-02T19:45:27.497+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+[2026-02-02T19:45:27.716+0000] {docker.py:429} INFO - 2026-02-02 19:45:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/robots.txt> (referer: None)
+[2026-02-02T19:45:30.150+0000] {docker.py:429} INFO - 2026-02-02 19:45:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/eventi/dal/2026-02-02/al/2026-02-08/> (referer: None)
+[2026-02-02T19:45:30.659+0000] {docker.py:429} INFO - 2026-02-02 19:45:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/eventi/claudio-orlandi-ultimate-landscapes-riva.html> (referer: https://www.trentotoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:30.790+0000] {docker.py:429} INFO - 2026-02-02 19:45:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.trentotoday.it/eventi/claudio-orlandi-ultimate-landscapes-riva.html>
+{'category': [],
+ 'city': 'Trento',
+ 'city_id': None,
+ 'content_hash': '172bd1762619bf4e',
+ 'date_display': 'dal 29 novembre 2025 al 14 giugno 2026',
+ 'date_end': '2026-06-14',
+ 'date_start': '2025-11-29',
+ 'description': 'Dopo diciassette anni di ricerca tra le vette e le ferite del '
+                'paesaggio alpino, dal 29 novembre 2025 al 14 giugno 2026, '
+                'Claudio Orlandi porta al Museo Alto Garda di Riva del Garda '
+                'il corpus completo di Ultimate Landscapes, progetto '
+                'fotografico d’arte che indaga la metamorfosi dei ghiacciai in '
+                'un tempo di crisi climatica. Un racconto visivo che '
+                'attraversa le Alpi dal Presena alla Marmolada, trasformando i '
+                'segni dell’uomo – i teli geotessili stesi a protezione del '
+                'ghiaccio – in simboli di un gesto ambivalente, sospeso tra '
+                'cura e accanimento, tra difesa e illusione. Con la curatela '
+                'di Matteo Rapanà e Alessia Locatelli, in occasione dell’Anno '
+                'Internazionale della Preservazione dei Ghiacciai, il Museo '
+                'Alto Garda dedica così all’artista romano la mostra “Claudio '
+                'Orlandi. Ultimate Landscapes. L’illusione del ghiaccio”, '
+                'accogliendo nella Pinacoteca del museo e per la prima volta '
+                'in un’istituzione pubblica l’intera produzione del progetto, '
+                'articolata in tredici serie fotografiche che raccontano un '
+                'viaggio durato quasi due decenni. Sin dal 2008 Orlandi '
+                'esplora i ghiacciai delle Alpi costruendo un linguaggio che '
+                'fonde documentazione e visione estetica. Le sue immagini non '
+                'si limitano a registrare il ritiro del ghiaccio, ma ne '
+                'svelano la complessità attraverso dettagli che diventano '
+                'materia narrativa: pieghe, strappi, cuciture dei teli '
+                'artificiali si confondono con la trama naturale del ghiaccio, '
+                'generando forme quasi astratte, ma intrise di senso. In '
+                'questi paesaggi estremi, ciò che emerge è la fragilità del '
+                'rapporto tra uomo e natura, la tensione tra conservazione e '
+                'controllo, tra la volontà di salvare e quella – forse '
+                'inconsapevole – di perpetuare un modello non più sostenibile. '
+                'Il percorso espositivo restituisce la profondità di questa '
+                'ricerca, in cui ogni serie diventa un capitolo autonomo di un '
+                'racconto in continua evoluzione. Dal Rhonegletscher svizzero '
+                'allo Stelvio, fino alla recente salita in Marmolada, “Regina '
+                'delle Dolomiti”, Orlandi cattura la trasformazione del '
+                'paesaggio alpino con un linguaggio di malinconica bellezza. '
+                'Nei suoi scatti, la luce disegna trame mutevoli, i teli si '
+                'ripiegano come sudari, la montagna respira e si ritrae, '
+                'lasciando intravedere la fine di un’era. Come ha scritto '
+                'Maria Fratelli, “sono sudari” – veli di una memoria che si '
+                'scioglie. La mostra si inserisce nel percorso di riflessione '
+                'che il Museo Alto Garda dedica alle trasformazioni ambientali '
+                'e sociali contemporanee. “I musei oggi sono luoghi di dialogo '
+                'e di interpretazione del presente – affermano i curatori – '
+                'capaci di interrogare la realtà e di immaginare il futuro. Il '
+                'progetto di Orlandi ci invita a fermarci, a osservare, a '
+                'interrogarci su quale modello di sviluppo vogliamo per la '
+                'montagna e per il pianeta che abitiamo”. Con Ultimate '
+                'Landscapes la fotografia si fa linguaggio etico, strumento di '
+                'conoscenza e di partecipazione, capace di tradurre l’urgenza '
+                'ambientale in esperienza emotiva. Ogni immagine diventa una '
+                'soglia, un varco tra la bellezza e la perdita, tra la forza '
+                'della natura e la vulnerabilità dell’uomo. E in questa '
+                'sospensione – tra ciò che resta e ciò che si scioglie – si '
+                'apre lo spazio di una consapevolezza nuova: il paesaggio, '
+                'ultimo, è anche il primo segno del nostro futuro. In '
+                'occasione della mostra, la narrazione fotografica di Claudio '
+                'Orlandi incontra l’installazione sonora creata dal sud '
+                'designer Alessio Mosti che si fa “voce” dello stesso '
+                'ghiacciaio, suono fisico dello sgretolamento registrato, '
+                'ripetuto e reso musica. Per la composizione del sound '
+                'Katabasis, Alessio Mosti ha utilizzato dei campionamenti '
+                'sonori rilevati in Antartide relativi al collasso delle '
+                'piattaforme di ghiaccio, fenomeno ormai conosciuto come '
+                'calving: il materiale sonoro è stato rielaborato, manipolato '
+                'e inserito all’interno di una composizione elettroacustica di '
+                '8 minuti e 22 secondi.',
+ 'event_id': 'claudio-orlandi-ultimate-landscapes-riva',
+ 'image_url': '//citynews-trentotoday.stgy.ovh/~media/horizontal-low/61759525587755/museoaltogarda-2.jpg',
+ 'location_address': 'Piazza Cesare Battisti, 3/A',
+ 'location_name': 'Museo Alto Garda',
+ 'price': 'intero €5 – ridotto €4',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni',
+                                                'website': None},
+                         'descrizione': 'Dopo diciassette anni di ricerca tra '
+                                        'le vette e le ferite del paesaggio '
+                                        'alpino, dal 29 novembre 2025 al 14 '
+                                        'giugno 2026, Claudio Orlandi porta al '
+                                        'Museo Alto Garda di Riva del Garda il '
+                                        'corpus completo di Ultimate '
+                                        'Landscapes, progetto fotografico '
+                                        'd’arte che indaga la metamorfosi dei '
+                                        'ghiacciai in un tempo di crisi '
+                                        'climatica. Un racconto visivo che '
+                                        'attraversa le Alpi dal Presena alla '
+                                        'Marmolada, trasformando i segni '
+                                        'dell’uomo – i teli geotessili stesi a '
+                                        'protezione del ghiaccio – in simboli '
+                                        'di un gesto ambivalente, sospeso tra '
+                                        'cura e accanimento, tra difesa e '
+                                        'illusione. Con la curatela di Matteo '
+                                        'Rapanà e Alessia Locatelli, in '
+                                        'occasione dell’Anno Internazionale '
+                                        'della Preservazione dei Ghiacciai, il '
+                                        'Museo Alto Garda dedica così '
+                                        'all’artista romano la mostra “Claudio '
+                                        'Orlandi. Ultimate Landscapes. '
+                                        'L’illusione del ghiaccio”, '
+                                        'accogliendo nella Pinacoteca del '
+                                        'museo e per la prima volta in '
+                                        'un’istituzione pubblica l’intera '
+                                        'produzione del proge
+[2026-02-02T19:45:30.794+0000] {docker.py:429} INFO - tto, articolata '
+                                        'in tredici serie fotografiche che '
+                                        'raccontano un viaggio durato quasi '
+                                        'due decenni. Sin dal 2008 Orlandi '
+                                        'esplora i ghiacciai delle Alpi '
+                                        'costruendo un linguaggio che fonde '
+                                        'documentazione e visione estetica. Le '
+                                        'sue immagini non si limitano a '
+                                        'registrare il ritiro del ghiaccio, ma '
+                                        'ne svelano la complessità attraverso '
+                                        'dettagli che diventano materia '
+                                        'narrativa: pieghe, strappi, cuciture '
+                                        'dei teli artificiali si confondono '
+                                        'con la trama naturale del ghiaccio, '
+                                        'generando forme quasi astratte, ma '
+                                        'intrise di senso. In questi paesaggi '
+                                        'estremi, ciò che emerge è la '
+                                        'fragilità del rapporto tra uomo e '
+                                        'natura, la tensione tra conservazione '
+                                        'e controllo, tra la volontà di '
+                                        'salvare e quella – forse '
+                                        'inconsapevole – di perpetuare un '
+                                        'modello non più sostenibile. Il '
+                                        'percorso espositivo restituisce la '
+                                        'profondità di questa ricerca, in cui '
+                                        'ogni serie diventa un capitolo '
+                                        'autonomo di un racconto in continua '
+                                        'evoluzione. Dal Rhonegletscher '
+                                        'svizzero allo Stelvio, fino alla '
+                                        'recente salita in Marmolada, “Regina '
+                                        'delle Dolomiti”, Orlandi cattura la '
+                                        'trasformazione del paesaggio alpino '
+                                        'con un linguaggio di malinconica '
+                                        'bellezza. Nei suoi scatti, la luce '
+                                        'disegna trame mutevoli, i teli si '
+                                        'ripiegano come sudari, la montagna '
+                                        'respira e si ritrae, lasciando '
+                                        'intravedere la fine di un’era. Come '
+                                        'ha scritto Maria Fratelli, “sono '
+                                        'sudari” – veli di una memoria che si '
+                                        'scioglie. La mostra si inserisce nel '
+                                        'percorso di riflessione che il Museo '
+                                        'Alto Garda dedica alle trasformazioni '
+                                        'ambientali e sociali contemporanee. '
+                                        '“I musei oggi sono luoghi di dialogo '
+                                        'e di interpretazione del presente – '
+                                        'affermano i curatori – capaci di '
+                                        'interrogare la realtà e di immaginare '
+                                        'il futuro. Il progetto di Orlandi ci '
+                                        'invita a fermarci, a osservare, a '
+                                        'interrogarci su quale modello di '
+                                        'sviluppo vogliamo per la montagna e '
+                                        'per il pianeta che abitiamo”. Con '
+                                        'Ultimate Landscapes la fotografia si '
+                                        'fa linguaggio etico, strumento di '
+                                        'conoscenza e di partecipazione, '
+                                        'capace di tradurre l’urgenza '
+                                        'ambientale in esperienza emotiva. '
+                                        'Ogni immagine diventa una soglia, un '
+                                        'varco tra la bellezza e la perdita, '
+                                        'tra la forza della natura e la '
+                                        'vulnerabilità dell’uomo. E in questa '
+                                        'sospensione – tra ciò che resta e ciò '
+                                        'che si scioglie – si apre lo spazio '
+                                        'di una consapevolezza nuova: il '
+                                        'paesaggio, ultimo, è anche il primo '
+                                        'segno del nostro futuro. In occasione '
+                                        'della mostra, la narrazione '
+                                        'fotografica di Claudio Orlandi '
+                                        'incontra l’installazione sonora '
+                                        'creata dal sud designer Alessio Mosti '
+                                        'che si fa “voce” dello stesso '
+                                        'ghiacciaio, suono fisico dello '
+                                        'sgretolamento registrato, ripetuto e '
+                                        'reso musica. Per la composizione del '
+                                        'sound Katabasis, Alessio Mosti ha '
+                                        'utilizzato dei campionamenti sonori '
+                                        'rilevati in Antartide relativi al '
+                                        'collasso delle piattaforme di '
+                                        'ghiaccio, fenomeno ormai conosciuto '
+                                        'come calving: il materiale sonoro è '
+                                        'stato rielaborato, manipolato e '
+                                        'inserito all’interno di una '
+                                        'composizione elettroacustica di 8 '
+                                        'minuti e 22 secondi.',
+                         'dove': {'address': 'Piazza Cesare Battisti, 3/A',
+                                  'name': 'Museo Alto Garda',
+                                  'raw_text': 'Dove Museo Alto Garda Piazza '
+                                              'Cesare Battisti, 3/A Riva del '
+                                              'Garda'},
+                         'image': '//citynews-trentotoday.stgy.ovh/~media/horizontal-low/61759525587755/museoaltogarda-2.jpg',
+                         'prezzo': 'intero €5 – ridotto €4',
+                         'quando': {'date_end': '2026-06-14',
+                                    'date_start': '2025-11-29',
+                                    'raw_text': 'Quando Dal 29/11/2025 al '
+                                                '14/06/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': None,
+                       'date': 'dal 29 novembre 2025 al 14 giugno 2026',
+                       'image': '//citynews-trentotoday.stgy.ovh/~media/horizontal-mid/61759525587755/museoaltogarda-2.jpg',
+                       'location': 'Museo Alto Garda',
+                       'stars': None,
+                       'title': "Ultimate landscapes: l'illusione del ghiaccio "
+                                'al Museo Alto Garda secondo Claudio Orlandi'}},
+ 'scraped_at': '2026-02-02T19:45:30.784535',
+ 'source': 'city_today',
+ 'title': "Ultimate landscapes: l'illusione del ghiaccio al Museo Alto Garda "
+          'secondo Claudio Orlandi',
+ 'url': 'https://www.trentotoday.it/eventi/claudio-orlandi-ultimate-landscapes-riva.html',
+ 'uuid': '280af1e62ee16541',
+ 'website': None}
+[2026-02-02T19:45:32.620+0000] {docker.py:429} INFO - 2026-02-02 19:45:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.trentotoday.it/eventi/krampus-programma-sfilate-quando-dove.html> (referer: https://www.trentotoday.it/eventi/dal/2026-02-02/al/2026-02-08/)
+[2026-02-02T19:45:32.729+0000] {docker.py:429} INFO - 2026-02-02 19:45:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.trentotoday.it/eventi/krampus-programma-sfilate-quando-dove.html>
+{'category': ['Fiere'],
+ 'city': 'Trento',
+ 'city_id': None,
+ 'content_hash': '719ebbe09c467189',
+ 'date_display': 'dal 31 ottobre 2025 al 14 febbraio 2026',
+ 'date_end': '2026-02-14',
+ 'date_start': '2025-10-31',
+ 'description': 'Lunghe corna, visi feroci scolpiti nel legno, mantelli di '
+                'pelliccia e un frastuono di campanacci che riecheggia tra '
+                'vicoli e piazze: i Krampus stanno per tornare. Anche '
+                'quest’anno, tra fine novembre e dicembre, il Trentino Alto '
+                'Adige si trasforma nel palcoscenico naturale di una delle '
+                'tradizioni più affascinanti e suggestive delle Alpi. Le '
+                'sfilate, sempre più attese da residenti e turisti, colorano '
+                'l’inverno di mistero, folklore e un pizzico di sana paura '
+                'scenografica. La storia dei Krampus affonda le radici in '
+                'antichi culti pagani, legati ai riti dell’inverno e al '
+                'dualismo tra luce e oscurità. Creature metà uomo e metà '
+                'bestia, i Krampus incarnavano lo spirito selvatico che, '
+                'secondo le credenze popolari, accompagnava San Nicolò nella '
+                'notte del 5 dicembre: il Santo premiava i bambini buoni, '
+                'mentre il suo inquietante seguito ammoniva i più monelli. Con '
+                'maschere lignee finemente intagliate — celebri quelle delle '
+                'Valli di Tures e Aurina — e pelli di capra dalle quali a '
+                'volte si sprigiona ancora l’odore acre della tradizione, i '
+                'Krampus evocano il fascino primordiale delle montagne. '
+                'Catene, fruste e campanacci completano l’iconografia di un '
+                'rito antico che in Val di Fiemme si arricchisce di figure '
+                'diverse: dal diavolo fuligginoso con lingua mobile alle '
+                'maschere cornute dai tratti deformi. Una delle storie più '
+                'raccontate narra di un gruppo di ragazzi che, in tempi di '
+                'carestia, si travestiva da creature mostruose per spaventare '
+                'gli abitanti dei villaggi vicini e sottrarre loro le '
+                'provviste. Finché, un giorno, si accorsero che tra le loro '
+                'file si nascondeva un intruso: il diavolo in persona, '
+                'riconoscibile solo dagli zoccoli caprini. Fu l’intervento di '
+                'San Nicolò a scacciarlo con un esorcismo, dando origine alla '
+                'tradizione delle sfilate che ogni vigilia del Santo ricordano '
+                'quel confronto simbolico tra bene e male. Dal capoluogo alla '
+                'montagna, passando per borghi e mercatini natalizi, il '
+                'Trentino offre un fitto cartellone di eventi dedicati ai '
+                'Krampus. Ecco dove incontrarli: È in Alto Adige che la '
+                'tradizione raggiunge i suoi momenti più scenografici, con '
+                'alcune tra le sfilate più famose dell’arco alpino. Tra tutte '
+                'spicca Dobbiaco, la più antica del territorio, che ogni anno '
+                'richiama centinaia di Krampus e Perchten. Ecco gli '
+                'appuntamenti principali: Che si tratti dei gruppi più '
+                'scenografici dell’Alto Adige o delle sfilate intime e '
+                'suggestive dei borghi trentini, l’arrivo dei Krampus resta '
+                'uno degli eventi più attesi dell’inverno alpino. Una festa di '
+                'luci, suoni e radici culturali profonde, capace ogni anno di '
+                'incantare — e spaventare quel tanto che basta — adulti e '
+                'bambini. Il consiglio è uno solo: preparatevi a incontrarli. '
+                'E quando sentirete in lontananza il rintocco metallico dei '
+                'campanacci, saprete che stanno arrivando. Il clima natalizio '
+                'comincia a diffondersi e, come ogni anno, il territorio si '
+                'prepara ad accogliere visitatori e curiosi con atmosfere '
+                'suggestive, luci e profumi d’inverno. Tutte le iniziative '
+                'dedicate ai mercatini sono raccolte nella nostra rubrica '
+                'stagionale , per accompagnarvi lungo il periodo più magico '
+                'dell’anno.',
+ 'event_id': 'krampus-programma-sfilate-quando-dove',
+ 'image_url': '//citynews-trentotoday.stgy.ovh/~media/horizontal-low/50426121075007/krampus-7.jpeg',
+ 'location_address': None,
+ 'location_name': None,
+ 'price': 'Prezzo non disponibile',
+ 'raw_data': {'detail': {'altre_informazioni': {'raw_text': 'Altre '
+                                                            'informazioni Tema '
+                                                            'Natale Evento per '
+                                                            'bambini',
+                                                'website': None},
+                         'descrizione': 'Lunghe corna, visi feroci scolpiti '
+                                        'nel legno, mantelli di pelliccia e un '
+                                        'frastuono di campanacci che '
+                                        'riecheggia tra vicoli e piazze: i '
+                                        'Krampus stanno per tornare. Anche '
+                                        'quest’anno, tra fine novembre e '
+                                        'dicembre, il Trentino Alto Adige si '
+                                        'trasforma nel palcoscenico naturale '
+                                        'di una delle tradizioni più '
+                                        'affascinanti e suggestive delle Alpi. '
+                                        'Le sfilate, sempre più attese da '
+                                        'residenti e turisti, colorano '
+                                        'l’inverno di mistero, folklore e un '
+                                        'pizzico di sana paura scenografica. '
+                                        'La storia dei Krampus affonda le '
+                                        'radici in antichi culti pagani, '
+                                        'legati ai riti dell’inverno e al '
+                                        'dualismo tra luce e oscurità. '
+                                        'Creature metà uomo e metà bestia, i '
+                                        'Krampus incarnavano lo spirito '
+                                        'selvatico che, secondo le credenze '
+                                        'popolari, accompagnava San Nicolò '
+                                        'nella notte del 5 dicembre: il Santo '
+                                        'premiava i bambini buoni, mentre il '
+                                        'suo inquietante seguito ammoniva i '
+                                        'più monelli. Con maschere lignee '
+                                        'finemente intagliate — celebri quelle '
+                                        'delle Valli di Tures e Aurina — e '
+                                        'pelli di capra dalle quali a volte si '
+                                        'sprigiona ancora l’odore acre della '
+                                        'tradizione, i Krampus evocano il '
+                                        'fascino primordiale delle montagne. '
+                                        'Catene, fruste e campanacci '
+                                        'completano l’iconografia di un rito '
+                                        'antico che in Val di Fiemme si '
+                                        'arricchisce di figure diverse: dal '
+                                        'diavolo fuligginoso con lingua mobile '
+                                        'alle maschere cornute dai tratti '
+                                        'deformi. Una delle storie più '
+                                        'raccontate narra di un gruppo di '
+                                        'ragazzi che, in tempi di carestia, si '
+                                        'travestiva da creature mostruose per '
+                                        'spaventare gli abitanti dei villaggi '
+                                        'vicini e sottrarre loro le provviste. '
+                                        'Finché, un giorno, si accorsero che '
+                                        'tra le loro file si nascondeva un '
+                                        'intruso: il diavolo in persona, '
+                                        'riconoscibile solo dagli zoccoli '
+                                        'caprini. Fu l’intervento di San '
+                                        'Nicolò a scacciarlo con un esorcismo, '
+                                        'dando origine alla tradizione delle '
+                                        'sfilate che ogni vigilia del Santo '
+                                        'ricordano quel confronto simbolico '
+                                        'tra bene e male. Dal capoluogo alla '
+                                        'montagna, passando per borghi e '
+                                        'mercatini natalizi, il Trentino offre '
+                                        'un fitto cartellone di eventi '
+                                        'dedicati ai Krampus. Ecco dove '
+                                        'incontrarli: È in Alto Adige che la '
+                                        'tradizione raggiunge i suoi momenti '
+                                        'più scenografici, con alcune tra le '
+                                        'sfilate più famose dell’arco alpino. '
+                                        'Tra tutte spicca Dobbiaco, la più '
+                                        'antica del territorio, che ogni anno '
+                                        'richiama centinaia di Krampus e '
+                                        'Perchten. Ecco gli appuntamenti '
+                                        'principali: Che si tratti dei gruppi '
+                                        'più scenografici dell’Alto Adige o '
+                                        'delle sfilate intime e suggestive dei '
+                                        'borghi trentini, l’arrivo dei Krampus '
+                                        'resta uno degli eventi più attesi '
+                                        'dell’inverno alpino. Una festa di '
+                                        'luci, suoni e radici culturali '
+                                        'profonde, capace ogni anno di '
+                                        'incantare — e spaventare quel tanto '
+                                        'che basta — adulti e bambini. Il '
+                                        'consiglio è uno solo: preparatevi a '
+                                        'incontrarli. E quando sentirete in '
+                                        'lontananza il rintocco metallico dei '
+                                        'campanacci, saprete che stanno '
+                                        'arrivando. Il clima natalizio '
+                                        'comincia a diffondersi e, come ogni '
+                                        'anno, il territorio si prepara ad '
+                                        'accogliere visitatori e curiosi con '
+                                        'atmosfere suggestive, luci e profumi '
+                                        'd’inverno. Tutte le iniziative '
+                                        'dedicate ai mercatini sono raccolte '
+                                        'nella nostra rubrica stagionale , per '
+                                        'accompagnarvi lungo il periodo più '
+                                        'magico dell’anno.',
+                         'dove': {'address': None,
+                                  'name': None,
+                                  'raw_text': 'Dove Indirizzo non disponibile'},
+                         'image': '//citynews-trentotoday.stgy.ovh/~media/horizontal-low/50426121075007/krampus-7.jpeg',
+                         'prezzo': 'Prezzo non disponibile',
+                         'quando': {'date_end': '2026-02-14',
+                                    'date_start': '2025-10-31',
+                                    'raw_text': 'Quando Dal 31/10/2025 al '
+                                                '14/02/2026 Orario non '
+                                                'disponibile',
+                                    'schedule': 'Orario non disponibile'}},
+              'list': {'category': 'Fiere',
+                       'date': 'dal 31 ottobre 2025 al 14 febbraio 2026',
+                       'image': '//citynews-trentotoday.stgy.ovh/~media/horizontal-mid/50426121075007/krampus-7.jpeg',
+                       'location': None,
+                       'stars': None,
+                       'title': 'Quando e dove compariranno: tutte le sfilate '
+                                'dei Krampus da non perdere'}},
+ 'scraped_at': '2026-02-02T19:45:32.727010',
+ 'source': 'city_today',
+ 'title': 'Quando e dove compariranno: tutte le sfilate dei Krampus da non '
+          'perdere',
+ 'url': 'https://www.trentotoday.it/eventi/krampus-programma-sfilate-quando-dove.html',
+ 'uuid': 'eac21b12127f8598',
+ 'website': None}
+[2026-02-02T19:45:32.730+0000] {docker.py:429} INFO - 2026-02-02 19:45:32 [scrapy.core.engine] INFO: Closing spider (finished)
+[2026-02-02T19:45:32.731+0000] {docker.py:429} INFO - 2026-02-02 19:45:32 [scrapy.extensions.feedexport] INFO: Stored json feed (2 items) in: /app/city_today/output/eventi_trento_questa-settimana_20260202_194527.json
+[2026-02-02T19:45:32.731+0000] {docker.py:429} INFO - 2026-02-02 19:45:32 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1499,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 444169,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'elapsed_time_seconds': 5.234658,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 2, 2, 19, 45, 32, 729452, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 2286339,
+ 'httpcompression/response_count': 4,
+ 'item_scraped_count': 2,
+ 'items_per_city/Trento': 2,
+ 'items_per_minute': 24.0,
+ 'log_count/DEBUG': 6,
+ 'log_count/INFO': 3,
+ 'memusage/max': 68681728,
+ 'memusage/startup': 68681728,
+ 'request_depth_max': 1,
+ 'response_received_count': 4,
+ 'responses_per_minute': 48.0,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2026, 2, 2, 19, 45, 27, 494794, tzinfo=datetime.timezone.utc)}
+2026-02-02 19:45:32 [scrapy.core.engine] INFO: Spider closed (finished)
+[2026-02-02T19:45:33.037+0000] {docker.py:429} INFO - Scraping completato. File: /app/city_today/output/eventi_trento_questa-settimana_20260202_194527.json
+[2026-02-02T19:45:33.320+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_events_daily, task_id=process_trento.scrape_city_today, execution_date=20260201T060000, start_date=20260202T194526, end_date=20260202T194533
+[2026-02-02T19:45:33.388+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-02-02T19:45:33.422+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
