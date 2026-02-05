@@ -1,7 +1,17 @@
 import os
+import platform
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# GDAL/GEOS per macOS (development locale)
+if platform.system() == 'Darwin':
+    _gdal_path = Path('/opt/homebrew/lib/python3.11/site-packages/fiona/.dylibs/libgdal.32.3.6.4.dylib')
+    _geos_path = Path('/opt/homebrew/lib/python3.11/site-packages/shapely/.dylibs/libgeos_c.1.17.3.dylib')
+    if _gdal_path.exists():
+        GDAL_LIBRARY_PATH = str(_gdal_path)
+    if _geos_path.exists():
+        GEOS_LIBRARY_PATH = str(_geos_path)
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-change-me-in-production')
 
@@ -157,33 +167,33 @@ CSRF_TRUSTED_ORIGINS = os.environ.get(
 
 # Spectacular (API docs)
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Events Staging API',
+    'TITLE': 'Events Backoffice API',
     'DESCRIPTION': '''
-## API per Servizi Esterni
+## API REST - Events Backoffice
 
-API REST per l'integrazione con servizi di terze parti per la gestione degli staging events.
+API per la gestione degli eventi, monitoraggio ETL e integrazione con servizi esterni.
 
 ### Autenticazione
 
-Questa API utilizza **OAuth2 Client Credentials** per l'autenticazione.
+- **API interne**: Session authentication (Django admin login)
+- **API esterne** (`/api/external/`): OAuth2 Client Credentials
+
+#### OAuth2 Flow
 
 1. Richiedi le credenziali (Client ID e Client Secret) all'amministratore
-2. Ottieni un access token chiamando `/oauth/token/`
-3. Usa il token nelle richieste con header `Authorization: Bearer <token>`
+2. Ottieni un access token: `POST /oauth/token/` con `grant_type=client_credentials`
+3. Usa il token: `Authorization: Bearer <access_token>`
 
-### Scopes
+### Scopes OAuth2
 
-- `read` - Permette di leggere gli staging events
-- `write` - Permette di creare, modificare ed eliminare staging events
-
-### Rate Limiting
-
-Le richieste API sono monitorate. Contatta l'amministratore per informazioni sui limiti.
+- `read` - Lettura staging events
+- `write` - Scrittura staging events
     ''',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'SECURITY': [
         {'OAuth2': ['read', 'write']},
+        {'SessionAuth': []},
     ],
     'OAUTH2_FLOWS': ['clientCredentials'],
     'OAUTH2_TOKEN_URL': '/oauth/token/',
@@ -200,12 +210,21 @@ Le richieste API sono monitorate. Contatta l'amministratore per informazioni sui
                         }
                     }
                 }
+            },
+            'SessionAuth': {
+                'type': 'apiKey',
+                'in': 'cookie',
+                'name': 'sessionid',
             }
         }
     },
     'TAGS': [
-        {'name': 'Staging Events', 'description': 'Gestione staging events'},
-        {'name': 'Bulk Operations', 'description': 'Operazioni massive'},
+        {'name': 'Dashboard', 'description': 'Statistiche aggregate e panoramica'},
+        {'name': 'Production Events', 'description': 'Eventi validati in produzione'},
+        {'name': 'Staging Events (Internal)', 'description': 'Eventi in staging (sola lettura interna)'},
+        {'name': 'ETL', 'description': 'Monitoraggio esecuzioni e errori ETL'},
+        {'name': 'Staging Events', 'description': 'API esterna OAuth2 - gestione staging events'},
+        {'name': 'Bulk Operations', 'description': 'Operazioni massive (bulk create, clear source)'},
     ],
 }
 

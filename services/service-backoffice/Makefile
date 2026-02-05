@@ -5,7 +5,7 @@
 # =============================================================================
 BACKEND_DIR := backend
 FRONTEND_DIR := frontend
-VENV := venv
+VENV := $(BACKEND_DIR)/venv
 PYTHON := $(shell pwd)/$(VENV)/bin/python3
 PIP := $(shell pwd)/$(VENV)/bin/pip3
 
@@ -18,15 +18,29 @@ ENV_FILE := .env
 GREEN := \033[0;32m
 NC := \033[0m
 
-.PHONY: help install build-frontend run-django dev run stop logs shell build build-no-cache clean
+.PHONY: help install venv build-frontend run-django migrate makemigrations \
+        createsuperuser superuser collectstatic check-db shell-django \
+        dev run stop logs shell build build-no-cache clean
 
 help:
 	@echo "$(GREEN)Comandi disponibili per Service Events:$(NC)"
 	@echo ""
-	@echo "  Sviluppo locale:"
+	@echo "  Setup:"
+	@echo "    venv             Crea virtualenv Python in $(VENV)"
 	@echo "    install          Installa dipendenze (pip + npm)"
-	@echo "    build-frontend   Compila il frontend React (Vite build)"
+	@echo ""
+	@echo "  Django:"
 	@echo "    run-django       Avvia Django localmente (caricando .env)"
+	@echo "    migrate          Applica migrazioni database"
+	@echo "    makemigrations   Crea nuove migrazioni"
+	@echo "    createsuperuser  Crea superuser (interattivo)"
+	@echo "    superuser        Crea superuser da variabili .env (non interattivo)"
+	@echo "    collectstatic    Raccoglie file statici"
+	@echo "    shell-django     Apre Django shell"
+	@echo "    check-db         Verifica connessione DB e conta record"
+	@echo ""
+	@echo "  Frontend:"
+	@echo "    build-frontend   Compila il frontend React (Vite build)"
 	@echo ""
 	@echo "  Docker Development:"
 	@echo "    dev              Avvia container in background (con volume mount)"
@@ -44,15 +58,88 @@ help:
 	@echo ""
 
 # =============================================================================
-# Sviluppo locale
+# Setup
 # =============================================================================
 
-install:
+venv:
+	@if [ ! -d $(VENV) ]; then \
+		echo "$(GREEN)Creazione virtualenv in $(VENV)...$(NC)"; \
+		python3.11 -m venv $(VENV); \
+	else \
+		echo "Virtualenv $(VENV) gia' esistente."; \
+	fi
+
+install: venv
 	@echo "$(GREEN)Installazione dipendenze Backend...$(NC)"
-	@if [ ! -d $(VENV) ]; then python3 -m venv $(VENV); fi
 	$(PIP) install -r $(BACKEND_DIR)/requirements.txt
 	@echo "$(GREEN)Installazione dipendenze Frontend...$(NC)"
 	cd $(FRONTEND_DIR) && npm install
+
+# =============================================================================
+# Django
+# =============================================================================
+
+run-django:
+	@echo "$(GREEN)Avvio Django Server locale...$(NC)"
+	@if [ -f $(ENV_FILE) ]; then \
+		set -a && . ./$(ENV_FILE) && set +a && \
+		cd $(BACKEND_DIR) && $(PYTHON) manage.py runserver; \
+	else \
+		echo "File $(ENV_FILE) non trovato. Avvio senza variabili caricate da file."; \
+		cd $(BACKEND_DIR) && $(PYTHON) manage.py runserver; \
+	fi
+
+migrate:
+	@echo "$(GREEN)Applicazione migrazioni...$(NC)"
+	@set -a && . ./$(ENV_FILE) && set +a && \
+	cd $(BACKEND_DIR) && $(PYTHON) manage.py migrate
+
+makemigrations:
+	@echo "$(GREEN)Creazione migrazioni...$(NC)"
+	@set -a && . ./$(ENV_FILE) && set +a && \
+	cd $(BACKEND_DIR) && $(PYTHON) manage.py makemigrations
+
+createsuperuser:
+	@echo "$(GREEN)Creazione superuser (interattivo)...$(NC)"
+	@set -a && . ./$(ENV_FILE) && set +a && \
+	cd $(BACKEND_DIR) && $(PYTHON) manage.py createsuperuser
+
+superuser:
+	@echo "$(GREEN)Creazione superuser da .env...$(NC)"
+	@set -a && . ./$(ENV_FILE) && set +a && \
+	cd $(BACKEND_DIR) && $(PYTHON) manage.py createsuperuser --noinput
+
+collectstatic:
+	@echo "$(GREEN)Raccolta file statici...$(NC)"
+	@set -a && . ./$(ENV_FILE) && set +a && \
+	cd $(BACKEND_DIR) && $(PYTHON) manage.py collectstatic --noinput
+
+shell-django:
+	@set -a && . ./$(ENV_FILE) && set +a && \
+	cd $(BACKEND_DIR) && $(PYTHON) manage.py shell
+
+check-db:
+	@echo "$(GREEN)Verifica connessione DB e conteggio record...$(NC)"
+	@set -a && . ./$(ENV_FILE) && set +a && \
+	cd $(BACKEND_DIR) && $(PYTHON) manage.py shell -c "\
+from events.models import ProductionEvent, StagingEvent; \
+from etl.models import EtlRun, EtlError; \
+print('=== Database Status ==='); \
+print(f'Production events: {ProductionEvent.objects.count()}'); \
+print(f'Staging events:    {StagingEvent.objects.count()}'); \
+print(f'ETL runs:          {EtlRun.objects.count()}'); \
+print(f'ETL errors:        {EtlError.objects.count()}'); \
+print(); \
+from django.db import connection; \
+cursor = connection.cursor(); \
+cursor.execute(\"SELECT table_schema, table_name FROM information_schema.tables WHERE table_schema IN ('events_data', 'comuni_italiani', 'public') AND table_type='BASE TABLE' ORDER BY table_schema, table_name\"); \
+print('=== Tabelle DB ==='); \
+for row in cursor.fetchall(): print(f'  {row[0]}.{row[1]}'); \
+"
+
+# =============================================================================
+# Frontend
+# =============================================================================
 
 build-frontend:
 	@echo "$(GREEN)Compilazione Frontend React...$(NC)"
@@ -60,15 +147,6 @@ build-frontend:
 	@echo "$(GREEN)Copia build nel Backend...$(NC)"
 	mkdir -p $(BACKEND_DIR)/staticfiles/frontend
 	cp -r $(FRONTEND_DIR)/dist/* $(BACKEND_DIR)/staticfiles/frontend/
-
-run-django:
-	@echo "$(GREEN)Avvio Django Server locale...$(NC)"
-	@if [ -f $(BACKEND_DIR)/.env ]; then \
-		cd $(BACKEND_DIR) && export $$(grep -v '^#' .env | xargs) && $(PYTHON) manage.py runserver; \
-	else \
-		echo "File .env non trovato in $(BACKEND_DIR). Avvio senza variabili caricate da file."; \
-		cd $(BACKEND_DIR) && $(PYTHON) manage.py runserver; \
-	fi
 
 # =============================================================================
 # Docker Development

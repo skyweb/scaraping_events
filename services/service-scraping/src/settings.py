@@ -98,7 +98,7 @@ ITEM_PIPELINES = {
     # Opzione 1: Salvataggio diretto su PostgreSQL
     # "pipelines.PostgresPipeline": 300,
     # Opzione 2: Invio tramite API al backoffice (raccomandato)
-    # "pipelines.ApiPipeline": 300,
+    "pipelines.ApiPipeline": 300,
 }
 
 # =============================================================================

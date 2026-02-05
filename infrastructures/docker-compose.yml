@@ -11,6 +11,9 @@ x-airflow-common:
     AIRFLOW__CELERY__RESULT_BACKEND: ${AIRFLOW__CELERY__RESULT_BACKEND}
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+    API_BASE_URL: ${API_BASE_URL:-http://backoffice:8000}
+    API_CLIENT_ID: ${API_CLIENT_ID}
+    API_CLIENT_SECRET: ${API_CLIENT_SECRET}
     _PIP_ADDITIONAL_REQUIREMENTS: 'apache-airflow-providers-docker apache-airflow-providers-postgres psycopg2-binary redis'
   volumes:
     - ./dags:/opt/airflow/dags

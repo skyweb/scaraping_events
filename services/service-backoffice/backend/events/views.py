@@ -43,6 +43,52 @@ class ErrorResponseSerializer(drf_serializers.Serializer):
     error = drf_serializers.CharField()
 
 
+class CityCountSerializer(drf_serializers.Serializer):
+    city = drf_serializers.CharField()
+    count = drf_serializers.IntegerField()
+
+
+class SourceCountSerializer(drf_serializers.Serializer):
+    source = drf_serializers.CharField()
+    count = drf_serializers.IntegerField()
+
+
+class ToggleActiveResponseSerializer(drf_serializers.Serializer):
+    is_active = drf_serializers.BooleanField()
+
+
+@extend_schema_view(
+    list=extend_schema(
+        summary="Lista production events",
+        description="Recupera la lista paginata degli eventi in produzione. Supporta filtri, ricerca e ordinamento.",
+        tags=["Production Events"],
+    ),
+    retrieve=extend_schema(
+        summary="Dettaglio production event",
+        description="Recupera tutti i dettagli di un singolo evento in produzione.",
+        tags=["Production Events"],
+    ),
+    create=extend_schema(
+        summary="Crea production event",
+        description="Crea un nuovo evento in produzione.",
+        tags=["Production Events"],
+    ),
+    update=extend_schema(
+        summary="Aggiorna production event",
+        description="Aggiorna completamente un evento in produzione.",
+        tags=["Production Events"],
+    ),
+    partial_update=extend_schema(
+        summary="Aggiorna parzialmente production event",
+        description="Aggiorna parzialmente un evento in produzione.",
+        tags=["Production Events"],
+    ),
+    destroy=extend_schema(
+        summary="Elimina production event",
+        description="Elimina un evento in produzione.",
+        tags=["Production Events"],
+    ),
+)
 class ProductionEventViewSet(viewsets.ModelViewSet):
     queryset = ProductionEvent.objects.all()
     serializer_class = ProductionEventSerializer
@@ -57,6 +103,12 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
             return ProductionEventListSerializer
         return ProductionEventSerializer
 
+    @extend_schema(
+        summary="Citta' disponibili",
+        description="Restituisce la lista delle citta' con il conteggio degli eventi per ciascuna.",
+        tags=["Production Events"],
+        responses={200: CityCountSerializer(many=True)},
+    )
     @action(detail=False, methods=['get'])
     def cities(self, request):
         """Lista delle città disponibili"""
@@ -68,6 +120,12 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
         )
         return Response(list(cities))
 
+    @extend_schema(
+        summary="Sorgenti disponibili",
+        description="Restituisce la lista delle sorgenti dati con il conteggio degli eventi per ciascuna.",
+        tags=["Production Events"],
+        responses={200: SourceCountSerializer(many=True)},
+    )
     @action(detail=False, methods=['get'])
     def sources(self, request):
         """Lista delle sorgenti disponibili"""
@@ -79,6 +137,13 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
         )
         return Response(list(sources))
 
+    @extend_schema(
+        summary="Toggle attivo/inattivo",
+        description="Inverte lo stato `is_active` dell'evento specificato.",
+        tags=["Production Events"],
+        request=None,
+        responses={200: ToggleActiveResponseSerializer},
+    )
     @action(detail=True, methods=['post'])
     def toggle_active(self, request, pk=None):
         """Toggle stato attivo/inattivo"""
@@ -88,6 +153,18 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
         return Response({'is_active': event.is_active})
 
 
+@extend_schema_view(
+    list=extend_schema(
+        summary="Lista staging events",
+        description="Recupera la lista paginata degli eventi in staging (pre-validazione).",
+        tags=["Staging Events (Internal)"],
+    ),
+    retrieve=extend_schema(
+        summary="Dettaglio staging event",
+        description="Recupera i dettagli di un singolo evento in staging.",
+        tags=["Staging Events (Internal)"],
+    ),
+)
 class StagingEventViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = StagingEvent.objects.all()
     serializer_class = StagingEventSerializer
@@ -96,6 +173,18 @@ class StagingEventViewSet(viewsets.ReadOnlyModelViewSet):
     search_fields = ['title', 'description']
 
 
+@extend_schema_view(
+    list=extend_schema(
+        summary="Lista ETL runs",
+        description="Recupera lo storico delle esecuzioni ETL con durata, conteggi e stato.",
+        tags=["ETL"],
+    ),
+    retrieve=extend_schema(
+        summary="Dettaglio ETL run",
+        description="Recupera i dettagli di una singola esecuzione ETL.",
+        tags=["ETL"],
+    ),
+)
 class EtlRunViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = EtlRun.objects.all()
     serializer_class = EtlRunSerializer
@@ -105,6 +194,18 @@ class EtlRunViewSet(viewsets.ReadOnlyModelViewSet):
     ordering = ['-started_at']
 
 
+@extend_schema_view(
+    list=extend_schema(
+        summary="Lista ETL errors",
+        description="Recupera lo storico degli errori ETL con tipo, sorgente e messaggio.",
+        tags=["ETL"],
+    ),
+    retrieve=extend_schema(
+        summary="Dettaglio ETL error",
+        description="Recupera i dettagli di un singolo errore ETL.",
+        tags=["ETL"],
+    ),
+)
 class EtlErrorViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = EtlError.objects.all()
     serializer_class = EtlErrorSerializer
@@ -117,6 +218,12 @@ class EtlErrorViewSet(viewsets.ReadOnlyModelViewSet):
 class DashboardView(APIView):
     """Dashboard con statistiche generali"""
 
+    @extend_schema(
+        summary="Statistiche dashboard",
+        description="Restituisce statistiche aggregate: totale eventi, eventi attivi, distribuzione per citta'/sorgente, ultimi ETL runs e conteggio staging.",
+        tags=["Dashboard"],
+        responses={200: DashboardStatsSerializer},
+    )
     def get(self, request):
         total_events = ProductionEvent.objects.count()
         active_events = ProductionEvent.objects.filter(is_active=True).count()
@@ -168,24 +275,59 @@ class DashboardView(APIView):
     ),
     create=extend_schema(
         summary="Crea staging event",
-        description="Crea un nuovo staging event. Richiede scope `write`.",
+        description="""
+Crea un nuovo staging event. Richiede scope `write`.
+
+**Campi obbligatori:** `uuid`, `source`, `title`
+
+Tutti gli altri campi sono opzionali. Il campo `uuid` deve essere univoco
+per sorgente (tipicamente un hash di title + date_start + location_name).
+        """,
         tags=["Staging Events"],
         examples=[
             OpenApiExample(
-                "Esempio evento",
+                "Evento completo",
+                summary="Evento con tutti i campi compilati",
                 value={
-                    "uuid": "evt_abc123",
-                    "source": "my_service",
-                    "title": "Concerto Jazz",
-                    "city": "Milano",
-                    "description": "Serata di musica jazz dal vivo",
+                    "uuid": "a1b2c3d4e5f6",
+                    "content_hash": "f6e5d4c3b2a1",
+                    "source": "city_today",
+                    "url": "https://www.example.com/eventi/concerto-jazz-milano",
+                    "title": "Concerto Jazz al Blue Note",
+                    "description": "Una serata di musica jazz dal vivo con artisti internazionali. Aperitivo dalle 19:30, concerto dalle 21:00.",
+                    "category": ["musica", "jazz", "concerti", "nightlife"],
+                    "image_url": "https://www.example.com/img/jazz-night.jpg",
+                    "city": "milano",
+                    "location_name": "Blue Note Milano",
+                    "location_address": "Via Borsieri 37, 20159 Milano MI",
+                    "price": "25,00 EUR + prevendita",
+                    "website": "https://www.bluenotemilano.com",
                     "date_start": "2026-02-15",
                     "date_end": "2026-02-15",
-                    "time_start": "21:00",
-                    "location_name": "Blue Note",
-                    "location_address": "Via Borsieri 37, Milano",
-                    "price": "25 EUR",
-                    "category": ["musica", "jazz", "concerti"]
+                    "time_start": "21:00:00",
+                    "time_end": "23:30:00",
+                    "time_info": "Apertura porte ore 19:30",
+                    "schedule": "Venerdi e Sabato",
+                    "weekdays": "fri,sat",
+                    "raw_data": {
+                        "original_id": "12345",
+                        "scraped_from": "city_today",
+                        "extra_field": "valore originale"
+                    },
+                    "scraped_at": "2026-02-05T14:30:00Z"
+                },
+                request_only=True,
+            ),
+            OpenApiExample(
+                "Evento minimo",
+                summary="Solo i campi obbligatori",
+                value={
+                    "uuid": "b2c3d4e5f6a1",
+                    "source": "city_today",
+                    "title": "Mercatino di Natale",
+                    "city": "bologna",
+                    "date_start": "2026-12-01",
+                    "date_end": "2026-12-24"
                 },
                 request_only=True,
             ),
@@ -264,20 +406,82 @@ Utile per importare grandi quantità di eventi in modo efficiente.
         },
         examples=[
             OpenApiExample(
-                "Esempio bulk create",
+                "Bulk con eventi completi",
+                summary="Due eventi con tutti i campi compilati",
+                value={
+                    "events": [
+                        {
+                            "uuid": "a1b2c3d4e5f6",
+                            "content_hash": "f6e5d4c3b2a1",
+                            "source": "city_today",
+                            "url": "https://www.example.com/eventi/concerto-jazz-milano",
+                            "title": "Concerto Jazz al Blue Note",
+                            "description": "Una serata di musica jazz dal vivo con artisti internazionali.",
+                            "category": ["musica", "jazz", "concerti"],
+                            "image_url": "https://www.example.com/img/jazz-night.jpg",
+                            "city": "milano",
+                            "location_name": "Blue Note Milano",
+                            "location_address": "Via Borsieri 37, 20159 Milano MI",
+                            "price": "25,00 EUR",
+                            "website": "https://www.bluenotemilano.com",
+                            "date_start": "2026-02-15",
+                            "date_end": "2026-02-15",
+                            "time_start": "21:00:00",
+                            "time_end": "23:30:00",
+                            "time_info": "Apertura porte ore 19:30",
+                            "schedule": "Venerdi e Sabato",
+                            "weekdays": "fri,sat",
+                            "raw_data": {"original_id": "12345"},
+                            "scraped_at": "2026-02-05T14:30:00Z"
+                        },
+                        {
+                            "uuid": "b2c3d4e5f6a1",
+                            "content_hash": "a1f6e5d4c3b2",
+                            "source": "city_today",
+                            "url": "https://www.example.com/eventi/mostra-caravaggio-roma",
+                            "title": "Mostra Caravaggio - Luci e Ombre",
+                            "description": "Esposizione dedicata alle opere di Caravaggio con percorso multimediale.",
+                            "category": ["arte", "mostre", "cultura"],
+                            "image_url": "https://www.example.com/img/caravaggio.jpg",
+                            "city": "roma",
+                            "location_name": "Palazzo delle Esposizioni",
+                            "location_address": "Via Nazionale 194, 00184 Roma RM",
+                            "price": "15,00 EUR",
+                            "website": "https://www.palazzoesposizioni.it",
+                            "date_start": "2026-02-01",
+                            "date_end": "2026-04-30",
+                            "time_start": "10:00:00",
+                            "time_end": "20:00:00",
+                            "time_info": "Ultimo ingresso ore 19:00",
+                            "schedule": "Da martedi a domenica",
+                            "weekdays": "tue,wed,thu,fri,sat,sun",
+                            "raw_data": {"original_id": "67890"},
+                            "scraped_at": "2026-02-05T14:30:00Z"
+                        }
+                    ]
+                },
+                request_only=True,
+            ),
+            OpenApiExample(
+                "Bulk con eventi minimi",
+                summary="Due eventi con solo i campi obbligatori",
                 value={
                     "events": [
                         {
                             "uuid": "evt_001",
-                            "source": "my_service",
-                            "title": "Evento 1",
-                            "city": "Milano"
+                            "source": "city_today",
+                            "title": "Mercatino di Natale",
+                            "city": "bologna",
+                            "date_start": "2026-12-01",
+                            "date_end": "2026-12-24"
                         },
                         {
                             "uuid": "evt_002",
-                            "source": "my_service",
-                            "title": "Evento 2",
-                            "city": "Roma"
+                            "source": "city_today",
+                            "title": "Sagra del Tartufo",
+                            "city": "firenze",
+                            "date_start": "2026-03-10",
+                            "date_end": "2026-03-12"
                         }
                     ]
                 },

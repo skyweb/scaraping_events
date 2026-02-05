@@ -40,6 +40,76 @@ $ docker-compose up -d
 - **Backend API:** [http://localhost:8000](http://localhost:8000)
 - **Django Admin:** [http://localhost:8000/admin](http://localhost:8000/admin)
 
+## API Documentation
+
+La documentazione delle API viene generata automaticamente tramite **drf-spectacular** (OpenAPI 3.0).
+
+### Rotte documentazione
+
+| URL | Descrizione |
+|---|---|
+| `/api/docs/` | Swagger UI interattivo (API interne) |
+| `/api/schema/` | Schema OpenAPI raw (JSON/YAML) |
+| `/docs/` | Swagger UI pubblico (API esterne) |
+| `/docs/redoc/` | ReDoc - documentazione alternativa |
+| `/docs/schema/` | Schema OpenAPI pubblico (JSON/YAML) |
+
+Per scaricare lo schema in formato specifico:
+```
+GET /api/schema/?format=yaml
+GET /api/schema/?format=json
+```
+
+### API Endpoints
+
+**API Interne** (prefisso `/api/`):
+
+| Endpoint | Descrizione |
+|---|---|
+| `/api/events/` | CRUD Production Events |
+| `/api/events/{id}/toggle_active/` | Toggle attivo/inattivo evento |
+| `/api/events/cities/` | Lista citta con conteggio eventi |
+| `/api/events/sources/` | Lista sorgenti con conteggio eventi |
+| `/api/staging/` | Lista Staging Events (read-only) |
+| `/api/etl-runs/` | Storico esecuzioni ETL |
+| `/api/etl-errors/` | Storico errori ETL |
+| `/api/dashboard/` | Statistiche aggregate |
+
+**API Esterne - OAuth2** (prefisso `/api/external/`):
+
+| Endpoint | Metodi | Scope | Descrizione |
+|---|---|---|---|
+| `/api/external/staging/` | GET, POST, PUT, PATCH, DELETE | read/write | CRUD Staging Events |
+| `/api/external/staging/bulk/` | POST | write | Creazione massiva eventi |
+| `/api/external/staging/clear_source/?source=xxx` | DELETE | write | Elimina eventi per sorgente |
+
+### Autenticazione API Esterne
+
+Le API esterne richiedono un token OAuth2 (Client Credentials):
+
+```bash
+# 1. Ottieni access token
+curl -X POST http://localhost:8000/oauth/token/ \
+  -d "grant_type=client_credentials" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET"
+
+# 2. Usa il token nelle richieste
+curl -H "Authorization: Bearer ACCESS_TOKEN" \
+  http://localhost:8000/api/external/staging/
+```
+
+### Celery (Task asincroni)
+
+Il backoffice utilizza Celery con Redis come broker per task asincroni e scheduling periodico.
+
+| Servizio | Descrizione |
+|---|---|
+| `backoffice-celery-worker` | Worker per esecuzione task |
+| `backoffice-celery-beat` | Scheduler per task periodici |
+
+I task periodici sono configurabili da Django Admin nella sezione **Celery** > **Periodic Tasks**.
+
 ## Gestione Utenti (Django)
 
 ### Creare un Superuser
