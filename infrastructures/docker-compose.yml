@@ -305,7 +305,7 @@ services:
     volumes:
       - ./config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
-      - "80:80"
+      - "8081:80"
     depends_on:
       - backoffice
     networks:

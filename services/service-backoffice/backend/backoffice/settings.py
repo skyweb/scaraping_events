@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'backoffice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': os.environ.get('POSTGRES_DB', 'today_events'),
         'USER': os.environ.get('POSTGRES_USER', 'events'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'events_secret_2026'),

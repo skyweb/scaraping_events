@@ -13,6 +13,7 @@ class Migration(migrations.Migration):
     dependencies = []
 
     operations = [
+        migrations.RunSQL('CREATE SCHEMA IF NOT EXISTS comuni_italiani;'),
         migrations.CreateModel(
             name="ComuneJsonStaging",
             fields=[
