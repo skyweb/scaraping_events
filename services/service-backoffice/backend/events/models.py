@@ -68,7 +68,6 @@ class StagingEvent(models.Model):
     loaded_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        managed = False
         db_table = 'events_data"."staging_events'
         ordering = ['-loaded_at']
         verbose_name = 'Staging Event'
