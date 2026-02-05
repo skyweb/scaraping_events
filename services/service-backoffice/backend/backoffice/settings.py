@@ -162,7 +162,7 @@ CORS_ALLOW_CREDENTIALS = True
 # CSRF
 CSRF_TRUSTED_ORIGINS = os.environ.get(
     'CSRF_TRUSTED_ORIGINS',
-    'http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000'
+    'http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000,http://localhost:80'
 ).split(',')
 
 # Spectacular (API docs)

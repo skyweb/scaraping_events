@@ -6,7 +6,7 @@ services:
   # Scrapyd Server
   scrapyd:
     build:
-      context: src
+      context: .
       dockerfile: src/Dockerfile
     image: events-scraper:latest
     container_name: events-scrapyd

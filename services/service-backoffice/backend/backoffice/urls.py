@@ -5,6 +5,13 @@ from django.http import HttpResponse
 from django.views.static import serve
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
+from backoffice.views import permission_denied_view # Import the custom 403 view
+
+# ... (rest of the file) ...
+
+handler403 = 'backoffice.views.permission_denied_view' # Set the custom 403 handler
+
+
 
 def serve_frontend(request, path=''):
     """Serve React frontend index.html for SPA routing"""
