@@ -39,7 +39,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean
 
 # Copia requirements e installa dipendenze Python
-COPY requirements.txt .
+# NB: paths relativi al build context (services/service-scraping/)
+COPY src/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Crea directory per Scrapyd
@@ -48,13 +49,13 @@ RUN mkdir -p /var/lib/scrapyd/eggs \
              /var/lib/scrapyd/dbs \
              /data/output
 
-# Copia il progetto Scrapy
-COPY events_scraper/ /app/events_scraper/
-COPY events_scraper/scrapy.cfg /app/scrapy.cfg
-COPY events_scraper/scrapyd.conf /etc/scrapyd/scrapyd.conf
+# Copia il progetto Scrapy (src/ = events_scraper package)
+COPY src/ /app/events_scraper/
+COPY src/scrapy.cfg /app/scrapy.cfg
+COPY src/scrapyd.conf /etc/scrapyd/scrapyd.conf
 
 # Copia script di avvio
-COPY ../docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Deploy automatico del progetto su Scrapyd all'avvio

@@ -25,6 +25,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'drf_spectacular',
+    'django_celery_beat',
+    'django_celery_results',
     'comuni_italiani',
     'etl',
     'scraping',
@@ -207,6 +209,15 @@ Le richieste API sono monitorate. Contatta l'amministratore per informazioni sui
     ],
 }
 
+# Celery
+CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL', 'redis://:redis_secret_2026@redis:6379/1')
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
 # Unfold Admin Theme
 UNFOLD = {
     "SITE_TITLE": "Events Backoffice",
@@ -326,6 +337,22 @@ UNFOLD = {
                         "title": "API Requests Log",
                         "icon": "analytics",
                         "link": "/admin/rest_framework_tracking/apirequestlog/",
+                    },
+                ],
+            },
+            {
+                "title": "Celery",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Periodic Tasks",
+                        "icon": "timer",
+                        "link": "/admin/django_celery_beat/periodictask/",
+                    },
+                    {
+                        "title": "Task Results",
+                        "icon": "checklist",
+                        "link": "/admin/django_celery_results/taskresult/",
                     },
                 ],
             },

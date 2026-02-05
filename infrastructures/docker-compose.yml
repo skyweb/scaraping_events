@@ -8,6 +8,7 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
     AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
     AIRFLOW__CELERY__BROKER_URL: ${AIRFLOW__CELERY__BROKER_URL}
+    AIRFLOW__CELERY__RESULT_BACKEND: ${AIRFLOW__CELERY__RESULT_BACKEND}
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     _PIP_ADDITIONAL_REQUIREMENTS: 'apache-airflow-providers-docker apache-airflow-providers-postgres psycopg2-binary redis'
@@ -26,12 +27,36 @@ x-airflow-common:
   networks:
     - events-network
 
+x-backoffice-common:
+  &backoffice-common
+  build:
+    context: ../services/service-backoffice
+    dockerfile: Dockerfile
+  image: events-backoffice:latest
+  environment:
+    POSTGRES_HOST: postgres
+    POSTGRES_PORT: 5432
+    POSTGRES_DB: ${POSTGRES_DB}
+    POSTGRES_USER: ${POSTGRES_USER}
+    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-django-insecure-change-me}
+    DJANGO_DEBUG: ${DJANGO_DEBUG:-False}
+    DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,backoffice,nginx}
+    CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+  networks:
+    - events-network
+
 services:
   # Scrapy Spider Image Builder - builds and exits
   scrapy-events:
     build:
       context: ../services/service-scraping
-      dockerfile: Dockerfile
+      dockerfile: src/Dockerfile
     image: events-scrapy:latest
     container_name: events-scrapy
     entrypoint: ["echo", "Scrapy image built successfully"]
@@ -42,7 +67,7 @@ services:
 
   # PostgreSQL con PostGIS
   postgres:
-    image: postgis/postgis:16-3.4-alpine
+    image: imresamu/postgis:16-3.4
     container_name: events-postgres
     restart: unless-stopped
     environment:
@@ -162,6 +187,44 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
+  # Airflow Celery Worker
+  airflow-worker:
+    <<: *airflow-common
+    container_name: events-airflow-worker
+    command: celery worker
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: ["CMD-SHELL", "celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d celery@$${HOSTNAME} || celery --app airflow.executors.celery_executor.app inspect ping -d celery@$${HOSTNAME}"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  # Flower - Celery Monitoring
+  flower:
+    <<: *airflow-common
+    container_name: events-airflow-flower
+    command: celery flower
+    ports:
+      - "5555:5555"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:5555/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
   # Airflow Triggerer (for deferrable operators)
   airflow-triggerer:
     <<: *airflow-common
@@ -179,9 +242,7 @@ services:
 
   # Backoffice Admin (Django + React)
   backoffice:
-    build:
-      context: ../services/service-backoffice
-      dockerfile: Dockerfile
+    <<: *backoffice-common
     container_name: events-backoffice
     restart: unless-stopped
     environment:
@@ -198,18 +259,40 @@ services:
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
       CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost,http://localhost:80}
       CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-http://localhost,http://localhost:80}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
     expose:
       - "8000"
-    depends_on:
-      postgres:
-        condition: service_healthy
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/admin/')"]
       interval: 30s
       timeout: 10s
       retries: 3
-    networks:
-      - events-network
+
+  # Backoffice Celery Worker
+  backoffice-celery-worker:
+    <<: *backoffice-common
+    container_name: events-backoffice-celery-worker
+    restart: unless-stopped
+    entrypoint: []
+    command: celery -A backoffice worker -l info
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A backoffice inspect ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Backoffice Celery Beat (periodic tasks scheduler)
+  backoffice-celery-beat:
+    <<: *backoffice-common
+    container_name: events-backoffice-celery-beat
+    restart: unless-stopped
+    entrypoint: []
+    command: celery -A backoffice beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A backoffice inspect ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   # Nginx Reverse Proxy
   nginx:
