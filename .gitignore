@@ -17,8 +17,11 @@ dist/
 .eslintcache
 
 # Project specific
+infrastructures/logs/
 infrastructures/data/*.processed
 !infrastructures/logs/.gitkeep
 !infrastructures/plugins/.gitkeep
 !infrastructures/data/.gitkeep
 /.idea/.wiseGPT/
+/.claude
+/.gemini
