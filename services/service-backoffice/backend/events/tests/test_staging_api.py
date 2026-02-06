@@ -328,7 +328,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
             ev['uuid'] = f"bulk-valid-{i:03d}"
 
         response = self.client.post(
-            '/api/external/staging/bulk/',
+            '/api/external/staging/bulk/?sync=true',
             data=payload,
             format='json',
         )
@@ -361,7 +361,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
             ev['uuid'] = f"bulk-partial-{i:03d}"
 
         response = self.client.post(
-            '/api/external/staging/bulk/',
+            '/api/external/staging/bulk/?sync=true',
             data=payload,
             format='json',
         )
@@ -387,7 +387,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
                     ev['uuid'] = f"bulk-all-{idx}-{i:03d}"
 
                 response = self.client.post(
-                    '/api/external/staging/bulk/',
+                    '/api/external/staging/bulk/?sync=true',
                     data=payload,
                     format='json',
                 )
@@ -406,7 +406,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
         """POST bulk con lista eventi vuota -> 400."""
         self.auth_write()
         response = self.client.post(
-            '/api/external/staging/bulk/',
+            '/api/external/staging/bulk/?sync=true',
             data={'events': []},
             format='json',
         )
@@ -416,7 +416,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
         """POST bulk senza chiave 'events' -> 400."""
         self.auth_write()
         response = self.client.post(
-            '/api/external/staging/bulk/',
+            '/api/external/staging/bulk/?sync=true',
             data={'data': []},
             format='json',
         )
@@ -635,3 +635,186 @@ class StagingEventAuthTest(StagingAPIBaseTestCase):
         self.auth_write()
         response = self.client.get('/api/external/staging/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
+# ===========================================================================
+# 7. Test BULK ASYNC
+# ===========================================================================
+
+class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
+    """Test per il bulk create asincrono via Celery."""
+
+    def test_async_bulk_returns_202_with_task_id(self):
+        """POST bulk senza ?sync=true -> 202 Accepted con task_id."""
+        from unittest.mock import patch, MagicMock
+
+        mock_result = MagicMock()
+        mock_result.id = 'fake-task-id-001'
+
+        self.auth_write()
+        payload = {
+            'events': [
+                {
+                    'uuid': 'async-001',
+                    'source': 'test_source',
+                    'title': 'Evento Async 1',
+                    'city': 'milano',
+                },
+                {
+                    'uuid': 'async-002',
+                    'source': 'test_source',
+                    'title': 'Evento Async 2',
+                    'city': 'roma',
+                },
+            ]
+        }
+        with patch('events.tasks.process_bulk_events') as mock_task:
+            mock_task.delay.return_value = mock_result
+            response = self.client.post(
+                '/api/external/staging/bulk/',
+                data=payload,
+                format='json',
+            )
+        self.assertEqual(response.status_code, status.HTTP_202_ACCEPTED)
+        self.assertEqual(response.data['task_id'], 'fake-task-id-001')
+        self.assertEqual(response.data['status'], 'PENDING')
+        self.assertIn('message', response.data)
+
+    def test_bulk_status_endpoint_success(self):
+        """GET bulk-status/{task_id} ritorna SUCCESS con risultato."""
+        from unittest.mock import patch, MagicMock
+
+        mock_async_result = MagicMock()
+        mock_async_result.status = 'SUCCESS'
+        mock_async_result.ready.return_value = True
+        mock_async_result.successful.return_value = True
+        mock_async_result.result = {'created_count': 5, 'failed_count': 0, 'failed_events': []}
+
+        self.auth_read()
+        with patch('events.views.AsyncResult', return_value=mock_async_result):
+            response = self.client.get(
+                '/api/external/staging/bulk-status/fake-task-id-001/',
+            )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['task_id'], 'fake-task-id-001')
+        self.assertEqual(response.data['status'], 'SUCCESS')
+        self.assertEqual(response.data['result']['created_count'], 5)
+
+    def test_bulk_status_endpoint_pending(self):
+        """GET bulk-status/{task_id} ritorna PENDING quando il task non e' ancora completato."""
+        from unittest.mock import patch, MagicMock
+
+        mock_async_result = MagicMock()
+        mock_async_result.status = 'PENDING'
+        mock_async_result.ready.return_value = False
+
+        self.auth_read()
+        with patch('events.views.AsyncResult', return_value=mock_async_result):
+            response = self.client.get(
+                '/api/external/staging/bulk-status/fake-task-id-002/',
+            )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['status'], 'PENDING')
+        self.assertIsNone(response.data['result'])
+
+    def test_bulk_status_endpoint_failure(self):
+        """GET bulk-status/{task_id} ritorna FAILURE con dettaglio errore."""
+        from unittest.mock import patch, MagicMock
+
+        mock_async_result = MagicMock()
+        mock_async_result.status = 'FAILURE'
+        mock_async_result.ready.return_value = True
+        mock_async_result.successful.return_value = False
+        mock_async_result.result = Exception('DB connection lost')
+
+        self.auth_read()
+        with patch('events.views.AsyncResult', return_value=mock_async_result):
+            response = self.client.get(
+                '/api/external/staging/bulk-status/fake-task-id-003/',
+            )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['status'], 'FAILURE')
+        self.assertIn('DB connection lost', response.data['result'])
+
+    def test_bulk_status_unknown_task(self):
+        """GET bulk-status con task_id sconosciuto -> 200 con status PENDING."""
+        from unittest.mock import patch, MagicMock
+
+        mock_async_result = MagicMock()
+        mock_async_result.status = 'PENDING'
+        mock_async_result.ready.return_value = False
+
+        self.auth_read()
+        with patch('events.views.AsyncResult', return_value=mock_async_result):
+            response = self.client.get(
+                '/api/external/staging/bulk-status/nonexistent-task-id/',
+            )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['status'], 'PENDING')
+
+    def test_sync_true_returns_201(self):
+        """POST bulk?sync=true mantiene il comportamento sincrono -> 201."""
+        self.auth_write()
+        payload = {
+            'events': [
+                {
+                    'uuid': 'sync-compat-001',
+                    'source': 'test_source',
+                    'title': 'Evento Sync Compat',
+                    'city': 'firenze',
+                },
+            ]
+        }
+        response = self.client.post(
+            '/api/external/staging/bulk/?sync=true',
+            data=payload,
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertIn('created_count', response.data)
+        self.assertEqual(response.data['created_count'], 1)
+        # Verifica che l'evento e' stato effettivamente creato nel DB
+        self.assertTrue(StagingEvent.objects.filter(uuid='sync-compat-001').exists())
+
+    def test_async_empty_events_returns_400(self):
+        """POST bulk async con lista vuota -> 400 (validato prima del dispatch)."""
+        self.auth_write()
+        response = self.client.post(
+            '/api/external/staging/bulk/',
+            data={'events': []},
+            format='json',
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_process_bulk_events_task_directly(self):
+        """Test diretto del task Celery (senza broker)."""
+        from events.tasks import process_bulk_events
+        events_data = [
+            {
+                'uuid': 'task-direct-001',
+                'source': 'test_source',
+                'title': 'Evento Task Diretto 1',
+                'city': 'milano',
+            },
+            {
+                'uuid': 'task-direct-002',
+                'source': 'test_source',
+                'title': 'Evento Task Diretto 2',
+                'city': 'roma',
+            },
+            {
+                # Invalid: missing title
+                'uuid': 'task-direct-003',
+                'source': 'test_source',
+                'city': 'napoli',
+            },
+        ]
+        result = process_bulk_events(events_data)
+        self.assertEqual(result['created_count'], 2)
+        self.assertEqual(result['failed_count'], 1)
+        self.assertEqual(len(result['failed_events']), 1)
+        self.assertEqual(result['failed_events'][0]['index'], 2)
+        # Verify in DB
+        self.assertTrue(StagingEvent.objects.filter(uuid='task-direct-001').exists())
+        self.assertTrue(StagingEvent.objects.filter(uuid='task-direct-002').exists())
+        self.assertFalse(StagingEvent.objects.filter(uuid='task-direct-003').exists())

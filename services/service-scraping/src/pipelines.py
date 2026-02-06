@@ -409,7 +409,13 @@ class ApiPipeline:
 
             if response.status_code == 201:
                 result = response.json()
-                logger.info(f"Batch inviato: {result.get('created', 0)} eventi creati")
+                logger.info(f"Batch inviato (sync): {result.get('created_count', 0)} eventi creati")
+                return True
+
+            elif response.status_code == 202:
+                result = response.json()
+                task_id = result.get('task_id', 'unknown')
+                logger.info(f"Batch accettato (async): task_id={task_id}, {len(events)} eventi")
                 return True
 
             elif response.status_code == 401:

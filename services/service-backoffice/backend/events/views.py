@@ -10,6 +10,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter, OpenApiExample
 from drf_spectacular.types import OpenApiTypes
+from celery.result import AsyncResult
 
 from .models import ProductionEvent, StagingEvent
 from etl.models import EtlRun, EtlError
@@ -39,6 +40,18 @@ class BulkCreateRequestSerializer(drf_serializers.Serializer):
 class ClearSourceResponseSerializer(drf_serializers.Serializer):
     deleted = drf_serializers.IntegerField()
     source = drf_serializers.CharField()
+
+
+class BulkAcceptedResponseSerializer(drf_serializers.Serializer):
+    task_id = drf_serializers.CharField()
+    status = drf_serializers.CharField()
+    message = drf_serializers.CharField()
+
+
+class BulkTaskStatusResponseSerializer(drf_serializers.Serializer):
+    task_id = drf_serializers.CharField()
+    status = drf_serializers.CharField()
+    result = drf_serializers.JSONField(required=False, allow_null=True)
 
 
 class ErrorResponseSerializer(drf_serializers.Serializer):
@@ -389,7 +402,7 @@ class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
     logging_methods = ['POST', 'PUT', 'PATCH', 'DELETE']
 
     def get_permissions(self):
-        if self.action in ['list', 'retrieve']:
+        if self.action in ['list', 'retrieve', 'bulk_status']:
             permission_classes = [IsAuthenticated, TokenHasScope]
             self.required_scopes = ['read']
         else:
@@ -409,14 +422,27 @@ Crea multipli staging events in una sola richiesta.
 
 **Richiede scope `write`.**
 
-Utile per importare grandi quantità di eventi in modo efficiente.
+**Modalita':**
+- **Async (default):** Il batch viene processato in background tramite Celery.
+  Ritorna 202 Accepted con un `task_id` per monitorare lo stato.
+- **Sync (`?sync=true`):** Comportamento sincrono originale, processa tutto nella richiesta.
         """,
         tags=["Bulk Operations"],
         request=BulkCreateRequestSerializer,
+        parameters=[
+            OpenApiParameter(
+                name='sync',
+                type=OpenApiTypes.BOOL,
+                location=OpenApiParameter.QUERY,
+                required=False,
+                description='Se true, processa il batch in modo sincrono (default: false)',
+            ),
+        ],
         responses={
-            200: BulkProcessResponseSerializer, # Changed to 200 and new serializer for partial success
-            201: BulkProcessResponseSerializer, # For all success
-            400: BulkProcessResponseSerializer, # For all failure
+            200: BulkProcessResponseSerializer,
+            201: BulkProcessResponseSerializer,
+            202: BulkAcceptedResponseSerializer,
+            400: BulkProcessResponseSerializer,
         },
         examples=[
             OpenApiExample(
@@ -506,14 +532,14 @@ Utile per importare grandi quantità di eventi in modo efficiente.
                 summary="Un evento valido e uno non valido",
                 value={
                     "events": [
-                        { # Valid event
+                        {
                             "uuid": "evt_003",
                             "source": "test_source",
                             "title": "Evento Valido di Prova",
                             "city": "milano",
                             "date_start": "2026-03-01"
                         },
-                        { # Invalid event - missing required title
+                        {
                             "uuid": "evt_004",
                             "source": "test_source",
                             "city": "roma",
@@ -527,7 +553,7 @@ Utile per importare grandi quantità di eventi in modo efficiente.
     )
     @action(detail=False, methods=['post'])
     def bulk(self, request):
-        """Crea multipli staging events in una sola richiesta, ignorando gli elementi non validi."""
+        """Crea multipli staging events. Default: async via Celery. ?sync=true per sincrono."""
         events_data = request.data.get('events', [])
         if not events_data:
             return Response(
@@ -535,6 +561,25 @@ Utile per importare grandi quantità di eventi in modo efficiente.
                 status=status.HTTP_400_BAD_REQUEST
             )
 
+        sync_mode = request.query_params.get('sync', 'false').lower() in ('true', '1', 'yes')
+
+        if sync_mode:
+            return self._bulk_sync(events_data)
+
+        # Async mode: dispatch to Celery
+        from .tasks import process_bulk_events
+        task = process_bulk_events.delay(events_data)
+        return Response(
+            {
+                'task_id': task.id,
+                'status': 'PENDING',
+                'message': f'Batch of {len(events_data)} events accepted for processing.',
+            },
+            status=status.HTTP_202_ACCEPTED,
+        )
+
+    def _bulk_sync(self, events_data):
+        """Logica sincrona per il bulk create (backward compatible)."""
         successful_events = []
         failed_events = []
 
@@ -545,7 +590,6 @@ Utile per importare grandi quantità di eventi in modo efficiente.
                     instance = serializer.save()
                     successful_events.append(instance)
                 except Exception as e:
-                    # Catch potential database save errors not covered by validation
                     failed_events.append({
                         'original_data': item_data,
                         'errors': {'non_field_errors': [str(e)]},
@@ -569,13 +613,55 @@ Utile per importare grandi quantità di eventi in modo efficiente.
 
         status_code = status.HTTP_200_OK
         if successful_events and failed_events:
-            status_code = status.HTTP_200_OK # Partial success
+            status_code = status.HTTP_200_OK
         elif not successful_events and failed_events:
-            status_code = status.HTTP_400_BAD_REQUEST # All failed
+            status_code = status.HTTP_400_BAD_REQUEST
         elif successful_events and not failed_events:
-            status_code = status.HTTP_201_CREATED # All succeeded
+            status_code = status.HTTP_201_CREATED
 
         return Response(response_serializer.data, status=status_code)
+
+    @extend_schema(
+        summary="Stato bulk task asincrono",
+        description="""
+Controlla lo stato di un task di bulk create asincrono.
+
+**Richiede scope `read`.**
+
+**Stati possibili:** PENDING, STARTED, SUCCESS, FAILURE
+        """,
+        tags=["Bulk Operations"],
+        parameters=[
+            OpenApiParameter(
+                name='task_id',
+                type=OpenApiTypes.STR,
+                location=OpenApiParameter.PATH,
+                required=True,
+                description='ID del task Celery',
+            ),
+        ],
+        responses={
+            200: BulkTaskStatusResponseSerializer,
+        },
+    )
+    @action(detail=False, methods=['get'], url_path='bulk-status/(?P<task_id>[^/.]+)')
+    def bulk_status(self, request, task_id=None):
+        """Controlla lo stato di un task di bulk create asincrono."""
+        result = AsyncResult(task_id)
+
+        response_data = {
+            'task_id': task_id,
+            'status': result.status,
+            'result': None,
+        }
+
+        if result.ready():
+            if result.successful():
+                response_data['result'] = result.result
+            else:
+                response_data['result'] = str(result.result)
+
+        return Response(response_data)
 
 
     @extend_schema(

@@ -229,6 +229,52 @@ Dopo l'avvio, crea la connection PostgreSQL in Airflow:
   5. Schema: today_events
   6. Login: events, Password: events_secret_2026
 
+## Bulk Ingestion Asincrono
+
+L'endpoint `POST /api/external/staging/bulk/` supporta due modalita':
+
+### Async (default)
+```
+POST /api/external/staging/bulk/
+→ 202 Accepted + { task_id, status: "PENDING", message }
+```
+Il batch viene processato in background dal Celery worker. Per verificare lo stato:
+```
+GET /api/external/staging/bulk-status/{task_id}/
+→ { task_id, status: "SUCCESS|PENDING|STARTED|FAILURE", result }
+```
+
+### Sync (backward compatible)
+```
+POST /api/external/staging/bulk/?sync=true
+→ 201/200/400 + { created_count, failed_count, successful_events, failed_events }
+```
+Comportamento sincrono originale.
+
+### Flusso Async
+
+```
+Scrapy ApiPipeline
+    │ POST /api/external/staging/bulk/
+    ▼
+┌──────────────────────────┐
+│ bulk() view              │
+│ → valida payload         │
+│ → process_bulk.delay()   │  ← dispatch a Celery
+│ → return 202 + task_id   │  ← risposta immediata
+└──────────────────────────┘
+    │
+    ▼ (Redis queue)
+┌──────────────────────────┐
+│ Celery Worker            │
+│ process_bulk_events()    │
+│ → validate each item     │
+│ → bulk_create (batch DB) │  ← 1 query invece di N
+│ → retry su errore DB     │
+│ → salva risultato        │
+└──────────────────────────┘
+```
+
 ## Test API Staging Events
 
 Test Django che leggono lo schema OpenAPI (drf-spectacular) ed eseguono
