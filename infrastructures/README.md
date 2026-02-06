@@ -15,8 +15,8 @@ $ cd infrastructures
 $ docker-compose build scrapy-events
 
 # 2. Avvia i servizi
-$ docker-compose up -d
-
+$ docker compose up -d
+$ docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 # 3. Verifica lo stato
 $ docker-compose ps
 ```
@@ -29,6 +29,31 @@ $ docker-compose ps
 | Redis | 6379 | Cache e message broker |
 | Airflow Webserver | 8080 | UI Airflow |
 | scrapy-events | - | Container per scraping |
+
+  ┌────────────────────────────────────┬──────────┬──────────────────┐
+  │              Servizio              │  Stato   │      Porta       │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Postgres (PostGIS)                 │ Healthy  │ 5432             │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Redis                              │ Healthy  │ 6379             │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Backoffice (Django dev server)     │ Starting │ 8000 (via Nginx) │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Backoffice Celery Worker           │ Starting │ -                │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Backoffice Celery Beat             │ Starting │ -                │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Nginx                              │ Up       │ 80               │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Airflow Webserver                  │ Starting │ 8080             │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Airflow Scheduler/Worker/Triggerer │ Starting │ -                │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Flower (Celery monitor)            │ Starting │ 5555             │
+  ├────────────────────────────────────┼──────────┼──────────────────┤
+  │ Redis UI (RedisInsight)            │ Up       │ 5540             │
+  └────────────────────────────────────┴──────────┴──────────────────┘
+
 
 ## Container Scrapy
 
@@ -187,20 +212,77 @@ Dopo l'avvio, crea la connection PostgreSQL in Airflow:
    - Password: `events_secret_2026`
    - Port: `5432`
 
-  Funzioni SQL:                                                                                                                                                                                                                              
-  - events_data.truncate_staging()                                                                                                                                                                                                                
-  - events_data.upsert_from_staging()                                                                                                                                                                                                             
-  - events_data.mark_missing_inactive()                                                                                                                                                                                                           
-                                                                                                                                                                                                                                             
-  Accesso:                                                                                                                                                                                                                                   
-  - Airflow: http://localhost:8080 (admin / admin_secret_2026)                                                                                                                                                                               
-  - PostgreSQL: psql -h localhost -U events -d today_events                                                                                                                                                                                  
-                                                                                                                                                                                                                                             
-  Prossimo passo: Configura la connection PostgreSQL in Airflow:                                                                                                                                                                             
-  1. http://localhost:8080 → Admin → Connections → +                                                                                                                                                                                         
-  2. Connection Id: events_postgres                                                                                                                                                                                                          
-  3. Type: Postgres                                                                                                                                                                                                                          
-  4. Host: postgres, Port: 5432                                                                                                                                                                                                              
-  5. Schema: today_events                                                                                                                                                                                                                    
-  6. Login: events, Password: events_secret_2026                                                                                                                                                                                             
-                                      
+  Funzioni SQL:
+  - events_data.truncate_staging()
+  - events_data.upsert_from_staging()
+  - events_data.mark_missing_inactive()
+
+  Accesso:
+  - Airflow: http://localhost:8080 (admin / admin_secret_2026)
+  - PostgreSQL: psql -h localhost -U events -d today_events
+
+  Prossimo passo: Configura la connection PostgreSQL in Airflow:
+  1. http://localhost:8080 → Admin → Connections → +
+  2. Connection Id: events_postgres
+  3. Type: Postgres
+  4. Host: postgres, Port: 5432
+  5. Schema: today_events
+  6. Login: events, Password: events_secret_2026
+
+## Test API Staging Events
+
+Test Django che leggono lo schema OpenAPI (drf-spectacular) ed eseguono
+le richieste usando gli esempi JSON definiti nelle `@extend_schema`.
+
+### Cosa testano
+
+| Classe | Descrizione |
+|--------|-------------|
+| `OpenAPISchemaTest` | Validita' schema: paths, esempi, campi obbligatori |
+| `StagingEventCreateFromSchemaTest` | POST `/api/external/staging/` con ogni esempio OpenAPI |
+| `StagingEventBulkFromSchemaTest` | POST `/api/external/staging/bulk/` con esempi valid/partial/invalid |
+| `StagingEventCRUDTest` | Ciclo completo: list, retrieve, create, update, patch, delete, filtri, search |
+| `StagingEventClearSourceTest` | DELETE `/api/external/staging/clear_source/?source=xxx` |
+| `StagingEventAuthTest` | OAuth2: token assente, scaduto, invalido, scope read vs write |
+
+### Come lanciare
+
+```bash
+# Output tabellare (endpoint, metodo, status, esito)
+docker exec -w /app/backend events-backoffice \
+  python manage.py test events.tests.test_staging_api \
+  --testrunner events.tests.runner.TableTestRunner
+
+# Output standard Django (-v2 per dettaglio)
+docker exec -w /app/backend events-backoffice \
+  python manage.py test events.tests.test_staging_api -v2
+
+# Solo una classe specifica
+docker exec -w /app/backend events-backoffice \
+  python manage.py test events.tests.test_staging_api.StagingEventBulkFromSchemaTest -v2
+
+# Solo un singolo test
+docker exec -w /app/backend events-backoffice \
+  python manage.py test events.tests.test_staging_api.StagingEventCRUDTest.test_create_event -v2
+```
+
+### Esempio output tabellare
+
+```
+Metodo | Endpoint                            | Status | Esito | Test
+-------+-------------------------------------+--------+-------+------------------------------------------
+GET    | /api/external/staging/              | 200    | PASS  | test_list_events
+POST   | /api/external/staging/              | 201    | PASS  | test_create_with_each_schema_example
+POST   | /api/external/staging/bulk/         | 201    | PASS  | test_bulk_create_all_valid
+DELETE | /api/external/staging/clear_source/ | 200    | PASS  | test_clear_source_deletes_matching
+GET    | /api/external/staging/              | 401    | PASS  | test_no_token_returns_401
+...
+Totale: 36  |  Pass: 36
+```
+
+### Note
+
+- I test creano un database temporaneo (`test_today_events`) e lo distruggono a fine esecuzione
+- Le migrazioni RunSQL creano automaticamente lo schema `events_data` nel DB di test
+- L'autenticazione OAuth2 viene simulata con token creati in `setUpTestData`
+- Gli esempi JSON vengono estratti dallo schema generato da `SchemaGenerator` di drf-spectacular

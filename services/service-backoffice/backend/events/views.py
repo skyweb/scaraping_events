@@ -367,6 +367,17 @@ class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
     - `read` - Per operazioni di lettura (GET)
     - `write` - Per operazioni di scrittura (POST, PUT, PATCH, DELETE)
     """
+
+    def _get_user(self, request):
+        """
+        Get the user from the request if it exists, handling anonymous users.
+        This overrides the faulty method in LoggingMixin.
+        """
+        user = getattr(request, "user", None)
+        if user and not user.is_anonymous:
+            return user
+        return None
+    
     queryset = StagingEvent.objects.all()
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['city', 'source', 'uuid']
@@ -516,7 +527,6 @@ Utile per importare grandi quantità di eventi in modo efficiente.
     )
     @action(detail=False, methods=['post'])
     def bulk(self, request):
-        print("Received a bulk request!") # <--- Add this line
         """Crea multipli staging events in una sola richiesta, ignorando gli elementi non validi."""
         events_data = request.data.get('events', [])
         if not events_data:
@@ -548,13 +558,14 @@ Utile per importare grandi quantità di eventi in modo efficiente.
                     'index': index
                 })
 
-        response_serializer = BulkProcessResponseSerializer(data={
-            'successful_events': successful_events,
+        response_data = {
+            'successful_events': StagingEventSerializer(successful_events, many=True).data,
             'failed_events': failed_events,
             'created_count': len(successful_events),
             'failed_count': len(failed_events),
-        })
-        response_serializer.is_valid(raise_exception=True) # Validate the response data structure
+        }
+        response_serializer = BulkProcessResponseSerializer(data=response_data)
+        response_serializer.is_valid(raise_exception=True)
 
         status_code = status.HTTP_200_OK
         if successful_events and failed_events:
