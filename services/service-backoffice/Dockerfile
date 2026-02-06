@@ -39,35 +39,8 @@ COPY backend/ .
 COPY --from=frontend-builder /app/frontend/dist /app/staticfiles/frontend
 
 # Create entrypoint script
-RUN echo '#!/bin/bash\n\
-set -e\n\
-\n\
-echo "Waiting for database..."\n\
-while ! python -c "import psycopg2; psycopg2.connect(host=\"${POSTGRES_HOST:-postgres}\", dbname=\"${POSTGRES_DB}\", user=\"${POSTGRES_USER}\", password=\"${POSTGRES_PASSWORD}\")" 2>/dev/null; do\n\
-    sleep 1\n\
-done\n\
-echo "Database ready!"\n\
-\n\
-echo "Running migrations..."\n\
-python manage.py makemigrations --noinput\n\
-python manage.py migrate --noinput\n\
-\n\
-echo "Collecting static files..."\n\
-python manage.py collectstatic --noinput\n\
-\n\
-echo "Creating superuser if not exists..."\n\
-python manage.py shell -c "\n\
-from django.contrib.auth import get_user_model;\n\
-User = get_user_model();\n\
-if not User.objects.filter(username=\"${DJANGO_SUPERUSER_USERNAME:-admin}\").exists():\n\
-    User.objects.create_superuser(\"${DJANGO_SUPERUSER_USERNAME:-admin}\", \"${DJANGO_SUPERUSER_EMAIL:-admin@example.com}\", \"${DJANGO_SUPERUSER_PASSWORD:-admin}\");\n\
-    print(\"Superuser created\");\n\
-else:\n\
-    print(\"Superuser already exists\");\n\
-"\n\
-\n\
-exec "$@"\n\
-' > /app/entrypoint.sh && chmod +x /app/entrypoint.sh
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
 
 EXPOSE 8000
 

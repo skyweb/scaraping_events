@@ -265,11 +265,13 @@ services:
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
     expose:
       - "8000"
+    volumes:
+      - ../services/service-backoffice/backend:/app/backend
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/admin/')"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+            test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/admin/')"]
+            interval: 30s
+            timeout: 10s
+            retries: 3
 
   # Backoffice Celery Worker
   backoffice-celery-worker:

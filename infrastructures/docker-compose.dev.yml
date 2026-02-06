@@ -1,0 +1,28 @@
+services:
+  backoffice:
+    build:
+      context: ../services/service-backoffice
+      dockerfile: Dockerfile
+    volumes:
+      - ../services/service-backoffice/backend:/app/backend
+    command: python /app/backend/manage.py runserver 0.0.0.0:8000
+    environment:
+      DJANGO_DEBUG: "True"
+
+  backoffice-celery-worker:
+    build:
+      context: ../services/service-backoffice
+      dockerfile: Dockerfile
+    volumes:
+      - ../services/service-backoffice/backend:/app/backend
+    environment:
+      DJANGO_DEBUG: "True"
+
+  backoffice-celery-beat:
+    build:
+      context: ../services/service-backoffice
+      dockerfile: Dockerfile
+    volumes:
+      - ../services/service-backoffice/backend:/app/backend
+    environment:
+      DJANGO_DEBUG: "True"

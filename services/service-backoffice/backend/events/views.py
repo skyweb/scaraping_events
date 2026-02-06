@@ -21,6 +21,8 @@ from .serializers import (
     EtlRunSerializer,
     EtlErrorSerializer,
     DashboardStatsSerializer,
+    FailedEventSerializer,  # New
+    BulkProcessResponseSerializer, # New
 )
 
 
@@ -401,8 +403,9 @@ Utile per importare grandi quantità di eventi in modo efficiente.
         tags=["Bulk Operations"],
         request=BulkCreateRequestSerializer,
         responses={
-            201: BulkCreateResponseSerializer,
-            400: ErrorResponseSerializer,
+            200: BulkProcessResponseSerializer, # Changed to 200 and new serializer for partial success
+            201: BulkProcessResponseSerializer, # For all success
+            400: BulkProcessResponseSerializer, # For all failure
         },
         examples=[
             OpenApiExample(
@@ -487,11 +490,34 @@ Utile per importare grandi quantità di eventi in modo efficiente.
                 },
                 request_only=True,
             ),
+            OpenApiExample(
+                "Bulk con eventi parzialmente validi",
+                summary="Un evento valido e uno non valido",
+                value={
+                    "events": [
+                        { # Valid event
+                            "uuid": "evt_003",
+                            "source": "test_source",
+                            "title": "Evento Valido di Prova",
+                            "city": "milano",
+                            "date_start": "2026-03-01"
+                        },
+                        { # Invalid event - missing required title
+                            "uuid": "evt_004",
+                            "source": "test_source",
+                            "city": "roma",
+                            "date_start": "2026-03-02"
+                        }
+                    ]
+                },
+                request_only=True,
+            ),
         ],
     )
     @action(detail=False, methods=['post'])
     def bulk(self, request):
-        """Crea multipli staging events in una sola richiesta."""
+        print("Received a bulk request!") # <--- Add this line
+        """Crea multipli staging events in una sola richiesta, ignorando gli elementi non validi."""
         events_data = request.data.get('events', [])
         if not events_data:
             return Response(
@@ -499,17 +525,47 @@ Utile per importare grandi quantità di eventi in modo efficiente.
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        serializer = StagingEventCreateSerializer(data=events_data, many=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(
-                {
-                    'created': len(serializer.data),
-                    'events': serializer.data
-                },
-                status=status.HTTP_201_CREATED
-            )
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        successful_events = []
+        failed_events = []
+
+        for index, item_data in enumerate(events_data):
+            serializer = StagingEventCreateSerializer(data=item_data)
+            if serializer.is_valid():
+                try:
+                    instance = serializer.save()
+                    successful_events.append(instance)
+                except Exception as e:
+                    # Catch potential database save errors not covered by validation
+                    failed_events.append({
+                        'original_data': item_data,
+                        'errors': {'non_field_errors': [str(e)]},
+                        'index': index
+                    })
+            else:
+                failed_events.append({
+                    'original_data': item_data,
+                    'errors': serializer.errors,
+                    'index': index
+                })
+
+        response_serializer = BulkProcessResponseSerializer(data={
+            'successful_events': successful_events,
+            'failed_events': failed_events,
+            'created_count': len(successful_events),
+            'failed_count': len(failed_events),
+        })
+        response_serializer.is_valid(raise_exception=True) # Validate the response data structure
+
+        status_code = status.HTTP_200_OK
+        if successful_events and failed_events:
+            status_code = status.HTTP_200_OK # Partial success
+        elif not successful_events and failed_events:
+            status_code = status.HTTP_400_BAD_REQUEST # All failed
+        elif successful_events and not failed_events:
+            status_code = status.HTTP_201_CREATED # All succeeded
+
+        return Response(response_serializer.data, status=status_code)
+
 
     @extend_schema(
         summary="Elimina eventi per sorgente",

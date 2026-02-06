@@ -69,3 +69,17 @@ class DashboardStatsSerializer(serializers.Serializer):
     events_by_source = serializers.DictField()
     recent_etl_runs = EtlRunSerializer(many=True)
     staging_count = serializers.IntegerField()
+
+
+# --- New Serializers for Bulk Processing ---
+class FailedEventSerializer(serializers.Serializer):
+    original_data = serializers.JSONField(help_text="The original event data that failed to save.")
+    errors = serializers.JSONField(help_text="Detailed validation errors for the event.")
+    index = serializers.IntegerField(help_text="Index of the event in the original request list.")
+
+
+class BulkProcessResponseSerializer(serializers.Serializer):
+    successful_events = StagingEventSerializer(many=True, help_text="List of events that were successfully created/updated.")
+    failed_events = FailedEventSerializer(many=True, help_text="List of events that failed to save, with their errors.")
+    created_count = serializers.IntegerField(help_text="Number of events successfully created.")
+    failed_count = serializers.IntegerField(help_text="Number of events that failed to save.")
