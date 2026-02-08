@@ -7,6 +7,7 @@ from unfold.admin import ModelAdmin
 from django_ckeditor_5.widgets import CKEditor5Widget
 from django_celery_results.models import TaskResult
 from django_celery_results.admin import TaskResultAdmin as BaseTaskResultAdmin
+from django.utils import timezone
 from .models import ProductionEvent, StagingEvent
 from comuni_italiani.models import ComuneItaliano, ProvinciaItaliana
 from comuni_italiani.admin import ProvinciaFilter, RegioneFilter
@@ -98,7 +99,7 @@ class StagingEventAdmin(ModelAdmin):
             'all': ('events/css/admin_custom.css',)
         }
 
-    list_display = ['image_thumbnail', 'title', 'category_list', 'city', 'source', 'loaded_at']
+    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city', 'source', 'loaded_at']
     list_display_links = ['title']
     list_filter = ['city', 'source', CategoriaFilter]
     search_fields = ['title', 'description', 'uuid']
@@ -151,6 +152,33 @@ class StagingEventAdmin(ModelAdmin):
             'classes': ['tab'],
         }),
     )
+
+    def event_status_chip(self, obj):
+        """Mostra uno stato colorato: Verde (In corso), Rosso (Passato), Blu (Futuro)."""
+        today = timezone.now().date()
+        
+        if not obj.date_start:
+            return "-"
+            
+        start = obj.date_start
+        end = obj.date_end if obj.date_end else start
+        
+        if end < today:
+            # Passato - Rosso
+            color, bg, label = '#991b1b', '#fee2e2', 'Passato'
+        elif start <= today <= end:
+            # In corso - Verde
+            color, bg, label = '#166534', '#dcfce7', 'In corso'
+        else:
+            # Futuro - Blu
+            color, bg, label = '#1e40af', '#dbeafe', 'Futuro'
+            
+        return format_html(
+            '<span style="display:inline-block;padding:0.2rem 0.75rem;border-radius:9999px;'
+            'font-size:0.75rem;font-weight:600;color:{};background:{};">{}</span>',
+            color, bg, label
+        )
+    event_status_chip.short_description = "Stato"
 
     def category_list(self, obj):
         """Mostra le categorie come chip colorati nella lista e nel dettaglio."""
@@ -308,7 +336,7 @@ class ProductionEventAdmin(ModelAdmin):
             'all': ('events/css/admin_custom.css',)
         }
 
-    list_display = ['image_thumbnail', 'title', 'category_list', 'city', 'source', 'date_start', 'is_active']
+    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city', 'source', 'date_start', 'is_active']
     list_display_links = ['title']
     list_filter = ['is_active', 'city', 'source', CategoriaFilter]
     search_fields = ['title', 'description', 'uuid']
@@ -362,6 +390,33 @@ class ProductionEventAdmin(ModelAdmin):
             'classes': ['tab'],
         }),
     )
+
+    def event_status_chip(self, obj):
+        """Mostra uno stato colorato: Verde (In corso), Rosso (Passato), Blu (Futuro)."""
+        today = timezone.now().date()
+        
+        if not obj.date_start:
+            return "-"
+            
+        start = obj.date_start
+        end = obj.date_end if obj.date_end else start
+        
+        if end < today:
+            # Passato - Rosso
+            color, bg, label = '#991b1b', '#fee2e2', 'Passato'
+        elif start <= today <= end:
+            # In corso - Verde
+            color, bg, label = '#166534', '#dcfce7', 'In corso'
+        else:
+            # Futuro - Blu
+            color, bg, label = '#1e40af', '#dbeafe', 'Futuro'
+            
+        return format_html(
+            '<span style="display:inline-block;padding:0.2rem 0.75rem;border-radius:9999px;'
+            'font-size:0.75rem;font-weight:600;color:{};background:{};">{}</span>',
+            color, bg, label
+        )
+    event_status_chip.short_description = "Stato"
 
     def category_list(self, obj):
         if obj.category:
