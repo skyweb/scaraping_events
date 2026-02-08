@@ -33,7 +33,7 @@ x-airflow-common:
 x-backoffice-common:
   &backoffice-common
   build:
-    context: ../services/service-backoffice
+    context: ../microservices/backoffice-service
     dockerfile: Dockerfile
   image: events-backoffice:latest
   environment:
@@ -58,7 +58,7 @@ services:
   # Scrapy Spider Image Builder - builds and exits
   scrapy-events:
     build:
-      context: ../services/service-scraping
+      context: ../microservices/scraping-service
       dockerfile: src/Dockerfile
     image: events-scrapy:latest
     container_name: events-scrapy
@@ -266,7 +266,7 @@ services:
     expose:
       - "8000"
     volumes:
-      - ../services/service-backoffice/backend:/app/backend
+      - ../microservices/backoffice-service/backend:/app/backend
     healthcheck:
             test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/admin/')"]
             interval: 30s

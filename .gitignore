@@ -14,3 +14,28 @@
 !/infrastructures/services/airflow/data/.gitkeep
 !/infrastructures/services/airflow/logs/.gitkeep
 !/infrastructures/services/airflow/pgdata/.gitkeep
+
+/microservices/scraping-service/data/output/
+!/microservices/scraping-service/data/output/.gitkeep
+
+# Node.js
+node_modules/
+dist/
+build/
+.npm
+.eslintcache
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+.pytest_cache/
+staticfiles/
+
+# Database
+/infrastructures/services/postgres/data/

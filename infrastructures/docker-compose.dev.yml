@@ -20,7 +20,9 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - dev-network
+      dev-network:
+        aliases:
+          - postgres
 
   # Redis
   redis:
@@ -38,7 +40,9 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - dev-network
+      dev-network:
+        aliases:
+          - redis
 
   # Django Backoffice (dev: runserver + volume mount, no production build)
   backoffice:
@@ -74,7 +78,9 @@ services:
       redis:
         condition: service_healthy
     networks:
-      - dev-network
+      dev-network:
+        aliases:
+          - backoffice
 
   # Celery Worker
   backoffice-celery-worker:

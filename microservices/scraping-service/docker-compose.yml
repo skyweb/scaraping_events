@@ -1,0 +1,48 @@
+# =============================================================================
+# Events Scraper - Docker Compose Development
+# =============================================================================
+# Collegato al postgres e redis dello stack dev (dev-network).
+# Il codice sorgente è montato in read-write per sviluppo live.
+#
+# Avvio:
+#   docker compose up -d
+#
+# Lanciare uno spider manualmente:
+#   docker compose exec scrapyd scrapy crawl city_today -a cities=milano
+#
+# Prerequisito: lo stack dev deve essere attivo (dev-postgres su dev-network)
+
+services:
+  scrapyd:
+    image: today-events/scrapyd-dev:latest
+    build:
+      context: .
+      dockerfile: src/Dockerfile.dev
+    container_name: dev-scrapyd
+    working_dir: /app/events_scraper
+    restart: unless-stopped
+    ports:
+      - "6800"
+    env_file:
+      - .env
+    volumes:
+      # Codice sorgente montato live (read-write)
+      - ./src:/app/events_scraper
+      # scrapy.cfg nella root /app
+      - ./src/scrapy.cfg:/app/scrapy.cfg:ro
+      - ./src/scrapyd.conf:/etc/scrapyd/scrapyd.conf:ro
+      # Output e logs in cartelle locali
+      - ./data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6800/daemonstatus.json"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    name: dev-network
+    external: true

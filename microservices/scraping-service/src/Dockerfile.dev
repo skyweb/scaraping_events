@@ -1,0 +1,30 @@
+# =============================================================================
+# Events Scraper - Dockerfile Development
+# =============================================================================
+# No egg build, no deploy. Il codice sorgente viene montato via volume.
+# Permette di lanciare scrapy crawl direttamente senza rebuild.
+
+FROM python:3.11-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    libxml2-dev \
+    libxslt1-dev \
+    libffi-dev \
+    libssl-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY src/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN mkdir -p /data/output /data/logs
+
+EXPOSE 6800
+
+CMD ["scrapyd"]

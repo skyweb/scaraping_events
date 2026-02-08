@@ -1,0 +1,30 @@
+/* Tutte le righe con campi multipli (tuple) → 100% width */
+.form-row.flex-row {
+    flex-wrap: nowrap;
+}
+
+.form-row.flex-row > div {
+    max-width: none;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.form-row > div {
+    max-width: none;
+    width: 100%;
+}
+
+/* Tab wrapper → 100% width */
+[class*="tab-wrapper"] {
+    max-width: none;
+    width: 100%;
+}
+
+/* CKEditor 5 integration */
+.ck-editor {
+    width: 100% !important;
+}
+
+.ck-content {
+    min-height: 300px;
+}
