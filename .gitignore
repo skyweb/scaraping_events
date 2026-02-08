@@ -1,27 +1,16 @@
 # IDEs and editors
 .idea/
 .vscode/
+.claude/
+.gemini/
 *.swp
 *.swo
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-venv/
-.env
-
-# Node/JS
-node_modules/
-dist/
-.eslintcache
-
 # Project specific
-infrastructures/logs/
-infrastructures/data/*.processed
-!infrastructures/logs/.gitkeep
-!infrastructures/plugins/.gitkeep
-!infrastructures/data/.gitkeep
-/.idea/.wiseGPT/
-/.claude
-/.gemini
+/infrastructures/services/airflow/data/
+/infrastructures/services/airflow/logs/
+/infrastructures/services/postgres/pgdata/
+
+!/infrastructures/services/airflow/data/.gitkeep
+!/infrastructures/services/airflow/logs/.gitkeep
+!/infrastructures/services/airflow/pgdata/.gitkeep
