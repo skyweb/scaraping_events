@@ -19,7 +19,8 @@ class ScrapingCategoria(models.Model):
 
 class ScrapingLocation(models.Model):
     """Location uniche dagli eventi - vista aggregata"""
-    location_name = models.CharField(max_length=512, primary_key=True)
+    id = models.CharField(max_length=32, primary_key=True)
+    location_name = models.CharField(max_length=255, blank=True, null=True)
     city = models.CharField(max_length=100, blank=True, null=True)
     count = models.IntegerField(default=0)
 
@@ -30,13 +31,7 @@ class ScrapingLocation(models.Model):
         verbose_name = 'Location'
         verbose_name_plural = 'Locations'
 
-    @property
-    def nome_location(self):
-        """Estrae il nome location dalla chiave composta"""
-        if '|||' in self.location_name:
-            return self.location_name.split('|||')[0]
-        return self.location_name
-
     def __str__(self):
-        nome = self.nome_location
-        return f"{nome} ({self.city})" if self.city else nome
+        if self.city:
+            return f"{self.location_name} ({self.city})"
+        return self.location_name or ''

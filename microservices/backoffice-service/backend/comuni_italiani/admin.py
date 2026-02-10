@@ -39,3 +39,19 @@ class ProvinciaFilter(admin.SimpleListFilter):
         if self.value():
             return queryset.filter(cod_uts_id=self.value())
         return queryset
+
+
+@admin.register(ComuneItaliano)
+class ComuneItalianoAdmin(ModelAdmin):
+    list_display = ['comune', 'cod_uts', 'popolazione']
+    search_fields = ['comune']
+    list_filter = [RegioneFilter, ProvinciaFilter]
+    list_per_page = 50
+
+
+@admin.register(ProvinciaItaliana)
+class ProvinciaItalianaAdmin(ModelAdmin):
+    list_display = ['den_uts', 'sigla', 'cod_reg']
+    search_fields = ['den_uts', 'sigla']
+    list_filter = [RegioneFilter]
+    list_per_page = 50

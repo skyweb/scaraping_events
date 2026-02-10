@@ -337,7 +337,7 @@ UNFOLD = {
                     {
                         "title": "Production Events",
                         "icon": "event",
-                        "link": "/admin/events/stagingevent/",
+                        "link": "/admin/events/productionevent/",
                     },
                     {
                         "title": "Staging Events",
@@ -369,12 +369,12 @@ UNFOLD = {
                     {
                         "title": "Categorie",
                         "icon": "category",
-                        "link": "/admin/events/scrapingcategoria/",
+                        "link": "/admin/scraping/scrapingcategoria/",
                     },
                     {
                         "title": "Location",
                         "icon": "place",
-                        "link": "/admin/events/scrapinglocation/",
+                        "link": "/admin/scraping/scrapinglocation/",
                     },
                 ],
             },
@@ -385,12 +385,12 @@ UNFOLD = {
                     {
                         "title": "ETL Runs",
                         "icon": "sync",
-                        "link": "/admin/events/etlrun/",
+                        "link": "/admin/etl/etlrun/",
                     },
                     {
                         "title": "ETL Errors",
                         "icon": "error",
-                        "link": "/admin/events/etlerror/",
+                        "link": "/admin/etl/etlerror/",
                     },
                 ],
             },

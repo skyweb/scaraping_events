@@ -390,6 +390,16 @@ class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
         if user and not user.is_anonymous:
             return user
         return None
+
+    def handle_log(self):
+        """Salva il nome dell'applicazione OAuth2 in username_persistent prima del salvataggio."""
+        if self.log.get('username_persistent') in (None, 'Anonymous', ''):
+            auth = getattr(self.request, 'auth', None)
+            if auth:
+                app = getattr(auth, 'application', None)
+                if app:
+                    self.log['username_persistent'] = app.name
+        super().handle_log()
     
     queryset = StagingEvent.objects.all()
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]

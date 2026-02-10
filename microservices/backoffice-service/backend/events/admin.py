@@ -1,12 +1,16 @@
 import json
+from datetime import timedelta
 from django import forms
 from django.contrib import admin
+from django.db.models import Avg, Max, Min, Count
+from django.db.models.functions import TruncDate
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 from unfold.admin import ModelAdmin
 from django_ckeditor_5.widgets import CKEditor5Widget
 from django_celery_results.models import TaskResult
 from django_celery_results.admin import TaskResultAdmin as BaseTaskResultAdmin
+from rest_framework_tracking.models import APIRequestLog
 from django.utils import timezone
 from .models import ProductionEvent, StagingEvent
 from comuni_italiani.models import ComuneItaliano, ProvinciaItaliana
@@ -46,6 +50,39 @@ class CategoryChipsWidget(forms.TextInput):
         if value:
             return [v.strip() for v in value.split(',') if v.strip()]
         return []
+
+
+# =============================================================================
+# Filtro per stato temporale (Passato / In corso / Futuro)
+# =============================================================================
+
+class StatoFilter(admin.SimpleListFilter):
+    """Filtro per stato temporale degli eventi"""
+    title = 'Stato'
+    parameter_name = 'stato'
+
+    def lookups(self, request, model_admin):
+        return [
+            ('passato', 'Passato'),
+            ('in_corso', 'In corso'),
+            ('futuro', 'Futuro'),
+        ]
+
+    def queryset(self, request, queryset):
+        today = timezone.now().date()
+        if self.value() == 'passato':
+            return queryset.filter(date_start__isnull=False).extra(
+                where=["COALESCE(date_end, date_start) < %s"], params=[today]
+            )
+        if self.value() == 'in_corso':
+            return queryset.filter(
+                date_start__lte=today,
+            ).extra(
+                where=["COALESCE(date_end, date_start) >= %s"], params=[today]
+            )
+        if self.value() == 'futuro':
+            return queryset.filter(date_start__gt=today)
+        return queryset
 
 
 # =============================================================================
@@ -101,12 +138,13 @@ class StagingEventAdmin(ModelAdmin):
 
     list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city', 'source', 'loaded_at']
     list_display_links = ['title']
-    list_filter = ['city', 'source', CategoriaFilter]
+    list_filter = [StatoFilter, 'city', 'source', CategoriaFilter]
     search_fields = ['title', 'description', 'uuid']
     readonly_fields = [
         'loaded_at', 'image_preview', 'image_thumbnail', 'description_preview',
         'json_preview', 'clickable_url', 'clickable_image_url', 'source', 'uuid',
         'content_hash', 'category_list', 'date_start_display', 'date_start_ro', 'date_end_ro',
+        'event_status_chip',
     ]
     list_per_page = 50
 
@@ -115,7 +153,7 @@ class StagingEventAdmin(ModelAdmin):
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">info</span> Informazioni Evento</span>'), {
             'fields': (
                 ('source', 'uuid', 'date_start_ro', 'date_end_ro'),
-                'title',
+                ('title', 'event_status_chip'),
                 ('city', 'location_address'),
                 'location_name',
                 'clickable_url',
@@ -175,7 +213,7 @@ class StagingEventAdmin(ModelAdmin):
             
         return format_html(
             '<span style="display:inline-block;padding:0.2rem 0.75rem;border-radius:9999px;'
-            'font-size:0.75rem;font-weight:600;color:{};background:{};">{}</span>',
+            'font-size:0.75rem;font-weight:600;white-space:nowrap;color:{};background:{};">{}</span>',
             color, bg, label
         )
     event_status_chip.short_description = "Stato"
@@ -581,3 +619,189 @@ class CustomTaskResultAdmin(BaseTaskResultAdmin, ModelAdmin):
             color, bg, obj.status,
         )
     status_chip.short_description = "Status"
+
+
+# =============================================================================
+# Admin per API Request Log — statistiche e benchmark
+# =============================================================================
+
+HTTP_STATUS_COLORS = {
+    2: ('#065f46', '#d1fae5'),   # 2xx - verde
+    3: ('#1e40af', '#dbeafe'),   # 3xx - blu
+    4: ('#92400e', '#fef3c7'),   # 4xx - arancio
+    5: ('#991b1b', '#fee2e2'),   # 5xx - rosso
+}
+
+admin.site.unregister(APIRequestLog)
+
+
+@admin.register(APIRequestLog)
+class CustomAPIRequestLogAdmin(ModelAdmin):
+    """Admin API Request Log — solo statistiche e benchmark, senza dettagli query/response."""
+    list_display = [
+        'data_richiesta', 'method_chip', 'path', 'status_chip', 'response_time_chip',
+        'username_persistent', 'remote_addr',
+    ]
+    list_filter = ['method', 'status_code', 'view_method', 'username_persistent']
+    search_fields = ['path', 'username_persistent', 'remote_addr']
+    date_hierarchy = 'requested_at'
+    ordering = ['-requested_at']
+    list_per_page = 50
+
+    # Solo campi di riepilogo, esclusi query_params/data/response/errors
+    readonly_fields = [
+        'requested_at', 'method', 'path', 'view', 'view_method',
+        'status_code', 'response_ms', 'username_persistent',
+        'remote_addr', 'host',
+    ]
+    fields = readonly_fields
+    list_select_related = True
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+    def data_richiesta(self, obj):
+        """Data formattata DD/MM/YYYY HH:mm."""
+        if obj.requested_at:
+            local_dt = timezone.localtime(obj.requested_at)
+            return local_dt.strftime('%d/%m/%Y %H:%M')
+        return "-"
+    data_richiesta.short_description = "Data"
+    data_richiesta.admin_order_field = 'requested_at'
+
+    def status_chip(self, obj):
+        """Chip colorato per HTTP status code."""
+        category = obj.status_code // 100 if obj.status_code else 0
+        color, bg = HTTP_STATUS_COLORS.get(category, ('#6b7280', '#f3f4f6'))
+        return format_html(
+            '<span style="display:inline-block;padding:0.2rem 0.75rem;border-radius:9999px;'
+            'font-size:0.75rem;font-weight:600;white-space:nowrap;color:{};background:{};">{}</span>',
+            color, bg, obj.status_code,
+        )
+    status_chip.short_description = "Status"
+
+    def method_chip(self, obj):
+        """Chip colorato per metodo HTTP."""
+        colors = {
+            'GET': ('#1e40af', '#dbeafe'),
+            'POST': ('#065f46', '#d1fae5'),
+            'PUT': ('#92400e', '#fef3c7'),
+            'PATCH': ('#92400e', '#fef3c7'),
+            'DELETE': ('#991b1b', '#fee2e2'),
+        }
+        color, bg = colors.get(obj.method, ('#6b7280', '#f3f4f6'))
+        return format_html(
+            '<span style="display:inline-block;padding:0.2rem 0.75rem;border-radius:9999px;'
+            'font-size:0.75rem;font-weight:600;white-space:nowrap;color:{};background:{};">{}</span>',
+            color, bg, obj.method,
+        )
+    method_chip.short_description = "Metodo"
+
+    def response_time_chip(self, obj):
+        """Chip colorato per tempo di risposta (ms) — verde <200, arancio <1000, rosso >1000."""
+        ms = obj.response_ms
+        if ms is None:
+            return "-"
+        if ms < 200:
+            color, bg = '#065f46', '#d1fae5'
+        elif ms < 1000:
+            color, bg = '#92400e', '#fef3c7'
+        else:
+            color, bg = '#991b1b', '#fee2e2'
+        return format_html(
+            '<span style="display:inline-block;padding:0.2rem 0.75rem;border-radius:9999px;'
+            'font-size:0.75rem;font-weight:600;white-space:nowrap;color:{};background:{};">{} ms</span>',
+            color, bg, ms,
+        )
+    response_time_chip.short_description = "Tempo"
+
+    def changelist_view(self, request, extra_context=None):
+        """Aggiunge statistiche aggregate nella vista lista."""
+        qs = self.get_queryset(request)
+        # Applica gli stessi filtri attivi nella changelist
+        from django.contrib.admin.views.main import ChangeList
+        try:
+            cl = ChangeList(
+                request, self.model, self.list_display, self.list_display_links,
+                self.list_filter, self.date_hierarchy, self.search_fields,
+                self.list_select_related, self.list_per_page, self.list_max_show_all,
+                self.list_editable, self, self.sortable_by, self.search_help_text,
+            )
+            qs = cl.get_queryset(request)
+        except Exception:
+            pass
+
+        stats = qs.aggregate(
+            total=Count('id'),
+            avg_ms=Avg('response_ms'),
+            max_ms=Max('response_ms'),
+            min_ms=Min('response_ms'),
+        )
+
+        # Dati grafico: richieste per giorno (ultimi 30 giorni)
+        thirty_days_ago = timezone.now() - timedelta(days=30)
+        daily_data = (
+            qs.filter(requested_at__gte=thirty_days_ago)
+            .annotate(date=TruncDate('requested_at'))
+            .values('date')
+            .annotate(count=Count('id'), avg_time=Avg('response_ms'))
+            .order_by('date')
+        )
+
+        chart_labels = [d['date'].strftime('%d/%m') for d in daily_data]
+        chart_counts = [d['count'] for d in daily_data]
+        chart_avg_ms = [round(d['avg_time'] or 0) for d in daily_data]
+
+        chart_data = json.dumps({
+            'labels': chart_labels,
+            'datasets': [
+                {
+                    'label': 'Richieste',
+                    'type': 'bar',
+                    'data': chart_counts,
+                    'backgroundColor': 'rgba(147, 51, 234, 0.5)',
+                    'borderColor': 'rgb(147, 51, 234)',
+                    'borderWidth': 1,
+                    'yAxisID': 'y',
+                },
+                {
+                    'label': 'Tempo medio (ms)',
+                    'type': 'line',
+                    'data': chart_avg_ms,
+                    'borderColor': 'rgb(234, 88, 12)',
+                    'backgroundColor': 'rgba(234, 88, 12, 0.1)',
+                    'borderWidth': 2,
+                    'tension': 0.3,
+                    'fill': True,
+                    'yAxisID': 'y1',
+                },
+            ],
+        })
+
+        extra_context = extra_context or {}
+        extra_context['api_stats'] = stats
+        extra_context['chart_data'] = chart_data
+        extra_context['api_stats_html'] = format_html(
+            '<div style="display:flex;gap:1.5rem;flex-wrap:wrap;padding:1rem;margin-bottom:1rem;'
+            'background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.5rem;">'
+            '<div><span style="font-size:0.75rem;color:#6b7280;">Richieste</span>'
+            '<div style="font-size:1.25rem;font-weight:700;color:#111827;">{}</div></div>'
+            '<div><span style="font-size:0.75rem;color:#6b7280;">Tempo medio</span>'
+            '<div style="font-size:1.25rem;font-weight:700;color:#111827;">{} ms</div></div>'
+            '<div><span style="font-size:0.75rem;color:#6b7280;">Tempo min</span>'
+            '<div style="font-size:1.25rem;font-weight:700;color:#065f46;">{} ms</div></div>'
+            '<div><span style="font-size:0.75rem;color:#6b7280;">Tempo max</span>'
+            '<div style="font-size:1.25rem;font-weight:700;color:#991b1b;">{} ms</div></div>'
+            '</div>',
+            stats['total'],
+            round(stats['avg_ms'] or 0),
+            stats['min_ms'] or 0,
+            stats['max_ms'] or 0,
+        )
+        return super().changelist_view(request, extra_context=extra_context)

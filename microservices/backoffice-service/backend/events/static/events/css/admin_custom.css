@@ -20,6 +20,45 @@
     width: 100%;
 }
 
+/* Input e textarea — stile coerente con i campi readonly di Unfold */
+.form-row input[type="text"],
+.form-row input[type="url"],
+.form-row input[type="number"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row input[type="time"],
+.form-row textarea,
+.form-row select {
+    background-color: #f3f4f6;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Dark mode (Unfold usa classe .dark) */
+.dark .form-row input[type="text"],
+.dark .form-row input[type="url"],
+.dark .form-row input[type="number"],
+.dark .form-row input[type="email"],
+.dark .form-row input[type="date"],
+.dark .form-row input[type="time"],
+.dark .form-row textarea,
+.dark .form-row select {
+    background-color: #1f2937;
+    color: #9ca3af;
+    border-color: #374151;
+}
+
+/* Readonly fields in fieldset wide → full width */
+.wide .readonly {
+    max-width: none !important;
+    width: 100%;
+}
+
 /* CKEditor 5 integration */
 .ck-editor {
     width: 100% !important;
