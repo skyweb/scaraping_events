@@ -138,6 +138,25 @@ services:
     networks:
       - dev-network
 
+  # Frontend (React + Vite dev server)
+  frontend:
+    build:
+      context: ../microservices/frontend-service
+      dockerfile: Dockerfile.dev
+    container_name: dev-frontend
+    restart: unless-stopped
+    environment:
+      VITE_API_URL: http://localhost/api
+    volumes:
+      - ../microservices/frontend-service:/app
+      - /app/node_modules
+    ports:
+      - "${FRONTEND_PORT:-3000}:5173"
+    networks:
+      dev-network:
+        aliases:
+          - frontend
+
   # Nginx Reverse Proxy
   nginx:
     image: nginx:alpine
@@ -150,6 +169,7 @@ services:
       - "80:80"
     depends_on:
       - backoffice
+      - frontend
     networks:
       - dev-network
 

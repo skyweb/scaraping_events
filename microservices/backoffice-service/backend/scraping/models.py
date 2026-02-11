@@ -1,8 +1,14 @@
+"""
+Modelli per le viste aggregate dello scraping (categorie e location).
+
+Questi modelli sono collegati a viste PostgreSQL (managed=False),
+quindi le rename non generano ALTER TABLE.
+"""
 from django.db import models
 
 
-class ScrapingCategoria(models.Model):
-    """Categorie uniche dagli eventi - vista aggregata"""
+class ScrapingCategory(models.Model):
+    """Categorie uniche estratte dagli eventi — vista aggregata su v_categorie."""
     categoria = models.CharField(max_length=255, primary_key=True)
     count = models.IntegerField(default=0)
 
@@ -18,7 +24,7 @@ class ScrapingCategoria(models.Model):
 
 
 class ScrapingLocation(models.Model):
-    """Location uniche dagli eventi - vista aggregata"""
+    """Location uniche estratte dagli eventi — vista aggregata su v_locations."""
     id = models.CharField(max_length=32, primary_key=True)
     location_name = models.CharField(max_length=255, blank=True, null=True)
     city = models.CharField(max_length=100, blank=True, null=True)

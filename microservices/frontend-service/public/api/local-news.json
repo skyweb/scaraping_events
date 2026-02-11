@@ -1,0 +1,48 @@
+{
+  "city": "Roma",
+  "weather": {
+    "icon": "cloud-rain",
+    "condition": "Pioggia moderata",
+    "tempMin": 10,
+    "tempMax": 15
+  },
+  "nav": [
+    { "label": "Notizie", "href": "/roma/notizie" },
+    { "label": "Eventi", "href": "/roma/eventi" },
+    { "label": "Farmacie", "href": "/roma/farmacie" },
+    { "label": "Aziende", "href": "/roma/aziende" },
+    { "label": "Magazine", "href": "/roma/magazine" },
+    { "label": "Mappa", "href": "/roma/mappa" },
+    { "label": "Previsioni", "href": "/roma/previsioni" }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "image": "https://picsum.photos/seed/roma1/302/170",
+      "title": "Quanto valgono le medaglie delle Olimpiadi di Milano Cortina",
+      "category": "Sport",
+      "url": "/articolo/medaglie-olimpiadi-milano-cortina"
+    },
+    {
+      "id": 2,
+      "image": "https://picsum.photos/seed/roma2/302/170",
+      "title": "Le 10 città più accoglienti al mondo per il 2026: una è in Italia",
+      "category": "Eccellenze",
+      "url": "/articolo/citta-accoglienti-2026"
+    },
+    {
+      "id": 3,
+      "image": "https://picsum.photos/seed/roma3/302/170",
+      "title": "Alligatore avvistato in un canale in Italia, la Polizia: \"Attendibile\"",
+      "category": "Territorio",
+      "url": "/articolo/alligatore-canale-italia"
+    },
+    {
+      "id": 4,
+      "image": "https://picsum.photos/seed/roma4/302/170",
+      "title": "Smog, queste sono le città più inquinate d'Italia: la nuova classifica",
+      "category": "Territorio",
+      "url": "/articolo/citta-inquinate-classifica"
+    }
+  ]
+}

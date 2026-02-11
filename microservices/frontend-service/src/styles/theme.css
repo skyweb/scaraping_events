@@ -1,0 +1,42 @@
+/* ================================================
+   Clone grafico Libero.it — portale legacy italiano
+   Denso, compatto, zero fronzoli
+   ================================================ */
+
+@theme inline {
+  /* Brand primari */
+  --color-libero-blue: #004a96;
+  --color-libero-blue-dark: #003672;
+  --color-libero-yellow: #ffcc00;
+  --color-libero-yellow-hover: #e6b800;
+  --color-libero-green: #008a00;
+  --color-libero-red: #cc0000;
+  --color-libero-orange: #ff6600;
+
+  /* Superfici */
+  --color-page-bg: #f0f0f0;
+  --color-card-bg: #ffffff;
+  --color-bar-dark: #003672;
+  --color-bar-blue: #004a96;
+  --color-bar-yellow: #ffcc00;
+  --color-widget-bg: #f7f7f7;
+  --color-widget-header: #e8e8e8;
+
+  /* Testo */
+  --color-txt-black: #000000;
+  --color-txt-dark: #333333;
+  --color-txt-body: #444444;
+  --color-txt-meta: #666666;
+  --color-txt-light: #999999;
+  --color-txt-white: #ffffff;
+
+  /* Bordi */
+  --color-brd-light: #e0e0e0;
+  --color-brd-medium: #cccccc;
+  --color-brd-dark: #999999;
+
+  /* Ad placeholder */
+  --color-ad-bg: #e8e8e8;
+  --color-ad-border: #cccccc;
+  --color-ad-text: #999999;
+}
