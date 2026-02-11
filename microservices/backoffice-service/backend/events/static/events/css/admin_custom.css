@@ -53,8 +53,8 @@
     border-color: #374151;
 }
 
-/* Readonly fields in fieldset wide → full width */
-.wide .readonly {
+/* Readonly fields → full width */
+.readonly {
     max-width: none !important;
     width: 100%;
 }

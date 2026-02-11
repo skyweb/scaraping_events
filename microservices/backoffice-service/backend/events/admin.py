@@ -144,7 +144,7 @@ class StagingEventAdmin(ModelAdmin):
         'loaded_at', 'image_preview', 'image_thumbnail', 'description_preview',
         'json_preview', 'clickable_url', 'clickable_image_url', 'source', 'uuid',
         'content_hash', 'category_list', 'date_start_display', 'date_start_ro', 'date_end_ro',
-        'event_status_chip',
+        'event_status_chip', 'data_creazione',
     ]
     list_per_page = 50
 
@@ -152,10 +152,11 @@ class StagingEventAdmin(ModelAdmin):
         # Tab 1: Informazioni principali (source, uuid, date, titolo, luogo, url)
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">info</span> Informazioni Evento</span>'), {
             'fields': (
-                ('source', 'uuid', 'date_start_ro', 'date_end_ro'),
-                ('title', 'event_status_chip'),
-                ('city', 'location_address'),
-                'location_name',
+                ('source', 'uuid', 'data_creazione'),
+                ('date_start_ro', 'date_end_ro', 'event_status_chip'),
+                'title',
+                ('city', 'location_address', 'location_name'),
+                'category_list',
                 'clickable_url',
             ),
             'classes': ['tab'],
@@ -185,7 +186,7 @@ class StagingEventAdmin(ModelAdmin):
             'fields': (
                 'content_hash',
                 'json_preview',
-                ('scraped_at', 'loaded_at'),
+                'scraped_at',
             ),
             'classes': ['tab'],
         }),
@@ -217,6 +218,13 @@ class StagingEventAdmin(ModelAdmin):
             color, bg, label
         )
     event_status_chip.short_description = "Stato"
+
+    def data_creazione(self, obj):
+        """Data di creazione formattata DD/MM/YYYY HH:mm."""
+        if obj.loaded_at:
+            return timezone.localtime(obj.loaded_at).strftime('%d/%m/%Y %H:%M')
+        return "-"
+    data_creazione.short_description = "Data creazione"
 
     def category_list(self, obj):
         """Mostra le categorie come chip colorati nella lista e nel dettaglio."""

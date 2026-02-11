@@ -99,20 +99,25 @@ class ScrapingLocationAdmin(ModelAdmin):
             # Data fine
             data_fine = e.date_end.strftime('%d/%m/%Y') if e.date_end else '-'
 
+            # Data creazione
+            data_creazione = timezone.localtime(e.loaded_at).strftime('%d/%m/%Y %H:%M') if e.loaded_at else '-'
+
             rows.append(format_html(
                 '<tr>'
                 '<td style="padding:0.5rem 0.75rem;border-bottom:1px solid #e5e7eb;">{}</td>'
                 '<td style="padding:0.5rem 0.75rem;border-bottom:1px solid #e5e7eb;">{}</td>'
                 '<td style="padding:0.5rem 0.75rem;border-bottom:1px solid #e5e7eb;">{}</td>'
                 '<td style="padding:0.5rem 0.75rem;border-bottom:1px solid #e5e7eb;">{}</td>'
+                '<td style="padding:0.5rem 0.75rem;border-bottom:1px solid #e5e7eb;">{}</td>'
                 '</tr>',
-                link, e.source, stato, data_fine,
+                link, data_creazione, e.source, stato, data_fine,
             ))
 
         header = (
             '<table style="width:100%;border-collapse:collapse;font-size:0.875rem;">'
             '<thead><tr style="background:#f9fafb;">'
             '<th style="padding:0.5rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Titolo</th>'
+            '<th style="padding:0.5rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Creato il</th>'
             '<th style="padding:0.5rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Source</th>'
             '<th style="padding:0.5rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Stato</th>'
             '<th style="padding:0.5rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Data Fine</th>'
