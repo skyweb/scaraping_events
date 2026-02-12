@@ -1,0 +1,45 @@
+# Grafana provisioning — Alert rule per errori nell'area admin Django
+apiVersion: 1
+
+groups:
+  - orgId: 1
+    name: django-admin
+    folder: Django
+    interval: 1m
+    rules:
+      - uid: admin-errors
+        title: "Admin area errors (5xx)"
+        condition: threshold
+        data:
+          - refId: logs
+            relativeTimeRange:
+              from: 300  # ultimi 5 minuti
+              to: 0
+            datasourceUid: loki
+            model:
+              expr: 'count_over_time({container_name=~"dev-backoffice.*", level="ERROR", logger="admin.requests"}[5m])'
+              refId: logs
+          - refId: threshold
+            relativeTimeRange:
+              from: 0
+              to: 0
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: logs
+              conditions:
+                - evaluator:
+                    type: gt
+                    params:
+                      - 0
+                  operator:
+                    type: and
+                  reducer:
+                    type: last
+              refId: threshold
+        for: 0s
+        noDataState: OK
+        execErrState: Alerting
+        annotations:
+          summary: "Errori 5xx rilevati nell'area admin Django"
+          description: "Ci sono log ERROR dal middleware admin.requests nel container backoffice negli ultimi 5 minuti. Controlla Loki per i dettagli."

@@ -29,6 +29,12 @@ pyOpenSSL>=24.0.0
 tldextract>=5.1.0
 python-dateutil>=2.8.0
 
+# OpenTelemetry (tracing distribuito)
+opentelemetry-api>=1.25.0
+opentelemetry-sdk>=1.25.0
+opentelemetry-exporter-otlp-proto-grpc>=1.25.0
+opentelemetry-instrumentation-requests>=0.46b0
+
 # Development (opzionale)
 # pytest>=8.0.0
 # pytest-cov>=4.1.0

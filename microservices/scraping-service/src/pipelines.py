@@ -25,6 +25,8 @@ import psycopg2
 from itemadapter import ItemAdapter
 from scrapy.exceptions import CloseSpider, DropItem
 
+from otel_setup import tracer
+
 logger = logging.getLogger(__name__)
 
 
@@ -400,14 +402,26 @@ class ApiPipeline:
         if not events:
             return True
 
+        with tracer.start_as_current_span(
+            "scraper.send_batch",
+            attributes={
+                "spider.name": self.spider_name,
+                "batch.size": len(events),
+            },
+        ) as span:
+            return self._do_send_batch(events, span)
+
+    def _do_send_batch(self, events: List[Dict[str, Any]], span) -> bool:
+        """Logica effettiva di invio batch (wrappata dallo span OTel)."""
         self._save_batch_json(events)
 
         if not self.access_token:
             if not self._get_access_token():
                 logger.error("Impossibile ottenere token, batch non inviato")
+                span.set_attribute("batch.error", "token_failure")
                 return False
 
-        bulk_url = f"{self.base_url}/api/external/staging/bulk/"
+        bulk_url = f"{self.base_url}/api/external/v1/staging/bulk/"
 
         try:
             response = self.session.post(
@@ -420,15 +434,32 @@ class ApiPipeline:
                 timeout=self.timeout,
             )
 
+            span.set_attribute("http.status_code", response.status_code)
+
             if response.status_code == 201:
                 result = response.json()
                 logger.info(f"Batch inviato (sync): {result.get('created_count', 0)} eventi creati")
+                # Span events per singolo evento (ricercabili in Jaeger per UUID)
+                for event in events:
+                    span.add_event("event.sent", attributes={
+                        "event.uuid": event.get("uuid", ""),
+                        "event.title": event.get("title", "")[:80],
+                        "event.source": event.get("source", ""),
+                    })
                 return True
 
             elif response.status_code == 202:
                 result = response.json()
                 task_id = result.get('task_id', 'unknown')
                 logger.info(f"Batch accettato (async): task_id={task_id}, {len(events)} eventi")
+                span.set_attribute("celery.task_id", task_id)
+                # Span events per singolo evento (ricercabili in Jaeger per UUID)
+                for event in events:
+                    span.add_event("event.sent", attributes={
+                        "event.uuid": event.get("uuid", ""),
+                        "event.title": event.get("title", "")[:80],
+                        "event.source": event.get("source", ""),
+                    })
                 return True
 
             elif response.status_code == 401:
@@ -436,15 +467,17 @@ class ApiPipeline:
                 logger.warning("Token scaduto, rinnovo...")
                 self.access_token = None
                 if self._get_access_token():
-                    return self._send_batch(events)
+                    return self._do_send_batch(events, span)
                 return False
 
             else:
                 logger.error(f"Errore invio batch: {response.status_code} - {response.text}")
+                span.set_attribute("batch.error", f"http_{response.status_code}")
                 return False
 
         except requests.RequestException as e:
             logger.error(f"Errore richiesta API: {e}")
+            span.set_attribute("batch.error", str(e))
             return False
 
     def _item_to_dict(self, item) -> Dict[str, Any]:

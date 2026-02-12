@@ -1,0 +1,230 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 },
+      "id": 100,
+      "title": "HTTP Overview",
+      "type": "row"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": { "axisBorderShow": false, "axisCenteredZero": false, "axisLabel": "req/s", "drawStyle": "line", "fillOpacity": 10, "lineWidth": 2, "pointSize": 5, "showPoints": "never", "spanNulls": true, "stacking": { "mode": "none" } },
+          "unit": "reqps"
+        }
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 1 },
+      "id": 1,
+      "options": { "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "expr": "sum(rate(django_http_requests_total_by_method_total[5m])) by (method)",
+          "legendFormat": "{{method}}"
+        }
+      ],
+      "title": "HTTP Request Rate",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": { "axisBorderShow": false, "axisCenteredZero": false, "axisLabel": "", "drawStyle": "line", "fillOpacity": 10, "lineWidth": 2, "pointSize": 5, "showPoints": "never", "spanNulls": true, "stacking": { "mode": "normal" } },
+          "unit": "reqps"
+        }
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 1 },
+      "id": 2,
+      "options": { "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "expr": "sum(rate(django_http_responses_total_by_status_total[5m])) by (status)",
+          "legendFormat": "{{status}}"
+        }
+      ],
+      "title": "HTTP Response Status Codes",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 9 },
+      "id": 101,
+      "title": "Latency",
+      "type": "row"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": { "axisBorderShow": false, "axisCenteredZero": false, "axisLabel": "", "drawStyle": "line", "fillOpacity": 5, "lineWidth": 2, "pointSize": 5, "showPoints": "never", "spanNulls": true, "stacking": { "mode": "none" } },
+          "unit": "s"
+        }
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 10 },
+      "id": 3,
+      "options": { "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.50, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket[5m])) by (le))",
+          "legendFormat": "P50"
+        },
+        {
+          "expr": "histogram_quantile(0.90, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket[5m])) by (le))",
+          "legendFormat": "P90"
+        },
+        {
+          "expr": "histogram_quantile(0.99, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket[5m])) by (le))",
+          "legendFormat": "P99"
+        }
+      ],
+      "title": "Request Latency (P50 / P90 / P99)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": { "axisBorderShow": false, "axisCenteredZero": false, "axisLabel": "", "drawStyle": "bars", "fillOpacity": 80, "lineWidth": 1, "pointSize": 5, "showPoints": "never", "spanNulls": true, "stacking": { "mode": "normal" } },
+          "unit": "s"
+        }
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 10 },
+      "id": 4,
+      "options": { "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "expr": "topk(10, histogram_quantile(0.95, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket[5m])) by (le, view)))",
+          "legendFormat": "{{view}}"
+        }
+      ],
+      "title": "Latency P95 per View (Top 10)",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 18 },
+      "id": 102,
+      "title": "Database",
+      "type": "row"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": { "axisBorderShow": false, "axisCenteredZero": false, "axisLabel": "queries/s", "drawStyle": "line", "fillOpacity": 10, "lineWidth": 2, "pointSize": 5, "showPoints": "never", "spanNulls": true, "stacking": { "mode": "none" } },
+          "unit": "ops"
+        }
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 19 },
+      "id": 5,
+      "options": { "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "expr": "sum(rate(django_db_execute_total[5m])) by (vendor)",
+          "legendFormat": "{{vendor}}"
+        }
+      ],
+      "title": "DB Query Rate",
+      "type": "timeseries"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": { "axisBorderShow": false, "axisCenteredZero": false, "axisLabel": "", "drawStyle": "line", "fillOpacity": 10, "lineWidth": 2, "pointSize": 5, "showPoints": "never", "spanNulls": true, "stacking": { "mode": "none" } },
+          "unit": "s"
+        }
+      },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 19 },
+      "id": 6,
+      "options": { "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "expr": "rate(django_db_query_duration_seconds_sum[5m]) / rate(django_db_query_duration_seconds_count[5m])",
+          "legendFormat": "avg query duration"
+        }
+      ],
+      "title": "DB Avg Query Duration",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 27 },
+      "id": 103,
+      "title": "Cache",
+      "type": "row"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "thresholds": { "mode": "absolute", "steps": [{ "color": "red", "value": null }, { "color": "yellow", "value": 50 }, { "color": "green", "value": 80 }] },
+          "unit": "percentunit",
+          "min": 0,
+          "max": 1
+        }
+      },
+      "gridPos": { "h": 8, "w": 8, "x": 0, "y": 28 },
+      "id": 7,
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "orientation": "auto", "showThresholdLabels": false, "showThresholdMarkers": true },
+      "targets": [
+        {
+          "expr": "sum(rate(django_cache_hits_total[5m])) / (sum(rate(django_cache_hits_total[5m])) + sum(rate(django_cache_misses_total[5m])))",
+          "legendFormat": "hit rate"
+        }
+      ],
+      "title": "Cache Hit Rate",
+      "type": "gauge"
+    },
+    {
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": { "axisBorderShow": false, "axisCenteredZero": false, "axisLabel": "ops/s", "drawStyle": "line", "fillOpacity": 10, "lineWidth": 2, "pointSize": 5, "showPoints": "never", "spanNulls": true, "stacking": { "mode": "none" } },
+          "unit": "ops"
+        }
+      },
+      "gridPos": { "h": 8, "w": 16, "x": 8, "y": 28 },
+      "id": 8,
+      "options": { "legend": { "calcs": ["mean", "max"], "displayMode": "table", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "targets": [
+        {
+          "expr": "sum(rate(django_cache_hits_total[5m]))",
+          "legendFormat": "hits"
+        },
+        {
+          "expr": "sum(rate(django_cache_misses_total[5m]))",
+          "legendFormat": "misses"
+        }
+      ],
+      "title": "Cache Hits vs Misses",
+      "type": "timeseries"
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["django", "prometheus"],
+  "templating": { "list": [] },
+  "time": { "from": "now-1h", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Django Application",
+  "uid": "django-prometheus",
+  "version": 1
+}

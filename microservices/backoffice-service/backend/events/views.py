@@ -125,7 +125,7 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
         responses={200: CityCountSerializer(many=True)},
     )
     @action(detail=False, methods=['get'])
-    def cities(self, request):
+    def cities(self, request, **kwargs):
         """Lista delle città disponibili"""
         cities = (
             ProductionEvent.objects
@@ -142,7 +142,7 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
         responses={200: SourceCountSerializer(many=True)},
     )
     @action(detail=False, methods=['get'])
-    def sources(self, request):
+    def sources(self, request, **kwargs):
         """Lista delle sorgenti disponibili"""
         sources = (
             ProductionEvent.objects
@@ -160,7 +160,7 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
         responses={200: ToggleActiveResponseSerializer},
     )
     @action(detail=True, methods=['post'])
-    def toggle_active(self, request, pk=None):
+    def toggle_active(self, request, pk=None, **kwargs):
         """Toggle stato attivo/inattivo"""
         event = self.get_object()
         event.is_active = not event.is_active
@@ -239,7 +239,7 @@ class DashboardView(APIView):
         tags=["Dashboard"],
         responses={200: DashboardStatsSerializer},
     )
-    def get(self, request):
+    def get(self, request, **kwargs):
         total_events = ProductionEvent.objects.count()
         active_events = ProductionEvent.objects.filter(is_active=True).count()
 
@@ -560,7 +560,7 @@ Crea multipli staging events in una sola richiesta.
         ],
     )
     @action(detail=False, methods=['post'])
-    def bulk(self, request):
+    def bulk(self, request, **kwargs):
         """Crea multipli staging events. Default: async via Celery. ?sync=true per sincrono."""
         events_data = request.data.get('events', [])
         if not events_data:
@@ -658,7 +658,7 @@ Controlla lo stato di un task di bulk create asincrono.
         },
     )
     @action(detail=False, methods=['get'], url_path='bulk-status/(?P<task_id>[^/.]+)')
-    def bulk_status(self, request, task_id=None):
+    def bulk_status(self, request, task_id=None, **kwargs):
         """Controlla lo stato di un task di bulk create asincrono."""
         result = AsyncResult(task_id)
 
@@ -705,7 +705,7 @@ Utile per pulire i dati prima di un nuovo import.
         },
     )
     @action(detail=False, methods=['delete'])
-    def clear_source(self, request):
+    def clear_source(self, request, **kwargs):
         """Elimina tutti gli staging events di una specifica sorgente."""
         source = request.query_params.get('source')
         if not source:

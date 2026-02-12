@@ -2,6 +2,7 @@ import logging
 
 from celery import shared_task
 from django.db import OperationalError
+from opentelemetry import trace
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,8 @@ def process_bulk_events(self, events_data, spider_name='unknown'):
 
     logger.info(f"Processing bulk events from spider: {spider_name} ({len(events_data)} events)")
 
+    span = trace.get_current_span()
+
     valid_instances = []
     failed_events = []
 
@@ -36,11 +39,19 @@ def process_bulk_events(self, events_data, spider_name='unknown'):
         serializer = StagingEventCreateSerializer(data=data)
         if serializer.is_valid():
             valid_instances.append(StagingEvent(**serializer.validated_data))
+            span.add_event("event.validated", attributes={
+                "event.uuid": data.get("uuid", ""),
+                "event.title": str(data.get("title", ""))[:80],
+            })
         else:
             failed_events.append({
                 'index': idx,
                 'errors': serializer.errors,
                 'original_data': data,
+            })
+            span.add_event("event.validation_failed", attributes={
+                "event.uuid": data.get("uuid", ""),
+                "event.errors": str(serializer.errors)[:200],
             })
 
     if not valid_instances:
@@ -55,6 +66,13 @@ def process_bulk_events(self, events_data, spider_name='unknown'):
     try:
         created = StagingEvent.objects.bulk_create(valid_instances)
         created_count = len(created)
+        # Span events + log per ogni evento creato (cercabili in Jaeger/Loki per UUID)
+        for instance in created:
+            span.add_event("event.created", attributes={
+                "event.uuid": str(instance.uuid),
+                "event.title": str(instance.title)[:80],
+            })
+            logger.info(f"Evento creato: uuid={instance.uuid} title={str(instance.title)[:80]}")
     except OperationalError as exc:
         logger.warning(f"bulk_create OperationalError, retrying: {exc}")
         raise self.retry(exc=exc)

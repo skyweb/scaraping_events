@@ -1,0 +1,55 @@
+# OpenTelemetry Collector - Configurazione sviluppo
+# Riceve telemetria da Django/Celery e la inoltra a Jaeger
+# Genera metriche RED (Rate, Errors, Duration) via spanmetrics per Jaeger Monitor
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+connectors:
+  spanmetrics:
+    histogram:
+      explicit:
+        buckets: [5ms, 10ms, 25ms, 50ms, 100ms, 250ms, 500ms, 1s, 2.5s, 5s, 10s]
+    dimensions:
+      - name: http.method
+      - name: http.status_code
+      - name: http.route
+    dimensions_cache_size: 1000
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+
+  memory_limiter:
+    check_interval: 5s
+    limit_mib: 256
+    spike_limit_mib: 64
+
+exporters:
+  otlphttp/jaeger:
+    endpoint: http://jaeger:4318
+    tls:
+      insecure: true
+
+  prometheus:
+    endpoint: 0.0.0.0:8889
+
+  debug:
+    verbosity: basic
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [otlphttp/jaeger, spanmetrics, debug]
+
+    metrics:
+      receivers: [spanmetrics]
+      exporters: [prometheus]

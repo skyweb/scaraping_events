@@ -19,6 +19,9 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
+# Limite upload per richieste bulk (default Django: 2.5MB, insufficiente per batch con raw_data)
+DATA_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024  # 20MB
+
 INSTALLED_APPS = [
     'unfold',
     'unfold.contrib.filters',
@@ -29,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.forms',
+    'django_prometheus',
     'rest_framework',
     'oauth2_provider',
     'rest_framework_tracking',
@@ -45,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django_prometheus.middleware.PrometheusBeforeMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -54,6 +59,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'backoffice.middleware.ApiVersionHeaderMiddleware',
+    'backoffice.middleware.AdminRequestLoggingMiddleware',
+    'django_prometheus.middleware.PrometheusAfterMiddleware',
 ]
 
 ROOT_URLCONF = 'backoffice.urls'
@@ -78,12 +86,20 @@ WSGI_APPLICATION = 'backoffice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'ENGINE': 'django_prometheus.db.backends.postgis',
         'NAME': os.environ.get('POSTGRES_DB', 'today_events'),
         'USER': os.environ.get('POSTGRES_USER', 'events'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'events_secret_2026'),
         'HOST': os.environ.get('POSTGRES_HOST', 'postgres'),
         'PORT': os.environ.get('POSTGRES_PORT', '5432'),
+    }
+}
+
+# Cache Redis instrumentata (DB 2 — DB 0 Airflow, DB 1 Celery broker)
+CACHES = {
+    'default': {
+        'BACKEND': 'django_prometheus.cache.backends.redis.RedisCache',
+        'LOCATION': os.environ.get('CACHE_REDIS_URL', 'redis://:redis_secret_2026@redis:6379/2'),
     }
 }
 
@@ -141,6 +157,10 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
+# Versioning API — applicato solo alle view esterne (ExternalStagingEventViewSet)
+API_VERSION = 'v1'
+API_ALLOWED_VERSIONS = ['v1']
+
 # OAuth2 Provider
 OAUTH2_PROVIDER = {
     'SCOPES': {
@@ -179,7 +199,7 @@ API per la gestione degli eventi, monitoraggio ETL e integrazione con servizi es
 ### Autenticazione
 
 - **API interne**: Session authentication (Django admin login)
-- **API esterne** (`/api/external/`): OAuth2 Client Credentials
+- **API esterne** (`/api/external/v1/`): OAuth2 Client Credentials (versionata)
 
 #### OAuth2 Flow
 
@@ -191,6 +211,15 @@ API per la gestione degli eventi, monitoraggio ETL e integrazione con servizi es
 
 - `read` - Lettura staging events
 - `write` - Scrittura staging events
+
+### Versioning
+
+Le API esterne (`/api/external/`) sono versionate tramite URL path:
+- Versione corrente: **v1** → `/api/external/v1/staging/`
+- Endpoint info versione: `GET /api/version/` (senza autenticazione)
+- Header `X-API-Version` presente in ogni risposta API
+
+Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) non sono versionate.
     ''',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
@@ -226,7 +255,7 @@ API per la gestione degli eventi, monitoraggio ETL e integrazione con servizi es
         {'name': 'Production Events', 'description': 'Eventi validati in produzione'},
         {'name': 'Staging Events (Internal)', 'description': 'Eventi in staging (sola lettura interna)'},
         {'name': 'ETL', 'description': 'Monitoraggio esecuzioni e errori ETL'},
-        {'name': 'Staging Events', 'description': 'API esterna OAuth2 - gestione staging events'},
+        {'name': 'Staging Events', 'description': 'API esterna OAuth2 v1 - gestione staging events'},
         {'name': 'Bulk Operations', 'description': 'Operazioni massive (bulk create, clear source)'},
     ],
 }
@@ -240,6 +269,9 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_WORKER_HIJACK_ROOT_LOGGER = False  # Mantiene il formato LOGGING Django con trace_id
+CELERY_WORKER_SEND_TASK_EVENTS = True
+CELERY_TASK_SEND_SENT_EVENT = True
 
 # CKEditor 5
 CKEDITOR_5_CONFIGS = {
@@ -292,6 +324,57 @@ CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
 CKEDITOR_5_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# Logging JSON strutturato — Promtail/Loki parsano nativamente.
+# Se OTel è attivo, il LoggingInstrumentor inietta otelTraceID/otelSpanID nel record
+# e vengono inclusi automaticamente nel JSON output.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'json': {
+            '()': 'pythonjsonlogger.jsonlogger.JsonFormatter',
+            'format': '%(asctime)s %(levelname)s %(name)s %(message)s',
+            'rename_fields': {
+                'asctime': 'timestamp',
+                'levelname': 'level',
+                'name': 'logger',
+            },
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'json',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+    'loggers': {
+        'django.server': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'admin.requests': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'celery': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'celery.task': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
 
 # Unfold Admin Theme
 UNFOLD = {

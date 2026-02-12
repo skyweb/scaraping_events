@@ -25,6 +25,10 @@ services:
       - "6800"
     env_file:
       - .env
+    environment:
+      OTEL_ENABLED: "true"
+      OTEL_SERVICE_NAME: scraping-service
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
     volumes:
       # Codice sorgente montato live (read-write)
       - ./src:/app/events_scraper

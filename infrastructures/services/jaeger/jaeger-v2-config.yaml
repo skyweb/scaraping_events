@@ -1,0 +1,54 @@
+# Jaeger v2 - Configurazione sviluppo
+# Storage in-memory, SPM via spanmetrics connector interno + Prometheus
+
+service:
+  extensions: [jaeger_storage, jaeger_query]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [jaeger_storage_exporter, spanmetrics]
+    metrics/spanmetrics:
+      receivers: [spanmetrics]
+      exporters: [prometheus]
+
+extensions:
+  jaeger_storage:
+    backends:
+      memstore:
+        memory:
+          max_traces: 100000
+    metric_backends:
+      promstore:
+        prometheus:
+          endpoint: http://prometheus:9090
+          normalize_calls: true
+          normalize_duration: true
+
+  jaeger_query:
+    storage:
+      traces: memstore
+      metrics: promstore
+    ui:
+      config_file: /etc/jaeger/ui-config.json
+
+connectors:
+  spanmetrics:
+    metrics_flush_interval: 15s
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+
+exporters:
+  jaeger_storage_exporter:
+    trace_storage: memstore
+  prometheus:
+    endpoint: 0.0.0.0:8889

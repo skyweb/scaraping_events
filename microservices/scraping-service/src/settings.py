@@ -172,3 +172,11 @@ TELNETCONSOLE_ENABLED = os.getenv("SCRAPY_TELNETCONSOLE_ENABLED", "False").lower
 
 # Queste impostazioni sono usate quando il progetto viene deployato su Scrapyd
 SCRAPYD_URL = os.getenv("SCRAPYD_URL", "http://localhost:6800")
+
+# =============================================================================
+# OPENTELEMETRY (tracing distribuito)
+# =============================================================================
+
+OTEL_ENABLED = os.getenv("OTEL_ENABLED", "false").lower() == "true"
+OTEL_SERVICE_NAME = os.getenv("OTEL_SERVICE_NAME", "scraping-service")
+OTEL_EXPORTER_OTLP_ENDPOINT = os.getenv("OTEL_EXPORTER_OTLP_ENDPOINT", "http://localhost:4317")

@@ -9,21 +9,23 @@ from .views import (
     ExternalStagingEventViewSet,
 )
 
-# Router per API interne (admin)
+# Router per API interne (admin) — senza versioning
 router = DefaultRouter()
 router.register(r'events', ProductionEventViewSet, basename='events')
 router.register(r'staging', StagingEventViewSet, basename='staging')
 router.register(r'etl-runs', EtlRunViewSet, basename='etl-runs')
 router.register(r'etl-errors', EtlErrorViewSet, basename='etl-errors')
 
-# Router per API esterne (OAuth2)
+# Router per API esterne (OAuth2) — versionato
 external_router = DefaultRouter()
 external_router.register(r'staging', ExternalStagingEventViewSet, basename='external-staging')
 
 urlpatterns = [
+    # /api/events/, /api/staging/, /api/dashboard/ (no versioning)
     path('', include(router.urls)),
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
 
-    # API esterne con OAuth2
-    path('external/', include(external_router.urls)),
+    # /api/external/v1/staging/, /api/external/v1/staging/bulk/
+    # Per aggiungere v2: path('external/v2/', include(external_router_v2.urls))
+    path('external/v1/', include(external_router.urls)),
 ]
