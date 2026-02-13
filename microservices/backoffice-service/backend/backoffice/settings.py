@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     'django_celery_results',
     'django_ckeditor_5',
     'comuni_italiani',
+    'comuni_italiani_ingestion',
     'etl',
     'scraping',
     'events',
+    'cms',
 ]
 
 MIDDLEWARE = [
@@ -442,6 +444,22 @@ UNFOLD = {
                         "title": "Province",
                         "icon": "map",
                         "link": "/admin/comuni_italiani/provinciaitaliana/",
+                    },
+                ],
+            },
+            {
+                "title": "CMS",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Pagine Città",
+                        "icon": "web",
+                        "link": "/admin/cms/paginacitta/",
+                    },
+                    {
+                        "title": "Sezioni",
+                        "icon": "article",
+                        "link": "/admin/cms/sezionepagina/",
                     },
                 ],
             },

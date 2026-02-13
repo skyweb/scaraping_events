@@ -1,0 +1,536 @@
+[
+{
+  "model": "cms.paginacitta",
+  "pk": 1,
+  "fields": {
+    "nome": "Roma API",
+    "slug": "roma",
+    "is_attiva": true,
+    "ordine": 0,
+    "created_at": "2026-02-13T21:36:54.893Z",
+    "updated_at": "2026-02-13T21:39:27.290Z"
+  }
+},
+{
+  "model": "cms.tabnavigazione",
+  "pk": 1,
+  "fields": {
+    "pagina": 1,
+    "label": "Notizie",
+    "url": "/roma/notizie",
+    "ordine": 0
+  }
+},
+{
+  "model": "cms.tabnavigazione",
+  "pk": 2,
+  "fields": {
+    "pagina": 1,
+    "label": "Eventi",
+    "url": "/roma/eventi",
+    "ordine": 1
+  }
+},
+{
+  "model": "cms.tabnavigazione",
+  "pk": 3,
+  "fields": {
+    "pagina": 1,
+    "label": "Farmacie",
+    "url": "/roma/farmacie",
+    "ordine": 2
+  }
+},
+{
+  "model": "cms.tabnavigazione",
+  "pk": 4,
+  "fields": {
+    "pagina": 1,
+    "label": "Aziende",
+    "url": "/roma/aziende",
+    "ordine": 3
+  }
+},
+{
+  "model": "cms.tabnavigazione",
+  "pk": 5,
+  "fields": {
+    "pagina": 1,
+    "label": "Magazine",
+    "url": "/roma/magazine",
+    "ordine": 4
+  }
+},
+{
+  "model": "cms.tabnavigazione",
+  "pk": 6,
+  "fields": {
+    "pagina": 1,
+    "label": "Mappa",
+    "url": "/roma/mappa",
+    "ordine": 5
+  }
+},
+{
+  "model": "cms.tabnavigazione",
+  "pk": 7,
+  "fields": {
+    "pagina": 1,
+    "label": "Previsioni",
+    "url": "/roma/previsioni",
+    "ordine": 6
+  }
+},
+{
+  "model": "cms.sezionepagina",
+  "pk": 1,
+  "fields": {
+    "pagina": 1,
+    "titolo": "Notizie Locali",
+    "colore": "blue",
+    "link_vedi_tutti": "/roma/notizie",
+    "ordine": 0,
+    "is_attiva": true
+  }
+},
+{
+  "model": "cms.sezionepagina",
+  "pk": 2,
+  "fields": {
+    "pagina": 1,
+    "titolo": "Notizie",
+    "colore": "blue",
+    "link_vedi_tutti": "/roma/notizie",
+    "ordine": 1,
+    "is_attiva": true
+  }
+},
+{
+  "model": "cms.sezionepagina",
+  "pk": 3,
+  "fields": {
+    "pagina": 1,
+    "titolo": "Sport",
+    "colore": "green",
+    "link_vedi_tutti": "/roma/sport",
+    "ordine": 2,
+    "is_attiva": true
+  }
+},
+{
+  "model": "cms.sezionepagina",
+  "pk": 4,
+  "fields": {
+    "pagina": 1,
+    "titolo": "Tecnologia",
+    "colore": "red",
+    "link_vedi_tutti": "/roma/tecnologia",
+    "ordine": 3,
+    "is_attiva": true
+  }
+},
+{
+  "model": "cms.sezionepagina",
+  "pk": 5,
+  "fields": {
+    "pagina": 1,
+    "titolo": "Spettacoli",
+    "colore": "red",
+    "link_vedi_tutti": "/roma/spettacoli",
+    "ordine": 4,
+    "is_attiva": true
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 1,
+  "fields": {
+    "sezione": 1,
+    "titolo": "Quanto valgono le medaglie delle Olimpiadi di Milano Cortina",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/roma1/302/170",
+    "categoria": "SPORT",
+    "colore_categoria": "red",
+    "url": "/articolo/medaglie-olimpiadi-milano-cortina",
+    "ordine": 0
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 2,
+  "fields": {
+    "sezione": 1,
+    "titolo": "Le 10 città più accoglienti al mondo per il 2026: una è in Italia",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/roma2/302/170",
+    "categoria": "ECCELLENZE",
+    "colore_categoria": "blue",
+    "url": "/articolo/citta-accoglienti-2026",
+    "ordine": 1
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 3,
+  "fields": {
+    "sezione": 1,
+    "titolo": "Alligatore avvistato in un canale in Italia, la Polizia: \"Attendibile\"",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/roma3/302/170",
+    "categoria": "TERRITORIO",
+    "colore_categoria": "red",
+    "url": "/articolo/alligatore-canale-italia",
+    "ordine": 2
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 4,
+  "fields": {
+    "sezione": 1,
+    "titolo": "Smog, queste sono le città più inquinate d'Italia: la nuova classifica",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/roma4/302/170",
+    "categoria": "TERRITORIO",
+    "colore_categoria": "blue",
+    "url": "/articolo/citta-inquinate-classifica",
+    "ordine": 3
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 5,
+  "fields": {
+    "sezione": 2,
+    "titolo": "Allerta meteo in diverse regioni: piogge intense previste per domani",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/n1/480/300",
+    "categoria": "CRONACA",
+    "colore_categoria": "red",
+    "url": "/articolo/allerta-meteo-regioni",
+    "ordine": 0
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 6,
+  "fields": {
+    "sezione": 2,
+    "titolo": "Governo, tensioni nella maggioranza: vertice a Palazzo Chigi",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/n2/480/300",
+    "categoria": "POLITICA",
+    "colore_categoria": "blue",
+    "url": "/articolo/governo-tensioni-maggioranza",
+    "ordine": 1
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 7,
+  "fields": {
+    "sezione": 2,
+    "titolo": "USA, la Fed lascia i tassi invariati: Wall Street reagisce positivamente",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/n3/480/300",
+    "categoria": "ESTERI",
+    "colore_categoria": "red",
+    "url": "/articolo/fed-tassi-invariati",
+    "ordine": 2
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 8,
+  "fields": {
+    "sezione": 2,
+    "titolo": "Inflazione in calo: i dati Istat confermano il trend positivo",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/n4/480/300",
+    "categoria": "ECONOMIA",
+    "colore_categoria": "blue",
+    "url": "/articolo/inflazione-calo-istat",
+    "ordine": 3
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 9,
+  "fields": {
+    "sezione": 2,
+    "titolo": "Terremoto in Emilia: scossa di magnitudo 3.2, nessun danno",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/n5/480/300",
+    "categoria": "CRONACA",
+    "colore_categoria": "red",
+    "url": "/articolo/terremoto-emilia",
+    "ordine": 4
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 10,
+  "fields": {
+    "sezione": 2,
+    "titolo": "Riforma pensioni, le novità per il 2026: chi ci guadagna",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/n6/480/300",
+    "categoria": "POLITICA",
+    "colore_categoria": "blue",
+    "url": "/articolo/riforma-pensioni-2026",
+    "ordine": 5
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 11,
+  "fields": {
+    "sezione": 3,
+    "titolo": "Serie A, 25ª giornata: risultati, classifica e marcatori",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/s1/480/300",
+    "categoria": "CALCIO",
+    "colore_categoria": "red",
+    "url": "/articolo/serie-a-25-giornata",
+    "ordine": 0
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 12,
+  "fields": {
+    "sezione": 3,
+    "titolo": "Juve-Real Madrid, Thiago Motta: \"Ce la giocheremo al massimo\"",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/s2/480/300",
+    "categoria": "CHAMPIONS",
+    "colore_categoria": "blue",
+    "url": "/articolo/juve-real-madrid-champions",
+    "ordine": 1
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 13,
+  "fields": {
+    "sezione": 3,
+    "titolo": "Test Bahrain: Ferrari velocissima, Leclerc primo nel Day 2",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/s3/480/300",
+    "categoria": "FORMULA 1",
+    "colore_categoria": "red",
+    "url": "/articolo/test-bahrain-ferrari",
+    "ordine": 2
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 14,
+  "fields": {
+    "sezione": 3,
+    "titolo": "Sinner vince in due set e vola ai quarti del torneo di Dubai",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/s4/480/300",
+    "categoria": "TENNIS",
+    "colore_categoria": "blue",
+    "url": "/articolo/sinner-quarti-dubai",
+    "ordine": 3
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 15,
+  "fields": {
+    "sezione": 3,
+    "titolo": "Calciomercato: le trattative dell'ultimo giorno di sessione",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/s5/480/300",
+    "categoria": "CALCIO",
+    "colore_categoria": "red",
+    "url": "/articolo/calciomercato-ultimo-giorno",
+    "ordine": 4
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 16,
+  "fields": {
+    "sezione": 3,
+    "titolo": "Eurolega: Olimpia Milano batte il Barcellona in trasferta",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/s6/480/300",
+    "categoria": "BASKET",
+    "colore_categoria": "blue",
+    "url": "/articolo/eurolega-olimpia-barcellona",
+    "ordine": 5
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 17,
+  "fields": {
+    "sezione": 4,
+    "titolo": "ChatGPT compie 3 anni: come ha cambiato il modo di lavorare",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/t1/480/300",
+    "categoria": "AI",
+    "colore_categoria": "blue",
+    "url": "/articolo/chatgpt-3-anni",
+    "ordine": 0
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 18,
+  "fields": {
+    "sezione": 4,
+    "titolo": "Samsung Galaxy S26: prime immagini e specifiche trapelate",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/t2/480/300",
+    "categoria": "SMARTPHONE",
+    "colore_categoria": "red",
+    "url": "/articolo/samsung-galaxy-s26",
+    "ordine": 1
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 19,
+  "fields": {
+    "sezione": 4,
+    "titolo": "Auto elettriche 2026: i modelli più attesi sotto i 30mila euro",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/t3/480/300",
+    "categoria": "AUTO",
+    "colore_categoria": "blue",
+    "url": "/articolo/auto-elettriche-2026",
+    "ordine": 2
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 20,
+  "fields": {
+    "sezione": 4,
+    "titolo": "Attenzione alla nuova truffa via SMS: come riconoscerla",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/t4/480/300",
+    "categoria": "CYBERSECURITY",
+    "colore_categoria": "red",
+    "url": "/articolo/truffa-sms-come-riconoscerla",
+    "ordine": 3
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 21,
+  "fields": {
+    "sezione": 4,
+    "titolo": "GTA 6: Rockstar conferma la data di uscita per ottobre 2026",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/t5/480/300",
+    "categoria": "GAMING",
+    "colore_categoria": "blue",
+    "url": "/articolo/gta-6-data-uscita",
+    "ordine": 4
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 22,
+  "fields": {
+    "sezione": 4,
+    "titolo": "SpaceX: il razzo Starship completa con successo il sesto volo",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/t6/480/300",
+    "categoria": "SPAZIO",
+    "colore_categoria": "red",
+    "url": "/articolo/spacex-starship-sesto-volo",
+    "ordine": 5
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 23,
+  "fields": {
+    "sezione": 5,
+    "titolo": "Oscar 2026: le previsioni sui favoriti e le sorprese attese",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/sp1/480/300",
+    "categoria": "CINEMA",
+    "colore_categoria": "blue",
+    "url": "/articolo/oscar-2026-previsioni",
+    "ordine": 0
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 24,
+  "fields": {
+    "sezione": 5,
+    "titolo": "Ascolti TV ieri: chi ha vinto la prima serata di lunedì",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/sp2/480/300",
+    "categoria": "TV",
+    "colore_categoria": "red",
+    "url": "/articolo/ascolti-tv-prima-serata",
+    "ordine": 1
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 25,
+  "fields": {
+    "sezione": 5,
+    "titolo": "Sanremo 2026: i nomi dei big in gara e le prime anticipazioni",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/sp3/480/300",
+    "categoria": "MUSICA",
+    "colore_categoria": "blue",
+    "url": "/articolo/sanremo-2026-big-gara",
+    "ordine": 2
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 26,
+  "fields": {
+    "sezione": 5,
+    "titolo": "La coppia dell'anno si è lasciata: l'annuncio sui social",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/sp4/480/300",
+    "categoria": "GOSSIP",
+    "colore_categoria": "red",
+    "url": "/articolo/coppia-anno-lasciata",
+    "ordine": 3
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 27,
+  "fields": {
+    "sezione": 5,
+    "titolo": "Le serie TV da vedere a febbraio: la guida completa",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/sp5/480/300",
+    "categoria": "SERIE TV",
+    "colore_categoria": "blue",
+    "url": "/articolo/serie-tv-febbraio-guida",
+    "ordine": 4
+  }
+},
+{
+  "model": "cms.articolosezione",
+  "pk": 28,
+  "fields": {
+    "sezione": 5,
+    "titolo": "I libri più venduti della settimana: la classifica aggiornata",
+    "immagine": "",
+    "immagine_url": "https://picsum.photos/seed/sp6/480/300",
+    "categoria": "LIBRI",
+    "colore_categoria": "red",
+    "url": "/articolo/libri-piu-venduti-settimana",
+    "ordine": 5
+  }
+}
+]

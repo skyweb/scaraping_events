@@ -1,0 +1,170 @@
+/* ── Bottone trigger ── */
+.ip-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f9fafb;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.ip-trigger:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+.ip-thumb {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.ip-icon {
+  font-size: 18px !important;
+}
+
+/* ── Dialog/Popup ── */
+.ip-dialog {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  width: 460px;
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow: hidden;
+}
+.ip-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+.ip-dialog-inner {
+  padding: 20px 24px 24px;
+}
+.ip-dialog h3 {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ── Anteprima ── */
+.ip-preview {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 16px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ip-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+.ip-no-img {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* ── Campi ── */
+.ip-field {
+  margin-bottom: 14px;
+}
+.ip-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.ip-field input[type="url"],
+.ip-field input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #111827;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+.ip-field input[type="url"]:focus,
+.ip-field input[type="text"]:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.15);
+}
+.ip-separator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.ip-separator::before,
+.ip-separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+.ip-field input[type="file"] {
+  font-size: 12px;
+  color: #374151;
+}
+.ip-upload-status {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.ip-loading { color: #92400e; }
+.ip-ok { color: #065f46; }
+.ip-err { color: #991b1b; }
+
+/* ── Bottoni ── */
+.ip-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+.ip-btn {
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+.ip-btn-primary {
+  background: #7c3aed;
+  color: #fff;
+}
+.ip-btn-primary:hover {
+  background: #6d28d9;
+}
+.ip-btn-secondary {
+  background: #fff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+.ip-btn-secondary:hover {
+  background: #f9fafb;
+}
