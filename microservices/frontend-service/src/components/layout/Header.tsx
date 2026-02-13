@@ -22,48 +22,6 @@ export function Header() {
 
   return (
     <header className="w-full">
-      {/* ── Top banner advertising ── */}
-      <div className="flex h-[90px] items-center justify-center border-b border-brd-light bg-ad-bg">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-ad-text">
-          ADVERTISING — 728×90 Leaderboard
-        </span>
-      </div>
-
-      {/* ── Barra servizi: gialla con link blu ── */}
-      <div className="bg-bar-yellow">
-        <div className="mx-auto flex h-8 max-w-[980px] items-center justify-between px-2">
-          <div className="flex items-center gap-0">
-            {serviceItems.map((item, i) => (
-              <span key={item.label} className="flex items-center">
-                <a
-                  href="#"
-                  className={`px-2 py-1 text-[11px] font-bold transition-colors ${
-                    item.highlight
-                      ? "rounded-sm bg-libero-blue text-txt-white hover:bg-libero-blue-dark"
-                      : "text-libero-blue hover:underline"
-                  }`}
-                >
-                  {item.label}
-                </a>
-                {i < serviceItems.length - 1 && (
-                  <Separator orientation="vertical" className="!h-3 bg-libero-blue/30" />
-                )}
-              </span>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-2">
-            <a href="#" className="text-[11px] font-bold text-libero-blue hover:underline">
-              ACCEDI
-            </a>
-            <Separator orientation="vertical" className="!h-3 bg-libero-blue/30" />
-            <a href="#" className="text-[11px] font-bold text-libero-blue hover:underline">
-              REGISTRATI
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* ── Header principale: logo + search ── */}
       <div className="border-b border-brd-light bg-card-bg">
         <div className="mx-auto flex h-14 max-w-[980px] items-center justify-between px-2">

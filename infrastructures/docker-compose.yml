@@ -14,12 +14,14 @@ x-airflow-common:
     API_BASE_URL: ${API_BASE_URL:-http://backoffice:8000}
     API_CLIENT_ID: ${API_CLIENT_ID}
     API_CLIENT_SECRET: ${API_CLIENT_SECRET}
+    COMUNI_DATA_PATH: ${COMUNI_DATA_PATH:-/opt/today_events/data/comuni-italiani}
     _PIP_ADDITIONAL_REQUIREMENTS: 'apache-airflow-providers-docker apache-airflow-providers-postgres psycopg2-binary redis'
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./data:/data
+    - ${COMUNI_DATA_PATH:-./data/comuni-italiani}:/opt/today_events/data/comuni-italiani
     - /var/run/docker.sock:/var/run/docker.sock
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-0}"
   depends_on:

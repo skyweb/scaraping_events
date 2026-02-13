@@ -155,14 +155,6 @@ export function RightSidebar() {
           ))}
         </CardContent>
       </Card>
-
-      {/* ── Ad bottom sidebar ── */}
-      <div className="flex h-[600px] items-center justify-center border border-ad-border bg-ad-bg">
-        <div className="text-center">
-          <p className="text-[9px] font-bold uppercase tracking-widest text-ad-text">ADVERTISING</p>
-          <p className="text-[9px] text-ad-text">300×600 Half Page</p>
-        </div>
-      </div>
     </aside>
   )
 }

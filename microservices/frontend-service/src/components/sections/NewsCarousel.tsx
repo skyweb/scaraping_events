@@ -8,7 +8,7 @@ export interface NewsItem {
   occhiello: string
   occhielloColor: "red" | "blue"
   title: string
-  time: string
+  time?: string
 }
 
 interface NewsCarouselProps {
@@ -87,7 +87,7 @@ export function NewsCarousel({
                 <h3 className="mt-0.5 line-clamp-3 text-[12px] font-bold leading-tight text-txt-black group-hover:text-libero-blue">
                   {item.title}
                 </h3>
-                <span className="mt-1 block text-[10px] text-txt-light">{item.time}</span>
+                {item.time && <span className="mt-1 block text-[10px] text-txt-light">{item.time}</span>}
               </CardContent>
             </a>
           </Card>

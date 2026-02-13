@@ -39,3 +39,5 @@ staticfiles/
 
 # Database
 /infrastructures/services/postgres/data/
+/microservices/scraping-comuni-service/data/output/
+!/microservices/scraping-comuni-service/data/output/.gitkeep

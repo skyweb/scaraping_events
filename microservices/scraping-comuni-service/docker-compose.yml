@@ -1,0 +1,29 @@
+# =============================================================================
+# Scraping Comuni Italiani - Docker Compose
+# =============================================================================
+# Esegue lo spider per scaricare dati su regioni, province e comuni italiani.
+# I JSON generati vengono salvati in data/output/
+#
+# Avvio:
+#   docker compose up
+#
+# Oppure in background:
+#   docker compose run --rm scraper
+
+services:
+  scraper:
+    image: today-events/scraping-comuni:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scraping-comuni
+    volumes:
+      # Output JSON in cartella locale
+      - ./data/output:/data/output
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    name: dev-network
+    external: true
