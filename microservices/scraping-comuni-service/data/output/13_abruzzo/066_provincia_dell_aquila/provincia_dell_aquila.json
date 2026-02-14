@@ -1,0 +1,16 @@
+{
+  "nome": "Provincia dell'Aquila",
+  "regione": "Abruzzo",
+  "zona": null,
+  "sigla": "AQ",
+  "codice_istat": "066",
+  "popolazione": 301910,
+  "popolazione_maschi": 148695,
+  "popolazione_femmine": 153215,
+  "superficie_kmq": 5034.46,
+  "densita": 60.0,
+  "num_comuni": 108,
+  "capoluogo": "L'Aquila",
+  "iso_3166_2": "IT-AQ",
+  "nuts": "ITF11"
+}

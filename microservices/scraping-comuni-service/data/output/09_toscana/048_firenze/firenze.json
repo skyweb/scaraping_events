@@ -1,0 +1,16 @@
+{
+  "nome": "Firenze",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "FI",
+  "codice_istat": "048",
+  "popolazione": 1014423,
+  "popolazione_maschi": 485845,
+  "popolazione_femmine": 528578,
+  "superficie_kmq": 3514.38,
+  "densita": 288.6,
+  "num_comuni": 42,
+  "capoluogo": "Firenze",
+  "iso_3166_2": "IT-FI",
+  "nuts": "ITE14"
+}

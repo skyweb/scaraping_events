@@ -1,0 +1,16 @@
+{
+  "nome": "Reggio Calabria",
+  "regione": "Calabria",
+  "zona": null,
+  "sigla": "RC",
+  "codice_istat": "080",
+  "popolazione": 553861,
+  "popolazione_maschi": 269662,
+  "popolazione_femmine": 284199,
+  "superficie_kmq": 3183.19,
+  "densita": 174.0,
+  "num_comuni": 97,
+  "capoluogo": "Reggio Calabria",
+  "iso_3166_2": "IT-RC",
+  "nuts": "ITF65"
+}

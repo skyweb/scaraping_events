@@ -1,0 +1,1371 @@
+[
+  {
+    "nome": "Villesse",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031025",
+    "codice_catastale": "M043",
+    "popolazione": 1681,
+    "superficie_kmq": 11.75,
+    "densita": 143.1,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "villessini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Campolongo Tapogliano (UD)",
+      "Fogliano Redipuglia",
+      "Gradisca d'Isonzo",
+      "Romans d'Isonzo",
+      "Ruda (UD)",
+      "San Pier d'Isonzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa di San Michele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Micheldorf (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Turriaco",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031024",
+    "codice_catastale": "L474",
+    "popolazione": 2804,
+    "superficie_kmq": 5.28,
+    "densita": 531.1,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "turriachesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Fiumicello (UD)",
+      "Ruda (UD)",
+      "San Canzian d'Isonzo",
+      "San Pier d'Isonzo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Priuli",
+      "villa seicentesca"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Staranzano",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031023",
+    "codice_catastale": "I939",
+    "popolazione": 7257,
+    "superficie_kmq": 18.71,
+    "densita": 387.9,
+    "cap": "34079",
+    "prefisso_telefonico": "0481",
+    "patrono": "SS. Pietro e Paolo Apostoli",
+    "festa_patronale": "29 giugno",
+    "demonimo": "staranzanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo"
+    ],
+    "localita_frazioni": [
+      "Alberoni",
+      "Bistrigna",
+      "Dobbia",
+      "Lido di Staranzano",
+      "Quarantia"
+    ],
+    "comuni_confinanti": [
+      "Grado",
+      "Monfalcone",
+      "Ronchi dei Legionari",
+      "San Canzian d'Isonzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra de la Raza (prima decina di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Savogna d'Isonzo",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031022",
+    "codice_catastale": "I479",
+    "popolazione": 1705,
+    "superficie_kmq": 16.41,
+    "densita": 103.9,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "savognesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Area Minoranza Linguistica Slovena"
+    ],
+    "localita_frazioni": [
+      "Gabria",
+      "Peci",
+      "Rupa",
+      "San Michele del Carso"
+    ],
+    "comuni_confinanti": [
+      "Doberdò del Lago, Farra d'Isonzo, Gorizia, Sagrado",
+      "Savogna d'Isonzo è: Comune di Confine con la Slovenia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino Vescovo (ricostruita nel 1927)",
+      "Chiesa di San Marco Evangelista (1955, a Rupa)",
+      "Chiesa di San Nicolò (a Gabria)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pier d'Isonzo",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031021",
+    "codice_catastale": "I082",
+    "popolazione": 2034,
+    "superficie_kmq": 9.09,
+    "densita": 223.8,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "sampierini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo"
+    ],
+    "localita_frazioni": [
+      "Cassegliano",
+      "San Zanut"
+    ],
+    "comuni_confinanti": [
+      "Fogliano Redipuglia",
+      "Ronchi dei Legionari",
+      "Ruda (UD)",
+      "San Canzian d'Isonzo",
+      "Turriaco",
+      "Villesse"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Lorenzo Isontino",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031020",
+    "codice_catastale": "H964",
+    "popolazione": 1541,
+    "superficie_kmq": 4.36,
+    "densita": 353.4,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "sanlorenzini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Comunità Montana Torre, Natisone, Collio",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capriva del Friuli",
+      "Farra d'Isonzo",
+      "Moraro",
+      "Mossa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro Apostolo (1750), in Via Roma",
+      "Chiesa di San Lorenzo Martire, in Via G. d'Annunzio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Pottendorf (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Floriano del Collio",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031019",
+    "codice_catastale": "H845",
+    "popolazione": 780,
+    "superficie_kmq": 10.57,
+    "densita": 73.8,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Florano",
+    "festa_patronale": "4 maggio",
+    "demonimo": "colliani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Comunità Montana Torre, Natisone, Collio",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Slovena"
+    ],
+    "localita_frazioni": [
+      "Bukoje",
+      "Giasbana"
+    ],
+    "comuni_confinanti": [
+      "Capriva del Friuli, Cormons, Gorizia, Mossa",
+      "San Floriano del Collio è: Comune di Confine con la Slovenia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello di San Floriano",
+      "in piazza Libertà"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Canzian d'Isonzo",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031018",
+    "codice_catastale": "H787",
+    "popolazione": 6172,
+    "superficie_kmq": 33.58,
+    "densita": 183.8,
+    "cap": "34075",
+    "prefisso_telefonico": "0481",
+    "patrono": "Madonna della Salute",
+    "festa_patronale": "21 novembre",
+    "demonimo": "sancanzianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "Begliano",
+      "Isola Morosini",
+      "Pieris",
+      "Terranova"
+    ],
+    "comuni_confinanti": [
+      "Fiumicello (UD)",
+      "Grado",
+      "Ronchi dei Legionari",
+      "San Pier d'Isonzo",
+      "Staranzano",
+      "Turriaco"
+    ],
+    "musei": [
+      "Antiquarium Cantianense"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Proto, in via Romana",
+      "Chiesa dei Santi Canzio, Canziano e Canzianilla (XVI secolo), in piazza SS. Martiri"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sagrado",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031017",
+    "codice_catastale": "H665",
+    "popolazione": 2183,
+    "superficie_kmq": 14.14,
+    "densita": 154.4,
+    "cap": "34078",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "sagradini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo"
+    ],
+    "localita_frazioni": [
+      "Peteano",
+      "Poggio Terza Armata",
+      "San Martino del Carso"
+    ],
+    "comuni_confinanti": [
+      "Doberdò del Lago",
+      "Farra d'Isonzo",
+      "Fogliano Redipuglia",
+      "Gradisca d'Isonzo",
+      "Savogna d'Isonzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa San Paolino Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ronchi dei Legionari",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031016",
+    "codice_catastale": "H531",
+    "popolazione": 11939,
+    "superficie_kmq": 16.98,
+    "densita": 703.1,
+    "cap": "34077",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "ronchesi",
+    "etimologia": "La prima parte è il plurale di Ronco, dal latino runcare, estirpare, in riferimento ai luoghi disboscati. La specifica, aggiunta nel 1925, ricorda i Legionari di Gabriele D'Annunzio che qui si riunirono, prima dell'impresa di Fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Comuni Aeroportuali Italiani",
+      "Area Minoranza Linguistica Slovena"
+    ],
+    "localita_frazioni": [
+      "Cave di Selz",
+      "Soleschiano",
+      "Vermegliano"
+    ],
+    "comuni_confinanti": [
+      "Doberdò del Lago",
+      "Fogliano Redipuglia",
+      "Monfalcone",
+      "San Canzian d'Isonzo",
+      "San Pier d'Isonzo",
+      "Staranzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei Santi Lorenzo e Domenica",
+      "Chiesa della Santissima Trinità (1762)",
+      "Chiesetta di Santo Stefano (a Vermegliano), in piazza Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Metlika (Slovenia), dall'aprile 1968",
+      "Wagna (Austria), dal giugno 1969"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Romans d'Isonzo",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031015",
+    "codice_catastale": "H514",
+    "popolazione": 3711,
+    "superficie_kmq": 15.37,
+    "densita": 241.4,
+    "cap": "34076",
+    "prefisso_telefonico": "0481",
+    "patrono": "Maria SS. Annunciata",
+    "festa_patronale": "25 marzo",
+    "demonimo": "romanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Fratta",
+      "Versa"
+    ],
+    "comuni_confinanti": [
+      "A est: Gradisca d'Isonzo",
+      "Mariano del Friuli; a nord: Medea; a ovest: Campolongo Tapogliano (UD)",
+      "San Vito al Torre (UD); a sud: Villesse"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Del Torre",
+      "Palazzo Lang",
+      "Palazzo Pasiani Candussi"
+    ],
+    "chiese": [
+      "Chiesa di Santo Stefano (in frazione Fratta)",
+      "Chiesa di Santa Maria Annunziata, in Piazza G. Candussi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Necropoli Longobarda"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dal dindiat (a novembre)",
+      "detta anche Fiera di Santa Elisabetta",
+      "con la caratteristica Gara di Peso del Tacchino Gigante"
+    ],
+    "gemellaggi": [
+      "Schiefling am See (Austria), dal 2001",
+      "Sempeter-Vrtojba (Slovenia), dal 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mossa",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031014",
+    "codice_catastale": "F767",
+    "popolazione": 1561,
+    "superficie_kmq": 6.09,
+    "densita": 256.3,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "mossesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Comunità Montana Torre, Natisone, Collio",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Blanchis"
+    ],
+    "comuni_confinanti": [
+      "A est: Gorizia; a nord: San Floriano del Collio; a ovest: Capriva del Friuli",
+      "San Lorenzo Isontino; a sud: Farra d'Isonzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Diocesano Santa Maria Regina dei Popoli (in località Prevàl)",
+      "Chiesetta della Madonna del Preval",
+      "Chiesa di Sant'Andrea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Moraro",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031013",
+    "codice_catastale": "F710",
+    "popolazione": 768,
+    "superficie_kmq": 3.5,
+    "densita": 219.4,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "moraresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capriva del Friuli",
+      "Cormons",
+      "Farra d'Isonzo",
+      "Gradisca d'Isonzo",
+      "Mariano del Friuli",
+      "San Lorenzo Isontino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Maria Maddalena",
+      "Chiesa parrocchiale di Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monfalcone",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031012",
+    "codice_catastale": "F356",
+    "popolazione": 27991,
+    "superficie_kmq": 20.52,
+    "densita": 1364.1,
+    "cap": "34074",
+    "prefisso_telefonico": "0481",
+    "patrono": "Madonna della Salute",
+    "festa_patronale": "21 novembre",
+    "demonimo": "monfalconesi",
+    "etimologia": "Deriva da Montis falconis, è un composto di Monte e falcone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Minoranza Linguistica Slovena"
+    ],
+    "localita_frazioni": [
+      "Archi",
+      "Aris",
+      "Crosera",
+      "Lisert",
+      "Marina Julia",
+      "Marina Nova",
+      "Panzano",
+      "Pietrarossa",
+      "Rocca",
+      "San Polo",
+      "Schiavetti"
+    ],
+    "comuni_confinanti": [
+      "Doberdò del Lago",
+      "Duino-Aurisina (TS)",
+      "Ronchi dei Legionari",
+      "Staranzano"
+    ],
+    "musei": [
+      "Museo Paleontologico della Rocca"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria Marcelliana",
+      "Chiesa di San Nicolò (1660, ad Aris)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Medea",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031011",
+    "codice_catastale": "F081",
+    "popolazione": 955,
+    "superficie_kmq": 7.3,
+    "densita": 130.8,
+    "cap": "34076",
+    "prefisso_telefonico": "0481",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "medeoti",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Ara Pacis",
+      "Borgnano"
+    ],
+    "comuni_confinanti": [
+      "Chiopris-Viscone (UD)",
+      "Cormons",
+      "Mariano del Friuli",
+      "Romans d'Isonzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Assunta",
+      "Chiesa di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Vrtojba (Slovenia), dal 1980",
+      "Keutschach Am See (Austria)",
+      "Castelculier (Francia), dal 1977"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mariano del Friuli",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031010",
+    "codice_catastale": "E952",
+    "popolazione": 1520,
+    "superficie_kmq": 8.36,
+    "densita": 181.8,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Gottardo Vescovo",
+    "festa_patronale": "5 maggio",
+    "demonimo": "marianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Corona"
+    ],
+    "comuni_confinanti": [
+      "Cormons",
+      "Farra d'Isonzo",
+      "Gradisca d'Isonzo",
+      "Medea",
+      "Moraro",
+      "Romans d'Isonzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta della SS. Trinità",
+      "Chiesa di San Gottardo, in Piazza della Chiesa",
+      "Chiesa dei SS. Maria e Zenone (in frazione Corona)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Lurnfeld (Austria)",
+      "dal 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grado",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031009",
+    "codice_catastale": "E125",
+    "popolazione": 8222,
+    "superficie_kmq": 114.06,
+    "densita": 72.1,
+    "cap": "34073",
+    "prefisso_telefonico": "0431",
+    "patrono": "SS. Ermagora e Fortunato",
+    "festa_patronale": "12 luglio",
+    "demonimo": "gradesi o graisani",
+    "etimologia": "Dal latino gradus, scalo portuale alla foce di un fiume o all'ingresso di una laguna.",
+    "il_comune_e": [
+      "Città Termale (Stabilimento Termale)",
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007",
+      "Bandiera Blu Approdi Turistici 2007 (Porto San Vito)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Associazione Nazionale per l'Incremento Turistico (ANIT)"
+    ],
+    "localita_frazioni": [
+      "Boscat",
+      "Fossalon",
+      "Pineta",
+      "Primero",
+      "Val Cavarera"
+    ],
+    "comuni_confinanti": [
+      "A nord: Aquileia (UD)",
+      "Fiumicello (UD)",
+      "San Canzian d'Isonzo",
+      "San Giorgio di Nogaro (UD)",
+      "Staranzano",
+      "Terzo d'Aquileia (UD)",
+      "Torviscosa (UD); a nord-ovest: Marano Lagunare (UD)"
+    ],
+    "musei": [
+      "Museo Lapidario del Duomo di Sant'Eufemia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Basilica di Santa Maria delle Grazie (iniziata nel IV-V secolo)",
+      "Basilica di Sant'Eufemia (VI secolo)",
+      "Santuario di Santa Maria di Barbana"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dei S.S. Ermagora e Fortunato (12 luglio), con la sardelada - festa gastronomica a base di pesce azzurro",
+      "Perdòn de Barbana (prima domenica di luglio), processione votiva con corteo imbandierato di barche"
+    ],
+    "gemellaggi": [
+      "St. Lorenzen (Austria)",
+      "Feistritz bei Knittelfeld (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gradisca d'Isonzo",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031008",
+    "codice_catastale": "E124",
+    "popolazione": 6504,
+    "superficie_kmq": 10.8,
+    "densita": 602.2,
+    "cap": "34072",
+    "prefisso_telefonico": "0481",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "gradiscani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Club I Borghi più Belli d'Italia",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Farra d'Isonzo",
+      "Fogliano Redipuglia",
+      "Mariano del Friuli",
+      "Moraro",
+      "Romans d'Isonzo",
+      "Sagrado",
+      "Villesse"
+    ],
+    "musei": [
+      "Galleria d'Arte Contemporanea \"Luigi Spazzapan\"",
+      "Museo Documentario della Città"
+    ],
+    "ville_palazzi": [
+      "Palazzo dei Provveditori Veneti, quattrocentesco, all'angolo fra le vie Battisti e Dante",
+      "Palazzo Torriani (Municipio), in via Ciotti"
+    ],
+    "chiese": [
+      "Duomo",
+      "in via Bergamas"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Kastav (Croazia), dal 2003",
+      "Ibrany (Ungheria), dal 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fogliano Redipuglia",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031006",
+    "codice_catastale": "D645",
+    "popolazione": 3048,
+    "superficie_kmq": 7.77,
+    "densita": 392.3,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "Madonna della Salute",
+    "festa_patronale": "21 novembre",
+    "demonimo": "foglianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo"
+    ],
+    "localita_frazioni": [
+      "Fogliano",
+      "Polazzo",
+      "Redipuglia"
+    ],
+    "comuni_confinanti": [
+      "Doberdò del Lago",
+      "Gradisca d'Isonzo",
+      "Ronchi dei Legionari",
+      "Sagrado",
+      "San Pier d'Isonzo",
+      "Villesse"
+    ],
+    "musei": [
+      "Museo Storico Militare e Sacrario di Redipuglia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Agata (a Polazzo)",
+      "Chiesa di Santa Maria in Monte (1521), edificata dal capitano Teodoro Trivulzio da Borgomanero",
+      "Chiesa di San Giacomo Apostolo (a Redipuglia)",
+      "Chiesa di Sant'Elisabetta (a Fogliano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Farra d'Isonzo",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031005",
+    "codice_catastale": "D504",
+    "popolazione": 1726,
+    "superficie_kmq": 10.13,
+    "densita": 170.4,
+    "cap": "34072",
+    "prefisso_telefonico": "0481",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "farresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Borgo Grotta",
+      "Mainizza",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Gorizia",
+      "Gradisca d'Isonzo",
+      "Mariano del Friuli",
+      "Moraro",
+      "Mossa",
+      "Sagrado",
+      "San Lorenzo Isontino",
+      "Savogna d'Isonzo"
+    ],
+    "musei": [
+      "Museo dell'Automobile e della Tecnica",
+      "Museo della Civiltà Contadina Friulana"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta (riedificata nel 1923)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio sociale del Circolo Culturale Astronomico di Farra d'Isonzo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dolegna del Collio",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031004",
+    "codice_catastale": "D321",
+    "popolazione": 358,
+    "superficie_kmq": 12.49,
+    "densita": 28.7,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "dolegnesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Comunità Montana Torre, Natisone, Collio",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Mernico",
+      "Restoccina",
+      "Ruttars",
+      "Scriò",
+      "Trussio",
+      "Lonzano",
+      "Vencò"
+    ],
+    "comuni_confinanti": [
+      "Cormons, Corno di Rosazzo (UD), Prepotto (UD)",
+      "Dolegna del Collio è: Comune di Confine con la Slovenia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giuseppe, settecentesca",
+      "Chiesa del Rosario (a Lonzano Inferiore)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Zorutti (in località Lonzano)",
+      "Castello di Ruttars",
+      "Castello di Trussio (in località Ruttars)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Doberdò del Lago",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031003",
+    "codice_catastale": "D312",
+    "popolazione": 1384,
+    "superficie_kmq": 26.85,
+    "densita": 51.5,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "doberdovesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Minoranza Linguistica Slovena"
+    ],
+    "localita_frazioni": [
+      "Devetachi",
+      "Jamiano",
+      "Marcottini",
+      "Visintini"
+    ],
+    "comuni_confinanti": [
+      "Duino-Aurisina (TS), Fogliano Redipuglia, Monfalcone, Ronchi dei Legionari, Sagrado, Savogna d'Isonzo",
+      "Doberdò del Lago è: Comune di Confine con la Slovenia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova (a Jamiano)",
+      "Chiesa di San Martino Vescovo",
+      "Chiesa Cuore Immacolato di Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ujfeherto (Ungheria), dal 2009",
+      "Bled (Slovenia), dal 1998",
+      "Prvacina (Slovenia), dal 1977"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cormons",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031002",
+    "codice_catastale": "D014",
+    "popolazione": 7376,
+    "superficie_kmq": 34.58,
+    "densita": 213.3,
+    "cap": "34071",
+    "prefisso_telefonico": "0481",
+    "patrono": "Sant'Adalberto",
+    "festa_patronale": "23 aprile",
+    "demonimo": "cormonesi",
+    "etimologia": "Documentato con i nomi di Cormones e Carmonis, potrebbe riferirsi ad un antico etnico Cormones, connesso con la voce gallica carmo, -one (donnola). Alcuni lo ritengono riferibile al nome di persona Carmo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Comunità Montana Torre, Natisone, Collio",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Slovena",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Angoris",
+      "Borgnano",
+      "Brazzano",
+      "Giassico"
+    ],
+    "comuni_confinanti": [
+      "Capriva del Friuli, Chiopris-Viscone (UD), Corno di Rosazzo (UD), Dolegna del Collio, Mariano del Friuli, Medea, Moraro, San Floriano del Collio, San Giovanni al Natisone (UD)",
+      "Cormons è: Comune di Confine con la Slovenia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Locatelli (Municipio), in piazza XXIV Maggio",
+      "Palazzo Taccò - Aita, in via Dante"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Apollonio",
+      "Chiesa di Santa Maria Apollonia, in via Sottomonte",
+      "Chiesa di San Leopoldo",
+      "Chiesa di San Giovanni Battista",
+      "Duomo di Sant'Adalberto, in via Matteotti"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Cormons",
+      "ruderi",
+      "sul monte Quarin"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica (una domenica di fine agosto)",
+      "con sfilata di figuranti in costume e torneo cavalleresco"
+    ],
+    "gemellaggi": [
+      "Friesach (Austria), dal 1984",
+      "Dobrovo Medana (Slovenia), dal 1976"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capriva del Friuli",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031001",
+    "codice_catastale": "B712",
+    "popolazione": 1711,
+    "superficie_kmq": 6.22,
+    "densita": 275.1,
+    "cap": "34070",
+    "prefisso_telefonico": "0481",
+    "patrono": "Santissimo nome di Maria",
+    "festa_patronale": "12 settembre",
+    "demonimo": "caprivesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Comunità Montana Torre, Natisone, Collio",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Friulana"
+    ],
+    "localita_frazioni": [
+      "Budignacco",
+      "Russiz Superiore",
+      "Russiz Inferiore",
+      "Spessa"
+    ],
+    "comuni_confinanti": [
+      "Cormons",
+      "Moraro",
+      "Mossa",
+      "San Floriano del Collio",
+      "San Lorenzo Isontino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa SS. Trinità",
+      "Chiesa Parrocchiale di Santa Maria"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Spessa"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Treffen (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gorizia",
+    "provincia": "Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "031007",
+    "codice_catastale": "E098",
+    "popolazione": 34742,
+    "superficie_kmq": 41.11,
+    "densita": 845.1,
+    "cap": "34170",
+    "prefisso_telefonico": "0481",
+    "patrono": "Santi Ilario e Taziano",
+    "festa_patronale": "16 marzo",
+    "demonimo": "goriziani",
+    "etimologia": "Deriva dalla voce slovena gorica, collina, da gora (monte).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Isonzo",
+      "Comunità Montana Torre, Natisone, Collio",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Castello",
+      "Lucinico",
+      "Oslavia",
+      "Piuma",
+      "San Mauro",
+      "Sant'Andrea",
+      "Straccis"
+    ],
+    "comuni_confinanti": [
+      "Farra d'Isonzo, Mossa, San Floriano del Collio, Savogna d'Isonzo",
+      "Gorizia è: Comune di Confine con la Slovenia"
+    ],
+    "musei": [
+      "Museo di Palazzo Coronini Cronberg",
+      "Museo del Castello",
+      "Musei Provinciali: Museo di Storia e Arte",
+      "Musei Provinciali: Museo della Moda e delle Arti Applicate",
+      "Musei Provinciali: Museo della Grande Guerra",
+      "Musei Provinciali: Collezione Archeologica"
+    ],
+    "ville_palazzi": [
+      "Palazzo Lantieri, in piazza Sant'Antonio",
+      "Palazzo Cobenzi",
+      "Palazzo Attems - Santa Croce (Municipio)"
+    ],
+    "chiese": [
+      "Sinagoga (1756), in via Ascoli",
+      "Duomo di Sant'Ilario e Taziano",
+      "Chiesa di Santo Spirito (nel borgo Castello)",
+      "Chiesa di Sant'Ignazio, in Piazza Vittoria"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Gorizia (in località Borgo Castello)"
+    ],
+    "fontane": [
+      "Fontana del Nettuno",
+      "in piazza Vittoria"
+    ],
+    "giardini_orti_botanici": [
+      "Parco di Villa Coronini Cronberg"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Kulturni Center Lojze Bratuž, Viale XX Settembre",
+      "Teatro Kulturni Dom, Via I. Brass",
+      "Teatro Verdi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Lienz (Austria), dal 2000",
+      "Venlo (Olanda), dal 1965",
+      "Zalaegerszeg (Ungheria), dal 2014",
+      "Klagenfurt (Austria), dal 1965",
+      "Avellaneda (Argentina), dal 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Carlo Rubbia (1934-)",
+      "fisico",
+      "Premio Nobel per la Fisica"
+    ]
+  }
+]

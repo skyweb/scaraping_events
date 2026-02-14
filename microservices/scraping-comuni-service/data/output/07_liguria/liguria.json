@@ -1,0 +1,14 @@
+{
+  "nome": "Liguria",
+  "codice_istat": "07",
+  "popolazione": 1565307,
+  "popolazione_maschi": 746352,
+  "popolazione_femmine": 818955,
+  "superficie_kmq": 5420.97,
+  "densita": 288.8,
+  "num_province": 4,
+  "num_comuni": 235,
+  "capoluogo": "Genova",
+  "iso_3166_2": "IT-42",
+  "nuts": "ITC3"
+}

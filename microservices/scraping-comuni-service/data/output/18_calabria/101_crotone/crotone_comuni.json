@@ -1,0 +1,1482 @@
+[
+  {
+    "nome": "Verzino",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101027",
+    "codice_catastale": "L802",
+    "popolazione": 1826,
+    "superficie_kmq": 45.37,
+    "densita": 40.2,
+    "cap": "88819",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Biagio",
+    "festa_patronale": null,
+    "demonimo": "verzinesi",
+    "etimologia": "Probabilmente deriva dal latino volgare virdia da viridis, ossia verde.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 3 - Colline del Lipuda e del Vitravo"
+    ],
+    "localita_frazioni": [
+      "Vigne"
+    ],
+    "comuni_confinanti": [
+      "Campana (CS)",
+      "Casabona",
+      "Castelsilano",
+      "Pallagorio",
+      "Savelli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Municipale (o del Duca Nicolò Cortese o del Campo)",
+      "Palazzo Riolo, in Piazza San Basilio"
+    ],
+    "chiese": [
+      "Chiesa di San Biagio",
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di San Francesco",
+      "Chiesa di Santa Chiara (in frazione Vigne)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Umbriatico",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101026",
+    "codice_catastale": "L492",
+    "popolazione": 839,
+    "superficie_kmq": 72.86,
+    "densita": 11.5,
+    "cap": "88823",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Donato",
+    "festa_patronale": "7 agosto",
+    "demonimo": "umbriaticesi",
+    "etimologia": "Potrebbe derivare dal nome latino di persona Umbriaticus o da umbraticus, ossia \"all'ombra\". Secondo alcuni si riferisce al cognome greco Eupiates che in dialetto è divenuto Briaticu, così come il paese viene chiamato nei documenti nel XII secolo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 3 - Colline del Lipuda e del Vitravo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Campana (CS)",
+      "Carfizzi",
+      "Cirò",
+      "Crucoli",
+      "Pallagorio",
+      "Scala Coeli (CS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Maria Addolorata (in frazione di Perticaro)",
+      "Cattedrale di San Donato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Strongoli",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101025",
+    "codice_catastale": "I982",
+    "popolazione": 6537,
+    "superficie_kmq": 85.29,
+    "densita": 76.6,
+    "cap": "88816",
+    "prefisso_telefonico": "0962",
+    "patrono": "Madonna delle Grazie",
+    "festa_patronale": "14 agosto",
+    "demonimo": "strongolesi",
+    "etimologia": "Deriva dal greco strongulos, ossia rotondo forse riferendosi a qualche caratteristica geografica del luogo. La tradizione crede che il nome derivi dalla forma ellittica dell'antica città chiamata Petelia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 6 - Piana del Marchesato o di Crotone"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casabona",
+      "Crotone",
+      "Melissa",
+      "Rocca di Neto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre",
+      "Chiesa di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scandale",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101024",
+    "codice_catastale": "I494",
+    "popolazione": 3126,
+    "superficie_kmq": 53.65,
+    "densita": 58.3,
+    "cap": "88831",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "scandalesi",
+    "etimologia": "Si riferisce probabilmente al cognome greco Skandalis o Skandalos da cui deriva anche il nome greco skandale, ossia molla.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto Marchesato Crotonese",
+      "Regione Agraria n. 6 - Piana del Marchesato o di Crotone"
+    ],
+    "localita_frazioni": [
+      "Corazzo"
+    ],
+    "comuni_confinanti": [
+      "Crotone",
+      "Cutro",
+      "Rocca di Neto",
+      "San Mauro Marchesato",
+      "Santa Severina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Nicola",
+      "Chiesa dell'Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "St. Georgen (Germania)",
+      "dal 1989"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Savelli",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101023",
+    "codice_catastale": "I468",
+    "popolazione": 1265,
+    "superficie_kmq": 48.5,
+    "densita": 26.1,
+    "cap": "88825",
+    "prefisso_telefonico": "0984",
+    "patrono": "SS Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "savellesi",
+    "etimologia": "Deriva dal cognome della feudataria Savelli Carlotta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 1 - Montagna di Savelli",
+      "Parco Nazionale della Sila"
+    ],
+    "localita_frazioni": [
+      "frazione: Scalzaporri;località: Pino grande"
+    ],
+    "comuni_confinanti": [
+      "Bocchigliero (CS)",
+      "Campana (CS)",
+      "Castelsilano",
+      "San Giovanni in Fiore (CS)",
+      "Verzino"
+    ],
+    "musei": [
+      "Museo dell'Arte Contadina"
+    ],
+    "ville_palazzi": [
+      "Palazzo Brisinda"
+    ],
+    "chiese": [
+      "Chiesetta del Divino Amore",
+      "Chiesa Matrice di San Pietro e San Paolo",
+      "Chiesa di Santa Maria delle Grazie, detta Jiesulella"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Pitinella",
+      "Fontana Vecchia",
+      "Fonte Pedagese",
+      "Fontana Nuova"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Severina",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101022",
+    "codice_catastale": "I308",
+    "popolazione": 2107,
+    "superficie_kmq": 51.88,
+    "densita": 40.6,
+    "cap": "88832",
+    "prefisso_telefonico": "0962",
+    "patrono": "Sant'Anastasia",
+    "festa_patronale": "29 ottobre",
+    "demonimo": "santaseverinesi",
+    "etimologia": "Diversamente da come potrebbe sembrare, il nome non si riferisce al culto di una santa ma deriverebbe da Siberene, antico paese degli Entri, l'appellativo di Santa sarebbe stato poi aggiunto dai Bizantini dopo la riconquista della città nell'886",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto Marchesato Crotonese",
+      "Regione Agraria n. 4 - Medio Neto",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belvedere di Spinello",
+      "Caccuri",
+      "Castelsilano",
+      "Rocca di Neto",
+      "Roccabernarda",
+      "San Mauro Marchesato",
+      "Scandale"
+    ],
+    "musei": [
+      "Museo Diocesano di Arte Sacra",
+      "Museo Archeologico - Centro Documentazione e Studi sui Castelli e le Fortificazioni in Calabria"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria del Pozzo",
+      "Chiesa di Santa Filomena",
+      "Cattedrale di Santa Anastasia"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Carafa"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Nicola dell'Alto",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101021",
+    "codice_catastale": "I057",
+    "popolazione": 852,
+    "superficie_kmq": 7.83,
+    "densita": 108.8,
+    "cap": "88817",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "lunedì successivo alla prima domenica di maggio",
+    "demonimo": "sannicolesi",
+    "etimologia": "Il nome si riferisce alla forte devozione verso il santo anche se il patrono del paese è San Michele. La specifica si riferisce alla posizione \"alta\" del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 3 - Colline del Lipuda e del Vitravo",
+      "Associazione Nazionale Città dell'Olio",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carfizzi",
+      "Casabona",
+      "Melissa",
+      "Pallagorio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Nicola",
+      "Chiesa di San Nicola Vescovo",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di di San Domenico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Mauro Marchesato",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101020",
+    "codice_catastale": "I026",
+    "popolazione": 2119,
+    "superficie_kmq": 42.02,
+    "densita": 50.4,
+    "cap": "88831",
+    "prefisso_telefonico": "0962",
+    "patrono": "Madonna del Soccorso",
+    "festa_patronale": "prima domenica di giugno",
+    "demonimo": "sanmauresi",
+    "etimologia": "Il nome si riferisce alla forte venerazione per il santo, anche se non è il patrono del paese. La specifica fu aggiunta nel 1863 e si riferisce all'antico marchesato di Crotone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto Marchesato Crotonese",
+      "Regione Agraria n. 4 - Medio Neto"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cutro",
+      "Roccabernarda",
+      "Santa Severina",
+      "Scandale"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Salerno",
+      "Palazzo Poerio"
+    ],
+    "chiese": [
+      "Santuario Madonna del Soccorso",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di maria Santissima Annunziata",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roccabernarda",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101018",
+    "codice_catastale": "H383",
+    "popolazione": 3407,
+    "superficie_kmq": 65.52,
+    "densita": 52.0,
+    "cap": "88835",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Francesco di Paola",
+    "festa_patronale": "2 aprile",
+    "demonimo": "rocchisani",
+    "etimologia": "Il nome è un composto di \"rocca\" che assume il significato di roccia e del nome germanico Bernardus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto Marchesato Crotonese",
+      "Regione Agraria n. 4 - Medio Neto"
+    ],
+    "localita_frazioni": [
+      "contrade: Caprara",
+      "Termine Grosso",
+      "Salinella",
+      "Lenze"
+    ],
+    "comuni_confinanti": [
+      "Caccuri",
+      "Cotronei",
+      "Cutro",
+      "Mesoraca",
+      "Petilia Policastro",
+      "San Mauro Marchesato",
+      "Santa Severina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocca di Neto",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101019",
+    "codice_catastale": "H403",
+    "popolazione": 5690,
+    "superficie_kmq": 43.63,
+    "densita": 130.4,
+    "cap": "88821",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "rocchitani",
+    "etimologia": "Chiamato così dal 1863, il nome è un composto di \"Rocca\" con il significato di roccia e \"Neto\", il nome del fiume che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piana del Marchesato o di Crotone"
+    ],
+    "localita_frazioni": [
+      "Setteporte"
+    ],
+    "comuni_confinanti": [
+      "Belvedere di Spinello",
+      "Casabona",
+      "Crotone",
+      "Santa Severina",
+      "Scandale",
+      "Strongoli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Gallo",
+      "Palazzo Ape",
+      "Palazzo Barracco",
+      "Palazzo Marrajeni Scordo",
+      "Palazzo Arcuri"
+    ],
+    "chiese": [
+      "Santuario Madonna della Pietà",
+      "Chiesa di Santa Filomena",
+      "Chiesa di San Martino Vescovo",
+      "Chiesa della Madonna di Setteporte (1662)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Petilia Policastro",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101017",
+    "codice_catastale": "G508",
+    "popolazione": 9175,
+    "superficie_kmq": 96.43,
+    "densita": 95.1,
+    "cap": "88837",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "petilini o policastresi",
+    "etimologia": "La prima parte del nome si riferisce alla denominazione dell'antico centro greco Petilia. La seconda parte, ossia Policastro deriva da Pollicastro e Pullicastri, dal greco Polukastron, ossia vasto castello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto Marchesato Crotonese",
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 2 - Sila Piccola di Crotone",
+      "Parco Nazionale della Sila"
+    ],
+    "localita_frazioni": [
+      "Pagliarelle",
+      "Camellino",
+      "Foresta"
+    ],
+    "comuni_confinanti": [
+      "Cotronei",
+      "Mesoraca",
+      "Roccabernarda",
+      "Taverna (CZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Aquila",
+      "Palazzo Ferrari",
+      "Palazzo Portiglia"
+    ],
+    "chiese": [
+      "Santuario di Santa Spina",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa di San Nicola Pontefice",
+      "Chiesa di San Francesco di Paola",
+      "Chiesa dell'Annunziata",
+      "Cappella del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pallagorio",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101016",
+    "codice_catastale": "G278",
+    "popolazione": 1211,
+    "superficie_kmq": 41.96,
+    "densita": 28.9,
+    "cap": "88818",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "pallagoresi",
+    "etimologia": "Il nome deriva dal greco palaiokhorion, ossia \"vecchio villaggio\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 3 - Colline del Lipuda e del Vitravo",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Campana (CS)",
+      "Carfizzi",
+      "Casabona",
+      "San Nicola dell'Alto",
+      "Umbriatico",
+      "Verzino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di San Giovanni Battista",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mesoraca",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101015",
+    "codice_catastale": "F157",
+    "popolazione": 6472,
+    "superficie_kmq": 93.56,
+    "densita": 69.2,
+    "cap": "88838",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "mesorachesi",
+    "etimologia": "Essendo posizionato in posizione rialzata nel luogo in cui confluiscono i due torrenti Vergari e Reazio, si crede che il nome derivi dal greco mesoruakion, ossia \"ruscello che scorre nel mezzo\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto Marchesato Crotonese",
+      "Regione Agraria n. 2 - Sila Piccola di Crotone",
+      "Parco Nazionale della Sila"
+    ],
+    "localita_frazioni": [
+      "Filippa"
+    ],
+    "comuni_confinanti": [
+      "Belcastro (CZ)",
+      "Cutro",
+      "Marcedusa (CZ)",
+      "Petilia Policastro",
+      "Petronà (CZ)",
+      "Roccabernarda",
+      "Taverna (CZ)",
+      "Zagarise (CZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo De Gratia",
+      "Palazzo Grisolia",
+      "Palazzo Rossi",
+      "Palazzo Stranges",
+      "Palazzo Alessio"
+    ],
+    "chiese": [
+      "Chiesa della Candelora",
+      "Chiesa del Ritiro",
+      "Chiesa di San Michele Arcangelo (a Filippa)",
+      "Chiesa dell'Immacolata",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontane dei Tre Canali"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Melissa",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101014",
+    "codice_catastale": "F108",
+    "popolazione": 3525,
+    "superficie_kmq": 50.94,
+    "densita": 69.2,
+    "cap": "88814",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "melissesi",
+    "etimologia": "Il nome deriva dal greco melissa che significa \"ape\". La provenienza del nome è comune anche ad altri nomi della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 5 - Colline Litoranee di Cirò",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Città del Bio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carfizzi",
+      "Casabona",
+      "Cirò Marina",
+      "San Nicola dell'Alto",
+      "Strongoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giacomo",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola di Capo Rizzuto",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101013",
+    "codice_catastale": "E339",
+    "popolazione": 17718,
+    "superficie_kmq": 125.27,
+    "densita": 141.4,
+    "cap": "88841",
+    "prefisso_telefonico": "0962",
+    "patrono": "Madonna Greca",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "isolitani",
+    "etimologia": "Chiamato in passato Asila dal greco aesulos con il significato di \"criminale\". Assunse il nome attuale nel 1863 riferendosi al promontorio di Capo Rizzuto posto nei pressi.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piana del Marchesato o di Crotone",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "frazione: Le Castella;\nlocalità: Marinella",
+      "Sant'Anna",
+      "Capo Rizzuto",
+      "Campolongo",
+      "Sant'Andrea",
+      "Le Cannella",
+      "Stumìo"
+    ],
+    "comuni_confinanti": [
+      "Crotone",
+      "Cutro"
+    ],
+    "musei": [
+      "Museo Civico Demologico dell'Economia del Lavoro e della Storia Sociale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna Greca",
+      "Duomo",
+      "Chiesa di San Marco"
+    ],
+    "castelli_fortificazioni": [
+      "Le Castella"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Belcastro (Catanzaro-Calabria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cutro",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101012",
+    "codice_catastale": "D236",
+    "popolazione": 10575,
+    "superficie_kmq": 131.87,
+    "densita": 80.2,
+    "cap": "88842",
+    "prefisso_telefonico": "0962",
+    "patrono": "Santissimo Crocifisso",
+    "festa_patronale": "3 maggio",
+    "demonimo": "cutresi",
+    "etimologia": "Deriva dal greco khutros, ossia pentola, che assume un significato figurato di \"cavità nel terreno\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piana del Marchesato o di Crotone"
+    ],
+    "localita_frazioni": [
+      "frazioni: San Leonardo",
+      "Steccato;\ncentri rurali: Sant'Anna",
+      "Rosito"
+    ],
+    "comuni_confinanti": [
+      "Belcastro (CZ)",
+      "Crotone",
+      "Isola di Capo Rizzuto",
+      "Mesoraca",
+      "Roccabernarda",
+      "San Mauro Marchesato",
+      "Scandale"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa  Margherita"
+    ],
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa delle Monachelle o di Santa Chiara",
+      "Chiesa della Riforma",
+      "Chiesa della Pietà",
+      "Chiesa  della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crucoli",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101011",
+    "codice_catastale": "D189",
+    "popolazione": 3064,
+    "superficie_kmq": 49.81,
+    "densita": 61.5,
+    "cap": "88812",
+    "prefisso_telefonico": "0962",
+    "patrono": "Madonna della Manipuglia",
+    "festa_patronale": "terza domenica di maggio",
+    "demonimo": "crucolesi",
+    "etimologia": "Chiamato Curuculi e Cruculo deriva dal latino ocruculum da ocriculum, \"piccolo monte\", che deriva a sua volta da ocris, ossia monte.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Cirò"
+    ],
+    "localita_frazioni": [
+      "Torretta"
+    ],
+    "comuni_confinanti": [
+      "Cariati (CS)",
+      "Cirò",
+      "Scala Coeli (CS)",
+      "Terravecchia (CS)",
+      "Umbriatico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Celsi",
+      "Palazzo Lamanna",
+      "Palazzo Palopoli (sede Municipio)",
+      "Palazzo Toscano",
+      "Villa Clausi",
+      "Villa Palopoli (contrada Ciuranà, in frazione Torretta)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Madre della Chiesa (in frazione Torretta)",
+      "Chiesa dei Santissimi Pietro e Paolo",
+      "Santuario della Madonna di Manipuglia",
+      "Chiesa di Sant'Elia",
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cotronei",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101009",
+    "codice_catastale": "D123",
+    "popolazione": 5500,
+    "superficie_kmq": 78.13,
+    "densita": 70.4,
+    "cap": "88836",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "cotronellari",
+    "etimologia": "Il nome del paese deriva da \"i Cotronei\", più precisamente \"la famiglia dei Cotronei\", ossia delle persone \"provenienti da Crotone\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto Marchesato Crotonese",
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 1 - Montagna di Savelli",
+      "Parco Nazionale della Sila",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aprigliano (CS)",
+      "Caccuri",
+      "Petilia Policastro",
+      "Roccabernarda",
+      "San Giovanni in Fiore (CS)",
+      "Taverna (CZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cirò Marina",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101008",
+    "codice_catastale": "C726",
+    "popolazione": 14847,
+    "superficie_kmq": 41.6,
+    "densita": 356.9,
+    "cap": "88811",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Cataldo",
+    "festa_patronale": "10 maggio",
+    "demonimo": "ciromarinesi",
+    "etimologia": "La prima parte del nome (Cirò) deriva dal greco psuchros, ossia freddo oppure da ischuros, forte. La specifica si riferisce alla vicinanza del paese al mare.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Cirò",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cirò",
+      "Melissa"
+    ],
+    "musei": [
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Marchese Terranova, in Largo Stazione",
+      "Palazzo Siciliani, in via Vittorio Emanuele",
+      "Palazzo Caparra, in Via Tirone",
+      "Palazzo Porti, in piazza Diaz"
+    ],
+    "chiese": [
+      "Cappella di Santa Lucia",
+      "Chiesetta del Mare (o di Santa Croce)",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di San Nicodemo Abate",
+      "Chiesa di San Michele",
+      "Chiesa di San Cataldo",
+      "Chiesa di San Francesco di Paola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana dell'Alice (o del Principe)"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Faro di Punta Alice"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Supino (Lazio)",
+      "dal maggio 2007"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cirò",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101007",
+    "codice_catastale": "C725",
+    "popolazione": 2862,
+    "superficie_kmq": 70.15,
+    "densita": 40.8,
+    "cap": "88813",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Francesco di Paola",
+    "festa_patronale": "2 aprile",
+    "demonimo": "cirotani",
+    "etimologia": "Il nome deriva dal greco psuchros, ossia freddo oppure da ischuros, forte.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Cirò"
+    ],
+    "localita_frazioni": [
+      "nuclei abitati sparsi: Località Toscano",
+      "Capella",
+      "Cappelleri",
+      "Casale Attiva"
+    ],
+    "comuni_confinanti": [
+      "Carfizzi",
+      "Cirò Marina",
+      "Crucoli",
+      "Melissa",
+      "Umbriatico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Zito",
+      "Palazzo Siciliani, in Via Marconi",
+      "Palazzo Adorisio",
+      "Palazzo Quattromani, in Piazza San Giovanni",
+      "Palazzo Susanna, in Via Lilio",
+      "Palazzo Terranova, in Via Casoppero",
+      "Palazzo Teti, in Via Pugliese",
+      "Palazzo Vitetti, in Piazza Bandiera",
+      "Palazzo Pignatari, in Via Casoppero",
+      "Palazzo Vergi, oggi Baffa, in via Marconi"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria de Plateis",
+      "Chiesetta di San Lorenzo",
+      "Chiesa di San Menna",
+      "Chiesetta della Catena, o di Santa Maria della Mercede",
+      "Chiesa di San Giuseppe",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Cataldo",
+      "Chiesa della Madonna delle Grazie, in precedenza nota come Chiesa di Santa Maria del Casale",
+      "Chiesa della Madonna del Carmine",
+      "Chiesa del Purgatorio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Carafa (di origine quattrocentesca)"
+    ],
+    "fontane": [
+      "Fontana San Francesco di Paola",
+      "Fontana Arenacchio"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerenzia",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101006",
+    "codice_catastale": "C501",
+    "popolazione": 1147,
+    "superficie_kmq": 24.28,
+    "densita": 47.2,
+    "cap": "88833",
+    "prefisso_telefonico": "0984",
+    "patrono": "San Teodoro Martire",
+    "festa_patronale": "9 novembre",
+    "demonimo": "cerentinesi",
+    "etimologia": "Il paese è menzionato nei documenti con il nome di Akerentia forse riferendosi al luogo di culto di Hercules Acheruntinus, ossia \"Ercole sul punto di morte\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 1 - Montagna di Savelli",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caccuri",
+      "Castelsilano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Teodoro",
+      "Chiesa Madre di San Teodoro Martire Nuova"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelsilano",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101005",
+    "codice_catastale": "B968",
+    "popolazione": 992,
+    "superficie_kmq": 39.51,
+    "densita": 25.1,
+    "cap": "88834",
+    "prefisso_telefonico": "0984",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "castelsilanesi",
+    "etimologia": "In passato il paese era chiamato Casino, poi il nome fu considerato sconveniente e quindi l'amministrazione pubblica lo mutò nel 1950 in quello attuale, formato da Castello e silano che deriva dal nome del monte che sorge nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 1 - Montagna di Savelli",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belvedere di Spinello",
+      "Caccuri",
+      "Casabona",
+      "Cerenzia",
+      "San Giovanni in Fiore (CS)",
+      "Santa Severina",
+      "Savelli",
+      "Verzino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Lamanna",
+      "Palazzo Tallerico"
+    ],
+    "chiese": [
+      "Chiesetta della Madonna della Campagna",
+      "Chiesa di Santa Maria Immacolata",
+      "Cappella di San Leonardo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana del Missile Apollo-Pace",
+      "nel rione Colla"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Falò di Natale (periodo natalizio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casabona",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101004",
+    "codice_catastale": "B857",
+    "popolazione": 2677,
+    "superficie_kmq": 68.89,
+    "densita": 38.9,
+    "cap": "88822",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "casabonesi",
+    "etimologia": "Chiamato nei documenti con il nome di Casuboni probabilmente deriva da casa bona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 3 - Colline del Lipuda e del Vitravo"
+    ],
+    "localita_frazioni": [
+      "Zinga"
+    ],
+    "comuni_confinanti": [
+      "Belvedere di Spinello",
+      "Castelsilano",
+      "Melissa",
+      "Pallagorio",
+      "Rocca di Neto",
+      "San Nicola dell'Alto",
+      "Strongoli",
+      "Verzino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carfizzi",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101003",
+    "codice_catastale": "B771",
+    "popolazione": 676,
+    "superficie_kmq": 20.34,
+    "densita": 33.2,
+    "cap": "88817",
+    "prefisso_telefonico": "0962",
+    "patrono": "Santa Veneranda",
+    "festa_patronale": "27 luglio",
+    "demonimo": "carfizzoti",
+    "etimologia": "Il nome deriva dal greco Karphitsion da karphitza, ossia \"spilla\" che forse si riferiva ad un nome di persona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 3 - Colline del Lipuda e del Vitravo",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cirò",
+      "Melissa",
+      "Pallagorio",
+      "San Nicola dell'Alto",
+      "Umbriatico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Rizzuto",
+      "Palazzo Leonetti",
+      "Palazzo Corritore"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Santa Veneranda"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Asturi"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caccuri",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101002",
+    "codice_catastale": "B319",
+    "popolazione": 1630,
+    "superficie_kmq": 57.27,
+    "densita": 28.5,
+    "cap": "88833",
+    "prefisso_telefonico": "0984",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "caccuresi",
+    "etimologia": "Citato nei documenti con il nome di Caccurio deriva dal latino Caccurius che forse si riferisce al cognome greco Kakouri.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 1 - Montagna di Savelli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belvedere di Spinello",
+      "Castelsilano",
+      "Cerenzia",
+      "Cotronei",
+      "Roccabernarda",
+      "San Giovanni in Fiore (CS)",
+      "Santa Severina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Rocco",
+      "Chiesa di Santa. Maria del Soccorso  (o della Riforma)",
+      "Chiesa di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Belvedere di Spinello",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101001",
+    "codice_catastale": "A772",
+    "popolazione": 2272,
+    "superficie_kmq": 30.19,
+    "densita": 75.3,
+    "cap": "88824",
+    "prefisso_telefonico": "0962",
+    "patrono": "Madonna della Pietà",
+    "festa_patronale": "primo martedì di giugno",
+    "demonimo": "belvederesi",
+    "etimologia": "Il nome del luogo è di chiara provenienza: \"Belvedere\" si riferisce alla posizione geografica del paese che sorge su di un colle. Spinello è il nome di una frazione e deriva da spina con l'aggiunta del suffisso -ellu.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Crotonese",
+      "Regione Agraria n. 4 - Medio Neto"
+    ],
+    "localita_frazioni": [
+      "Belvedere",
+      "Spinello"
+    ],
+    "comuni_confinanti": [
+      "Casabona",
+      "Castelsilano",
+      "Rocca di Neto",
+      "Santa Severina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa SS. Trinità",
+      "Santuario Santa Maria della Pietà",
+      "Chiesa del San Salvatore (a Spinello)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crotone",
+    "provincia": "Crotone",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "101010",
+    "codice_catastale": "D122",
+    "popolazione": 63455,
+    "superficie_kmq": 179.83,
+    "densita": 352.9,
+    "cap": "88900",
+    "prefisso_telefonico": "0962",
+    "patrono": "San Dionigi Aeropagita",
+    "festa_patronale": "9 ottobre",
+    "demonimo": "crotonesi o crotoniati",
+    "etimologia": "Denominata in passato Cotrone, dal termine dialettale cutroni o cutruoni. Il nome attuale deriva dal latino Croton, -onis che identifica la colonia achea della Magna Grecia del 710 a.C.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piana del Marchesato o di Crotone"
+    ],
+    "localita_frazioni": [
+      "Apriglianello",
+      "Carpentieri",
+      "Cipolla",
+      "Farina",
+      "Gabella Grande",
+      "Iannello",
+      "Maiorano",
+      "Margherita",
+      "Papanice"
+    ],
+    "comuni_confinanti": [
+      "A nord: Strongoli; a ovest: Cutro",
+      "Rocca di Neto",
+      "Scandale; a sud: Isola di Capo Rizzuto"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale",
+      "Museo Civico (Castello Aragonese)",
+      "Pinacoteca Civica",
+      "Museo Provinciale d'Arte Contemporanea"
+    ],
+    "ville_palazzi": [
+      "Palazzo Montalcini, oggi Oliverio-Susanna",
+      "Palazzo Berlingieri, in Piazza Umberto I",
+      "Palazzo Brasacchio",
+      "Palazzo Lucifero",
+      "Palazzo Morace",
+      "Palazzo Morelli",
+      "Palazzo Zurlo-Soda, in Via Risorgimento",
+      "Palazzo Galluccio, in Via Risorgimento"
+    ],
+    "chiese": [
+      "Duomo, dedicato alla Madonna Assunta",
+      "Santuario di Capo Colonna",
+      "Chiesa e Monastero di Santa Chiara",
+      "Chiesa di Santa Rita",
+      "Chiesa di Santa Maria del Carmine",
+      "Chiesa di San Giuseppe",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Apollo"
+    ],
+    "stadi": [
+      "Stadio Ezio Scida"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

@@ -1,0 +1,2731 @@
+[
+  {
+    "nome": "Valle Castellana",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067046",
+    "codice_catastale": "L597",
+    "popolazione": 968,
+    "superficie_kmq": 133.94,
+    "densita": 7.2,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "vallecastellanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Laga",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Basto",
+      "Cesano",
+      "Collegrato",
+      "Coronelle",
+      "Fornisco",
+      "Laturo",
+      "Leofara",
+      "Macchia da Borea",
+      "Macchia da Sole",
+      "Morrice",
+      "Pascellata",
+      "Pietralta",
+      "Pietralta Colle",
+      "Prevenisco",
+      "San Vito",
+      "Setteceneri",
+      "Vallenquina",
+      "Vallepezzata da Borea"
+    ],
+    "comuni_confinanti": [
+      "Accumoli (RI)",
+      "Acquasanta Terme (AP)",
+      "Amatrice (RI)",
+      "Arquata del Tronto (AP)",
+      "Ascoli Piceno (AP)",
+      "Campli",
+      "Civitella del Tronto",
+      "Rocca Santa Maria",
+      "Torricella Sicura"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Rufina",
+      "Chiesa di San Vito (XII secolo)",
+      "Chiesa di San Giovanni Battista (a Collegrato)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tossicia",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067045",
+    "codice_catastale": "L314",
+    "popolazione": 1380,
+    "superficie_kmq": 25.29,
+    "densita": 54.6,
+    "cap": "64049",
+    "prefisso_telefonico": "0861",
+    "patrono": "Santa Sinforosa",
+    "festa_patronale": "18 luglio",
+    "demonimo": "tossiciani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Aquilano",
+      "Azzinano",
+      "Castel Maidetto",
+      "Chiarino",
+      "Palozza",
+      "Tozzanella",
+      "Villa Alzano"
+    ],
+    "comuni_confinanti": [
+      "Colledara",
+      "Fano Adriano",
+      "Isola del Gran Sasso d'Italia",
+      "Montorio al Vomano"
+    ],
+    "musei": [
+      "Museo di Tossicia",
+      "Artigianato - Arte - Comunicazione"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Sinforosa (XV secolo)",
+      "Chiesa di Sant'Antonio Abate",
+      "Chiesa di Santa Maria della Neve, detta anche Cona di Santa Teresa"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tortoreto",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067044",
+    "codice_catastale": "L307",
+    "popolazione": 11622,
+    "superficie_kmq": 22.96,
+    "densita": 506.2,
+    "cap": "64018",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "tortoretani",
+    "etimologia": "Attestato come Tortoretum, deriva dal latino turtur, -uris (tortora) con l'aggiunta del suffisso -etum che ha valore collettivo in riferimento all'abbondanza di tortore in loco.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata"
+    ],
+    "localita_frazioni": [
+      "Tortoreto Alta",
+      "Tortoreto Lido",
+      "Cavatassi",
+      "Salino",
+      "Terrabianca"
+    ],
+    "comuni_confinanti": [
+      "Alba Adriatica",
+      "Corropoli",
+      "Giulianova",
+      "Mosciano Sant'Angelo",
+      "Sant'Omero"
+    ],
+    "musei": [
+      "Museo della Cultura Marinara"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Chiesa della Madonna della Misericordia",
+      "Chiesa di Sant' Agostino",
+      "Chiesa di San Rocco",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torricella Sicura",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067043",
+    "codice_catastale": "L295",
+    "popolazione": 2635,
+    "superficie_kmq": 54.08,
+    "densita": 48.7,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "torricellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Laga",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Abetemozzo",
+      "Borgonovo",
+      "Ioanella",
+      "Piano Grande",
+      "Poggio Rattieri",
+      "Poggio Valle",
+      "Santo Stefano"
+    ],
+    "comuni_confinanti": [
+      "Campli",
+      "Cortino",
+      "Rocca Santa Maria",
+      "Teramo",
+      "Valle Castellana"
+    ],
+    "musei": [
+      "Museo Etnografico e delle Tradizioni Contadine \"Borgo Antico\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Barbara (a Ioanella)",
+      "Chiesa di San Pietro di Azzano",
+      "Chiesa di Santa Maria Assunta (a Ioanella)",
+      "Parrocchiale di San Paolo (a Torricella)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torano Nuovo",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067042",
+    "codice_catastale": "L207",
+    "popolazione": 1597,
+    "superficie_kmq": 10.19,
+    "densita": 156.7,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Flaviano",
+    "festa_patronale": "24 novembre",
+    "demonimo": "toranesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ancarano",
+      "Controguerra",
+      "Nereto",
+      "Sant'Egidio alla Vibrata",
+      "Sant'Omero"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa San Massimo a Varano",
+      "Chiesa Madonna delle Grazie",
+      "Chiesa di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Silvi",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067040",
+    "codice_catastale": "I741",
+    "popolazione": 15667,
+    "superficie_kmq": 20.44,
+    "densita": 766.5,
+    "cap": "64028",
+    "prefisso_telefonico": "085",
+    "patrono": "San Leone",
+    "festa_patronale": "29 maggio",
+    "demonimo": "silvaroli",
+    "etimologia": "Deriva dal latino silva, selva o bosco, attraverso un ablativo plurale locativo silvis.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Atri",
+      "Città Sant'Angelo (PE)",
+      "Pineto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Ciancialone (ultima domenica di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Omero",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067039",
+    "codice_catastale": "I348",
+    "popolazione": 5288,
+    "superficie_kmq": 33.98,
+    "densita": 155.6,
+    "cap": "64027",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Omero",
+    "festa_patronale": "3 giugno",
+    "demonimo": "santomeresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata"
+    ],
+    "localita_frazioni": [
+      "centri abitati: Garrufo",
+      "Poggio Morello",
+      "Villa Ricci",
+      "Case Alte;\nnuclei abitati: Bivio Sant'Omero",
+      "Casette",
+      "Villa Gatti",
+      "Barracche"
+    ],
+    "comuni_confinanti": [
+      "Bellante",
+      "Campli",
+      "Civitella del Tronto",
+      "Corropoli",
+      "Mosciano Sant'Angelo",
+      "Nereto",
+      "Sant'Egidio alla Vibrata",
+      "Torano Nuovo",
+      "Tortoreto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Egidio alla Vibrata",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067038",
+    "codice_catastale": "I318",
+    "popolazione": 9760,
+    "superficie_kmq": 18.24,
+    "densita": 535.1,
+    "cap": "64016",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Egidio",
+    "festa_patronale": "primo settembre",
+    "demonimo": "santegidiesi",
+    "etimologia": "Richiama il nome del santo patrono del paese Sant'Egidio. La specifica fu aggiunta nel 1863 e si riferisce al torrente Vibrata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata"
+    ],
+    "localita_frazioni": [
+      "Faraone",
+      "Villa Mattoni",
+      "Paolantonio"
+    ],
+    "comuni_confinanti": [
+      "A est: Torano Nuovo; a nord: Ascoli Piceno (AP)",
+      "Maltignano (AP); a nord e est: Ancarano; a ovest: Folignano (AP); a sud: Sant'Omero; a sud e ovest: Civitella del Tronto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roseto degli Abruzzi",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067037",
+    "codice_catastale": "F585",
+    "popolazione": 25602,
+    "superficie_kmq": 52.8,
+    "densita": 484.9,
+    "cap": "64026",
+    "prefisso_telefonico": "085",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "rosetani",
+    "etimologia": "Deriva dal latinorosetum, roseto. La specifica identifica la sua collocazione geografica.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007 (Capoluogo e Cologna Spiaggia)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Casal Thaulero",
+      "Cologna Paese",
+      "Cologna Spiaggia",
+      "Montepagano",
+      "San Giovanni",
+      "Santa Lucia"
+    ],
+    "comuni_confinanti": [
+      "Atri",
+      "Giulianova",
+      "Morro d'Oro",
+      "Mosciano Sant'Angelo",
+      "Notaresco",
+      "Pineto"
+    ],
+    "musei": [
+      "Civica Raccolta d'Arte",
+      "Museo Civico della Cultura Materiale"
+    ],
+    "ville_palazzi": [
+      "Villa Clemente"
+    ],
+    "chiese": [
+      "Chiesa dell'Assunta",
+      "Chiesa parrocchiale dell'Annunciazione (XVII secolo)",
+      "Chiesa del Sacro Cuore",
+      "Cappella Russicum, chiesa di rito ortodosso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Fonte dell'Olmo"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Pasquale Celommi (1851-1928)",
+      "pittore"
+    ]
+  },
+  {
+    "nome": "Rocca Santa Maria",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067036",
+    "codice_catastale": "H440",
+    "popolazione": 516,
+    "superficie_kmq": 61.23,
+    "densita": 8.4,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "roccolani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Laga",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Acquatarola",
+      "Faiete",
+      "Fiòli",
+      "Imposte",
+      "Paranesi",
+      "San Biagio",
+      "Tavolero"
+    ],
+    "comuni_confinanti": [
+      "Amatrice (RI)",
+      "Cortino",
+      "Torricella Sicura",
+      "Valle Castellana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Egidio (ad Acquaratola)",
+      "Chiesa di San Salvatore (a Serra)",
+      "Chiesa di San Martino (a Fiòli)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pineto",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067035",
+    "codice_catastale": "F831",
+    "popolazione": 15016,
+    "superficie_kmq": 37.74,
+    "densita": 397.9,
+    "cap": "64025",
+    "prefisso_telefonico": "085",
+    "patrono": "Sant'Agnese",
+    "festa_patronale": "21 gennaio",
+    "demonimo": "pinetesi",
+    "etimologia": "Deriva dal latino pinetum, pineta.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007 (Scerne/Villa Fumosa, Villa Ardente/Torre Cerrano)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Roseto degli Abruzzi; a ovest: Atri; a sud: Silvi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Filiani"
+    ],
+    "chiese": [
+      "Chiesa di San Silvestro"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Cerrano (XVI secolo)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pietracamela",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067034",
+    "codice_catastale": "G608",
+    "popolazione": 263,
+    "superficie_kmq": 44.32,
+    "densita": 5.9,
+    "cap": "64047",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Leucio",
+    "festa_patronale": "seconda domenica di luglio",
+    "demonimo": "pretaroli",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso",
+      "Parco Nazionale del Gran Sasso e Monti della Laga",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Intermesoli",
+      "Prati di Tivo"
+    ],
+    "comuni_confinanti": [
+      "Fano Adriano",
+      "Isola del Gran Sasso d'Italia",
+      "L'Aquila (AQ)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Leucio (1324)",
+      "Chiesa di San Rocco",
+      "Chiesa di San Giovanni (1432)",
+      "Chiesa di San Donato (1530)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Guido Montauti (1918-1979)",
+      "pittore"
+    ]
+  },
+  {
+    "nome": "Penna Sant'Andrea",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067033",
+    "codice_catastale": "G437",
+    "popolazione": 1764,
+    "superficie_kmq": 11.04,
+    "densita": 159.8,
+    "cap": "64039",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "pennesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": [
+      "Val Vomano",
+      "Pilone"
+    ],
+    "comuni_confinanti": [
+      "Basciano",
+      "Castel Castagna",
+      "Cermignano",
+      "Teramo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Giusta",
+      "Chiesa Matrice o parrocchiale di Santa Maria del Soccorso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Bosco Comunale (in località Pilone)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Notaresco",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067032",
+    "codice_catastale": "F942",
+    "popolazione": 6841,
+    "superficie_kmq": 37.98,
+    "densita": 180.1,
+    "cap": "64024",
+    "prefisso_telefonico": "085",
+    "patrono": "San Gennaro",
+    "festa_patronale": "19 settembre",
+    "demonimo": "notareschini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Guardia Vomano"
+    ],
+    "comuni_confinanti": [
+      "Atri",
+      "Castellalto",
+      "Cellino Attanasio",
+      "Morro d'Oro",
+      "Mosciano Sant'Angelo",
+      "Roseto degli Abruzzi"
+    ],
+    "musei": [
+      "Museo Civico Romualdi"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale intitolata a San Pietro e Sant'Andrea Apostoli",
+      "Chiesa parrocchiale di San Rocco (a Guardia Vomano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra delle Fave Fresche con Pane e Olio (a maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Ignazio Rozzi (1797-1870)",
+      "medico e naturalista"
+    ]
+  },
+  {
+    "nome": "Nereto",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067031",
+    "codice_catastale": "F870",
+    "popolazione": 5258,
+    "superficie_kmq": 7.01,
+    "densita": 750.1,
+    "cap": "64015",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "neretesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata"
+    ],
+    "localita_frazioni": [
+      "contrade:  Capo di Valle",
+      "Certosa",
+      "Parignano",
+      "Pignotto",
+      "Rote",
+      "San Martino",
+      "San Savino",
+      "Vibrata"
+    ],
+    "comuni_confinanti": [
+      "Controguerra",
+      "Corropoli",
+      "Sant'Omero",
+      "Torano Nuovo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Maria SS. della Consolazione",
+      "Chiesa Maria SS. Addolorata",
+      "Chiesa di Santa Maria del Suffragio",
+      "Chiesa di San Rocco",
+      "Chiesa di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Vecchia"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fuochi di Natale (24 dicembre - 6 gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mosciano Sant'Angelo",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067030",
+    "codice_catastale": "F764",
+    "popolazione": 9331,
+    "superficie_kmq": 48.25,
+    "densita": 193.4,
+    "cap": "64023",
+    "prefisso_telefonico": "085",
+    "patrono": "Sant'Alessandro",
+    "festa_patronale": "26 agosto",
+    "demonimo": "moscianesi",
+    "etimologia": "Deriva dal nome latino di persona Mussius, con l'aggiunta del suffisso -anus che indica appartenenza. La seconda parte del nome di riferisce al nome del santo a cui è dedicata l'abbazia benedettina.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Collepietro",
+      "Montone"
+    ],
+    "comuni_confinanti": [
+      "Bellante",
+      "Castellalto",
+      "Giulianova",
+      "Notaresco",
+      "Roseto degli Abruzzi",
+      "Sant'Omero",
+      "Tortoreto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento dei SS. Sette Fratelli o di Santa Maria degli Angeli",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio di Colle Leone"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Morro d'Oro",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067029",
+    "codice_catastale": "F747",
+    "popolazione": 3618,
+    "superficie_kmq": 28.0,
+    "densita": 129.2,
+    "cap": "64020",
+    "prefisso_telefonico": "085",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "morresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Atri",
+      "Notaresco",
+      "Roseto degli Abruzzi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Piano Cesare"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montorio al Vomano",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067028",
+    "codice_catastale": "F690",
+    "popolazione": 8105,
+    "superficie_kmq": 53.37,
+    "densita": 151.9,
+    "cap": "64046",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "montoriesi",
+    "etimologia": "Esistono numerosi riscontri anche nella variante Montoro e probabilmente è un composto di Monte e del latino torus (rialzo da terra, altura, rocca). La specifica si riferisce al vicino fiume Vomano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Altavilla",
+      "Brozzi",
+      "Collevecchio",
+      "Cusciano",
+      "Faiano",
+      "Leognano",
+      "Schiavano",
+      "Villa Vallucci"
+    ],
+    "comuni_confinanti": [
+      "A est: Basciano; a nord: Cortino",
+      "Teramo; a ovest: Crognaleto",
+      "Fano Adriano; a sud: Tossicia; a sud e est: Colledara"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Marchesale Camponeschi-Carafa"
+    ],
+    "chiese": [
+      "Convento dei Cappuccini e Chiesa di Santa Maria della Salute",
+      "Chiesa di Santa Lucia (a Cusciano)",
+      "Chiesa di San Rocco",
+      "Chiesa degli Zoccolanti"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Congiura dei Baroni (terza fine settimana di giugno)",
+      "Carnevale (domenica e martedì di Carnevale, mercoledì delle Ceneri)"
+    ],
+    "gemellaggi": [
+      "Amatrice (Rieti-Lazio)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Odorico D'Andrea (1916-1990)",
+      "missionario in Nicaragua"
+    ]
+  },
+  {
+    "nome": "Montefino",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067027",
+    "codice_catastale": "F500",
+    "popolazione": 1033,
+    "superficie_kmq": 18.47,
+    "densita": 55.9,
+    "cap": "64030",
+    "prefisso_telefonico": "0861",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "montefinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Atri",
+      "Castiglione Messer Raimondo",
+      "Castilenti",
+      "Cellino Attanasio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Martinsicuro",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067047",
+    "codice_catastale": "E989",
+    "popolazione": 16083,
+    "superficie_kmq": 14.32,
+    "densita": 1123.1,
+    "cap": "64014",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Gabriele dell'Addolorata",
+    "festa_patronale": "27 febbraio",
+    "demonimo": "martinsicuresi",
+    "etimologia": "E' un composto del nome di persona Martino e dell'aggettivo sicuro.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alba Adriatica",
+      "Colonnella",
+      "Monteprandone (AP)",
+      "San Benedetto del Tronto (AP)"
+    ],
+    "musei": [
+      "Museo privato delle armi",
+      "Antiquarium Castrum Truentinum"
+    ],
+    "ville_palazzi": [
+      "Dimora storica Casa Partenope",
+      "Dimora storica Casa Crocetta"
+    ],
+    "chiese": [
+      "Chiesa di via Po'",
+      "Chiesa del Sacro Cuore di Gesù"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Carlo V°"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Las Palmas (Spagna)",
+      "Makò (Ungheria)",
+      "Puerto de la Cruz (Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola del Gran Sasso d'Italia",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067026",
+    "codice_catastale": "E343",
+    "popolazione": 4759,
+    "superficie_kmq": 83.26,
+    "densita": 57.2,
+    "cap": "64045",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Massimo",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "isolani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Capsano",
+      "Casale San Nicola",
+      "Cerchiara",
+      "Ceriseto",
+      "Cesa di Francia",
+      "Colliberti",
+      "Fano a Corno",
+      "Forca di Valle",
+      "Pacciano",
+      "Pretara",
+      "San",
+      "Giovanni",
+      "San Massimo",
+      "San Pietro",
+      "Trignano"
+    ],
+    "comuni_confinanti": [
+      "Calascio (AQ)",
+      "Carapelle Calvisio (AQ)",
+      "Castel Castagna",
+      "Castelli",
+      "Castelvecchio Calvisio (AQ)",
+      "Colledara",
+      "Fano Adriano",
+      "L'Aquila (AQ)",
+      "Pietracamela",
+      "Santo Stefano di Sessanio (AQ)",
+      "Tossicia"
+    ],
+    "musei": [
+      "Museo Stauròs di Arte Sacra Contemporanea"
+    ],
+    "ville_palazzi": [
+      "Palazzo baronale Henrici-De Angeli",
+      "cinquecentesco"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Massimo (XV secolo)",
+      "Chiesa di San Salvatore (a Fano a Corno)",
+      "Chiesa di San Giovanni ad Insulam (XII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giulianova",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067025",
+    "codice_catastale": "E058",
+    "popolazione": 23980,
+    "superficie_kmq": 27.33,
+    "densita": 877.4,
+    "cap": "64021",
+    "prefisso_telefonico": "085",
+    "patrono": "San Flaviano",
+    "festa_patronale": "24 novembre",
+    "demonimo": "giuliesi",
+    "etimologia": "La cittadina venne fondata per volere di Giulio Antonio Acquaviva allo scopo di dare una giusta collocazione agli abitanti di Castel San Flaviano che era inabitabile a causa della malaria.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007 (Lungomare Nord e Lido Zara)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Colleranesco",
+      "Villa Pozzoni",
+      "Villa Volpe"
+    ],
+    "comuni_confinanti": [
+      "Mosciano Sant'Angelo",
+      "Roseto degli Abruzzi",
+      "Tortoreto"
+    ],
+    "musei": [
+      "Sala \"Raffaello Pagliaccetti\"",
+      "Museo d'Arte dello Splendore",
+      "Pinacoteca Civica \"Vincenzo Bindi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna dello Splendore :: Frati Minori Cappuccini",
+      "Chiesa di Santa Maria a Mare",
+      "Chiesa di Sant'Antonio, cinquecentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Rubens Fadini"
+    ],
+    "eventi_feste_sagre": [
+      "Festa della Madonna dello Splendore (22 aprile e settimana seguente)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Raffaello Pagliaccetti (1839-1900), scultore",
+      "Vincenzo Bindi (1852-1928), storico dell'arte"
+    ]
+  },
+  {
+    "nome": "Fano Adriano",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067024",
+    "codice_catastale": "D489",
+    "popolazione": 288,
+    "superficie_kmq": 35.43,
+    "densita": 8.1,
+    "cap": "64044",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "fanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Cerqueto"
+    ],
+    "comuni_confinanti": [
+      "Crognaleto",
+      "Isola del Gran Sasso d'Italia",
+      "L'Aquila (AQ)",
+      "Montorio al Vomano",
+      "Pietracamela",
+      "Tossicia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Egidio Abate (a Cerqueto)",
+      "Chiesa di San Pietro, di origine medioevale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crognaleto",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067023",
+    "codice_catastale": "D179",
+    "popolazione": 1267,
+    "superficie_kmq": 124.18,
+    "densita": 10.2,
+    "cap": "64043",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "crognaletani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Aiello",
+      "Alvi",
+      "Aprati",
+      "Cerrone",
+      "Cervaro",
+      "Cesacastina",
+      "Crognaleto",
+      "Figliola",
+      "Frattoli",
+      "Macchia Vomano",
+      "Nerito",
+      "Paladini",
+      "Piano Vomano",
+      "Poggio Umbricchio",
+      "San Giorgio",
+      "Santa Croce",
+      "Senarica",
+      "Tintorale",
+      "Tottea",
+      "Vallocchio"
+    ],
+    "comuni_confinanti": [
+      "Amatrice (RI)",
+      "Campotosto (AQ)",
+      "Cortino",
+      "Fano Adriano",
+      "L'Aquila (AQ)",
+      "Montorio al Vomano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Nardi di Corvaro (XVI secolo)"
+    ],
+    "chiese": [
+      "Santuario della Madonna della Tibia",
+      "Chiesa di Sant'Andrea Apostolo(in frazione Cervaro)",
+      "Chiesa di Santa Maria Laurentana (in frazione Poggio Umbricchio)",
+      "Chiesa di Santa Maria Apparens (in frazione Alvi)",
+      "Chiesa di San Silvestro (in frazione Macchia Vomano)",
+      "Chiesa di San Nicola (in frazione Piano Vomano)",
+      "Chiesa di San Michele Arcangelo (in frazione Tottea)",
+      "Chiesa di San Giovanni Battista (in frazione Frattoli)",
+      "Chiesa di San Giorgio (frazione San Giorgio)",
+      "Chiesa della Madonna della Lacrima (in frazione San Giorgio)",
+      "Chiesa dei SS. Pietro e Paolo (in frazione Nerito)",
+      "Chiesa dei Santi Pietro e Paolo (in frazione Valle Vaccaro)",
+      "Chiesa dei Santi Silvestro e Rocco (in frazione Aiello)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "L'Erede (martedì di Carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cortino",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067022",
+    "codice_catastale": "D076",
+    "popolazione": 652,
+    "superficie_kmq": 62.72,
+    "densita": 10.4,
+    "cap": "64040",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "cortinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Laga",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Altovia",
+      "Cortino",
+      "Casagreca",
+      "Comignano",
+      "Fonte Palumbo",
+      "Servillo",
+      "Collegilesco",
+      "Cunetta",
+      "Casanova",
+      "Pagliaroli - Piane Santa Lucia",
+      "Faieto - Casale",
+      "Elce",
+      "Agnova",
+      "Caiano",
+      "Pezzelle",
+      "Piano Fiumata",
+      "Vernesca",
+      "Lame",
+      "Padula",
+      "Macchiatornella"
+    ],
+    "comuni_confinanti": [
+      "Amatrice (RI)",
+      "Crognaleto",
+      "Montorio al Vomano",
+      "Rocca Santa Maria",
+      "Teramo",
+      "Torricella Sicura"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo (a Elce)",
+      "Chiesa di Sant'Andrea (a Faieto)",
+      "Chiesa di Santa Maria Assunta (a Padula)",
+      "Chiesa di San Martino (a Casanova)",
+      "Chiesa dell'Annunziata (a Servillo), in precedenza intitolata a Santa Maria de Sirbillo",
+      "Chiesa dei Santi Pietro e Paolo (a Comignano)",
+      "Chiesa di Santa Giusta (XIV secolo, ad Agnova)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Corropoli",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067021",
+    "codice_catastale": "D043",
+    "popolazione": 5068,
+    "superficie_kmq": 21.98,
+    "densita": 230.6,
+    "cap": "64013",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Agnese",
+    "festa_patronale": "21 gennaio",
+    "demonimo": "corropolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alba Adriatica",
+      "Colonnella",
+      "Controguerra",
+      "Nereto",
+      "Sant'Omero",
+      "Tortoreto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna del Sabato Santo",
+      "Chiesa di Sant'Antonio Gabbiano",
+      "Badia di Mejulano"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Campanaria"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio delle Botti (ultimo fine settimana di luglio",
+      "primi di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Controguerra",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067020",
+    "codice_catastale": "C972",
+    "popolazione": 2402,
+    "superficie_kmq": 22.73,
+    "densita": 105.7,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Benedetto",
+    "festa_patronale": "21 marzo",
+    "demonimo": "controguerresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ancarano",
+      "Colonnella",
+      "Corropoli",
+      "Monsampolo del Tronto (AP)",
+      "Monteprandone (AP)",
+      "Nereto",
+      "Spinetoli (AP)",
+      "Torano Nuovo"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina in Val Vibrata"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Cappellina della Icona",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesetta di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Polczyn Zdroj (Polonia)",
+      "dall'ottobre 2003"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colonnella",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067019",
+    "codice_catastale": "C901",
+    "popolazione": 3707,
+    "superficie_kmq": 21.74,
+    "densita": 170.5,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "colonnellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "contrade: Giardino",
+      "San Martino",
+      "Vibrata"
+    ],
+    "comuni_confinanti": [
+      "A est: Martinsicuro; a nord: Monteprandone (AP); a ovest: Controguerra",
+      "Corropoli; a sud: Alba Adriatica"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Marzi",
+      "Palazzo Pardi",
+      "Palazzo Volpi",
+      "Villa Ricci"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Cipriano e Giustina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Fonte Vecchia (contrada Giardino)",
+      "Fonte Ottone (contrada San Martino)",
+      "Cisterna Ricci (contrada Vibrata)",
+      "Cisterna Cinicolà (contrada San Martino)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa \"manoppi\" (seconda domenica di luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colledara",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067018",
+    "codice_catastale": "C311",
+    "popolazione": 2161,
+    "superficie_kmq": 19.86,
+    "densita": 108.8,
+    "cap": "64042",
+    "prefisso_telefonico": "0861",
+    "patrono": "Madonna di Costantinopoli",
+    "festa_patronale": "lunedì dopo Pentecoste",
+    "demonimo": "colledaresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso"
+    ],
+    "localita_frazioni": [
+      "Bascianella",
+      "Castiglione della Valle",
+      "Collecastino",
+      "Ornano Grande",
+      "Ornano Piccolo",
+      "Villa Petto"
+    ],
+    "comuni_confinanti": [
+      "Basciano",
+      "Castel Castagna",
+      "Isola del Gran Sasso d'Italia",
+      "Montorio al Vomano",
+      "Tossicia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Paolo",
+      "Chiesa di San Michele Arcangelo (a Castiglione della Valle)",
+      "Chiesa di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della porchetta (ad agosto)",
+      "Lucrezia Borgia a Castiglione della Valle (prima decade di agosto), rievocazione storica"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Civitella del Tronto",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067017",
+    "codice_catastale": "C781",
+    "popolazione": 5036,
+    "superficie_kmq": 77.65,
+    "densita": 64.9,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Ubaldo",
+    "festa_patronale": "16 maggio",
+    "demonimo": "civitellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Laga",
+      "Unione Comuni Città-Territorio Val Vibrata",
+      "Parco Nazionale del Gran Sasso e Monti della Laga",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Borrano",
+      "Cerqueto",
+      "Collebigliano",
+      "Cornacchiano",
+      "Favale",
+      "Fucignano",
+      "Gabbiano",
+      "Lucignano",
+      "Piano Risteccio",
+      "Piano San Pietro",
+      "Ponzano",
+      "Ripe",
+      "Rocche",
+      "Sant'Andrea",
+      "Santa Reparata",
+      "Sant'Eurosia",
+      "Villa Lempa",
+      "Villa Passo"
+    ],
+    "comuni_confinanti": [
+      "Ascoli Piceno (AP)",
+      "Campli",
+      "Folignano (AP)",
+      "Sant'Egidio alla Vibrata",
+      "Sant'Omero",
+      "Valle Castellana"
+    ],
+    "musei": [
+      "Museo Storico delle Armi",
+      "Museo delle arti creative tessili NINA"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento e il Santuario di Santa Maria dei Lumi",
+      "Chiesetta di Santa Maria degli Angeli, detta della Scopa",
+      "Chiesa di San Lorenzo",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Gola del fiume Salinello",
+      "Cascate Kakma"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "A la Corte de lo Governatore (metà agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cermignano",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067016",
+    "codice_catastale": "C517",
+    "popolazione": 1627,
+    "superficie_kmq": 26.09,
+    "densita": 62.4,
+    "cap": "64037",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "cermignanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": [
+      "Montegualtieri",
+      "Poggio delle Rose",
+      "Santa Maria"
+    ],
+    "comuni_confinanti": [
+      "Bisenti",
+      "Canzano",
+      "Castel Castagna",
+      "Castellalto",
+      "Cellino Attanasio",
+      "Penna Sant'Andrea",
+      "Teramo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo De Sterlich",
+      "Palazzo Tartagliozzi"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale Santa Lucia",
+      "Chiesa parrocchiale di San Martino (a Poggio delle Rose)",
+      "Chiesa di Santa Maria ad Martyres (in frazione Santa Maria)",
+      "Chiesa di San'Eustachio"
+    ],
+    "castelli_fortificazioni": [
+      "Torre triangolare (in frazione Montegualtieri)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra delle Fragnaccie (in estate: a luglio o ad agosto). Le Fragnaccie sono un particolare tipo di pasta",
+      "Sagra delle Cantine e Festa della Mietitura (fine giugno), nella frazione di Poggio delle Rose",
+      "Processione del Venerdì Santo, accompagnata da canti",
+      "Festa di Sant'Antonio Abate (fine settimana successivo al 17 gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cellino Attanasio",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067015",
+    "codice_catastale": "C449",
+    "popolazione": 2511,
+    "superficie_kmq": 43.97,
+    "densita": 57.1,
+    "cap": "64036",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Attanasio",
+    "festa_patronale": "2 maggio",
+    "demonimo": "cellinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": [
+      "Faiete",
+      "Scorrano"
+    ],
+    "comuni_confinanti": [
+      "Atri",
+      "Bisenti",
+      "Castellalto",
+      "Castiglione Messer Raimondo",
+      "Cermignano",
+      "Montefino",
+      "Notaresco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria la Nova",
+      "Chiesa e Convento di San Francesco",
+      "Chiesa di Santa Maria di Musano (nella frazione di Scorrano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dei Cingoli (verso fine luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castilenti",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067014",
+    "codice_catastale": "C322",
+    "popolazione": 1456,
+    "superficie_kmq": 23.52,
+    "densita": 61.9,
+    "cap": "64035",
+    "prefisso_telefonico": "0861",
+    "patrono": "Santa Vittoria",
+    "festa_patronale": "23 dicembre",
+    "demonimo": "castilentesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazioni: Villa San Romualdo",
+      "Casabianca;\ncontrade:  Pizzannocca",
+      "Colle dei Galli",
+      "Vicenne",
+      "S. Croce"
+    ],
+    "comuni_confinanti": [
+      "Atri",
+      "Castiglione Messer Raimondo",
+      "Elice (PE)",
+      "Montefino",
+      "Penne (PE)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo De Sterlich"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Vittoria",
+      "Chiesa e Convento di Santa Maria di Monte Uliveto",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Birra (ad agosto)"
+    ],
+    "gemellaggi": [
+      "Bad Groenebach (Baviera",
+      "Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castiglione Messer Raimondo",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067013",
+    "codice_catastale": "C316",
+    "popolazione": 2285,
+    "superficie_kmq": 30.83,
+    "densita": 74.1,
+    "cap": "64034",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Donato Martire",
+    "festa_patronale": "7 agosto",
+    "demonimo": "castiglionesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bisenti",
+      "Castilenti",
+      "Cellino Attanasio",
+      "Montefino",
+      "Penne (PE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelli",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067012",
+    "codice_catastale": "C169",
+    "popolazione": 1129,
+    "superficie_kmq": 49.73,
+    "densita": 22.7,
+    "cap": "64041",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Eusanio",
+    "festa_patronale": "8 maggio",
+    "demonimo": "castellani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso",
+      "Parco Nazionale del Gran Sasso e Monti della Laga",
+      "Associazione Italiana Città della Ceramica (AICC)",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Befaro",
+      "Colledoro",
+      "Palombara",
+      "Santa Maria della Neve",
+      "Villa Rossi"
+    ],
+    "comuni_confinanti": [
+      "Arsita",
+      "Bisenti",
+      "Calascio (AQ)",
+      "Castel Castagna",
+      "Castel del Monte (AQ)",
+      "Castelvecchio Calvisio (AQ)",
+      "Isola del Gran Sasso d'Italia"
+    ],
+    "musei": [
+      "Museo delle Ceramiche"
+    ],
+    "ville_palazzi": [
+      "Casa di Orazio Pompei"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Chiesa di Santa Maria della Lacrima, detta anche della Cona",
+      "Chiesa campestre di San Donato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castellalto",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067011",
+    "codice_catastale": "C128",
+    "popolazione": 7496,
+    "superficie_kmq": 33.82,
+    "densita": 221.6,
+    "cap": "64020",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Giovanni Evangelista",
+    "festa_patronale": "27 dicembre",
+    "demonimo": "castellaltesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": [
+      "Campogrande",
+      "Casemolino",
+      "Castelbasso",
+      "Castelnuovo Vomano",
+      "Feudo",
+      "Guzzano",
+      "Mulano",
+      "Petriccione",
+      "Pianvilla",
+      "Santa Lucia",
+      "Villa Torre"
+    ],
+    "comuni_confinanti": [
+      "Bellante",
+      "Canzano",
+      "Cellino Attanasio",
+      "Cermignano",
+      "Mosciano Sant'Angelo",
+      "Notaresco",
+      "Teramo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Costantini Cancrini (a Castelbasso)"
+    ],
+    "chiese": [
+      "Chiesa romanica di San Pietro (a Castelbasso)",
+      "Chiesa parrocchiale di San Gervasio (a Castelbasso)",
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa di Santa Maria (a Guzzano)",
+      "Chiesa di San Giovanni Evangelista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "San Esteban (Cile)",
+      "dal marzo 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel Castagna",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067010",
+    "codice_catastale": "C040",
+    "popolazione": 491,
+    "superficie_kmq": 17.72,
+    "densita": 27.7,
+    "cap": "64030",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Pietro martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "castagnoli",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gran Sasso"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Ronzano",
+      "Castagna Vecchia",
+      "Chiavoni",
+      "Santa Maria",
+      "Villa Ruzzi",
+      "Scaricasale",
+      "Villa Salsa;\nContrade: Colle Maccarone",
+      "Vasto",
+      "Colle Pizzuto",
+      "Fonte del Colle",
+      "Marconi",
+      "Mulino Vecchio",
+      "Pappafico"
+    ],
+    "comuni_confinanti": [
+      "Basciano",
+      "Bisenti",
+      "Castelli",
+      "Cermignano",
+      "Colledara",
+      "Isola del Gran Sasso d'Italia",
+      "Penna Sant'Andrea"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Pietro Martire",
+      "Chiesa di Santa Maria in Ronzano",
+      "Chiesa della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Canzano",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067009",
+    "codice_catastale": "B640",
+    "popolazione": 1920,
+    "superficie_kmq": 16.88,
+    "densita": 113.7,
+    "cap": "64020",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "canzanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": [
+      "Valle Canzano"
+    ],
+    "comuni_confinanti": [
+      "Castellalto",
+      "Cermignano",
+      "Teramo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Taraschi"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale della Madonna dell'Alno",
+      "Chiesa di San Salvatore",
+      "Chiesa di San Pasquale (in frazione Valle Canzano)",
+      "Cappella dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campli",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067008",
+    "codice_catastale": "B515",
+    "popolazione": 7176,
+    "superficie_kmq": 73.87,
+    "densita": 97.1,
+    "cap": "64012",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "10 maggio",
+    "demonimo": "camplesi",
+    "etimologia": "Si riconduce a campulus, diminutivo del latino campus (pianura, campo).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Laga",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Battaglia",
+      "Campovalano",
+      "Castelnuovo",
+      "Cesenà",
+      "Floriano",
+      "Gagliano",
+      "Garrufo",
+      "Guazzano",
+      "Molviano",
+      "Nocella",
+      "Pagannoni",
+      "Paterno",
+      "Piancarani",
+      "Roiano",
+      "Sant'Onofrio",
+      "Villa Camera"
+    ],
+    "comuni_confinanti": [
+      "Bellante",
+      "Civitella del Tronto",
+      "Sant'Omero",
+      "Teramo",
+      "Torricella Sicura",
+      "Valle Castellana"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale"
+    ],
+    "ville_palazzi": [
+      "Palazzo del Comune o del Parlamento",
+      "detto anche Palazzo Farnese"
+    ],
+    "chiese": [
+      "Chiesa di San Paolo, con la Scala Santa",
+      "Chiesa di San Giovanni (a Castelnuovo)",
+      "Chiesa di San Francesco",
+      "Parrocchiale dei Santi Mariano e Giacomo (a Nocella)",
+      "Chiesa di San Pietro (a Campovalano)",
+      "Collegiata di Santa Maria in Platea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Primo Riccitelli (1875-1941)",
+      "musicista e compositore"
+    ]
+  },
+  {
+    "nome": "Bisenti",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067007",
+    "codice_catastale": "A885",
+    "popolazione": 1925,
+    "superficie_kmq": 30.89,
+    "densita": 62.3,
+    "cap": "64033",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Pasquale Baylon",
+    "festa_patronale": "17 maggio",
+    "demonimo": "bisentini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arsita",
+      "Castel Castagna",
+      "Castelli",
+      "Castiglione Messer Raimondo",
+      "Cellino Attanasio",
+      "Cermignano",
+      "Penne (PE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria degli Angeli",
+      "Chiesa di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Madonna degli Angeli (2 agosto)",
+      "con le \"oblatrici\" in costume"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bellante",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067006",
+    "codice_catastale": "A746",
+    "popolazione": 7152,
+    "superficie_kmq": 49.88,
+    "densita": 143.4,
+    "cap": "64020",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Attanasio",
+    "festa_patronale": "2 maggio",
+    "demonimo": "bellantesi",
+    "etimologia": "Deriva dal nome latino di persona Bellans, -antis, dal sostantivo classico bellans, -antis (combattente).",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Penna Alta",
+      "Ripattoni",
+      "San Mauro"
+    ],
+    "comuni_confinanti": [
+      "Campli",
+      "Castellalto",
+      "Mosciano Sant'Angelo",
+      "Sant'Omero",
+      "Teramo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Saliceti (nella frazione di Ripattoni)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria",
+      "Chiesa di Santa Maria del Herulis o della Misericordia (a Ripattoni)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Basciano",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067005",
+    "codice_catastale": "A692",
+    "popolazione": 2409,
+    "superficie_kmq": 18.64,
+    "densita": 129.2,
+    "cap": "64030",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Flaviano",
+    "festa_patronale": "24 novembre",
+    "demonimo": "bascianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": [
+      "Sant'Agostino",
+      "Santa Maria",
+      "Zampitto",
+      "Tomolati",
+      "Feudo da Sole",
+      "Feudo da Borea",
+      "Pantane",
+      "Sbaragli",
+      "Villa Guidotti",
+      "Vallone",
+      "Pian Mulino",
+      "Villa Frio",
+      "Villa Ginestra",
+      "Villa Colle Portone",
+      "Madonna delle Grazie",
+      "Cretone",
+      "S. Rustico"
+    ],
+    "comuni_confinanti": [
+      "Castel Castagna",
+      "Colledara",
+      "Montorio al Vomano",
+      "Penna Sant'Andrea",
+      "Teramo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria a Porto Lungo, detta anche fuori le mura",
+      "Chiesa di Sant'Agostino (nella frazione omonima)",
+      "Chiesa parrocchiale dedicata a San Flaviano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Atri",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067004",
+    "codice_catastale": "A488",
+    "popolazione": 10720,
+    "superficie_kmq": 91.44,
+    "densita": 117.2,
+    "cap": "64032",
+    "prefisso_telefonico": "085",
+    "patrono": "Santa Reparata",
+    "festa_patronale": "secondo lunedì dopo Pasqua",
+    "demonimo": "atriani",
+    "etimologia": "E' l'antica Hadria o Hatria. L'interpretazione più probabile è quella che lo ritiene derivato da una base preromana connessa al latino ater, nero, scuro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Pineto",
+      "Silvi; a nord: Morro d'Oro",
+      "Notaresco",
+      "Roseto degli Abruzzi; a ovest: Cellino Attanasio",
+      "Montefino; a sud: Castilenti",
+      "Città Sant'Angelo (PE)"
+    ],
+    "musei": [
+      "Museo Capitolare",
+      "Museo Civico Etnografico"
+    ],
+    "ville_palazzi": [
+      "Palazzo dei Duchi Acquaviva"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Agostino",
+      "Basilica Cattedrale Santa Maria Assunta",
+      "Santuario di San Gabriele dell'Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fauni (8 dicembre)",
+      "Corteo Storico della Contea e Apertura della Porta Santa (14 e 15 agosto), con la fiera di ferragosto"
+    ],
+    "gemellaggi": [
+      "Villamagna (Chieti-Abruzzo)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arsita",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067003",
+    "codice_catastale": "A445",
+    "popolazione": 818,
+    "superficie_kmq": 34.04,
+    "densita": 24.0,
+    "cap": "64031",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "10 settembre",
+    "demonimo": "arsitani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Vomano Piomba e Fino",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bisenti",
+      "Castel del Monte (AQ)",
+      "Castelli",
+      "Farindola (PE)",
+      "Penne (PE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Vittoria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ancarano",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067002",
+    "codice_catastale": "A270",
+    "popolazione": 1872,
+    "superficie_kmq": 14.41,
+    "densita": 129.9,
+    "cap": "64010",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Simplicio",
+    "festa_patronale": "29 luglio",
+    "demonimo": "ancaranesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ascoli Piceno (AP)",
+      "Colli del Tronto (AP)",
+      "Controguerra",
+      "Sant'Egidio alla Vibrata",
+      "Spinetoli (AP)",
+      "Torano Nuovo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna della Misericordia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Simplicio (29 luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alba Adriatica",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067001",
+    "codice_catastale": "A125",
+    "popolazione": 12430,
+    "superficie_kmq": 9.5,
+    "densita": 1308.4,
+    "cap": "64011",
+    "prefisso_telefonico": "0861",
+    "patrono": "Sant'Eufemia",
+    "festa_patronale": "16 settembre",
+    "demonimo": "albensi",
+    "etimologia": "Anticamente denominato Alba Fucens o Fucentia, dalla voce prelatina alpa o alba che significa \"altura, monte\". La specifica si riferisce alla sua posizione geografica.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Unione Comuni Città-Territorio Val Vibrata"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Colonnella",
+      "Corropoli",
+      "Martinsicuro",
+      "Tortoreto"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Chiarugi",
+      "Villa Palma",
+      "Villa Zanoni"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale dell'Immacolata",
+      "Chiesa di Sant'Eufemia",
+      "Chiesa di Sant'Angelo Abbamano",
+      "Chiesa di San Vincenzo Ferreri"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Teramo",
+    "provincia": "Teramo",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "067041",
+    "codice_catastale": "L103",
+    "popolazione": 54775,
+    "superficie_kmq": 151.88,
+    "densita": 360.6,
+    "cap": "64100",
+    "prefisso_telefonico": "0861",
+    "patrono": "San Berardo di Teramo",
+    "festa_patronale": "19 dicembre",
+    "demonimo": "teramani",
+    "etimologia": "Deriva dalla sua denominazione antica: Interamna deriva dal latino inter amnes, ossia tra i fiumi.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Cannelli",
+      "Caprafico",
+      "Castagneto",
+      "Castrogno",
+      "Cavuccio",
+      "Cerreto",
+      "Chiareto",
+      "Colle Santa Maria",
+      "Colleminuccio",
+      "Forcella",
+      "Frondarola",
+      "Garrano Alto",
+      "Garrano Basso",
+      "Magnanella",
+      "Miano",
+      "Monticelli",
+      "Nepezzano",
+      "Piano D'Accio",
+      "Piano della Lenta",
+      "Poggio Cono",
+      "Poggio San Vittorino",
+      "Putignano",
+      "Rapino",
+      "Rocciano",
+      "Rupo",
+      "San Nicolò a Tordino",
+      "Sant'Atto",
+      "Sardinara",
+      "Scapriano",
+      "Sciusciano",
+      "Spiano",
+      "Valle San Giovanni",
+      "Varano",
+      "Villa Falchini",
+      "Villa Gesso",
+      "Villa Pavone",
+      "Villa Pompetti",
+      "Villa Ripa",
+      "Villa Romita",
+      "Villa Schiavoni",
+      "Villa Stanghieri",
+      "Villa Tofo",
+      "Villa Tordinia",
+      "Villa Turri - Ferretti",
+      "Villa Viola",
+      "Villa Vomano"
+    ],
+    "comuni_confinanti": [
+      "Basciano",
+      "Bellante",
+      "Campli",
+      "Canzano",
+      "Castellalto",
+      "Cermignano",
+      "Cortino",
+      "Montorio al Vomano",
+      "Penna Sant'Andrea",
+      "Torricella Sicura"
+    ],
+    "musei": [
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": [
+      "Palazzo del Convitto Nazionale \"Melchiorre Delfico\""
+    ],
+    "chiese": [
+      "Santuario Santa Maria delle Grazie :: Frati Minori Francescani",
+      "Chiesa di Sant'Agostino, in origine di San Giacomo",
+      "Chiesa di Santa Maria del Carmine",
+      "Chiesa di San Domenico",
+      "Chiesa dell'Annunziata",
+      "Chiesa dei Cappuccini, già San Benedetto",
+      "Cappella del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio Astronomico Collurania di Teramo"
+    ],
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": [
+      "Stadio Comunale Teramo"
+    ],
+    "eventi_feste_sagre": [
+      "Trionfi della Pace (26 luglio), festa rinascimentale",
+      "Processione della Desolata (Venerdì Santo)",
+      "Festa della Pace (ultima domenica di aprile)",
+      "Ballo dell'Insegna a Forcella (23-24 settembre)"
+    ],
+    "gemellaggi": [
+      "Strovolos (Cipro)",
+      "Praga 7 (Repubblica Ceca)",
+      "Memmingen (Germania)",
+      "Rishon Lezion (Israele)",
+      "Berane (Serbia Montenegro)",
+      "Gorzow (Polonia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Giuseppe Bonolis (1800-1851), pittore",
+      "Vincenzo Cerulli (1859-1927), astronomo, fondatore dell'Osservatorio di Collurania"
+    ]
+  }
+]

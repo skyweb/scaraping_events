@@ -1,0 +1,1570 @@
+[
+  {
+    "nome": "Valsinni",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077030",
+    "codice_catastale": "D513",
+    "popolazione": 1506,
+    "superficie_kmq": 31.97,
+    "densita": 47.1,
+    "cap": "75029",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Fabiano",
+    "festa_patronale": "10 maggio",
+    "demonimo": "valsinnesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Basso Sinni",
+      "Parco Nazionale del Pollino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Colobraro",
+      "Nocara (CS)",
+      "Nova Siri",
+      "Rotondella",
+      "San Giorgio Lucano",
+      "Senise (PZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre di Santa Maria Assunta",
+      "Cappella dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tursi",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077029",
+    "codice_catastale": "L477",
+    "popolazione": 4989,
+    "superficie_kmq": 156.05,
+    "densita": 32.0,
+    "cap": "75028",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Filippo Neri",
+    "festa_patronale": "26 maggio",
+    "demonimo": "tursitani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Basso Sinni"
+    ],
+    "localita_frazioni": [
+      "Caprarico",
+      "Panevino"
+    ],
+    "comuni_confinanti": [
+      "Colobraro",
+      "Montalbano Jonico",
+      "Policoro",
+      "Rotondella",
+      "Sant'Arcangelo (PZ)",
+      "Scanzano Jonico",
+      "Stigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Maria SS. Regina di Anglona",
+      "Pontificia Basilica Minore Santuario Maria SS. d'Anglona \"della Natività di Maria\" (in Contrada Anglona)",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Filippo Neri (1661)",
+      "Chiesa di Maria SS. Regina del Mondo (in Località Caprarico Centro)",
+      "Chiesa Cattedrale dell'Annunziata",
+      "Chiesa della Madonna del Rosario (in Contrada Panevino)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tricarico",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077028",
+    "codice_catastale": "L418",
+    "popolazione": 5292,
+    "superficie_kmq": 176.93,
+    "densita": 29.9,
+    "cap": "75019",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Potito",
+    "festa_patronale": "14 gennaio",
+    "demonimo": "tricaricesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Medio Basento"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albano di Lucania (PZ)",
+      "Brindisi Montagna (PZ)",
+      "Calciano",
+      "Grassano",
+      "Grottole",
+      "Irsina",
+      "San Chirico Nuovo (PZ)",
+      "Tolve (PZ)",
+      "Vaglio Basilicata (PZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ducale"
+    ],
+    "chiese": [
+      "Convento di Sant'Antonio da Padova (nel rione Santa Maria)",
+      "Chiesa di Santa Maria del Carmine",
+      "Chiesa di Santa Chiara",
+      "Cattedrale dedicata a Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Stigliano",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077027",
+    "codice_catastale": "I954",
+    "popolazione": 4223,
+    "superficie_kmq": 209.96,
+    "densita": 20.1,
+    "cap": "75018",
+    "prefisso_telefonico": "0835",
+    "patrono": "Sant'Antonio da Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "stiglianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Collina Materana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accettura",
+      "Aliano",
+      "Cirigliano",
+      "Craco",
+      "Gorgoglione",
+      "Montalbano Jonico",
+      "San Mauro Forte",
+      "Sant'Arcangelo (PZ)",
+      "Tursi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre di Santa Maria Assunta",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Santa Teresa",
+      "Chiesa del Sacro Cuore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scanzano Jonico",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077031",
+    "codice_catastale": "M256",
+    "popolazione": 7564,
+    "superficie_kmq": 71.5,
+    "densita": 105.8,
+    "cap": "75020",
+    "prefisso_telefonico": "0835",
+    "patrono": "Maria SS. Annunziata",
+    "festa_patronale": "25 marzo",
+    "demonimo": "scanzanesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Recoleta centro",
+      "Parisi",
+      "Terzo Cavone"
+    ],
+    "comuni_confinanti": [
+      "Montalbano Jonico",
+      "Pisticci",
+      "Policoro",
+      "Tursi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale",
+      "detto Palazzaccio"
+    ],
+    "chiese": [
+      "Chiesa SS. Medici (località: Parisi)",
+      "Chiesa parrocchiale San Giulio I Papa (località: Terzo Cavone)",
+      "Chiesa Madre dell'Annunziata",
+      "Chiesa di San Giuseppe (località Recoleta centro)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Parco Archeologico Termitito"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Asquelon (Israele)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Mauro Forte",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077026",
+    "codice_catastale": "I029",
+    "popolazione": 1505,
+    "superficie_kmq": 86.89,
+    "densita": 17.3,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Mauro",
+    "festa_patronale": "23 maggio",
+    "demonimo": "sanmauresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Collina Materana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accettura",
+      "Craco",
+      "Ferrandina",
+      "Garaguso",
+      "Oliveto Lucano",
+      "Salandra",
+      "Stigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria",
+      "Chiesa di San Rocco",
+      "Chiesa della SS. Annunziata",
+      "Cappella di Santa Maria del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giorgio Lucano",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077025",
+    "codice_catastale": "H888",
+    "popolazione": 1199,
+    "superficie_kmq": 38.94,
+    "densita": 30.8,
+    "cap": "75027",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "sangiorgiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Basso Sinni",
+      "Parco Nazionale del Pollino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cersosimo (PZ)",
+      "Nocara (CS)",
+      "Noepoli (PZ)",
+      "Oriolo (CS)",
+      "Senise (PZ)",
+      "Valsinni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cappella della Madonna delle Grazie",
+      "Chiesa Parrocchiale",
+      "Santuario della Madonna del Pantano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Salandra",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077024",
+    "codice_catastale": "H687",
+    "popolazione": 2796,
+    "superficie_kmq": 77.09,
+    "densita": 36.3,
+    "cap": "75017",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "salandresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "località Montagnola"
+    ],
+    "comuni_confinanti": [
+      "Ferrandina",
+      "Garaguso",
+      "Grassano",
+      "Grottole",
+      "San Mauro Forte"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre della SS. Trinità",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di San Rocco",
+      "Chiesetta di Santa Maria l'Arabita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rotondella",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077023",
+    "codice_catastale": "H591",
+    "popolazione": 2618,
+    "superficie_kmq": 76.9,
+    "densita": 34.0,
+    "cap": "75026",
+    "prefisso_telefonico": "0835",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "rotondellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Basso Sinni"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Policoro; a nord-est: Colobraro",
+      "Tursi; a ovest: Valsinni; a sud: Nova Siri"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale Albisinno"
+    ],
+    "chiese": [
+      "Chiesetta della Madonna del Lauro",
+      "Chiesa Parrocchiale di Sant'Antonio da Padova",
+      "Chiesa Madre Santa Maria delle Grazie",
+      "Chiesa dell'Annunziata (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Sant'Antonio Abate (16-17 gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pomarico",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077022",
+    "codice_catastale": "G806",
+    "popolazione": 4117,
+    "superficie_kmq": 128.74,
+    "densita": 32.0,
+    "cap": "75016",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "pomaricani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ferrandina",
+      "Miglionico",
+      "Montescaglioso",
+      "Pisticci"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Donnaperna",
+      "noto come il Palazzo Marchesale"
+    ],
+    "chiese": [
+      "Chiesa della Madonna del Monte",
+      "Chiesa Madre dedicata a San Michele Arcangelo",
+      "Chiesa Madonna del Rosario",
+      "Chiesa di Sant'Antonio",
+      "Chiesa dell'Addolorata (XVI secolo)",
+      "Chiesa di San Rocco (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Policoro",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077021",
+    "codice_catastale": "G786",
+    "popolazione": 17532,
+    "superficie_kmq": 67.31,
+    "densita": 260.5,
+    "cap": "75025",
+    "prefisso_telefonico": "0835",
+    "patrono": "Madonna del Ponte",
+    "festa_patronale": "terza domenica di maggio",
+    "demonimo": "policoresi",
+    "etimologia": "Deriva dal greco poluchoros, spazioso.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Rotondella",
+      "Scanzano Jonico",
+      "Tursi"
+    ],
+    "musei": [
+      "Museo Nazionale della Siritide"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria d'Anglona",
+      "Santuario della Madonna del Ponte (XVIII secolo)",
+      "Chiesa del Buon Pastore"
+    ],
+    "castelli_fortificazioni": [
+      "Palazzo Baronale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Oasi del Bosco di Policoro"
+    ],
+    "luoghi_interesse": [
+      "Giardini Murati"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Banesti (Romania)",
+      "dal 2011"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pisticci",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077020",
+    "codice_catastale": "G712",
+    "popolazione": 17715,
+    "superficie_kmq": 231.39,
+    "densita": 76.6,
+    "cap": "75015",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "pisticcesi",
+    "etimologia": "Dal verbo latino pistare con un significato legato all'ambito agricolo, nel senso di \"terreno coltivato\".",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bernalda",
+      "Craco",
+      "Ferrandina",
+      "Montalbano Jonico",
+      "Montescaglioso",
+      "Pomarico",
+      "Scanzano Jonico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre, dedicata ai Santi Pietro e Paolo",
+      "Chiesa di Sant'Antonio",
+      "Chiesa dell'Immacolata Concezione",
+      "Chiesa del Purgatorio o di San Rocco",
+      "Abbazia di Santa Maria La Sanità del Casale, già Cenobio basiliano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Oliveto Lucano",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077019",
+    "codice_catastale": "G037",
+    "popolazione": 430,
+    "superficie_kmq": 31.47,
+    "densita": 13.7,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Cipriano",
+    "festa_patronale": "12 agosto",
+    "demonimo": "olivetesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Medio Basento",
+      "Parco Gallipoli Cognato e Piccole Dolomiti Lucane"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accettura",
+      "Calciano",
+      "Garaguso",
+      "San Mauro Forte"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Maria SS.ma delle Grazie",
+      "Chiesa di Santa Maria di Piano di Campo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nova Siri",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077018",
+    "codice_catastale": "A942",
+    "popolazione": 6780,
+    "superficie_kmq": 52.1,
+    "densita": 130.1,
+    "cap": "75020",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "novasiresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Basso Sinni",
+      "Associazione Borghi Autentici d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Canna (CS)",
+      "Nocara (CS)",
+      "Rocca Imperiale (CS)",
+      "Rotondella",
+      "Valsinni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova (1953)",
+      "Cappella di Maria SS. Annunziata, detta anche Madonna della Sulla",
+      "Chiesa Madre di Santa Maria Assunta",
+      "Cappella dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montescaglioso",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077017",
+    "codice_catastale": "F637",
+    "popolazione": 9940,
+    "superficie_kmq": 173.26,
+    "densita": 57.4,
+    "cap": "75024",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Rocco",
+    "festa_patronale": "20 agosto",
+    "demonimo": "montesi",
+    "etimologia": "E' un composto di \"monte\" e dell'aggettivo latino scabiosus, scabbioso, con riferimento all'aspetto aspro del territorio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco archeologico storico naturale delle Chiese rupestri del Materano (Murgia Materana)",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bernalda",
+      "Ginosa (TA)",
+      "Matera",
+      "Miglionico",
+      "Pisticci",
+      "Pomarico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa SS. Concezione (XVI secolo)",
+      "Chiesa Madre intitolata a San Pietro e San Paolo",
+      "Chiesa di Santo Stefano",
+      "Chiesa di Sant'Agostino",
+      "Chiesa di San Rocco",
+      "Chiesa di San Francesco o dei Cappuccini",
+      "Chiesa della Madonna delle Grazie",
+      "Abbazia benedettina di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montalbano Jonico",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077016",
+    "codice_catastale": "F399",
+    "popolazione": 7264,
+    "superficie_kmq": 132.94,
+    "densita": 54.6,
+    "cap": "75023",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Maurizio",
+    "festa_patronale": "22 settembre",
+    "demonimo": "montalbanesi",
+    "etimologia": "Attestato come Montem Albanum, è un composto di \"monte\" e del nome latino di persona Albus, con l'aggiunta del suffisso -anus che indica appartenenza. La specifica, aggiunta nel 1863, si riferisce alla vicinanza al Mar Ionio.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Craco",
+      "Pisticci",
+      "Scanzano Jonico",
+      "Stigliano",
+      "Tursi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre di Santa Maria dell'Episcopio (1534)",
+      "Chiesa di San Rocco (ex Convento Cappuccini)",
+      "Chiesa dello Spirito Santo (XX secolo)",
+      "Cappella di Santa Maria d'Andria",
+      "Cappella di San Gennaro (1846)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Miglionico",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077015",
+    "codice_catastale": "F201",
+    "popolazione": 2497,
+    "superficie_kmq": 88.92,
+    "densita": 28.1,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "miglionichesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ferrandina",
+      "Grottole",
+      "Matera",
+      "Montescaglioso",
+      "Pomarico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cappella della SS. Trinità",
+      "Santuario della Madonna delle Grazie (in località Porticella)",
+      "Chiesa Madre di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": [
+      "Castello del Malconsiglio"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Irsina",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077013",
+    "codice_catastale": "E326",
+    "popolazione": 4972,
+    "superficie_kmq": 262.21,
+    "densita": 19.0,
+    "cap": "75022",
+    "prefisso_telefonico": "0835",
+    "patrono": "Sant'Eufemia",
+    "festa_patronale": "16 settembre",
+    "demonimo": "irsinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord-est: Gravina in Puglia (BA); a nord-ovest: Genzano di Lucania (PZ)",
+      "Oppido Lucano (PZ)",
+      "Tolve (PZ); a sud: Grassano",
+      "Grottole",
+      "Tricarico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Purgatorio (XVII secolo)",
+      "Chiesa di Sant'Agostino",
+      "Chiesa del Convento di San Francesco (XIII secolo)",
+      "Cattedrale della Madonna dell'Assunta",
+      "Cappella dell'Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sant'Angelo del Pesco (Isernia - Molise)",
+      "Sassuolo (Modena - Emilia-Romagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grottole",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077012",
+    "codice_catastale": "E213",
+    "popolazione": 2186,
+    "superficie_kmq": 115.88,
+    "densita": 18.9,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "grottolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ferrandina",
+      "Grassano",
+      "Gravina in Puglia (BA)",
+      "Irsina",
+      "Matera",
+      "Miglionico",
+      "Salandra"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Labella Danzi"
+    ],
+    "chiese": [
+      "Chiesa Madre di Santa Maria Maggiore",
+      "Monastero dei Frati Cappuccini (in contrada Seria)",
+      "Chiesa di San Rocco (già Santa Maria la Grotta)",
+      "Chiesa di San Pietro Apostolo (XVII secolo)",
+      "Chiesa della Santissima Trinità",
+      "Santuario di Sant'Antuono Abate"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Grottole"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grassano",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077011",
+    "codice_catastale": "E147",
+    "popolazione": 5112,
+    "superficie_kmq": 41.08,
+    "densita": 124.4,
+    "cap": "75014",
+    "prefisso_telefonico": "0835",
+    "patrono": "Sant'Innocenzo",
+    "festa_patronale": "22 settembre",
+    "demonimo": "grassanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Garaguso",
+      "Grottole",
+      "Irsina",
+      "Salandra",
+      "Tricarico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ferri",
+      "Palazzo Materi",
+      "Palazzo Ruggiero",
+      "Palazzo Schiavone"
+    ],
+    "chiese": [
+      "Chiesa Madre dedicata a San Giovanni Battista (XVII secolo)",
+      "Chiesa di Santa Maria della Neve",
+      "Chiesa della Madonna del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gorgoglione",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077010",
+    "codice_catastale": "E093",
+    "popolazione": 977,
+    "superficie_kmq": 34.22,
+    "densita": 28.6,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "gorgoglionesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Collina Materana"
+    ],
+    "localita_frazioni": [
+      "Abate Lupo",
+      "Sant'Angelo",
+      "Croce San Canio"
+    ],
+    "comuni_confinanti": [
+      "Aliano",
+      "Cirigliano",
+      "Corleto Perticara (PZ)",
+      "Guardia Perticara (PZ)",
+      "Missanello (PZ)",
+      "Pietrapertosa (PZ)",
+      "Stigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna di Pergamo",
+      "Chiesa Madre dedicata a Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta dei Briganti",
+      "Bosco le Manche"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna del Pergamo (11-12 giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Garaguso",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077009",
+    "codice_catastale": "D909",
+    "popolazione": 1055,
+    "superficie_kmq": 38.58,
+    "densita": 27.3,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Gaudenzio",
+    "festa_patronale": "24 settembre",
+    "demonimo": "garagusani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Medio Basento"
+    ],
+    "localita_frazioni": [
+      "Borgo Garaguso",
+      "Parata"
+    ],
+    "comuni_confinanti": [
+      "Calciano",
+      "Grassano",
+      "Oliveto Lucano",
+      "Salandra",
+      "San Mauro Forte"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre dedicata a San Nicola di Myra",
+      "Cappella della Madonna delle Puglie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ferrandina",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077008",
+    "codice_catastale": "D547",
+    "popolazione": 8727,
+    "superficie_kmq": 215.55,
+    "densita": 40.5,
+    "cap": "75013",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "ferrandinesi",
+    "etimologia": "Si crede derivato dal nome di Ferrante, padre di Federico d'Aragona che fondò il paese intorno al 1490.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Borgo Macchia"
+    ],
+    "comuni_confinanti": [
+      "Craco",
+      "Grottole",
+      "Miglionico",
+      "Pisticci",
+      "Pomarico",
+      "Salandra",
+      "San Mauro Forte"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Cantorio"
+    ],
+    "chiese": [
+      "Chiesa del Purgatorio",
+      "Cappella di Santa Maria della Consolazione (in contrada La Foresta)",
+      "Cappella della Madonna dei Mali",
+      "Chiesa di Santa Chiara",
+      "Chiesa di Sant'Antonio (in zona Salita Cappuccini)",
+      "Chiesa di San Domenico",
+      "Convento di San Francesco (1614)",
+      "Chiesa Madre di Santa Maria della Croce, dedicata a San Lorenzo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello d'Uggiano (ruderi)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Craco",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077007",
+    "codice_catastale": "D128",
+    "popolazione": 726,
+    "superficie_kmq": 76.28,
+    "densita": 9.5,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Nicola",
+    "festa_patronale": "secondo sabato di ottobre",
+    "demonimo": "crachesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Collina Materana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ferrandina",
+      "Montalbano Jonico",
+      "Pisticci",
+      "San Mauro Forte",
+      "Stigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Maris Stella",
+      "Chiesa di San Vincenzo",
+      "Chiesa di San Nicola Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colobraro",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077006",
+    "codice_catastale": "C888",
+    "popolazione": 1243,
+    "superficie_kmq": 65.93,
+    "densita": 18.9,
+    "cap": "75021",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Nicola",
+    "festa_patronale": "24 maggio",
+    "demonimo": "colobraresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Basso Sinni"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Rotondella",
+      "Sant'Arcangelo (PZ)",
+      "Senise (PZ)",
+      "Tursi",
+      "Valsinni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Nicola (XII secolo)",
+      "Chiesa di Sant'Antonio",
+      "Cappella di Santa Maria di Cironofrio, dedicata ora a Santa Maria della Neve",
+      "Cappella di San Rocco (XVIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cirigliano",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077005",
+    "codice_catastale": "C723",
+    "popolazione": 369,
+    "superficie_kmq": 14.93,
+    "densita": 24.7,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "ciriglianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Collina Materana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accettura",
+      "Gorgoglione",
+      "Pietrapertosa (PZ)",
+      "Stigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cappella dell'Addolorata",
+      "Chiesa Madre di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Baronale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calciano",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077004",
+    "codice_catastale": "B391",
+    "popolazione": 757,
+    "superficie_kmq": 48.68,
+    "densita": 15.6,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "Maria SS. della Serra",
+    "festa_patronale": "8 settembre",
+    "demonimo": "calcianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Medio Basento",
+      "Parco Gallipoli Cognato e Piccole Dolomiti Lucane"
+    ],
+    "localita_frazioni": [
+      "Parata"
+    ],
+    "comuni_confinanti": [
+      "Accettura",
+      "Albano di Lucania (PZ)",
+      "Campomaggiore (PZ)",
+      "Garaguso",
+      "Grassano",
+      "Oliveto Lucano",
+      "Tricarico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bernalda",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077003",
+    "codice_catastale": "A801",
+    "popolazione": 12445,
+    "superficie_kmq": 126.72,
+    "densita": 98.2,
+    "cap": "75012",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Bernardino",
+    "festa_patronale": "20 agosto",
+    "demonimo": "bernaldesi",
+    "etimologia": "Deriva il nome da Bernardino de Bernaudo, segretario dei re aragonesi, fondatore della cittadina nel 1470.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Metaponto",
+      "Serramarina",
+      "Spineto"
+    ],
+    "comuni_confinanti": [
+      "Ginosa (TA)",
+      "Montescaglioso",
+      "Pisticci"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale di Metaponto"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "Chiesa di San Rocco (1540)",
+      "Chiesa di San Donato",
+      "Chiesa di San Bernardino (XVI secolo)",
+      "Chiesa della Madonna degli Angeli",
+      "Chiesa del Carmine",
+      "Chiesa dei Santi Medici"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aliano",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077002",
+    "codice_catastale": "A196",
+    "popolazione": 975,
+    "superficie_kmq": 96.29,
+    "densita": 10.1,
+    "cap": "75010",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Luigi Gonzaga",
+    "festa_patronale": "21 giugno",
+    "demonimo": "alianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Collina Materana",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Alianello Nuovo",
+      "Alianello di Sotto"
+    ],
+    "comuni_confinanti": [
+      "Gorgoglione",
+      "Missanello (PZ)",
+      "Roccanova (PZ)",
+      "Sant'Arcangelo (PZ)",
+      "Stigliano"
+    ],
+    "musei": [
+      "Museo Storico \"Carlo Levi\"",
+      "Museo della Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria della Stella",
+      "Chiesa di San Luigi Gonzaga"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Accettura",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077001",
+    "codice_catastale": "A017",
+    "popolazione": 1823,
+    "superficie_kmq": 89.27,
+    "densita": 20.4,
+    "cap": "75011",
+    "prefisso_telefonico": "0835",
+    "patrono": "San Giuliano",
+    "festa_patronale": "27 gennaio",
+    "demonimo": "accetturesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Collina Materana",
+      "Parco Gallipoli Cognato e Piccole Dolomiti Lucane"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calciano",
+      "Campomaggiore (PZ)",
+      "Cirigliano",
+      "Oliveto Lucano",
+      "Pietrapertosa (PZ)",
+      "San Mauro Forte",
+      "Stigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchia di Sant'Antonio",
+      "Chiesa Madre di San Nicola di Bari",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "San Giuliano - Festa del Maggio (domenica di Ascensione e di Pentecoste)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Matera",
+    "provincia": "Matera",
+    "regione": "Basilicata",
+    "zona": "Italia Meridionale",
+    "codice_istat": "077014",
+    "codice_catastale": "F052",
+    "popolazione": 60351,
+    "superficie_kmq": 388.14,
+    "densita": 155.5,
+    "cap": "75100",
+    "prefisso_telefonico": "0835",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "materani",
+    "etimologia": "Deriva dal latino materies e materia, \"legname da lavoro\", o da una base mat, altura.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco archeologico storico naturale delle Chiese rupestri del Materano (Murgia Materana)",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Altamura (BA)",
+      "Ginosa (TA)",
+      "Gravina in Puglia (BA)",
+      "Grottole",
+      "Laterza (TA)",
+      "Miglionico",
+      "Montescaglioso",
+      "Santeramo in Colle (BA)"
+    ],
+    "musei": [
+      "Museo Nazionale \"Domenico Ridola\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Francesco di Paola :: Frati Minimi"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Tramontano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Kennedy",
+      "Teatro Duni"
+    ],
+    "stadi": [
+      "Stadio XXI Settembre"
+    ],
+    "eventi_feste_sagre": [
+      "Festa di Maria SS. della Bruna (2 luglio)",
+      "Festa della Crapiata (primo agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

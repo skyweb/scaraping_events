@@ -1,0 +1,16 @@
+{
+  "nome": "Cagliari",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "CA",
+  "codice_istat": "092",
+  "popolazione": 560373,
+  "popolazione_maschi": 273593,
+  "popolazione_femmine": 286780,
+  "superficie_kmq": 4569.56,
+  "densita": 122.6,
+  "num_comuni": 71,
+  "capoluogo": "Cagliari",
+  "iso_3166_2": "IT-CA",
+  "nuts": "ITG27"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Sassari",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "SS",
+  "codice_istat": "090",
+  "popolazione": 333116,
+  "popolazione_maschi": 162846,
+  "popolazione_femmine": 170270,
+  "superficie_kmq": 4282.14,
+  "densita": 77.8,
+  "num_comuni": 66,
+  "capoluogo": "Sassari",
+  "iso_3166_2": "IT-SS",
+  "nuts": "ITG25"
+}

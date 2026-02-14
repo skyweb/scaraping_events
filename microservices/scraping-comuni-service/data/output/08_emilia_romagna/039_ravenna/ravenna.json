@@ -1,0 +1,16 @@
+{
+  "nome": "Ravenna",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "RA",
+  "codice_istat": "039",
+  "popolazione": 391414,
+  "popolazione_maschi": 190055,
+  "popolazione_femmine": 201359,
+  "superficie_kmq": 1858.49,
+  "densita": 210.6,
+  "num_comuni": 18,
+  "capoluogo": "Ravenna",
+  "iso_3166_2": "IT-RA",
+  "nuts": "ITD57"
+}

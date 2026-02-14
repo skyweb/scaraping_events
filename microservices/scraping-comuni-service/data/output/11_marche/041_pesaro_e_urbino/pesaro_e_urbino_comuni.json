@@ -1,0 +1,3355 @@
+[
+  {
+    "nome": "Vallefoglia",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041068",
+    "codice_catastale": "M331",
+    "popolazione": 15016,
+    "superficie_kmq": 39.23,
+    "densita": 382.8,
+    "cap": "61022",
+    "prefisso_telefonico": "0721",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": null,
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Pian del Bruscolo",
+      "Associazione Nazionale Città dell'Olio",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "borghi: Montefabbri;\nfrazioni: Bottega",
+      "Cappone",
+      "Colbordolo",
+      "Montecchio",
+      "Montefabbri",
+      "Morciola",
+      "Talacchio;\nlocalità:Coldazzo",
+      "Mulino Ruggeri",
+      "Pontevecchio",
+      "Coldelce"
+    ],
+    "comuni_confinanti": [
+      "Montecalvo in Foglia",
+      "Monteciccardo",
+      "Montegridolfo (RN)",
+      "Montelabbate",
+      "Pesaro",
+      "Petriano",
+      "Tavullia",
+      "Urbino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Mamiani",
+      "Villa Carelli",
+      "Villa Perticari",
+      "Villa Fantaguzzi"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Gaudenzio Martire",
+      "Chiesa abbaziale di Sant’Egidio",
+      "Abbadia di San Tommaso in Foglia",
+      "Chiesetta della Madonna del Monte",
+      "Collegiata di San Michele Arcangelo",
+      "Chiesa parrocchiale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Colbordolo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Vecchia Fonte",
+      "Mulino di Ponte Vecchio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Urbino",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041067",
+    "codice_catastale": "L500",
+    "popolazione": 14844,
+    "superficie_kmq": 228.07,
+    "densita": 65.1,
+    "cap": "61029",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Crescentino",
+    "festa_patronale": "primo giugno",
+    "demonimo": "urbinati",
+    "etimologia": "Deriva dall'antico nome del centro, Urvinum Mataurense o Mataurense (del Metauro), dove Urvinates (nome di origine umbra) fa riferimento al nome della popolazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": [
+      "Ca' Mazzasette",
+      "Canavaccio",
+      "Castelboccione",
+      "Cavallino",
+      "Cavaticci",
+      "Cerquetobono",
+      "Coldelce",
+      "Colonna",
+      "Crocicchia",
+      "Forquini",
+      "Fornace",
+      "Gadana",
+      "Ghiaiolo",
+      "Girfalco",
+      "Maciolla",
+      "Marcella",
+      "Mazzaferro",
+      "Miniera",
+      "Monteavorio",
+      "Montecalende",
+      "Monteolivo",
+      "Monte Polo",
+      "Montesoffio",
+      "Paganico",
+      "Palazzo del Piano",
+      "Pallino",
+      "Pantiere",
+      "Pieve di Cagna",
+      "Pozzuolo",
+      "Rancitella",
+      "Repuglia",
+      "S.S. Annunziata",
+      "Santa Maria delle Selve",
+      "San Donato",
+      "Sasso",
+      "Schieti",
+      "Scotaneto",
+      "San Marino",
+      "Torre",
+      "Tortorina",
+      "Trasanni",
+      "Tufo",
+      "Viapiana",
+      "Villa Croce"
+    ],
+    "comuni_confinanti": [
+      "A est: Fossombrone",
+      "Isola del Piano",
+      "Monteciccardo",
+      "Montefelcino",
+      "Montelabbate",
+      "Petriano; a nord: Auditore",
+      "Lunano",
+      "Mondaino (RN)",
+      "Montecalvo in Foglia",
+      "Sassocorvaro",
+      "Tavoleto",
+      "Vallefoglia; a ovest: Piandimeleto",
+      "Sant'Angelo in Vado; a sud: Acqualagna",
+      "Fermignano",
+      "Peglio",
+      "Urbania"
+    ],
+    "musei": [
+      "Museum Graphia",
+      "Museo Lapidario",
+      "Museo Diocesano \"Albani\"",
+      "Museo della Città (palazzo Bonaventura Odasi)",
+      "Galleria Nazionale delle Marche",
+      "Casa Natale di Raffaello"
+    ],
+    "ville_palazzi": [
+      "Palazzo Corboli",
+      "Palazzo Albani, in via Bramante",
+      "Palazzo Bonaventura",
+      "Palazzo Ducale",
+      "Palazzo Bonaventura Odasi",
+      "Palazzo Veterani"
+    ],
+    "chiese": [
+      "Oratorio di Sant'Andrea Avellino, in origine titolato a San Sebastiano",
+      "Oratorio di San Giuseppe",
+      "Oratorio di San Giovanni",
+      "Oratorio delle Cinque Piaghe, in via Barocci",
+      "Monastero di Santa Caterina, in via Saffi",
+      "Chiesa di Santo Spirito",
+      "Chiesa di San Francesco, in via Raffaello",
+      "Chiesa di San Domenico (sconsacrata), in piazza Rinascimento",
+      "Chiesa di San Bernardino",
+      "Chiesa del Corpus Domini",
+      "Chiesa degli Scalzi, in via dei Maceri",
+      "Cattedrale, in via Puccinotti"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza dell'Albornoz"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico Pierina Scaramella"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Sanzio"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dell'Aquilone (primo fine settimana di settembre)",
+      "Festa del Duca (terza domenica di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Valentino Rossi (1979-)",
+      "campione di motociclismo"
+    ]
+  },
+  {
+    "nome": "Urbania",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041066",
+    "codice_catastale": "L498",
+    "popolazione": 7071,
+    "superficie_kmq": 77.79,
+    "densita": 90.9,
+    "cap": "61049",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Cristoforo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "urbaniesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro",
+      "Associazione Italiana Città della Ceramica (AICC)"
+    ],
+    "localita_frazioni": [
+      "Muraglione"
+    ],
+    "comuni_confinanti": [
+      "Acqualagna",
+      "Apecchio",
+      "Cagli",
+      "Fermignano",
+      "Peglio",
+      "Piobbico",
+      "Sant'Angelo in Vado",
+      "Urbino"
+    ],
+    "musei": [
+      "Museo Diocesano",
+      "Museo di Storia dell'Agricoltura e dell'Artigianato",
+      "Museo Civico e Pinacoteca"
+    ],
+    "ville_palazzi": [
+      "Palazzo Signorile Boscarini",
+      "Palazzo Signorile Carrara"
+    ],
+    "chiese": [
+      "Tempietto Votivo dello Spirito Santo",
+      "Santuario del Santissimo Crocifisso di Battaglia",
+      "Oratorio del Corpus Domini, in via Garibaldi",
+      "Oratorio del Carmine, in via Roma",
+      "Monastero delle Clarisse, in via Porta Celle",
+      "Convento di Santa Chiara",
+      "Chiesetta della Madonna dei Cassoni, in via Castel Durante",
+      "Chiesa e Convento di Santa Maria Maddalena",
+      "Chiesa e Convento di San Francesco",
+      "Chiesa di Santa Caterina",
+      "Chiesa del Santissimo Crocifisso, detta dell'Ospedale, già Oratorio della Neve",
+      "Cattedrale, già chiesa abbaziale di San Cristoforo del Ponte, in piazza Duomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro D. Bramante"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tavullia",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041065",
+    "codice_catastale": "L081",
+    "popolazione": 7987,
+    "superficie_kmq": 42.33,
+    "densita": 188.7,
+    "cap": "61010",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "tavulliesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Pian del Bruscolo"
+    ],
+    "localita_frazioni": [
+      "Babbucce",
+      "Belvedere Fogliense",
+      "Case Bernardi",
+      "Monteluro",
+      "Padiglione",
+      "Rio Salso"
+    ],
+    "comuni_confinanti": [
+      "Gradara",
+      "Mondaino (RN)",
+      "Montecalvo in Foglia",
+      "Montegridolfo (RN)",
+      "Montelabbate",
+      "Pesaro",
+      "Saludecio (RN)",
+      "San Giovanni in Marignano (RN)",
+      "Vallefoglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino a Rio Salso (XI secolo)",
+      "Chiesa di San Lorenzo Martire",
+      "Chiesa di San Donato a Belvedere Fogliense",
+      "Chiesa della Madonna del Monte"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tavoleto",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041064",
+    "codice_catastale": "L078",
+    "popolazione": 867,
+    "superficie_kmq": 11.99,
+    "densita": 72.3,
+    "cap": "61020",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "tavoletani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": [
+      "Ripamassana"
+    ],
+    "comuni_confinanti": [
+      "Auditore",
+      "Mercatino Conca",
+      "Mondaino (RN)",
+      "Monte Cerignone",
+      "Montefiore Conca (RN)",
+      "Saludecio (RN)",
+      "Sassocorvaro",
+      "Urbino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serra Sant'Abbondio",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041061",
+    "codice_catastale": "I654",
+    "popolazione": 1012,
+    "superficie_kmq": 32.78,
+    "densita": 30.9,
+    "cap": "61040",
+    "prefisso_telefonico": "0721",
+    "patrono": "Sant'Abbondio",
+    "festa_patronale": "16 settembre",
+    "demonimo": "serrani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano",
+      "Comunità Montana del Catria e Cesano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Frontone",
+      "Pergola",
+      "Sassoferrato (AN)",
+      "Scheggia e Pascelupo (PG)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Eremo camaldolese di Santa Croce di Fonte Avellana",
+      "Chiesa della Canale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sassofeltrio",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041060",
+    "codice_catastale": "I460",
+    "popolazione": 1421,
+    "superficie_kmq": 20.87,
+    "densita": 68.1,
+    "cap": "61013",
+    "prefisso_telefonico": "0541",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "sassofeltresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro",
+      "Unione Comuni San Marino"
+    ],
+    "localita_frazioni": [
+      "Farneto",
+      "Fratte",
+      "Gesso",
+      "Mulino Renzini",
+      "Valle Sant'Anastasio"
+    ],
+    "comuni_confinanti": [
+      "Gemmano (RN)",
+      "Mercatino Conca",
+      "Monte Grimano Terme",
+      "Montescudo - Montecolombo (RN)",
+      "San Leo (RN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Caderzone Terme (Trento-Trentino Alto Adige)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sassocorvaro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041059",
+    "codice_catastale": "I459",
+    "popolazione": 3465,
+    "superficie_kmq": 66.52,
+    "densita": 52.1,
+    "cap": "61028",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "sassocorvaresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": [
+      "Bronzo",
+      "Ca' Guido",
+      "Caprazzino",
+      "Case Nuove",
+      "Celletta",
+      "Fontanelle",
+      "Mercatale",
+      "Piagniano",
+      "San Donato in Taviglione",
+      "Valle Avellana"
+    ],
+    "comuni_confinanti": [
+      "Auditore",
+      "Lunano",
+      "Macerata Feltria",
+      "Mercatino Conca",
+      "Monte Cerignone",
+      "Piandimeleto",
+      "Tavoleto",
+      "Urbino"
+    ],
+    "musei": [
+      "Pinacoteca della Rocca Ubaldinesca",
+      "Museo della Civiltà Contadina"
+    ],
+    "ville_palazzi": [
+      "Palazzo Battelli",
+      "in Via Crescentini"
+    ],
+    "chiese": [
+      "Oratorio della SS. Trinità, in via della Croce",
+      "Collegiata di San Giovanni Battista",
+      "Chiesa di San Giovanni Battista, in piazza Bartolomei"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca degli Ubaldini"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Ippolito",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041058",
+    "codice_catastale": "I344",
+    "popolazione": 1543,
+    "superficie_kmq": 19.74,
+    "densita": 78.2,
+    "cap": "61040",
+    "prefisso_telefonico": "0721",
+    "patrono": "Sant'Ippolito",
+    "festa_patronale": "13 agosto",
+    "demonimo": "santippolitesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Pian di Rose",
+      "Sorbolongo",
+      "Reforzate"
+    ],
+    "comuni_confinanti": [
+      "Barchi",
+      "Colli al Metauro",
+      "Fossombrone",
+      "Fratte Rosa",
+      "Montefelcino",
+      "Orciano di Pesaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giuseppe",
+      "in piazza Della Rocca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Angelo in Vado",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041057",
+    "codice_catastale": "I287",
+    "popolazione": 4088,
+    "superficie_kmq": 67.44,
+    "densita": 60.6,
+    "cap": "61048",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "vadesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": [
+      "Passo Sant'Angelo"
+    ],
+    "comuni_confinanti": [
+      "Apecchio",
+      "Belforte all'Isauro",
+      "Carpegna",
+      "Mercatello sul Metauro",
+      "Peglio",
+      "Piandimeleto",
+      "Urbania",
+      "Urbino"
+    ],
+    "musei": [
+      "Museo Archeologico \"Tifernum Mataurense\"",
+      "\"I Mestieri di una volta\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Della Ragione",
+      "Palazzo Fagnani"
+    ],
+    "chiese": [
+      "Chiesa di Santa Caterina delle Bastarde, in piazza Umberto I",
+      "Chiesa di Santa Caterina del Corso",
+      "Chiesa di San Francesco (XIV secolo)",
+      "Chiesa di San Filippo",
+      "Chiesa di San Bernardino",
+      "Basilica Cattedrale dedicata a San Michele Arcangelo, in piazza Pio XII",
+      "Chiesa ed il Convento di Santa Chiara",
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa di Santa Maria Extra Muros",
+      "Santuario Madonna del Pianto (nella Basilica di Sant'Angelo in Vado)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Lorenzo in Campo",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041054",
+    "codice_catastale": "H958",
+    "popolazione": 3387,
+    "superficie_kmq": 28.69,
+    "densita": 118.1,
+    "cap": "61047",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "laurentini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano",
+      "Comunità Montana del Catria e Cesano"
+    ],
+    "localita_frazioni": [
+      "San Vito sul Cesano",
+      "Montalfoglio"
+    ],
+    "comuni_confinanti": [
+      "Arcevia (AN)",
+      "Castelleone di Suasa (AN)",
+      "Corinaldo (AN)",
+      "Fratte Rosa",
+      "Mondavio",
+      "Pergola"
+    ],
+    "musei": [
+      "Museo delle Terre Marchigiane",
+      "Museo Archeologico del Territorio"
+    ],
+    "ville_palazzi": [
+      "Palazzo Amatori",
+      "Palazzo Ruspoli"
+    ],
+    "chiese": [
+      "Pieve Romanica (in località San Vito sul Cesano), detta anche Pieve vecchia",
+      "Abbazia di San Lorenzo, in via S. Demetrio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giorgio di Pesaro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041052",
+    "codice_catastale": "H886",
+    "popolazione": 1360,
+    "superficie_kmq": 20.88,
+    "densita": 65.1,
+    "cap": "61030",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sangiorgesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Roveresca"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Monte Porzio",
+      "Orciano di Pesaro",
+      "Piagge",
+      "San Costanzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Appollinare in Poggio",
+      "Chiesa di San Pasquale, ex Santa Maria della Misericordia",
+      "Chiesa di San Giorgio, in via Castello",
+      "Chiesa del SS. Crocifisso, in via Tortolindo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Costanzo",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041051",
+    "codice_catastale": "H809",
+    "popolazione": 4749,
+    "superficie_kmq": 40.7,
+    "densita": 116.7,
+    "cap": "61039",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Costanzo",
+    "festa_patronale": "15 gennaio",
+    "demonimo": "sancostanzesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano"
+    ],
+    "localita_frazioni": [
+      "Cerasa",
+      "Stacciola"
+    ],
+    "comuni_confinanti": [
+      "Fano",
+      "Mondolfo",
+      "Monte Porzio",
+      "Piagge",
+      "San Giorgio di Pesaro",
+      "Trecastelli (AN)"
+    ],
+    "musei": [
+      "Quadreria Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo Martire (in località Cerasa)",
+      "Chiesa parrocchiale dei SS. Cristoforo e Costanzo (fine secolo XVI)",
+      "Chiesa di Sant'Agostino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piobbico",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041049",
+    "codice_catastale": "G682",
+    "popolazione": 2020,
+    "superficie_kmq": 48.16,
+    "densita": 41.9,
+    "cap": "61046",
+    "prefisso_telefonico": "0722",
+    "patrono": "Santa Maria in Val d'Abisso",
+    "festa_patronale": "8 settembre",
+    "demonimo": "piobbichesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Catria e del Nerone"
+    ],
+    "localita_frazioni": [
+      "Acquanera",
+      "Baciardi",
+      "Ca' Giavaccolo",
+      "Cardella",
+      "Castiglione",
+      "Colle",
+      "Cuppio",
+      "Finocchietto",
+      "Fratte",
+      "Le Ville",
+      "Monteforno",
+      "Piano",
+      "Rocca Leonella",
+      "San Silvestro"
+    ],
+    "comuni_confinanti": [
+      "Apecchio",
+      "Cagli",
+      "Urbania"
+    ],
+    "musei": [
+      "Museo Geopaleontologico Naturalistico Antropico e Ornitologico \"Brancaleoni\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Brancaleoni"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria in Val d'Abisso, già convento dei Serviti",
+      "Chiesa di Santo Stefano, in Via Dante Alighieri",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di San Pietro al Borghetto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pietrarubbia",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041048",
+    "codice_catastale": "G627",
+    "popolazione": 666,
+    "superficie_kmq": 13.05,
+    "densita": 51.0,
+    "cap": "61023",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Silvestro",
+    "festa_patronale": "12 dicembre",
+    "demonimo": "pietrarubbiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro",
+      "Parco Sasso Simone e Simoncello"
+    ],
+    "localita_frazioni": [
+      "Ca' Baldiserra",
+      "Ca' Bartolino",
+      "Ca' Boso",
+      "Ca' Ivano",
+      "Ca' Mafuccio",
+      "Ca' Mancino",
+      "Fonte del Bacio",
+      "Lago del Conte",
+      "Mercato Vecchio",
+      "Pietrarubbia Castello",
+      "Ponte Cappuccini",
+      "Sant'Arduino",
+      "Villa del Piano"
+    ],
+    "comuni_confinanti": [
+      "Carpegna",
+      "Frontino",
+      "Macerata Feltria",
+      "Montecopiolo",
+      "Piandimeleto"
+    ],
+    "musei": [
+      "Musei del Castello di Pietrarubbia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento di San Silvestro",
+      "Convento di Ponte Cappuccini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piandimeleto",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041047",
+    "codice_catastale": "G551",
+    "popolazione": 2157,
+    "superficie_kmq": 39.96,
+    "densita": 54.0,
+    "cap": "61026",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "pianmelitesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro",
+      "Parco Sasso Simone e Simoncello"
+    ],
+    "localita_frazioni": [
+      "Cavoleto",
+      "Monastero",
+      "Pirlo",
+      "San Sisto",
+      "Viano"
+    ],
+    "comuni_confinanti": [
+      "Belforte all'Isauro",
+      "Carpegna",
+      "Frontino",
+      "Lunano",
+      "Macerata Feltria",
+      "Pietrarubbia",
+      "Sant'Angelo in Vado",
+      "Sassocorvaro",
+      "Sestino (AR)",
+      "Urbino"
+    ],
+    "musei": [
+      "Museo del Lavoro Contadino",
+      "Museo di Scienze della Terra",
+      "Raccolta d'Arte Ubaldiana"
+    ],
+    "ville_palazzi": [
+      "Palazzo dei Conti Oliva"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Biagio",
+      "Abbazia di Santa Maria del Mutino (in località Monastero)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piagge",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041046",
+    "codice_catastale": "G537",
+    "popolazione": 1013,
+    "superficie_kmq": 8.64,
+    "densita": 117.2,
+    "cap": "61030",
+    "prefisso_telefonico": "0721",
+    "patrono": "SanVincenzo Ferreri",
+    "festa_patronale": "5 aprile",
+    "demonimo": "piaggesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Roveresca"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cartoceto",
+      "Fano",
+      "Orciano di Pesaro",
+      "San Costanzo",
+      "San Giorgio di Pesaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Sacramento"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Petriano",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041045",
+    "codice_catastale": "G514",
+    "popolazione": 2795,
+    "superficie_kmq": 11.32,
+    "densita": 246.9,
+    "cap": "61020",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "petrianesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Città Termale (Terme di Raffaello Srl)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro"
+    ],
+    "localita_frazioni": [
+      "Gallo",
+      "Santa Maria in Calafria",
+      "Riceci"
+    ],
+    "comuni_confinanti": [
+      "Montefelcino",
+      "Urbino",
+      "Vallefoglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista di Riceci",
+      "Oratorio della SS. Concezione",
+      "Chiesa di Santa Maria in Calafria",
+      "Chiesa di San Gallo",
+      "Chiesa di San Martino",
+      "Cappella di San Bernardino, un tempo detta di Santa Maria ad Nives o Castel di Sajano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pergola",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041043",
+    "codice_catastale": "G453",
+    "popolazione": 6270,
+    "superficie_kmq": 113.46,
+    "densita": 55.3,
+    "cap": "61045",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Secondo",
+    "festa_patronale": "primo giugno",
+    "demonimo": "pergolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano",
+      "Comunità Montana del Catria e Cesano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arcevia (AN)",
+      "Cagli",
+      "Fossombrone",
+      "Fratte Rosa",
+      "Frontone",
+      "San Lorenzo in Campo",
+      "Sassoferrato (AN)",
+      "Serra Sant'Abbondio"
+    ],
+    "musei": [
+      "Museo dei Bronzi Dorati e della città di Pergola"
+    ],
+    "ville_palazzi": [
+      "Palazzo Cini, oggi Giannini",
+      "Palazzo Ducale, poi Ginevri",
+      "Palazzo Episcopale",
+      "Palazzo Guazzugli Buonaiuti (XVI secolo)",
+      "Palazzo Guazzugli Tarducci, sede della Biblioteca Marini",
+      "Palazzo Malatesta",
+      "Palazzo Mattei Baldini",
+      "Palazzo Antonelli"
+    ],
+    "chiese": [
+      "Chiesa di San Giacomo, detta anche di Santa Lucia",
+      "Chiesa di San Francesco",
+      "Chiesa di San Biagio",
+      "Chiesa dell'Oratorio di Santa Maria Assunta, in Via Don Minzoni",
+      "Cappella dei Magi,  in Via Don Minzoni",
+      "Chiesa di San Vitale",
+      "Chiesa di San Marco",
+      "Chiesa di San Rocco (1528)",
+      "Oratorio dell'Ascensione al Palazzolo, in viale Dante",
+      "Duomo dei Santi Andrea Apostolo e Secondo Martire, in via Don Minzoni",
+      "Convento degli Zoccolanti, in via J.F. Kennedy",
+      "Collegiata di Sant'Andrea Apostolo, in corso Matteotti",
+      "Chiesa di Sant'Orsola",
+      "Chiesa di Santa Maria di Piazza (XI secolo, sconsacrata)",
+      "Chiesa di Santa Maria dell'Olmo",
+      "Chiesa di Santa Maria delle Tinte, in via XX settembre"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Gernsbach (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Peglio",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041041",
+    "codice_catastale": "G416",
+    "popolazione": 727,
+    "superficie_kmq": 20.2,
+    "densita": 36.0,
+    "cap": "61049",
+    "prefisso_telefonico": "0722",
+    "patrono": "SS. Eusebio e Vittore",
+    "festa_patronale": "prima domenica di agosto",
+    "demonimo": "pegliesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Sant'Angelo in Vado",
+      "Urbania",
+      "Urbino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Fortunato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Orciano di Pesaro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041040",
+    "codice_catastale": "G089",
+    "popolazione": 2006,
+    "superficie_kmq": 23.78,
+    "densita": 84.4,
+    "cap": "61038",
+    "prefisso_telefonico": "0721",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "25 novembre",
+    "demonimo": "orcianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Roveresca"
+    ],
+    "localita_frazioni": [
+      "Montebello",
+      "Rupoli",
+      "Schieppe"
+    ],
+    "comuni_confinanti": [
+      "Barchi",
+      "Mondavio",
+      "Monte Porzio",
+      "Piagge",
+      "San Giorgio di Pesaro",
+      "Sant'Ippolito"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Novella",
+      "nel centro storico"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Malatestiana"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montelabbate",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041036",
+    "codice_catastale": "F533",
+    "popolazione": 6860,
+    "superficie_kmq": 19.6,
+    "densita": 350.0,
+    "cap": "61025",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Terenzio",
+    "festa_patronale": "24 settembre",
+    "demonimo": "montelabbatesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Pian del Bruscolo"
+    ],
+    "localita_frazioni": [
+      "Apsella",
+      "Farneto",
+      "Osteria Nuova",
+      "Montecchio"
+    ],
+    "comuni_confinanti": [
+      "Monteciccardo",
+      "Pesaro",
+      "Tavullia",
+      "Urbino",
+      "Vallefoglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria (XIII secolo), romanico-gotica",
+      "Chiesa di San Marco in Ripe (in località Ripe)",
+      "Abbadia di San Tommaso in Foglia (in località Apsella)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montefelcino",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041034",
+    "codice_catastale": "F497",
+    "popolazione": 2645,
+    "superficie_kmq": 38.69,
+    "densita": 68.4,
+    "cap": "61030",
+    "prefisso_telefonico": "0721",
+    "patrono": "Sant'Esuperanzio",
+    "festa_patronale": "24 gennaio",
+    "demonimo": "montefelcinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Colli al Metauro",
+      "Fossombrone",
+      "Isola del Piano",
+      "Monteciccardo",
+      "Petriano",
+      "Sant'Ippolito",
+      "Urbino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo del Feudatario",
+      "in Piazza Francesca da Rimini"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montecopiolo",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041033",
+    "codice_catastale": "F478",
+    "popolazione": 1106,
+    "superficie_kmq": 35.74,
+    "densita": 30.9,
+    "cap": "61014",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "montecopiolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro",
+      "Parco Sasso Simone e Simoncello"
+    ],
+    "localita_frazioni": [
+      "Badia",
+      "Belvedere",
+      "Bivio Serra Nanni",
+      "Bosca",
+      "Ca' Baccagna",
+      "Ca' Baldisserri",
+      "Ca' Bellino",
+      "Ca' Bernacchia",
+      "Ca' d'Eugenio",
+      "Ca' della Morona",
+      "Ca' Fabbrone",
+      "Ca' Moneta",
+      "Cacciamarra",
+      "Calmato",
+      "Calvillano",
+      "Camonita",
+      "Campodarco",
+      "Capraia",
+      "Casa Nuova",
+      "Case Nanni",
+      "Casentino",
+      "Casepio",
+      "Casina",
+      "Cavalcanese",
+      "Chiesa di Montecopiolo",
+      "Cisterna di Sopra",
+      "Cisterna di Sotto",
+      "Cornieto",
+      "Fonti della Cisterna",
+      "Greppe",
+      "Ginacchia",
+      "Laghi",
+      "Legata",
+      "Legore",
+      "Molino Baldisserri",
+      "Molino Bosco",
+      "Molinaccio",
+      "Monacchie",
+      "Monteboaggine",
+      "Monterotto",
+      "Muricce",
+      "Petorno",
+      "Pezzano",
+      "Pian della Ruota",
+      "Poggio",
+      "Ponte Conca",
+      "Pugliano",
+      "Roncaliccio",
+      "Selbuccia",
+      "Selva Grossa",
+      "Serra Brucciata",
+      "Serra Nanni",
+      "Vena",
+      "Villaggio del Lago",
+      "Villaggio di Santa Rita",
+      "Villagrande",
+      "Ville"
+    ],
+    "comuni_confinanti": [
+      "Carpegna",
+      "Macerata Feltria",
+      "Maiolo (RN)",
+      "Monte Cerignone",
+      "Monte Grimano Terme",
+      "Pennabilli (RN)",
+      "Pietrarubbia",
+      "San Leo (RN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchia di San Marino (località Monterotto)",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monteciccardo",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041032",
+    "codice_catastale": "F474",
+    "popolazione": 1683,
+    "superficie_kmq": 25.86,
+    "densita": 65.1,
+    "cap": "61024",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "monteciccardesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Pian del Bruscolo",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Colli al Metauro",
+      "Mombaroccio",
+      "Montefelcino",
+      "Montelabbate",
+      "Pesaro",
+      "Urbino",
+      "Vallefoglia"
+    ],
+    "musei": [
+      "Centro per l'arte contemporanea \"Il Conventino\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Conventino dei Servi di Maria",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montecalvo in Foglia",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041030",
+    "codice_catastale": "F450",
+    "popolazione": 2735,
+    "superficie_kmq": 18.24,
+    "densita": 149.9,
+    "cap": "61020",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "montecalvesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro"
+    ],
+    "localita_frazioni": [
+      "Borgo Massano",
+      "Ca' Gallo"
+    ],
+    "comuni_confinanti": [
+      "Mondaino (RN)",
+      "Tavullia",
+      "Urbino",
+      "Vallefoglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Porzio",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041038",
+    "codice_catastale": "F589",
+    "popolazione": 2860,
+    "superficie_kmq": 18.36,
+    "densita": 155.8,
+    "cap": "61040",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "monteporziesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Corinaldo (AN)",
+      "Mondavio",
+      "Orciano di Pesaro",
+      "San Costanzo",
+      "San Giorgio di Pesaro",
+      "Trecastelli (AN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Grimano Terme",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041035",
+    "codice_catastale": "F524",
+    "popolazione": 1129,
+    "superficie_kmq": 24.01,
+    "densita": 47.0,
+    "cap": "61010",
+    "prefisso_telefonico": "0541",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "montegrimanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro",
+      "Unione Comuni San Marino",
+      "Associazione Nazionale Comuni Termali (ANCOT)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Macerata Feltria",
+      "Mercatino Conca",
+      "Monte Cerignone",
+      "Montecopiolo",
+      "San Leo (RN)",
+      "Sassofeltrio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Comunale o Massaioli"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Silvestro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Cerignone",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041031",
+    "codice_catastale": "F467",
+    "popolazione": 667,
+    "superficie_kmq": 18.04,
+    "densita": 37.0,
+    "cap": "61010",
+    "prefisso_telefonico": "0541",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "montecerignonesi o cerignonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Macerata Feltria",
+      "Mercatino Conca",
+      "Monte Grimano Terme",
+      "Montecopiolo",
+      "Sassocorvaro",
+      "Tavoleto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria in Recluso",
+      "Santuario Beato Domenico",
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mondolfo",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041029",
+    "codice_catastale": "F348",
+    "popolazione": 14235,
+    "superficie_kmq": 22.69,
+    "densita": 627.4,
+    "cap": "61037",
+    "prefisso_telefonico": "0721",
+    "patrono": "Santa Giustina",
+    "festa_patronale": "26 settembre",
+    "demonimo": "mondolfesi",
+    "etimologia": "E' un composto di \"monte\" e del nome di persona Dolfo, per Rodolfo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano"
+    ],
+    "localita_frazioni": [
+      "Marotta"
+    ],
+    "comuni_confinanti": [
+      "Fano",
+      "San Costanzo",
+      "Senigallia (AN)",
+      "Trecastelli (AN)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Giraldi della Rovere",
+      "Palazzo Gallucci",
+      "Palazzo Peruzzi",
+      "Palazzo Roscetti",
+      "Villa Giraldi",
+      "Palazzo Beliardi"
+    ],
+    "chiese": [
+      "Santuario Madonna delle Grotte",
+      "Oratorio di San Giovanni Decollato (XVII secolo)",
+      "Chiesetta di Sant'Irene (1734)",
+      "Chiesa Madonna Addolorata (Chiesa del Mengaccio)",
+      "Chiesa di Sant'Agostino, in via Cavour",
+      "Chiesa di Santa Vittoria",
+      "Chiesa di San Gervasio di Bulgaria ((V-VI secolo)",
+      "Chiesa Conventuale di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Presepe Vivente (25 e 26 dicembre, 6 gennaio)",
+      "La Cacciata (ultima domenica di luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mondavio",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041028",
+    "codice_catastale": "F347",
+    "popolazione": 3795,
+    "superficie_kmq": 29.48,
+    "densita": 128.7,
+    "cap": "61040",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "mondaviesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Barchi",
+      "Colli al Metauro",
+      "Corinaldo (AN)",
+      "Fratte Rosa",
+      "Monte Porzio",
+      "Orciano di Pesaro",
+      "San Lorenzo in Campo"
+    ],
+    "musei": [
+      "Museo della Rocca Roveresca"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata dei SS. Pietro e Paterniano",
+      "Chiesa e Convento di San Francesco"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di Mondavio"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Caccia al Cinghiale (13-15 agosto)",
+      "inizia con il Banchetto Rinascimentale"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mombaroccio",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041027",
+    "codice_catastale": "F310",
+    "popolazione": 2107,
+    "superficie_kmq": 28.22,
+    "densita": 74.7,
+    "cap": "61024",
+    "prefisso_telefonico": "0721",
+    "patrono": "SS. Vito e Modesto",
+    "festa_patronale": "15 giugno",
+    "demonimo": "mombaroccesi o montebaroccesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Villagrande",
+      "Montegiano",
+      "Cairo"
+    ],
+    "comuni_confinanti": [
+      "Cartoceto",
+      "Colli al Metauro",
+      "Fano",
+      "Monteciccardo",
+      "Pesaro"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina",
+      "Museo d'Arte Sacra San Marco",
+      "Pinacoteca-Museo \"Beato Sante\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario del Beato Sante",
+      "Chiesa di San Marco, in piazza Barocci"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mercatino Conca",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041026",
+    "codice_catastale": "F136",
+    "popolazione": 1042,
+    "superficie_kmq": 14.47,
+    "densita": 72.0,
+    "cap": "61013",
+    "prefisso_telefonico": "0541",
+    "patrono": "Sant'Apollinare",
+    "festa_patronale": "23 luglio",
+    "demonimo": "mercatinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": [
+      "Monte Altavellio",
+      "Piandicastello",
+      "Trebbio",
+      "Cà Merone",
+      "Cà Centirocco"
+    ],
+    "comuni_confinanti": [
+      "Auditore",
+      "Gemmano (RN)",
+      "Monte Cerignone",
+      "Monte Grimano Terme",
+      "Sassocorvaro",
+      "Sassofeltrio",
+      "Tavoleto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Apollinare"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera di Sant'Ubaldo (domenica più vicina al 16 maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mercatello sul Metauro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041025",
+    "codice_catastale": "F135",
+    "popolazione": 1368,
+    "superficie_kmq": 68.59,
+    "densita": 19.9,
+    "cap": "61040",
+    "prefisso_telefonico": "0722",
+    "patrono": "Santa Veronica",
+    "festa_patronale": "9 luglio",
+    "demonimo": "mercatellesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apecchio",
+      "Belforte all'Isauro",
+      "Borgo Pace",
+      "Città di Castello (PG)",
+      "San Giustino (PG)",
+      "Sant'Angelo in Vado",
+      "Sestino (AR)"
+    ],
+    "musei": [
+      "Museo della Collegiata"
+    ],
+    "ville_palazzi": [
+      "Palazzo Gasparini, in piazza Garibaldi",
+      "Palazzo Ducale, in corso Bencivenni",
+      "Palazzo Fabbri, cinquecentesca"
+    ],
+    "chiese": [
+      "Chiesa di Santa Chiara",
+      "Chiesa di San Giovanni Battista (in località Castello della Pieve)",
+      "Collegiata",
+      "Chiesa di Santo Stefano (in località Metola)",
+      "Chiesa di Santa Veronica",
+      "Chiesa di Santa Maria del Metauro",
+      "Chiesa di Santa Croce, detta anche di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Macerata Feltria",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041023",
+    "codice_catastale": "E785",
+    "popolazione": 2014,
+    "superficie_kmq": 40.23,
+    "densita": 50.1,
+    "cap": "61023",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "maceratini",
+    "etimologia": null,
+    "il_comune_e": [
+      "Città Termale (Pitinum Thermae SpA)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": [
+      "Apsa",
+      "Ca' Antonio",
+      "Castellina",
+      "Certalto",
+      "Grassano",
+      "Mondagano",
+      "Santa Lucia",
+      "Santa Maria Valcava",
+      "San Teodoro",
+      "San Vicino"
+    ],
+    "comuni_confinanti": [
+      "Lunano",
+      "Monte Cerignone",
+      "Monte Grimano Terme",
+      "Montecopiolo",
+      "Piandimeleto",
+      "Pietrarubbia",
+      "Sassocorvaro"
+    ],
+    "musei": [
+      "Museo di Archeologia Industriale",
+      "Museo della Radio d'Epoca",
+      "Museo Civico Archeologico e Paleontologico"
+    ],
+    "ville_palazzi": [
+      "Palazzo del Podestà",
+      "trecentesco"
+    ],
+    "chiese": [
+      "Pieve di San Cassiano",
+      "Oratorio di San Giuseppe (XIV secolo)",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Santa Chiara",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Battelli"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lunano",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041022",
+    "codice_catastale": "E743",
+    "popolazione": 1518,
+    "superficie_kmq": 14.62,
+    "densita": 103.8,
+    "cap": "61026",
+    "prefisso_telefonico": "0722",
+    "patrono": "SS. Cosma e Damiano",
+    "festa_patronale": "26 settembre",
+    "demonimo": "lunanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": [
+      "Pietracavola"
+    ],
+    "comuni_confinanti": [
+      "Macerata Feltria",
+      "Piandimeleto",
+      "Sassocorvaro",
+      "Urbino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento di Sant'Illuminato",
+      "Chiesa dei Santi Cosma e Damiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola del Piano",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041021",
+    "codice_catastale": "E351",
+    "popolazione": 593,
+    "superficie_kmq": 23.05,
+    "densita": 25.7,
+    "cap": "61030",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Cristoforo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "isolani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Fossombrone",
+      "Montefelcino",
+      "Urbino"
+    ],
+    "musei": [
+      "Sulle Tracce dei Nostri Padri"
+    ],
+    "ville_palazzi": [
+      "Palazzo Castiglioni (oggi Bartolini)"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Andrea (in località Scotaneto)",
+      "Chiesa dell'Annunziata (sconsacrata)",
+      "Chiesa di San Cristoforo, in piazza Umberto I"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gradara",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041020",
+    "codice_catastale": "E122",
+    "popolazione": 4883,
+    "superficie_kmq": 17.52,
+    "densita": 278.7,
+    "cap": "61012",
+    "prefisso_telefonico": "0541",
+    "patrono": "San Terenzio",
+    "festa_patronale": "24 settembre",
+    "demonimo": "gradaresi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Associazione Nazionale Città in Gioco (GioNa)",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino",
+      "Club I Borghi più Belli d'Italia",
+      "Walled Towns Friendship Circle (WTFC)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Gabicce Mare; a nord e est: Pesaro; a ovest: Cattolica (RN)",
+      "San Giovanni in Marignano (RN); a sud: Tavullia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Rocca Demaniale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sfilata della Corte Malatestiana (terzo fine settimana di luglio)"
+    ],
+    "gemellaggi": [
+      "Muggensturm (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gabicce Mare",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041019",
+    "codice_catastale": "D836",
+    "popolazione": 5716,
+    "superficie_kmq": 4.85,
+    "densita": 1178.6,
+    "cap": "61011",
+    "prefisso_telefonico": "0541",
+    "patrono": "Sant'Ermete",
+    "festa_patronale": "28 agosto",
+    "demonimo": "gabiccesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale del Monte San Bartolo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cattolica (RN)",
+      "Gradara",
+      "Pesaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Ermete (in località Gabicce Monte)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frontone",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041018",
+    "codice_catastale": "D808",
+    "popolazione": 1281,
+    "superficie_kmq": 36.01,
+    "densita": 35.6,
+    "cap": "61040",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Teodoro",
+    "festa_patronale": "9 settembre",
+    "demonimo": "frontonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano",
+      "Comunità Montana del Catria e Cesano"
+    ],
+    "localita_frazioni": [
+      "San Savino",
+      "Foce",
+      "Caprile",
+      "Buonconsiglio",
+      "Colombara",
+      "Castello"
+    ],
+    "comuni_confinanti": [
+      "Cagli",
+      "Cantiano",
+      "Pergola",
+      "Scheggia e Pascelupo (PG)",
+      "Serra Sant'Abbondio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna dell'Acquanera (in località Monte Acuto)",
+      "Pieve di San Savino",
+      "Chiesa parrocchiale Cuore Immacolato di Maria",
+      "Chiesa di Santa Maria Assunta in Cielo",
+      "Chiesa di San Pier Damiani (in località Infilatoio)",
+      "Chiesa della Madonna di Loreto (in località Foce)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Frontone"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frontino",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041017",
+    "codice_catastale": "D807",
+    "popolazione": 293,
+    "superficie_kmq": 10.74,
+    "densita": 27.3,
+    "cap": "61021",
+    "prefisso_telefonico": "0722",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "frontinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro",
+      "Parco Sasso Simone e Simoncello"
+    ],
+    "localita_frazioni": [
+      "Ponte Nuovo",
+      "Torrito",
+      "Montefiorentino"
+    ],
+    "comuni_confinanti": [
+      "Carpegna",
+      "Piandimeleto",
+      "Pietrarubbia"
+    ],
+    "musei": [
+      "Museo \"Franco Assetto\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Eremo di San Girolamo",
+      "Convento Francescano di Monte Fiorentino",
+      "Chiesa del Capoluogo, intitolata ai Santi Pietro e Paolo, in corso Giovanni XXIII"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fratte Rosa",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041016",
+    "codice_catastale": "D791",
+    "popolazione": 951,
+    "superficie_kmq": 15.6,
+    "densita": 61.0,
+    "cap": "61040",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "frattesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Valle del Cesano",
+      "Comunità Montana del Catria e Cesano",
+      "Associazione dei Comuni Virtuosi"
+    ],
+    "localita_frazioni": [
+      "Torre San Marco",
+      "Convento Santa Vittoria"
+    ],
+    "comuni_confinanti": [
+      "Barchi",
+      "Fossombrone",
+      "Mondavio",
+      "Pergola",
+      "San Lorenzo in Campo",
+      "Sant'Ippolito"
+    ],
+    "musei": [
+      "Museo delle Terrecotte"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria in Castagneto",
+      "Chiesa di San Marco (in località Torre San Marco)",
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fossombrone",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041015",
+    "codice_catastale": "D749",
+    "popolazione": 9528,
+    "superficie_kmq": 106.68,
+    "densita": 89.3,
+    "cap": "61034",
+    "prefisso_telefonico": "0721",
+    "patrono": "Sant'Aldebrando",
+    "festa_patronale": "primo maggio",
+    "demonimo": "forsempronesi",
+    "etimologia": "Deriva dal latino forum Sempronii, foro di Sempronio, con probabile allusione a Caio Sempronio Gracco che in questi luoghi approvò la legge agraria.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acqualagna",
+      "Cagli",
+      "Fratte Rosa",
+      "Isola del Piano",
+      "Montefelcino",
+      "Pergola",
+      "Sant'Ippolito",
+      "Urbino"
+    ],
+    "musei": [
+      "Quadreria \"Cesarini\"",
+      "Pinacoteca Civica \"A. Vernarecci\"",
+      "Museo Civico \"A. Vernarecci\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Cattabeni",
+      "Palazzo Vescovile"
+    ],
+    "chiese": [
+      "Santuario Beato Benedetto Passionei :: Frati Minori Cappuccini",
+      "Chiesa di Sant'Agostino",
+      "Chiesa di San Filippo, in corso Garibaldi",
+      "Cattedrale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Trionfo del Carnevale (secondo fine settimana di giugno)"
+    ],
+    "gemellaggi": [
+      "Entraigues Sur la Sorgue (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fermignano",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041014",
+    "codice_catastale": "D541",
+    "popolazione": 8563,
+    "superficie_kmq": 43.27,
+    "densita": 197.9,
+    "cap": "61033",
+    "prefisso_telefonico": "0722",
+    "patrono": "Santa Veneranda",
+    "festa_patronale": "26 luglio",
+    "demonimo": "fermignanesi",
+    "etimologia": "Dal nome latino di persona Firminius, con l'aggiunta del suffisso -anus, che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro"
+    ],
+    "localita_frazioni": [
+      "Bivio Borzaga",
+      "Ca' l'Agostina",
+      "Pagino",
+      "San Silvestro"
+    ],
+    "comuni_confinanti": [
+      "Acqualagna",
+      "Urbania",
+      "Urbino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Calistri",
+      "Villa Isola"
+    ],
+    "chiese": [
+      "Chiesa di Santa Veneranda",
+      "Chiesa di San Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Gran Premio del Biciclo Ottocentesco (primo sabato e domenica di settembre)",
+      "Palio della Rana (prima domenica dopo Pasqua)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fano",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041013",
+    "codice_catastale": "D488",
+    "popolazione": 60852,
+    "superficie_kmq": 121.27,
+    "densita": 501.8,
+    "cap": "61032",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Paterniano",
+    "festa_patronale": "10 luglio",
+    "demonimo": "fanesi",
+    "etimologia": "Deriva dal latino Fanum Fortunae, tempio della fortuna, dal termine latino fanum (tempio).",
+    "il_comune_e": [
+      "Città Termale (Terme di Carignano Srl)",
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007 (Fano Centro - Sassonia, Torrette e Marotta)"
+    ],
+    "fa_parte_di": [
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cartoceto",
+      "Mombaroccio",
+      "Mondolfo",
+      "Pesaro",
+      "Piagge",
+      "San Costanzo"
+    ],
+    "musei": [
+      "Museo Civico e Pinacoteca del Palazzo Malatestiano"
+    ],
+    "ville_palazzi": [
+      "Palazzo Montevecchio",
+      "Palazzo della Ragione, noto anche come Palazzo del Podestà",
+      "Palazzo Martinozzi",
+      "Palazzo Malatestiano"
+    ],
+    "chiese": [
+      "Chiesa di San Francesco",
+      "Santuario Beata Vergine della Colonna",
+      "Eremo di Monte Giove",
+      "Chiesa di Santa Maria Nuova (medievale)",
+      "Chiesa di San Paterniano, in piazza Sansovino",
+      "Chiesa di San Pietro in Valle, in via Nolfi"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Malatestiana (quattrocentesca)"
+    ],
+    "fontane": [
+      "Fontana della Fortuna (in piazza XX Settembre)"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro della Fortuna"
+    ],
+    "stadi": [
+      "Stadio Comunale Raffaele Mancini"
+    ],
+    "eventi_feste_sagre": [
+      "Carnevale dell'Adriatico (domenica e martedì di carnevale)",
+      "Sagra dei Garagoi (località Marotta, prima domenica di aprile)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colli al Metauro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041069",
+    "codice_catastale": "M380",
+    "popolazione": 12400,
+    "superficie_kmq": 45.99,
+    "densita": 269.6,
+    "cap": "61036",
+    "prefisso_telefonico": "0721",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": null,
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Montemaggiore al Metauro",
+      "Saltara",
+      "Serrungarina",
+      "Fiordipiano",
+      "San Liberio",
+      "Villanova",
+      "Bargni",
+      "Pozzuolo",
+      "Tavernelle"
+    ],
+    "comuni_confinanti": [
+      "Cartoceto",
+      "Mombaroccio",
+      "Mondavio",
+      "Monteciccardo",
+      "Montefelcino",
+      "Sant'Ippolito"
+    ],
+    "musei": [
+      "Museo storico del fiume Metauro (frazione: Montemaggiore al Metauro)",
+      "Museo del Balì (frazione: Saltara)"
+    ],
+    "ville_palazzi": [
+      "Villa Federici (in località Bargni)",
+      "Villa San Martino (frazione: Saltara)",
+      "Villa Serafini (frazione: Serrungarina)"
+    ],
+    "chiese": [
+      "Chiesa del Gonfalone (frazione: Saltara)",
+      "Chiesa parrocchiale di Santa Maria del Soccorso (frazione: Montemaggiore al Metauro)",
+      "Chiesa di Sant'Antonio Abate (frazione: Serrungarina)",
+      "Chiesa di San Pier Celestino (frazione: Saltara)",
+      "Chiesa di San Francesco in Rovereto (frazione: Saltara)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cartoceto",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041010",
+    "codice_catastale": "B846",
+    "popolazione": 7895,
+    "superficie_kmq": 23.16,
+    "densita": 340.9,
+    "cap": "61030",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Bernardino",
+    "festa_patronale": "20 maggio",
+    "demonimo": "cartocetani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "frazioni: Lucrezia",
+      "Ripalta; Salomone  \nLocalità: Molinaccio",
+      "Pontemurello; Sant'Anna"
+    ],
+    "comuni_confinanti": [
+      "Colli al Metauro",
+      "Fano",
+      "Mombaroccio",
+      "Piagge"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo del Popolo, di origine trecentesca",
+      "Palazzo Marcolini"
+    ],
+    "chiese": [
+      "Pieve dei Santi Pietro e Paolo",
+      "Convento e Chiesa di Santa Maria del Soccorso",
+      "Collegiata di Santa Maria della Misericordia",
+      "Chiesa di Sant'Apollinare (frazione: Lucrezia)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Mostra Mercato dell'Oliva e dell'Olio (inizio novembre)",
+      "Sagra dei Vincisgrassi (prima domenica di giugno)"
+    ],
+    "gemellaggi": [
+      "Gemeinde Hügelsheim (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carpegna",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041009",
+    "codice_catastale": "B816",
+    "popolazione": 1686,
+    "superficie_kmq": 28.31,
+    "densita": 59.6,
+    "cap": "61021",
+    "prefisso_telefonico": "0722",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "carpegnoli",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro",
+      "Parco Sasso Simone e Simoncello"
+    ],
+    "localita_frazioni": [
+      "Petrino",
+      "Torre Fossati"
+    ],
+    "comuni_confinanti": [
+      "Frontino",
+      "Montecopiolo",
+      "Pennabilli (RN)",
+      "Piandimeleto",
+      "Pietrarubbia",
+      "Sestino (AR)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Principi"
+    ],
+    "chiese": [
+      "Pieve romanica di San Giovanni",
+      "Eremo della Beata Vergine del Faggio",
+      "Chiesetta di San Sisto",
+      "Chiesa di San Nicolò",
+      "Chiesa di San Leo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cantiano",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041008",
+    "codice_catastale": "B636",
+    "popolazione": 2220,
+    "superficie_kmq": 83.1,
+    "densita": 26.7,
+    "cap": "61044",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cantianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Catria e del Nerone",
+      "Associazione Città del Pane"
+    ],
+    "localita_frazioni": [
+      "Chiaserna",
+      "I Conti",
+      "Moria",
+      "Palcano",
+      "Pontedazzo",
+      "Pontericcioli",
+      "San Crescentino",
+      "Vilano"
+    ],
+    "comuni_confinanti": [
+      "Cagli",
+      "Frontone",
+      "Gubbio (PG)",
+      "Scheggia e Pascelupo (PG)"
+    ],
+    "musei": [
+      "Museo Archeologico e della Via Flaminia \"G. C. Corsi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Anastasia (in località Chiaserna)",
+      "Chiesa di Sant'Agostino (in via VI Novembre)",
+      "Chiesa di San Nicolò (in piazza Luceoli)",
+      "Abbazia di San Michele Arcangelo (in località Chiaserna)",
+      "Collegiata di San Giovanni Battista, in via IV Novembre",
+      "Pieve di San Crescentino (in località S. Crescentino)",
+      "Chiesa di Sant'Ubaldo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "La Turba (Venerdì Santo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cagli",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041007",
+    "codice_catastale": "B352",
+    "popolazione": 8652,
+    "superficie_kmq": 226.16,
+    "densita": 38.3,
+    "cap": "61043",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Geronzio",
+    "festa_patronale": "9 maggio",
+    "demonimo": "cagliesi",
+    "etimologia": "E' riconducibile al plurale di callis (calle) con la trasformazione di -li in -gli.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Catria e del Nerone"
+    ],
+    "localita_frazioni": [
+      "Abbadia di Naro",
+      "Acquaviva",
+      "Ca' Bargello",
+      "Cerreto",
+      "Foci",
+      "Massa",
+      "Moira",
+      "Paravento",
+      "Pianello",
+      "Pieia",
+      "Secchiano",
+      "Smirra"
+    ],
+    "comuni_confinanti": [
+      "Acqualagna",
+      "Apecchio",
+      "Cantiano",
+      "Fossombrone",
+      "Frontone",
+      "Gubbio (PG)",
+      "Pergola",
+      "Pietralunga (PG)",
+      "Piobbico",
+      "Urbania"
+    ],
+    "musei": [
+      "Museo Archeologico e della via Flaminia",
+      "Centro di Scultura Contemporanea"
+    ],
+    "ville_palazzi": [
+      "Palazzo Tiranni Castracane, in via Purgotti",
+      "Palazzo Preziosi Brancaleoni, quattrocentesco",
+      "Palazzo Pubblico, in piazza Matteotti"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria delle Stelle (1495, in località Monte Martello)",
+      "Pieve di San Severo (in località Pigno)",
+      "Chiesa di Sant'Angelo Minore, in via Lapis",
+      "Chiesa di Sant'Andrea, in Viale della Vittoria",
+      "Chiesa di Santa Maria della Misericordia, in via Franco Michelini Tocci",
+      "Chiesa di Santa Chiara (XVII secolo), in via Flaminia",
+      "Chiesa di San Pietro (XIV secolo), in via pian del Vescovo",
+      "Chiesa di San Nicolò, in via Angelo Celli",
+      "Chiesa di San Filippo, in via Atanagi",
+      "Chiesa di San Giuseppe, in via Leopardi",
+      "Chiesa di San Domenico",
+      "Chiesa di San Bartolomeo, in piazza Giovanni XXIII",
+      "Cattedrale, in via Fonte del Duomo",
+      "Chiesa di San Francesco, in piazza San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Giuoco dell'Oca (prima domenica e secondo fine settimana di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borgo Pace",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041006",
+    "codice_catastale": "B026",
+    "popolazione": 611,
+    "superficie_kmq": 55.95,
+    "densita": 10.9,
+    "cap": "61040",
+    "prefisso_telefonico": "0722",
+    "patrono": "Sant'Eurosia",
+    "festa_patronale": "quarta domenica di maggio",
+    "demonimo": "borgopacesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alto e Medio Metauro"
+    ],
+    "localita_frazioni": [
+      "Dese",
+      "Lamoli",
+      "Parchiule",
+      "Sompiano"
+    ],
+    "comuni_confinanti": [
+      "Badia Tedalda (AR)",
+      "Mercatello sul Metauro",
+      "San Giustino (PG)",
+      "Sansepolcro (AR)",
+      "Sestino (AR)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Bartolomeo (in località Castel De' Fabbri)",
+      "Oratorio del Carmine (in località Sompiano)",
+      "Chiesina romanica di San Leone (in località Figiano)",
+      "Chiesa di Santa Maria Nuova",
+      "Chiesa di Santa Croce (in località Sompiano)",
+      "Abbazia di San Michele Arcangelo (in località Lamoli)",
+      "Chiesa di Santa Maria (in località Parchiule)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Belforte all'Isauro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041005",
+    "codice_catastale": "A740",
+    "popolazione": 754,
+    "superficie_kmq": 11.99,
+    "densita": 62.9,
+    "cap": "61026",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "belfortini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Mercatello sul Metauro",
+      "Piandimeleto",
+      "Sant'Angelo in Vado",
+      "Sestino (AR)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Barchi",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041004",
+    "codice_catastale": "A639",
+    "popolazione": 956,
+    "superficie_kmq": 17.24,
+    "densita": 55.5,
+    "cap": "61040",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Ubaldo",
+    "festa_patronale": "16 maggio",
+    "demonimo": "barchiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Roveresca"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Fratte Rosa",
+      "Mondavio",
+      "Orciano di Pesaro",
+      "Sant'Ippolito"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo della Rovere"
+    ],
+    "chiese": [
+      "Chiesa della SS. Resurrezione",
+      "in piazza Vittorio Emanuele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Auditore",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041003",
+    "codice_catastale": "A493",
+    "popolazione": 1543,
+    "superficie_kmq": 20.3,
+    "densita": 76.0,
+    "cap": "61020",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Nicola da Tolentino",
+    "festa_patronale": "10 settembre",
+    "demonimo": "auditoresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Montefeltro"
+    ],
+    "localita_frazioni": [
+      "Ca' Angelino",
+      "Casinina",
+      "Castelnuovo San Giovanni",
+      "San Leo Nuovo"
+    ],
+    "comuni_confinanti": [
+      "Gemmano (RN)",
+      "Mercatino Conca",
+      "Montefiore Conca (RN)",
+      "Sassocorvaro",
+      "Tavoleto",
+      "Urbino"
+    ],
+    "musei": [
+      "Museo Storico della Linea Gotica"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Apecchio",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041002",
+    "codice_catastale": "A327",
+    "popolazione": 1844,
+    "superficie_kmq": 103.26,
+    "densita": 17.9,
+    "cap": "61042",
+    "prefisso_telefonico": "0722",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "apecchiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Catria e del Nerone",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": [
+      "Colombara",
+      "Osteria Nuova",
+      "Pian di Molino",
+      "Pietra Gialla",
+      "Serravalle di Carda",
+      "Valdara"
+    ],
+    "comuni_confinanti": [
+      "Cagli",
+      "Città di Castello (PG)",
+      "Mercatello sul Metauro",
+      "Pietralunga (PG)",
+      "Piobbico",
+      "Sant'Angelo in Vado",
+      "Urbania"
+    ],
+    "musei": [
+      "Museo dei Fossili e Minerali del Monte Nerone"
+    ],
+    "ville_palazzi": [
+      "Palazzo Ubaldini",
+      "in via XX Settembre"
+    ],
+    "chiese": [
+      "Santuario del SS. Crocifisso, già Pieve di San Martino",
+      "Chiesa della Madonna della Vita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acqualagna",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041001",
+    "codice_catastale": "A035",
+    "popolazione": 4449,
+    "superficie_kmq": 50.74,
+    "densita": 87.7,
+    "cap": "61041",
+    "prefisso_telefonico": "0721",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "acqualagnesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Catria e del Nerone",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": [
+      "Bellaria",
+      "Ca' Chiaruccio",
+      "Ca' Romano",
+      "Case Nuove",
+      "Farneta",
+      "Fossato",
+      "Furlo",
+      "Petriccio",
+      "Pianacce",
+      "Pole"
+    ],
+    "comuni_confinanti": [
+      "Cagli",
+      "Fermignano",
+      "Fossombrone",
+      "Urbania",
+      "Urbino"
+    ],
+    "musei": [
+      "Museo Archeologico Antiquarium comunale Pitinum Mergens"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Lucia",
+      "Santuario del Pelingo (in località Pelingo)",
+      "Chiesa di San Vincenzo",
+      "Chiesa di San Paterniano (XIV secolo)",
+      "Chiesa della SS. Annunziata (in località Petriccio)",
+      "Chiesa del SS. Sacramento"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera Regionale del Tartufo Nero Pregiato (terza domenica di febbraio)",
+      "Fiera Nazionale del Tartufo Bianco (fine ottobre - inizio novembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pesaro",
+    "provincia": "Pesaro e Urbino",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "041044",
+    "codice_catastale": "G479",
+    "popolazione": 94813,
+    "superficie_kmq": 126.58,
+    "densita": 749.0,
+    "cap": "61100",
+    "prefisso_telefonico": "0721",
+    "patrono": "San Terenzio di Luni",
+    "festa_patronale": "24 settembre",
+    "demonimo": "pesaresi",
+    "etimologia": "Documentato con il nome di Pisaurum, accanto a Isaurum, da Isaurus, nome di fiume.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007 (Lido di Ponente e Lido di Levante)"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale del Monte San Bartolo",
+      "Associazione Italiana Città della Ceramica (AICC)",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Fano",
+      "Gabicce Mare",
+      "Gradara",
+      "Mombaroccio",
+      "Monteciccardo",
+      "Montelabbate",
+      "Tavullia",
+      "Vallefoglia"
+    ],
+    "musei": [
+      "Testimonianze di Vita Rurale nella Bassa Valle del Foglia",
+      "Tempietto Rossiniano",
+      "Museo Scientifico L. Guidi",
+      "Museo Morbidelli",
+      "Museo Archeologico Oliveriano",
+      "Casa Rossini",
+      "Musei Civici: Pinacoteca e Museo delle Ceramiche"
+    ],
+    "ville_palazzi": [
+      "Villa Imperiale"
+    ],
+    "chiese": [
+      "Chiesa della Santissima Annunziata, in via Fratelli Benelli",
+      "Santuario di Santa Maria dell'Arzilla",
+      "Santuario Beata Vergine delle Grazie :: Servi di Maria",
+      "Pieve di Santo Stefano (a Candelara)",
+      "Pieve di Ginestreto",
+      "Chiesa monumentale di Sant'Agostino, in corso XI Settembre",
+      "Chiesa e convento dei Girolimini",
+      "Chiesa di Sant'Ubaldo, in piazza Mamiani",
+      "Chiesa di Santa Maria Maddalena, in Via Zacconi",
+      "Chiesa di Santa Maria della Scala, detta anche Del Porto",
+      "Chiesa di Santa Lucia, in origine dedicata a San Carlo Borromeo",
+      "Chiesa di San Giacomo, in piazza Olivieri",
+      "Chiesa della Maternità",
+      "Chiesa del Nome di Dio, in Via Petrucci",
+      "Cattedrale di San Terenzio",
+      "Chiesa di San Giovanni Battista, in via Passeri"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Costanza"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Rossini"
+    ],
+    "stadi": [
+      "Stadio Comunale T. Benelli"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Lubiana (Slovenia), dal marzo 1964",
+      "Watford (Inghilterra), dall'aprile 1988",
+      "Rovigno (Croatia), dal maggio 1999",
+      "Rafah (Striscia di Gaza)",
+      "Qinhuangdao (Cina)",
+      "Nanterre (dipartimento dell'Hauts-de-Seine, regione dell'Ile-de-France, Francia), dal marzo 1969",
+      "Keita (Niger), dall'agosto 1987"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Gioachino Rossini (1792 - 1868)",
+      "compositore"
+    ]
+  }
+]

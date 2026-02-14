@@ -1,0 +1,16 @@
+{
+  "nome": "Lucca",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "LU",
+  "codice_istat": "046",
+  "popolazione": 390042,
+  "popolazione_maschi": 187937,
+  "popolazione_femmine": 202105,
+  "superficie_kmq": 1773.02,
+  "densita": 220.0,
+  "num_comuni": 33,
+  "capoluogo": "Lucca",
+  "iso_3166_2": "IT-LU",
+  "nuts": "ITE12"
+}

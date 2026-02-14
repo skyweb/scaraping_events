@@ -1,0 +1,3839 @@
+[
+  {
+    "nome": "Zoagli",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010067",
+    "codice_catastale": "M182",
+    "popolazione": 2457,
+    "superficie_kmq": 7.62,
+    "densita": 322.4,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "prima domenica di ottobre",
+    "demonimo": "zoagliesi",
+    "etimologia": "Attestato come Zovaio, rimanda ll'aggettivo latino iugalis, derivato da iugalis, a sua volta da iugum, giogo di monte, in riferimento all'aspetto aspro del luogo in cui sorse l'abitato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Naturale di Portofino"
+    ],
+    "localita_frazioni": [
+      "San Pietro di Rovereto",
+      "Sant'Ambrogio",
+      "Semorile"
+    ],
+    "comuni_confinanti": [
+      "Chiavari",
+      "Coreglia Ligure",
+      "Leivi",
+      "Rapallo",
+      "San Colombano Certenoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vobbia",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010066",
+    "codice_catastale": "M105",
+    "popolazione": 402,
+    "superficie_kmq": 33.2,
+    "densita": 12.1,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "Nostra Signora delle Grazie",
+    "festa_patronale": "seconda domenica di agosto",
+    "demonimo": "vobbiesi",
+    "etimologia": "Si riconduce a Vidubula, nella forma Veoblia, probabilmente in origine riferito al torrente.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Vallenzona",
+      "Arezzo",
+      "Noceto",
+      "Salata",
+      "Alpe"
+    ],
+    "comuni_confinanti": [
+      "Busalla",
+      "Carrega Ligure (AL)",
+      "Crocefieschi",
+      "Isola del Cantone",
+      "Mongiardino Ligure (AL)",
+      "Valbrevenna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello della Pietra"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Valbrevenna",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010065",
+    "codice_catastale": "L546",
+    "popolazione": 784,
+    "superficie_kmq": 35.13,
+    "densita": 22.3,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "valbrevennesi",
+    "etimologia": "E' un composto di valle, in riferimento al luogo in cui sorge l'abitato, e di Brevenna, derivato dalla base brev, freddo che irrigidisce o breva, vento freddo di Levante o brivido, con evidente significato, con l'aggiunta del suffisso -enna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Carsi",
+      "Cerreta",
+      "Clavarezza",
+      "Frassinello",
+      "Gorra",
+      "Molino Vecchio",
+      "Nenno",
+      "Pareto",
+      "Senarega",
+      "Ternano",
+      "Tonno"
+    ],
+    "comuni_confinanti": [
+      "Carrega Ligure (AL)",
+      "Casella",
+      "Crocefieschi",
+      "Montoggio",
+      "Propata",
+      "Savignone",
+      "Torriglia",
+      "Vobbia"
+    ],
+    "musei": [
+      "Museo Alta Valle Scrivia: Sezione Etnologica"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna dell'Acqua"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Uscio",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010064",
+    "codice_catastale": "L507",
+    "popolazione": 2268,
+    "superficie_kmq": 9.64,
+    "densita": 235.3,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "Sant'Ambrogio",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "uscesi",
+    "etimologia": "Si collega alla forma latina Augustis, dal nome proprio di persona Augustus, poi divenuto Auguxa.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Calcinara",
+      "Caprile",
+      "Colonia Arnaldi",
+      "Terrile"
+    ],
+    "comuni_confinanti": [
+      "Avegno",
+      "Lumarzo",
+      "Neirone",
+      "Sori",
+      "Tribogna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dei Battolli (seconda domenica di settembre)",
+      "con fiera di merci varie"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tribogna",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010063",
+    "codice_catastale": "L416",
+    "popolazione": 612,
+    "superficie_kmq": 7.05,
+    "densita": 86.8,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "tribognini",
+    "etimologia": "E' incerto se si tratta di una derivazione dal nome romano di persona Tebonius, senza suffisso o si debba identificare con il latino Tarboniae, di significato non chiaro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": [
+      "Aveno",
+      "Cassanesi",
+      "Garbarini",
+      "Piandeipreti"
+    ],
+    "comuni_confinanti": [
+      "Avegno",
+      "Cicagna",
+      "Moconesi",
+      "Neirone",
+      "Rapallo",
+      "Uscio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torriglia",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010062",
+    "codice_catastale": "L298",
+    "popolazione": 2297,
+    "superficie_kmq": 58.81,
+    "densita": 39.1,
+    "cap": "16029",
+    "prefisso_telefonico": "010",
+    "patrono": "Nostra Signora della Divina Provvidenza",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "torrigliesi",
+    "etimologia": "Derivato da turricula, opera di difesa, prova l'esistenza di un'antica fortificazione medioevale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Bavastri",
+      "Costafontana",
+      "Fascia di Carlo",
+      "Garaventa",
+      "Laccio",
+      "Marzano",
+      "Olcesi",
+      "Pentema",
+      "Ponte Trebbia",
+      "Porto",
+      "Passo della Scoffera"
+    ],
+    "comuni_confinanti": [
+      "Davagna",
+      "Lorsica",
+      "Lumarzo",
+      "Moconesi",
+      "Montebruno",
+      "Montoggio",
+      "Neirone",
+      "Propata",
+      "Rondanina",
+      "Valbrevenna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Canestrello (seconda domenica di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tiglieto",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010061",
+    "codice_catastale": "L167",
+    "popolazione": 537,
+    "superficie_kmq": 24.47,
+    "densita": 21.9,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "tiglietesi",
+    "etimologia": "Dal nome latino di pianta tilia (tiglio), con l'aggiunta del suffisso -eto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli Stura e Orba",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": [
+      "Acquabuona",
+      "Casavecchia"
+    ],
+    "comuni_confinanti": [
+      "Campo Ligure",
+      "Genova",
+      "Masone",
+      "Molare (AL)",
+      "Ponzone (AL)",
+      "Rossiglione",
+      "Urbe (SV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Bernardo e della Madonna Assunta",
+      "Badia di Tiglieto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sori",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010060",
+    "codice_catastale": "I852",
+    "popolazione": 4176,
+    "superficie_kmq": 13.13,
+    "densita": 318.1,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Gottardo",
+    "festa_patronale": "15 agosto",
+    "demonimo": "soresi",
+    "etimologia": "Potrebbe derivare dal nome di persona Saurius, ma non è da escludere un origine non latina, non bene determinata.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Canepa",
+      "Capreno",
+      "Lago",
+      "Leva'",
+      "San Bartolomeo",
+      "Sant'Apolinnare",
+      "Sussisa",
+      "Teriasca"
+    ],
+    "comuni_confinanti": [
+      "Avegno",
+      "Bargagli",
+      "Bogliasco",
+      "Genova",
+      "Lumarzo",
+      "Pieve Ligure",
+      "Recco",
+      "Uscio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Margherita (1711)",
+      "Chiesa di San Apollinare"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro del Levante"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sestri Levante",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010059",
+    "codice_catastale": "I693",
+    "popolazione": 18512,
+    "superficie_kmq": 33.49,
+    "densita": 552.8,
+    "cap": "16039",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "sestresi o sestrini",
+    "etimologia": "Si riconduce all'antico Segesta Tigulliorum con identificazione poco chiara. La specifica lo distingue dall'omofono sestri ponente.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Val Petronio",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Riva Trigoso",
+      "Trigoso",
+      "San Bartolomeo",
+      "Santa Margherita di Fossa Lupara",
+      "Pila sul Gromolo",
+      "Santa Vittoria",
+      "San Bernardo",
+      "Villa Cascine",
+      "Villa Costarossa",
+      "Santa Vittoria",
+      "Villa Libiola",
+      "Villa Rovereto",
+      "Villa Tassani",
+      "Villa Loto",
+      "Villa Azaro",
+      "Villa Montedomenico"
+    ],
+    "comuni_confinanti": [
+      "Casarza Ligure",
+      "Lavagna",
+      "Moneglia",
+      "Ne"
+    ],
+    "musei": [
+      "Galleria \"M. Rizzi\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Durazzo Pallavicini"
+    ],
+    "chiese": [
+      "Madonnina del Grappa Tempio di Cristo Re",
+      "Chiesa di San Nicolò dell'Isola (XII secolo)",
+      "Basilica di Santa Maria di Nazareth"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Bagnun (penultimo fine settimana di luglio)",
+      "con danze popolari e spettacolo pirotecnico sul mare"
+    ],
+    "gemellaggi": [
+      "Dole (Francia)",
+      "dal 1983"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serra Riccò",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010058",
+    "codice_catastale": "I640",
+    "popolazione": 7816,
+    "superficie_kmq": 26.15,
+    "densita": 298.9,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "serrariccoesi",
+    "etimologia": "E' un composto di Serra (tratto di cresta fra due valli, zona di valico) e di Riccò che continua il latino rivi caput, che indica l'inizio di un corso d'acqua.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Polcevera"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Pedemonte",
+      "Castagna",
+      "Mainetto",
+      "San Cipriano",
+      "Serra",
+      "Valleregia",
+      "Orero",
+      "Prelo;località: Ciaè",
+      "Pernecco",
+      "Niusci"
+    ],
+    "comuni_confinanti": [
+      "Casella",
+      "Genova",
+      "Mignanego",
+      "Montoggio",
+      "Sant'Olcese",
+      "Savignone"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Campanella (frazione: Mainetto)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo (frazione: Orero)",
+      "Chiesa parrocchiale dei SS. Cornelio e Cipriano (frazione: San Cipriano)",
+      "Chiesa di Santa Maria Maddalena (frazione: Pedemonte)",
+      "Chiesa di Nostra Signora della Mercede (frazione: Mainetto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Savignone",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010057",
+    "codice_catastale": "I475",
+    "popolazione": 3186,
+    "superficie_kmq": 21.78,
+    "densita": 146.3,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "Sant'Agostino",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "savignonesi",
+    "etimologia": "Dal nome latino di persona Sabinius, con sostituzione di -anus con -one.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Besolagno",
+      "Bosco",
+      "Canalbolzone",
+      "Capoluogo",
+      "Castellorosso",
+      "Cerisola",
+      "Cerreta",
+      "Costalovaia",
+      "Gabbie",
+      "Gualdrà",
+      "Inastrà",
+      "Inastrà di Montemaggio",
+      "Isorelle",
+      "Montemaggio",
+      "Moglia",
+      "Nacosta",
+      "Ponte di Savignone",
+      "Ponte San Bartolomeo",
+      "Prelo",
+      "Renesso",
+      "Sementella",
+      "Sorrivi",
+      "Vaccarezza",
+      "Vallecalda",
+      "Vittoria"
+    ],
+    "comuni_confinanti": [
+      "Busalla",
+      "Casella",
+      "Crocefieschi",
+      "Mignanego",
+      "Serra Riccò",
+      "Valbrevenna"
+    ],
+    "musei": [
+      "Museo degli Alpini",
+      "Museo Alta Valle Scrivia: Sezione Archeologica"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Olcese",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010055",
+    "codice_catastale": "I346",
+    "popolazione": 5926,
+    "superficie_kmq": 21.92,
+    "densita": 270.3,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "santolcesini",
+    "etimologia": "Il nome onora il santo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Polcevera"
+    ],
+    "localita_frazioni": [
+      "Arvigo",
+      "Casanova",
+      "Comago",
+      "Manesseno",
+      "Piccarello",
+      "Sant'Olcese",
+      "Torrazza",
+      "Trensasco",
+      "Vicomorasso"
+    ],
+    "comuni_confinanti": [
+      "Genova",
+      "Montoggio",
+      "Serra Riccò"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Martorelles (Spagna)",
+      "dal 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santo Stefano d'Aveto",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010056",
+    "codice_catastale": "I368",
+    "popolazione": 1122,
+    "superficie_kmq": 55.26,
+    "densita": 20.3,
+    "cap": "16049",
+    "prefisso_telefonico": "0185",
+    "patrono": "Madonna di Guadalupe",
+    "festa_patronale": "12 dicembre",
+    "demonimo": "santostefanesi",
+    "etimologia": "Deriva dal nome di una chiesa menzionata nei documenti medioevali come Sancti Stephani vallis Avanti. La specifica si riferisce al torrente Aveto, affluente del Trebbia.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Aveto Graveglia Sturla",
+      "Parco Naturale dell'Aveto"
+    ],
+    "localita_frazioni": [
+      "Allegrezze",
+      "Alpicella",
+      "Amborzasco",
+      "Ascona",
+      "Casoni",
+      "Gavadi",
+      "Gramizza",
+      "La Villa",
+      "Montegrosso",
+      "Pievetta",
+      "Villaneri"
+    ],
+    "comuni_confinanti": [
+      "Bedonia (PR)",
+      "Borzonasca",
+      "Ferriere (PC)",
+      "Rezzoaglio",
+      "Tornolo (PR)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Allegrezze"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Malaspina"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Margherita Ligure",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010054",
+    "codice_catastale": "I225",
+    "popolazione": 9227,
+    "superficie_kmq": 9.82,
+    "densita": 939.6,
+    "cap": "16038",
+    "prefisso_telefonico": "0185",
+    "patrono": "Nostra Signora della Rosa",
+    "festa_patronale": "20 luglio",
+    "demonimo": "sammargheritesi",
+    "etimologia": "Chiamato in origine Piscina o Pescino, assunse in seguito il nome di Santa Margherita di Pescino, dalla chiesa collegiata di Santa Margherita. La specifica indica la sua collocazione geografica.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale di Portofino"
+    ],
+    "localita_frazioni": [
+      "Nozarego",
+      "Paraggi",
+      "San Lorenzo della Costa"
+    ],
+    "comuni_confinanti": [
+      "Camogli",
+      "Portofino",
+      "Rapallo"
+    ],
+    "musei": [
+      "Museo \"Vittorio G. Rossi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di Santa Margherita di Antiochia",
+      "Chiesa di San Giacomo",
+      "Chiesa dei Cappuccini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "La Cervara",
+      "Abbazia di San Girolamo al Monte di Portofino"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Primavera (fine settimana più vicino al 21 marzo)",
+      "in località Ghiaia",
+      "con la Sagra della Fritella Ligure"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Colombano Certenoli",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010053",
+    "codice_catastale": "H802",
+    "popolazione": 2644,
+    "superficie_kmq": 41.23,
+    "densita": 64.1,
+    "cap": "16040",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Colombano Abate",
+    "festa_patronale": null,
+    "demonimo": "sancolombanesi",
+    "etimologia": "Deriva dal nome del santo. La seconda parte è il nome di una frazione, derivata da cerretenulum, piccola associazione di cerri.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Aveggio",
+      "Baranzuolo",
+      "Bavaggi",
+      "Calvari",
+      "Camposasco",
+      "Celesia",
+      "Certenoli",
+      "Chiesa Nuova",
+      "Cichero",
+      "Maggi",
+      "Mezzavalle",
+      "Romaggi",
+      "San Colombano",
+      "San Martino al Monte"
+    ],
+    "comuni_confinanti": [
+      "Borzonasca",
+      "Carasco",
+      "Coreglia Ligure",
+      "Leivi",
+      "Mezzanego",
+      "Orero",
+      "Rapallo",
+      "Rezzoaglio",
+      "Zoagli"
+    ],
+    "musei": [
+      "Museo Lascito Cuneo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dell’Assunta (frazione: Certenoli)",
+      "Chiesa di San Michele Arcangelo(frazione: Romaggi)",
+      "Chiesa di San Bernardo (frazione: Celesia)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "ruderi di un’abbazia a Villa Oneto"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rovegno",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010052",
+    "codice_catastale": "H599",
+    "popolazione": 533,
+    "superficie_kmq": 45.07,
+    "densita": 11.8,
+    "cap": "16028",
+    "prefisso_telefonico": "010",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "rovegnesi",
+    "etimologia": "Deriva dal nome romano di persona Rubenius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia"
+    ],
+    "localita_frazioni": [
+      "Casanova",
+      "Foppiano",
+      "Garbarino",
+      "Isola",
+      "Loco",
+      "Moglia",
+      "Pietranera",
+      "Spescia"
+    ],
+    "comuni_confinanti": [
+      "Fascia",
+      "Fontanigorda",
+      "Gorreto",
+      "Ottone (PC)",
+      "Rezzoaglio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rossiglione",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010051",
+    "codice_catastale": "H581",
+    "popolazione": 2744,
+    "superficie_kmq": 47.2,
+    "densita": 58.1,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "rossiglionesi",
+    "etimologia": "Deriva dall'aggettivo latino russus, rosso, con l'aggiunta del suffisso -iculum in riferimento a qualche caratteristica fisica del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli Stura e Orba",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belforte Monferrato (AL)",
+      "Bosio (AL)",
+      "Campo Ligure",
+      "Molare (AL)",
+      "Ovada (AL)",
+      "Tagliolo Monferrato (AL)",
+      "Tiglieto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Caterina (a Rossiglione Superiore)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rondanina",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010050",
+    "codice_catastale": "H546",
+    "popolazione": 64,
+    "superficie_kmq": 12.63,
+    "densita": 5.1,
+    "cap": "16025",
+    "prefisso_telefonico": "010",
+    "patrono": "San Nicola",
+    "festa_patronale": null,
+    "demonimo": "rondanelli",
+    "etimologia": "E' un aggettivo derivato da rondine, in riferimento al significato di \"zona frequentata dalle rondini\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Conio Avena",
+      "Costalunga",
+      "Fontanasse",
+      "Giardino",
+      "Gorreto di Ballini",
+      "Maiada",
+      "Retezzo"
+    ],
+    "comuni_confinanti": [
+      "Fascia",
+      "Montebruno",
+      "Propata",
+      "Torriglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola (XIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ronco Scrivia",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010049",
+    "codice_catastale": "H536",
+    "popolazione": 4376,
+    "superficie_kmq": 30.5,
+    "densita": 143.5,
+    "cap": "16019",
+    "prefisso_telefonico": "010",
+    "patrono": "Madonna della Guardia",
+    "festa_patronale": "29 agosto",
+    "demonimo": "ronchesi",
+    "etimologia": "La prima parte deriva dal latino runcare, sarchiare. La seconda parte allude alla collocazione dell'insediamento nell'alta valle Scrivia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Banchetta",
+      "Borgo Fornari",
+      "Isolabuona",
+      "Pietrafraccia"
+    ],
+    "comuni_confinanti": [
+      "Busalla",
+      "Fraconalto (AL)",
+      "Isola del Cantone",
+      "Voltaggio (AL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte medioevale sullo Scrivia"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rezzoaglio",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010048",
+    "codice_catastale": "H258",
+    "popolazione": 982,
+    "superficie_kmq": 105.2,
+    "densita": 9.3,
+    "cap": "16048",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Terenziano",
+    "festa_patronale": "primo settembre",
+    "demonimo": "rezzoagliesi",
+    "etimologia": "E' di etimologia oscura.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Aveto Graveglia Sturla",
+      "Parco Naturale dell'Aveto"
+    ],
+    "localita_frazioni": [
+      ": Alpepiana",
+      "Brignole",
+      "Brugnoni",
+      "Cabanne",
+      "Ca' degli Alessandri",
+      "Ca' de Bertè",
+      "Calcinara",
+      "Calzagatta",
+      "Cardenosa",
+      "Cardenosa di sotto",
+      "Casaleggio",
+      "Cascine",
+      "Cerisola",
+      "Cerro",
+      "Codorso",
+      "Cognoli",
+      "Costafigara",
+      "Ertola",
+      "Esola",
+      "Farfanosa",
+      "Garba",
+      "Ghiriverto",
+      "Gropparolo",
+      "Isolarotonda",
+      "Isoletta",
+      "Lago delle Lame",
+      "Lisorastro",
+      "Lovari",
+      "Magnasco",
+      "Mandriole",
+      "Mileto",
+      "Moglia",
+      "Molini",
+      "Monte",
+      "Noci",
+      "Parazzuolo",
+      "Pian di Fontana",
+      "Pianazze",
+      "Piandomestico",
+      "Piano",
+      "Prato della casa",
+      "Priosa",
+      "Rezzoaglio Basso",
+      "Rocca",
+      "Roncopiano",
+      "Salto",
+      "Sbarbari",
+      "Scabbiamara",
+      "Segaglia",
+      "Tecchia",
+      "Vaccarile",
+      "Ventarola",
+      "Vicomezzano",
+      "Vicosoprano",
+      "Villa Cella",
+      "Villa Cerro",
+      "Villa Noce"
+    ],
+    "comuni_confinanti": [
+      "Borzonasca",
+      "Favale di Malvaro",
+      "Ferriere (PC)",
+      "Fontanigorda",
+      "Lorsica",
+      "Montebruno",
+      "Orero",
+      "Ottone (PC)",
+      "Rovegno",
+      "San Colombano Certenoli",
+      "Santo Stefano d'Aveto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Terenziano",
+      "Chiesa di San Michele a Rezzoaglio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Recco",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010047",
+    "codice_catastale": "H212",
+    "popolazione": 9696,
+    "superficie_kmq": 9.67,
+    "densita": 1002.7,
+    "cap": "16036",
+    "prefisso_telefonico": "0185",
+    "patrono": "Madonna del Suffragio",
+    "festa_patronale": "8 settembre",
+    "demonimo": "recchelini o recchesi",
+    "etimologia": "Deriva dall'antico Ricina, forse di origine prelatina.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": [
+      "Megli",
+      "Polanesi",
+      "San Rocco"
+    ],
+    "comuni_confinanti": [
+      "Avegno",
+      "Camogli",
+      "Rapallo",
+      "Sori"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Michele e del Crocifisso",
+      "Santuario della Madonna del Suffragio",
+      "Chiesa Parrocchiale dei Santi Giovanni Battista e Giovanni Bono",
+      "Chiesa di San Martino a Polànesi",
+      "Chiesa di Nostra Signora delle Grazie (in località Megli)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Nostra Signora del Suffragio (la Suffragina) e Sagra del Fuoco (8 settembre)",
+      "Sagra della Focaccia di Recco (maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rapallo",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010046",
+    "codice_catastale": "H183",
+    "popolazione": 29778,
+    "superficie_kmq": 33.63,
+    "densita": 885.5,
+    "cap": "16035",
+    "prefisso_telefonico": "0185",
+    "patrono": "Nostra Signora di Montallegro",
+    "festa_patronale": "2 luglio",
+    "demonimo": "rapallesi",
+    "etimologia": "Deriva dal gotico rappa che assume il significato di piega, fenditura in riferimento ad un aspetto geografico. L'aggiunta del suffisso -allo, dal latino -anulum.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Porto Carlo Riva)"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale di Portofino"
+    ],
+    "localita_frazioni": [
+      "Santuario di Montallegro",
+      "Montepegli",
+      "San Martino di Noceto",
+      "San Massimo",
+      "San Maurizio di Monti",
+      "San Michele di Pagana",
+      "San Pietro di Novella",
+      "San Quirico d'Assereto",
+      "Santa Maria del Campo",
+      "Sant'Andrea di Foggia"
+    ],
+    "comuni_confinanti": [
+      "Avegno",
+      "Camogli",
+      "Cicagna",
+      "Coreglia Ligure",
+      "Recco",
+      "San Colombano Certenoli",
+      "Santa Margherita Ligure",
+      "Tribogna",
+      "Zoagli"
+    ],
+    "musei": [
+      "Museo \"A. e C. Gaffoglio\"",
+      "Civico Museo del Merletto al Tombolo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale dei SS. Gervasio e Protasio",
+      "Chiesa di Santo Stefano (X secolo)",
+      "Chiesa Evangelica Battista",
+      "Santuario Nostra Signora di Montallegro"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Doria"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte di Annibale (di epoca altomedievale)"
+    ],
+    "teatri": [
+      "Teatro Auditorium delle Clarisse"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna di Montallegro (1-3 luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Propata",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010045",
+    "codice_catastale": "H073",
+    "popolazione": 140,
+    "superficie_kmq": 16.8,
+    "densita": 8.3,
+    "cap": "16027",
+    "prefisso_telefonico": "010",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "propatesi",
+    "etimologia": "Prop- potrebbe derivare da polp-, pulp, di significato oscuro, con l'aggiunta del suffisso -ata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Albora",
+      "Bavasterlli",
+      "Caffarena",
+      "Caprile"
+    ],
+    "comuni_confinanti": [
+      "Carrega Ligure (AL)",
+      "Fascia",
+      "Rondanina",
+      "Torriglia",
+      "Valbrevenna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Portofino",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010044",
+    "codice_catastale": "G913",
+    "popolazione": 416,
+    "superficie_kmq": 2.55,
+    "densita": 163.1,
+    "cap": "16034",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "portofinesi",
+    "etimologia": "Deriva dal latino portus (porto) e delphin, -inis (delfino), forse in riferimento alla forma della collina che chiude l'insenatura e che assomiglia al dorso del delfino. La riduzione a Portofino si deve alla cancellazione di del nel tempo.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale di Portofino"
+    ],
+    "localita_frazioni": [
+      "San Sebastiano"
+    ],
+    "comuni_confinanti": [
+      "Camogli",
+      "Santa Margherita Ligure"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Martino di Tour",
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Brown (XVI secolo)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Faro di Portofino"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Giorgio (23 aprile)"
+    ],
+    "gemellaggi": [
+      "Palma De Mallorca (Spagna)",
+      "Kinsale (Irlanda)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pieve Ligure",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010043",
+    "codice_catastale": "G646",
+    "popolazione": 2515,
+    "superficie_kmq": 3.43,
+    "densita": 733.2,
+    "cap": "16030",
+    "prefisso_telefonico": "010",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "pievesi",
+    "etimologia": "Citata come Plebs de Sauri, pieve di Sori. Nel 1920 ha assunto la denominazione attuale, che identifica anche la sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Corsanico"
+    ],
+    "comuni_confinanti": [
+      "Bogliasco",
+      "Sori"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Croce",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Orero",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010042",
+    "codice_catastale": "G093",
+    "popolazione": 546,
+    "superficie_kmq": 15.86,
+    "densita": 34.4,
+    "cap": "16040",
+    "prefisso_telefonico": "0185",
+    "patrono": "Sant'Ambrogio",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "oreresi",
+    "etimologia": "Non si esclude che derivi dal nome di popolo Odiates, una delle tribù liguri dell'Agro Genuate.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Isolona",
+      "Pian dei Ratti",
+      "Pianezza",
+      "Soglio"
+    ],
+    "comuni_confinanti": [
+      "Cicagna",
+      "Coreglia Ligure",
+      "Lorsica",
+      "Rezzoaglio",
+      "San Colombano Certenoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Neirone",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010041",
+    "codice_catastale": "F862",
+    "popolazione": 886,
+    "superficie_kmq": 30.31,
+    "densita": 29.2,
+    "cap": "16040",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Maurizio",
+    "festa_patronale": "22 settembre",
+    "demonimo": "neironesi",
+    "etimologia": "Deriva dal torrente omonimo e si confronta con Negrone, con allusione al latino niger o nigrum (nero), in relazione al colore delle acque.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Neirone",
+      "Ognio",
+      "Roccatagliata",
+      "San Marco d'Urri"
+    ],
+    "comuni_confinanti": [
+      "Favale di Malvaro",
+      "Lorsica",
+      "Lumarzo",
+      "Moconesi",
+      "Torriglia",
+      "Tribogna",
+      "Uscio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della Patata Quarantina (domenica successiva al ferragosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ne",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010040",
+    "codice_catastale": "F858",
+    "popolazione": 2252,
+    "superficie_kmq": 64.05,
+    "densita": 35.2,
+    "cap": "16040",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "neesi",
+    "etimologia": "Dal nome romano di persona Nevius o un derivato dalla base ligura che si trova nell'antico nome di fiume Neviasca.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Magra",
+      "Comunità Montana Aveto Graveglia Sturla",
+      "Parco Naturale dell'Aveto"
+    ],
+    "localita_frazioni": [
+      "Arzeno",
+      "Caminata",
+      "Campo di Ne",
+      "Cassagna",
+      "Chiesanuova",
+      "Conscenti",
+      "Frisolino",
+      "Graveglia",
+      "Nascio",
+      "Piandifieno",
+      "Pontori",
+      "Reppia",
+      "Sambuceto",
+      "Statale",
+      "Zerli"
+    ],
+    "comuni_confinanti": [
+      "Borzonasca",
+      "Carasco",
+      "Casarza Ligure",
+      "Cogorno",
+      "Lavagna",
+      "Maissana (SP)",
+      "Mezzanego",
+      "Sestri Levante",
+      "Varese Ligure (SP)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Nascio (frazione Cassagna)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montoggio",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010039",
+    "codice_catastale": "F682",
+    "popolazione": 2022,
+    "superficie_kmq": 46.33,
+    "densita": 43.6,
+    "cap": "16026",
+    "prefisso_telefonico": "010",
+    "patrono": "Decollazione di San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "montoggini",
+    "etimologia": "Da Mons Opli, è un composto del latino mons (monte) e opulus, nome dell'acero montano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva"
+    ],
+    "localita_frazioni": [
+      "Bromia",
+      "Casalino",
+      "Creto",
+      "Trefontane"
+    ],
+    "comuni_confinanti": [
+      "Casella",
+      "Davagna",
+      "Genova",
+      "Sant'Olcese",
+      "Serra Riccò",
+      "Torriglia",
+      "Valbrevenna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sainte Lucie De Porto Vecchio (Francia), dal 2006",
+      "Radomysl (Repubblica Ceca), dal 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montebruno",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010038",
+    "codice_catastale": "F445",
+    "popolazione": 238,
+    "superficie_kmq": 17.54,
+    "densita": 13.6,
+    "cap": "16025",
+    "prefisso_telefonico": "010",
+    "patrono": "Natività di Maria",
+    "festa_patronale": "8 settembre",
+    "demonimo": "montebrunesi",
+    "etimologia": "Composto da mons (monte o territorio montano o luogo adibito a difesa) e dal nome individuale Bruno, probabilmente un suo feudatario.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Pianazzo",
+      "Connio di Mezzo",
+      "One",
+      "Croso",
+      "Lunga",
+      "Sottoripa",
+      "Seppioni",
+      "Tartogni",
+      "Ca' de Pipetta",
+      "Ravinello",
+      "Cassinetta",
+      "Ca' Rossa",
+      "Pian della Ca'",
+      "Cason da Basso",
+      "Caprili",
+      "Zeppado",
+      "Segli",
+      "Viazzale",
+      "Pian de Giane'",
+      "Scabbie",
+      "Libbie",
+      "Rocca",
+      "Pian della Felina"
+    ],
+    "comuni_confinanti": [
+      "Fascia",
+      "Fontanigorda",
+      "Lorsica",
+      "Moconesi",
+      "Rezzoaglio",
+      "Rondanina",
+      "Torriglia"
+    ],
+    "musei": [
+      "Museo del Sacro dell'Alta Val Trebbia",
+      "Museo di Cultura Contadina dell'Alta Val Trebbia"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Moneglia",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010037",
+    "codice_catastale": "F354",
+    "popolazione": 2793,
+    "superficie_kmq": 15.42,
+    "densita": 181.1,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "Esaltazione della Santa Croce",
+    "festa_patronale": "14 settembre",
+    "demonimo": "monegliesi",
+    "etimologia": "Dalla locuzione latina Ad Munilia, con probabile riferimento a costruzioni militari presenti nella zona.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Val Petronio"
+    ],
+    "localita_frazioni": [
+      "Bracco",
+      "Lemeglio",
+      "San Saturnino"
+    ],
+    "comuni_confinanti": [
+      "Casarza Ligure",
+      "Castiglione Chiavarese",
+      "Deiva Marina (SP)",
+      "Sestri Levante"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Croce",
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Moconesi",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010036",
+    "codice_catastale": "F256",
+    "popolazione": 2586,
+    "superficie_kmq": 16.14,
+    "densita": 160.2,
+    "cap": "16047",
+    "prefisso_telefonico": "0185",
+    "patrono": "Sacro Cuore di Gesù",
+    "festa_patronale": "terza domenica di settembre",
+    "demonimo": "moconesini",
+    "etimologia": "Dal nome di persona Mocco o Moccone, con l'aggiunta del suffisso -onicis.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Cornia",
+      "Ferrada",
+      "Gattorna",
+      "Moconesi Alto",
+      "Santa Brilla",
+      "Terrarossa"
+    ],
+    "comuni_confinanti": [
+      "Cicagna",
+      "Favale di Malvaro",
+      "Lorsica",
+      "Montebruno",
+      "Neirone",
+      "Torriglia",
+      "Tribogna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mignanego",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010035",
+    "codice_catastale": "F202",
+    "popolazione": 3655,
+    "superficie_kmq": 18.37,
+    "densita": 199.0,
+    "cap": "16018",
+    "prefisso_telefonico": "010",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "mignanesi",
+    "etimologia": "Deriva dal nome romano Munnius, con l'aggiunta del suffisso -anico.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Polcevera"
+    ],
+    "localita_frazioni": [
+      "Barriera",
+      "Fumeri",
+      "Giovi",
+      "Mignanego",
+      "Montanesi",
+      "Paveto",
+      "Ponterosso",
+      "Vittoria"
+    ],
+    "comuni_confinanti": [
+      "Busalla",
+      "Campomorone",
+      "Fraconalto (AL)",
+      "Genova",
+      "Savignone",
+      "Serra Riccò",
+      "Voltaggio (AL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Nostra Signora della Vittoria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro San Giuseppe"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mezzanego",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010034",
+    "codice_catastale": "F173",
+    "popolazione": 1544,
+    "superficie_kmq": 28.81,
+    "densita": 53.6,
+    "cap": "16046",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Rocco",
+    "festa_patronale": "seconda domenica di agosto",
+    "demonimo": "mezzaneghesi",
+    "etimologia": "Risale a (vicus) medianicus, vico di mezzo, ossia interposto tra due municipi, probabilmente Genua e Veleia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Aveto Graveglia Sturla",
+      "Parco Naturale dell'Aveto"
+    ],
+    "localita_frazioni": [
+      "Passo del Bocco",
+      "Borgonovo Ligure",
+      "Prati di Mezzanego",
+      "San Siro Foce",
+      "Semovigo",
+      "Vignolo",
+      "Isola di Borgonovo",
+      "Porciletto",
+      "Mezzanego Alto",
+      "Case Zatta",
+      "Corerallo",
+      "Pontegiacomo"
+    ],
+    "comuni_confinanti": [
+      "Borzonasca",
+      "Carasco",
+      "Ne",
+      "San Colombano Certenoli",
+      "Tornolo (PR)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Nostra Signora della Neve (a Borgonovo Ligure)",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mele",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010033",
+    "codice_catastale": "F098",
+    "popolazione": 2728,
+    "superficie_kmq": 16.93,
+    "densita": 161.1,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "Sant'Antonio abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "melesi",
+    "etimologia": "Dal latino volgare melus (melo), al plurale con valore collettivo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentea"
+    ],
+    "localita_frazioni": [
+      "Acquasanta",
+      "Biscaccia",
+      "Fado",
+      "Ferriera",
+      "Fondo Crosa"
+    ],
+    "comuni_confinanti": [
+      "Bosio (AL)",
+      "Genova",
+      "Masone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Nostra Signora dell'Acquasanta",
+      "Oratorio di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Masone",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010032",
+    "codice_catastale": "F020",
+    "popolazione": 3677,
+    "superficie_kmq": 29.82,
+    "densita": 123.3,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "masonesi",
+    "etimologia": "Menzionato come castrum Massoni, si riconduce al latino mansio, -onis, luogo di sosta lungo un itinerario.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli Stura e Orba",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": [
+      "Passo del Turchino",
+      "San Pietro",
+      "Passionata",
+      "La Cappelletta"
+    ],
+    "comuni_confinanti": [
+      "Bosio (AL)",
+      "Campo Ligure",
+      "Genova",
+      "Mele",
+      "Tiglieto"
+    ],
+    "musei": [
+      "Museo Civico \"A. Tubino\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Natività"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lumarzo",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010031",
+    "codice_catastale": "E737",
+    "popolazione": 1502,
+    "superficie_kmq": 25.48,
+    "densita": 58.9,
+    "cap": "16024",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Camillo",
+    "festa_patronale": "secondo lunedì di settembre",
+    "demonimo": "lumarzesi",
+    "etimologia": "Attestato con il nome di Limarce, è di probabile origine preromana, anche se non si riesce a definire la reale provenienza.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Boasi",
+      "Craviasco",
+      "Ferriere",
+      "Lumarzo",
+      "Pannesi",
+      "Rossi",
+      "Tasso",
+      "Vallebuona"
+    ],
+    "comuni_confinanti": [
+      "Bargagli",
+      "Davagna",
+      "Neirone",
+      "Sori",
+      "Torriglia",
+      "Uscio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lorsica",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010030",
+    "codice_catastale": "E695",
+    "popolazione": 449,
+    "superficie_kmq": 17.78,
+    "densita": 25.3,
+    "cap": "16045",
+    "prefisso_telefonico": "0185",
+    "patrono": "Santa Caterina da Genova",
+    "festa_patronale": "quarta domenica dopo Pasqua",
+    "demonimo": "lorsicesi",
+    "etimologia": "Dal latino ursus, con l'aggiunta del suffisso -ico, come attributo del latino loca, luoghi o terra, per indicare una zona dove sono presenti gli orsi.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Figarolo",
+      "Acqua",
+      "Verzi",
+      "Castagnelo",
+      "Monteghirfo",
+      "Barbagelata"
+    ],
+    "comuni_confinanti": [
+      "Cicagna",
+      "Favale di Malvaro",
+      "Moconesi",
+      "Montebruno",
+      "Neirone",
+      "Orero",
+      "Rezzoaglio",
+      "Torriglia"
+    ],
+    "musei": [
+      "Museo del Damasco"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Terenziano (a Figarolo)",
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di Santa Maria Regina del Creato (a Barbagelata)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della Carne in sa Ciappa (terza domenica di luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Leivi",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010029",
+    "codice_catastale": "E519",
+    "popolazione": 2438,
+    "superficie_kmq": 9.87,
+    "densita": 247.0,
+    "cap": "16040",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "leivesi",
+    "etimologia": "Si lega al nome di popolo Laevi.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Bocco",
+      "Curlo",
+      "Mezzo",
+      "Rostio",
+      "San Bartolomeo",
+      "San Rufino di Leivi",
+      "Solaro"
+    ],
+    "comuni_confinanti": [
+      "Carasco",
+      "Chiavari",
+      "San Colombano Certenoli",
+      "Zoagli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lavagna",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010028",
+    "codice_catastale": "E488",
+    "popolazione": 12692,
+    "superficie_kmq": 13.87,
+    "densita": 915.1,
+    "cap": "16033",
+    "prefisso_telefonico": "0185",
+    "patrono": "Nostra Signora del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "lavagnesi",
+    "etimologia": "Documentato come Lavania, precedentemente indicava la valle percorsa dal torrente omonimo. Potrebbe essere un aggettivo in -ania, forse concordato con vallis, da una base lava da connettere con il nome di popolo ligure Laevi.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Barassi",
+      "Cavi",
+      "San Giulia Centaura",
+      "Sorlana"
+    ],
+    "comuni_confinanti": [
+      "Chiavari",
+      "Cogorno",
+      "Ne",
+      "Sestri Levante"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Carbone"
+    ],
+    "chiese": [
+      "Santuario di Nostra Signora del Carmine",
+      "Chiesa di Santa Maria Madre della Chiesa",
+      "Chiesa di San Giulia di Centaura",
+      "Basilica di Santo Stefano"
+    ],
+    "castelli_fortificazioni": [
+      "Torre del Borgo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Torta dei Fieschi (14 agosto)",
+      "con corteo in costume"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola del Cantone",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010027",
+    "codice_catastale": "E341",
+    "popolazione": 1527,
+    "superficie_kmq": 47.8,
+    "densita": 31.9,
+    "cap": "16017",
+    "prefisso_telefonico": "010",
+    "patrono": "SS. Stefano e Innocenzo",
+    "festa_patronale": "seconda domenica di agosto",
+    "demonimo": "isolesi",
+    "etimologia": "La prima parte si riferisce alla sua posizione geografica sul territorio di confluenza del torrente Vobbia nello Scrivia. La seconda parte designa un nucleo autonomo, formatosi sull'altra sponda dello Scrivia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva"
+    ],
+    "localita_frazioni": [
+      "Borlasca",
+      "Cafforenga",
+      "Creverina",
+      "Griffoglieto",
+      "Marmassana",
+      "Mereta",
+      "Montecanne",
+      "Montessoro",
+      "Pietrabissara",
+      "Prarolo",
+      "Vobbietta"
+    ],
+    "comuni_confinanti": [
+      "Arquata Scrivia (AL)",
+      "Busalla",
+      "Gavi (AL)",
+      "Grondona (AL)",
+      "Mongiardino Ligure (AL)",
+      "Roccaforte Ligure (AL)",
+      "Ronco Scrivia",
+      "Vobbia",
+      "Voltaggio (AL)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Spinola Mignacco"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gorreto",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010026",
+    "codice_catastale": "E109",
+    "popolazione": 97,
+    "superficie_kmq": 18.53,
+    "densita": 5.2,
+    "cap": "16020",
+    "prefisso_telefonico": "010",
+    "patrono": "San Fermo",
+    "festa_patronale": null,
+    "demonimo": "gorretesi",
+    "etimologia": "Dal nome di piante gorra, salice, con l'aggiunta del suffisso -eto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Alpe",
+      "Borgo",
+      "Bosco",
+      "Canneto",
+      "Fontanarossa",
+      "Gorreto",
+      "Pissino",
+      "Varni"
+    ],
+    "comuni_confinanti": [
+      "Carrega Ligure (AL)",
+      "Fascia",
+      "Ottone (PC)",
+      "Rovegno"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Tornelli"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Caterina",
+      "Chiesa di Santo Stefano (in frazione Fontanarossa)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fontanigorda",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010024",
+    "codice_catastale": "D677",
+    "popolazione": 266,
+    "superficie_kmq": 16.62,
+    "densita": 16.0,
+    "cap": "16023",
+    "prefisso_telefonico": "010",
+    "patrono": "Sant'Antonio abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "fontanigordesi",
+    "etimologia": "Formato da fontana o loca fontana con un aggettivo ingurda, di significato non chiaro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia"
+    ],
+    "localita_frazioni": [
+      "Canale",
+      "Casoni"
+    ],
+    "comuni_confinanti": [
+      "Fascia",
+      "Montebruno",
+      "Rezzoaglio",
+      "Rovegno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Favale di Malvaro",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010023",
+    "codice_catastale": "D512",
+    "popolazione": 457,
+    "superficie_kmq": 16.66,
+    "densita": 27.4,
+    "cap": "16040",
+    "prefisso_telefonico": "0185",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": null,
+    "demonimo": "favalesi",
+    "etimologia": "Deriva dal latino fava, fava, con l'aggiunta del suffisso -ale, nel senso di \"terreno adatto alla coltivazione delle fave\". La specifica allude alla collocazione del centro nella valle del torrente Malvaro.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Castello",
+      "Monteghirfo"
+    ],
+    "comuni_confinanti": [
+      "Lorsica",
+      "Moconesi",
+      "Neirone",
+      "Rezzoaglio"
+    ],
+    "musei": [
+      "Museo dell'Emigrante \"Casa Giannini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fascia",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010022",
+    "codice_catastale": "D509",
+    "popolazione": 75,
+    "superficie_kmq": 11.03,
+    "densita": 6.8,
+    "cap": "16020",
+    "prefisso_telefonico": "010",
+    "patrono": "San Guglielmo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "fasciotti",
+    "etimologia": "Deriva dal latino fascia, nel senso di terreno a forma allungata, in riferimento alla sua conformazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Trebbia",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Carpeneto",
+      "Cassingheno"
+    ],
+    "comuni_confinanti": [
+      "Carrega Ligure (AL)",
+      "Fontanigorda",
+      "Gorreto",
+      "Montebruno",
+      "Propata",
+      "Rondanina",
+      "Rovegno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio Astronomico Parco Antola"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Davagna",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010021",
+    "codice_catastale": "D255",
+    "popolazione": 1895,
+    "superficie_kmq": 22.1,
+    "densita": 85.7,
+    "cap": "16022",
+    "prefisso_telefonico": "010",
+    "patrono": "San Pietro Apostolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "davagnini",
+    "etimologia": "Deriva da una base davo- con l'aggiunta del suffisso -aneo o -anio, con significato sconosciuto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva"
+    ],
+    "localita_frazioni": [
+      "Cavassolo",
+      "Maggiolo",
+      "Calvari",
+      "Marsiglia",
+      "Dercogna",
+      "Moranego",
+      "Meco",
+      "Piè di Rosso",
+      "Rosso",
+      "Sottana",
+      "Paravagna",
+      "Capenardo",
+      "Villamezzana",
+      "Davagna (capoluogo)",
+      "Sella",
+      "Piancarnese",
+      "Scoffera",
+      "Sottocolle"
+    ],
+    "comuni_confinanti": [
+      "Bargagli",
+      "Genova",
+      "Lumarzo",
+      "Montoggio",
+      "Torriglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro Apostolo di Davagna",
+      "Chiesa parrocchiale di Sant'Andrea (a Calvari)",
+      "Chiesa di San Giovanni (nel borgo di Marsiglia)",
+      "Chiesa di San Colombano (a Moranego)",
+      "Chiesa parrocchiale di Santo Stefano (a Rosso)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crocefieschi",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010020",
+    "codice_catastale": "D175",
+    "popolazione": 545,
+    "superficie_kmq": 11.56,
+    "densita": 47.1,
+    "cap": "16010",
+    "prefisso_telefonico": "010",
+    "patrono": "Madonna della Guardia",
+    "festa_patronale": "29 agosto",
+    "demonimo": "crocesi",
+    "etimologia": "Attestato come Crucem per indicare la chiesa parrocchiale dedicata alla Santa Croce. E' un composto di Croce e del cognome dei signori del borgo Fieschi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Crebaia",
+      "Crosi",
+      "Strasserra",
+      "Vallegge",
+      "Vallemara"
+    ],
+    "comuni_confinanti": [
+      "Busalla",
+      "Savignone",
+      "Valbrevenna",
+      "Vobbia"
+    ],
+    "musei": [
+      "Museo Paleontologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Croce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Coreglia Ligure",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010019",
+    "codice_catastale": "C995",
+    "popolazione": 272,
+    "superficie_kmq": 8.0,
+    "densita": 34.0,
+    "cap": "16040",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Nicola da Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "coregliesi",
+    "etimologia": "Dal nome di persona Corellius, la specifica indica la posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Coreglia",
+      "Canevale",
+      "Dezerega",
+      "Vallefredda",
+      "Piandeimanzi",
+      "Piandicoreglia"
+    ],
+    "comuni_confinanti": [
+      "Cicagna",
+      "Orero",
+      "Rapallo",
+      "San Colombano Certenoli",
+      "Zoagli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Giacomo (primo fine settimana di agosto)",
+      "nella frazione Canevalle",
+      "con la Corsa del Santo"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cogorno",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010018",
+    "codice_catastale": "C826",
+    "popolazione": 5748,
+    "superficie_kmq": 9.06,
+    "densita": 634.4,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "cogornesi",
+    "etimologia": "Attestato come Cucurno o Cugurno, deriva dal nome di pianta Cogorno con l'aggiunta del suffisso -urno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": [
+      "frazioni: Breccanecca",
+      "Monticelli",
+      "Panesi",
+      "Costa",
+      "San Salvatore"
+    ],
+    "comuni_confinanti": [
+      "Carasco",
+      "Chiavari",
+      "Lavagna",
+      "Ne"
+    ],
+    "musei": [
+      "Museo dei Fieschi"
+    ],
+    "ville_palazzi": [
+      "Palazzo Comitale"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Colombano della Costa",
+      "Chiesa parrocchiale di S. Antonino di Breccanecca",
+      "Chiesa di San Salvatore il Vecchio",
+      "Basilica dei Fieschi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Addiu du Fantin (13 agosto)",
+      "con corteo storico"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cogoleto",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010017",
+    "codice_catastale": "C823",
+    "popolazione": 9131,
+    "superficie_kmq": 20.34,
+    "densita": 448.9,
+    "cap": "16016",
+    "prefisso_telefonico": "010",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "cogoletesi",
+    "etimologia": "Documentato con il nome di Codoledo, è un collettivo in -eto del nome latino di pianta cotoneum (cotogno).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentea",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": [
+      "località: Pratozanino; frazioni: Lerca",
+      "Sciarborasca"
+    ],
+    "comuni_confinanti": [
+      "A est: Arenzano; a nord: Sassello (SV); a ovest: Varazze (SV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Casa natale di Cristoforo Colombo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Santa Coloma de Gramenet (Spagna), dal marzo 1997",
+      "Saint Andrè Les Vergers (Francia), dall'ottobre 2006",
+      "Olympia (Grecia), dal giugno 2005",
+      "Ober-Ramstadt (Germania), dal 1960"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cicagna",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010016",
+    "codice_catastale": "C673",
+    "popolazione": 2483,
+    "superficie_kmq": 11.54,
+    "densita": 215.2,
+    "cap": "16044",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cicagnesi",
+    "etimologia": "Potrebbe essere un derivato in -anea del latino plicare, ossia \"piegare\", in riferimento alla forma del terreno.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Monleone",
+      "Pianezza",
+      "Serra"
+    ],
+    "comuni_confinanti": [
+      "Coreglia Ligure",
+      "Lorsica",
+      "Moconesi",
+      "Orero",
+      "Rapallo",
+      "Tribogna"
+    ],
+    "musei": [
+      "Museo Storico Archeologico",
+      "Museo dell'Ardesia"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro di Cicagna"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chiavari",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010015",
+    "codice_catastale": "C621",
+    "popolazione": 27429,
+    "superficie_kmq": 12.46,
+    "densita": 2201.4,
+    "cap": "16043",
+    "prefisso_telefonico": "0185",
+    "patrono": "Nostra Signora dell'Orto",
+    "festa_patronale": "2 luglio",
+    "demonimo": "chiavaresi",
+    "etimologia": "Di etimologia incerta, potrebbe derivare da una base celtica klavo, affine al romano clava con valore di \"località di un cono di deiezione\". Secondo altri deriva da clavulis, piantagione, dal latino clavula, piantone.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Chiavari)"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale di Portofino"
+    ],
+    "localita_frazioni": [
+      "Campodonico",
+      "Maxena",
+      "Ri Alto",
+      "Sanguineto",
+      "Sant'Andrea di Rovereto"
+    ],
+    "comuni_confinanti": [
+      "Carasco",
+      "Cogorno",
+      "Lavagna",
+      "Leivi",
+      "Zoagli"
+    ],
+    "musei": [
+      "Quadreria della Società Economica di Chiavari",
+      "Museo Storico del Risorgimento della Società Economica di Chiavari",
+      "Museo Diocesano di Arte Sacra",
+      "Museo Archeologico per la Preistoria e Protostoria del Tigullio",
+      "Museo \"Lorenzo Garaventa\" della Società Economica di Chiavari",
+      "Civica Galleria di Palazzo Rocca"
+    ],
+    "ville_palazzi": [
+      "Palazzo Torriglia",
+      "Palazzo Rocca",
+      "Palazzo Marana",
+      "Palazzo Gagliardo",
+      "Palazzo di Giustizia (con torre merlata del 1537)"
+    ],
+    "chiese": [
+      "Santuario Nostra Signora dell'Orto",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Giacomo di Rupinaro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Nostra Signora dell'Orto (1-3 luglio)",
+      "con palio marinaro tra i quartieri"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ceranesi",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010014",
+    "codice_catastale": "C481",
+    "popolazione": 3816,
+    "superficie_kmq": 30.92,
+    "densita": 123.4,
+    "cap": "16014",
+    "prefisso_telefonico": "010",
+    "patrono": "Madonna della Guardia",
+    "festa_patronale": "29 agosto",
+    "demonimo": "ceranesotti",
+    "etimologia": "Deriva dal nome di persona Coelius, con l'aggiunta del suffisso -anico.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Polcevera"
+    ],
+    "localita_frazioni": [
+      "Ceranesi-Gaiazza",
+      "Geo",
+      "Livellato",
+      "San Martino di Paravanico",
+      "Torbi"
+    ],
+    "comuni_confinanti": [
+      "A est: Campomorone; a nord: Bosio (AL); a sud e ovest e est: Genova"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo di Torbi",
+      "Chiesa di San Martino di Paravanico",
+      "Chiesa di San Bernardo di Lencisa",
+      "Cappella di N.S. della Misericordia della Caffarella"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castiglione Chiavarese",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010013",
+    "codice_catastale": "C302",
+    "popolazione": 1592,
+    "superficie_kmq": 30.15,
+    "densita": 52.8,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "N.S. della Guardia di Velva",
+    "festa_patronale": "29 agosto",
+    "demonimo": "castiglionesi",
+    "etimologia": "Documentato come Castellionem, deriva dalla base tardo latina castellio, forma alterata di castellum. La specifica identifica la posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Val Petronio"
+    ],
+    "localita_frazioni": [
+      "Velva",
+      "Missano",
+      "Campegli",
+      "San Pietro Frascati",
+      "Casali",
+      "Mereta",
+      "Masso"
+    ],
+    "comuni_confinanti": [
+      "Carro (SP)",
+      "Casarza Ligure",
+      "Maissana (SP)",
+      "Moneglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Nostra Signora della Guardia",
+      "Chiesa Parrocchiale di Sant'Antonio",
+      "Chiesa di San Martino di Velva"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casella",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010012",
+    "codice_catastale": "B956",
+    "popolazione": 3133,
+    "superficie_kmq": 7.78,
+    "densita": 402.7,
+    "cap": "16015",
+    "prefisso_telefonico": "010",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "casellesi",
+    "etimologia": "Diminutivo in -ello del termine latino casa, con il significato di \"casa massaricia\" o \"casolare rustico\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva"
+    ],
+    "localita_frazioni": [
+      "Avosso"
+    ],
+    "comuni_confinanti": [
+      "A est: Montoggio",
+      "Valbrevenna; a nord e ovest: Savignone; a sud: Serra Riccò"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Sant'Antonio Abate",
+      "Chiesa di Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casarza Ligure",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010011",
+    "codice_catastale": "B939",
+    "popolazione": 6920,
+    "superficie_kmq": 27.36,
+    "densita": 252.9,
+    "cap": "16030",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "casarzesi",
+    "etimologia": "Documentato come casa arsa, deriva dal latino medioevale casa (podere) e dall'aggettivo arsus (bruciato), in riferimento ad un probabile incendio. La specifica identifica la collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Magra",
+      "Comunità Montana Val Petronio"
+    ],
+    "localita_frazioni": [
+      "Bargonasco",
+      "Bargone",
+      "Cardini",
+      "Massasco",
+      "Verici Costa"
+    ],
+    "comuni_confinanti": [
+      "Castiglione Chiavarese",
+      "Maissana (SP)",
+      "Moneglia",
+      "Ne",
+      "Sestri Levante"
+    ],
+    "musei": [
+      "Museo \"Parma Gemma\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa romanica di San Giovanni Battista di Candisco",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carasco",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010010",
+    "codice_catastale": "B726",
+    "popolazione": 3773,
+    "superficie_kmq": 8.61,
+    "densita": 438.2,
+    "cap": "16042",
+    "prefisso_telefonico": "0185",
+    "patrono": "Madonna delle Ciliegie",
+    "festa_patronale": "terza domenica di giugno",
+    "demonimo": "caraschini",
+    "etimologia": "Deriva probabilmente dal latino calare (sospendere), da cui il dialetto ligure karà (scendere), in riferimento alla sua conformazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": [
+      "Rivarola",
+      "Graveglia",
+      "San Pietro di Sturla",
+      "Santa Maria di Sturla",
+      "Paggi"
+    ],
+    "comuni_confinanti": [
+      "Chiavari",
+      "Cogorno",
+      "Leivi",
+      "Mezzanego",
+      "Ne",
+      "San Colombano Certenoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campomorone",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010009",
+    "codice_catastale": "B551",
+    "popolazione": 6956,
+    "superficie_kmq": 26.14,
+    "densita": 266.1,
+    "cap": "16014",
+    "prefisso_telefonico": "010",
+    "patrono": "Madonna del Santo Amore",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "campomoronesi",
+    "etimologia": "E' un composto del latino campus (campo) e del cognome del possessore, Maurone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Polcevera"
+    ],
+    "localita_frazioni": [
+      "Cravasco",
+      "Gallaneto",
+      "Gazzolo",
+      "Isoverde",
+      "Langasco",
+      "Pietralavezzara",
+      "Santo Stefano di Larvego"
+    ],
+    "comuni_confinanti": [
+      "Bosio (AL)",
+      "Ceranesi",
+      "Fraconalto (AL)",
+      "Genova",
+      "Mignanego",
+      "Voltaggio (AL)"
+    ],
+    "musei": [
+      "Museo di Paleontologia e Mineralogia",
+      "Museo delle Marionette",
+      "Museo della Croce Rossa Italiana"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campo Ligure",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010008",
+    "codice_catastale": "B538",
+    "popolazione": 2951,
+    "superficie_kmq": 23.78,
+    "densita": 124.1,
+    "cap": "16013",
+    "prefisso_telefonico": "010",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "campesi",
+    "etimologia": "Chiamato Campo freddo fino al 1884 e poi semplicemente Campo, deriva dal latino campus, campo, con evidente significato. La specifica identifica la posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli Stura e Orba",
+      "Parco Naturale del Beigua",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Maddalena"
+    ],
+    "comuni_confinanti": [
+      "Bosio (AL)",
+      "Masone",
+      "Rossiglione",
+      "Tiglieto"
+    ],
+    "musei": [
+      "Museo della Filigrana"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Nostra Signora Assunta",
+      "Oratorio dei Santi Sebastiano e Rocco",
+      "Chiesa Parrocchiale della Natività"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Spinola"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Botanico montano Pratorondanino"
+    ],
+    "luoghi_interesse": [
+      "Ponte Medievale sullo Stura"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Corbelin (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camogli",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010007",
+    "codice_catastale": "B490",
+    "popolazione": 5342,
+    "superficie_kmq": 9.88,
+    "densita": 540.7,
+    "cap": "16032",
+    "prefisso_telefonico": "0185",
+    "patrono": "San Fortunato",
+    "festa_patronale": "seconda domenica di maggio",
+    "demonimo": "camogliesi",
+    "etimologia": "Deriva dal nome romano di persona Camullius, all'ablativo plurale.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale di Portofino"
+    ],
+    "localita_frazioni": [
+      "Portofino Vetta",
+      "Punta Chiappa",
+      "Ruta",
+      "San Fruttuoso",
+      "San Rocco"
+    ],
+    "comuni_confinanti": [
+      "Portofino",
+      "Rapallo",
+      "Recco",
+      "Santa Margherita Ligure"
+    ],
+    "musei": [
+      "Museo Marinaro Gio Bon Ferrari",
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Abbazia di San Fruttuoso di Capodimonte (frazione: San Fruttuoso)",
+      "Chiesa Millenaria",
+      "Chiesa parrocchiale di San Rocco",
+      "Basilica di Santa Maria Assunta (XII secolo)",
+      "Santuario Nostra Signora del Boschetto",
+      "Chiesetta di San Nicolò",
+      "Chiesa parrocchiale San Michele Arcangelo (a Ruta)"
+    ],
+    "castelli_fortificazioni": [
+      "Castel Dragone (di origine medievale)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Cristo degli Abissi (sul fondo della baia di San Fruttuoso)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Pesce",
+      "Sagra del Pesce (seconda domenica di maggio)",
+      "Stella Maris (prima domenica di agosto), processione di barche, tra cui la tradizionale \"u Dragun\""
+    ],
+    "gemellaggi": [
+      "Tuningen (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Busalla",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010006",
+    "codice_catastale": "B282",
+    "popolazione": 5545,
+    "superficie_kmq": 17.12,
+    "densita": 323.9,
+    "cap": "16012",
+    "prefisso_telefonico": "010",
+    "patrono": "Nome di Maria Vergine",
+    "festa_patronale": "seconda domenica di settembre",
+    "demonimo": "busallesi",
+    "etimologia": "Deriva da un nome di persona non ben definito, con l'aggiunte del suffisso -ano o -anulo, come attributo di villa o mansio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Valle Scriva",
+      "Parco Naturale dell'Antola"
+    ],
+    "localita_frazioni": [
+      "Sarissola",
+      "Camarza",
+      "Semino",
+      "Bastia"
+    ],
+    "comuni_confinanti": [
+      "A est: Crocefieschi",
+      "Vobbia; a nord: Isola del Cantone",
+      "Ronco Scrivia; a ovest: Fraconalto (AL); a sud: Mignanego",
+      "Savignone"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Ballerini, in stile liberty",
+      "Villa Borzino",
+      "Villa Bozano (a Sarissola)",
+      "Villa Macciò"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Maddalena",
+      "Chiesa Cristiana Evangelica",
+      "Cappella di San Rocco",
+      "Cappella di N. S. della Guardia",
+      "Cappella del Buon Consiglio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa delle Rose - Busalla è in Fiore (a giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borzonasca",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010005",
+    "codice_catastale": "B067",
+    "popolazione": 2089,
+    "superficie_kmq": 79.99,
+    "densita": 26.1,
+    "cap": "16041",
+    "prefisso_telefonico": "0185",
+    "patrono": "Esaltazione della Santa Croce",
+    "festa_patronale": "14 settembre",
+    "demonimo": "borzonaschini",
+    "etimologia": "Prende il nome dalla vicina abbazia di Borzone, come derivato in -asco al femminile.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Aveto Graveglia Sturla",
+      "Parco Naturale dell'Aveto"
+    ],
+    "localita_frazioni": [
+      "Montemoggio",
+      "Belpiano",
+      "Temossi",
+      "Brizzolara",
+      "Sopralacroce",
+      "Levaggi",
+      "Caregli",
+      "Borzone",
+      "Giaiette",
+      "Acero"
+    ],
+    "comuni_confinanti": [
+      "Mezzanego",
+      "Ne",
+      "Rezzoaglio",
+      "San Colombano Certenoli",
+      "Santo Stefano d'Aveto",
+      "Tornolo (PR)",
+      "Varese Ligure (SP)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bogliasco",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010004",
+    "codice_catastale": "A922",
+    "popolazione": 4487,
+    "superficie_kmq": 4.36,
+    "densita": 1029.1,
+    "cap": "16031",
+    "prefisso_telefonico": "010",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "bogliaschini",
+    "etimologia": "Il nome deriva dal fatto che il comune è sorto vicino alla foce del rio dei Bogli, da bullium, da bullire (bollire), con il significato di \"punto del torrente dove l'acqua ribolle, con l'aggiunta del suffisso -asco.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Sessarego",
+      "Poggio",
+      "San Bernardo"
+    ],
+    "comuni_confinanti": [
+      "A est: Pieve Ligure",
+      "Sori; a nord e ovest: Genova"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale della Natività"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bargagli",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010003",
+    "codice_catastale": "A658",
+    "popolazione": 2697,
+    "superficie_kmq": 16.25,
+    "densita": 166.0,
+    "cap": "16021",
+    "prefisso_telefonico": "010",
+    "patrono": "Assunzione della Vergine Maria",
+    "festa_patronale": "15 agosto",
+    "demonimo": "bargaglini",
+    "etimologia": "Probabilmente deriva dal nome di popolo Bergalli (montanari), dalla base ligure bergo- (monte), nella forma dell'ablativo plurale Bergallis.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "frazioni: Valle Lentro (borgate: La Presa",
+      "Trapena",
+      "Viganego",
+      "Terrusso",
+      "Cisiano)",
+      "Traso",
+      "Bargagli - Capoluogo (borgate: Eo",
+      "Casa Comunale",
+      "Molino",
+      "Vaxe",
+      "Vigo",
+      "Cevasco",
+      "Miana",
+      "Ferretto",
+      "Mercato",
+      "San Lorenzo",
+      "Canova",
+      "Bragalla",
+      "Portiglia",
+      "Borgonuovo",
+      "Pian Serreto",
+      "Ospedale",
+      "Sant'Alberto)",
+      "Maxena"
+    ],
+    "comuni_confinanti": [
+      "Davagna",
+      "Genova",
+      "Lumarzo",
+      "Pieve Ligure",
+      "Sori"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Ambrogio (a Traso)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Avegno",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010002",
+    "codice_catastale": "A506",
+    "popolazione": 2548,
+    "superficie_kmq": 11.03,
+    "densita": 231.0,
+    "cap": "16036",
+    "prefisso_telefonico": "0185",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "avegnesi",
+    "etimologia": "Deriva dal nome latino di persona Avinius.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Località: Avegno Chiesa",
+      "Molino Nuovo",
+      "Salto",
+      "Testana",
+      "Vescina"
+    ],
+    "comuni_confinanti": [
+      "Rapallo",
+      "Recco",
+      "Sori",
+      "Tribogna",
+      "Uscio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Avegno (Svizzera)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arenzano",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010001",
+    "codice_catastale": "A388",
+    "popolazione": 11478,
+    "superficie_kmq": 24.57,
+    "densita": 467.2,
+    "cap": "16011",
+    "prefisso_telefonico": "010",
+    "patrono": "Santi Nazario e Celso",
+    "festa_patronale": "28 luglio",
+    "demonimo": "arenzanesi",
+    "etimologia": "Attestato con le forme Aensen e Rensen, si riferisce ad un termine fissato nella forma dell'ablativo plurale Arentianis, dal nome romano di persona Arentius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentea",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": [
+      "Terralba"
+    ],
+    "comuni_confinanti": [
+      "Cogoleto",
+      "Genova",
+      "Sassello (SV)"
+    ],
+    "musei": [
+      "Muvita (Museo vivo delle tecnologie per l'ambiente)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della SS.Annunziata alla Olivete (XVII secolo)",
+      "Santuario del Santo Bambino di Praga :: Frati Carmelitani Scalzi",
+      "Chiesa Parrocchiale dei SS. Nazario e Celso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Tata (Ungheria), dal giugno 1994",
+      "Pontoise (Francia), dal febbraio 1958",
+      "Lutraki (Grecia), dall'ottobre 1957",
+      "El Jadida (Marocco), dal luglio 1964",
+      "Domburg (Olanda), dal novembre 1958"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Genova",
+    "provincia": "Genova",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "010025",
+    "codice_catastale": "D969",
+    "popolazione": 583601,
+    "superficie_kmq": 243.6,
+    "densita": 2395.7,
+    "cap": "16100",
+    "prefisso_telefonico": "010",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "genovesi",
+    "etimologia": "Dal latino Genua, deriva da una base indoeuropea geneu (ginocchio) o genu (mascella) in riferimento alla conformazione del luogo, con una curvatura interna, come un ginocchio o la bocca di un fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Naturale del Beigua",
+      "Associazione Città italiane per la mobilità sostenibile e lo sviluppo dei trasporti",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "Acquasanta",
+      "Vesima"
+    ],
+    "comuni_confinanti": [
+      "Arenzano",
+      "Bargagli",
+      "Bogliasco",
+      "Bosio (AL)",
+      "Campomorone",
+      "Ceranesi",
+      "Davagna",
+      "Masone",
+      "Mele",
+      "Mignanego",
+      "Montoggio",
+      "Sant'Olcese",
+      "Sassello (SV)",
+      "Serra Riccò",
+      "Sori",
+      "Tiglieto"
+    ],
+    "musei": [
+      "Civico Museo Biblioteca dell'Attore del Teatro di Genova",
+      "Collezione d'Arte della Banca Carige",
+      "Museo del Tesoro della Cattedrale di San Lorenzo",
+      "Museo Giannettino Luxoro",
+      "Museo Garibaldino (Villa Spinola)",
+      "Museo Emanuele Luzzati",
+      "Museo Diocesano di Arte Sacra",
+      "Museo di Vita Cappuccina",
+      "Museo di Storia e Cultura Contadina",
+      "Museo di Sant'Agostino",
+      "Museo di Santa Maria di Castello",
+      "Museo di Palazzo del Principe",
+      "Museo di Etnomedicina Antonio Scarpa",
+      "Museo di Archeologia Ligure",
+      "Museo Raccolte Frugone",
+      "Museo dell'Accademia Ligustica di Belle Arti",
+      "Museo Storico della Filarmonica Sestrese",
+      "Museo del Risorgimento (Casa Mazzini)",
+      "Museo del Jazz G. Dagnino",
+      "Museo d'Arte Orientale Edoardo Chiossone",
+      "Museo d'Arte Contemporanea di Villa Croce",
+      "Museo Civico di Storia Naturale Giacomo Doria",
+      "Mu.MA",
+      "GAM Galleria di Arte Moderna",
+      "Galleria Nazionale di Palazzo Spinola",
+      "Galleria di Palazzo Rosso",
+      "Galleria di Palazzo Reale",
+      "Galleria di Palazzo Bianco",
+      "Collezione Wolfson - Fondazione Regionale \"C. Colombo\"",
+      "Collezione Wolfson",
+      "Museo delle Culture del Mondo",
+      "Museo Nazionale dell'Antartide \"F. Ippolito\"",
+      "Raccolta Ighiniana dell'Istituto Calasanzio",
+      "Raccolta \"Frugone\"",
+      "Palazzo Tursi"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Nostra Signora delle Grazie Santa Maria della Castagna :: Monaci Benedettini Sublacensi",
+      "Santuario Nostra Signora della Guardia (sul monte Figogna)",
+      "Santuario Nostra Signora del Monte :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco di Villa Pallavicini",
+      "Parchi di Nervi (villa Groppallo, villa Saluzzo Serra, villa Grimaldi)",
+      "Giardino Botanico Clelia Durazzo Grimaldi"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Rina e Gilberto Govi",
+      "Teatro Carignano",
+      "Teatro Carlo Felice",
+      "Teatro della Corte",
+      "Teatro della Gioventù",
+      "Teatro della Tosse in Sant'Agostino (Piazza Renato Negri, 6)",
+      "Teatro Diana",
+      "Teatro Duse",
+      "Teatro Politeama Genovese",
+      "Teatro Verdi",
+      "Teatro Gustavo Modena",
+      "Teatro Cargo"
+    ],
+    "stadi": [
+      "Stadio Luigi Ferraris"
+    ],
+    "eventi_feste_sagre": [
+      "Confeugo (sabato precedente il 25 dicembre)",
+      "Festa della Zucca (secondo e terzo fine settimana di novembre), in località Murta",
+      "Festa di San Giovanni Battista (24 giugno)",
+      "Mercatino di San Nicola (5-21 dicembre)",
+      "Palio della Tavola Bronzea di Polcevera (una domenica a metà settembre), con corteo storico commemorativo"
+    ],
+    "gemellaggi": [
+      "Rijeka (Croazia), dal 2005",
+      "Chios (Grecia), dal 1985",
+      "Huelva (Spagna)",
+      "Odessa (Ucraina)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Riccardo Giacconi (1931-)",
+      "Premio Nobel per la Fisica"
+    ]
+  }
+]

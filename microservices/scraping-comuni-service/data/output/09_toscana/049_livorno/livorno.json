@@ -1,0 +1,16 @@
+{
+  "nome": "Livorno",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "LI",
+  "codice_istat": "049",
+  "popolazione": 337334,
+  "popolazione_maschi": 162305,
+  "popolazione_femmine": 175029,
+  "superficie_kmq": 1211.38,
+  "densita": 278.5,
+  "num_comuni": 20,
+  "capoluogo": "Livorno",
+  "iso_3166_2": "IT-LI",
+  "nuts": "ITE16"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Frosinone",
+  "regione": "Lazio",
+  "zona": null,
+  "sigla": "FR",
+  "codice_istat": "060",
+  "popolazione": 493067,
+  "popolazione_maschi": 241594,
+  "popolazione_femmine": 251473,
+  "superficie_kmq": 3243.95,
+  "densita": 152.0,
+  "num_comuni": 91,
+  "capoluogo": "Frosinone",
+  "iso_3166_2": "IT-FR",
+  "nuts": "ITE45"
+}

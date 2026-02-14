@@ -1,0 +1,16 @@
+{
+  "nome": "Ascoli Piceno",
+  "regione": "Marche",
+  "zona": null,
+  "sigla": "AP",
+  "codice_istat": "044",
+  "popolazione": 209450,
+  "popolazione_maschi": 101412,
+  "popolazione_femmine": 108038,
+  "superficie_kmq": 1228.23,
+  "densita": 170.5,
+  "num_comuni": 33,
+  "capoluogo": "Ascoli Piceno",
+  "iso_3166_2": "IT-AP",
+  "nuts": "ITE34"
+}

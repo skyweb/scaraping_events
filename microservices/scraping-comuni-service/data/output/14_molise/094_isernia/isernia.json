@@ -1,0 +1,16 @@
+{
+  "nome": "Isernia",
+  "regione": "Molise",
+  "zona": null,
+  "sigla": "IS",
+  "codice_istat": "094",
+  "popolazione": 85805,
+  "popolazione_maschi": 42447,
+  "popolazione_femmine": 43358,
+  "superficie_kmq": 1524.36,
+  "densita": 56.3,
+  "num_comuni": 52,
+  "capoluogo": "Isernia",
+  "iso_3166_2": "IT-IS",
+  "nuts": "ITF21"
+}

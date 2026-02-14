@@ -1,0 +1,16 @@
+{
+  "nome": "Trieste",
+  "regione": "Friuli-Venezia Giulia",
+  "zona": null,
+  "sigla": "TS",
+  "codice_istat": "032",
+  "popolazione": 234682,
+  "popolazione_maschi": 112065,
+  "popolazione_femmine": 122617,
+  "superficie_kmq": 211.82,
+  "densita": 1107.9,
+  "num_comuni": 6,
+  "capoluogo": "Trieste",
+  "iso_3166_2": "IT-TS",
+  "nuts": "ITD44"
+}

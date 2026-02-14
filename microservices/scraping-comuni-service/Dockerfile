@@ -24,7 +24,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY scrapy.cfg .
-COPY comuni_italiani/ comuni_italiani/
+COPY comuni_istat/ comuni_istat/
 
 RUN mkdir -p /data/output
 

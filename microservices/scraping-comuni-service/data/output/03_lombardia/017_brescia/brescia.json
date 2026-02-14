@@ -1,0 +1,16 @@
+{
+  "nome": "Brescia",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "BS",
+  "codice_istat": "017",
+  "popolazione": 1262318,
+  "popolazione_maschi": 621253,
+  "popolazione_femmine": 641425,
+  "superficie_kmq": 4784.36,
+  "densita": 263.8,
+  "num_comuni": 205,
+  "capoluogo": "Brescia",
+  "iso_3166_2": "IT-BS",
+  "nuts": "ITC47"
+}

@@ -1,0 +1,2671 @@
+[
+  {
+    "nome": "Zungri",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102050",
+    "codice_catastale": "M204",
+    "popolazione": 1966,
+    "superficie_kmq": 23.26,
+    "densita": 84.5,
+    "cap": "89867",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "zungresi",
+    "etimologia": "Deriva dal termine greco zugrion o tsougkrì, ossia altura, collina. Secondo alcuni potrebbe derivare da zungrì, ossia roccia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Papaglionti"
+    ],
+    "comuni_confinanti": [
+      "Briatico",
+      "Cessaniti",
+      "Drapia",
+      "Filandari",
+      "Rombiolo",
+      "Spilinga",
+      "Zaccanopoli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Baronale Pisani"
+    ],
+    "chiese": [
+      "Chiesetta della Madonna di Lourds",
+      "Chiesa della Madonna della Neve"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Villa Romana, detta \"Grotta di Trisulina\" (in frazione Papaglionti)",
+      "Villa Comunale \"Cichello Gasparri Giuseppe\"",
+      "Insediamento Rupestre degli Sbariati, con le case-grotta scavate nella roccia"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Zambrone",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102049",
+    "codice_catastale": "M143",
+    "popolazione": 1769,
+    "superficie_kmq": 14.36,
+    "densita": 123.2,
+    "cap": "89868",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Carlo",
+    "festa_patronale": "4 novembre",
+    "demonimo": "zambronesi",
+    "etimologia": "Esistono diverse ipotesi sulla provenienza del nome. Secondo alcuni deriva dal termine dialettale zambaru che significa villano. Secondo altri potrebbe derivare da sanbronum, da sanbra, cavità. Un'altra ipotesi ritiene che il nome derivi dall'arabo sabbara, ossia aloe.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "frazioni: Daffinà",
+      "Daffinacello",
+      "San Giovanni;\nlocalità: Madama",
+      "Perdipitti",
+      "Stazione",
+      "ferroviaria",
+      "Marina",
+      "Priscopio",
+      "Calate Potame"
+    ],
+    "comuni_confinanti": [
+      "Briatico",
+      "Parghelia",
+      "Zaccanopoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Carlo Borromeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Zaccanopoli",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102048",
+    "codice_catastale": "M138",
+    "popolazione": 741,
+    "superficie_kmq": 6.61,
+    "densita": 112.1,
+    "cap": "89867",
+    "prefisso_telefonico": "0963",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "zaccanopolesi",
+    "etimologia": "Deriva dal nome greco di famiglia Zagharopoulos o dal termine dialettale zaccanu, ossia ovile.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Briatico",
+      "Drapia",
+      "Parghelia",
+      "Tropea",
+      "Zambrone",
+      "Zungri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madonna della Neve"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vazzano",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102046",
+    "codice_catastale": "L699",
+    "popolazione": 1051,
+    "superficie_kmq": 19.85,
+    "densita": 52.9,
+    "cap": "89834",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Francesco di Paola",
+    "festa_patronale": null,
+    "demonimo": "vazzanesi",
+    "etimologia": "Deriva dal nome latino di persona Vatius o Vaccius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Filogaso",
+      "Pizzoni",
+      "Sant'Onofrio",
+      "Simbario",
+      "Stefanaconi",
+      "Vallelonga"
+    ],
+    "musei": [
+      "Antiquarium Civico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Fuscà-Luciana"
+    ],
+    "chiese": [
+      "Chiesa del SS. Rosario",
+      "Chiesa Matrice dedicata a San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallelonga",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102045",
+    "codice_catastale": "L607",
+    "popolazione": 702,
+    "superficie_kmq": 17.53,
+    "densita": 40.0,
+    "cap": "89821",
+    "prefisso_telefonico": "0963",
+    "patrono": "Madonna della Neve o Santa Maria Maggiore",
+    "festa_patronale": "5 agosto",
+    "demonimo": "vallelonghesi",
+    "etimologia": "Essendo posizionato nel punto in cui confluiscono due valloni, il nome si riferisce alla sua collocazione. Il nome è un composto di \"valle\" che deriva dal latino vallis e \"longa\", dal latino longus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Filogaso",
+      "San Nicola da Crissa",
+      "Simbario",
+      "Torre di Ruggiero (CZ)",
+      "Vazzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna di Monserrato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tropea",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102044",
+    "codice_catastale": "L452",
+    "popolazione": 6362,
+    "superficie_kmq": 3.59,
+    "densita": 1772.1,
+    "cap": "89861",
+    "prefisso_telefonico": "0963",
+    "patrono": "Maria SS. di Romania",
+    "festa_patronale": "27 marzo",
+    "demonimo": "tropeani",
+    "etimologia": "Deriva dal greco Tropaias che significa \"trofei\". Secondo alcuni il nome deriverebbe dal nome latino di persona Tarpeius. Altri ancora credono che il nome derivi da Triofea, ossia dal nome che fu assegnato al paese dopo la vittoria di Pompeo su Cesare.",
+    "il_comune_e": [
+      "Località balneare segnalata con cinque vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro",
+      "Associazione Nazionale per l'Incremento Turistico (ANIT)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Drapia",
+      "Parghelia",
+      "Ricadi",
+      "Zaccanopoli"
+    ],
+    "musei": [
+      "Raccolta Privata \"Toraldo di Francia\"",
+      "Mostra degli Antichi Mestieri di Calabria"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale",
+      "Santuario di Santa Maria dell'Isola",
+      "Chiesa dell'Annunziata",
+      "Chiesa di San Francesco (1295)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Stefanaconi",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102043",
+    "codice_catastale": "I945",
+    "popolazione": 2473,
+    "superficie_kmq": 23.23,
+    "densita": 106.5,
+    "cap": "89843",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola Vescovo",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "stefanaconesi",
+    "etimologia": "Deriva dal nome latino di persona Stefanaci che si riferisce al greco Stephanaki(o)s con l'aggiunta del suffisso -oni.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Morsillara-Calvario"
+    ],
+    "comuni_confinanti": [
+      "Francica",
+      "Gerocarne",
+      "Sant'Onofrio",
+      "Soriano Calabro",
+      "Vazzano",
+      "Vibo Valentia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Maria SS. del Carmelo",
+      "Chiesa di San Nicola Vescovo",
+      "Chiesa di M. S. Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Spilinga",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102042",
+    "codice_catastale": "I905",
+    "popolazione": 1467,
+    "superficie_kmq": 18.69,
+    "densita": 78.5,
+    "cap": "89864",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "21 maggio",
+    "demonimo": "spilingesi",
+    "etimologia": "Il nome deriva da spelunga o da spilinga, ossia grotta, spelonca.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Drapia",
+      "Joppolo",
+      "Limbadi",
+      "Nicotera",
+      "Ricadi",
+      "Rombiolo",
+      "Zungri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta della Madonna delle Fonti"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Spadola",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102041",
+    "codice_catastale": "I884",
+    "popolazione": 818,
+    "superficie_kmq": 9.58,
+    "densita": 85.4,
+    "cap": "89822",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "spadolesi",
+    "etimologia": "Il nome deriva dal latino spatula, ossia mestolo. Secondo alcuni il nome deriva dal dialetto spatula che indica uno strumento usato per battere il lino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Brognaturo",
+      "Gerocarne",
+      "Serra San Bruno",
+      "Simbario",
+      "Sorianello",
+      "Stilo (RC)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Sopra Minerva",
+      "Chiesa della Confraternita di Maria S.S. dei Sette Dolori"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soriano Calabro",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102040",
+    "codice_catastale": "I854",
+    "popolazione": 2391,
+    "superficie_kmq": 15.17,
+    "densita": 157.6,
+    "cap": "89831",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "sorianesi",
+    "etimologia": "Deriva dal nome latino di persona Surius con l'aggiunta del suffisso -anus che indica possesso. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Gerocarne",
+      "Pizzoni",
+      "Sorianello",
+      "Stefanaconi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Carmine",
+      "Chiesa di San Filippo",
+      "Santuario di San Domenico :: Frati Domenicani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sorianello",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102039",
+    "codice_catastale": "I853",
+    "popolazione": 1180,
+    "superficie_kmq": 9.72,
+    "densita": 121.4,
+    "cap": "89831",
+    "prefisso_telefonico": "0963",
+    "patrono": "Madonna della Salute",
+    "festa_patronale": null,
+    "demonimo": "sorianellesi",
+    "etimologia": "Il nome è un diminutivo di Soriano Calabro, paese limitrofo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Gerocarne",
+      "Pizzoni",
+      "Serra San Bruno",
+      "Simbario",
+      "Soriano Calabro",
+      "Spadola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa di San Nicola",
+      "Chiesa di San Giovanni",
+      "Chiesa di San Bruno"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Simbario",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102038",
+    "codice_catastale": "I744",
+    "popolazione": 964,
+    "superficie_kmq": 19.25,
+    "densita": 50.1,
+    "cap": "89822",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "simbariani",
+    "etimologia": "Il nome potrebbe riferirsi al termine dialettale zimba, ossia porcile (dal greco kumbos, cavità o kumbareion, gruppo di porcili).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Brognaturo",
+      "Spadola; a nord: Cardinale (CZ)",
+      "Torre di Ruggiero (CZ); a ovest: Pizzoni",
+      "Vallelonga",
+      "Vazzano; a sud: Sorianello"
+    ],
+    "musei": [
+      "Museo Etnografico delle culture del territorio"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice",
+      "in piazza Vittorio Veneto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serra San Bruno",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102037",
+    "codice_catastale": "I639",
+    "popolazione": 6698,
+    "superficie_kmq": 39.58,
+    "densita": 169.2,
+    "cap": "89822",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Bruno",
+    "festa_patronale": null,
+    "demonimo": "serresi",
+    "etimologia": "La prima parte del nome deriva dal verbo serrare, ossia chiudere o dal termine serra, ossia sega (riferendosi alla dentellatura della cresta dei monti). Essendo il paese collocato in una vasta conca, è circondato da montagne, quindi il nome si riferisce alla sua posizione geografica. La specifica si riferisce a San Brunone da Colonia, fondatore della Certosa di Santo Stefano a cui il paese è appartenuto fino al 1765.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arena",
+      "Gerocarne",
+      "Mongiana",
+      "Sorianello",
+      "Spadola",
+      "Stilo (RC)"
+    ],
+    "musei": [
+      "Museo della Certosa"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria dell'Eremo (o del Bosco)",
+      "Chiesa di San Biagio (1795)",
+      "Chiesa dell'Annunziata (o di San Giovanni o dell'Assunta), di origine medievale",
+      "Chiesa dell'Addolorata (1721)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Bruno (lunedì e martedì dopo la Pentecoste)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Onofrio",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102036",
+    "codice_catastale": "I350",
+    "popolazione": 3067,
+    "superficie_kmq": 18.36,
+    "densita": 167.0,
+    "cap": "89843",
+    "prefisso_telefonico": "0963",
+    "patrono": "Sant'Onofrio",
+    "festa_patronale": null,
+    "demonimo": "santonofresi",
+    "etimologia": "Il nome deriva dall'antico monastero basiliano intorno a cui sorse il paese e si riferisce anche al santo patrono del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Filogaso",
+      "Maierato",
+      "Pizzo",
+      "Stefanaconi",
+      "Vazzano",
+      "Vibo Valentia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Nicola da Crissa",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102035",
+    "codice_catastale": "I058",
+    "popolazione": 1329,
+    "superficie_kmq": 19.32,
+    "densita": 68.8,
+    "cap": "89821",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "sannicolesi",
+    "etimologia": "Il nome riflette la forte venerazione verso il santo patrono del paese. La specifica ha un'origine sconosciuta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capistrano",
+      "Filogaso",
+      "Torre di Ruggiero (CZ)",
+      "Vallelonga"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Gregorio d'Ippona",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102034",
+    "codice_catastale": "H941",
+    "popolazione": 2580,
+    "superficie_kmq": 12.37,
+    "densita": 208.6,
+    "cap": "89853",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Gregorio Magno",
+    "festa_patronale": "12 marzo",
+    "demonimo": "ipponesi",
+    "etimologia": "Deriva il suo nome dal santo patrono del paese. La specifica deriva da Hipponion, nome greco con cui anticamente era chiamata Vibo Valentia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Mezzocasale",
+      "Zammaro",
+      "Regina Elena"
+    ],
+    "comuni_confinanti": [
+      "Francica",
+      "Ionadi",
+      "San Costantino Calabro",
+      "Vibo Valentia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Gregorio Magno"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Costantino Calabro",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102033",
+    "codice_catastale": "H807",
+    "popolazione": 2214,
+    "superficie_kmq": 7.03,
+    "densita": 314.9,
+    "cap": "89851",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Costantino Vescovo",
+    "festa_patronale": "21 maggio",
+    "demonimo": "sancostantinesi",
+    "etimologia": "Il nome riflette la forte venerazione verso il santo patrono del paese. La specifica, identificativa della zona, risale al 1863.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Francica",
+      "Ionadi",
+      "Mileto",
+      "San Gregorio d'Ippona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra da Pitta Chjina (inizio agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Calogero",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102032",
+    "codice_catastale": "H785",
+    "popolazione": 4247,
+    "superficie_kmq": 25.12,
+    "densita": 169.1,
+    "cap": "89842",
+    "prefisso_telefonico": "0963",
+    "patrono": "Madonna dell'Immacolata",
+    "festa_patronale": "8 dicembre",
+    "demonimo": "sancalogeresi",
+    "etimologia": "Il nome riflette la forte devozione verso il santo, anche se la patrona del paese è l'Immacolata Concezione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "frazione: Calimera; borgate: Piana Delle Querce",
+      "Sant'Opoli",
+      "Casalello",
+      "Torre di Campo"
+    ],
+    "comuni_confinanti": [
+      "Candidoni (RC)",
+      "Filandari",
+      "Limbadi",
+      "Mileto",
+      "Rombiolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dell'Immacolata",
+      "Chiesa del Sacro Cuore Di Gesù"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rombiolo",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102031",
+    "codice_catastale": "H516",
+    "popolazione": 4549,
+    "superficie_kmq": 22.81,
+    "densita": 199.4,
+    "cap": "89841",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "rombiolesi o rombioloti",
+    "etimologia": "La sua provenienza è incerta, potrebbe derivare dal termine rhombiolus che è diminutivo di rhombus, ossia rombo. Potrebbe riferirsi anche al greco rhombos o al termine rombeo, ossia \"trottola\" o \"giro\" riferendosi alla forma del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Pernocari",
+      "Presinaci",
+      "Orsigliadi",
+      "Moladi Garavati"
+    ],
+    "comuni_confinanti": [
+      "Filandari",
+      "Limbadi",
+      "San Calogero",
+      "Spilinga",
+      "Zungri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ricadi",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102030",
+    "codice_catastale": "H271",
+    "popolazione": 4938,
+    "superficie_kmq": 22.3,
+    "densita": 221.4,
+    "cap": "89866",
+    "prefisso_telefonico": "0963",
+    "patrono": "Madonna delle Grazie",
+    "festa_patronale": null,
+    "demonimo": "ricadesi",
+    "etimologia": "Deriva dal nome di famiglia Riga o Rigà con l'aggiunta del suffisso -adi.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "frazioni: Ricadi",
+      "Lampazzone",
+      "Barbalaconi",
+      "Orsigliadi",
+      "San Nicolò",
+      "Brivadi",
+      "Santa Domenica",
+      "Ciaramiti;\nborgate: Santa Maria",
+      "Torre Marino"
+    ],
+    "comuni_confinanti": [
+      "Drapia",
+      "Joppolo",
+      "Spilinga",
+      "Tropea"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola (nella frazione di San Nicolò)",
+      "Chiesa di San Michele (nella frazione Lampazzone)",
+      "Chiesa di San Martino (nella frazione Orsigliadi)",
+      "Chiesa di San Basilio (nella frazione Brivadi)",
+      "Cappella di Santa Domenica (in località Formicoli)",
+      "Chiesa di Santa Lucia (nella  frazione Barbalaconi)",
+      "Chiesa di San Paolo (a Ciaramiti)",
+      "Chiesa di Santa Zaccaria",
+      "Chiesa di San Pietro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta del Palombaro"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della Cipolla Rossa (seconda settimana di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Polia",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102029",
+    "codice_catastale": "G785",
+    "popolazione": 1014,
+    "superficie_kmq": 31.78,
+    "densita": 31.9,
+    "cap": "89813",
+    "prefisso_telefonico": "0963",
+    "patrono": "Sant'Enrico",
+    "festa_patronale": "13 luglio",
+    "demonimo": "poliesi",
+    "etimologia": "Deriva dal termine greco polia, ossia vecchia o dal nome femminile di persona Apuleia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Cellìa",
+      "Minniti",
+      "Poliolo",
+      "Tre Croci",
+      "Lia"
+    ],
+    "comuni_confinanti": [
+      "Cenadi (CZ)",
+      "Cortale (CZ)",
+      "Filadelfia",
+      "Francavilla Angitola",
+      "Jacurso (CZ)",
+      "Maierato",
+      "Monterosso Calabro",
+      "San Vito sullo Ionio (CZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Croce",
+      "Chiesa di Sant’Enrico",
+      "Chiesa di San Nicola",
+      "Chiesa dell'Immacolata a Poliolo",
+      "Chiesa della Madonna di Loreto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pizzoni",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102028",
+    "codice_catastale": "G728",
+    "popolazione": 1120,
+    "superficie_kmq": 23.23,
+    "densita": 48.2,
+    "cap": "89834",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "pizzonesi",
+    "etimologia": "Deriva dal nome di famiglia Pizzo o Pizzi con l'aggiunta del suffisso -ones, diventando Pitsones che indica l'estensione di significato a \"discendenti della famiglia Pizzi\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Simbario",
+      "Sorianello",
+      "Soriano Calabro",
+      "Vazzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola",
+      "Chiesa dell'ex congrega dei Sette Dolori",
+      "Chiesa del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana delle Sirene"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pizzo",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102027",
+    "codice_catastale": "G722",
+    "popolazione": 9298,
+    "superficie_kmq": 22.34,
+    "densita": 416.2,
+    "cap": "89812",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "pizzitani o napitini",
+    "etimologia": "Il nome deriva dal dialetto pizzu, ossia punta. Si riferisce alla sua posizione a picco sul mare.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Curinga (CZ)",
+      "Francavilla Angitola",
+      "Maierato",
+      "Sant'Onofrio",
+      "Vibo Valentia"
+    ],
+    "musei": [
+      "Museo Provinciale Murattiano",
+      "Museo del Mare"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Piedigrotta",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Murat"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Parghelia",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102026",
+    "codice_catastale": "G335",
+    "popolazione": 1299,
+    "superficie_kmq": 8.0,
+    "densita": 162.4,
+    "cap": "89861",
+    "prefisso_telefonico": "0963",
+    "patrono": "Sant'Andrea Apostolo",
+    "festa_patronale": "30 novembre",
+    "demonimo": "pargheliesi",
+    "etimologia": "Il nome deriva dal greco paraigialia, ossia regione vicino al mare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "frazione Fitili",
+      "contrada Quercia"
+    ],
+    "comuni_confinanti": [
+      "Drapia",
+      "Tropea",
+      "Zaccanopoli",
+      "Zambrone"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Meligrana"
+    ],
+    "chiese": [
+      "Santuario della Madonna di Portosalvo",
+      "Chiesa parrocchiale Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nicotera",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102025",
+    "codice_catastale": "F893",
+    "popolazione": 6192,
+    "superficie_kmq": 32.77,
+    "densita": 189.0,
+    "cap": "89844",
+    "prefisso_telefonico": "0963",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "nicoteresi",
+    "etimologia": "Deriva dal nome greco di persona Nikoteras il cui significato è \"miracolo di vittoria\" associandosi a nike, vittoria appunto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "Marina di Nicotera",
+      "Comerconi",
+      "Preitoni",
+      "Badia"
+    ],
+    "comuni_confinanti": [
+      "Candidoni (RC)",
+      "Joppolo",
+      "Limbadi",
+      "Rosarno (RC)",
+      "Spilinga"
+    ],
+    "musei": [
+      "Museo Civico Archeologico",
+      "Archivio Storico Vescovile",
+      "Centro per lo Studio e la Conservazione della Civiltà Contadina del Poro",
+      "Museo Diocesano d'Arte Sacra"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello dei Ruffo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nardodipace",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102024",
+    "codice_catastale": "F843",
+    "popolazione": 1277,
+    "superficie_kmq": 32.78,
+    "densita": 39.0,
+    "cap": "89824",
+    "prefisso_telefonico": "0963",
+    "patrono": "Beata Vergine",
+    "festa_patronale": null,
+    "demonimo": "nardodipacesi o nardopacesi",
+    "etimologia": "Di provenienza dubbia, potrebbe derivare dal nome di persona \"Nardo\" (derivato di Leonardo) e dal cognome \"di Pace\" diffuso in zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caulonia (RC)",
+      "Fabrizia",
+      "Martone (RC)",
+      "Mongiana",
+      "Pazzano (RC)",
+      "Roccella Ionica (RC)",
+      "Stilo (RC)"
+    ],
+    "musei": [
+      "Oggetti di Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monterosso Calabro",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102023",
+    "codice_catastale": "F607",
+    "popolazione": 1690,
+    "superficie_kmq": 18.16,
+    "densita": 93.1,
+    "cap": "89819",
+    "prefisso_telefonico": "0963",
+    "patrono": "Madonna del Soccorso",
+    "festa_patronale": "prima domenica di luglio",
+    "demonimo": "monterossini",
+    "etimologia": "Il nome Monterosso si riferisce alla presenza in zona di una miniera ferruginosa adoperata per tinteggiare i tessuti. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capistrano",
+      "Maierato",
+      "Polia",
+      "San Vito sullo Ionio (CZ)"
+    ],
+    "musei": [
+      "Museo Multimediale delle Serre",
+      "Museo della Civiltà Contadina e Artigiana"
+    ],
+    "ville_palazzi": [
+      "Palazzo Basile",
+      "Palazzo Massara"
+    ],
+    "chiese": [
+      "Chiesa del Rosario",
+      "Chiesa di Maria del SS. Soccorso",
+      "Chiesa di Maria SS. del Carmelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mongiana",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102022",
+    "codice_catastale": "F364",
+    "popolazione": 730,
+    "superficie_kmq": 20.7,
+    "densita": 35.3,
+    "cap": "89823",
+    "prefisso_telefonico": "0963",
+    "patrono": null,
+    "festa_patronale": "16 agosto",
+    "demonimo": "mongianesi",
+    "etimologia": "Il nome deriva dal dialetto del luogo mungiana, ossia ferriera.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Santa Maria di Cropani"
+    ],
+    "comuni_confinanti": [
+      "Arena",
+      "Fabrizia",
+      "Nardodipace",
+      "Serra San Bruno",
+      "Stilo (RC)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mileto",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102021",
+    "codice_catastale": "F207",
+    "popolazione": 6706,
+    "superficie_kmq": 34.94,
+    "densita": 191.9,
+    "cap": "89852",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "miletesi",
+    "etimologia": "Secondo alcuni il nome si riferisce alla fondazione del paese da parte dei milesi. Secondo altri il nome deriverebbe dal latino meletum o maletum che deriva a sua volta da malus (melo) con l'aggiunta del suffisso collettivo -etum. Poco condivisa è l'ipotesi che collega il nome del paese all'antica e ricca città greca Miletos.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Comparni",
+      "Paravati",
+      "San Giovanni"
+    ],
+    "comuni_confinanti": [
+      "Candidoni (RC)",
+      "Dinami",
+      "Filandari",
+      "Francica",
+      "Ionadi",
+      "San Calogero",
+      "San Costantino Calabro",
+      "Serrata (RC)"
+    ],
+    "musei": [
+      "Museo Statale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale di San Nicola di Bari",
+      "Santuario di Santa Maria della Cattolica"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Maierato",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102020",
+    "codice_catastale": "E836",
+    "popolazione": 2198,
+    "superficie_kmq": 39.88,
+    "densita": 55.1,
+    "cap": "89843",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola",
+    "festa_patronale": null,
+    "demonimo": "maieratani",
+    "etimologia": "Potrebbe derivare dal nome di persona o di famiglia Maiera con estensione a ton Makhairados (proprietà della famiglia) oppure potrebbe derivare dal greco makhairas con l'aggiunta del suffisso -ades che significa \"coltellaio\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "frazione: Cannalia;\ncontrade: Baratta",
+      "Cabbano",
+      "Caggiola",
+      "Cannella",
+      "Carvolì",
+      "Casalinovo",
+      "Castagnarella",
+      "Cesini",
+      "Cresta Basilica",
+      "Daporni",
+      "Donna Gianna",
+      "Falco",
+      "Fego",
+      "Giannarosa",
+      "Grilluzzo",
+      "Macuni",
+      "Maddalena",
+      "Maria",
+      "Martellito",
+      "Medaglie",
+      "Monte Marello",
+      "Montesanto",
+      "Mosto",
+      "Petto di Agazio",
+      "Piccola Valle",
+      "Pimè",
+      "Piria",
+      "Rollina",
+      "Trovato",
+      "Vitello",
+      "Volpara"
+    ],
+    "comuni_confinanti": [
+      "Capistrano",
+      "Filogaso",
+      "Francavilla Angitola",
+      "Monterosso Calabro",
+      "Pizzo",
+      "Polia",
+      "Sant'Onofrio"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina"
+    ],
+    "ville_palazzi": [
+      "Villa Gagliardi"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria della Pietà",
+      "Chiesa di San Nicola e San Michele Arcangelo",
+      "Chiesa di Maria SS. della Provvidenza, nota anche come Chiesa del Monastero"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Limbadi",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102019",
+    "codice_catastale": "E590",
+    "popolazione": 3665,
+    "superficie_kmq": 28.9,
+    "densita": 126.8,
+    "cap": "89844",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Pantaleone M. e M.",
+    "festa_patronale": "27 luglio",
+    "demonimo": "limbadesi",
+    "etimologia": "Deriva dal greco libadion, ossia pianura con la successiva trasformazione della \"n\" in \"m\". Secondo un'altra ipotesi si riferisce al nome di famiglia Limbos con l'aggiunta del suffisso -adi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Caroni",
+      "Mandaradoni",
+      "Motta Filocastro",
+      "San Nicola De Legistis",
+      "località Badia"
+    ],
+    "comuni_confinanti": [
+      "Candidoni (RC)",
+      "Nicotera",
+      "Rombiolo",
+      "San Calogero",
+      "Spilinga"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Gabrielli",
+      "Villa Cafaro"
+    ],
+    "chiese": [
+      "Chiesa dei Sacri Cuori di Gesù e Maria (a Motta Filocastro)",
+      "Santuario della Santa Croce",
+      "Chiesa di San Pantaleone",
+      "Chiesa di San Nicola (a San Nicola De Legistis)",
+      "Chiesa di Maria SS. della Neve (a Mandaradoni)",
+      "Chiesa di Maria SS. Addolorata",
+      "Chiesa dell'Immacolata (a Caroni)",
+      "Chiesa della Madonna del Carmelo, già del SS. Sacramento",
+      "Chiesa della Madonna della Romania (a Motta Filocastro)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Joppolo",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102018",
+    "codice_catastale": "E389",
+    "popolazione": 1912,
+    "superficie_kmq": 15.31,
+    "densita": 124.9,
+    "cap": "89863",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Sisto",
+    "festa_patronale": "6 agosto",
+    "demonimo": "joppolesi",
+    "etimologia": "Esistono svariate ipotesi che tentano di stabilire la sua provenienza. Secondo alcuni il nome deriva dal greco aigilops (avena selvatica) o da gheopedon (terreno). Secondo altri il nome si riferisce ad un santo chiamato in greco aghios Euplos ed in latino Sanctus Euplus. Un'ipotesi più recente lega la denominazione del paese al nome del capitano angioino Artemidoro Joppolo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "Oliveto",
+      "Coccorino",
+      "Coccorinello",
+      "Caroniti e Monte Poro"
+    ],
+    "comuni_confinanti": [
+      "Nicotera",
+      "Ricadi",
+      "Spilinga"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Sisto",
+      "Chiesa Madonna del Carmelo",
+      "Chiesa di San Gennaro (frazione: Caroniti)",
+      "Chiesa dell'Immacolata (frazione: Coccorino)"
+    ],
+    "castelli_fortificazioni": [
+      "Torre saracena"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ionadi",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102017",
+    "codice_catastale": "E321",
+    "popolazione": 4285,
+    "superficie_kmq": 8.72,
+    "densita": 491.4,
+    "cap": "89851",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola da Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "jonadesi",
+    "etimologia": "Il nome è documentato come Genadi e Ionadi. Secondo alcuni deriva dal nome di persona Jona che divenne con il tempo anche un cognome. Secondo altri il nome ha una traduzione diversa e significa \"campo di viole\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Nao",
+      "Vena di Jonadi",
+      "Baracconi",
+      "Case Sparse"
+    ],
+    "comuni_confinanti": [
+      "Filandari",
+      "Mileto",
+      "San Costantino Calabro",
+      "San Gregorio d'Ippona",
+      "Vibo Valentia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maggiore (1564)",
+      "Chiesa di Santa Maria degli Angeli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gerocarne",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102016",
+    "codice_catastale": "D988",
+    "popolazione": 2191,
+    "superficie_kmq": 44.93,
+    "densita": 48.8,
+    "cap": "89831",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "gerocarnesi",
+    "etimologia": "Deriva dal nome greco di famiglia Gerakarones (famiglia Ieracari) che si riferisce a sua volta al nome di persona Hierakares che significa anche falconiere.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arena",
+      "Dasà",
+      "Dinami",
+      "Francica",
+      "Mileto",
+      "Serra San Bruno",
+      "Sorianello",
+      "Soriano Calabro",
+      "Spadola",
+      "Stefanaconi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria dei Latini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Francica",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102015",
+    "codice_catastale": "D767",
+    "popolazione": 1654,
+    "superficie_kmq": 22.73,
+    "densita": 72.8,
+    "cap": "89851",
+    "prefisso_telefonico": "0963",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "francicoti",
+    "etimologia": "Il paese è documentato con il nome di Lafrancita. Secondo alcuni il nome si riferisce alla sconfitta che subirono i francesi del 1506. Secondo altri deriva dal nome di famiglia Francica o dal greco Phragkika, ossia proprietà di Franco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "contrade: Mutari",
+      "Santa Maria"
+    ],
+    "comuni_confinanti": [
+      "Gerocarne",
+      "Mileto",
+      "San Costantino Calabro",
+      "San Gregorio d'Ippona",
+      "Stefanaconi",
+      "Vibo Valentia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Annunziato Sarlo",
+      "Palazzo Tavella, in via Regina",
+      "Palazzo Roberto Sarlo, in piazza Martiri d'Ungheria"
+    ],
+    "chiese": [
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Mutari"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Francavilla Angitola",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102014",
+    "codice_catastale": "D762",
+    "popolazione": 1924,
+    "superficie_kmq": 28.25,
+    "densita": 68.1,
+    "cap": "89815",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Foca",
+    "festa_patronale": "seconda domenica di agosto",
+    "demonimo": "francavillesi",
+    "etimologia": "Francavilla è un nome composto da \"villa\" e dall'aggettivo \"franca\", ossia esente dal pagamento delle tasse. La specifica si riferisce alla sua collocazione nella valle del fiume Angitola il cui nome deriva dal latino ancus o dal greco agkos con il significato di \"curvatura\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Curinga (CZ)",
+      "Filadelfia",
+      "Maierato",
+      "Pizzo",
+      "Polia"
+    ],
+    "musei": [
+      "Museo dell'Emigrazione \"G. B. Scalabrini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Foca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Filogaso",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102013",
+    "codice_catastale": "D596",
+    "popolazione": 1417,
+    "superficie_kmq": 23.69,
+    "densita": 59.8,
+    "cap": "89843",
+    "prefisso_telefonico": "0963",
+    "patrono": "Sant'Agata",
+    "festa_patronale": "5 febbraio",
+    "demonimo": "filogasesi",
+    "etimologia": "Chiamato Filogase e Philocasa, deriva dal greco philagathos, ossia virtuoso e si collega forse ad un nome di persona o di famiglia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capistrano",
+      "Maierato",
+      "San Nicola da Crissa",
+      "Sant'Onofrio",
+      "Vallelonga",
+      "Vazzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Agata",
+      "Chiesa di San Francesco di Paola",
+      "Chiesa di Maria Santissima del Monte Carmelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Lago dell'Angitola"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Filandari",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102012",
+    "codice_catastale": "D589",
+    "popolazione": 1855,
+    "superficie_kmq": 18.54,
+    "densita": 100.1,
+    "cap": "89841",
+    "prefisso_telefonico": "0963",
+    "patrono": "Santa Marina Vergine",
+    "festa_patronale": "7 luglio",
+    "demonimo": "filandaresi",
+    "etimologia": "Documentato con il nome di Chelandare si confronta con altre denominazioni di paesi nei dintorni che si riferiscono forse al nome greco Kilandarios.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Occidentali del Mesima"
+    ],
+    "localita_frazioni": [
+      "Arzona",
+      "Mesiano",
+      "Pizzinni",
+      "Scaliti"
+    ],
+    "comuni_confinanti": [
+      "Cessaniti",
+      "Ionadi",
+      "Mileto",
+      "Rombiolo",
+      "San Calogero",
+      "Vibo Valentia",
+      "Zungri"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Acquaro (in frazione Arzona)",
+      "Palazzo Fransoni, in piazza Umberto I",
+      "Palazzo Moricca, in via Roma"
+    ],
+    "chiese": [
+      "Chiesa di San Nicola (ad Arzona)",
+      "Chiesa di San Pietro (a Scaliti)",
+      "Chiesa di San Carlo (a Pizzinni)",
+      "Chiesa dell'Immacolata (a Pizzinni)",
+      "Chiesa dell'Addolorata",
+      "Chiesa della Misericordia (ad Arzona)",
+      "Chiesa della Madonna della Neve (a Mesiano)",
+      "Chiesa della Madonna del Potere (a Scaliti)",
+      "Chiesa di Santa Marina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Filadelfia",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102011",
+    "codice_catastale": "D587",
+    "popolazione": 5309,
+    "superficie_kmq": 30.48,
+    "densita": 174.2,
+    "cap": "89814",
+    "prefisso_telefonico": "0968",
+    "patrono": "Santa Barbara",
+    "festa_patronale": null,
+    "demonimo": "filadelfiesi",
+    "etimologia": "Chiamato in passato Castelmonardo, ossia una fusione di Castello e del nome latino di persona Mainardus. Il nome odierno si riferisce al greco philadelphia che significa \"amore fraterno\" in riferimento ai numerosi aiuti che il paese ricevette dopo il terremoto che lo colpì nel 1783. Secondo altri il nome si riferisce alla società illuminista dei Filadelfoi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": [
+      "frazione: Montesoro;\ncontrade: Agazzi Polioti",
+      "Baccolopane",
+      "Bretti",
+      "Buccerio",
+      "Carbone",
+      "Caria",
+      "Castelmonardo",
+      "Chiusi",
+      "Croce",
+      "Dirupi",
+      "Dorinchi",
+      "Farni",
+      "Giuli",
+      "Guanci",
+      "Lucente",
+      "Maiodi",
+      "Masi",
+      "Molinello",
+      "Nucarelle",
+      "Palermi",
+      "Pantani",
+      "Peppazzi",
+      "Pian del Bosco",
+      "Pietracola",
+      "Pietrasanta",
+      "Pilucchi",
+      "Pontenisi",
+      "Prato",
+      "Salinella-Aloisi",
+      "Scarro",
+      "Scendamo",
+      "Schiocca",
+      "Targani I",
+      "Targani II",
+      "Tre Carlini",
+      "Zagaria"
+    ],
+    "comuni_confinanti": [
+      "Curinga (CZ)",
+      "Francavilla Angitola",
+      "Jacurso (CZ)",
+      "Polia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Gemelli",
+      "Palazzo Serrao dei Gregori",
+      "Palazzo Serrao del Compasso"
+    ],
+    "chiese": [
+      "Chiesa di Santa Barbara",
+      "Chiesa di San Teodoro d'Amaseno",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Nicola (in frazione Montesoro)",
+      "Chiesa di San Francesco di Paola",
+      "Chiesa della Madonna del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fabrizia",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102010",
+    "codice_catastale": "D453",
+    "popolazione": 2174,
+    "superficie_kmq": 38.78,
+    "densita": 56.1,
+    "cap": "89823",
+    "prefisso_telefonico": "0963",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "domenica dopo 13 giugno",
+    "demonimo": "fabrizioti",
+    "etimologia": "Deriva da Fabrizio Caraffa, marchese di Paulonia, che nel 1590 fece realizzare in loco la sua casa di villeggiatura, dando vita allo sviluppo del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Angilletta",
+      "Serricella"
+    ],
+    "comuni_confinanti": [
+      "Acquaro",
+      "Arena",
+      "Grotteria (RC)",
+      "Martone (RC)",
+      "Mongiana",
+      "Nardodipace",
+      "San Pietro di Caridà (RC)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ricciotti",
+      "Palazzo Capria",
+      "Palazzo Carè, in via Cristoforo Colombo",
+      "Palazzo Costa",
+      "Palazzo Mamone",
+      "Palazzo Siciliani, in via Umberto I",
+      "Palazzo della Cavalera"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova",
+      "Chiesa del Rosario",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Drapia",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102009",
+    "codice_catastale": "D364",
+    "popolazione": 2082,
+    "superficie_kmq": 21.52,
+    "densita": 96.7,
+    "cap": "89862",
+    "prefisso_telefonico": "0963",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "12 agosto",
+    "demonimo": "drapiesi",
+    "etimologia": "La sua origine è poco chiara, potrebbe derivare dal greco tropaia ossia \"i trofei\" (come Tropea). Secondo altri, il significato corretto della parola è \"messe matura\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "Brattirò. Carìa",
+      "Gàsponi"
+    ],
+    "comuni_confinanti": [
+      "Parghelia",
+      "Ricadi",
+      "Spilinga",
+      "Tropea",
+      "Zaccanopoli",
+      "Zungri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Immacolata Concezione",
+      "Chiesa della Madonna del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dinami",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102008",
+    "codice_catastale": "D303",
+    "popolazione": 2103,
+    "superficie_kmq": 44.06,
+    "densita": 47.7,
+    "cap": "89833",
+    "prefisso_telefonico": "0966",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "dinamesi",
+    "etimologia": "Il nome deriva dal greco dunamis che significa \"potenza, forza\", perché in greco il luogo era chiamato egglesia agias Dynameos, ossia chiesa di Santa Potenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": [
+      "Melicuccà",
+      "Monsoreto",
+      "Sciantarri"
+    ],
+    "comuni_confinanti": [
+      "Acquaro",
+      "Dasà",
+      "Gerocarne",
+      "Mileto",
+      "San Pietro di Caridà (RC)",
+      "Serrata (RC)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Casa Germano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dasà",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102007",
+    "codice_catastale": "D253",
+    "popolazione": 1182,
+    "superficie_kmq": 6.19,
+    "densita": 191.0,
+    "cap": "89832",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "dasaesi",
+    "etimologia": "Deriva dal greco dados, ossia arbusto che a sua volta deriva da dasas (bosco, zona boscosa).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": [
+      "Marzano",
+      "Bracciara"
+    ],
+    "comuni_confinanti": [
+      "Acquaro",
+      "Arena",
+      "Dinami",
+      "Gerocarne"
+    ],
+    "musei": [
+      "Museo del dialetto"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola e San Michele",
+      "Chiesa dell'Immacolata",
+      "Chiesa della Madonna della Consolazione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cessaniti",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102006",
+    "codice_catastale": "C581",
+    "popolazione": 3282,
+    "superficie_kmq": 17.86,
+    "densita": 183.8,
+    "cap": "89816",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Basilio",
+    "festa_patronale": "14 giugno",
+    "demonimo": "cessanitesi",
+    "etimologia": "Potrebbe derivare da Cessanu che a sua volta deriva dal nome latino di persona Cessus. Secondo un'altra ipotesi il nome deriva dal greco per la presenza del suffisso -ites e significa \"oriundo di Kessane\", piccola città della Tracia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "Favelloni",
+      "Mantineo",
+      "Pannaconi",
+      "San Cono",
+      "San Marco",
+      "Piana Pugliese"
+    ],
+    "comuni_confinanti": [
+      "Briatico",
+      "Filandari",
+      "Vibo Valentia",
+      "Zungri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Basilio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capistrano",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102005",
+    "codice_catastale": "B655",
+    "popolazione": 1031,
+    "superficie_kmq": 20.94,
+    "densita": 49.2,
+    "cap": "89818",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "capistranesi",
+    "etimologia": "Si riferisce al nome latino di persona Carpistes (con l'aggiunta del suffisso -anus) che deriva dal greco Karpistes (garante). Il dialetto calabro ha poi trasformato il nome in capistru (fune).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola"
+    ],
+    "localita_frazioni": [
+      "Nicastrello"
+    ],
+    "comuni_confinanti": [
+      "Chiaravalle Centrale (CZ)",
+      "Filogaso",
+      "Maierato",
+      "Monterosso Calabro",
+      "San Nicola da Crissa",
+      "San Vito sullo Ionio (CZ)",
+      "Torre di Ruggiero (CZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Batia"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Brognaturo",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102004",
+    "codice_catastale": "B197",
+    "popolazione": 720,
+    "superficie_kmq": 24.5,
+    "densita": 29.4,
+    "cap": "89822",
+    "prefisso_telefonico": "0963",
+    "patrono": "Madonna della Consolazione",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "brognaturesi",
+    "etimologia": "Deriva da Brognaturi che può significare sia \"colui che suona la Brogna\" (strumento formato da una conchiglia usato per chiamare i maiali) che \"colui che osserva i tuoni\". Questa denominazione probabilmente identificava una persona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana delle Serre Calabre",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Badolato (CZ)",
+      "Cardinale (CZ)",
+      "Guardavalle (CZ)",
+      "Isca sullo Ionio (CZ)",
+      "San Sostene (CZ)",
+      "Santa Caterina dello Ionio (CZ)",
+      "Simbario",
+      "Spadola",
+      "Stilo (RC)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Tiani"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria della Consolazione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Briatico",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102003",
+    "codice_catastale": "B169",
+    "popolazione": 4203,
+    "superficie_kmq": 27.75,
+    "densita": 151.5,
+    "cap": "89817",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola da Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "briaticesi",
+    "etimologia": "Chiamato nei documenti con il nome di Euriatikon potrebbe derivare dal nome greco Euriates con l'aggiunta del suffisso -ikos che ne indica possesso. Potrebbe anche derivare dal nome latino di persona Ebriaticu. Secondo un'alta ipotesi il nome deriva dal greco briaon, ossia robusto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "Mandaradoni",
+      "Paradisoni",
+      "Potenzoni",
+      "San Costantino",
+      "San Leo",
+      "Sciconi",
+      "Conidoni"
+    ],
+    "comuni_confinanti": [
+      "Cessaniti",
+      "Vibo Valentia",
+      "Zambrone",
+      "Zungri"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Bisogni",
+      "Palazzo Lombardi Satriani",
+      "Palazzo Satriano",
+      "Villa Marzano (in frazione San Costantino)"
+    ],
+    "chiese": [
+      "Chiesa dell'Assunta (in frazione Potenzoni)",
+      "Chiesa di San Pietro (in frazione Paradisoni)",
+      "Chiesa di San Nicola",
+      "Chiesa di San Michele Arcangelo (in frazione Sciconi)",
+      "Chiesa di San Giacomo (in frazione Conidoni), dedicata a San Giuseppe",
+      "Chiesa della Madonna di Costantinopoli (in frazione San Costantino)",
+      "Chiesa della Madonna delle Grazie (in frazione Mandaradoni)",
+      "Chiesa del Carmine",
+      "Cappella del Carmine o della Madonnella (a Briatico)",
+      "Chiesa di San Leone Magno (in frazione San Leo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Sor Iacopo"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arena",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102002",
+    "codice_catastale": "A386",
+    "popolazione": 1461,
+    "superficie_kmq": 32.35,
+    "densita": 45.2,
+    "cap": "89832",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "arenesi",
+    "etimologia": "Deriva probabilmente dal latino arena, ossia sabbia. Secondo alcuni invece il nome è ispirato al famoso condottiero Luigi d'Arena.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 1 - Montagna di Serra San Bruno",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Berrina-Bivieri",
+      "Castellina",
+      "Castellina Managò",
+      "Cerasara",
+      "Croce",
+      "Croce di Bovo",
+      "Fossa",
+      "Tomacelli",
+      "Umbro"
+    ],
+    "comuni_confinanti": [
+      "Acquaro",
+      "Dasà",
+      "Fabrizia",
+      "Gerocarne",
+      "Mongiana",
+      "Serra San Bruno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice di Santa Maria dei Latini",
+      "Chiesa delle Grazie"
+    ],
+    "castelli_fortificazioni": [
+      "Castello normanno di Arena"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acquaro",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102001",
+    "codice_catastale": "A043",
+    "popolazione": 2397,
+    "superficie_kmq": 25.32,
+    "densita": 94.7,
+    "cap": "89832",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Rocco",
+    "festa_patronale": "quarta domenica di agosto",
+    "demonimo": "acquaresi",
+    "etimologia": "Deriva dal dialetto calabrese Akkuaru (acquario, rivo) che a sua volta deriva dal latino aquarium e si riferisce alla sua posizione in una valle attraversata del fiume Marepotamo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alto Mesima",
+      "Regione Agraria n. 3 - Colline Orientali del Mesima e dell'Angitola",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Limpidi",
+      "Piani",
+      "Fellari"
+    ],
+    "comuni_confinanti": [
+      "Arena",
+      "Dasà",
+      "Dinami",
+      "Fabrizia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria dei Latini",
+      "Chiesa di San Giuseppe, comunemente chiamata chiesuleia o chiesetta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana del Nettuno"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vibo Valentia",
+    "provincia": "Vibo Valentia",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "102047",
+    "codice_catastale": "F537",
+    "popolazione": 33742,
+    "superficie_kmq": 46.34,
+    "densita": 728.1,
+    "cap": "89900",
+    "prefisso_telefonico": "0963",
+    "patrono": "San Leoluca",
+    "festa_patronale": "primo marzo",
+    "demonimo": "vibonesi",
+    "etimologia": "Chiamata Monteleone di Calabria fino al 1928 quando ha assunto il nome attuale che è un composto di \"Vibo\" e \"Valentia\". La prima parte del nome, ossia Vibo si riferisce ad un'antica accezione; Vibona che deriva a sua volta dal greco Hipponium (da hippos, cavallo). La seconda parte del nome (Valentia) deriva dal verbo valere con il significato di \"essere forte\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee del Poro"
+    ],
+    "localita_frazioni": [
+      "Vibo Marina",
+      "Bivona",
+      "Porto Salvo",
+      "Longobardi",
+      "San Pietro",
+      "Piscopio",
+      "Vene",
+      "Triparni"
+    ],
+    "comuni_confinanti": [
+      "Briatico",
+      "Cessaniti",
+      "Filandari",
+      "Francica",
+      "Ionadi",
+      "Pizzo",
+      "San Gregorio d'Ippona",
+      "Sant'Onofrio",
+      "Stefanaconi"
+    ],
+    "musei": [
+      "Museo di Arte Sacra",
+      "Museo Archeologico Statale \"Vito Capialbi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco del Palazzo di Francia"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Carnevale Mediterraneo (ultimo sabato di agosto)",
+      "Fiera di Santa Lucia (13 dicembre), con le zeppole"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "nome": "Perugia",
+  "regione": "Umbria",
+  "zona": null,
+  "sigla": "PG",
+  "codice_istat": "054",
+  "popolazione": 660690,
+  "popolazione_maschi": 318009,
+  "popolazione_femmine": 342681,
+  "superficie_kmq": 6334.09,
+  "densita": 104.3,
+  "num_comuni": 59,
+  "capoluogo": "Perugia",
+  "iso_3166_2": "IT-PG",
+  "nuts": "ITE21"
+}

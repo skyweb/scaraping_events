@@ -1,0 +1,16 @@
+{
+  "nome": "Gorizia",
+  "regione": "Friuli-Venezia Giulia",
+  "zona": null,
+  "sigla": "GO",
+  "codice_istat": "031",
+  "popolazione": 139673,
+  "popolazione_maschi": 68327,
+  "popolazione_femmine": 71346,
+  "superficie_kmq": 466.02,
+  "densita": 299.7,
+  "num_comuni": 25,
+  "capoluogo": "Gorizia",
+  "iso_3166_2": "IT-GO",
+  "nuts": "ITD43"
+}

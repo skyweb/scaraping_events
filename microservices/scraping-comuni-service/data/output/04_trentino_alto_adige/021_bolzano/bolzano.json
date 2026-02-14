@@ -1,0 +1,16 @@
+{
+  "nome": "Bolzano",
+  "regione": "Trentino-Alto Adige",
+  "zona": null,
+  "sigla": "BZ",
+  "codice_istat": "021",
+  "popolazione": 524256,
+  "popolazione_maschi": 258948,
+  "popolazione_femmine": 265308,
+  "superficie_kmq": 7399.97,
+  "densita": 70.8,
+  "num_comuni": 116,
+  "capoluogo": "Bolzano",
+  "iso_3166_2": "IT-BZ",
+  "nuts": "ITD10"
+}

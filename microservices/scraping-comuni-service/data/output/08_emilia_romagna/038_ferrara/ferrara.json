@@ -1,0 +1,16 @@
+{
+  "nome": "Ferrara",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "FE",
+  "codice_istat": "038",
+  "popolazione": 348362,
+  "popolazione_maschi": 166883,
+  "popolazione_femmine": 181479,
+  "superficie_kmq": 2631.12,
+  "densita": 132.4,
+  "num_comuni": 24,
+  "capoluogo": "Ferrara",
+  "iso_3166_2": "IT-FE",
+  "nuts": "ITD56"
+}

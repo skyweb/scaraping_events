@@ -1,0 +1,14 @@
+{
+  "nome": "Campania",
+  "codice_istat": "15",
+  "popolazione": 5839084,
+  "popolazione_maschi": 2843239,
+  "popolazione_femmine": 2995845,
+  "superficie_kmq": 13589.9,
+  "densita": 429.7,
+  "num_province": 5,
+  "num_comuni": 550,
+  "capoluogo": "Napoli",
+  "iso_3166_2": "IT-72",
+  "nuts": "ITF3"
+}

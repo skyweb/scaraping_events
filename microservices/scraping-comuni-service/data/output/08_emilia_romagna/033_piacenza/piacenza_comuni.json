@@ -1,0 +1,2704 @@
+[
+  {
+    "nome": "Ziano Piacentino",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033048",
+    "codice_catastale": "L848",
+    "popolazione": 2540,
+    "superficie_kmq": 32.91,
+    "densita": 77.2,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "zianesi",
+    "etimologia": "Chiamato in passato Vicomarino, il nome attuale gli fu assegnato nel 1888 riferendosi al nome latino di persona Caelius con l'aggiunta del suffisso -anus. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Albareto",
+      "Fornello",
+      "Montalbo",
+      "Seminò",
+      "Vicobarone",
+      "Vicomarino"
+    ],
+    "comuni_confinanti": [
+      "Borgonovo Val Tidone",
+      "Castel San Giovanni",
+      "Nibbiano",
+      "Rovescala (PV)",
+      "Santa Maria della Versa (PV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ponte-de-L'Isere (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Zerba",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033047",
+    "codice_catastale": "M165",
+    "popolazione": 78,
+    "superficie_kmq": 25.12,
+    "densita": 3.1,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "zerbesi",
+    "etimologia": "Deriva da gerbo o gerba, ossia sterpo, luogo incolto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 1 - Montagna del Medio Trebbia"
+    ],
+    "localita_frazioni": [
+      "Capannette di Pei",
+      "Cerreto",
+      "Pei",
+      "Samboneto",
+      "Vezimo"
+    ],
+    "comuni_confinanti": [
+      "Brallo di Pregola (PV)",
+      "Cabella Ligure (AL)",
+      "Cerignale",
+      "Fabbrica Curone (AL)",
+      "Ottone",
+      "Santa Margherita di Staffora (PV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villanova sull'Arda",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033046",
+    "codice_catastale": "L980",
+    "popolazione": 1769,
+    "superficie_kmq": 36.46,
+    "densita": 48.5,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "villanovesi",
+    "etimologia": "E' un composto di villa e dell'aggettivo latino novus (nuovo) assumendo quindi il significato di \"villaggio nuovo\" (di recente fondazione). La specifica si riferisce al fiume Arda che scorre in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Cignano",
+      "Sant'Agata",
+      "Soarza"
+    ],
+    "comuni_confinanti": [
+      "Besenzone",
+      "Busseto (PR)",
+      "Castelvetro Piacentino",
+      "Cortemaggiore",
+      "Monticelli d'Ongina",
+      "Polesine Zibello (PR)",
+      "San Pietro in Cerro",
+      "Stagno Lombardo (CR)"
+    ],
+    "musei": [
+      "Villa Verdi"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vigolzone",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033045",
+    "codice_catastale": "L897",
+    "popolazione": 4301,
+    "superficie_kmq": 42.35,
+    "densita": 101.6,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "vigolzonesi",
+    "etimologia": "E' un composto di vicus (villaggio) e di un nome di persona non ben identificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda"
+    ],
+    "localita_frazioni": [
+      "Fraz.: Albarola",
+      "Bagnolo",
+      "Bicchignano",
+      "Carmiano",
+      "Chiulano",
+      "Grazzano",
+      "Justiano la Vela e la Luna Stellata",
+      "Visconti",
+      "Villò",
+      "Veano"
+    ],
+    "comuni_confinanti": [
+      "Bettola",
+      "Podenzano",
+      "Ponte dell'Olio",
+      "Rivergaro",
+      "San Giorgio Piacentino",
+      "Travo"
+    ],
+    "musei": [
+      "Museo di Auto e Moto d'Epoca"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corteo Storico (ultima domenica di maggio) in località Grazzano Visconti",
+      "con spettacoli medievali"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vernasca",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033044",
+    "codice_catastale": "L772",
+    "popolazione": 2111,
+    "superficie_kmq": 72.65,
+    "densita": 29.1,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Colombano",
+    "festa_patronale": "23 novembre",
+    "demonimo": "vernaschini",
+    "etimologia": "Deriva dal celtico verna, ovvero \"ontano\" (albero con la chioma larga ed il legno duro), con l'aggiunta del suffisso -asca.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli di Nure e dell'Arda",
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda",
+      "Parco Fluviale dello Stirone",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Bacedasco",
+      "Borla",
+      "Castelletto",
+      "Mignano",
+      "Settesorelle",
+      "Trinità",
+      "Vezzolacca",
+      "Vigoleno"
+    ],
+    "comuni_confinanti": [
+      "Alseno",
+      "Bore (PR)",
+      "Castell'Arquato",
+      "Lugagnano Val D'Arda",
+      "Morfasso",
+      "Pellegrino Parmense (PR)",
+      "Salsomaggiore Terme (PR)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Colombano"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Vigoleno"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Travo",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033043",
+    "codice_catastale": "L348",
+    "popolazione": 2082,
+    "superficie_kmq": 80.39,
+    "densita": 25.9,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "Sant'Antonino",
+    "festa_patronale": "4 luglio",
+    "demonimo": "travesi",
+    "etimologia": "Deriva dal latino trabs, ossia trave, in riferimento al fatto che in passato per oltrepassare il fiume Trebbia veniva usata una trave.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone"
+    ],
+    "localita_frazioni": [
+      "Bobbiano",
+      "Caverzago",
+      "Donceto",
+      "Fellino",
+      "Pigazzano",
+      "Pillori",
+      "Statto"
+    ],
+    "comuni_confinanti": [
+      "Bettola",
+      "Bobbio",
+      "Coli",
+      "Gazzola",
+      "Pecorara",
+      "Piozzano",
+      "Rivergaro",
+      "Vigolzone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonino Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sarmato",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033042",
+    "codice_catastale": "I434",
+    "popolazione": 2822,
+    "superficie_kmq": 26.96,
+    "densita": 104.7,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "sarmatesi",
+    "etimologia": "Si riferisce al nome di popolo Sarmati, in riferimento al fatto che la popolazione si stanziò in loco a seguito dei longobardi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Piacenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Borgonovo Val Tidone",
+      "Castel San Giovanni",
+      "Monticelli Pavese (PV)",
+      "Pieve Porto Morone (PV)",
+      "Rottofreno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madonnina di Caravaggio",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Fontenay sur Bois (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pietro in Cerro",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033041",
+    "codice_catastale": "G788",
+    "popolazione": 860,
+    "superficie_kmq": 27.51,
+    "densita": 31.3,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "sampietrini",
+    "etimologia": "Chiamato in passato Polignano Piacentino. Il nome attuale si riferisce a San Pietro ed al nome di pianta cerro, dal latino cerrus (quercia).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Polignano"
+    ],
+    "comuni_confinanti": [
+      "Caorso",
+      "Cortemaggiore",
+      "Monticelli d'Ongina",
+      "Villanova sull'Arda"
+    ],
+    "musei": [
+      "Mim - Museum in Motion",
+      "collezione d'arte contemporanea"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giorgio Piacentino",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033040",
+    "codice_catastale": "H887",
+    "popolazione": 5777,
+    "superficie_kmq": 49.07,
+    "densita": 117.7,
+    "cap": "29019",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sangiorgini",
+    "etimologia": "Il nome riflette la venerazione verso il santo patrono del luogo. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda"
+    ],
+    "localita_frazioni": [
+      "frazioni: Viustino",
+      "Godi",
+      "Ronco",
+      "Tollara",
+      "San Damiano",
+      "Centovera",
+      "Rizzolo\nnuclei abitati: Bassetto",
+      "Montanaro",
+      "Pozzo Pagano Grande",
+      "Sant'Agata",
+      "Case Greche",
+      "Case Nuove",
+      "Castello di Viustino",
+      "Casturzano",
+      "Mulazzana",
+      "Casino della Costa",
+      "Costa Godi",
+      "Corneliano Palazzo",
+      "Chiesa di Rizzolo",
+      "Casa Nuova di Centovera",
+      "Quattro Cascine",
+      "Ribera",
+      "Tre Santi di Centovera"
+    ],
+    "comuni_confinanti": [
+      "Carpaneto Piacentino",
+      "Gropparello",
+      "Podenzano",
+      "Ponte dell'Olio",
+      "Pontenure",
+      "Vigolzone"
+    ],
+    "musei": [
+      "Raccolta Etnografica della Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Rocca di San Giorgio Piacentino"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rottofreno",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033039",
+    "codice_catastale": "H593",
+    "popolazione": 12249,
+    "superficie_kmq": 34.53,
+    "densita": 354.7,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "Sant'Elena",
+    "festa_patronale": "18 agosto",
+    "demonimo": "rottofrenesi",
+    "etimologia": "Deriva dal nome germanico di persona Hrodfrid o longobardo Hrotfrid. Secondo una leggenda il nome deriva dall'episodio in cui il cavallo di Annibale avrebbe \"rotto\" il \"freno\" prendendo la mano al padrone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Piacenza"
+    ],
+    "localita_frazioni": [
+      "Frazioni: San Nicolò",
+      "Santimento",
+      "Centora;\nLocalità: Pilastro"
+    ],
+    "comuni_confinanti": [
+      "Borgonovo Val Tidone",
+      "Calendasco",
+      "Chignolo Po (PV)",
+      "Gragnano Trebbiense",
+      "Monticelli Pavese (PV)",
+      "Piacenza",
+      "Sarmato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchia Santuario Madonna del Pilastro (località Pilastro)",
+      "Chiesa parrocchiale Santa Maria della Neve (frazione Centora)",
+      "Chiesa parrocchiale di San Nicola di Bari (frazione San Nicolò)",
+      "Chiesa parrocchiale di San Michele",
+      "Chiesa parrocchiale di San Giovanni Battista (frazione Santimento)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rivergaro",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033038",
+    "codice_catastale": "H350",
+    "popolazione": 7010,
+    "superficie_kmq": 43.77,
+    "densita": 160.2,
+    "cap": "29029",
+    "prefisso_telefonico": "0523",
+    "patrono": "Sant'Agata",
+    "festa_patronale": "5 febbraio",
+    "demonimo": "rivergaresi",
+    "etimologia": "E' un composto di rivus e varicarium, ossia \"rio del guado\". Secondo altri, il nome si riferisce a rivus ilicarium, dal nome di pianta ilex, leccio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda"
+    ],
+    "localita_frazioni": [
+      "Ancarano",
+      "Bassano",
+      "Cisiano",
+      "Fabiano",
+      "Larzano",
+      "Niviano",
+      "Ottavello",
+      "Pieve Dugliara",
+      "Rallio",
+      "Roveleto Landi",
+      "Suzzano"
+    ],
+    "comuni_confinanti": [
+      "Gazzola",
+      "Gossolengo",
+      "Podenzano",
+      "Travo",
+      "Vigolzone"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Aguissola-Scotti"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Agata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Montechiaro",
+      "Castello di Ottavello"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pontenure",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033037",
+    "codice_catastale": "G852",
+    "popolazione": 6540,
+    "superficie_kmq": 33.81,
+    "densita": 193.4,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Colombo Abate",
+    "festa_patronale": "23 novembre",
+    "demonimo": "pontenuresi",
+    "etimologia": "E' un composto di \"ponte\" e del nome del fiume Nure.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Muradello",
+      "Paderna",
+      "Valconasso"
+    ],
+    "comuni_confinanti": [
+      "Cadeo",
+      "Caorso",
+      "Carpaneto Piacentino",
+      "Cortemaggiore",
+      "Piacenza",
+      "Podenzano",
+      "San Giorgio Piacentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa San Pietro Apostolo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Paderna"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco di Villa Raggio"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ponte dell'Olio",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033036",
+    "codice_catastale": "G842",
+    "popolazione": 4742,
+    "superficie_kmq": 43.97,
+    "densita": 107.8,
+    "cap": "29028",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "pontolliesi",
+    "etimologia": "La prima parte del nome di riferisce esplicitamente al ponte sul fiume Nure. La specifica è legata al commercio dell'olio che avveniva in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Castione",
+      "Folignano",
+      "Monte Santo",
+      "Santa Maria del Rivo",
+      "Torrano Veggiola",
+      "Zaffignano;\nlocalità: Biana",
+      "Cassano",
+      "Cà dell'Orso",
+      "Sarmata Sbruzzi"
+    ],
+    "comuni_confinanti": [
+      "Bettola",
+      "Gropparello",
+      "San Giorgio Piacentino",
+      "Vigolzone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castelli di Riva",
+      "Castello di Folignano",
+      "Castello di Torrano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fesa della Pancetta Piacentina (ultimo fine settimana di giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Podenzano",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033035",
+    "codice_catastale": "G747",
+    "popolazione": 9195,
+    "superficie_kmq": 44.58,
+    "densita": 206.3,
+    "cap": "29027",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giovanni",
+    "festa_patronale": "31 gennaio",
+    "demonimo": "podenzanesi",
+    "etimologia": "Deriva dal nome latino di persona Potentius o Pudentius con l'aggiunta del suffisso di appartenenza -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Piacenza"
+    ],
+    "localita_frazioni": [
+      "San Polo",
+      "Gariga",
+      "Turro",
+      "Altoè",
+      "Verano"
+    ],
+    "comuni_confinanti": [
+      "A est: Pontenure",
+      "San Giorgio Piacentino; a nord: Piacenza; a ovest: Gossolengo",
+      "Rivergaro; a sud: Vigolzone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Hajdudorog (Ungheria)",
+      "Kani Bonzon (Mali, Africa)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piozzano",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033034",
+    "codice_catastale": "G696",
+    "popolazione": 626,
+    "superficie_kmq": 43.57,
+    "densita": 14.4,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Salvatore",
+    "festa_patronale": "prima domenica dopo Pasqua",
+    "demonimo": "piozzanesi",
+    "etimologia": "Deriva dal nome latino di persona Plotius o Plautius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone"
+    ],
+    "localita_frazioni": [
+      "Groppo",
+      "Montecanino",
+      "Monteventano",
+      "Pomaro",
+      "San Gabriele",
+      "San Nazzaro",
+      "Vidiano"
+    ],
+    "comuni_confinanti": [
+      "Agazzano",
+      "Bobbio",
+      "Gazzola",
+      "Pecorara",
+      "Pianello Val Tidone",
+      "Travo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pianello Val Tidone",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033033",
+    "codice_catastale": "G557",
+    "popolazione": 2216,
+    "superficie_kmq": 36.39,
+    "densita": 60.9,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Maurizio",
+    "festa_patronale": "domenica successiva al 22 settembre",
+    "demonimo": "pianellesi",
+    "etimologia": "La prima parte del nome è un diminutivo di piano e si riferisce all'aspetto geografico del luogo. La specifica si riferisce al fiume Tidone, nella cui valle sorge il paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Tidone",
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Arcello",
+      "Casanova",
+      "Castellaro Arcelli",
+      "Fontanese",
+      "Gabbiano",
+      "Morago",
+      "Pradaglia",
+      "Roccapulzana"
+    ],
+    "comuni_confinanti": [
+      "A est: Piozzano; a nord-est: Agazzano; a nord-ovest: Borgonovo Val Tidone; a ovest: Nibbiano; a sud",
+      "sud-est e sud-ovest: Pecorara"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Gallina Grigia (primo maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pecorara",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033031",
+    "codice_catastale": "G399",
+    "popolazione": 714,
+    "superficie_kmq": 53.7,
+    "densita": 13.3,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "pecoraresi",
+    "etimologia": "Deriva da pecoraria (luogo delle pecore) dal latino pecus, pecoris, ossia gregge, pecore.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Tidone",
+      "Regione Agraria n. 1 - Montagna del Medio Trebbia"
+    ],
+    "localita_frazioni": [
+      "Busseto",
+      "Cicogni",
+      "Costalta",
+      "Marzonago",
+      "Montemartino",
+      "Sevizzano"
+    ],
+    "comuni_confinanti": [
+      "Bobbio",
+      "Nibbiano",
+      "Pianello Val Tidone",
+      "Piozzano",
+      "Romagnese (PV)",
+      "Travo",
+      "Zavattarello (PV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ottone",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033030",
+    "codice_catastale": "G195",
+    "popolazione": 516,
+    "superficie_kmq": 98.41,
+    "densita": 5.2,
+    "cap": "29026",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "ottonesi",
+    "etimologia": "Deriva dal nome germanico di persona Otto, -onis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 1 - Montagna del Medio Trebbia"
+    ],
+    "localita_frazioni": [
+      "Barchi",
+      "Belnome",
+      "Bertassi",
+      "Bogli",
+      "Campi",
+      "Gramizzola",
+      "Orezzoli",
+      "Traschio Fabbrica",
+      "Frassi",
+      "Moglia",
+      "Soprano",
+      "Valsigiara"
+    ],
+    "comuni_confinanti": [
+      "Cabella Ligure (AL)",
+      "Carrega Ligure (AL)",
+      "Cerignale",
+      "Gorreto (GE)",
+      "Rezzoaglio (GE)",
+      "Rovegno (GE)",
+      "Zerba"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Balzarini"
+    ],
+    "chiese": [
+      "Chiesa di San Marziano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nibbiano",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033029",
+    "codice_catastale": "F885",
+    "popolazione": 2184,
+    "superficie_kmq": 44.01,
+    "densita": 49.6,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "7 ottobre",
+    "demonimo": "nibbianesi",
+    "etimologia": "Deriva dal nome latino di persona Naevius con l'aggiunta del suffisso -anus riferendosi ad un possedimento terriero.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Tidone",
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone"
+    ],
+    "localita_frazioni": [
+      "Genepreto",
+      "Mandelli",
+      "Sala",
+      "Stadera",
+      "Strà",
+      "Tassara",
+      "Trebecco",
+      "Trevozzo"
+    ],
+    "comuni_confinanti": [
+      "Borgonovo Val Tidone",
+      "Caminata",
+      "Canevino (PV)",
+      "Golferenzo (PV)",
+      "Pecorara",
+      "Pianello Val Tidone",
+      "Ruino (PV)",
+      "Santa Maria della Versa (PV)",
+      "Volpara (PV)",
+      "Zavattarello (PV)",
+      "Ziano Piacentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Assunta (a Trevozzo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Milena Gabanelli (1954 -)",
+      "giornalista"
+    ]
+  },
+  {
+    "nome": "Morfasso",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033028",
+    "codice_catastale": "F724",
+    "popolazione": 1013,
+    "superficie_kmq": 83.78,
+    "densita": 12.1,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "morfassini",
+    "etimologia": "Deriva dal latino Morphacis dal nome di persona Morphus con l'aggiunta del suffisso -acis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli di Nure e dell'Arda",
+      "Regione Agraria n. 2 - Alto Nure",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Casali",
+      "Monastero",
+      "Pedina",
+      "San Michele",
+      "Sperongia",
+      "Teruzzi"
+    ],
+    "comuni_confinanti": [
+      "Bardi (PR)",
+      "Bettola",
+      "Bore (PR)",
+      "Farini",
+      "Gropparello",
+      "Lugagnano Val D'Arda",
+      "Vernasca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monticelli d'Ongina",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033027",
+    "codice_catastale": "F671",
+    "popolazione": 5278,
+    "superficie_kmq": 46.41,
+    "densita": 113.7,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "monticellesi",
+    "etimologia": "La prima parte del nome è un diminutivo di monte e si riferisce alle piccole collinette site nei pressi del Po. La specifica si riferisce alla famiglia medievale De Unguenis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "San Nazzaro",
+      "Borgonovo",
+      "San Pietro in Corte",
+      "Olza",
+      "Fogarole"
+    ],
+    "comuni_confinanti": [
+      "Caorso",
+      "Castelnuovo Bocca d'Adda (LO)",
+      "Castelvetro Piacentino",
+      "Cremona (CR)",
+      "Crotta d'Adda (CR)",
+      "San Pietro in Cerro",
+      "Spinadesco (CR)",
+      "Villanova sull'Arda"
+    ],
+    "musei": [
+      "Museo Etnografico del Po e della Civiltà Contadina e Artigiana",
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Decollato",
+      "Chiesa di San Giorgio",
+      "Basilica di San Lorenzo (la Collegiata)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lugagnano Val D'Arda",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033026",
+    "codice_catastale": "E726",
+    "popolazione": 4046,
+    "superficie_kmq": 54.39,
+    "densita": 74.4,
+    "cap": "29018",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Zenone",
+    "festa_patronale": "9 dicembre",
+    "demonimo": "lugagnanesi",
+    "etimologia": "Deriva dal nome di persona latino Lucanius con l'aggiunta del suffisso -anus. La specifica si riferisce al fiume che scorre in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli di Nure e dell'Arda",
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda"
+    ],
+    "localita_frazioni": [
+      "Antognano",
+      "Chiavenna",
+      "Diolo",
+      "Montezago",
+      "Prato Ottesola",
+      "Rustigazzo",
+      "Tabiano",
+      "Veleia",
+      "Vicanino"
+    ],
+    "comuni_confinanti": [
+      "Carpaneto Piacentino",
+      "Castell'Arquato",
+      "Gropparello",
+      "Morfasso",
+      "Vernasca"
+    ],
+    "musei": [
+      "Antiquarium di Velleia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta (frazione: Rustigazzo)",
+      "Chiesa parrocchiale di San Zenone Vescovo e Martire",
+      "Chiesa di San Giorgio martire (frazione: Antognano)",
+      "Chiesa di San Giacomo Apostolo (località: Vicanino)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco del Monte Moria"
+    ],
+    "luoghi_interesse": [
+      "Sito archeologico Veleia Romana"
+    ],
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gropparello",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033025",
+    "codice_catastale": "E196",
+    "popolazione": 2279,
+    "superficie_kmq": 56.28,
+    "densita": 40.5,
+    "cap": "29025",
+    "prefisso_telefonico": "0523",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "gropparellesi",
+    "etimologia": "Si riferisce a groppo (altura, colle).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli di Nure e dell'Arda",
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda"
+    ],
+    "localita_frazioni": [
+      "Castellana",
+      "Groppovisdomo",
+      "Gusano",
+      "La Valle",
+      "Montechino",
+      "Obolo",
+      "Sariano",
+      "Veggiola"
+    ],
+    "comuni_confinanti": [
+      "Bettola",
+      "Carpaneto Piacentino",
+      "Lugagnano Val D'Arda",
+      "Morfasso",
+      "Ponte dell'Olio",
+      "San Giorgio Piacentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco del Castello di Gropparello e Gole del Vezzeno"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gragnano Trebbiense",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033024",
+    "codice_catastale": "E132",
+    "popolazione": 4591,
+    "superficie_kmq": 34.59,
+    "densita": 132.7,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "gragnanesi",
+    "etimologia": "Deriva dal nome latino di persona Granius con l'aggiunta del suffisso -anus. La specifica deriva dal nome del vicino fiume Trebbia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Piacenza"
+    ],
+    "localita_frazioni": [
+      "Casaliggio",
+      "Capremoldo Sopra",
+      "Campremoldo Sotto",
+      "Gragnanino"
+    ],
+    "comuni_confinanti": [
+      "A est: Gossolengo",
+      "Piacenza; a nord: Rottofreno; a ovest: Agazzano",
+      "Borgonovo Val Tidone; a sud: Gazzola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Pilastro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gossolengo",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033023",
+    "codice_catastale": "E114",
+    "popolazione": 5652,
+    "superficie_kmq": 31.47,
+    "densita": 179.6,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Quintino",
+    "festa_patronale": "31 ottobre",
+    "demonimo": "gossolenghesi",
+    "etimologia": "Deriva dal nome longobardo di persona Gozilo o Gauzilo con l'aggiunta del suffisso -engo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Piacenza"
+    ],
+    "localita_frazioni": [
+      "Caratta",
+      "Quarto",
+      "Settima"
+    ],
+    "comuni_confinanti": [
+      "Gazzola",
+      "Gragnano Trebbiense",
+      "Piacenza",
+      "Podenzano",
+      "Rivergaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria Assunta in Settima"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gazzola",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033022",
+    "codice_catastale": "D958",
+    "popolazione": 2069,
+    "superficie_kmq": 44.13,
+    "densita": 46.9,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "gazzolesi",
+    "etimologia": "Il nome deriva dal longobardo gahagi, terreno riservato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone"
+    ],
+    "localita_frazioni": [
+      "Gazzola",
+      "Momeliano",
+      "Rezzanello",
+      "Monticello",
+      "Tuna",
+      "Castelletto",
+      "Rivalta",
+      "Canneto Sopra",
+      "Canneto Sotto"
+    ],
+    "comuni_confinanti": [
+      "Agazzano",
+      "Gossolengo",
+      "Gragnano Trebbiense",
+      "Piozzano",
+      "Rivergaro",
+      "Travo"
+    ],
+    "musei": [
+      "Castello di Rivalta"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino Vescovo (in località Rivalta)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Rivalta Trebbia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio privato \"Padre Secchi\" (a Rezzanello di Gazzola)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiorenzuola d'Arda",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033021",
+    "codice_catastale": "D611",
+    "popolazione": 15306,
+    "superficie_kmq": 59.74,
+    "densita": 256.2,
+    "cap": "29017",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Fiorenzo",
+    "festa_patronale": "17 ottobre",
+    "demonimo": "fiorenzuolani",
+    "etimologia": "La prima parte del nome potrebbe riferirsi alla rigogliosità del luogo o al nome del santo patrono: San Fiorenzo. La specifica si riferisce al torrente che scorre in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda",
+      "Associazione Europea dei Comuni sulla Via Francigena"
+    ],
+    "localita_frazioni": [
+      "Baselica Duce",
+      "San Protaso",
+      "Paullo"
+    ],
+    "comuni_confinanti": [
+      "Alseno",
+      "Besenzone",
+      "Cadeo",
+      "Carpaneto Piacentino",
+      "Castell'Arquato",
+      "Cortemaggiore"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Zobia (settimana di carnevale)",
+      "Ponta e Cull (Pasqua)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ferriere",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033020",
+    "codice_catastale": "D555",
+    "popolazione": 1270,
+    "superficie_kmq": 179.57,
+    "densita": 7.1,
+    "cap": "29024",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "ferrieresi",
+    "etimologia": "Il nome probabilmente si riferisce alla presenza in loco, in passato, di numerose aziende metallurgiche attualmente abbandonate per mancanza di materia prima.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli di Nure e dell'Arda",
+      "Regione Agraria n. 2 - Alto Nure",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Boschi",
+      "Brugneto",
+      "Canadello",
+      "Casaldonato",
+      "Cassimorenga",
+      "Cassimoreno",
+      "Castagnola",
+      "Castelcanafurone",
+      "Cattaragna",
+      "Centenaro",
+      "Ciregna",
+      "Cerreto Rossi",
+      "Gambaro",
+      "Grondone",
+      "Pertuso",
+      "Rocca",
+      "Rompeggio",
+      "Salsominore",
+      "Selva",
+      "Torrio"
+    ],
+    "comuni_confinanti": [
+      "Bardi (PR)",
+      "Bedonia (PR)",
+      "Cerignale",
+      "Coli",
+      "Corte Brugnatella",
+      "Farini",
+      "Ottone",
+      "Rezzoaglio (GE)",
+      "Santo Stefano d'Aveto (GE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro (a Gambaro)",
+      "Chiesa di San Giovanni Battista, in Piazza delle Miniere"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Farini",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033019",
+    "codice_catastale": "D502",
+    "popolazione": 1244,
+    "superficie_kmq": 112.15,
+    "densita": 11.1,
+    "cap": "29023",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "farinesi",
+    "etimologia": "Potrebbe riferirsi ad un nome di famiglia: Farini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli di Nure e dell'Arda",
+      "Regione Agraria n. 2 - Alto Nure"
+    ],
+    "localita_frazioni": [
+      "Boccolo Noce",
+      "Cogno San Bassano",
+      "Cogno San Savino",
+      "Groppallo",
+      "Mareto",
+      "Montereggio",
+      "Pradovera"
+    ],
+    "comuni_confinanti": [
+      "Bardi (PR)",
+      "Bettola",
+      "Coli",
+      "Ferriere",
+      "Morfasso"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Torre di Tornara"
+    ],
+    "chiese": [
+      "Chiesa di San Giuseppe"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cortemaggiore",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033018",
+    "codice_catastale": "D061",
+    "popolazione": 4653,
+    "superficie_kmq": 36.82,
+    "densita": 126.4,
+    "cap": "29016",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "cortemaggioresi",
+    "etimologia": "Il nome deriva da curtis maior, ossia corte maggiore, con evidente significato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Chiavenna Landi",
+      "San Martino in Olza"
+    ],
+    "comuni_confinanti": [
+      "Besenzone",
+      "Cadeo",
+      "Caorso",
+      "Fiorenzuola d'Arda",
+      "Pontenure",
+      "San Pietro in Cerro",
+      "Villanova sull'Arda"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria delle Grazie e San Lorenzo",
+      "Chiesa dell'Annunziata o dei Frati"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Corte Brugnatella",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033017",
+    "codice_catastale": "D054",
+    "popolazione": 568,
+    "superficie_kmq": 46.32,
+    "densita": 12.3,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "cortebrugnatellesi",
+    "etimologia": "Il nome è un composto di \"corte\" e di Brugnatella. La seconda parte potrebbe riferirsi ad un nome di famiglia o al dialetto piacentino brugna (prugna) e brugno (prunello).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 1 - Montagna del Medio Trebbia"
+    ],
+    "localita_frazioni": [
+      "Castelvetto",
+      "Lago",
+      "Lupi",
+      "Marsaglia",
+      "Metteglia",
+      "Ozzola Pieve",
+      "Rovaiola",
+      "Valle"
+    ],
+    "comuni_confinanti": [
+      "Bobbio",
+      "Brallo di Pregola (PV)",
+      "Cerignale",
+      "Coli",
+      "Ferriere"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna dell'Aiuto (in località Pieve di Montarsolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Carlin di Maggio (notte tra il 30 aprile e il primo maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Coli",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033016",
+    "codice_catastale": "C838",
+    "popolazione": 912,
+    "superficie_kmq": 72.14,
+    "densita": 12.6,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "colesi",
+    "etimologia": "Potrebbe derivare da un nome di persona Caurus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 1 - Montagna del Medio Trebbia"
+    ],
+    "localita_frazioni": [
+      "Aglio",
+      "Peli",
+      "Perino",
+      "Scabiazze",
+      "Rosso"
+    ],
+    "comuni_confinanti": [
+      "Bettola",
+      "Bobbio",
+      "Corte Brugnatella",
+      "Farini",
+      "Ferriere",
+      "Travo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Agostino",
+      "Chiesa di Santa Cecilia",
+      "Chiesa di San Bartolomeo Apostolo"
+    ],
+    "castelli_fortificazioni": [
+      "Resti del Castello di Magrini"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerignale",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033015",
+    "codice_catastale": "C513",
+    "popolazione": 128,
+    "superficie_kmq": 31.51,
+    "densita": 4.1,
+    "cap": "29020",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "cerignalesi",
+    "etimologia": "Potrebbe riferirsi al nome di pianta cerrus, ossia cerro con l'aggiunta di un suffisso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 1 - Montagna del Medio Trebbia"
+    ],
+    "localita_frazioni": [
+      "Carisasca",
+      "Cariseto",
+      "Casale",
+      "Castello",
+      "Lisore",
+      "Oneto",
+      "Ponte Organasco",
+      "Rovereto",
+      "Selva",
+      "Zermogliana"
+    ],
+    "comuni_confinanti": [
+      "Brallo di Pregola (PV)",
+      "Corte Brugnatella",
+      "Ferriere",
+      "Ottone",
+      "Zerba"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelvetro Piacentino",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033014",
+    "codice_catastale": "C288",
+    "popolazione": 5379,
+    "superficie_kmq": 35.11,
+    "densita": 153.2,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "castelvetresi",
+    "etimologia": "Chiamato in passato Castel Vetere, deriva dal latino castrum (castello) e vetus, veteris (vecchio). La specifica si riferisce alla zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Croce Santo Spirito",
+      "Mezzano Chitantolo",
+      "San Giuliano"
+    ],
+    "comuni_confinanti": [
+      "Cremona (CR)",
+      "Gerre de' Caprioli (CR)",
+      "Monticelli d'Ongina",
+      "Spinadesco (CR)",
+      "Stagno Lombardo (CR)",
+      "Villanova sull'Arda"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Croce Santo Spirito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castell'Arquato",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033012",
+    "codice_catastale": "C145",
+    "popolazione": 4668,
+    "superficie_kmq": 52.22,
+    "densita": 89.4,
+    "cap": "29014",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "arquatesi",
+    "etimologia": "E' un composto di Castello (da castrum, fortezza) e arcuato che potrebbe riferirsi all'aspetto della costruzione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda",
+      "Associazione Nazionale Città del Vino",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Bacedasco Alto",
+      "Doppi",
+      "Pallastrelli",
+      "Sant'Antonio",
+      "San Lorenzo\nVigolo Marchese"
+    ],
+    "comuni_confinanti": [
+      "Alseno",
+      "Carpaneto Piacentino",
+      "Fiorenzuola d'Arda",
+      "Lugagnano Val D'Arda",
+      "Vernasca"
+    ],
+    "musei": [
+      "Museo Illichiano",
+      "Museo Geologico",
+      "Museo della Collegiata"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata dell'Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di Castell'Arquato"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corteo Storico (seconda domenica di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel San Giovanni",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033013",
+    "codice_catastale": "C261",
+    "popolazione": 13661,
+    "superficie_kmq": 44.67,
+    "densita": 305.8,
+    "cap": "29015",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giovanni",
+    "festa_patronale": "24 giugno",
+    "demonimo": "castellani",
+    "etimologia": "Deriva da Castrum S. Iohannis, ossia Castello di San Giovanni. La prima parte del nome si riferisce alla presenza di una fortezza, di un campo fortificato. La seconda è in onore del santo venerato in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Creta",
+      "Ganaghello",
+      "Fornaci",
+      "Dogana",
+      "Fontana Pradosa",
+      "Bosco Tosca",
+      "Pievetta",
+      "Parpanese"
+    ],
+    "comuni_confinanti": [
+      "Arena Po (PV)",
+      "Borgonovo Val Tidone",
+      "Bosnasco (PV)",
+      "Pieve Porto Morone (PV)",
+      "Rovescala (PV)",
+      "San Damiano al Colle (PV)",
+      "Sarmato",
+      "Ziano Piacentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carpaneto Piacentino",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033011",
+    "codice_catastale": "B812",
+    "popolazione": 7718,
+    "superficie_kmq": 63.24,
+    "densita": 122.0,
+    "cap": "29013",
+    "prefisso_telefonico": "0523",
+    "patrono": "SS. Fermo e Rustico",
+    "festa_patronale": "9 agosto",
+    "demonimo": "carpanetani",
+    "etimologia": "Deriva dal nome di pianta carpinus, ossia carpine, con l'aggiunta del suffisso collettivo -etum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Badagnano",
+      "Celleri",
+      "Chero",
+      "Cimafava",
+      "Ciriano",
+      "Magnano Montanaro",
+      "Rezzano",
+      "Travazzano",
+      "Zena"
+    ],
+    "comuni_confinanti": [
+      "Cadeo",
+      "Castell'Arquato",
+      "Fiorenzuola d'Arda",
+      "Gropparello",
+      "Lugagnano Val D'Arda",
+      "Pontenure",
+      "San Giorgio Piacentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Fermo e Rustico"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Zena",
+      "Castello di Travazzano",
+      "Castello di Torre Confalonieri",
+      "Castello di Magnano",
+      "Castello di Cerreto Landi",
+      "Castello di Carpaneto"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Edoardo Amaldi (1908 - 1989)",
+      "fisico"
+    ]
+  },
+  {
+    "nome": "Caorso",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033010",
+    "codice_catastale": "B643",
+    "popolazione": 4752,
+    "superficie_kmq": 40.95,
+    "densita": 116.0,
+    "cap": "29012",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "caorsani",
+    "etimologia": "Il nome deriva dal latino Caput Ursi, ossia \"testa d'orso\" riferendosi ad una persona non ben identificata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Fossadello",
+      "Muradolo",
+      "Roncarolo",
+      "Zerbio"
+    ],
+    "comuni_confinanti": [
+      "Caselle Landi (LO)",
+      "Castelnuovo Bocca d'Adda (LO)",
+      "Cortemaggiore",
+      "Monticelli d'Ongina",
+      "Piacenza",
+      "Pontenure",
+      "San Pietro in Cerro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Mandelli"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Oasi naturalistica dell'Isola De Pinedo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caminata",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033009",
+    "codice_catastale": "B479",
+    "popolazione": 250,
+    "superficie_kmq": 3.17,
+    "densita": 78.9,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "caminatesi",
+    "etimologia": "Il nome indica una casa medioevale con una grande stanza con camino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Tidone",
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone"
+    ],
+    "localita_frazioni": [
+      "Canova",
+      "Costiola",
+      "Moncasacco"
+    ],
+    "comuni_confinanti": [
+      "Canevino (PV)",
+      "Nibbiano",
+      "Ruino (PV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Sinforiano e Timoteo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calendasco",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033008",
+    "codice_catastale": "B405",
+    "popolazione": 2473,
+    "superficie_kmq": 37.3,
+    "densita": 66.3,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Corrado",
+    "festa_patronale": "19 febbraio",
+    "demonimo": "calendaschesi",
+    "etimologia": "Deriva dal nome latino di persona Calendus con l'aggiunta del suffisso -ascus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Piacenza",
+      "Associazione Europea dei Comuni sulla Via Francigena"
+    ],
+    "localita_frazioni": [
+      "Bonina",
+      "Boscone Cusani",
+      "Castellazzo",
+      "Cotrebbia Nuova",
+      "Incrociata",
+      "Malpaga",
+      "Ponte Trebbia",
+      "Santimento"
+    ],
+    "comuni_confinanti": [
+      "Chignolo Po (PV)",
+      "Guardamiglio (LO)",
+      "Orio Litta (LO)",
+      "Piacenza",
+      "Rottofreno",
+      "San Rocco al Porto (LO)",
+      "Senna Lodigiana (LO)",
+      "Somaglia (LO)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa dal Verme"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello di Calendasco"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cadeo",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033007",
+    "codice_catastale": "B332",
+    "popolazione": 6132,
+    "superficie_kmq": 38.59,
+    "densita": 158.9,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "cadeensi",
+    "etimologia": "Deriva dal latino Casa Dei, ossia casa di Dio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Fontanafredda",
+      "Roveleto",
+      "Saliceto"
+    ],
+    "comuni_confinanti": [
+      "Carpaneto Piacentino",
+      "Cortemaggiore",
+      "Fiorenzuola d'Arda",
+      "Pontenure"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Beata Vergine del Carmelo (a Roveleto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Marsaxlokk Bay (Malta)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borgonovo Val Tidone",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033006",
+    "codice_catastale": "B025",
+    "popolazione": 7893,
+    "superficie_kmq": 51.72,
+    "densita": 152.6,
+    "cap": "29011",
+    "prefisso_telefonico": "0523",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "borgonovesi",
+    "etimologia": "La prima parte del nome è un composto di \"borgo\" e \"novo\", con evidente significato. La specifica si riferisce al torrente che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Agazzino",
+      "Bilegno",
+      "Breno",
+      "Bruso",
+      "Castelnuovo",
+      "Corano",
+      "Fabbiano",
+      "Mottaziana"
+    ],
+    "comuni_confinanti": [
+      "Agazzano",
+      "Castel San Giovanni",
+      "Gragnano Trebbiense",
+      "Nibbiano",
+      "Pianello Val Tidone",
+      "Rottofreno",
+      "Sarmato",
+      "Ziano Piacentino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Tedeschi",
+      "Villa Calciati"
+    ],
+    "chiese": [
+      "Oratorio di San Rocco",
+      "Convento e Chiesa di San Bernardino",
+      "Chiesa dell'Immacolata Concezione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bobbio",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033005",
+    "codice_catastale": "A909",
+    "popolazione": 3572,
+    "superficie_kmq": 106.46,
+    "densita": 33.6,
+    "cap": "29022",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Colombano",
+    "festa_patronale": "23 novembre",
+    "demonimo": "bobbiesi",
+    "etimologia": "Potrebbe derivare da un nome latino di persona Bovius o da un nome germanico Bobilo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Piacentino",
+      "Regione Agraria n. 1 - Montagna del Medio Trebbia",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Cassolo",
+      "Ceci",
+      "Dezza",
+      "Mezzano Scotti",
+      "Santa Maria\nSan Cristoforo",
+      "San Salvatore",
+      "Vaccarezza"
+    ],
+    "comuni_confinanti": [
+      "Brallo di Pregola (PV)",
+      "Coli",
+      "Corte Brugnatella",
+      "Menconico (PV)",
+      "Pecorara",
+      "Piozzano",
+      "Romagnese (PV)",
+      "Santa Margherita di Staffora (PV)",
+      "Travo"
+    ],
+    "musei": [
+      "Museo dell'Abbazia di San Colombano"
+    ],
+    "ville_palazzi": [
+      "Palazzo Brugnatelli"
+    ],
+    "chiese": [
+      "Duomo",
+      "Abbazia di San Colombano, fondata dal monaco irlandese Colombano",
+      "Santuario della Madonna dell'Aiuto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Gobbo",
+      "a undici arcate"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ybbs an der Donau (Austria)",
+      "Navan (Irlanda)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bettola",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033004",
+    "codice_catastale": "A831",
+    "popolazione": 2787,
+    "superficie_kmq": 122.85,
+    "densita": 22.7,
+    "cap": "29021",
+    "prefisso_telefonico": "0523",
+    "patrono": "Madonna della Quercia",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "bettolesi",
+    "etimologia": "Dal 1881 al 1885 fu chiamata Borgonure. Il nome attuale si riferisce all'italiano taverna, osteria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valli di Nure e dell'Arda",
+      "Regione Agraria n. 2 - Alto Nure"
+    ],
+    "localita_frazioni": [
+      "località: Bramaiano",
+      "Calenzano",
+      "Ebbio",
+      "Groppo Ducale",
+      "Leggio\nMissano",
+      "Pradello",
+      "Revigozzo",
+      "Roncovero",
+      "Rossoreggio\nVigolo",
+      "Villanova Chiesa;borgate: San Bernardino",
+      "San Giovanni"
+    ],
+    "comuni_confinanti": [
+      "Coli",
+      "Farini",
+      "Gropparello",
+      "Morfasso",
+      "Ponte dell'Olio",
+      "Vigolzone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Bernardino",
+      "Santuario Madonna della Quercia, in precedenza Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre Colombo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Besenzone",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033003",
+    "codice_catastale": "A823",
+    "popolazione": 978,
+    "superficie_kmq": 23.88,
+    "densita": 41.0,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Vitale",
+    "festa_patronale": "28 aprile",
+    "demonimo": "besenzonesi",
+    "etimologia": "Deriva dal nome latino di persona Vesentio, -onis o da Vesontio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Basso Arda"
+    ],
+    "localita_frazioni": [
+      "Bersano",
+      "Mercore"
+    ],
+    "comuni_confinanti": [
+      "Alseno",
+      "Busseto (PR)",
+      "Cortemaggiore",
+      "Fiorenzuola d'Arda",
+      "Villanova sull'Arda"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Vitale",
+      "Chiesa di San Pietro Martire",
+      "Chiesa del SS Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alseno",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033002",
+    "codice_catastale": "A223",
+    "popolazione": 4718,
+    "superficie_kmq": 55.51,
+    "densita": 85.0,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "alsenesi",
+    "etimologia": "Deriva dal latino sinus (avvallamento) in riferimento ad un antico fiume o ad un antica strada.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline del Nure e dell'Arda",
+      "Parco Fluviale dello Stirone",
+      "Associazione Europea dei Comuni sulla Via Francigena"
+    ],
+    "localita_frazioni": [
+      "Castelnuovo Fogliani",
+      "Cortina",
+      "Chiaravalle della Colomba\nLusurasco"
+    ],
+    "comuni_confinanti": [
+      "Besenzone",
+      "Busseto (PR)",
+      "Castell'Arquato",
+      "Fiorenzuola d'Arda",
+      "Salsomaggiore Terme (PR)",
+      "Vernasca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino, di origine gotica",
+      "Abbazia di Chiaravalle della Colomba"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza di Castelnuovo Fogliani"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Agazzano",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033001",
+    "codice_catastale": "A067",
+    "popolazione": 2081,
+    "superficie_kmq": 35.88,
+    "densita": 58.0,
+    "cap": "29010",
+    "prefisso_telefonico": "0523",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "agazzanesi",
+    "etimologia": "Deriva dal nome latino di famiglia Agatius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline del Trebbia e del Tidone"
+    ],
+    "localita_frazioni": [
+      "Boffalora",
+      "Cantone",
+      "Grintorto",
+      "Sarturano",
+      "Tavernago\nVerdeto"
+    ],
+    "comuni_confinanti": [
+      "Borgonovo Val Tidone",
+      "Gazzola",
+      "Gragnano Trebbiense",
+      "Pianello Val Tidone",
+      "Piozzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Piastrello (1630)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Di Boffalora"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piacenza",
+    "provincia": "Piacenza",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "033032",
+    "codice_catastale": "G535",
+    "popolazione": 102355,
+    "superficie_kmq": 118.46,
+    "densita": 864.0,
+    "cap": "29100",
+    "prefisso_telefonico": "0523",
+    "patrono": "Sant'Antonino di Piacenza",
+    "festa_patronale": "4 luglio",
+    "demonimo": "piacentini",
+    "etimologia": "Deriva da Placentia, dal verbo latino placere, piacere. E' evidente la funzione augurale del nome.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Piacenza",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione Europea dei Comuni sulla Via Francigena",
+      "Circuito Città d'Arte della Pianura Padana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calendasco",
+      "Caorso",
+      "Caselle Landi (LO)",
+      "Corno Giovine (LO)",
+      "Gossolengo",
+      "Gragnano Trebbiense",
+      "Podenzano",
+      "Pontenure",
+      "Rottofreno",
+      "San Rocco al Porto (LO)",
+      "Santo Stefano Lodigiano (LO)"
+    ],
+    "musei": [
+      "Museo di Storia Naturale",
+      "Museo della Basilica di Sant'Antonino",
+      "Musei di Palazzo Farnese: Sezione Pinacoteca",
+      "Musei di Palazzo Farnese: Sezione Medievale-Moderna e Farnesiana",
+      "Musei di Palazzo Farnese: Museo delle Carrozze",
+      "Musei di Palazzo Farnese: Museo del Risorgimento",
+      "Musei di Palazzo Farnese: Museo Archeologico",
+      "Galleria Alberoni"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Chiara",
+      "Chiesa di San Paolo Apostolo",
+      "Chiesa Abbaziale di San Sisto",
+      "Basilica di Sant'Antonino",
+      "Basilica di San Savino",
+      "Chiesa di Sant'Agostino (sconsacrata)",
+      "Duomo di Piacenza",
+      "Chiesa di Santa Rita",
+      "Santuario Santa Maria di Campagna :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Municipale",
+      "Teatro Plaza",
+      "Teatro Politeama",
+      "Teatro San Matteo",
+      "Teatro dei Filodrammatici"
+    ],
+    "stadi": [
+      "Stadio Leonardo Garilli"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

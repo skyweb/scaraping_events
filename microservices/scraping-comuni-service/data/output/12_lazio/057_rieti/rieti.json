@@ -1,0 +1,16 @@
+{
+  "nome": "Rieti",
+  "regione": "Lazio",
+  "zona": null,
+  "sigla": "RI",
+  "codice_istat": "057",
+  "popolazione": 157420,
+  "popolazione_maschi": 77640,
+  "popolazione_femmine": 79780,
+  "superficie_kmq": 2749.16,
+  "densita": 57.3,
+  "num_comuni": 73,
+  "capoluogo": "Rieti",
+  "iso_3166_2": "IT-RI",
+  "nuts": "ITE42"
+}

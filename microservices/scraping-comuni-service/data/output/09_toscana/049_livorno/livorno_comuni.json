@@ -1,0 +1,1215 @@
+[
+  {
+    "nome": "Suvereto",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049020",
+    "codice_catastale": "L019",
+    "popolazione": 3035,
+    "superficie_kmq": 92.95,
+    "densita": 32.7,
+    "cap": "57028",
+    "prefisso_telefonico": "0565",
+    "patrono": "Santa Croce",
+    "festa_patronale": "3 maggio",
+    "demonimo": "suveretani",
+    "etimologia": "Deriva dal latino suber, ossia sughero, con l'aggiunta del suffisso collettivo -etum.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)",
+      "Club I Borghi più Belli d'Italia",
+      "Circondario della Val di Cornia",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "San Lorenzo",
+      "Montioni",
+      "Prata",
+      "Belevedere"
+    ],
+    "comuni_confinanti": [
+      "Campiglia Marittima",
+      "Castagneto Carducci",
+      "Follonica (GR)",
+      "Massa Marittima (GR)",
+      "Monterotondo Marittimo (GR)",
+      "Monteverdi Marittimo (PI)",
+      "Piombino",
+      "San Vincenzo",
+      "Sassetta"
+    ],
+    "musei": [
+      "Museo di Arte Sacra",
+      "Museo Artistico della Bambola"
+    ],
+    "ville_palazzi": [
+      "Villa di Casalappi"
+    ],
+    "chiese": [
+      "Pieve romanica di San Giusto",
+      "Chiostro di San Francesco",
+      "Chiesa della Madonna di sopra la Porta",
+      "Chiesa del Crocifisso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Cinghiale (prima domenica di dicembre)",
+      "con il Palio delle Botti e giostra degli arcieri"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sassetta",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049019",
+    "codice_catastale": "I454",
+    "popolazione": 503,
+    "superficie_kmq": 26.58,
+    "densita": 18.9,
+    "cap": "57020",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "sassetani",
+    "etimologia": "Deriva dal diminutivo del termine saxum, ossia roccia, pietra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Colline Metallifere",
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Circondario della Val di Cornia",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Monteverdi Marittimo (PI); a ovest: Castagneto Carducci; a sud: Suvereto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchia di Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vincenzo",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049018",
+    "codice_catastale": "I390",
+    "popolazione": 6910,
+    "superficie_kmq": 33.06,
+    "densita": 209.0,
+    "cap": "57027",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Vincenzo Ferreri",
+    "festa_patronale": "5 aprile",
+    "demonimo": "sanvincenzini",
+    "etimologia": "Il nome si riferisce alla presenza di una torre in cui era posta una chiesa dedicata al santo.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città dell'Olio",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)",
+      "Associazione Nazionale Città del Vino",
+      "Circondario della Val di Cornia",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "San Carlo"
+    ],
+    "comuni_confinanti": [
+      "A est: Campiglia Marittima",
+      "Suvereto; a nord: Castagneto Carducci; a sud: Piombino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Alfonso",
+      "Chiesa di San Vincenzo Ferreri, in Piazza della Chiesa",
+      "Chiesa di Santa Barbara (in località San Carlo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Parco di Rimigliano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Guanabo (Cuba)",
+      "Pfarrkirchen (Germania)",
+      "Saint Maximin la Sainte Baume (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rosignano Marittimo",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049017",
+    "codice_catastale": "H570",
+    "popolazione": 31197,
+    "superficie_kmq": 120.24,
+    "densita": 259.5,
+    "cap": "57016",
+    "prefisso_telefonico": "0586",
+    "patrono": "San Nicola",
+    "festa_patronale": "10 settembre",
+    "demonimo": "rosignanesi",
+    "etimologia": "Deriva dal nome latino di persona Rasinius o Rusinius con l'aggiunta del suffisso -anus che indica appartenenza. La specifica assume il senso di \"maremmana\".",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007 (Castiglioncello e Vada)"
+    ],
+    "fa_parte_di": [
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "Castelnuovo della Misericordia",
+      "Gabbro",
+      "Nibbiaia",
+      "Vada",
+      "Rosignano Solvay",
+      "Castiglioncello"
+    ],
+    "comuni_confinanti": [
+      "Castellina Marittima (PI)",
+      "Cecina",
+      "Collesalvetti",
+      "Livorno",
+      "Orciano Pisano (PI)",
+      "Santa Luce (PI)"
+    ],
+    "musei": [
+      "Museo di Scienze Naturali",
+      "Museo Civico Archeologico",
+      "Museo \"Pietro Gori\""
+    ],
+    "ville_palazzi": [
+      "Villa di Poggio Piano",
+      "Villa Mirabello o Cubbe",
+      "Palazzo Bombardieri"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Ilario, in Via del Castello",
+      "Chiesa di Santo Stefano (a Castelnuovo della Misericordia)",
+      "Chiesa di Sant'Andrea (a Castiglioncello)",
+      "Chiesa di San Michele (a Gabbro)",
+      "Chiesa di San Leopoldo Re (a Vada)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Solvay",
+      "Tensostruttura Castello Pasquini"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Champigny sur Marne (Francia)",
+      "Musselburgh (Scozia)",
+      "Pardubice (Repubblica Ceca)",
+      "Zug (Repubblica Araba Saharawi Democratica)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rio nell'Elba",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049016",
+    "codice_catastale": "H297",
+    "popolazione": 1105,
+    "superficie_kmq": 16.71,
+    "densita": 66.1,
+    "cap": "57039",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "riesi",
+    "etimologia": "Il termine Rio significa ruscello, la specifica indica la sua posizione geografica.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "Nisporto",
+      "Nisportino",
+      "Bagnaia",
+      "Cerboli"
+    ],
+    "comuni_confinanti": [
+      "A est e nord-est: Rio Marina; a ovest: Portoferraio; a sud: Porto Azzurro"
+    ],
+    "musei": [
+      "Museo dei Minerali della gente di Rio"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta delle anime del purgatorio",
+      "Chiesa parrocchiale dei SS. Giacomo e Quirico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "lavatoi pubblici"
+    ],
+    "teatri": [
+      "Teatro Garibaldi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rio Marina",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049015",
+    "codice_catastale": "H305",
+    "popolazione": 2195,
+    "superficie_kmq": 19.54,
+    "densita": 112.3,
+    "cap": "57038",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "riesi",
+    "etimologia": "Detta in passato Marina di Rio. Il termine Rio significa ruscello e la specifica indica la vicinanza alla spiaggia.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano"
+    ],
+    "localita_frazioni": [
+      "Cavo"
+    ],
+    "comuni_confinanti": [
+      "Porto Azzurro",
+      "Rio nell'Elba"
+    ],
+    "musei": [
+      "Museo dei Minerali Elbani"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Mausoleo Tonietti (in frazione Cavo)",
+      "progettato dall'architetto Adolfo Coppedè come cappella sepolcrale"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Portoferraio",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049014",
+    "codice_catastale": "G912",
+    "popolazione": 11980,
+    "superficie_kmq": 47.46,
+    "densita": 252.4,
+    "cap": "57037",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Cristino",
+    "festa_patronale": "29 aprile",
+    "demonimo": "portoferraiesi",
+    "etimologia": "Chiamato in passato Cosmopoli in onore di Cosimo I de Medici. Il nome attuale si compone di \"porto\" e \"ferraio\" da ferrum, ossa ferro, in riferimento al trasposto di questo materiale in loco.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano"
+    ],
+    "localita_frazioni": [
+      "San Giovanni",
+      "Schiopparello",
+      "Magazzini",
+      "Ottone",
+      "Carpani",
+      "Bagnaia",
+      "San Martino",
+      "La Biodola",
+      "Viticcio",
+      "isola di Montecristo"
+    ],
+    "comuni_confinanti": [
+      "Campo nell'Elba",
+      "Capoliveri",
+      "Marciana",
+      "Porto Azzurro",
+      "Rio nell'Elba"
+    ],
+    "musei": [
+      "Museo Nazionale di Villa San Martino",
+      "Museo Nazionale della Palazzina dei Mulini",
+      "Museo Naturalistico",
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": [
+      "Palazzina dei Mulini"
+    ],
+    "chiese": [
+      "Chiesa di Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro dei Vigilanti"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Porto Azzurro",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049013",
+    "codice_catastale": "E680",
+    "popolazione": 3752,
+    "superficie_kmq": 13.3,
+    "densita": 282.1,
+    "cap": "57036",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Giacomo",
+    "festa_patronale": "26 luglio",
+    "demonimo": "portoazzurrini",
+    "etimologia": "Denominato in precedenza Longone, fu chiamato Porto Longone nel 1873 e poi assunse il nome attuale nel 1947 che si riferisce alla presenza di un porto sul mare azzurro. Il nome precedente si riferisce alla forma allungata del porto.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano"
+    ],
+    "localita_frazioni": [
+      "Barbarossa",
+      "Mola"
+    ],
+    "comuni_confinanti": [
+      "Capoliveri",
+      "Portoferraio",
+      "Rio Marina",
+      "Rio nell'Elba"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Forte Focardo (1678)",
+      "Forte di San Giacomo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piombino",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049012",
+    "codice_catastale": "G687",
+    "popolazione": 34041,
+    "superficie_kmq": 129.61,
+    "densita": 262.6,
+    "cap": "57025",
+    "prefisso_telefonico": "0565",
+    "patrono": "Santa Anastasia",
+    "festa_patronale": "8 maggio",
+    "demonimo": "piombinesi",
+    "etimologia": "Deriva da Plumbinum da plumbum, ossia piombo. Secondo alcuni deriva da Poplinum o Populinum riferendosi al vicino centro etrusco di Populonia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione Italiana Paesi Dipinti",
+      "Circondario della Val di Cornia",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "Riotorto",
+      "Populonia Stazione",
+      "Fiorentina",
+      "Populonia",
+      "La Sdriscia",
+      "Colmata",
+      "Poggio all'Agnello",
+      "Baratti"
+    ],
+    "comuni_confinanti": [
+      "Campiglia Marittima",
+      "Follonica (GR)",
+      "San Vincenzo",
+      "Suvereto"
+    ],
+    "musei": [
+      "Museo Etrusco \"Gasparri\"",
+      "Museo del Castello e della Città",
+      "Museo Archeologico del Territorio di Populonia"
+    ],
+    "ville_palazzi": [
+      "Ville delle Delizie o Baciocca",
+      "in Piazza Cittadella"
+    ],
+    "chiese": [
+      "Chiesa di San Cerbone",
+      "Chiesina di Cittadella",
+      "Chiesa di Santa Maria della Croce (a Populonia)",
+      "Chiesa della Misericordia",
+      "Chiesa di Sant'Antimo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Cinema Teatro Metropolitan"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Flemalle (Belgio)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marciana Marina",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049011",
+    "codice_catastale": "E931",
+    "popolazione": 1975,
+    "superficie_kmq": 5.64,
+    "densita": 350.2,
+    "cap": "57033",
+    "prefisso_telefonico": "0565",
+    "patrono": "Santa Chiara",
+    "festa_patronale": "12 agosto",
+    "demonimo": "marinesi",
+    "etimologia": "La prima parte deriva dal nome di persona Marcius con l'aggiunta del suffisso -anus che indica appartenenza espresso al femminile, quindi -ana. La specifica indica la vicinanza al porto.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano"
+    ],
+    "localita_frazioni": [
+      "Cotone"
+    ],
+    "comuni_confinanti": [
+      "Marciana"
+    ],
+    "musei": [
+      "Museo \"da Torre a Torre\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Chiara",
+      "Chiesa di Santa Caterina"
+    ],
+    "castelli_fortificazioni": [
+      "Torre del Porto"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marciana",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049010",
+    "codice_catastale": "E930",
+    "popolazione": 2157,
+    "superficie_kmq": 45.16,
+    "densita": 47.8,
+    "cap": "57030",
+    "prefisso_telefonico": "0565",
+    "patrono": "Santa Caterina d'Alessandria",
+    "festa_patronale": "25 novembre",
+    "demonimo": "marcianesi",
+    "etimologia": "Deriva dal nome di persona Marcius con l'aggiunta del suffisso -anus che indica appartenenza espresso al femminile, quindi -ana.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Pomonte",
+      "Chiessi",
+      "Colle d'Orano",
+      "Patresi",
+      "Zanca",
+      "Sant'Andrea",
+      "Maciarello",
+      "Poggio",
+      "Procchio"
+    ],
+    "comuni_confinanti": [
+      "Campo nell'Elba",
+      "Marciana Marina",
+      "Portoferraio"
+    ],
+    "musei": [
+      "Museo Civico Archeologico",
+      "Museo dell'Arte Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Defendente (XVI secolo)",
+      "Santuario della Madonna del Monte",
+      "Chiesa di San Nicolò (XIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Collesalvetti",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049008",
+    "codice_catastale": "C869",
+    "popolazione": 16705,
+    "superficie_kmq": 109.61,
+    "densita": 152.4,
+    "cap": "57014",
+    "prefisso_telefonico": "0586",
+    "patrono": "SS. Quirico e Giulitta",
+    "festa_patronale": "16 giugno",
+    "demonimo": "colligiani",
+    "etimologia": "E' un composto di colle e Salvetti, che deriva dal nome di persona Salvetto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Italiana le Città del Miele",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "Stagno",
+      "Vicarello",
+      "Guasticce",
+      "Nugola",
+      "Parrana San Martino",
+      "Colognole",
+      "Parrana San Giusto",
+      "Castell'Anselmo"
+    ],
+    "comuni_confinanti": [
+      "Cascina (PI)",
+      "Crespina Lorenzana (PI)",
+      "Fauglia (PI)",
+      "Livorno",
+      "Orciano Pisano (PI)",
+      "Pisa (PI)",
+      "Rosignano Marittimo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Romitorio di Santa Maria della Sambuca",
+      "Chiesa e Monastero di Valle Benedetta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Sala Spettacolo"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cecina",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049007",
+    "codice_catastale": "C415",
+    "popolazione": 28120,
+    "superficie_kmq": 42.48,
+    "densita": 662.0,
+    "cap": "57023",
+    "prefisso_telefonico": "0586",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "cecinesi",
+    "etimologia": "Il paese fu chiamato Bibbona fino al 1873. Il nome attuale si riferisce al fiume che scorre in loco e deriva dal nome di persona Ceicina.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007 (Gorette e Marina di Cecina)"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Italiana Città Ciclabili",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "Cecina Mare",
+      "San Pietro in Palazzi"
+    ],
+    "comuni_confinanti": [
+      "Bibbona",
+      "Casale Marittimo (PI)",
+      "Guardistallo (PI)",
+      "Montescudaio (PI)",
+      "Riparbella (PI)",
+      "Rosignano Marittimo"
+    ],
+    "musei": [
+      "Museo della Vita e del Lavoro della Maremma Settentrionale",
+      "Museo Archeologico Etrusco-Romano"
+    ],
+    "ville_palazzi": [
+      "Villa Ginori"
+    ],
+    "chiese": [
+      "Chiesa di San Giuseppe"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Eduardo De Filippo"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castagneto Carducci",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049006",
+    "codice_catastale": "C044",
+    "popolazione": 9071,
+    "superficie_kmq": 142.6,
+    "densita": 63.6,
+    "cap": "57022",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "castagnetani",
+    "etimologia": "La prima parte del nome deriva da castanea, ossia castagno, con l'aggiunta del suffisso collettivo -etum. Nel 1900 fu chiamato Castagneto Marittimo, cioè \"della maremma\" e nel 1907 fu sostituita la specifica con il cognome del famoso letterato italiano Carducci che qui visse per alcuni anni.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Città dell'Olio",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "Donoratico",
+      "Bolgheri",
+      "Marina di Castagneto Donoratico"
+    ],
+    "comuni_confinanti": [
+      "A est: Monteverdi Marittimo (PI)",
+      "Sassetta",
+      "Suvereto; a nord: Bibbona; a sud: San Vincenzo"
+    ],
+    "musei": [
+      "Casa \"Carducci\""
+    ],
+    "ville_palazzi": [
+      "Villa Emilia",
+      "Villa Margherita"
+    ],
+    "chiese": [
+      "Oratorio di San Guido",
+      "Chiesetta di Segalari",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di San Sebastiano",
+      "Chiesa di San Bernardo",
+      "Chiesa della Madonna del Carmine",
+      "Chiesa del SS. Crocifisso",
+      "Chiesa dei SS. Giacomo e Cristoforo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello della Gherardesca",
+      "Castello di Segalari",
+      "Castiglioncello di Bolgheri"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capraia Isola",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049005",
+    "codice_catastale": "B685",
+    "popolazione": 412,
+    "superficie_kmq": 19.03,
+    "densita": 21.7,
+    "cap": "57032",
+    "prefisso_telefonico": "0586",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "capraiesi",
+    "etimologia": "Il suo nome si riferisce a cappero, con evidente significato per la presenza massiccia in loco di colture di capperi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": null,
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Nicola",
+      "Chiesa dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capoliveri",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049004",
+    "codice_catastale": "B669",
+    "popolazione": 4046,
+    "superficie_kmq": 38.96,
+    "densita": 103.9,
+    "cap": "57031",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "capoliveresi",
+    "etimologia": "Deriva dal latino caput, ossia vetta, e Liberi dal nome latino di persona Liber che si identifica con il dio italico Libero. Liber potrebbe anche essere un aggettivo e significare libero, quindi \"vetta libera\". Secondo altri il termine caput potrebbe identificarsi con \"capitale\" in quanto fu capoluogo dell'isola nel medioevo e liber potrebbe significare \"franco\", ossia esonerato dal pagamento delle tasse.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Campo nell'Elba",
+      "Porto Azzurro",
+      "Portoferraio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Michele (in località San Rocco)",
+      "Pieve della Madonnina",
+      "Chiesa della Madonna della Neve"
+    ],
+    "castelli_fortificazioni": [
+      "Forte Focardo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campo nell'Elba",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049003",
+    "codice_catastale": "B553",
+    "popolazione": 4856,
+    "superficie_kmq": 55.6,
+    "densita": 87.3,
+    "cap": "57034",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Gaetano",
+    "festa_patronale": "7 agosto",
+    "demonimo": "campesi",
+    "etimologia": "La prima parte deriva dal latino campus, ossia campo o superficie agraria. La specifica si riferisce alla sua posizione e deriva da Ilva dal termine preindoeuropeo Ilvates.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Elba",
+      "Comunità Montana dell'Elba e Capraia",
+      "Parco Nazionale Arcipelago Toscano"
+    ],
+    "localita_frazioni": [
+      "Marina di Campo",
+      "Seccheto",
+      "Sant'Ilario e la Pila",
+      "San Piero",
+      "Isola di Pianosa"
+    ],
+    "comuni_confinanti": [
+      "Capoliveri",
+      "Marciana",
+      "Portoferraio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Giovanni in Campo",
+      "Chiesa dei Santi Pietro e Paolo in Campo (in località San Piero - frazione di Campo nell'Elba)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campiglia Marittima",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049002",
+    "codice_catastale": "B509",
+    "popolazione": 13167,
+    "superficie_kmq": 83.2,
+    "densita": 158.3,
+    "cap": "57021",
+    "prefisso_telefonico": "0565",
+    "patrono": "San Fiorenzo",
+    "festa_patronale": "15 maggio",
+    "demonimo": "campigliesi",
+    "etimologia": "Deriva dal latino campus (campo) con l'aggiunta del suffisso -iglia. La specifica, aggiunta nel 1862, assume il senso di \"maremmana\".",
+    "il_comune_e": [
+      "Città Termale (Terme Valle del Sole",
+      "in località Venturina)"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città del Vino",
+      "Circondario della Val di Cornia",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "frazioni: Venturina",
+      "Cafaggio; agglomerati urbani: Banditelle",
+      "Lumiere"
+    ],
+    "comuni_confinanti": [
+      "Piombino",
+      "San Vincenzo",
+      "Suvereto"
+    ],
+    "musei": [
+      "Museo della Civiltà del Lavoro",
+      "Museo del Minerale - Circolo Mineralogico Toscano",
+      "Museo d'Arte Sacra della Parrocchia di San Lorenzo"
+    ],
+    "ville_palazzi": [
+      "Palazzo Pretorio",
+      "Villa Mussio"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Ilario",
+      "Chiesa della Madonna di Fucinaia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro dei Concordi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Aspettando il Natale (24 dicembre)",
+      "Maggio Campigliese (secondo fine settimana di maggio), con corteo storico"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bibbona",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049001",
+    "codice_catastale": "A852",
+    "popolazione": 3191,
+    "superficie_kmq": 65.55,
+    "densita": 48.7,
+    "cap": "57020",
+    "prefisso_telefonico": "0586",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "bibbonesi",
+    "etimologia": "Deriva da un nome etrusco di persona Vib(b)ona o dal nome latino Vibius o Vibbius.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "Forte di Bibbona",
+      "La California",
+      "Stazione Bolgheri"
+    ],
+    "comuni_confinanti": [
+      "Casale Marittimo (PI)",
+      "Castagneto Carducci",
+      "Cecina",
+      "Guardistallo (PI)",
+      "Montecatini Val di Cecina (PI)",
+      "Monteverdi Marittimo (PI)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo del Comune Vecchio"
+    ],
+    "chiese": [
+      "Pieve di Sant'Ilario (XIV secolo)",
+      "Chiesa di Santa Maria della Pietà (XV secolo)"
+    ],
+    "castelli_fortificazioni": [
+      "Forte di Marina di Bibbona"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Livorno",
+    "provincia": "Livorno",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "049009",
+    "codice_catastale": "E625",
+    "popolazione": 158916,
+    "superficie_kmq": 104.1,
+    "densita": 1526.6,
+    "cap": "57100",
+    "prefisso_telefonico": "0586",
+    "patrono": "Santa Giulia di Corsica",
+    "festa_patronale": "22 maggio",
+    "demonimo": "livornesi",
+    "etimologia": "Deriva dal nome etrusco di persona Liburna o dal latino Liburnius, Leburna o Leburnius. Secondo alcuni deriva dal latino liburna, ossia brigantino, oppure dall'antico nome di popolo, ossia Liburni.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007 (Antignano e Quercianella)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Parco Nazionale Arcipelago Toscano",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)",
+      "Ambito Turistico Costa degli Etruschi"
+    ],
+    "localita_frazioni": [
+      "Antignano",
+      "Castellaccio",
+      "Isola di Gorgona",
+      "Montenero",
+      "Quercianella",
+      "Valle Benedetta"
+    ],
+    "comuni_confinanti": [
+      "Collesalvetti",
+      "Pisa (PI)",
+      "Rosignano Marittimo"
+    ],
+    "musei": [
+      "Museo Provinciale di Storia Naturale",
+      "Museo Ebraico",
+      "Museo Civico \"Giovanni Fattori\"",
+      "Galleria degli Ex Voto"
+    ],
+    "ville_palazzi": [
+      "Villa Dupoy o Casa Rossa",
+      "Villa Mayer",
+      "Villa del Buffone",
+      "Palazzo Huighens",
+      "Palazzo Finocchietti",
+      "Palazzo De Larderel",
+      "Villa Maurogordato (a Monterotondo)"
+    ],
+    "chiese": [
+      "Chiesa di San Jacopo in Acquaviva",
+      "Chiesa di San Giovanni Gualberto",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Ferdinando di Castiglia Re o della Crocetta",
+      "Chiesa della Santissima Annunziata o dei Greci Uniti",
+      "Chiesa della Madonna del Rosario di Pompei",
+      "Chiesa di Santa Caterina o dei Domenicani, di forma ottagonale",
+      "Sinagoga di Livorno",
+      "Chiesa di San Pietro e Paolo",
+      "Chiesa di San Sebastiano",
+      "Santuario Madonna di Montenero :: Monaci Benedettini Vallombrosani",
+      "Duomo di Livorno, in Piazza Grande",
+      "Chiesa parrocchiale di San Giovanni Bosco",
+      "Chiesa Evangelica Valdese",
+      "Chiesa di Santo Stefano ai Lupi",
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa di Santa Lucia",
+      "Chiesa di Santa Giulia"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza Vecchia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico del Museo di Storia Naturale del Mediterraneo"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro del Porto di Livorno",
+      "Teatro delle Commedie",
+      "Teatro Goldoni e Goldonetta",
+      "Teatro I 4 Mori",
+      "Teatro Mascagni di Villa Corridi"
+    ],
+    "stadi": [
+      "Stadio A. Picchi"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

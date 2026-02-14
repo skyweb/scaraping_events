@@ -1,0 +1,16 @@
+{
+  "nome": "Fermo",
+  "regione": "Marche",
+  "zona": null,
+  "sigla": "FM",
+  "codice_istat": "109",
+  "popolazione": 174849,
+  "popolazione_maschi": 84927,
+  "popolazione_femmine": 89922,
+  "superficie_kmq": 859.51,
+  "densita": 203.4,
+  "num_comuni": 40,
+  "capoluogo": "Fermo",
+  "iso_3166_2": "IT-FM",
+  "nuts": "-"
+}

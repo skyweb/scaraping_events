@@ -1,0 +1,14 @@
+{
+  "nome": "Toscana",
+  "codice_istat": "09",
+  "popolazione": 3742437,
+  "popolazione_maschi": 1802884,
+  "popolazione_femmine": 1939553,
+  "superficie_kmq": 22990.44,
+  "densita": 162.8,
+  "num_province": 10,
+  "num_comuni": 279,
+  "capoluogo": "Firenze",
+  "iso_3166_2": "IT-52",
+  "nuts": "ITE1"
+}

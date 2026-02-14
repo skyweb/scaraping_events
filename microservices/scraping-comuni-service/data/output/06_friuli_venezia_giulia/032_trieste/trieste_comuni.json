@@ -1,0 +1,368 @@
+[
+  {
+    "nome": "Sgonico",
+    "provincia": "Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "032005",
+    "codice_catastale": "I715",
+    "popolazione": 2066,
+    "superficie_kmq": 31.31,
+    "densita": 66.0,
+    "cap": "34010",
+    "prefisso_telefonico": "040",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "sgonichesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Borgo Grotta Gigante",
+      "Bristie",
+      "Campo Sacro",
+      "Colludrozza",
+      "Devincina",
+      "Gabrovizza",
+      "Rupinpiccolo",
+      "Sagrado",
+      "Sales",
+      "Samatorza",
+      "Stazione Prosecco"
+    ],
+    "comuni_confinanti": [
+      "A est: Monrupino; a nord-ovest: Duino-Aurisina; a sud: Trieste",
+      "Sgonico è: Comune di Confine con la Slovenia"
+    ],
+    "musei": [
+      "Museo Speleologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Ulrico (in località Samatorza)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Botanico Carsiana"
+    ],
+    "luoghi_interesse": [
+      "Grotta Gigante"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Dorligo della Valle-Dolina",
+    "provincia": "Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "032004",
+    "codice_catastale": "D324",
+    "popolazione": 5809,
+    "superficie_kmq": 24.51,
+    "densita": 237.0,
+    "cap": "34018",
+    "prefisso_telefonico": "040",
+    "patrono": "Sant'Ulderico",
+    "festa_patronale": "4 luglio",
+    "demonimo": "dolinciani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Bagnoli della Rosandra",
+      "Bottazzo",
+      "Caresana",
+      "Crociata di Prebenico",
+      "Domio",
+      "Draga Sant'Elia",
+      "Francovez",
+      "Grozzana",
+      "Lacotisce",
+      "Log - Mattonaia",
+      "Pese",
+      "Prebenico",
+      "San Antonio in Bosco",
+      "San Giuseppe della Chiusa",
+      "San Lorenzo"
+    ],
+    "comuni_confinanti": [
+      "Muggia, Trieste",
+      "San Dorligo della Valle-Dolina è: Comune di Confine con la Slovenia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Muggia",
+    "provincia": "Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "032003",
+    "codice_catastale": "F795",
+    "popolazione": 13124,
+    "superficie_kmq": 13.66,
+    "densita": 960.8,
+    "cap": "34015",
+    "prefisso_telefonico": "040",
+    "patrono": "SS. Giovanni e Paolo",
+    "festa_patronale": "26 giugno",
+    "demonimo": "muggesani",
+    "etimologia": "Riflette il latino mutula, per mutila, che significa \"mozza, tronca\", nel senso di \"sporgenza mozza\".",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: San Dorligo della Valle-Dolina, Trieste",
+      "Muggia è: Comune di Confine con la Slovenia"
+    ],
+    "musei": [
+      "Museo di Muggia e del Territorio",
+      "Mostra permanente del Presepio"
+    ],
+    "ville_palazzi": [
+      "Palazzo dei Rettori (Municipio)",
+      "in piazza Marconi"
+    ],
+    "chiese": [
+      "Duomo, dedicato ai Santi Giovanni e Paolo, in piazza Marconi",
+      "Chiesa di San Francesco",
+      "Basilica romanica di Santa Maria Assunta, in salita Muggia Vecchia"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Muggia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monrupino",
+    "provincia": "Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "032002",
+    "codice_catastale": "F378",
+    "popolazione": 885,
+    "superficie_kmq": 12.68,
+    "densita": 69.8,
+    "cap": "34016",
+    "prefisso_telefonico": "040",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "monrupinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Fernetti",
+      "Rupingrande",
+      "Zolla"
+    ],
+    "comuni_confinanti": [
+      "Sgonico, Trieste",
+      "Monrupino è: Comune di Confine con la Slovenia"
+    ],
+    "musei": [
+      "Museo della Casa Carsica"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Beata Vergine Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Nozze Carsiche (ultimo fine settimana di agosto negli anni dispari)",
+      "con corteo nuziale in abiti tradizionali"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Duino-Aurisina",
+    "provincia": "Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "032001",
+    "codice_catastale": "D383",
+    "popolazione": 8564,
+    "superficie_kmq": 45.17,
+    "densita": 189.6,
+    "cap": "34011",
+    "prefisso_telefonico": "040",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "aurisiniani",
+    "etimologia": "La prima parte deriva dal latino tubinu, da tuba, condotto naturale, la seconda parte è il nome di un torrente che scorre in loco e si connette con una base preromana aur- (acqua) con l'aggiunta del suffisso -isio, la cui origine non è chiara.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Aurisina",
+      "Ceroglie",
+      "Malchina",
+      "Medeazza",
+      "Precenico",
+      "Prepotto",
+      "San Pelagio",
+      "San Giovanni di Duino",
+      "Santa Croce",
+      "Sistiana",
+      "Slivia",
+      "Ternova Piccola",
+      "Villaggio del Pescatore",
+      "Visogliano"
+    ],
+    "comuni_confinanti": [
+      "A nord-ovest: Doberdò del Lago (GO), Monfalcone (GO); a sud-est: Sgonico, Trieste",
+      "Duino-Aurisina è: Comune di Confine con la Slovenia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni in Tuba"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Nuovo di Duino"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco del Castello di Duino"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ilirska Bistrica (Slovenia), dal 1983",
+      "Buie d'Istria (Croazia), dal 1979"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trieste",
+    "provincia": "Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "032006",
+    "codice_catastale": "L424",
+    "popolazione": 204234,
+    "superficie_kmq": 84.49,
+    "densita": 2417.3,
+    "cap": "34100",
+    "prefisso_telefonico": "040",
+    "patrono": "San Giusto",
+    "festa_patronale": "3 novembre",
+    "demonimo": "triestini",
+    "etimologia": "Deriva da Tergeste, dalla base terg, mercato, anche se è un'ipotesi poco condivisa, non ne esistono di più convincenti.",
+    "il_comune_e": [
+      "Bandiera Blu Approdi Turistici 2007 (Lega Navale Italiana)"
+    ],
+    "fa_parte_di": [
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Duino-Aurisina, Monrupino, Muggia, San Dorligo della Valle-Dolina, Sgonico",
+      "Trieste è: Comune di Confine con la Slovenia"
+    ],
+    "musei": [
+      "Civico Museo \"Morpurgo\"",
+      "Museo Etnografico di Servola",
+      "Museo della Farmacia \"Picciola\"",
+      "Museo della Comunità Ebraica \"Carlo e Vera Wagner\"",
+      "Galleria Nazionale d'Arte Antica",
+      "Donazione \"Sambo\"",
+      "Civico Museo Teatrale \"Fondazione Carlo Schmidl\"",
+      "Civico Museo di Storia Naturale",
+      "Civico Museo di Storia ed Arte e Orto Lapidario",
+      "Civico Museo di Guerra per la Pace \"Diego de Henriquez\"",
+      "Civico Museo della Risiera di S. Sabba",
+      "Civico Museo del Risorgimento e Sacrario \"Oberdan\"",
+      "Civico Museo del Mare",
+      "Civico Museo \"Revoltella\" e Galleria d'Arte Moderna",
+      "Museo Storico del Castello di Miramare",
+      "Antiquarium",
+      "Civico Museo d'Arte Orientale",
+      "Museo Ferroviario",
+      "Museo Postale e Telegrafico della Mitteleuropa",
+      "Science Centre Immaginario Scientifico",
+      "Museo Sveviano"
+    ],
+    "ville_palazzi": [
+      "Villa Sartorio, con parco",
+      "Palazzo Carciotti, in riva III Novembre"
+    ],
+    "chiese": [
+      "Chiesa di San Nicolò dei Greci, lungo la riva Tre Novembre",
+      "Sinagoga (1902), in via Donizetti",
+      "Santuario Nazionale a Maria Madre e Regina :: Missionari della Fede",
+      "Chiesa Evangelica, in largo Panfili",
+      "Chiesa di Sant'Antonio Taumaturgo, in piazza Sant'Antonio Nuovo",
+      "Chiesa di Santa Maria Maggiore, detta anche dei \"Gesuiti\", in via del Teatro Romano",
+      "Chiesa di San Silvestro",
+      "Chiesa di San Cipriano, in via delle Monache",
+      "Cattedrale di San Giusto",
+      "Chiesa di San Spiridione, di rito serbo-ortodosso, detta anche Chiesa degli Schiavoni, in piazza Sant'Antonio Nuovo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Miramare, con vasto parco",
+      "Castello di San Giusto, in piazza della Cattedrale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Civico Orto Botanico"
+    ],
+    "luoghi_interesse": [
+      "Osservatorio Astronomico di Trieste"
+    ],
+    "teatri": [
+      "Teatro Cristallo",
+      "Teatro dei Fabbri",
+      "Teatro Lirico Giuseppe Verdi",
+      "Teatro Stabile del Friuli-Venezia Giulia - Politeama Rossetti",
+      "Teatro Stabile Sloveno"
+    ],
+    "stadi": [
+      "Stadio N. Rocco"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "nome": "Bari",
+  "regione": "Puglia",
+  "zona": null,
+  "sigla": "BA",
+  "codice_istat": "072",
+  "popolazione": 1260142,
+  "popolazione_maschi": 614749,
+  "popolazione_femmine": 645393,
+  "superficie_kmq": 3825.41,
+  "densita": 329.4,
+  "num_comuni": 41,
+  "capoluogo": "Bari",
+  "iso_3166_2": "IT-BA",
+  "nuts": "ITF42"
+}

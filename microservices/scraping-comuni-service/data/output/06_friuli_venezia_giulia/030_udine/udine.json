@@ -1,0 +1,16 @@
+{
+  "nome": "Udine",
+  "regione": "Friuli-Venezia Giulia",
+  "zona": null,
+  "sigla": "UD",
+  "codice_istat": "030",
+  "popolazione": 531466,
+  "popolazione_maschi": 256808,
+  "popolazione_femmine": 274658,
+  "superficie_kmq": 4903.79,
+  "densita": 108.4,
+  "num_comuni": 135,
+  "capoluogo": "Udine",
+  "iso_3166_2": "IT-UD",
+  "nuts": "ITD42"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Verbano Cusio Ossola",
+  "regione": "Piemonte",
+  "zona": null,
+  "sigla": "VB",
+  "codice_istat": "103",
+  "popolazione": 159664,
+  "popolazione_maschi": 77366,
+  "popolazione_femmine": 82298,
+  "superficie_kmq": 2255.1,
+  "densita": 70.8,
+  "num_comuni": 76,
+  "capoluogo": "Verbania",
+  "iso_3166_2": "IT-VB",
+  "nuts": "ITC14"
+}

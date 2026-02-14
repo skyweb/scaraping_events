@@ -1,0 +1,16 @@
+{
+  "nome": "Varese",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "VA",
+  "codice_istat": "012",
+  "popolazione": 890043,
+  "popolazione_maschi": 432795,
+  "popolazione_femmine": 457248,
+  "superficie_kmq": 1198.71,
+  "densita": 742.5,
+  "num_comuni": 139,
+  "capoluogo": "Varese",
+  "iso_3166_2": "IT-VA",
+  "nuts": "ITC41"
+}

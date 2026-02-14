@@ -1,0 +1,14 @@
+{
+  "nome": "Veneto",
+  "codice_istat": "05",
+  "popolazione": 4907529,
+  "popolazione_maschi": 2394567,
+  "popolazione_femmine": 2512962,
+  "superficie_kmq": 18391.25,
+  "densita": 266.8,
+  "num_province": 7,
+  "num_comuni": 576,
+  "capoluogo": "Venezia",
+  "iso_3166_2": "IT-34",
+  "nuts": "ITD3"
+}

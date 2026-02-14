@@ -6,11 +6,22 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from rest_framework import viewsets, mixins
 from rest_framework.permissions import AllowAny
+from drf_spectacular.utils import extend_schema, extend_schema_view
 
 from .models import PaginaCitta
 from .serializers import PaginaCittaListSerializer, PaginaCittaDetailSerializer
 
 
+@extend_schema_view(
+    list=extend_schema(
+        summary="Lista pagine città attive",
+        tags=["CMS"],
+    ),
+    retrieve=extend_schema(
+        summary="Dettaglio pagina città con sezioni e articoli",
+        tags=["CMS"],
+    ),
+)
 class PaginaCittaViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     """API readonly per le pagine città (pubblico, senza autenticazione)."""
     permission_classes = [AllowAny]

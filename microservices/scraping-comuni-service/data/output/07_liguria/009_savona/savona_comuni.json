@@ -1,0 +1,3922 @@
+[
+  {
+    "nome": "Zuccarello",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009069",
+    "codice_catastale": "M197",
+    "popolazione": 313,
+    "superficie_kmq": 10.74,
+    "densita": 29.1,
+    "cap": "17039",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "zuccarellesi",
+    "etimologia": "E' un diminutivo in -ello della voce zucco o zuccaro, collina a groppa, poggio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Martinetto"
+    ],
+    "comuni_confinanti": [
+      "Arnasco",
+      "Balestrino",
+      "Castelbianco",
+      "Castelvecchio di Rocca Barbena",
+      "Cisano sul Neva",
+      "Erli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Santa Maria Nascente",
+      "Chiesa Parrocchiale di San Bartolomeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villanova d'Albenga",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009068",
+    "codice_catastale": "L975",
+    "popolazione": 2659,
+    "superficie_kmq": 15.74,
+    "densita": 168.9,
+    "cap": "17038",
+    "prefisso_telefonico": "0182",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "villanovesi",
+    "etimologia": "E' un composto di villa e dell'aggettivo latino novus, nuovo, quindi villaggio di recente formazione. La specifica identifica la vicinanza geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "frazioni: Ligo",
+      "Marta",
+      "Bossoleto;\nborgata: Coasco"
+    ],
+    "comuni_confinanti": [
+      "Alassio",
+      "Albenga",
+      "Andora",
+      "Casanova Lerrone",
+      "Garlenda",
+      "Ortovero"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vezzi Portio",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009067",
+    "codice_catastale": "L823",
+    "popolazione": 806,
+    "superficie_kmq": 9.69,
+    "densita": 83.2,
+    "cap": "17028",
+    "prefisso_telefonico": "019",
+    "patrono": "Santissimo Salvatore",
+    "festa_patronale": "6 agosto",
+    "demonimo": "vezzesi",
+    "etimologia": "La prima parte deriva dal nome romano di persona Vettius, la seconda da Portio, diminutivo di portus (riparo, rifugio) o da porticus (portico).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 5 - Colline litoranee di Savona"
+    ],
+    "localita_frazioni": [
+      "Portio",
+      "San Filippo",
+      "San Giorgio",
+      "Magnone"
+    ],
+    "comuni_confinanti": [
+      "Finale Ligure",
+      "Mallare",
+      "Noli",
+      "Orco Feglino",
+      "Quiliano",
+      "Spotorno",
+      "Vado Ligure"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Salvatore",
+      "Santuario di Santa Maria di Pia",
+      "Chiesa di San Giorgio",
+      "Chiesa di San Filippo (frazione: San Filippo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vendone",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009066",
+    "codice_catastale": "L730",
+    "popolazione": 377,
+    "superficie_kmq": 10.11,
+    "densita": 37.3,
+    "cap": "17032",
+    "prefisso_telefonico": "0182",
+    "patrono": "Sant'Antonino",
+    "festa_patronale": "2 settembre",
+    "demonimo": "vendonesi",
+    "etimologia": "Potrebbe derivare dal nome latino di persona Vindonius o ad una base celto-ligure windo-, bianco, splendente.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva"
+    ],
+    "localita_frazioni": [
+      "Borgo Curenna",
+      "Villa",
+      "Leuso",
+      "Cantone",
+      "Vallone",
+      "Castellaro",
+      "Celsa",
+      "Crosa"
+    ],
+    "comuni_confinanti": [
+      "Arnasco",
+      "Castelbianco",
+      "Onzo",
+      "Ortovero"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Lorenzo",
+      "Chiesetta di San Calocero",
+      "Chiesa parrocchiale di Sant'Antonio Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Varazze",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009065",
+    "codice_catastale": "L675",
+    "popolazione": 13184,
+    "superficie_kmq": 47.97,
+    "densita": 274.8,
+    "cap": "17019",
+    "prefisso_telefonico": "019",
+    "patrono": "Santa Caterina da Siena",
+    "festa_patronale": "30 aprile",
+    "demonimo": "varazzini",
+    "etimologia": "Risale al latino volgare varagine, dal verbo varare, con il significato di \"luogo di approdo o di costruzione delle imbarcazioni\".",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 3 - Montagna litoranea di Varazze",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": [
+      "Castagnabuona",
+      "Cantalupo",
+      "Casanova",
+      "Alpicella",
+      "Faie",
+      "Pero",
+      "Piani d'Invrea"
+    ],
+    "comuni_confinanti": [
+      "Celle Ligure",
+      "Cogoleto (GE)",
+      "Sassello",
+      "Stella"
+    ],
+    "musei": [
+      "Mostra Permanente di Materiale Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Domenico",
+      "Chiesa dei SS. Nazario e Celso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Santa Caterina da Siena (30 aprile)",
+      "con sfilata in costume medioevale"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vado Ligure",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009064",
+    "codice_catastale": "L528",
+    "popolazione": 8365,
+    "superficie_kmq": 23.38,
+    "densita": 357.8,
+    "cap": "17047",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "vadesi",
+    "etimologia": "Dal latino vadum (acqua bassa, palude) in riferimento alla costa, ricca di bassifondi marini. La specifica identifica la collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 5 - Colline litoranee di Savona"
+    ],
+    "localita_frazioni": [
+      "frazioni di\nSegno (con le località: Ponte Isola",
+      "Ritano",
+      "Contrada",
+      "Cundan",
+      "Cunio",
+      "Marroni",
+      "Piano",
+      "S.Bernardo",
+      "Bricco",
+      "Carpeneta",
+      "Bassi",
+      "Gatti",
+      "Campo Ferrato",
+      "Verma",
+      "Suenghe); \nSant'Ermete (con le località: Ne Pessen",
+      "Carpineta",
+      "Bellandi",
+      "Bosco); \nValle di Vado (con le località: Ne Cascine",
+      "Ne Ferrè",
+      "Coghi",
+      "Ne Vaè",
+      "Ne Viglietta",
+      "Bossarino);\nSan Genesio; \nPorto Vado;\ne le località di Vado Centro: Griffi",
+      "Murate"
+    ],
+    "comuni_confinanti": [
+      "Bergeggi",
+      "Quiliano",
+      "Savona",
+      "Spotorno",
+      "Vezzi Portio"
+    ],
+    "musei": [
+      "Pinacoteca Civica"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "La Ravoire (Francia)",
+      "dal 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Urbe",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009063",
+    "codice_catastale": "L499",
+    "popolazione": 684,
+    "superficie_kmq": 31.48,
+    "densita": 21.7,
+    "cap": "17048",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "urbaschi",
+    "etimologia": "Deriva dal nome di fiume Orba, di origine preromana.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Acquabianca",
+      "Martina",
+      "San Pietro",
+      "Vara Inferiore",
+      "Vara Superiore"
+    ],
+    "comuni_confinanti": [
+      "Ponzone (AL)",
+      "Sassello",
+      "Tiglieto (GE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tovo San Giacomo",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009062",
+    "codice_catastale": "L315",
+    "popolazione": 2557,
+    "superficie_kmq": 9.58,
+    "densita": 266.9,
+    "cap": "17020",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "tovesi",
+    "etimologia": "Attestato come Sacti Iacobi de Tuvo, deriva dal latino tufus (tufo), in riferimento alla qualità del terreno. La specifica si riferisce al santo a cui è intitolata la chiesa parrocchiale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "borgate: Bardino Nuovo",
+      "Bardino Vecchio",
+      "Boragni",
+      "Bottasano",
+      "Briffi",
+      "Bringhiera",
+      "Brunate",
+      "Case Grassi",
+      "Costino",
+      "Crescia",
+      "Ferro",
+      "Folchi",
+      "Giorni",
+      "Lavrio",
+      "Morelli",
+      "Neuroni",
+      "Pelin",
+      "Poggio"
+    ],
+    "comuni_confinanti": [
+      "Borgio Verezzi",
+      "Calice Ligure",
+      "Finale Ligure",
+      "Giustenice",
+      "Magliolo",
+      "Pietra Ligure",
+      "Rialto"
+    ],
+    "musei": [
+      "Museo dell'Orologio"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa  parrocchiale di San Giovanni Battista (frazione: Bardino Vecchio)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Toirano",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009061",
+    "codice_catastale": "L190",
+    "popolazione": 2684,
+    "superficie_kmq": 18.63,
+    "densita": 144.1,
+    "cap": "17055",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "toiranesi",
+    "etimologia": "Deriva dal nome romano di persona Taurius o Turrius, con l'aggiunta del suffisso -ano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Carpe"
+    ],
+    "comuni_confinanti": [
+      "Balestrino",
+      "Bardineto",
+      "Boissano",
+      "Borghetto Santo Spirito",
+      "Castelvecchio di Rocca Barbena",
+      "Ceriale"
+    ],
+    "musei": [
+      "Museo Etnografico della Val Varatella"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Testico",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009060",
+    "codice_catastale": "L152",
+    "popolazione": 198,
+    "superficie_kmq": 10.15,
+    "densita": 19.5,
+    "cap": "17020",
+    "prefisso_telefonico": "0182",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "testicesi",
+    "etimologia": "Deriva dal latino volgare testa, forse da una base preromana, con significato sconosciuto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva"
+    ],
+    "localita_frazioni": [
+      "frazioni: Ginestro",
+      "Poggio Bottaro;\nlocalità nel Capoluogo: San Sebastiano",
+      "Praello",
+      "Pezzuolo;\nborgate nel Capoluogo: Cà del Rosso",
+      "Dani",
+      "Caselle",
+      "Roggio;\nborgate in frazione Ginestro: Poggio",
+      "Case",
+      "Costa"
+    ],
+    "comuni_confinanti": [
+      "Casanova Lerrone",
+      "Cesio (IM)",
+      "Chiusanico (IM)",
+      "Stellanello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Pietro e Paolo",
+      "Cappella dell'Ascensione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra delle Castagne (prima domenica di ottobre)",
+      "Sagra delle Frittelle (prima meta di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Stellanello",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009059",
+    "codice_catastale": "I947",
+    "popolazione": 808,
+    "superficie_kmq": 17.55,
+    "densita": 46.0,
+    "cap": "17020",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Gregorio",
+    "festa_patronale": "3 settembre",
+    "demonimo": "stellanesi",
+    "etimologia": "Dal germanico stalla, luogo di fermata e di dimora o dal latino medioevale astalaria, stellaria, bosco ceduo, dal latino hasta, albero usato come fusto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva"
+    ],
+    "localita_frazioni": [
+      "frazioni: San Lorenzo",
+      "San Damiano",
+      "Santa Maria",
+      "San Vincenzo",
+      "San Gregorio;\nBorgate\nin frazione San Lorenzo: Bossaneto",
+      "Moretti",
+      "Cavalli",
+      "Costa",
+      "Villarelli;\nin frazione San Damiano: Villalunga",
+      "Guagnolo",
+      "Caselle",
+      "Caio",
+      "Case Vecchie;\nin frazione Santa Maria: Duranti",
+      "Costa",
+      "Castello",
+      "Berghi",
+      "Ciantà",
+      "Ciccioni",
+      "Caselle;\nin frazione San Vincenzo: Ravagli",
+      "Auberti",
+      "Bovini",
+      "Crocche",
+      "Armati",
+      "Villa",
+      "Canneto;\nin frazione San Gregorio: Rossi (capoluogo)",
+      "Borgonuovo",
+      "Mulino",
+      "Albareto",
+      "Borgososso",
+      "Costapiana",
+      "Moglia",
+      "Giaini"
+    ],
+    "comuni_confinanti": [
+      "Andora",
+      "Casanova Lerrone",
+      "Chiusanico (IM)",
+      "Diano Arentino (IM)",
+      "Diano San Pietro (IM)",
+      "Garlenda",
+      "Testico",
+      "Villa Faraldi (IM)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Gregorio Magno (frazione San Gregorio)",
+      "Santuario della Madonna di Loreto, detta la Madonnetta  (in frazione Santa Maria, località Duranti)",
+      "Oratorio di San Damiano (in frazione San Damiano)",
+      "Chiesa parrocchiale di San Bernardino (in frazione Villarelli)",
+      "Chiesa parrocchiale di San Lorenzo Martire (in frazione San Lorenzo)",
+      "Chiesa parrocchiale di N.S. Assunta (in frazione Santa Maria - Castello)",
+      "Chiesa parrocchiale dei SS. Vincenzo e Anastasio Martiri (in frazione Armati di San Vincenzo)",
+      "Chiesa parrocchiale dei SS. Cosma e Damiano (in frazione San Damiano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra di friscioide mee (14 e 15 luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Stella",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009058",
+    "codice_catastale": "I946",
+    "popolazione": 3030,
+    "superficie_kmq": 43.26,
+    "densita": 70.0,
+    "cap": "17044",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "stellesi",
+    "etimologia": "Deriva dal latino stella, segno di confine inciso negli alberi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": [
+      "frazioni: San Giovanni",
+      "San Bernardo",
+      "Santa Giustina",
+      "San Martino",
+      "Gameragna"
+    ],
+    "comuni_confinanti": [
+      "Albisola Superiore",
+      "Celle Ligure",
+      "Pontinvrea",
+      "Sassello",
+      "Varazze"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Martino",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Giacomo",
+      "Chiesa di San Bernardo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Polvere di stelle (ultimo weekend di agosto)",
+      "a Stella San Giovanni"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Spotorno",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009057",
+    "codice_catastale": "I926",
+    "popolazione": 3786,
+    "superficie_kmq": 8.14,
+    "densita": 465.1,
+    "cap": "17028",
+    "prefisso_telefonico": "019",
+    "patrono": "Maria SS. Annunziata",
+    "festa_patronale": "25 marzo",
+    "demonimo": "spotornesi",
+    "etimologia": "Deriva dal nome di pianta spelta, in riferimento alla coltivazione di questo cereale, il suffisso -urno, ha valore collettivo.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 5 - Colline litoranee di Savona"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bergeggi",
+      "Noli",
+      "Vado Ligure",
+      "Vezzi Portio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Caterina",
+      "Chiesa dell'Assunta (1585)",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Saarbrücken (Germania), dal 1958",
+      "Høje-Taastrup (Danimarca)",
+      "Bad Dürrheim (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sassello",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009055",
+    "codice_catastale": "I453",
+    "popolazione": 1762,
+    "superficie_kmq": 100.45,
+    "densita": 17.5,
+    "cap": "17046",
+    "prefisso_telefonico": "019",
+    "patrono": "Decollazione di San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "sassellesi",
+    "etimologia": "E' un derivato in -ello del termine latino saxum, roccia, nel senso di luogo pietroso.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro",
+      "Parco Naturale del Beigua"
+    ],
+    "localita_frazioni": [
+      "Palo",
+      "Piampaludo",
+      "Maddalena"
+    ],
+    "comuni_confinanti": [
+      "Arenzano (GE)",
+      "Cogoleto (GE)",
+      "Genova (GE)",
+      "Mioglia",
+      "Pareto (AL)",
+      "Pontinvrea",
+      "Ponzone (AL)",
+      "Stella",
+      "Urbe",
+      "Varazze"
+    ],
+    "musei": [
+      "Museo \"Perrando\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Alquerias del Nino Perdido (provincia Castellón",
+      "Comunità autonoma Valenciana",
+      "Spagna)",
+      "dal 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roccavignale",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009054",
+    "codice_catastale": "H452",
+    "popolazione": 760,
+    "superficie_kmq": 17.46,
+    "densita": 43.5,
+    "cap": "17017",
+    "prefisso_telefonico": "019",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "roccavignalesi",
+    "etimologia": "E' un composto di rocca e vineale, aggettivo derivato dal latino vinea, zona coltivata a vigneto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Camponuovo",
+      "Pianissolo",
+      "Strada",
+      "Valzemola",
+      "Case Rossi",
+      "Case Facelli",
+      "Martinetto"
+    ],
+    "comuni_confinanti": [
+      "Castelnuovo di Ceva (CN)",
+      "Cengio",
+      "Millesimo",
+      "Montezemolo (CN)",
+      "Murialdo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Eugenio",
+      "Cappella della Madonna degli Angeli (XV secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rialto",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009053",
+    "codice_catastale": "H266",
+    "popolazione": 563,
+    "superficie_kmq": 19.84,
+    "densita": 28.4,
+    "cap": "17020",
+    "prefisso_telefonico": "019",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "rialtesi",
+    "etimologia": "Dal latino rivus altus, ruscello profondo, forse riferito al torrente Pora.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Annunziata",
+      "Berea",
+      "Bianchi",
+      "Calvi",
+      "Cheirano",
+      "Chiazzari",
+      "Mulino",
+      "Piazza Vecchia",
+      "Vene",
+      "Villa"
+    ],
+    "comuni_confinanti": [
+      "Bormida",
+      "Calice Ligure",
+      "Calizzano",
+      "Magliolo",
+      "Osiglia",
+      "Tovo San Giacomo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Pietro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Quiliano",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009052",
+    "codice_catastale": "H126",
+    "popolazione": 7199,
+    "superficie_kmq": 49.46,
+    "densita": 145.6,
+    "cap": "17047",
+    "prefisso_telefonico": "019",
+    "patrono": "Madonna degli Angeli",
+    "festa_patronale": "2 agosto",
+    "demonimo": "quilianesi",
+    "etimologia": "Documentato con il nome di Aquilianum, deriva dal nome latino di persona Aquilius o Aculius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 5 - Colline litoranee di Savona"
+    ],
+    "localita_frazioni": [
+      "frazioni: Cadibona",
+      "Montagna",
+      "Roviasca",
+      "Valleggia",
+      "San Carlo",
+      "Castello;contrade: Pomo",
+      "Faia",
+      "Tiassano",
+      "Orso"
+    ],
+    "comuni_confinanti": [
+      "Altare",
+      "Mallare",
+      "Orco Feglino",
+      "Savona",
+      "Vado Ligure",
+      "Vezzi Portio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Maria",
+      "Villa Garelli",
+      "Casa colonica della Villa Pertusio"
+    ],
+    "chiese": [
+      "Chiesetta di San Pietro",
+      "Chiesetta di San Carlo Borromeo",
+      "Chiesetta dell'Immacolata Concezione",
+      "Chiesa parrocchiale di San Lorenzo",
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa di San Bernardo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Rovine del Castello di Pomo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pontinvrea",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009051",
+    "codice_catastale": "G866",
+    "popolazione": 835,
+    "superficie_kmq": 24.87,
+    "densita": 33.6,
+    "cap": "17042",
+    "prefisso_telefonico": "019",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "pontesini",
+    "etimologia": "E' un composto di ponte e del nome dei marchesi Invrea, feudatari del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Ferriera",
+      "Giovo"
+    ],
+    "comuni_confinanti": [
+      "Albisola Superiore",
+      "Cairo Montenotte",
+      "Giusvalla",
+      "Mioglia",
+      "Sassello",
+      "Stella"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Lorenzo",
+      "Chiesa di Nostra Signora del Carmine (in frazione Giovo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Plodio",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009050",
+    "codice_catastale": "G741",
+    "popolazione": 639,
+    "superficie_kmq": 8.21,
+    "densita": 77.8,
+    "cap": "17043",
+    "prefisso_telefonico": "019",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "plodiesi",
+    "etimologia": "Si confronta con il latino medioevale plodium, misura agraria, connessa con plovum, aratro, ma non si può escludere un nesso con pioda, lastra o tegola di pietra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Plodio Alto",
+      "Plodio Basso"
+    ],
+    "comuni_confinanti": [
+      "Carcare",
+      "Cosseria",
+      "Millesimo",
+      "Pallare"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pietra Ligure",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009049",
+    "codice_catastale": "G605",
+    "popolazione": 8935,
+    "superficie_kmq": 9.67,
+    "densita": 924.0,
+    "cap": "17027",
+    "prefisso_telefonico": "019",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "pietresi",
+    "etimologia": "La prima parte del nome si riferisce al luogo sicuro dove fu realizzato il castello. La seconda parte fu aggiunta nel 1863, per evitare l'omonimia con altri comuni.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "Ranzi"
+    ],
+    "comuni_confinanti": [
+      "Bardineto",
+      "Boissano",
+      "Borgio Verezzi",
+      "Giustenice",
+      "Loano",
+      "Tovo San Giacomo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Nostra Signora del Soccorso :: Frati Minori Francescani",
+      "Chiesa parrocchiale di San Nicolò di Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Confeugo (terza domenica di dicembre), tradizionale cerimonia natalizia",
+      "Festa di San Nicolò (8 luglio)",
+      "Infiorate Artistiche (fine aprile)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piana Crixia",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009048",
+    "codice_catastale": "G542",
+    "popolazione": 806,
+    "superficie_kmq": 29.59,
+    "densita": 27.2,
+    "cap": "17058",
+    "prefisso_telefonico": "019",
+    "patrono": "SS. Martiri Eugenio, Vittore e Corona",
+    "festa_patronale": "24 aprile",
+    "demonimo": "pianesi",
+    "etimologia": "Corrisponde a loca plana, zona pianeggiante. La seconda parte del nome è un'aggiunta dotta e recente e si riferisce ad un nome tardo romano, con significato poco chiaro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro",
+      "Parco Naturale di Piana Crixia"
+    ],
+    "localita_frazioni": [
+      "Borgo",
+      "Lodisio",
+      "Pontevecchio",
+      "Porri",
+      "Praie",
+      "San Massimo",
+      "Villa"
+    ],
+    "comuni_confinanti": [
+      "Castelletto Uzzone (CN)",
+      "Dego",
+      "Merana (AL)",
+      "Pezzolo Valle Uzzone (CN)",
+      "Serole (AT)",
+      "Spigno Monferrato (AL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Carlo (XVIII secolo)",
+      "Chiesa parrocchiale dei Santi Martiri Eugenio, Vittore e Corona"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Saint Jodard (Francia)",
+      "2001"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pallare",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009047",
+    "codice_catastale": "G281",
+    "popolazione": 939,
+    "superficie_kmq": 21.3,
+    "densita": 44.1,
+    "cap": "17043",
+    "prefisso_telefonico": "019",
+    "patrono": "San Marco",
+    "festa_patronale": "25 aprile",
+    "demonimo": "pallaresi",
+    "etimologia": "Deriva dal nome di pianta pallara, connesso con il latino palus, palo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Frazione: Biestro;località: San Rocco",
+      "Costabella"
+    ],
+    "comuni_confinanti": [
+      "Bormida",
+      "Carcare",
+      "Mallare",
+      "Millesimo",
+      "Osiglia",
+      "Plodio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Cà di Gamba",
+      "Casa Morando"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Margherita (a Biestro)",
+      "Chiesa parrocchiale di San Marco",
+      "Chiesa di San Rocco (località: San Rocco)",
+      "Chiesa dei Santi Pietro e Palolo (località: Costabella)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Osiglia",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009046",
+    "codice_catastale": "G155",
+    "popolazione": 450,
+    "superficie_kmq": 29.15,
+    "densita": 15.4,
+    "cap": "17010",
+    "prefisso_telefonico": "019",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "osigliesi",
+    "etimologia": "Potrebbe essere un derivato in -ica del termine latino aucellus (uccello) o del termine ausa (fonte).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Baltera",
+      "Barberis",
+      "Borgo",
+      "Cabana",
+      "Cavallotti",
+      "Giacchini",
+      "Monte",
+      "Orticeti",
+      "Ponzi",
+      "Ripa",
+      "Ronchi",
+      "Rossi",
+      "Tecchio Gamba"
+    ],
+    "comuni_confinanti": [
+      "Bormida",
+      "Calizzano",
+      "Millesimo",
+      "Murialdo",
+      "Pallare",
+      "Rialto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale del Santissimo Nome di Maria (in località Borgo)",
+      "Cappella di Sant'Antonio (in località Ripa), quattrocentesca",
+      "Cappella di San Rocco (in località Rossi)",
+      "Cappella della Madonna delle Neve (in località Monte)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ortovero",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009045",
+    "codice_catastale": "G144",
+    "popolazione": 1576,
+    "superficie_kmq": 9.83,
+    "densita": 160.3,
+    "cap": "17037",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "ortoveresi",
+    "etimologia": "Deriva da ortus vetus, ossia orto vecchio, in relazione ed uno \"nuovo\", poco distante.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Campi",
+      "Pogli"
+    ],
+    "comuni_confinanti": [
+      "Albenga",
+      "Arnasco",
+      "Casanova Lerrone",
+      "Onzo",
+      "Vendone",
+      "Villanova d'Albenga"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santo Stefano (frazione: Pogli)",
+      "Chiesa parrocchiale di San Silvestro Papa"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Orco Feglino",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009044",
+    "codice_catastale": "D522",
+    "popolazione": 898,
+    "superficie_kmq": 17.72,
+    "densita": 50.7,
+    "cap": "17024",
+    "prefisso_telefonico": "019",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "orchesi e feglinesi",
+    "etimologia": "La prima parte del nome ha etimo incerto, forse deriva dal latino orca, con significato di \"grosso barile\" o con associazione a nome di fiume Orco. La specifica deriva dal latino locus figulinus, luogo dove si fabbricano i vasi o cava d'argilla.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Feglino",
+      "Orco"
+    ],
+    "comuni_confinanti": [
+      "Calice Ligure",
+      "Finale Ligure",
+      "Mallare",
+      "Vezzi Portio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzino",
+      "Chiesa di San Lorenzo (a Feglino)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Presepe Vivente (24 dicembre)",
+      "con rievocazione degli antichi mestieri"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Onzo",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009043",
+    "codice_catastale": "G076",
+    "popolazione": 214,
+    "superficie_kmq": 8.23,
+    "densita": 26.0,
+    "cap": "17037",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "onzesi",
+    "etimologia": "Deriva dal nome francese di persona Onzay e Onzac, dal gentilizio raro Auncius o da Uncius, dal latino uncus, adunco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva"
+    ],
+    "localita_frazioni": [
+      "Capitolo",
+      "Costa",
+      "Menezzo",
+      "Ponterotto",
+      "Veravo Inferiore",
+      "Veravo Superiore"
+    ],
+    "comuni_confinanti": [
+      "Casanova Lerrone",
+      "Castelbianco",
+      "Nasino",
+      "Ortovero",
+      "Ranzo (IM)",
+      "Vendone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Noli",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009042",
+    "codice_catastale": "F926",
+    "popolazione": 2725,
+    "superficie_kmq": 9.62,
+    "densita": 283.3,
+    "cap": "17026",
+    "prefisso_telefonico": "019",
+    "patrono": "Sant'Eugenio",
+    "festa_patronale": "seconda domenica di luglio",
+    "demonimo": "nolesi",
+    "etimologia": "Forse deriva dal greco Neapolis, città nuova, con probabile riferimento all'origine bizantina dell'insediamento. Secondo altri potrebbe derivare dal latino navalis, navale.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 5 - Colline litoranee di Savona",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Località: Voze;frazioni: Tosse"
+    ],
+    "comuni_confinanti": [
+      "Finale Ligure",
+      "Spotorno",
+      "Vezzi Portio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Pagliano (località: Voze)",
+      "Palazzo del Comune (XIV-XV secolo)",
+      "Palazzo Salvarezza",
+      "Palazzo Vescovile"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Ignazio",
+      "Chiesa parrocchiale di San Pietro e Paolo",
+      "Chiesa di San Paragorio (XI secolo)",
+      "Chiesa di San Francesco",
+      "Cattedrale di San Pietro"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Noli"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Medioevale"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Regata dei Rioni di Noli (secondo sabato di settembre)"
+    ],
+    "gemellaggi": [
+      "Langenargen (Germania)",
+      "dal 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nasino",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009041",
+    "codice_catastale": "F847",
+    "popolazione": 201,
+    "superficie_kmq": 21.56,
+    "densita": 9.3,
+    "cap": "17030",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "nasinesi",
+    "etimologia": "E' un aggettivo in -ino, da una base preromana -nat, scorrere, collegabile al nome del fiume Natisone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Beo",
+      "Borgo",
+      "Casale",
+      "Chiesa",
+      "Costa",
+      "Madonna di Curagna",
+      "Mulino",
+      "Perati",
+      "Vignolo",
+      "Vignoletto"
+    ],
+    "comuni_confinanti": [
+      "Alto (CN)",
+      "Aquila d'Arroscia (IM)",
+      "Castelbianco",
+      "Erli",
+      "Garessio (CN)",
+      "Onzo",
+      "Ormea (CN)",
+      "Ranzo (IM)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Murialdo",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009040",
+    "codice_catastale": "F813",
+    "popolazione": 831,
+    "superficie_kmq": 37.49,
+    "densita": 22.2,
+    "cap": "17013",
+    "prefisso_telefonico": "019",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "murialdesi",
+    "etimologia": "Deriva dal nome germanico di persona Mero-wald, forse unito a castrum, castello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Colle dei Giovetti",
+      "Isolagrande",
+      "Piano",
+      "Ponte",
+      "Riofreddo",
+      "Valle"
+    ],
+    "comuni_confinanti": [
+      "Calizzano",
+      "Castelnuovo di Ceva (CN)",
+      "Massimino",
+      "Millesimo",
+      "Osiglia",
+      "Perlo (CN)",
+      "Roccavignale"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maddalena (in Borgata Ponte)",
+      "Chiesa di San Giacomo (in Borgata Piano)",
+      "Cappella dei Santi Giacomo e Filippo (in Borgata Bonetti)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Schweich (Germania)",
+      "dal 1995"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mioglia",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009039",
+    "codice_catastale": "F226",
+    "popolazione": 528,
+    "superficie_kmq": 20.02,
+    "densita": 26.4,
+    "cap": "17040",
+    "prefisso_telefonico": "019",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "miogliesi",
+    "etimologia": "Deriva dal nome latino di persona Mevolius o dal cognome Mevolanus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "borgate: Casone",
+      "Carpenaro",
+      "Dogli",
+      "Schegli"
+    ],
+    "comuni_confinanti": [
+      "Giusvalla",
+      "Pareto (AL)",
+      "Pontinvrea",
+      "Sassello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Andrea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Millesimo",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009038",
+    "codice_catastale": "F213",
+    "popolazione": 3374,
+    "superficie_kmq": 15.87,
+    "densita": 212.6,
+    "cap": "17017",
+    "prefisso_telefonico": "019",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "millesimesi",
+    "etimologia": "Trae origine dall'aggettivo numerale ordinale mille, ma non se ne conosce il motivo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro",
+      "Parco Naturale di Bric Tana",
+      "Club I Borghi più Belli d'Italia",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": [
+      "Acquafredda",
+      "Quera",
+      "San Rocco",
+      "Chiesa",
+      "Melogni",
+      "Cabroni",
+      "Borda",
+      "Santuario",
+      "San Bernardo",
+      "Renaldo",
+      "Pisciarotta",
+      "Spaletto",
+      "Colla"
+    ],
+    "comuni_confinanti": [
+      "Cengio",
+      "Cosseria",
+      "Murialdo",
+      "Osiglia",
+      "Pallare",
+      "Plodio",
+      "Roccavignale"
+    ],
+    "musei": [
+      "Museo Napoleonico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Nostra Signora del Deserto",
+      "Pieve di Santa Maria Extra Muros",
+      "Chiesa Parrocchiale di Sant'Antonio Abate e Visitazione"
+    ],
+    "castelli_fortificazioni": [
+      "Castello del Carretto"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Pontevechio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Massimino",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009037",
+    "codice_catastale": "F046",
+    "popolazione": 105,
+    "superficie_kmq": 7.73,
+    "densita": 13.6,
+    "cap": "12071",
+    "prefisso_telefonico": "019",
+    "patrono": "San Donato",
+    "festa_patronale": "7 agosto",
+    "demonimo": "massiminesi",
+    "etimologia": "Forse presuppone un castrum Maximini, castello di Massimino, dal nome romano di persona Maximinus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "San Pietro",
+      "Selvagni",
+      "Cerri",
+      "Costa",
+      "Villa",
+      "Muraglia",
+      "San Vincenzo (capoluogo)"
+    ],
+    "comuni_confinanti": [
+      "Bagnasco (CN)",
+      "Calizzano",
+      "Murialdo",
+      "Perlo (CN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Donato",
+      "Chiesetta di San Vincenzo Ferreri",
+      "Chiesa di San Giuseppe",
+      "Chiesetta di Sant'Antonio Abate (in frazione San Pietro)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mallare",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009036",
+    "codice_catastale": "E860",
+    "popolazione": 1127,
+    "superficie_kmq": 32.6,
+    "densita": 34.6,
+    "cap": "17045",
+    "prefisso_telefonico": "019",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "mallaresi",
+    "etimologia": "Si collega al latino mallum, placito pubblico da mal, altura, monte.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Acque",
+      "Codevilla",
+      "Eremita",
+      "Fornelli",
+      "Montefreddo",
+      "Olano"
+    ],
+    "comuni_confinanti": [
+      "Altare",
+      "Bormida",
+      "Calice Ligure",
+      "Carcare",
+      "Orco Feglino",
+      "Pallare",
+      "Quiliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Abbazia Fornelli",
+      "Santuario dell'Eremita",
+      "Oratorio della Madonna Della Neve",
+      "Chiesa parrocchiale di San Nicola (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Magliolo",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009035",
+    "codice_catastale": "E816",
+    "popolazione": 976,
+    "superficie_kmq": 19.18,
+    "densita": 50.9,
+    "cap": "17020",
+    "prefisso_telefonico": "019",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "magliolesi",
+    "etimologia": "Dal latino malleus, propriamente martello e \"fucina dove si lavorava il ferro\". Risale direttamente al latino malleolus, terreno piantato di recente a vigna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Canova",
+      "Isallo",
+      "Melogno"
+    ],
+    "comuni_confinanti": [
+      "Bardineto",
+      "Calizzano",
+      "Giustenice",
+      "Osiglia",
+      "Rialto",
+      "Tovo San Giacomo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario dei Santi Cosma e Damiano",
+      "Chiesa parrocchiale di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Loano",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009034",
+    "codice_catastale": "E632",
+    "popolazione": 11340,
+    "superficie_kmq": 13.46,
+    "densita": 842.5,
+    "cap": "17025",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "loanesi",
+    "etimologia": "E' nome di origine preromana, derivato da Logano o Lodanis o Loenis. Le uniche attestazioni che abbiamo lo menzionano così: loco qui Lovenis vocatur (chiamato Lovenis).",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "Verzi"
+    ],
+    "comuni_confinanti": [
+      "Bardineto",
+      "Boissano",
+      "Borghetto Santo Spirito",
+      "Giustenice",
+      "Pietra Ligure"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Mare - Muscolata (terzo fine settimana di luglio)",
+      "Festa della Nostra Signora della Visitazione (2 luglio), con processione religiosa",
+      "Festa delle Basure (15 agosto)"
+    ],
+    "gemellaggi": [
+      "Francheville (Francia)",
+      "dal 1998"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Laigueglia",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009033",
+    "codice_catastale": "E414",
+    "popolazione": 1785,
+    "superficie_kmq": 2.78,
+    "densita": 642.1,
+    "cap": "17053",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "laiguegliesi",
+    "etimologia": "Deriva dal latino aquicula, diminutivo di aqua, con riferimento al corso d'acqua che sfocia al limite orientale dell'abitato.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alassio",
+      "Andora"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Santa Maria Maddalena",
+      "Chiesa di San Matteo (1754)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sbarco dei Saraceni (fine luglio)",
+      "rievocazione storica in costume"
+    ],
+    "gemellaggi": [
+      "Semur-En-Auxois (Borgogna, Francia), 2000",
+      "Höhr Grenzhausen (Germania), dal 1972"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giusvalla",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009032",
+    "codice_catastale": "E066",
+    "popolazione": 420,
+    "superficie_kmq": 19.13,
+    "densita": 22.0,
+    "cap": "17010",
+    "prefisso_telefonico": "019",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "giusvallini",
+    "etimologia": "Deriva dal latino iusum (giù, sotto) e Valla, nome del torrente che percorre la conca e che deriva a sua volta dal latino vallis, valle.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Rapetti",
+      "Prati Proia",
+      "Cà Vegia",
+      "Salvaioni",
+      "Cà Berto",
+      "Zaplotti",
+      "Pian del Prete",
+      "Galli",
+      "Rapetti",
+      "Tunno",
+      "Bricco della Croce",
+      "La Buia"
+    ],
+    "comuni_confinanti": [
+      "Cairo Montenotte",
+      "Dego",
+      "Mioglia",
+      "Pareto (AL)",
+      "Pontinvrea",
+      "Spigno Monferrato (AL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Matteo (XVI secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giustenice",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009031",
+    "codice_catastale": "E064",
+    "popolazione": 987,
+    "superficie_kmq": 17.43,
+    "densita": 56.6,
+    "cap": "17027",
+    "prefisso_telefonico": "019",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "giusteniesi",
+    "etimologia": "Deriva dal nome latino di persona Iustus, nella forma dell'ablativo plurale o dal gentilizio Iustius, con l'aggiunta del suffisso -inico o -anico.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "San Lorenzo (contrade: Besso",
+      "Villa",
+      "Villetta)",
+      "San Michele (contrade: Costa",
+      "Valsorda",
+      "Foresto",
+      "Pianazzo",
+      "Serrati)"
+    ],
+    "comuni_confinanti": [
+      "Bardineto",
+      "Loano",
+      "Magliolo",
+      "Pietra Ligure",
+      "Tovo San Giacomo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica e Cena Medievale (ultima settimana di luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Garlenda",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009030",
+    "codice_catastale": "D927",
+    "popolazione": 1240,
+    "superficie_kmq": 8.26,
+    "densita": 150.1,
+    "cap": "17033",
+    "prefisso_telefonico": "0182",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "galendesi",
+    "etimologia": "Potrebbe derivare dal provenzale garlanda o dal francese garlande (corona) o dal verbo francone waron (guarnire).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Castelli",
+      "Paravenna"
+    ],
+    "comuni_confinanti": [
+      "A nord e ovest: Casanova Lerrone; a nord",
+      "sud e est: Villanova d'Albenga; a sud: Andora",
+      "Stellanello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Finale Ligure",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009029",
+    "codice_catastale": "D600",
+    "popolazione": 11741,
+    "superficie_kmq": 34.59,
+    "densita": 339.4,
+    "cap": "17024",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "finalesi",
+    "etimologia": "Derivato da locus finalis (luogo di confine). Si riferisce probabilmente alla posizione della pieve matrice di San Giovanni Battista, che sorge al limite occidentale del territorio. La specifica indica la sua collocazione geografica.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Finale Pia",
+      "Finale Marina",
+      "Finalborgo",
+      "Varigotti"
+    ],
+    "comuni_confinanti": [
+      "Borgio Verezzi",
+      "Calice Ligure",
+      "Noli",
+      "Orco Feglino",
+      "Tovo San Giacomo",
+      "Vezzi Portio"
+    ],
+    "musei": [
+      "Museo Archeologico del Finale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Pia (a Finale Pia)",
+      "Chiesa di San Biagio (a Finalborgo)"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza Castelfranco",
+      "Castel Govone (rovine)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio delle Compagne Finalesi (secondo fine settimana di luglio)",
+      "manifestazione in costume medievale con il Trofeo Nazionale degli Sbandieratori"
+    ],
+    "gemellaggi": [
+      "Coseano (Udine - Friuli Venezia Giulia)",
+      "Benalmadena (provincia di Málaga, Andalusia, Spagna), dal 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Erli",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009028",
+    "codice_catastale": "D424",
+    "popolazione": 251,
+    "superficie_kmq": 16.57,
+    "densita": 15.1,
+    "cap": "17030",
+    "prefisso_telefonico": "0182",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "25 novembre",
+    "demonimo": "erlesi",
+    "etimologia": "Ha etimologia incerta, potrebbe derivare dal nome germanico di persona Herilo o dal nome dell'antico popolo germanico degli Eruli.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Bassi",
+      "Berrioli Carpeneto",
+      "Costa",
+      "Gazzo",
+      "Panizzara",
+      "Poggio Praetto"
+    ],
+    "comuni_confinanti": [
+      "Castelbianco",
+      "Castelvecchio di Rocca Barbena",
+      "Garessio (CN)",
+      "Nasino",
+      "Zuccarello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Martino di Erli (XI secolo)",
+      "Oratorio di San Giovanni",
+      "Chiesa parrocchiale di Santa Caterina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dego",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009027",
+    "codice_catastale": "D264",
+    "popolazione": 1967,
+    "superficie_kmq": 67.77,
+    "densita": 29.0,
+    "cap": "17058",
+    "prefisso_telefonico": "019",
+    "patrono": "Sant'Ambrogio",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "deghesi",
+    "etimologia": "Deriva dal latino decussis, abbreviato in decus, che rappresenta la x incisa sui cippi come segnale di direzione di un confine.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Bormiola",
+      "Piano",
+      "La Costa",
+      "Costalupara",
+      "Governatori",
+      "Girini",
+      "Saraffi",
+      "Botta",
+      "Sanvarezzo",
+      "Sugliani",
+      "Noceto",
+      "Brovida Chiesa",
+      "Villa",
+      "Cà Bulin - Certosa della Trinità",
+      "Chiaffoni",
+      "Santa Giulia - Chiesa",
+      "Niosa",
+      "Porri di Dego"
+    ],
+    "comuni_confinanti": [
+      "Cairo Montenotte",
+      "Castelletto Cervo (BI)",
+      "Giusvalla",
+      "Gottasecca (CN)",
+      "Piana Crixia",
+      "Spigno Monferrato (AL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa parrocchiale di Sant'Ambrogio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cosseria",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009026",
+    "codice_catastale": "D095",
+    "popolazione": 1081,
+    "superficie_kmq": 13.73,
+    "densita": 78.7,
+    "cap": "17017",
+    "prefisso_telefonico": "019",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "cosseriesi",
+    "etimologia": "E' un composto del latino crux (croce) e ferreus (di ferro), anche se sono sconosciute le circostanze per cui l'insediamento prese nome da una croce di ferro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Lidora",
+      "Marghero",
+      "Rossi",
+      "Valle",
+      "Montecala",
+      "Patetta",
+      "Bricchetto",
+      "Cosseria",
+      "Mule"
+    ],
+    "comuni_confinanti": [
+      "Cairo Montenotte",
+      "Carcare",
+      "Cengio",
+      "Millesimo",
+      "Plodio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio dei Disciplinati",
+      "Cappella di San Rocco",
+      "Chiesa parrocchiale dell'Immacolata Concezione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cisano sul Neva",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009025",
+    "codice_catastale": "C729",
+    "popolazione": 2094,
+    "superficie_kmq": 12.15,
+    "densita": 172.3,
+    "cap": "17035",
+    "prefisso_telefonico": "0182",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "cisanesi",
+    "etimologia": "Attestato come Cixano, deriva dal nome latino Caesius, forma abbreviata di Caesellius o Caesilius, con l'aggiunta del suffisso -anus. La specifica si riferisce al vicino torrente Neva.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva"
+    ],
+    "localita_frazioni": [
+      "Cenesi",
+      "Conscente",
+      "Martinetto"
+    ],
+    "comuni_confinanti": [
+      "Albenga",
+      "Arnasco",
+      "Balestrino",
+      "Ceriale",
+      "Zuccarello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale Sant'Alessandro (frazione Conscente)",
+      "Chiesa parrocchiale Santa Maria Maddalena",
+      "Chiesa parrocchiale San Nicola (frazione Cenesi)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Le Vigan (dipartimento del Gard, regione della Linguadoca-Rossiglione, Francia), dal 2002",
+      "Bigastro (Comunità Valenciana, Spagna), dal 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ceriale",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009024",
+    "codice_catastale": "C510",
+    "popolazione": 5561,
+    "superficie_kmq": 11.21,
+    "densita": 496.1,
+    "cap": "17023",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "cerialesi",
+    "etimologia": "Deriva dall'aggettivo latino cerealis, attributo di terra o di locus, luogo, nel senso di area seminativa.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "Peagna"
+    ],
+    "comuni_confinanti": [
+      "Albenga",
+      "Balestrino",
+      "Borghetto Santo Spirito",
+      "Cisano sul Neva",
+      "Toirano"
+    ],
+    "musei": [
+      "Museo paleontologico Silvio Lai",
+      "Museo Paleontologico \"S. Lai\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei SS. Giovanni Battista ed Eugenio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cengio",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009023",
+    "codice_catastale": "C463",
+    "popolazione": 3489,
+    "superficie_kmq": 18.79,
+    "densita": 185.7,
+    "cap": "17056",
+    "prefisso_telefonico": "019",
+    "patrono": "Santa Caterina da Siena",
+    "festa_patronale": "29 aprile",
+    "demonimo": "cengesi",
+    "etimologia": "Deriva dal latino cingulus, cingolo, cintura, che designa una particolare forma del terreno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Bormida",
+      "Brignoletta",
+      "Cengio Alto",
+      "Cengio Genepro",
+      "Costa Pian Rocchetta",
+      "Rocchetta Cengio"
+    ],
+    "comuni_confinanti": [
+      "Cairo Montenotte",
+      "Cosseria",
+      "Millesimo",
+      "Montezemolo (CN)",
+      "Roccavignale",
+      "Saliceto (CN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della Natività di Maria (nel borgo di Cengio Alto)",
+      "Cappella di Santa Caterina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Celle Ligure",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009022",
+    "codice_catastale": "C443",
+    "popolazione": 5200,
+    "superficie_kmq": 9.62,
+    "densita": 540.5,
+    "cap": "17015",
+    "prefisso_telefonico": "019",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "cellesi",
+    "etimologia": "La prima parte è il plurale del latino cella, con il significato di \"cella monastica\". La specifica si riferisce alla sua posizione geografica.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007",
+      "Bandiera Blu Approdi Turistici 2007 (Cala Cravieu)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 5 - Colline litoranee di Savona"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e nord-est: Varazze; a nord: Stella; a ovest: Albisola Superiore"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Michele Arcangelo",
+      "Chiesa di San Pietro (in località Brasi)",
+      "Chiesa di San Giorgio (a Sanda)",
+      "Oratorio di San Michele",
+      "Chiesa di Santa Maria della Consolazione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Celle (Bassa Sassonia",
+      "Germania)",
+      "dal giugno 2001"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelvecchio di Rocca Barbena",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009021",
+    "codice_catastale": "C276",
+    "popolazione": 139,
+    "superficie_kmq": 16.68,
+    "densita": 8.3,
+    "cap": "17034",
+    "prefisso_telefonico": "0182",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "castelvecchiesi",
+    "etimologia": "La prima parte del nome ha evidente significato e si riferisce alla sede marchionale che fu spostata nel nuovo castello di Zuccarello. La specifica fa riferimento a Rocca Barbena, imponente altura rocciosa sovrastante.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Vecersio"
+    ],
+    "comuni_confinanti": [
+      "Balestrino",
+      "Bardineto",
+      "Erli",
+      "Garessio (CN)",
+      "Toirano",
+      "Zuccarello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelbianco",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009020",
+    "codice_catastale": "C063",
+    "popolazione": 325,
+    "superficie_kmq": 14.76,
+    "densita": 22.0,
+    "cap": "17030",
+    "prefisso_telefonico": "0182",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "castelbianchesi",
+    "etimologia": "Il nome è un composto di Castello (riferito al castello dei marchesi di Clavesana) e l'aggettivo blanco (dal germanico blank, bianco), che potrebbe riferirsi all'aspetto dell'edificio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Colletta",
+      "Oresine",
+      "Veravo",
+      "Vesallo"
+    ],
+    "comuni_confinanti": [
+      "Arnasco",
+      "Erli",
+      "Nasino",
+      "Onzo",
+      "Vendone",
+      "Zuccarello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Nostra Signora Assunta (frazione Veravo)",
+      "Chiesa di San Sebastiano (frazione Vesallo)",
+      "Chiesa dell'Annunziata (frazione Vesallo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casanova Lerrone",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009019",
+    "codice_catastale": "B927",
+    "popolazione": 731,
+    "superficie_kmq": 24.3,
+    "densita": 30.1,
+    "cap": "17033",
+    "prefisso_telefonico": "0182",
+    "patrono": "Sant'Antonino",
+    "festa_patronale": "2 settembre",
+    "demonimo": "casanovesi",
+    "etimologia": "La prima parte deriva dal nome latino casa, podere a conduzione familiare, unito all'aggettivo nova, nuova, con evidente significato. La specifica deriva dal nome del torrente e della valle in cui sorge.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Bosco",
+      "Degna",
+      "Maromoreo",
+      "Vellego"
+    ],
+    "comuni_confinanti": [
+      "Borghetto d'Arroscia (IM)",
+      "Cesio (IM)",
+      "Garlenda",
+      "Onzo",
+      "Ortovero",
+      "Ranzo (IM)",
+      "Stellanello",
+      "Testico",
+      "Vessalico (IM)",
+      "Villanova d'Albenga"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carcare",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009018",
+    "codice_catastale": "B748",
+    "popolazione": 5588,
+    "superficie_kmq": 10.36,
+    "densita": 539.4,
+    "cap": "17043",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "carcaresi",
+    "etimologia": "Deriva dal latino carcar, variante di carcer, -eris, carcere o barriera.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Vispa"
+    ],
+    "comuni_confinanti": [
+      "Altare",
+      "Cairo Montenotte",
+      "Cosseria",
+      "Mallare",
+      "Pallare",
+      "Plodio"
+    ],
+    "musei": [
+      "Museo Barrili",
+      "Museo Alpino"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Scolopica di Sant'Antonio Abate, detta Chiesa del Collegio",
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Cappella di San Giovanni del Monte, in precedenza denominata Santa Maria di Bozile"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Anton Giulio Barrili (1836 - 1908)",
+      "scrittore"
+    ]
+  },
+  {
+    "nome": "Calizzano",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009017",
+    "codice_catastale": "B416",
+    "popolazione": 1471,
+    "superficie_kmq": 63.21,
+    "densita": 23.3,
+    "cap": "17057",
+    "prefisso_telefonico": "019",
+    "patrono": "Madonna delle Grazie",
+    "festa_patronale": "2 luglio",
+    "demonimo": "calizzanesi",
+    "etimologia": "Deriva dal nome latino di persona Canitius, con l'aggiunta del suffisso -ano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "frazioni: Caragna",
+      "Mereta",
+      "Vetria;\nregioni: Barbassiria",
+      "Bosco",
+      "Caragnetta",
+      "Durante",
+      "Ferriera Nuova",
+      "Frassino",
+      "Giaire",
+      "Maritani",
+      "Melogno",
+      "Pasquale",
+      "Valle Inferiore (Granei",
+      "Rini",
+      "Tomaloni)",
+      "Valle Superiore"
+    ],
+    "comuni_confinanti": [
+      "A est: Magliolo",
+      "Osiglia",
+      "Rialto; a nord: Murialdo; a ovest: Bagnasco (CN)",
+      "Garessio (CN)",
+      "Massimino",
+      "Priola (CN); a sud: Bardineto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo",
+      "Chiesa di N.S. delle Grazie",
+      "Chiesa di N.S. del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa d'Autunno (terza domenica di ottobre)",
+      "con il concorso \"dolci di castagne\""
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calice Ligure",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009016",
+    "codice_catastale": "B409",
+    "popolazione": 1720,
+    "superficie_kmq": 19.36,
+    "densita": 88.8,
+    "cap": "17020",
+    "prefisso_telefonico": "019",
+    "patrono": "San Nicolò",
+    "festa_patronale": "3 maggio",
+    "demonimo": "calicesi",
+    "etimologia": "Deriva dal nome di pianta carex, carice. La specifica identifica la posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Carbuta",
+      "Mordeglia"
+    ],
+    "comuni_confinanti": [
+      "Bormida",
+      "Finale Ligure",
+      "Magliolo",
+      "Mallare",
+      "Orco Feglino",
+      "Rialto",
+      "Tovo San Giacomo"
+    ],
+    "musei": [
+      "Museo di Arte Contemporanea “la Casa del Console“"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cairo Montenotte",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009015",
+    "codice_catastale": "B369",
+    "popolazione": 13205,
+    "superficie_kmq": 99.5,
+    "densita": 132.7,
+    "cap": "17014",
+    "prefisso_telefonico": "019",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "cairesi",
+    "etimologia": "Deriva dal nome di persona Carius o dall'aggettivo latino uadrus, quadrato. La specifica si riferisce alla frazione di Montenotte.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": [
+      "Montenotte",
+      "San Giuseppe",
+      "Ferrania",
+      "Rocchetta",
+      "Monti",
+      "Carnovale",
+      "Carretto",
+      "Bragno",
+      "Ville"
+    ],
+    "comuni_confinanti": [
+      "Albisola Superiore",
+      "Altare",
+      "Carcare",
+      "Cengio",
+      "Cosseria",
+      "Dego",
+      "Giusvalla",
+      "Gottasecca (CN)",
+      "Pontinvrea",
+      "Saliceto (CN)",
+      "Savona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Lorenzo (1632)",
+      "Abbazia di Ferrania"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bormida",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009014",
+    "codice_catastale": "B048",
+    "popolazione": 391,
+    "superficie_kmq": 22.43,
+    "densita": 17.4,
+    "cap": "17045",
+    "prefisso_telefonico": "019",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "bormidesi",
+    "etimologia": "Trae origine dal nome di fiume Bormida, da collegarsi a sua volta con la base indoeuropea gwormo-, caldo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Chiesa",
+      "Fornelli",
+      "Piano Soprano",
+      "Piano Sottano",
+      "Resi",
+      "Costa",
+      "Pirotti",
+      "Navoni-Balteria",
+      "Romano",
+      "Ronco"
+    ],
+    "comuni_confinanti": [
+      "Calice Ligure",
+      "Calizzano",
+      "Mallare",
+      "Osiglia",
+      "Pallare",
+      "Rialto"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo \"la Ferriera\""
+    ],
+    "chiese": [
+      "Chiesetta del Carmine (in località Piano Sottano)",
+      "Chiesa parrocchiale di San Giorgio Martire"
+    ],
+    "castelli_fortificazioni": [
+      "Trincee napoleoniche (località: Ronco)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borgio Verezzi",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009013",
+    "codice_catastale": "B005",
+    "popolazione": 2232,
+    "superficie_kmq": 2.92,
+    "densita": 764.4,
+    "cap": "17022",
+    "prefisso_telefonico": "019",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "borgesi e verezzini",
+    "etimologia": "E' un composto di due nomi di possibile origine preromana, ma di etimologia sconosciuta.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Verezzi (Crosa",
+      "Roccaro",
+      "Piazza",
+      "Poggio)",
+      "Borgio",
+      "Borgio Verezzi Nuovo"
+    ],
+    "comuni_confinanti": [
+      "Finale Ligure",
+      "Pietra Ligure",
+      "Tovo San Giacomo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro Apostolo (XVIII secolo)",
+      "Santuario della Madonna del Buon Consiglio",
+      "Chiesa di San Martino Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotte di Borgio Verezzi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borghetto Santo Spirito",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009012",
+    "codice_catastale": "A999",
+    "popolazione": 4850,
+    "superficie_kmq": 5.34,
+    "densita": 908.2,
+    "cap": "17052",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "borghettini",
+    "etimologia": "Attestato come Burgo Sancti Spiritus o Burgeto è un diminutivo di Borgo, con evidente significato. La specifica deriva dal nome di un vicino ospedale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "Borgo Marina",
+      "Borgo d’Anzio",
+      "Giardini",
+      "Pontassi",
+      "Patarello",
+      "Castellaro"
+    ],
+    "comuni_confinanti": [
+      "Boissano",
+      "Ceriale",
+      "Loano",
+      "Toirano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Boissano",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009011",
+    "codice_catastale": "A931",
+    "popolazione": 2487,
+    "superficie_kmq": 8.67,
+    "densita": 286.9,
+    "cap": "17054",
+    "prefisso_telefonico": "0182",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "boissanesi",
+    "etimologia": "Potrebbe derivare dal nome latino di persona Potentius o Betutius, con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "Pogli",
+      "Mogli",
+      "Cavi",
+      "Gandolfi",
+      "Gandarini",
+      "Berruti",
+      "Bosseri",
+      "Pozzo",
+      "Sottani",
+      "Bonfanti",
+      "Baroni",
+      "Piazza"
+    ],
+    "comuni_confinanti": [
+      "Bardineto",
+      "Borghetto Santo Spirito",
+      "Loano",
+      "Pietra Ligure",
+      "Toirano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bergeggi",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009010",
+    "codice_catastale": "A796",
+    "popolazione": 1122,
+    "superficie_kmq": 3.68,
+    "densita": 304.9,
+    "cap": "17028",
+    "prefisso_telefonico": "019",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "bergeggini",
+    "etimologia": "Deriva da bergensis, dalla base ligure bergo, monte, con l'aggiunta del suffisso latino -ense.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 5 - Colline litoranee di Savona"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Spotorno",
+      "Vado Ligure"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bardineto",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009009",
+    "codice_catastale": "A647",
+    "popolazione": 747,
+    "superficie_kmq": 29.6,
+    "densita": 25.2,
+    "cap": "17057",
+    "prefisso_telefonico": "019",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "bardinetesi",
+    "etimologia": "Deriva dal nome di pianta bandana e bardina, lappola, in italiano bardana, con l'aggiunta del suffisso -eto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 2 - Alto Bormida di Millesimo"
+    ],
+    "localita_frazioni": [
+      "Brigneta",
+      "Principi",
+      "Muschieto"
+    ],
+    "comuni_confinanti": [
+      "Boissano",
+      "Calizzano",
+      "Castelvecchio di Rocca Barbena",
+      "Erli",
+      "Garessio (CN)",
+      "Giustenice",
+      "Loano",
+      "Magliolo",
+      "Pietra Ligure",
+      "Toirano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cappella di San Nicolò"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Balestrino",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009008",
+    "codice_catastale": "A593",
+    "popolazione": 582,
+    "superficie_kmq": 11.27,
+    "densita": 51.6,
+    "cap": "17020",
+    "prefisso_telefonico": "0182",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "balestrinesi",
+    "etimologia": "Può derivare dalla base preromana bala, rupe, o dal latino ballista, balestra, ipotesi meno condivisa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Pollupice",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva"
+    ],
+    "localita_frazioni": [
+      "Borgo",
+      "Poggio",
+      "Cuneo",
+      "Bergalla"
+    ],
+    "comuni_confinanti": [
+      "Castelvecchio di Rocca Barbena",
+      "Ceriale",
+      "Cisano sul Neva",
+      "Toirano",
+      "Zuccarello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Monte Croce",
+      "Chiesa di Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello del Carretto"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arnasco",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009007",
+    "codice_catastale": "A422",
+    "popolazione": 634,
+    "superficie_kmq": 6.01,
+    "densita": 105.5,
+    "cap": "17032",
+    "prefisso_telefonico": "0182",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "arnaschesi",
+    "etimologia": "Potrebbe derivare dal tema preromano arno- o dal nome germanico di persona Arnulfo o latino arena, sabbia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 4 - Media Valle dell'Arroscia e del Neva"
+    ],
+    "localita_frazioni": [
+      "Bezzo Chiesa",
+      "Menosio"
+    ],
+    "comuni_confinanti": [
+      "Albenga",
+      "Castelbianco",
+      "Cisano sul Neva",
+      "Ortovero",
+      "Vendone",
+      "Zuccarello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale Maria SS. Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Brading (Contea dell'Isola di Wight",
+      "Inghilterra)",
+      "dal 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Andora",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009006",
+    "codice_catastale": "A278",
+    "popolazione": 7531,
+    "superficie_kmq": 31.61,
+    "densita": 238.2,
+    "cap": "17051",
+    "prefisso_telefonico": "0182",
+    "patrono": "SS. Giacomo e Filippo",
+    "festa_patronale": "3 maggio",
+    "demonimo": "andoresi",
+    "etimologia": "E' un derivato in -ora di una base che potrebbe essere la stessa del verbo andare, per esempio: andoira, modo di camminare.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Andora)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "San Pietro",
+      "San Bartolomeo",
+      "San Giovanni",
+      "Castello",
+      "Rollo",
+      "Conna",
+      "Colla Micheri"
+    ],
+    "comuni_confinanti": [
+      "Alassio",
+      "Cervo (IM)",
+      "Garlenda",
+      "Laigueglia",
+      "San Bartolomeo al Mare (IM)",
+      "Stellanello",
+      "Villa Faraldi (IM)",
+      "Villanova d'Albenga"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Clavesana (XIII secolo)",
+      "rudere"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte romano (con dieci arcate)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Larvik (Norvegia)",
+      "dal 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Altare",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009005",
+    "codice_catastale": "A226",
+    "popolazione": 2086,
+    "superficie_kmq": 11.74,
+    "densita": 177.7,
+    "cap": "17041",
+    "prefisso_telefonico": "019",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "altaresi",
+    "etimologia": "Dal latino altare, luogo, dove si celebrava la messa nei pellegrinaggi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta Val Bormida",
+      "Regione Agraria n. 1 - Alto Bormida di Spigno e Alto Erro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cairo Montenotte",
+      "Carcare",
+      "Mallare",
+      "Quiliano",
+      "Savona"
+    ],
+    "musei": [
+      "Museo dell’Arte Vetraria Altarese"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albissola Marina",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009003",
+    "codice_catastale": "A165",
+    "popolazione": 5431,
+    "superficie_kmq": 3.2,
+    "densita": 1697.2,
+    "cap": "17012",
+    "prefisso_telefonico": "019",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "albisolesi",
+    "etimologia": "Dal nome romano Alba Docilia, composto da alba (città) e dal nome celtico Dolcilius. Questo composto, attraverso la tradizione orale, è divenuto Albizola e Albuzola. La specifica si riferisce al fatto che è un borgo costiero.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 5 - Colline litoranee di Savona",
+      "Associazione Italiana Città della Ceramica (AICC)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albisola Superiore",
+      "Savona"
+    ],
+    "musei": [
+      "Museo di Villa Faraggiana",
+      "Fabbrica Casa Museo \"G. Mazzotti\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Nostra Signora della Concordia (XVI secolo",
+      "con facciata novecentesca)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albisola Superiore",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009004",
+    "codice_catastale": "A166",
+    "popolazione": 10064,
+    "superficie_kmq": 29.02,
+    "densita": 346.8,
+    "cap": "17011",
+    "prefisso_telefonico": "019",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "albisolesi",
+    "etimologia": "La prima parte del nome è composta dalla base ligure-romana alba (città) e dal nome celtico di persona Dolcilius. La tradizione orale ha provocato la variazione del composto in Albizola o Albuzola. La specifica indica che è l'insediamento più antico, situato nell'entroterra.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Giovo",
+      "Regione Agraria n. 5 - Colline litoranee di Savona",
+      "Associazione Italiana Città della Ceramica (AICC)"
+    ],
+    "localita_frazioni": [
+      "Ellera"
+    ],
+    "comuni_confinanti": [
+      "A est: Celle Ligure; a nord: Cairo Montenotte",
+      "Pontinvrea",
+      "Stella; a ovest: Albissola Marina",
+      "Savona"
+    ],
+    "musei": [
+      "Museo Civico \"Manlio Trucco\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna della Pace :: Dehoniani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albenga",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009002",
+    "codice_catastale": "A145",
+    "popolazione": 24144,
+    "superficie_kmq": 36.51,
+    "densita": 661.3,
+    "cap": "17031",
+    "prefisso_telefonico": "0182",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "ingauni o albenganesi",
+    "etimologia": "Il nome è il frutto dell'unione di album e Ingaunum, la prima parte identifica una \"città capoluogo\", la seconda si riferisce al nome di una potente popolazione ligure.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "Bastia",
+      "Campochiesa",
+      "Leca",
+      "Lusignano",
+      "Salea",
+      "San\nFedele"
+    ],
+    "comuni_confinanti": [
+      "Alassio",
+      "Arnasco",
+      "Ceriale",
+      "Cisano sul Neva",
+      "Ortovero",
+      "Villanova d'Albenga"
+    ],
+    "musei": [
+      "Museo Navale Romano",
+      "Museo Diocesano",
+      "Museo Civico Ingauno"
+    ],
+    "ville_palazzi": [
+      "Palazzo Peloso Cepolla (XVI secolo)"
+    ],
+    "chiese": [
+      "Cattedrale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Dabas (Ungheria)",
+      "dal 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alassio",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009001",
+    "codice_catastale": "A122",
+    "popolazione": 10821,
+    "superficie_kmq": 17.29,
+    "densita": 625.9,
+    "cap": "17021",
+    "prefisso_telefonico": "0182",
+    "patrono": "Sant'Ambrogio Vescovo",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "alassini",
+    "etimologia": "Documentato con il nome di Alaxe, forse dal nome femminile Adalaxia o Alaxia (forma alterata del nome longobardo Adalahis, da cui Adelaide) con riferimento alla marchesa di Susa, con relativo passaggio al maschile.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Porto Luca Ferrari)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Ingauna",
+      "Regione Agraria n. 6 - Colline litoranee di Albenga"
+    ],
+    "localita_frazioni": [
+      "Moglio",
+      "Caso",
+      "Solva"
+    ],
+    "comuni_confinanti": [
+      "Albenga",
+      "Andora",
+      "Laigueglia",
+      "Villanova d'Albenga"
+    ],
+    "musei": [
+      "Museo di Scienze Naturali \"Don Bosco\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Ferrero de Gubernatis Ventimiglia"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Ambrogio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Il muretto di Alassio (con 550 piastrelle autografate da vip)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Gnoccata (seconda domenica di agosto), in frazione Moglio",
+      "Sagra delle Biscette (ultima domenica di marzo), nella frazione di Solva"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Savona",
+    "provincia": "Savona",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "009056",
+    "codice_catastale": "I480",
+    "popolazione": 61057,
+    "superficie_kmq": 65.55,
+    "densita": 931.5,
+    "cap": "17100",
+    "prefisso_telefonico": "019",
+    "patrono": "Madonna della Misericordia",
+    "festa_patronale": "18 marzo",
+    "demonimo": "savonesi",
+    "etimologia": "Da Savo, -onis, centro della tribù ligure dei Sabates. Fu documentato anche con il nome di castellum Saunense o Saone.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007 (spiagge Fornaci e Crocetta/Natarella)",
+      "Bandiera Blu Approdi Turistici 2007 (Vecchia Darsena)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline litoranee di Savona"
+    ],
+    "localita_frazioni": [
+      "Lavagnola",
+      "Santuario",
+      "Ciatti",
+      "Marmorassi",
+      "Ciantagalletto",
+      "Conca Verde",
+      "Valcada",
+      "Madonna del Monte",
+      "Zinola"
+    ],
+    "comuni_confinanti": [
+      "Albisola Superiore",
+      "Albissola Marina",
+      "Altare",
+      "Cairo Montenotte",
+      "Quiliano",
+      "Vado Ligure"
+    ],
+    "musei": [
+      "Collezioni d'Arte della Cassa di Risparmio",
+      "Pinacoteca Civica",
+      "Museo del Tesoro della Cattedrale",
+      "Museo d'Arte \"Sandro Pertini\"",
+      "Civico Museo Storico Archeologico",
+      "Museo del Tesoro del Santuario della Misericordia"
+    ],
+    "ville_palazzi": [
+      "Palazzo della Rovere"
+    ],
+    "chiese": [
+      "Santuario Madonna della Misericordia",
+      "Chiesa di San Giovanni Battista",
+      "Cattedrale (XVI secolo)"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Leon Pancaldo, trecentesca",
+      "Torre del Brandale, detta anche Campanassa",
+      "Fortezza del Priamar"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Chiabrera"
+    ],
+    "stadi": [
+      "Stadio Valerio Bacigalupo (10.000 posti)"
+    ],
+    "eventi_feste_sagre": [
+      "Confeugo (domenica precedente il 25 dicembre), con sfilata in costume medioevale",
+      "Processione del Venerdì Santo (il Venerdì Santo negli anni pari)"
+    ],
+    "gemellaggi": [
+      "Villingen Schwenningen (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

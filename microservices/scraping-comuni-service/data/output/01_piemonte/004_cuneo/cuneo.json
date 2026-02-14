@@ -1,0 +1,16 @@
+{
+  "nome": "Cuneo",
+  "regione": "Piemonte",
+  "zona": null,
+  "sigla": "CN",
+  "codice_istat": "004",
+  "popolazione": 589108,
+  "popolazione_maschi": 289868,
+  "popolazione_femmine": 299240,
+  "superficie_kmq": 6902.65,
+  "densita": 85.3,
+  "num_comuni": 250,
+  "capoluogo": "Cuneo",
+  "iso_3166_2": "IT-CN",
+  "nuts": "ITC16"
+}

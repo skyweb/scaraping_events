@@ -1,0 +1,16 @@
+{
+  "nome": "Foggia",
+  "regione": "Puglia",
+  "zona": null,
+  "sigla": "FG",
+  "codice_istat": "071",
+  "popolazione": 628556,
+  "popolazione_maschi": 307526,
+  "popolazione_femmine": 321030,
+  "superficie_kmq": 6971.05,
+  "densita": 90.2,
+  "num_comuni": 61,
+  "capoluogo": "Foggia",
+  "iso_3166_2": "IT-FG",
+  "nuts": "ITF41"
+}

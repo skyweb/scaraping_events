@@ -1,0 +1,5056 @@
+[
+  {
+    "nome": "Volla",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063089",
+    "codice_catastale": "M115",
+    "popolazione": 24002,
+    "superficie_kmq": 6.16,
+    "densita": 3896.4,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "vollesi",
+    "etimologia": "Il nome deriva dal termine latino bulla (polla d'acqua), per la presenza in zona della sorgente del Sebeto. Il termine Bulla poi con il tempo si è trasformato dialettalmente in Volla.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Pollena Trocchia; a nord: Casoria; a nord e est: Casalnuovo di Napoli; a ovest: Napoli; a sud: Cercola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele"
+    ],
+    "castelli_fortificazioni": [
+      "Resti dell'antico castello"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Visciano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063088",
+    "codice_catastale": "M072",
+    "popolazione": 4456,
+    "superficie_kmq": 10.89,
+    "densita": 409.2,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Sebastiano Maritre",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "viscianesi",
+    "etimologia": "Anticamente chiamata Bissana o Vissana. Con molta probabilità deriva dal nome di persona latino Vesius o Vescinus a cui si aggiunge il suffisso -anus che indica l'appartenenza. Secondo un‘ipotesi più fantasiosa, ma priva di fondamento, il nome deriva dal termine latino Biscia (serpente), ad indicare una zona piena di serpenti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Agro Nolano",
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Regione Agraria n. 1 - Colline di Roccarainola e Visciano",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Monteforte Irpino (AV); a nord: Avella (AV)",
+      "Baiano (AV)",
+      "Mugnano del Cardinale (AV)",
+      "Sperone (AV); a ovest: Casamarciano",
+      "Nola; a sud: Liveri",
+      "Marzano di Nola (AV)",
+      "Pago del Vallo di Lauro (AV)",
+      "Taurano (AV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villaricca",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063087",
+    "codice_catastale": "G309",
+    "popolazione": 31226,
+    "superficie_kmq": 6.85,
+    "densita": 4558.5,
+    "cap": "80010",
+    "prefisso_telefonico": "081",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "villaricchesi",
+    "etimologia": "In passato e fino al 1871 si chiamava \"Pannicocoli\" (fornaio, luogo dove si cuoce il pane) e derivava dal latino paniscoculi o Paniscoculum. Gli abitanti, a cui questo nome proprio non piaceva, con il supporto dell'allora parlamentare Ranieri (amico di Leopardi), riuscirono ad ottenere dall'amministrazione la modifica del nome in Villaricca.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": [
+      "Torretta - Scalzapecora"
+    ],
+    "comuni_confinanti": [
+      "Calvizzano",
+      "Giugliano in Campania",
+      "Marano di Napoli",
+      "Mugnano di Napoli",
+      "Qualiano",
+      "Quarto"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria dell'Arco",
+      "Chiesa del Purgatorio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vico Equense",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063086",
+    "codice_catastale": "L845",
+    "popolazione": 21002,
+    "superficie_kmq": 29.3,
+    "densita": 716.8,
+    "cap": "80069",
+    "prefisso_telefonico": "081",
+    "patrono": "San Ciro",
+    "festa_patronale": "31 gennaio",
+    "demonimo": "vicani",
+    "etimologia": "Molto probabilmente deriva dal latino vicus, ossia villaggio, gruppo di case. Il termine \"Equense\", invece, deriva dal latino Aequana che era un antico centro poi distrutto dai Goti.",
+    "il_comune_e": [
+      "Città Termale (Scrajo Terme SpA)",
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Costiera Sorrentina",
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Vico Equense (Capoluogo)",
+      "Seiano",
+      "Montechiaro Fornacelle",
+      "Pacognano",
+      "Alberi",
+      "Arola",
+      "Prezzano",
+      "Ticciano",
+      "Santa Maria del Castello",
+      "Moiano",
+      "Monte Faito",
+      "Patierno",
+      "Massaquano",
+      "San Salvatore",
+      "Sant'Andrea",
+      "Bonea",
+      "Pietrapiana"
+    ],
+    "comuni_confinanti": [
+      "A est: Pimonte",
+      "Positano (SA); a nord: Castellammare di Stabia; a ovest: Meta; a sud: Piano di Sorrento"
+    ],
+    "musei": [
+      "Museo Mineralogico Campano",
+      "Museo del Cinema del Territorio della Penisola Sorrentina",
+      "Museo Aperto Antonio Asturi",
+      "Antiquarium Silio Italico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria del Toro (XVI secolo)",
+      "Chiesa ed ex Convento della SS. Trinità e Paradiso",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Ciro",
+      "Cattedrale della SS. Annunziata",
+      "Cappella dell'Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Giusso"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Provolone del Monaco (prima settimana di luglio)",
+      "sul Monte Faito"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tufino",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063085",
+    "codice_catastale": "L460",
+    "popolazione": 3720,
+    "superficie_kmq": 5.25,
+    "densita": 708.6,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "tufinesi",
+    "etimologia": "Il nome deriva dal latino Tophinum pagum, che a sua volta deriva dal termine latino tofus o tofus ager proprio per la particolarità della zona che è costituita da cave di tufo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Regione Agraria n. 1 - Colline di Roccarainola e Visciano",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Schiava",
+      "Risigliano",
+      "Vignola",
+      "Contrada Cesina"
+    ],
+    "comuni_confinanti": [
+      "Avella (AV)",
+      "Casamarciano",
+      "Cicciano",
+      "Comiziano",
+      "Roccarainola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Mastrilli (in località Ponticchio)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria di Loreto",
+      "Chiesa di San Bartolomeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trecase",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063091",
+    "codice_catastale": "M280",
+    "popolazione": 9091,
+    "superficie_kmq": 6.14,
+    "densita": 1480.6,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gennaro",
+    "festa_patronale": "19 settembre",
+    "demonimo": "trecasesi",
+    "etimologia": "Il nome deriva dall'usanza in vigore a partire dal Cinquecento che obbligava gli abitanti del luogo a pagare le imposte fondiarie a tre case religiose a cui nel 1337 Roberto d'Angiò donò queste terre.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Torre del Greco; a nord: Ottaviano; a ovest: Boscotrecase; a sud: Torre Annunziata"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Ruta",
+      "Villa Lebano",
+      "Villa Laugella",
+      "Villa De Ruggiero",
+      "Palazzo Filippone"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova",
+      "Chiesa di Santa Maria delle Grazie",
+      "Cappella della Santissima Trinità, settecentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torre del Greco",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063084",
+    "codice_catastale": "L259",
+    "popolazione": 85762,
+    "superficie_kmq": 30.66,
+    "densita": 2797.2,
+    "cap": "80059",
+    "prefisso_telefonico": "081",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "8 dicembre",
+    "demonimo": "torresi",
+    "etimologia": "Le ipotesi sull'origine del nome sono svariate. Secondo alcuni il nome è legato all'evento storico che ci racconta che il territorio subì la dominazione dei Greci, altri credono che il nome sia legato al \"buon vino\" greco prodotto nella zona. Un'altra ipotesi (non condivisa dagli studiosi) è quella secondo cui anticamente il paese era chiamato Torre Octavia in riferimento alla distanza di \"8 miglia\" da Napoli.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio",
+      "Associazione Nazionale Città del Pesce di Mare"
+    ],
+    "localita_frazioni": [
+      "Cappella Nuova",
+      "Leopardi",
+      "Ponte della Gatta",
+      "Scappi",
+      "Cappella Bianchini",
+      "Cappella Carotenuto",
+      "Montedoro",
+      "Santa Maria La Bruna",
+      "Portosalvo",
+      "Camaldoli",
+      "Calastro",
+      "Litoranea"
+    ],
+    "comuni_confinanti": [
+      "Boscotrecase",
+      "Ercolano",
+      "Ottaviano",
+      "Torre Annunziata",
+      "Trecase"
+    ],
+    "musei": [
+      "Museo del Corallo dell'Istituto Statale d'Arte"
+    ],
+    "ville_palazzi": [
+      "Villa Bruno-Prota",
+      "Villa delle Ginestre (Giacomo Leopardi fu ospite nella villa, nei suoi ultimi mesi di vita)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di Santa Maria del Principio",
+      "Chiesa di Santa Maria del Popolo",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa della Vergine del Carmelo",
+      "Basilica di Santa Croce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dell'Immacola Concezione (8 dicembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torre Annunziata",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063083",
+    "codice_catastale": "L245",
+    "popolazione": 42627,
+    "superficie_kmq": 7.33,
+    "densita": 5815.4,
+    "cap": "80058",
+    "prefisso_telefonico": "081",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "22 ottobre",
+    "demonimo": "torresi",
+    "etimologia": "La prima parte del nome, ossia \"Torre\", deriva dalla presenza di un campanile in zona. \"Annunziata\" trae origine da una cappella dedicata alla Vergine Annunziata. Il paese sorge e si sviluppa nella zona dell'antica città Oplonti, ricca ed elegante, purtroppo distrutta dall'eruzione del Vesuvio del 79.",
+    "il_comune_e": [
+      "Città Termale (Lido Azzurro Terme Vesuviane Srl)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Associazione Nazionale Città del Pesce di Mare",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Boscoreale",
+      "Boscotrecase",
+      "Castellammare di Stabia",
+      "Pompei",
+      "Torre del Greco",
+      "Trecase"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria della Neve",
+      "Chiesa dei Santi Giuseppe e Teresa",
+      "Chiesa parrocchiale Santuario dello Spirito Santo (nota come Chiesa del Carmine)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Scavi di Oplonti: Parco Archeologico di Oplonti"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Ritrovamento (5 agosto)",
+      "Festa della Madonna della Neve (22 ottobre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Dino De Laurentiis",
+      "nome anagrafico Agostino (1919-2010)",
+      "produttore cinematografico"
+    ]
+  },
+  {
+    "nome": "Terzigno",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063082",
+    "codice_catastale": "L142",
+    "popolazione": 18935,
+    "superficie_kmq": 23.51,
+    "densita": 805.4,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "12 settembre",
+    "demonimo": "terzignesi",
+    "etimologia": "Secondo alcuni il nome deriva dal latino terra ignis ossia \"del fuoco\", oppure terra usta ignis (terra bruciata dal fuoco), secondo altri, invece il temine è riconducibile al numero cardinale terzo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Italiana Città del Vulcano"
+    ],
+    "localita_frazioni": [
+      "Campitello"
+    ],
+    "comuni_confinanti": [
+      "Boscoreale",
+      "Boscotrecase",
+      "Ottaviano",
+      "Poggiomarino",
+      "San Giuseppe Vesuviano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Bifulco"
+    ],
+    "chiese": [
+      "Chiesa di Maria Santissima Immacolata",
+      "Chiesa di Sant'Antonio (località Campitello)",
+      "Chiesa di Madonna SS. del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Striano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063081",
+    "codice_catastale": "I978",
+    "popolazione": 8519,
+    "superficie_kmq": 7.58,
+    "densita": 1123.9,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "San Severino Abate",
+    "festa_patronale": "8 gennaio",
+    "demonimo": "strianesi",
+    "etimologia": "Con molta probabilità deriva dal nome latino di persona Histrius, a cui si aggiunge il suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Palma Campania",
+      "Poggiomarino",
+      "San Valentino Torio (SA)",
+      "Sarno (SA)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa De Sparano - Pisani (XIV secolo)"
+    ],
+    "chiese": [
+      "Chiesa di San Severino Abate (XIII secolo)",
+      "Cappella di Santa Maria di Costantinopoli",
+      "Cappella di Santa Maria delle Sette Piante, edificata nel 1855 dal sig. Giovanni Sorvillo",
+      "Congrega del SS. Crocifisso",
+      "Parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Arco di San Nicola",
+      "risalente al Medioevo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sorrento",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063080",
+    "codice_catastale": "I862",
+    "popolazione": 16609,
+    "superficie_kmq": 9.93,
+    "densita": 1672.6,
+    "cap": "80067",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Antonino di Sorrento",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "sorrentini",
+    "etimologia": "L'ipotesi più concreta è che il nome derivi dal latino Surrenton che a sua volta deriva da surreo, ossia concorro, in relazione alle acque dei diversi fiumi che scendono dai valloni, quindi \"concorrono\". L'ipotesi più fantasiosa, invece ritiene che il termine sia legato alle leggendarie sirene che abitavano questi luoghi. Infatti, dai dintorni queste cercarono di ammaliare Ulisse.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Costiera Sorrentina",
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale per l'Incremento Turistico (ANIT)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Sant'Agnello; a ovest: Massa Lubrense"
+    ],
+    "musei": [
+      "Museo della Tarsia Lignea",
+      "Museo Correale di Terranova"
+    ],
+    "ville_palazzi": [
+      "Palazzo Correale",
+      "Palazzo Ferola, con portale della prima metà del quattrocento",
+      "Casa Fasulo, già Sersale, nota come la Casa di Cornelia Tasso",
+      "Villa Tritone"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Onofrio",
+      "Duomo - Cattedrale dei SS. Filippo e Giacomo",
+      "Chiese dei SS. Felice e Bacolo (o del SS. Rosario)",
+      "Chiesa e Monastero di San Paolo",
+      "Chiesa e Convento della Madonna del Carmine",
+      "Chiesa di Santa Maria della Pietà",
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa di Santa Anna",
+      "Chiesa di San Francesco",
+      "Chiesa dell'Addolorata",
+      "Chiesa della SS. Annunziata",
+      "Chiesa dei Servi di Maria",
+      "Basilica di Sant'Antonino",
+      "Chiesa e Convento di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Italia"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Torquato Tasso (1544 - 1595)",
+      "poeta"
+    ]
+  },
+  {
+    "nome": "Somma Vesuviana",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063079",
+    "codice_catastale": "I820",
+    "popolazione": 35100,
+    "superficie_kmq": 30.74,
+    "densita": 1141.8,
+    "cap": "80049",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gennaro",
+    "festa_patronale": "19 settembre",
+    "demonimo": "sommesi",
+    "etimologia": "Il termine Somma si riferisce alla posizione geografica del luogo, e deriva dal latino summa. La specifica Vesuviana si riferisce alla vicinanza al Vesuvio, inoltre una leggenda ci racconta che fu proprio il paese a dare il nome al monte presso cui sorge, ossia il monte Somma.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio",
+      "Associazione Italiana Città del Vulcano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Brusciano",
+      "Castello di Cisterna",
+      "Ercolano",
+      "Marigliano",
+      "Nola",
+      "Ottaviano",
+      "Pomigliano d'Arco",
+      "Sant'Anastasia",
+      "Saviano",
+      "Scisciano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo della Starza della Regina",
+      "Palazzo dell'Ave Gratia Plena, oggi denominato Palazzo Migliaccio"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria del Pozzo",
+      "Santuario di Santa Maria a Castello",
+      "Chiesa di San Sossio",
+      "Chiesa di San Pietro",
+      "Chiesa di San Giorgio Martire",
+      "Chiesa dei Padri Trinitari",
+      "Chiesa Collegiata di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serrara Fontana",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063078",
+    "codice_catastale": "I652",
+    "popolazione": 3147,
+    "superficie_kmq": 6.69,
+    "densita": 470.4,
+    "cap": "80070",
+    "prefisso_telefonico": "081",
+    "patrono": "San Vincenzo Ferreri",
+    "festa_patronale": "5 aprile",
+    "demonimo": "serraresi o fontanesi",
+    "etimologia": "Il nome Serrara deriva da serra (altura) ed è identificata in questo caso con l'accezione di \"sito tra le alture\", proprio per la sua posizione geografica. L'aggiunta Fontana si riferisce alla presenza in zona di una fonte.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Ischia",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida"
+    ],
+    "localita_frazioni": [
+      "Serrara",
+      "Fontana",
+      "Sant'Angelo",
+      "Succhivo",
+      "Ciglio",
+      "Calimera",
+      "Noia"
+    ],
+    "comuni_confinanti": [
+      "Barano d'Ischia",
+      "Casamicciola Terme",
+      "Forio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Jacono"
+    ],
+    "chiese": [
+      "Confraternita dell'Immacolata",
+      "Chiesa di Santa Maria di Monte Carmelo",
+      "Chiesa di Santa Maria La Sacra"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scisciano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063077",
+    "codice_catastale": "I540",
+    "popolazione": 6054,
+    "superficie_kmq": 5.46,
+    "densita": 1108.8,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Germano",
+    "festa_patronale": "30 ottobre",
+    "demonimo": "sciscianesi",
+    "etimologia": "Probabilmente deriva dal nome latino di persona Sittius, proprietario di quelle terre, a cui fu aggiunto il suffisso -anus, che indica appartenenza. Con il tempo diventò Sicciano, poi Scisciano",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "San Martino",
+      "Palazzuolo",
+      "Spartimento",
+      "Frocia"
+    ],
+    "comuni_confinanti": [
+      "Marigliano",
+      "Nola",
+      "San Vitaliano",
+      "Saviano",
+      "Somma Vesuviana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Chiesa parrocchiale di San Germano",
+      "Chiesa di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Masseria Montanaro",
+      "Masseria Camaldoli"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Saviano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063076",
+    "codice_catastale": "I469",
+    "popolazione": 16117,
+    "superficie_kmq": 13.78,
+    "densita": 1169.6,
+    "cap": "80039",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "savianesi",
+    "etimologia": "Probabilmente il nome deriva dal latino gens Sabia, o Sabidius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Associazione Nazionale Città in Gioco (GioNa)",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Fressuriello",
+      "Cerreto",
+      "Tommasoni",
+      "Sant'Erasmo",
+      "Sirico"
+    ],
+    "comuni_confinanti": [
+      "Nola",
+      "San Vitaliano",
+      "Scisciano",
+      "Somma Vesuviana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre di San Giacomo Apostolo",
+      "Chiesa di Sant'Erasmo",
+      "Chiesa di San Giovanni Battista (frazione: Sirico)",
+      "Chiesa dell'Immacolata",
+      "Chiesa della Libera"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Giardino Palazzo Allocca"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Antonio Abate",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063074",
+    "codice_catastale": "I300",
+    "popolazione": 19745,
+    "superficie_kmq": 7.87,
+    "densita": 2508.9,
+    "cap": "80057",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "abatesi",
+    "etimologia": "Il nome trae origine dalla venerazione verso il Santo patrono del luogo, Sant'Antonio Abate. La festa dedicata a Sant'Antonio Abate in paese si svolge il 17 gennaio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Scafati (SA); a nord-est: Angri (SA); a ovest: Santa Maria la Carità; a sud: Lettere; a sud e ovest: Gragnano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Gerardo",
+      "Chiesa parrocchiale di Sant'Antonio",
+      "Chiesa di Sant'Antonio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Antimo",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063073",
+    "codice_catastale": "I293",
+    "popolazione": 33852,
+    "superficie_kmq": 5.84,
+    "densita": 5796.6,
+    "cap": "80029",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Antimo",
+    "festa_patronale": "ultima domenica di maggio",
+    "demonimo": "santantimesi",
+    "etimologia": "Il nome è legato alla forte devozione verso il Santo patrono: Sant'Antimo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": [
+      "Friano"
+    ],
+    "comuni_confinanti": [
+      "A est: Grumo Nevano; a est e sud: Casandrino; a nord: Cesa (CE)",
+      "Sant'Arpino (CE); a ovest: Giugliano in Campania; a ovest e nord: Aversa (CE); a ovest e sud: Melito di Napoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Sant'Antimo",
+      "Chiesa di San Vincenzo",
+      "Chiesa dello Spirito Santo",
+      "Chiesa dell'Annunziata",
+      "Chiesa del Convento di Santa Maria del Carmine"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Baronale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Anastasia",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063072",
+    "codice_catastale": "I262",
+    "popolazione": 27747,
+    "superficie_kmq": 18.76,
+    "densita": 1479.1,
+    "cap": "80048",
+    "prefisso_telefonico": "081",
+    "patrono": "San Francesco Saverio",
+    "festa_patronale": "3 dicembre",
+    "demonimo": "anastasiani",
+    "etimologia": "Il nome è ispirato e riflette il culto di Sant'Anastasia, Il luogo è conosciuto anche con il nome di Madonna dell'Arco, in relazione al famoso Santuario situato in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Somma Vesuviana; a nord: Pomigliano d'Arco; a nord-ovest: Casalnuovo di Napoli; a ovest: Pollena Trocchia; a sud: Ercolano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna dell'Arco :: Frati Domenicani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Madonna dell'Arco (lunedì in Albis)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Agnello",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063071",
+    "codice_catastale": "I208",
+    "popolazione": 9141,
+    "superficie_kmq": 4.09,
+    "densita": 2235.0,
+    "cap": "80065",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Agnello",
+    "festa_patronale": "14 dicembre",
+    "demonimo": "santanellesi",
+    "etimologia": "Il nome è ispirato e riflette il culto del Santo patrono del paese: Sant' Agnello appunto, monaco benedettino. Il Santo è molto venerato dagli abitanti del paese ed è dedicata a Lui una festa il 14 dicembre. La tradizione racconta che la madre del Santo, non riuscendo ad avere figli pregava spesso con fede Santa Maria affinché potesse dare al mondo un bambino. Un giorno finalmente ebbe la rivelazione: avrebbe partorito un bimbo, Agnello appunto, che sarebbe stato molto caro a Dio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Costiera Sorrentina",
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Piano di Sorrento",
+      "Sorrento"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Crawford",
+      "Tenuta della Cocumella"
+    ],
+    "chiese": [
+      "Chiesa dei Santi Prisco ed Agnello"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Maria la Carità",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063090",
+    "codice_catastale": "M273",
+    "popolazione": 11665,
+    "superficie_kmq": 3.93,
+    "densita": 2968.2,
+    "cap": "80050",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Maria",
+    "festa_patronale": null,
+    "demonimo": "sammaritani",
+    "etimologia": "Il nome è ispirato e riflette il culto del Santo patrono del paese: Santa Maria delle Grazie. L'aggiunta \"la Carità\" è probabilmente una designazione locale. Il 21 novembre ed il 2 luglio vengono organizzate delle feste in onore di Santa Maria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Sant'Antonio Abate; a nord: Pompei",
+      "Scafati (SA); a ovest: Castellammare di Stabia; a sud: Gragnano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria la Carità",
+      "Chiesa di Santa Maria del Carmine (1825)",
+      "Chiesa della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vitaliano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063075",
+    "codice_catastale": "I391",
+    "popolazione": 6415,
+    "superficie_kmq": 5.3,
+    "densita": 1210.4,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Vitaliano",
+    "festa_patronale": "16 luglio",
+    "demonimo": "sanvitalianesi",
+    "etimologia": "Il nome trae origine dalla devozione verso il Santo patrono del paese, San Vitaliano, che fu vescovo di Capua.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Regi Lagni",
+      "Area Geografica: Agro Nolano",
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Marigliano",
+      "Nola",
+      "Saviano",
+      "Scisciano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo d'Avenia",
+      "Palazzo Petrosino"
+    ],
+    "chiese": [
+      "Chiesa dell'Immacolata",
+      "Chiesa del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Sebastiano al Vesuvio",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063070",
+    "codice_catastale": "I151",
+    "popolazione": 9146,
+    "superficie_kmq": 2.63,
+    "densita": 3477.6,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "sebastianesi",
+    "etimologia": "Il nome è ispirato e riflette il culto del Santo patrono del paese: San Sebastiano appunto. La specifica \"al Vesuvio\" si riferisce alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cercola",
+      "Ercolano",
+      "Massa di Somma",
+      "Napoli",
+      "San Giorgio a Cremano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Tufarelli",
+      "Villa Figliola"
+    ],
+    "chiese": [
+      "Chiesa Madre di San Sebastiano Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Paolo Bel Sito",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063069",
+    "codice_catastale": "I073",
+    "popolazione": 3495,
+    "superficie_kmq": 2.97,
+    "densita": 1176.8,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "sampaolesi",
+    "etimologia": "Il nome è legato al culto di San Paolo, a cui l'amministrazione aggiunse la specifica \"Bel Sito\" per distinguerlo dagli altri paesi omonimi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Agro Nolano",
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Unione Comuni Valle dell'Antico Clanis",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Associazione Nazionale delle Città della Nocciola",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Liveri",
+      "Nola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Accinni",
+      "Palazzo Contieri",
+      "Palazzo Scala"
+    ],
+    "chiese": [
+      "Chiesa di San Paolo I Eremita, rinascimentale",
+      "Chiesa del Corpus Domin"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giuseppe Vesuviano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063068",
+    "codice_catastale": "H931",
+    "popolazione": 31192,
+    "superficie_kmq": 14.09,
+    "densita": 2213.8,
+    "cap": "80047",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "sangiuseppesi",
+    "etimologia": "Il nome è ispirato e riflette il culto del Santo patrono del paese: San Giuseppe appunto. La specifica \"Vesuviano\" si riferisce alla sua posizione geografica. E' così chiamato dal 1894.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Palma Campania",
+      "San Gennaro Vesuviano; a nord-ovest: Ottaviano; a sud: Terzigno; a sud-est: Poggiomarino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Giuseppe",
+      "Chiesa Vergine Madre di Dio",
+      "Chiesa di Santa Maria la Scala",
+      "Chiesa di San Francesco d'Assisi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Italia"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giorgio a Cremano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063067",
+    "codice_catastale": "H892",
+    "popolazione": 45410,
+    "superficie_kmq": 4.11,
+    "densita": 11048.7,
+    "cap": "80046",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giorgio Martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sangiorgesi",
+    "etimologia": "Il nome fa riferimento alla forte venerazione per il Santo che salvò, alla fine del X secolo, gli abitanti dall'eruzione del Vesuvio. Sull'origine del termine Cremano, alcuni credono che faccia riferimento al fatto che la terra su cui è costruito il paese sia \"cremata\", ossia bruciata dal Vesuvio. Altri ritengono che derivi dal nome Crambano, poi Gramano che sarebbe il nome di un villaggio distrutto, che a sua volta derivava dal nome del proprietario terriero Cambarus a cui si aggiunge il suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ercolano",
+      "Napoli",
+      "Portici",
+      "San Sebastiano al Vesuvio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Bruno",
+      "Villa Avallone, ora Tufarelli"
+    ],
+    "chiese": [
+      "Chiesa di San Giorgio Vecchio",
+      "Chiesa dell'Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Alighiero Noschese (1932-1979), attore comico, imitatore cinematografico e televisivo",
+      "Massimo Troisi (1953-1994), attore, regista e sceneggiatore teatrale, cinematografico e televisivo"
+    ]
+  },
+  {
+    "nome": "San Gennaro Vesuviano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063066",
+    "codice_catastale": "H860",
+    "popolazione": 11911,
+    "superficie_kmq": 6.97,
+    "densita": 1708.9,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gennaro",
+    "festa_patronale": "19 settembre",
+    "demonimo": "sangennaresi",
+    "etimologia": "In passato il paese si chiamava San Gennaro di Palma, perché apparteneva al comprensorio di Palma. Il nome attuale risale solo al 1939 e fa riferimento alla forte venerazione per San Gennaro a cui gli abitanti rivolgono preghiere per invocare la sua protezione dal vicino Vesuvio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei"
+    ],
+    "localita_frazioni": [
+      "Aprile",
+      "Giugliani",
+      "Ruocco",
+      "Sommese"
+    ],
+    "comuni_confinanti": [
+      "Nola",
+      "Ottaviano",
+      "Palma Campania",
+      "San Giuseppe Vesuviano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento Francescano dei Frati Minor",
+      "Chiesa parrocchiale dei Santi Gioacchino ed Anna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roccarainola",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063065",
+    "codice_catastale": "H433",
+    "popolazione": 7009,
+    "superficie_kmq": 28.1,
+    "densita": 249.4,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "rocchesi",
+    "etimologia": "Il nome è composto da due termini, il primo, si riferisce ad un'altura (appunto rocca) su cui sorgeva un castello, il secondo fa riferimento ad un nome di persona di origine longobarda, Ragino o Raino. Secondo alcuni, invece il termine Rainola è legato al termine rava, ossia dirupo a cui fu poi aggiunto il termine rocca dove fu costruito il castello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Unione Comuni Valle dell'Antico Clanis",
+      "Regione Agraria n. 1 - Colline di Roccarainola e Visciano",
+      "Parco del Partenio",
+      "Associazione Nazionale delle Città della Nocciola",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Piazza",
+      "Gargani",
+      "Sasso",
+      "Fellino"
+    ],
+    "comuni_confinanti": [
+      "A est: Avella (AV); a nord: Arpaia (BN)",
+      "Cervinara (AV)",
+      "Forchia (BN)",
+      "Paolisi (BN)",
+      "Rotondi (AV); a ovest: Arienzo (CE)",
+      "San Felice a Cancello (CE); a sud: Cicciano",
+      "Nola",
+      "Tufino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Baracoa (Cuba)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Quarto",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063063",
+    "codice_catastale": "H114",
+    "popolazione": 41069,
+    "superficie_kmq": 14.17,
+    "densita": 2898.3,
+    "cap": "80010",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Maria",
+    "festa_patronale": null,
+    "demonimo": "quartesi",
+    "etimologia": "Il nome deriverebbe dal latino quartus, che identifica una distanza non bene definita, forse \"quarto miglio\", perché proprio al quarto miglio della via che oggi chiamiamo Campana sorge Quarto, così come è indicato anche nello stemma civico. Forse potrebbe anche dipendere da un nome latino di persona Quartus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Campi Flegrei",
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Villaricca; a nord e ovest: Giugliano in Campania; a ovest: Pozzuoli; a sud: Napoli; a sud e est: Marano di Napoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Cristiana Evangelica Asseblee di Dio in Italia",
+      "Cappella di San Petrillo",
+      "Chiesa Santa Maria libera nos a scandalis",
+      "Chiesa SS. Pietro e Paolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Qualiano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063062",
+    "codice_catastale": "H101",
+    "popolazione": 25766,
+    "superficie_kmq": 7.26,
+    "densita": 3549.0,
+    "cap": "80019",
+    "prefisso_telefonico": "081",
+    "patrono": "Santo Stefano Promartire",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "qualianesi",
+    "etimologia": "Deriva dal nome latino di persona Quaelius, o Aquiliuscon, con l'aggiunta del suffisso -anus che indica l'appartenenza. Un'ipotesi più fantasiosa ci indica che il nome deriva dal longobardo \"wald\", ossia bosco, e che con il tempo diventò Guardiano e poi Qualiano, con il significato di città sorta nel bosco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": [
+      "Glicine-Teorema",
+      "Oleandro",
+      "Ripuaria",
+      "Varcaturo"
+    ],
+    "comuni_confinanti": [
+      "Calvizzano",
+      "Giugliano in Campania",
+      "Villaricca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santo Stefano",
+      "in precedenza intitolata a San Magno"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte di Surriento",
+      "costruito in epoca borbonica per volontà di Ferdinando II"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Procida",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063061",
+    "codice_catastale": "H072",
+    "popolazione": 10496,
+    "superficie_kmq": 4.14,
+    "densita": 2535.3,
+    "cap": "80079",
+    "prefisso_telefonico": "081",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "procidani",
+    "etimologia": "Potrebbe sia derivare dal termine pro-Cyma, che significa \"prima Cuma\", la parola Cuma (dall'ebraico) significa cima, quindi il termine pro-Cyma sarebbe \"prima cima\", oppure deriva dal verbo greco prokutos (versato), in riferimento alle numerose eruzioni avvenute. Secondo la leggenda inoltre il nome potrebbe derivare da un compagno di Enea.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida",
+      "Associazione Nazionale Città del Pesce di Mare"
+    ],
+    "localita_frazioni": [
+      "Isola di Procida",
+      "Isola di Vivaro"
+    ],
+    "comuni_confinanti": null,
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Angelina",
+      "Villa Sofia"
+    ],
+    "chiese": [
+      "Chiesa di Santa Margherita Nuova",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di Santa Maria della Pietà",
+      "Chiesa di San Tommaso D'Aquino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pozzuoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063060",
+    "codice_catastale": "G964",
+    "popolazione": 81528,
+    "superficie_kmq": 43.21,
+    "densita": 1886.8,
+    "cap": "80078",
+    "prefisso_telefonico": "081",
+    "patrono": "San Procolo",
+    "festa_patronale": "16 novembre",
+    "demonimo": "puteolani",
+    "etimologia": "Il nome deriva dal latino Puteoli. A sua volta il termine Puteoli è legato al termine latino puteus, che significa pozzo, ed al termine osco fistulus (cava), oppure da puteo, che significa puzzare, cattivo odore (riferito all'odore delle esalazioni sulfuree).",
+    "il_comune_e": [
+      "Città Termale (Terme Puteolane, f.lli D'Alicandro)",
+      "Bandiera Blu Approdi Turistici 2007 (Sudcantieri)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Campi Flegrei",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Campi Flegrei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e nord-est: Napoli; a nord-ovest: Giugliano in Campania",
+      "Quarto; a ovest: Bacoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Assunta, distrutta dal maremoto del 1872, fu ricostruita",
+      "Chiesa della Purificazione (1702)",
+      "Chiesa del Purgatorio",
+      "Chiesa del Carmine",
+      "Cattedrale del Rione Terra",
+      "Chiesa di San Raffaele",
+      "Chiesa di San Vincenzo",
+      "Chiesa di San Gennaro",
+      "Chiesa di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Solfatara"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Portici",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063059",
+    "codice_catastale": "G902",
+    "popolazione": 55012,
+    "superficie_kmq": 4.52,
+    "densita": 12170.8,
+    "cap": "80055",
+    "prefisso_telefonico": "081",
+    "patrono": "San Ciro",
+    "festa_patronale": "31 gennaio",
+    "demonimo": "porticesi",
+    "etimologia": "L'ipotesi più accreditata è quella che il nome derivi dal latino porticus, ossia da un portico monumentale sito in zona. Esistono però altre ipotesi sull'origine del nome, secondo alcuni il temine deriverebbe dal nome latino Quinto Porzio Aquila, un nobile romano in congiura contro Cesare. Questa ipotesi trova conferma nello stemma civico su cui è raffigurata un'aquila che regge tra gli artigli le iniziali \"Q.P.A.\". Secondo altri deriverebbe da portus (porto), in riferimento ad un porto presente nelle vicinanze (porto di Ercolano).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Bellavista",
+      "Granatello"
+    ],
+    "comuni_confinanti": [
+      "Ercolano",
+      "Napoli",
+      "San Giorgio a Cremano"
+    ],
+    "musei": [
+      "Museo Nazionale Ferroviario di Pietrarsa",
+      "Collezioni dell'Istituto di Entomologia e Zoologia Agraria"
+    ],
+    "ville_palazzi": [
+      "Villa Savonarola",
+      "Palazzo Mascabruno",
+      "Palazzo d'Elboeuf",
+      "Palazzo Capuano",
+      "Palazzo Buono"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "Chiesa parrocchiale di San Ciro",
+      "Chiesa di San Pasquale (al Granatello)",
+      "Cappella Reale",
+      "Parrocchiale di Santa Maria del Consiglio, detta di San Luigi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico di Portici"
+    ],
+    "luoghi_interesse": [
+      "Reggia di Portici"
+    ],
+    "teatri": null,
+    "stadi": [
+      "Stadio San Ciro"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pompei",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063058",
+    "codice_catastale": "G813",
+    "popolazione": 25196,
+    "superficie_kmq": 12.41,
+    "densita": 2030.3,
+    "cap": "80045",
+    "prefisso_telefonico": "081",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "8 maggio",
+    "demonimo": "pompeiani",
+    "etimologia": "L'ipotesi più probabile è quella che il nome abbia un'origine indoeuropea, da penk, ossia cinque, il nome farebbe riferimento alla fusione di cinque villaggi. Una più fantasiosa ipotesi racconta che Ercole venuto in Campania, fondò la città che chiamò pompa, con il significato di corteo trionfale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Scafati (SA); a nord: Boscoreale; a ovest: Torre Annunziata; a sud: Santa Maria la Carità; a sud-ovest: Castellammare di Stabia"
+    ],
+    "musei": [
+      "Museo del Pontificio Santuario della \"Madonna del Rosario\"",
+      "Museo Vesuviano \"G. B. Alfano\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchia del Santissimo Salvatore",
+      "Santuario Beata Maria Vergine del Rosario :: Padri Redentoristi",
+      "Parrocchia Santa Maria Assunta in Cielo (frazione Parrelle)",
+      "Parrocchia San Giuseppe Sposo della Beata Vergine Maria",
+      "Parrocchia Maria SS.ma Immacolata Concezione",
+      "Parrocchia Sacro Cuore di Gesù\nSacro Cuore di Gesù"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Scavi di Pompei: Parco Archeologico della città di Pompei"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Tarragona (Spagna)",
+      "Xi'an (Cina)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pomigliano d'Arco",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063057",
+    "codice_catastale": "G812",
+    "popolazione": 39843,
+    "superficie_kmq": 11.44,
+    "densita": 3482.8,
+    "cap": "80038",
+    "prefisso_telefonico": "081",
+    "patrono": "San Felice",
+    "festa_patronale": "14 gennaio",
+    "demonimo": "pomiglianesi",
+    "etimologia": "Il nome deriva dal termine latino di persona Pomelianus, o gens Pomelia, a cui fu concessa la proprietà della cittadina. Il termine d'Arco deriva da un arco presente in zona. La natura di quest'arco è dubbia, potrebbe essere l'arco dell'acquedotto che portava l'acqua da Serino a Napoli o l'arco appartenente ad una costruzione, o un tempio dedicato a Diana.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Associazione Italiana Città del Vulcano",
+      "Associazione Città del Bio",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acerra",
+      "Casalnuovo di Napoli",
+      "Castello di Cisterna",
+      "Sant'Anastasia",
+      "Somma Vesuviana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Pietro",
+      "Chiesa di Santa Maria del Carmine",
+      "Chiesa di San Felice in Pincis",
+      "Chiesa della Madonna delle Grazie",
+      "Cappella Imbriani Poerio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dell'Orologio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pollena Trocchia",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063056",
+    "codice_catastale": "G795",
+    "popolazione": 13468,
+    "superficie_kmq": 8.11,
+    "densita": 1660.7,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "pollenesi o trocchiesi",
+    "etimologia": "In passato Pollena e Trocchia erano due villaggi separati ed autonomi. L'origine del termine Pollena è incerta, forse è legata al termine latino pullula, ossia piccola (ma questa ipotesi non è accettata formalmente). Trocchia, invece, deriva dal latino torculum (torchio), da cui è derivato Trocla e poi Trocchia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casalnuovo di Napoli",
+      "Cercola",
+      "Ercolano",
+      "Massa di Somma",
+      "Sant'Anastasia",
+      "Volla"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Caracciolo-Ruoppolo",
+      "Palazzo Pistolese, già palazzo Capace Minutolo",
+      "Palazzo Cappabianca"
+    ],
+    "chiese": [
+      "Chiesa di San Giacomo Apostolo",
+      "Chiesa di San Gennariello",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino di villa Santangelo"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poggiomarino",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063055",
+    "codice_catastale": "G762",
+    "popolazione": 22009,
+    "superficie_kmq": 13.28,
+    "densita": 1657.3,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Antonio da Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "poggiomarinesi",
+    "etimologia": "In passato il luogo era chiamato \"Taverna Penta\" in virtù del fatto che esisteva in zona una taverna \"penta\" (dipinta) . Nella prima metà del 700 fu chiamato Podio Marino dal cognome Marino o De Marinis, cioè il cognome del proprietario del luogo. Il termine Podio deriva dal latino podium e si è poi trasformato in Poggio, che identifica un luogo leggermente più alto della pianura, ma più basso della collina.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Striano; a nord: Palma Campania",
+      "San Giuseppe Vesuviano; a ovest: Boscoreale",
+      "Terzigno; a sud: San Valentino Torio (SA)",
+      "Scafati (SA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria del Carmelo",
+      "Chiesa di Sant'Antonio da Padova",
+      "Chiesa di San Francesco",
+      "Chiesa del SS. Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Sito archeologico perifluviale protostorico (in località Longola)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pimonte",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063054",
+    "codice_catastale": "G670",
+    "popolazione": 6000,
+    "superficie_kmq": 12.47,
+    "densita": 481.2,
+    "cap": "80050",
+    "prefisso_telefonico": "081",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "pimontesi",
+    "etimologia": "Così chiamato per la sua posizione \"ai piedi del monte\" da cui deriva pi(e'di)monte.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina"
+    ],
+    "localita_frazioni": [
+      "frazioni: Franche",
+      "Piazza",
+      "Tralia;località: Resicco"
+    ],
+    "comuni_confinanti": [
+      "Agerola",
+      "Castellammare di Stabia",
+      "Gragnano",
+      "Positano (SA)",
+      "Scala (SA)",
+      "Vico Equense"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello di Pimonte"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piano di Sorrento",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063053",
+    "codice_catastale": "G568",
+    "popolazione": 13026,
+    "superficie_kmq": 7.33,
+    "densita": 1777.1,
+    "cap": "80063",
+    "prefisso_telefonico": "081",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "carottesi",
+    "etimologia": "Il comune era conosciuto in passato con il nome di Planities per il suo aspetto pianeggiante. Infatti proprio al suo aspetto si riferisce il termine \"Piano\" che deriva dal latino planum (pianura). La specifica \"di Sorrento\" si riferisce alla sua posizione geografica. In dialetto il paese viene chiamato Caruotte (Carotto) dal latino carottum, ossia il cavotto per la presenza di molte cave di tufo. La tradizione popolare spiega diversamente la denominazione, credendo che il termine \"cavotto\" derivi dall'antica sudivvisione del comune in due zone, causata da un terremoto nel XVI secolo, Carotto e Cassano, rispettivamente da cà rotto (parte danneggiata) e cà sano (parte intatta). Da questa denominazione dialettale deriva anche il nome degli abitanti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Costiera Sorrentina",
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina"
+    ],
+    "localita_frazioni": [
+      "Colli San Pietro",
+      "Legittimo",
+      "Marina di Cassano",
+      "Mortora",
+      "Pozzopiano",
+      "San Liborio",
+      "Trinità"
+    ],
+    "comuni_confinanti": [
+      "Meta",
+      "Sant'Agnello",
+      "Vico Equense"
+    ],
+    "musei": [
+      "Museo Archeologico \"G. Vallet\""
+    ],
+    "ville_palazzi": [
+      "Villa De Sangro di Fondi",
+      "Villa Ciampa",
+      "Palazzo Villa Romano",
+      "Villa Sopramare, costruito nel '700 dalla nobile famiglia Maresca di Serracapriola",
+      "Villa Irbicella (detta Il Beneficio)",
+      "Villa Massa, in stile neoclassico"
+    ],
+    "chiese": [
+      "Chiesa di San Giuseppe e Santa Teresa",
+      "Chiesa della SS. Annunziata e Congrega",
+      "Chiesa della Misericordia",
+      "Chiesa della Madonna di Rosella",
+      "Chiesa dell’Assunta (frazione Mortora)",
+      "Basilica Pontificia di San Michele Arcangelo",
+      "Basilica della SS. Trinità"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palma Campania",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063052",
+    "codice_catastale": "G283",
+    "popolazione": 16045,
+    "superficie_kmq": 20.78,
+    "densita": 772.1,
+    "cap": "80036",
+    "prefisso_telefonico": "081",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "palmesi",
+    "etimologia": "Il nome deriva con molta probabilità dal nome di una pianta, la palma appunto. Secondo altri invece potrebbe derivare da un antico feudo di proprietà della famiglia normanna Palma. Il luogo è identificato anche come \"Palma di Nola\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carbonara di Nola",
+      "Domicella (AV)",
+      "Lauro (AV)",
+      "Liveri",
+      "Nola",
+      "Poggiomarino",
+      "San Gennaro Vesuviano",
+      "San Giuseppe Vesuviano",
+      "Sarno (SA)",
+      "Striano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino (in contrada Vico)",
+      "Chiesa di San Giovanni Battista (in frazione di Castello di Palma)",
+      "Chiesa di Mater Dei",
+      "Chiesa del S.S. Rosario",
+      "Congrega della S.S. Immacolata",
+      "Convento di Santa Croce al Casale (1576)",
+      "Chiesa di San Michele Arcangelo, in origine intitolata a Santa Maria La Nova"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Compagna (noto come Palazzo Aragonese)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ottaviano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063051",
+    "codice_catastale": "G190",
+    "popolazione": 23760,
+    "superficie_kmq": 19.5,
+    "densita": 1218.5,
+    "cap": "80044",
+    "prefisso_telefonico": "081",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "ottavianesi",
+    "etimologia": "La città in passato era chiamata Ottaiano, fino a quando il re Vittorio Emanuele III mutò il nome in Ottaviano. Entrambe le denominazioni, comunque, derivano dal nome latino Octavius o gens Octavia a cui si aggiunge il suffisso -anus che indica l'appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": [
+      "San Gennarello"
+    ],
+    "comuni_confinanti": [
+      "Boscotrecase",
+      "Ercolano",
+      "Nola",
+      "San Gennaro Vesuviano",
+      "San Giuseppe Vesuviano",
+      "Somma Vesuviana",
+      "Terzigno",
+      "Torre del Greco",
+      "Trecase"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Mediceo"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Gennaro",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Lorenzo Martire",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Francesco di Paola",
+      "Chiesa della SS. Annunziata",
+      "Chiesa del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Processione di San Michele Arcangelo (8 maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nola",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063050",
+    "codice_catastale": "F924",
+    "popolazione": 34432,
+    "superficie_kmq": 39.0,
+    "densita": 882.9,
+    "cap": "80035",
+    "prefisso_telefonico": "081",
+    "patrono": "San Felice",
+    "festa_patronale": null,
+    "demonimo": "nolani",
+    "etimologia": "La denominazione si è mantenuta dal latino Nola ed è associata ad un termine osco Nuvla, che significa \"città nuova\". Anticamente la città si chiamò Uri o Hyria che poi fu distrutta e dalle sue rovine nacque Nola.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Regi Lagni",
+      "Area Geografica: Agro Nolano",
+      "Unione Comuni Valle dell'Antico Clanis",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Associazione Nazionale delle Città della Nocciola",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Piazzolla",
+      "Polvica"
+    ],
+    "comuni_confinanti": [
+      "A est: Camposano",
+      "Casamarciano",
+      "Cicciano",
+      "Cimitile",
+      "Liveri",
+      "Palma Campania",
+      "San Paolo Bel Sito",
+      "Visciano; a nord: Roccarainola",
+      "San Felice a Cancello (CE); a ovest: Acerra",
+      "Marigliano",
+      "San Vitaliano",
+      "Saviano",
+      "Scisciano; a sud: Ottaviano",
+      "San Gennaro Vesuviano",
+      "Somma Vesuviana"
+    ],
+    "musei": [
+      "Museo Storico Archeologico dell'Antica Nola",
+      "Museo Etnomusicale I Gigli di Nola",
+      "Museo Diocesano",
+      "Antiquarium del Seminario Vescovile"
+    ],
+    "ville_palazzi": [
+      "Palazzo Orsini (dal 1994 sede del Tribunale di Nola)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Chiara",
+      "Cattedrale di Nola, in stile rinascimentale",
+      "Chiesa di Santa Maria Jacobi (XII secolo)",
+      "Chiesa di San Francesco, oggi di San Biagio",
+      "Convento di Sant'Angelo in Palco"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Cicala (XI secolo)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dei Gigli (quarta domenica di giugno)"
+    ],
+    "gemellaggi": [
+      "Sutera (Caltanissetta - Sicilia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mugnano di Napoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063048",
+    "codice_catastale": "F799",
+    "popolazione": 34920,
+    "superficie_kmq": 5.27,
+    "densita": 6626.2,
+    "cap": "80018",
+    "prefisso_telefonico": "081",
+    "patrono": "San Biagio di Sebaste",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "mugnanesi",
+    "etimologia": "Lo stemma civico raffigura un mugnaio che bastona un asino bendato che tira una mola, quindi si è portati spontaneamente a pensare che da questa rappresentazione derivi la denominazione del paese, invece il nome deriva dal nome di persona latino Munnius o Munius a cui si aggiunge il suffisso -anus che indica l'appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calvizzano",
+      "Giugliano in Campania",
+      "Marano di Napoli",
+      "Melito di Napoli",
+      "Napoli",
+      "Villaricca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di San Biagio",
+      "Chiesetta di San Giovanni a Carpignano",
+      "Chiesa del Sacro Cuore, in piazza Suor Maria Pia Brando",
+      "Chiesa dei SS. Alfonso e Luigi, in via Napoli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Mausoleo Torricelli (mausoleo romano del I secolo d.C.)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte di Procida",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063047",
+    "codice_catastale": "F488",
+    "popolazione": 12826,
+    "superficie_kmq": 3.65,
+    "densita": 3514.0,
+    "cap": "80070",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Maria Assunta in Cielo",
+    "festa_patronale": "15 agosto",
+    "demonimo": "montesi",
+    "etimologia": "Il termine deriva, secondo una stravagante ipotesi, dal termine pro-Cyma, che significa \"prima Cuma\", la parola Cuma (dall'ebraico) significa cima, quindi il termine pro-Cyma sarebbe \"prima cima\". Infatti il luogo nei documenti è identificato prima con il nome Mons Cumanus e poi Mons Terrae Firmae. Poi dopo l'attacco distruttivo dei saraceni a Cuma, divenne Monte di Procida.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Campi Flegrei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bacoli"
+    ],
+    "musei": [
+      "Museo Iconografico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di S. M. dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Itaca (Isole Ionie",
+      "Grecia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Meta",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063046",
+    "codice_catastale": "F162",
+    "popolazione": 7945,
+    "superficie_kmq": 2.19,
+    "densita": 3627.9,
+    "cap": "80062",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Maria del Lauro",
+    "festa_patronale": "12 settembre",
+    "demonimo": "metesi",
+    "etimologia": "L'origine è dubbia. Potrebbe derivare dal latino meta, che significa mucchio, cumulo ed assumere quindi il significato di altura. Il termine latino meta inoltre, può assumere anche il significato di limite, quindi confine (della pianura sorrentina, in questo caso). Il nome potrebbe però anche derivare dal termine \"meta\", con il significato di \"punto di arrivo\". Alcuni ipotizzano inoltre che il termine possa derivare da un vocabolo longobardo che identifica i beni portati alla sposa, la cosiddetta dote.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Costiera Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Piano di Sorrento",
+      "Vico Equense"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria del Lauro",
+      "Chiesetta dei SS. Angeli Custodi",
+      "Chiesa di Santa Maria della Misericordia",
+      "Chiesa di Santa Maria Assunta al Trivio",
+      "Chiesa della Madonna delle Grazie a Rivo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Melito di Napoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063045",
+    "codice_catastale": "F111",
+    "popolazione": 37836,
+    "superficie_kmq": 3.72,
+    "densita": 10171.0,
+    "cap": "80017",
+    "prefisso_telefonico": "081",
+    "patrono": "Santo Stefano Protomartire",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "melitesi",
+    "etimologia": "Il nome trae la sua origine dal nome latino di pianta Malus, ossia il melo più il suffisso -etum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casandrino",
+      "Giugliano in Campania",
+      "Mugnano di Napoli",
+      "Napoli",
+      "Sant'Antimo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Massa Lubrense",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063044",
+    "codice_catastale": "F030",
+    "popolazione": 14236,
+    "superficie_kmq": 19.71,
+    "densita": 722.3,
+    "cap": "80061",
+    "prefisso_telefonico": "081",
+    "patrono": "San Cataldo",
+    "festa_patronale": "10 maggio",
+    "demonimo": "massesi",
+    "etimologia": "La prima parte del nome deriva probabilmente dal termine latino massa (ammasso), che indica anche possedimento terriero. La specifica Lubrense forse deriva da Lobra che si riferisce al santuario di \"Santa Maria della Lobra\". A sua volta il termine Lobra deriva dal latino Delebrum, ossia tempio.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Costiera Sorrentina",
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Acquara",
+      "Annunziata",
+      "Casa",
+      "Marciano",
+      "Marina della Lobra",
+      "Marina del Cantone",
+      "Marina di Puolo",
+      "Monticchio",
+      "Nerano",
+      "Pastena",
+      "San Francesco",
+      "Sant'Agata sui due Golfi",
+      "Santa Maria",
+      "Schiazzano",
+      "Termini",
+      "Torca"
+    ],
+    "comuni_confinanti": [
+      "Sorrento"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale di Santa Maria delle Grazie",
+      "Santuario Santa Maria della Lobra :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Limone (primo weekend di luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Massa di Somma",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063092",
+    "codice_catastale": "M289",
+    "popolazione": 5352,
+    "superficie_kmq": 3.47,
+    "densita": 1542.4,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "massesi",
+    "etimologia": "Con molta probabilità il nome deriva dal latino massa (ammasso), che nel medioevo veniva usato per indicare i grandi possedimenti terrieri coltivati. La specifica di Somma viene attribuita dalla vicinanza a \"Somma Vesuviana\" o perché il paese è posto ai piedi del monte Somma.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cercola",
+      "Ercolano",
+      "Pollena Trocchia",
+      "San Sebastiano al Vesuvio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marigliano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063043",
+    "codice_catastale": "E955",
+    "popolazione": 30046,
+    "superficie_kmq": 22.6,
+    "densita": 1329.5,
+    "cap": "80034",
+    "prefisso_telefonico": "081",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "mariglianesi",
+    "etimologia": "Il nome trae la sua origine dal nome latino di persona Marius o Marlius, più il suffisso -anus che indica appartenenza, ossia proprietà. Fu per lungo tempo chiamata Marelianum o Marellanum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Regi Lagni",
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Miuli",
+      "Pontecitra",
+      "Casaferro",
+      "San Nicola",
+      "Faibano",
+      "Lausdomini"
+    ],
+    "comuni_confinanti": [
+      "Acerra",
+      "Brusciano",
+      "Mariglianella",
+      "Nola",
+      "San Vitaliano",
+      "Scisciano",
+      "Somma Vesuviana"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Nicotera",
+      "Palazzo Doria (palazzo nobiliare del XVIII secolo)"
+    ],
+    "chiese": [
+      "Chiesa di San Vito",
+      "Collegiata di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Ducale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mariglianella",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063042",
+    "codice_catastale": "E954",
+    "popolazione": 7836,
+    "superficie_kmq": 3.22,
+    "densita": 2433.5,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giovanni Evangelista",
+    "festa_patronale": "27 dicembre",
+    "demonimo": "mariglianellesi",
+    "etimologia": "L'origine del nome è strettamente collegata a Marigliano, ossia ne è il diminutivo femminile. Molto probabilmente sorse sul territorio di Marigliano e divenne suo casale prima di distaccarsene.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord",
+      "ovest e est: Marigliano; a sud e est: Brusciano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Evangelista",
+      "Chiesa di Maria Santissima della Sanità (1583)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marano di Napoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063041",
+    "codice_catastale": "E906",
+    "popolazione": 59871,
+    "superficie_kmq": 15.45,
+    "densita": 3875.1,
+    "cap": "80016",
+    "prefisso_telefonico": "081",
+    "patrono": "San Castrese",
+    "festa_patronale": "11 febbraio",
+    "demonimo": "maranesi",
+    "etimologia": "E' probabilmente legato al nome latino di persona Marius più il suffisso -anus che indica appartenenza, ossia proprietà.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": [
+      "Castello Monteleone",
+      "San Marco",
+      "San Rocco",
+      "Torre Caracciolo",
+      "Torre Piscicelli"
+    ],
+    "comuni_confinanti": [
+      "Calvizzano",
+      "Mugnano di Napoli",
+      "Napoli",
+      "Quarto",
+      "Villaricca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dell'Annunziata",
+      "Chiesa parrocchiale Sant'Alfonso Maria de' Liguori",
+      "Chiesa di San Castrese",
+      "Chiesa parrocchiale SS. Immacolata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Monteleone (periodo Svevo-Angioino)",
+      "Castello Scilla"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Mausoleo del Ciaurro (mausoleo romano del II secolo d.C.)",
+      "situato nella Villa Comunale \"del Ciaurro\""
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Liveri",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063040",
+    "codice_catastale": "E620",
+    "popolazione": 1615,
+    "superficie_kmq": 2.63,
+    "densita": 614.1,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "liveresi",
+    "etimologia": "Non essendo certi dell'origine del nome, si crede che possa derivare da un nome latino Liber; o che possa essere collegato al termine Liberi, che è riferito alla condizione degli abitanti nei tempi antichi (non schiavi).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carbonara di Nola",
+      "Domicella (AV)",
+      "Marzano di Nola (AV)",
+      "Nola",
+      "Palma Campania",
+      "San Paolo Bel Sito",
+      "Visciano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria a Parete Regina delle Vittorie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lettere",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063039",
+    "codice_catastale": "E557",
+    "popolazione": 6250,
+    "superficie_kmq": 12.03,
+    "densita": 519.5,
+    "cap": "80050",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "letteresi",
+    "etimologia": "Il nome deriva dal latino littera, in riferimento a qualche monumento e/o epigrafe presente in zona. Secondo alcuni il nome potrebbe derivare anche dai monti Lattari, che sono così chiamati per il latte prodotto dalle mucche che vi pascolano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina"
+    ],
+    "localita_frazioni": [
+      "Orsano",
+      "San Lorenzo",
+      "Fuscoli",
+      "Depugliano",
+      "San Nicola; Saletta",
+      "Pagliano"
+    ],
+    "comuni_confinanti": [
+      "Angri (SA)",
+      "Casola di Napoli",
+      "Corbara (SA)",
+      "Gragnano",
+      "Ravello (SA)",
+      "Sant'Antonio Abate",
+      "Tramonti (SA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Anna"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Lettere (X secolo)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lacco Ameno",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063038",
+    "codice_catastale": "E396",
+    "popolazione": 4842,
+    "superficie_kmq": 2.07,
+    "densita": 2339.1,
+    "cap": "80076",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Restituta",
+    "festa_patronale": "17 maggio",
+    "demonimo": "lacchesi",
+    "etimologia": "Secondo alcuni il termine deriva dal greco laccos, ossia cavità in riferimento alla sua posizione geografica \"bassa\", secondo altri deriva invece da lakkos, ossia pietra, per la scogliera che si innalza dal mare. Nel 1864 fu aggiunto l'attributo ameno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Ischia",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casamicciola Terme",
+      "Forio"
+    ],
+    "musei": [
+      "Museo e Scavi Archeologici di Santa Restituta",
+      "Museo Archeologico di Pithecusae"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Complesso di Santa Restituta",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Rocco",
+      "Chiesa di Maria S.S. Assunta in Cielo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco Idrotermale Negombo (Baia di San Montano)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Santa Restituta (16-18 maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ischia",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063037",
+    "codice_catastale": "E329",
+    "popolazione": 20010,
+    "superficie_kmq": 8.05,
+    "densita": 2485.7,
+    "cap": "80077",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giovan Giuseppe della Croce",
+    "festa_patronale": null,
+    "demonimo": "ischitani",
+    "etimologia": "Diversi sono i nomi legati all'isola: i Greci la chiamarono Pithecussae, che può significare sia terra delle scimmie (secondo il mito degli abitanti trasformati in scimmie da Eracle) che manufatti in creta (Pythos) che si realizzavano sull'isola. I latini la chiamavano Aenaria, che potrebbe essere identificato sia con \"scimmie\" che con Enea (che qui sbarcò con la sua flotta). L'ipotesi più probabile è quella che ci indica che il termine deriva dal latino insula, che poi diventa Iscla... fino a divenire Ischia.",
+    "il_comune_e": [
+      "Città Termale (Associazione Termalisti Isola d'Ischia)",
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Ischia",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida",
+      "Associazione Nazionale Comuni Termali (ANCOT)"
+    ],
+    "localita_frazioni": [
+      "nuclei principali: Ischia Porto",
+      "Ischia Ponte;\ncontrade: San Domenico",
+      "San Michele",
+      "Sant'Antuono",
+      "Campagnano"
+    ],
+    "comuni_confinanti": [
+      "Barano d'Ischia",
+      "Casamicciola Terme"
+    ],
+    "musei": [
+      "Museo delle Armi, Armature e Strumenti di Tortura",
+      "Museo del Mare"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria di Portosalvo (a Ischia Porto)",
+      "Chiesa di San Pietro a Pantaniello (a Ischia Porto)",
+      "Chiesa dell'Assunta",
+      "Chiesa dello Spirito Santo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Aragonese (a Ischia Ponte)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Sant'Anna (26 luglio)",
+      "con carri allegorici acquatici"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grumo Nevano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063036",
+    "codice_catastale": "E224",
+    "popolazione": 18015,
+    "superficie_kmq": 2.92,
+    "densita": 6169.5,
+    "cap": "80028",
+    "prefisso_telefonico": "081",
+    "patrono": "San Tammaro",
+    "festa_patronale": "16 gennaio",
+    "demonimo": "grumesi",
+    "etimologia": "Secondo una tradizione il nome deriva dalla parola \"casagrumi\", ossia un luogo dove venivano depositati o fatti crescere gli agrumi. Con il tempo scomparve il termine \"casa\" e fu aggiunto il termine \"Nevano\" che deriva o dal termine latino novus, ossia nuovo, o dal nome della famiglia romana Gens Naevia. Più probabilmente il nome deriva dalla parola latina grumus che significa collinetta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzano",
+      "Casandrino",
+      "Frattamaggiore",
+      "Sant'Antimo",
+      "Sant'Arpino (CE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Vito Martire",
+      "Chiesa di San Tammaro (XVIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gragnano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063035",
+    "codice_catastale": "E131",
+    "popolazione": 29008,
+    "superficie_kmq": 14.56,
+    "densita": 1992.3,
+    "cap": "80054",
+    "prefisso_telefonico": "081",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "gragnanesi",
+    "etimologia": "Il termine deriva dal nome latino di persona Granius, più il suffisso -anus che indica appartenenza. Oppure potrebbe derivare dal nome della famiglia romana di Gens Grania, che possedeva parte del territorio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Agerola",
+      "Casola di Napoli",
+      "Castellammare di Stabia",
+      "Lettere",
+      "Pimonte",
+      "Ravello (SA)",
+      "Santa Maria la Carità",
+      "Sant'Antonio Abate",
+      "Scala (SA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista (nel rione Rosario), in precedenza intitolata a San Sebastiano",
+      "Chiesa del Carmine (XVI secolo)",
+      "Chiesa Collegiata del Corpus Domini",
+      "Chiesa di Sant'Agostino",
+      "Chiesa di Santa Maria ad Nives",
+      "Chiesa di Santa Maria dell'Assunta",
+      "Convento di San Nicola dei Miri (XIV secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giugliano in Campania",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063034",
+    "codice_catastale": "E054",
+    "popolazione": 123839,
+    "superficie_kmq": 94.19,
+    "densita": 1314.8,
+    "cap": "80014",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giuliano di Le Mans",
+    "festa_patronale": "27 gennaio",
+    "demonimo": "giuglianesi",
+    "etimologia": "Secondo alcuni il termine deriva dal nome latino di persona Julius, più il suffisso -anus che indica appartenenza, o forse Julius è la persona che la fondò. Secondo altri, invece, il nome deriva dal latino Lilianum (dal latino lilum, ossia Giglio). Da qui poi con il tempo è diventato Gigliano e poi Giugliano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": [
+      "frazioni: Licola",
+      "Lago Patria",
+      "Varcaturo;\ncircoscrizioni: Giugliano Centro",
+      "Casacelle",
+      "Lago Patria",
+      "Licola-Varcaturo"
+    ],
+    "comuni_confinanti": [
+      "Aversa (CE)",
+      "Casapesenna (CE)",
+      "Castel Volturno (CE)",
+      "Lusciano (CE)",
+      "Melito di Napoli",
+      "Mugnano di Napoli",
+      "Parete (CE)",
+      "Pozzuoli",
+      "Qualiano",
+      "Quarto",
+      "San Cipriano d'Aversa (CE)",
+      "Sant'Antimo",
+      "Trentola-Ducenta (CE)",
+      "Villa Literno (CE)",
+      "Villaricca"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Colonna di Stigliano (XVIII secolo)",
+      "oggi noto come palazzo Palumbo"
+    ],
+    "chiese": [
+      "Chiesa di Santa Sofia",
+      "Chiesa di Santa Maria della Purità, detta anche Chiesa del Purgatorio",
+      "Chiesa di San Giovanni Evangelista",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Area archeologica di Liternum (nelle vicinanze del Lago di Patria)"
+    ],
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Alberto De Cristofaro"
+    ],
+    "eventi_feste_sagre": [
+      "Madonna della Pace (dal sabato precedente la Pentecoste alla SS. Trinità)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frattaminore",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063033",
+    "codice_catastale": "D790",
+    "popolazione": 16230,
+    "superficie_kmq": 1.99,
+    "densita": 8155.8,
+    "cap": "80020",
+    "prefisso_telefonico": "081",
+    "patrono": "San Simeone",
+    "festa_patronale": "8 ottobre",
+    "demonimo": "frattaminoresi",
+    "etimologia": "L'origine e la storia del nome Frattaminore sono identiche a Frattamaggiore. Nei documenti Frattaminore è indicata come Fratta Piccola, probabilmente in contrapposizione e/o in riferimento a Frattamaggiore.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Crispano; a nord: Orta di Atella (CE); a ovest: Sant'Arpino (CE); a sud: Frattamaggiore"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale (in precedenza castello ducale)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Simeone Profeta",
+      "Chiesa di San Maurizio (XVI secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frattamaggiore",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063032",
+    "codice_catastale": "D789",
+    "popolazione": 30076,
+    "superficie_kmq": 5.32,
+    "densita": 5653.4,
+    "cap": "80027",
+    "prefisso_telefonico": "081",
+    "patrono": "San Sossio di Miseno",
+    "festa_patronale": "23 settembre",
+    "demonimo": "frattesi",
+    "etimologia": "Il termine deriva dal latino fracta, ossia bosco (luogo boscoso), il termine latino fracta però deriva dal verbo frangere, ossia abbattere, quindi fratta può essere inteso anche come luogo disboscato. In un senso o nell'altro, il termine indica la presenza di un bosco e da questo deriva la parola fratta, l'aggiunta \"maggiore\" è successiva e testimoniata in un documento del 1282.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzano",
+      "Cardito",
+      "Casoria",
+      "Crispano",
+      "Frattaminore",
+      "Grumo Nevano",
+      "Sant'Arpino (CE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di SS. Annunziata e Sant'Antonio (XVII secolo)",
+      "Chiesa di Sant'Ingenuino (XVII secolo)",
+      "Chiesa di Santa Maria delle Grazie e Purgatorio (XV secolo)",
+      "Chiesa di San Giovanni Battista (XV secolo)",
+      "Basilica Pontificia di San Sossio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dell'Orologio (costruita nel 1763)",
+      "in Piazza Umberto I"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Forio",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063031",
+    "codice_catastale": "D702",
+    "popolazione": 17749,
+    "superficie_kmq": 12.85,
+    "densita": 1381.2,
+    "cap": "80075",
+    "prefisso_telefonico": "081",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "foriani",
+    "etimologia": "Secondo alcuni il nome ha origine dal latino Ferax (fertile), per la fertilità della terra. Secondo altri il nome Forio deriverebbe invece dal fatto che il piccolo centro sia sempre riuscito a risollevarsi, quindi rifiorire da diverse calamità. Da qui il nome \"fiorio\", poi divenuto Forio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Ischia",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Panza",
+      "Monterone",
+      "Scentone"
+    ],
+    "comuni_confinanti": [
+      "A est: Casamicciola Terme; a est e sud: Serrara Fontana; a nord e est: Lacco Ameno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Gaetano, fondata nel 1665, presenta numerosi ex-voto raffiguranti scene di vita marinara",
+      "Chiesa di Sant'Antonio Abate",
+      "Chiesa di Santa Maria di Montevergine o Santuario di San Francesco di Paola",
+      "Chiesa di Santa Maria di Loreto",
+      "Chiesa di Santa Maria del Soccorso, sorta come chiesa votiva dei marinai",
+      "Chiesa di San Vito",
+      "Chiesa di San Michele (detta del Purgatorio), fondata nel 1742 da Aniello D'Ascia",
+      "Chiesa di San Francesco (edificata nel 1646)",
+      "Chiesa di San Carlo (in contrada Cierco)",
+      "Chiesa di San Michele, costruita nel 1748 da Erasmo Castaldi, detto Zotta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardini La Mortella"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corsa dell'Angelo (Pasqua)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ercolano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063064",
+    "codice_catastale": "H243",
+    "popolazione": 53231,
+    "superficie_kmq": 19.64,
+    "densita": 2710.3,
+    "cap": "80056",
+    "prefisso_telefonico": "081",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "ercolanesi",
+    "etimologia": "Fu fondata, secondo la leggenda, da Ercole nel 1243 a.C. e perciò chiamata Herculaneum. Secondo la tradizione, la città dal medioevo fino al 1969 fu chiamata Resina che significa terra impaludata. Una leggenda racconta che Resina significa residuo di Ercolano, cioè un paese retto a repubblica, ossia terra senza re (da latino Re sine o sine rege).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Massa di Somma",
+      "Ottaviano",
+      "Pollena Trocchia",
+      "Portici",
+      "San Giorgio a Cremano",
+      "San Sebastiano al Vesuvio",
+      "Sant'Anastasia",
+      "Somma Vesuviana",
+      "Torre del Greco"
+    ],
+    "musei": [
+      "Museo Vulcanologico dell'Osservatorio Vesuviano"
+    ],
+    "ville_palazzi": [
+      "Villa Favorita",
+      "Villa Durante",
+      "Villa Campolieto",
+      "Palazzo Tarascone",
+      "Palazzo Correale",
+      "Palazzo Comunale",
+      "Palazzo Capracotta",
+      "Villa Ruggiero",
+      "Villa Signorini"
+    ],
+    "chiese": [
+      "Chiesa di Santa Caterina",
+      "Santuario della Madonna del Rosario",
+      "Chiesa di Santa Maria a Pugliano, esistente già dall'undicesimo secolo e basilica pontificia dal 1574",
+      "Chiesa della Reale Arciconfraternita della SS. Trinità (XVII secolo)",
+      "Cappella di Santa Maria del Pilar (1748)",
+      "Chiesa di Santa Maria della Consolazione, nota come chiesa di Sant'Agostino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Scavi archeologici di Ercolano",
+      "Parco di Villa Favorita, edificato da Ferdinando Fuga"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crispano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063030",
+    "codice_catastale": "D170",
+    "popolazione": 12326,
+    "superficie_kmq": 2.25,
+    "densita": 5478.2,
+    "cap": "80020",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gregorio Magno",
+    "festa_patronale": "12 marzo",
+    "demonimo": "crispanesi",
+    "etimologia": "Il termine deriva dal nome latino di persona Cripius più il suffisso -anus che indica appartenenza. Probabile è il legame del nome con la famiglia Crispino che per lungo tempo visse in zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caivano",
+      "Cardito",
+      "Frattamaggiore",
+      "Frattaminore",
+      "Orta di Atella (CE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Gregorio Magno"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Comiziano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063029",
+    "codice_catastale": "C929",
+    "popolazione": 1821,
+    "superficie_kmq": 2.44,
+    "densita": 746.3,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Severino",
+    "festa_patronale": "8 gennaio",
+    "demonimo": "comizianesi",
+    "etimologia": "Il nome potrebbe derivare da Cumignano. Secondo questa ipotesi, qualche scrittore mutò il nome da Cumignano a Comiziano, volendo nobilitare la città, oppure per errore. Il termine Cumignano deriva a sua volta da \"cominia\" (una specie di oliva) oppure dalla famiglia Cominia, proprietaria di queste terre.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Gallo"
+    ],
+    "comuni_confinanti": [
+      "Camposano",
+      "Casamarciano",
+      "Cicciano",
+      "Cimitile",
+      "Tufino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa patronale di San Severino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cimitile",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063028",
+    "codice_catastale": "C697",
+    "popolazione": 7193,
+    "superficie_kmq": 2.7,
+    "densita": 2664.1,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Felice",
+    "festa_patronale": "14 gennaio",
+    "demonimo": "cimitilesi",
+    "etimologia": "Il termine deriva da Coemeterium. La storia di questo paese ci racconta che nei tempi antichi questo luogo fu un Coemeterium (cimitero) dove i nolani seppellirono il loro primo vescovo ed altri martiri. Questo luogo divenne presto sede di pellegrinaggi e quindi tutt'intorno si realizzarono delle case per ospitare i pellegrini. Con il tempo poi si sviluppò il paese che prese il nome appunto da Coemeterium e fu chiamato anche Cimitero Nolano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Agro Nolano",
+      "Unione Comuni Valle dell'Antico Clanis",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Associazione Nazionale delle Città della Nocciola",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Camposano",
+      "Casamarciano",
+      "Comiziano",
+      "Nola"
+    ],
+    "musei": [
+      "Antiquarium"
+    ],
+    "ville_palazzi": [
+      "Villa Lenzi",
+      "Palazzo Filo della Torre",
+      "Palazzo de Lerma",
+      "Palazzo Albertini"
+    ],
+    "chiese": [
+      "Parrocchiale della Sacra Famiglia",
+      "Chiesa Parrocchiale di San Felice in Pincis",
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa della SS. Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cicciano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063027",
+    "codice_catastale": "C675",
+    "popolazione": 12898,
+    "superficie_kmq": 7.07,
+    "densita": 1824.3,
+    "cap": "80033",
+    "prefisso_telefonico": "081",
+    "patrono": "San Barbato",
+    "festa_patronale": "19 febbraio",
+    "demonimo": "ciccianesi",
+    "etimologia": "Secondo alcuni la denominazione è legata al nome del proprietario, Cipius oppure Caepius, Ceppius o Caecius più il suffisso -anus che indica proprietà. Secondo altri il nome deriva dal termine Circianum (cerchio), in riferimento al luogo dove si facevano i cerchi per le botti. Secondo la tradizione del paese il nome deriva dal termine dialettale \"zizza\" (seno), da cui \"zizzano\". Questa ipotesi è legata anche allo stemma del paese su cui è disegnato, per la negligenza di un amanuense (copista) che lo ricopiò su alcuni documenti ufficiali, una mano che accarezza un seno di donna. La tradizione ci racconta che questo disegnatore travisò il senso dell'antico stemma che invece rappresentava un pomo stretto in una mano, ad indicare la fertilità della terra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Valle dell'Antico Clanis",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Associazione Nazionale delle Città della Nocciola",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Cutignano"
+    ],
+    "comuni_confinanti": [
+      "A est: Comiziano; a nord e nord-est: Roccarainola; a ovest: Nola; a sud: Camposano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna degli Angeli (sorge quasi ai piedi del Monte Fellino)",
+      "Chiesa dell'Immacolata Concezione (XVIII secolo)",
+      "Chiesa di San Pietro Apostolo (XVII secolo)",
+      "Chiesa di San Giacomo Apostolo (in località Cutignano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cercola",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063026",
+    "codice_catastale": "C495",
+    "popolazione": 18211,
+    "superficie_kmq": 3.74,
+    "densita": 4869.3,
+    "cap": "80040",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gennaro",
+    "festa_patronale": "19 settembre",
+    "demonimo": "cercolesi",
+    "etimologia": "Con molta probabilità il nome deriva dal latino quercea, ossia quercia, poi diventata \"cercula\" in dialetto. Evidente è il riferimento alla presenza di una quercia secolare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Massa di Somma",
+      "Napoli",
+      "Pollena Trocchia",
+      "San Sebastiano al Vesuvio",
+      "Volla"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Rota",
+      "Villa Miletto",
+      "Villa Buonanno (Villa dei Conti Piatti)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Immacolata e Sant'Antonio da Padova",
+      "Chiesa di Santa Maria del Carmine (XVII secolo)",
+      "Chiesa dell'Immacolata, con facciata in stile neoclassico, fatta erigere nel 1875 dal primo sindaco di Cercola, Domenico Riccardi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castello di Cisterna",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063025",
+    "codice_catastale": "C188",
+    "popolazione": 7926,
+    "superficie_kmq": 3.97,
+    "densita": 1996.5,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "cisternesi",
+    "etimologia": "In passato il luogo era chiamato Cisterna, per la presenza di una cisterna che raccoglieva l'acqua piovana usata per dissetare i cavalli, tutt'oggi in dialetto è così chiamato. Il termine castello deriva da Castrum, ossia Castello, fortezza, in riferimento al castello dove forse riposavano le truppe.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Brusciano; a nord: Acerra; a ovest: Pomigliano d'Arco; a sud: Somma Vesuviana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola di Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castellammare di Stabia",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063024",
+    "codice_catastale": "C129",
+    "popolazione": 66164,
+    "superficie_kmq": 17.71,
+    "densita": 3736.0,
+    "cap": "80053",
+    "prefisso_telefonico": "081",
+    "patrono": "San Catello",
+    "festa_patronale": "19 gennaio",
+    "demonimo": "stabiesi",
+    "etimologia": "Il nome deriva da Castrum ad mare, o Castrum Maris, ossia Castello, fortezza al mare, in riferimento al castello sorto nel IX secolo intorno al quale si estendeva la città. La specifica \"di Stabia\" secondo la tradizione, deriva dal nome dato anticamente al luogo: Stabia o Stabiae (città fondata da Ercole).",
+    "il_comune_e": [
+      "Città Termale (Terme di Stabia)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Nazionale Comuni Termali (ANCOT)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Gragnano",
+      "Pimonte",
+      "Pompei",
+      "Santa Maria la Carità",
+      "Torre Annunziata",
+      "Vico Equense"
+    ],
+    "musei": [
+      "Antiquarium Stabiano"
+    ],
+    "ville_palazzi": [
+      "Villa Ersilia (sulla collina del Solaro)"
+    ],
+    "chiese": [
+      "Santuario Santa Maria di Pozzano:: Frati Minimi",
+      "Santuario della Madonna della Libera",
+      "Duomo, intitolato alla Madonna dell'Assunta e a San Catello",
+      "Chiesa di Santa Maria della Pace",
+      "Chiesa di Santa Maria di Porto Salvo, fondata per volontà  della Congrega dei Marinai",
+      "Chiesa di San Vincenzo",
+      "Chiesa dello Spirito Santo",
+      "Chiesa del Purgatorio",
+      "Chiesa del Gesù",
+      "Cappella di Sant'Anna",
+      "Chiesa di Santa Maria dell'Orto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Villa Comunale"
+    ],
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale R. Menti"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casoria",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063023",
+    "codice_catastale": "B990",
+    "popolazione": 77319,
+    "superficie_kmq": 12.03,
+    "densita": 6427.2,
+    "cap": "80026",
+    "prefisso_telefonico": "081",
+    "patrono": "San Mauro",
+    "festa_patronale": "15 gennaio",
+    "demonimo": "casoriani",
+    "etimologia": "Secondo alcuni il nome ha origine dalla definizione Casa Aurea, poi diventata Casaurea e quindi Casoria. Secondo altri Casoria deriverebbe invece da \"Casa Mauri\". La prima traccia del nome è in una cronaca dei Duchi di Capua scritta da un anonimo nel 948-949.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli"
+    ],
+    "localita_frazioni": [
+      "Arpino"
+    ],
+    "comuni_confinanti": [
+      "A est: Casalnuovo di Napoli; a nord: Cardito",
+      "Frattamaggiore; a nord-est e est: Afragola; a nord-ovest: Arzano; a ovest: Casavatore; a sud: Napoli; a sud-est: Volla"
+    ],
+    "musei": [
+      "International Contemporary Art Museum"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata di San Mauro (XVII secolo)",
+      "Chiesa parrocchiale di Santa Maria Francesca delle Cinque Piaghe, in Via Nazionale delle Puglie",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Benedetto",
+      "Chiesa del SS. Sacramento",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casola di Napoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063022",
+    "codice_catastale": "B980",
+    "popolazione": 3870,
+    "superficie_kmq": 2.57,
+    "densita": 1505.8,
+    "cap": "80050",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Antonio da Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "casolesi",
+    "etimologia": "Secondo la tradizione il termine deriva da Casae Solis (Tempio dedicato al Sole), ma più verosimilmente discende dal termine latino casula, ossia casetta, taverna che si trovava nella zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Lettere",
+      "Lettere; a sud e ovest: Gragnano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Santissimo Salvatore e Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casavatore",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063021",
+    "codice_catastale": "B946",
+    "popolazione": 18737,
+    "superficie_kmq": 1.62,
+    "densita": 11566.0,
+    "cap": "80020",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": null,
+    "demonimo": "casavatoresi",
+    "etimologia": "Il nome potrebbe derivare dall'unione di casa e Victore (luogo così chiamato per una vittoria, oppure riferito ad un nome di persona). In alternativa potrebbe derivare dal termine \"Casabuttore\" (casa di confine), oppure da \"Casa del battezzatore\" con riferimento al patrono del paese Giovan Battista.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzano",
+      "Casoria",
+      "Napoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista (XVIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casandrino",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063020",
+    "codice_catastale": "B925",
+    "popolazione": 14286,
+    "superficie_kmq": 3.25,
+    "densita": 4395.7,
+    "cap": "80025",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "casandrinesi",
+    "etimologia": "L'origine è dubbia. Potrebbe derivare dal nome proprio Andrino (derivato da Andrea), oppure dal termine \"casa Andrena\" (dal latino: casa sicura con mura). Secondo la tradizione popolare, invece, il nome deriva da \"Casa di Sandrino\", un contadino del posto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Grumo Nevano; a nord: Sant'Antimo; a ovest: Melito di Napoli; a sud: Arzano",
+      "Napoli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Migliaccio (XIX secolo)"
+    ],
+    "chiese": [
+      "Chiesa di Maria SS. Assunta in Cielo",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casamicciola Terme",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063019",
+    "codice_catastale": "B924",
+    "popolazione": 8301,
+    "superficie_kmq": 5.6,
+    "densita": 1482.3,
+    "cap": "80074",
+    "prefisso_telefonico": "081",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": null,
+    "demonimo": "casamicciolesi",
+    "etimologia": "Il nome potrebbe derivare dal termine \"casa\" aggiunto al nome di persona Miccio. Secondo la tradizione, invece, il nome deriva da una ragazza zoppa di nome \"Nizzola\" che grazie alle acque termali (Terme) guarì. Questa ipotesi è avvalorata dallo stemma comunale in cui è raffigurata una donna che bagna i piedi in una fonte.",
+    "il_comune_e": [
+      "Città Termale (Parco Termale di Castiglione)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Ischia",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida",
+      "Associazione Nazionale Comuni Termali (ANCOT)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Barano d'Ischia",
+      "Forio",
+      "Ischia",
+      "Lacco Ameno",
+      "Serrara Fontana"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maddalena, in Piazza Maio",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casamarciano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063018",
+    "codice_catastale": "B922",
+    "popolazione": 3270,
+    "superficie_kmq": 6.26,
+    "densita": 522.4,
+    "cap": "80032",
+    "prefisso_telefonico": "081",
+    "patrono": "San Clemente",
+    "festa_patronale": "23 novembre",
+    "demonimo": "casamarcianesi",
+    "etimologia": "Secondo alcuni la denominazione è legata ad un personaggio che abitò quelle terre (un prefetto oppure un funzionario della cancelleria) di nome Marciano. Secondo altri il nome deriva da un tempio sorto in zona e dedicato a Marte, quindi Casa Martiana, dunque con il tempo Casa Marciana. Una terza ipotesi crede che il nome abbia origine da un tale Marcianus che qui possedeva delle case.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Regione Agraria n. 1 - Colline di Roccarainola e Visciano",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Schiava",
+      "Rione Gescal",
+      "Trivio"
+    ],
+    "comuni_confinanti": [
+      "A est: Tufino; a nord: Comiziano; a ovest: Cimitile; a sud: Visciano; a sud e ovest: Nola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Mercogliano (ex monastero di Santa Maria del Plesco)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria del Plesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalnuovo di Napoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063017",
+    "codice_catastale": "B905",
+    "popolazione": 49589,
+    "superficie_kmq": 7.75,
+    "densita": 6398.6,
+    "cap": "80013",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "casalnuovesi",
+    "etimologia": "Il nome ha un'origine abbastanza intuitiva, deriva dall'accostamento della parola \"casale\" con l'aggettivo \"nuovo\". Il termine casale deriva dal latino casalis che nel medioevo assunse il significato di \"insieme di case difese da mura\". Alla fine del Quattrocento nacque questo \"Casale Nuovo\", da cui il nome.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": [
+      "Licignano",
+      "Tavernanova",
+      "Casarea"
+    ],
+    "comuni_confinanti": [
+      "Acerra",
+      "Afragola",
+      "Casoria",
+      "Pollena Trocchia",
+      "Pomigliano d'Arco",
+      "Sant'Anastasia",
+      "Volla"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Marra",
+      "Palazzo Salerno-Lancellotti di Durazzo, residenza dei Baroni dell'antico casale di Licignano",
+      "Palazzo Berlingieri"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di Santa Maria dell'Arcora",
+      "Chiesa di San Nicola di Bari (in frazione Licignano), fondata sotto il titolo dell'Annunziata",
+      "Chiesa di San Giacomo Maggiore, edificata nel cinquecento per volontà di Angiolo Como, Duca di Arcora e di \"Casale Novo\"",
+      "Chiesa del Sacro Cuore di Gesù",
+      "Cappella di Santa Maria ad Nives",
+      "Cappella di San Giovanni Evangelista, cappella gentilizia dei Fontana",
+      "Cappella di San Giuseppe, eretta nel 1760 da Luca e Carlo Manna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cardito",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063016",
+    "codice_catastale": "B759",
+    "popolazione": 22716,
+    "superficie_kmq": 3.16,
+    "densita": 7188.6,
+    "cap": "80024",
+    "prefisso_telefonico": "081",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "carditesi",
+    "etimologia": "Il nome Cardito deriva dal latino carduus (cardo e carciofo). Con il suffisso -etum (riferito alle piante), diventa carduetum, ossia \"carciofaia\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": [
+      "Carditello"
+    ],
+    "comuni_confinanti": [
+      "Afragola",
+      "Caivano",
+      "Casoria",
+      "Crispano",
+      "Frattamaggiore"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Caracciolo Carafa"
+    ],
+    "chiese": [
+      "Chiesa del Sacro Cuore Eucaristico",
+      "Chiesa dell'Addolorata, edificata nel XVIII secolo per volontà di Don Giuseppe Amodio",
+      "Chiesa di San Giuseppe e Sant'Eufemia (in frazione Carditello)",
+      "Chiesa della Madonna delle Grazie, fondata sotto il titolo di San Giovanni in Nulleto",
+      "Chiesa patronale di San Biagio",
+      "Chiesa di San Vincenzo, edificata nel 1885 per volontà del sacerdote Vincenzo Buonuomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carbonara di Nola",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063015",
+    "codice_catastale": "B740",
+    "popolazione": 2436,
+    "superficie_kmq": 3.53,
+    "densita": 690.1,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "Santi Cosma e Damiano",
+    "festa_patronale": "26 settembre",
+    "demonimo": "carbonaresi",
+    "etimologia": "L'origine del nome è collegata alla produzione del carbone. Antica attività svolta dagli abitanti del luogo attraverso la trasformazione del legname che reperivano dai boschi circostanti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Montedonico Tribucco",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Domicella (AV)",
+      "Lauro (AV)",
+      "Liveri",
+      "Palma Campania"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario dei Santi Medici Cosma e Damiano (XVI secolo)",
+      "con pianta a tre navate in stile romanico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capri",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063014",
+    "codice_catastale": "B696",
+    "popolazione": 7201,
+    "superficie_kmq": 3.97,
+    "densita": 1813.9,
+    "cap": "80073",
+    "prefisso_telefonico": "081",
+    "patrono": "San Costanzo",
+    "festa_patronale": "14 maggio",
+    "demonimo": "capresi",
+    "etimologia": "La sua origine è incerta. Secondo i latini deriva dal termine Capreae (posto delle capre), secondo i greci Kapros (cinghiale), secondo gli etruschi capra (terreno di sepoltura), infine secondo Strabone da Kapreae (isola delle pietre) per i faraglioni che circondano l'isola.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Porto Turistico)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola di Capri",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida",
+      "Associazione Nazionale per l'Incremento Turistico (ANIT)"
+    ],
+    "localita_frazioni": [
+      "Marina Grande",
+      "Marina Piccola"
+    ],
+    "comuni_confinanti": [
+      "Anacapri"
+    ],
+    "musei": [
+      "Museo Diefenbach",
+      "Museo Ignazio Cerio"
+    ],
+    "ville_palazzi": [
+      "Palazzo Cerio",
+      "Villa Malaparte"
+    ],
+    "chiese": [
+      "Chiesa Evangelica Tedesca",
+      "Chiesa di Santo Stefano",
+      "Chiesa di Sant'Anna",
+      "Chiesa di Sant'Andrea (in località Marina Piccola)",
+      "Chiesa di Santa Teresa",
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa di San Costanzo (in località Marina Grande)",
+      "Chiesa di San Michele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardini di Augusto"
+    ],
+    "luoghi_interesse": [
+      "Certosa di San Giacomo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camposano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063013",
+    "codice_catastale": "B565",
+    "popolazione": 5335,
+    "superficie_kmq": 3.34,
+    "densita": 1597.3,
+    "cap": "80030",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gavino Martire",
+    "festa_patronale": "25 ottobre",
+    "demonimo": "camposanesi",
+    "etimologia": "Sull'origine del nome esistono diverse ipotesi. Una tradizione locale vuole che derivi dalla presenza di un tempio dedicato al dio Giano da cui consegue Campus Jani (e poi con il tempo Camposano). Un' altra tradizione invece racconta che un gruppo di persone, per scampare alla peste, cercarono rifugio in un \"campo sano\", e da qui il nome Camposano. Secondo un' ipotesi più storica si crede che la denominazione derivi dal nome del proprietario, Campasius, più il suffisso -anus (indica appartenenza).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Agenzia Locale di Sviluppo dei Comuni dell'Area Nolana"
+    ],
+    "localita_frazioni": [
+      "Frazione Faibano"
+    ],
+    "comuni_confinanti": [
+      "Cicciano",
+      "Cimitile",
+      "Comiziano",
+      "Nola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Gavino Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calvizzano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063012",
+    "codice_catastale": "B452",
+    "popolazione": 12133,
+    "superficie_kmq": 3.91,
+    "densita": 3103.1,
+    "cap": "80012",
+    "prefisso_telefonico": "081",
+    "patrono": "San Giacomo Apostolo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "calvizzanesi",
+    "etimologia": "La denominazione Calvizzano ha origine antroponimica (cioè deriva da un nome proprio di persona). Anticamente si chiamava Calvicianum dal nome Calvicius (forse appartenente a gens romana) a cui si è aggiunto il suffisso -anus, che indica la proprietà.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e nord-est: Mugnano di Napoli; a nord-ovest: Qualiano; a sud: Marano di Napoli; a sud-ovest e nord: Villaricca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro",
+      "Chiesa di San Giacomo Apostolo Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caivano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063011",
+    "codice_catastale": "B371",
+    "popolazione": 37790,
+    "superficie_kmq": 27.11,
+    "densita": 1394.0,
+    "cap": "80023",
+    "prefisso_telefonico": "081",
+    "patrono": "Maria Santissima di Campiglione",
+    "festa_patronale": "seconda domenica di maggio",
+    "demonimo": "caivanesi",
+    "etimologia": "Ha origine gentilizia (cioè deriva da un nome di famiglia). Proviene dal nome latino Calvius a cui è stato aggiunto, nel tempo, il suffisso -anus che indica la proprietà. Inoltre nel tempo la \"L\" è stata trasformata in I (fenomeno chiamato vocalizzazione).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Regi Lagni",
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": [
+      "Pascarola",
+      "Casolla Valenzano"
+    ],
+    "comuni_confinanti": [
+      "Acerra",
+      "Afragola",
+      "Cardito",
+      "Crispano",
+      "Marcianise (CE)",
+      "Orta di Atella (CE)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo marchesale Cimino",
+      "edificato alla fine del XVIII secolo"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova, in Piazza del Plebiscito",
+      "Santuario di Maria SS. di Campiglione",
+      "Chiesa parrocchiale di San Paolo",
+      "Chiesa di Santa Maria (in frazione Casolla Valenzano)",
+      "Chiesa parrocchiale Annunziata",
+      "Chiesa di Santa Barbara",
+      "Chiesa di San Pietro",
+      "Chiesa di San Giorgio Martire (in frazione Pascarola)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Caivano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Brusciano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063010",
+    "codice_catastale": "B227",
+    "popolazione": 16499,
+    "superficie_kmq": 5.64,
+    "densita": 2925.4,
+    "cap": "80031",
+    "prefisso_telefonico": "081",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "bruscianesi",
+    "etimologia": "Secondo alcuni il nome ha origine dalla presenza di numerose bisce, causata dallo stato paludoso del luogo. Questa ipotesi troverebbe riscontro nello stemma comunale che raffigurava un terreno acquitrinoso. Secondo altri, invece, deriva dal nome del proprietario delle terre Brussius o della famiglia proprietaria Bruxia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Regi Lagni",
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": [
+      "La Scorza",
+      "Pastena",
+      "De Ruggiero"
+    ],
+    "comuni_confinanti": [
+      "Acerra",
+      "Castello di Cisterna",
+      "Mariglianella",
+      "Marigliano",
+      "Somma Vesuviana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchia San Sebastiano Martire",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dei Gigli (ultima domenica di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Boscotrecase",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063009",
+    "codice_catastale": "B077",
+    "popolazione": 10316,
+    "superficie_kmq": 7.49,
+    "densita": 1377.3,
+    "cap": "80042",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "boschesi",
+    "etimologia": "La sua origine è molto semplice da individuare, il nome si riferisce ad uno dei boschi situati all'interno del territorio di Boscoreale. Precisamente il bosco è quello di \"Silva Mala\" che i Re Angioini donarono a \"tre case\" religiose.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Boscoreale",
+      "Ottaviano",
+      "Terzigno",
+      "Torre Annunziata",
+      "Torre del Greco",
+      "Trecase"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale Ave Gratia Plena",
+      "Chiesa di Sant'Anna",
+      "Chiesa parrocchiale Santissima Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Boscoreale",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063008",
+    "codice_catastale": "B076",
+    "popolazione": 27918,
+    "superficie_kmq": 11.2,
+    "densita": 2492.7,
+    "cap": "80041",
+    "prefisso_telefonico": "081",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "boschesi",
+    "etimologia": "Il nome Boscoreale è di chiara provenienza. Ha origine dalla presenza di un bosco (foresta di Schifati o Scafati) usato come riserva di caccia dai Re di Napoli, che veniva chiamato Nemus Regalis, Bosco Reale appunto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Area Vesuviana",
+      "Regione Agraria n. 7 - Pianura di Nola e Pompei",
+      "Parco Nazionale del Vesuvio"
+    ],
+    "localita_frazioni": [
+      "Pellegrini",
+      "Marchesa",
+      "Cangiani",
+      "Marra"
+    ],
+    "comuni_confinanti": [
+      "A est e sud: Scafati (SA); a nord: Poggiomarino",
+      "Terzigno; a ovest: Boscotrecase; a ovest e sud: Torre Annunziata; a sud: Pompei"
+    ],
+    "musei": [
+      "Antiquarium - Uomo e Ambiente nel Territorio Vesuviano"
+    ],
+    "ville_palazzi": [
+      "Palazzo Zurlo",
+      "Palazzo de Prisco"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Salome",
+      "Cappella di Maria SS. di Montevergine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Barano d'Ischia",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063007",
+    "codice_catastale": "A617",
+    "popolazione": 10036,
+    "superficie_kmq": 11.07,
+    "densita": 906.6,
+    "cap": "80070",
+    "prefisso_telefonico": "081",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "baranesi",
+    "etimologia": "Di origine latina, probabilmente deriva dal nome dell'antico proprietario terriero: Barius o Varius, (che con il tempo ha subito la modifica dialettale della V in B), a cui si è aggiunto il suffisso -anus che indica l'appartenenza. Potrebbe però anche derivare dal termine balneum, per le acque salutari che il territorio possiede.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Isola d'Ischia",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida"
+    ],
+    "localita_frazioni": [
+      "frazioni: Barano centro",
+      "Buonopane",
+      "Fiaiano",
+      "Piedimonte",
+      "Testaccio",
+      "Valotiere;\nnuclei abitati:  Buttavento",
+      "Cesa",
+      "Chiummano",
+      "Cretaio",
+      "Matarace",
+      "Molara",
+      "Schiappone",
+      "Starza",
+      "Terranera",
+      "Testa",
+      "Corbore",
+      "Spalatriello",
+      "Toccaneto"
+    ],
+    "comuni_confinanti": [
+      "Casamicciola Terme",
+      "Ischia",
+      "Serrara Fontana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Sebastiano",
+      "Chiesa di Santa Maria delle Grazie (in località Testaccio)",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Giorgio e Congrega di Santa Maria di Costantinopoli",
+      "Chiesa della Madonna di Montevergine allo Schiappone",
+      "Cappella dell'Assunta, edificata nel 1748 per volere di Don Simone Buono"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Danza della 'Ndrezzata (Pasquetta)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bacoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063006",
+    "codice_catastale": "A535",
+    "popolazione": 26404,
+    "superficie_kmq": 13.29,
+    "densita": 1986.8,
+    "cap": "80070",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "bacolesi",
+    "etimologia": "Secondo la tradizione il nome deriva dal termine Bauli, in greco Boualia o Bualia (stalla); in riferimento alle stalle create da Ercole per i buoi portati dalla Spagna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Campi Flegrei",
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Campi Flegrei"
+    ],
+    "localita_frazioni": [
+      "Miseno",
+      "Miliscola",
+      "Baia",
+      "Fusaro",
+      "Cuma",
+      "Cappella",
+      "Torregaveta"
+    ],
+    "comuni_confinanti": [
+      "Monte di Procida",
+      "Pozzuoli"
+    ],
+    "musei": [
+      "Museo Archeologico dei Campi Flegrei"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Anna"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Baia",
+      "edificato nel Cinquecento dai Vicerè spagnoli sui resti del Palazzo Imperiale di età romana"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tomba di Agrippina, malgrado la denominazione era in realtà la cavea di un teatro di una villa marittima romana",
+      "Piscina Mirabilis, scavata nel tufo, era alimentata dall'acquedotto del Serino, fu costruita per il rifornimento d'acqua della flotta imperiale romana stazionante a Miseno",
+      "Cento Camerelle, impianto di cisterne noto anche con il nome di \"Prigioni di Nerone\" (probabilmente a causa dell'intricato reticolo della sua pianta), apparteneva alla villa privata romana di Quinto Ortensio Ortalo",
+      "Casina Reale o Vanvitellaina (lago di Fusaro)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arzano",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063005",
+    "codice_catastale": "A455",
+    "popolazione": 34560,
+    "superficie_kmq": 4.68,
+    "densita": 7384.6,
+    "cap": "80022",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Agrippino",
+    "festa_patronale": "9 novembre",
+    "demonimo": "arzanesi",
+    "etimologia": "Ci sono diverse ipotesi sull'origine del nome. E' possibile che derivi da un arco antico situato nella zona, oppure dal latino acer sano (luogo sano). Più probabile è l'ipotesi che derivi dal nome dell'antico proprietario delle terre, il signor Artius a cui con il tempo si è aggiunto il suffisso -anus che indica l'appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piano Campano sud-occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casandrino",
+      "Casavatore",
+      "Casoria",
+      "Frattamaggiore",
+      "Grumo Nevano",
+      "Napoli"
+    ],
+    "musei": [
+      "Museo della cultura contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Agrippino",
+      "Chiesa della Santissima Annunziata",
+      "Cappella di Santa Maria di Squillace",
+      "Cappella di Santa Maria delle Grazie",
+      "Cappella del Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre campanaria detta \"dell'Orologio\"",
+      "nel centro storico in Largo Piazza"
+    ],
+    "teatri": [
+      "Teatro Le Maschere"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Arzano (Francia), dal 1986",
+      "Cléguer (Francia), dal 2003"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anacapri",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063004",
+    "codice_catastale": "A268",
+    "popolazione": 7003,
+    "superficie_kmq": 6.39,
+    "densita": 1095.9,
+    "cap": "80071",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "anacapresi",
+    "etimologia": "Il nome ha origine dal termine greco ano (sopra) e da Capri, proprio per indicare la posizione del luogo, elevata rispetto a Capri.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Isola di Capri",
+      "Regione Agraria n. 4 - Isole di Capri, Ischia e Procida"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capri"
+    ],
+    "musei": [
+      "Museo Villa San Michele (di Axel Munthe)"
+    ],
+    "ville_palazzi": [
+      "Villa Orlandi"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio o dei Marinai",
+      "Chiesa di Santa Sofia, medioevale rimaneggiata in epoca  barocca",
+      "Chiesa di Santa Maria a Costantinopoli",
+      "Chiesa di Santa Maria a Cetrella - Eremo (sul Monte Solaro)",
+      "Chiesa di San Michele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino di Villa San Michele"
+    ],
+    "luoghi_interesse": [
+      "Osservatorio Astronomico di Capri",
+      "Faro di Punta Carena"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Agerola",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063003",
+    "codice_catastale": "A068",
+    "popolazione": 7697,
+    "superficie_kmq": 19.62,
+    "densita": 392.3,
+    "cap": "80051",
+    "prefisso_telefonico": "081",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "agerolesi",
+    "etimologia": "Sembra che il nome derivi dal latino ager (campo) a cui veniva aggiunto il suffisso -ula. Mentre un'altra ipotesi vuole che derivi dal termine area (spiazzo, terrazza); questa supposizione trova riscontro nella presenza ad Agerola di diversi campi \"a terrazze\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona Penisola Sorrentina",
+      "Regione Agraria n. 3 - Colline litoranee della penisola Sorrentina",
+      "Associazione Città del Pane"
+    ],
+    "localita_frazioni": [
+      "San Lazzaro",
+      "Campora",
+      "Santa Maria",
+      "Pianillo",
+      "Ponte",
+      "Bomerano"
+    ],
+    "comuni_confinanti": [
+      "Amalfi (SA)",
+      "Furore (SA)",
+      "Gragnano",
+      "Pimonte",
+      "Positano (SA)",
+      "Praiano (SA)",
+      "Scala (SA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro",
+      "Chiesa di San Nicola di Bari",
+      "Chiesa di San Michele Arcangelo, fondata nel 1680 dagli Acampora",
+      "Chiesa di San Matteo Apostolo",
+      "Chiesa di San Martino (in frazione Campora), già dedicata a Santa Maria di Loreto",
+      "Chiesa della SS. Annunziata, in Piazza G. Avitabile",
+      "Chiesa di Tutti i Santi",
+      "Chiesa Madonna delle Grazie (in frazione Campora)",
+      "Chiesa di Santa Maria La Manna (in borgata Santa Maria)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Parco \"Colonia Montana\" (in frazione San Lazzaro)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Afragola",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063002",
+    "codice_catastale": "A064",
+    "popolazione": 64558,
+    "superficie_kmq": 17.99,
+    "densita": 3588.5,
+    "cap": "80021",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gennaro",
+    "festa_patronale": "19 settembre",
+    "demonimo": "afragolesi",
+    "etimologia": "Con molta probabilità il nome deriva dalla parola Fragola, più precisamente dalla modifica, avvenuta nel tempo, di La Fragola in L'Afragola. Si racconta che il luogo si chiamasse città delle Fragole. Secondo un'altra ipotesi, il nome deriva da A-fragore, per il rumore (fragore) proveniente da una cascata ormai scomparsa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Regi Lagni",
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": [
+      "Capo Mazzo",
+      "Saggese"
+    ],
+    "comuni_confinanti": [
+      "Acerra",
+      "Caivano",
+      "Cardito",
+      "Casalnuovo di Napoli",
+      "Casoria"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Migliore"
+    ],
+    "chiese": [
+      "Santuario di Sant'Antonio da Padova",
+      "Chiesa di Santa Marie d'Ajello",
+      "Chiesa di Santa Maria della Misericordia, eretta ad opera dei monaci dell'Ordine dei Servi di Maria",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Marco in Sylvis",
+      "Chiesa di San Marco all'Olmo",
+      "Chiesa di San Giorgio",
+      "Chiesa del SS. Rosario, edificata dai Padri Domenicani nel 1602"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acerra",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063001",
+    "codice_catastale": "A024",
+    "popolazione": 59830,
+    "superficie_kmq": 54.08,
+    "densita": 1106.3,
+    "cap": "80011",
+    "prefisso_telefonico": "081",
+    "patrono": "San Cuono",
+    "festa_patronale": "29 maggio",
+    "demonimo": "acerrani",
+    "etimologia": "Di origine etrusca, deriva dal nome Acerrae, così come è testimoniato da Plinio, secondo alcuni collegato al termine sacro Acerrae che significa \"navetta con l'incenso\", secondo altri collegato invece al nome greco Acherrai, o al nome di fiume (in greco Acqueron) perché la zona era paludosa e soggetta ad inondazioni.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Regi Lagni",
+      "Unione Comuni Valle dell'Antico Clanis",
+      "Regione Agraria n. 6 - Piano Campano sud-orientale",
+      "Associazione Nazionale delle Città della Nocciola",
+      "Città del Fare (Agenzia Locale di Sviluppo)"
+    ],
+    "localita_frazioni": [
+      "Gaudello",
+      "Pezzalunga"
+    ],
+    "comuni_confinanti": [
+      "Afragola",
+      "Brusciano",
+      "Caivano",
+      "Casalnuovo di Napoli",
+      "Castello di Cisterna",
+      "Maddaloni (CE)",
+      "Marcianise (CE)",
+      "Marigliano",
+      "Nola",
+      "Pomigliano d'Arco",
+      "San Felice a Cancello (CE)"
+    ],
+    "musei": [
+      "Museo della Maschera",
+      "del Folklore e della Civiltà Contadina"
+    ],
+    "ville_palazzi": [
+      "Palazzo Russo Spena",
+      "Palazzo Radice, edificato alla fine del settecento, opera di Michele Manlio"
+    ],
+    "chiese": [
+      "Chiesetta di San Conone",
+      "Duomo dell'Assunta, sede Vescovile",
+      "Chiesa e Arciconfraternita Corpus Domini",
+      "Chiesa di Santa Maria SS. dell'Annunziata",
+      "Chiesa di San Pietro",
+      "Chiesa del Suffragio",
+      "Cappella rurale di Santa Maria della Grazie",
+      "Cappella di Maria Santissima di Montevergine, fondata nel 1855 da Gaetano Bianco"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Baronale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Rostocco (Via Calzolaio",
+      "9)"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Napoli",
+    "provincia": "Napoli",
+    "regione": "Campania",
+    "zona": "Italia Meridionale",
+    "codice_istat": "063049",
+    "codice_catastale": "F839",
+    "popolazione": 970185,
+    "superficie_kmq": 117.27,
+    "densita": 8273.1,
+    "cap": "80100",
+    "prefisso_telefonico": "081",
+    "patrono": "San Gennaro",
+    "festa_patronale": "19 settembre",
+    "demonimo": "napoletani",
+    "etimologia": "Il nome deriva da termine greco Neapolis, ossia \"città nuova\". Il nome Neapolis forse nacque in contrapposizione ai precedenti nomi Palaipolis, ossia vecchia città e Parthenope, nome dedicato alla dea Minerva.",
+    "il_comune_e": [
+      "Città Termale (Terme di Agnano SpA",
+      "Agnano)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline Litoranee di Napoli",
+      "Parco Campi Flegrei",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione Città del Gelato",
+      "Associazione Città del Bio",
+      "Associazione Italiana Città della Ceramica (AICC)",
+      "Associazione Città italiane per la mobilità sostenibile e lo sviluppo dei trasporti",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": [
+      "quartieri: Arenella",
+      "Avvocata",
+      "Bagnoli",
+      "Barra",
+      "Chiaia",
+      "Chiaiano",
+      "Fuorigrotta",
+      "Mercato Pendino",
+      "Miano",
+      "Montecalvario",
+      "Pianura",
+      "Piscinola Marianella",
+      "Poggioreale",
+      "Ponticelli",
+      "Posillipo",
+      "San Ferdinando",
+      "San Giovanni a Teduccio",
+      "San Lorenzo Vicaria",
+      "San Pietro a Patierno",
+      "Scampia",
+      "Secondigliano",
+      "Soccavo",
+      "Stella San Carlo Arena",
+      "Vomero"
+    ],
+    "comuni_confinanti": [
+      "Arzano",
+      "Casandrino",
+      "Casavatore",
+      "Casoria",
+      "Cercola",
+      "Marano di Napoli",
+      "Melito di Napoli",
+      "Mugnano di Napoli",
+      "Portici",
+      "Pozzuoli",
+      "Quarto",
+      "San Giorgio a Cremano",
+      "San Sebastiano al Vesuvio",
+      "Volla"
+    ],
+    "musei": [
+      "(scheda musei in preparazione)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madre del Buon Consiglio",
+      "Santuario di San Gaetano",
+      "Duomo di Napoli",
+      "Chiesa di San Domenico Maggiore",
+      "Chiesa del Gesù Nuovo",
+      "Basilica di Santa Chiara",
+      "Basilica di San Lorenzo Maggiore"
+    ],
+    "castelli_fortificazioni": [
+      "Castel Capuano",
+      "Castel dell'Ovo",
+      "Castel Nuovo, detto anche Maschio Angioino",
+      "Castel Sant'Elmo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco di Villa Floridiana",
+      "Bosco di Capodimonte",
+      "Orto Botanico dell'Università di Napoli Federico II",
+      "Parco Virgiliano"
+    ],
+    "luoghi_interesse": [
+      "Osservatorio Astronomico di Capodimonte"
+    ],
+    "teatri": [
+      "Teatro Bellini",
+      "Teatro Galleria Toledo",
+      "Teatro Mercadante",
+      "Teatro San Carlo",
+      "Teatro Sannazzaro",
+      "Teatro Tasso",
+      "Teatro Totò",
+      "Teatro Augusteo"
+    ],
+    "stadi": [
+      "Stadio Comunale San Paolo"
+    ],
+    "eventi_feste_sagre": [
+      "Festa di San Gennaro (19 settembre)"
+    ],
+    "gemellaggi": [
+      "Kagoshima (Giappone), dal 1960",
+      "Nablus (Palestina)",
+      "Zhengzhou (Cina), dall'aprile 2007"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Edoardo De Filippo (1900 - 1984), attore teatrale, regista e poeta",
+      "Antonio De Curtis, in arte Totò, (1898 – 1967), attore, commediografo e poeta",
+      "Renato Caccioppoli (1904-1959), matematico"
+    ]
+  }
+]

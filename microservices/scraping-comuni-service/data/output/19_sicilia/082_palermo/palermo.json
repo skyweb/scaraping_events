@@ -1,0 +1,16 @@
+{
+  "nome": "Palermo",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "PA",
+  "codice_istat": "082",
+  "popolazione": 1268217,
+  "popolazione_maschi": 613792,
+  "popolazione_femmine": 654425,
+  "superficie_kmq": 4992.23,
+  "densita": 254.0,
+  "num_comuni": 82,
+  "capoluogo": "Palermo",
+  "iso_3166_2": "IT-PA",
+  "nuts": "ITG12"
+}

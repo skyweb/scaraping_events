@@ -1,0 +1,16 @@
+{
+  "nome": "Venezia",
+  "regione": "Veneto",
+  "zona": null,
+  "sigla": "VE",
+  "codice_istat": "027",
+  "popolazione": 854275,
+  "popolazione_maschi": 413281,
+  "popolazione_femmine": 440994,
+  "superficie_kmq": 2461.52,
+  "densita": 347.1,
+  "num_comuni": 44,
+  "capoluogo": "Venezia",
+  "iso_3166_2": "IT-VE",
+  "nuts": "ITD35"
+}

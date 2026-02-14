@@ -1,0 +1,16 @@
+{
+  "nome": "Piacenza",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "PC",
+  "codice_istat": "033",
+  "popolazione": 286758,
+  "popolazione_maschi": 139667,
+  "popolazione_femmine": 147091,
+  "superficie_kmq": 2589.47,
+  "densita": 110.7,
+  "num_comuni": 48,
+  "capoluogo": "Piacenza",
+  "iso_3166_2": "IT-PC",
+  "nuts": "ITD51"
+}

@@ -1,0 +1,485 @@
+[
+  {
+    "nome": "Vernio",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "100007",
+    "codice_catastale": "L775",
+    "popolazione": 6041,
+    "superficie_kmq": 63.28,
+    "densita": 95.5,
+    "cap": "59024",
+    "prefisso_telefonico": "0574",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "verniatti",
+    "etimologia": "Deriva dal nome latino di persona Vernius privo di suffisso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Val Bisenzio"
+    ],
+    "localita_frazioni": [
+      "San Quirico",
+      "Mercatale",
+      "Montepiano",
+      "Sant'Ippolito",
+      "Terrigoli - Le Confina",
+      "Sasseta - Luciana",
+      "Cavarzano"
+    ],
+    "comuni_confinanti": [
+      "Barberino di Mugello (FI)",
+      "Camugnano (BO)",
+      "Cantagallo",
+      "Castiglione dei Pepoli (BO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Antonio Maria Pucci (in frazione Mercatale)",
+      "Pieve dei Santi Ippolito e Cassiano",
+      "Chiesa di San Leonardo (in San Quirico di Vernio)",
+      "Badia di Santa Maria (Montepiano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Parco Memoriale della Linea Gotica (in località La Torricella di San Quirico)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica della Festa della Polenta (prima domenica di Quaresima)",
+      "Carnevalino di Sant'Ippolito (primo sabato di Quaresima)"
+    ],
+    "gemellaggi": [
+      "Marchin (Belgio), dal novembre 2005",
+      "Senones (Francia), dal febbraio 1988",
+      "Jettingen (Germania), dal febbraio 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vaiano",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "100006",
+    "codice_catastale": "L537",
+    "popolazione": 9914,
+    "superficie_kmq": 34.24,
+    "densita": 289.5,
+    "cap": "59021",
+    "prefisso_telefonico": "0574",
+    "patrono": "San Salvatore",
+    "festa_patronale": "venerdì prima di Pentecoste",
+    "demonimo": "vaianesi",
+    "etimologia": "Deriva dal nome latino di persona Varius, con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Val Bisenzio"
+    ],
+    "localita_frazioni": [
+      "centri abitati: Fabio",
+      "Faltugnano",
+      "Gamberame",
+      "La Briglia",
+      "La Cartaia",
+      "La Foresta",
+      "La Tignamica",
+      "Savignano",
+      "Schignano",
+      "Sofignano"
+    ],
+    "comuni_confinanti": [
+      "Barberino di Mugello (FI)",
+      "Calenzano (FI)",
+      "Cantagallo",
+      "Montemurlo",
+      "Prato"
+    ],
+    "musei": [
+      "Museo della Badia di San Salvatore"
+    ],
+    "ville_palazzi": [
+      "Villa Il Mulinaccio (Villa Vaj)"
+    ],
+    "chiese": [
+      "Badia di San Salvatore, in Piazza Firenzuola",
+      "Chiesa dei Santi Giusto e Clemente (a Faltugnano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Gustavo Modena"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poggio a Caiano",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "100004",
+    "codice_catastale": "G754",
+    "popolazione": 9996,
+    "superficie_kmq": 5.97,
+    "densita": 1674.4,
+    "cap": "59016",
+    "prefisso_telefonico": "055",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "7 ottobre",
+    "demonimo": "poggesi",
+    "etimologia": "E' un composto del termie Poggio e del nome locale Caiano che deriva a sua volt dal nome di persona Carius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Bonistallo",
+      "Poggetto",
+      "Santa Cristina in Pilli"
+    ],
+    "comuni_confinanti": [
+      "Campi Bisenzio (FI)",
+      "Carmignano",
+      "Prato",
+      "Signa (FI)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Comunale (XVII secolo), già palazzina reale",
+      "Villa Medicea di Poggio a Caiano",
+      "Scuderie Medicee (XVI secolo)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Cristina in Pilli",
+      "Chiesa di San Francesco in Bonistallo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Campo profughi di Aguenit (Auserd) - Popolo Saharawi",
+      "Charlottesville (Virginia, USA)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montemurlo",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "100003",
+    "codice_catastale": "F572",
+    "popolazione": 18610,
+    "superficie_kmq": 30.66,
+    "densita": 607.0,
+    "cap": "59013",
+    "prefisso_telefonico": "0574",
+    "patrono": "Esaltazione della Santa Croce",
+    "festa_patronale": "3 maggio",
+    "demonimo": "montemurlesi",
+    "etimologia": "E' un composto di \"monte\" e del termine latino murulus, ossia muretto, che deriva a sua volta da murus, ossia muro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Val Bisenzio"
+    ],
+    "localita_frazioni": [
+      "Bagnolo",
+      "Fornacelle",
+      "Mazzone",
+      "Oste"
+    ],
+    "comuni_confinanti": [
+      "Agliana (PT)",
+      "Cantagallo",
+      "Montale (PT)",
+      "Prato",
+      "Vaiano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve San Giovanni Battista Decollato",
+      "in Piazza della Rocca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corteggio Storico (2 agosto)",
+      "rievocazione storica della battaglia del 2 agosto 1537"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carmignano",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "100002",
+    "codice_catastale": "B794",
+    "popolazione": 14458,
+    "superficie_kmq": 38.59,
+    "densita": 374.7,
+    "cap": "59015",
+    "prefisso_telefonico": "055",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "carmignanesi",
+    "etimologia": "Deriva dal nome latino di persona Carminius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Artimino",
+      "Bacchereto",
+      "Comeana",
+      "La Serra",
+      "Poggio alla Malva",
+      "Santa Cristina a Mezzana",
+      "Seano",
+      "Verghereto"
+    ],
+    "comuni_confinanti": [
+      "Capraia e Limite (FI)",
+      "Lastra a Signa (FI)",
+      "Montelupo Fiorentino (FI)",
+      "Poggio a Caiano",
+      "Prato",
+      "Quarrata (PT)",
+      "Signa (FI)",
+      "Vinci (FI)"
+    ],
+    "musei": [
+      "Museo della Vite e del Vino",
+      "Museo Archeologico Comunale di Artimino"
+    ],
+    "ville_palazzi": [
+      "Villa Contini-Bonacossi",
+      "Villa Le Farnete, in precedenza residenza della famiglia Mazzinghi",
+      "Villa Medicea La Ferdinanda, detta \"Villa dai Cento Camini\""
+    ],
+    "chiese": [
+      "Pieve di San Michele e San Francesco",
+      "Pieve di San Leonardo",
+      "Oratorio di San Jacopo",
+      "Chiesa di Santo Stefano alle Busche (in località Poggio alla Malva)",
+      "Abbazia di San Martino in Campo",
+      "Abbazia di San Giusto al Pinone"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Michele e Palio dei Ciuchi (ultimo fine settimana di settembre)",
+      "con la partecipazione dei quattro rioni: Rione Bianco o Rione della Torre",
+      "Rione Celeste o Rione dell'Arcangelo",
+      "Rione Giallo o Rione del Leone",
+      "Rione Verde o Rione dell'Arte"
+    ],
+    "gemellaggi": [
+      "Deville Les Rouen (Francia), dal 1985",
+      "San Michele Salentino (Brindisi - Puglia), dal settembre 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cantagallo",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "100001",
+    "codice_catastale": "B626",
+    "popolazione": 3120,
+    "superficie_kmq": 94.93,
+    "densita": 32.9,
+    "cap": "59025",
+    "prefisso_telefonico": "0574",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "cantagallesi",
+    "etimologia": "Il nome del paese significa \"canta il gallo\" forse in riferimento al luogo in cui appare prima il chiarore del giorno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Val Bisenzio",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Fossato",
+      "Gavigno",
+      "L'Acqua",
+      "Luicciana",
+      "Migliana",
+      "Gricigliana",
+      "La Rocca di Cerbaia",
+      "Carmignanello",
+      "Usella",
+      "Il Fabbro"
+    ],
+    "comuni_confinanti": [
+      "Barberino di Mugello (FI)",
+      "Camugnano (BO)",
+      "Montale (PT)",
+      "Montemurlo",
+      "Pistoia (PT)",
+      "Sambuca Pistoiese (PT)",
+      "Vaiano",
+      "Vernio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Rocco (a Fossato)"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di Cerbaia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Prato",
+    "provincia": "Prato",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "100005",
+    "codice_catastale": "G999",
+    "popolazione": 192469,
+    "superficie_kmq": 97.59,
+    "densita": 1972.2,
+    "cap": "59100",
+    "prefisso_telefonico": "0574",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "pratesi",
+    "etimologia": "Fu chiamato così dai suoi fondatori, che acquistarono una terra privata e vi posero la loro dimora. Dal 1863 al 1931 fu associato al nome la specifica in Toscana.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": [
+      "Canneto",
+      "Carteano",
+      "Casale",
+      "Castelnuovo",
+      "Colonica",
+      "Figline",
+      "Filettole",
+      "Fontanelle",
+      "Galciana",
+      "Iolo",
+      "Maliseti",
+      "Mazzone",
+      "Pacciana-Lastre",
+      "Paperino",
+      "San Paolo",
+      "Villa Fiorita"
+    ],
+    "comuni_confinanti": [
+      "Agliana (PT)",
+      "Calenzano (FI)",
+      "Campi Bisenzio (FI)",
+      "Carmignano",
+      "Montemurlo",
+      "Poggio a Caiano",
+      "Quarrata (PT)",
+      "Vaiano"
+    ],
+    "musei": [
+      "Museo di Pittura Murale",
+      "Museo dell'Opera del Duomo",
+      "Museo della Pieve di San Pietro",
+      "Museo del Tessuto",
+      "Museo Civico: Quadreria di Palazzo Comunale"
+    ],
+    "ville_palazzi": [
+      "Palazzo degli Spedalinghi, in Piazza dell'Ospedale",
+      "Palazzo Verzoni Bizzocchi, in Via Santa Trinità",
+      "Villa di San Leonardo al Palco",
+      "Villa Rucellai, in Via di Canneto",
+      "Palazzo degli Alberti"
+    ],
+    "chiese": [
+      "Duomo o Cattedrale di Santo Stefano",
+      "Chiesa di San Pier Forelli, ottocentesca, nell'omonima piazza",
+      "Chiesa di San Francesco, in Piazza San Francesco",
+      "Chiesa di San Fabiano, in Via di Gherardo",
+      "Chiesa di San Domenico, nell'omonima piazza",
+      "Chiesa di San Bartolomeo, in Piazza Mercatale",
+      "Chiesa dello Spirito Santo, in Via Giuseppe Silvestri",
+      "Santuario Madonna del Sacro Cingolo",
+      "Pieve di San Pietro Apostolo, in Via Vecchia Cantagallo",
+      "Pieve di Sant'Ippolito (a Galciana)",
+      "Santuario Santa Maria delle Carceri"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dell'Imperatore"
+    ],
+    "fontane": [
+      "Fontana del Bacchino",
+      "in Piazza del Comune"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Fabbricone",
+      "Cantieri Culturali ex Macelli - \"Officina Giovani\"",
+      "Teatro La Baracca",
+      "Teatro Metastasio",
+      "Politeama Pratese"
+    ],
+    "stadi": [
+      "Stadio Comunale Lungobisenzio"
+    ],
+    "eventi_feste_sagre": [
+      "Ostensione della Sacra Cintola della Madonna e Corteggio Storico (8 settembre)",
+      "con giochi di bandiera e esibizione di tiro con balestra antica"
+    ],
+    "gemellaggi": [
+      "Ebensee (Austria)",
+      "dal 1987"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

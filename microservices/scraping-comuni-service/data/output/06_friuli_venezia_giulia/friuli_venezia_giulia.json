@@ -1,0 +1,14 @@
+{
+  "nome": "Friuli-Venezia Giulia",
+  "codice_istat": "06",
+  "popolazione": 1217872,
+  "popolazione_maschi": 589751,
+  "popolazione_femmine": 628121,
+  "superficie_kmq": 7854.85,
+  "densita": 155.0,
+  "num_province": 4,
+  "num_comuni": 216,
+  "capoluogo": "Trieste",
+  "iso_3166_2": "IT-36",
+  "nuts": "ITD4"
+}

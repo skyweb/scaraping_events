@@ -1,0 +1,16 @@
+{
+  "nome": "Torino",
+  "regione": "Piemonte",
+  "zona": null,
+  "sigla": "TO",
+  "codice_istat": "001",
+  "popolazione": 2277857,
+  "popolazione_maschi": 1100562,
+  "popolazione_femmine": 1177295,
+  "superficie_kmq": 6830.53,
+  "densita": 333.5,
+  "num_comuni": 315,
+  "capoluogo": "Torino",
+  "iso_3166_2": "IT-TO",
+  "nuts": "ITC11"
+}

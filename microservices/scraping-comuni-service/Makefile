@@ -97,7 +97,7 @@ clean-output: ## Rimuove tutti i JSON generati
 clean: clean-output ## Pulizia completa (output + cache + container)
 	@echo "$(GREEN)Pulizia completa...$(NC)"
 	-$(COMPOSE) down -v 2>/dev/null
-	-rm -rf comuni_italiani/__pycache__ comuni_italiani/spiders/__pycache__
+	-rm -rf comuni_istat/__pycache__ comuni_istat/spiders/__pycache__
 	-rm -rf .scrapy
 	@echo "$(GREEN)Pulizia completata.$(NC)"
 

@@ -1,0 +1,16 @@
+{
+  "nome": "Olbia-Tempio",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "OT",
+  "codice_istat": "104",
+  "popolazione": 160672,
+  "popolazione_maschi": 80098,
+  "popolazione_femmine": 80574,
+  "superficie_kmq": 3398.56,
+  "densita": 47.3,
+  "num_comuni": 26,
+  "capoluogo": null,
+  "iso_3166_2": "IT-OT",
+  "nuts": "ITG29"
+}

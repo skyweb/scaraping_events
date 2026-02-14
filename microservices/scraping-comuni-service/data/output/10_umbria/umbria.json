@@ -1,0 +1,14 @@
+{
+  "nome": "Umbria",
+  "codice_istat": "10",
+  "popolazione": 888908,
+  "popolazione_maschi": 426959,
+  "popolazione_femmine": 461949,
+  "superficie_kmq": 8456.04,
+  "densita": 105.1,
+  "num_province": 2,
+  "num_comuni": 92,
+  "capoluogo": "Perugia",
+  "iso_3166_2": "IT-55",
+  "nuts": "ITE2"
+}

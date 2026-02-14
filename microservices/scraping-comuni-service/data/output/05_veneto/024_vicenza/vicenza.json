@@ -1,0 +1,16 @@
+{
+  "nome": "Vicenza",
+  "regione": "Veneto",
+  "zona": null,
+  "sigla": "VI",
+  "codice_istat": "024",
+  "popolazione": 865082,
+  "popolazione_maschi": 425318,
+  "popolazione_femmine": 439764,
+  "superficie_kmq": 2722.76,
+  "densita": 317.7,
+  "num_comuni": 121,
+  "capoluogo": "Vicenza",
+  "iso_3166_2": "IT-VI",
+  "nuts": "ITD32"
+}

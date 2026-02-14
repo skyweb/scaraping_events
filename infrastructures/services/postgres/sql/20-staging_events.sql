@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS events_data.staging_events (
 
     -- Location
     city VARCHAR(100),                 -- Nome città
-    city_id INTEGER,                   -- FK a comuni_italiani.comuni(id)
+    city_id INTEGER,                   -- FK a comuni_istat.comuni(id)
     location_name VARCHAR(255),
     location_address TEXT,
     location_coords GEOMETRY(Point, 4326), -- Coordinate PostGIS (Long/Lat)
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS events_data.staging_events (
 
     -- Foreign Key
     CONSTRAINT fk_staging_city FOREIGN KEY (city_id)
-        REFERENCES comuni_italiani.comuni(id) ON DELETE SET NULL
+        REFERENCES comuni_istat.comuni(id) ON DELETE SET NULL
 );
 
 -- Commenti
@@ -56,7 +56,7 @@ COMMENT ON COLUMN events_data.staging_events.uuid IS 'Hash univoco interno (tito
 COMMENT ON COLUMN events_data.staging_events.content_hash IS 'Hash del contenuto per rilevare modifiche.';
 COMMENT ON COLUMN events_data.staging_events.source IS 'Codice della fonte dati (es. city_today).';
 COMMENT ON COLUMN events_data.staging_events.category IS 'Array di categorie (TEXT[]).';
-COMMENT ON COLUMN events_data.staging_events.city_id IS 'FK a comuni_italiani.comuni per join geografici.';
+COMMENT ON COLUMN events_data.staging_events.city_id IS 'FK a comuni_istat.comuni per join geografici.';
 COMMENT ON COLUMN events_data.staging_events.location_coords IS 'Coordinate PostGIS (SRID 4326). Usare ST_SetSRID(ST_MakePoint(lng, lat), 4326).';
 COMMENT ON COLUMN events_data.staging_events.date_display IS 'Rappresentazione testuale della data (es. "dal 31 gennaio al 1 febbraio").';
 COMMENT ON COLUMN events_data.staging_events.raw_data IS 'Dump completo del JSON scaricato dalla fonte.';

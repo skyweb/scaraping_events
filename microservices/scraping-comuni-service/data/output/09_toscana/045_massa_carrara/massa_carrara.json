@@ -1,0 +1,16 @@
+{
+  "nome": "Massa-Carrara",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "MS",
+  "codice_istat": "045",
+  "popolazione": 196580,
+  "popolazione_maschi": 94673,
+  "popolazione_femmine": 101907,
+  "superficie_kmq": 1156.38,
+  "densita": 170.0,
+  "num_comuni": 17,
+  "capoluogo": "Massa",
+  "iso_3166_2": "IT-MS",
+  "nuts": "ITE11"
+}

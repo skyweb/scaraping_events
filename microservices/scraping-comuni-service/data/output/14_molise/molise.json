@@ -1,0 +1,14 @@
+{
+  "nome": "Molise",
+  "codice_istat": "14",
+  "popolazione": 310449,
+  "popolazione_maschi": 152777,
+  "popolazione_femmine": 157672,
+  "superficie_kmq": 4433.16,
+  "densita": 70.0,
+  "num_province": 2,
+  "num_comuni": 136,
+  "capoluogo": "Campobasso",
+  "iso_3166_2": "IT-67",
+  "nuts": "ITF2"
+}

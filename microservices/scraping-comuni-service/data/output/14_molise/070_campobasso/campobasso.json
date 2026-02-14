@@ -1,0 +1,16 @@
+{
+  "nome": "Campobasso",
+  "regione": "Molise",
+  "zona": null,
+  "sigla": "CB",
+  "codice_istat": "070",
+  "popolazione": 224644,
+  "popolazione_maschi": 110330,
+  "popolazione_femmine": 114314,
+  "superficie_kmq": 2908.8,
+  "densita": 77.2,
+  "num_comuni": 84,
+  "capoluogo": "Campobasso",
+  "iso_3166_2": "IT-CB",
+  "nuts": "ITF22"
+}

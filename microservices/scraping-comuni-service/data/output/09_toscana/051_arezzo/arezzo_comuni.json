@@ -1,0 +1,2440 @@
+[
+  {
+    "nome": "Terranuova Bracciolini",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051039",
+    "codice_catastale": "L123",
+    "popolazione": 12288,
+    "superficie_kmq": 85.35,
+    "densita": 144.0,
+    "cap": "52028",
+    "prefisso_telefonico": "055",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "terranuovesi",
+    "etimologia": "La prima parte del nome ha un significato chiaro e si riferisce ad un \"nuovo insediamento\". La seconda parte, aggiunta nel 1862, si riferisce all'umanista Bracciolini che ivi nacque.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "frazione: Penna",
+      "Ville",
+      "Piantravigne",
+      "Persignano",
+      "Montemarciano",
+      "Campogialli",
+      "Traiana",
+      "Cicogna",
+      "Tasso",
+      "Castiglion Ubertini"
+    ],
+    "comuni_confinanti": [
+      "Castelfranco Piandiscò",
+      "Castiglion Fibocchi",
+      "Laterina",
+      "Loro Ciuffenna",
+      "Montevarchi",
+      "Pergine Valdarno",
+      "San Giovanni Valdarno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Biagio ai Mori",
+      "Arcipretura di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Fagiolo Zolfino (primo maggio)",
+      "nella frazione Penna"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Talla",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051038",
+    "codice_catastale": "L038",
+    "popolazione": 1060,
+    "superficie_kmq": 60.1,
+    "densita": 17.6,
+    "cap": "52010",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "tallesi",
+    "etimologia": "Potrebbe derivare dal nome etrusco di persona Talla o dal latino Thallius o Tallius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Bicciano",
+      "Capraia",
+      "Faltona",
+      "Pieve Pontenano",
+      "Pontenano",
+      "Santo Bagnena"
+    ],
+    "comuni_confinanti": [
+      "Capolona",
+      "Castel Focognano",
+      "Castiglion Fibocchi",
+      "Loro Ciuffenna"
+    ],
+    "musei": [
+      "Museo della Musica Guido d'Arezzo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Niccolò",
+      "Chiesa della Castellaccia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corsa del Saracino (terza domenica di settembre)",
+      "sfida a cavallo tra il capoluogo Talla e le sei frazioni"
+    ],
+    "gemellaggi": [
+      "Pont du Casse (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Subbiano",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051037",
+    "codice_catastale": "I991",
+    "popolazione": 6336,
+    "superficie_kmq": 78.22,
+    "densita": 81.0,
+    "cap": "52010",
+    "prefisso_telefonico": "0575",
+    "patrono": "Maria SS. della Visitazione",
+    "festa_patronale": "31 maggio",
+    "demonimo": "subbianesi",
+    "etimologia": "Deriva dal nome latino di persona Sevius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Calbenzano",
+      "Castelnuovo",
+      "Chiaveretto",
+      "Falciano",
+      "Poggio d'Acona",
+      "Ponte Caliano",
+      "Santa Mama",
+      "Vogognano",
+      "Savorgnano"
+    ],
+    "comuni_confinanti": [
+      "Anghiari",
+      "Arezzo",
+      "Capolona",
+      "Caprese Michelangelo",
+      "Castel Focognano",
+      "Chitignano",
+      "Chiusi della Verna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello dei Della Fioraia (in località Castelnuovo)",
+      "Castello di Valenzano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sestino",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051035",
+    "codice_catastale": "I681",
+    "popolazione": 1343,
+    "superficie_kmq": 80.44,
+    "densita": 16.7,
+    "cap": "52038",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "12 maggio",
+    "demonimo": "sestinati",
+    "etimologia": "Potrebbe derivare dal nome etrusco di persona Sesta o latino Sestius o Sestus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valtiberina"
+    ],
+    "localita_frazioni": [
+      "Ponte Presale"
+    ],
+    "comuni_confinanti": [
+      "Badia Tedalda",
+      "Belforte all'Isauro (PU)",
+      "Borgo Pace (PU)",
+      "Carpegna (PU)",
+      "Casteldelci (RN)",
+      "Mercatello sul Metauro (PU)",
+      "Pennabilli (RN)",
+      "Piandimeleto (PU)"
+    ],
+    "musei": [
+      "Antiquarium Sestinate"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Pancrazio"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Monteromano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Verdi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sansepolcro",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051034",
+    "codice_catastale": "I155",
+    "popolazione": 15907,
+    "superficie_kmq": 91.45,
+    "densita": 173.9,
+    "cap": "52037",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Giovanni Evangelista",
+    "festa_patronale": "27 dicembre",
+    "demonimo": "borghesi o biturgensi",
+    "etimologia": "Chiamato in passato Borgo San Sepolcro si riferisce, secondo la tradizione, al nome di due santi pellegrini che qui realizzarono una chiesetta o un oratorio per custodirvi all'interno il sepolcro di Cristo. Si crede che la denominazione latina ecclesiastica del luogo fosse Biturgia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valtiberina"
+    ],
+    "localita_frazioni": [
+      "Gricignano",
+      "La Villa",
+      "Santa Fiora",
+      "Trebbio"
+    ],
+    "comuni_confinanti": [
+      "Anghiari",
+      "Badia Tedalda",
+      "Borgo Pace (PU)",
+      "Citerna (PG)",
+      "Città di Castello (PG)",
+      "Pieve Santo Stefano",
+      "San Giustino (PG)"
+    ],
+    "musei": [
+      "Museo della Vetrata Antica",
+      "Museo Civico",
+      "Aboca Museum"
+    ],
+    "ville_palazzi": [
+      "Palazzo delle Laudi",
+      "Palazzo Ducci Del Rosso",
+      "Palazzo Pretorio"
+    ],
+    "chiese": [
+      "Eremo di Montecasale",
+      "Chiesa di Sant'Antonio Abate",
+      "Chiesa di Sant'Agostino",
+      "Chiesa di Santa Maria dei Servi",
+      "Chiesa di San Rocco e Oratorio della Compagnia del Crocifisso",
+      "Chiesa di San Lorenzo",
+      "Chiesa di San Francesco",
+      "Chiesa del Buon Gesù",
+      "Cattedrale di San Giovanni Evangelista",
+      "Santuario Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Casa di Piero della Francesca"
+    ],
+    "teatri": [
+      "Cinema Teatro Dante",
+      "Cinema Nuova Aurora"
+    ],
+    "stadi": [
+      "Stadio Comunale Buitoni (capienza: 2.000 posti)"
+    ],
+    "eventi_feste_sagre": [
+      "Palio della Balestra (seconda domenica di settembre)"
+    ],
+    "gemellaggi": [
+      "Neuchatel (Svizzera)",
+      "Sinj (Croazia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giovanni Valdarno",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051033",
+    "codice_catastale": "H901",
+    "popolazione": 16960,
+    "superficie_kmq": 21.32,
+    "densita": 795.5,
+    "cap": "52027",
+    "prefisso_telefonico": "055",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "sangiovannesi",
+    "etimologia": "Denominato in passato Vallis Arni, San Giovanni in altura poi San Giovanni. Dal 1863 è denominato San Giovanni Valdarno in riferimento al Santo ed alla posizione geografica nel Valdarno superiore.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Vacchereccia"
+    ],
+    "comuni_confinanti": [
+      "Castelfranco Piandiscò",
+      "Cavriglia",
+      "Figline e Incisa Valdarno (FI)",
+      "Montevarchi",
+      "Terranuova Bracciolini"
+    ],
+    "musei": [
+      "Museo della Basilica di Santa Maria delle Grazie"
+    ],
+    "ville_palazzi": [
+      "Palazzo d'Arnolfo"
+    ],
+    "chiese": [
+      "Basilica di Santa Maria delle Grazie",
+      "Chiesa SS. Annunziata",
+      "Chiesa di San Lorenzo, trecentesca",
+      "Chiesa delle Anime",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Bucci",
+      "Teatro Masaccio"
+    ],
+    "stadi": [
+      "Stadio Comunale Virgilio Fedini"
+    ],
+    "eventi_feste_sagre": [
+      "Festa della Rificolona (7 settembre)",
+      "Rassegna cinematografica Valdarno Cinema Fedic (aprile)",
+      "Gli Uffizi del Carnevale (nelle cinque domeniche precedenti il martedì grasso)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pratovecchio Stia",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051041",
+    "codice_catastale": "M329",
+    "popolazione": 5780,
+    "superficie_kmq": 138.13,
+    "densita": 41.8,
+    "cap": "52015",
+    "prefisso_telefonico": "0575",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "pratovecchini, stiani",
+    "etimologia": "Il nome del comune è composto dai nomi:Pratovecchio costituito dal sostantivo \"prato\" e dell'aggettivo \"vecchio\", dal significato esplicito;Stia documentato con il nome di Staia, deriva dal nome di torrente Staggia dal nome latino di persona Staius.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Campolombardo",
+      "Casalino",
+      "Castel Castagnaio",
+      "Gaviserri",
+      "Gualdo",
+      "Lonnano",
+      "Moiano",
+      "Molin di Bucchio",
+      "Monte di Gianni",
+      "Moriccia",
+      "Palazzo",
+      "Papiano",
+      "Papiano Alto",
+      "Porciano",
+      "Pratariccia",
+      "Pratovecchio",
+      "San Donato",
+      "Santa Maria alle Grazie",
+      "Serelli",
+      "Stia",
+      "Tartiglia",
+      "Valiana",
+      "Vallucciole",
+      "Villa"
+    ],
+    "comuni_confinanti": [
+      "Bagno di Romagna (FC)",
+      "Castel San Niccolò",
+      "Londa (FI)",
+      "Montemignaio",
+      "Pelago (FI)",
+      "Poppi",
+      "Rufina (FI)",
+      "San Godenzo (FI)",
+      "Santa Sofia (FC)"
+    ],
+    "musei": [
+      "Museo dello Sci",
+      "Museo del Castello di Porciano",
+      "Museo del Bosco e della Montagna",
+      "Museo dell'Arte della Lana"
+    ],
+    "ville_palazzi": [
+      "Palagio Fiorentino"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo",
+      "Santuario di Santa Maria delle Grazie",
+      "Pieve di Santa Maria Assunta",
+      "Chiesa parrocchiale del SS. Nome di Gesù",
+      "Pieve di San Pietro a Romena",
+      "Chiesa del Monastero di Santa Maria della Neve"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Porciano",
+      "fu la dimora dei Conti Guidi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale degli Antei",
+      "Teatro della Lana"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ybbsitz (Austria), dal settembre 2006",
+      "Bad Hall (Austria), dal settembre 2006",
+      "Mynämäki (Finlandia), dal settembre 2006",
+      "Olbernhau (Germania), dal settembre 2006",
+      "Uffenheim (Baviera-Germania)",
+      "Oude IJsselstreek (Olanda), dal settembre 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poppi",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051031",
+    "codice_catastale": "G879",
+    "popolazione": 6134,
+    "superficie_kmq": 96.99,
+    "densita": 63.2,
+    "cap": "52014",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Torello",
+    "festa_patronale": "terza domenica dopo Pasqua",
+    "demonimo": "poppesi",
+    "etimologia": "Secondo alcuni deriva dal nome latino di persona Pupius o Puppius, anche se alcuni credono sia più probabile una derivazione dal nome longobardo Poppo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino",
+      "Parco Nazionale delle Foreste Casentinesi, Monte Falterona, Campigna",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "centri abitati: Poppi",
+      "Badia Prataglia Ponte a Poppi",
+      "Becarino",
+      "Quota",
+      "San Martino in Tremoleto",
+      "Riosecco",
+      "Memmenano",
+      "Avena",
+      "Lierna",
+      "Moggiona;\nnuclei: Buiano",
+      "Porrena Sala",
+      "San Martino a Monte",
+      "Montanino",
+      "Camaldoli",
+      "Eremo",
+      "Storca;\ncase sparse: Strumi",
+      "Fronzola",
+      "Filetto",
+      "Larniano",
+      "Mazzocchi",
+      "Quorle",
+      "Loscove",
+      "Lucciano",
+      "Agna",
+      "Corsignano",
+      "Carpineto"
+    ],
+    "comuni_confinanti": [
+      "Bagno di Romagna (FC)",
+      "Bibbiena",
+      "Castel Focognano",
+      "Castel San Niccolò",
+      "Chiusi della Verna",
+      "Ortignano Raggiolo",
+      "Pratovecchio Stia"
+    ],
+    "musei": [
+      "Museo Ornitologico",
+      "Museo Forestale \"C. Siemoni\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria a Buiano",
+      "Sacro Eremo di Camaldoli, nella foresta del Parco delle Foreste Casentinesi",
+      "Pieve di Santa Maria Assunta",
+      "Oratorio della Madonna del Morbo",
+      "Monastero di Camaldoli",
+      "Abbazia di San Fedele",
+      "Propositura dei SS. Marco e Lorenzo, in Piazza Amerighi"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Conti Guidi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dei Diavoli"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pieve Santo Stefano",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051030",
+    "codice_catastale": "G653",
+    "popolazione": 3156,
+    "superficie_kmq": 155.76,
+    "densita": 20.3,
+    "cap": "52036",
+    "prefisso_telefonico": "0575",
+    "patrono": "Madonna dei Lumi",
+    "festa_patronale": "8 settembre",
+    "demonimo": "pievani",
+    "etimologia": "E' un composto di Pieve e di Santo Stefano, il Santo a cui è intitolata la chiesa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valtiberina"
+    ],
+    "localita_frazioni": [
+      "Baldignano",
+      "Brancialino",
+      "Bulciano",
+      "Castelnuovo",
+      "Cerbaiolo",
+      "Cercetole",
+      "Cirignone",
+      "Madonnuccia",
+      "Mignano",
+      "Mogginano",
+      "Montalone",
+      "Sigliano",
+      "Sintigliano",
+      "Tizzano",
+      "Valdazze",
+      "Valsavignone",
+      "Ville di Roti"
+    ],
+    "comuni_confinanti": [
+      "Anghiari",
+      "Badia Tedalda",
+      "Caprese Michelangelo",
+      "Chiusi della Verna",
+      "Sansepolcro",
+      "Verghereto (FC)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna dei Lumi",
+      "Collegiata di Santo Stefano",
+      "Chiesa dei SS. Giacomo e Cristoforo (a Montalone)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Cantata dei Befani (5 gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pergine Valdarno",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051028",
+    "codice_catastale": "G451",
+    "popolazione": 3119,
+    "superficie_kmq": 46.65,
+    "densita": 66.9,
+    "cap": "52020",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "perginesi",
+    "etimologia": "Deriva da Pergina dal nome etrusco di persona Percenas o latino Pergonius. La specifica si riferisce alla sua collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Montalto",
+      "Pieve a Presciano",
+      "Casalone",
+      "Poggio Bagnoli"
+    ],
+    "comuni_confinanti": [
+      "Bucine",
+      "Civitella in Val di Chiana",
+      "Laterina",
+      "Montevarchi",
+      "Terranuova Bracciolini"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Neve a Migliari",
+      "Pieve di San Pietro a Presciano",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dell'Olio Nuovo di Pergine (tra fine novembre e inizio dicembre)",
+      "Palio della Rana (prima o seconda domenica di giugno), in frazione Casalone-Ponticino",
+      "Mostra Campionaria di Zootecnia del Valdarno (fine maggio), in frazione Montalto"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ortignano Raggiolo",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051027",
+    "codice_catastale": "G139",
+    "popolazione": 876,
+    "superficie_kmq": 36.43,
+    "densita": 24.0,
+    "cap": "52010",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "ortignanesi",
+    "etimologia": "La prima parte deriva dal nome latino di persona Hortinius con l'aggiunta del suffisso -anus. La seconda parte fu aggiunta nel 1875 e deriva dal latino radius, ossia linea, confine, forse riferendosi ad un solco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Ortignano Alto",
+      "Ortignano Basso",
+      "San Piero in Frassino",
+      "Raggiolo",
+      "La Villa",
+      "Badia a Tega"
+    ],
+    "comuni_confinanti": [
+      "Bibbiena",
+      "Castel Focognano",
+      "Castel San Niccolò",
+      "Loro Ciuffenna",
+      "Poppi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve dei Santi Matteo e Margherita (a Raggiolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montevarchi",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051026",
+    "codice_catastale": "F656",
+    "popolazione": 24399,
+    "superficie_kmq": 56.75,
+    "densita": 429.9,
+    "cap": "52025",
+    "prefisso_telefonico": "055",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "montevarchini",
+    "etimologia": "E' un composto di \"monte\" e di varco, riferito probabilmente alla sua posizione geografica, ai confini tra Arezzo e Fiesole.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Levane",
+      "Caposelvi",
+      "Mercatale - Torre",
+      "Rendola",
+      "Ventena",
+      "Moncioni",
+      "Ricasoli"
+    ],
+    "comuni_confinanti": [
+      "Bucine",
+      "Cavriglia",
+      "Gaiole in Chianti (SI)",
+      "Pergine Valdarno",
+      "San Giovanni Valdarno",
+      "Terranuova Bracciolini"
+    ],
+    "musei": [
+      "Museo Paleontologico dell'Accademia Valdarnese del Poggio",
+      "Museo Ernesto Galeffi",
+      "Museo di Arte Sacra Onlus"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio del Redentore",
+      "Collegiata di San Lorenzo",
+      "Chiesa di Sant'Andrea a Cennano",
+      "Chiesa di Santa Maria al Giglio",
+      "Chiesa di Santa Croce alla Ginestra"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale G. Brilli-Peri"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Kitzingen (Baviera, Germania), dal 1984",
+      "Betlemme (Palestina)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monterchi",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051024",
+    "codice_catastale": "F594",
+    "popolazione": 1742,
+    "superficie_kmq": 28.71,
+    "densita": 60.7,
+    "cap": "52035",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Simeone",
+    "festa_patronale": "8 ottobre",
+    "demonimo": "monterchiesi",
+    "etimologia": "E' un composto di \"monte\" e del nome latino Hercules, al genitivo Herculis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valtiberina"
+    ],
+    "localita_frazioni": [
+      "Le Ville"
+    ],
+    "comuni_confinanti": [
+      "Anghiari",
+      "Arezzo",
+      "Citerna (PG)",
+      "Città di Castello (PG)",
+      "Monte Santa Maria Tiberina (PG)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Monastero di San Benedetto",
+      "Chiesa di Sant'Apollinare alla Villa del Poggio",
+      "Chiesa di Santa Maria della Pace a Le Ville",
+      "Chiesa di Santa Maria a Scandolaia, alle pendici del monte Felcino",
+      "Chiesa di San Simeone",
+      "Chiesa di San Biagio",
+      "Chiesa di San Michele Arcangelo a Pianezze",
+      "Chiesa della Madonna Bella",
+      "Chiesa di San Michele Arcangelo a Padonchia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montemignaio",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051023",
+    "codice_catastale": "F565",
+    "popolazione": 558,
+    "superficie_kmq": 26.03,
+    "densita": 21.4,
+    "cap": "52010",
+    "prefisso_telefonico": "0575",
+    "patrono": "Madonna delle Calle",
+    "festa_patronale": "martedì dopo Pasqua",
+    "demonimo": "montemignaiesi",
+    "etimologia": "E' un composto di \"monte\" e del termine latino minium, ossia cinabro (minerale rosso). Secondo alcuni potrebbe derivare dal nome latino di persona Miniarius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Pieve",
+      "Molino",
+      "Castello",
+      "Cerreto",
+      "Prato",
+      "Campiano",
+      "Casodi",
+      "Cozzo",
+      "Masso",
+      "Poggiolino",
+      "Forcanasso",
+      "Santo",
+      "Serraia",
+      "Valendaia",
+      "Treggiaia",
+      "Fornello",
+      "Cameronci",
+      "Liconia",
+      "Vignola",
+      "Consuma",
+      "Secchieta",
+      "Fossatello",
+      "Masso Rovinato",
+      "La Fonte",
+      "Assillo",
+      "Brustichino"
+    ],
+    "comuni_confinanti": [
+      "Castel San Niccolò",
+      "Pelago (FI)",
+      "Pratovecchio Stia",
+      "Reggello (FI)",
+      "Rufina (FI)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria Assunta",
+      "Oratorio delle Calle"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte San Savino",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051025",
+    "codice_catastale": "F628",
+    "popolazione": 8761,
+    "superficie_kmq": 89.66,
+    "densita": 97.7,
+    "cap": "52048",
+    "prefisso_telefonico": "0575",
+    "patrono": "SS. Egidio e Savino",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "savinesi",
+    "etimologia": "La sua composizione è molto semplice: è un composto di \"monte\" e del nome del Santo venerato in loco, \"San Savino\". Chiamato in passato Monte di Sansovino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Alberoro",
+      "Gargonza",
+      "Montagnano",
+      "Verniana"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Bucine",
+      "Civitella in Val di Chiana",
+      "Lucignano",
+      "Marciano della Chiana",
+      "Rapolano Terme (SI)"
+    ],
+    "musei": [
+      "Museo Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Agostino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Verdi"
+    ],
+    "stadi": [
+      "Stadio Comunale"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marciano della Chiana",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051022",
+    "codice_catastale": "E933",
+    "popolazione": 3441,
+    "superficie_kmq": 23.71,
+    "densita": 145.1,
+    "cap": "52047",
+    "prefisso_telefonico": "0575",
+    "patrono": "Santissimo Crocifisso",
+    "festa_patronale": "prima domenica dopo Ferragosto",
+    "demonimo": "marcianesi",
+    "etimologia": "Deriva dal nome latino di persona Marcius con l'aggiunta del suffisso -anus che indica possesso. La specifica si riferisce al fiume Chiani da Clanis che significa \"corso d'acqua fangoso\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Cesa",
+      "Badicorte",
+      "San Giovanni dei Mori"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Castiglion Fiorentino",
+      "Foiano della Chiana",
+      "Lucignano",
+      "Monte San Savino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Carmine",
+      "Chiesa dei SS. Andrea e Stefano"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lucignano",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051021",
+    "codice_catastale": "E718",
+    "popolazione": 3577,
+    "superficie_kmq": 44.87,
+    "densita": 79.7,
+    "cap": "52046",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Felice",
+    "festa_patronale": "29 luglio",
+    "demonimo": "lucignanesi",
+    "etimologia": "Deriva dal nome latino di persona Lucinius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Croce",
+      "Pieve Vecchia",
+      "Santa Maria"
+    ],
+    "comuni_confinanti": [
+      "Foiano della Chiana",
+      "Marciano della Chiana",
+      "Monte San Savino",
+      "Rapolano Terme (SI)",
+      "Sinalunga (SI)"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria della Querce",
+      "Collegiata di San Michele Arcangelo",
+      "Chiesa di San Francesco",
+      "Chiesa di San Biagio, in precedenza dedicata a San Felice",
+      "Chiesa della SS. Annunziata o della Misericordia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Maggiolata (ultime due domeniche di maggio)",
+      "manifestazione folcloristica"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Loro Ciuffenna",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051020",
+    "codice_catastale": "E693",
+    "popolazione": 5837,
+    "superficie_kmq": 86.72,
+    "densita": 67.3,
+    "cap": "52024",
+    "prefisso_telefonico": "055",
+    "patrono": "Maria Santissima Assunta",
+    "festa_patronale": "seconda domenica di settembre",
+    "demonimo": "loresi",
+    "etimologia": "La prima parte del nome deriva dal latino laurus, ossia alloro. La seconda parte del nome deriva dal nome del torrente Iofinne che scorre nei pressi e che a sua volta deriva dal nome etrusco di persona Ciufenna o latino Clufennius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Pratomagno"
+    ],
+    "localita_frazioni": [
+      "Anciolina",
+      "Borro",
+      "Casa",
+      "Casale",
+      "Casamona",
+      "Chiassaia",
+      "Faeto",
+      "Gorgiti",
+      "Gropina",
+      "Malva",
+      "Modine",
+      "Odina",
+      "Oliveto",
+      "Poggio di Loro",
+      "Pratovalle",
+      "Querceto",
+      "Rocca Ricciarda",
+      "San Clemente",
+      "San Giustino  Valdarno",
+      "Sercognano",
+      "Trappola",
+      "Trevane",
+      "Villa"
+    ],
+    "comuni_confinanti": [
+      "Castel Focognano",
+      "Castel San Niccolò",
+      "Castelfranco Piandiscò",
+      "Castiglion Fibocchi",
+      "Ortignano Raggiolo",
+      "Talla",
+      "Terranuova Bracciolini"
+    ],
+    "musei": [
+      "Museo \"Venturino Venturi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta",
+      "Basilica di Nostra Signora dell'Umiltà"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Laterina",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051019",
+    "codice_catastale": "E468",
+    "popolazione": 3504,
+    "superficie_kmq": 23.96,
+    "densita": 146.2,
+    "cap": "52020",
+    "prefisso_telefonico": "0575",
+    "patrono": "Santi Ippolito e Cassiano",
+    "festa_patronale": "18 agosto",
+    "demonimo": "laterinesi",
+    "etimologia": "Deriva probabilmente dal latino laterina (mattonaia) o dal nome latino di persona Laterinus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Casanuova",
+      "Ponticino"
+    ],
+    "comuni_confinanti": [
+      "A nord e nord-est: Arezzo",
+      "Castiglion Fibocchi; a nord e nord-ovest: Terranuova Bracciolini; a sud e sud-ovest: Pergine Valdarno; a sud-est: Civitella in Val di Chiana"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo del Podestà",
+      "Villa di Monsoglio",
+      "Villa dell'lsola"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria in Valle",
+      "Chiesa di San Rocco",
+      "Chiesa di San Biagio",
+      "Chiesa dei Santi Ippolito e Cassiano"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre Guinigi",
+      "Porta Fredda"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Foiano della Chiana",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051018",
+    "codice_catastale": "D649",
+    "popolazione": 9473,
+    "superficie_kmq": 40.82,
+    "densita": 232.1,
+    "cap": "52045",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "foianesi",
+    "etimologia": "Documentato come Fogiano, Fugiano o Fuiano, deriva da Furianus, dal nome latino di persona Furius. La specifica si riferisce al fiume Chiani, da Clanis che significa \"corso d'acqua fangoso\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castiglion Fiorentino",
+      "Cortona",
+      "Lucignano",
+      "Marciano della Chiana",
+      "Sinalunga (SI)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Francesco",
+      "Chiesa dei SS. Domenico e Michele Arcangelo",
+      "Collegiata di San Martino",
+      "Chiesa di Santa Cecilia della Pace",
+      "Chiesa di Santa Maria della Fraternita",
+      "Tempio di Santo Stefano alla Vittoria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cortona",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051017",
+    "codice_catastale": "D077",
+    "popolazione": 22269,
+    "superficie_kmq": 342.32,
+    "densita": 65.1,
+    "cap": "52044",
+    "prefisso_telefonico": "0575",
+    "patrono": "Santa Margherita da Cortona",
+    "festa_patronale": "22 febbraio",
+    "demonimo": "cortonesi",
+    "etimologia": "Si suppone la presenza di un suffisso -ona di origine prelatina, ma la provenienza del nome è sconosciuta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Barullo-Centoia",
+      "Camucia",
+      "Chianacce",
+      "Cignano",
+      "Col di Morro",
+      "Creti",
+      "Fraticciola",
+      "Fratta-Santa Caterina",
+      "La Villa-Farneta",
+      "Mercatale",
+      "Mezzavia",
+      "Monsigliolo",
+      "Montalla",
+      "Montecchio",
+      "Ossaia",
+      "Pierle",
+      "Pietraia",
+      "Poggioni",
+      "Riccio",
+      "Ronzano",
+      "Sant'Andrea di Sorbello",
+      "Scanizza",
+      "Sodo",
+      "Terontola",
+      "Terontola Stazione",
+      "Toppo di Morro",
+      "Tornia",
+      "Torreone",
+      "Vallone"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Castiglion Fiorentino",
+      "Castiglione del Lago (PG)",
+      "Città di Castello (PG)",
+      "Foiano della Chiana",
+      "Lisciano Niccone (PG)",
+      "Montepulciano (SI)",
+      "Sinalunga (SI)",
+      "Torrita di Siena (SI)",
+      "Tuoro sul Trasimeno (PG)",
+      "Umbertide (PG)"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina Fratticciola",
+      "Museo dell'Accademia Etrusca e della Città di Cortona",
+      "Museo Diocesano"
+    ],
+    "ville_palazzi": [
+      "Palazzo del Popolo o Passerini",
+      "Villa Passerini o Palazzone"
+    ],
+    "chiese": [
+      "Santuario \"Eremo le Celle\" :: Frati Minori Cappuccini",
+      "Santuario Abbazia Maria Assunta (in località Camucia - Farneta)",
+      "Santuario di Santa Margherita da Cortona :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Pierle",
+      "Fortezza di Girifalco"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Signorelli"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Athens (Georgia - USA)",
+      "Chateau-Chinon (Francia)",
+      "Kruje (Albania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Civitella in Val di Chiana",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051016",
+    "codice_catastale": "C774",
+    "popolazione": 9099,
+    "superficie_kmq": 100.37,
+    "densita": 90.7,
+    "cap": "52041",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "civitellini",
+    "etimologia": "La prima parte del nome potrebbe riferirsi al latino civitas o al toscano civitella (tipo di frumento). La specifica si riferisce alla valle lungo la quale scorre il fiume Chiani da Clanis che significa \"corso d'acqua fangoso\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)"
+    ],
+    "localita_frazioni": [
+      "Albergo",
+      "Badia al Pino",
+      "Ciggiano",
+      "Oliveto",
+      "Pieve al Toppo",
+      "Pieve a Maiano",
+      "Tegoleto",
+      "Tuori",
+      "Viciomaggio"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Bucine",
+      "Laterina",
+      "Monte San Savino",
+      "Pergine Valdarno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "TMT Teatro Moderno Tegoleto"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Kämpfelbach (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chiusi della Verna",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051015",
+    "codice_catastale": "C663",
+    "popolazione": 1992,
+    "superficie_kmq": 102.31,
+    "densita": 19.5,
+    "cap": "52010",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "chiusini",
+    "etimologia": "Deriva dal termine latino clusa, ossia strettoia, in riferimento alla collocazione del paese all'imbocco di due valli. Fino al 1928 fu chiamato Chiusi in Casentino, la denominazione attuale si riferisce al vicino monte La Verna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino",
+      "Parco Nazionale delle Foreste Casentinesi, Monte Falterona, Campigna"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bagno di Romagna (FC)",
+      "Bibbiena",
+      "Caprese Michelangelo",
+      "Castel Focognano",
+      "Chitignano",
+      "Pieve Santo Stefano",
+      "Poppi",
+      "Subbiano",
+      "Verghereto (FC)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Francescano della Verna :: Frati Minori Francescani",
+      "Chiesa Maggiore o Basilica",
+      "Chiesa di Santa Maria degli Angeli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Helmstadt (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chitignano",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051014",
+    "codice_catastale": "C648",
+    "popolazione": 910,
+    "superficie_kmq": 14.72,
+    "densita": 61.8,
+    "cap": "52010",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Vincenzo",
+    "festa_patronale": "22 gennaio",
+    "demonimo": "chitignanini",
+    "etimologia": "Documentato come Clotinianum, deriva dal nome latino di persona Clutinius (da Clutius) con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Croce di Sarna",
+      "Taena",
+      "Rosina"
+    ],
+    "comuni_confinanti": [
+      "A nord-est: Caprese Michelangelo; a nord-ovest: Chiusi della Verna; a sud-est: Subbiano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Vincenzo",
+      "Chiesa di San Jacopo (a Taena)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Ubertini",
+      "detto di Clotiniano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "La Calmette (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cavriglia",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051013",
+    "codice_catastale": "C407",
+    "popolazione": 9576,
+    "superficie_kmq": 60.88,
+    "densita": 157.3,
+    "cap": "52022",
+    "prefisso_telefonico": "055",
+    "patrono": "Santa Berta",
+    "festa_patronale": "primo lunedì di agosto",
+    "demonimo": "cavrigliesi",
+    "etimologia": "Secondo alcuni potrebbe riferirsi al nome latino di persona Cabrilius, secondo altri potrebbe invece derivare da capra (attraverso Capriglia) in riferimento a \"capra selvatica\" per la loro presenza in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Neri",
+      "Castelnuovo dei Sabbioni",
+      "Massa Sabbioni",
+      "Meleto Valdarno",
+      "Santa Barbara",
+      "San Cipriano",
+      "Vacchereccia",
+      "Montegonzi"
+    ],
+    "comuni_confinanti": [
+      "Figline e Incisa Valdarno (FI)",
+      "Gaiole in Chianti (SI)",
+      "Greve in Chianti (FI)",
+      "Montevarchi",
+      "Radda in Chianti (SI)",
+      "San Giovanni Valdarno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Pancrazio",
+      "Pieve di San Giovanni Battista",
+      "Chiesetta di San Lorenzo a Casignano"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Pian Franzese (oggi villa-fattoria)",
+      "Castello di Montedomenichi (resti)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castiglion Fiorentino",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051012",
+    "codice_catastale": "C319",
+    "popolazione": 13210,
+    "superficie_kmq": 113.24,
+    "densita": 116.7,
+    "cap": "52043",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "castiglionesi",
+    "etimologia": "Il termine Castiglione deriva da \"Castello\", la seconda parte del nome fu in un primo momento aretino, poi perugino, infine fiorentino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Brolio",
+      "Castroncello",
+      "Cozzano",
+      "La Badia",
+      "La Nave",
+      "Mammi",
+      "Manciano La Misericordia",
+      "Montecchio Vesponi",
+      "Noceta",
+      "Orzale",
+      "Pergognano",
+      "Petreto",
+      "Pieve di Chio",
+      "Pievuccia",
+      "Ranchetto",
+      "Ristonchia",
+      "Santa Cristina",
+      "Santa Lucia",
+      "Santa Margherita"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Cortona",
+      "Foiano della Chiana",
+      "Marciano della Chiana"
+    ],
+    "musei": [
+      "Pinacoteca Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata di San Giuliano",
+      "Chiesa di San Francesco",
+      "Chiesa della Madonna della Consolazione",
+      "Pieve dei SS. Ippolito e Cassiano a Retina",
+      "Santuario della Madonna del Bagno",
+      "Oratorio del SS. Sacramento, detto Chiesa del Gesù"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Montecchio Vesponi",
+      "Castello di Montegonzi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio dei Rioni Castiglionesi (terza domenica di giugno)",
+      "corsa di cavalli tra i rioni: Rione Cassero",
+      "Rione di Porta Fiorentina",
+      "Rione di Porta Romana"
+    ],
+    "gemellaggi": [
+      "La Charité sur Loire (Francia)",
+      "Ronda (Andalusia, Spagna), dal maggio 1996"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Roberto Benigni (1952 -)",
+      "attore e regista"
+    ]
+  },
+  {
+    "nome": "Castiglion Fibocchi",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051011",
+    "codice_catastale": "C318",
+    "popolazione": 2162,
+    "superficie_kmq": 25.68,
+    "densita": 84.2,
+    "cap": "52029",
+    "prefisso_telefonico": "0575",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "castiglionesi",
+    "etimologia": "Fino al 1863 il comune fu chiamato Due Comuni di Laterina, documentato nel 1774 anche con il nome di Castellione de filiis Bocchi, ossia Castiglione dei figli di Bocco, da cui trae origine il nome moderno. Il termine Castiglione deriva da \"Castello\", Bocco è un nome germanico di persona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Pratomagno"
+    ],
+    "localita_frazioni": [
+      "Gello Biscardo"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Capolona",
+      "Laterina",
+      "Loro Ciuffenna",
+      "Talla",
+      "Terranuova Bracciolini"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta medievale di San Pietro in Pezzano",
+      "Chiesa Parrocchiale dei SS. Pietro e Ilario",
+      "Chiesa di San Giovanni Battista (in frazione Gello Biscardo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelfranco Piandiscò",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051040",
+    "codice_catastale": "M322",
+    "popolazione": 9739,
+    "superficie_kmq": 56.04,
+    "densita": 173.8,
+    "cap": "52026",
+    "prefisso_telefonico": "055",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": null,
+    "etimologia": "Il nome Castelfranco Piandiscò è costituito dall'unione dei nomi:Castelfranco che deriva dall'unione delle parole \"castello\" e \"franco\", quest'ultima probabilmente è riferita al popolo della zona, ed è da intendersi con il significato di liberi, ossia \"franchi\", esonerati dal pagamento delle tasse;Piandiscò un composto di piano e Sco. La sua origine è incerta ma potrebbe riferirsi a Resco, nome del torrente che scorre nei pressi che è inteso come re (rio, fiume) e Sco.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Caspri",
+      "Certignano",
+      "Lama",
+      "Pulicciano",
+      "Casabiondo",
+      "Faella",
+      "Vaggio",
+      "Matassino"
+    ],
+    "comuni_confinanti": [
+      "Castel San Niccolò",
+      "Figline e Incisa Valdarno (FI)",
+      "Loro Ciuffenna",
+      "Reggello (FI)",
+      "San Giovanni Valdarno",
+      "Terranuova Bracciolini"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria Assunta a Scò",
+      "Chiesa di San Tommaso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Wanda Capodaglio"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Caldes D’Estrac (Spagna), dal 2003",
+      "L’Horme (Francia), dal 1993",
+      "Saint Saturnainn Les Apt. (Francia), dal 1993"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel San Niccolò",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051010",
+    "codice_catastale": "C263",
+    "popolazione": 2695,
+    "superficie_kmq": 83.11,
+    "densita": 32.4,
+    "cap": "52018",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "stradini",
+    "etimologia": "Il termine castello deriva da Castrum, ossia Castello, fortezza. La seconda parte del nome si riferisce alla locale parrocchia di San Niccolò.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Strada (Capoluogo del Comune)",
+      "Barbiano",
+      "Battifolle",
+      "Borgo alla Collina",
+      "Caiano",
+      "Castello",
+      "Cavolini",
+      "Cetica",
+      "Garliano",
+      "Le Lastre",
+      "La Sala",
+      "La Selva",
+      "Le Gualchiere",
+      "Pagliericcio",
+      "Pratarutoli",
+      "Prato",
+      "Rifiglio",
+      "Ristonchi",
+      "Spalanni",
+      "Poggio di Vertelli",
+      "San Pancrazio",
+      "Santa Maria",
+      "Torre",
+      "Valgianni",
+      "Vertelli"
+    ],
+    "comuni_confinanti": [
+      "Castelfranco Piandiscò",
+      "Loro Ciuffenna",
+      "Montemignaio",
+      "Ortignano Raggiolo",
+      "Poppi",
+      "Pratovecchio Stia",
+      "Reggello (FI)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Martino a Vado",
+      "Chiesa Parrocchiale di San Donato (Borgo alla Collina)",
+      "Chiesa di Santa Maria a Spalanni",
+      "Chiesa di San Michele o Sant'Angelo (Cetica)",
+      "Chiesa di San Giovanni Battista (Prato, XV secolo)",
+      "Cappella Oratorio della Visitazione della Madonna",
+      "Cappella del Crocefisso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Pegomas (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel Focognano",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051008",
+    "codice_catastale": "C102",
+    "popolazione": 3119,
+    "superficie_kmq": 56.59,
+    "densita": 55.1,
+    "cap": "52016",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "focognanesi o rassinesi",
+    "etimologia": "Documentato come Fulconiano o Fulcognano è un composto di Castello e Focognano. La prima parte è di intuibile provenienza, la seconda deriva dal nome latino di persona Falconius o Fulconius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Rassina (capoluogo)",
+      "Carda",
+      "Castel Focognano",
+      "Pieve e Socana",
+      "Salutio"
+    ],
+    "comuni_confinanti": [
+      "Bibbiena",
+      "Capolona",
+      "Chiusi della Verna",
+      "Loro Ciuffenna",
+      "Ortignano Raggiolo",
+      "Poppi",
+      "Subbiano",
+      "Talla"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino (Rassina)",
+      "Pieve di Sant'Antonino a Socana"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Champcevinel (Francia)",
+      "dal luglio 1992"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caprese Michelangelo",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051007",
+    "codice_catastale": "B693",
+    "popolazione": 1389,
+    "superficie_kmq": 67.34,
+    "densita": 20.6,
+    "cap": "52033",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "capresani",
+    "etimologia": "La prima parte deriva dal latino capra, ossia capra selvatica, con l'aggiunta del suffisso -ensis. Secondo altri il nome deriva da ad capras riferendosi a quanto scrive Procopio sulla leggendaria morte in loco di Totila. La seconda parte del nome fu aggiunta nel 1913 perché fu patria di Michelangelo Buonarroti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valtiberina"
+    ],
+    "localita_frazioni": [
+      "Fragaiolo",
+      "Lama",
+      "San Cristoforo-Caroni"
+    ],
+    "comuni_confinanti": [
+      "Anghiari",
+      "Chitignano",
+      "Chiusi della Verna",
+      "Pieve Santo Stefano",
+      "Subbiano"
+    ],
+    "musei": [
+      "Museo Michelangiolesco"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Eremo della Casella",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Cassiano in Startina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Castagna (secondo e terzo fine settimana di ottobre)",
+      "con l'esibizione di gruppi folcloristici"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Michelangelo Buonarroti (1475 - 1564)",
+      "artista italiano del tardo Rinascimento: scultore",
+      "pittore",
+      "architetto e letterato"
+    ]
+  },
+  {
+    "nome": "Capolona",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051006",
+    "codice_catastale": "B670",
+    "popolazione": 5439,
+    "superficie_kmq": 47.34,
+    "densita": 114.9,
+    "cap": "52010",
+    "prefisso_telefonico": "0575",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "capolonesi",
+    "etimologia": "Documentato con i nomi Caputleonis e Campilione, si crede derivi da Campo Leone, dal latino Caput Leonis anche se non si esclude un legame con il termine latino campus (pianura).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino"
+    ],
+    "localita_frazioni": [
+      "Bibbiano",
+      "Castelluccio",
+      "Pieve San Giovanni",
+      "San Martino Sopr'Arno"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Castel Focognano",
+      "Castiglion Fibocchi",
+      "Subbiano",
+      "Talla"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria Maddalena a Sietina",
+      "Pieve dei Santi Giovanni Battista e Marino",
+      "Chiesa di Santa Lucia (in località Pieve a Cenina)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bucine",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051005",
+    "codice_catastale": "B243",
+    "popolazione": 10120,
+    "superficie_kmq": 131.09,
+    "densita": 77.2,
+    "cap": "52021",
+    "prefisso_telefonico": "055",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "bucinesi",
+    "etimologia": "Potrebbe riferirsi ad una bucine (rete da pesca) in uso nei pressi del torrente Ambra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)"
+    ],
+    "localita_frazioni": [
+      "Ambra",
+      "Badia Agnano",
+      "Badia a Ruoti",
+      "Capannole",
+      "Cennina",
+      "Levane",
+      "Montebenichi",
+      "Pietraviva",
+      "Pogi",
+      "Rapale",
+      "San Leonino",
+      "San Pancrazio",
+      "Torre"
+    ],
+    "comuni_confinanti": [
+      "A est e nord-est: Pergine Valdarno; a est e sud-est: Civitella in Val di Chiana; a nord e nord-ovest: Montevarchi; a ovest: Gaiole in Chianti (SI); a sud: Rapolano Terme (SI); a sud-est: Monte San Savino; a sud-ovest: Castelnuovo Berardenga (SI)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria ad Agnano",
+      "Chiesa di San Giovanni Battista a Galatrona, romanica",
+      "Abbazia di San Pietro a Ruoti"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Galatrona"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale",
+      "Teatro Società Filodrammatica"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bibbiena",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051004",
+    "codice_catastale": "A851",
+    "popolazione": 12232,
+    "superficie_kmq": 86.37,
+    "densita": 141.6,
+    "cap": "52011",
+    "prefisso_telefonico": "0575",
+    "patrono": "Sant'Ippolito",
+    "festa_patronale": "13 agosto",
+    "demonimo": "bibbienesi",
+    "etimologia": "Menzionato nei documenti con il nome Biblena e Beblena, deriva dall'etrusco Viblena che si riferisce al nome etrusco di persona Viplnei o latino Viblenus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana del Casentino",
+      "Parco Nazionale delle Foreste Casentinesi, Monte Falterona, Campigna"
+    ],
+    "localita_frazioni": [
+      "Banzena",
+      "Campi",
+      "Camprena",
+      "Candolesi",
+      "Farneta",
+      "Freggina",
+      "Gello",
+      "Giona Gressa",
+      "Guazzi",
+      "Lonnano",
+      "Marciano",
+      "Partina",
+      "Pian del Ponte",
+      "Poggiolo",
+      "Ponte Bifolco",
+      "Querceto",
+      "Serravalle",
+      "Soci",
+      "Terrossola",
+      "Valchiusa"
+    ],
+    "comuni_confinanti": [
+      "Bagno di Romagna (FC)",
+      "Castel Focognano",
+      "Chiusi della Verna",
+      "Ortignano Raggiolo",
+      "Poppi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Mazzoleni",
+      "Palazzo Niccolini"
+    ],
+    "chiese": [
+      "Santuario Santa Maria del Sasso :: Frati Domenicani",
+      "Oratorio di San Francesco",
+      "Chiesa di Sant'Ippolito Martire, nata come cappella della nobile famiglia dei Tarlati",
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro dei Dovizi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "La Leggenda della Mea"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Badia Tedalda",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051003",
+    "codice_catastale": "A541",
+    "popolazione": 1080,
+    "superficie_kmq": 119.03,
+    "densita": 9.1,
+    "cap": "52032",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "badiali",
+    "etimologia": "Il nome si riferisce ad un'abbazia benedettina fondata dalla famiglia Tedaldi, nome che deriva a sua volta dal germanico Teudald.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valtiberina"
+    ],
+    "localita_frazioni": [
+      "Caprile",
+      "Cà Raffaello",
+      "Cicognaia",
+      "Fresciano",
+      "Montebotolino",
+      "Montelabreve",
+      "Pratieghi",
+      "Ranco",
+      "Rofelle",
+      "Sant'Andrea",
+      "San Patrignano",
+      "Santa Sofia",
+      "Stiavola",
+      "Via Maggio"
+    ],
+    "comuni_confinanti": [
+      "Borgo Pace (PU)",
+      "Casteldelci (RN)",
+      "Pennabilli (RN)",
+      "Pieve Santo Stefano",
+      "Sansepolcro",
+      "Sant'Agata Feltria (RN)",
+      "Sestino",
+      "Verghereto (FC)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna delle Grazie",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anghiari",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051001",
+    "codice_catastale": "A291",
+    "popolazione": 5623,
+    "superficie_kmq": 130.4,
+    "densita": 43.1,
+    "cap": "52031",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "anghiaresi",
+    "etimologia": "Deriva dal termine latino angularis, ossia \"ad angolo\" e si riferisce probabilmente ad un castello a pianta triangolare sito in loco.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Valtiberina",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Catigliano",
+      "Motina",
+      "Ponte alla Piera",
+      "San Leo",
+      "Scheggia",
+      "Tavernelle",
+      "Viaio"
+    ],
+    "comuni_confinanti": [
+      "Arezzo",
+      "Caprese Michelangelo",
+      "Citerna (PG)",
+      "Monterchi",
+      "Pieve Santo Stefano",
+      "Sansepolcro",
+      "Subbiano"
+    ],
+    "musei": [
+      "Museo della Battaglia di Anghiari - Palazzo del Marzocco",
+      "Museo Statale di Palazzo Taglieschi",
+      "Museo della Confraternita della Misericordia"
+    ],
+    "ville_palazzi": [
+      "Palazzo Pretorio o del Comune",
+      "Palazzo Taglieschi",
+      "Villa di Galbino"
+    ],
+    "chiese": [
+      "Chiesa di Santo Stefano, medioevale",
+      "Chiesa di Santa Maria delle Grazie, settecentesca",
+      "Chiesa romanica di Santa Maria a Corsano",
+      "Chiesa di Sant'Agostino"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Montalto",
+      "Castello di Sorci"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro dell'Accademia dei Ricomposti"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna di Loreto (10 dicembre)",
+      "Tovaglia a Quadri (10-20 agosto)"
+    ],
+    "gemellaggi": [
+      "La Plata (Argentina)",
+      "dal 1998"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arezzo",
+    "provincia": "Arezzo",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "051002",
+    "codice_catastale": "A390",
+    "popolazione": 99469,
+    "superficie_kmq": 386.25,
+    "densita": 257.5,
+    "cap": "52100",
+    "prefisso_telefonico": "0575",
+    "patrono": "San Donato di Arezzo",
+    "festa_patronale": "7 agosto",
+    "demonimo": "aretini",
+    "etimologia": "Documentato con il nome latino di Arretium e greco Arretion derivando forse da una base pre-etrusca (arra) che è collegata al nome etrusco Arnth, diventato in latino Arruns (nome di persona), Arrenius (nome di famiglia) o Arrone (nome di fiume).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": [
+      "Antria",
+      "Battifolle-Ruscello-Poggiola",
+      "Campoluci",
+      "Chiassa-Tregozzano",
+      "Giovi-Ponte alla Chiassa",
+      "Marcena",
+      "Meliciano",
+      "Molinelli",
+      "Molin Nuovo",
+      "Monte Sopra Rondine",
+      "Palazzo del Pero",
+      "Patrignone",
+      "Ponte Buriano-Cincelli",
+      "Pratantico-Indicatore",
+      "Puglia",
+      "Quarata",
+      "Salceta-Formicheto-Osteria",
+      "San Firenze-Fonte di Sala",
+      "San Polo",
+      "Santa Maria alla Rassinata",
+      "Venere"
+    ],
+    "comuni_confinanti": [
+      "Anghiari",
+      "Capolona",
+      "Castiglion Fibocchi",
+      "Castiglion Fiorentino",
+      "Città di Castello (PG)",
+      "Civitella in Val di Chiana",
+      "Cortona",
+      "Laterina",
+      "Marciano della Chiana",
+      "Monte San Savino",
+      "Monte Santa Maria Tiberina (PG)",
+      "Monterchi",
+      "Subbiano"
+    ],
+    "musei": [
+      "Museo Diocesano di Arte Sacra del Duomo",
+      "Museo di Arte Medievale e Moderna",
+      "Museo Archeologico Nazionale \"G. C. Mecenate\"",
+      "Casa Vasari",
+      "Casa Museo Ivan Bruschi"
+    ],
+    "ville_palazzi": [
+      "Palazzo della Fraternita dei Laici",
+      "Palazzo Albergotti o delle Statue",
+      "Palazzo Cofani-Brizzolari"
+    ],
+    "chiese": [
+      "Santuario Santa Maria delle Grazie :: Frati Carmelitani",
+      "Santuario Madonna del Conforto",
+      "Pieve di San Paolo (in località San Polo)",
+      "Pieve di San Donnino a Maiano",
+      "Cattedrale di San Donato"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza Medicea (sul colle di San Donato)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Anfiteatro Romano"
+    ],
+    "teatri": [
+      "Libera Accademia del Teatro",
+      "Politeama Universale",
+      "Teatrino di via della Bicchieraia",
+      "Teatro Petrarca"
+    ],
+    "stadi": [
+      "Stadio Comunale"
+    ],
+    "eventi_feste_sagre": [
+      "Cena Medievale (prima domenica di luglio), organizzata dal quartiere di Porta del Foro",
+      "Giostra del Saracino (penultima domenica di giugno e prima domenica di settembre), rievocazione storica"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Guido Monaco (991 circa - 1050), monaco e teorico della musica",
+      "Giorgio Vasari (1511 - Firenze, 1574), pittore",
+      "Pietro Aretino (1492 - 1556), letterato",
+      "Francesco Petrarca (1304 - 1374), scrittore, poeta ed umanista"
+    ]
+  }
+]

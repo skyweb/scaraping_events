@@ -1,0 +1,16 @@
+{
+  "nome": "Milano",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "MI",
+  "codice_istat": "015",
+  "popolazione": 3218201,
+  "popolazione_maschi": 1557612,
+  "popolazione_femmine": 1660589,
+  "superficie_kmq": 1578.9,
+  "densita": 2038.3,
+  "num_comuni": 134,
+  "capoluogo": "Milano",
+  "iso_3166_2": "IT-MI",
+  "nuts": "ITC45"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Pavia",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "PV",
+  "codice_istat": "018",
+  "popolazione": 547251,
+  "popolazione_maschi": 266487,
+  "popolazione_femmine": 280764,
+  "superficie_kmq": 2964.73,
+  "densita": 184.6,
+  "num_comuni": 188,
+  "capoluogo": "Pavia",
+  "iso_3166_2": "IT-PV",
+  "nuts": "ITC48"
+}

@@ -74,7 +74,7 @@ class EventItem(scrapy.Item):
 
     # === Location ===
     city = scrapy.Field()           # Nome città
-    city_id = scrapy.Field()        # FK a comuni_italiani.comuni.id
+    city_id = scrapy.Field()        # FK a comuni_istat.comuni.id
     location_name = scrapy.Field()  # Nome venue/luogo
     location_address = scrapy.Field()  # Indirizzo completo
     location_coords = scrapy.Field()   # Dict con lat/lng

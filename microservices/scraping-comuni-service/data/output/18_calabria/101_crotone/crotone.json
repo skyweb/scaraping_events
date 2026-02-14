@@ -1,0 +1,16 @@
+{
+  "nome": "Crotone",
+  "regione": "Calabria",
+  "zona": null,
+  "sigla": "KR",
+  "codice_istat": "101",
+  "popolazione": 175566,
+  "popolazione_maschi": 87925,
+  "popolazione_femmine": 87641,
+  "superficie_kmq": 1716.58,
+  "densita": 102.3,
+  "num_comuni": 27,
+  "capoluogo": "Crotone",
+  "iso_3166_2": "IT-KR",
+  "nuts": "ITF62"
+}

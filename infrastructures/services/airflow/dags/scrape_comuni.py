@@ -1,5 +1,5 @@
 """
-DAG per ETL comuni italiani
+DAG per ETL comuni ISTAT
 
 Pipeline:
 1. Scraping via DockerOperator → genera JSON su disco (regioni, province, comuni)
@@ -33,13 +33,13 @@ default_args = {
 SCRAPY_IMAGE = 'today-events/scraping-comuni:latest'
 COMUNI_DATA_PATH = Variable.get(
     'COMUNI_DATA_PATH',
-    default_var=os.getenv('COMUNI_DATA_PATH', '/opt/today_events/data/comuni-italiani'),
+    default_var=os.getenv('COMUNI_DATA_PATH', '/opt/today_events/data/comuni-istat'),
 )
 API_BASE_URL = Variable.get(
     'API_BASE_URL',
     default_var=os.getenv('API_BASE_URL', 'http://backoffice:8000'),
 )
-BULK_ENDPOINT = f'{API_BASE_URL}/api/comuni-italiani/ingestion/bulk/'
+BULK_ENDPOINT = f'{API_BASE_URL}/api/comuni-istat/ingestion/bulk/'
 BATCH_SIZE = 500
 
 
@@ -199,9 +199,9 @@ def ingest_comuni(**context):
 # =============================================================================
 
 with DAG(
-    'etl_comuni_italiani',
+    'etl_comuni_istat',
     default_args=default_args,
-    description='ETL comuni italiani - scraping + ingestion',
+    description='ETL comuni ISTAT - scraping + ingestion',
     schedule_interval=None,
     start_date=datetime(2026, 1, 1),
     catchup=False,

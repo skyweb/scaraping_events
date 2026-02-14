@@ -1,0 +1,16 @@
+{
+  "nome": "Lecco",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "LC",
+  "codice_istat": "097",
+  "popolazione": 339238,
+  "popolazione_maschi": 166975,
+  "popolazione_femmine": 172263,
+  "superficie_kmq": 816.17,
+  "densita": 415.6,
+  "num_comuni": 88,
+  "capoluogo": "Lecco",
+  "iso_3166_2": "IT-LC",
+  "nuts": "ITC43"
+}

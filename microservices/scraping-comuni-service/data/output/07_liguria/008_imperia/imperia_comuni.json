@@ -1,0 +1,3594 @@
+[
+  {
+    "nome": "Villa Faraldi",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008067",
+    "codice_catastale": "L943",
+    "popolazione": 459,
+    "superficie_kmq": 9.61,
+    "densita": 47.8,
+    "cap": "18010",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "faraldesi",
+    "etimologia": "E' un composto di villa e di Faraldi (nome di famiglia di origine germanica), da Faroald, nome longobardo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero"
+    ],
+    "localita_frazioni": [
+      "Deglio"
+    ],
+    "comuni_confinanti": [
+      "Andora (SV)",
+      "Diano San Pietro",
+      "San Bartolomeo al Mare",
+      "Stellanello (SV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vessalico",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008066",
+    "codice_catastale": "L809",
+    "popolazione": 286,
+    "superficie_kmq": 10.35,
+    "densita": 27.6,
+    "cap": "18026",
+    "prefisso_telefonico": "0183",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "vessalcesi",
+    "etimologia": "Secondo alcuni potrebbe derivare dal medioevale vassallo, ma più probabilmente potrebbe essere un derivato in -ico da una base preromana non ben identificata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "Lenzari",
+      "Perinetti",
+      "Sigliolo"
+    ],
+    "comuni_confinanti": [
+      "Borghetto d'Arroscia",
+      "Casanova Lerrone (SV)",
+      "Cesio",
+      "Pieve di Teco"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Manfredi"
+    ],
+    "chiese": [
+      "Chiesetta di Sant'Andrea",
+      "Chiesa Parrocchiale di Santa Maria Maddalena"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera dell'Aglio di Vessalico (inizio luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ventimiglia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008065",
+    "codice_catastale": "L741",
+    "popolazione": 24178,
+    "superficie_kmq": 54.06,
+    "densita": 447.2,
+    "cap": "18039",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Secondo di Ventimiglia",
+    "festa_patronale": "26 agosto",
+    "demonimo": "ventimigliesi",
+    "etimologia": "È formato dalla voce ligure albom (città capoluogo) e dal genitivo plurale del nome etnico Intemelion, divenuto quindi Albintimilium poi Vintimilio, poi Vigintimilium divenuto Vintimilia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": [
+      "Bevera",
+      "Calvo",
+      "Carletti",
+      "Grimaldi",
+      "Latte",
+      "Mortola",
+      "Roverino",
+      "San Antonio",
+      "San Bernardo",
+      "San Lorenzo",
+      "San  Pancrazio",
+      "Sealza",
+      "Torri",
+      "Trucco",
+      "Varase",
+      "Verrandi",
+      "Villatella",
+      "Ville"
+    ],
+    "comuni_confinanti": [
+      "Airole, Camporosso, Dolceacqua, Olivetta San Michele",
+      "Ventimiglia è: Comune di Confine con la Francia"
+    ],
+    "musei": [
+      "Museo Preistorico dei Balzi Rossi",
+      "Museo di Villa \"Hanbury\"",
+      "Museo Archeologico \"G. Rossi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele (edificata nel XII secolo)",
+      "Cattedrale"
+    ],
+    "castelli_fortificazioni": [
+      "Castel d'Appio"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardini Botanici Hanbury"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Agosto Medievale (6-14 agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vasia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008064",
+    "codice_catastale": "L693",
+    "popolazione": 391,
+    "superficie_kmq": 10.75,
+    "densita": 36.4,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "vasiesi",
+    "etimologia": "Deriva dal nome latino Vasius o dal nome germanico Waso, passato al femminile per concordanza con villa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Pantasina",
+      "Pianavia",
+      "Castello",
+      "Torretta"
+    ],
+    "comuni_confinanti": [
+      "Borgomaro",
+      "Dolcedo",
+      "Imperia",
+      "Lucinasco",
+      "Pontedassio",
+      "Prelà"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Antonino",
+      "Chiesa di San Martino, con campanile romanico",
+      "Chiesa campestre di Sant'Anna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallecrosia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008063",
+    "codice_catastale": "L599",
+    "popolazione": 6970,
+    "superficie_kmq": 3.56,
+    "densita": 1957.9,
+    "cap": "18019",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "vallecrosini",
+    "etimologia": "Riflette la voce dialettale ligure krosu, incavato, forse dal latino corrosus (da corrodere, rodere).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": [
+      "Vallecrosia Alta"
+    ],
+    "comuni_confinanti": [
+      "Bordighera",
+      "Camporosso",
+      "San Biagio della Cima",
+      "Vallebona"
+    ],
+    "musei": [
+      "Museo della Canzone e della Riproduzione Sonora"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "già San Vincenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallebona",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008062",
+    "codice_catastale": "L596",
+    "popolazione": 1324,
+    "superficie_kmq": 5.99,
+    "densita": 221.0,
+    "cap": "18012",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "vallebonesi",
+    "etimologia": "Significa letteralmente \"valle buona\", con riferimento alla valle del torrente Borghetto nella quale sorge.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": [
+      "Madonna della Neve"
+    ],
+    "comuni_confinanti": [
+      "Bordighera",
+      "Ospedaletti",
+      "Perinaldo",
+      "San Biagio della Cima",
+      "Seborga",
+      "Soldano",
+      "Vallecrosia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo Martire",
+      "Oratorio della Natività di Maria Vergine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Triora",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008061",
+    "codice_catastale": "L430",
+    "popolazione": 361,
+    "superficie_kmq": 67.76,
+    "densita": 5.3,
+    "cap": "18010",
+    "prefisso_telefonico": "0184",
+    "patrono": "Nostra Signora Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "trioresi",
+    "etimologia": "Deriva dal latino tritum, participio passato di terere, macinare, con l'aggiunta del suffisso -orio, in origine attributo del plurale neutro loca, luoghi; quindi \"luoghi dove si svolgeva attività molitoria\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Città del Pane",
+      "Club I Borghi più Belli d'Italia",
+      "Area Minoranza Linguistica Occitana"
+    ],
+    "localita_frazioni": [
+      "Cetta",
+      "Creppo",
+      "Realdo",
+      "Verdeggia",
+      "Monesi di Triora",
+      "Loreto",
+      "Bregalla",
+      "Carmeli",
+      "Borniga",
+      "Pin",
+      "Abenin",
+      "Vesignana",
+      "Goina"
+    ],
+    "comuni_confinanti": [
+      "Briga Alta (CN), Castel Vittorio, Mendatica, Molini di Triora, Montegrosso Pian Latte, Pigna",
+      "Triora è: Comune di Confine con la Francia"
+    ],
+    "musei": [
+      "Museo Etnografico e della Stregoneria"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "La Brigue (Provenza-Alpi-Costa Azzurra",
+      "Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Terzorio",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008060",
+    "codice_catastale": "L146",
+    "popolazione": 231,
+    "superficie_kmq": 1.86,
+    "densita": 124.2,
+    "cap": "18010",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "terzorini",
+    "etimologia": "Dal latino tertius, con l'aggiunta del suffisso -orio, ossia terza parte di un territorio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cipressa",
+      "Pompeiana",
+      "Santo Stefano al Mare"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Natività di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Taggia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008059",
+    "codice_catastale": "L024",
+    "popolazione": 14060,
+    "superficie_kmq": 30.89,
+    "densita": 455.2,
+    "cap": "18018",
+    "prefisso_telefonico": "0184",
+    "patrono": "Madonna Miracolosa",
+    "festa_patronale": null,
+    "demonimo": "tabiesi",
+    "etimologia": "Potrebbe essere una forma alterata del latino tabula, nel senso di \"estensione di terreno\", oppure potrebbe avere un'origine preromana.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Badalucco",
+      "Castellaro",
+      "Ceriana",
+      "Dolcedo",
+      "Pietrabruna",
+      "Riva Ligure",
+      "Sanremo"
+    ],
+    "musei": [
+      "Museo di San Domenico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei SS. Giacomo e Filippo (1675-1681)",
+      "Chiesa di San Martino",
+      "Chiesa della Madonna del Cannetto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Ballo della Morte - Festa di Santa Maddalena (terza domenica di luglio)",
+      "Festa di San Benedetto Revelli - Ambientazione e Corteo Storico (ultimo fine settimana di febbraio)",
+      "I Furgari (secondo sabato di febbraio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soldano",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008058",
+    "codice_catastale": "I796",
+    "popolazione": 1017,
+    "superficie_kmq": 3.58,
+    "densita": 284.1,
+    "cap": "18036",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "soldanesi",
+    "etimologia": "Deriva probabilmente dalla denominazione di sultano del fondatore del borgo o di un feudatario. Secondo altri, deriverebbe da Soldanus, nome di persona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": [
+      "San Martino"
+    ],
+    "comuni_confinanti": [
+      "Perinaldo",
+      "San Biagio della Cima",
+      "Vallebona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Nostra Signora del Carmine",
+      "Oratorio dei Disciplinati",
+      "Chiesa Parrocchiale di San Giovanni Battista",
+      "Cappella di San Mauro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del vino Rossese (ultimo sabato di luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Seborga",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008057",
+    "codice_catastale": "I556",
+    "popolazione": 307,
+    "superficie_kmq": 4.91,
+    "densita": 62.5,
+    "cap": "18012",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "seborghini",
+    "etimologia": "Attestato con il nome di Sepulcrum, è riconducibile a sepulc(a)ru, da sepulcrum (sepolcro).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ospedaletti",
+      "Perinaldo",
+      "Sanremo",
+      "Vallebona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Martino Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "L'Escarene (Francia)",
+      "dal 2003"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santo Stefano al Mare",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008056",
+    "codice_catastale": "I365",
+    "popolazione": 2232,
+    "superficie_kmq": 2.74,
+    "densita": 814.6,
+    "cap": "18010",
+    "prefisso_telefonico": "0184",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "3 agosto",
+    "demonimo": "santostefanesi",
+    "etimologia": "Trae il nome dal monastero Santo Stefano di Villaregia. La specifica si riferisce alla posizione geografica.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Marina degli Aregai)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cipressa",
+      "Pompeiana",
+      "Riva Ligure",
+      "Terzorio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di Santo Stefano Protomartire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sanremo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008055",
+    "codice_catastale": "I138",
+    "popolazione": 54824,
+    "superficie_kmq": 54.73,
+    "densita": 1001.7,
+    "cap": "18038",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Romolo",
+    "festa_patronale": "13 ottobre",
+    "demonimo": "sanremesi",
+    "etimologia": "Documentato con il nome di Sancti Romuli, trae il nome da San Romolo, che riflette il dialetto San Romu. il culto del santo è legato all'eremo in cui Romolo, vescovo di Genova nel IV secolo, si sarebbe ritirato ed alla sua tomba.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Portosole di Sanremo)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": [
+      "Pigna",
+      "Poggio",
+      "Coldirodi",
+      "Bussana",
+      "Verezzo"
+    ],
+    "comuni_confinanti": [
+      "Apricale",
+      "Bajardo",
+      "Ceriana",
+      "Ospedaletti",
+      "Perinaldo",
+      "Seborga",
+      "Taggia"
+    ],
+    "musei": [
+      "Pinacoteca e Biblioteca \"Rambaldi\"",
+      "Museo Civico (palazzo Borea d'Olmo)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale di San Siro",
+      "Santuario Madonna Pellegrina (in frazione Coldirodi)",
+      "Chiesa Ortodossa Russa",
+      "Chiesa evangelica valdese",
+      "Chiesa di San Giuseppe",
+      "Chiesa di Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Villa Nobel",
+      "Giardino Ormond"
+    ],
+    "luoghi_interesse": [
+      "Casinò Municipale",
+      "in stile liberty"
+    ],
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Karlskoga (Svezia)",
+      "Helsingor (Danimarca)",
+      "Atami (Giappone), dal 1976"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Lorenzo al Mare",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008054",
+    "codice_catastale": "H957",
+    "popolazione": 1281,
+    "superficie_kmq": 1.32,
+    "densita": 970.5,
+    "cap": "18017",
+    "prefisso_telefonico": "0183",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "sanlorenzini",
+    "etimologia": "Il nome deriva dal culto del santo, la specifica allude alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cipressa",
+      "Civezza",
+      "Costarainera",
+      "Imperia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Misericordia",
+      "Chiesa Parrocchiale di Santa Maria Maddalena"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Biagio della Cima",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008053",
+    "codice_catastale": "H780",
+    "popolazione": 1325,
+    "superficie_kmq": 4.6,
+    "densita": 288.0,
+    "cap": "18036",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "sanbiagini",
+    "etimologia": "Il nome deriva dal culto del santo, la specifica allude al monte Cima, che sovrasta il borgo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Camporosso",
+      "Dolceacqua",
+      "Perinaldo",
+      "Soldano",
+      "Vallebona",
+      "Vallecrosia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Fabiano e Sebastiano",
+      "Chiesa di San Biagio",
+      "Chiesa di Nostra Signora dei Dolori",
+      "Oratorio dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Camps la Source (Francia)",
+      "2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Bartolomeo al Mare",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008052",
+    "codice_catastale": "H763",
+    "popolazione": 3062,
+    "superficie_kmq": 10.88,
+    "densita": 281.4,
+    "cap": "18016",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "sanbartolomesi",
+    "etimologia": "Il nome venera il santo a cui è dedicata la parrocchiale. La specifica allude alla collocazione geografica dell'insediamento.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": [
+      "Rovere",
+      "Poiolo",
+      "San Bartolomeo",
+      "Pairola",
+      "Chiappa"
+    ],
+    "comuni_confinanti": [
+      "Andora (SV)",
+      "Cervo",
+      "Diano Castello",
+      "Diano Marina",
+      "Diano San Pietro",
+      "Villa Faraldi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Nostra Signora della Rovere"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocchetta Nervina",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008051",
+    "codice_catastale": "H460",
+    "popolazione": 299,
+    "superficie_kmq": 15.04,
+    "densita": 19.9,
+    "cap": "18030",
+    "prefisso_telefonico": "0184",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "rocchettini",
+    "etimologia": "Menzionato come castrum Barbaire, prese il nome di Rocchetta nel 1220. Allude a un borgo fortificato, mentre la seconda parte si riferisce alla collocazione del paese nel bacino del torrente Nervia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": [
+      "Paú"
+    ],
+    "comuni_confinanti": [
+      "Dolceacqua, Isolabona, Pigna",
+      "Rocchetta Nervina è: Comune di Confine con la Francia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cappella di San Martino",
+      "Chiesa parrocchiale di Santo Stefano Protomartire, cinquecentesca",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Santa Lucia",
+      "Chiesa di San Bernardo",
+      "Chiesa di San Bartolomeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Canyon del Barbaira"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "\"u Festin\"",
+      "2 settembre"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Riva Ligure",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008050",
+    "codice_catastale": "H328",
+    "popolazione": 2863,
+    "superficie_kmq": 2.11,
+    "densita": 1356.9,
+    "cap": "18015",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Maurizio",
+    "festa_patronale": "22 settembre",
+    "demonimo": "rivesi",
+    "etimologia": "Deriva dal latino ripa maris, costa, spiaggia. La specifica si riferisce alla posizione geografica.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": [
+      "Borgo Torre"
+    ],
+    "comuni_confinanti": [
+      "Castellaro",
+      "Pompeiana",
+      "Santo Stefano al Mare",
+      "Taggia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Buon Consiglio",
+      "Parrocchiale di San Maurizio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rezzo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008049",
+    "codice_catastale": "H257",
+    "popolazione": 351,
+    "superficie_kmq": 37.42,
+    "densita": 9.4,
+    "cap": "18026",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "rezzaschi o rezzesi",
+    "etimologia": "Deriva dal nome romano di persona Raetius",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "Lavina",
+      "Cenova",
+      "San Bernardo"
+    ],
+    "comuni_confinanti": [
+      "Aurigo",
+      "Borgomaro",
+      "Carpasio",
+      "Molini di Triora",
+      "Montegrosso Pian Latte",
+      "Pieve di Teco",
+      "Pornassio"
+    ],
+    "musei": [
+      "Museo della Pietra"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dell'Assunzione di Maria Vergine (a Cenova)",
+      "Santuario della Vergine della Neve (a Lavina)",
+      "Oratorio di San Giovanni Battista (a Lavina)",
+      "Oratorio dei Santi Giovanni Battista e Giovanni Evangelista (a Cenova)",
+      "Chiesa parrocchiale di San Martino",
+      "Chiesa della Maddalena (a Lavina)",
+      "Chiesa parrocchiale di Sant'Antonio Abate (a Lavina)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ranzo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008048",
+    "codice_catastale": "H180",
+    "popolazione": 563,
+    "superficie_kmq": 11.73,
+    "densita": 48.0,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "SS Assunzione e San Rocco",
+    "festa_patronale": "15 agosto",
+    "demonimo": "ranzesi",
+    "etimologia": "Deriva dal nome romano di persona Rantius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Costa Bacelega"
+    ],
+    "comuni_confinanti": [
+      "Aquila d'Arroscia",
+      "Borghetto d'Arroscia",
+      "Casanova Lerrone (SV)",
+      "Nasino (SV)",
+      "Onzo (SV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Madonna delle Vigne",
+      "Chiesa parrocchiale di San Donato",
+      "Chiesa di San Pantaleo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Prelà",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008047",
+    "codice_catastale": "H027",
+    "popolazione": 494,
+    "superficie_kmq": 15.38,
+    "densita": 32.1,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "prelaesi",
+    "etimologia": "Citata come Petralata e Petra Lata, grossa rocca, con evidente significato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "capoluogo: Molini;\nfrazioni: Tavole",
+      "Valloria",
+      "Villatalla;\nborgate: Casa Carli",
+      "Canneto",
+      "Costiolo",
+      "Praelo"
+    ],
+    "comuni_confinanti": [
+      "Borgomaro",
+      "Carpasio",
+      "Dolcedo",
+      "Montalto Ligure",
+      "Vasia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni del Groppo (a Molini",
+      "XV secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Chateauneuf (Francia)",
+      "dal 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pornassio",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008046",
+    "codice_catastale": "G890",
+    "popolazione": 710,
+    "superficie_kmq": 27.7,
+    "densita": 25.6,
+    "cap": "18024",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Dalmazzo",
+    "festa_patronale": "5 dicembre",
+    "demonimo": "pornassini",
+    "etimologia": "E' un derivato dal nome romano di persona Paulinus con l'aggiunta del suffisso -asco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Case Rosse",
+      "Case di Nava",
+      "Nava",
+      "Ottano",
+      "Ponti",
+      "San Luigi",
+      "Villa"
+    ],
+    "comuni_confinanti": [
+      "Armo",
+      "Cosio d'Arroscia",
+      "Montegrosso Pian Latte",
+      "Ormea (CN)",
+      "Pieve di Teco",
+      "Rezzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Chiazza",
+      "Santuario di Nostra Signora del Santissimo Nome (1775)",
+      "Chiesa parrocchiale di San Dalmazzo (a Villa)",
+      "Cappella di Sant'Antonio (a Ottano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pontedassio",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008045",
+    "codice_catastale": "G840",
+    "popolazione": 2339,
+    "superficie_kmq": 14.47,
+    "densita": 161.6,
+    "cap": "18027",
+    "prefisso_telefonico": "0183",
+    "patrono": "Santa Margherita V.M.",
+    "festa_patronale": "20 luglio",
+    "demonimo": "pontedassini",
+    "etimologia": "Si riferisce ad un antico ponte, ma la derivazione di assio, resta incerta. Potrebbe derivare dal nome di persona Assius o Axius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "frazioni: Villa Viani",
+      "Villa Guardia",
+      "Bestagno;\nborgate: Monti",
+      "Cà",
+      "Poggio di Villa Viani",
+      "Santa Lucia"
+    ],
+    "comuni_confinanti": [
+      "Chiusanico",
+      "Chiusavecchia",
+      "Diano Arentino",
+      "Imperia",
+      "Lucinasco",
+      "Vasia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di Santa Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pompeiana",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008044",
+    "codice_catastale": "G814",
+    "popolazione": 816,
+    "superficie_kmq": 5.39,
+    "densita": 151.4,
+    "cap": "18015",
+    "prefisso_telefonico": "0184",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": null,
+    "demonimo": "pompeianesi",
+    "etimologia": "Deriva dal nome di persona Pompilius, concordato al femminile con il termine villa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": [
+      "Borgate: Barbarasa",
+      "Case Soprane",
+      "Conio",
+      "Forno",
+      "Tentu",
+      "Taggia",
+      "Belli"
+    ],
+    "comuni_confinanti": [
+      "Castellaro",
+      "Cipressa",
+      "Pietrabruna",
+      "Riva Ligure",
+      "Santo Stefano al Mare",
+      "Terzorio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre Barbaresca \"Dei Panei\""
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pigna",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008043",
+    "codice_catastale": "G660",
+    "popolazione": 839,
+    "superficie_kmq": 53.7,
+    "densita": 15.6,
+    "cap": "18037",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "pignaschi",
+    "etimologia": "Dal latino volgare pinnia, connesso con pinna, penna.",
+    "il_comune_e": [
+      "Città Termale (Pigna Antiche Terme",
+      "Località Regione Lago Pigo)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": [
+      "Buggio"
+    ],
+    "comuni_confinanti": [
+      "Apricale, Castel Vittorio, Isolabona, Rocchetta Nervina, Triora",
+      "Pigna è: Comune di Confine con la Francia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Michele",
+      "Chiesa di San Bernardo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pieve di Teco",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008042",
+    "codice_catastale": "G632",
+    "popolazione": 1346,
+    "superficie_kmq": 40.61,
+    "densita": 33.1,
+    "cap": "18026",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "pievesi",
+    "etimologia": "La prima parte del nome ha significato chiaro e evidente. La specifica Teco si riferisce al nome del castello oppure ad una voce di origine ligure o dal greco teichos, muro di difesa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "Acquetico",
+      "Calderara",
+      "Lovegno",
+      "Moano",
+      "Muzio",
+      "Nirasca",
+      "Trovasta"
+    ],
+    "comuni_confinanti": [
+      "Armo",
+      "Aurigo",
+      "Borghetto d'Arroscia",
+      "Borgomaro",
+      "Caprauna (CN)",
+      "Caravonica",
+      "Cesio",
+      "Pornassio",
+      "Rezzo",
+      "Vessalico"
+    ],
+    "musei": [
+      "Museo di Arte Sacra"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Salvini"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bagnols-en-Forêt (Francia)",
+      "dal 1990"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pietrabruna",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008041",
+    "codice_catastale": "G607",
+    "popolazione": 482,
+    "superficie_kmq": 9.95,
+    "densita": 48.4,
+    "cap": "18010",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "pietrabrunesi",
+    "etimologia": "Il nome può indicare il materiale pietroso che si estrae in loco oppure l'esistenza di una posizione usata per difesa. Bruna si riferisce al colore della pietra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": [
+      "Boscomare",
+      "Torre Paponi"
+    ],
+    "comuni_confinanti": [
+      "Castellaro",
+      "Cipressa",
+      "Civezza",
+      "Dolcedo",
+      "Pompeiana",
+      "Taggia"
+    ],
+    "musei": [
+      "Museo Giuseppina Guasco"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio dell'Annunziata",
+      "Chiesa parrocchiale di San Matteo",
+      "Chiesa di San Gregorio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Perinaldo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008040",
+    "codice_catastale": "G454",
+    "popolazione": 881,
+    "superficie_kmq": 21.04,
+    "densita": 41.9,
+    "cap": "18032",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "perinaldesi",
+    "etimologia": "Citato come Podium Rainaldi, poggio di Rinaldo, trae origine da un castello fondato da Rinaldo, conte di Ventimiglia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Negi",
+      "Suseneo"
+    ],
+    "comuni_confinanti": [
+      "Apricale",
+      "Bajardo",
+      "Dolceacqua",
+      "San Biagio della Cima",
+      "Sanremo",
+      "Seborga",
+      "Soldano",
+      "Vallebona"
+    ],
+    "musei": [
+      "Museo \"G. D. Cassini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Nicolò"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Carciofo Provenzale (verso metà maggio)"
+    ],
+    "gemellaggi": [
+      "Tourves (Provenza",
+      "Francia)",
+      "dal 1993"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ospedaletti",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008039",
+    "codice_catastale": "G164",
+    "popolazione": 3356,
+    "superficie_kmq": 5.21,
+    "densita": 644.1,
+    "cap": "18014",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "ospedalettesi",
+    "etimologia": "Secondo una tradizione locale deriva il nome da un piccolo ospedale medievale, sorto per il ricovero dei pellegrini diretti dalla Provenza a Gerusalemme.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bordighera",
+      "Sanremo",
+      "Seborga",
+      "Vallebona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra du Pignurin (primo sabato di agosto)"
+    ],
+    "gemellaggi": [
+      "Soulac sur Mer (Gironda",
+      "Francia)",
+      "dal 1972"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Olivetta San Michele",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008038",
+    "codice_catastale": "G041",
+    "popolazione": 224,
+    "superficie_kmq": 13.84,
+    "densita": 16.2,
+    "cap": "18030",
+    "prefisso_telefonico": "0184",
+    "patrono": "Sant'Antonio da Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "olivettesi",
+    "etimologia": "La prima parte deriva dal termine latino plurale oliveta, da olivetum, oliveto, con il suffisso femminile diminutivo in -etta. La specifica si riferisce al culto del santo a cui è intitolata la chiesa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Fanghetto",
+      "San Michele;\nBorgate: Bossar",
+      "Ciantri"
+    ],
+    "comuni_confinanti": [
+      "Airole, Ventimiglia",
+      "Olivetta San Michele è: Comune di Confine con la Francia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova",
+      "Chiesa di San Marco",
+      "Chiesa della  Madonna e dell'Angelo Custode (a Fanghetto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montegrosso Pian Latte",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008037",
+    "codice_catastale": "F528",
+    "popolazione": 120,
+    "superficie_kmq": 10.23,
+    "densita": 11.7,
+    "cap": "18025",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Biagio Vescovo Martire",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "montegrossini",
+    "etimologia": "E' un composto di monte e grosso, con evidente significato indicando un vasto territorio montano destinato ad alpeggio. La specifica si riferisce ad un passo montano contiguo: planum Lactis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "Case Fascei"
+    ],
+    "comuni_confinanti": [
+      "Cosio d'Arroscia",
+      "Mendatica",
+      "Molini di Triora",
+      "Pornassio",
+      "Rezzo",
+      "Triora"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montalto Ligure",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008036",
+    "codice_catastale": "F406",
+    "popolazione": 397,
+    "superficie_kmq": 13.85,
+    "densita": 28.7,
+    "cap": "18010",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "montaltesi",
+    "etimologia": "Deriva da mons e altus ossia monte alto. La specifica si riferisce alla posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Badalucco",
+      "Carpasio",
+      "Dolcedo",
+      "Molini di Triora",
+      "Prelà"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Nostra Signora dell'Acquasanta, situato sulle pendici dl Monte Faudo",
+      "Pieve di San Giorgio",
+      "Chiesa parrochiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Molini di Triora",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008035",
+    "codice_catastale": "F290",
+    "popolazione": 611,
+    "superficie_kmq": 58.02,
+    "densita": 10.5,
+    "cap": "18010",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "molinesi",
+    "etimologia": "Attestato come Molendinum, riferito all'attività dei mulini. La specifica indica la posizione geografica limitrofa al paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": [
+      "Agaggio Inferiore",
+      "Agaggio Superiore",
+      "Aigovo",
+      "Andagna",
+      "Corte",
+      "Gavano",
+      "Glori",
+      "Perallo"
+    ],
+    "comuni_confinanti": [
+      "Badalucco",
+      "Bajardo",
+      "Carpasio",
+      "Castel Vittorio",
+      "Montalto Ligure",
+      "Montegrosso Pian Latte",
+      "Rezzo",
+      "Triora"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Montà",
+      "Oratorio di Sant'Antonio Abate e Santa Maria Maddalena",
+      "Oratorio di San Rocco",
+      "Oratorio di San Carlo Borromeo (ad Agaggio Superiore)",
+      "Oratorio di San Bernardo",
+      "Chiesa Parrocchiale di San Lorenzo",
+      "Chiesa Parrocchiale della Madonna della Misericordia (ad Agaggio Inferiore)",
+      "Cappella della Madonna del Buon Consiglio (in località Orenghi, ad Aigovo)",
+      "Chiesa di San Giuseppe (a Perallo)",
+      "Chiesa dei Santi Faustino e Giovita (ad Aigovo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della Lumaca (seconda domenica di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mendatica",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008034",
+    "codice_catastale": "F123",
+    "popolazione": 182,
+    "superficie_kmq": 30.72,
+    "densita": 5.9,
+    "cap": "18025",
+    "prefisso_telefonico": "0183",
+    "patrono": "SS. Nazario e Celso",
+    "festa_patronale": "28 luglio",
+    "demonimo": "mendaticesi",
+    "etimologia": "E' un derivato in -atico da una base incerta, forse il nome di persona Mendus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "nuclei abitati: Monesi",
+      "San Bernardo di Mendatica",
+      "Cian Prai",
+      "Valcona Soprana",
+      "Valcona Sottana",
+      "Secae",
+      "Le Salse\nlocalità: Penna",
+      "Poilarocca",
+      "Lago",
+      "Barchei",
+      "Sligge",
+      "Tetto Vecchio",
+      "Bauso"
+    ],
+    "comuni_confinanti": [
+      "Briga Alta (CN)",
+      "Cosio d'Arroscia",
+      "Montegrosso Pian Latte",
+      "Triora"
+    ],
+    "musei": [
+      "Museo Storico Etnografico delle Alpi Liguri",
+      "Mostra Cartografica"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Nazario e Celso",
+      "Chiesa campestre di Santa Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Cascate dell'Arroscia"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lucinasco",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008033",
+    "codice_catastale": "E719",
+    "popolazione": 287,
+    "superficie_kmq": 8.2,
+    "densita": 35.0,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "2 settembre",
+    "demonimo": "lucinaschesi",
+    "etimologia": "Ha origine incerta, potrebbe derivare dal latino vicinus, con l'aggiunta dell'aggettivo -asco oppure dal nome romano di persona Lucinus o Licinius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Borgoratto",
+      "Case Moline"
+    ],
+    "comuni_confinanti": [
+      "Borgomaro",
+      "Chiusanico",
+      "Chiusavecchia",
+      "Pontedassio",
+      "Vasia"
+    ],
+    "musei": [
+      "Museo d'Arte Sacra \"L. Acquarone\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale dei Santi Stefano e Antonino",
+      "Chiesa di Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isolabona",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008032",
+    "codice_catastale": "E346",
+    "popolazione": 698,
+    "superficie_kmq": 12.4,
+    "densita": 56.3,
+    "cap": "18035",
+    "prefisso_telefonico": "0184",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "isolesi",
+    "etimologia": "Attestato come Insula Bona, poi solo come Insula. E' formato dal latino insula (ossia territorio compreso tra due corsi d'acqua) e dall'aggettivo bona (fertile).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricale",
+      "Dolceacqua",
+      "Pigna",
+      "Rocchetta Nervina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna delle Grazie",
+      "Chiesa parrocchiale di Santa Maria Maddalena",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Doria (resti)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dolcedo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008030",
+    "codice_catastale": "D319",
+    "popolazione": 1410,
+    "superficie_kmq": 19.32,
+    "densita": 73.0,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Tommaso",
+    "festa_patronale": "21 dicembre",
+    "demonimo": "dolcedesi",
+    "etimologia": "Deriva dalla base dolsa (spicchio d'aglio o bacello) o dal greco dolikhos (cicerchia) con l'aggiunta del suffisso -eto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero"
+    ],
+    "localita_frazioni": [
+      "Bellissimi",
+      "Castellazzo",
+      "Costa Carnara",
+      "Isolalunga",
+      "Lecchiore",
+      "Piazza",
+      "Ripalta"
+    ],
+    "comuni_confinanti": [
+      "Badalucco",
+      "Civezza",
+      "Imperia",
+      "Montalto Ligure",
+      "Pietrabruna",
+      "Prelà",
+      "Taggia",
+      "Vasia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario dell'Acquasanta",
+      "Parrocchiale di San Tommaso",
+      "Cappella di Santa Brigida, quattrocentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dolceacqua",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008029",
+    "codice_catastale": "D318",
+    "popolazione": 2081,
+    "superficie_kmq": 20.23,
+    "densita": 102.9,
+    "cap": "18035",
+    "prefisso_telefonico": "0184",
+    "patrono": "Sant'Antonio abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "dolceacquini",
+    "etimologia": "Può derivare dal latino dulciaqua e associarsi al significato \"dolce acqua\".",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Airole, Apricale, Camporosso, Isolabona, Perinaldo, Rocchetta Nervina, San Biagio della Cima, Ventimiglia",
+      "Dolceacqua è: Comune di Confine con la Francia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Filippo",
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Doria"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Processione di San Sebastiano (domenica più vicina al 20 gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Diano San Pietro",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008028",
+    "codice_catastale": "D298",
+    "popolazione": 1135,
+    "superficie_kmq": 11.76,
+    "densita": 96.5,
+    "cap": "18013",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "sampietresi",
+    "etimologia": "La prima parte riprende il nome della dea Diana, la specifica si riferisce alla posizione dell'abitato vicino alla costa. La specifica si riferisce al nome del torrente che percorre la valle di Diano e dalla pieve primitiva.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero"
+    ],
+    "localita_frazioni": [
+      "Diano Borganzo"
+    ],
+    "comuni_confinanti": [
+      "Diano Arentino",
+      "Diano Castello",
+      "San Bartolomeo al Mare",
+      "Stellanello (SV)",
+      "Villa Faraldi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della Natività di Maria SS. (in frazione Borganzo)",
+      "Chiesa di San Pantaleone (in frazione Moltedo)",
+      "Chiesa di Nostra Signora della Neve (in borgata Colla)",
+      "Chiesa dei Santi Vincenzo e Anastasio (in borgata Camporondo)",
+      "Chiesa parrocchiale di Santa Maria Assunta e Santa Lucia (in frazione Roncagli)",
+      "Oratorio di Santa Croce",
+      "Chiesa parrocchiale di San Pietro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Diano Marina",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008027",
+    "codice_catastale": "D297",
+    "popolazione": 5972,
+    "superficie_kmq": 6.49,
+    "densita": 920.2,
+    "cap": "18013",
+    "prefisso_telefonico": "0183",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "dianesi",
+    "etimologia": "Nel Medioevo il comune, insieme a Diano Castello e Diano Aretino, componeva la Communitas Diani (la comunità di Diano). La prima parte riprende il nome della dea Diana, la specifica si riferisce alla posizione dell'abitato vicino alla costa.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": [
+      "Diano Calderina",
+      "Diano Gorleri",
+      "Diano Serreta",
+      "Borgo Muratori"
+    ],
+    "comuni_confinanti": [
+      "Diano Castello",
+      "Imperia",
+      "San Bartolomeo al Mare"
+    ],
+    "musei": [
+      "Museo Civico MARM"
+    ],
+    "ville_palazzi": [
+      "Palazzo Maglione",
+      "Forte Sant'Elmo",
+      "Palazzo Ardoino",
+      "Palazzo del Parco"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Alpicella",
+      "Torre Saracena"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Infiorata del Corpus Domini (Corpus Domini)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Diano Castello",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008026",
+    "codice_catastale": "D296",
+    "popolazione": 2221,
+    "superficie_kmq": 5.99,
+    "densita": 370.8,
+    "cap": "18013",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "castellotti",
+    "etimologia": "Insieme a Diano Aretino e Diano Marina, costituiva nel Medioevo la Communitas Diani, comunità di Diano. La prima parte deriva dal nome della dea Diana, la specifica si riferisce alla residenza dei marchesi di Clavesana, citata come castro Diani.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": [
+      "frazione: Varcavello; borgate: Ferretti",
+      "Madonna della Neve (vulgo Porcili)",
+      "San Siro",
+      "Santa Lucia",
+      "Monade"
+    ],
+    "comuni_confinanti": [
+      "Diano Arentino",
+      "Diano Marina",
+      "Diano San Pietro",
+      "Imperia",
+      "San Bartolomeo al Mare"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Nicola",
+      "Chiesa di San Giovanni",
+      "Chiesa dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Diano Arentino",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008025",
+    "codice_catastale": "D293",
+    "popolazione": 729,
+    "superficie_kmq": 8.32,
+    "densita": 87.6,
+    "cap": "18013",
+    "prefisso_telefonico": "0183",
+    "patrono": "Santa Margherita",
+    "festa_patronale": "20 luglio",
+    "demonimo": "arentinesi",
+    "etimologia": "Insieme a Diano Castello e Diano Marina, costituiva nel Medioevo la Communitas Diani, comunità di Diano. La prima parte riprende il nome della dea Diana mentre la specifica deriva dal latino adhaerentem, ossia a rente (vicino, accosto).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero"
+    ],
+    "localita_frazioni": [
+      "Diano Borello",
+      "Evigno"
+    ],
+    "comuni_confinanti": [
+      "Chiusanico",
+      "Diano Castello",
+      "Diano San Pietro",
+      "Imperia",
+      "Pontedassio",
+      "Stellanello (SV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Santa Croce",
+      "Chiesa Parrocchiale di Santa Margherita d'Antiochia Vergine e Martire",
+      "Chiesa di San Bernardo Abate (a Evigno)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Costarainera",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008024",
+    "codice_catastale": "D114",
+    "popolazione": 838,
+    "superficie_kmq": 2.44,
+    "densita": 343.4,
+    "cap": "18017",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "costenghi",
+    "etimologia": "Nel dialetto A Kosta, la costa, per la posizione dell'insediamento su uno sperone che affaccia sul mare. La seconda parte è agglutinazione al femminile di de' Ranieri, dal cognome di una o più famiglie qui residenti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cipressa",
+      "San Lorenzo al Mare"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista (XVIII secolo)",
+      "Chiesa di Sant'Antonio (XII-XIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cosio d'Arroscia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008023",
+    "codice_catastale": "D087",
+    "popolazione": 218,
+    "superficie_kmq": 40.53,
+    "densita": 5.4,
+    "cap": "18023",
+    "prefisso_telefonico": "0183",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "cosiesi",
+    "etimologia": "Deriva dal nome romano di persona Cusius. La specifica si riferisce alla sua posizione geografica nella valle Arroscia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Briga Alta (CN)",
+      "Mendatica",
+      "Montegrosso Pian Latte",
+      "Ormea (CN)",
+      "Pornassio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Assunzione della Beata Vergine",
+      "Chiesa Parrocchiale di San Pietro del Fossato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Civezza",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008022",
+    "codice_catastale": "C755",
+    "popolazione": 599,
+    "superficie_kmq": 3.83,
+    "densita": 156.4,
+    "cap": "18017",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Marco Evangelista",
+    "festa_patronale": "25 aprile",
+    "demonimo": "civezzini",
+    "etimologia": "Alcuni credono che derivi dal latino clivus, pendio, anche se probabilmente deriva dal nome personale Civitius o Civicius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cipressa",
+      "Dolcedo",
+      "Imperia",
+      "Pietrabruna",
+      "San Lorenzo al Mare"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Marco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cipressa",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008021",
+    "codice_catastale": "C718",
+    "popolazione": 1283,
+    "superficie_kmq": 9.53,
+    "densita": 134.6,
+    "cap": "18017",
+    "prefisso_telefonico": "0183",
+    "patrono": "Visitazione di Maria",
+    "festa_patronale": "2 luglio",
+    "demonimo": "cipressini",
+    "etimologia": "Deriva dal nome di albero cupressus o cipressum (cipresso), concordato come aggettivo ad un sostantivo femminile.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": [
+      "Lingueglietta",
+      "Aregai",
+      "Piani"
+    ],
+    "comuni_confinanti": [
+      "Civezza",
+      "Costarainera",
+      "Pietrabruna",
+      "Pompeiana",
+      "San Lorenzo al Mare",
+      "Santo Stefano al Mare",
+      "Terzorio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio dell'Annunciazione",
+      "Chiesa Parrocchiale della Natività di Maria Vergine"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Gallinara"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chiusavecchia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008020",
+    "codice_catastale": "C660",
+    "popolazione": 572,
+    "superficie_kmq": 3.3,
+    "densita": 173.3,
+    "cap": "18027",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "chiusavecchiesi",
+    "etimologia": "Si riferisce ad un'antica chiusa del torrente, dal latino tardo clusa, dal classico clausa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "frazioni: Sarola",
+      "Olivastri;\nlocalità: Gombi di Ricci",
+      "Gombi della Luna"
+    ],
+    "comuni_confinanti": [
+      "Chiusanico",
+      "Lucinasco",
+      "Pontedassio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Santa Croce",
+      "Chiesa Parrocchiale dei Santi Biagio e Francesco di Sales"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chiusanico",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008019",
+    "codice_catastale": "C657",
+    "popolazione": 591,
+    "superficie_kmq": 13.67,
+    "densita": 43.2,
+    "cap": "18027",
+    "prefisso_telefonico": "0183",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "chiusanichesi",
+    "etimologia": "Attestato come villa Plausaneghi, ecclesia Plozanechi, deriva dal nome romano di persona Plausius, con l'aggiunta del suffisso -anico, poi in dialetto è stato denominato cuzanegu.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Gazzelli",
+      "Torria"
+    ],
+    "comuni_confinanti": [
+      "Borgomaro",
+      "Caravonica",
+      "Cesio",
+      "Chiusavecchia",
+      "Diano Arentino",
+      "Lucinasco",
+      "Pontedassio",
+      "Stellanello (SV)",
+      "Testico (SV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santo Stefano",
+      "Chiesa Parrocchiale di Sant'Andrea (in frazione Gazzelli)",
+      "Chiesa Parrocchiale di San Martino (in frazione Torria)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Vilobí del Penedès (Catalogna",
+      "Spagna)",
+      "dal 2003"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cesio",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008018",
+    "codice_catastale": "C578",
+    "popolazione": 279,
+    "superficie_kmq": 8.92,
+    "densita": 31.3,
+    "cap": "18022",
+    "prefisso_telefonico": "0183",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "cesiaschi o cesiotti",
+    "etimologia": "Si pensa che derivi dal nome di persona Caesius, senza suffisso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Arzeno d'Oneglia",
+      "Cartari",
+      "Colle di San Bartolomeo"
+    ],
+    "comuni_confinanti": [
+      "Caravonica",
+      "Casanova Lerrone (SV)",
+      "Chiusanico",
+      "Pieve di Teco",
+      "Testico (SV)",
+      "Vessalico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo de Tomatis"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cervo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008017",
+    "codice_catastale": "C559",
+    "popolazione": 1160,
+    "superficie_kmq": 3.36,
+    "densita": 345.2,
+    "cap": "18010",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cervesi",
+    "etimologia": "Potrebbe derivare dal nome latino cervus, cervo, con trasposizione alla forma del terreno o a un significato inerente alla fortificazione.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Andora (SV)",
+      "San Bartolomeo al Mare"
+    ],
+    "musei": [
+      "Museo Etnografico del Ponente Ligure"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista (1686)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello medioevale dei marchesi di Clavesana"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festival Internazionale di Musica da Camera (luglio-agosto)"
+    ],
+    "gemellaggi": [
+      "Cervo (nel distretto \"Marina\" della provincia di Lugo",
+      "in Galizia",
+      "Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ceriana",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008016",
+    "codice_catastale": "C511",
+    "popolazione": 1229,
+    "superficie_kmq": 32.12,
+    "densita": 38.3,
+    "cap": "18034",
+    "prefisso_telefonico": "0184",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "cerianaschi",
+    "etimologia": "Deriva dal nome Coelius o Caerellius, con l'aggiunta del suffisso -ano, al femminile.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Badalucco",
+      "Bajardo",
+      "Sanremo",
+      "Taggia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Conti Roverizio"
+    ],
+    "chiese": [
+      "Chiesetta rurale di San Giovanni",
+      "Chiesa di Sant'Andrea",
+      "Chiesa Romanica di San Pietro e Paolo, in piazza Santo Spirito",
+      "Chiesa parrocchiale dell'Assunzione della Vergine e dei SS. Pietro e Paolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Riti della Settimana Santa (nella Settimana Santa)",
+      "Sagra della Castagna (ultima domenica di Ottobre)",
+      "Sagra della Salsiccia (penultima domenica di Agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castellaro",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008014",
+    "codice_catastale": "C143",
+    "popolazione": 1265,
+    "superficie_kmq": 8.69,
+    "densita": 145.6,
+    "cap": "18011",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Pietro in Vincoli",
+    "festa_patronale": "primo agosto",
+    "demonimo": "castellaresi",
+    "etimologia": "Denominato come Castellarium, riflette un locus o borgus castellarius, cioè un insediamento dipendente da un castello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Pietrabruna",
+      "Pompeiana",
+      "Riva Ligure",
+      "Taggia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Marchesi Gentile"
+    ],
+    "chiese": [
+      "Santuario di Nostra Signora di Lampedusa",
+      "Chiesa Parrocchiale, dedicata a San Pietro in Vincoli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel Vittorio",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008015",
+    "codice_catastale": "C110",
+    "popolazione": 292,
+    "superficie_kmq": 25.71,
+    "densita": 11.4,
+    "cap": "18030",
+    "prefisso_telefonico": "0184",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "castellesi",
+    "etimologia": "In origine Castrum Dodi, fu chiamato in seguito Castelfranco, dall'unione delle parole \"castel\" e \"franco\", quest'ultima probabilmente è da intendersi con il significato di \"libero\", esonerato dal pagamento delle tasse. La sostituzione con Vittorio si ebbe nel 1862, in omaggio a re Vittorio Emanuele II.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricale",
+      "Bajardo",
+      "Molini di Triora",
+      "Pigna",
+      "Triora"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santo Stefano",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carpasio",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008013",
+    "codice_catastale": "B814",
+    "popolazione": 163,
+    "superficie_kmq": 16.05,
+    "densita": 10.2,
+    "cap": "18010",
+    "prefisso_telefonico": "0184",
+    "patrono": "Sant'Antonino Martire",
+    "festa_patronale": "2 settembre",
+    "demonimo": "carpasini",
+    "etimologia": "Deriva dal cognome latino Carpus o Calpus, senza suffisso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": [
+      "frazioni: Arzene",
+      "Costa",
+      "Funtanili;\nlocalità: Costarossa",
+      "Prati Piani",
+      "Colle D'Oggia",
+      "Rairan",
+      "Faravello",
+      "Costorello"
+    ],
+    "comuni_confinanti": [
+      "Borgomaro",
+      "Molini di Triora",
+      "Montalto Ligure",
+      "Prelà",
+      "Rezzo"
+    ],
+    "musei": [
+      "Museo Partigiano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caravonica",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008012",
+    "codice_catastale": "B734",
+    "popolazione": 270,
+    "superficie_kmq": 4.9,
+    "densita": 55.1,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "caravonchiesi",
+    "etimologia": "Deriva dal nome di persona Caravus o Caravanius, con l'aggiunta del suffisso -oniko. Si ipotizza anche un'unione con un nome comune femminile, probabilmente il latino villa, casa di campagna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "San Bartolomeo d'Arzeno"
+    ],
+    "comuni_confinanti": [
+      "Borgomaro",
+      "Cesio",
+      "Chiusanico",
+      "Pieve di Teco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Nostra Signora delle Vigne"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camporosso",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008011",
+    "codice_catastale": "B559",
+    "popolazione": 5622,
+    "superficie_kmq": 17.63,
+    "densita": 318.9,
+    "cap": "18033",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "camporossini",
+    "etimologia": "Dal latino campus (campo) con l'aggettivo russeus (rosso), forse per la natura del terreno.",
+    "il_comune_e": [
+      "Località balneare (Camporosso Mare) segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo",
+      "Associazione Città del Bio"
+    ],
+    "localita_frazioni": [
+      "Balloi",
+      "Martinazzi",
+      "Brunetti",
+      "Ciaixe",
+      "Fontane",
+      "San Giacomo",
+      "Trinità"
+    ],
+    "comuni_confinanti": [
+      "Dolceacqua",
+      "San Biagio della Cima",
+      "Vallecrosia",
+      "Ventimiglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro",
+      "Chiesa parrocchiale di San Marco Evangelista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borgomaro",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008010",
+    "codice_catastale": "B020",
+    "popolazione": 879,
+    "superficie_kmq": 23.24,
+    "densita": 37.8,
+    "cap": "18021",
+    "prefisso_telefonico": "0183",
+    "patrono": "Sant'Antonio abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "borgomaresi",
+    "etimologia": "Trae il suo nome dal castro de Macro, sede fortificata dei conti di Ventimiglia. Macro si connette con il nome di fiume Macra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Maro Castello",
+      "Candeasco",
+      "Conio",
+      "San Bernardo di Conio",
+      "San Lazzaro Reale",
+      "Ville San Pietro",
+      "Ville San Sebastiano"
+    ],
+    "comuni_confinanti": [
+      "Aurigo",
+      "Caravonica",
+      "Carpasio",
+      "Chiusanico",
+      "Lucinasco",
+      "Pieve di Teco",
+      "Prelà",
+      "Rezzo",
+      "Vasia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve dei Santi Nazario e Celso",
+      "Chiesa di San Maurizio (a Conio)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borghetto d'Arroscia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008009",
+    "codice_catastale": "A993",
+    "popolazione": 452,
+    "superficie_kmq": 25.54,
+    "densita": 17.7,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Marco Evangelista",
+    "festa_patronale": "25 aprile",
+    "demonimo": "borghettini",
+    "etimologia": "La prima parte è un diminutivo di Borgo, con evidente significato. La specifica si riferisce alla valle dove è situato il comune.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "Borghetto",
+      "Gavenola",
+      "Gazzo",
+      "Leverone",
+      "Ubaga",
+      "Ubaghetta",
+      "Montecalvo",
+      "Cornari"
+    ],
+    "comuni_confinanti": [
+      "Aquila d'Arroscia",
+      "Caprauna (CN)",
+      "Casanova Lerrone (SV)",
+      "Pieve di Teco",
+      "Ranzo",
+      "Vessalico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Antonio Abate (a Ubaga)",
+      "Chiesa parrocchiale di San Colombano (a Gavenola)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bordighera",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008008",
+    "codice_catastale": "A984",
+    "popolazione": 10454,
+    "superficie_kmq": 10.41,
+    "densita": 1004.2,
+    "cap": "18012",
+    "prefisso_telefonico": "0184",
+    "patrono": "Sant'Ampelio",
+    "festa_patronale": "14 maggio",
+    "demonimo": "bordigotti",
+    "etimologia": "Documentato con il nome di Burdigheta, deriva da bordiga con l'aggiunta del suffisso -eta che significa \"recinto di canne o giunchi in un canale o in una laguna per la pesca\". Nel XVII secolo, gli scribi genovesi introdussero l'attuale forma ufficiale in -era.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Colline Litoranee di Sanremo"
+    ],
+    "localita_frazioni": [
+      "Borghetto San Nicolò",
+      "Sasso"
+    ],
+    "comuni_confinanti": [
+      "Ospedaletti",
+      "Vallebona",
+      "Vallecrosia"
+    ],
+    "musei": [
+      "Museo-Biblioteca \"Clarence Bicknell\"",
+      "Mostra Permanente \"Pompeo Mariani\""
+    ],
+    "ville_palazzi": [
+      "Villa Regina Margherita"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Maddalena (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Villefranche sur Mer (Francia), dal 1956",
+      "Neckarsulm (Germania), dal 1963"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bajardo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008007",
+    "codice_catastale": "A581",
+    "popolazione": 331,
+    "superficie_kmq": 24.54,
+    "densita": 13.5,
+    "cap": "18031",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "baiardesi",
+    "etimologia": "Secondo un'ipotesi poco condivisa si potrebbe riferire al nome del feudatario, il cavaliere Baiardo, ma questi era visconte di Bayard, quindi è il suo nome che proviene dal toponimo, non il contrario. Potrebbe derivare dal francese antico Bayard, dal latino badius, baio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Berzi",
+      "Vignai"
+    ],
+    "comuni_confinanti": [
+      "A est: Badalucco",
+      "Ceriana; a est e sud: Sanremo; a nord: Molini di Triora; a nord e ovest: Castel Vittorio; a sud e ovest: Apricale"
+    ],
+    "musei": [
+      "Pinacoteca Civica"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Salvatore",
+      "Chiesa Parrocchiale di San Nicolò da Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Badalucco",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008006",
+    "codice_catastale": "A536",
+    "popolazione": 1127,
+    "superficie_kmq": 15.84,
+    "densita": 71.1,
+    "cap": "18010",
+    "prefisso_telefonico": "0184",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "badalucchesi",
+    "etimologia": "Si collega con il verbo batare, da cui deriva badare, nel senso di \"far la guardia, sorvegliare\" con l'aggiunta del suffisso -al-ucco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Argentina Armea",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Argallo",
+      "Ciabaudo",
+      "Zerni"
+    ],
+    "comuni_confinanti": [
+      "Bajardo",
+      "Ceriana",
+      "Dolcedo",
+      "Molini di Triora",
+      "Montalto Ligure",
+      "Taggia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Boeri"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria e San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dello Stoccafisso (terza domenica di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aurigo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008005",
+    "codice_catastale": "A499",
+    "popolazione": 343,
+    "superficie_kmq": 9.46,
+    "densita": 36.3,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "aurighesi",
+    "etimologia": "Potrebbe derivare dal latino apricus, solatio, o da un nome di persona germanico Aurigis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Olivo",
+      "Regione Agraria n. 3 - Colline dell'altro Impero",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Poggialto"
+    ],
+    "comuni_confinanti": [
+      "Borgomaro",
+      "Pieve di Teco",
+      "Rezzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della Natività",
+      "Chiesa di Sant'Andrea",
+      "Chiesa di San Bernardo (in frazione Poggialto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Armo",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008004",
+    "codice_catastale": "A418",
+    "popolazione": 111,
+    "superficie_kmq": 9.26,
+    "densita": 12.0,
+    "cap": "18026",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Giovanni Nepomuceno",
+    "festa_patronale": "16 maggio",
+    "demonimo": "armensi",
+    "etimologia": "Potrebbe derivare da Aramo (nome personale celtico) o dal nome germanico Armo, né si può escludere che si tratti del maschile del termine ligure arma (grotta).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "Frazione: Trastanello;contrade: Grenzolini",
+      "Costa",
+      "Ponte",
+      "Besta"
+    ],
+    "comuni_confinanti": [
+      "Caprauna (CN)",
+      "Ormea (CN)",
+      "Pieve di Teco",
+      "Pornassio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Bernardo",
+      "Chiesa parrocchiale della Natività di Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aquila d'Arroscia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008003",
+    "codice_catastale": "A344",
+    "popolazione": 159,
+    "superficie_kmq": 10.08,
+    "densita": 15.8,
+    "cap": "18020",
+    "prefisso_telefonico": "0183",
+    "patrono": "Santa Reparata",
+    "festa_patronale": "8 ottobre",
+    "demonimo": "aquilotti",
+    "etimologia": "La prima parte è riconducibile al nome dell'animale per la posizione eminente del castello. La seconda parte si riferisce alla valle in prossimità della quale sorge il borgo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle Arroscia",
+      "Regione Agraria n. 1 - Alte Valli Arroscia"
+    ],
+    "localita_frazioni": [
+      "Affreddore",
+      "Prato",
+      "Loga",
+      "Mugno",
+      "Salino",
+      "Maglioreto",
+      "Montà"
+    ],
+    "comuni_confinanti": [
+      "Alto (CN)",
+      "Borghetto d'Arroscia",
+      "Caprauna (CN)",
+      "Nasino (SV)",
+      "Onzo (SV)",
+      "Ranzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Neve o del Monte",
+      "Oratorio di San Sebastiano",
+      "Chiesa parrocchiale di Santa Reparata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello medievale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Apricale",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008002",
+    "codice_catastale": "A338",
+    "popolazione": 624,
+    "superficie_kmq": 19.68,
+    "densita": 31.7,
+    "cap": "18035",
+    "prefisso_telefonico": "0184",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "8 settembre",
+    "demonimo": "apricalesi",
+    "etimologia": "Deriva dal latino apricus, solatio, in riferimento alla conformazione del luogo. Secondo alcuni deriva dal dialetto avregu, pietra dura.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia",
+      "Associazione Nazionale Città dell'Olio",
+      "Club I Borghi più Belli d'Italia",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Regione Osaggio",
+      "Semoigo",
+      "Foa"
+    ],
+    "comuni_confinanti": [
+      "Bajardo",
+      "Dolceacqua",
+      "Isolabona",
+      "Perinaldo",
+      "Pigna",
+      "Sanremo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della Purificazione di Maria Vergine",
+      "Oratorio di San Bartolomeo",
+      "Chiesa di Sant'Antonio Abate",
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa di San Pietro in Ento (ruderi)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Airole",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008001",
+    "codice_catastale": "A111",
+    "popolazione": 401,
+    "superficie_kmq": 14.74,
+    "densita": 27.2,
+    "cap": "18030",
+    "prefisso_telefonico": "0184",
+    "patrono": "Santi Filippo e Giacomo",
+    "festa_patronale": "3 maggio",
+    "demonimo": "airolesi",
+    "etimologia": "Si pensa che il nome abbia origine da una proprietà di Airoaldo, un tempo era detta anche Aerola o Ayerola, deriva dal latino area, areola, piccolo spazio. Un'ipotesi fantasiosa conduce il nome al latino ara Jovis, altare di Giove, in riferimento alla presenza di un'ara votiva presente in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Intemelia",
+      "Regione Agraria n. 2 - Alte Valli d'Argentina e Nervia"
+    ],
+    "localita_frazioni": [
+      "frazione: Collabassa; borgate: case Noceire",
+      "case Giauma"
+    ],
+    "comuni_confinanti": [
+      "A nord-est: Dolceacqua; a nord-ovest: Olivetta San Michele; a sud: Ventimiglia",
+      "Airole è: Comune di Confine con la Francia"
+    ],
+    "musei": [
+      "Museo dell'Olio e della Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna delle Grazie",
+      "Chiesa Parrocchiale dei Santi Filippo e Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Imperia",
+    "provincia": "Imperia",
+    "regione": "Liguria",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "008031",
+    "codice_catastale": "E290",
+    "popolazione": 42154,
+    "superficie_kmq": 45.95,
+    "densita": 917.4,
+    "cap": "18100",
+    "prefisso_telefonico": "0183",
+    "patrono": "San Leonardo",
+    "festa_patronale": "26 novembre",
+    "demonimo": "imperiesi",
+    "etimologia": "Comune costituito nel 1923 dall'unione di Porto Maurizio e Oneglia. Il suo nome fa riferimento al torrente Impero, che sfocia nei pressi.",
+    "il_comune_e": [
+      "Bandiera Blu Approdi Turistici 2007 (Imperia Mare)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Litoranee di Imperia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Borgo Sant'Agata",
+      "Caramagna",
+      "Castelvecchio",
+      "Costa D'Oneglia",
+      "Moltedo",
+      "Montegrazie",
+      "Piani",
+      "Poggi Torrazza"
+    ],
+    "comuni_confinanti": [
+      "Civezza",
+      "Diano Arentino",
+      "Diano Castello",
+      "Diano Marina",
+      "Dolcedo",
+      "Pontedassio",
+      "San Lorenzo al Mare",
+      "Vasia"
+    ],
+    "musei": [
+      "Pinacoteca Civica",
+      "Museo Navale Internazionale del Ponente Ligure",
+      "Museo dell'Olivo",
+      "Museo delle Confraternite",
+      "Museo Centrale dell'Istituto Storico della Resistenza"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Nostra Signora delle Grazie (in frazione Montegrazie)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Cavour"
+    ],
+    "stadi": [
+      "Stadio Comunale Nino Ciccione (capienza: circa 3.300 posti)"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Mandelieu La Napoule (Francia), dal 2000",
+      "Newport (Rhode Island, USA)",
+      "Rosario (Argentina), dal 1987"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Edmondo De Amicis (1846 - 1908)",
+      "Giulio Natta (1903 - 1979), Premio Nobel per la Chimica"
+    ]
+  }
+]

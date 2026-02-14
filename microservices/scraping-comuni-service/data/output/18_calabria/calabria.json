@@ -1,0 +1,14 @@
+{
+  "nome": "Calabria",
+  "codice_istat": "18",
+  "popolazione": 1965128,
+  "popolazione_maschi": 962338,
+  "popolazione_femmine": 1002790,
+  "superficie_kmq": 15080.55,
+  "densita": 130.3,
+  "num_province": 5,
+  "num_comuni": 409,
+  "capoluogo": "Catanzaro",
+  "iso_3166_2": "IT-78",
+  "nuts": "ITF6"
+}

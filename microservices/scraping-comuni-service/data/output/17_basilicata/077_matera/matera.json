@@ -1,0 +1,16 @@
+{
+  "nome": "Matera",
+  "regione": "Basilicata",
+  "zona": null,
+  "sigla": "MT",
+  "codice_istat": "077",
+  "popolazione": 199685,
+  "popolazione_maschi": 98189,
+  "popolazione_femmine": 101496,
+  "superficie_kmq": 3446.12,
+  "densita": 57.9,
+  "num_comuni": 31,
+  "capoluogo": "Matera",
+  "iso_3166_2": "IT-MT",
+  "nuts": "ITF52"
+}

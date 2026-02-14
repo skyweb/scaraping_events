@@ -1,0 +1,3238 @@
+[
+  {
+    "nome": "Zola Predosa",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037060",
+    "codice_catastale": "M185",
+    "popolazione": 18875,
+    "superficie_kmq": 37.76,
+    "densita": 499.9,
+    "cap": "40069",
+    "prefisso_telefonico": "051",
+    "patrono": "SS. Nicola e Agata",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "zolesi",
+    "etimologia": "La prima parte del nome deriva dal latino cella con il significato di \"cantina\" o \"cappella\". Con il tempo divenne ceula, poi ceola. La specifica significa \"pietrosa\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Unione di comuni Valle del Samoggia",
+      "Regione Agraria n. 3 - Colline di Bologna",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Fontanella",
+      "Gessi",
+      "Lavino di Sopra",
+      "Ponte Ronca",
+      "Riale",
+      "Rivabella",
+      "Tombe",
+      "Madonna Prati",
+      "Rigosa",
+      "Zola Chiesa"
+    ],
+    "comuni_confinanti": [
+      "Anzola dell'Emilia",
+      "Bologna",
+      "Casalecchio di Reno",
+      "Monte San Pietro",
+      "Sasso Marconi",
+      "Valsamoggia"
+    ],
+    "musei": [
+      "Museo Ca' la Ghironda"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vergato",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037059",
+    "codice_catastale": "L762",
+    "popolazione": 7627,
+    "superficie_kmq": 59.93,
+    "densita": 127.3,
+    "cap": "40038",
+    "prefisso_telefonico": "051",
+    "patrono": "Madonna della Provvidenza",
+    "festa_patronale": "prima domenica dopo Pasqua",
+    "demonimo": "vergatesi",
+    "etimologia": "Deriva dal latino virga, ossia ramoscello, o da virgatus, ossia \"intrecciato di verghe\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 1 - Montagna del Medio Reno",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Riola",
+      "Tolè Cereglio",
+      "Calvenzano",
+      "Castelnuovo",
+      "Prunarolo",
+      "Pieve Roffeno",
+      "Susano"
+    ],
+    "comuni_confinanti": [
+      "Castel d'Aiano",
+      "Gaggio Montano",
+      "Grizzana Morandi",
+      "Marzabotto",
+      "Valsamoggia",
+      "Zocca (MO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Apollinare (a Calvenzano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Valsamoggia",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037061",
+    "codice_catastale": "M320",
+    "popolazione": 30716,
+    "superficie_kmq": 178.05,
+    "densita": 172.5,
+    "cap": "40053",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": null,
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Unione di comuni Valle del Samoggia",
+      "Regione Agraria n. 6 - Pianura a sinistra del Reno",
+      "Regione Agraria n. 4 - Colline del Reno",
+      "Parco Abbazia di Monteveglio",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Bazzano",
+      "Castello di Serravalle",
+      "Crespellano",
+      "Monteveglio",
+      "Savigno",
+      "Serravalle",
+      "Mercatello",
+      "Tiola",
+      "Maiola",
+      "Ponzano",
+      "Zappolino",
+      "Fagnano",
+      "Bersagliera",
+      "Calcara",
+      "Ponte Samoggia",
+      "Pragatto",
+      "Muffa",
+      "Stiore-Oliveto",
+      "Ziribega",
+      "Montebudello",
+      "Bortolani",
+      "Merlano",
+      "Rodiano",
+      "Samoggia",
+      "San Biagio",
+      "San Prospero",
+      "Santa Croce",
+      "Vedegheto",
+      "Vignola dei Conti"
+    ],
+    "comuni_confinanti": [
+      "Anzola dell'Emilia",
+      "Castelfranco Emilia (MO)",
+      "Guiglia (MO)",
+      "Marzabotto",
+      "Monte San Pietro",
+      "San Cesario sul Panaro (MO)",
+      "Savignano sul Panaro (MO)",
+      "Tresigallo (FE)",
+      "Vergato",
+      "Zocca (MO)",
+      "Zola Predosa"
+    ],
+    "musei": [
+      "Museo Civico \"Arsenio Crespellani\" (località: Bazzano)",
+      "Ecomuseo di Serravalle"
+    ],
+    "ville_palazzi": [
+      "Villa Tanari",
+      "ora Muller (località: Ca' Rossa)"
+    ],
+    "chiese": [
+      "Chiesa di Santo Stefano (località: Bazzano)",
+      "Chiesa di Sant'Apollinare (località: Castello di Serravalle)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro delle Temperie (località: Calcara)"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Saracca (seconda domenica di marzo)",
+      "la saracca è l'aringa essiccata (località: Monteveglio)"
+    ],
+    "gemellaggi": [
+      "Bellreguard (Valencia",
+      "Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sasso Marconi",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037057",
+    "codice_catastale": "G972",
+    "popolazione": 14792,
+    "superficie_kmq": 96.54,
+    "densita": 153.2,
+    "cap": "40037",
+    "prefisso_telefonico": "051",
+    "patrono": "San Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "sassesi",
+    "etimologia": "La prima parte del nome si riferisce ad una rupe, il Sasso di Glosina che ostruiva la via per la costruzione della quale la rupe fu tagliata. Nel 1935 fu chiamato Sasso Bolognese, poi nel 1938 assunse la denominazione attuale in memoria di Guglielmo Marconi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Unione di comuni Valle del Samoggia",
+      "Regione Agraria n. 4 - Colline del Reno",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Pontecchio Marconi",
+      "Pieve del Pino",
+      "Battedizzo",
+      "Badolo",
+      "Vizzano",
+      "Ancognano",
+      "Tignano",
+      "Mongardino",
+      "Rasiglio",
+      "Scopeto",
+      "Montechiaro",
+      "Iano",
+      "Lagune",
+      "Nugareto",
+      "San Leo",
+      "Moglio",
+      "San Lorenzo",
+      "Fontana di Sasso Marconi"
+    ],
+    "comuni_confinanti": [
+      "Bologna",
+      "Casalecchio di Reno",
+      "Marzabotto",
+      "Monte San Pietro",
+      "Monzuno",
+      "Pianoro",
+      "Zola Predosa"
+    ],
+    "musei": [
+      "Museo Marconi"
+    ],
+    "ville_palazzi": [
+      "Palazzo de' Rossi",
+      "Palazzo Sanuti (località: Fontana di Sasso Marconi)",
+      "Villa Fontana, detta Palazzo Sanuti, quattrocentesca"
+    ],
+    "chiese": [
+      "Oratorio di Sant'Apollonia",
+      "Santuario della Madonna del Sasso"
+    ],
+    "castelli_fortificazioni": [
+      "Castel del Vescovo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Agata Bolognese",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037056",
+    "codice_catastale": "I191",
+    "popolazione": 7255,
+    "superficie_kmq": 34.78,
+    "densita": 208.6,
+    "cap": "40019",
+    "prefisso_telefonico": "051",
+    "patrono": "Sant'Agata",
+    "festa_patronale": "5 febbraio",
+    "demonimo": "santagatesi",
+    "etimologia": "Il nome riflette la venerazione per la santa patrona del luogo. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura a sinistra del Reno",
+      "Associazione Comuni Terre d'Acqua"
+    ],
+    "localita_frazioni": [
+      "Maggi",
+      "Crocetta"
+    ],
+    "comuni_confinanti": [
+      "Castelfranco Emilia (MO)",
+      "Crevalcore",
+      "Nonantola (MO)",
+      "San Giovanni in Persiceto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pietro in Casale",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037055",
+    "codice_catastale": "I110",
+    "popolazione": 12292,
+    "superficie_kmq": 65.81,
+    "densita": 186.8,
+    "cap": "40018",
+    "prefisso_telefonico": "051",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "sampierini",
+    "etimologia": "La prima parte del nome esprime la venerazione per il santo patrono del paese. La specifica deriva dal latino casalis (aggregato di case rurali).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Asìa",
+      "Cenacchio",
+      "Gavaseto",
+      "Maccaretolo",
+      "Massumatico",
+      "Poggetto",
+      "Rubizzano",
+      "Sant'Alberto",
+      "San Benedetto"
+    ],
+    "comuni_confinanti": [
+      "Bentivoglio",
+      "Castello d'Argile",
+      "Galliera",
+      "Malalbergo",
+      "Pieve di Cento",
+      "San Giorgio di Piano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Garani",
+      "Villa Luisa",
+      "Villa Padoa",
+      "Villa Rusconi",
+      "Villa Bonora"
+    ],
+    "chiese": [
+      "Chiesa dei Santi Pietro e Paolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Lazzaro di Savena",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037054",
+    "codice_catastale": "H945",
+    "popolazione": 32333,
+    "superficie_kmq": 44.7,
+    "densita": 723.3,
+    "cap": "40068",
+    "prefisso_telefonico": "051",
+    "patrono": "San Lazzaro",
+    "festa_patronale": "17 dicembre",
+    "demonimo": "sanlazzaresi",
+    "etimologia": "Si riferisce al nome del santo patrono del luogo. La specifica si riferisce al fiume che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline di Bologna",
+      "Parco dei Gessi Bolognesi e Calanchi dell'Abbadessa",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Valle dell'Idice"
+    ],
+    "localita_frazioni": [
+      "Idice",
+      "Ca' de' Mandorli",
+      "Ponticella"
+    ],
+    "comuni_confinanti": [
+      "Bologna",
+      "Castenaso",
+      "Ozzano dell'Emilia",
+      "Pianoro"
+    ],
+    "musei": [
+      "Museo delle Preistoria \"Luigi Donini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Agostino",
+      "Chiesa della Sacra famiglia dell'Opera Pia Padre Marella",
+      "Chiesa Cristiana Evangelica"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giovanni in Persiceto",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037053",
+    "codice_catastale": "G467",
+    "popolazione": 28186,
+    "superficie_kmq": 114.4,
+    "densita": 246.4,
+    "cap": "40017",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giovanni",
+    "festa_patronale": "24 giugno",
+    "demonimo": "persicetani",
+    "etimologia": "Del 1912 al 1928 il luogo fu chiamato soltanto Persiceto. Il nome odierno si riferisce alla venerazione per il santo, mente la specifica deriva dal latino persica (pesca) con l'aggiunta del suffisso collettivo -etum, quindi persicetum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura a sinistra del Reno",
+      "Associazione Italiana Paesi Dipinti",
+      "Associazione Comuni Terre d'Acqua"
+    ],
+    "localita_frazioni": [
+      "Budrie",
+      "Castagnolo",
+      "Tivoli",
+      "San Matteo della Decima"
+    ],
+    "comuni_confinanti": [
+      "Anzola dell'Emilia",
+      "Castelfranco Emilia (MO)",
+      "Castello d'Argile",
+      "Cento (FE)",
+      "Crevalcore",
+      "Sala Bolognese",
+      "Sant'Agata Bolognese"
+    ],
+    "musei": [
+      "Museo d'Arte Sacra",
+      "Quadreria Civica"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio Comunale \"Giorgio Abetti\""
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giorgio di Piano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037052",
+    "codice_catastale": "H896",
+    "popolazione": 8629,
+    "superficie_kmq": 30.48,
+    "densita": 283.1,
+    "cap": "40016",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sangiorgesi",
+    "etimologia": "Il nome riflette la forte venerazione verso il santo patrono del paese. La specifica si riferisce alla sua collocazione \"in piano\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno"
+    ],
+    "localita_frazioni": [
+      "Cinquanta",
+      "Gherghenzano",
+      "Stiatico"
+    ],
+    "comuni_confinanti": [
+      "Argelato",
+      "Bentivoglio",
+      "Castello d'Argile",
+      "San Pietro in Casale"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Benedetto Val di Sambro",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037051",
+    "codice_catastale": "G566",
+    "popolazione": 4249,
+    "superficie_kmq": 66.74,
+    "densita": 63.7,
+    "cap": "40048",
+    "prefisso_telefonico": "0534",
+    "patrono": "San Benedetto Abate",
+    "festa_patronale": "11 luglio",
+    "demonimo": "sambenedettesi",
+    "etimologia": "Chiamato prima Piano, poi Piano del Voglio fino al 1924. Il nome attuale riflette la forte venerazione verso il santo. La specifica si riferisce alla collocazione del paese nella valle del Sambro (dal nome del fiume).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Alto Reno"
+    ],
+    "localita_frazioni": [
+      "Sant'Andrea",
+      "Pian del Voglio",
+      "Monteacuto Vallese",
+      "Madonna dei Fornelli",
+      "Ripoli",
+      "Castel dell'Alpi",
+      "Montefredente",
+      "Qualto",
+      "Cedrecchia",
+      "Zaccanesca",
+      "Pian di Balestra"
+    ],
+    "comuni_confinanti": [
+      "Castiglione dei Pepoli",
+      "Firenzuola (FI)",
+      "Grizzana Morandi",
+      "Monghidoro",
+      "Monzuno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sala Bolognese",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037050",
+    "codice_catastale": "H678",
+    "popolazione": 8369,
+    "superficie_kmq": 45.18,
+    "densita": 185.2,
+    "cap": "40010",
+    "prefisso_telefonico": "051",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "salesi",
+    "etimologia": "La prima parte del nome deriva dal latino sala che significa corte o casa di campagna. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura a sinistra del Reno",
+      "Associazione Comuni Terre d'Acqua"
+    ],
+    "localita_frazioni": [
+      "Bagno",
+      "Buonconvento",
+      "Osteria Nuova",
+      "Padulle",
+      "Sala Bolognese"
+    ],
+    "comuni_confinanti": [
+      "Anzola dell'Emilia",
+      "Argelato",
+      "Calderara di Reno",
+      "Castel Maggiore",
+      "Castello d'Argile",
+      "San Giovanni in Persiceto"
+    ],
+    "musei": [
+      "Ecomuseo dell'Acqua"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria Annunziata e San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pieve di Cento",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037048",
+    "codice_catastale": "G643",
+    "popolazione": 7013,
+    "superficie_kmq": 15.85,
+    "densita": 442.5,
+    "cap": "40066",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "pievesi",
+    "etimologia": "Il termine pieve indica un \"distretto rurale\". La specifica deriva dal latino centum, da cui poi proviene il termine centuria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castello d'Argile",
+      "Cento (FE)",
+      "Galliera",
+      "San Pietro in Casale",
+      "Sant'Agostino (FE)"
+    ],
+    "musei": [
+      "Pinacoteca Civica",
+      "Museo d'Arte delle Generazioni Italiane del '900 \"G. Bargellini\"",
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della SS. Trinità",
+      "Colleggiata di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pianoro",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037047",
+    "codice_catastale": "G570",
+    "popolazione": 17537,
+    "superficie_kmq": 107.12,
+    "densita": 163.7,
+    "cap": "40065",
+    "prefisso_telefonico": "051",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "pianoresi",
+    "etimologia": "Il nome deriva dal latino planum o planurium ed assume il significato di \"pianura tra due alture\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Savena-Idice",
+      "Regione Agraria n. 4 - Colline del Reno",
+      "Parco dei Gessi Bolognesi e Calanchi dell'Abbadessa",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Rastignano",
+      "Sesto",
+      "Carteria",
+      "Montecalvo",
+      "Pian di Macina",
+      "Musiano",
+      "Gorgognano",
+      "Montelungo",
+      "Guzzano",
+      "Riosto",
+      "Livergnano",
+      "Pianoro Nuovo",
+      "Pianoro Vecchio",
+      "San Salvatore di Casola",
+      "Monte delle Formiche",
+      "Zena"
+    ],
+    "comuni_confinanti": [
+      "Bologna",
+      "Loiano",
+      "Monterenzio",
+      "Monzuno",
+      "Ozzano dell'Emilia",
+      "San Lazzaro di Savena",
+      "Sasso Marconi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario del Monte delle Formiche"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ozzano dell'Emilia",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037046",
+    "codice_catastale": "G205",
+    "popolazione": 13770,
+    "superficie_kmq": 64.94,
+    "densita": 212.0,
+    "cap": "40064",
+    "prefisso_telefonico": "051",
+    "patrono": "San Cristoforo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "ozzanesi",
+    "etimologia": "Chiamato in passato Ozzano di Robbiano, deriva dal nome latino di persona Ulcius con l'aggiunta del suffisso -anus che indica possesso. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Savena-Idice",
+      "Regione Agraria n. 3 - Colline di Bologna",
+      "Parco dei Gessi Bolognesi e Calanchi dell'Abbadessa",
+      "Associazione Valle dell'Idice"
+    ],
+    "localita_frazioni": [
+      "Mercatale",
+      "Ponte Rizzoli",
+      "Maggio",
+      "Noce di Mercatale",
+      "Osteria Nuova"
+    ],
+    "comuni_confinanti": [
+      "Budrio",
+      "Castel San Pietro Terme",
+      "Castenaso",
+      "Medicina",
+      "Monterenzio",
+      "Pianoro",
+      "San Lazzaro di Savena"
+    ],
+    "musei": [
+      "Raccolta dell'Istituto Nazionale per la Fauna Selvatica",
+      "Museo di Anatomia degli Animali Domestici",
+      "Museo \"Giovanni Battista Ercolani\" di Anatomia Patologica e Teratologia Veterinaria"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Staffanstorp (Svezia)",
+      "dal giugno 2003"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mordano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037045",
+    "codice_catastale": "F718",
+    "popolazione": 4732,
+    "superficie_kmq": 21.53,
+    "densita": 219.8,
+    "cap": "40027",
+    "prefisso_telefonico": "0542",
+    "patrono": "Sant'Eustachio",
+    "festa_patronale": "20 settembre",
+    "demonimo": "mordanesi",
+    "etimologia": "Deriva da un nome latino di persona non ben identificabile (forse Murdus) con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura dell'Idice e del Santerno",
+      "Associazione Intercomunale Cinque Castelli"
+    ],
+    "localita_frazioni": [
+      "Bubano"
+    ],
+    "comuni_confinanti": [
+      "Bagnara di Romagna (RA)",
+      "Imola",
+      "Lugo (RA)",
+      "Massa Lombarda (RA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monzuno",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037044",
+    "codice_catastale": "F706",
+    "popolazione": 6312,
+    "superficie_kmq": 65.0,
+    "densita": 97.1,
+    "cap": "40036",
+    "prefisso_telefonico": "051",
+    "patrono": "San Luigi",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "monzunesi",
+    "etimologia": "Deriva dal latino mons, montis, ossia monte, con l'aggiunta del suffisso -one.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Montagna del Medio Reno",
+      "Parco Storico Monte Sole"
+    ],
+    "localita_frazioni": [
+      "Brigola",
+      "Gabbiano",
+      "Montorio",
+      "Trasasso",
+      "Vado",
+      "Valle",
+      "Rioveggio"
+    ],
+    "comuni_confinanti": [
+      "Grizzana Morandi",
+      "Loiano",
+      "Marzabotto",
+      "Monghidoro",
+      "Pianoro",
+      "San Benedetto Val di Sambro",
+      "Sasso Marconi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monterenzio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037041",
+    "codice_catastale": "F597",
+    "popolazione": 6055,
+    "superficie_kmq": 105.35,
+    "densita": 57.5,
+    "cap": "40050",
+    "prefisso_telefonico": "051",
+    "patrono": "Cristo Re",
+    "festa_patronale": "5 ottobre",
+    "demonimo": "monterenziani",
+    "etimologia": "E' un composto di \"monte\" e del nome latino di persona Terentius (forse Terenzo).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Savena-Idice",
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno"
+    ],
+    "localita_frazioni": [
+      "Monterenzio",
+      "Pizzano",
+      "Vignale-Sassuno",
+      "Rignano Bolognese",
+      "Sassonero",
+      "Cassano",
+      "Bisano",
+      "San Benedetto del Querceto"
+    ],
+    "comuni_confinanti": [
+      "Casalfiumanese",
+      "Castel del Rio",
+      "Castel San Pietro Terme",
+      "Firenzuola (FI)",
+      "Loiano",
+      "Monghidoro",
+      "Ozzano dell'Emilia",
+      "Pianoro"
+    ],
+    "musei": [
+      "Museo Civico Archeologico \"Luigi Fantini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Molde (Norvegia)",
+      "dal 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte San Pietro",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037042",
+    "codice_catastale": "F627",
+    "popolazione": 10950,
+    "superficie_kmq": 74.65,
+    "densita": 146.7,
+    "cap": "40050",
+    "prefisso_telefonico": "051",
+    "patrono": "Beata Vergine del Rosario",
+    "festa_patronale": "7 ottobre",
+    "demonimo": "montesampietrini",
+    "etimologia": "La sua composizione è molto semplice: è un composto di \"monte\" e del nome del santo venerato in loco: \"San Pietro\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Unione di comuni Valle del Samoggia",
+      "Regione Agraria n. 4 - Colline del Reno",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Città del Castagno",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Calderino (Amola",
+      "Ozzano dell'Amola)",
+      "San Martino (Pradalbino",
+      "San Martino in Casola",
+      "San Lorenzo in Collina)",
+      "Loghetto (Monte San Pietro",
+      "Montemaggiore)",
+      "Monte San Giovanni (Mongiorgio",
+      "Monte San Giovanni",
+      "San Chierlo)",
+      "Montepastore (Ronca",
+      "Montesevero",
+      "Gavignano",
+      "Montepastore)",
+      "Badia"
+    ],
+    "comuni_confinanti": [
+      "Marzabotto",
+      "Sasso Marconi",
+      "Valsamoggia",
+      "Zola Predosa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria (ad Amola)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monghidoro",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037040",
+    "codice_catastale": "F363",
+    "popolazione": 3691,
+    "superficie_kmq": 48.2,
+    "densita": 76.6,
+    "cap": "40063",
+    "prefisso_telefonico": "051",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "monghidoresi",
+    "etimologia": "Deriva dal latino mons Gothorum, ossia monte dei Goti, riferendosi alla popolazione che invase il luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Savena-Idice",
+      "Regione Agraria n. 2 - Alto Reno"
+    ],
+    "localita_frazioni": [
+      "Piamaggio",
+      "Campeggio",
+      "Frassineta",
+      "Vergiano"
+    ],
+    "comuni_confinanti": [
+      "Firenzuola (FI)",
+      "Loiano",
+      "Monterenzio",
+      "Monzuno",
+      "San Benedetto Val di Sambro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Alessandro (a Vergiano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Gianni Morandi (1944-)",
+      "cantante",
+      "attore e conduttore televisivo"
+    ]
+  },
+  {
+    "nome": "Molinella",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037039",
+    "codice_catastale": "F288",
+    "popolazione": 15653,
+    "superficie_kmq": 128.0,
+    "densita": 122.3,
+    "cap": "40062",
+    "prefisso_telefonico": "051",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "molinellesi",
+    "etimologia": "Deriva dal latino molina, ossia mulino, che a sua volta deriva da mola (macina).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura dell'Idice e del Santerno",
+      "Associazione intercomunale Terre di Pianura"
+    ],
+    "localita_frazioni": [
+      "San Pietro Capofiume",
+      "Marmorta",
+      "San Martino in Argine",
+      "Selva Malvezzi",
+      "Guarda"
+    ],
+    "comuni_confinanti": [
+      "Argenta (FE)",
+      "Baricella",
+      "Budrio",
+      "Medicina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Minerbio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037038",
+    "codice_catastale": "F219",
+    "popolazione": 8783,
+    "superficie_kmq": 43.05,
+    "densita": 204.0,
+    "cap": "40061",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giovanni",
+    "festa_patronale": "24 giugno",
+    "demonimo": "minerbiesi",
+    "etimologia": "Si riferisce forse alla presenza in loco di un tempio di Minerva o comunque al culto della dea, derivando quindi dal latino Minervium.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno",
+      "Associazione intercomunale Terre di Pianura"
+    ],
+    "localita_frazioni": [
+      "Ca' de' Fabbri",
+      "Tintoria",
+      "San Giovanni in Triario",
+      "San Martino in Soverzano"
+    ],
+    "comuni_confinanti": [
+      "A est e sud: Budrio; a nord: Baricella",
+      "Malalbergo; a ovest: Bentivoglio",
+      "Granarolo dell'Emilia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Isolani"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marzabotto",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037036",
+    "codice_catastale": "B689",
+    "popolazione": 6812,
+    "superficie_kmq": 74.55,
+    "densita": 91.4,
+    "cap": "40043",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giuseppe Lavoratore",
+    "festa_patronale": "terza domenica dopo Pasqua",
+    "demonimo": "marzabottesi",
+    "etimologia": "La storia che spiega l'origine del nome di questo paese è molto simpatica. Si racconta infatti il nome abbia una formazione dialettale, attraverso l'unione del verbo marza (impregna) e bot (rospo). Secondo altri il nome alludeva alle \"botti\" usate per la lavorazione la canapa coltivata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 4 - Colline del Reno",
+      "Parco Storico Monte Sole",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "Allocco",
+      "Gardeletta",
+      "Lama di Reno",
+      "Lama di Setta",
+      "Luminasio",
+      "Malfolle",
+      "Medelana",
+      "Montasico",
+      "Panico",
+      "Pian di Venola",
+      "Pioppe di Salvaro",
+      "Quercia",
+      "Sibano",
+      "Sirano",
+      "Sperticano"
+    ],
+    "comuni_confinanti": [
+      "Grizzana Morandi",
+      "Monte San Pietro",
+      "Monzuno",
+      "Sasso Marconi",
+      "Valsamoggia",
+      "Vergato"
+    ],
+    "musei": [
+      "Museo Nazionale Etrusco \"P. Aria\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo Martire (a Panico)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Medicina",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037037",
+    "codice_catastale": "F083",
+    "popolazione": 16744,
+    "superficie_kmq": 159.1,
+    "densita": 105.2,
+    "cap": "40059",
+    "prefisso_telefonico": "051",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "medicinesi",
+    "etimologia": "Il nome deriva dal latino medicina, riferendosi ad un \"luogo ove ci si cura\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura dell'Idice e del Santerno",
+      "Associazione Intercomunale Cinque Castelli"
+    ],
+    "localita_frazioni": [
+      "Buda",
+      "Crocetta",
+      "Fantuzza",
+      "Fiorentina",
+      "Fossatone",
+      "Ganzanigo",
+      "Portonovo",
+      "San Martino",
+      "Sant'Antonio",
+      "Via Nuova",
+      "Villa Fontana"
+    ],
+    "comuni_confinanti": [
+      "Argenta (FE)",
+      "Budrio",
+      "Castel Guelfo di Bologna",
+      "Castel San Pietro Terme",
+      "Imola",
+      "Molinella",
+      "Ozzano dell'Emilia"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Comunale",
+      "Palazzo del Podestà",
+      "Palazzo Prandi"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria del Carmine",
+      "Chiesa di San Mamante",
+      "Chiesa dell'Assunta",
+      "Chiesa del Carmine",
+      "Chiesa dei Santi Francesco e Anna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Barbarossa (terza domenica di settembre)",
+      "con il Palio della Serpe"
+    ],
+    "gemellaggi": [
+      "Skofja Loka (Slovenia)",
+      "Pescia (Pistoia-Toscana), dal 2002",
+      "Romilly sur Seine (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Malalbergo",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037035",
+    "codice_catastale": "E844",
+    "popolazione": 8972,
+    "superficie_kmq": 53.83,
+    "densita": 166.7,
+    "cap": "40051",
+    "prefisso_telefonico": "051",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "malalberghesi",
+    "etimologia": "Il nome si riferisce al fatto che in passato il luogo era considerato un posto malsicuro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno",
+      "Associazione intercomunale Terre di Pianura"
+    ],
+    "localita_frazioni": [
+      "Altedo",
+      "Pegola",
+      "Casoni",
+      "Ponticelli"
+    ],
+    "comuni_confinanti": [
+      "Baricella",
+      "Bentivoglio",
+      "Galliera",
+      "Minerbio",
+      "Poggio Renatico (FE)",
+      "San Pietro in Casale"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Marescalchi",
+      "Palazzo Venturi (frazione: Pegola)"
+    ],
+    "chiese": [
+      "Chiesa di Sant’Antonio Abate",
+      "Chiesa di San Giovanni Battista (frazione: Altedo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dell'Asparago Verde di Altedo (terza settimana di maggio)",
+      "Sagra dell'Ortica (ultimo fine settimana di agosto e primo di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lizzano in Belvedere",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037033",
+    "codice_catastale": "A771",
+    "popolazione": 2203,
+    "superficie_kmq": 85.56,
+    "densita": 25.7,
+    "cap": "40042",
+    "prefisso_telefonico": "0534",
+    "patrono": "San Mamante",
+    "festa_patronale": "17 agosto",
+    "demonimo": "lizzanesi",
+    "etimologia": "Deriva dal nome di persona Liccius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": [
+      "Comune Amico del Turismo Itinerante"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 2 - Alto Reno",
+      "Parco del Corno alle Scale"
+    ],
+    "localita_frazioni": [
+      "Vidiciatico",
+      "Monteacuto delle Alpi",
+      "Pianaccio",
+      "La Ca'",
+      "Poggiolforato",
+      "Farnè",
+      "Rocca Corneta",
+      "Querciola",
+      "Gabba",
+      "Villaggio Europa"
+    ],
+    "comuni_confinanti": [
+      "Alto Reno Terme",
+      "Fanano (MO)",
+      "Gaggio Montano",
+      "Montese (MO)",
+      "Pistoia (PT)",
+      "San Marcello Pistoiese (PT)",
+      "Sestola (MO)"
+    ],
+    "musei": [
+      "Museo Etnografico \"G. Carpani\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale San Martino di Tours (a Rocca Corneta)",
+      "Chiesa di San Nicolò (a Monteacuto delle Alpi)",
+      "Chiesa della Madonna del Carmine (a Farnè)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Donviccia (notte del 5 gennaio)",
+      "Le Fasgelle (24 dicembre), in località Pianaccio di Lizzano"
+    ],
+    "gemellaggi": [
+      "Hilzingen (Germania)",
+      "dal settembre 2001"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Enzo Biagi (1920-2007)",
+      "giornalista e scrittore"
+    ]
+  },
+  {
+    "nome": "Loiano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037034",
+    "codice_catastale": "E655",
+    "popolazione": 4315,
+    "superficie_kmq": 52.41,
+    "densita": 82.3,
+    "cap": "40050",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "loianesi",
+    "etimologia": "Deriva dal nome latino di persona Lollius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Savena-Idice",
+      "Regione Agraria n. 4 - Colline del Reno"
+    ],
+    "localita_frazioni": [
+      "Anconella",
+      "Barbarolo",
+      "Bibulano",
+      "Case sparse",
+      "La Guarda",
+      "Quinzano",
+      "Roncastaldo",
+      "Sabbioni",
+      "Scanello",
+      "Scascoli"
+    ],
+    "comuni_confinanti": [
+      "Monghidoro",
+      "Monterenzio",
+      "Monzuno",
+      "Pianoro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardini del Casoncello"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Imola",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037032",
+    "codice_catastale": "E289",
+    "popolazione": 69951,
+    "superficie_kmq": 204.96,
+    "densita": 341.3,
+    "cap": "40026",
+    "prefisso_telefonico": "0542",
+    "patrono": "San Cassiano",
+    "festa_patronale": "13 agosto",
+    "demonimo": "imolesi",
+    "etimologia": "Anticamente chiamata Forum Cornelii, assunse svariate denominazioni come Immola, Imula e Emola derivando dal nome germanico di persona Immilo. Secondo alcun il nome potrebbe anche accostarsi alla \"Via Emilia\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura dell'Idice e del Santerno",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Argenta (FE)",
+      "Bagnara di Romagna (RA)",
+      "Borgo Tossignano",
+      "Casalfiumanese",
+      "Castel Bolognese (RA)",
+      "Castel Guelfo di Bologna",
+      "Conselice (RA)",
+      "Dozza",
+      "Massa Lombarda (RA)",
+      "Medicina",
+      "Mordano",
+      "Riolo Terme (RA)",
+      "Solarolo (RA)"
+    ],
+    "musei": [
+      "Collezioni di Armi e Ceramiche della Rocca Sforzesca",
+      "Pinacoteca Civica",
+      "Museo Diocesano d'Arte Sacra",
+      "Museo \"G. Scarabelli\"",
+      "Collezioni d'Arte di Palazzo Tozzoni",
+      "Museo della Resistenza e del '900"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Beata Vergine Maria del Piratello :: Frati Francescani del Terzo Ordine Regolare",
+      "Santuario di Santa Maria in Regola Chiesa Abbaziale",
+      "Santuario Madonna del Ghiandolino"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di Imola"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Romeo Galli"
+    ],
+    "eventi_feste_sagre": [
+      "Lume a Marzo (primo marzo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grizzana Morandi",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037031",
+    "codice_catastale": "E187",
+    "popolazione": 3915,
+    "superficie_kmq": 77.32,
+    "densita": 50.6,
+    "cap": "40030",
+    "prefisso_telefonico": "051",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "grizzanesi",
+    "etimologia": "Deriva dal nome latino di persona Grittius con l'aggiunta del suffisso -anus che indica possesso. La specifica, che risale al 1985, si riferisce al famoso pittore Giorgio Morandi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 1 - Montagna del Medio Reno",
+      "Parco Storico Monte Sole"
+    ],
+    "localita_frazioni": [
+      "Campolo",
+      "Carviano",
+      "Monteacuto Ragazza",
+      "Oreglia",
+      "Pian di Setta",
+      "Prada",
+      "Puzzola",
+      "Salvaro",
+      "Savignano",
+      "Stanco",
+      "Tavernola",
+      "Vimignano"
+    ],
+    "comuni_confinanti": [
+      "Camugnano",
+      "Castel di Casio",
+      "Castiglione dei Pepoli",
+      "Gaggio Montano",
+      "Marzabotto",
+      "Monzuno",
+      "San Benedetto Val di Sambro",
+      "Vergato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Granarolo dell'Emilia",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037030",
+    "codice_catastale": "E136",
+    "popolazione": 11972,
+    "superficie_kmq": 34.41,
+    "densita": 347.9,
+    "cap": "40057",
+    "prefisso_telefonico": "051",
+    "patrono": "San Vitale",
+    "festa_patronale": "28 aprile",
+    "demonimo": "granarolesi",
+    "etimologia": "Deriva dal termine latino granarolum, ossia \"deposito di grani\". La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno",
+      "Associazione intercomunale Terre di Pianura"
+    ],
+    "localita_frazioni": [
+      "frazioni: Granarolo (capoluogo)",
+      "Quarto Inferiore",
+      "Cadriano",
+      "Viadagola",
+      "Lovoleto;\nborgate: Osteria Pontica",
+      "Santa Brigida",
+      "Trappanino",
+      "Casette di Cadriano",
+      "Osteriola",
+      "Fibbia"
+    ],
+    "comuni_confinanti": [
+      "Bentivoglio",
+      "Bologna",
+      "Budrio",
+      "Castel Maggiore",
+      "Castenaso",
+      "Minerbio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Mignani (in località Cadriano)",
+      "Palazzo dell'antica casata Fibbia (in frazione Viadagola)",
+      "Palazzo Zambeccari (in località Cadriano)",
+      "Villa del Marchesino",
+      "Villa Naldi",
+      "Villa Amelia, seicentesca"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Vitale",
+      "Chiesa di Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bagnères de Bigorre (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Galliera",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037028",
+    "codice_catastale": "D878",
+    "popolazione": 5452,
+    "superficie_kmq": 37.16,
+    "densita": 146.7,
+    "cap": "40015",
+    "prefisso_telefonico": "051",
+    "patrono": "San Venanzio",
+    "festa_patronale": "18 maggio",
+    "demonimo": "gallierini",
+    "etimologia": "Secondo alcuni potrebbe derivare da galeria, ossia galleria. Secondo altri si riferisce al nome della famiglia romana Galeria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno"
+    ],
+    "localita_frazioni": [
+      "San Venanzio",
+      "San Vincenzo"
+    ],
+    "comuni_confinanti": [
+      "A est: Malalbergo; a est e sud: San Pietro in Casale; a nord: Poggio Renatico (FE); a ovest: Pieve di Cento",
+      "Sant'Agostino (FE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gaggio Montano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037027",
+    "codice_catastale": "D847",
+    "popolazione": 4828,
+    "superficie_kmq": 58.68,
+    "densita": 82.3,
+    "cap": "40041",
+    "prefisso_telefonico": "0534",
+    "patrono": "Natività di Maria",
+    "festa_patronale": "8 settembre",
+    "demonimo": "gaggesi",
+    "etimologia": "Deriva dal termine longobardo gahagi che significa terreno riservato. La specifica si riferisce all'aspetto geografico del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 1 - Montagna del Medio Reno"
+    ],
+    "localita_frazioni": [
+      "Bombiana",
+      "Silla",
+      "Marano",
+      "Pietracolora",
+      "Santa Maria Villiana",
+      "Rocca Pitigliana",
+      "Affrico"
+    ],
+    "comuni_confinanti": [
+      "Castel d'Aiano",
+      "Castel di Casio",
+      "Castel di Casio",
+      "Grizzana Morandi",
+      "Lizzano in Belvedere",
+      "Montese (MO)",
+      "Vergato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele (a Rocca Pitigliana)",
+      "Chiesa dei Santi Michele e Nazario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sauveterre du Gard (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fontanelice",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037026",
+    "codice_catastale": "D668",
+    "popolazione": 1916,
+    "superficie_kmq": 36.57,
+    "densita": 52.4,
+    "cap": "40025",
+    "prefisso_telefonico": "0542",
+    "patrono": "San Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "fontanelicesi o fontanesi",
+    "etimologia": "Chiamato in passato Fontana Elice, nel 1911 ha assunto la denominazione attuale che deriva da una sorgente posta sotto un leccio, quindi dal latino fons ilicis, ossia sorgente del leccio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Santerno",
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno",
+      "Parco Vena del Gesso Romagnola",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Gaggio e Fornione",
+      "Monte in Pieve",
+      "Monte Morosino",
+      "Orsara",
+      "Santa Maria Maddalena",
+      "San Giovanni"
+    ],
+    "comuni_confinanti": [
+      "Borgo Tossignano",
+      "Casalfiumanese",
+      "Casola Valsenio (RA)",
+      "Castel del Rio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Comunità Montana Valle del Santerno",
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno",
+      "Parco Vena del Gesso Romagnola",
+      "Associazione Nazionale Città del Vino",
+      "Gaggio e Fornione, Monte in Pieve, Monte Morosino, Orsara, Santa Maria Maddalena, San Giovanni"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dozza",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037025",
+    "codice_catastale": "D360",
+    "popolazione": 6617,
+    "superficie_kmq": 24.23,
+    "densita": 273.1,
+    "cap": "40060",
+    "prefisso_telefonico": "0542",
+    "patrono": "Madonna del Calanco",
+    "festa_patronale": "martedì dopo Pentecoste",
+    "demonimo": "dozzesi",
+    "etimologia": "Deriva dal latino ductia, ossia condotto d'acqua.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno",
+      "Associazione Nazionale Città del Vino",
+      "Club I Borghi più Belli d'Italia",
+      "Associazione Italiana Paesi Dipinti",
+      "Associazione Intercomunale Cinque Castelli"
+    ],
+    "localita_frazioni": [
+      "Toscanella"
+    ],
+    "comuni_confinanti": [
+      "Casalfiumanese",
+      "Castel Guelfo di Bologna",
+      "Castel San Pietro Terme",
+      "Imola"
+    ],
+    "musei": [
+      "Museo parrocchiale d'Arte Sacra",
+      "Museo della Rocca"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale dell'Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di Dozza"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale di Dozza"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Oliveto Citra (Salerno-Campania)",
+      "dal 2017"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crevalcore",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037024",
+    "codice_catastale": "D166",
+    "popolazione": 13469,
+    "superficie_kmq": 102.58,
+    "densita": 131.3,
+    "cap": "40014",
+    "prefisso_telefonico": "051",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "crevalcoresi",
+    "etimologia": "Secondo alcuni il nome si riferisce ad un soprannome non bene identificato. Secondo altri si riferisce invece alle condizioni geografiche del luogo e quindi deriverebbe da cuoro o cuora (terreno galleggiante).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura a sinistra del Reno",
+      "Associazione Comuni Terre d'Acqua"
+    ],
+    "localita_frazioni": [
+      "Caselle",
+      "Bolognina",
+      "Sammartini",
+      "Palata Pepoli",
+      "Galeazza",
+      "Bevilacqua"
+    ],
+    "comuni_confinanti": [
+      "Camposanto (MO)",
+      "Cento (FE)",
+      "Finale Emilia (MO)",
+      "Nonantola (MO)",
+      "Ravarino (MO)",
+      "San Giovanni in Persiceto",
+      "Sant'Agata Bolognese"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Ronchi"
+    ],
+    "chiese": [
+      "Oratorio della Pietà, settecentesco",
+      "Chiesa dell'Immacolata Concezione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Marcello Malpighi (1628 - 1694)",
+      "medico e fondatore dell'anatomia microscopica"
+    ]
+  },
+  {
+    "nome": "Castiglione dei Pepoli",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037022",
+    "codice_catastale": "C296",
+    "popolazione": 5558,
+    "superficie_kmq": 65.8,
+    "densita": 84.5,
+    "cap": "40035",
+    "prefisso_telefonico": "0534",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "castiglionesi",
+    "etimologia": "La prima parte del nome si collega al latino castrum. La specifica fa riferimento alla famiglia Pepoli.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Alto Reno"
+    ],
+    "localita_frazioni": [
+      "Baragazza",
+      "Creda",
+      "Lagaro",
+      "Rasora",
+      "Roncobilaccio",
+      "San Giacomo",
+      "Sparvo"
+    ],
+    "comuni_confinanti": [
+      "Barberino di Mugello (FI)",
+      "Camugnano",
+      "Firenzuola (FI)",
+      "Grizzana Morandi",
+      "San Benedetto Val di Sambro",
+      "Vernio (PO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Beata Vergine delle Grazie di Boccadirio (in frazione Baragazza) :: Dehoniani",
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castenaso",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037021",
+    "codice_catastale": "C292",
+    "popolazione": 15191,
+    "superficie_kmq": 35.74,
+    "densita": 425.0,
+    "cap": "40055",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giovanni",
+    "festa_patronale": "24 giugno",
+    "demonimo": "castenasesi",
+    "etimologia": "Secondo la tradizione il nome deriva dal latino castrum Nasicae, ossia accampamento di Nasica (Cornelio Scipione Nasica) che era al comando dei romani nella guerra contro i Galli. Secondo altri il nome deriverebbe dal nome latino di persona Castinus, con l'aggiunta del suffisso -acus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura dell'Idice e del Santerno",
+      "Associazione Valle dell'Idice"
+    ],
+    "localita_frazioni": [
+      "Fiesso",
+      "Marano/Veduro",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "A nord e est: Budrio; a ovest: Bologna",
+      "Granarolo dell'Emilia; a sud: Ozzano dell'Emilia",
+      "San Lazzaro di Savena"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Orsi (a Marano)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Rethymno (Creta",
+      "Grecia)",
+      "dall'ottobre 1987"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castello d'Argile",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037017",
+    "codice_catastale": "C185",
+    "popolazione": 6552,
+    "superficie_kmq": 29.06,
+    "densita": 225.5,
+    "cap": "40050",
+    "prefisso_telefonico": "051",
+    "patrono": "San Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "argilesi",
+    "etimologia": "E' un composto di \"castello\" (con evidente significato) e del termine latino arger, -eris, ossia argine.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno"
+    ],
+    "localita_frazioni": [
+      "Venezzano"
+    ],
+    "comuni_confinanti": [
+      "Argelato",
+      "Cento (FE)",
+      "Pieve di Cento",
+      "Sala Bolognese",
+      "San Giorgio di Piano",
+      "San Giovanni in Persiceto",
+      "San Pietro in Casale"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria in Venezzano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel San Pietro Terme",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037020",
+    "codice_catastale": "C265",
+    "popolazione": 20875,
+    "superficie_kmq": 148.48,
+    "densita": 140.6,
+    "cap": "40024",
+    "prefisso_telefonico": "051",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "7 ottobre",
+    "demonimo": "castellani",
+    "etimologia": "Chiamato prima Castel San Pietro, poi Castel San Pietro nell'Emilia, poi nel 1959 acquistò la denominazione attuale riferendosi allo stabilimento termale presente in loco. E' un composto di \"castello\" (dal latino castrum, ossia fortezza) e del nome del Santo venerato in loco.",
+    "il_comune_e": [
+      "Città Termale (Terme di Castel San Pietro SpA)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Italiana le Città del Miele",
+      "Associazione Intercomunale Cinque Castelli"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Gallo Bolognese",
+      "Molino Nuovo",
+      "Osteria Grande",
+      "Poggio Grande",
+      "Varignana; \nlocalità: Casalecchio dei Conti",
+      "Montecalderaro"
+    ],
+    "comuni_confinanti": [
+      "Casalfiumanese",
+      "Castel Guelfo di Bologna",
+      "Dozza",
+      "Medicina",
+      "Monterenzio",
+      "Ozzano dell'Emilia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Beata Vergine del Lato di Monte Calderaro",
+      "Santuario della Madonna di Poggio Piccolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bad Salzschlirf (Germania), dal 2007",
+      "Lovran (Croazia), ex frazione di Opatija",
+      "Matulji (Croazia), ex frazione di Opatija",
+      "Opatija (Croazia), dal 1983"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel Maggiore",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037019",
+    "codice_catastale": "C204",
+    "popolazione": 18306,
+    "superficie_kmq": 30.92,
+    "densita": 592.0,
+    "cap": "40013",
+    "prefisso_telefonico": "051",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "castelmaggioresi",
+    "etimologia": "Il nome ha un significato esplicito. La prima parte deriva dal latino castrum, ossia fortezza, la seconda è di semplice intuizione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Bondanello",
+      "Boschetto-Castiglia",
+      "Castello",
+      "Garluda",
+      "Osteria del Gallo",
+      "Primo Maggio",
+      "Sabbiuno",
+      "Torre Verde",
+      "Trebbo di Reno"
+    ],
+    "comuni_confinanti": [
+      "Argelato",
+      "Bentivoglio",
+      "Bologna",
+      "Calderara di Reno",
+      "Granarolo dell'Emilia",
+      "Sala Bolognese"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Salina",
+      "Villa Stagni",
+      "Villa Zarri",
+      "Villa Isabella",
+      "Villa Belvedere",
+      "Villa Rossi"
+    ],
+    "chiese": [
+      "Oratorio di Santa Maria Immacolata",
+      "Chiesa di Sant'Apollinare (a Ronco)",
+      "Chiesa di Sant'Andrea",
+      "Chiesa di San Biagio di Saliceto",
+      "Chiesa di Santa Maria (a Sabbiuno)",
+      "Chiesa di San Bartolomeo (a Bondanello)",
+      "Chiesa di San Giovanni Battista (a Trebbo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel Guelfo di Bologna",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037016",
+    "codice_catastale": "C121",
+    "popolazione": 4479,
+    "superficie_kmq": 28.55,
+    "densita": 156.9,
+    "cap": "40023",
+    "prefisso_telefonico": "0542",
+    "patrono": "Sant'Agnese",
+    "festa_patronale": "21 gennaio",
+    "demonimo": "guelfesi",
+    "etimologia": "E' un composto di \"castello\" e Guelfo (consorte di Matilde di Canossa) che lo distingue dagli omonimi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura dell'Idice e del Santerno",
+      "Associazione Intercomunale Cinque Castelli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castel San Pietro Terme",
+      "Dozza",
+      "Imola",
+      "Medicina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel di Casio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037015",
+    "codice_catastale": "B969",
+    "popolazione": 3409,
+    "superficie_kmq": 47.45,
+    "densita": 71.8,
+    "cap": "40030",
+    "prefisso_telefonico": "0534",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "castellani",
+    "etimologia": "E' un composto di \"castello\" (dal latino castrum, ossia fortezza) e di Caio che sarebbe l'antico nome di un piccolo paese limitrofo (oggi chiamato Pieve di Casio) che potrebbe derivare dal nome latino di persona Accasius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 2 - Alto Reno",
+      "Parco dei Laghi di Suviana e Brasimone",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": [
+      "Badi",
+      "Casola-Berzantina",
+      "Pieve",
+      "Prati",
+      "Suviana"
+    ],
+    "comuni_confinanti": [
+      "Alto Reno Terme",
+      "Camugnano",
+      "Gaggio Montano",
+      "Grizzana Morandi",
+      "Sambuca Pistoiese (PT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria (in frazione Casola)",
+      "Chiesa di San Pietro, seicentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel del Rio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037014",
+    "codice_catastale": "C086",
+    "popolazione": 1251,
+    "superficie_kmq": 52.56,
+    "densita": 23.8,
+    "cap": "40022",
+    "prefisso_telefonico": "0542",
+    "patrono": "Sant'Ambrogio",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "alidosiani",
+    "etimologia": "E' composto dal termine \"castello\" (in riferimento al castello degli Alidosi) e dalla specifica Rio che si riferisce ad un torrente che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Santerno",
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Belvedere",
+      "Giugnola",
+      "Moraduccio",
+      "Valsalva"
+    ],
+    "comuni_confinanti": [
+      "Casalfiumanese",
+      "Casola Valsenio (RA)",
+      "Firenzuola (FI)",
+      "Fontanelice",
+      "Monterenzio",
+      "Palazzuolo sul Senio (FI)"
+    ],
+    "musei": [
+      "Museo della Guerra"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Palazzo Bastionato"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Marrone (ottobre), con mostre di prodotti, convegni e conferenze",
+      "Feste Rinascimentali (inizi di luglio), con il Palio del Biroccio, competizione tra i Terzieri del paese",
+      "Sagra del Porcino (ultimi due fine settimana di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel d'Aiano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037013",
+    "codice_catastale": "C075",
+    "popolazione": 1872,
+    "superficie_kmq": 45.32,
+    "densita": 41.3,
+    "cap": "40034",
+    "prefisso_telefonico": "051",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "casteldaianesi",
+    "etimologia": "E' un composto di \"castello\" (dal latino castrum, ossia fortezza) e del nome latino di persona Ad(d)ius o Atilius con l'aggiunta del suffisso di appartenenza -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 1 - Montagna del Medio Reno"
+    ],
+    "localita_frazioni": [
+      "Villa d'Aiano",
+      "Rocca di Roffeno",
+      "Casigno",
+      "Labante",
+      "Sassomolare"
+    ],
+    "comuni_confinanti": [
+      "Gaggio Montano",
+      "Montese (MO)",
+      "Vergato",
+      "Zocca (MO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalfiumanese",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037012",
+    "codice_catastale": "B892",
+    "popolazione": 3452,
+    "superficie_kmq": 81.96,
+    "densita": 42.1,
+    "cap": "40020",
+    "prefisso_telefonico": "0542",
+    "patrono": "San Gregorio Magno",
+    "festa_patronale": "12 marzo",
+    "demonimo": "casalesi",
+    "etimologia": "E' un composto di Casale e di un termine derivato dal latino flumen, ossia fiume con l'aggiunta del suffisso -ensis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Santerno",
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno",
+      "Parco Vena del Gesso Romagnola"
+    ],
+    "localita_frazioni": [
+      "Sassoleone",
+      "San Martino in Pedriolo"
+    ],
+    "comuni_confinanti": [
+      "Borgo Tossignano",
+      "Castel del Rio",
+      "Castel San Pietro Terme",
+      "Dozza",
+      "Fontanelice",
+      "Imola",
+      "Monterenzio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa romanica e convento di Riviera",
+      "Chiesa di San Martino in Pedriolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalecchio di Reno",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037011",
+    "codice_catastale": "B880",
+    "popolazione": 36466,
+    "superficie_kmq": 17.37,
+    "densita": 2099.4,
+    "cap": "40033",
+    "prefisso_telefonico": "051",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "casalecchiesi",
+    "etimologia": "Deriva dal latino Casaliculum che deriva a sua volta da casalis (casa rurale). La specifica si riferisce alla vicinanza al fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Unione di comuni Valle del Samoggia",
+      "Regione Agraria n. 3 - Colline di Bologna",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Ceretolo",
+      "Croce",
+      "San Biagio",
+      "Tizzano"
+    ],
+    "comuni_confinanti": [
+      "Bologna",
+      "Sasso Marconi",
+      "Zola Predosa"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa il Toiano (XVI secolo)",
+      "Villa Marullina",
+      "Villa Volpe"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camugnano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037010",
+    "codice_catastale": "B572",
+    "popolazione": 1849,
+    "superficie_kmq": 96.61,
+    "densita": 19.1,
+    "cap": "40032",
+    "prefisso_telefonico": "0534",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "camugnanesi",
+    "etimologia": "Deriva dal nome latino di persona Camonius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 2 - Alto Reno",
+      "Parco dei Laghi di Suviana e Brasimone",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": [
+      "Guzzano",
+      "Carpineta",
+      "Mogne",
+      "Verzuno",
+      "Vigo",
+      "Burzanella",
+      "Trasserra",
+      "San Damiano",
+      "Baigno",
+      "Bargi",
+      "Stagno"
+    ],
+    "comuni_confinanti": [
+      "Cantagallo (PO)",
+      "Castel di Casio",
+      "Castiglione dei Pepoli",
+      "Grizzana Morandi",
+      "Sambuca Pistoiese (PT)",
+      "Vernio (PO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calderara di Reno",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037009",
+    "codice_catastale": "B399",
+    "popolazione": 13292,
+    "superficie_kmq": 41.25,
+    "densita": 322.2,
+    "cap": "40012",
+    "prefisso_telefonico": "051",
+    "patrono": "San Petronio",
+    "festa_patronale": "4 ottobre",
+    "demonimo": "calderaresi",
+    "etimologia": "Potrebbe derivare da calidaria, ossia caldaia, con l'aggiunta del suffisso -aria, oppure da calderara che sarebbe il femminile di calderaro (ramaio). La specifica si riferisce alla vicinanza al fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura a sinistra del Reno",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Nazionale Comuni Aeroportuali Italiani",
+      "Associazione Comuni Terre d'Acqua"
+    ],
+    "localita_frazioni": [
+      "San Vitale",
+      "Longara",
+      "Sacerno"
+    ],
+    "comuni_confinanti": [
+      "Anzola dell'Emilia",
+      "Bologna",
+      "Castel Maggiore",
+      "Sala Bolognese"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Spalletti"
+    ],
+    "chiese": [
+      "Chiesa di San Michele Arcangelo (in frazione Longara)",
+      "Chiesa San Filippo Neri (in frazione Lippo)",
+      "Chiesa di Santa Maria di Calderara",
+      "Chiesa di Sant'Elena (in frazione Sacerno)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Budrio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037008",
+    "codice_catastale": "B249",
+    "popolazione": 18518,
+    "superficie_kmq": 120.14,
+    "densita": 154.1,
+    "cap": "40054",
+    "prefisso_telefonico": "051",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "budriesi",
+    "etimologia": "Potrebbe derivare dal latino Butrium o dal greco bothros con il significato di \"fosso\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura dell'Idice e del Santerno",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione intercomunale Terre di Pianura"
+    ],
+    "localita_frazioni": [
+      "Cento",
+      "Prunaro",
+      "Vigorso",
+      "Bagnarola",
+      "Maddalena di Cazzano",
+      "Armarolo",
+      "Mezzolara",
+      "Dugliolo",
+      "Vedrana",
+      "Riccardina"
+    ],
+    "comuni_confinanti": [
+      "A est: Medicina; a nord: Molinella; a nord-ovest: Baricella",
+      "Minerbio; a ovest: Granarolo dell'Emilia; a sud: Ozzano dell'Emilia; a sud-ovest: Castenaso"
+    ],
+    "musei": [
+      "Pinacoteca \"Domenico Inzaghi\"",
+      "Museo dell'Ocarina e degli Strumenti in Terracotta",
+      "Museo Civico Archeologico Paleoambientale"
+    ],
+    "ville_palazzi": [
+      "Palazzo Boriani Dalla Noce"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Agata",
+      "Chiesa Arcipretale di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Gyula (Ungheria), dal 1992",
+      "Eichenau (Germania), dal 1991"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borgo Tossignano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037007",
+    "codice_catastale": "B044",
+    "popolazione": 3273,
+    "superficie_kmq": 29.12,
+    "densita": 112.4,
+    "cap": "40021",
+    "prefisso_telefonico": "0542",
+    "patrono": "San Bartolomeo Apostolo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "borghigiani, tossignanesi, codrignanesi",
+    "etimologia": "Il significato di \"borgo\" è evidente. La seconda parte del nome deriva dal nome latino di persona Tossunius o Tuscenius con l'aggiunta del suffisso aggettivale -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Valle del Santerno",
+      "Regione Agraria n. 5 - Colline del Sillaro e del Santerno",
+      "Parco Vena del Gesso Romagnola",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Tossignano",
+      "Codrignano"
+    ],
+    "comuni_confinanti": [
+      "Casalfiumanese",
+      "Casola Valsenio (RA)",
+      "Fontanelice",
+      "Imola",
+      "Riolo Terme (RA)"
+    ],
+    "musei": [
+      "Museo della Cultura Materiale"
+    ],
+    "ville_palazzi": [
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa di San Girolamo (a Tossignano)",
+      "Chiesa della Visitazione"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di Tossignano (ruderi)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dei maccheroni (martedì grasso)",
+      "Sagra della polenta (martedì grasso)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bentivoglio",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037005",
+    "codice_catastale": "A785",
+    "popolazione": 5479,
+    "superficie_kmq": 51.14,
+    "densita": 107.1,
+    "cap": "40010",
+    "prefisso_telefonico": "051",
+    "patrono": "Santissima Maria Ausiliatrice",
+    "festa_patronale": "24 maggio",
+    "demonimo": "bentivogliesi",
+    "etimologia": "Fino al 1885 il luogo era identificato con il nome di Santa Maria in Duno riferendosi alla parrocchia di Santa Maria, mentre la specifica in Duno si riferiva al termine gallico dunum, ossia \"luogo fortificato\". Il nome attuale si riferisce all'antica famiglia proprietaria del feudo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno"
+    ],
+    "localita_frazioni": [
+      "Saletto",
+      "San Marino",
+      "Castagnolo Minore",
+      "Santa Maria in Duno"
+    ],
+    "comuni_confinanti": [
+      "Argelato",
+      "Castel Maggiore",
+      "Granarolo dell'Emilia",
+      "Malalbergo",
+      "Minerbio",
+      "San Giorgio di Piano",
+      "San Pietro in Casale"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina e della Canapa \"G. Romagnoli\"",
+      "Museo della Civiltà Contadina - Istituzione Villa Smeraldi"
+    ],
+    "ville_palazzi": [
+      "Villa Paleotta",
+      "Villa Smeraldi"
+    ],
+    "chiese": [
+      "Oratorio di Santa Lucia (a Castagnolo Minore)",
+      "Chiesa di Sant'Andrea Apostolo (a Santa Maria in Duno)",
+      "Chiesa di Santa Maria e San Folco (in località Saletto)",
+      "Chiesa di San Marino (in località San Marino)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Baricella",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037003",
+    "codice_catastale": "A665",
+    "popolazione": 6982,
+    "superficie_kmq": 45.61,
+    "densita": 153.1,
+    "cap": "40052",
+    "prefisso_telefonico": "051",
+    "patrono": "Beata Vergine Maria",
+    "festa_patronale": "8 settembre",
+    "demonimo": "baricellesi",
+    "etimologia": "Potrebbe identificare una persona attraverso il diminutivo di barile, barigello o bargello, con il significato di \"capo degli sbirri\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno",
+      "Associazione intercomunale Terre di Pianura"
+    ],
+    "localita_frazioni": [
+      "San Gabriele - Mondonuovo",
+      "Boschi",
+      "Passo Segni"
+    ],
+    "comuni_confinanti": [
+      "Argenta (FE)",
+      "Budrio",
+      "Ferrara (FE)",
+      "Malalbergo",
+      "Minerbio",
+      "Molinella",
+      "Poggio Renatico (FE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della Natività di Maria",
+      "Chiesa di Santa Maria Lauretana (in località Boschi)",
+      "Chiesa di San Gabriele Arcangelo (in località San Gabriele)",
+      "Chiesa della Madonna Assunta del Corniolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Argelato",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037002",
+    "codice_catastale": "A392",
+    "popolazione": 9820,
+    "superficie_kmq": 35.17,
+    "densita": 279.2,
+    "cap": "40050",
+    "prefisso_telefonico": "051",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "argelatesi",
+    "etimologia": "Potrebbe derivare dal verbo latino aggerare, ossia arginare, riferendosi ad un terreno \"con argini\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura a destra del Reno"
+    ],
+    "localita_frazioni": [
+      "Volta Reno",
+      "Casadio",
+      "Funo"
+    ],
+    "comuni_confinanti": [
+      "Bentivoglio",
+      "Castel Maggiore",
+      "Castello d'Argile",
+      "Sala Bolognese",
+      "San Giorgio di Piano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Sampieri Talon (a Volta Reno)",
+      "Villa Facchini, già Villa Zambeccari",
+      "Villa Beatrice"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Michele Arcangelo",
+      "Chiesa di San Nicolò (a Funo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anzola dell'Emilia",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037001",
+    "codice_catastale": "A324",
+    "popolazione": 12281,
+    "superficie_kmq": 36.61,
+    "densita": 335.5,
+    "cap": "40011",
+    "prefisso_telefonico": "051",
+    "patrono": "Santi Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "anzolesi",
+    "etimologia": "Deriva dal nome latino di persona Antius o Antia. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura a sinistra del Reno",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Comuni Terre d'Acqua"
+    ],
+    "localita_frazioni": [
+      "Lavino di Mezzo",
+      "San Giacomo del Martignone",
+      "Ponte Samoggia - Santa Maria in Strada"
+    ],
+    "comuni_confinanti": [
+      "Bologna",
+      "Calderara di Reno",
+      "Castelfranco Emilia (MO)",
+      "Sala Bolognese",
+      "San Giovanni in Persiceto",
+      "Valsamoggia",
+      "Zola Predosa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio dell'Assunta",
+      "Oratorio della Madonna della Neve",
+      "Chiesa parrocchiale Arcipretale dei Santi Pietro e Paolo",
+      "Chiesa di Santa Maria in Strada"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alto Reno Terme",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037062",
+    "codice_catastale": "M369",
+    "popolazione": 6953,
+    "superficie_kmq": 73.52,
+    "densita": 94.6,
+    "cap": "40046",
+    "prefisso_telefonico": "0534",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": null,
+    "etimologia": null,
+    "il_comune_e": [
+      "Città Termale (Terme di Porretta)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 2 - Alto Reno"
+    ],
+    "localita_frazioni": [
+      "frazioni: Porretta Terme",
+      "Granaglione;borghi e località: Ponte della Venturina",
+      "Borgo Capanne",
+      "Granaglione",
+      "Lustrola",
+      "Casa Forlai",
+      "Casa Calistri",
+      "Molino del Pallone",
+      "Vizzero",
+      "Biagioni",
+      "Castelluccio",
+      "Capugnano",
+      "Corvella"
+    ],
+    "comuni_confinanti": [
+      "Castel di Casio",
+      "Gaggio Montano",
+      "Lizzano in Belvedere",
+      "Pistoia (PT)",
+      "Sambuca Pistoiese (PT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna di Calvigi (frazione: Granaglione)",
+      "Chiesa parrocchiale di Santa Maria Maddalena (frazione: Porretta Terme)",
+      "Chiesa parrocchiale di San Nicolò (frazione: Granaglione)",
+      "Chiesa di San Michele (borgo: Capugnano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Francisco Villa (Chiapas-Messico)",
+      "Ollioules (Provenza-Francia), dal maggio 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bologna",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037006",
+    "codice_catastale": "A944",
+    "popolazione": 388367,
+    "superficie_kmq": 140.73,
+    "densita": 2759.7,
+    "cap": "40100",
+    "prefisso_telefonico": "051",
+    "patrono": "San Petronio",
+    "festa_patronale": "4 ottobre",
+    "demonimo": "bolognesi",
+    "etimologia": "Deriva dal termine gallico Bononia che è un composto di bona (fondazione) con l'aggiunta del suffisso -onia.",
+    "il_comune_e": [
+      "Città Termale (Terme Felsinee)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline di Bologna",
+      "Parco dei Gessi Bolognesi e Calanchi dell'Abbadessa",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Città italiane per la mobilità sostenibile e lo sviluppo dei trasporti",
+      "Circuito Città d'Arte della Pianura Padana"
+    ],
+    "localita_frazioni": [
+      "quartieri: Borgo Panigale",
+      "Navile",
+      "Porto",
+      "Reno",
+      "San Donato",
+      "San Vitale",
+      "Santo Stefano",
+      "Saragozza",
+      "Savena"
+    ],
+    "comuni_confinanti": [
+      "Anzola dell'Emilia",
+      "Calderara di Reno",
+      "Casalecchio di Reno",
+      "Castel Maggiore",
+      "Castenaso",
+      "Granarolo dell'Emilia",
+      "Pianoro",
+      "San Lazzaro di Savena",
+      "Sasso Marconi",
+      "Zola Predosa"
+    ],
+    "musei": [
+      "MAMbo - Museo d'Arte Moderna di Bologna",
+      "(scheda musei in preparazione)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna di San Luca",
+      "Santuario del Corpus Domini o di Santa Caterina da Bologna :: Monache Clarisse",
+      "Santuario Basilica di San Domenico :: Frati Domenicani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco Villa Ghigi",
+      "Orto Botanico dell'Università di Bologna"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro delle Celebrazioni",
+      "Teatro Eleonora Duse",
+      "Arena del Sole",
+      "Europauditorium (in zona fiera)",
+      "Teatro Alemanni",
+      "Teatro Comunale",
+      "Teatro Dehon"
+    ],
+    "stadi": [
+      "Stadio Renato Dall'Ara"
+    ],
+    "eventi_feste_sagre": [
+      "Processione delle Arcate (fine settimana dell'Ascensione)"
+    ],
+    "gemellaggi": [
+      "Lipsia (Germania), dal 2 maggio 1962",
+      "Saint-Louis (Missouri, Stati Uniti), dal 30 luglio 1987",
+      "Saint-Louis (Senegal), dal 9 dicembre 1991",
+      "Salonicco (Grecia), dal 29 ottobre 1981",
+      "San Carlos (Nicaragua), dal 21 maggio 1988",
+      "Tolosa (Francia), dal 23 novembre 1981",
+      "Tuzla (Bosnia ed Erzegovina), dal 21 luglio 1994",
+      "Valencia (Spagna), dal 27 marzo 1976",
+      "Zagabria (Croazia), dal  5 maggio 1963",
+      "Coventry (Gran Bretagna), dal 21 aprile 1984",
+      "La Plata (Argentina), dal 23 novembre 1988",
+      "Kharkov (Ucraina), dal 5 agosto 1966"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Giosuè Carducci (1835 - 1907), poeta",
+      "Raffaella Carrà, pseudonimo di Raffaella Roberta Pelloni (1943-), conduttrice televisiva e attrice",
+      "Guglielmo Marconi (1874 - 1937), ingegnere elettrico, premio Nobel per la Fisica"
+    ]
+  }
+]

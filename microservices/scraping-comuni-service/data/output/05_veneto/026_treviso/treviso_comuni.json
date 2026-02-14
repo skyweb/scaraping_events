@@ -1,0 +1,4952 @@
+[
+  {
+    "nome": "Zero Branco",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026095",
+    "codice_catastale": "M171",
+    "popolazione": 11287,
+    "superficie_kmq": 26.11,
+    "densita": 432.3,
+    "cap": "31059",
+    "prefisso_telefonico": "0422",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "zerotini",
+    "etimologia": "Zero può riflettere un antico nome proprio di persona come Iarius o Darius o dal latino theatru (teatro). La seconda parte equivale a branca o branco nel senso di diramazione di fosso o canale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Sant’Alberto",
+      "Scandolara"
+    ],
+    "comuni_confinanti": [
+      "Mogliano Veneto",
+      "Morgano",
+      "Piombino Dese (PD)",
+      "Preganziol",
+      "Quinto di Treviso",
+      "Scorzè (VE)",
+      "Trebaseleghe (PD)",
+      "Treviso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Zenson di Piave",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026094",
+    "codice_catastale": "M163",
+    "popolazione": 1812,
+    "superficie_kmq": 9.55,
+    "densita": 189.7,
+    "cap": "31050",
+    "prefisso_telefonico": "0421",
+    "patrono": "San Benedetto",
+    "festa_patronale": "21 marzo",
+    "demonimo": "zensonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e sud: Fossalta di Piave (VE)",
+      "Noventa di Piave (VE); a nord: Salgareda; a ovest: Monastier di Treviso",
+      "San Biagio di Callalta"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Volpago del Montello",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026093",
+    "codice_catastale": "M118",
+    "popolazione": 10170,
+    "superficie_kmq": 44.69,
+    "densita": 227.6,
+    "cap": "31040",
+    "prefisso_telefonico": "0423",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "volpaghesi",
+    "etimologia": "Attestato con il nome di Bolpago. Probabilmente deriva dal nome latino di persona Vulpius, con l'aggiunta del suffisso -acus. La specifica, aggiunta nel 1925, allude alla sua collocazione alle falde del Montello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Martignago",
+      "Venegazzu",
+      "Selva",
+      "Montello"
+    ],
+    "comuni_confinanti": [
+      "Crocetta del Montello",
+      "Giavera del Montello",
+      "Montebelluna",
+      "Moriago della Battaglia",
+      "Paese",
+      "Ponzano Veneto",
+      "Povegliano",
+      "Sernaglia della Battaglia",
+      "Trevignano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Ca' Duodo (frazione: Martignago)",
+      "Casa Dal Zotto (frazione: Venegazzu)",
+      "Villa Spineda (frazione: Venegazzu)",
+      "Barchessa Loredan (frazione: Selva)"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vittorio Veneto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026092",
+    "codice_catastale": "M089",
+    "popolazione": 28320,
+    "superficie_kmq": 82.61,
+    "densita": 342.8,
+    "cap": "31029",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Tiziano di Oderzo",
+    "festa_patronale": "16 gennaio",
+    "demonimo": "vittoriesi",
+    "etimologia": "Il toponimo Vittorio fu assunto in onore del re Vittorio Emanuele II nel 1866. La specifica identifica la collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana delle Prealpi Trevigiane",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Carpesica",
+      "Confin",
+      "Fadalto",
+      "Formeniga",
+      "Manzana",
+      "Nove San Floriano",
+      "San Giacomo di Veglia",
+      "Savassa Alta"
+    ],
+    "comuni_confinanti": [
+      "Alpago (BL)",
+      "Belluno (BL)",
+      "Cappella Maggiore",
+      "Colle Umberto",
+      "Conegliano",
+      "Fregona",
+      "Limana (BL)",
+      "Revine Lago",
+      "San Pietro di Feletto",
+      "Tarzo"
+    ],
+    "musei": [
+      "Museo Diocesano d'Arte Sacra \"A. Luciani\"",
+      "Museo della Battaglia",
+      "Museo del Cenedese",
+      "Fondazione \"M. Minucci\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Sarcinelli",
+      "Palazzo Borsoi",
+      "Palazzo Cavalcanti Casoni",
+      "Palazzo Flaminio",
+      "Palazzo Minucci-De Carlo",
+      "Palazzo Galletti"
+    ],
+    "chiese": [
+      "Pieve di Sant'Andrea di Bigonzo",
+      "Duomo di Santa Maria Nova",
+      "Chiesa di Santa Maria del Meschio",
+      "Chiesa di Santa Giustina",
+      "Chiesa di San Giovanni",
+      "Cattedrale di Santa Maria Assunta e San Tiziano",
+      "Santuario di Santa Augusta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di San Martino",
+      "Castello Vescovile",
+      "Castrum di Serravalle"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Lago Morto",
+      "Lago del Restello o di San Floriano",
+      "Lago di Negrisiola"
+    ],
+    "teatri": [
+      "Teatro Lorenzo Da Ponte (già Rossini)"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villorba",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026091",
+    "codice_catastale": "M048",
+    "popolazione": 17984,
+    "superficie_kmq": 30.59,
+    "densita": 587.9,
+    "cap": "31020",
+    "prefisso_telefonico": "0422",
+    "patrono": "SS. Fabiano e Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "villorbesi",
+    "etimologia": "E' un composto di villa e dell'aggettivo orbus, cieco, nel senso di \"orbato\", ossia \"povero\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Fontane",
+      "Venturali",
+      "Castrette",
+      "Catena",
+      "San Sisto",
+      "Lancenigo",
+      "Carità;"
+    ],
+    "comuni_confinanti": [
+      "A est: Carbonera; a nord: Arcade; a nord-est: Spresiano; a nord-ovest: Povegliano; a ovest: Ponzano Veneto; a sud: Treviso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Arborea (Oristano-Sardegna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vidor",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026090",
+    "codice_catastale": "L856",
+    "popolazione": 3742,
+    "superficie_kmq": 13.52,
+    "densita": 276.8,
+    "cap": "31020",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "vidoresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Colbertaldo"
+    ],
+    "comuni_confinanti": [
+      "Crocetta del Montello",
+      "Farra di Soligo",
+      "Moriago della Battaglia",
+      "Pederobba",
+      "Valdobbiadene"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Petritoli (Fermo-Marche)",
+      "dal 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vedelago",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026089",
+    "codice_catastale": "L706",
+    "popolazione": 16865,
+    "superficie_kmq": 61.66,
+    "densita": 273.5,
+    "cap": "31050",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "vedelaghesi",
+    "etimologia": "Deriva dal nome latino di persona Vitellus, con l'aggiunta del suffisso -acus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Comuni Gemellati con la Fondazione Città della Speranza"
+    ],
+    "localita_frazioni": [
+      "frazioni: Albaredo",
+      "Barcon",
+      "Casacorba",
+      "Cavasagra",
+      "Fanzolo",
+      "Fossalunga;località: Caravaggio"
+    ],
+    "comuni_confinanti": [
+      "Altivole",
+      "Castelfranco Veneto",
+      "Istrana",
+      "Montebelluna",
+      "Piombino Dese (PD)",
+      "Resana",
+      "Riese Pio X",
+      "Trevignano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Emo Capodilista (in frazione Fanzolo)"
+    ],
+    "chiese": [
+      "Santuario Madonna del Caravaggio (a Fanzolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vazzola",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026088",
+    "codice_catastale": "L700",
+    "popolazione": 6969,
+    "superficie_kmq": 26.03,
+    "densita": 267.7,
+    "cap": "31028",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "vazzolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Tezze di Piave",
+      "Visnà"
+    ],
+    "comuni_confinanti": [
+      "Cimadolmo",
+      "Codognè",
+      "Fontanelle",
+      "Mareno di Piave",
+      "San Polo di Piave"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Giovanni Battista (1691)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Valdobbiadene",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026087",
+    "codice_catastale": "L565",
+    "popolazione": 10409,
+    "superficie_kmq": 60.7,
+    "densita": 171.5,
+    "cap": "31049",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Gregorio Magno",
+    "festa_patronale": "secondo lunedì di marzo",
+    "demonimo": "valdobbiadenesi",
+    "etimologia": "Attestato con i nomi di Dublandino e Valledoblandeni, è un composto di valle e di Duplavilis, con il derivato Dublandino, connesso con il nome del fiume Plavis (Piave). Si ipotizza un'allusione a due (dupli, plurale di duplus, doppio) rami dell'alveo del fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Bigolino",
+      "Guia",
+      "San Giovanni",
+      "San Pietro di Barbozza",
+      "Santo Stefano",
+      "San Vito",
+      "Ron;\nborghi: Saccol"
+    ],
+    "comuni_confinanti": [
+      "Alano di Piave (BL)",
+      "Farra di Soligo",
+      "Lentiai (BL)",
+      "Mel (BL)",
+      "Miane",
+      "Pederobba",
+      "Quero Vas (BL)",
+      "Segusino",
+      "Vidor"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Caravaggio (in località San Vito)",
+      "Chiesa Parrocchiale dei Santi Pietro e Paolo (a San Pietro di Barbozza)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Mor (Ungheria)",
+      "dal dicembre 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trevignano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026085",
+    "codice_catastale": "L402",
+    "popolazione": 10766,
+    "superficie_kmq": 26.55,
+    "densita": 405.5,
+    "cap": "31040",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "trevignanesi",
+    "etimologia": "Deriva dal nome latino di persona Trebinius, con l'aggiunta del suffisso -anus che indica appartenenza, possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Falzè",
+      "Musano",
+      "Signoressa"
+    ],
+    "comuni_confinanti": [
+      "Istrana",
+      "Montebelluna",
+      "Paese",
+      "Vedelago",
+      "Volpago del Montello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale Santi Tabra Tabrata e Teonisto e Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tarzo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026084",
+    "codice_catastale": "L058",
+    "popolazione": 4378,
+    "superficie_kmq": 23.8,
+    "densita": 183.9,
+    "cap": "31020",
+    "prefisso_telefonico": "0438",
+    "patrono": "Purificazione di Maria Vergine",
+    "festa_patronale": "2 febbraio",
+    "demonimo": "tarzesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Corbanese",
+      "Arfanta",
+      "Nogarolo",
+      "Fratta",
+      "Colmaggiore",
+      "Resera"
+    ],
+    "comuni_confinanti": [
+      "Cison di Valmarino",
+      "Refrontolo",
+      "Revine Lago",
+      "San Pietro di Feletto",
+      "Vittorio Veneto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Susegana",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026083",
+    "codice_catastale": "L014",
+    "popolazione": 11858,
+    "superficie_kmq": 44.01,
+    "densita": 269.4,
+    "cap": "31058",
+    "prefisso_telefonico": "0438",
+    "patrono": "Maria SS. Ausiliatrice",
+    "festa_patronale": "24 maggio",
+    "demonimo": "suseganesi",
+    "etimologia": "Deriva dal nome latino di persona Sosicus (da Sosius), con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazioni: Ponte della Priula",
+      "Colfosco",
+      "Collalto;\nlocalità: Crevada"
+    ],
+    "comuni_confinanti": [
+      "Conegliano",
+      "Nervesa della Battaglia",
+      "Pieve di Soligo",
+      "Refrontolo",
+      "San Pietro di Feletto",
+      "Santa Lucia di Piave",
+      "Sernaglia della Battaglia"
+    ],
+    "musei": [
+      "Museo dell'Uomo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Visitazione della Beata Vergine"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di San Salvatore"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Spresiano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026082",
+    "codice_catastale": "I927",
+    "popolazione": 12209,
+    "superficie_kmq": 25.63,
+    "densita": 476.4,
+    "cap": "31027",
+    "prefisso_telefonico": "0422",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "primo lunedì di ottobre",
+    "demonimo": "spresianesi",
+    "etimologia": "Deriva dal nome latino di persona Praecilius, con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Lovadina",
+      "Visnadello"
+    ],
+    "comuni_confinanti": [
+      "Arcade",
+      "Carbonera",
+      "Cimadolmo",
+      "Mareno di Piave",
+      "Maserada sul Piave",
+      "Nervesa della Battaglia",
+      "Santa Lucia di Piave",
+      "Villorba"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Silea",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026081",
+    "codice_catastale": "F116",
+    "popolazione": 10174,
+    "superficie_kmq": 18.74,
+    "densita": 542.9,
+    "cap": "31057",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "silesi",
+    "etimologia": "La sua denominazione è nata a livello amministrativo e deriva dal nome del fiume Sile.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "frazioni: Cendon",
+      "Sant' Elena;\nlocalità: Lanzago",
+      "Canton",
+      "Franceniga"
+    ],
+    "comuni_confinanti": [
+      "A est: Roncade; a nord: Carbonera",
+      "San Biagio di Callalta; a ovest: Treviso; a sud-est: Casale sul Sile; a sud-ovest: Casier"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta Madonna della Salute",
+      "Chiesa parrocchiale di San Michele Arcangelo",
+      "Chiesa di Sant'Elena Imperatrice"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sernaglia della Battaglia",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026080",
+    "codice_catastale": "I635",
+    "popolazione": 6212,
+    "superficie_kmq": 20.25,
+    "densita": 306.8,
+    "cap": "31020",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "sernagliesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave"
+    ],
+    "localita_frazioni": [
+      "Falzè di Piave",
+      "Fontigo",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Farra di Soligo",
+      "Giavera del Montello",
+      "Moriago della Battaglia",
+      "Nervesa della Battaglia",
+      "Pieve di Soligo",
+      "Susegana",
+      "Volpago del Montello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Sant'Antonio Abate (a Falzè di Piave)",
+      "detta Chiesa dei Baccheri o Beccari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Segusino",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026079",
+    "codice_catastale": "I578",
+    "popolazione": 1888,
+    "superficie_kmq": 18.14,
+    "densita": 104.1,
+    "cap": "31040",
+    "prefisso_telefonico": "0423",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "segusinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Riva Secca",
+      "Milies",
+      "Stramare",
+      "Riva Grassa"
+    ],
+    "comuni_confinanti": [
+      "Alano di Piave (BL)",
+      "Quero Vas (BL)",
+      "Valdobbiadene"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Chipilo (Messico), dal 1982",
+      "Saint Jory (Francia), dal 1997"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sarmede",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026078",
+    "codice_catastale": "I435",
+    "popolazione": 3054,
+    "superficie_kmq": 17.94,
+    "densita": 170.2,
+    "cap": "31026",
+    "prefisso_telefonico": "0438",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "sarmedesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Borgo Palù",
+      "Rugolo",
+      "Montaner",
+      "Borgo Val"
+    ],
+    "comuni_confinanti": [
+      "Caneva (PN)",
+      "Cappella Maggiore",
+      "Cordignano",
+      "Fregona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Cecilia a Val (Montaner)",
+      "Chiesa di Sant'Antonio a Sarmede",
+      "Chiesa di San Pancrazio a Montaner",
+      "Chiesa di San Giorgio in Rugolo",
+      "Chiesa della Madonna di Val"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Lucia di Piave",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026075",
+    "codice_catastale": "I221",
+    "popolazione": 9195,
+    "superficie_kmq": 19.91,
+    "densita": 461.8,
+    "cap": "31025",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "santalucesi",
+    "etimologia": "Riflette il nome della santa patrona del paese Santa Lucia. La specifica fu aggiunta nel 1867.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Santa Lucia",
+      "Sarano",
+      "Bocca di Strada"
+    ],
+    "comuni_confinanti": [
+      "Cimadolmo",
+      "Conegliano",
+      "Mareno di Piave",
+      "Nervesa della Battaglia",
+      "Spresiano",
+      "Susegana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Lucia Vergine e Martire",
+      "Chiesa parrocchiale di San Martino Vescovo (località Sarano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Castanet-Tolosan (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Zenone degli Ezzelini",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026077",
+    "codice_catastale": "I417",
+    "popolazione": 7502,
+    "superficie_kmq": 19.97,
+    "densita": 375.7,
+    "cap": "31020",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Zenone",
+    "festa_patronale": "12 aprile",
+    "demonimo": "sanzenonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": [
+      "Ca' Rainati",
+      "Liedolo"
+    ],
+    "comuni_confinanti": [
+      "Borso del Grappa",
+      "Crespano del Grappa",
+      "Fonte",
+      "Loria",
+      "Mussolente (VI)",
+      "Riese Pio X"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna del Monte",
+      "Chiesa parrocchiale San Francesco d'Assisi (fraz: Ca' Rainati)",
+      "Chiesa parrocchiale di San Lorenzo (fraz: Liedolo)",
+      "Chiesa parrocchiale di Chiesa di San Zenone"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Marling (Baviera",
+      "Germania)",
+      "dal luglio 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vendemiano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026076",
+    "codice_catastale": "I382",
+    "popolazione": 10024,
+    "superficie_kmq": 18.39,
+    "densita": 545.1,
+    "cap": "31020",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Vendemiale",
+    "festa_patronale": "primo giugno",
+    "demonimo": "sanvendemianesi",
+    "etimologia": "Fa riferimento al nome del santo: Sanctus Vindemianus, ossia San Vendemiale, il patrono del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Zoppé",
+      "Borgo Saccon",
+      "Borgo Fossamerlo",
+      "Visnadello",
+      "Cosniga",
+      "Gai",
+      "Borghetto",
+      "Centro"
+    ],
+    "comuni_confinanti": [
+      "Codognè",
+      "Conegliano",
+      "Mareno di Piave",
+      "San Fior"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Lippomano (in località Monticella)"
+    ],
+    "chiese": [
+      "Oratorio della Madonna della Salute",
+      "Chiesetta di San Fris"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Nova Gorica (Slovenia)",
+      "dal 1973"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Polo di Piave",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026074",
+    "codice_catastale": "I124",
+    "popolazione": 4860,
+    "superficie_kmq": 20.94,
+    "densita": 232.1,
+    "cap": "31020",
+    "prefisso_telefonico": "0422",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "sanpolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazione: Rai;\nlocalità: San Giorgio",
+      "Guizza"
+    ],
+    "comuni_confinanti": [
+      "Cimadolmo",
+      "Fontanelle",
+      "Ormelle",
+      "Vazzola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pietro di Feletto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026073",
+    "codice_catastale": "I103",
+    "popolazione": 5251,
+    "superficie_kmq": 19.45,
+    "densita": 270.0,
+    "cap": "31020",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santi Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "felettani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Bagnolo",
+      "Rua",
+      "Santa Maria",
+      "San Michele"
+    ],
+    "comuni_confinanti": [
+      "Conegliano",
+      "Refrontolo",
+      "Susegana",
+      "Tarzo",
+      "Vittorio Veneto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria",
+      "Chiesa di San Pietro di Feletto",
+      "Chiesa di San Michele di Feletto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Fior",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026072",
+    "codice_catastale": "H843",
+    "popolazione": 6962,
+    "superficie_kmq": 17.77,
+    "densita": 391.8,
+    "cap": "31020",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "sanfioresi o sanfloresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Codognè",
+      "Colle Umberto",
+      "Conegliano",
+      "Godega di Sant'Urbano",
+      "San Vendemiano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Biagio di Callalta",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026071",
+    "codice_catastale": "H781",
+    "popolazione": 12964,
+    "superficie_kmq": 48.25,
+    "densita": 268.7,
+    "cap": "31048",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "sanbiagesi",
+    "etimologia": "Deriva il suo nome dal Santo Patrono. La specifica corrisponde a \"strada alta\" e si riferisce a strade rialzate.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Sant'Andrea di Barbarana",
+      "Fagaré della Battaglia",
+      "Rovaré",
+      "Spercenigo",
+      "San Martino",
+      "Olmi -San Floriano",
+      "Cavriè"
+    ],
+    "comuni_confinanti": [
+      "Breda di Piave",
+      "Carbonera",
+      "Monastier di Treviso",
+      "Ponte di Piave",
+      "Roncade",
+      "Salgareda",
+      "Silea",
+      "Zenson di Piave"
+    ],
+    "musei": [
+      "Museo Soldati della Battaglia"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Union (Francia)",
+      "Santa Tereza (Brasile)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Salgareda",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026070",
+    "codice_catastale": "H706",
+    "popolazione": 6674,
+    "superficie_kmq": 27.2,
+    "densita": 245.4,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "salgaredesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave"
+    ],
+    "localita_frazioni": [
+      "frazioni: Campodipietra",
+      "Campobernardo;\nlocalità: Vigonovo",
+      "Arzeri",
+      "Candolè"
+    ],
+    "comuni_confinanti": [
+      "Cessalto",
+      "Chiarano",
+      "Noventa di Piave (VE)",
+      "Ponte di Piave",
+      "San Biagio di Callalta",
+      "San Donà di Piave (VE)",
+      "Zenson di Piave"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roncade",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026069",
+    "codice_catastale": "H523",
+    "popolazione": 14471,
+    "superficie_kmq": 61.98,
+    "densita": 233.5,
+    "cap": "31056",
+    "prefisso_telefonico": "0422",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "roncadesi",
+    "etimologia": "Deriva da (terrae) runcatae, terre disboscate.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Biancade",
+      "San Cipriano",
+      "Musestre",
+      "Vallio",
+      "Ca' Tron"
+    ],
+    "comuni_confinanti": [
+      "A est: Meolo (VE)",
+      "Monastier di Treviso; a nord: San Biagio di Callalta; a ovest: Casale sul Sile",
+      "Silea; a sud: Quarto d'Altino (VE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Riese Pio X",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026068",
+    "codice_catastale": "H280",
+    "popolazione": 11012,
+    "superficie_kmq": 30.74,
+    "densita": 358.2,
+    "cap": "31039",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "riesini",
+    "etimologia": "Deriva dal nome latino di persona Rhaesius, Resius. La specifica, assunta nel 1952, è dovuta a papa Pio X che qui nacque.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": [
+      "Vallà",
+      "Poggiana",
+      "Spineda; borgata Cendrole"
+    ],
+    "comuni_confinanti": [
+      "Altivole",
+      "Asolo",
+      "Castelfranco Veneto",
+      "Castello di Godego",
+      "Fonte",
+      "Loria",
+      "San Zenone degli Ezzelini",
+      "Vedelago"
+    ],
+    "musei": [
+      "Museo Casa Natale di San Pio X"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Beata Vergine delle Cendrole",
+      "Chiesa di San Lorenzo a Poggiana",
+      "Chiesa di Sant'Antonio Abate a Spineda",
+      "Chiesa di San Giovanni Battista a Vallà",
+      "Chiesa di San Matteo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio dei Mussi (terza domenica di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Revine Lago",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026067",
+    "codice_catastale": "H253",
+    "popolazione": 2198,
+    "superficie_kmq": 18.66,
+    "densita": 117.8,
+    "cap": "31020",
+    "prefisso_telefonico": "0438",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "revinesi e laghesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Lago",
+      "Revine",
+      "Sottocroda",
+      "Santa Maria"
+    ],
+    "comuni_confinanti": [
+      "Cison di Valmarino",
+      "Limana (BL)",
+      "Tarzo",
+      "Trichiana (BL)",
+      "Vittorio Veneto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Monte Frascon"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Mitterdorf an der Raab (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Resana",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026066",
+    "codice_catastale": "H238",
+    "popolazione": 9490,
+    "superficie_kmq": 24.97,
+    "densita": 380.1,
+    "cap": "31023",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "resanesi",
+    "etimologia": "Deriva dal nome latino di persona Rhaesius o Resius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comuni Gemellati con la Fondazione Città della Speranza"
+    ],
+    "localita_frazioni": [
+      "Castelminio",
+      "San Marco"
+    ],
+    "comuni_confinanti": [
+      "Castelfranco Veneto",
+      "Loreggia (PD)",
+      "Piombino Dese (PD)",
+      "Vedelago"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Refrontolo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026065",
+    "codice_catastale": "H220",
+    "popolazione": 1739,
+    "superficie_kmq": 13.11,
+    "densita": 132.6,
+    "cap": "31020",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santa Margherita",
+    "festa_patronale": "20 luglio",
+    "demonimo": "refrontolani o refrontolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cison di Valmarino",
+      "Pieve di Soligo",
+      "San Pietro di Feletto",
+      "Susegana",
+      "Tarzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Quinto di Treviso",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026064",
+    "codice_catastale": "H131",
+    "popolazione": 9881,
+    "superficie_kmq": 18.97,
+    "densita": 520.9,
+    "cap": "31055",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "quintini",
+    "etimologia": "La prima parte deriva dal latino ad quintum lapidem, alla quinta pietra miliare, ossia al quinto miglio da Treviso lungo la via romana. La specifica fu assunta nel 1868.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "Santa Cristina"
+    ],
+    "comuni_confinanti": [
+      "A est: Treviso; a nord: Paese; a ovest: Morgano; a sud: Zero Branco"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Giordani (XVIII secolo)"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Cristina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Preganziol",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026063",
+    "codice_catastale": "H022",
+    "popolazione": 16908,
+    "superficie_kmq": 22.89,
+    "densita": 738.7,
+    "cap": "31022",
+    "prefisso_telefonico": "0422",
+    "patrono": "Sant'Urbano",
+    "festa_patronale": "25 maggio",
+    "demonimo": "preganziolesi",
+    "etimologia": "E' un composto di prato, con passaggio da pra  a pre e del nome germanico di persona Golza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casale sul Sile",
+      "Casier",
+      "Mogliano Veneto",
+      "Treviso",
+      "Zero Branco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Povegliano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026062",
+    "codice_catastale": "G944",
+    "popolazione": 5211,
+    "superficie_kmq": 12.95,
+    "densita": 402.4,
+    "cap": "31050",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Daniele",
+    "festa_patronale": "21 luglio",
+    "demonimo": "poveglianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Santandrà",
+      "Camalò"
+    ],
+    "comuni_confinanti": [
+      "Arcade",
+      "Giavera del Montello",
+      "Ponzano Veneto",
+      "Villorba",
+      "Volpago del Montello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Possagno",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026061",
+    "codice_catastale": "G933",
+    "popolazione": 2160,
+    "superficie_kmq": 12.08,
+    "densita": 178.8,
+    "cap": "31054",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "possagnesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Grappa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alano di Piave (BL)",
+      "Castelcucco",
+      "Cavaso del Tomba",
+      "Paderno del Grappa"
+    ],
+    "musei": [
+      "Gypsoteca canoviana",
+      "Gipsoteca Canoviana"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale Santissima Trinità",
+      "Chiesa di San Giustina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Casa Natale di Canova"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Antonio Canova (1757 - 1822)",
+      "scultore neoclassico"
+    ]
+  },
+  {
+    "nome": "Portobuffolè",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026060",
+    "codice_catastale": "G909",
+    "popolazione": 755,
+    "superficie_kmq": 5.0,
+    "densita": 151.0,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Marco",
+    "festa_patronale": "25 aprile",
+    "demonimo": "portobuffolesi o portuensi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Settimo",
+      "Ronche",
+      "Faé"
+    ],
+    "comuni_confinanti": [
+      "Brugnera (PN)",
+      "Gaiarine",
+      "Mansuè",
+      "Prata di Pordenone (PN)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Beccaro",
+      "Casa della Gaia da Camino"
+    ],
+    "chiese": [
+      "Oratorio di Santa Teresa",
+      "Duomo (in orgine sinagoga ebraica)",
+      "Chiesa dei Servi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ponzano Veneto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026059",
+    "codice_catastale": "G875",
+    "popolazione": 12714,
+    "superficie_kmq": 22.14,
+    "densita": 574.3,
+    "cap": "31050",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Gaetano",
+    "festa_patronale": "7 agosto",
+    "demonimo": "ponzanesi",
+    "etimologia": "Deriva dal nome latino di persona Pontius con l'aggiunta del suffisso -anus. La specifica fu assunta nel 1868 e si riferisce alla posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Paderno (capoluogo)",
+      "Merlengo",
+      "Ponzano"
+    ],
+    "comuni_confinanti": [
+      "Paese",
+      "Povegliano",
+      "Treviso",
+      "Villorba",
+      "Volpago del Montello"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Barbaro-Bourbon del Monte",
+      "Villa Chiozzi (a Merlengo)",
+      "Villa Cicogna"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ponte di Piave",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026058",
+    "codice_catastale": "G846",
+    "popolazione": 8345,
+    "superficie_kmq": 32.82,
+    "densita": 254.3,
+    "cap": "31047",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Tommaso di Canterbury",
+    "festa_patronale": "29 dicembre",
+    "demonimo": "pontepiavensi",
+    "etimologia": "Deriva il nome da un ponte sul fiume Piave.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Busco",
+      "Levada",
+      "Negrisia",
+      "San Nicolò"
+    ],
+    "comuni_confinanti": [
+      "Breda di Piave",
+      "Chiarano",
+      "Maserada sul Piave",
+      "Oderzo",
+      "Ormelle",
+      "Salgareda",
+      "San Biagio di Callalta"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio dell'Addolorata di Borgo Sottotreviso (XV secolo)",
+      "Chiesetta di San Bonifacio a Levada (XI secolo)",
+      "Chiesa di San Nicolò (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Castelginest (Tolosa",
+      "dipartimento dell'Alta Garonna",
+      "Francia)",
+      "dall'ottobre 1987"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pieve di Soligo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026057",
+    "codice_catastale": "G645",
+    "popolazione": 12060,
+    "superficie_kmq": 19.0,
+    "densita": 634.7,
+    "cap": "31053",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "pievigini",
+    "etimologia": "E' un composto di \"pieve\" e del nome locale Soligo (dal nome latino di persona Sulla o Solius).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Barbisano",
+      "Solighetto"
+    ],
+    "comuni_confinanti": [
+      "Cison di Valmarino",
+      "Farra di Soligo",
+      "Follina",
+      "Refrontolo",
+      "Sernaglia della Battaglia",
+      "Susegana"
+    ],
+    "musei": [
+      "Museo \"Toti dal Monte\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Careni"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pederobba",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026056",
+    "codice_catastale": "G408",
+    "popolazione": 7403,
+    "superficie_kmq": 29.32,
+    "densita": 252.5,
+    "cap": "31040",
+    "prefisso_telefonico": "0423",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "pederobbesi",
+    "etimologia": "Documentato nelle forme di Petrarubea, Petraroyba, Peraroyba. E' un composto del latino petra e rubea, ossia pietra rossa, con allusione alla presenza di pietre di calcare rosso in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Grappa"
+    ],
+    "localita_frazioni": [
+      "Onigo",
+      "Covolo",
+      "Curogna",
+      "Levada"
+    ],
+    "comuni_confinanti": [
+      "Alano di Piave (BL)",
+      "Cavaso del Tomba",
+      "Cornuda",
+      "Crocetta del Montello",
+      "Monfumo",
+      "Valdobbiadene",
+      "Vidor"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Conti d'Onigo"
+    ],
+    "chiese": [
+      "Chiesa di San Michele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Hettange-Grande (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Paese",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026055",
+    "codice_catastale": "G229",
+    "popolazione": 21933,
+    "superficie_kmq": 38.0,
+    "densita": 577.2,
+    "cap": "31038",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "paesani",
+    "etimologia": "Dal latino pagensis, aggettivo di pagus (villaggio).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Castagnole",
+      "Padernello",
+      "Porcellengo",
+      "Postioma"
+    ],
+    "comuni_confinanti": [
+      "Istrana",
+      "Morgano",
+      "Ponzano Veneto",
+      "Quinto di Treviso",
+      "Trevignano",
+      "Treviso",
+      "Volpago del Montello"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa delle Meridiane (a Castagnole)",
+      "Villa Ferretti (a Porcellengo), in Via Baldrocco",
+      "Villa Gobbato-Dalla Riva (a Paese)",
+      "Villa Tassoni (a Postioma), in Piazza Montello",
+      "Casa Bavaresco-Netto (a Padernello)",
+      "Villa Algarotti-Quaglia (a Paese), in Via Roma",
+      "Villa Alessi (a Castagnole)"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Manzoni"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Paderno del Grappa",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026054",
+    "codice_catastale": "G221",
+    "popolazione": 2181,
+    "superficie_kmq": 19.46,
+    "densita": 112.1,
+    "cap": "31017",
+    "prefisso_telefonico": "0423",
+    "patrono": "Annunciazione della Beata Vergine Maria",
+    "festa_patronale": "25 marzo",
+    "demonimo": "padernesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Grappa"
+    ],
+    "localita_frazioni": [
+      "Fietta"
+    ],
+    "comuni_confinanti": [
+      "Alano di Piave (BL)",
+      "Asolo",
+      "Castelcucco",
+      "Cismon del Grappa (VI)",
+      "Crespano del Grappa",
+      "Fonte",
+      "Possagno",
+      "Seren del Grappa (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Fietta"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Andrea",
+      "Chiesa Arcipretale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Orsago",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026053",
+    "codice_catastale": "G123",
+    "popolazione": 3882,
+    "superficie_kmq": 10.68,
+    "densita": 363.5,
+    "cap": "31010",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Benedetto",
+    "festa_patronale": "11 luglio",
+    "demonimo": "orsaghesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cordignano",
+      "Gaiarine",
+      "Godega di Sant'Urbano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa De Chastonay (XVII secolo)"
+    ],
+    "chiese": [
+      "Chiesetta di SS. Maria Bambina",
+      "Chiesa Parrocchiale di San Benedetto Abate",
+      "Chiesa di Sant'Elena",
+      "Chiesa di Cristo Redentore",
+      "Chiesa della Pace"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ormelle",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026052",
+    "codice_catastale": "G115",
+    "popolazione": 4466,
+    "superficie_kmq": 18.76,
+    "densita": 238.1,
+    "cap": "31024",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "ormellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Tempio",
+      "Roncadelle"
+    ],
+    "comuni_confinanti": [
+      "Breda di Piave",
+      "Cimadolmo",
+      "Fontanelle",
+      "Maserada sul Piave",
+      "Oderzo",
+      "Ponte di Piave",
+      "San Polo di Piave"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Oderzo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026051",
+    "codice_catastale": "F999",
+    "popolazione": 20400,
+    "superficie_kmq": 42.57,
+    "densita": 479.2,
+    "cap": "31046",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Tiziano",
+    "festa_patronale": "16 gennaio",
+    "demonimo": "opitergini",
+    "etimologia": "Anticamente chiamato Opitergio, evolutasi Oterg- e passata in latino come Opitergium in cui si distingue la radice terg-, col probabile significato di \"mercato\", \"piazza\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "frazioni: Camino",
+      "Colfrancui",
+      "Faè",
+      "Fratta",
+      "Piavon",
+      "Rustignè;\nlocalità: Magera",
+      "San Vincenzo"
+    ],
+    "comuni_confinanti": [
+      "Chiarano",
+      "Fontanelle",
+      "Gorgo al Monticano",
+      "Mansuè",
+      "Ormelle",
+      "Ponte di Piave"
+    ],
+    "musei": [
+      "Pinacoteca \"Alberto Martini\"",
+      "Museo Civico Archeologico \"Eno Bellis\"",
+      "Museo \"Brandolini\" e \"Giol\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo (tardo-quattrocentesco)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nervesa della Battaglia",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026050",
+    "codice_catastale": "F872",
+    "popolazione": 6719,
+    "superficie_kmq": 35.58,
+    "densita": 188.8,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Gerolamo",
+    "festa_patronale": "ultimo lunedì di settembre",
+    "demonimo": "nervesani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Bavaria",
+      "Bidasio",
+      "Dus",
+      "Santa Croce",
+      "Sant'Andrea",
+      "Sovilla",
+      "SS. Angeli"
+    ],
+    "comuni_confinanti": [
+      "Arcade",
+      "Giavera del Montello",
+      "Santa Lucia di Piave",
+      "Sernaglia della Battaglia",
+      "Spresiano",
+      "Susegana"
+    ],
+    "musei": [
+      "Museo dei Soldati del Montello"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Motta di Livenza",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026049",
+    "codice_catastale": "F770",
+    "popolazione": 10765,
+    "superficie_kmq": 37.64,
+    "densita": 286.0,
+    "cap": "31045",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "mottensi",
+    "etimologia": "La prima parte del nome riprende il termine \"Motta\" (rialzo, ammasso di terreno). La specifica, aggiunta nel 1868, si riferisce al fiume Livenza che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Annone Veneto (VE)",
+      "Cessalto",
+      "Chiarano",
+      "Gorgo al Monticano",
+      "Meduna di Livenza",
+      "San Stino di Livenza (VE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna dei Miracoli :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio Dee Batee (primo fine settimana di ottobre)",
+      "con sfilata storica in costume rinascimentale"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Moriago della Battaglia",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026048",
+    "codice_catastale": "F729",
+    "popolazione": 2800,
+    "superficie_kmq": 13.94,
+    "densita": 200.9,
+    "cap": "31010",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "moriaghesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave"
+    ],
+    "localita_frazioni": [
+      "Mosnigo"
+    ],
+    "comuni_confinanti": [
+      "Crocetta del Montello",
+      "Farra di Soligo",
+      "Sernaglia della Battaglia",
+      "Vidor",
+      "Volpago del Montello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Isola dei Morti"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Morgano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026047",
+    "codice_catastale": "F725",
+    "popolazione": 4491,
+    "superficie_kmq": 11.75,
+    "densita": 382.2,
+    "cap": "31050",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "morganesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Badoere"
+    ],
+    "comuni_confinanti": [
+      "Istrana",
+      "Paese",
+      "Piombino Dese (PD)",
+      "Quinto di Treviso",
+      "Zero Branco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montebelluna",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026046",
+    "codice_catastale": "F443",
+    "popolazione": 31324,
+    "superficie_kmq": 48.98,
+    "densita": 639.5,
+    "cap": "31044",
+    "prefisso_telefonico": "0423",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "8 dicembre",
+    "demonimo": "montebellunesi",
+    "etimologia": "Probabilmente deriva da Montis Belluni, corrispondente a \"monte di Belluno\", è quindi un evidente composto di monte e di Belluno",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "La Pieve",
+      "Mercato Vecchio",
+      "Biadene",
+      "Pederiva",
+      "Caonada",
+      "Guarda",
+      "San Gaetano",
+      "Sant'Andrea",
+      "Busta",
+      "Contea",
+      "Posmon"
+    ],
+    "comuni_confinanti": [
+      "Altivole",
+      "Caerano di San Marco",
+      "Cornuda",
+      "Crocetta del Montello",
+      "Trevignano",
+      "Vedelago",
+      "Volpago del Montello"
+    ],
+    "musei": [
+      "Museo di Storia Naturale e Archeologia",
+      "Museo dello Scarpone"
+    ],
+    "ville_palazzi": [
+      "Villa Correr Pisani",
+      "Villa Legrenzi",
+      "Villa Loredan Van Axel",
+      "Villa Zuccareda"
+    ],
+    "chiese": [
+      "Duomo",
+      "Chiesa di Santa Maria in colle, seicentesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Dammarie-Les-Lys (Francia), dal 1987",
+      "Tata (Ungheria), dal 2000",
+      "Oberkochen (Germania), dal 1992"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monfumo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026045",
+    "codice_catastale": "F360",
+    "popolazione": 1386,
+    "superficie_kmq": 11.31,
+    "densita": 122.5,
+    "cap": "31010",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "monfumesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Grappa"
+    ],
+    "localita_frazioni": [
+      "Castelli"
+    ],
+    "comuni_confinanti": [
+      "Asolo",
+      "Castelcucco",
+      "Cavaso del Tomba",
+      "Cornuda",
+      "Maser",
+      "Pederobba"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Bardellini-Scotti (in località Ca' Corniani)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Nicolò"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monastier di Treviso",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026044",
+    "codice_catastale": "F332",
+    "popolazione": 4308,
+    "superficie_kmq": 25.43,
+    "densita": 169.4,
+    "cap": "31050",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "monastieresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Fornaci",
+      "Chiesa Vecchia",
+      "Pralongo",
+      "San Pietro Novello"
+    ],
+    "comuni_confinanti": [
+      "Fossalta di Piave (VE)",
+      "Meolo (VE)",
+      "Roncade",
+      "San Biagio di Callalta",
+      "Zenson di Piave"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Collalto-Giustiniani",
+      "Villa Albrizzi",
+      "Villa Tramonti"
+    ],
+    "chiese": [
+      "Santuario Madonna Nera di Pralongo",
+      "Chiesa abbaziale dell’Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ruderi dell'Abbazia di Santa Maria del Pero"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mogliano Veneto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026043",
+    "codice_catastale": "F269",
+    "popolazione": 27851,
+    "superficie_kmq": 46.15,
+    "densita": 603.5,
+    "cap": "31021",
+    "prefisso_telefonico": "041",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "moglianesi",
+    "etimologia": "E' un derivato dal nome latino di persona Mollius o Mulius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Ghetto",
+      "Zerman",
+      "Campocroce",
+      "Bonisiolo"
+    ],
+    "comuni_confinanti": [
+      "Casale sul Sile",
+      "Marcon (VE)",
+      "Preganziol",
+      "Quarto d'Altino (VE)",
+      "Scorzè (VE)",
+      "Venezia (VE)",
+      "Zero Branco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna delle Grazie (in frazione Bonisiolo)",
+      "Chiesa parrocchiale San Teonisto",
+      "Chiesa parrocchiale di Sant'Elena",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "ex Filanda Motta"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Miane",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026042",
+    "codice_catastale": "F190",
+    "popolazione": 3312,
+    "superficie_kmq": 30.92,
+    "densita": 107.1,
+    "cap": "31050",
+    "prefisso_telefonico": "0438",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "mianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Combai",
+      "Campea",
+      "Premaor"
+    ],
+    "comuni_confinanti": [
+      "Farra di Soligo",
+      "Follina",
+      "Mel (BL)",
+      "Valdobbiadene"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Meduna di Livenza",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026041",
+    "codice_catastale": "F088",
+    "popolazione": 2890,
+    "superficie_kmq": 15.13,
+    "densita": 191.0,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "medunesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Annone Veneto (VE)",
+      "Gorgo al Monticano",
+      "Motta di Livenza",
+      "Pasiano di Pordenone (PN)",
+      "Pravisdomini (PN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Maserada sul Piave",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026040",
+    "codice_catastale": "F012",
+    "popolazione": 9361,
+    "superficie_kmq": 28.93,
+    "densita": 323.6,
+    "cap": "31052",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "maseradesi",
+    "etimologia": "Deriva dal latino maceria, nel senso di accumulo di sassi e detriti, lasciati dal fiume Piave. La specifica fu assunta nel 1925.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "frazioni: Varago",
+      "Candelù; località: Salettuol",
+      "Saltore"
+    ],
+    "comuni_confinanti": [
+      "Breda di Piave",
+      "Carbonera",
+      "Cimadolmo",
+      "Ormelle",
+      "Spresiano"
+    ],
+    "musei": [
+      "Museo Civico Naturalistico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Maser",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026039",
+    "codice_catastale": "F009",
+    "popolazione": 5088,
+    "superficie_kmq": 26.01,
+    "densita": 195.6,
+    "cap": "31010",
+    "prefisso_telefonico": "0423",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "21 gennaio",
+    "demonimo": "maserini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": [
+      "frazioni: Coste",
+      "Crespignaga",
+      "Madonna della Salute; \nlocalità: Muliparte"
+    ],
+    "comuni_confinanti": [
+      "Altivole",
+      "Asolo",
+      "Caerano di San Marco",
+      "Cornuda",
+      "Monfumo"
+    ],
+    "musei": [
+      "Villa Barbaro di Maser e Collezione di Carrozze"
+    ],
+    "ville_palazzi": [
+      "Villa Barbaro"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mareno di Piave",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026038",
+    "codice_catastale": "E940",
+    "popolazione": 9606,
+    "superficie_kmq": 27.83,
+    "densita": 345.2,
+    "cap": "31010",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santi Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "marenesi",
+    "etimologia": "La prima parte del nome solitamente identifica zone acquitrinose o incolte. La specifica si riferisce alla vicinanza al fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "frazioni: Ramera",
+      "Soffratta",
+      "Santa Maria del Piave",
+      "Bocca di Strada;\nlocalità: Campagnola",
+      "Cittadella"
+    ],
+    "comuni_confinanti": [
+      "A est: Vazzola; a nord: Codognè",
+      "Conegliano",
+      "San Vendemiano; a ovest: Santa Lucia di Piave; a sud-est: Cimadolmo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mansuè",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026037",
+    "codice_catastale": "E893",
+    "popolazione": 5027,
+    "superficie_kmq": 26.94,
+    "densita": 186.6,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Mansueto",
+    "festa_patronale": "3 settembre",
+    "demonimo": "mansuetani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "frazione: Basalghelle;\nborgate: Baite",
+      "Cornarè",
+      "Fossabiuba",
+      "Rigole",
+      "Tessere",
+      "Villalunga"
+    ],
+    "comuni_confinanti": [
+      "Fontanelle",
+      "Gaiarine",
+      "Gorgo al Monticano",
+      "Oderzo",
+      "Pasiano di Pordenone (PN)",
+      "Portobuffolè",
+      "Prata di Pordenone (PN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Loria",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026036",
+    "codice_catastale": "E692",
+    "popolazione": 9354,
+    "superficie_kmq": 23.18,
+    "densita": 403.5,
+    "cap": "31037",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "loriesi",
+    "etimologia": "Documentato con il nome di Lorgna e Lorlia, si riconduce al nome di persona latino Aurelia, forse in riferimento alla romana via Aurelia o al nome dell'antica proprietaria del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": [
+      "Bessica",
+      "Castione",
+      "Ramon"
+    ],
+    "comuni_confinanti": [
+      "Cassola (VI)",
+      "Castello di Godego",
+      "Fonte",
+      "Galliera Veneta (PD)",
+      "Mussolente (VI)",
+      "Riese Pio X",
+      "Rossano Veneto (VI)",
+      "San Martino di Lupari (PD)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bressols (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Istrana",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026035",
+    "codice_catastale": "E373",
+    "popolazione": 9205,
+    "superficie_kmq": 26.32,
+    "densita": 349.7,
+    "cap": "31036",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "istranesi",
+    "etimologia": "Deriva del nome latino di persona Histrius o Hister, con l'aggiunta del suffisso -anus, che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Ospedaletto",
+      "Pezzan",
+      "Sala",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Morgano",
+      "Paese",
+      "Piombino Dese (PD)",
+      "Trevignano",
+      "Vedelago"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Tamagnino Lattes (XVIII secolo)",
+      "in località Casoni"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gorgo al Monticano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026034",
+    "codice_catastale": "E092",
+    "popolazione": 4138,
+    "superficie_kmq": 27.08,
+    "densita": 152.8,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "SS. Ippolito e Cassiano",
+    "festa_patronale": "13 agosto",
+    "demonimo": "gorghensi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Cavalier",
+      "Navolè"
+    ],
+    "comuni_confinanti": [
+      "Chiarano",
+      "Mansuè",
+      "Meduna di Livenza",
+      "Motta di Livenza",
+      "Oderzo",
+      "Pasiano di Pordenone (PN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Godega di Sant'Urbano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026033",
+    "codice_catastale": "E071",
+    "popolazione": 6037,
+    "superficie_kmq": 24.31,
+    "densita": 248.3,
+    "cap": "31010",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santa Margherita",
+    "festa_patronale": "20 luglio",
+    "demonimo": "godeghesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "frazioni: Bibano",
+      "Pianzano;località: Salvatoronda",
+      "Baver",
+      "Levada",
+      "Belcorvo",
+      "Borgo Nobili",
+      "Quattro Strade"
+    ],
+    "comuni_confinanti": [
+      "Codognè",
+      "Colle Umberto",
+      "Cordignano",
+      "Gaiarine",
+      "Orsago",
+      "San Fior"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Lucheschi",
+      "Villa Marinotti",
+      "Villa Pero-Riello",
+      "Villa Savognan"
+    ],
+    "chiese": [
+      "Chiesa di San Martino vecchia",
+      "Chiesa di San Bartolomeo (frazione: Bibano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giavera del Montello",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026032",
+    "codice_catastale": "E021",
+    "popolazione": 5138,
+    "superficie_kmq": 19.91,
+    "densita": 258.1,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "giaveresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Cusignana",
+      "SS. Angeli"
+    ],
+    "comuni_confinanti": [
+      "Arcade",
+      "Nervesa della Battaglia",
+      "Povegliano",
+      "Sernaglia della Battaglia",
+      "Volpago del Montello"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Tiretta Agostini (XV secolo)",
+      "in frazione Cusignana"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale Santa Maria Assunta",
+      "Chiesa parrocchiale  Santi Angeli Custodi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gaiarine",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026031",
+    "codice_catastale": "D854",
+    "popolazione": 6092,
+    "superficie_kmq": 28.7,
+    "densita": 212.3,
+    "cap": "31018",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Tommaso di Canterbury",
+    "festa_patronale": "29 dicembre",
+    "demonimo": "gaiarinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "frazioni: Francenigo",
+      "Albina",
+      "Campomolino;\nlocalità: Calderano"
+    ],
+    "comuni_confinanti": [
+      "Brugnera (PN)",
+      "Codognè",
+      "Cordignano",
+      "Fontanelle",
+      "Godega di Sant'Urbano",
+      "Mansuè",
+      "Orsago",
+      "Portobuffolè",
+      "Sacile (PN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fregona",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026030",
+    "codice_catastale": "D794",
+    "popolazione": 2987,
+    "superficie_kmq": 42.85,
+    "densita": 69.7,
+    "cap": "31010",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "fregonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Osigo",
+      "Sonego"
+    ],
+    "comuni_confinanti": [
+      "Alpago (BL)",
+      "Caneva (PN)",
+      "Cappella Maggiore",
+      "Cordignano",
+      "Sarmede",
+      "Tambre (BL)",
+      "Vittorio Veneto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fonte",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026029",
+    "codice_catastale": "D680",
+    "popolazione": 5894,
+    "superficie_kmq": 14.63,
+    "densita": 402.9,
+    "cap": "31010",
+    "prefisso_telefonico": "0423",
+    "patrono": "Santi Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "fontesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": [
+      "Onè di Fonte",
+      "Fonte Alto"
+    ],
+    "comuni_confinanti": [
+      "Asolo",
+      "Crespano del Grappa",
+      "Paderno del Grappa",
+      "Riese Pio X",
+      "San Zenone degli Ezzelini"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fontanelle",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026028",
+    "codice_catastale": "D674",
+    "popolazione": 5755,
+    "superficie_kmq": 35.53,
+    "densita": 162.0,
+    "cap": "31043",
+    "prefisso_telefonico": "0422",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "fontanellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Lutrano",
+      "Vallonto"
+    ],
+    "comuni_confinanti": [
+      "Codognè",
+      "Gaiarine",
+      "Mansuè",
+      "Oderzo",
+      "Ormelle",
+      "San Polo di Piave",
+      "Vazzola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Galvagna",
+      "Villa Marcello"
+    ],
+    "chiese": [
+      "Chiesetta di Santa Maria del Palù",
+      "Chiesa di San Pietro",
+      "Chiesa di Lutrano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Lutrano, Vallonto"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Auterive (Francia)",
+      "dal 1989"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Follina",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026027",
+    "codice_catastale": "D654",
+    "popolazione": 3864,
+    "superficie_kmq": 24.16,
+    "densita": 159.9,
+    "cap": "31051",
+    "prefisso_telefonico": "0438",
+    "patrono": "Pentecoste",
+    "festa_patronale": null,
+    "demonimo": "follinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "frazioni: Farrò",
+      "Valmareno;\nlocalità: Col",
+      "La Bella",
+      "Pedeguarda"
+    ],
+    "comuni_confinanti": [
+      "Cison di Valmarino",
+      "Farra di Soligo",
+      "Mel (BL)",
+      "Miane",
+      "Pieve di Soligo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Castelletto Brandolini"
+    ],
+    "chiese": [
+      "Santuario Abbazia di Santa Maria :: Servi di Maria",
+      "Chiesetta di San Pietro e Paolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Farra di Soligo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026026",
+    "codice_catastale": "D505",
+    "popolazione": 8881,
+    "superficie_kmq": 28.21,
+    "densita": 314.8,
+    "cap": "31010",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "farresi",
+    "etimologia": "La prima parte deriva dal longobardo Fara, dal germanico fara, \"andare\", per estensione \"spedizione militare\". La seconda parte, ufficialmente aggiunta nel 1867, deriva dal nome di una sua frazione, che nel 1184 è attestata come Suligo, che deriva dal nome latino di persona Sulla o Solius, con l'aggiunta del suffisso -icus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Col San Martino",
+      "Soligo"
+    ],
+    "comuni_confinanti": [
+      "Follina",
+      "Miane",
+      "Moriago della Battaglia",
+      "Pieve di Soligo",
+      "Sernaglia della Battaglia",
+      "Valdobbiadene",
+      "Vidor"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Caragiani-Ricci",
+      "Palazzo Vedovati"
+    ],
+    "chiese": [
+      "Oratorio di San Tiziano",
+      "Chiesa di San Lorenzo",
+      "Chiesetta della Madonna del Broi",
+      "Chiesa di Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crocetta del Montello",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026025",
+    "codice_catastale": "C670",
+    "popolazione": 6093,
+    "superficie_kmq": 26.38,
+    "densita": 231.0,
+    "cap": "31035",
+    "prefisso_telefonico": "0423",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "crocettani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave"
+    ],
+    "localita_frazioni": [
+      "Ciano del Montello",
+      "Nogarè",
+      "Ponte di Pietra"
+    ],
+    "comuni_confinanti": [
+      "Cornuda",
+      "Montebelluna",
+      "Moriago della Battaglia",
+      "Pederobba",
+      "Vidor",
+      "Volpago del Montello"
+    ],
+    "musei": [
+      "Museo Civico di Storia Naturale"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Crespano del Grappa",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026024",
+    "codice_catastale": "D157",
+    "popolazione": 4534,
+    "superficie_kmq": 17.86,
+    "densita": 253.9,
+    "cap": "31017",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Marco",
+    "festa_patronale": "25 aprile",
+    "demonimo": "crespanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Comunità Montana del Grappa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Borso del Grappa",
+      "Cismon del Grappa (VI)",
+      "Fonte",
+      "Paderno del Grappa",
+      "San Zenone degli Ezzelini"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Manfrotto Canal (in località Gherla)"
+    ],
+    "chiese": [
+      "Santuario Madonna del Covolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cornuda",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026023",
+    "codice_catastale": "D030",
+    "popolazione": 6264,
+    "superficie_kmq": 12.38,
+    "densita": 506.0,
+    "cap": "31041",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "cornudesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Area Geografica: Bacino Idrografico del Fiume Piave"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caerano di San Marco",
+      "Crocetta del Montello",
+      "Maser",
+      "Monfumo",
+      "Montebelluna",
+      "Pederobba"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cordignano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026022",
+    "codice_catastale": "C992",
+    "popolazione": 7020,
+    "superficie_kmq": 26.16,
+    "densita": 268.3,
+    "cap": "31016",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Pietro",
+    "festa_patronale": null,
+    "demonimo": "cordignanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Villa di Villa",
+      "Pinidello",
+      "Ponte della Muda"
+    ],
+    "comuni_confinanti": [
+      "Caneva (PN)",
+      "Cappella Maggiore",
+      "Colle Umberto",
+      "Fregona",
+      "Gaiarine",
+      "Godega di Sant'Urbano",
+      "Orsago",
+      "Sacile (PN)",
+      "Sarmede"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta e San Cassiano del Meschio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Conegliano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026021",
+    "codice_catastale": "C957",
+    "popolazione": 34999,
+    "superficie_kmq": 36.33,
+    "densita": 963.4,
+    "cap": "31015",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "coneglianesi",
+    "etimologia": "Potrebbe derivare dal latino cuniculus, condotto sotterraneo, in riferimento alla funzione di difesa militare. Secondo altri potrebbe derivare dal nome di persona Connilius con l'aggiunta del suffisso -anus, che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "località: Costa",
+      "Campolongo",
+      "Parè",
+      "Collalbrigo;\nfrazioni: Ogliano",
+      "Scomigo"
+    ],
+    "comuni_confinanti": [
+      "Colle Umberto",
+      "Mareno di Piave",
+      "San Fior",
+      "San Pietro di Feletto",
+      "San Vendemiano",
+      "Santa Lucia di Piave",
+      "Susegana",
+      "Vittorio Veneto"
+    ],
+    "musei": [
+      "Museo Civico di Conegliano",
+      "Casa Museo del Cima"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Accademia"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colle Umberto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026020",
+    "codice_catastale": "C848",
+    "popolazione": 5079,
+    "superficie_kmq": 13.56,
+    "densita": 374.6,
+    "cap": "31014",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Tommaso",
+    "festa_patronale": "3 luglio",
+    "demonimo": "collumbertesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "San Martino di Colle Umberto",
+      "Menarè"
+    ],
+    "comuni_confinanti": [
+      "Cappella Maggiore",
+      "Conegliano",
+      "Cordignano",
+      "Godega di Sant'Urbano",
+      "San Fior",
+      "Vittorio Veneto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Sant'Antonio Abate (a Campion)",
+      "Oratorio di Santa Croce e di San Pietro (a Gazziol)",
+      "Oratorio della Madonna delle Grazie (a Colle Umberto)",
+      "Oratorio della Madonna della Salute (in borgo Mescolino)",
+      "Chiesa Parrocchiale Madonna della Pace (a Menarè)",
+      "Chiesa Arcipretale di San Martino di Colle Umberto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Codognè",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026019",
+    "codice_catastale": "C815",
+    "popolazione": 5316,
+    "superficie_kmq": 21.67,
+    "densita": 245.3,
+    "cap": "31013",
+    "prefisso_telefonico": "0438",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "codognesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Cimavilla",
+      "Cimetta",
+      "Roverbasso"
+    ],
+    "comuni_confinanti": [
+      "Fontanelle",
+      "Gaiarine",
+      "Godega di Sant'Urbano",
+      "Mareno di Piave",
+      "San Fior",
+      "San Vendemiano",
+      "Vazzola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Toderini De Gajardis (XVIII secolo), ora Bonicelli-Moras",
+      "Villa Paoletti (a Cimavilla)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Immacolata (a Codognè), detta Chiesa Nuova",
+      "Chiesa Parrocchiale di Sant'Ulderico (a Cimetta)",
+      "Chiesa parrocchiale di Santa Maria Assunta (a Roverbasso)",
+      "Chiesa parrocchiale della Beata Vergine della Mercede (a Cimavilla)",
+      "Chiesa arcipretale di Sant'Andrea (a Codognè)",
+      "Cappella di Sant'Ubaldo (a Codognè)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cison di Valmarino",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026018",
+    "codice_catastale": "C735",
+    "popolazione": 2618,
+    "superficie_kmq": 28.75,
+    "densita": 91.1,
+    "cap": "31030",
+    "prefisso_telefonico": "0438",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cisonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Gai",
+      "Mura",
+      "Rolle",
+      "Tovena"
+    ],
+    "comuni_confinanti": [
+      "Follina",
+      "Mel (BL)",
+      "Pieve di Soligo",
+      "Refrontolo",
+      "Revine Lago",
+      "Tarzo",
+      "Trichiana (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello Brandolini"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cimadolmo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026017",
+    "codice_catastale": "C689",
+    "popolazione": 3376,
+    "superficie_kmq": 17.75,
+    "densita": 190.2,
+    "cap": "31010",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "cimadolmesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Piave"
+    ],
+    "localita_frazioni": [
+      "San Michele di Piave",
+      "Stabiuzzo",
+      "Grave di Papadopoli"
+    ],
+    "comuni_confinanti": [
+      "Mareno di Piave",
+      "Maserada sul Piave",
+      "Ormelle",
+      "San Polo di Piave",
+      "Santa Lucia di Piave",
+      "Spresiano",
+      "Vazzola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Giovanni Battista",
+      "Chiesa di San Silvestro Papa",
+      "Chiesa di San Michele Arcangelo (a San Michele di Piave)",
+      "Chiesa della Beata Vergine della Visitazione (a Stabiuzzo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Mostra dell'Asparago Bianco (inizio maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chiarano",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026016",
+    "codice_catastale": "C614",
+    "popolazione": 3735,
+    "superficie_kmq": 19.96,
+    "densita": 187.1,
+    "cap": "31040",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "chiaranesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Fossalta Maggiore"
+    ],
+    "comuni_confinanti": [
+      "Cessalto",
+      "Gorgo al Monticano",
+      "Motta di Livenza",
+      "Oderzo",
+      "Ponte di Piave",
+      "Salgareda"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cessalto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026015",
+    "codice_catastale": "C580",
+    "popolazione": 3821,
+    "superficie_kmq": 28.19,
+    "densita": 135.5,
+    "cap": "31040",
+    "prefisso_telefonico": "0421",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "cessaltini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Santa Maria di Campagna",
+      "Sant'Anastasio"
+    ],
+    "comuni_confinanti": [
+      "Ceggia (VE)",
+      "Chiarano",
+      "Motta di Livenza",
+      "Salgareda",
+      "San Donà di Piave (VE)",
+      "San Stino di Livenza (VE)",
+      "Torre di Mosto (VE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cavaso del Tomba",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026014",
+    "codice_catastale": "C384",
+    "popolazione": 2937,
+    "superficie_kmq": 18.96,
+    "densita": 154.9,
+    "cap": "31034",
+    "prefisso_telefonico": "0423",
+    "patrono": "Madonna della Salute",
+    "festa_patronale": "21 novembre",
+    "demonimo": "cavasiensi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Grappa",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "colmelli: Caniezza",
+      "Castelcies",
+      "Virago",
+      "Costalunga",
+      "Granigo",
+      "Obledo",
+      "Vettorazzi",
+      "Capovilla",
+      "Pieve"
+    ],
+    "comuni_confinanti": [
+      "Alano di Piave (BL)",
+      "Castelcucco",
+      "Monfumo",
+      "Pederobba",
+      "Possagno"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Bianchi (in località Obledo)",
+      "Villa Premoli (in località Obledo)"
+    ],
+    "chiese": [
+      "Oratorio di San Martino (in località Castelcies)",
+      "Chiesa di Santa Maria Maddalena (in località Obledo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Monte Tomba"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castello di Godego",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026013",
+    "codice_catastale": "C190",
+    "popolazione": 7081,
+    "superficie_kmq": 17.98,
+    "densita": 393.8,
+    "cap": "31030",
+    "prefisso_telefonico": "0423",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "godigesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castelfranco Veneto",
+      "Loria",
+      "Riese Pio X",
+      "San Martino di Lupari (PD)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelfranco Veneto",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026012",
+    "codice_catastale": "C111",
+    "popolazione": 33369,
+    "superficie_kmq": 50.93,
+    "densita": 655.2,
+    "cap": "31033",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Liberale",
+    "festa_patronale": "27 aprile",
+    "demonimo": "castellani",
+    "etimologia": "Il nome deriva dall'unione delle parole \"castel\" e \"franco\", quest'ultima probabilmente è da intendersi con il significato di \"libero\", esonerato dal pagamento delle tasse. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Comuni Gemellati con la Fondazione Città della Speranza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castello di Godego",
+      "Loreggia (PD)",
+      "Resana",
+      "Riese Pio X",
+      "San Martino di Lupari (PD)",
+      "Santa Giustina in Colle (PD)",
+      "Vedelago"
+    ],
+    "musei": [
+      "Museo Agricolo e Museo dell'Arte Conciaria"
+    ],
+    "ville_palazzi": [
+      "Villa Corner Tiepolo Chiminelli (XVI secolo",
+      "in frazione Sant'Andrea)"
+    ],
+    "chiese": [
+      "Duomo"
+    ],
+    "castelli_fortificazioni": [
+      "Il Castello"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Accademico"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Mostra del Radicchio Variegato (dicembre)",
+      "Palio Castellano (primo e secondo fine settimana di settembre), con il Torneo del Gioco del Pallone, la Fiera Medioevale e il Corteo Storico dei Consoli"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelcucco",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026011",
+    "codice_catastale": "C073",
+    "popolazione": 2228,
+    "superficie_kmq": 8.79,
+    "densita": 253.5,
+    "cap": "31030",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "castelcucchesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Grappa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Asolo",
+      "Cavaso del Tomba",
+      "Monfumo",
+      "Paderno del Grappa",
+      "Possagno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Bartolomeo (in località Collalto)",
+      "Chiesa di Santa Lucia",
+      "Chiesa parrocchiale di San Giorgio",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Rohr (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casier",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026010",
+    "codice_catastale": "B965",
+    "popolazione": 11318,
+    "superficie_kmq": 13.46,
+    "densita": 840.9,
+    "cap": "31030",
+    "prefisso_telefonico": "0422",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "casieresi",
+    "etimologia": "Dal latino casearius (relativo al formaggio), in riferimento ad un luogo dove si lavora il formaggio o anche taberna casearia, luogo dove si conserva il formaggio. La voce veneta casera indica l'edificio principale di una malga.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comuni Gemellati con la Fondazione Città della Speranza"
+    ],
+    "localita_frazioni": [
+      "frazioni:Casier",
+      "Dosson di Casier;\nborgate: Frescada",
+      "Le Grazie;\ncontrade: La Sicilia",
+      "Cà Matte"
+    ],
+    "comuni_confinanti": [
+      "Casale sul Sile",
+      "Preganziol",
+      "Silea",
+      "Treviso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casale sul Sile",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026009",
+    "codice_catastale": "B879",
+    "popolazione": 12995,
+    "superficie_kmq": 26.85,
+    "densita": 484.0,
+    "cap": "31032",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Vincenzo Ferreri",
+    "festa_patronale": "Lunedì dopo l'ottava di Pasqua",
+    "demonimo": "casalesi",
+    "etimologia": "E' composto da Casale e dal nome del fiume Sile.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casier",
+      "Mogliano Veneto",
+      "Preganziol",
+      "Quarto d'Altino (VE)",
+      "Roncade",
+      "Silea"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Corner dall'Aglio (XV secolo)",
+      "in frazione Lughignano"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carbonera",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026008",
+    "codice_catastale": "B744",
+    "popolazione": 11206,
+    "superficie_kmq": 19.78,
+    "densita": 566.5,
+    "cap": "31030",
+    "prefisso_telefonico": "0422",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "carboneresi",
+    "etimologia": "E' il riflesso di Carbonaria, da carbone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "Mignagola",
+      "Pezzan",
+      "San Giacomo di Musestrelle",
+      "Vascon"
+    ],
+    "comuni_confinanti": [
+      "Breda di Piave",
+      "Maserada sul Piave",
+      "San Biagio di Callalta",
+      "Silea",
+      "Spresiano",
+      "Treviso",
+      "Villorba"
+    ],
+    "musei": [
+      "Museo della Ceramica"
+    ],
+    "ville_palazzi": [
+      "Villa Valier Loredan Perocco (XVII secolo)",
+      "in frazione Vascon"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cappella Maggiore",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026007",
+    "codice_catastale": "B678",
+    "popolazione": 4700,
+    "superficie_kmq": 11.13,
+    "densita": 422.3,
+    "cap": "31012",
+    "prefisso_telefonico": "0438",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "cappellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana delle Prealpi Trevigiane"
+    ],
+    "localita_frazioni": [
+      "Anzano"
+    ],
+    "comuni_confinanti": [
+      "A nord: Fregona; a nord-est: Sarmede; a nord-ovest: Vittorio Veneto; a sud: Cordignano; a sud-ovest: Colle Umberto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta della SS. Trinità (detta della Mattarella)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caerano di San Marco",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026006",
+    "codice_catastale": "B349",
+    "popolazione": 8036,
+    "superficie_kmq": 12.09,
+    "densita": 664.7,
+    "cap": "31031",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Marco",
+    "festa_patronale": "25 aprile",
+    "demonimo": "caeranesi",
+    "etimologia": "Deriva dal nome latino di persona Cavarius o Caprius, con l'aggiunta del suffisso -anus. La specifica si riferisce al santo patrono del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Altivole",
+      "Cornuda",
+      "Maser",
+      "Montebelluna"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Benzi - Zecchini (XVII secolo)",
+      "Villa Rovero  (XVI Secolo)"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Boissise Le Roi (Francia)",
+      "dal 2001"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Breda di Piave",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026005",
+    "codice_catastale": "B128",
+    "popolazione": 7863,
+    "superficie_kmq": 25.6,
+    "densita": 307.1,
+    "cap": "31030",
+    "prefisso_telefonico": "0422",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "bredesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": [
+      "frazioni: Pero",
+      "Saletto",
+      "San Bartolomeo",
+      "Vacil;\nlocalità: Campagne"
+    ],
+    "comuni_confinanti": [
+      "Carbonera",
+      "Maserada sul Piave",
+      "Ormelle",
+      "Ponte di Piave",
+      "San Biagio di Callalta"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Madonna delle Grazie",
+      "Chiesetta di San Giovanni (in frazione Pero)",
+      "Chiesa parrocchiale di San Paolo",
+      "Chiesa parrocchiale di San Bartolomeo",
+      "Chiesa parrocchiale di Pero - San Colombano Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borso del Grappa",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026004",
+    "codice_catastale": "B061",
+    "popolazione": 5932,
+    "superficie_kmq": 33.0,
+    "densita": 179.8,
+    "cap": "31030",
+    "prefisso_telefonico": "0423",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "borsatti",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Comunità Montana del Grappa"
+    ],
+    "localita_frazioni": [
+      "Borso",
+      "Semonzo",
+      "Sant'Eulalia"
+    ],
+    "comuni_confinanti": [
+      "Cismon del Grappa (VI)",
+      "Crespano del Grappa",
+      "Mussolente (VI)",
+      "Pove del Grappa (VI)",
+      "Romano d'Ezzelino (VI)",
+      "San Zenone degli Ezzelini"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa arcipretale di San Zenone (Borso)",
+      "Chiesa di San Severo e Santa Brigida (Semonzo)",
+      "Chiesa di Sant'Eulalia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Mostra Mercato del Biso (prime due domeniche di giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Asolo",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026003",
+    "codice_catastale": "A471",
+    "popolazione": 9068,
+    "superficie_kmq": 25.34,
+    "densita": 357.9,
+    "cap": "31011",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Prosdocimo",
+    "festa_patronale": "7 novembre",
+    "demonimo": "asolani",
+    "etimologia": "E' l'antica Acelum, città dei Veneti, attestata anche con il nome di Acaelum, Accelum, poi Acilo e Asillo (con successiva sostituzione dell'uscita in -olo), con il significato di \"aguzzo\", in riferimento alla Rocca posta sulla sommità.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Associazione Nazionale Città del Vino",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Pagnano",
+      "Sant'Apollinare",
+      "Villa d'Asolo"
+    ],
+    "comuni_confinanti": [
+      "A est: Maser; a nord: Castelcucco",
+      "Monfumo",
+      "Paderno del Grappa; a ovest: Fonte; a sud: Altivole",
+      "Riese Pio X"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo",
+      "Chiesa di Sant'Angelo"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Braida",
+      "Castello di Caterina Cornaro"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Duse"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "il Palio (tultima domenica di giugno)",
+      "vi partecipano le sei contrade di Asolo (Asolo",
+      "Casella",
+      "Villaraspa",
+      "Villa d'Asolo",
+      "Ca' Giupponi e Pagnano)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arcade",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026002",
+    "codice_catastale": "A360",
+    "popolazione": 4504,
+    "superficie_kmq": 8.41,
+    "densita": 535.6,
+    "cap": "31030",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "arcadesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Giavera del Montello",
+      "Nervesa della Battaglia",
+      "Povegliano",
+      "Spresiano",
+      "Villorba"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Barnabò",
+      "Villa Della Zonca",
+      "Villa Cavalieri o Sugana"
+    ],
+    "chiese": [
+      "Chiesetta di Madonnetta",
+      "Chiesa arcipretale di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Altivole",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026001",
+    "codice_catastale": "A237",
+    "popolazione": 6919,
+    "superficie_kmq": 21.95,
+    "densita": 315.2,
+    "cap": "31030",
+    "prefisso_telefonico": "0423",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "altivolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione"
+    ],
+    "localita_frazioni": [
+      "San Vito",
+      "Caselle",
+      "Edificio"
+    ],
+    "comuni_confinanti": [
+      "Asolo",
+      "Caerano di San Marco",
+      "Maser",
+      "Montebelluna",
+      "Riese Pio X",
+      "Vedelago"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Fietta Giacomelli",
+      "Villa Van Axel, con parco"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Vito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Barco della regina Cornaro"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Treviso",
+    "provincia": "Treviso",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "026086",
+    "codice_catastale": "L407",
+    "popolazione": 83950,
+    "superficie_kmq": 55.5,
+    "densita": 1512.6,
+    "cap": "31100",
+    "prefisso_telefonico": "0422",
+    "patrono": "San Liberale di Treviso",
+    "festa_patronale": "27 aprile",
+    "demonimo": "trevigiani",
+    "etimologia": "Deriva da Tarvisium, documentato come Tarvisus, di probabile origine gallica, da Tarv-is-iu, connesso con il celtico tarvos, toro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Destra Piave",
+      "Parco Naturale del Fiume Sile",
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carbonera",
+      "Casier",
+      "Paese",
+      "Ponzano Veneto",
+      "Preganziol",
+      "Quinto di Treviso",
+      "Silea",
+      "Villorba",
+      "Zero Branco"
+    ],
+    "musei": [
+      "Museo Diocesano d'Arte Sacra",
+      "Museo di Santa Caterina",
+      "Museo \"G. Scarpa, D. Grossa e Campagner\"",
+      "Museo delle Arti e delle Tradizioni"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria Maggiore \"Madonna Granda\""
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico Conservativo Carlo Spegazzini e Giardino Fenologico Alessandro Marcello"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro  Delle Voci (già La Perla)",
+      "Teatro Comunale di Treviso",
+      "Teatro Eden",
+      "Teatro Sociale (già Ariston)"
+    ],
+    "stadi": [
+      "Stadio Omobono Tenni"
+    ],
+    "eventi_feste_sagre": [
+      "Radicchio in Piazza (metà dicembre)",
+      "Rogo de la Vecia (giovedì di mezzaquaresima)"
+    ],
+    "gemellaggi": [
+      "Timisoara (Romania)",
+      "Orleans (Francia), dal 1965"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

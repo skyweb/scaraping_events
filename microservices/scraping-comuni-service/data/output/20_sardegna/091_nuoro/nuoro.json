@@ -1,0 +1,16 @@
+{
+  "nome": "Nuoro",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "NU",
+  "codice_istat": "091",
+  "popolazione": 156096,
+  "popolazione_maschi": 76786,
+  "popolazione_femmine": 79310,
+  "superficie_kmq": 3933.82,
+  "densita": 39.7,
+  "num_comuni": 52,
+  "capoluogo": "Nuoro",
+  "iso_3166_2": "IT-NU",
+  "nuts": "ITG26"
+}

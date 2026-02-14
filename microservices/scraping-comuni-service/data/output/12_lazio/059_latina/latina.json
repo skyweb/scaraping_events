@@ -1,0 +1,16 @@
+{
+  "nome": "Latina",
+  "regione": "Lazio",
+  "zona": null,
+  "sigla": "LT",
+  "codice_istat": "059",
+  "popolazione": 574891,
+  "popolazione_maschi": 283782,
+  "popolazione_femmine": 291109,
+  "superficie_kmq": 2250.52,
+  "densita": 255.4,
+  "num_comuni": 33,
+  "capoluogo": "Latina",
+  "iso_3166_2": "IT-LT",
+  "nuts": "ITE44"
+}

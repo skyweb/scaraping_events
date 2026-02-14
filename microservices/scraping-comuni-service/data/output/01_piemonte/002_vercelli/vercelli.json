@@ -1,0 +1,16 @@
+{
+  "nome": "Vercelli",
+  "regione": "Piemonte",
+  "zona": null,
+  "sigla": "VC",
+  "codice_istat": "002",
+  "popolazione": 173868,
+  "popolazione_maschi": 84210,
+  "popolazione_femmine": 89658,
+  "superficie_kmq": 2088.05,
+  "densita": 83.3,
+  "num_comuni": 86,
+  "capoluogo": "Vercelli",
+  "iso_3166_2": "IT-VC",
+  "nuts": "ITC12"
+}

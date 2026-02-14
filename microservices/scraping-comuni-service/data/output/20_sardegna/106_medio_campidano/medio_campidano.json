@@ -1,0 +1,16 @@
+{
+  "nome": "Medio Campidano",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "VS",
+  "codice_istat": "106",
+  "popolazione": 98623,
+  "popolazione_maschi": 48839,
+  "popolazione_femmine": 49784,
+  "superficie_kmq": 1516.19,
+  "densita": 65.0,
+  "num_comuni": 28,
+  "capoluogo": null,
+  "iso_3166_2": "IT-VS",
+  "nuts": "ITG2B"
+}

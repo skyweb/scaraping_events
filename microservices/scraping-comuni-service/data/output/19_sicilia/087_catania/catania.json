@@ -1,0 +1,16 @@
+{
+  "nome": "Catania",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "CT",
+  "codice_istat": "087",
+  "popolazione": 1113303,
+  "popolazione_maschi": 540679,
+  "popolazione_femmine": 572624,
+  "superficie_kmq": 3552.2,
+  "densita": 313.4,
+  "num_comuni": 58,
+  "capoluogo": "Catania",
+  "iso_3166_2": "IT-CT",
+  "nuts": "ITG17"
+}

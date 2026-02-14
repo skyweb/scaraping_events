@@ -1,0 +1,16 @@
+{
+  "nome": "Biella",
+  "regione": "Piemonte",
+  "zona": null,
+  "sigla": "BI",
+  "codice_istat": "096",
+  "popolazione": 178551,
+  "popolazione_maschi": 85499,
+  "popolazione_femmine": 93052,
+  "superficie_kmq": 913.71,
+  "densita": 195.4,
+  "num_comuni": 79,
+  "capoluogo": "Biella",
+  "iso_3166_2": "IT-BI",
+  "nuts": "ITC13"
+}

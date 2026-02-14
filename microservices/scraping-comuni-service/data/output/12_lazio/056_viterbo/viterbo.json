@@ -1,0 +1,16 @@
+{
+  "nome": "Viterbo",
+  "regione": "Lazio",
+  "zona": null,
+  "sigla": "VT",
+  "codice_istat": "056",
+  "popolazione": 319008,
+  "popolazione_maschi": 155577,
+  "popolazione_femmine": 163431,
+  "superficie_kmq": 3612.24,
+  "densita": 88.3,
+  "num_comuni": 60,
+  "capoluogo": "Viterbo",
+  "iso_3166_2": "IT-VT",
+  "nuts": "ITE41"
+}

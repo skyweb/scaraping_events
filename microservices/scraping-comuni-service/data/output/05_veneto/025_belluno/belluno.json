@@ -1,0 +1,16 @@
+{
+  "nome": "Belluno",
+  "regione": "Veneto",
+  "zona": null,
+  "sigla": "BL",
+  "codice_istat": "025",
+  "popolazione": 205781,
+  "popolazione_maschi": 99604,
+  "popolazione_femmine": 106177,
+  "superficie_kmq": 3677.86,
+  "densita": 56.0,
+  "num_comuni": 64,
+  "capoluogo": "Belluno",
+  "iso_3166_2": "IT-BL",
+  "nuts": "ITD33"
+}

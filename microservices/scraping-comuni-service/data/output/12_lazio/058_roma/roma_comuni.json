@@ -1,0 +1,6162 @@
+[
+  {
+    "nome": "Zagarolo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058114",
+    "codice_catastale": "M141",
+    "popolazione": 17872,
+    "superficie_kmq": 28.82,
+    "densita": 620.1,
+    "cap": "00039",
+    "prefisso_telefonico": "06",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "zagarolesi",
+    "etimologia": "L'unica informazione certa che possediamo sul nome del paese è che in passato era chiamato Gazzarolo ma non se ne conoscono le motivazioni e neanche l'origine.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Monte Compatri; a est: Gallicano nel Lazio; a est e sud: Palestrina; a nord",
+      "est e ovest: Roma; a ovest: San Cesareo"
+    ],
+    "musei": [
+      "Museo del Giocattolo di Zagarolo"
+    ],
+    "ville_palazzi": [
+      "Palazzo Rospigliosi"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria delle Grazie, duecentesco",
+      "Chiesa di San Pietro Apostolo (1717)",
+      "Chiesa di San Lorenzo Martire (1607),",
+      "Chiesa della SS. Annunziata (1580)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Nelahozeves (Repubblica Ceca)",
+      "Six Four les Plages (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vivaro Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058113",
+    "codice_catastale": "M095",
+    "popolazione": 170,
+    "superficie_kmq": 12.5,
+    "densita": 13.6,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "vivaresi",
+    "etimologia": "Il nome deriva dal latino vivarium (vivaio) luogo dove si coltivano le piante. La specifica è indicativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carsoli (AQ)",
+      "Oricola (AQ)",
+      "Orvinio (RI)",
+      "Pozzaglia Sabina (RI)",
+      "Turania (RI)",
+      "Vallinfreda"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Biagio",
+      "Chiesa della Madonna Illuminata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vicovaro",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058112",
+    "codice_catastale": "L851",
+    "popolazione": 3994,
+    "superficie_kmq": 36.12,
+    "densita": 110.6,
+    "cap": "00029",
+    "prefisso_telefonico": "0774",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "vicovaresi",
+    "etimologia": "Il nome è un composto di vico e vario. Deriva da vicus variae che proviene da Varia, nome di un'antica città.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": [
+      "San Cosimato",
+      "Mandela Scalo",
+      "Colle Frate",
+      "Cerreto",
+      "Saccomuro"
+    ],
+    "comuni_confinanti": [
+      "Castel Madama",
+      "Mandela",
+      "Roccagiovine",
+      "Sambuci",
+      "San Polo dei Cavalieri",
+      "Saracinesco",
+      "Tivoli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Cenci-Bolognetti"
+    ],
+    "chiese": [
+      "Chiesa di San Pietro",
+      "Chiesa di San Antonio Abate",
+      "Cappella di San Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della pagnotta vicovarese (di solito a luglio",
+      "a volte a settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Velletri",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058111",
+    "codice_catastale": "L719",
+    "popolazione": 53365,
+    "superficie_kmq": 113.21,
+    "densita": 471.4,
+    "cap": "00049",
+    "prefisso_telefonico": "06",
+    "patrono": "San Clemente",
+    "festa_patronale": "23 novembre",
+    "demonimo": "velletrani o veliterni",
+    "etimologia": "Il nome attuale deriva dall'antico nome Velitrae -arum dalla base -vel (altura) riferendosi probabilmente alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aprilia (LT)",
+      "Artena",
+      "Cisterna di Latina (LT)",
+      "Genzano di Roma",
+      "Lanuvio",
+      "Lariano",
+      "Nemi",
+      "Rocca di Papa"
+    ],
+    "musei": [
+      "Museo Diocesano",
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria delle Grazie",
+      "Chiesa parrocchiale di San Martino Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Ugo Tognazzi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Valmontone",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058110",
+    "codice_catastale": "L639",
+    "popolazione": 16035,
+    "superficie_kmq": 40.87,
+    "densita": 392.3,
+    "cap": "00038",
+    "prefisso_telefonico": "06",
+    "patrono": "San Luigi",
+    "festa_patronale": "ultima domenica di settembre",
+    "demonimo": "valmontonesi",
+    "etimologia": "La sua origine non è chiara, forse deriva dal nome della famiglia proprietaria del feudo: i Valmontone. Oppure si riferisce alla sua posizione geografica, ossia una valle \"sovrastata da un monte\".",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Cave",
+      "Genazzano; a est e sud: Colleferro; a nord e ovest: Palestrina; a ovest: Labico; a sud: Artena"
+    ],
+    "musei": [
+      "Museo Archeologico di Valmontone (MAV)"
+    ],
+    "ville_palazzi": [
+      "Palazzo Doria-Pamphili"
+    ],
+    "chiese": [
+      "Collegiata dell'Assunta",
+      "Santuario del Gonfalone",
+      "Chiesetta della Madonna delle Grazie",
+      "Convento Sant'Angelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallinfreda",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058109",
+    "codice_catastale": "L625",
+    "popolazione": 279,
+    "superficie_kmq": 16.82,
+    "densita": 16.6,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "vallinfredani",
+    "etimologia": "Deriva dal latino Vallis frigida, ossia valle fredda.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cineto Romano",
+      "Oricola (AQ)",
+      "Orvinio (RI)",
+      "Percile",
+      "Riofreddo",
+      "Vivaro Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Bencivenga",
+      "in piazza della Chiesa"
+    ],
+    "chiese": [
+      "Chiesa di San Giovanni Battista Decollato",
+      "Chiesa Madonna del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallepietra",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058108",
+    "codice_catastale": "L611",
+    "popolazione": 268,
+    "superficie_kmq": 51.73,
+    "densita": 5.2,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Cristoforo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "vallepietrani",
+    "etimologia": "Deriva dal latino Vallis Petrarum, ossia Valle delle pietre. Il nome si riferisce quindi alla sua posizione geografica (valle) ed alla massiccia presenza in zona di pietre calcaree. Secondo alcuni la pietra a cui il nome si riferisce è una lapide posta da Nerone quando fondò il paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale Regionale dei Monti Simbruini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Camerata Nuova",
+      "Cappadocia (AQ)",
+      "Filettino (FR)",
+      "Jenne",
+      "Subiaco",
+      "Trevi nel Lazio (FR)"
+    ],
+    "musei": [
+      "Museo del Santuario della Santissima Trinità"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della SS. Trinità",
+      "Chiesa parrocchiale di San Givanni Evangelista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trevignano Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058107",
+    "codice_catastale": "L401",
+    "popolazione": 5781,
+    "superficie_kmq": 39.44,
+    "densita": 146.6,
+    "cap": "00069",
+    "prefisso_telefonico": "06",
+    "patrono": "San Bernardino",
+    "festa_patronale": "20 maggio",
+    "demonimo": "trevignanesi",
+    "etimologia": "Deriva dal nome di persona Trebinius o dal termine latino Trebonianum da Gens Trebonia a cui si aggiunge il suffisso -anus che indica appartenenza. La specifica è identificativa della zona.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale di Bracciano - Martignano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Anguillara Sabazia",
+      "Bracciano",
+      "Campagnano di Roma",
+      "Monterosi (VT)",
+      "Nepi (VT)",
+      "Roma",
+      "Sutri (VT)"
+    ],
+    "musei": [
+      "Museo Civico Etrusco"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Bernardino",
+      "Chiesa di Santa Caterina",
+      "Chiesa dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torrita Tiberina",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058106",
+    "codice_catastale": "L302",
+    "popolazione": 1077,
+    "superficie_kmq": 10.8,
+    "densita": 99.7,
+    "cap": "00060",
+    "prefisso_telefonico": "0765",
+    "patrono": "San Tommaso",
+    "festa_patronale": "21 dicembre",
+    "demonimo": "torritani",
+    "etimologia": "La prima parte del nome deriva da Torre in riferimento a svariate torri costruite in zona a scopo difensivo. La specifica si riferisce alla vicinanza al fiume Tevere.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Poggio Mirteto (RI); a nord e ovest: Filacciano; a ovest: Nazzano; a sud e est: Montopoli di Sabina (RI); a sud e ovest: Fiano Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Tommaso",
+      "Chiesa dell'Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tolfa",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058105",
+    "codice_catastale": "L192",
+    "popolazione": 5074,
+    "superficie_kmq": 167.76,
+    "densita": 30.2,
+    "cap": "00059",
+    "prefisso_telefonico": "0766",
+    "patrono": "Sant'Egidio",
+    "festa_patronale": "primo settembre",
+    "demonimo": "tolfetani",
+    "etimologia": "Il nome ha un'origine incerta, potrebbe derivare da Tulphe dalla radice tol (indicante un'azione di sollevamento) riferita alla sua posizione geografica. Secondo un'altra ipotesi potrebbe riferirsi al nome di un principe longobardo, forse Agilulfo o Ataulfo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona III Monti della Tolfa"
+    ],
+    "localita_frazioni": [
+      "S. Severa Nord"
+    ],
+    "comuni_confinanti": [
+      "A est: Blera (VT)",
+      "Bracciano",
+      "Canale Monterano",
+      "Cerveteri",
+      "Manziana",
+      "Vejano (VT); a nord: Monte Romano (VT); a ovest: Allumiere",
+      "Tarquinia (VT); a ovest e sud: Santa Marinella"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Comunale",
+      "Palazzo Baronale o Palazzo della Ragione",
+      "Palazzo dei Priori o Palazzaccio",
+      "Palazzo Buttaon",
+      "Palazzo Panetti"
+    ],
+    "chiese": [
+      "Chiesa della Madonna della Sughera",
+      "Santuario della Madonna della Rocca",
+      "Chiesa di Sant'Antonio di Padova",
+      "Chiesa del Crocefisso",
+      "Chiesa Madre di Sant'Egidio Abate"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Frangipane"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco “Il Boschetto”",
+      "Parco della Pace",
+      "Giardino della Villa Comunale"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tivoli",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058104",
+    "codice_catastale": "L182",
+    "popolazione": 56603,
+    "superficie_kmq": 68.5,
+    "densita": 826.3,
+    "cap": "00019",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "tiburtini",
+    "etimologia": "Deriva dal suo antico nome Tibur, una delle città più importanti della Lega latina.",
+    "il_comune_e": [
+      "Città Termale (Terme Acque Albule SpA",
+      "in località Bagni di Tivoli)"
+    ],
+    "fa_parte_di": [
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione Nazionale Comuni Termali (ANCOT)"
+    ],
+    "localita_frazioni": [
+      "Campolimpido",
+      "Favale",
+      "Tivoli Terme",
+      "Villa Adriana"
+    ],
+    "comuni_confinanti": [
+      "A est: Castel Madama",
+      "Vicovaro; a nord: Marcellina",
+      "San Polo dei Cavalieri; a ovest: Guidonia Montecelio; a sud: Roma",
+      "San Gregorio da Sassola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Gregoriana",
+      "Villa d'Este",
+      "Villa Adriana"
+    ],
+    "chiese": [
+      "Chiesa di San Pietro alla Carità",
+      "Cattedrale o Chiesa di San Lorenzo, con campanile di stile romanico",
+      "Chiesa di San Silvestro (XII secolo), in stile romanico",
+      "Chiesa di Santa Maria Maggiore, fatta edificare da Papa Simplicio"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Pia",
+      "fatta edificare nel 1461 dal Papa Pio II"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Templi di Vesta e Sibilla",
+      "Anfiteatro Romano, di pianta ellittica"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Emilio Segrè (1905 - 1989)",
+      "fisico",
+      "Premio Nobel per la Fisica"
+    ]
+  },
+  {
+    "nome": "Subiaco",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058103",
+    "codice_catastale": "I992",
+    "popolazione": 8987,
+    "superficie_kmq": 63.44,
+    "densita": 141.7,
+    "cap": "00028",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Benedetto",
+    "festa_patronale": "21 marzo",
+    "demonimo": "sublacensi",
+    "etimologia": "Il nome deriva dal latino Sublaqueum composto da sub (sotto) e lacus (lago), in riferimento ad un lago ora scomparso. Oppure potrebbe derivare dal latino Simbruina stagna, ossia gli stagni creati da Nerone con lo sbarramento del fiume ai piedi dei monti Simbruini per costruirvi una villa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale Regionale dei Monti Simbruini"
+    ],
+    "localita_frazioni": [
+      "centri abitati: Monte Livata - Campo dell'Osso",
+      "Vignola",
+      "La Torre - Ponte Lucidi;\ncontrade: Pianiglio - San Lorenzo",
+      "Le Camere - Cappuccini",
+      "Montore - Camarde",
+      "Barili - Iegli",
+      "Pozziglio - Forma Focerale - San Vito",
+      "Caprola - Campo d'Arco",
+      "Riarco - Castagnola",
+      "Risano - Colle Perino",
+      "Sant'Angelo - Prato Maggiore - Nocchitella",
+      "Valle Papa - Valle Chiappante"
+    ],
+    "comuni_confinanti": [
+      "A est: Jenne",
+      "Vallepietra; a nord: Agosta",
+      "Camerata Nuova",
+      "Cervara di Roma; a ovest: Affile",
+      "Canterano",
+      "Rocca Santo Stefano; a sud: Arcinazzo Romano"
+    ],
+    "musei": [
+      "Museo \"Luigi Ceselli\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Monastero di San Benedetto",
+      "Monastero di Santa Scolastica",
+      "Convento di San Francesco",
+      "Chiesetta della Madonna della Croce",
+      "Chiesa di Santa Maria della Valle",
+      "Chiesa di San Lorenzo",
+      "Basilica di Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Medioevale di San Francesco, in precedenza chiamato \"di Campo d'Arco\", con torre quadrangolare di controllo",
+      "Piazzetta di Pietra Sprecata"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Inchinata (14-15 agosto)"
+    ],
+    "gemellaggi": [
+      "Ochsenhausen (Germania), dal 1989",
+      "Subiaco (Australia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Segni",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058102",
+    "codice_catastale": "I573",
+    "popolazione": 9220,
+    "superficie_kmq": 61.03,
+    "densita": 151.1,
+    "cap": "00037",
+    "prefisso_telefonico": "06",
+    "patrono": "San Bruno",
+    "festa_patronale": "18 luglio",
+    "demonimo": "segnini",
+    "etimologia": "Secondo la tradizione il nome deriva dai signa (insegne) che i romani posero sul territorio quando lo conquistarono.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVIII",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Artena",
+      "Colleferro",
+      "Cori (LT)",
+      "Gavignano",
+      "Montelanico",
+      "Paliano (FR)",
+      "Rocca Massima (LT)"
+    ],
+    "musei": [
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Cremona"
+    ],
+    "chiese": [
+      "Chiesa di Santo Stefano, con facciata in stile neoclassico e campanile romanico",
+      "Chiesa di San Pietro, con facciata in tufo",
+      "Cattedrale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Saracinesco",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058101",
+    "codice_catastale": "I424",
+    "popolazione": 182,
+    "superficie_kmq": 11.01,
+    "densita": 16.5,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "saracinescani",
+    "etimologia": "Il nome potrebbe derivare dai Saraceni, popolo che fondò il paese, o dal nome di persona Sarracenus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Anticoli Corrado",
+      "Cerreto Laziale",
+      "Mandela",
+      "Rocca Canterano",
+      "Sambuci",
+      "Vicovaro"
+    ],
+    "musei": [
+      "Museo del tempo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo (XIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Oreste",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058099",
+    "codice_catastale": "I352",
+    "popolazione": 3675,
+    "superficie_kmq": 43.96,
+    "densita": 83.6,
+    "cap": "00060",
+    "prefisso_telefonico": "0761",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "santorestesi",
+    "etimologia": "Probabilmente è un'alterazione del nome del santo patrono del paese: Sant'Edisto.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Civita Castellana (VT)",
+      "Civitella San Paolo",
+      "Faleria (VT)",
+      "Nazzano",
+      "Ponzano Romano",
+      "Rignano Flaminio",
+      "Stimigliano (RI)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Croce",
+      "Chiesa di San Nicola",
+      "Chiesa di San Biagio",
+      "Chiesa parrocchiale di San Lorenzo Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna di Maggio (ultima domenica di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Angelo Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058098",
+    "codice_catastale": "I284",
+    "popolazione": 5017,
+    "superficie_kmq": 21.45,
+    "densita": 233.9,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "SS. Michele e Liberata",
+    "festa_patronale": "terza domenica di maggio",
+    "demonimo": "santangelesi",
+    "etimologia": "Il paese assunse il nome attuale in onore a San Michele Arcangelo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Fonte Nuova; a est e sud: Guidonia Montecelio; a nord e est: Palombara Sabina; a ovest: Mentana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria",
+      "Chiesa di Santa Liberata (XIV secolo)",
+      "Chiesa di San Michele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Marinella",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058097",
+    "codice_catastale": "I255",
+    "popolazione": 18882,
+    "superficie_kmq": 49.2,
+    "densita": 383.8,
+    "cap": "00058",
+    "prefisso_telefonico": "0766",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "santamarinellesi",
+    "etimologia": "Il nome riflette il culto per Santa Marinella, anche se il patrono del luogo è San Giuseppe.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Santa Severa"
+    ],
+    "comuni_confinanti": [
+      "Allumiere",
+      "Cerveteri",
+      "Civitavecchia",
+      "Tolfa"
+    ],
+    "musei": [
+      "Museo Civico Archeologico",
+      "Antiquarium di Pyrgi"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria della Visitazione"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Odescalchi",
+      "Castello di Santa Severa"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vito Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058100",
+    "codice_catastale": "I400",
+    "popolazione": 3339,
+    "superficie_kmq": 12.72,
+    "densita": 262.5,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "sanvitesi",
+    "etimologia": "Il nome riflette il culto per San Vito e riprende il nome dell'antica città Vitellia. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Bellegra; a nord: Pisoniano; a ovest: Capranica Prenestina; a sud: Genazzano",
+      "Olevano Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Biagio Martire, in Piazza San Biagio",
+      "Chiesa dei Santi Sebastiano e Rocco, in Via Borgo Mario Theodoli",
+      "Santuario della Madonna di Compigliano, Viale Pietro Baccelli",
+      "Chiesa di Santa Maria de Arce, Piazza Santa Maria",
+      "Chiesa di San Vito Martire, in Via San Vito"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Theodoli"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Polo dei Cavalieri",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058096",
+    "codice_catastale": "I125",
+    "popolazione": 2981,
+    "superficie_kmq": 42.73,
+    "densita": 69.8,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "sampolesi",
+    "etimologia": "Il nome deriva dall'appartenenza del luogo all'abbazia di san Paolo, era chiamato infatti in passato Castrum Sancti Pauli in Jana. La specifica \"Cavalieri\" deriva o dall'appartenenza del paese all'ordine dei cavalieri dei templari o dalla presenza in zona di cavalieri francesi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Licenza",
+      "Roccagiovine; a est e nord: Monteflavio; a est e sud: Vicovaro; a ovest: Guidonia Montecelio",
+      "Marcellina",
+      "Palombara Sabina; a sud: Tivoli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale",
+      "residenza estiva di Federico Cesi e Galileo Galilei"
+    ],
+    "chiese": [
+      "Chiesa di Santa Lucia",
+      "Chiesa di San Rocco",
+      "Chiesa di San Nicola da Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Gregorio da Sassola",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058095",
+    "codice_catastale": "H942",
+    "popolazione": 1589,
+    "superficie_kmq": 35.25,
+    "densita": 45.1,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Gregorio Magno",
+    "festa_patronale": "12 marzo",
+    "demonimo": "sangregoriani",
+    "etimologia": "Il nome onora il papa e santo Gregorio Magno. La specifica \"Sassola\" si riferisce o all'antico nome del luogo, ossia Saxula oppure al latino saxa con il significato di \"in mezzo ai sassi\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Capranica Prenestina",
+      "Casape",
+      "Ciciliano",
+      "Poli; a est e nord: Castel Madama; a ovest: Tivoli; a ovest e sud: Roma"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento di Santa Maria Nova",
+      "Chiesa parrocchiale di San Gregorio Magno",
+      "Chiesa di San Sebastiano",
+      "Chiesa di San Giovanni Evangelista",
+      "Chiesa di San Biagio",
+      "Chiesa della Madonna della Cavata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Brancaccio"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "resti degli acquedotti dell'Impero Romano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Cesareo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058119",
+    "codice_catastale": "M295",
+    "popolazione": 15507,
+    "superficie_kmq": 22.72,
+    "densita": 682.5,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Cesareo",
+    "festa_patronale": "27 agosto",
+    "demonimo": "sancesaresi",
+    "etimologia": "Probabilmente il nome del luogo si riferisce al culto del santo patrono: San Cesareo. Secondo la tradizione il nome si lega all'antica presenza in zona di una villa di proprietà di Gaio Giulio Cesare",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XI Castelli Romani-Prenestini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Colonna",
+      "Monte Compatri",
+      "Palestrina",
+      "Rocca Priora",
+      "Zagarolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giuseppe"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Auditorium"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sambuci",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058094",
+    "codice_catastale": "H745",
+    "popolazione": 907,
+    "superficie_kmq": 8.23,
+    "densita": 110.2,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Celso",
+    "festa_patronale": "30 ottobre",
+    "demonimo": "sambuciani",
+    "etimologia": "Probabilmente deriva dal nome di pianta sambucum, ossia sambuco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castel Madama",
+      "Cerreto Laziale",
+      "Ciciliano",
+      "Saracinesco",
+      "Vicovaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento dei Frati",
+      "Chiesa di San Pietro Apostolo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Theodoli"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sacrofano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058093",
+    "codice_catastale": "H658",
+    "popolazione": 7806,
+    "superficie_kmq": 28.49,
+    "densita": 274.0,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "San Biagio Vescovo e Martire",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "sacrofanesi",
+    "etimologia": "In passato il luogo aveva nome Scrofano, derivando dal nome latino di persona Scrofa con l'aggiunta del suffisso -anus che indica appartenenza. Poiché il nome veniva associato allo scorfano, un pesce gustoso ma dall'aspetto non piacevolissimo o alla scrofa, fu cambiato in Sacrofano da sacro fano, ossia sacro tempio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Castelnuovo di Porto",
+      "Riano; a est e sud: Roma; a ovest: Campagnano di Roma",
+      "Formello; a ovest e nord: Magliano Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Biagio, settecentesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roviano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058092",
+    "codice_catastale": "H618",
+    "popolazione": 1334,
+    "superficie_kmq": 8.38,
+    "densita": 159.2,
+    "cap": "00027",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Giovanni Decollato",
+    "festa_patronale": "29 agosto",
+    "demonimo": "rovianesi",
+    "etimologia": "Il nome deriva dalla Gens Rubria (forse proprietaria della zona) a cui si aggiunge il suffisso -anus che indica appartenenza. Con il tempo il nome diventò Rubrianum, poi Rubianum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Arsoli; a nord: Riofreddo; a ovest: Anticoli Corrado",
+      "Cineto Romano; a sud: Marano Equo"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina dell'Alta Valle dell'Aniene",
+      "Museo della civiltà contadina della Valle dell'Aniene"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madonna del Rosario",
+      "Chiesa di San Giovanni Battista Decollato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roiate",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058090",
+    "codice_catastale": "H494",
+    "popolazione": 719,
+    "superficie_kmq": 10.38,
+    "densita": 69.3,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "Santissimo Salvatore",
+    "festa_patronale": "9 novembre",
+    "demonimo": "roiatesi",
+    "etimologia": "Potrebbe derivare dal latino rubia, ossia robbia, pianta da cui si ricava il colorante rosso a cui si aggiunge il suffisso collettivo -ata che indica abbondanza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Arcinazzo Romano; a nord e est: Affile; a ovest: Bellegra; a sud: Serrone (FR); a sud e ovest: Olevano Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiese parrocchiale di Santa Maria Assunta",
+      "Chiesa parrocchiale di San Tommaso Apostolo",
+      "Chiesa di San Benedetto",
+      "Chiesa della Madonna delle Grazie",
+      "Cappella della SS. Trinità (sulla cima del Monte Santa Maria la Serra)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roccagiovine",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058087",
+    "codice_catastale": "H411",
+    "popolazione": 265,
+    "superficie_kmq": 8.82,
+    "densita": 30.0,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "roccatani",
+    "etimologia": "E' il composto di \"Rocca\" (fortezza) e l'aggettivo giovine, ossia giovane in contrapposizione ad una rocca \"vecchia\", antica. Secondo la leggenda, il nome potrebbe derivare dal latino arx Iunionis, ossia castello (fortezza) di Giunone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Mandela; a nord e est: Licenza; a ovest: San Polo dei Cavalieri; a sud: Vicovaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta dei Flagellanti",
+      "Chiesa di Santa Maria delle Case",
+      "Chiesa di San Nicola di Bari"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Orsini"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocca Santo Stefano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058089",
+    "codice_catastale": "H441",
+    "popolazione": 971,
+    "superficie_kmq": 9.71,
+    "densita": 100.0,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "roccatani",
+    "etimologia": "E' l'unione di \"Rocca\", riferito alla presenza di un castello in zona e \"Santo Stefano\", santo patrono del luogo in onore del quale fu costruita una chiesa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Affile",
+      "Bellegra",
+      "Canterano",
+      "Gerano",
+      "Subiaco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta (XVIII secolo)",
+      "Chiesa di Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocca Priora",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058088",
+    "codice_catastale": "H432",
+    "popolazione": 12013,
+    "superficie_kmq": 28.07,
+    "densita": 428.0,
+    "cap": "00079",
+    "prefisso_telefonico": "06",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "roccaprioresi",
+    "etimologia": "Derivato da Rocca Periura, secondo la leggenda il nome fa riferimento ad una fortezza \"abitata da gente spergiura e bugiarda\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Parco Naturale dei Castelli Romani"
+    ],
+    "localita_frazioni": [
+      "Borgo: San Rocco;\nContrade: La Fontana",
+      "l'Ara Dandini",
+      "San Sebastiano",
+      "Madonna della Neve",
+      "Buero",
+      "Piani di Caiano",
+      "Colle di Fuori"
+    ],
+    "comuni_confinanti": [
+      "A est: Artena",
+      "Palestrina; a nord: San Cesareo; a ovest: Monte Compatri; a sud: Lariano",
+      "Rocca di Papa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giuseppe Artigiano",
+      "Chiesa dell'Assunta in Cielo",
+      "Chiesa della Madonna della Neve",
+      "Chiesa della Madonna del Buon Consiglio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sohland a.d. Spree (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocca di Papa",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058086",
+    "codice_catastale": "H404",
+    "popolazione": 17144,
+    "superficie_kmq": 40.18,
+    "densita": 426.7,
+    "cap": "00040",
+    "prefisso_telefonico": "06",
+    "patrono": "San Carlo Borromeo",
+    "festa_patronale": "4 novembre",
+    "demonimo": "rocchigiani",
+    "etimologia": "Il nome deriva da un castello posto a difesa della zona fatto costruire da un Papa, forse Eugenio III. Oppure perché per un certo periodo il paese è stato dipendente direttamente dalla Santa Sede.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Italiana Città del Vulcano",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Vivaro"
+    ],
+    "comuni_confinanti": [
+      "Albano Laziale",
+      "Ariccia",
+      "Artena",
+      "Castel Gandolfo",
+      "Grottaferrata",
+      "Lariano",
+      "Marino",
+      "Monte Compatri",
+      "Nemi",
+      "Rocca Priora",
+      "Velletri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Tufo",
+      "Duomo dell'Assunta (XVII secolo)",
+      "Abbazia di Palazzolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocca di Cave",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058085",
+    "codice_catastale": "H401",
+    "popolazione": 378,
+    "superficie_kmq": 11.11,
+    "densita": 34.0,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Egidio",
+    "festa_patronale": "primo settembre",
+    "demonimo": "roccheggiani",
+    "etimologia": "Il nome fa riferimento ad un castello posto in zona ed alla successiva unione del paese sorto intorno al castello con il paese di Cave.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capranica Prenestina",
+      "Castel San Pietro Romano",
+      "Cave",
+      "Genazzano",
+      "Palestrina"
+    ],
+    "musei": [
+      "Museo Civico Geopaleontologico Ardito Desio"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Nicola di Bari (fine XVII secolo)",
+      "Chiesetta di Sant'Egidio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocca Canterano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058084",
+    "codice_catastale": "H387",
+    "popolazione": 188,
+    "superficie_kmq": 15.79,
+    "densita": 11.9,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "roccacanteranesi",
+    "etimologia": "Il nome del paese si riferisce alla presenza di un fortezza eretta in difesa del paese di Canterano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Agosta",
+      "Anticoli Corrado",
+      "Canterano",
+      "Cerreto Laziale",
+      "Gerano",
+      "Marano Equo",
+      "Saracinesco"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Moretti"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Riofreddo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058083",
+    "codice_catastale": "H300",
+    "popolazione": 762,
+    "superficie_kmq": 12.46,
+    "densita": 61.2,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "riofreddani",
+    "etimologia": "Il nome deriva da rivus frigidus, ossia rivo freddo in riferimento alle acque fresche del fiume Bagnatore che scorre in zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arsoli",
+      "Cineto Romano",
+      "Oricola (AQ)",
+      "Roviano",
+      "Vallinfreda"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio dell'Annunziata",
+      "Chiesa di Sant'Andrea apostolo",
+      "Chiesa di San Nicola",
+      "Chiesa della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rignano Flaminio",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058082",
+    "codice_catastale": "H288",
+    "popolazione": 10232,
+    "superficie_kmq": 38.77,
+    "densita": 263.9,
+    "cap": "00068",
+    "prefisso_telefonico": "0761",
+    "patrono": "SS. Vincenzo e Anastasio",
+    "festa_patronale": "22 gennaio",
+    "demonimo": "rignanesi",
+    "etimologia": "Denominato Ariniano, deriva dal nome latino di persona Arinius con il suffisso -anus che indica appartenenza. Alcuni credono che l'antico nome Ariniano derivi da un antico ara Jani (un tempio dedicato al dio Giano) presente in zona. La specifica \"Flaminio\" allude alla sua posizione sulla via Flaminia.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Montelarco"
+    ],
+    "comuni_confinanti": [
+      "Calcata (VT)",
+      "Capena",
+      "Civitella San Paolo",
+      "Faleria (VT)",
+      "Magliano Romano",
+      "Morlupo",
+      "Sant'Oreste"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Teodora (XVIII secolo) e Catacombe dei SS. Abbondio e Abbondanzio (IV secolo)",
+      "Chiesa dei SS. Abbondio e Abbondanzio",
+      "Chiesa dei SS. Vincenzo e Anastasio"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca del Valentino"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Riano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058081",
+    "codice_catastale": "H267",
+    "popolazione": 10565,
+    "superficie_kmq": 25.35,
+    "densita": 416.8,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "rianesi",
+    "etimologia": "Secondo alcuni il nome deriva dal latino ara Jani, ossia un tempio o altare dedicato al dio Giano. Secondo altri il nome potrebbe collegarsi al latino rivus (fiume) in riferimento ai numerosi corsi d'acqua presenti in zona. Altri ancora credono che derivi dal nome latino di persona Arrius con il suffisso -anus per indicare appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio"
+    ],
+    "localita_frazioni": [
+      "La Rosta",
+      "Belvedere"
+    ],
+    "comuni_confinanti": [
+      "A est: Monterotondo; a nord e est: Castelnuovo di Porto; a ovest: Sacrofano; a sud: Roma"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale dell'Immacolata Concezione",
+      "Chiesa di Santa Pace",
+      "Chiesa di San Giorgio, quattrocentesca"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Cesi e dei Ruspoli"
+    ],
+    "fontane": [
+      "I Fontanoni",
+      "costruita originariamente nel 1730"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ponzano Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058080",
+    "codice_catastale": "G874",
+    "popolazione": 1137,
+    "superficie_kmq": 19.34,
+    "densita": 58.8,
+    "cap": "00060",
+    "prefisso_telefonico": "0765",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "ponzanesi",
+    "etimologia": "Deriva dal nome latino di persona Pontius con l'aggiunta del suffisso -anus che indica proprietà.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Civita Castellana (VT)",
+      "Civitella San Paolo",
+      "Collevecchio (RI)",
+      "Filacciano",
+      "Forano (RI)",
+      "Nazzano",
+      "Sant'Oreste",
+      "Stimigliano (RI)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Abbaziale"
+    ],
+    "chiese": [
+      "Chiesa e Convento di San Sebastiano",
+      "Chiesa di San Nicola di Bari",
+      "Abbazia di Sant'Andrea in Flumine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa delle Zitelle - San Nicola di Bari (6 dicembre)",
+      "con la Sagra delle Bruschette"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pomezia",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058079",
+    "codice_catastale": "G811",
+    "popolazione": 63268,
+    "superficie_kmq": 107.34,
+    "densita": 589.4,
+    "cap": "00071",
+    "prefisso_telefonico": "06",
+    "patrono": "San Benedetto",
+    "festa_patronale": "11 luglio",
+    "demonimo": "pometini",
+    "etimologia": "Il nome attuale deriva dall'antica città Pometia (in passato sita in zona, ma scomparsa già ai tempi di Plinio il Vecchio) o da \"città dei pomi\", indicanti la ricchezza ed il benessere della zona.",
+    "il_comune_e": [
+      "Una Città di Fondazione (centri urbani realizzati con progetto unitario)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Roma; a sud: Ardea"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Torre Maggiore",
+      "Castello di Pratica"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Antro di Fauno"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poli",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058078",
+    "codice_catastale": "G784",
+    "popolazione": 2425,
+    "superficie_kmq": 21.39,
+    "densita": 113.4,
+    "cap": "00010",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Eustachio",
+    "festa_patronale": "20 settembre",
+    "demonimo": "polesi",
+    "etimologia": "Il nome deriva o da castrum Poli (Poli è il genitivo di un cognome diffuso) o castum Pauli dal nome Paulus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Casape",
+      "San Gregorio da Sassola; a nord e est: Capranica Prenestina; a ovest: Roma; a sud: Castel San Pietro Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Conti",
+      "Palazzo Pelliccioni, in Via Umberto I",
+      "Villa Catena"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Pietro Apostolo, seicentesca",
+      "Chiesa di Santo Stefano",
+      "Chiesa di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pisoniano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058077",
+    "codice_catastale": "G704",
+    "popolazione": 753,
+    "superficie_kmq": 13.2,
+    "densita": 57.0,
+    "cap": "00020",
+    "prefisso_telefonico": "06",
+    "patrono": "Santa Vittoria",
+    "festa_patronale": "9 luglio",
+    "demonimo": "pisonianesi",
+    "etimologia": "Deriva dal latino Vicus Pisonis in riferimento all'antica villa di proprietà di Calpurnio Pisone presente in zona. In passato era chiamato Pisciano, poi modificato in quello attuale perché poco gradevole.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Bellegra",
+      "Gerano; a nord: Cerreto Laziale",
+      "Ciciliano; a ovest: Capranica Prenestina; a sud: San Vito Romano"
+    ],
+    "musei": [
+      "Museo della Canapa"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Vittoria",
+      "Chiesa di San Paolo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Theodoli"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sannat (Malta)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Percile",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058076",
+    "codice_catastale": "G444",
+    "popolazione": 241,
+    "superficie_kmq": 17.62,
+    "densita": 13.7,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "percilesi",
+    "etimologia": "Alcuni storici fanno derivare il nome dalla famiglia romana Porcia gens Porcia",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cineto Romano",
+      "Licenza",
+      "Mandela",
+      "Orvinio (RI)",
+      "Scandriglia (RI)",
+      "Vallinfreda"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Borghese"
+    ],
+    "chiese": [
+      "Chiesa di Santa Lucia",
+      "Chiesa di Santa Maria della Vittoria (XII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "lagustelli di Percile"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Alrance (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palombara Sabina",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058075",
+    "codice_catastale": "G293",
+    "popolazione": 13218,
+    "superficie_kmq": 75.19,
+    "densita": 175.8,
+    "cap": "00018",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "palombaresi",
+    "etimologia": "Denominata Palombara, deriva probabilmente dal latino palumbus (colombo) in riferimento ad una costruzione rurale sita in zona, usata per l'allevamento dei colombi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": [
+      "Cretone",
+      "Stazzano"
+    ],
+    "comuni_confinanti": [
+      "A est: San Polo dei Cavalieri; a nord: Monteflavio",
+      "Montelibretti",
+      "Moricone; a ovest: Monterotondo; a sud: Guidonia Montecelio",
+      "Mentana",
+      "Sant'Angelo Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria del Gonfalone",
+      "Chiesa di San Giovanni in Argentella",
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Savelli"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palestrina",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058074",
+    "codice_catastale": "G274",
+    "popolazione": 21716,
+    "superficie_kmq": 46.85,
+    "densita": 463.5,
+    "cap": "00036",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Agapito",
+    "festa_patronale": "18 agosto",
+    "demonimo": "palestrinesi o prenestini",
+    "etimologia": "Identificata come Civitas Praenestina deriva dal latino Praeneste da praene (in antica parte) e -ste dalla radice del verbo \"stare\". Quindi il sito Praeneste su un arx, roccia.",
+    "il_comune_e": [
+      "Città Termale (Pro Fonte Ceciliana Srl)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Zona XI Castelli Romani-Prenestini"
+    ],
+    "localita_frazioni": [
+      "Carchitti"
+    ],
+    "comuni_confinanti": [
+      "Artena",
+      "Castel San Pietro Romano",
+      "Cave",
+      "Gallicano nel Lazio",
+      "Labico",
+      "Rocca di Cave",
+      "Rocca Priora",
+      "Roma",
+      "San Cesareo",
+      "Valmontone",
+      "Zagarolo"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale di Palestrina",
+      "Museo della Resistenza e degli 11 Martiri"
+    ],
+    "ville_palazzi": [
+      "Palazzo Barberini"
+    ],
+    "chiese": [
+      "Chiesa di Santa Rosalia",
+      "Cattedrale di S. Agapito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bièvres (Francia), dal 2007",
+      "Fussen (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Olevano Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058073",
+    "codice_catastale": "G022",
+    "popolazione": 6657,
+    "superficie_kmq": 26.12,
+    "densita": 254.9,
+    "cap": "00035",
+    "prefisso_telefonico": "06",
+    "patrono": "Santa Margherita V.M.",
+    "festa_patronale": "20 luglio",
+    "demonimo": "olevanesi",
+    "etimologia": "Esistono diverse ipotesi sulla provenienza del nome. Secondo alcuni potrebbe derivare dal latino olivus (olivo) in riferimento alle numerose piante presenti in zona. Sullo stemma comunale è rappresentato infatti proprio un olivo. Secondo altri potrebbe derivare dal nome di persona Leonia. La specifica \"romano\" è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Roiate",
+      "Serrone (FR); a nord: Bellegra; a ovest: Genazzano",
+      "San Vito Romano; a sud: Paliano (FR)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nettuno",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058072",
+    "codice_catastale": "F880",
+    "popolazione": 49657,
+    "superficie_kmq": 71.46,
+    "densita": 694.9,
+    "cap": "00048",
+    "prefisso_telefonico": "06",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "nettunesi",
+    "etimologia": "Probabilmente si riferisce e deriva da Neptunus, ossia il Dio Nettuno a cui probabilmente era dedicato un altare o un tempio sul promontorio.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Nettuno)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Latina (LT); a nord: Aprilia (LT); a ovest: Anzio"
+    ],
+    "musei": [
+      "Museo dello Sbarco Alleato",
+      "Antiquarium Comunale"
+    ],
+    "ville_palazzi": [
+      "Palazzo Colonna (XVI secolo)"
+    ],
+    "chiese": [
+      "Santuario Nostra Signora delle Grazie e Santa Maria Goretti :: Padri Passionisti",
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": [
+      "Forte Sangallo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Traunreut (Germania), dall'ottobre 1973",
+      "Corinaldo (Ancona - Marche), dall'ottobre 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nerola",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058071",
+    "codice_catastale": "F871",
+    "popolazione": 1957,
+    "superficie_kmq": 18.64,
+    "densita": 105.0,
+    "cap": "00017",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "nerolesi",
+    "etimologia": "L'origine del nome è incerta: secondo alcuni potrebbe derivare dal latino nero o nerio con il significato di \"forza\". Secondo altri è legato a Nerulum in Lucania.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": [
+      "Acquaviva",
+      "Osteria di Nerola"
+    ],
+    "comuni_confinanti": [
+      "A est: Scandriglia (RI); a nord: Poggio Nativo (RI)",
+      "Toffia (RI); a ovest: Fara in Sabina (RI); a sud: Montelibretti",
+      "Montorio Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Vecchia,  in origine dedicata a San Giorgio, in seguito consacrata a Santa Maria Assunta",
+      "Chiesa di Sant'Antonio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Orsini"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nemi",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058070",
+    "codice_catastale": "F865",
+    "popolazione": 1910,
+    "superficie_kmq": 7.36,
+    "densita": 259.5,
+    "cap": "00074",
+    "prefisso_telefonico": "06",
+    "patrono": "SS. Filippo e Giacomo",
+    "festa_patronale": "primo maggio",
+    "demonimo": "nemesi o nemorensi",
+    "etimologia": "Il nome discende dal latino nemus, ossia bosco. Forse derivato dal cosiddetto nemus Dianae, bosco sacro a Diana (dea della caccia).",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Italiana Città del Vulcano"
+    ],
+    "localita_frazioni": [
+      "Valle delle Colombe",
+      "Ville di Nemi",
+      "Parco dei Lecci",
+      "Vigna Grande",
+      "Valle Petrucola"
+    ],
+    "comuni_confinanti": [
+      "Ariccia",
+      "Genzano di Roma",
+      "Rocca di Papa",
+      "Velletri"
+    ],
+    "musei": [
+      "Museo delle Navi Romane"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Romitorio di San Michele Arcangelo",
+      "Chiesa parrocchiale di Santa Maria del Pozzo",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Sito archeologico Tempio di Diana Nemorensis"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra delle fragole e mostra dei fiori (prima domenica di giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nazzano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058069",
+    "codice_catastale": "F857",
+    "popolazione": 1425,
+    "superficie_kmq": 12.24,
+    "densita": 116.4,
+    "cap": "00060",
+    "prefisso_telefonico": "0765",
+    "patrono": "Sant'Antimo",
+    "festa_patronale": "11 maggio",
+    "demonimo": "nazzanesi",
+    "etimologia": "Probabilmente deriva dal nome latino di persona Nattius con il suffisso -anus o dal nome di famiglia Gens Nantia.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Torrita Tiberina; a nord: Filacciano; a ovest: Ponzano Romano; a sud: Civitella San Paolo",
+      "Fiano Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antimo",
+      "Chiesa di Santa Maria Consolatrice"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della bruschetta (8 dicembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Morlupo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058068",
+    "codice_catastale": "F734",
+    "popolazione": 8729,
+    "superficie_kmq": 23.86,
+    "densita": 365.8,
+    "cap": "00067",
+    "prefisso_telefonico": "06",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "morlupesi",
+    "etimologia": "Il nome potrebbe derivare dall'unione di Morro e lupo, il secondo sarebbe un nome di persona. Secondo la tradizione gli abitanti vissero, a causa di un'epidemia, more luporum, ossia \"secondo il costume dei lupi\" (bestialmente).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Rignano Flaminio; a nord e est: Capena; a ovest: Magliano Romano; a sud: Castelnuovo di Porto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta",
+      "Convento di Santa Maria Seconda"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Moricone",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058067",
+    "codice_catastale": "F730",
+    "popolazione": 2611,
+    "superficie_kmq": 20.14,
+    "densita": 129.6,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "moriconesi",
+    "etimologia": "Deriva dal latino murex o murix, ossia scoglio, con il suffisso -one che ha funzione accrescitiva.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": [
+      "Osteria Moricone"
+    ],
+    "comuni_confinanti": [
+      "A est: Monteflavio; a nord e est: Montorio Romano; a nord e ovest: Montelibretti; a sud e ovest: Palombara Sabina"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Aureli"
+    ],
+    "chiese": [
+      "Parrocchiale dell'Assunta",
+      "Chiesa Vecchia, in piazza Roma",
+      "Chiesa di Gesù e Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montorio Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058066",
+    "codice_catastale": "F692",
+    "popolazione": 1930,
+    "superficie_kmq": 23.03,
+    "densita": 83.8,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Leonardo di Noblat",
+    "festa_patronale": "6 novembre",
+    "demonimo": "montoriani",
+    "etimologia": "Deriva da Mons Torus o da Mons Taurus con il significato di alto, rialzato da terra. Secondo alcuni potrebbe anche derivare da Mons aureus, ossia ricco. La specifica \"romano\" lo distingue dagli omonimi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Nerola; a nord e est: Scandriglia (RI); a ovest: Montelibretti; a sud: Monteflavio; a sud e ovest: Moricone"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale Santissima Annunziata e Cristo Re",
+      "Chiesa di San Leonardo da Noblat"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monterotondo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058065",
+    "codice_catastale": "F611",
+    "popolazione": 40813,
+    "superficie_kmq": 40.54,
+    "densita": 1006.7,
+    "cap": "00015",
+    "prefisso_telefonico": "06",
+    "patrono": "SS. Filippo e Giacomo",
+    "festa_patronale": "3 maggio",
+    "demonimo": "monterotondesi o eretini",
+    "etimologia": "Fondata sul luogo dell'antica città Eretum dedicata ad Era, ossia Giunone, chiamata poi Castrum Rotundum (da cui deriva il nome attuale) per la morfologia del territorio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Palombara Sabina; a nord: Capena",
+      "Montelibretti; a nord-ovest: Castelnuovo di Porto; a ovest: Riano; a sud e est: Mentana; a sud e ovest: Roma"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo di Santa Maria Maddalena",
+      "Chiesa di Santa Maria delle Grazie (XV-XVI secolo)",
+      "Chiesa di San Rocco (XV secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Sant'Antonio Abate (terza domenica di gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montelibretti",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058063",
+    "codice_catastale": "F545",
+    "popolazione": 5353,
+    "superficie_kmq": 44.03,
+    "densita": 121.6,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "10 maggio",
+    "demonimo": "montelibrettesi",
+    "etimologia": "Il nome è un composto di Monte e li Bretti (forma etnica di Brittus) ossia Brettone. Secondo alcuni la seconda parte potrebbe anche derivare da una pronuncia scorretta del nome Bruttius, ossia Flavio Brutto Presente, suocero dell'imperatore Commodo, possessore di una villa in zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Borgo Santa Maria",
+      "Montemaggiore",
+      "Passo Corese"
+    ],
+    "comuni_confinanti": [
+      "A est: Montorio Romano; a nord: Fara in Sabina (RI)",
+      "Montopoli di Sabina (RI); a nord e est: Nerola; a ovest: Capena",
+      "Fiano Romano; a sud: Monterotondo",
+      "Moricone",
+      "Palombara Sabina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola di Bari (XVI secolo)",
+      "Chiesa della Beata Vergine del Carmelo",
+      "Chiesa di Santa Giuliana Falconieri"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Primavera (ultima domenica di giugno)",
+      "con il Palio degli Anelli"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montelanico",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058062",
+    "codice_catastale": "F534",
+    "popolazione": 2144,
+    "superficie_kmq": 34.99,
+    "densita": 61.3,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "montelanichesi",
+    "etimologia": "Deriva dal latino Metellanicus, ossia appartenente alla famiglia dei Metelli (con suffisso aggettivale -anicus), divenne in seguito Montellanico.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVIII"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Gorga; a est e sud: Carpineto Romano; a nord: Anagni (FR)",
+      "Gavignano; a ovest: Cori (LT)",
+      "Norma (LT); a ovest e nord: Segni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna del Soccorso",
+      "Chiesa di San Pietro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monteflavio",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058061",
+    "codice_catastale": "F504",
+    "popolazione": 1322,
+    "superficie_kmq": 17.2,
+    "densita": 76.9,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "monteflaviesi",
+    "etimologia": "Il nome è un composto di Monte e del nome del cardinale che fondò il paese: Cardinale Flavio Orsini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Licenza; a est e nord: Scandriglia (RI); a ovest: Montorio Romano",
+      "Moricone; a sud: Palombara Sabina",
+      "San Polo dei Cavalieri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Monte Calvario",
+      "Chiesa di Maria SS. Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Monte Falco"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Porzio Catone",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058064",
+    "codice_catastale": "F590",
+    "popolazione": 8631,
+    "superficie_kmq": 9.36,
+    "densita": 922.1,
+    "cap": "00078",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Antonino Martire",
+    "festa_patronale": "2 settembre",
+    "demonimo": "monteporziani",
+    "etimologia": "Nei documenti lo ritroviamo con il nome di Castrum Montis Portii e fu chiamato per lungo tempo Monte Porzio perché probabilmente di proprietà della Gens Porcia, famiglia a cui apparteneva anche M. Porcio Catone il Censore. L'aggiunta \"Catone\" è però successiva per distinguerlo da un comune omonimo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Italiana Città del Vulcano",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Monte Compatri; a nord: Roma; a ovest: Frascati; a sud: Grottaferrata"
+    ],
+    "musei": [
+      "Museo Diffuso del Vino",
+      "Museo dell'Osservatorio",
+      "Museo della Città"
+    ],
+    "ville_palazzi": [
+      "Villa Mondragone (sedicesimo secolo)"
+    ],
+    "chiese": [
+      "Eremo di Camaldoli",
+      "Chiesa di San Gregorio Magno e Antonino Martire (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Rovine di Tusculum, antica città romana",
+      "Osservatorio Astronomico di Roma",
+      "Complesso archeologico monumentale del Barco Borghese"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Compatri",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058060",
+    "codice_catastale": "F477",
+    "popolazione": 12023,
+    "superficie_kmq": 24.38,
+    "densita": 493.2,
+    "cap": "00077",
+    "prefisso_telefonico": "06",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "monticiani",
+    "etimologia": "E' un composto di \"Monte\" e del latino computer, -tris, ossia amico, o del cretese Kuompos, ossia \"eccelso\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Laghetto",
+      "Molara",
+      "Pantano",
+      "Osa"
+    ],
+    "comuni_confinanti": [
+      "Colonna",
+      "Grottaferrata",
+      "Monte Porzio Catone",
+      "Rocca di Papa",
+      "Rocca Priora",
+      "Roma",
+      "San Cesareo",
+      "Zagarolo"
+    ],
+    "musei": [
+      "Pinacoteca di San Silvestro"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento di San Silvestro",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana dell'Angelo"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Calahorra (La Rioja",
+      "Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mentana",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058059",
+    "codice_catastale": "F127",
+    "popolazione": 23122,
+    "superficie_kmq": 24.09,
+    "densita": 959.8,
+    "cap": "00013",
+    "prefisso_telefonico": "06",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "mentanesi",
+    "etimologia": "Riprende il nome Nomentum, ossia l'antico nome del luogo ove sorse l'insediamento. Con il tempo diventò Nomentana, poi Lamentana con il successivo distacco della sillaba La (considerata come articolo) quindi divenne La Mentana.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Casali",
+      "Castelchiodato"
+    ],
+    "comuni_confinanti": [
+      "A nord-est: Palombara Sabina; a ord-ovest: Monterotondo; a ovest: Roma; a sud-est: Sant'Angelo Romano; a sud-ovest: Fonte Nuova"
+    ],
+    "musei": [
+      "Museo Nazionale Garibaldino"
+    ],
+    "ville_palazzi": [
+      "Palazzo Crescenzio"
+    ],
+    "chiese": [
+      "Chiesa Santa Maria degli Angeli",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mazzano Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058058",
+    "codice_catastale": "F064",
+    "popolazione": 3135,
+    "superficie_kmq": 28.84,
+    "densita": 108.7,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "San Nicola",
+    "festa_patronale": "7 settembre",
+    "demonimo": "mazzanesi",
+    "etimologia": "Deriva dal nome latino di persona Mattius o Matius con l'aggiunta di -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio",
+      "Parco suburbano Valle del Treja"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Calcata (VT)",
+      "Magliano Romano; a nord: Castel Sant'Elia (VT)",
+      "Faleria (VT); a ovest: Nepi (VT); a sud e ovest: Campagnano di Roma"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo baronale di Everso e Dolce degli Anguillara"
+    ],
+    "chiese": [
+      "Chiesetta di San Sebastiano"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di San Valentino (ruderi)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marino",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058057",
+    "codice_catastale": "E958",
+    "popolazione": 43797,
+    "superficie_kmq": 26.1,
+    "densita": 1678.0,
+    "cap": "00047",
+    "prefisso_telefonico": "06",
+    "patrono": "San Barnaba",
+    "festa_patronale": "11 giugno",
+    "demonimo": "marinesi",
+    "etimologia": "Secondo alcuni è un nome di persona, secondo altri riflette il nome latino Marius con l'aggiunta del suffisso -anus. Un'altra ipotesi ritiene che sia derivato da Massa Murinas, ossia una parte del fondo di Morena.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani",
+      "Parco dell'Appia Antica",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Marino Centro",
+      "Frattocchie",
+      "Santa Maria delle Mole",
+      "Cava dei Selci",
+      "Due Santi",
+      "Castelluccia",
+      "Fontana Sala"
+    ],
+    "comuni_confinanti": [
+      "A est: Rocca di Papa; a nord: Ciampino; a nord e est: Grottaferrata; a ovest: Roma; a sud: Castel Gandolfo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna dell'Acqua Santa",
+      "Chiesa di Santa Maria delle Grazie (XVII secolo)",
+      "Chiesa del SS. Rosario",
+      "Cappella del Gonfalone",
+      "Basilica Collegiata di San Barnaba Apostolo, eretta nel 1640 per volontà del cardinale Girolamo Colonna e progettata da Antonio Del Grande"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana di Nettuno, nota anche come Fontana del Cavallo",
+      "Fontana degli Schiavi, detta anche dei Mori"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del'Uva (prima domenica di ottobre)",
+      "con corteo storico in costume rinascimentale"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marcellina",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058056",
+    "codice_catastale": "E924",
+    "popolazione": 7363,
+    "superficie_kmq": 15.27,
+    "densita": 482.2,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "Madonna delle Grazie",
+    "festa_patronale": "15 settembre",
+    "demonimo": "marcellinesi",
+    "etimologia": "La zona era un Castrum Marcellini, quindi appartenente alla famiglia Marcellini o De Marcellis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": [
+      "Scalo Ferrroviario",
+      "Campetella"
+    ],
+    "comuni_confinanti": [
+      "A nord",
+      "est e ovest: San Polo dei Cavalieri; a ovest: Guidonia Montecelio; a sud: Tivoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie in Monte Dominici",
+      "Chiesa di Cristo Re"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marano Equo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058055",
+    "codice_catastale": "E908",
+    "popolazione": 780,
+    "superficie_kmq": 7.65,
+    "densita": 102.0,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "maranesi",
+    "etimologia": "Secondo alcuni deriva dal nome latino di persona Marius a cui si aggiunge il suffisso -anus con il successivo passaggio da Marianus a Maranus. Secondo altri il nome deriva dalle acque perenni che si trovano in zona, dette \"marane\". La specifica \"Equo\" si riferisce al popolo degli Equi, in latino Aequi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Agosta",
+      "Cervara di Roma; a nord: Arsoli",
+      "Roviano; a ovest: Anticoli Corrado; a sud: Rocca Canterano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Quercia",
+      "Chiesa parrocchiale di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Manziana",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058054",
+    "codice_catastale": "E900",
+    "popolazione": 7711,
+    "superficie_kmq": 23.79,
+    "densita": 324.1,
+    "cap": "00066",
+    "prefisso_telefonico": "06",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "manzianesi",
+    "etimologia": "Per lungo tempo si è ritenuto che il nome del luogo potesse derivare dal termine latino lapis Anitianus che identificava una pietra usata per le primitive costruzioni del paese, gli studiosi però considerano non veritiera questa ipotesi. Si pensa invece ad un origine gentilizia, dalla Gens Mantia. Secondo alcuni il nome deriva da Manthus, una divinità infernale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Naturale di Bracciano - Martignano"
+    ],
+    "localita_frazioni": [
+      "Quadroni"
+    ],
+    "comuni_confinanti": [
+      "Bracciano",
+      "Canale Monterano",
+      "Oriolo Romano (VT)",
+      "Tolfa"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Tittoni"
+    ],
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana del Mascherino",
+      "dalla quale sgorga l'acqua della fonte Precilia"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mandela",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058053",
+    "codice_catastale": "B632",
+    "popolazione": 934,
+    "superficie_kmq": 13.26,
+    "densita": 70.4,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Nicola",
+    "festa_patronale": "prima domenica di dicembre",
+    "demonimo": "mandelesi",
+    "etimologia": "Menzionato nei documenti con il nome di Cantalupo Procella e poi di Cantalupo Bardella, in seguito fu chiamata Mandela che è il nome che gli era stato attribuito già in passato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Anticoli Corrado",
+      "Cineto Romano",
+      "Saracinesco; a nord: Licenza",
+      "Percile; a ovest: Roccagiovine; a sud: Vicovaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Vincenzo",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Marchesi del Gallo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Magliano Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058052",
+    "codice_catastale": "E813",
+    "popolazione": 1413,
+    "superficie_kmq": 21.14,
+    "densita": 66.8,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "maglianesi",
+    "etimologia": "Chiamato in passato Maliano dal nome latino di persona Mallius a cui si aggiunge il suffisso -anus che indica proprietà.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Morlupo; a nord: Calcata (VT); a nord e est: Rignano Flaminio; a ovest: Campagnano di Roma",
+      "Mazzano Romano; a sud: Castelnuovo di Porto",
+      "Sacrofano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista (XV secolo)",
+      "Chiesa Madonna delle Grazie (XVI secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Licenza",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058051",
+    "codice_catastale": "E576",
+    "popolazione": 983,
+    "superficie_kmq": 17.66,
+    "densita": 55.7,
+    "cap": "00026",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "licentini",
+    "etimologia": "Prende il nome del fiume che scorre lungo la vallata: il Licenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale dei Monti Lucretili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Mandela",
+      "Percile; a nord: Scandriglia (RI); a ovest: Monteflavio",
+      "San Polo dei Cavalieri; a sud: Roccagiovine"
+    ],
+    "musei": [
+      "Museo Oraziano"
+    ],
+    "ville_palazzi": [
+      "Palazzo Orsini-Borghese"
+    ],
+    "chiese": [
+      "Chiesa dell'Immacolata Concezione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lariano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058115",
+    "codice_catastale": "M207",
+    "popolazione": 13509,
+    "superficie_kmq": 27.0,
+    "densita": 500.3,
+    "cap": "00076",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Eurosia",
+    "festa_patronale": "25 maggio",
+    "demonimo": "larianesi",
+    "etimologia": "Potrebbe derivare dal nome latino di persona Larius con l'aggiunta del suffisso -anus che indica proprietà. Secondo altri il nome deriva da un antico ara Jani, ossia un tempio eretto in onore al dio Giano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Cori (LT); a est e sud: Artena; a nord: Rocca Priora; a ovest: Rocca di Papa; a ovest e sud: Velletri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Intemerata",
+      "Chiesa della Madonna del Buon Consiglio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lanuvio",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058050",
+    "codice_catastale": "C767",
+    "popolazione": 13605,
+    "superficie_kmq": 43.91,
+    "densita": 309.8,
+    "cap": "00075",
+    "prefisso_telefonico": "06",
+    "patrono": "Santi Filippo e Giacomo",
+    "festa_patronale": "3 maggio",
+    "demonimo": "lanuvini",
+    "etimologia": "Chiamata anticamente Lanuvium, probabilmente deriva dal latino lama, ossia palude.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazione: Campoleone;agglomerati urbani: Bellavista",
+      "Colle Cavaliere",
+      "Farnete",
+      "Malcavallo",
+      "Monte Giove",
+      "Piano Marano",
+      "Stragonello;località: Crocette"
+    ],
+    "comuni_confinanti": [
+      "Aprilia (LT)",
+      "Ariccia",
+      "Genzano di Roma",
+      "Velletri"
+    ],
+    "musei": [
+      "Museo Civico Lanuvino"
+    ],
+    "ville_palazzi": [
+      "Palazzo Baronale dei Colonna",
+      "Villa Sforza Cesarini"
+    ],
+    "chiese": [
+      "Santuario della Madonna delle Grazie",
+      "Chiesa Collegiata di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Medioevale di Civita Lavinia",
+      "Torre Medievale"
+    ],
+    "fontane": [
+      "Fontana di Piazza Mazzini",
+      "Fontana degli scogli"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "resti del Tempio di Giunone Sospita"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Centuripe (Enna-Sicilia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ladispoli",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058116",
+    "codice_catastale": "M212",
+    "popolazione": 41174,
+    "superficie_kmq": 26.0,
+    "densita": 1583.6,
+    "cap": "00055",
+    "prefisso_telefonico": "06",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "ladispolani",
+    "etimologia": "Fondata da Ladislao Odescalchi, fu chiamata Ladislao polis, ossia città di Ladislao.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Cerveteri; a sud: Fiumicino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello Odescalchi",
+      "Castello dei Monteroni"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Carciofo (terza settimana di aprile)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Labico",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058049",
+    "codice_catastale": "E392",
+    "popolazione": 6445,
+    "superficie_kmq": 11.79,
+    "densita": 546.6,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Rocco",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "labicani",
+    "etimologia": "Chiamata in passato Lugnano, poi Lugnano Labicano, da cui Labicum fino ad arrivare a Labico.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Palestrina",
+      "Valmontone"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Giuliani"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Andrea Apostolo (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Jenne",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058048",
+    "codice_catastale": "E382",
+    "popolazione": 364,
+    "superficie_kmq": 31.52,
+    "densita": 11.5,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "jennesi",
+    "etimologia": "La provenienza del nome è di difficile interpretazione. Secondo alcuni deriva dal latino ianua, ossia porta. Altri credono che essendo il luogo menzionato nel XI secolo fundus Gehenna si riferisca alla Gehenna, ossia l'inferno, senza però indicare un valido motivo per l'associazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale Regionale dei Monti Simbruini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Vallepietra; a nord e ovest: Subiaco; a sud: Trevi nel Lazio (FR); a sud e ovest: Arcinazzo Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Guidonia Montecelio",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058047",
+    "codice_catastale": "E263",
+    "popolazione": 89141,
+    "superficie_kmq": 79.06,
+    "densita": 1127.5,
+    "cap": "00012",
+    "prefisso_telefonico": "0774",
+    "patrono": "Madonna di Loreto",
+    "festa_patronale": "10 dicembre",
+    "demonimo": "guidoniani o montecellesi",
+    "etimologia": "La prima parte del nome fu aggiunta in commemorazione del generale dell'aeronautica Alessandro Guidoni, precipitato e deceduto sul campo aeronautico di Montecelio mentre collaudava un nuovo paracadute. La seconda parte del nome deriva da Monticelli (nome del comune risalente al XII secolo) che è il diminutivo plurale della parola \"monte\".",
+    "il_comune_e": [
+      "Una Città di Fondazione (centri urbani realizzati con progetto unitario)"
+    ],
+    "fa_parte_di": [
+      "Parco Archeologico Inviolata"
+    ],
+    "localita_frazioni": [
+      "La Botte",
+      "Montecelio",
+      "Villalba",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Fonte Nuova",
+      "Marcellina",
+      "Palombara Sabina",
+      "Roma",
+      "San Polo dei Cavalieri",
+      "Sant'Angelo Romano",
+      "Tivoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Evangelista (Montecelio)",
+      "Chiesa di Santa Maria di Loreto (Guidonia)",
+      "Chiesa di San Michele Arcangelo (Montecelio)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grottaferrata",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058046",
+    "codice_catastale": "E204",
+    "popolazione": 20450,
+    "superficie_kmq": 18.36,
+    "densita": 1113.8,
+    "cap": "00046",
+    "prefisso_telefonico": "06",
+    "patrono": "San Nilo",
+    "festa_patronale": "26 settembre",
+    "demonimo": "grottaferratesi",
+    "etimologia": "E' un nome composto da \"grotta\" il cui significato è evidente e \"ferrata\". Ma non si riesce a stabilire se si riferisce ad una grotta chiusa da un'inferriata (nucleo antico dell'abbazia menzionato nei documenti con il nome di Crypta Ferrata) oppure da una miniera di ferro (ferriera).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castel Gandolfo",
+      "Ciampino",
+      "Frascati",
+      "Marino",
+      "Monte Compatri",
+      "Monte Porzio Catone",
+      "Rocca di Papa",
+      "Roma"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Grazioli",
+      "Villa Cavalletti",
+      "Villa Muti"
+    ],
+    "chiese": [
+      "Santuario Santa Maria di Grottaferrata :: Monaci Basiliani",
+      "Abbazia di San Nilo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera Nazionale di Grottaferrata (verso fine marzo), artigianato artistico, architettura, arredo giardino, florovivaismo, enogastronomia",
+      "Venerdì Santo secondo il Rito Greco-Ortodosso (Venerdì Santo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gorga",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058045",
+    "codice_catastale": "E091",
+    "popolazione": 720,
+    "superficie_kmq": 26.38,
+    "densita": 27.3,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Domenico",
+    "festa_patronale": "prima domenica di agosto",
+    "demonimo": "gorgani",
+    "etimologia": "Deriva dal latino gurges ossia sorgente, riferendosi ad una fonte d'acqua sita nei pressi. Secondo alcuni il nome si riferisce invece al suo aspetto, è infatti una \"gorga\" ossia una gola.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVIII"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Morolo (FR); a est e sud: Supino (FR); a nord: Anagni (FR)",
+      "Sgurgola (FR); a ovest: Montelanico; a sud: Carpineto Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Cardinale Santucci"
+    ],
+    "chiese": [
+      "Chiesa SS. Vergine del Rosario",
+      "Chiesa di Santa Maria in Cielo",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gerano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058044",
+    "codice_catastale": "D978",
+    "popolazione": 1259,
+    "superficie_kmq": 10.09,
+    "densita": 124.8,
+    "cap": "00025",
+    "prefisso_telefonico": "0774",
+    "patrono": "Sant'Anatolia",
+    "festa_patronale": "9 giugno",
+    "demonimo": "geranesi",
+    "etimologia": "Secondo alcuni deriva dal nome latino di persona Agerius con il suffisso -anus. Secondo altri dall'antico nome del monte, ossia Geranum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Canterano",
+      "Rocca Santo Stefano; a nord: Cerreto Laziale",
+      "Rocca Canterano; a ovest: Pisoniano; a sud: Bellegra"
+    ],
+    "musei": [
+      "Mostra Permanente \"La Casa delle Antiche Scatole di Latta\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo martire",
+      "Chiesa arcipretale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Infiorata e Festa della Madonna del Cuore (fine settimana successivo al 25 aprile)"
+    ],
+    "gemellaggi": [
+      "Gharb (Gozo - Malta)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Genzano di Roma",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058043",
+    "codice_catastale": "D972",
+    "popolazione": 23894,
+    "superficie_kmq": 18.15,
+    "densita": 1316.5,
+    "cap": "00045",
+    "prefisso_telefonico": "06",
+    "patrono": "San Tommaso da Villanova",
+    "festa_patronale": "18 settembre",
+    "demonimo": "genzanesi",
+    "etimologia": "Deriva probabilmente dal nome latino di persona Genicius o di famiglia Gentia. Si ipotizza che possa derivare anche dal nome Cinzia che è il nome dato alla dea Diana (dea della caccia) a cui è dedicato un santuario sito nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Città del Pane",
+      "Associazione Italiana Città del Vulcano",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazione: Landi;\nlocalità: Muti",
+      "Colli di Cicerone",
+      "Vigne Nuove",
+      "San Gennaro"
+    ],
+    "comuni_confinanti": [
+      "A est: Nemi",
+      "Velletri; a nord e ovest: Ariccia; a sud e ovest: Lanuvio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Cima",
+      "Chiesa della Ss. Trinità (XVIII-XIX secolo)",
+      "Chiesa della Ss. Annunziata (XVI-XVIII secolo)",
+      "Chiesa dei Cappuccini (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Pane Casereccio (terza settimana di settembre)",
+      "Infiorata (Corpus Domini), con la Processione del Corpus Domini"
+    ],
+    "gemellaggi": [
+      "Chatillon (Francia)",
+      "Merseburg (Germania)",
+      "Mokotov-Varsavia (Polonia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Genazzano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058042",
+    "codice_catastale": "D964",
+    "popolazione": 5984,
+    "superficie_kmq": 32.04,
+    "densita": 186.8,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "genazzanesi",
+    "etimologia": "Ha origine gentilizia, infatti deriva dal nome latino di persona Genatius con l'aggiunta del suffisso -anus che indica proprietà o da gens Genucia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capranica Prenestina",
+      "Cave",
+      "Colleferro",
+      "Olevano Romano",
+      "Paliano (FR)",
+      "Rocca di Cave",
+      "San Vito Romano",
+      "Valmontone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madre del Buon Consiglio :: Frati Agostiniani",
+      "Chiesa di San Nicola (XIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gavignano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058041",
+    "codice_catastale": "D945",
+    "popolazione": 1907,
+    "superficie_kmq": 14.89,
+    "densita": 128.1,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "gavignanesi",
+    "etimologia": "Chiamata in passato Gabiniano, deriva dal nome latino di persona Gabinius con la trasformazione della \"b\" in \"v\" e l'aggiunta del suffisso -anus che indica proprietà.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Rossilli"
+    ],
+    "comuni_confinanti": [
+      "A est: Anagni (FR); a nord: Paliano (FR); a nord e ovest: Segni; a sud: Montelanico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Traietto, edificato dai Signori di Anagni",
+      "Palazzo Baronale, detto Corte"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Assunta",
+      "Chiesa di San Rocco",
+      "Chiesa del Calvario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gallicano nel Lazio",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058040",
+    "codice_catastale": "D875",
+    "popolazione": 6326,
+    "superficie_kmq": 26.03,
+    "densita": 243.0,
+    "cap": "00010",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "gallicanesi",
+    "etimologia": "Ha origine dal nome latino Gallicanus, possessore di una villa in zona. Potrebbe anche ispirarsi a San Gallicano martire.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XI Castelli Romani-Prenestini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Roma; a sud: Palestrina; a sud e ovest: Zagarolo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Andrea Apostolo",
+      "Chiesa di San Rocco",
+      "Cappella di Santa Maria di Cavamonte"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Passeano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frascati",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058039",
+    "codice_catastale": "D773",
+    "popolazione": 22331,
+    "superficie_kmq": 22.41,
+    "densita": 996.5,
+    "cap": "00044",
+    "prefisso_telefonico": "06",
+    "patrono": "Santi Filippo e Giacomo",
+    "festa_patronale": "3 maggio",
+    "demonimo": "frascatani",
+    "etimologia": "Il nome secondo la tradizione è legato alla freschezza delle sue acque. Secondo un'altra ipotesi il nome deriva da frasca o da frascata, che si riferisce o al diritto per gli abitanti di tagliare la legna nei boschi circostanti o all'abbondanza di arbusti presenti in zona",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Vermicino",
+      "Cocciano",
+      "Macchia dello Sterparo"
+    ],
+    "comuni_confinanti": [
+      "A est: Monte Porzio Catone; a nord e ovest: Roma; a sud: Grottaferrata"
+    ],
+    "musei": [
+      "Museo Tuscolano",
+      "Museo Etiopico \"Guglielmo Massaia\""
+    ],
+    "ville_palazzi": [
+      "Villa Aldobrandini o Belvedere",
+      "Villa Falconieri, in origine Villa Rufina o \"La Rufina\"",
+      "Villa Lancellotti, già dei Farnese e poi dei Piccolomini",
+      "Villa Torlonia, con il Teatro delle acque del Maderno"
+    ],
+    "chiese": [
+      "Santuario Santa Maria di Capocroce :: Salesiani di Don Bosco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bonn-Bad Godesberg (Germania)",
+      "Kortrijk (Belgio)",
+      "Saint Cloud (Francia)",
+      "Windsor-Maidenhead (Gran Bretagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Formello",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058038",
+    "codice_catastale": "D707",
+    "popolazione": 13010,
+    "superficie_kmq": 31.11,
+    "densita": 418.2,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "formellesi",
+    "etimologia": "Potrebbe essere il diminutivo di forma riferendosi ad un canale artificiale o a delle condutture dove defluiva l'acqua.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio"
+    ],
+    "localita_frazioni": [
+      "Prato Roseto",
+      "Le Rughe",
+      "Castel de Ceveri"
+    ],
+    "comuni_confinanti": [
+      "A est: Sacrofano; a nord e ovest: Campagnano di Roma; a sud e ovest e est: Roma"
+    ],
+    "musei": [
+      "Museo Civico dell'Agro Veientano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fonte Nuova",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058122",
+    "codice_catastale": "M309",
+    "popolazione": 32917,
+    "superficie_kmq": 20.15,
+    "densita": 1633.6,
+    "cap": "00013",
+    "prefisso_telefonico": "06",
+    "patrono": "San Giuseppe Artigiano",
+    "festa_patronale": "19 marzo",
+    "demonimo": "fontenovesi",
+    "etimologia": "Il significato è evidente. E' un nome composto da \"fonte\" e dall'aggettivo \"nuova\".",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Tor Lupara",
+      "Santa Lucia"
+    ],
+    "comuni_confinanti": [
+      "Guidonia Montecelio",
+      "Mentana",
+      "Roma",
+      "Sant'Angelo Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Gesù Maestro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiumicino",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058120",
+    "codice_catastale": "M297",
+    "popolazione": 78887,
+    "superficie_kmq": 213.44,
+    "densita": 369.6,
+    "cap": "00054",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Ippolito",
+    "festa_patronale": "5 ottobre",
+    "demonimo": "fiumicinesi",
+    "etimologia": "Il nome deriva dal latino flumen micinum, ossia piccolo fiume o foce micina, piccola foce riferendosi al canale che funge da attracco per le imbarcazioni.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e sud: Roma; a nord: Anguillara Sabazia; a ovest: Cerveteri",
+      "Ladispoli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Salute"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Oasi di Porto"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Filacciano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058037",
+    "codice_catastale": "D586",
+    "popolazione": 462,
+    "superficie_kmq": 5.74,
+    "densita": 80.5,
+    "cap": "00060",
+    "prefisso_telefonico": "0765",
+    "patrono": "Sant'Egidio Abate",
+    "festa_patronale": "primo settembre",
+    "demonimo": "filaccianesi",
+    "etimologia": "Il territorio in passato era un fundus Flaccianus, ossia terreno (fondo) appartenente a Flaccio, quindi il nome deriva probabilmente da Flaccius con il suffisso -anus che indica proprietà.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Poggio Mirteto (RI)",
+      "Torrita Tiberina; a nord: Forano (RI); a ovest: Ponzano Romano; a sud: Nazzano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Principi Del Drago"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Egidio Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiano Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058036",
+    "codice_catastale": "D561",
+    "popolazione": 15708,
+    "superficie_kmq": 41.41,
+    "densita": 379.3,
+    "cap": "00065",
+    "prefisso_telefonico": "0765",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "3 agosto",
+    "demonimo": "fianesi",
+    "etimologia": "Probabilmente deriva da Flaiano dal nome latino di persona Flavius a cui si aggiunge il suffisso -anus che indica appartenenza, oppure da Flavianum per i possedimenti che la gens Flavia aveva in zona. Si ipotizza (poco concretamente) che possa derivare dalla forma diminutiva latina fanulum che significa tempietto.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Montelibretti",
+      "Montopoli di Sabina (RI); a nord: Nazzano",
+      "Torrita Tiberina; a ovest: Civitella San Paolo; a sud e ovest: Capena"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santo Spirito"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Ducale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colonna",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058035",
+    "codice_catastale": "C900",
+    "popolazione": 4309,
+    "superficie_kmq": 3.5,
+    "densita": 1231.1,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "colonnesi",
+    "etimologia": "Il nome deriva dal latino ad columnam, ossia \"alla colonna\" riferendosi ad una colonna superstite dell'antico insediamento.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Comunità Montana Zona XI Castelli Romani-Prenestini",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Monte Compatri",
+      "Roma",
+      "San Cesareo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola di Bari",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colleferro",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058034",
+    "codice_catastale": "C858",
+    "popolazione": 21521,
+    "superficie_kmq": 27.48,
+    "densita": 783.2,
+    "cap": "00034",
+    "prefisso_telefonico": "06",
+    "patrono": "Santa Barbara",
+    "festa_patronale": "4 dicembre",
+    "demonimo": "colleferrini",
+    "etimologia": "Il luogo era identificato con il nome di Verrugo collis (da Verrugo riferito al latino verruca, ossia altura) da cui Ferrugo collis quindi Ferro collis o Collis ferro. Secondo alcuni il nome si riferisce alla lavorazione del ferro che avveniva sul colle.",
+    "il_comune_e": [
+      "Una Città di Fondazione (centri urbani realizzati con progetto unitario)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Paliano (FR); a nord: Genazzano; a ovest: Artena",
+      "Valmontone; a sud: Segni"
+    ],
+    "musei": [
+      "Antiquarium Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Barbara",
+      "Chiesa dell' Immacolata",
+      "Chiesa di San Bruno"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Civitella San Paolo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058033",
+    "codice_catastale": "C784",
+    "popolazione": 2075,
+    "superficie_kmq": 20.52,
+    "densita": 101.1,
+    "cap": "00060",
+    "prefisso_telefonico": "0765",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "civitellesi",
+    "etimologia": "Nei documenti si trova menzionato con il nome di civitatis de colonis, divenuto poi Civitella. La prima parte del nome ha un'origine chiara: si riferisce al latino civitas. La specifica San Paolo è riferita al monastero sito nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e sud: Fiano Romano; a nord: Nazzano",
+      "Ponzano Romano; a ovest: Rignano Flaminio",
+      "Sant'Oreste; a sud: Capena"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo",
+      "Chiesa di San Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dei Canestri (primo maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Civitavecchia",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058032",
+    "codice_catastale": "C773",
+    "popolazione": 52816,
+    "superficie_kmq": 71.95,
+    "densita": 734.1,
+    "cap": "00053",
+    "prefisso_telefonico": "0766",
+    "patrono": "Santa Fermina",
+    "festa_patronale": "28 aprile",
+    "demonimo": "civitavecchiesi",
+    "etimologia": "Chiamata in passato centumcellae, fu abbandonata dopo l'arrivo dei saraceni. Quando fu nuovamente abitata le fu assegnato il nome di Civitas Vetula, ossia \"città vecchia\".",
+    "il_comune_e": [
+      "Bandiera Blu Approdi Turistici 2007 (Porto Turistico Riva di Traiano)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Allumiere; a nord: Tarquinia (VT); a sud: Santa Marinella"
+    ],
+    "musei": [
+      "Museo Nazionale Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei SS. Martiri Giapponesi"
+    ],
+    "castelli_fortificazioni": [
+      "Forte Michelangelo",
+      "a pianta rettangolare"
+    ],
+    "fontane": [
+      "Fontana del Vanvitelli"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Traiano"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Amelia (Terni - Umbria)",
+      "Betlemme (Palestina)",
+      "Ishinomaki (Giappone)",
+      "Nantong (Cina)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cineto Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058031",
+    "codice_catastale": "C702",
+    "popolazione": 595,
+    "superficie_kmq": 10.54,
+    "densita": 56.5,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "cinetesi",
+    "etimologia": "Chiamato in passato Scarpa, fu poi denominato Cineto riferendosi al latino cicinum, ossia ricino (pianta dai cui semi si estraeva un olio usato come medicinale) con l'aggiunta del suffisso collettivo -etum che indica abbondanza. La specifica \"Romano\" è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Riofreddo; a nord: Percile",
+      "Vallinfreda; a ovest: Mandela; a sud: Anticoli Corrado",
+      "Roviano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Lago",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Orsini"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ciciliano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058030",
+    "codice_catastale": "C677",
+    "popolazione": 1333,
+    "superficie_kmq": 19.03,
+    "densita": 70.0,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "Santa Liberata",
+    "festa_patronale": "18 agosto",
+    "demonimo": "cicilianesi",
+    "etimologia": "Potrebbe derivare dal nome latino di persona Caecilius o Caesilius con l'aggiunta del suffisso -anus che indica appartenenza, oppure da gens Caecilia, famiglia che occupò la zona in epoca imperiale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Cerreto Laziale; a nord: Sambuci; a ovest: Castel Madama",
+      "San Gregorio da Sassola; a sud: Capranica Prenestina",
+      "Pisoniano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Colonna"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria Assunta",
+      "Chiesa di Santa Liberata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ciampino",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058118",
+    "codice_catastale": "M272",
+    "popolazione": 38533,
+    "superficie_kmq": 11.0,
+    "densita": 3503.0,
+    "cap": "00043",
+    "prefisso_telefonico": "06",
+    "patrono": "Sacro Cuore di Gesù",
+    "festa_patronale": "2 giugno",
+    "demonimo": "ciampinesi",
+    "etimologia": "Probabilmente deriva dal nome del prelato pontificio Giovanni Giustino Ciampini che possedeva una villa in zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco dell'Appia Antica",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Grottaferrata; a nord e ovest: Roma; a sud: Marino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Pendik (Turchia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerveteri",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058029",
+    "codice_catastale": "C552",
+    "popolazione": 37759,
+    "superficie_kmq": 134.43,
+    "densita": 280.9,
+    "cap": "00052",
+    "prefisso_telefonico": "06",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "8 maggio",
+    "demonimo": "cerveterani",
+    "etimologia": "Denominata Caere vetus quando gli abitanti dell'antica città Caere tornarono in loco dopo un periodo di allontanamento causato delle incursioni saracene. L'aggettivo vetus, che significa vecchio, si aggiunse al nome per distinguerlo dall'altro centro che prende il nome di Cere-Nova.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Città Italiane Patrimonio Mondiale Unesco"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Anguillara Sabazia",
+      "Bracciano",
+      "Fiumicino",
+      "Ladispoli",
+      "Santa Marinella",
+      "Tolfa"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale Etrusco"
+    ],
+    "ville_palazzi": [
+      "Palazzo Ruspoli (XVI secolo)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cervara di Roma",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058028",
+    "codice_catastale": "C543",
+    "popolazione": 448,
+    "superficie_kmq": 31.63,
+    "densita": 14.2,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Felice",
+    "festa_patronale": "2 luglio",
+    "demonimo": "cervaroli",
+    "etimologia": "Secondo la tradizione il nome deriva dal tempo in cui i Saraceni lo chiamarono Cervara. Secondo un'altra ipotesi il nome deriva dal latino cervus con l'aggiunta del suffisso collettivo -ara che attribuisce il senso di \"luogo dove sono presenti i cervi\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale Regionale dei Monti Simbruini",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Agosta",
+      "Arsoli",
+      "Camerata Nuova",
+      "Marano Equo",
+      "Rocca di Botte (AQ)",
+      "Subiaco"
+    ],
+    "musei": [
+      "Museo Ex Voto di Santa Maria della Portella"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Portella",
+      "Chiesa di Maria SS. della Visitazione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerreto Laziale",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058027",
+    "codice_catastale": "C518",
+    "popolazione": 1120,
+    "superficie_kmq": 11.77,
+    "densita": 95.2,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "cerretani",
+    "etimologia": "Secondo alcuni il nome si riferisce al Monte Cerretum nei pressi del quale è situato il paese. Secondo altri deriva dal latino cerrus, ossia cerro (albero simile alla quercia) con l'aggiunta del suffisso collettivo -etum che indica abbondanza. La specifica \"Laziale\" è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ciciliano",
+      "Gerano",
+      "Pisoniano",
+      "Rocca Canterano",
+      "Sambuci",
+      "Saracinesco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta (XVII secolo)",
+      "Chiesa di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Gatta (24-25 aprile)",
+      "con il Palio in costume d'epoca"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cave",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058026",
+    "codice_catastale": "C390",
+    "popolazione": 11378,
+    "superficie_kmq": 17.75,
+    "densita": 641.0,
+    "cap": "00033",
+    "prefisso_telefonico": "06",
+    "patrono": "Madonna del Campo",
+    "festa_patronale": "27 aprile",
+    "demonimo": "cavensi",
+    "etimologia": "Il nome probabilmente si riferisce alla presenza di cave di pozzolana (tufo vulcanico) e breccia in zona, anche se va ricordato che il nome \"Cave\" può indicare anche una \"valle stretta e buia\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XI Castelli Romani-Prenestini"
+    ],
+    "localita_frazioni": [
+      "Colle Palme",
+      "San Bartolomeo"
+    ],
+    "comuni_confinanti": [
+      "Genazzano",
+      "Palestrina",
+      "Rocca di Cave",
+      "Valmontone"
+    ],
+    "musei": [
+      "Museo Lorenzo Ferri",
+      "Museo Civico Città di Cave"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Lorenzo Martire",
+      "Chiesetta di Santa Maria del Rapello, detta di Sant'Anatolia",
+      "Chiesa parrocchiale San Carlo Borromeo",
+      "Chiesa di Santo Stefano",
+      "Chiesa di Santa Maria \"In Plateis\", detta Chiesa della Cona"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale \"Città di Cave\""
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Cateau-Cambrésis (Francia",
+      "dal 2005)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnuovo di Porto",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058024",
+    "codice_catastale": "C237",
+    "popolazione": 8597,
+    "superficie_kmq": 30.84,
+    "densita": 278.8,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Antonino",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "castelnuovesi",
+    "etimologia": "Il nome fa riferimento ad un Castrum Novum, castello nuovo (di costruzione più recente rispetto ad uno già esistente) presente in zona. La specifica \"di Porto\" fa riferimento alla vicina cittadina di Porto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Capena",
+      "Monterotondo; a nord: Morlupo; a nord e ovest: Magliano Romano; a ovest: Sacrofano; a sud: Riano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di SS Agostino e Antonio Abate",
+      "Chiesa di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel San Pietro Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058025",
+    "codice_catastale": "C266",
+    "popolazione": 886,
+    "superficie_kmq": 15.06,
+    "densita": 58.8,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "castellani",
+    "etimologia": "Il nome deriva dal latino Castrum Sancti Petri, in riferimento ad un oratorio dedicato a San Pietro. La specifica \"Romano\" lo distingue dagli omonimi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Frainili"
+    ],
+    "comuni_confinanti": [
+      "Capranica Prenestina",
+      "Palestrina",
+      "Poli",
+      "Rocca di Cave",
+      "Roma"
+    ],
+    "musei": [
+      "Museo delle arti contadine"
+    ],
+    "ville_palazzi": [
+      "Palazzo Mocci"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria della Costa",
+      "Chiesa di Santa Maria del Montirolo",
+      "Chiesa di San Pietro Apostolo",
+      "Cappella della Vergine Dolorosa (Chiesetta dell'Addolorata)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel Madama",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058023",
+    "codice_catastale": "C203",
+    "popolazione": 7422,
+    "superficie_kmq": 28.46,
+    "densita": 260.8,
+    "cap": "00024",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "castellani",
+    "etimologia": "Il termine castello deriva da Castrum. In passato era chiamato Castrum Sancti Angeli, ha poi assunto il nome attuale in onore di Margherita d'Austria (detta \"madama\") che ivi visse nel XVI secolo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ciciliano",
+      "Sambuci",
+      "San Gregorio da Sassola",
+      "Tivoli",
+      "Vicovaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Sebastiano",
+      "Chiesa di Sant'Anna, il nome originario è Santa Maria della Vittoria",
+      "Chiesa di San Quirico, con forma a capanna",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Lorenzo o del Suffragio",
+      "Tempietto Votivo dei Collicelli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel Gandolfo",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058022",
+    "codice_catastale": "C116",
+    "popolazione": 8971,
+    "superficie_kmq": 14.71,
+    "densita": 609.9,
+    "cap": "00073",
+    "prefisso_telefonico": "06",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "castellani",
+    "etimologia": "La prima parte del nome deriva da Castrum (Castello o fortezza) in riferimento ad un castello forse presente in zona. La seconda parte del nome deriva dal nome di famiglia Gandolfi, antichi proprietari del feudo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani",
+      "Associazione Italiana Città del Vulcano",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Pavona",
+      "Mole"
+    ],
+    "comuni_confinanti": [
+      "Albano Laziale",
+      "Grottaferrata",
+      "Marino",
+      "Rocca di Papa",
+      "Roma"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Papi",
+      "seicentesco voluto da Urbano VIII"
+    ],
+    "chiese": [
+      "Chiesa di San Tommaso da Villanova"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Chateauneuf du Pape (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casape",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058021",
+    "codice_catastale": "B932",
+    "popolazione": 722,
+    "superficie_kmq": 5.33,
+    "densita": 135.5,
+    "cap": "00010",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Pietro",
+    "festa_patronale": "18 agosto",
+    "demonimo": "casapesi",
+    "etimologia": "Esistono diverse ipotesi sulla provenienza del nome, secondo alcuni deriva da \"casa d'api\" in riferimento allo stemma civico dei Barberini (ove vi sono rappresentate delle api) che furono proprietari del feudo. Oppure potrebbe derivare dal nome germanico di persona Has(a)perht oppure dal composto latino casa Petri, casa di Pietro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Capranica Prenestina; a nord e ovest: San Gregorio da Sassola; a sud: Poli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale",
+      "Villa Patrizia"
+    ],
+    "chiese": [
+      "Chiesetta della miracolosa Madonna della Piazzetta",
+      "Chiesa di San Pietro Apostolo",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Baronale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carpineto Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058020",
+    "codice_catastale": "B828",
+    "popolazione": 4448,
+    "superficie_kmq": 84.48,
+    "densita": 52.7,
+    "cap": "00032",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Agostino",
+    "festa_patronale": "28 agosto",
+    "demonimo": "carpinetani",
+    "etimologia": "Deriva dal latino carpinus, ossia carpine (albero delle betulacee) con l'aggiunta del suffisso collettivo -etum che indica abbondanza. Secondo la tradizione il nome deriva dal suo fondatore Carpito Silvio. La specifica \"Romano\" è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVIII",
+      "Associazione Nazionale Città del Castagno",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Gorga",
+      "Maenza (LT)",
+      "Supino (FR); a nord: Montelanico; a ovest: Bassiano (LT)",
+      "Norma (LT)",
+      "Sezze (LT); a sud: Roccagorga (LT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Angelo",
+      "Chiesa di Santa Maria del Popolo (XIII secolo)",
+      "Chiesa di San Pietro",
+      "Chiesa Collegiata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Cascia (Perugia-Umbria)",
+      "Hamrun (Malta)",
+      "Wadowice (Polonia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capranica Prenestina",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058019",
+    "codice_catastale": "B687",
+    "popolazione": 351,
+    "superficie_kmq": 20.2,
+    "densita": 17.4,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "capranicensi",
+    "etimologia": "La prima parte del nome (in passato Capralica) forse deriva dal latino capra per indicare un luogo adatto all'allevamento. Prenestina è una specifica aggiunta in seguito e deriva dall'antico centro Praenestre.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona IX Monti Sabini-Tiburtini"
+    ],
+    "localita_frazioni": [
+      "Guadagnolo"
+    ],
+    "comuni_confinanti": [
+      "A est: Pisoniano",
+      "San Vito Romano; a nord: Ciciliano",
+      "San Gregorio da Sassola; a ovest: Casape",
+      "Castel San Pietro Romano",
+      "Poli; a sud: Genazzano",
+      "Rocca di Cave"
+    ],
+    "musei": [
+      "Museo Civico Naturalistico dei Monti Prenestini"
+    ],
+    "ville_palazzi": [
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa della Maddalena",
+      "Chiesa rurale della Madonna delle Fratte",
+      "Chiesetta rurale di San Rocco",
+      "Chiesa di San Giacomo",
+      "Santuario Madre delle Grazie Mentorella :: Padri Resurrezionisti"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capena",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058018",
+    "codice_catastale": "B649",
+    "popolazione": 10659,
+    "superficie_kmq": 29.45,
+    "densita": 361.9,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "San Luca",
+    "festa_patronale": "18 ottobre",
+    "demonimo": "capenati",
+    "etimologia": "Il nome si riferisce all'antica città italica chiamata Capena che potrebbe derivare da cape, ossia conca, quindi avvallamento, per la sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Fiano Romano",
+      "Montelibretti; a nord: Civitella San Paolo",
+      "Rignano Flaminio; a ovest: Castelnuovo di Porto",
+      "Morlupo; a sud: Monterotondo"
+    ],
+    "musei": [
+      "Museo della Torre dell'Orologio",
+      "Museo Archeologico Lucus Feroniae"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio Abate, barocca",
+      "Chiesa di San Leone",
+      "Chiesa della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Canterano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058017",
+    "codice_catastale": "B635",
+    "popolazione": 346,
+    "superficie_kmq": 7.32,
+    "densita": 47.3,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Mauro",
+    "festa_patronale": "15 gennaio",
+    "demonimo": "canteranesi",
+    "etimologia": "Secondo alcuni il nome potrebbe derivare di cantori di chiesa, secondo altri da Kan (capostipite dei Pelasgi) e terapne (abitazione) con il significato di \"casa di Kan\". Secondo un'altra ipotesi deriva dal nome di persona Cantherius con il suffisso -anus che indica appartenenza, oppure da \"cantero\" ossia piccolo catino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Agosta",
+      "Bellegra",
+      "Gerano",
+      "Rocca Canterano",
+      "Rocca Santo Stefano",
+      "Subiaco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna degli Angeli (in località Maonna)",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Santa Maria e San Mauro",
+      "Chiesa di Santa Maria",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Canale Monterano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058016",
+    "codice_catastale": "B576",
+    "popolazione": 4169,
+    "superficie_kmq": 36.89,
+    "densita": 113.0,
+    "cap": "00060",
+    "prefisso_telefonico": "06",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "canalesi",
+    "etimologia": "Chiamato in passato Canale e Monte Virginio (il monte che sovrasta il paese) ha assunto il nome attuale nel 1873. La prima parte del nome si riferisce ad un canale artificiale creato per far defluire le acque, la seconda parte deriva dal nome della dea etrusca Manturna divenuto poi in latino Mantura ed infine Manturanum.",
+    "il_comune_e": [
+      "Città Termale (Bagni di Stigliano)"
+    ],
+    "fa_parte_di": [
+      "Associazione Città del Pane"
+    ],
+    "localita_frazioni": [
+      "contrade: Carraiola",
+      "Casenove",
+      "Castagno",
+      "Centro",
+      "Montevirginio",
+      "Stigliano"
+    ],
+    "comuni_confinanti": [
+      "Blera (VT)",
+      "Manziana",
+      "Oriolo Romano (VT)",
+      "Tolfa",
+      "Vejano (VT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Mattia de' Rossi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardini Botanici di Stigliano"
+    ],
+    "luoghi_interesse": [
+      "Ponte Etrusco-Romano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Riarto e dei Butteri col Lazo (seconda domenica di maggio)",
+      "Festa dei SS. Bartolometo e Calepodia e Palio delle Contrade (23-25 agosto), con rievocazione storica in costume medioevale"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campagnano di Roma",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058015",
+    "codice_catastale": "B496",
+    "popolazione": 11592,
+    "superficie_kmq": 46.07,
+    "densita": 251.6,
+    "cap": "00063",
+    "prefisso_telefonico": "06",
+    "patrono": "San Giovanni Decollato e San Celestino",
+    "festa_patronale": "29 agosto",
+    "demonimo": "campagnanesi",
+    "etimologia": "Deriva dal nome latino di persona Campanius a cui si aggiunge il suffisso -anus che indica appartenenza. Secondo la tradizione il nome deriva dagli abitanti della Campania trasferiti dai romani dalle loro città perché colpevoli di avere aiutato Annibale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco di Veio",
+      "Parco Naturale di Bracciano - Martignano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Anguillara Sabazia",
+      "Formello",
+      "Magliano Romano",
+      "Mazzano Romano",
+      "Nepi (VT)",
+      "Roma",
+      "Sacrofano",
+      "Trevignano Romano"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata di San Giovanni Battista",
+      "Santuario della Madonna del Sorbo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana dei Delfini"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camerata Nuova",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058014",
+    "codice_catastale": "B472",
+    "popolazione": 457,
+    "superficie_kmq": 40.19,
+    "densita": 11.4,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "Sant'Egidio",
+    "festa_patronale": "primo settembre",
+    "demonimo": "cameratani",
+    "etimologia": "In passato fu attribuito il nome di Pio camerata con gratitudine verso Pio IX che diede un forte contributo economico per la costruzione del paese. Il termine Camerata deriva dal latino casa con il significato di \"fatta a volta\". La specifica \"nuova\" si riferisce alla ricostruzione dell'abitato dopo l'incendio che distrusse il precedente insediamento (Camerata Vecchia).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene",
+      "Parco Naturale Regionale dei Monti Simbruini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cappadocia (AQ)",
+      "Cervara di Roma",
+      "Rocca di Botte (AQ)",
+      "Subiaco",
+      "Vallepietra"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Assunta in Cielo (1868)",
+      "Santuario della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della Braciola (19 gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bracciano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058013",
+    "codice_catastale": "B114",
+    "popolazione": 19238,
+    "superficie_kmq": 142.52,
+    "densita": 135.0,
+    "cap": "00062",
+    "prefisso_telefonico": "06",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "braccianesi",
+    "etimologia": "Probabilmente ha origine gentilizia, ossia deriva dal nome di famiglia gens Braccia o dal nome latino di persona Braccius a cui si aggiunge il suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Naturale di Bracciano - Martignano"
+    ],
+    "localita_frazioni": [
+      "frazioni: Castel Giuliano",
+      "Pisciarelli",
+      "Sambuco",
+      "Vicarello",
+      "Vigna di Valle;\nrioni: Borgo",
+      "Cartiere",
+      "Monti",
+      "Stazione"
+    ],
+    "comuni_confinanti": [
+      "Anguillara Sabazia",
+      "Bassano Romano (VT)",
+      "Cerveteri",
+      "Manziana",
+      "Oriolo Romano (VT)",
+      "Sutri (VT)",
+      "Tolfa",
+      "Trevignano Romano"
+    ],
+    "musei": [
+      "Museo Civico di Bracciano",
+      "Museo Storico dell'Aeronautica Militare"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio Beato Innocenzo",
+      "Duomo Santo Stefano",
+      "Chiesa di Santa Maria Novella",
+      "Chiesa di Santa Caterina Suore di Betania",
+      "Chiesa di San Lorenzo a Pisciarelli",
+      "Chiesa di San Liberato",
+      "Chiesa della Visitazione",
+      "Chiesa della Madonna del Riposo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Odelaschi Orsini"
+    ],
+    "fontane": [
+      "Fontana Piazza IV Novembre"
+    ],
+    "giardini_orti_botanici": [
+      "Parco di Palazzo Patrizi Castel Giuliano",
+      "Tenuta di San Liberato"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Viroflay (Francia)",
+      "La Marsa (Tunisia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bellegra",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058012",
+    "codice_catastale": "A749",
+    "popolazione": 2846,
+    "superficie_kmq": 18.77,
+    "densita": 151.6,
+    "cap": "00030",
+    "prefisso_telefonico": "06",
+    "patrono": "San Sisto",
+    "festa_patronale": "6 agosto",
+    "demonimo": "bellegrani",
+    "etimologia": "In passato era chiamata Civitella, dal latino Civitas Vitellia. Nel 1880 il consiglio comunale decise di cambiare il nome in quello attuale per la convinzione (non comprovata da documenti) che il paese fosse stato costruito su un antico borgo medioevale chiamato Belecre. Tale nome potrebbe derivare dal latino bella aegra, guerre cruente o bella agere, ossia far guerre.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Affile",
+      "Roiate; a nord: Gerano",
+      "Rocca Santo Stefano; a ovest: Pisoniano",
+      "San Vito Romano; a sud: Olevano Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Sisto",
+      "Chiesa parrocchiale di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta dell'Arco di Bellegra (tra la contrada delle Valli e la contrada Cona)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Artena",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058011",
+    "codice_catastale": "A449",
+    "popolazione": 14177,
+    "superficie_kmq": 54.35,
+    "densita": 260.8,
+    "cap": "00031",
+    "prefisso_telefonico": "06",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "artenesi",
+    "etimologia": "In passato era chiamata Montefortino dal latino Fortinum. La denominazione odierna della città riprende il nome di un antico insediamento etrusco derivando da Artina, in latino Artenna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVIII"
+    ],
+    "localita_frazioni": [
+      "Colubro",
+      "Macere",
+      "Maiotini",
+      "Abbazia",
+      "Selvatico",
+      "Valli"
+    ],
+    "comuni_confinanti": [
+      "Cisterna di Latina (LT)",
+      "Colleferro",
+      "Cori (LT)",
+      "Lariano",
+      "Palestrina",
+      "Rocca di Papa",
+      "Rocca Massima (LT)",
+      "Rocca Priora",
+      "Segni",
+      "Valmontone",
+      "Velletri"
+    ],
+    "musei": [
+      "Museo archeologico Roger Lambrechts-Ex Granaio"
+    ],
+    "ville_palazzi": [
+      "Palazzetto del Governatore",
+      "Palazzo Borghese"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Alcalà del Rio (Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arsoli",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058010",
+    "codice_catastale": "A446",
+    "popolazione": 1577,
+    "superficie_kmq": 12.13,
+    "densita": 130.0,
+    "cap": "00023",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Bartolomeo apostolo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "arsolani",
+    "etimologia": "Chiamata in passato Arsula da arx (rocca) e saxa (sasso) ad evidenziare la sua collocazione su una rocca. Un'altra ipotesi riconduce il nome al latino arsus, ossia bruciato o arido.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": [
+      "Molette",
+      "Piani Uggi",
+      "Stazione FF.SS."
+    ],
+    "comuni_confinanti": [
+      "Cervara di Roma",
+      "Marano Equo",
+      "Oricola (AQ)",
+      "Riofreddo",
+      "Rocca di Botte (AQ)",
+      "Roviano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale del SS. Salvatore",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio dell’Amico (domenica più vicina al 28 giugno)",
+      "festa medievale con rievocazioni storiche"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ariccia",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058009",
+    "codice_catastale": "A401",
+    "popolazione": 19118,
+    "superficie_kmq": 18.36,
+    "densita": 1041.3,
+    "cap": "00072",
+    "prefisso_telefonico": "06",
+    "patrono": "Santa Apollonia",
+    "festa_patronale": "9 febbraio",
+    "demonimo": "ariccini",
+    "etimologia": "Dal latino Aricia da arare. Secondo alcuni potrebbe trattarsi di un eponimo (nome di un personaggio storico o mitico che dà il nome ad una città) riferendosi alla dea Cerere. La leggenda racconta che l'ateniese Ippolito (cacciato da Teseo) durante il suo vagare nei colli Albani incontrò la ninfa Aricia di cui si innamorò. Lo stesso Ippolito fondò la città e le diede il nome della sua amata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Genzano di Roma",
+      "Lanuvio",
+      "Nemi; a nord: Rocca di Papa; a ovest: Albano Laziale",
+      "Ardea; a sud: Aprilia (LT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria di Galloro :: Gesuiti",
+      "Chiesa Cristiana Evangelica Battista di Ariccia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Monumentale",
+      "progettato dall'architetto Bertolini"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Processione della Signorina (8 dicembre)",
+      "con le \"torciere\" (ragazze in costumi seicenteschi)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ardea",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058117",
+    "codice_catastale": "M213",
+    "popolazione": 49418,
+    "superficie_kmq": 50.9,
+    "densita": 970.9,
+    "cap": "00040",
+    "prefisso_telefonico": "06",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "ardeatini",
+    "etimologia": "Secondo alcuni deriva dal latino ardea, airone. Secondo altri deriva dall'aggettivo \"ardua\" essendo il luogo difficile da scalare.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Aprilia (LT); a nord: Albano Laziale",
+      "Roma; a nord e ovest: Pomezia; a nord-est: Ariccia; a sud: Anzio"
+    ],
+    "musei": [
+      "Museo Giacomo Manzù"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Marina",
+      "Chiesa di San Pietro (XII secolo)",
+      "Chiesa cristiano ortodossa Parrocchia Santa Cecilia martire (22 novembre)",
+      "Chiesa cristiano evengelica Assemblee di Dio in Italia"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di San Lorenzo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino della Landriana (in località Tor San Lorenzo)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Rielasingen-Worblingen (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arcinazzo Romano",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058008",
+    "codice_catastale": "A370",
+    "popolazione": 1342,
+    "superficie_kmq": 28.27,
+    "densita": 47.5,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "San Giorgio Martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "ponzesi",
+    "etimologia": "Anticamente chiamato Ponza d'Arcinazzo, derivando il nome dalla famiglia Pontia. Secondo alcuni è proveniente dal latino arx, ossia roccia. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Trevi nel Lazio (FR); a nord: Subiaco; a nord e est: Jenne; a ovest: Affile; a sud: Roiate",
+      "Serrone (FR); a sud e est: Piglio (FR)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Croce",
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di San Giorgio",
+      "Cappella di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Presepe Vivente"
+    ],
+    "gemellaggi": [
+      "Santiponce (Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anzio",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058007",
+    "codice_catastale": "A323",
+    "popolazione": 54311,
+    "superficie_kmq": 43.43,
+    "densita": 1250.5,
+    "cap": "00042",
+    "prefisso_telefonico": "06",
+    "patrono": "Sant'Antonio di Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "anziati",
+    "etimologia": "Il nome deriva dal latino Antium, forse derivato dall'antica Antinum con base etrusca Anth che significa aquila o base pelatina And, ossia terreno franato.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Pesce di Mare",
+      "Associazione Nazionale per l'Incremento Turistico (ANIT)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Nettuno; a nord: Aprilia (LT)",
+      "Ardea"
+    ],
+    "musei": [
+      "Museo dello Sbarco di Anzio",
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "Santuario di Santa Teresa di Gesù Bambino :: Frati Carmelitani Scalzi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anticoli Corrado",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058006",
+    "codice_catastale": "A309",
+    "popolazione": 893,
+    "superficie_kmq": 16.28,
+    "densita": 54.9,
+    "cap": "00022",
+    "prefisso_telefonico": "0774",
+    "patrono": "Santa Vittoria",
+    "festa_patronale": "23 dicembre",
+    "demonimo": "anticolani",
+    "etimologia": "Il nome deriva da anti-quos, ossia \"che sta davanti\" oppure da ante colles (avanti ai colli), poi diventato anticulo. La specifica si riferisce al proprietario del feudo nel XIII secolo: Corrado di Antiochia. Si potrebbe anche pensare che il nome abbia origine gentilizia e si colleghi quindi proprio agli Antiochia, famiglia proprietaria fino al 1430.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Marano Equo; a nord: Cineto Romano",
+      "Roviano; a ovest: Mandela",
+      "Saracinesco; a sud: Rocca Canterano"
+    ],
+    "musei": [
+      "Museo Civico d'Arte Moderna"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Vittoria",
+      "Chiesa Madonna del Giglio",
+      "Chiesa di San Rocco",
+      "Chiesa di San Pietro",
+      "Chiesa della Santissima Trinità"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna del Giglio e San Rocco (domenica successiva all'8 settembre)",
+      "con il Ballo della Marmotta"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anguillara Sabazia",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058005",
+    "codice_catastale": "A297",
+    "popolazione": 19401,
+    "superficie_kmq": 74.91,
+    "densita": 259.0,
+    "cap": "00061",
+    "prefisso_telefonico": "06",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "anguillarini",
+    "etimologia": "Secondo alcuni ha origine gentilizia, in quanto proviene dal nome di una famiglia di antiche origini longobarde. Secondo altri deriva da Angularia, che sarebbe il nome di una villa romana che sorgeva lì dove la costa del lago prende la forma di angolo. Un'ipotesi più fantasiosa riconduce il nome alle anguille che si pescano sul lago. La specifica \"Sabazia\" di riferisce all'antico nome Sabate del lago o dai monti Sabatini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Naturale di Bracciano - Martignano"
+    ],
+    "localita_frazioni": [
+      "Ponton dell'Elce",
+      "Colle Sabazio",
+      "Colle dei Pini"
+    ],
+    "comuni_confinanti": [
+      "Bracciano",
+      "Campagnano di Roma",
+      "Cerveteri",
+      "Fiumicino",
+      "Roma",
+      "Trevignano Romano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Maria delle Grazie",
+      "Chiesetta della Trinità",
+      "Chiesa di San Francesco (XV secolo)",
+      "Chiesa di San Biagio",
+      "Chiesa dell'Assunta",
+      "Chiesa della Collegiata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana delle Anguille"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Blanca (Murcia",
+      "Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Allumiere",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058004",
+    "codice_catastale": "A210",
+    "popolazione": 4052,
+    "superficie_kmq": 92.3,
+    "densita": 43.9,
+    "cap": "00051",
+    "prefisso_telefonico": "0766",
+    "patrono": "Madonna dell'Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "allumieraschi",
+    "etimologia": "Il nome allude alla presenza di miniere di allume di rocca (scoperte da Giovanni da Castro nel 1462) che permisero, sotto Pio V, di finanziare la guerra contro i turchi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona III Monti della Tolfa"
+    ],
+    "localita_frazioni": [
+      "La Bianca"
+    ],
+    "comuni_confinanti": [
+      "Civitavecchia",
+      "Santa Marinella",
+      "Tarquinia (VT)",
+      "Tolfa"
+    ],
+    "musei": [
+      "Museo Civico \"A. Klitsche de la Grange\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna delle Grazie",
+      "Santuario di Cibona",
+      "Chiesa di Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Sant'Antonio Abate (17 gennaio)",
+      "Palio delle Contrade (domenica successiva al Ferragosto), con sfilata in costume"
+    ],
+    "gemellaggi": [
+      "Deutschkreutz (Austria), dal 1999",
+      "Eglfing (Baviera - Germania), dal 2001",
+      "Puçol  (Valencia - Spagna), dal 2006"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albano Laziale",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058003",
+    "codice_catastale": "A132",
+    "popolazione": 41654,
+    "superficie_kmq": 23.8,
+    "densita": 1750.2,
+    "cap": "00041",
+    "prefisso_telefonico": "06",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "12 maggio",
+    "demonimo": "albanensi",
+    "etimologia": "Secondo alcuni il comune prende nome dalla leggendaria Alba Longa, mentre secondo altri deriva dal latino Albanus, che a sua volta ha origine dalla voce pelatina alba o alpa, ossia pietra, riferendosi al monte Cavo (situato nei pressi).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Castelli Romani",
+      "Parco Naturale dei Castelli Romani"
+    ],
+    "localita_frazioni": [
+      "Cecchina",
+      "Pavona",
+      "Le Mole di Albano"
+    ],
+    "comuni_confinanti": [
+      "A est: Rocca di Papa; a est e sud: Ariccia; a nord: Castel Gandolfo; a ovest: Roma; a sud: Ardea"
+    ],
+    "musei": [
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria della Rotonda",
+      "Santuario di San Gaspare - Chiesa di San Paolo :: Missionari del Preziosissimo Sangue",
+      "Chiesa di San Pietro Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Cisternoni, cisterna di età romana",
+      "Anfiteatro Severiano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Agosta",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058002",
+    "codice_catastale": "A084",
+    "popolazione": 1758,
+    "superficie_kmq": 9.48,
+    "densita": 185.4,
+    "cap": "00020",
+    "prefisso_telefonico": "0774",
+    "patrono": "Sant'Agostino",
+    "festa_patronale": "28 agosto",
+    "demonimo": "agostani",
+    "etimologia": "Esistono svariate ipotesi sulla provenienza del nome. Secondo alcuni deriva da acqua Augusta riferendosi all'acqua che proviene dall'acquedotto fatto realizzare dall'imperatore Augusto. Secondo altri il nome deriva dal latino aqua hausta, ossia acqua bevuta. Altri ancora credono che il nome si colleghi all'aggettivo latino augusta, ossia maestosa, per la sua posizione imponente nella vallata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": [
+      "Cacino",
+      "Tostini",
+      "Pisciarello",
+      "Barco",
+      "Valleberta",
+      "Selve",
+      "Madonna della Pace"
+    ],
+    "comuni_confinanti": [
+      "A est e nord: Cervara di Roma; a nord-ovest e ovest: Marano Equo",
+      "Rocca Canterano; a sud e sud-est: Canterano",
+      "Subiaco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Passo (nota in passato come Santuario della Madonna degli Angeli)",
+      "Chiesa Parrocchiale di Santa Maria Assunta",
+      "Chiesa Parrocchiale della Madonna della Pace e di San Benedetto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Arco del Cardinale"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Affile",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058001",
+    "codice_catastale": "A062",
+    "popolazione": 1520,
+    "superficie_kmq": 15.03,
+    "densita": 101.1,
+    "cap": "00021",
+    "prefisso_telefonico": "0774",
+    "patrono": "Santa Felicita",
+    "festa_patronale": "23 novembre",
+    "demonimo": "affilani",
+    "etimologia": "Il nome deriva dal latino Afilae, ma le motivazioni ed il significato sono sconosciuti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona X Dell'Aniene"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arcinazzo Romano",
+      "Bellegra",
+      "Rocca Santo Stefano",
+      "Roiate",
+      "Subiaco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cappella della Madonna del Giglio",
+      "Chiesa di Santa Maria",
+      "Chiesa di Santa Felicita",
+      "Chiesa di San Pietro",
+      "Chiesa dei Santi Sebastiano e Rocco (XII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roma",
+    "provincia": "Roma",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "058091",
+    "codice_catastale": "H501",
+    "popolazione": 2873494,
+    "superficie_kmq": 1285.3,
+    "densita": 2235.7,
+    "cap": "00100",
+    "prefisso_telefonico": "06",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "romani",
+    "etimologia": "L'origine del suo nome è incerta. Secondo la leggenda deriva dal nome del suo fondatore Romulus (Romolo). Secondo alcuni potrebbe derivare da Rumon (uno dei nomi antichi del Tevere) quindi \"città sul Rumo\" oppure da ruma (mammelle) nome dato in passato al Palatino.",
+    "il_comune_e": [
+      "Località balneare (Ostia) segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco di Veio",
+      "Parco dell'Appia Antica",
+      "Romanatura - Aree naturali protette del Comune di Roma",
+      "Parco Naturale di Bracciano - Martignano",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Città del Bio",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Città italiane per la mobilità sostenibile e lo sviluppo dei trasporti",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)",
+      "Associazione Europea dei Comuni sulla Via Francigena",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "frazioni: Ostia",
+      "Ostia Antica",
+      "Acilia",
+      "Piana del Sole",
+      "Casal Palocco",
+      "Castel di Leva",
+      "Castelverde",
+      "Corcolle",
+      "Infernetto",
+      "La Storta-Olgiata",
+      "Massimina",
+      "Trigoria",
+      "Valle Santa",
+      "Villaggio Prenestino",
+      "Vitinia;\nrioni: Monti",
+      "Trevi",
+      "Colonna",
+      "Campo Marzio",
+      "Ponte",
+      "Parione",
+      "Regola",
+      "Sant'Eustachio",
+      "Pigna",
+      "Campitelli",
+      "Sant'Angelo",
+      "Ripa",
+      "Trastevere",
+      "Borgo",
+      "Esquilino",
+      "Ludovisi",
+      "Sallustiano",
+      "Castro Pretorio",
+      "Celio",
+      "Testaccio",
+      "San Saba",
+      "Prati"
+    ],
+    "comuni_confinanti": [
+      "Castel Gandolfo",
+      "Fonte Nuova",
+      "Palestrina",
+      "Trevignano Romano; a est: Castel San Pietro Romano",
+      "Gallicano nel Lazio",
+      "Guidonia Montecelio",
+      "Mentana",
+      "Poli",
+      "San Gregorio da Sassola",
+      "Tivoli",
+      "Zagarolo; a nord: Anguillara Sabazia",
+      "Campagnano di Roma",
+      "Formello",
+      "Monterotondo",
+      "Riano",
+      "Sacrofano; a ovest: Fiumicino; a sud: Albano Laziale",
+      "Ardea",
+      "Ciampino",
+      "Colonna",
+      "Frascati",
+      "Grottaferrata",
+      "Marino",
+      "Monte Compatri",
+      "Monte Porzio Catone",
+      "Pomezia"
+    ],
+    "musei": [
+      "(scheda musei in preparazione)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Vergine della Rivelazione :: Frati Minori Conventuali",
+      "Santuario Regina Apostolorum",
+      "Santuario Madonna del Divino Amore",
+      "Chiesa di San Lorenzo Fuori le Mura",
+      "Basilica Santuario Santa Maria e Santo Bambino in Aracoeli",
+      "Basilica di Santa Maria Maggiore",
+      "Basilica di Santa Croce in Gerusalemme",
+      "Basilica di San Pietro in Vaticano",
+      "Basilica di San Paolo Fuori le Mura :: Monaci Benedettini Cassinesi",
+      "Basilica di San Giovanni in Laterano"
+    ],
+    "castelli_fortificazioni": [
+      "Castel Sant'Angelo",
+      "Mura Aureliane"
+    ],
+    "fontane": [
+      "Fontana di Trevi",
+      "Fontana di Nettuno, in Piazza Navona"
+    ],
+    "giardini_orti_botanici": [
+      "Roseto Comunale di Roma (ai piedi dell'Aventino)",
+      "Parco di Villa Torlonia",
+      "Orto Botanico dell'Università di Roma (sulle pendici del Gianicolo)"
+    ],
+    "luoghi_interesse": [
+      "Scalinata di Trinità dei Monti",
+      "Osservatorio Astronomico di Monte Mario"
+    ],
+    "teatri": [
+      "Teatro Vascello",
+      "Teatro Parioli",
+      "Teatro Piccolo Eliseo",
+      "Teatro Quirino",
+      "Teatro Salone Margherita",
+      "Teatro San Raffaele",
+      "Teatro Valle",
+      "Teatro Verde",
+      "Teatro Vittoria",
+      "Teatro Sistina"
+    ],
+    "stadi": [
+      "Stadio Coni Flaminio",
+      "Stadio Olimpico"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Dario Argento (1940-), regista cinematografico",
+      "Alberto Sordi (1920 - 2003), attore e regista",
+      "Claudio Villa, vero nome Claudio Pica (1926 - 1987), cantante e attore, detto Il Reuccio della canzone italiana"
+    ]
+  }
+]

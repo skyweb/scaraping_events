@@ -1,0 +1,16 @@
+{
+  "nome": "Novara",
+  "regione": "Piemonte",
+  "zona": null,
+  "sigla": "NO",
+  "codice_istat": "003",
+  "popolazione": 370143,
+  "popolazione_maschi": 179840,
+  "popolazione_femmine": 190303,
+  "superficie_kmq": 1338.79,
+  "densita": 276.5,
+  "num_comuni": 88,
+  "capoluogo": "Novara",
+  "iso_3166_2": "IT-NO",
+  "nuts": "ITC15"
+}

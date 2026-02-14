@@ -1,0 +1,16 @@
+{
+  "nome": "Caserta",
+  "regione": "Campania",
+  "zona": null,
+  "sigla": "CE",
+  "codice_istat": "061",
+  "popolazione": 924166,
+  "popolazione_maschi": 451983,
+  "popolazione_femmine": 472183,
+  "superficie_kmq": 2639.38,
+  "densita": 350.1,
+  "num_comuni": 104,
+  "capoluogo": "Caserta",
+  "iso_3166_2": "IT-CE",
+  "nuts": "ITF31"
+}

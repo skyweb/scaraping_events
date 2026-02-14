@@ -1,0 +1,16 @@
+{
+  "nome": "Provincia dell'Ogliastra",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "OG",
+  "codice_istat": "105",
+  "popolazione": 57185,
+  "popolazione_maschi": 28245,
+  "popolazione_femmine": 28940,
+  "superficie_kmq": 1854.24,
+  "densita": 30.8,
+  "num_comuni": 23,
+  "capoluogo": null,
+  "iso_3166_2": "IT-OG",
+  "nuts": "ITG2A"
+}

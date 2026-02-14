@@ -1,0 +1,4904 @@
+[
+  {
+    "nome": "Viticuso",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060091",
+    "codice_catastale": "M083",
+    "popolazione": 338,
+    "superficie_kmq": 21.05,
+    "densita": 16.1,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Antonino Martire",
+    "festa_patronale": "primo settembre",
+    "demonimo": "viticusani",
+    "etimologia": "Dal 1863 al 1902 fu chiamato Viticuso ed Acqua Fondata e chiamato prima del 1863 Viticoso. Il nome si riferisce ad un aggettivo latino viticosus, ossia \"che produce viti\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquafondata",
+      "Cervaro",
+      "Conca Casale (IS)",
+      "Pozzilli (IS)",
+      "San Vittore del Lazio",
+      "Vallerotonda"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Antonino",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villa Santo Stefano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060090",
+    "codice_catastale": "I364",
+    "popolazione": 1700,
+    "superficie_kmq": 20.27,
+    "densita": 83.9,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "16 agosto",
+    "demonimo": "santostefanesi",
+    "etimologia": "Il termine Villa fu aggiunto nel 1872 al nome del santo venerato in loco: Santo Stefano, anche se il patrono del paese è San Rocco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva"
+    ],
+    "localita_frazioni": [
+      "Macchioni"
+    ],
+    "comuni_confinanti": [
+      "A est: Castro dei Volsci; a nord: Giuliano di Roma; a nord e est: Ceccano; a ovest: Prossedi (LT); a sud: Amaseno"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villa Santa Lucia",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060089",
+    "codice_catastale": "L905",
+    "popolazione": 2619,
+    "superficie_kmq": 18.15,
+    "densita": 144.3,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "villesi",
+    "etimologia": "Chiamato nel Medioevo Villa Pedismontis, il luogo fu chiamato Villa fino al 1863 e poi fu aggiunto il nome di Santa Lucia, patrona del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Parco Nazionale del Gran Sasso e Monti della Laga"
+    ],
+    "localita_frazioni": [
+      "Piumarola"
+    ],
+    "comuni_confinanti": [
+      "A est: Cassino; a nord: Terelle; a ovest: Piedimonte San Germano; a sud: Pignataro Interamna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villa Latina",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060088",
+    "codice_catastale": "A081",
+    "popolazione": 1217,
+    "superficie_kmq": 17.02,
+    "densita": 71.5,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "agnonesi",
+    "etimologia": "Chiamato Agnone fino al 1862. Il nome attuale è un composto di Villa e dell'aggettivo latina forse in riferimento al fatto che il luogo fu meta di villeggiatura per gli antichi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": [
+      "frazione: Vallegrande;\nborgate: Carletti",
+      "Ponte Sant'Anna",
+      "Pelino",
+      "Franchitti",
+      "Fontana Cocozza",
+      "Panara",
+      "Villaggio Peschiera",
+      "La Forma",
+      "Bianchi",
+      "Palombi",
+      "Colle Cavicchio",
+      "Palazzo Franchi",
+      "Serra del Cavaliere",
+      "Panetta",
+      "Saccocci",
+      "Gargaro",
+      "Dragonetti",
+      "Valenti",
+      "Pacitti",
+      "Fusco",
+      "Tosti",
+      "Colozzi",
+      "Marrocchio",
+      "Colle Santo",
+      "Riverenne",
+      "Carl'Annunzio"
+    ],
+    "comuni_confinanti": [
+      "Atina",
+      "Belmonte Castello",
+      "Picinisco",
+      "Sant'Elia Fiumerapido"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Anna (frazione: Vallegrande)",
+      "Chiesa della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vico nel Lazio",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060087",
+    "codice_catastale": "L843",
+    "popolazione": 2191,
+    "superficie_kmq": 45.75,
+    "densita": 47.9,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Giorgio",
+    "festa_patronale": "ultima domenica di luglio",
+    "demonimo": "vichensi",
+    "etimologia": "Il nome deriva dal termine latino vicus con il significato di villaggio, borgo. La specifica fu aggiunta nel 1872 ed è identificativa del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": [
+      "Località: Bitocco;\nContrade: Colle",
+      "Pitocco"
+    ],
+    "comuni_confinanti": [
+      "Alatri",
+      "Collepardo",
+      "Guarcino",
+      "Morino (AQ)"
+    ],
+    "musei": [
+      "Museo alla Pace \"I Nuovi Primitivi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Collegiata di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vicalvi",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060086",
+    "codice_catastale": "L836",
+    "popolazione": 761,
+    "superficie_kmq": 8.22,
+    "densita": 92.6,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Bernardino",
+    "festa_patronale": "25 maggio",
+    "demonimo": "vicalvesi",
+    "etimologia": "Sembra un derivato del termine latino vicus (villaggio) a cui fu aggiunto l'aggettivo albus (bianco).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": [
+      "Delicata",
+      "Centro Storico",
+      "Colle D'Agnese",
+      "Mortale",
+      "Maschiuna",
+      "Castellana",
+      "Palombo",
+      "Borgo",
+      "San Francesco",
+      "Colle Flonio"
+    ],
+    "comuni_confinanti": [
+      "A nord e est: Alvito; a ovest: Fontechiari",
+      "Posta Fibreno; a sud: Casalvieri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento di San Francesco",
+      "Chiesa San Giovanni Battista ed Evangelista",
+      "Chiesa di San Giovanni Evangelista"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Medievale di Vicalvi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Veroli",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060085",
+    "codice_catastale": "L780",
+    "popolazione": 20525,
+    "superficie_kmq": 120.33,
+    "densita": 170.6,
+    "cap": "03029",
+    "prefisso_telefonico": "0775",
+    "patrono": "Santa Salome",
+    "festa_patronale": "25 maggio",
+    "demonimo": "verolani",
+    "etimologia": "Deriva dall'antica città degli Ernici, chiamata Verulae, da cui deriva Verulis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": [
+      "Contrade: Casamari",
+      "Case Campoli-Panetta",
+      "Castelmassimo",
+      "Colleberardi",
+      "Cotropagno",
+      "Giglio",
+      "San Giuseppe le Prata",
+      "Santa Francesca",
+      "Sant'Angelo in Villa",
+      "Scifelli"
+    ],
+    "comuni_confinanti": [
+      "Alatri",
+      "Balsorano (AQ)",
+      "Boville Ernica",
+      "Collepardo",
+      "Frosinone",
+      "Monte San Giovanni Campano",
+      "Morino (AQ)",
+      "Ripi",
+      "San Vincenzo Valle Roveto (AQ)",
+      "Sora",
+      "Torrice"
+    ],
+    "musei": [
+      "Raccolta Antiquaria",
+      "Museo delle Erbe",
+      "Museo del Tesoro del Duomo"
+    ],
+    "ville_palazzi": [
+      "Palazzo Campanari",
+      "Palazzo Episcopale",
+      "Palazzo Franchi Palazzo Franchi",
+      "Palazzo Quinones"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria del Giglio",
+      "Chiesa di Santa Maria Salome",
+      "Chiesa di San Michele Arcangelo (XIX secolo)",
+      "Chiesa di San Leucio, in stile romanico",
+      "Chiesa della Madonna degli Angeli",
+      "Cattedrale di Sant'Andrea Apostolo",
+      "Basilica di Sant'Erasmo, eretta su un oratorio preesistente da San Benedetto nel 529"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Quinones"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Santa Francesca Romana e Sagra delle Crespelle (domenica più vicina al 9 marzo)"
+    ],
+    "gemellaggi": [
+      "Spinea (Venezia-Veneto)",
+      "Bruck an der Mur (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallerotonda",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060084",
+    "codice_catastale": "L614",
+    "popolazione": 1553,
+    "superficie_kmq": 59.65,
+    "densita": 26.0,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "SS. Giovanni e Paolo",
+    "festa_patronale": "26 giugno",
+    "demonimo": "vallerotondesi",
+    "etimologia": "Deriva da Vallis Rotunde riferendosi alle caratteristiche geografiche del luogo in cui sorge.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise"
+    ],
+    "localita_frazioni": [
+      "Valvori",
+      "Cerreto",
+      "Cardito"
+    ],
+    "comuni_confinanti": [
+      "Acquafondata",
+      "Cervaro",
+      "Filignano (IS)",
+      "Rocchetta a Volturno (IS)",
+      "San Biagio Saracinisco",
+      "Sant'Elia Fiumerapido",
+      "Viticuso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria dell'Assunzione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallemaio",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060083",
+    "codice_catastale": "L605",
+    "popolazione": 937,
+    "superficie_kmq": 19.54,
+    "densita": 48.0,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Tommaso",
+    "festa_patronale": "7 luglio",
+    "demonimo": "vallemaiesi o vallefreddani",
+    "etimologia": "Chiamata fino al 1932 Vallefredda. Il nome attuale si riferisce al monte Major (Maggiore) in riferimento alla posizione del paese alle falde del monte.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIX L'Arco degli Aurunci"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Sant'Andrea del Garigliano; a nord: Sant'Apollinare; a nord e ovest: San Giorgio a Liri; a ovest: Castelnuovo Parano",
+      "Coreno Ausonio; a sud: Castelforte (LT)"
+    ],
+    "musei": [
+      "Museo delle Ombre"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallecorsa",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060082",
+    "codice_catastale": "L598",
+    "popolazione": 2621,
+    "superficie_kmq": 39.71,
+    "densita": 66.0,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "vallecorsani",
+    "etimologia": "Chiamato nei documenti con il nome di Vallem de Corsa e Vallis Curse, deriva dal latino vallis unito ad un nome di persona Corso. La tradizione, non confermata dai documenti, racconta che si riferisce al nome di un'antica città dei Volsci: Verrugine, ricostruita da Curzio Filone, quindi chiamata Vallis Curti. Secondo altri il nome deriva da Valle Curtia riferendosi ai possessi sul luogo del popolo dei Curtii.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Quercia del Monaco"
+    ],
+    "comuni_confinanti": [
+      "Amaseno",
+      "Castro dei Volsci",
+      "Fondi (LT)",
+      "Lenola (LT)",
+      "Monte San Biagio (LT)",
+      "Pastena"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna della Sanità"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trivigliano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060081",
+    "codice_catastale": "L437",
+    "popolazione": 1703,
+    "superficie_kmq": 12.71,
+    "densita": 134.0,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "Sant'Oliva",
+    "festa_patronale": "11 giugno",
+    "demonimo": "triviglianesi",
+    "etimologia": "Chiamato Tribillianum deriva dal nome latino di persona Trebellius o Tribellius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": [
+      "San Giovanni",
+      "Pratovalle",
+      "Sassotello",
+      "3 Fontane",
+      "Cerreta",
+      "Valcagnano",
+      "Canterno",
+      "Padoni",
+      "Collitimi",
+      "Pezze",
+      "Colle Jorio",
+      "Rasella"
+    ],
+    "comuni_confinanti": [
+      "Alatri",
+      "Ferentino",
+      "Fiuggi",
+      "Fumone",
+      "Guarcino",
+      "Torre Cajetani"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Eremo della Madonna delle Grazie",
+      "Chiesa di Santa Oliva",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Prosciutto (ad agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trevi nel Lazio",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060080",
+    "codice_catastale": "L398",
+    "popolazione": 1790,
+    "superficie_kmq": 54.45,
+    "densita": 32.9,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Pietro Eremita",
+    "festa_patronale": "29 agosto",
+    "demonimo": "trebani",
+    "etimologia": "Chiamato Trebis si riferisce al nome Treba, antica città degli Equi. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici",
+      "Parco Naturale Regionale dei Monti Simbruini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Filettino; a nord e ovest: Vallepietra (RM); a ovest: Arcinazzo Romano (RM)",
+      "Jenne (RM); a sud: Fiuggi",
+      "Guarcino",
+      "Piglio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Pietro Eremita",
+      "Collegiata di Santa Maria",
+      "Cappella di San Sebastiano",
+      "Cappella della Madonna del Riposo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torrice",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060079",
+    "codice_catastale": "L290",
+    "popolazione": 4796,
+    "superficie_kmq": 18.18,
+    "densita": 263.8,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Bernardino",
+    "festa_patronale": "20 maggio",
+    "demonimo": "torriciani",
+    "etimologia": "Chiamato Turrice potrebbe derivare da Torre in riferimento alla presenza della struttura in loco. In verità l'origine è incerta, potrebbe anche derivare dal latino turriger, ossia munito di torre.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "La Cervona"
+    ],
+    "comuni_confinanti": [
+      "Arnara",
+      "Boville Ernica",
+      "Frosinone",
+      "Ripi",
+      "Veroli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro (dedicata anche a Santa Maria)",
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torre Cajetani",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060078",
+    "codice_catastale": "L243",
+    "popolazione": 1345,
+    "superficie_kmq": 11.6,
+    "densita": 115.9,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "torrigiani",
+    "etimologia": "Il nome si riferisce alla torre merlata appartenuta al castello che fu acquistato nel 1296 da Benedetto Ca(j)etani, ossia Papa Bonifacio VIII.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Guarcino; a ovest: Fiuggi; a sud: Trivigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Trinità",
+      "Chiesa di Santa Mana Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Terelle",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060077",
+    "codice_catastale": "L105",
+    "popolazione": 392,
+    "superficie_kmq": 31.67,
+    "densita": 12.4,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Egidio",
+    "festa_patronale": "primo settembre",
+    "demonimo": "terellesi",
+    "etimologia": "Di non chiara origine, in passato era chiamato Tirelle o Tirilla. Potrebbe derivare da Torella e quindi riferirsi al latino torellam.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "borgate: Ottaduna",
+      "Via del Prete",
+      "Fossate",
+      "Gariglia;località: Castagne al Piano"
+    ],
+    "comuni_confinanti": [
+      "Atina",
+      "Belmonte Castello",
+      "Casalattico",
+      "Cassino",
+      "Colle San Magno",
+      "Piedimonte San Germano",
+      "Sant'Elia Fiumerapido",
+      "Villa Santa Lucia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Cimitero Napoleonico"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Supino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060076",
+    "codice_catastale": "L009",
+    "popolazione": 4879,
+    "superficie_kmq": 35.27,
+    "densita": 138.3,
+    "cap": "03019",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "supinesi",
+    "etimologia": "Deriva dall'aggettivo latino supinus, ossia posto in pendio in riferimento alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva"
+    ],
+    "localita_frazioni": [
+      "Capoleprata",
+      "Ortelle"
+    ],
+    "comuni_confinanti": [
+      "Carpineto Romano (RM)",
+      "Ferentino",
+      "Frosinone",
+      "Giuliano di Roma",
+      "Gorga (RM)",
+      "Maenza (LT)",
+      "Morolo",
+      "Patrica"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna di Loreto",
+      "Chiesa di San Sebastiano",
+      "Parrocchiale di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Cirò Marina (Calabria), dal maggio 2007",
+      "Sasd (Ungheria), dal luglio 2007"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Strangolagalli",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060075",
+    "codice_catastale": "I973",
+    "popolazione": 2450,
+    "superficie_kmq": 10.48,
+    "densita": 233.8,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "strangolagallesi",
+    "etimologia": "Si riferisce ad un nome di persona o ad un soprannome non ben identificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Monte San Giovanni Campano; a nord: Boville Ernica; a ovest: Ripi; a sud: Arce",
+      "Ceprano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sora",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060074",
+    "codice_catastale": "I838",
+    "popolazione": 26057,
+    "superficie_kmq": 71.83,
+    "densita": 362.8,
+    "cap": "03039",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santa Restituta",
+    "festa_patronale": "27 maggio",
+    "demonimo": "sorani",
+    "etimologia": "Forse deriva da Soranus ma la storia e le origini del nome non sono documentate, quindi sconosciute.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Carnello",
+      "Selva",
+      "San Domenico"
+    ],
+    "comuni_confinanti": [
+      "Arpino",
+      "Balsorano (AQ)",
+      "Broccostella",
+      "Campoli Appennino",
+      "Castelliri",
+      "Isola del Liri",
+      "Monte San Giovanni Campano",
+      "Pescosolido",
+      "Veroli"
+    ],
+    "musei": [
+      "Museo Civico della Media Valle del Liri"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna di Costantinopoli",
+      "Chiesa della Madonna delle Grazie",
+      "Chiesa della Madonna della Quercia",
+      "Chiesa della Madonna della Neve",
+      "Abbazia di San Domenico",
+      "Chiesa di Santa Restituta",
+      "Chiesa di Santa Rosalia",
+      "Chiesa di San Silvestro Papa",
+      "Santuario di Santa Maria della Figura",
+      "Convento dei Padri Passionisti (in contrada Collacchio)",
+      "Chiesa di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Claudio Tomei"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Athis Mons (Francia)",
+      "Vaughan (Canada)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Vittorio De Sica (1902 - 1974)",
+      "attore e regista"
+    ]
+  },
+  {
+    "nome": "Sgurgola",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060073",
+    "codice_catastale": "I716",
+    "popolazione": 2667,
+    "superficie_kmq": 19.33,
+    "densita": 138.0,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "sgurgolani",
+    "etimologia": "Da Sculcula si riferisce al nome sculca che significa posto di vedetta e si riferisce alla posizione geografica del luogo ed al suo ruolo in antichità.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Anagni",
+      "Ferentino",
+      "Gorga (RM)",
+      "Morolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa San Leonardo",
+      "Chiesa di Santa Maria in Viano",
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Settefrati",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060072",
+    "codice_catastale": "I697",
+    "popolazione": 732,
+    "superficie_kmq": 50.55,
+    "densita": 14.5,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "29 agosto",
+    "demonimo": "settefratesi",
+    "etimologia": "Deriva da Septem Frates. La ricostruzione del nome riconduce al numero sette e la tradizione vuole che il nome sia stato introdotto dai Benedettini per i ricordare i figli di Santa Felicita (sette) uccisi a Roma nel II secolo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Barrea (AQ)",
+      "Civitella Alfedena (AQ)",
+      "Gallinaro",
+      "Opi (AQ)",
+      "Picinisco",
+      "San Donato Val di Comino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria del Canneto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serrone",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060071",
+    "codice_catastale": "I669",
+    "popolazione": 3060,
+    "superficie_kmq": 15.41,
+    "densita": 198.6,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "serronesi",
+    "etimologia": "Potrebbe derivare da \"Serra\" con il significato di cima di monte, collina.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "La Forma",
+      "San Quirico"
+    ],
+    "comuni_confinanti": [
+      "A est: Arcinazzo Romano (RM)",
+      "Piglio; a nord: Roiate (RM); a ovest: Olevano Romano (RM); a sud e ovest: Paliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa rupestre di Sant'AngeIo",
+      "Chiesa di San Pietro Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santopadre",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060069",
+    "codice_catastale": "I351",
+    "popolazione": 1350,
+    "superficie_kmq": 21.48,
+    "densita": 62.8,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Folco",
+    "festa_patronale": "22 maggio",
+    "demonimo": "santopadresi",
+    "etimologia": "Chiamato in passato Forolo poi Castro Forolo, il nome si riferisce al santo patrono del luogo: San Folco, chiamato Santo Padre per i miracoli compiuti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Ciaiali",
+      "Collepizzuto",
+      "Madonna delle Fosse;località: Campea"
+    ],
+    "comuni_confinanti": [
+      "A est: Casalattico; a est e sud: Colle San Magno; a nord-est e est: Arpino; a ovest: Fontana Liri",
+      "Rocca d'Arce; a ovest e sud: Roccasecca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Lorenzo",
+      "Chiesa di San Folco",
+      "Chiesa della Madonna delle Fosse"
+    ],
+    "castelli_fortificazioni": [
+      "Torre cilindrica medievale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotte dello Spirito Santo (località: Campea)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Elia Fiumerapido",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060068",
+    "codice_catastale": "I321",
+    "popolazione": 6112,
+    "superficie_kmq": 41.03,
+    "densita": 149.0,
+    "cap": "03049",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Elia",
+    "festa_patronale": "20 luglio",
+    "demonimo": "santeliani",
+    "etimologia": "Il nome riflette il culto per Sant'Elia, patrono del paese. La specifica si riferisce alla vicinanza del paese al fiume Rapido.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Portella",
+      "Olivella",
+      "Valleluce"
+    ],
+    "comuni_confinanti": [
+      "Belmonte Castello",
+      "Cassino",
+      "Cervaro",
+      "Picinisco",
+      "San Biagio Saracinisco",
+      "Terelle",
+      "Vallerotonda",
+      "Villa Latina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna di Casalucense",
+      "Chiesa Parrocchiale di Santa Maria la Nova",
+      "Chiesa di Santa Maria dell'Olivella, detta anche Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Apollinare",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060067",
+    "codice_catastale": "I302",
+    "popolazione": 1892,
+    "superficie_kmq": 17.04,
+    "densita": 111.0,
+    "cap": "03048",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Apollinare",
+    "festa_patronale": "23 luglio",
+    "demonimo": "santapollinaresi",
+    "etimologia": "Il nome richiama il culto per Sant' Apollinare, patrono del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "contrade: Giunture",
+      "Pagliare",
+      "San Marco"
+    ],
+    "comuni_confinanti": [
+      "Cassino",
+      "Pignataro Interamna",
+      "Rocca D'Evandro (CE)",
+      "San Giorgio a Liri",
+      "Sant'Ambrogio sul Garigliano",
+      "Sant'Andrea del Garigliano",
+      "Vallemaio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Andrea del Garigliano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060066",
+    "codice_catastale": "I265",
+    "popolazione": 1491,
+    "superficie_kmq": 16.86,
+    "densita": 88.4,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "santandreani",
+    "etimologia": "Nonostante la patrona del paese sia Maria Santissima delle Grazie, il nome onora il culto molto sentito per Sant'Andrea. La specifica fa riferimento al vicino fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIX L'Arco degli Aurunci"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castelforte (LT)",
+      "Rocca D'Evandro (CE)",
+      "Sant'Ambrogio sul Garigliano",
+      "Sant'Apollinare",
+      "Vallemaio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Benedetto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Ambrogio sul Garigliano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060065",
+    "codice_catastale": "I256",
+    "popolazione": 969,
+    "superficie_kmq": 8.95,
+    "densita": 108.3,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Biagio",
+    "festa_patronale": "2 febbraio",
+    "demonimo": "ambrosiani",
+    "etimologia": "Nonostante il patrono del paese sia San Biagio, il nome onora il culto molto sentito per Sant'Ambrogio. La specifica si riferisce al vicino fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Rocca D'Evandro (CE)",
+      "Sant'Andrea del Garigliano",
+      "Sant'Apollinare"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vittore del Lazio",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060070",
+    "codice_catastale": "I408",
+    "popolazione": 2576,
+    "superficie_kmq": 27.12,
+    "densita": 95.0,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Vittore",
+    "festa_patronale": "8 maggio",
+    "demonimo": "sanvittoresi",
+    "etimologia": "Il nome onora il Santo patrono del luogo, San Vittore. La specifica è indicativa della sua collocazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Radicosa",
+      "Rocca d'Evandro Scalo",
+      "Contrada San Cesario"
+    ],
+    "comuni_confinanti": [
+      "Cassino",
+      "Cervaro",
+      "Conca Casale (IS)",
+      "Mignano Monte Lungo (CE)",
+      "Rocca D'Evandro (CE)",
+      "San Pietro Infine (CE)",
+      "Venafro (IS)",
+      "Viticuso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Rosa",
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa di Santa Croce",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giovanni Incarico",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060064",
+    "codice_catastale": "H917",
+    "popolazione": 3307,
+    "superficie_kmq": 24.87,
+    "densita": 133.0,
+    "cap": "03028",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 aprile",
+    "demonimo": "sangiovannesi",
+    "etimologia": "Deriva da Sanctum Johannem o S. Iohannis de Incarco a venerazione del santo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVI Gronde Monti Ausoni"
+    ],
+    "localita_frazioni": [
+      "Colle Arduini",
+      "Colle Tronco",
+      "Madonna della Selva",
+      "Pozzi Petrolio",
+      "San Cataldo"
+    ],
+    "comuni_confinanti": [
+      "A est: Falvaterra; a nord: Arce",
+      "Ceprano; a nord-ovest: Colfelice; a ovest: Pontecorvo",
+      "Roccasecca; a sud: Pico; a sud-est: Pastena"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzetto Cayro-Santoro"
+    ],
+    "chiese": [
+      "Santuario della Madonna, sul monte della Guardia",
+      "Chiesa di San Giovanni Battista, medioevale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giorgio a Liri",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060063",
+    "codice_catastale": "H880",
+    "popolazione": 3150,
+    "superficie_kmq": 15.63,
+    "densita": 201.5,
+    "cap": "03047",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sangiorgesi",
+    "etimologia": "Il nome onora il Santo patrono del paese, la specifica fu assunta nel 1863 e si riferisce alla vicinanza del paese al fiume Liri",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Sant'Apollinare",
+      "Vallemaio; a nord: Pignataro Interamna; a ovest: Esperia; a sud: Castelnuovo Parano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Donato Val di Comino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060062",
+    "codice_catastale": "H824",
+    "popolazione": 2076,
+    "superficie_kmq": 35.74,
+    "densita": 58.1,
+    "cap": "03046",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Donato",
+    "festa_patronale": "7 agosto",
+    "demonimo": "sandonatesi",
+    "etimologia": "La prima parte del nome (da Sancti Donati) si riferisce al culto molto sentito del santo patrono San Donato. La seconda parte si riferisce alla sua collocazione geografica.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Forca d'Acero"
+    ],
+    "comuni_confinanti": [
+      "Alvito",
+      "Gallinaro",
+      "Opi (AQ)",
+      "Pescasseroli (AQ)",
+      "Settefrati"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Donato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Greccio (Rieti-Lazio)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Biagio Saracinisco",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060061",
+    "codice_catastale": "H779",
+    "popolazione": 338,
+    "superficie_kmq": 31.08,
+    "densita": 10.9,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Biagio V.M.",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "sanbiagesi",
+    "etimologia": "Il nome richiama il culto per San Biagio, patrono del paese. La specifica allude probabilmente ad un gruppo di saraceni che si stanziarono in passato nel luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castel San Vincenzo (IS)",
+      "Picinisco",
+      "Pizzone (IS)",
+      "Rocchetta a Volturno (IS)",
+      "Sant'Elia Fiumerapido",
+      "Vallerotonda"
+    ],
+    "musei": [
+      "Mostra Archeologica Permanente \"La Comunità Safina di San Biagio Saracinisco\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roccasecca",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060060",
+    "codice_catastale": "H443",
+    "popolazione": 7409,
+    "superficie_kmq": 43.02,
+    "densita": 172.2,
+    "cap": "03038",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 aprile",
+    "demonimo": "roccaseccani",
+    "etimologia": "Documentato come Roccam Siccam, il nome si riferisce alla sua posizione geografica (rocca) ed all'aridità del suolo (secca).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Caprile",
+      "Castello"
+    ],
+    "comuni_confinanti": [
+      "Castrocielo",
+      "Colfelice",
+      "Colle San Magno",
+      "Pontecorvo",
+      "Rocca d'Arce",
+      "San Giovanni Incarico",
+      "Santopadre"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Margherita, in stile barocco",
+      "Chiesa di San Tommaso a Castello (XIV secolo)",
+      "Chiesa della Madonna delle Grazie (a Caprile)",
+      "Chiesa dell' Annunziata a Castello"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Croissy-Beaubourg (Île-de-France",
+      "Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocca d'Arce",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060059",
+    "codice_catastale": "H393",
+    "popolazione": 945,
+    "superficie_kmq": 11.78,
+    "densita": 80.2,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Bernardo",
+    "festa_patronale": "13 settembre",
+    "demonimo": "rocchigiani o roccaciani",
+    "etimologia": "Chiamato Rocce Arcis, il termine rocca indica la sua posizione geografica, l'aggiunta Arce deriva dal latino arx, arcis che indica appunto \"roca, parte più elevata della città\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Fraioli",
+      "Murata"
+    ],
+    "comuni_confinanti": [
+      "A est: Roccasecca",
+      "Santopadre; a nord: Fontana Liri; a ovest: Arce; a sud: Colfelice"
+    ],
+    "musei": [
+      "Museo dei Fossili del Pensiero dell'Arte"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Bernardo",
+      "Chiesa medioevale di San Rocco",
+      "Chiesa di Sant'Agostino (detta anche Chiesa di Sant'Antonio)",
+      "Chiesa della Madonna di Paris o Madonna del Riparo  (in frazione Santa Lucia)"
+    ],
+    "castelli_fortificazioni": [
+      "Rovine della Fortezza Medievale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ripi",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060058",
+    "codice_catastale": "H324",
+    "popolazione": 5256,
+    "superficie_kmq": 31.44,
+    "densita": 167.2,
+    "cap": "03027",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "ripani",
+    "etimologia": "Chiamato nei documenti con il nome di Ripis, si riferisce al latino ripa, ossia riva oppure pendio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Colle Castagno",
+      "San Giovanni"
+    ],
+    "comuni_confinanti": [
+      "A nord: Boville Ernica",
+      "Torrice",
+      "Veroli; a sud: Arnara",
+      "Ceprano",
+      "Pofi",
+      "Strangolagalli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa del SS. Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Posta Fibreno",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060057",
+    "codice_catastale": "G935",
+    "popolazione": 1127,
+    "superficie_kmq": 9.11,
+    "densita": 123.7,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santa Vittoria e Blandina",
+    "festa_patronale": "20 agosto",
+    "demonimo": "postesi",
+    "etimologia": "Deriva dal latino postam inteso come \"ricovero per i bovini\". Fibreno deriva dal latino Fibrenum che è il nome di un antico fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Alvito; a est e sud: Vicalvi; a nord: Campoli Appennino; a ovest: Broccostella",
+      "Fontechiari"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa La Gallia"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria della Vittoria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pontecorvo",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060056",
+    "codice_catastale": "G838",
+    "popolazione": 13200,
+    "superficie_kmq": 88.23,
+    "densita": 149.6,
+    "cap": "03037",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "seconda domenica di maggio",
+    "demonimo": "pontecorvesi",
+    "etimologia": "Chiamato in passato Ponte Curvo si riferisce al pons curvus, ossia ponte curvo, quindi al ponte posto nei pressi del fiume Liri.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVI Gronde Monti Ausoni",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri",
+      "Parco Naturale Monti Aurunci"
+    ],
+    "localita_frazioni": [
+      "frazione: Sant'Oliva; \ncontrade: Melfi di Sotto",
+      "Melfi di Sopra",
+      "Noci Giunte",
+      "Vetrine",
+      "Corneto",
+      "Ravano di Sopra",
+      "Traversa",
+      "Campo Vincenzo",
+      "Fontana Merola",
+      "Querce Santa Maria",
+      "Vallario",
+      "Via Maggio",
+      "Le Cese",
+      "Fabbricata",
+      "Ravano di Sotto",
+      "Farnete",
+      "Ponte Teano",
+      "S. Esdra",
+      "Sant'Antonio Pietralate",
+      "Tordoni",
+      "SS. Cosma e Damiano",
+      "Santa Lucia"
+    ],
+    "comuni_confinanti": [
+      "Aquino",
+      "Campodimele (LT)",
+      "Castrocielo",
+      "Esperia",
+      "Pico",
+      "Pignataro Interamna",
+      "Roccasecca",
+      "San Giovanni Incarico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna delle Grazie",
+      "Cattedrale, ricostruita nel dopoguerra"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Rodoaldo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Curvo sul Liri"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Giovanni (secondo fine settimana di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pofi",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060055",
+    "codice_catastale": "G749",
+    "popolazione": 4190,
+    "superficie_kmq": 30.71,
+    "densita": 136.4,
+    "cap": "03026",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "primo agosto",
+    "demonimo": "pofani o pofinesi",
+    "etimologia": "L'origine del nome è sconosciuta. Si ipotizza che derivi dal nome germanico di persona Boffo con la variante della P al posto della B.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Ceprano; a nord e est: Ripi; a ovest: Arnara",
+      "Ceccano; a sud: Castro dei Volsci"
+    ],
+    "musei": [
+      "Museo Civico Preistorico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonino, di stile romanico",
+      "Chiesa di Sant'Andrea",
+      "Chiesa di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pignataro Interamna",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060054",
+    "codice_catastale": "G662",
+    "popolazione": 2570,
+    "superficie_kmq": 24.56,
+    "densita": 104.6,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Salvatore",
+    "festa_patronale": "20 settembre",
+    "demonimo": "pignataresi",
+    "etimologia": "Il primo termine che compone il nome si riferisce a \"colui che ripara le pignatte (pentole)\". Nel 1862 fu aggiunto il secondo termine che deriva da Interamna Lirinas o Lirenas, un'antica città dei Volsci sorta nei pressi del fiume Liri.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Cassino; a nord: Piedimonte San Germano",
+      "Villa Santa Lucia; a ovest: Esperia",
+      "Pontecorvo; a sud: San Giorgio a Liri",
+      "Sant'Apollinare"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale del Santissimo Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piglio",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060053",
+    "codice_catastale": "G659",
+    "popolazione": 4637,
+    "superficie_kmq": 35.17,
+    "densita": 131.8,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "pigliesi",
+    "etimologia": "Forse deriva dal latino pileus o pileum (berretto a forma conica). Essendo indicato nei documenti con il nome di Pileo. potrebbe anche derivare dal nome di persona Pilius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Acuto",
+      "Fiuggi; a nord: Arcinazzo Romano (RM)",
+      "Trevi nel Lazio; a ovest: Paliano",
+      "Serrone; a sud: Anagni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata dell'Assunta",
+      "Chiesa della Madonna delle Rose"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piedimonte San Germano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060052",
+    "codice_catastale": "G598",
+    "popolazione": 6523,
+    "superficie_kmq": 17.39,
+    "densita": 375.1,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Amasio",
+    "festa_patronale": "23 gennaio",
+    "demonimo": "pedemontani",
+    "etimologia": "Il nome si riferisce alla posizione del paese ai piedi del monte Cairo. La specifica è relativa al santo venerato dagli abitanti del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Volla",
+      "Ruscito",
+      "Piedimonte Alta"
+    ],
+    "comuni_confinanti": [
+      "A est: Villa Santa Lucia; a nord: Colle San Magno",
+      "Terelle; a ovest: Aquino",
+      "Castrocielo; a sud: Pignataro Interamna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Sant'Amasio",
+      "Chiesa parrocchiale di Santa Maria Assunta in Cielo",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pico",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060051",
+    "codice_catastale": "G592",
+    "popolazione": 2858,
+    "superficie_kmq": 32.65,
+    "densita": 87.5,
+    "cap": "03020",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Antonino",
+    "festa_patronale": "2 settembre",
+    "demonimo": "picani",
+    "etimologia": "Citato nei documenti come Lupica e Lupicum. Non si conosce bene la sua origine. Potrebbe derivare dal nome di persona Picus o dal termine picus con il significato di picchio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVI Gronde Monti Ausoni",
+      "Parco Naturale Monti Aurunci"
+    ],
+    "localita_frazioni": [
+      "Colle Ponte"
+    ],
+    "comuni_confinanti": [
+      "A est e sud: Pontecorvo; a nord: San Giovanni Incarico; a ovest: Lenola (LT)",
+      "Pastena; a sud: Campodimele (LT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di Sant'Antonino",
+      "Chiesa di Santa Marina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Picinisco",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060050",
+    "codice_catastale": "G591",
+    "popolazione": 1200,
+    "superficie_kmq": 62.02,
+    "densita": 19.3,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "piciniscani",
+    "etimologia": "Forse deriva dall'aggettivo latino picinus (nero come la pece) con l'aggiunta del suffisso -iscus, forse riferito a qualche caratteristica del luogo non ben definita.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise"
+    ],
+    "localita_frazioni": [
+      "Antica",
+      "Fontitune",
+      "Liscia",
+      "Prato di Mezzo",
+      "San Gennaro",
+      "San Giuseppe",
+      "San Pietro",
+      "Serre",
+      "Valleporcina"
+    ],
+    "comuni_confinanti": [
+      "Alfedena (AQ)",
+      "Atina",
+      "Barrea (AQ)",
+      "Gallinaro",
+      "Pizzone (IS)",
+      "San Biagio Saracinisco",
+      "Sant'Elia Fiumerapido",
+      "Settefrati",
+      "Villa Latina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco, ottocentesca",
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pescosolido",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060049",
+    "codice_catastale": "G500",
+    "popolazione": 1551,
+    "superficie_kmq": 44.55,
+    "densita": 34.8,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "14 settembre",
+    "demonimo": "pescosolidani",
+    "etimologia": "È' un composto di Pesco e dell'aggettivo solido (duro). Il termine pesco deriva dal latino pesclus con il significato di roccia, altura. L'aggettivo \"solido\", associato al nome, dona al tutto il significato traslato di \"roccia granitica\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise"
+    ],
+    "localita_frazioni": [
+      "Forcella"
+    ],
+    "comuni_confinanti": [
+      "A est: Campoli Appennino; a nord: Villavallelonga (AQ); a ovest: Balsorano (AQ); a sud: Sora"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Rocco, con facciata in pietra",
+      "Chiesa di San Pantaleone",
+      "Chiesa della Madonna della Neve",
+      "Chiesa dei Santi Giovanni Battista ed Evangelista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Patrica",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060048",
+    "codice_catastale": "G374",
+    "popolazione": 3178,
+    "superficie_kmq": 27.03,
+    "densita": 117.6,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "patricani",
+    "etimologia": "Potrebbe derivare da un nome latino di persona o da un aggettivo latino patricus, da patrius (paterno) con estensione di significato a \"terra ereditata dal padre\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva"
+    ],
+    "localita_frazioni": [
+      "Cardigna",
+      "Celletta",
+      "Colle San Giovanni",
+      "Fontana dei Conti",
+      "Quattrostrade",
+      "Tufo",
+      "Valiana"
+    ],
+    "comuni_confinanti": [
+      "Ceccano",
+      "Frosinone",
+      "Giuliano di Roma",
+      "Supino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di San Giovanni",
+      "Chiesa di San Pietro",
+      "Chiesa della Madonna della Pace"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pastena",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060047",
+    "codice_catastale": "G362",
+    "popolazione": 1453,
+    "superficie_kmq": 42.01,
+    "densita": 34.6,
+    "cap": "03020",
+    "prefisso_telefonico": "0776",
+    "patrono": "SS. Croce",
+    "festa_patronale": "3 maggio",
+    "demonimo": "pastenesi",
+    "etimologia": "Documentato come Pastinam e Pastine si riferisce al termine laziale Pastene o Pastine che indica un campo cha sarà coltivato a vigneto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVI Gronde Monti Ausoni",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Casanova",
+      "Grotte"
+    ],
+    "comuni_confinanti": [
+      "A est: San Giovanni Incarico; a est e sud: Pico; a nord e est: Falvaterra; a nord e ovest: Castro dei Volsci; a sud e ovest: Lenola (LT)"
+    ],
+    "musei": [
+      "Museo Demoantropologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna del Piano",
+      "Chiesa di Santa Maria del Parco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotte di Pastena (dette di San Cataldo o del Pertuso)",
+      "sono collocate all'interno della Catena dei Monti Ausoni"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Fungo Porcino e del Tartufo (primo ottobre)",
+      "Sagra delle Ciliegie (prima domenica di giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Paliano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060046",
+    "codice_catastale": "G276",
+    "popolazione": 8223,
+    "superficie_kmq": 70.11,
+    "densita": 117.3,
+    "cap": "03018",
+    "prefisso_telefonico": "0775",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "palianesi",
+    "etimologia": "Deriva dal nome latino di persona Pal(l)ius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Santa Maria Pugliano"
+    ],
+    "comuni_confinanti": [
+      "A est: Anagni",
+      "Piglio",
+      "Serrone; a nord: Olevano Romano (RM); a nord e ovest: Genazzano (RM); a ovest: Colleferro (RM)",
+      "Segni (RM); a sud: Gavignano (RM)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale",
+      "noto come Villa Colonna"
+    ],
+    "chiese": [
+      "Collegiata di Sant'Andrea",
+      "Chiesa di Santa Maria di Pugliano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dell'Assunzione (14-16 agosto)",
+      "con la rievocazione storica \"Trionfo di Marcantonio Colonna dopo la vittoria di Lepanto\""
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Morolo",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060045",
+    "codice_catastale": "F740",
+    "popolazione": 3271,
+    "superficie_kmq": 26.48,
+    "densita": 123.5,
+    "cap": "03017",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "8 maggio",
+    "demonimo": "morolani",
+    "etimologia": "Potrebbe riferirsi al latino murus, ossia muro. Secondo un'altra ipotesi potrebbe derivare dal termine Morro che assume il significato di \"sporgenza\". Ma nessuna delle ipotesi citate è confermata da documenti.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Madonna del Piano",
+      "Scalo"
+    ],
+    "comuni_confinanti": [
+      "Ferentino",
+      "Gorga (RM)",
+      "Sgurgola",
+      "Supino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa rurale della Madonna del Piano",
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte San Giovanni Campano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060044",
+    "codice_catastale": "F620",
+    "popolazione": 12847,
+    "superficie_kmq": 48.55,
+    "densita": 264.6,
+    "cap": "03025",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Tommaso d'Aquino",
+    "festa_patronale": "7 marzo",
+    "demonimo": "monticiani",
+    "etimologia": "Chiamato in passato Castelforte (probabilmente per la presenza di una fortezza difensiva), il nome odierno si riferisce alla conformazione geografica del luogo (un'altura) ed al santo venerato in paese. La specifica si riferisce all'antica appartenenza del luogo alla provincia di Campagna, area interna del Lazio meridionale e lo distingue da una cittadina omonima.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici",
+      "Associazione Nazionale Città dell'Olio",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Colli",
+      "Anitrella",
+      "Chiaiamari",
+      "Porrino",
+      "La Lucca"
+    ],
+    "comuni_confinanti": [
+      "Arce",
+      "Arpino",
+      "Boville Ernica",
+      "Castelliri",
+      "Fontana Liri",
+      "Sora",
+      "Strangolagalli",
+      "Veroli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro de Areaula",
+      "Chiesa della Madonna del Reggimento",
+      "Chiesa dei Santi Giacomo Battista ed Evangelista",
+      "Cappella di San Luigi Gonzaga, con dipinti settecenteschi",
+      "Collegiata di Santa Maria della Valle, in precedenza dedicata alla Madonna in Cielo o del Suffragio",
+      "Chiesa di Santa Margherita",
+      "Chiesa di Santa Maria della Arendola o Arenula, di origini medioevali"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola del Liri",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060043",
+    "codice_catastale": "E340",
+    "popolazione": 11584,
+    "superficie_kmq": 16.17,
+    "densita": 716.4,
+    "cap": "03036",
+    "prefisso_telefonico": "0776",
+    "patrono": "Madonna di Loreto",
+    "festa_patronale": "10 dicembre",
+    "demonimo": "isolani",
+    "etimologia": "Chiamato in passato Colle dell'Isola. Il nome si riferisce al fatto che il luogo era circondato completamente dalle acque del fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Capitino",
+      "Carnello",
+      "San Domenico",
+      "Selva"
+    ],
+    "comuni_confinanti": [
+      "A nord e est: Sora; a ovest: Castelliri; a sud e est: Arpino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo",
+      "Chiesa Cristiana Evangelica Battista di Isola del Liri, in Viale Piscicelli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Guarcino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060042",
+    "codice_catastale": "E236",
+    "popolazione": 1610,
+    "superficie_kmq": 42.26,
+    "densita": 38.1,
+    "cap": "03016",
+    "prefisso_telefonico": "0775",
+    "patrono": "Sant'Agnello",
+    "festa_patronale": "14 dicembre",
+    "demonimo": "guarcinesi",
+    "etimologia": "Deriva dal termine latino quercinus, assumendo il significato \"di quercia\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": [
+      "contrade: Castagnola",
+      "Colle",
+      "Cona Medagliata",
+      "Coriano. Lisciano",
+      "Menticchio",
+      "Pezza. Prato le Monache",
+      "Sant'Andrea",
+      "San Martino",
+      "Tori-ita",
+      "Torretta",
+      "Vallecareta",
+      "Vesperano",
+      "Vigne Strutte;\nstazione sciistica di Campocatino"
+    ],
+    "comuni_confinanti": [
+      "Filettino",
+      "Fiuggi",
+      "Morino (AQ)",
+      "Torre Cajetani",
+      "Trevi nel Lazio",
+      "Trivigliano",
+      "Vico nel Lazio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio Astronomico di Campocatino (gestione Associazione Astronomica Frusinate)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giuliano di Roma",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060041",
+    "codice_catastale": "E057",
+    "popolazione": 2420,
+    "superficie_kmq": 33.98,
+    "densita": 71.2,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Biagio",
+    "festa_patronale": "ultima domenica agosto",
+    "demonimo": "giulianesi",
+    "etimologia": "Deriva dal nome latino di persona Iullus con l'aggiunta del suffisso -anus che indica appartenenza. La specifica si riferisce all'antica appartenenza del luogo alla provincia di Roma.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Ceccano",
+      "Patrica; a nord: Supino; a ovest: Maenza (LT)",
+      "Prossedi (LT); a sud: Villa Santo Stefano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna della Speranza :: Agostiniani Scalzi",
+      "Chiesa di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gallinaro",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060040",
+    "codice_catastale": "D881",
+    "popolazione": 1265,
+    "superficie_kmq": 17.63,
+    "densita": 71.8,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Gerardo",
+    "festa_patronale": "11 agosto",
+    "demonimo": "gallinaresi",
+    "etimologia": "Deriva probabilmente dal termine Gallinarum in riferimento alla presenza di un luogo per l'allevamento delle galline.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Picinisco",
+      "Settefrati; a nord: San Donato Val di Comino; a ovest: Alvito; a sud e ovest: Atina"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei Santi Giovanni Battista ed Evangelista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fumone",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060039",
+    "codice_catastale": "D819",
+    "popolazione": 2101,
+    "superficie_kmq": 14.77,
+    "densita": 142.2,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "fumonesi",
+    "etimologia": "Potrebbe riferirsi al latino fumus (fumo) in riferimento alla frequente formazione di nebbia in zona o da focus, nel senso di focolare (famiglia) con l'aggiunta del suffisso -one. Un'altra ipotesi indica la derivazione del nome dal latino flumen, -inis, ossia fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e sud: Alatri; a nord: Trivigliano; a ovest: Anagni; a ovest e sud: Ferentino"
+    ],
+    "musei": [
+      "Museo del Castello",
+      "Museo \"Ada e Giuseppe Marchetti\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di San Gaugerico",
+      "Chiesa della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Marchesi Longhi De Paolis"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fontechiari",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060037",
+    "codice_catastale": "D682",
+    "popolazione": 1304,
+    "superficie_kmq": 16.22,
+    "densita": 80.4,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "fontechiaresi",
+    "etimologia": "Il nome si riferisce probabilmente ad una fonte ed assume il significato di \"Fonte dei Chiari\" o \"di Chiaro\", riferendosi al nome latino di persona Clarus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": [
+      "Cisterna",
+      "Collemastroianni"
+    ],
+    "comuni_confinanti": [
+      "A est: Posta Fibreno",
+      "Vicalvi; a est e sud: Casalvieri; a nord: Broccostella; a sud e ovest: Arpino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo De Carolis",
+      "Palazzo Serafini (ora Ferrante)"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Giovanni, settecentesca",
+      "Chiesa di Sant'Anna",
+      "Chiesa della Madonna dei Fratelli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fontana Liri",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060036",
+    "codice_catastale": "D667",
+    "popolazione": 2944,
+    "superficie_kmq": 15.97,
+    "densita": 184.3,
+    "cap": "03035",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santa Barbara Vergine e Martire",
+    "festa_patronale": "4 dicembre",
+    "demonimo": "fontanesi",
+    "etimologia": "Il nome si riferisce alla presenza in zona di una fonte di acqua ed al nome del fiume presente nei pressi, ossia Liri.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Fontana Liri Superiore",
+      "Fontana Liri Inferiore"
+    ],
+    "comuni_confinanti": [
+      "Arce",
+      "Arpino",
+      "Monte San Giovanni Campano",
+      "Rocca d'Arce",
+      "Santopadre"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Santa Croce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Marcello Mastroianni (1924 - 1996)",
+      "attore"
+    ]
+  },
+  {
+    "nome": "Fiuggi",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060035",
+    "codice_catastale": "A310",
+    "popolazione": 10529,
+    "superficie_kmq": 33.06,
+    "densita": 318.5,
+    "cap": "03014",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "fiuggini",
+    "etimologia": "In precedenza chiamata Anticoli, assunse il nome attuale nel 1911 riferendosi al luogo dove sgorgano le acque e le sorgenti naturali, dal latino fluvius.",
+    "il_comune_e": [
+      "Città Termale (Acque e Terme Fiuggi SpA",
+      "Spelagato)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici",
+      "Associazione Nazionale Comuni Termali (ANCOT)"
+    ],
+    "localita_frazioni": [
+      "Cimetta",
+      "Fonte"
+    ],
+    "comuni_confinanti": [
+      "A est: Guarcino",
+      "Torre Cajetani; a nord: Trevi nel Lazio; a ovest: Acuto",
+      "Piglio; a sud: Ferentino",
+      "Trivigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata di San Pietro",
+      "Chiesa di Santo Stefano",
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "San Biagio e Festa delle Stuzze (2-3 febbraio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Filettino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060034",
+    "codice_catastale": "D591",
+    "popolazione": 553,
+    "superficie_kmq": 77.66,
+    "densita": 7.1,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Bernardino da Siena",
+    "festa_patronale": "20 maggio",
+    "demonimo": "filettinesi",
+    "etimologia": "Deriva dal latino filictum nome collettivo derivato da filex, ossia felce.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici",
+      "Parco Naturale Regionale dei Monti Simbruini"
+    ],
+    "localita_frazioni": [
+      "Campo Staffi",
+      "Serra",
+      "Sant'Antonio"
+    ],
+    "comuni_confinanti": [
+      "Canistro (AQ)",
+      "Capistrello (AQ)",
+      "Cappadocia (AQ)",
+      "Castellafiume (AQ)",
+      "Civitella Roveto (AQ)",
+      "Guarcino",
+      "Morino (AQ)",
+      "Trevi nel Lazio",
+      "Vallepietra (RM)"
+    ],
+    "musei": [
+      "Museo di Arte Sacra",
+      "Museo della tradizione Agro-Silvo-Pastorale"
+    ],
+    "ville_palazzi": [
+      "Palazzo Graziani"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria, ricostruita nel Settecento",
+      "Chiesa di San Giovanni",
+      "Chiesa di San Bernardino, dedicata in precedenza a San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sellonet (Francia)",
+      "dal 2011"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ferentino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060033",
+    "codice_catastale": "D539",
+    "popolazione": 21131,
+    "superficie_kmq": 80.48,
+    "densita": 262.6,
+    "cap": "03013",
+    "prefisso_telefonico": "0775",
+    "patrono": "Sant'Ambrogio",
+    "festa_patronale": "primo maggio",
+    "demonimo": "ferentinati o ferentinesi",
+    "etimologia": "Deriva dal latino Ferentinum da -frent (forse da -brent, ossia cervo) con accostamento al latino ferens, ferentis (participio del verbo ferre, portare).",
+    "il_comune_e": [
+      "Città Termale (Terme Pompeo)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Cartiera Quarto",
+      "Stazione",
+      "Cercete",
+      "Pareti",
+      "Porciano",
+      "San Rocco",
+      "Sant'Antonio",
+      "Terme Pompeo",
+      "Terravalle",
+      "Tofe",
+      "Torre Noverana"
+    ],
+    "comuni_confinanti": [
+      "Acuto",
+      "Fiuggi",
+      "Sgurgola",
+      "Trivigliano; a est: Alatri; a nord e est: Fumone; a nord e ovest: Anagni; a ovest: Morolo; a sud: Frosinone",
+      "Supino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Consolare o Palazzo dei Consoli",
+      "Palazzo Vescovile di San Giovanni e Paolo"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Agata",
+      "Duomo - dedicato ai Ss. Giovanni e Paolo",
+      "Chiesa di Santa Maria Maggiore, in stile gotico-cistercense",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa di Santa Maria Gaudenti",
+      "Chiesa di Santa Maria del Rosario (detta di San Rocco)",
+      "Chiesa di Santa Maria dei Cavalieri Gaudenti",
+      "Chiesa di Santa Lucia",
+      "Chiesa di San Valentino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Sant'Ambrogio (30 aprile - primo maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Falvaterra",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060032",
+    "codice_catastale": "D483",
+    "popolazione": 559,
+    "superficie_kmq": 12.78,
+    "densita": 43.7,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Sosio",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "falvaterrani",
+    "etimologia": "Deriva dal nome romano Fabrateria Nova antico centro romano i cui abitanti si rifugiarono nella zona che corrisponde all'attuale Falvaterra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XVI Gronde Monti Ausoni",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e sud: San Giovanni Incarico; a nord: Arce",
+      "Ceprano; a ovest: Castro dei Volsci; a ovest e sud: Pastena"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Sosio Martire :: Padri Passionisti",
+      "Chiesa Parrocchiale di Santa Maria, di origine medioevale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Esperia",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060031",
+    "codice_catastale": "D440",
+    "popolazione": 3796,
+    "superficie_kmq": 108.78,
+    "densita": 34.9,
+    "cap": "03045",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Clino Abate",
+    "festa_patronale": "30 maggio",
+    "demonimo": "esperiani",
+    "etimologia": "Si riferisce all'antico nome con cui veniva in passato chiamata la nostra penisola.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIX L'Arco degli Aurunci",
+      "Parco Naturale Monti Aurunci"
+    ],
+    "localita_frazioni": [
+      "Roccaguglielma (Esperia Superiore)",
+      "San Pietro (Esperia Inferiore)",
+      "Monticelli",
+      "Badia"
+    ],
+    "comuni_confinanti": [
+      "Ausonia",
+      "Campodimele (LT)",
+      "Castelnuovo Parano",
+      "Formia (LT)",
+      "Itri (LT)",
+      "Pignataro Interamna",
+      "Pontecorvo",
+      "San Giorgio a Liri",
+      "Spigno Saturnia (LT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna delle Grazie, sul monte Cecubo",
+      "Chiesa Parrocchiale di Santa Maria Maggiore (a Esperia Superiore)",
+      "Chiesa di Santa Maria di Montevetro",
+      "Chiesa di San Donato, sul monte Oro",
+      "Chiesa della Madonna di Loreto, in stile barocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Coreno Ausonio",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060030",
+    "codice_catastale": "C998",
+    "popolazione": 1621,
+    "superficie_kmq": 26.03,
+    "densita": 62.3,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santa Margherita",
+    "festa_patronale": "20 luglio",
+    "demonimo": "corenesi",
+    "etimologia": "Deriva dal nome di persona latino Corenius. Si ritiene che questo nome si colleghi con il greco Korune (clava) riferendosi alla clava di Ercole Ausonio in onore del quale fu innalzato un tempio in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIX L'Arco degli Aurunci"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Castelforte (LT); a est e sud: Santi Cosma e Damiano (LT); a nord: Castelnuovo Parano",
+      "Vallemaio; a ovest: Ausonia",
+      "Minturno (LT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre dedicata a Santa Margherita",
+      "Chiesa di Santa Maria della Quercia (1649)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio delle Contrade (prima domenica di agosto)"
+    ],
+    "gemellaggi": [
+      "Blonie (Masovia",
+      "Polonia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Collepardo",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060028",
+    "codice_catastale": "C864",
+    "popolazione": 961,
+    "superficie_kmq": 24.98,
+    "densita": 38.5,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "Santissimo Salvatore",
+    "festa_patronale": "6 agosto",
+    "demonimo": "collepardesi",
+    "etimologia": "Il nome è un composto di Colle e di Pardo, nome di persona di origine longobarda.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": [
+      "Civita",
+      "Trisulti"
+    ],
+    "comuni_confinanti": [
+      "Alatri",
+      "Veroli",
+      "Vico nel Lazio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale del Santissimo Salvatore",
+      "Chiesa di San Bartolomeo",
+      "Certosa di Trisulti",
+      "Santuario della Madonna delle Cese"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Botanico di Collepardo"
+    ],
+    "luoghi_interesse": [
+      "Grotta dei Bambocci",
+      "detta anche Grotta Regina Margherita o di Collepardo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colle San Magno",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060029",
+    "codice_catastale": "C870",
+    "popolazione": 683,
+    "superficie_kmq": 44.64,
+    "densita": 15.3,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Magno",
+    "festa_patronale": "19 agosto",
+    "demonimo": "collacciani",
+    "etimologia": "Il nome è un composto di Colle e del nome del santo patrono, particolarmente venerato in paese: San Magno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Cantalupo",
+      "Varciosa",
+      "Forma",
+      "Tigione",
+      "Scanole"
+    ],
+    "comuni_confinanti": [
+      "Casalattico",
+      "Castrocielo",
+      "Piedimonte San Germano",
+      "Roccasecca",
+      "Santopadre",
+      "Terelle"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Magno Vescovo e Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colfelice",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060027",
+    "codice_catastale": "C836",
+    "popolazione": 1928,
+    "superficie_kmq": 14.21,
+    "densita": 135.7,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Gaetano",
+    "festa_patronale": "7 agosto",
+    "demonimo": "colfelicesi",
+    "etimologia": "E' un composto di Col(dragone) e Villa Felice, ossia dei nomi delle frazioni che nel 1923 si sono unite per formare un unico comune.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Colfelice (detta anche Coldragone)",
+      "Villafelice"
+    ],
+    "comuni_confinanti": [
+      "Arce",
+      "Rocca d'Arce",
+      "Roccasecca",
+      "San Giovanni Incarico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cervaro",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060026",
+    "codice_catastale": "C545",
+    "popolazione": 8094,
+    "superficie_kmq": 39.19,
+    "densita": 206.5,
+    "cap": "03044",
+    "prefisso_telefonico": "0776",
+    "patrono": "Maria SS. de Piternis",
+    "festa_patronale": "8 settembre",
+    "demonimo": "cervaresi",
+    "etimologia": "Deriva dal nome di animale cervo in riferimento alla massiccia presenza di quest'animale in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Isola Tocca",
+      "Pastenelle",
+      "Santa Lucia"
+    ],
+    "comuni_confinanti": [
+      "Cassino",
+      "San Vittore del Lazio",
+      "Sant'Elia Fiumerapido",
+      "Vallerotonda",
+      "Viticuso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa di Santa Lucia",
+      "Chiesa di San Paolo",
+      "Chiesa dell'Annunziata",
+      "Chiesa del Santuario della Madonna de Piternis"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Fadoni",
+      "Fontana delle Quattro Stagioni (o Fontana di Piazza Navona o Fontana di Piazza Casaburi, nome attuale della piazza)",
+      "Fontana della Forma, in Piazza San Paolo"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ceprano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060025",
+    "codice_catastale": "C479",
+    "popolazione": 8875,
+    "superficie_kmq": 37.99,
+    "densita": 233.6,
+    "cap": "03024",
+    "prefisso_telefonico": "0775",
+    "patrono": "Sant'Arduino",
+    "festa_patronale": "28 luglio",
+    "demonimo": "cepranesi",
+    "etimologia": "Attestato come Ceperano, deriva del nome latino di persona Ceparius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arce",
+      "Castro dei Volsci",
+      "Falvaterra",
+      "Pofi",
+      "Ripi",
+      "San Giovanni Incarico"
+    ],
+    "musei": [
+      "Museo Civico Archeologico di Fregellae"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "edificata nel Cinquecento"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ceccano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060024",
+    "codice_catastale": "C413",
+    "popolazione": 23494,
+    "superficie_kmq": 60.5,
+    "densita": 388.3,
+    "cap": "03023",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "ceccanesi",
+    "etimologia": "Non ci sono ipotesi né documenti che attestano le sue origini. Si suppone derivi da un nome latino di persona non ben specificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Colle Antico",
+      "Maiura",
+      "Colle Leo",
+      "Colle Alto",
+      "Colle San Paolo",
+      "Celleta",
+      "Peschiera",
+      "Acqua Santa",
+      "Casamarciano",
+      "Cardegna",
+      "Fiano",
+      "Cantinella",
+      "Faito"
+    ],
+    "comuni_confinanti": [
+      "A est: Arnara",
+      "Pofi; a nord: Frosinone; a ovest: Giuliano di Roma",
+      "Patrica; a sud: Villa Santo Stefano; a sud e est: Castro dei Volsci"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Gizzi",
+      "Palazzo Berardi",
+      "Palazzo Sindici",
+      "Villa Antonelli"
+    ],
+    "chiese": [
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Rocco",
+      "Chiesa di San Nicola",
+      "Chiesa di San Pietro Apostolo",
+      "Chiesa di Santa Maria Goretti",
+      "Chiesa di Santa Maria a Fiume",
+      "Chiesa di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Plouzanè (Bretagna, Francia)",
+      "Cancun (Messico)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castrocielo",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060022",
+    "codice_catastale": "C340",
+    "popolazione": 4001,
+    "superficie_kmq": 27.93,
+    "densita": 143.3,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "castrocielesi",
+    "etimologia": "Chiamato Palazzolo fino al 1863. Il nome attuale deriva da Castrum Coeli, la parola latina caelum significa cielo quindi probabilmente ci si riferisce ad una luogo fortificato (castello) ed alla sua altezza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Villa Euchelia",
+      "Campo"
+    ],
+    "comuni_confinanti": [
+      "A est: Piedimonte San Germano; a nord e est: Colle San Magno; a nord e ovest: Roccasecca; a ovest: Pontecorvo; a sud: Aquino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria Assunta",
+      "Chiesa Parrocchiale di Santa Lucia",
+      "Chiesa di Capodacqua, detta anche della Madonna dei Sette Dolori",
+      "Chiesa della Madonna di Loreto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castro dei Volsci",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060023",
+    "codice_catastale": "C338",
+    "popolazione": 4756,
+    "superficie_kmq": 58.29,
+    "densita": 81.6,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "Sant'Oliva",
+    "festa_patronale": "3 giugno",
+    "demonimo": "castresi",
+    "etimologia": "Il nome Castro deriva dal termine latino Castrum (luogo fortificato, castello). La specifica \"dei Volsci\" di riferisce all'antico popolo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Collepece",
+      "Madonna del Piano",
+      "San Sosio",
+      "Vallefratta"
+    ],
+    "comuni_confinanti": [
+      "Amaseno",
+      "Ceccano",
+      "Ceprano",
+      "Falvaterra",
+      "Lenola (LT)",
+      "Pastena",
+      "Pofi",
+      "Vallecorsa",
+      "Villa Santo Stefano"
+    ],
+    "musei": [
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Oliva, in stile barocco",
+      "Chiesa di Santa Maria, con campanile romanico",
+      "Chiesa di San Tamaro",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnuovo Parano",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060021",
+    "codice_catastale": "C223",
+    "popolazione": 883,
+    "superficie_kmq": 9.95,
+    "densita": 88.7,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Mauro",
+    "festa_patronale": "15 gennaio",
+    "demonimo": "castelnovesi",
+    "etimologia": "Il nome si riferisce ad un castello fatto costruire dall'abate Desiderio sul monte Parano nel XI secolo. E' documentato in passato con il nome di Castelnuovo di Sangermano o di Traetto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIX L'Arco degli Aurunci"
+    ],
+    "localita_frazioni": [
+      "Casali",
+      "Terra",
+      "Valli-Sant'Antonio"
+    ],
+    "comuni_confinanti": [
+      "A est: Coreno Ausonio",
+      "Vallemaio; a nord: San Giorgio a Liri; a ovest: Esperia; a sud: Ausonia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelliri",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060020",
+    "codice_catastale": "C177",
+    "popolazione": 3447,
+    "superficie_kmq": 15.51,
+    "densita": 222.2,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "Santa Maria Salome",
+    "festa_patronale": "22 ottobre",
+    "demonimo": "castellucciani",
+    "etimologia": "Nel 1878 fu chiamato Castelliri (in sostituzione di Castelluccio di Sora). Il nome attuale è un chiaro composto di \"Castello\" e del nome del fiume Liri.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Isola del Liri; a nord: Sora; a sud: Arpino; a sud e ovest: Monte San Giovanni Campano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cassino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060019",
+    "codice_catastale": "C034",
+    "popolazione": 36460,
+    "superficie_kmq": 82.77,
+    "densita": 440.5,
+    "cap": "03043",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Benedetto",
+    "festa_patronale": "21 marzo",
+    "demonimo": "cassinati",
+    "etimologia": "Il nome attuale sostituì nel 1863 il vecchio San Germano. Deriva forse da Casinum, Casilinum o Casilinus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Caira",
+      "Montecassino",
+      "San Cesareo",
+      "San Michele",
+      "Sant'Angelo in Theodice",
+      "Sant'Antonino",
+      "San Pasquale"
+    ],
+    "comuni_confinanti": [
+      "Cervaro",
+      "Pignataro Interamna",
+      "Rocca D'Evandro (CE)",
+      "San Vittore del Lazio",
+      "Sant'Apollinare",
+      "Sant'Elia Fiumerapido",
+      "Terelle",
+      "Villa Santa Lucia"
+    ],
+    "musei": [
+      "Museo Storico Artistico",
+      "Museo Archeologico Nazionale",
+      "Historiale, museo multimediale sulla Battaglia di Cassino"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Abbazia di Montecassino :: Monaci Benedettini Cassinesi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Manzoni"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Berlino Zehlendorf (Germania), dal 1969",
+      "Casino (Australia), dal 1997",
+      "Cavarzere (Venezia-Veneto), dal 26 aprile 1998",
+      "Falaise (Francia), dal 1974",
+      "Karlovy Vary (Repubblica Ceca), dal 1991",
+      "North York (Canada), dal 1987",
+      "Ortona (Chieti-Abruzzo), dal 1991",
+      "Tychy (Polonia), dal 1977",
+      "Uzice (Repubblica Federale di Jugoslavia), dal 1981",
+      "Zamosc (Polonia), dal 1969"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalvieri",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060018",
+    "codice_catastale": "B919",
+    "popolazione": 2679,
+    "superficie_kmq": 27.17,
+    "densita": 98.6,
+    "cap": "03034",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Onorio",
+    "festa_patronale": "ultima domenica di maggio",
+    "demonimo": "casalvierani",
+    "etimologia": "Chiamato Caselverii è un composto di Casale e del nome di persona Verius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Purgatorio",
+      "Roselli;Contrade: Abate\nArcarella",
+      "Asino",
+      "Barbatella",
+      "Calone",
+      "Canala",
+      "Canalara",
+      "Capocroce",
+      "Frittata",
+      "Cappone",
+      "Caronte",
+      "Carzuolo",
+      "Casal d’Angela",
+      "Casal La Mola",
+      "Castellone",
+      "Catenacci",
+      "Cattura",
+      "Cauto",
+      "Cavallo",
+      "Cerasola",
+      "Chépe",
+      "Ciuccia",
+      "Cola Morelli",
+      "Colle Alto",
+      "Colle d’Arcangela",
+      "Colle La Fossa",
+      "Colle La Madonna",
+      "Colle Mosca",
+      "Colle Palombo",
+      "Colle Quercia",
+      "Colle Rasci",
+      "Colli e Bandiera",
+      "Coluccia",
+      "Corso o Sarravoglia",
+      "Cricca",
+      "Criticcio",
+      "Cuccagna",
+      "Cucco",
+      "Cucuzzo",
+      "Curoccio",
+      "Falcuna",
+      "Fallena o Inguastro",
+      "Farritto",
+      "Ferruccia",
+      "Folcara",
+      "Fossa o Catallo",
+      "Giuntura",
+      "Grotte dell’Acqua",
+      "Iacovelli",
+      "Iacuccio",
+      "Intaragno",
+      "Iucci",
+      "Luce",
+      "Maola",
+      "Marchetta",
+      "Mariana",
+      "Marrocco",
+      "Marsiello",
+      "Mattè",
+      "Mattione",
+      "Micalitto",
+      "Morina",
+      "Moscone",
+      "Muraccia",
+      "Olive",
+      "Papa",
+      "Persichello",
+      "Pietro Niro",
+      "Santa Croce",
+      "Pistillo",
+      "Pettella",
+      "Pittillo o Foreste",
+      "Pizzico",
+      "Plauto",
+      "Puzzillo",
+      "Puzzuolo o Giordana",
+      "Quagno",
+      "Ranno",
+      "San Francesco",
+      "San Leonardo",
+      "Santo Pietro",
+      "Saracina",
+      "Sciocca",
+      "Sorelle",
+      "Spina",
+      "Taccone",
+      "Tingoniro",
+      "Tirlo",
+      "Tirlo",
+      "Tiscio",
+      "Togna",
+      "Trippoccio",
+      "Tufo",
+      "Valloni",
+      "Valloni",
+      "Vedenna",
+      "Vitella",
+      "Volpone Vecchio e Nuovo",
+      "Zagarino",
+      "Zincone e Colle Molino",
+      "Zuorro"
+    ],
+    "comuni_confinanti": [
+      "A est: Alvito",
+      "Atina; a nord: Vicalvi; a ovest: Arpino",
+      "Fontechiari; a sud: Casalattico"
+    ],
+    "musei": [
+      "Museo Civico \"Padre Michele Jacobelli\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Cellitto",
+      "Palazzo Ianni",
+      "Palazzo Iacobelli",
+      "Palazzo Fanelli",
+      "Palazzo Rezza"
+    ],
+    "chiese": [
+      "Collegiata dei Santi Giovanni Battista ed Evangelista",
+      "Chiesa di Santa Maria delle Rose (borgata Roselli)",
+      "Chiesa di San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana di Santa Lucia"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalattico",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060017",
+    "codice_catastale": "B862",
+    "popolazione": 561,
+    "superficie_kmq": 28.34,
+    "densita": 19.8,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Barbato",
+    "festa_patronale": "19 febbraio",
+    "demonimo": "casalatticesi",
+    "etimologia": "E' un composto di Casale ed Attico riferendosi a Pomponio Attico che qui avrebbe posseduto una casa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": [
+      "Macchia",
+      "Montattico",
+      "Mortale",
+      "San Nazario",
+      "Sant'Andrea"
+    ],
+    "comuni_confinanti": [
+      "Arpino",
+      "Atina",
+      "Casalvieri",
+      "Colle San Magno",
+      "Santopadre",
+      "Terelle"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Barbato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campoli Appennino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060016",
+    "codice_catastale": "B543",
+    "popolazione": 1696,
+    "superficie_kmq": 33.38,
+    "densita": 50.8,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "12 maggio",
+    "demonimo": "campolesi",
+    "etimologia": "Campoli deriva da campulus, diminutivo del termine latino campus (campo, terra) oppure dal latino campora che si realizza con l'aggiunta della desinenza -ora al plurale di campo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise"
+    ],
+    "localita_frazioni": [
+      "Rifugio Simoncelli"
+    ],
+    "comuni_confinanti": [
+      "Alvito",
+      "Broccostella",
+      "Pescasseroli (AQ)",
+      "Pescosolido",
+      "Posta Fibreno",
+      "Sora",
+      "Villavallelonga (AQ)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Sant'Andrea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Broccostella",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060015",
+    "codice_catastale": "B195",
+    "popolazione": 2710,
+    "superficie_kmq": 11.95,
+    "densita": 226.8,
+    "cap": "03030",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "broccostellani",
+    "etimologia": "E' un nome composto da Brocco e Stella che sii riferiscono ai nomi di due antiche frazioni: Brocco dal nome latino di persona Brocchus, il secondo da Madonna della Stella.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Brocco Alto",
+      "Madonna della Stella",
+      "San Martino",
+      "Schito"
+    ],
+    "comuni_confinanti": [
+      "A est: Posta Fibreno; a nord e est: Campoli Appennino; a nord e ovest: Sora; a sud: Arpino",
+      "Fontechiari"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Boville Ernica",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060014",
+    "codice_catastale": "A720",
+    "popolazione": 8609,
+    "superficie_kmq": 28.15,
+    "densita": 305.8,
+    "cap": "03022",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Pietro Ispano",
+    "festa_patronale": "16 agosto",
+    "demonimo": "bovillensi",
+    "etimologia": "Chiamato Bauco fino al 1907, il nome attuale si riferisce all'antico Bovillae che a sua volta deriva dal latino bos, bovis (bue) ed identifica una città degli Ernici che ivi sorgeva (da qui anche la specifica Ernica).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": [
+      "Area Castello",
+      "Casavitola",
+      "Colle Piscioso",
+      "Panicelli",
+      "San Lucio",
+      "Santa Liberata",
+      "Scrima"
+    ],
+    "comuni_confinanti": [
+      "A est: Monte San Giovanni Campano; a nord e ovest: Veroli; a ovest: Ripi; a sud: Strangolagalli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Liberata",
+      "Chiesa di Santo Stefano",
+      "Chiesa di San Pietro Ispano",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Francesco",
+      "Chiesa della Madonna del Latte"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Belmonte Castello",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060013",
+    "codice_catastale": "A763",
+    "popolazione": 727,
+    "superficie_kmq": 14.24,
+    "densita": 51.1,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "belmontesi",
+    "etimologia": "La prima parte del nome, ossia \"Belmonte\" ha un chiaro significato. L'aggiunta \"Castello\" si riferisce alla presenza nella parte alta del paese di un torrione diroccato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e sud: Sant'Elia Fiumerapido; a nord: Atina; a nord e est: Villa Latina; a ovest e sud: Terelle"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ausonia",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060012",
+    "codice_catastale": "A502",
+    "popolazione": 2593,
+    "superficie_kmq": 20.1,
+    "densita": 129.0,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "ausoniesi",
+    "etimologia": "Chiamato Le Fratte fino al 1862, anno in cui il luogo assunse il nome attuale in memoria dell'antica città distrutta dai romani. Deriva probabilmente da -aus (corso d'acqua, fiume) con estensione del significato alla popolazione: \"gente del fiume\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIX L'Arco degli Aurunci",
+      "Parco Naturale Monti Aurunci"
+    ],
+    "localita_frazioni": [
+      "Madonna del Piano",
+      "Selvacava"
+    ],
+    "comuni_confinanti": [
+      "A nord-ovest: Castelnuovo Parano",
+      "Esperia; a sud-est: Coreno Ausonio; a sud-ovest: Spigno Saturnia (LT)"
+    ],
+    "musei": [
+      "Museo della Pietra"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di Santa Maria del Piano"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Medievale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Berzé-La-Ville (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Atina",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060011",
+    "codice_catastale": "A486",
+    "popolazione": 4258,
+    "superficie_kmq": 29.81,
+    "densita": 142.8,
+    "cap": "03042",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Marco Galileo",
+    "festa_patronale": "primo ottobre",
+    "demonimo": "atinati",
+    "etimologia": "La sua origine è sconosciuta, secondo alcuni potrebbe derivare dal latino Atina (forse dal nome di un fiume Ater, ossia nero). Secondo altri il nome potrebbe riferirsi al fatto che il centro fu fondato da coloni greci.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Ponte Melfa",
+      "Settignano"
+    ],
+    "comuni_confinanti": [
+      "A est: Picinisco",
+      "Villa Latina; a nord: Alvito",
+      "Gallinaro; a ovest: Casalattico",
+      "Casalvieri; a sud: Belmonte Castello",
+      "Terelle"
+    ],
+    "musei": [
+      "Museo Internazionale del Folklore e Civiltà Contadina",
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Newton Mass. (U.S.A.)",
+      "Augusta Raurica (Svizzera)",
+      "Veroli (in provincia di Frosinone)",
+      "Basilea (Svizzera)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arpino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060010",
+    "codice_catastale": "A433",
+    "popolazione": 7193,
+    "superficie_kmq": 55.96,
+    "densita": 128.5,
+    "cap": "03033",
+    "prefisso_telefonico": "0776",
+    "patrono": "Madonna di Loreto",
+    "festa_patronale": "10 dicembre",
+    "demonimo": "arpinati",
+    "etimologia": "Deriva dal nome latino di persona Arpinus o Arpinum.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Carnello",
+      "Civitavecchia",
+      "Collecarino",
+      "Vallefredda",
+      "Vallone",
+      "Vignepiane",
+      "Colle Lo Zoppo",
+      "Sant'Amasio",
+      "Forglieta"
+    ],
+    "comuni_confinanti": [
+      "A est: Casalvieri",
+      "Fontechiari; a nord: Sora; a nord e est: Broccostella; a ovest: Castelliri",
+      "Fontana Liri",
+      "Isola del Liri",
+      "Monte San Giovanni Campano",
+      "Santopadre; a sud: Casalattico"
+    ],
+    "musei": [
+      "Museo Donazione \"Umberto Mastroianni\"",
+      "Museo della Liuteria",
+      "Museo Archeologico Industriale dell'Arte della Lana"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna del Riparo o San Giuseppe alla Parata",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa della Madonna di Loreto, sulla rocca di Civita Falconara",
+      "Santuario Maria Assunta di Civita",
+      "Chiesa Madonna delle Grazie",
+      "Chiesa di Sant'Antonio di Padova (nel quartiere Ponte)",
+      "Chiesa di Sant'Andrea",
+      "Chiesa di San Vito",
+      "Chiesa di San Rocco",
+      "Chiesa della SS. Trinità (frazione Civitavecchia)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Gonfalone (domenica successiva al Ferragosto)",
+      "con sfilata folcloristica"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arnara",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060009",
+    "codice_catastale": "A421",
+    "popolazione": 2302,
+    "superficie_kmq": 12.33,
+    "densita": 186.7,
+    "cap": "03020",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "arnaresi",
+    "etimologia": "Secondo alcuni il nome deriva dalla natura rocciosa del luogo, secondo altri si riferisce al nome latino di pianta alnus, ossia ontano, forse per la presenza in zona della pianta. Più probabilmente deriva da arnaro, ossia \"luogo chiuso\" come una grotta oppure cava di terra. Altre ipotesi raccontano che deriva dal nome longobardo di persona Arnhari o latino Arnarius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Le Sterpare"
+    ],
+    "comuni_confinanti": [
+      "A est: Ripi; a est e sud: Pofi; a nord: Frosinone",
+      "Torrice; a sud e ovest: Ceccano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arce",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060008",
+    "codice_catastale": "A363",
+    "popolazione": 5697,
+    "superficie_kmq": 39.5,
+    "densita": 144.2,
+    "cap": "03032",
+    "prefisso_telefonico": "0776",
+    "patrono": "Sant'Eleuterio",
+    "festa_patronale": "29 maggio",
+    "demonimo": "arcesi",
+    "etimologia": "Deriva dal latino arx, arcis, ossia rocca in riferimento alla parte più alta della città.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XV Valle del Liri",
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Stazione",
+      "Colle Alto",
+      "Isoletta",
+      "Marzi",
+      "Murata",
+      "Tramonti;località: Santa Giusta"
+    ],
+    "comuni_confinanti": [
+      "Ceprano",
+      "Colfelice",
+      "Falvaterra",
+      "Fontana Liri",
+      "Monte San Giovanni Campano",
+      "Rocca d'Arce",
+      "San Giovanni Incarico",
+      "Strangolagalli"
+    ],
+    "musei": [
+      "Museo Antropologico Gente di Ciociaria"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Eleuterio",
+      "Chiesa di Sant'Agostino, detta anche di Sant'Antonio",
+      "Chiesa di Santa Maria",
+      "Chiesa dei SS. Apostoli Pietro e Paolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Parco Archeologico",
+      "resti di una Villa romana (località: Santa Giusta)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aquino",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060007",
+    "codice_catastale": "A348",
+    "popolazione": 5358,
+    "superficie_kmq": 19.24,
+    "densita": 278.5,
+    "cap": "03031",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Costanzo Vescovo",
+    "festa_patronale": "primo settembre",
+    "demonimo": "aquinati",
+    "etimologia": "Deriva dal latino Aquinum che si riferisce al nome latino di persona Acuvius con l'aggiunta del suffisso -inumo al nome osco Akviiai.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica Valle del Liri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e sud: Piedimonte San Germano; a nord-ovest e ovest: Castrocielo; a sud e ovest: Pontecorvo"
+    ],
+    "musei": [
+      "Museo della Città"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Libera",
+      "Chiesa di San Pietro Vetere"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anagni",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060006",
+    "codice_catastale": "A269",
+    "popolazione": 21411,
+    "superficie_kmq": 113.79,
+    "densita": 188.2,
+    "cap": "03012",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Magno",
+    "festa_patronale": "19 agosto",
+    "demonimo": "anagnini",
+    "etimologia": "Nei documenti antichi è menzionato come Anagnia, la sua origine è sconosciuta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": [
+      "Anagni Scalo",
+      "Osteria della Fontana"
+    ],
+    "comuni_confinanti": [
+      "Acuto",
+      "Ferentino",
+      "Fumone",
+      "Gavignano (RM)",
+      "Gorga (RM)",
+      "Montelanico (RM)",
+      "Paliano",
+      "Piglio",
+      "Sgurgola"
+    ],
+    "musei": [
+      "Museo del Tesoro della Cattedrale",
+      "Museo Bonifaciano del Lazio Meridionale",
+      "Mostra Permanente \"Tommaso Gismondi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro in Vineis",
+      "Chiesa di San Giacomo, detta di San Vincenzo",
+      "Cattedrale dedicata a Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Gniezno (Polonia)",
+      "Isle sur la Sorgue (Francia)",
+      "Migdal Haemek (Israele)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Amaseno",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060005",
+    "codice_catastale": "A256",
+    "popolazione": 4375,
+    "superficie_kmq": 77.18,
+    "densita": 56.7,
+    "cap": "03021",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "amasenensi",
+    "etimologia": "Si riferisce al nome di un piccolo fiume Amasenus che potrebbe derivare a sua volta da Amasos (forse un nome di città). La denominazione attuale fu assegnata alla città nel 1872 in sostituzione di San Lorenzo in Campagna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XXI Monti Lepini Ausoni e Valliva"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castro dei Volsci",
+      "Monte San Biagio (LT)",
+      "Prossedi (LT)",
+      "Roccasecca dei Volsci (LT)",
+      "Sonnino (LT)",
+      "Vallecorsa",
+      "Villa Santo Stefano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Monastero dl Santa Maria dell'Auricola, più brevemente chiamato l'Auricola",
+      "Chiesa di Santa Maria",
+      "Chiesa di San Pietro",
+      "Chiesa dell'Annunciazione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alvito",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060004",
+    "codice_catastale": "A244",
+    "popolazione": 2678,
+    "superficie_kmq": 52.04,
+    "densita": 51.5,
+    "cap": "03041",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Valerio",
+    "festa_patronale": "ultima domenica di maggio",
+    "demonimo": "alvitani",
+    "etimologia": "Potrebbe riferirsi ai numerosi ulivi che sorgono in zona con l'aggiunta del suffisso collettivo -etum. Meno condivisa è l'ipotesi che vuole che il nome derivi dal nome di persona Aliwits.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino",
+      "Parco Nazionale d'Abruzzo, Lazio e Molise"
+    ],
+    "localita_frazioni": [
+      "Castello",
+      "Sant'Onofrio"
+    ],
+    "comuni_confinanti": [
+      "Atina",
+      "Campoli Appennino",
+      "Casalvieri",
+      "Gallinaro",
+      "Pescasseroli (AQ)",
+      "Posta Fibreno",
+      "San Donato Val di Comino",
+      "Vicalvi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ducale",
+      "con facciata barocca"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Simeone",
+      "Chiesa di Santa Maria del Campo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alatri",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060003",
+    "codice_catastale": "A123",
+    "popolazione": 28884,
+    "superficie_kmq": 97.23,
+    "densita": 297.1,
+    "cap": "03011",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Sisto",
+    "festa_patronale": "mercoledì dopo Pasqua",
+    "demonimo": "alatrensi",
+    "etimologia": "Probabilmente il nome si riferisce al latino alatrium o aletrium il cui primitivo significato è però sconosciuto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "rioni: Scurano",
+      "Valle",
+      "Colle",
+      "Fiorenza",
+      "Spidini",
+      "Vineri",
+      "Santa Lucia",
+      "Sant'Andrea",
+      "San Simeone",
+      "Civette;\ncontrade:  Chiappitto",
+      "Pacciano",
+      "Porpuro",
+      "Valle Santa Maria",
+      "Carvarola",
+      "Capranica",
+      "Fontana Vecchia",
+      "Maddalena",
+      "Piedimonte",
+      "Madonna delle Grazie",
+      "Melegranate",
+      "Montecapraro",
+      "Vignola",
+      "Valle Carchera",
+      "Montesantangelo",
+      "Montelarena",
+      "Pezza",
+      "Allegra",
+      "Basciano",
+      "Pignano",
+      "Castello",
+      "Collefreddo",
+      "Madonna del Pianto",
+      "Montelungo",
+      "Montereo",
+      "Monte San Marino",
+      "Pezzelle",
+      "Preturo",
+      "Sant'Antimo",
+      "San Valentino",
+      "Vallecupa",
+      "Vallefredda",
+      "Valle Pantano",
+      "Vallesacco",
+      "Valle S.Matteo",
+      "Villa Magna",
+      "Cassiano",
+      "Castagneto",
+      "Fraschette",
+      "Seritico",
+      "Santa Caterina",
+      "Vicero",
+      "Aiello",
+      "Canarolo",
+      "Collelavena",
+      "Costa San Vincenzo",
+      "Maranillo",
+      "Cavariccio",
+      "Colletraiano",
+      "Imbratto",
+      "Piano",
+      "S. Colomba",
+      "Scopigliette",
+      "Cucuruzzavolo",
+      "le Grotte",
+      "Magione",
+      "Mole Santa Maria",
+      "San Pancrazio",
+      "Vallemiccina",
+      "Sant'Emidio",
+      "Canale",
+      "Prati Giuliani",
+      "Quarticciolo",
+      "Quarti di Tecchiena",
+      "Tecchiena",
+      "Campello",
+      "Mole Bisleti",
+      "Cuione",
+      "Fontana Santo Stefano",
+      "Fontana Sistiliana",
+      "Frittola",
+      "S. Manno",
+      "Arillette",
+      "Collecuttrino",
+      "Colle del Papa",
+      "Laguccio",
+      "Montelena",
+      "Quercia d'Orlando",
+      "San Mattia",
+      "Carano",
+      "Fontana Scurano",
+      "Magliano",
+      "Cellerano",
+      "Fiume",
+      "Fiura",
+      "Fontana Santa",
+      "Riano",
+      "Abbadia",
+      "Case Paolone",
+      "Fontana Sambuco",
+      "Gaudo",
+      "Intignano",
+      "Colleprata"
+    ],
+    "comuni_confinanti": [
+      "Collepardo",
+      "Ferentino",
+      "Frosinone",
+      "Fumone",
+      "Guarcino",
+      "Morino (AQ)",
+      "Trivigliano",
+      "Veroli",
+      "Vico nel Lazio"
+    ],
+    "musei": [
+      "Museo della Chiesa di Santa Maria Maggiore",
+      "Museo Civico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Gottifredi"
+    ],
+    "chiese": [
+      "Chiesa di San Francesco",
+      "Chiesa di Santo Stefano",
+      "Chiesa di San Silvestro",
+      "Chiesa degli Scolopi",
+      "Cattedrale di San Paolo di Alatri",
+      "Chiesa di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acuto",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060002",
+    "codice_catastale": "A054",
+    "popolazione": 1915,
+    "superficie_kmq": 13.4,
+    "densita": 142.9,
+    "cap": "03010",
+    "prefisso_telefonico": "0775",
+    "patrono": "San Maurizio",
+    "festa_patronale": "22 settembre",
+    "demonimo": "acutini",
+    "etimologia": "Il nome del luogo si riferisce al colle su cui il paese è sorto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XII Monti Ernici"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Fiuggi; a nord e ovest: Piglio; a ovest: Alatri; a sud: Anagni",
+      "Ferentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di San Sebastiano",
+      "Chiesa di San Pietro",
+      "Chiesa della Maddalena"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acquafondata",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060001",
+    "codice_catastale": "A032",
+    "popolazione": 270,
+    "superficie_kmq": 25.59,
+    "densita": 10.6,
+    "cap": "03040",
+    "prefisso_telefonico": "0776",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "acquafondatari",
+    "etimologia": "Il nome è un composto di \"acqua\" e \"fondata\", ossia profonda. Si riferisce alla presenza di un lago o di una sorgente sita nei pressi del colle su cui sorge il paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona XIV Valle di Comino"
+    ],
+    "localita_frazioni": [
+      "Casalcassinese",
+      "Serre"
+    ],
+    "comuni_confinanti": [
+      "Filignano (IS)",
+      "Pozzilli (IS)",
+      "Vallerotonda",
+      "Viticuso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Margherita",
+      "Chiesa della Madonna del Carmelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festival internazionale della Zampogna (in gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frosinone",
+    "provincia": "Frosinone",
+    "regione": "Lazio",
+    "zona": "Italia Centrale",
+    "codice_istat": "060038",
+    "codice_catastale": "D810",
+    "popolazione": 46120,
+    "superficie_kmq": 47.02,
+    "densita": 980.9,
+    "cap": "03100",
+    "prefisso_telefonico": "0775",
+    "patrono": "Santi Silverio e Ormisda",
+    "festa_patronale": "20 giugno",
+    "demonimo": "frusinati",
+    "etimologia": "Il nome si riferisce all'antica città dei Volsci: Frusino che si traduce come \"terra inondata dai fiumi\". Il nome in latino diventò Frusino, -onis da cui deriva il nome della città.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "La Cervona",
+      "Capo Barile Nicolia",
+      "Colle Martuccio",
+      "Fontana Grande",
+      "Le Rase",
+      "Pratillo",
+      "Valle Contessa",
+      "Vetiche"
+    ],
+    "comuni_confinanti": [
+      "A est: Torrice; a nord: Alatri",
+      "Ferentino",
+      "Veroli; a ovest: Patrica",
+      "Supino; a sud: Arnara",
+      "Ceccano"
+    ],
+    "musei": [
+      "Museo Archeologico Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Neve",
+      "Chiesa di Santa Lucia",
+      "Chiesa di San Liberatore",
+      "Chiesa di San Benedetto, in piazza della Libertà",
+      "Cattedrale di Santa Maria Assunta, settecentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Nestor"
+    ],
+    "stadi": [
+      "Stadio Comunale"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

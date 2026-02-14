@@ -1,0 +1,16 @@
+{
+  "nome": "Macerata",
+  "regione": "Marche",
+  "zona": null,
+  "sigla": "MC",
+  "codice_istat": "043",
+  "popolazione": 318921,
+  "popolazione_maschi": 154600,
+  "popolazione_femmine": 164321,
+  "superficie_kmq": 2773.75,
+  "densita": 115.0,
+  "num_comuni": 57,
+  "capoluogo": "Macerata",
+  "iso_3166_2": "IT-MC",
+  "nuts": "ITE33"
+}

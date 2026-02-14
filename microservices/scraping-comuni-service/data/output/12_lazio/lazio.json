@@ -1,0 +1,14 @@
+{
+  "nome": "Lazio",
+  "codice_istat": "12",
+  "popolazione": 5898124,
+  "popolazione_maschi": 2846876,
+  "popolazione_femmine": 3051248,
+  "superficie_kmq": 17207.68,
+  "densita": 342.8,
+  "num_province": 5,
+  "num_comuni": 378,
+  "capoluogo": "Roma",
+  "iso_3166_2": "IT-62",
+  "nuts": "ITE4"
+}

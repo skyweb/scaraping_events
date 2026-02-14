@@ -1,0 +1,14 @@
+{
+  "nome": "Basilicata",
+  "codice_istat": "17",
+  "popolazione": 570365,
+  "popolazione_maschi": 280176,
+  "popolazione_femmine": 290189,
+  "superficie_kmq": 9994.61,
+  "densita": 57.1,
+  "num_province": 2,
+  "num_comuni": 131,
+  "capoluogo": "Potenza",
+  "iso_3166_2": "IT-77",
+  "nuts": "ITF5"
+}

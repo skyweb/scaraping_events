@@ -1,0 +1,16 @@
+{
+  "nome": "Parma",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "PR",
+  "codice_istat": "034",
+  "popolazione": 448899,
+  "popolazione_maschi": 218409,
+  "popolazione_femmine": 230490,
+  "superficie_kmq": 3449.32,
+  "densita": 130.1,
+  "num_comuni": 45,
+  "capoluogo": "Parma",
+  "iso_3166_2": "IT-PR",
+  "nuts": "ITD52"
+}

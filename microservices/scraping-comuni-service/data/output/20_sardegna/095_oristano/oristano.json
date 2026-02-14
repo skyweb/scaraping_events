@@ -1,0 +1,16 @@
+{
+  "nome": "Oristano",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "OR",
+  "codice_istat": "095",
+  "popolazione": 160746,
+  "popolazione_maschi": 79210,
+  "popolazione_femmine": 81536,
+  "superficie_kmq": 3039.99,
+  "densita": 52.9,
+  "num_comuni": 88,
+  "capoluogo": "Oristano",
+  "iso_3166_2": "IT-OR",
+  "nuts": "ITG28"
+}

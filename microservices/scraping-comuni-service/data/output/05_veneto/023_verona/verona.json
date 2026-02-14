@@ -1,0 +1,16 @@
+{
+  "nome": "Verona",
+  "regione": "Veneto",
+  "zona": null,
+  "sigla": "VR",
+  "codice_istat": "023",
+  "popolazione": 921557,
+  "popolazione_maschi": 450834,
+  "popolazione_femmine": 470723,
+  "superficie_kmq": 3120.91,
+  "densita": 295.3,
+  "num_comuni": 98,
+  "capoluogo": "Verona",
+  "iso_3166_2": "IT-VR",
+  "nuts": "ITD31"
+}

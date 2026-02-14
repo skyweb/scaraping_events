@@ -148,6 +148,63 @@ Vedere i log del frontend:
 docker logs -f backoffice-frontend-dev
 ```
 
+## Django Apps
+
+| App | Descrizione |
+|-----|-------------|
+| `events` | Gestione eventi (Staging + Production), ETL, API esterne OAuth2 |
+| `scraping` | Configurazione spider e categorie |
+| `cms` | CMS pagine citta: sezioni, articoli, staging events integrati |
+| `comuni_istat` | Confini amministrativi ISTAT (regioni, province, comuni con geometrie PostGIS) |
+| `comuni_istat_ingestion` | Dati scraping comuni-italiani.it: modelli relazionali + raw data JSON |
+| `etl` | Storico esecuzioni e errori ETL |
+
+### App `comuni_istat_ingestion`
+
+Contiene i modelli relazionali per i dati scraping da comuni-italiani.it:
+
+| Modello | Tabella DB | Descrizione |
+|---------|-----------|-------------|
+| `Regione` | `regioni` | 20 regioni con dati demografici |
+| `Provincia` | `province` | 110 province con sigla, popolazione, superficie |
+| `Comune` | `comuni` | ~8000 comuni con CAP, patrono, etimologia, ecc. |
+| `ComuneFrazione` | `comune_frazioni` | Frazioni e localita |
+| `ComuneConfinante` | `comune_confinanti` | Comuni confinanti |
+| `ComuneAppartenenza` | `comune_appartenenze` | Comunita montane, parchi, associazioni |
+| `ComunePuntoInteresse` | `comune_punti_interesse` | Musei, chiese, castelli, teatri, stadi |
+| `ComuneEvento` | `comune_eventi` | Feste, sagre, eventi tradizionali |
+| `ComuneGemellaggio` | `comune_gemellaggi` | Gemellaggi con altre citta |
+| `ComuneCittadinoIllustre` | `comune_cittadini_illustri` | Cittadini illustri |
+| `ComuniIstatRawData` | `raw_data` | Dati JSON grezzi dallo scraping |
+
+Tutte le tabelle sono nello schema PostgreSQL `comuni_istat_ingestion`.
+
+#### Management Command: `import_scraping_comuni`
+
+Importa i JSON generati dallo spider `comuni_spider` nelle tabelle relazionali:
+
+```bash
+# Copia i JSON nel container
+docker cp /path/to/scraping-comuni-service/data/output dev-backoffice:/tmp/scraping_output
+
+# Importa (--flush cancella i dati esistenti prima)
+docker exec dev-backoffice python manage.py import_scraping_comuni /tmp/scraping_output --flush
+```
+
+### API Endpoints Comuni
+
+| Endpoint | Metodi | Descrizione |
+|----------|--------|-------------|
+| `/api/comuni-istat/ingestion/` | POST | Ingestione singolo record |
+| `/api/comuni-istat/ingestion/bulk/` | POST | Ingestione bulk |
+
+### CMS
+
+| Endpoint | Metodi | Descrizione |
+|----------|--------|-------------|
+| `/api/cms/citta/` | GET | Lista pagine citta attive |
+| `/api/cms/citta/{slug}/` | GET | Dettaglio pagina citta con sezioni e articoli |
+
 ## Struttura
 
 - **backend/**: Applicazione Django (API + Admin)

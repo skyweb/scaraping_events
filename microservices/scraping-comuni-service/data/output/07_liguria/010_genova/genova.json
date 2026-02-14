@@ -1,0 +1,16 @@
+{
+  "nome": "Genova",
+  "regione": "Liguria",
+  "zona": null,
+  "sigla": "GE",
+  "codice_istat": "010",
+  "popolazione": 850071,
+  "popolazione_maschi": 403271,
+  "popolazione_femmine": 446800,
+  "superficie_kmq": 1839.2,
+  "densita": 462.2,
+  "num_comuni": 67,
+  "capoluogo": "Genova",
+  "iso_3166_2": "IT-GE",
+  "nuts": "ITC33"
+}

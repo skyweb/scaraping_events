@@ -1,0 +1,16 @@
+{
+  "nome": "Terni",
+  "regione": "Umbria",
+  "zona": null,
+  "sigla": "TR",
+  "codice_istat": "055",
+  "popolazione": 228218,
+  "popolazione_maschi": 108950,
+  "popolazione_femmine": 119268,
+  "superficie_kmq": 2121.95,
+  "densita": 107.6,
+  "num_comuni": 33,
+  "capoluogo": "Terni",
+  "iso_3166_2": "IT-TR",
+  "nuts": "ITE22"
+}

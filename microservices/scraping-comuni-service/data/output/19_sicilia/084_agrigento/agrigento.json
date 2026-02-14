@@ -1,0 +1,16 @@
+{
+  "nome": "Agrigento",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "AG",
+  "codice_istat": "084",
+  "popolazione": 442049,
+  "popolazione_maschi": 215100,
+  "popolazione_femmine": 226949,
+  "superficie_kmq": 3041.9,
+  "densita": 145.3,
+  "num_comuni": 43,
+  "capoluogo": "Agrigento",
+  "iso_3166_2": "IT-AG",
+  "nuts": "ITG14"
+}

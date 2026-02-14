@@ -1,0 +1,2174 @@
+[
+  {
+    "nome": "Valenzano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072048",
+    "codice_catastale": "L571",
+    "popolazione": 17980,
+    "superficie_kmq": 15.79,
+    "densita": 1138.7,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "valenzanesi",
+    "etimologia": "Deriva dal nome latino di persona Valentius, con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Adelfia",
+      "Bari",
+      "Capurso",
+      "Casamassima"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Turi",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072047",
+    "codice_catastale": "L472",
+    "popolazione": 13038,
+    "superficie_kmq": 70.77,
+    "densita": 184.2,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "Sant'Oronzo",
+    "festa_patronale": "26 agosto",
+    "demonimo": "turesi",
+    "etimologia": "Deriva dal nome dell'antico paese su cui sorse: Thuriae.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casamassima",
+      "Conversano",
+      "Gioia del Colle",
+      "Putignano",
+      "Rutigliano",
+      "Sammichele di Bari"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Marchesale",
+      "Torre dell`Orologio"
+    ],
+    "chiese": [
+      "Chiesa e Convento di San Giovanni Battista",
+      "Chiesa di San Domenico",
+      "Cappellina della Madonna della Grazia",
+      "Chiesa Matrice",
+      "Chiesa di Sant'Oronzo alla Grotta",
+      "Chiesetta di San Rocco o dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Roeser (Lussemburgo)",
+      "dal giugno 2004"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Triggiano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072046",
+    "codice_catastale": "L425",
+    "popolazione": 27247,
+    "superficie_kmq": 20.0,
+    "densita": 1362.4,
+    "cap": "70019",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna della Croce",
+    "festa_patronale": "terza domenica di settembre",
+    "demonimo": "triggianesi",
+    "etimologia": "Deriva dal nome latino di persona Trebius con l'aggiunta del suffisso -anus che indica possesso. La tradizione popolare vuole che il luogo derivi da le tre vie che dal castello conducevano al paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Noicàttaro; a nord e ovest: Bari; a sud: Capurso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Veterana",
+      "Chiesa di Santa Maria della Croce",
+      "Chiesa di San Michele",
+      "Chiesa di San Giuseppe"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio Astronomico \"Apollo\""
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Rocco (ad agosto)"
+    ],
+    "gemellaggi": [
+      "Addison (Chicago",
+      "Ilinois - USA)",
+      "dal settembre 2003"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Toritto",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072044",
+    "codice_catastale": "L220",
+    "popolazione": 8461,
+    "superficie_kmq": 74.58,
+    "densita": 113.4,
+    "cap": "70020",
+    "prefisso_telefonico": "080",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "torittesi",
+    "etimologia": "Sembrerebbe logico ricondurre il nome alla presenza di una torre, invece deriva dal latino torus (rialzo di terreno) con l'aggiunta del suffisso -etum. Potrebbe anche derivare dal latino veteretum, ossia sodaglia (terreno sassoso e incolto).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Nord-Ovest",
+      "Regione Agraria n. 3 - Murge di Bitonto",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città dell'Olio",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Altamura",
+      "Binetto",
+      "Bitonto",
+      "Grumo Appula",
+      "Palo del Colle"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Terlizzi",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072043",
+    "codice_catastale": "L109",
+    "popolazione": 26944,
+    "superficie_kmq": 68.3,
+    "densita": 394.5,
+    "cap": "70038",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna di Sovereto",
+    "festa_patronale": "23 aprile",
+    "demonimo": "terlizzesi",
+    "etimologia": "Deriva dal latino inter iliceas, ossia \"tra i lecci\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Murge di Bitonto",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Sovereto"
+    ],
+    "comuni_confinanti": [
+      "Bisceglie (BT)",
+      "Bitonto",
+      "Giovinazzo",
+      "Molfetta",
+      "Ruvo di Puglia"
+    ],
+    "musei": [
+      "Pinacoteca Civica \"Michele De Napoli\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Confreda",
+      "Palazzo de Gemmis",
+      "Palazzo De Napoli",
+      "Palazzo de Paù Gentili"
+    ],
+    "chiese": [
+      "Chiesa del Crocifisso",
+      "Chiesa dell'Immacolata (detta del Purgatorio)",
+      "Chiesa della Madonna del Rosario",
+      "Chiesa dei S. Medici",
+      "Chiesa dei Cappuccini (o Santa Maria delle Grazie)",
+      "Chiesa della Madonna della Stella"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Madonna di Sovereto (prima domenica di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santeramo in Colle",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072041",
+    "codice_catastale": "I330",
+    "popolazione": 26724,
+    "superficie_kmq": 143.42,
+    "densita": 186.3,
+    "cap": "70029",
+    "prefisso_telefonico": "080",
+    "patrono": "Sant'Erasmo",
+    "festa_patronale": "2 giugno",
+    "demonimo": "santermani",
+    "etimologia": "Il nome evidenzia il culto per il santo patrono del paese Sant'Eramo di Antiochia. La specifica lascia intendere la sua collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Sud-Est",
+      "Regione Agraria n. 5 - Murge di Gioia del Colle",
+      "Parco Nazionale dell'Alta Murgia",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquaviva delle Fonti",
+      "Altamura",
+      "Cassano delle Murge",
+      "Gioia del Colle",
+      "Laterza (TA)",
+      "Matera (MT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre di Sant'Erasmo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Il Saltimbanco"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bulach (Svizzera), dal 2003",
+      "Bad Sackingen (Germania), dal 1983",
+      "Formia (Latina-Lazio)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sannicandro di Bari",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072040",
+    "codice_catastale": "I053",
+    "popolazione": 9952,
+    "superficie_kmq": 56.0,
+    "densita": 177.7,
+    "cap": "70028",
+    "prefisso_telefonico": "080",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "ultima domenica di giugno",
+    "demonimo": "sannicandresi",
+    "etimologia": "Il nome esprime la venerazione per San Nicandro, diventato poi con il tempo Sannicandro. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquaviva delle Fonti",
+      "Adelfia",
+      "Binetto",
+      "Bitetto",
+      "Bitritto",
+      "Cassano delle Murge",
+      "Grumo Appula"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa rupestre di Santa Maria di Sizzaro Odegitria"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Normanno-Svevo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra delle Orecchiette e dei Prodotti Tipici Locali (fine giugno)",
+      "Sagra delle Olive (seconda domenica di ottobre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sammichele di Bari",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072039",
+    "codice_catastale": "H749",
+    "popolazione": 6499,
+    "superficie_kmq": 33.87,
+    "densita": 191.9,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "sammichelini o casalini",
+    "etimologia": "Il nome deriva dalla venerazione per San Michele, diventato poi con il tempo Sammichele. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquaviva delle Fonti",
+      "Casamassima",
+      "Gioia del Colle",
+      "Turi"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina \"D. Bianco\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ruvo di Puglia",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072038",
+    "codice_catastale": "H645",
+    "popolazione": 25457,
+    "superficie_kmq": 222.04,
+    "densita": 114.7,
+    "cap": "70037",
+    "prefisso_telefonico": "080",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "ruvesi",
+    "etimologia": "Chiamato in passato Rubos, deriva dal latino rupes, roccia, pietra. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Nord-Ovest",
+      "Regione Agraria n. 3 - Murge di Bitonto",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Altamura",
+      "Andria (BT)",
+      "Bisceglie (BT)",
+      "Bitonto",
+      "Corato",
+      "Gravina in Puglia",
+      "Spinazzola (BT)",
+      "Terlizzi"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale \"Jatta\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Del Purgatorio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rutigliano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072037",
+    "codice_catastale": "H643",
+    "popolazione": 18617,
+    "superficie_kmq": 53.2,
+    "densita": 349.9,
+    "cap": "70018",
+    "prefisso_telefonico": "080",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "rutiglianesi",
+    "etimologia": "Deriva dal nome latino di persona Rutilius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Monopoli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casamassima",
+      "Conversano",
+      "Mola di Bari",
+      "Noicàttaro",
+      "Turi"
+    ],
+    "musei": [
+      "Museo delle ”Arti ed Antichi Mestieri”",
+      "Museo del Fischietto",
+      "Museo degli Emigrati",
+      "Museo Civico Archeologico “Grazia e Pietro Di Donna”"
+    ],
+    "ville_palazzi": [
+      "Palazzo Guidotti o dei “diamanti”",
+      "Palazzo Moccia dell’Erba",
+      "Palazzo Pappalepore",
+      "Palazzo Settanni",
+      "Palazzo Antonelli",
+      "Casa De Leone",
+      "Palazzo De Franceschis"
+    ],
+    "chiese": [
+      "Chiesa Matrice di Santa Maria della Colonna e San Nicola",
+      "Chiesa di San Domenico",
+      "Chiesa dei Cappuccini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Putignano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072036",
+    "codice_catastale": "H096",
+    "popolazione": 26783,
+    "superficie_kmq": 99.11,
+    "densita": 270.2,
+    "cap": "70017",
+    "prefisso_telefonico": "080",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "3 agosto",
+    "demonimo": "putignanesi",
+    "etimologia": "Deriva dal nome di persona Putinius, con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castellana Grotte",
+      "Conversano",
+      "Gioia del Colle",
+      "Noci",
+      "Turi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Domenico",
+      "Chiesa di San Pietro Apostolo",
+      "Chiesa della Madonna SS. del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta del Trullo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Polignano a Mare",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072035",
+    "codice_catastale": "G787",
+    "popolazione": 18014,
+    "superficie_kmq": 62.5,
+    "densita": 288.2,
+    "cap": "70044",
+    "prefisso_telefonico": "080",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "polignanesi",
+    "etimologia": "Deriva dal nome latino di persona Paulinius con l'aggiunta del suffisso -anus che indica possesso. La specifica \"a Mare\" risale al 1863.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Monopoli",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "San Vito",
+      "Casello Cavuzzi",
+      "Chiesa Nuova-Triggianello"
+    ],
+    "comuni_confinanti": [
+      "A est: Monopoli; a ovest: Mola di Bari; a sud-est: Castellana Grotte; a sud-ovest: Conversano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo del Feudatario",
+      "Palazzo del Governatore",
+      "Palazzo dell'Orologio",
+      "Palazzo Pino Pascali"
+    ],
+    "chiese": [
+      "Chiesa dei Santissimi Cosma e Damiano",
+      "Chiesa Trinità",
+      "Chiesa Matrice",
+      "Chiesa di Santo Stefano",
+      "Chiesa di Sant'Antonio",
+      "Chiesa del Purgatorio",
+      "Abbazia di San Vito",
+      "Chiesa della Natività"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Domenico Modugno (1928 - 1994)"
+    ]
+  },
+  {
+    "nome": "Poggiorsini",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072034",
+    "codice_catastale": "G769",
+    "popolazione": 1486,
+    "superficie_kmq": 43.12,
+    "densita": 34.5,
+    "cap": "70020",
+    "prefisso_telefonico": "080",
+    "patrono": "Maria Santissima dell'Addolorata",
+    "festa_patronale": "10 agosto",
+    "demonimo": "poggiorsinesi",
+    "etimologia": "La prima parte del nome (Poggio) deriva dal latino podium, ossia rialzo. La seconda parte del nome si riferisce all'antico possesso sul luogo da parte della famiglia Orsini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Nord-Ovest",
+      "Regione Agraria n. 4 - Murge di Altamura",
+      "Parco Nazionale dell'Alta Murgia",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Genzano di Lucania (PZ)",
+      "Gravina in Puglia",
+      "Spinazzola (BT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palo del Colle",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072033",
+    "codice_catastale": "G291",
+    "popolazione": 21561,
+    "superficie_kmq": 79.06,
+    "densita": 272.7,
+    "cap": "70027",
+    "prefisso_telefonico": "080",
+    "patrono": "Santissimo Crocifisso di Auricarro",
+    "festa_patronale": "terzo lunedì di settembre",
+    "demonimo": "palesi",
+    "etimologia": "Deriva dal latino palus (palo) o da pala (monte). La specifica \"del Colle\" lascia intendere la sua collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Murge di Bitonto"
+    ],
+    "localita_frazioni": [
+      "Auricarro"
+    ],
+    "comuni_confinanti": [
+      "Binetto",
+      "Bitetto",
+      "Bitonto",
+      "Toritto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio del Viccio (martedì di carnevale)"
+    ],
+    "gemellaggi": [
+      "Biebesheim am Rhein (land dell'Assia",
+      "Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Noicàttaro",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072032",
+    "codice_catastale": "F923",
+    "popolazione": 26297,
+    "superficie_kmq": 41.16,
+    "densita": 638.9,
+    "cap": "70016",
+    "prefisso_telefonico": "080",
+    "patrono": "Maria S.S. del Carmelo",
+    "festa_patronale": "domenica successiva al 16 luglio",
+    "demonimo": "nojani",
+    "etimologia": "Chiamato in passato Noja dal latino nova per indicare un terreno adatto al pascolo. Il nome attuale richiama il nome di un'antica città: Katry.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Monopoli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bari",
+      "Capurso",
+      "Casamassima",
+      "Cellamare",
+      "Mola di Bari",
+      "Rutigliano",
+      "Triggiano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Santa Maria del Soccorso",
+      "Chiesa Santa Maria Annunziata, Via Cappuccini",
+      "Chiesa Madre Santa Maria della Pace",
+      "Chiesa Madonna di Lourdes (Zona Residenziale Parchitello)",
+      "Chiesa Madonna della Lama",
+      "Chiesa Madonna del Rito",
+      "Chiesa dei Cappuccini",
+      "Chiesa  Santa Maria del Carmine",
+      "Chiesa Santa Maria Immacolata, Corso Roma"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Noci",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072031",
+    "codice_catastale": "F915",
+    "popolazione": 19211,
+    "superficie_kmq": 148.82,
+    "densita": 129.1,
+    "cap": "70015",
+    "prefisso_telefonico": "080",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "nocesi",
+    "etimologia": "Il nome si riferisce ed attesta la presenza in loco di un bosco con alberi di noci.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Sud-Est",
+      "Regione Agraria n. 5 - Murge di Gioia del Colle"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alberobello",
+      "Castellana Grotte",
+      "Gioia del Colle",
+      "Mottola (TA)",
+      "Putignano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre, dedicata a Santa Maria della Natività",
+      "Monastero Benedettino della Madonna della Scala",
+      "Santuario della Madonna della Croce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "I Sapori del Bosco, sagra dei funghi (ottobre)",
+      "Bacco nelle gnostre e vino novello in sagra (metà novembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monopoli",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072030",
+    "codice_catastale": "F376",
+    "popolazione": 49030,
+    "superficie_kmq": 156.38,
+    "densita": 313.5,
+    "cap": "70043",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna della Madia",
+    "festa_patronale": "15 dicembre",
+    "demonimo": "monopolitani",
+    "etimologia": "È un composto del termine greco monos (solo) e polis (città) con il significato di \"città unica\" riferendosi all'antica città Dirium.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Monopoli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alberobello",
+      "Castellana Grotte",
+      "Fasano (BR)",
+      "Polignano a Mare"
+    ],
+    "musei": [
+      "Museo della Chiesa di San Leonardo",
+      "Museo Diocesano",
+      "Museo dell'Artiglieria all'aperto"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Amalfitana (XII secolo, romanica)",
+      "Cattedrale"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Carlo V"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Botanico Lama degli Ulivi"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Madonna della Madia (15 agosto e 16 dicembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Franca Raimondi (1932 - 1988)",
+      "cantante",
+      "vincitrice del Festival di Sanremo nel 1956"
+    ]
+  },
+  {
+    "nome": "Molfetta",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072029",
+    "codice_catastale": "F284",
+    "popolazione": 59623,
+    "superficie_kmq": 58.32,
+    "densita": 1022.3,
+    "cap": "70056",
+    "prefisso_telefonico": "080",
+    "patrono": "San Corrado",
+    "festa_patronale": "9 febbraio",
+    "demonimo": "molfettesi",
+    "etimologia": "Chiamata in passato Melficta, Malfete, Melfetta, potrebbe derivare da Melphes, antico fiume della Lucania con l'aggiunta del suffisso -icta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Barletta",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bisceglie (BT)",
+      "Giovinazzo",
+      "Terlizzi"
+    ],
+    "musei": [
+      "Raccolta Civica d'Arte Contemporanea",
+      "Museo Diocesano",
+      "Museo Civico Archeologico del Pulo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna dei Martiri :: Frati Minori Francescani",
+      "Duomo",
+      "Chiesa di Santo Stefano",
+      "Chiesa di San Domenico",
+      "Chiesa di San Bernardino da Siena",
+      "Chiesa del Purgatorio",
+      "Cattedrale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna dei Martiri (8 settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mola di Bari",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072028",
+    "codice_catastale": "F280",
+    "popolazione": 25554,
+    "superficie_kmq": 50.76,
+    "densita": 503.4,
+    "cap": "70042",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna Addolorata",
+    "festa_patronale": "seconda domenica di settembre",
+    "demonimo": "molesi",
+    "etimologia": "Deriva dal latino mola, ossia macina. Secondo un'ipotesi poco accreditata potrebbe derivare dal latino moles (scoglio). La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Monopoli"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bari",
+      "Conversano",
+      "Noicàttaro",
+      "Polignano a Mare",
+      "Rutigliano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa San Domenico",
+      "Chiesa Matrice",
+      "Chiesa Maddalena"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Angioino"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Modugno",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072027",
+    "codice_catastale": "F262",
+    "popolazione": 38443,
+    "superficie_kmq": 31.9,
+    "densita": 1205.1,
+    "cap": "70026",
+    "prefisso_telefonico": "080",
+    "patrono": "San Nicola da Tolentino",
+    "festa_patronale": "10 settembre",
+    "demonimo": "modugnesi",
+    "etimologia": "Deriva dal nome latino di persona Medonius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bari",
+      "Bitetto",
+      "Bitonto",
+      "Bitritto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Locorotondo",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072025",
+    "codice_catastale": "E645",
+    "popolazione": 14156,
+    "superficie_kmq": 47.5,
+    "densita": 298.0,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "san Giorgio Martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "locorotondesi",
+    "etimologia": "Deriva da Locorotundo, ossia \"luogo rotondo\", dal latino locus con il significato di latifondo con chiesa e abitazioni rurali.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana",
+      "Associazione Nazionale Città del Vino",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alberobello",
+      "Cisternino (BR)",
+      "Fasano (BR)",
+      "Martina Franca (TA)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Morelli"
+    ],
+    "chiese": [
+      "Chiesa Rurale di San Marco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grumo Appula",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072024",
+    "codice_catastale": "E223",
+    "popolazione": 12812,
+    "superficie_kmq": 80.6,
+    "densita": 159.0,
+    "cap": "70025",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna di Monteverde",
+    "festa_patronale": null,
+    "demonimo": "grumesi",
+    "etimologia": "La prima parte del nome deriva dal latino grumus, ossia mucchio di terra. La specifica, risalente al 1863, deriva da Apulia, ossia Puglia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Sud-Est",
+      "Regione Agraria n. 3 - Murge di Bitonto",
+      "Parco Nazionale dell'Alta Murgia",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": [
+      "Mellitto"
+    ],
+    "comuni_confinanti": [
+      "Altamura",
+      "Binetto",
+      "Cassano delle Murge",
+      "Sannicandro di Bari",
+      "Toritto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria di Monteverde",
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di San Rocco",
+      "Chiesa di San Francesco",
+      "Chiesa di Maria SS delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gravina in Puglia",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072023",
+    "codice_catastale": "E155",
+    "popolazione": 43770,
+    "superficie_kmq": 381.3,
+    "densita": 114.8,
+    "cap": "70024",
+    "prefisso_telefonico": "080",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "gravinesi",
+    "etimologia": "La prima parte del nome, ossia Gravina, significa \"burrone\" e si riferisce al precipizio intorno al quale si distribuisce il paese. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Murge di Altamura",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Altamura",
+      "Genzano di Lucania (PZ)",
+      "Grottole (MT)",
+      "Irsina (MT)",
+      "Matera (MT)",
+      "Poggiorsini",
+      "Ruvo di Puglia",
+      "Spinazzola (BT)"
+    ],
+    "musei": [
+      "Museo della Fondazione \"E. Pomarici Santomasi\"",
+      "Museo Civico Archeologico",
+      "Museo Capitolare di Arte Sacra"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria del Suffragio (nota come Chiesa del Purgatorio)",
+      "Chiesa di San Sebastiano",
+      "Chiesa di San Francesco",
+      "Chiesa della Madonna delle Grazie",
+      "Basilica Cattedrale Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giovinazzo",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072022",
+    "codice_catastale": "E047",
+    "popolazione": 20396,
+    "superficie_kmq": 43.71,
+    "densita": 466.6,
+    "cap": "70054",
+    "prefisso_telefonico": "080",
+    "patrono": "San Tommaso",
+    "festa_patronale": "3 luglio",
+    "demonimo": "giovinazzesi",
+    "etimologia": "Esistono diverse ipotesi in merito all'origine del nome. Una derivazione leggendaria ritiene che la città sia stata fondata da Perseo, figlio di Giove (Jovis natio). Secondo alcuni deriverebbe dal nome di persona Johannacius che corrisponde all'attuale italiano Giovannaccio, secondo altri si riferisce ad un antico Juvenis Netium in riferimento all'antica città distrutta dalle guerre puniche. Altri ancora credono all'identificazione di questo luogo con Natiolum, città fortificata al tempo dell'Impero Romano. Verso la fine del primo millennio Natolium mutò il nome in Juvenatium, ossia Juvene Natiolum, a indicare una nuova e più vasta città con una popolazione più numerosa a causa dell'aggiunta di tanti degli ex invasori (Greci, Longobardi, Saraceni).",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Barletta",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bari",
+      "Bitonto",
+      "Molfetta",
+      "Terlizzi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ducale (XVII secolo)",
+      "Palazzo Saraceno"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa dello Spirito Santo",
+      "Chiesa della Madonna di Costantinopoli",
+      "Cattedrale (XII secolo, successivamente rimaneggiato)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Madonna di Corsignano (terza o quarta domenica di agosto)",
+      "con corteo storico"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gioia del Colle",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072021",
+    "codice_catastale": "E038",
+    "popolazione": 27667,
+    "superficie_kmq": 206.48,
+    "densita": 134.0,
+    "cap": "70023",
+    "prefisso_telefonico": "080",
+    "patrono": "San Filippo Neri",
+    "festa_patronale": "26 maggio",
+    "demonimo": "gioiesi",
+    "etimologia": "Potrebbe derivare da Iovis, ossia Giove, forse perché nelle credenze popolari il luogo era sacro alla divinità.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Sud-Est",
+      "Regione Agraria n. 5 - Murge di Gioia del Colle",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquaviva delle Fonti",
+      "Castellaneta (TA)",
+      "Laterza (TA)",
+      "Mottola (TA)",
+      "Noci",
+      "Putignano",
+      "Sammichele di Bari",
+      "Santeramo in Colle",
+      "Turi"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Rossini"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Corato",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072020",
+    "codice_catastale": "C983",
+    "popolazione": 48313,
+    "superficie_kmq": 167.69,
+    "densita": 288.1,
+    "cap": "70033",
+    "prefisso_telefonico": "080",
+    "patrono": "San Cataldo",
+    "festa_patronale": null,
+    "demonimo": "coratini",
+    "etimologia": "Deriva dal latino quadratum, ossia \"centuria quadrata\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Murge di Andria",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Andria (BT)",
+      "Bisceglie (BT)",
+      "Ruvo di Puglia",
+      "Trani (BT)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Gioia",
+      "Palazzo Lamonica Vecchio",
+      "Palazzo de Mattis"
+    ],
+    "chiese": [
+      "Santuario Santa Maria Greca",
+      "Chiesetta di San Vito",
+      "Chiesa Matrice di Santa Maria Maggiore",
+      "Chiesa e Convento di San Domenico",
+      "Chiesa e Convento di San Benedetto",
+      "Chiesa di Santa Maria Santissima Incoronata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Conversano",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072019",
+    "codice_catastale": "C975",
+    "popolazione": 26144,
+    "superficie_kmq": 126.9,
+    "densita": 206.0,
+    "cap": "70014",
+    "prefisso_telefonico": "080",
+    "patrono": "San Flaviano",
+    "festa_patronale": "24 novembre",
+    "demonimo": "conversanesi",
+    "etimologia": "Deriva dal nome latino di persona Cupricius o Cupressius con il suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana"
+    ],
+    "localita_frazioni": [
+      "Castiglione",
+      "Triggianello"
+    ],
+    "comuni_confinanti": [
+      "Castellana Grotte",
+      "Mola di Bari",
+      "Polignano a Mare",
+      "Putignano",
+      "Rutigliano",
+      "Turi"
+    ],
+    "musei": [
+      "Pinacoteca Comunale",
+      "Museo del Territorio",
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria dell'Isola",
+      "Chiesa di Santa Caterina",
+      "Cattedrale della Vergine Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Acquaviva d'Aragona",
+      "Castel Marchione"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Casa delle Arti"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Fratta Polesine (Rovigo-Veneto)",
+      "Nardò (Lecce-Puglia)",
+      "Trecenta (Rovigo-Veneto)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cellamare",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072018",
+    "codice_catastale": "C436",
+    "popolazione": 5789,
+    "superficie_kmq": 5.83,
+    "densita": 993.0,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "Sant'Amatore",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "cellamaresi",
+    "etimologia": "Deriva da cella al mare, ossia: Cella (con il significato di \"piccola azienda agraria\"o \"cappella\") rivolta verso il mare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capurso",
+      "Casamassima",
+      "Noicàttaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Martos (Andalusia",
+      "Spagna)",
+      "dal giugno 2008"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castellana Grotte",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072017",
+    "codice_catastale": "C134",
+    "popolazione": 19536,
+    "superficie_kmq": 67.93,
+    "densita": 287.6,
+    "cap": "70013",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna della Vetrana",
+    "festa_patronale": "ultima domenica di aprile",
+    "demonimo": "castellanesi",
+    "etimologia": "Deriva da Castellania, con il significato di \"abitazione (o proprietà) del castellano\". La specifica si riferisce alle famose grotte poste nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alberobello",
+      "Conversano",
+      "Monopoli",
+      "Noci",
+      "Polignano a Mare",
+      "Putignano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotte di Castellana"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cassano delle Murge",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072016",
+    "codice_catastale": "B998",
+    "popolazione": 14776,
+    "superficie_kmq": 89.42,
+    "densita": 165.2,
+    "cap": "70020",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna degli Angeli",
+    "festa_patronale": "2 agosto",
+    "demonimo": "cassanesi",
+    "etimologia": "Secondo alcuni deriva dal nome latino di persona Cassius con l'aggiunta del suffisso -anus. Secondo altri il nome si riferisce all'antico culto per il Dio Giano a cui era dedicato un piccolo tempio, ossia la casa Jani. La specifica si riferisce al noto altopiano pugliese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Sud-Est",
+      "Regione Agraria n. 5 - Murge di Gioia del Colle",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquaviva delle Fonti",
+      "Altamura",
+      "Grumo Appula",
+      "Sannicandro di Bari",
+      "Santeramo in Colle"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzetto Miani-Perotti"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale Santa Maria delle Grazie",
+      "Chiesa Madre Santa Maria Assunta",
+      "Chiesa e la romanica Cripta del SS. Crocifisso",
+      "Chiesa di San Rocco",
+      "Chiesa di San Giuseppe",
+      "Cappella di Santa Maria dei Martiri (sconsacrata)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casamassima",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072015",
+    "codice_catastale": "B923",
+    "popolazione": 19846,
+    "superficie_kmq": 77.41,
+    "densita": 256.4,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna del Camelo",
+    "festa_patronale": "26 luglio",
+    "demonimo": "casamassimesi",
+    "etimologia": "Il nome è un composto di casa e massima (ossia \"maggiore\"). Secondo alcuni il secondo termine, piuttosto che essere un aggettivo, si riferisce a Fabio Massimo che realizzò in loco un castello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquaviva delle Fonti",
+      "Adelfia",
+      "Capurso",
+      "Cellamare",
+      "Noicàttaro",
+      "Rutigliano",
+      "Sammichele di Bari",
+      "Turi",
+      "Valenzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Santo Rosario",
+      "Chiesa Maria Ss. delle Grazie",
+      "Chiesa di Santo Stefano",
+      "Chiesa di Santa Maria del Soccorso o di Santa Lucia",
+      "Chiesa di Cristo Re",
+      "Chiesa del Purgatorio",
+      "Abbazia di San Lorenzo",
+      "Chiesa di Santa Croce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corteo Storico di Corrado IV di Svevia (4 ottobre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capurso",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072014",
+    "codice_catastale": "B716",
+    "popolazione": 15681,
+    "superficie_kmq": 14.88,
+    "densita": 1053.8,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "capursesi",
+    "etimologia": "Deriva dal nome latino di persona Capurtius o Caprutius o da un nome di famiglia Capursus o Capudursus (Capo d'Orso). Secondo altri deriva dal termine pugliese cutursu, ossia schiena.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bari",
+      "Casamassima",
+      "Cellamare",
+      "Noicàttaro",
+      "Triggiano",
+      "Valenzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria del Pozzo :: Frati Minori Francescani",
+      "Convento di San Francesco da Paola",
+      "Chiesa SS.Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "La Fanoj (7 dicembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bitritto",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072012",
+    "codice_catastale": "A894",
+    "popolazione": 11299,
+    "superficie_kmq": 17.65,
+    "densita": 640.2,
+    "cap": "70020",
+    "prefisso_telefonico": "080",
+    "patrono": "Madonna di Costantinopoli",
+    "festa_patronale": "primo martedì di marzo",
+    "demonimo": "bitrittesi",
+    "etimologia": "Deriva da Vitricto o Bitrictum dal latino veteretum, ossia sodaglia (terreno sassoso e incolto).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Adelfia",
+      "Bari",
+      "Bitetto",
+      "Modugno",
+      "Sannicandro di Bari"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Maria SS. di Costantinopoli",
+      "Chiesa Maria SS. del Deserto",
+      "Chiesa della Madonna Del Piano",
+      "Chiesa del Purgatorio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bitonto",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072011",
+    "codice_catastale": "A893",
+    "popolazione": 55354,
+    "superficie_kmq": 172.82,
+    "densita": 320.3,
+    "cap": "70032",
+    "prefisso_telefonico": "080",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "26 maggio",
+    "demonimo": "bitontini",
+    "etimologia": "Deriva da Butuntum o Butontum forse da Butua, di significato sconosciuto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Murge di Bitonto",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Altamura",
+      "Bari",
+      "Bitetto",
+      "Giovinazzo",
+      "Modugno",
+      "Palo del Colle",
+      "Ruvo di Puglia",
+      "Terlizzi",
+      "Toritto"
+    ],
+    "musei": [
+      "Museo Civico \"G. D. Rogadeo\"",
+      "Museo \"Monsignor Aurelio Marena\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Vulpano"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Tommaso Traetta"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bitetto",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072010",
+    "codice_catastale": "A892",
+    "popolazione": 11999,
+    "superficie_kmq": 33.57,
+    "densita": 357.4,
+    "cap": "70020",
+    "prefisso_telefonico": "080",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "bitettesi",
+    "etimologia": "Alcune fonti farebbero derivare l'origine da Vitectum, altre da Bitectum, dal latino vitex, -ice, ossia \"vertice\". Alcuni credono che deriva dal latino vitetum, ossia vigneto, in riferimento anche al fatto che sullo stemma del paese vi è rappresentato una vite carica di uva.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Binetto",
+      "Bitonto",
+      "Bitritto",
+      "Modugno",
+      "Palo del Colle",
+      "Sannicandro di Bari"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corteo Storico (primo maggio)",
+      "Mercato Medievale (25 aprile)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Binetto",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072008",
+    "codice_catastale": "A874",
+    "popolazione": 2256,
+    "superficie_kmq": 17.62,
+    "densita": 128.0,
+    "cap": "70020",
+    "prefisso_telefonico": "080",
+    "patrono": "San Crescenzio",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "binettesi",
+    "etimologia": "Deriva dal latino vinetum, ossia vigneto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bitetto",
+      "Grumo Appula",
+      "Palo del Colle",
+      "Sannicandro di Bari",
+      "Toritto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Altamura",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072004",
+    "codice_catastale": "A225",
+    "popolazione": 70595,
+    "superficie_kmq": 427.75,
+    "densita": 165.0,
+    "cap": "70022",
+    "prefisso_telefonico": "080",
+    "patrono": "Sant'Irene",
+    "festa_patronale": "5 maggio",
+    "demonimo": "altamurani",
+    "etimologia": "Chiamato in passato Alta Augusta. Il nome attuale si riferisce alle alte mura che circondavano il centro nel XIII secolo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Murge di Altamura",
+      "Parco Nazionale dell'Alta Murgia",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bitonto",
+      "Cassano delle Murge",
+      "Gravina in Puglia",
+      "Grumo Appula",
+      "Matera (MT)",
+      "Ruvo di Puglia",
+      "Santeramo in Colle",
+      "Toritto"
+    ],
+    "musei": [
+      "Museo della Civiltà Rurale",
+      "Museo dell'Arte Tipografica",
+      "Museo Archeologico Statale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madonna del Rosario",
+      "Chiesa di Sant'Agostino",
+      "Chiesa di Santa Maria della Consolazione",
+      "Chiesa di San Giovanni Bosco",
+      "Chiesa del Santo Sepolcro",
+      "Cattedrale, dedicata all'Assunta",
+      "Chiesa del Sacro Cuore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Francesco Saverio Mercadante",
+      "Teatro Mangiatordi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Cavalcata della Madonna del Buon Cammino (domenica successiva al 15 agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Saverio Mercadante (1795 - 1870)",
+      "compositore",
+      "fu direttore del Conservatorio di Napoli"
+    ]
+  },
+  {
+    "nome": "Alberobello",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072003",
+    "codice_catastale": "A149",
+    "popolazione": 10735,
+    "superficie_kmq": 40.34,
+    "densita": 266.1,
+    "cap": "70011",
+    "prefisso_telefonico": "080",
+    "patrono": "SS. Cosma e Damiano",
+    "festa_patronale": "27 settembre",
+    "demonimo": "alberobellesi",
+    "etimologia": "Secondo alcuni il nome si riferisce alla presenza in zona di una grande quercia, secondo altri deriva da Sylva Arboris Belli, una distesa di querce. Per lungo tempo si è creduto che la parte finale del nome, ossia -bello derivasse dal latino bellum, ossia guerra, ma l'ipotesi sembrerebbe da scartare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Murge di Castellana",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "Coreggia"
+    ],
+    "comuni_confinanti": [
+      "Castellana Grotte",
+      "Fasano (BR)",
+      "Locorotondo",
+      "Martina Franca (TA)",
+      "Monopoli",
+      "Mottola (TA)",
+      "Noci"
+    ],
+    "musei": [
+      "Museo del Territorio ex Casa Pezzolla"
+    ],
+    "ville_palazzi": [
+      "Casa Curri",
+      "Palazzo Acquaviva",
+      "Casa Rossa"
+    ],
+    "chiese": [
+      "Chiesa Madonna del Carmine",
+      "Chiesa di Santa Lucia",
+      "Chiesa a trullo di Sant'Antonio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Trullo Sovrano",
+      "Trulli Siamesi",
+      "grande Trullo di Paparale"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Natale fra i Trulli (24-25 dicembre)"
+    ],
+    "gemellaggi": [
+      "Romentino (Novara-Piemonte)",
+      "Shirakawa Go (Giappone), dal marzo 2003"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Adelfia",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072002",
+    "codice_catastale": "A055",
+    "popolazione": 17139,
+    "superficie_kmq": 29.73,
+    "densita": 576.5,
+    "cap": "70010",
+    "prefisso_telefonico": "080",
+    "patrono": "San Trifone",
+    "festa_patronale": "10 novembre",
+    "demonimo": "adelfiesi",
+    "etimologia": "Deriva dal greco Adelphos (fratello) per intendere la fratellanza tra i due centri abitati, Canneto e Montrone, che si sono fusi ed hanno formato il paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari"
+    ],
+    "localita_frazioni": [
+      "Montrone",
+      "Canneto"
+    ],
+    "comuni_confinanti": [
+      "Acquaviva delle Fonti",
+      "Bari",
+      "Bitritto",
+      "Casamassima",
+      "Sannicandro di Bari",
+      "Valenzano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Santa Maria del Principio (a Montrone)",
+      "Chiesa Matrice (Canneto)",
+      "Chiesa Maria SS. della Stella (Canneto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Trifone (8-11 novembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acquaviva delle Fonti",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072001",
+    "codice_catastale": "A048",
+    "popolazione": 20760,
+    "superficie_kmq": 130.98,
+    "densita": 158.5,
+    "cap": "70021",
+    "prefisso_telefonico": "080",
+    "patrono": null,
+    "festa_patronale": "primo martedì di settembre",
+    "demonimo": "acquavivesi",
+    "etimologia": "Il nome si riferisce al fatto che il paese è situato in una conca con una falda acquifera.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Sud-Est",
+      "Regione Agraria n. 6 - Murge di Castellana",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Patto Territoriale Sistema Murgiano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Adelfia",
+      "Casamassima",
+      "Cassano delle Murge",
+      "Gioia del Colle",
+      "Sammichele di Bari",
+      "Sannicandro di Bari",
+      "Santeramo in Colle"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo De Mari",
+      "Villa del Duca"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale San'Eustachio Cattedrale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dell'Orologio"
+    ],
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna di Costantinopoli (dalla prima domenica di settembre al mercoledì successivo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bari",
+    "provincia": "Bari",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "072006",
+    "codice_catastale": "A662",
+    "popolazione": 324198,
+    "superficie_kmq": 116.2,
+    "densita": 2790.0,
+    "cap": "70100",
+    "prefisso_telefonico": "080",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": null,
+    "demonimo": "baresi",
+    "etimologia": "Deriva da Barium che si riferisce a baur o bur, ossia casa, riparo. Forse la sua forma originaria fu baorra.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura di Bari",
+      "Parco Lama Balice",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Città italiane per la mobilità sostenibile e lo sviluppo dei trasporti",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Adelfia",
+      "Bitonto",
+      "Bitritto",
+      "Capurso",
+      "Giovinazzo",
+      "Modugno",
+      "Mola di Bari",
+      "Noicàttaro",
+      "Triggiano",
+      "Valenzano"
+    ],
+    "musei": [
+      "Museo della Basilica di San Nicola",
+      "Pinacoteca Provinciale",
+      "Museo Storico Civico",
+      "Museo Etnografico Africano",
+      "Museo Diocesano - Sezione di Bari",
+      "Museo di Scienze della Terra",
+      "Museo - Raccolta di Fisica",
+      "Gipsoteca del Castello Normanno Svevo",
+      "Museo di Zoologia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Basilica Pontificia di San Nicola :: Frati Domenicani"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Svevo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico dell'Università di Bari"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Piccinni",
+      "Teatro dell'Anonima",
+      "Teatro Petruzzelli"
+    ],
+    "stadi": [
+      "Stadio Comunale San Nicola"
+    ],
+    "eventi_feste_sagre": [
+      "San Nicola - Corteo Storico della Caravella (7-9 maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

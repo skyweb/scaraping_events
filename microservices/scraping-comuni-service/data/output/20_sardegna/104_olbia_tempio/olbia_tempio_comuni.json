@@ -1,0 +1,1419 @@
+[
+  {
+    "nome": "Trinità d'Agultu e Vignola",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104026",
+    "codice_catastale": "L428",
+    "popolazione": 2249,
+    "superficie_kmq": 136.43,
+    "densita": 16.5,
+    "cap": "07038",
+    "prefisso_telefonico": "079",
+    "patrono": "SS. Trinità",
+    "festa_patronale": "6 giugno",
+    "demonimo": "trinitaesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aggius",
+      "Aglientu",
+      "Badesi",
+      "Viddalba (SS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Telti",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104024",
+    "codice_catastale": "L088",
+    "popolazione": 2301,
+    "superficie_kmq": 84.65,
+    "densita": 27.2,
+    "cap": "07020",
+    "prefisso_telefonico": "0789",
+    "patrono": "Sante Vittoria e Anatolia",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "teltesi o teltiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n.  3 - Colline dell'Alto Coghinas"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calangianus",
+      "Loiri Porto San Paolo",
+      "Monti",
+      "Olbia",
+      "Sant'Antonio di Gallura"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Antonio di Gallura",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104021",
+    "codice_catastale": "M276",
+    "popolazione": 1518,
+    "superficie_kmq": 81.27,
+    "densita": 18.7,
+    "cap": "07030",
+    "prefisso_telefonico": "079",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "ultima domenica di settembre",
+    "demonimo": "santantonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n.  3 - Colline dell'Alto Coghinas"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzachena",
+      "Calangianus",
+      "Luras",
+      "Olbia",
+      "Telti"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Teresa Gallura",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104022",
+    "codice_catastale": "I312",
+    "popolazione": 5279,
+    "superficie_kmq": 101.19,
+    "densita": 52.2,
+    "cap": "07028",
+    "prefisso_telefonico": "0789",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "teresini",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007 (Rena Bianca)",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Santa Teresa Gallura)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale"
+    ],
+    "localita_frazioni": [
+      "Isola di Culuccia"
+    ],
+    "comuni_confinanti": [
+      "Aglientu",
+      "Tempio Pausania; a sud-est: Palau"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Vittorio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Longosardo (resti)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sa Die de sa Sardigna (28 aprile)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Teodoro",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104023",
+    "codice_catastale": "I329",
+    "popolazione": 4932,
+    "superficie_kmq": 104.87,
+    "densita": 47.0,
+    "cap": "08020",
+    "prefisso_telefonico": "0784",
+    "patrono": "San Teodoro",
+    "festa_patronale": "9 novembre",
+    "demonimo": "teodorini",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana delle Baronie",
+      "Regione Agraria n. 11 - Colline litoranee di Posada"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Budoni",
+      "Loiri Porto San Paolo",
+      "Padru",
+      "Torpè (NU)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palau",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104020",
+    "codice_catastale": "G258",
+    "popolazione": 4207,
+    "superficie_kmq": 44.38,
+    "densita": 94.8,
+    "cap": "07020",
+    "prefisso_telefonico": "0789",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "palaesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Porto Turistico)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale"
+    ],
+    "localita_frazioni": [
+      "Barrabisa",
+      "Capannaccia",
+      "Capo d'Orso"
+    ],
+    "comuni_confinanti": [
+      "A ovest: Santa Teresa Gallura; a sud-est: Arzachena; a sud-ovest: Tempio Pausania"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tombe dei Giganti Li Mizzani e Sajacciu",
+      "Roccia di Capo d'Orso"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Saint Genest-Lerpt (dipartimento della Loira",
+      "regione Alpi-Rodano",
+      "Francia)",
+      "dal settembre 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Padru",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104019",
+    "codice_catastale": "M301",
+    "popolazione": 2118,
+    "superficie_kmq": 130.0,
+    "densita": 16.3,
+    "cap": "07020",
+    "prefisso_telefonico": "0789",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "padresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n.  1 - Montagna del Goceano e di Alà"
+    ],
+    "localita_frazioni": [
+      "Biasì",
+      "Budò",
+      "Graniadolzu",
+      "Sotza",
+      "Cuzzola",
+      "Su Tirialzu",
+      "Nodalvu",
+      "Ludurru",
+      "Sa Serra",
+      "Sos Runcos",
+      "Sas Enas",
+      "Pedrabianca"
+    ],
+    "comuni_confinanti": [
+      "Alà dei Sardi",
+      "Bitti (NU)",
+      "Lodè (NU)",
+      "Loiri Porto San Paolo",
+      "Olbia",
+      "San Teodoro",
+      "Torpè (NU)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale del Sacro Cuore di Gesù",
+      "Chiesa di Sant'Elia Profeta",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Scavo archeologico Santu Miali"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Oschiri",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104018",
+    "codice_catastale": "G153",
+    "popolazione": 3292,
+    "superficie_kmq": 216.07,
+    "densita": 15.2,
+    "cap": "07027",
+    "prefisso_telefonico": "079",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "oschiresi o oschiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monte Acuto",
+      "Regione Agraria n.  3 - Colline dell'Alto Coghinas",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alà dei Sardi",
+      "Berchidda",
+      "Buddusò",
+      "Ozieri (SS)",
+      "Pattada (SS)",
+      "Tempio Pausania",
+      "Tula (SS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santo Stefano (XVI secolo)",
+      "Chiesa di Nostra Signora di Otti",
+      "Chiesa di Nostra Signora di Castro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Altare Bizantino di Santo Stefano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Presepe Vivente (24 dicembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monti",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104016",
+    "codice_catastale": "F667",
+    "popolazione": 2418,
+    "superficie_kmq": 123.44,
+    "densita": 19.6,
+    "cap": "07020",
+    "prefisso_telefonico": "0789",
+    "patrono": "San Gavino",
+    "festa_patronale": "17 settembre",
+    "demonimo": "montini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n.  3 - Colline dell'Alto Coghinas",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alà dei Sardi",
+      "Berchidda",
+      "Calangianus",
+      "Loiri Porto San Paolo",
+      "Olbia",
+      "Telti"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Paolo l'Eremita",
+      "Chiesa parrocchiale di San Gavino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Luras",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104015",
+    "codice_catastale": "E752",
+    "popolazione": 2551,
+    "superficie_kmq": 87.03,
+    "densita": 29.3,
+    "cap": "07025",
+    "prefisso_telefonico": "079",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "prima domenica di ottobre",
+    "demonimo": "luresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n.  3 - Colline dell'Alto Coghinas"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzachena",
+      "Calangianus",
+      "Luogosanto",
+      "Sant'Antonio di Gallura",
+      "Tempio Pausania"
+    ],
+    "musei": [
+      "Museo Etnografico Galluras"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della S.S. Vergine del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Dolmen di Ladas",
+      "Dolmen di Ciuledda",
+      "Dolmen di Alzoledda",
+      "Dolmen di Bilella"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Luogosanto",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104014",
+    "codice_catastale": "E747",
+    "popolazione": 1872,
+    "superficie_kmq": 135.45,
+    "densita": 13.8,
+    "cap": "07020",
+    "prefisso_telefonico": "079",
+    "patrono": "Natività di Maria",
+    "festa_patronale": "8 settembre",
+    "demonimo": "luogosantesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aglientu",
+      "Arzachena",
+      "Luras",
+      "Tempio Pausania"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Eremo di San Trano",
+      "Chiesetta di Santo Stefano",
+      "Chiesetta di San Leonardo",
+      "Chiesa parrocchiale di Nostra Signora di Luogosanto"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Santo Stefano o Reggia di Re Baldo",
+      "Castello Balaiana"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Loiri Porto San Paolo",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104013",
+    "codice_catastale": "M275",
+    "popolazione": 3414,
+    "superficie_kmq": 117.75,
+    "densita": 29.0,
+    "cap": "07020",
+    "prefisso_telefonico": "0789",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "loiresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Monti",
+      "Olbia",
+      "Padru",
+      "San Teodoro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "La Maddalena",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104012",
+    "codice_catastale": "E425",
+    "popolazione": 11248,
+    "superficie_kmq": 49.37,
+    "densita": 227.8,
+    "cap": "07024",
+    "prefisso_telefonico": "0789",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "maddalenini",
+    "etimologia": "Trae il suo nome da una cappella votiva, ancora esistente, dedicata a Santa Maria Maddalena.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n.  8 - Arcipelago di La Maddalena",
+      "Parco Nazionale dell'Arcipelago di La Maddalena"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": null,
+    "musei": [
+      "Museo Diocesiano Sacristia Santa Maria Maddalena",
+      "Museo Nazionale Garibaldino"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maddalena"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Golfo Aranci",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104011",
+    "codice_catastale": "M274",
+    "popolazione": 2454,
+    "superficie_kmq": 37.97,
+    "densita": 64.6,
+    "cap": "07020",
+    "prefisso_telefonico": "0789",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "golfoarancini",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline litoranee della Gallura Orientale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Olbia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Pozzo Sacro Milis"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calangianus",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104010",
+    "codice_catastale": "B378",
+    "popolazione": 4122,
+    "superficie_kmq": 126.35,
+    "densita": 32.6,
+    "cap": "07023",
+    "prefisso_telefonico": "079",
+    "patrono": "Santa Giusta",
+    "festa_patronale": "14 maggio",
+    "demonimo": "calangianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n.  3 - Colline dell'Alto Coghinas"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Berchidda",
+      "Luras",
+      "Monti",
+      "Sant'Antonio di Gallura",
+      "Telti",
+      "Tempio Pausania"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Agnu (del tipo a corridoio)",
+      "Fonte Nuragica Li Paladini",
+      "Tomba dei Giganti di Pascareddha"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Budoni",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104009",
+    "codice_catastale": "B248",
+    "popolazione": 5150,
+    "superficie_kmq": 55.9,
+    "densita": 92.1,
+    "cap": "08020",
+    "prefisso_telefonico": "0784",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "budonesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Porto Ottiolu)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana delle Baronie",
+      "Regione Agraria n. 11 - Colline litoranee di Posada",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Agrustos",
+      "Berruiles",
+      "Birgalavò",
+      "Li Troni",
+      "Limpiddu",
+      "Linnalvu",
+      "Ludduì",
+      "Luttuni",
+      "Lutturai",
+      "Maiorca",
+      "Malamurì",
+      "Muriscuvò",
+      "Nuditta",
+      "Ottiolu",
+      "San Gavino",
+      "San Lorenzo",
+      "San Pietro",
+      "San Silvestro",
+      "S'Iscala",
+      "Solità",
+      "Strugas",
+      "Tamarispa",
+      "Tanaunella"
+    ],
+    "comuni_confinanti": [
+      "Posada (NU)",
+      "San Teodoro",
+      "Torpè (NU)"
+    ],
+    "musei": [
+      "Museo degli stazzi e della civiltà contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Anna (in località Berruiles)",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Buddusò",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104008",
+    "codice_catastale": "B246",
+    "popolazione": 3868,
+    "superficie_kmq": 217.97,
+    "densita": 17.7,
+    "cap": "07020",
+    "prefisso_telefonico": "079",
+    "patrono": "Sant'Anastasia",
+    "festa_patronale": "23 settembre",
+    "demonimo": "buddusoini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monte Acuto",
+      "Regione Agraria n.  1 - Montagna del Goceano e di Alà"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alà dei Sardi",
+      "Bitti (NU)",
+      "Oschiri",
+      "Osidda (NU)",
+      "Pattada (SS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Loelle",
+      "Nuraghe e Domus De Janas di Iselle",
+      "Domus de Janas di Ludurru",
+      "Dolmen di Su Laccu e di Sos Monimentos"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bortigiadas",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104007",
+    "codice_catastale": "B063",
+    "popolazione": 758,
+    "superficie_kmq": 76.76,
+    "densita": 9.9,
+    "cap": "07030",
+    "prefisso_telefonico": "079",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "12 maggio",
+    "demonimo": "bortigiadesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n. 11 - Colline litoranee di Castelsardo"
+    ],
+    "localita_frazioni": [
+      "Tisiennari",
+      "Figaruja",
+      "Lu Falzu",
+      "Giovanni Moro",
+      "Fraigata",
+      "La Fumosa",
+      "Li Pauli",
+      "Scala Ruja",
+      "Lu Scupaggiu"
+    ],
+    "comuni_confinanti": [
+      "Aggius",
+      "Perfugas (SS)",
+      "Santa Maria Coghinas (SS)",
+      "Tempio Pausania",
+      "Viddalba (SS)"
+    ],
+    "musei": [
+      "Museo Mineralogico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Pancrazio",
+      "Chiesa di Santa Croce",
+      "Chiesa di San Nicola di Bari",
+      "Santuario di San Rocco (in località Scala Ruja, nella frazione di Tisiennari)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Domus de janas di Tisiennari"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Berchidda",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104006",
+    "codice_catastale": "A789",
+    "popolazione": 2772,
+    "superficie_kmq": 201.88,
+    "densita": 13.7,
+    "cap": "07022",
+    "prefisso_telefonico": "079",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "31 agosto",
+    "demonimo": "berchiddesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monte Acuto",
+      "Regione Agraria n.  3 - Colline dell'Alto Coghinas",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alà dei Sardi",
+      "Calangianus",
+      "Monti",
+      "Oschiri",
+      "Tempio Pausania"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Andrea",
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Michele",
+      "Chiesa di San Marco",
+      "Chiesa del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Dolmen di Santa Caterina e di Sant'Andrea (in località Abialzos)",
+      "Dolmen di Monte Acuto"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Badesi",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104005",
+    "codice_catastale": "M214",
+    "popolazione": 1847,
+    "superficie_kmq": 30.71,
+    "densita": 60.1,
+    "cap": "07030",
+    "prefisso_telefonico": "079",
+    "patrono": "Sacro Cuore di Gesù",
+    "festa_patronale": "27 giugno",
+    "demonimo": "badesani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana su Sasso Anglona",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "La Tozza",
+      "Muntiggioni",
+      "Azzagulta",
+      "La Conia"
+    ],
+    "comuni_confinanti": [
+      "Trinità d'Agultu e Vignola",
+      "Valledoria (SS)",
+      "Viddalba (SS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Sacro Cuore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arzachena",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104004",
+    "codice_catastale": "A453",
+    "popolazione": 13639,
+    "superficie_kmq": 228.61,
+    "densita": 59.7,
+    "cap": "07021",
+    "prefisso_telefonico": "0789",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "9 settembre",
+    "demonimo": "arzachenesi",
+    "etimologia": "Attestato nella forma di Arsequen, il contenuto semantico non è facilmente individuabile. In origine si credeva attribuibile alla profonda insenatura a V che si apre sulla costa. Secondo un'ipotesi poco probabile, potrebbe derivare dal nome femminile di persona Arzachena, da Arsacenis.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Marina dell'Orso, Poltu Quatu, Marina di Porto Cervo)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n. 10 - Colline litoranee della Gallura Orientale"
+    ],
+    "localita_frazioni": [
+      "frazioni: Cannigione",
+      "Laconia",
+      "Abbiadori",
+      "Porto Cervo",
+      "Liscia di Vacca;\nborghi: Pulicinu",
+      "Baja Sardinia",
+      "Farina",
+      "Pevero",
+      "Monticanaglia",
+      "Santa Teresina",
+      "Padula d'Izzana (Cudacciolu)"
+    ],
+    "comuni_confinanti": [
+      "Luogosanto",
+      "Luras",
+      "Olbia",
+      "Palau",
+      "Sant'Antonio di Gallura",
+      "Tempio Pausania"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tomba dei Giganti Li Lolghi",
+      "Tomba dei Giganti Coddu Vecchiu",
+      "Tempietto Nuragico Malchittu",
+      "Nuraghe la Prisciona, un nuraghe complesso trilobato circondato da un villaggio di capanne",
+      "Nuraghe Albucciu",
+      "Necropoli di Li Muri"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alà dei Sardi",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104003",
+    "codice_catastale": "A115",
+    "popolazione": 1878,
+    "superficie_kmq": 188.6,
+    "densita": 10.0,
+    "cap": "07020",
+    "prefisso_telefonico": "079",
+    "patrono": "Sant'Agostino",
+    "festa_patronale": "28 agosto",
+    "demonimo": "alaesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monte Acuto",
+      "Regione Agraria n.  1 - Montagna del Goceano e di Alà"
+    ],
+    "localita_frazioni": [
+      "Sos Onorcolos",
+      "Badde Suelzu",
+      "Iscala Pedrosa",
+      "Mazzinaiu"
+    ],
+    "comuni_confinanti": [
+      "Berchidda",
+      "Bitti (NU)",
+      "Buddusò",
+      "Monti",
+      "Olbia",
+      "Oschiri",
+      "Padru"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Francesco\nChiesa di San Francesco",
+      "Chiesa della Natività di Maria"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Corda-Colonna"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Dolmen e Menhir di Pedra De Lughia Rajosa",
+      "Complesso Nuragico di Sos Nurattolos, con piccolo tempio a megaron"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aglientu",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104002",
+    "codice_catastale": "H848",
+    "popolazione": 1173,
+    "superficie_kmq": 148.56,
+    "densita": 7.9,
+    "cap": "07020",
+    "prefisso_telefonico": "079",
+    "patrono": "San Francesco",
+    "festa_patronale": "4 ottobre",
+    "demonimo": "aglientesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale"
+    ],
+    "localita_frazioni": [
+      "Portobello",
+      "Monti Russu Littigheddu",
+      "Vignola Mare"
+    ],
+    "comuni_confinanti": [
+      "Aggius",
+      "Luogosanto",
+      "Santa Teresa Gallura",
+      "Tempio Pausania",
+      "Trinità d'Agultu e Vignola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Patronale di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aggius",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104001",
+    "codice_catastale": "A069",
+    "popolazione": 1503,
+    "superficie_kmq": 83.56,
+    "densita": 18.0,
+    "cap": "07020",
+    "prefisso_telefonico": "079",
+    "patrono": "Santa Vittoria",
+    "festa_patronale": "prima domenica di ottobre",
+    "demonimo": "aggesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale"
+    ],
+    "localita_frazioni": [
+      "Bonaita",
+      "Pala di Monti",
+      "Vintura"
+    ],
+    "comuni_confinanti": [
+      "Aglientu",
+      "Bortigiadas",
+      "Tempio Pausania",
+      "Trinità d'Agultu e Vignola",
+      "Viddalba (SS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Vittoria",
+      "Chiesa di Santa Croce (1709)",
+      "Chiesa di San Pietro di Ruda",
+      "Chiesa di San Lussorio",
+      "Chiesa di San Giacomo",
+      "Chiesa di San Filippo",
+      "Chiesa di Nostra Signora della Pace (in località Bonaita)",
+      "Chiesa di Nostra Signora del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Izzana (nella Valle della Luna)",
+      "Laghetto di Santa Degna",
+      "Valle della Luna, distesa di sculture granitiche"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tempio Pausania",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104025",
+    "codice_catastale": "L093",
+    "popolazione": 14141,
+    "superficie_kmq": 213.69,
+    "densita": 66.2,
+    "cap": "07029",
+    "prefisso_telefonico": "079",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 agosto",
+    "demonimo": "tempiesi",
+    "etimologia": "Dal latino templum (tempio). Per la specifica Pausania si crede che si riferisca alla località Pasana, piccolo centro vicino ad Olbia, anticamente sede della diocesi.",
+    "il_comune_e": [
+      "Città Termale (Terme di Tempio)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Gallura",
+      "Regione Agraria n.  9 - Colline litoranee della Gallura Occidentale",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Nuchis",
+      "Bassacutena",
+      "San Pasquale"
+    ],
+    "comuni_confinanti": [
+      "Aggius",
+      "Aglientu",
+      "Arzachena",
+      "Berchidda",
+      "Bortigiadas",
+      "Calangianus",
+      "Erula (SS)",
+      "Luogosanto",
+      "Luras",
+      "Oschiri",
+      "Palau",
+      "Perfugas (SS)",
+      "Santa Teresa Gallura",
+      "Tula (SS)"
+    ],
+    "musei": [
+      "Museo \"Bernardo De Muro\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna del Pilar",
+      "Chiesa del Purgatorio (1679)",
+      "Cattedrale di San Pietro",
+      "Chiesa di San Francesco (1543)",
+      "Chiesa di Sant'Antonio (1657)",
+      "Chiesa dell'Immacolata Concezione",
+      "Oratorio di Santa Croce",
+      "Oratorio del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Majori"
+    ],
+    "teatri": null,
+    "stadi": [
+      "Stadio comunale Nino Manconi"
+    ],
+    "eventi_feste_sagre": [
+      "Carrasciali Timpiesu (giovedì e martedì di carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Olbia",
+    "provincia": "Olbia-Tempio",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "104017",
+    "codice_catastale": "G015",
+    "popolazione": 59968,
+    "superficie_kmq": 376.1,
+    "densita": 159.4,
+    "cap": "07026",
+    "prefisso_telefonico": "0789",
+    "patrono": "San Simplicio",
+    "festa_patronale": "15 maggio",
+    "demonimo": "olbiesi o olbiensi",
+    "etimologia": "Il luogo era chiamato Terranova fino al 1862, assunse poi il nome di Terranova Pausania e nel 1939 assunse il nome attuale. Deriva dal greco Olbia, da olbios (felice), anche se più probabilmente deriva dal preromano, dalla base olb(a) che si confronta sempre con il greco olbios.",
+    "il_comune_e": [
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Portisco",
+      "Marina di Portorotondo)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Riviera di Gallura",
+      "Regione Agraria n. 10 - Colline litoranee della Gallura Orientale"
+    ],
+    "localita_frazioni": [
+      "Costa Romantica",
+      "Cugnana Verde",
+      "le Vecchie Saline",
+      "Li Cuncheddi",
+      "Lido del Sole",
+      "Marinella",
+      "Murta Maria",
+      "Pittulongu",
+      "Portisco",
+      "Porto Istana",
+      "Porto Rotondo",
+      "Rudalza",
+      "San Pantaleo",
+      "Sole Ruiu",
+      "Bunthe",
+      "Cabu Abbas",
+      "Contras",
+      "Ludos",
+      "Lu Sticcadu",
+      "Maltineddu",
+      "Mannazzu",
+      "Milmeggiu",
+      "Monte Telti",
+      "Moriscu",
+      "Osseddu",
+      "Paule Lada",
+      "Pinnacula",
+      "Putzolu",
+      "Sa Istrana",
+      "Santa Lucia",
+      "Sa Testa",
+      "Sporula",
+      "Teggia De Sambene",
+      "Berchiddeddu"
+    ],
+    "comuni_confinanti": [
+      "Alà dei Sardi",
+      "Arzachena",
+      "Golfo Aranci",
+      "Loiri Porto San Paolo",
+      "Monti",
+      "Padru",
+      "Sant'Antonio di Gallura",
+      "Telti"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Simplicio",
+      "ex Cattedrale"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Sa Paulazza",
+      "Castello di Pedres"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Villa Rurale Romana di Età Repubblicana",
+      "Tomba dei Giganti di Su Monte e S'Ape",
+      "Pozzo Sacro Sa Testa",
+      "Complesso Nuragico Cabu Abbas"
+    ],
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Bruno Nespoli"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

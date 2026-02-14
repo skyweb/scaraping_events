@@ -1,0 +1,16 @@
+{
+  "nome": "Bologna",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "BO",
+  "codice_istat": "037",
+  "popolazione": 1009210,
+  "popolazione_maschi": 485694,
+  "popolazione_femmine": 523516,
+  "superficie_kmq": 3702.53,
+  "densita": 272.6,
+  "num_comuni": 55,
+  "capoluogo": "Bologna",
+  "iso_3166_2": "IT-BO",
+  "nuts": "ITD55"
+}

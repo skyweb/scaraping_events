@@ -1,0 +1,16 @@
+{
+  "nome": "Vibo Valentia",
+  "regione": "Calabria",
+  "zona": null,
+  "sigla": "VV",
+  "codice_istat": "102",
+  "popolazione": 161619,
+  "popolazione_maschi": 79885,
+  "popolazione_femmine": 81734,
+  "superficie_kmq": 1139.47,
+  "densita": 141.8,
+  "num_comuni": 50,
+  "capoluogo": "Vibo Valentia",
+  "iso_3166_2": "IT-VV",
+  "nuts": "ITF64"
+}

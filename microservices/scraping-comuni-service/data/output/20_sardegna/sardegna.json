@@ -1,0 +1,14 @@
+{
+  "nome": "Sardegna",
+  "codice_istat": "20",
+  "popolazione": 1653135,
+  "popolazione_maschi": 811407,
+  "popolazione_femmine": 841728,
+  "superficie_kmq": 24089.45,
+  "densita": 68.6,
+  "num_province": 8,
+  "num_comuni": 377,
+  "capoluogo": "Cagliari",
+  "iso_3166_2": "IT-88",
+  "nuts": "ITG2"
+}

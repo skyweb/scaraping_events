@@ -1,0 +1,3383 @@
+[
+  {
+    "nome": "Vinci",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048050",
+    "codice_catastale": "M059",
+    "popolazione": 14564,
+    "superficie_kmq": 54.42,
+    "densita": 267.6,
+    "cap": "50059",
+    "prefisso_telefonico": "0571",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "vinciani",
+    "etimologia": "Deriva dal latino vincus o vincis (vimine).",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Collegonzi",
+      "Faltognano",
+      "San Pantalèo",
+      "Sant'Amato",
+      "Sant'Ansano in Greti",
+      "Sovigliana - Spicchio",
+      "Streda",
+      "Toiano",
+      "Vitolini"
+    ],
+    "comuni_confinanti": [
+      "A nord: Quarrata (PT); a nord-est: Carmignano (PO); a nord-ovest: Lamporecchio (PT); a ovest: Cerreto Guidi; a sud e sud-ovest: Empoli; a sud-est: Capraia e Limite"
+    ],
+    "musei": [
+      "Museo Leonardiano",
+      "Museo Ideale \"Leonardo da Vinci\"",
+      "Casa Natale \"Leonardo da Vinci\""
+    ],
+    "ville_palazzi": [
+      "Villa Dianella"
+    ],
+    "chiese": [
+      "Santuario della Santissima Annunziata, in Via Giovanni XXIII",
+      "Pieve di San Giovanni Battista in Greti (a Sant'Ansano)",
+      "Oratorio dell'Erta",
+      "Chiesa San Bartolomeo in Sovigliana",
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa di Santa Maria a Collegonzi",
+      "Chiesa di Santa Croce",
+      "Chiesa di San Pietro (a Sant'Amato)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Conti Guidi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Sala Polifunzionale",
+      "Sala Rinascita"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Volo di Cecco Santi (ultimo mercoledì di luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vicchio",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048049",
+    "codice_catastale": "L838",
+    "popolazione": 8110,
+    "superficie_kmq": 138.89,
+    "densita": 58.4,
+    "cap": "50039",
+    "prefisso_telefonico": "055",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "vicchiesi",
+    "etimologia": "Deriva dal latino viculus, diminutivo di vicus (gruppo di case, villaggio).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Mugello",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Arsella",
+      "Ampinana",
+      "Barbiana",
+      "Boccagnello",
+      "Bovino",
+      "Bricciana",
+      "Campestri",
+      "Casole",
+      "Cistio",
+      "Cuccino",
+      "Farneto",
+      "Gattaia",
+      "Gracchia",
+      "Mirandola",
+      "Molezzano",
+      "Mulinuccio",
+      "Padule",
+      "Piazzano",
+      "Paterno",
+      "Pilarciano",
+      "Pimaggiore",
+      "Ponte a Vicchio",
+      "Rossoio",
+      "Rostolena",
+      "Rupecanina",
+      "Scopeto",
+      "Uliveta",
+      "Vespignano",
+      "Vezzano",
+      "Villore",
+      "Zufolana"
+    ],
+    "comuni_confinanti": [
+      "Borgo San Lorenzo",
+      "Dicomano",
+      "Marradi",
+      "Pontassieve"
+    ],
+    "musei": [
+      "Museo di Arte Sacra \"Beato Angelico\"",
+      "Museo Casa di Giotto"
+    ],
+    "ville_palazzi": [
+      "Villa Altoviti di Casole",
+      "Villa Bonsi al Monte",
+      "Villa di Pesciola",
+      "Villa dei Da Fortuna",
+      "Villa di Zufolana",
+      "Villa Il Palagio",
+      "Villa La Madonna",
+      "Villa di Campestri"
+    ],
+    "chiese": [
+      "Chiesa di San Martino (a Vespignano)",
+      "Chiesa di San Lorenzo a Villore",
+      "Chiesa di San Giovanni Battista, in Piazza Giotto",
+      "Chiesa di San Donato al Cistio",
+      "Chiesa di San Cristoforo a Casole",
+      "Chiesa di San Bartolomeo a Molezzano",
+      "Chiesa di San Bartolomeo a Farneto",
+      "Cappella della Bruna (a Vespignano)",
+      "Chiesa di San Quirico a Uliveta",
+      "Chiesa di San Michele a Rupecanina",
+      "Chiesa di San Michele ad Ampinana",
+      "Pieve di San Martino a Scopeto o a Viminiccio",
+      "Pieve di San Cassiano in Padule",
+      "Chiesa di Sant'Andrea a Barbiana",
+      "Chiesa di Santa Maria a Vezzano",
+      "Chiesa di Santa Maria a Rostolena",
+      "Chiesa di Santa Maria a Fabbrica",
+      "Chiesa di Santa Maria a Bovino",
+      "Chiesa di Santa Felicita al Fiume di Gattaia",
+      "Chiesa di San Romolo a Campestri"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Giotto"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vaglia",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048046",
+    "codice_catastale": "L529",
+    "popolazione": 5139,
+    "superficie_kmq": 56.94,
+    "densita": 90.3,
+    "cap": "50036",
+    "prefisso_telefonico": "055",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "vagliesi",
+    "etimologia": "Deriva dal latino Vallia o Vallea, da vallis (valle).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Mugello"
+    ],
+    "localita_frazioni": [
+      "frazioni: Bivigliano",
+      "Caselline",
+      "Fontebuona",
+      "Montorsoli",
+      "Paterno",
+      "Pratolino;\nlocalità: Basciano",
+      "Carlone",
+      "Cerreto Maggio",
+      "Ferraglia",
+      "Montesenario",
+      "Mulinaccio",
+      "Olmo",
+      "Pescina",
+      "San Jacopo",
+      "San Michele alle Macchie",
+      "Starniano",
+      "Uccellatoio",
+      "Viliani"
+    ],
+    "comuni_confinanti": [
+      "Borgo San Lorenzo",
+      "Calenzano",
+      "Fiesole",
+      "Scarperia e San Piero",
+      "Sesto Fiorentino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Pozzolini (in frazione Bivigliano)"
+    ],
+    "chiese": [
+      "Santuario Santa Maria di Monte Senario (in frazione Bivigliano) :: Servi di Maria",
+      "Pieve San Cresci a Macioli",
+      "Chiesa di San Romolo a Bivigliano",
+      "Pieve di San Pietro a Vaglia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Finocchiona (inizio ottobre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tavarnelle Val di Pesa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048045",
+    "codice_catastale": "L067",
+    "popolazione": 7786,
+    "superficie_kmq": 56.98,
+    "densita": 136.6,
+    "cap": "50028",
+    "prefisso_telefonico": "055",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "tavarnellini",
+    "etimologia": "E' un diminutivo di taverna (dal latino taberna ). La specifica si riferisce alla sua posizione nella valle del fiume Pesa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Noce",
+      "Passignano",
+      "Romita",
+      "Sambuca",
+      "San Donato in Poggio"
+    ],
+    "comuni_confinanti": [
+      "Barberino Val d'Elsa",
+      "Castellina in Chianti (SI)",
+      "Certaldo",
+      "Greve in Chianti",
+      "Montespertoli",
+      "San Casciano in Val di Pesa"
+    ],
+    "musei": [
+      "Museo d'Arte Sacra",
+      "MEF - Museo Emilio Ferrari della Cultura Contadina"
+    ],
+    "ville_palazzi": [
+      "Villa Cantuccio",
+      "Villa del Nero Torrigiani",
+      "Villa dell'Ugo",
+      "Villa Fabbri",
+      "Villa Montecchio",
+      "Villa Muricci (a Noce)",
+      "Villa Regoli",
+      "Villa Salvini",
+      "Villa Valle",
+      "Villa Satrada"
+    ],
+    "chiese": [
+      "Cappella di San Giovanni Gualberto (a Sambuca)",
+      "Santuario di Santa Maria delle Grazie a Pietracupa",
+      "Pieve di San Pietro in Bossolo",
+      "Pieve di San Donato in Poggio",
+      "Monastero di Passignano",
+      "Chiesa di Santa Maria della Neve (a San Donato in Poggio)",
+      "Chiesa di Santa Maria del Carmine",
+      "Chiesa di Santa Lucia al Borghetto",
+      "Chiesa di San Michele a Passignano",
+      "Chiesa di San Jacopo alla Sambuca",
+      "Chiesa di San Giminiano a Petroio",
+      "Chiesa di San Biagio a Passignano",
+      "Chiesa di San Bartolomeo a Palazzolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Società Filarmonica Giuseppe Verdi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Trebbiatura (due fine settimanali centrali di luglio)"
+    ],
+    "gemellaggi": [
+      "Minden (Germania)",
+      "Falticeni (Romania)",
+      "Hatvan (Ungheria), dal 1996",
+      "Tangermunde (Sassonia-Anhalt, Germania)",
+      "Gagny (Francia), dal 1966"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Signa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048044",
+    "codice_catastale": "I728",
+    "popolazione": 19235,
+    "superficie_kmq": 18.81,
+    "densita": 1022.6,
+    "cap": "50058",
+    "prefisso_telefonico": "055",
+    "patrono": "Beata Giovanna",
+    "festa_patronale": "Lunedì di Pasqua",
+    "demonimo": "signesi",
+    "etimologia": "Secondo alcuni si riferisce al nome latino di persona Asinius (o Saennius oppure Sinnius). Secondo altri deriva da Exinea (dal nome Essenius) ma questa ipotesi è poco condivisa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Colli Alti",
+      "Lecore",
+      "Ponte all'Asse",
+      "San Mauro a Signa",
+      "San Piero a Ponti",
+      "Sant'Angelo"
+    ],
+    "comuni_confinanti": [
+      "A est: Campi Bisenzio; a nord-ovest: Carmignano (PO)",
+      "Poggio a Caiano (PO); a sud: Lastra a Signa; a sud-est: Scandicci"
+    ],
+    "musei": [
+      "Museo della Paglia e dell'Intreccio \"D. Michelacci\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Rocco",
+      "Chiesa di Sant'Angelo (a Lecore)",
+      "Chiesa di Santa Maria in Castello",
+      "Chiesa di San Pietro (a Lecore)",
+      "Chiesa di San Miniato, in Via Sorelle Gramatica",
+      "Chiesa di San Mauro",
+      "Chiesa della Madonna di Fatima",
+      "Pieve di San Lorenzo",
+      "Pieve di San Giovanni Battista, detta anche della Beata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Trasporto della Beata Giovanna (Pasquetta)"
+    ],
+    "gemellaggi": [
+      "Maromme (Francia), dal 1985",
+      "Oberdrauburg (Austria), dal 1996",
+      "Tifariti (Repubblica Saharawi)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sesto Fiorentino",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048043",
+    "codice_catastale": "I684",
+    "popolazione": 49060,
+    "superficie_kmq": 49.04,
+    "densita": 1000.4,
+    "cap": "50019",
+    "prefisso_telefonico": "055",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "sestesi",
+    "etimologia": "Il nome si riferisce alla distanza da Firenze, deriva dal latino (ad) sextum (lapidem), ossia \"presso la sesta (pietra miliare)\". La specifica fu aggiunta nel 1867.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Terre di Toscana",
+      "Associazione Italiana Città della Ceramica (AICC)",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "Canonica",
+      "Castiglione",
+      "Ceppeto",
+      "Cercina",
+      "Colonnata",
+      "Montorsoli",
+      "Montorsoli Stazione",
+      "Morello",
+      "Osmannoro"
+    ],
+    "comuni_confinanti": [
+      "Calenzano",
+      "Campi Bisenzio",
+      "Fiesole",
+      "Firenze",
+      "Vaglia"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina",
+      "Museo Richard-Ginori della Manifattura di Doccia"
+    ],
+    "ville_palazzi": [
+      "Villa Nemi all'Olmo",
+      "Villa Carmignanello-La Fattoria",
+      "Villa Ginori, in Via della Fabbrica",
+      "Villa Guicciardini (già Corsi Salviati)",
+      "Villa Il Masseto",
+      "Villa la Collina",
+      "Villa Bianchini la Zambra, in Via Gramsci",
+      "Villa le Pergole",
+      "Villa Paolina",
+      "Villa Ragionieri",
+      "Villa San Lorenzo al Prato",
+      "Villa Solaria (già Torrigiani)",
+      "Villa Stanley",
+      "Villa la Mula",
+      "Villa Calamai-Ricceri",
+      "Villa Torre al Termine"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria e San Bartolomeo",
+      "Pieve di Sant'Andrea (a Cercina)",
+      "Pieve di San Martino, in Piazza della Chiesa",
+      "Oratorio Madonna del Piano",
+      "Chiesa di Santa Maria e San Jacopo",
+      "Chiesa di Santa Croce (a Quinto)",
+      "Chiesa di San Romolo (a Colonnata)",
+      "Chiesa di San Lorenzo al Prato",
+      "Chiesa di San Giuseppe Artigiano",
+      "Chiesa di San Bartolomeo",
+      "Convento di Santa Lucia alla Castellina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro della Limonaia"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scarperia e San Piero",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048053",
+    "codice_catastale": "M326",
+    "popolazione": 12150,
+    "superficie_kmq": 116.0,
+    "densita": 104.7,
+    "cap": "50038",
+    "prefisso_telefonico": "055",
+    "patrono": "Santi Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": null,
+    "etimologia": "Il del comune è composto da Scarperia e San Piero.Scarperia deriva da scarpa, ossia \"pendio\". Alcuni credono che il significato della parola sia da associare alla presenza di una \"calzoleria\" in loco.San Piero nome si riferisce alla chiesa eretta in loco intitolata a San Pietro. La specifica allude alla collocazione del sito all'incrocio del torrente Carza e del fiume Sieve.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Scarperia",
+      "San Piero a Sieve",
+      "Sant'Agata",
+      "Marcoiano",
+      "Ponzalla",
+      "Petrona La Torre",
+      "Campomigliaio",
+      "Gabbiano",
+      "Lucigliaio",
+      "San Giusto a Fortuna",
+      "Santo Stefano a Cornetole"
+    ],
+    "comuni_confinanti": [
+      "Barberino di Mugello",
+      "Borgo San Lorenzo",
+      "Calenzano",
+      "Firenzuola",
+      "Vaglia"
+    ],
+    "musei": [
+      "Museo di Vita Artigiana e Contadina",
+      "Museo dei Ferri Taglienti"
+    ],
+    "ville_palazzi": [
+      "Villa della Torre",
+      "Villa dello Sprocco (a Sant'Agata)",
+      "Villa di Cafaggio",
+      "Villa di Sassuolo",
+      "Villa il Palagiaccio",
+      "Villa Maganzi",
+      "Villa Schifanoia, in Via dei Medici",
+      "Villa Corsini delle Mozzette",
+      "Villa del Fango",
+      "Villa dei Pepi"
+    ],
+    "chiese": [
+      "Chiesa di San Lorenzo a Montepoli",
+      "Pieve di Sant'Agata",
+      "Pieve di Santa Maria a Fagna",
+      "Pieve di San Piero",
+      "Chiesa di Santo Stefano a Cornetole",
+      "Chiesa di Sant'Andrea a Cerliano",
+      "Chiesa di Santa Maria e San Niccolò a Spugnole",
+      "Chiesa di San Michele a Lumena",
+      "Chiesa di San Lorenzo a Gabbiano",
+      "Chiesa di San Giusto a Fortuna",
+      "Chiesa di San Giovanni Battista a Senni",
+      "Chiesa di San Gavino al Cornocchio",
+      "Chiesa di San Clemente a Signano",
+      "Chiesa di San Bartolomeo a Petrona",
+      "Chiesa di Santa Maria a Marcoiano"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza di San Martino",
+      "Castello del Trebbio"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festeggiamenti del Diotto (ultima settimana di agosto - metà settembre)",
+      "Infiorata di Scarperia (ultima domenica di maggio)",
+      "Palio della Fortezza (ultimo fine settimana di maggio o il primo di giugno), con la sfida dei rappresentanti dei quattro rioni e la \"cerca del Regolo\""
+    ],
+    "gemellaggi": [
+      "Laguiole (regione dell'Aubrac",
+      "Francia)",
+      "dal 1993"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scandicci",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048041",
+    "codice_catastale": "B962",
+    "popolazione": 50515,
+    "superficie_kmq": 59.59,
+    "densita": 847.7,
+    "cap": "50018",
+    "prefisso_telefonico": "055",
+    "patrono": "San Zanobi",
+    "festa_patronale": "10 maggio",
+    "demonimo": "scandiccesi",
+    "etimologia": "Potrebbe riferirsi al nome latino di pianta scandala o scandula (spelta).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Badia a Settimo",
+      "Casellina",
+      "Mosciano",
+      "Roveta",
+      "San Giusto",
+      "San Martino alla Palma",
+      "San Michele a Torri",
+      "Santa Maria a Marciola",
+      "San Vincenzo a Torri",
+      "Vingone"
+    ],
+    "comuni_confinanti": [
+      "Campi Bisenzio",
+      "Firenze",
+      "Impruneta",
+      "Lastra a Signa",
+      "Montespertoli",
+      "San Casciano in Val di Pesa",
+      "Signa"
+    ],
+    "musei": [
+      "Museo del G.A.M.P.S."
+    ],
+    "ville_palazzi": [
+      "Villa la Vespa",
+      "Villa Antinori",
+      "Villa Arcipresso (o Villa Miranda o Villa Merenda)",
+      "Villa di Castel Pulci",
+      "Villa Torrigiani",
+      "Villa Boccini"
+    ],
+    "chiese": [
+      "Chiesa di San Martino alla Palma",
+      "Pieve di Sant'Alessandro a Giogoli",
+      "Pieve di San Vincenzo a Torri",
+      "Pieve di San Giuliano a Settimo",
+      "Chiesa di Sant'Andrea (nel borgo di Mosciano)",
+      "Chiesa di Santa Maria, in Piazza Benini",
+      "Chiesa di Santa Maria a Marciola",
+      "Chiesa di San Michele a Torri",
+      "Chiesa di San Bartolomeo in Tuto",
+      "Chiesa dei Santi Salvatore e Lorenzo",
+      "Chiesa di San Zanobi a Casignano"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dell'Acciaiolo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Aurora",
+      "Teatro Studio"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Godenzo",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048039",
+    "codice_catastale": "H937",
+    "popolazione": 1142,
+    "superficie_kmq": 99.19,
+    "densita": 11.5,
+    "cap": "50060",
+    "prefisso_telefonico": "055",
+    "patrono": "San Gaudenzio",
+    "festa_patronale": "ultima domenica di settembre",
+    "demonimo": "sangodenzini",
+    "etimologia": "Il nome si riferisce ad una badia benedettina in cui riposavano le spoglie di San Gaudenzio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Montagna Fiorentina",
+      "Parco Nazionale delle Foreste Casentinesi, Monte Falterona, Campigna"
+    ],
+    "localita_frazioni": [
+      "Casale",
+      "Eremo (Chiesa)",
+      "Castagno d'Andrea",
+      "Passo del Muraglione",
+      "Petrognano",
+      "San Bavello"
+    ],
+    "comuni_confinanti": [
+      "Dicomano",
+      "Londa",
+      "Marradi",
+      "Portico e San Benedetto (FC)",
+      "Pratovecchio Stia (AR)",
+      "Premilcuore (FC)",
+      "Santa Sofia (FC)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Abbazia di San Godenzo, in Piazza Dante Alighieri",
+      "Pieve di San Babila (a San Bavello)",
+      "Chiesa di Santa Maria all'Eremo",
+      "Chiesa di San Niccolò a Casale",
+      "Chiesa di San Giorgio a Petrognano",
+      "Chiesa di San Martino (a Castagno d'Andrea)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Casciano in Val di Pesa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048038",
+    "codice_catastale": "H791",
+    "popolazione": 17125,
+    "superficie_kmq": 107.98,
+    "densita": 158.6,
+    "cap": "50026",
+    "prefisso_telefonico": "055",
+    "patrono": "San Cassiano",
+    "festa_patronale": "13 agosto",
+    "demonimo": "sancascianesi",
+    "etimologia": "Secondo alcuni la prima parte deriva dal nome latino di persona Cassius con l'aggiunta del suffisso -anus, secondo altri si riferisce al santo. La specifica allude alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Città del Bio"
+    ],
+    "localita_frazioni": [
+      "Bargino",
+      "Calcinaia",
+      "Cerbaia",
+      "Chiesanuova",
+      "Fabbrica",
+      "Le Quattro Strade",
+      "Mercatale",
+      "Montefiridolfi",
+      "Romola",
+      "San Pancrazio",
+      "Sant'Andrea in Percussina",
+      "Spedaletto",
+      "Talente"
+    ],
+    "comuni_confinanti": [
+      "Greve in Chianti",
+      "Impruneta",
+      "Montespertoli",
+      "Scandicci",
+      "Tavarnelle Val di Pesa"
+    ],
+    "musei": [
+      "Museo d'Arte Sacra"
+    ],
+    "ville_palazzi": [
+      "Villa Borromeo",
+      "Villa Belvedere o Roncognano",
+      "Villa Guicciardini (a San Pancrazio)",
+      "Villa il Poggiale",
+      "Villa le Corti",
+      "Villa Mangiacane (a Sant'Andrea in Percussina)",
+      "Villa Montepaldi (a Talente)",
+      "Villa Poggio Torselli (a Spedaletto)",
+      "Villa Antinori (a Cigliano di sotto)"
+    ],
+    "chiese": [
+      "Chiesa Santa Maria del Prato o della Misericordia",
+      "Pieve di Santo Stefano a Campoli",
+      "Pieve di Santa Cecilia a Decimo",
+      "Pieve di San Giovanni in Sugana",
+      "Chiesa di Santa Maria a Mercatale",
+      "Chiesa di San Piero di Sotto",
+      "Chiesa di San Martino a Argiano",
+      "Chiesa di San Lorenzo a Castelbonsi",
+      "Chiesa di San Colombano",
+      "Chiesa della Collegiata di San Cassiano, in Piazza Cavour",
+      "Chiesa dei Cappuccini, in Via A. Grandi",
+      "Pieve di San Pancrazio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Cinema Teatro Everest",
+      "Jack and Joe Theatre",
+      "Teatro Niccolini"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Morgan Hill (California)",
+      "Nieuwerkerken (Belgio)",
+      "Mahabes (Repubblica Araba Saharawi Democratica)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rufina",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048037",
+    "codice_catastale": "H635",
+    "popolazione": 7291,
+    "superficie_kmq": 45.68,
+    "densita": 159.6,
+    "cap": "50068",
+    "prefisso_telefonico": "055",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "rufinesi",
+    "etimologia": "Potrebbe riferirsi ad un nome di persona: Rufina, dall'etrusco Ruvfni o dal latino Rufenus o Rufinus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Montagna Fiorentina",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Falgano (Casi)",
+      "Masseto",
+      "Scopeti",
+      "Contea (Casini)",
+      "Turicchi (Pianettole)",
+      "Pomino (Castelnuovo",
+      "Castiglioni",
+      "Cigliano",
+      "Petrognano",
+      "Pinzano",
+      "Rimaggio",
+      "Agna)"
+    ],
+    "comuni_confinanti": [
+      "Dicomano",
+      "Londa",
+      "Montemignaio (AR)",
+      "Pelago",
+      "Pontassieve",
+      "Pratovecchio Stia (AR)"
+    ],
+    "musei": [
+      "Museo della Vite e del Vino"
+    ],
+    "ville_palazzi": [
+      "Villa delle Lame",
+      "Villa Budini",
+      "Villa di Poggio Reale",
+      "Villa I Busini"
+    ],
+    "chiese": [
+      "Pieve di Santo Stefano a Castiglioni",
+      "Pieve di San Bartolomeo a Pomino",
+      "Chiesa di Santa Maria e San Giusto a Falgano",
+      "Chiesa di Santa Maria del Carmine ai Fossi",
+      "Chiesa di San Pietro a Casi",
+      "Chiesa di Santa Lucia in Pinzano",
+      "Chiesa di San Michele a Cigliano",
+      "Chiesa di San Giusto ad Agna",
+      "Chiesa di San Pietro a Petrognano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Piccolo Teatro"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rignano sull'Arno",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048036",
+    "codice_catastale": "H286",
+    "popolazione": 8706,
+    "superficie_kmq": 54.21,
+    "densita": 160.6,
+    "cap": "50067",
+    "prefisso_telefonico": "055",
+    "patrono": "San Leolino",
+    "festa_patronale": "12 novembre",
+    "demonimo": "rignanesi",
+    "etimologia": "Documentato con il nome di Regnano, deriva dal nome di persona Herennius (o Rennius oppure Rinnius) con l'aggiunta del suffisso -anus che indica appartenenza. La specifica indica la posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Bisticci",
+      "Bombone",
+      "Cellai",
+      "Le Corti",
+      "Le Valli",
+      "Rosano",
+      "Castellonchio",
+      "Sarnese",
+      "San Donato",
+      "Santa Maria",
+      "San Martino",
+      "San Piero",
+      "Torri",
+      "Troghi",
+      "Volognano"
+    ],
+    "comuni_confinanti": [
+      "Bagno a Ripoli",
+      "Figline e Incisa Valdarno",
+      "Greve in Chianti",
+      "Pelago",
+      "Pontassieve",
+      "Reggello"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Gamberaia",
+      "Villa-Fattoria di Mitigliano",
+      "Villa di Torre a Cona",
+      "Villa di Poggi Francoli"
+    ],
+    "chiese": [
+      "Pieve di San Lorenzo a Miransù",
+      "Pieve di San Leolino",
+      "Chiesa di Santa Maria Immacolata",
+      "Chiesa di San Pietro in Perticaia",
+      "Chiesa di San Michele a Volognano",
+      "Chiesa di San Cristoforo in Perticaia",
+      "Chiesa Badiuzza degli Ughi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera del Bestiame (26 settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Reggello",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048035",
+    "codice_catastale": "H222",
+    "popolazione": 16340,
+    "superficie_kmq": 121.22,
+    "densita": 134.8,
+    "cap": "50066",
+    "prefisso_telefonico": "055",
+    "patrono": "San Jacopo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "reggellesi",
+    "etimologia": "Potrebbe derivare da Reggi o Reggio dal latino rege (proprietà longobardiche).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Montagna Fiorentina",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Cancelli",
+      "Cascia",
+      "I Ciliegi",
+      "Donnini",
+      "Sant'Ellero",
+      "Leccio",
+      "Matassino",
+      "Montanino",
+      "Pietrapiana",
+      "San Clemente",
+      "San Donato in Fronzano",
+      "Tosi",
+      "Saltino",
+      "Vallombrosa",
+      "Vaggio/La Canova"
+    ],
+    "comuni_confinanti": [
+      "Castel San Niccolò (AR)",
+      "Castelfranco Piandiscò (AR)",
+      "Figline e Incisa Valdarno",
+      "Montemignaio (AR)",
+      "Pelago",
+      "Rignano sull'Arno"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa di Sammezzano (a Leccio)",
+      "Villa Pitiana, già Grottanelli (a Donnini)"
+    ],
+    "chiese": [
+      "Pieve di San Pietro a Pitiana",
+      "Pieve di San Pietro (a Cascia)",
+      "Chiesa di Sant'Andrea (a Tosi)",
+      "Chiesa di Sant'Agata",
+      "Chiesa di Santa Margherita (a Cancelli)",
+      "Chiesa di San Michele a Caselli",
+      "Chiesa di San Jacopo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Arboreti di Vallombrosa"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Billy-Montigny (Francia)",
+      "Voesendorf (Austria)",
+      "Rossdorf (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pontassieve",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048033",
+    "codice_catastale": "G825",
+    "popolazione": 20607,
+    "superficie_kmq": 114.44,
+    "densita": 180.1,
+    "cap": "50065",
+    "prefisso_telefonico": "055",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "pontassievesi",
+    "etimologia": "Chiamato anche Ponte a Sieve, identifica un ponte sul fiume Sieve.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Montagna Fiorentina",
+      "Associazione Nazionale Città del Vino",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "Acone",
+      "Colognole",
+      "Doccia",
+      "Galiga",
+      "Molin del Piano",
+      "Montebonello",
+      "Monteloro",
+      "Santa Brigida",
+      "Sieci"
+    ],
+    "comuni_confinanti": [
+      "Bagno a Ripoli",
+      "Borgo San Lorenzo",
+      "Dicomano",
+      "Fiesole",
+      "Pelago",
+      "Rignano sull'Arno",
+      "Rufina",
+      "Vicchio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa di Tassinaia",
+      "Villa Il Palagio a Le Radola",
+      "Villa Sansoni-Trombetta"
+    ],
+    "chiese": [
+      "Chiesa di Santa Lucia a Pievevecchia",
+      "Santuario della Madonna delle Grazie, detto anche della Madonna del Sasso",
+      "Pieve di Sant'Eustachio in Acone",
+      "Pieve di San Lorenzo a Montefiesole",
+      "Pieve di San Giovanni Battista a Monteloro",
+      "Pieve di San Giovanni a Remole, in Via Aretina",
+      "Chiesa di Sant'Ilario a Colognole",
+      "Chiesa di Santa Maria in Acone",
+      "Chiesa di Santa Brigida",
+      "Chiesa di San Salvatore in Valle",
+      "Chiesa di San Miniato a Pagnolle (XI secolo)",
+      "Chiesa di San Miniato a Montebonello",
+      "Chiesa di San Martino e San Giusto a Quona",
+      "Chiesa di San Lorenzo a Galiga",
+      "Chiesa di Sant'Andrea di Doccia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Cinema Accademia"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Presepe Vivente (24 dicembre e 6 gennaio)",
+      "a Santa Brigida"
+    ],
+    "gemellaggi": [
+      "Griesheim (Germania)",
+      "dal 2008"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pelago",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048032",
+    "codice_catastale": "G420",
+    "popolazione": 7735,
+    "superficie_kmq": 54.78,
+    "densita": 141.2,
+    "cap": "50060",
+    "prefisso_telefonico": "055",
+    "patrono": "San Clemente",
+    "festa_patronale": "23 novembre",
+    "demonimo": "pelaghesi",
+    "etimologia": "Deriva dal latino pelagus (pozzanghera) anche se non si conosce ancora bene la connessione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Montagna Fiorentina",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "San Francesco",
+      "Carbonile",
+      "Diacceto",
+      "Raggioli",
+      "Palaie",
+      "Borselli",
+      "Ferrano",
+      "Consuma",
+      "Fontisterni",
+      "Paterno",
+      "S. Ellero"
+    ],
+    "comuni_confinanti": [
+      "Montemignaio (AR)",
+      "Pontassieve",
+      "Pratovecchio Stia (AR)",
+      "Reggello",
+      "Rignano sull'Arno",
+      "Rufina"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Stupan, in piazza Ghiberti",
+      "Villa Bargigli (a Camperiti)",
+      "Villa Buondelmonti",
+      "Villa La Grangia Vallombrosana (a Paterno)",
+      "Villa Story (a Campiglioni)",
+      "Villa Poggio al Commessario (a Diacceto)"
+    ],
+    "chiese": [
+      "Chiesa di San Niccolò (a Nipozzano)",
+      "Pieve di Santa Margherita a Tosina",
+      "Pieve di San Lorenzo (a Diacceto)",
+      "Oratorio del Santissimo Crocifisso o della Compagnia",
+      "Chiesa di Sant'Egidio (a Ristonchi)",
+      "Chiesa di San Martino (a Bibbiano)",
+      "Chiesa di San Pietro (a Ferrano)",
+      "Chiesa di San Lorenzo (a Fontisterni)",
+      "Chiesa di San Francesco (in località San Francesco, in  piazza Verdi)",
+      "Chiesa di San Clemente, in piazza Cavalcanti"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palazzuolo sul Senio",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048031",
+    "codice_catastale": "G270",
+    "popolazione": 1131,
+    "superficie_kmq": 108.9,
+    "densita": 10.4,
+    "cap": "50035",
+    "prefisso_telefonico": "055",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "palazzuolesi",
+    "etimologia": "La prima parte del nome è il diminutivo italianizzato del latino palatium (palazzo, edificio). La specifica si riferisce alla vicinanza al torrente Senio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Mugello"
+    ],
+    "localita_frazioni": [
+      "Acquadalto",
+      "Badia di Susisana",
+      "Bibbiana",
+      "Casetta di Tiara Mantigno (Chiesa)",
+      "Misileo",
+      "Salecchio",
+      "Passo  Sambuca",
+      "Visano"
+    ],
+    "comuni_confinanti": [
+      "Borgo San Lorenzo",
+      "Brisighella (RA)",
+      "Casola Valsenio (RA)",
+      "Castel del Rio (BO)",
+      "Firenzuola",
+      "Marradi"
+    ],
+    "musei": [
+      "Museo delle Genti di Montagna",
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": [
+      "Villa Strigelli",
+      "Palazzo dei Capitani (1387)",
+      "Villa di Gruffieto (XVII secolo)"
+    ],
+    "chiese": [
+      "Chiesa della Visitazione della Beata Maria Vergine (a Casetta di Tiara)",
+      "Chiesa dei Santissimi Simone e Giuda (a Bibbiana)",
+      "Santuario di Santa Maria della Neve (a Acquadalto)",
+      "Oratorio dei Santissimi Carlo e Antonio",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Sant'Andrea (a Mantigno)",
+      "Chiesa di San Pietro (a Piedimonte)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montespertoli",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048030",
+    "codice_catastale": "F648",
+    "popolazione": 13511,
+    "superficie_kmq": 125.02,
+    "densita": 108.1,
+    "cap": "50025",
+    "prefisso_telefonico": "0571",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "montespertolesi",
+    "etimologia": "Deriva da Mons Sighipertuli, è un composto di monte e del nome germanico di persona Sighipert con l'aggiunta del suffisso -ulus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Città del Pane",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Città del Tartufo",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Anselmo",
+      "Baccaiano",
+      "Botinaccio",
+      "Castiglioni",
+      "Corfecciano",
+      "Fornacette",
+      "Gigliola",
+      "Lucardo",
+      "Lucignano",
+      "Lungagnana",
+      "Martignana",
+      "Molino del Ponte",
+      "Montagnana",
+      "Montalbino",
+      "Montegufoni",
+      "Ortimino",
+      "Polvereto",
+      "Poppiano",
+      "San Donato a Livizzano",
+      "San Pietro in Mercato",
+      "San Quirico in Collina",
+      "Tresanti"
+    ],
+    "comuni_confinanti": [
+      "Barberino Val d'Elsa",
+      "Castelfiorentino",
+      "Certaldo",
+      "Empoli",
+      "Lastra a Signa",
+      "Montelupo Fiorentino",
+      "San Casciano in Val di Pesa",
+      "Scandicci",
+      "Tavarnelle Val di Pesa"
+    ],
+    "musei": [
+      "Museo della Vite e del Vino del Centro per la Cultura del Vino \"I Lecci\"",
+      "Museo d'Arte Sacra"
+    ],
+    "ville_palazzi": [
+      "Villa Baldasseroni",
+      "Villa Frescobaldi (a Castiglioni)",
+      "Villa Guicciardini, in Via Brugnano",
+      "Villa Panciatichi (a Aliano), antica residenza della famiglia fiorentina dei Panciatichi"
+    ],
+    "chiese": [
+      "Pieve di San Piero in Mercato",
+      "Chiesa di Santo Stefano (a Lucignano)",
+      "Chiesa di Sant'Ilario, in Via di Lungagnana",
+      "Chiesa di Sant'Andrea, in Piazza Machiavelli",
+      "Chiesa di San Michele Arcangelo (a Castiglioni)",
+      "Chiesa di San Martino e San Giusto (a Lucardo)",
+      "Chiesa di San Lorenzo (a Montegufoni)",
+      "Chiesa di San Giusto (a Montalbino)",
+      "Chiesa del Cuore Immacolato di Maria (a Ortimino)",
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Neustadt an der Aisch (Germania)",
+      "Epernay (Francia)",
+      "Santo Stefano di Cadore (Belluno Veneto)",
+      "Tickla (Repubblica Saharawi)",
+      "Caronia (Messina-Sicilia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montelupo Fiorentino",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048028",
+    "codice_catastale": "F551",
+    "popolazione": 14236,
+    "superficie_kmq": 24.6,
+    "densita": 578.7,
+    "cap": "50056",
+    "prefisso_telefonico": "0571",
+    "patrono": "San Giovanni Evangelista",
+    "festa_patronale": "27 dicembre",
+    "demonimo": "montelupini",
+    "etimologia": "La prima parte del nome è un composto di monte e lupo. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Terre di Toscana",
+      "Associazione Italiana Città della Ceramica (AICC)",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Camaioni",
+      "Fibbiana",
+      "Samminiatello",
+      "Sammontana",
+      "Turbone"
+    ],
+    "comuni_confinanti": [
+      "Capraia e Limite",
+      "Carmignano (PO)",
+      "Empoli",
+      "Lastra a Signa",
+      "Montespertoli"
+    ],
+    "musei": [
+      "Museo Archeologico e della Ceramica"
+    ],
+    "ville_palazzi": [
+      "Villa Medicea dell'Ambrogiana"
+    ],
+    "chiese": [
+      "Pieve di San Giovanni Evangelista",
+      "Oratorio dell'Erta",
+      "Chiesa di Santa Maria (a Sammontana)",
+      "Chiesa di San Lorenzo",
+      "Chiesa dei Santi Quirico, Lucia e Pietro d'Alcantara",
+      "Pieve di Sant'Ippolito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Aurora",
+      "Teatro Mignon"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Manises (Spagna), dal 1994",
+      "Moustiers Sainte Marie (Alpi della Provenza, Francia), dal 1996",
+      "Nove (Vicenza - Veneto), dal 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Bartolomeo di Giovanni d'Astore dei Sinibaldi",
+      "detto Baccio da Montelupo (1469 - 1523 circa)",
+      "scultore"
+    ]
+  },
+  {
+    "nome": "Montaione",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048027",
+    "codice_catastale": "F398",
+    "popolazione": 3689,
+    "superficie_kmq": 104.9,
+    "densita": 35.2,
+    "cap": "50050",
+    "prefisso_telefonico": "0571",
+    "patrono": "Santissimo Crocifisso",
+    "festa_patronale": "3 maggio",
+    "demonimo": "montaionesi",
+    "etimologia": "Documentato come Mons Ajonis. Non sembra essere un composto di \"monte\" e di un nome di persona, bensì un derivato da \"monte\", ad identificare un'altura limitrofa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Città del Pane",
+      "Associazione Nazionale Città del Tartufo",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Alberi",
+      "Barbialla",
+      "Casastrada",
+      "Castelfalfi",
+      "Iano",
+      "Mura",
+      "Palàgio",
+      "San Vivaldo",
+      "Sùghera",
+      "Torri"
+    ],
+    "comuni_confinanti": [
+      "Castelfiorentino",
+      "Gambassi Terme",
+      "Palaia (PI)",
+      "Peccioli (PI)",
+      "San Miniato (PI)",
+      "Volterra (PI)"
+    ],
+    "musei": [
+      "Museo Comunale"
+    ],
+    "ville_palazzi": [
+      "Villa da Filicaia"
+    ],
+    "chiese": [
+      "Convento di San Vivaldo",
+      "Oratorio di San Biagio",
+      "Chiesa di San Regolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marradi",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048026",
+    "codice_catastale": "E971",
+    "popolazione": 3087,
+    "superficie_kmq": 154.07,
+    "densita": 20.0,
+    "cap": "50034",
+    "prefisso_telefonico": "055",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "marradesi",
+    "etimologia": "Deriva dal latino marra, ossia strumento per dissodare la terra o da marratus (terreno lavorato con la marra). Secondo altri potrebbe riferirsi ad una base prelatina marra con il significato di mucchio di sassi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Mugello",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Biforco",
+      "Campigno",
+      "Crespino del Lamone",
+      "Lutirano",
+      "Popolano",
+      "Sant'Adriano"
+    ],
+    "comuni_confinanti": [
+      "Borgo San Lorenzo",
+      "Brisighella (RA)",
+      "Dicomano",
+      "Modigliana (FC)",
+      "Palazzuolo sul Senio",
+      "Portico e San Benedetto (FC)",
+      "San Godenzo",
+      "Tredozio (FC)",
+      "Vicchio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Ceroni, costruita dai Fabbroni",
+      "Palazzo Torriani"
+    ],
+    "chiese": [
+      "Chiesa di San Jacopo a Cardeto",
+      "Chiesa Arcipretale di San Lorenzo",
+      "Badia del Borgo",
+      "Abbazia di Crespino sul Lamone",
+      "Monastero delle Domenicane della Santissima Annunziata",
+      "Chiesa del Suffragio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Castiglionchio",
+      "detto anche Castellaccio (in località Biforco)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro degli Animosi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Notte delle Streghe (12-13 agosto)",
+      "Sagra delle Castagne (ottobre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Londa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048025",
+    "codice_catastale": "E668",
+    "popolazione": 1852,
+    "superficie_kmq": 59.4,
+    "densita": 31.2,
+    "cap": "50060",
+    "prefisso_telefonico": "055",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "8 dicembre",
+    "demonimo": "londesi",
+    "etimologia": "Deriva dal latino Unda, ossia \"onda\", con riferimento alla massa d'acqua del torrente che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Montagna Fiorentina",
+      "Parco Nazionale delle Foreste Casentinesi, Monte Falterona, Campigna"
+    ],
+    "localita_frazioni": [
+      "Bucigna",
+      "Caiano (Chiesa)",
+      "Croce a Mori (Valico)",
+      "Fornace",
+      "Petroio (Chiesa)",
+      "Rata",
+      "Rincine",
+      "Vierle (Chiesa)"
+    ],
+    "comuni_confinanti": [
+      "Dicomano",
+      "Pratovecchio Stia (AR)",
+      "Rufina",
+      "San Godenzo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa di Fornace",
+      "Villa Passerini di Belvedere",
+      "Villa della Rata",
+      "Villa Gori a Caiano"
+    ],
+    "chiese": [
+      "Pieve di Sant'Elena (a Rincine)",
+      "Pieve di Santa Maria (a Rata)",
+      "Pieve di San Lorino, detta anche di San Leolino a Monti o in Montanis",
+      "Chiesa di Santa Maria a Caiano",
+      "Chiesa di San Lorenzo a Vierle",
+      "Chiesa di San Lorenzo a Fornace"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Brzeszcze (Polonia)",
+      "dal 2008"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lastra a Signa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048024",
+    "codice_catastale": "E466",
+    "popolazione": 20312,
+    "superficie_kmq": 43.06,
+    "densita": 471.7,
+    "cap": "50055",
+    "prefisso_telefonico": "055",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "lastrigiani",
+    "etimologia": "La prima parte del nome si riferisce ad uno \"strato di pietra\" (lastra). La specifica allude alla posizione geografica del paese, rivolto verso Signa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "Ginestra Fiorentina",
+      "Carcheri",
+      "Marliano",
+      "Vigliano",
+      "San Romolo",
+      "Quattro Strade",
+      "Malmantile",
+      "Brucianesi",
+      "Porto di Mezzo",
+      "Ponte a Signa"
+    ],
+    "comuni_confinanti": [
+      "Carmignano (PO)",
+      "Montelupo Fiorentino",
+      "Montespertoli",
+      "Scandicci",
+      "Signa"
+    ],
+    "musei": [
+      "Museo Parrocchiale della Propositura di San Martino a Gangalandi"
+    ],
+    "ville_palazzi": [
+      "Villa Prat",
+      "Villa delle Selve",
+      "Villa la Serena",
+      "Villa le Brunette",
+      "Villa le Sorti",
+      "Villa Migliorini",
+      "Villa Pian d'Accoli",
+      "Villa Cappiardi ai Lecci",
+      "Villa Tassinara",
+      "Villa Pandolfini",
+      "Villa Cecchi Tolomei",
+      "Villa Caruso Bellosguardo, cinquecentesca, in precedenza della famiglia Pucci"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria a Castagnolo",
+      "Eremo di Lecceto",
+      "Chiesa Santa Maria a Marliano",
+      "Chiesa di Santo Stefano a Calcinaia",
+      "Chiesa di Sant'Ippolito",
+      "Chiesa di Sant'Ilario a Settimo",
+      "Chiesa di Santa Maria a Lamole",
+      "Chiesa di San Romolo a Settimo",
+      "Chiesa di San Pietro in Selva",
+      "Chiesa di San Pietro a Porto di Mezzo (nato dall'Oratorio dei Santissimi Sebastiano e Rocco)",
+      "Chiesa di San Martino a Gangalandi",
+      "Chiesa di San Martino a Carcheri",
+      "Chiesa dell'Immacolata Concezione (a Ginestra Fiorentina)",
+      "Chiesa di Santa Maria alla Lastra, detta anche della Misericordia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Saint-Fons (Rodano",
+      "Francia)",
+      "dal maggio 1995"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Impruneta",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048022",
+    "codice_catastale": "E291",
+    "popolazione": 14635,
+    "superficie_kmq": 48.76,
+    "densita": 300.1,
+    "cap": "50023",
+    "prefisso_telefonico": "055",
+    "patrono": "San Luca",
+    "festa_patronale": "18 ottobre",
+    "demonimo": "imprunetini",
+    "etimologia": "Potrebbe derivare dal latino pinus, ossia pino. Meno probabile è l'ipotesi che lo descrive come un derivato da prunus (pruno).",
+    "il_comune_e": [
+      "Città Termale (Terme di Firenze Sorgenti Acqua Cassia SpA)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Terre di Toscana",
+      "Associazione Italiana Città della Ceramica (AICC)"
+    ],
+    "localita_frazioni": [
+      "Bagnolo-Cantagallo",
+      "Bottai",
+      "Falciani",
+      "Il Ferrone",
+      "Mezzomonte",
+      "Monteoriolo",
+      "Pozzolatico",
+      "Tavarnuzze",
+      "Terme di Firenze"
+    ],
+    "comuni_confinanti": [
+      "Bagno a Ripoli",
+      "Firenze",
+      "Greve in Chianti",
+      "San Casciano in Val di Pesa",
+      "Scandicci"
+    ],
+    "musei": [
+      "Museo del Tesoro di Santa Maria all'Impruneta"
+    ],
+    "ville_palazzi": [
+      "Villa le Sodera",
+      "Villa l'Ugolino",
+      "Villa Pasqui",
+      "Villa Corsini (a Mezzomonte)",
+      "Villa De Larderel",
+      "Villa Antinori",
+      "Villa Benci, detta anticamente Palagio",
+      "Villa Carrega",
+      "Villa Curadossi"
+    ],
+    "chiese": [
+      "Oratorio di Santa Maria a Colleramole",
+      "Chiesa di San Pietro a Montebuoni",
+      "Chiesa di San Miniato a Quintole",
+      "Chiesa di San Martino a Bagnolo",
+      "Chiesa di San Lorenzo alle Rose",
+      "Chiesa di San Lorenzo a Colline",
+      "Chiesa dei Santi Stefano e Caterina a Pozzolatico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Greve in Chianti",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048021",
+    "codice_catastale": "E169",
+    "popolazione": 13819,
+    "superficie_kmq": 169.04,
+    "densita": 81.7,
+    "cap": "50022",
+    "prefisso_telefonico": "055",
+    "patrono": "Esaltazione della Santa Croce",
+    "festa_patronale": "8 settembre",
+    "demonimo": "grevigiani",
+    "etimologia": "Il nome si riferisce al fiume Greve che scorre nei pressi che potrebbe derivare a sua volta da grava (ghiaieto).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)",
+      "Associazione Nazionale Città del Vino",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Chiocchio",
+      "Cintoia",
+      "Dudda",
+      "Il Ferrone",
+      "Lamole",
+      "Lucolena",
+      "Montefioralle",
+      "Panzano in Chianti",
+      "Passo dei Pecorai",
+      "Pieve di Panzano",
+      "Poggio alla Croce",
+      "San Polo in Chianti",
+      "Strada in Chianti",
+      "Torsoli"
+    ],
+    "comuni_confinanti": [
+      "Bagno a Ripoli",
+      "Castellina in Chianti (SI)",
+      "Cavriglia (AR)",
+      "Figline e Incisa Valdarno",
+      "Impruneta",
+      "Radda in Chianti (SI)",
+      "Rignano sull'Arno",
+      "San Casciano in Val di Pesa",
+      "Tavarnelle Val di Pesa"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Calcinaia",
+      "Villa Carbonaia",
+      "Villa Vignamaggio"
+    ],
+    "chiese": [
+      "Chiesa di San Donato a Mugnana",
+      "Chiesa di San Donato a Lamole",
+      "Chiesa di San Cristoforo",
+      "Chiesa del Sacro Cuore a Citille",
+      "Chiesa di San Martino",
+      "Chiesa di San Michele",
+      "Pieve di San Pietro a Cintoia",
+      "Chiesa di San Gaudenzio",
+      "Pieve di San Pietro a Sillano",
+      "Pieve di San Miniato di Rubbiana",
+      "Pieve di San Leolino (a Panzano)",
+      "Pieve di San Cresci",
+      "Oratorio di Sant'Eufrosino",
+      "Oratorio di San Simone",
+      "Oratorio della Madonna della Neve a Montagliari",
+      "Chiesa di Santo Stefano a Montefioralle",
+      "Chiesa di Santo Stefano a Lucolena",
+      "Chiesa di Santa Croce",
+      "Chiesa di Santa Cristina a Pancole",
+      "Chiesa di San Polo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Circolo Arci - Società Filarmonica B. Paoli",
+      "Teatro A. Boito"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Stagion Bona (25 aprile)",
+      "in località Panzano",
+      "con corteo storico con figuranti in abiti medievali"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gambassi Terme",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048020",
+    "codice_catastale": "D895",
+    "popolazione": 4852,
+    "superficie_kmq": 83.06,
+    "densita": 58.4,
+    "cap": "50050",
+    "prefisso_telefonico": "0571",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "gambassini",
+    "etimologia": "Documentato con il nome di Cambasi e Cambassi, potrebbe essere un composto di camp(u) bassi con un nome di persona. Secondo alcuni potrebbe derivare da cam(p)i bassi, con iniziale in \"g\". La specifica Terme si riferisce alla presenza in loco di una fonte termale.",
+    "il_comune_e": [
+      "Città Termale (Stabilimento Termale Acqua di Pillo)"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Badia a Cerreto",
+      "Case Nuove",
+      "Catignano",
+      "Il Castagno",
+      "Pillo",
+      "Varna"
+    ],
+    "comuni_confinanti": [
+      "Castelfiorentino",
+      "Certaldo",
+      "Montaione",
+      "San Gimignano (SI)",
+      "Volterra (PI)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria a Chianni",
+      "Chiesa di San Giovanni Battista (in località Varna)",
+      "Badia di San Pietro a Cerreto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Zona Archeologica Poggio all'Aglione"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "La Croix-Valmer (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fucecchio",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048019",
+    "codice_catastale": "D815",
+    "popolazione": 23403,
+    "superficie_kmq": 65.13,
+    "densita": 359.3,
+    "cap": "50054",
+    "prefisso_telefonico": "0571",
+    "patrono": "San Candido",
+    "festa_patronale": "3 ottobre",
+    "demonimo": "fucecchiesi",
+    "etimologia": "Deriva dal latino ficus (fico), nella forma collettiva ficetulum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "San Pierino",
+      "La Torre",
+      "Massarella",
+      "Le Pinete",
+      "Botteghe",
+      "Ponte a Cappiano",
+      "Querce"
+    ],
+    "comuni_confinanti": [
+      "A est: Cerreto Guidi",
+      "Larciano (PT); a nord: Chiesina Uzzanese (PT)",
+      "Ponte Buggianese (PT); a ovest: Altopascio (LU)",
+      "Castelfranco di Sotto (PI)",
+      "Santa Croce sull'Arno (PI); a sud: San Miniato (PI)"
+    ],
+    "musei": [
+      "Collezione \"Arturo Checchi\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Montanelli della Volta"
+    ],
+    "chiese": [
+      "Santuario Madonna della Querce",
+      "Oratorio della Madonna della Ferruzza (secolo XV)",
+      "Collegiata di San Giovanni Battista",
+      "Chiesa e Convento della Vergine",
+      "Chiesa di Santa Maria delle Vedute"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Mediceo di Cappiano",
+      "sul canale Usciana"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corpus Domini - Infiorata (Corpus Domini)",
+      "Palio delle Contrade (penultima domenica di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Indro Montanelli (1909 - 2001)",
+      "giornalista"
+    ]
+  },
+  {
+    "nome": "Firenzuola",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048018",
+    "codice_catastale": "D613",
+    "popolazione": 4660,
+    "superficie_kmq": 272.06,
+    "densita": 17.1,
+    "cap": "50033",
+    "prefisso_telefonico": "055",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "firenzuolini",
+    "etimologia": "Il nome fu attribuito dai fiorentini che fondarono il paese nel 1332. Significa \"piccola Firenze\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Mugello",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Casanuova (Casanuova",
+      "Caselle",
+      "Corniolo",
+      "Violla",
+      "Molinuccio); Borgo Santerno (Borgo Santerno",
+      "San Piero Santerno",
+      "Frena",
+      "Pianaccia); Le Valli (Le Valli",
+      "Pagliana",
+      "Badia); Pietramala (Pietramala",
+      "Peglio",
+      "Poggio Tignoso",
+      "Casa Sabatini",
+      "Collinelle); San Pellegrino (San Pellegrino",
+      "Marzocco",
+      "Rio dell'Alpe",
+      "Brentosanico); Cornacchiaia (Cornacchiaia",
+      "Sigliola); Coniale (Coniale",
+      "Scheggianico",
+      "Monti",
+      "Rapezzo",
+      "Camaggiore",
+      "Tirli",
+      "Casovana",
+      "Morraduccio",
+      "Cerreta); Rifredo (Rifredo",
+      "Barco",
+      "Moscheta",
+      "Giogo); Castro San Martino (Castro San Martino",
+      "Segalari",
+      "Roncopiano",
+      "Montefiori); S. Jacopo a Castro (S. Iacopo a Castro",
+      "Traversa",
+      "La Futa",
+      "La Selva",
+      "Santa Lucia allo Stale); Bruscoli (Bruscoli",
+      "Le Fratte); Covigliaio (Covigliaio",
+      "Faggiotto",
+      "Camaggianica",
+      "Casetta); Montalbano (Montalbano",
+      "Filigare",
+      "La Posta",
+      "Cannove",
+      "Cavrenno); Valle Diaterna (Bordignano",
+      "Caburaccia",
+      "Castelvecchio",
+      "Visignano); Piancaldoli (Piancaldoli",
+      "Mercurio",
+      "Il Poggio",
+      "Roco",
+      "Giugnola)"
+    ],
+    "comuni_confinanti": [
+      "Barberino di Mugello",
+      "Borgo San Lorenzo",
+      "Castel del Rio (BO)",
+      "Castiglione dei Pepoli (BO)",
+      "Monghidoro (BO)",
+      "Palazzuolo sul Senio",
+      "San Benedetto Val di Sambro (BO)",
+      "Scarperia e San Piero"
+    ],
+    "musei": [
+      "Museo della Pietra Serena",
+      "Museo del Paesaggio Storico dell'Appennino"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei Santissimi Jacopo e Cristoforo (a Visignano)",
+      "Chiesa dei Santissimi Giovanni e Paolo (a Castiglioncello)",
+      "Chiesa dei Santissimi Domenico e Giustino (a San Pellegrino)",
+      "Abbazia di San Pietro Moscheta",
+      "Chiesa di San Biagio (a Brentosanico)",
+      "Chiesa dei Santissimi Pietro e Paolo (a Santerno)",
+      "Chiesa Parrocchiale di San Giovanni Battista",
+      "Pieve di San Giovanni (a Camaggiore)",
+      "Chiesa di Sant'Andrea (a Piancaldoli)",
+      "Chiesa di Santa Maria (a Frena)",
+      "Chiesa di San Michele a Monti Coniale",
+      "Chiesa di San Michele (a Casanuova)",
+      "Chiesa di San Matteo (al Covigliaio)",
+      "Chiesa di San Martino (a Castro)",
+      "Chiesa di San Martino (a Bruscoli)",
+      "Chiesa di San Lorenzo (a Peglio)",
+      "Chiesa di San Jacopo (a Traversa)",
+      "Chiesa di San Giorgio (a Castelvecchio)",
+      "Pieve di San Giovanni Battista Decollato (a Bordignano)",
+      "Chiesa della Beata Maria Vergine (a Giugnola)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Sala Don Otello Puccetti"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Cantamaggio (fine settimana più vicina al primo maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Figline e Incisa Valdarno",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048052",
+    "codice_catastale": "M321",
+    "popolazione": 23420,
+    "superficie_kmq": 98.2,
+    "densita": 238.5,
+    "cap": "50063",
+    "prefisso_telefonico": "055",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": null,
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Brollo",
+      "Gaville",
+      "Ponte agli Stolli",
+      "Porcellino",
+      "Restone",
+      "San Biagio"
+    ],
+    "comuni_confinanti": [
+      "Castelfranco Piandiscò (AR)",
+      "Cavriglia (AR)",
+      "Greve in Chianti",
+      "Reggello",
+      "Rignano sull'Arno",
+      "San Giovanni Valdarno (AR)"
+    ],
+    "musei": [
+      "Raccolta d'Arte Sacra (frazione: Figline Valdarno)",
+      "Museo della Civiltà Contadina (frazione: Figline Valdarno)",
+      "Antica Spezieria dello Spedale Serristori (frazione: Figline Valdarno)"
+    ],
+    "ville_palazzi": [
+      "Villa di San Cerbone"
+    ],
+    "chiese": [
+      "Santuario Santa Maria a Ponterosso :: Servi di Maria",
+      "Chiesa Sant'Andrea a Ripalta",
+      "Chiesa di San Pietro al Terreno (in località Brollo)",
+      "Chiesa di San Francesco",
+      "Chiesa di San Bartolomeo a Scampata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Garibaldi (frazione: Figline Valdarno)"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiesole",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048015",
+    "codice_catastale": "D575",
+    "popolazione": 14009,
+    "superficie_kmq": 42.11,
+    "densita": 332.7,
+    "cap": "50014",
+    "prefisso_telefonico": "055",
+    "patrono": "San Romolo di Fiesole",
+    "festa_patronale": "6 luglio",
+    "demonimo": "fiesolani",
+    "etimologia": "Deriva da Faesulae, dal greco Phaisoula.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Anchetta",
+      "Caldine",
+      "Compiobbi",
+      "Ellera",
+      "Maiano",
+      "Olmo",
+      "Pian di Mugnone",
+      "Pian di San Bartolo",
+      "Salviatino",
+      "San Domenico",
+      "San Jacopo al Girone",
+      "Valico Vetta le Croci"
+    ],
+    "comuni_confinanti": [
+      "Bagno a Ripoli",
+      "Borgo San Lorenzo",
+      "Firenze",
+      "Pontassieve",
+      "Sesto Fiorentino",
+      "Vaglia"
+    ],
+    "musei": [
+      "Museo \"Giovanni Duprè\"",
+      "Museo-Fondazione \"Primo Conti\"",
+      "Museo Missionario Francescano",
+      "Museo \"Bandini\"",
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": [
+      "Palazzina Mangani",
+      "Villa Albizi o del Teatro",
+      "Villa Bellagio",
+      "Villa I Tatti",
+      "Villa il Bosco di Fontelucente",
+      "Villa le Balze"
+    ],
+    "chiese": [
+      "Chiesa di San Girolamo",
+      "Chiesa di San Domenico",
+      "Cattedrale di San Romolo",
+      "Cappelletta del Santo Sepolcro",
+      "Basilica di Sant'Alessandro",
+      "Badia Fiesolana",
+      "Chiesa di San Martino a Mensola",
+      "Chiesa di San Lorenzo a Vincigliata",
+      "Chiesa di San Martino a Maiano",
+      "Oratorio di Sant'Ansano",
+      "Oratorio del Santissimo Crocifisso",
+      "Convento della Maddalena",
+      "Chiesa e Convento di San Francesco",
+      "Chiesa di Santa Maria Primerana"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana di Baccio Bandinelli"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Romano"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Empoli",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048014",
+    "codice_catastale": "D403",
+    "popolazione": 48442,
+    "superficie_kmq": 62.28,
+    "densita": 777.8,
+    "cap": "50053",
+    "prefisso_telefonico": "0571",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "empolesi",
+    "etimologia": "Esistono svariate ipotesi sulla provenienza del nome. Potrebbe derivare da un antico castello che sorgeva in loco, chiamato Empolum (o Empolis), potrebbe riferirsi al latino limpidus, ossia chiaro o al nome germanico di persona Impo o Empo con l'aggiunta del suffisso -ulus. Secondo alcuni potrebbe riferirsi all'italiano emporio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Brusciana",
+      "Casenuove",
+      "Corniola",
+      "Cortenuova",
+      "Fontanella",
+      "Marcignana",
+      "Martignana",
+      "Molin Nuovo",
+      "Monterappoli",
+      "Pagnana",
+      "Ponte a Elsa",
+      "Pianezzoli",
+      "Ponzano",
+      "Pozzale",
+      "Riottoli",
+      "Santa \nMaria",
+      "Sant'Andrea",
+      "Tinaia",
+      "Villanuova",
+      "Vitiana"
+    ],
+    "comuni_confinanti": [
+      "Capraia e Limite",
+      "Castelfiorentino",
+      "Cerreto Guidi",
+      "Montelupo Fiorentino",
+      "Montespertoli",
+      "San Miniato (PI)",
+      "Vinci"
+    ],
+    "musei": [
+      "Museo della Collegiata di Sant'Andrea",
+      "Museo-Casa \"Ferruccio Busoni\"",
+      "Museo Civico di Paleontologia"
+    ],
+    "ville_palazzi": [
+      "Villa del Terraio",
+      "Villa della Bastia",
+      "Villa di Castagneto",
+      "Villa di Poggio-Piano",
+      "Villa-Castello del Cotone"
+    ],
+    "chiese": [
+      "Chiesa della Madonna del Pozzo",
+      "Chiesa di San Michele (a Pianezzoli)",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Martino (a Pontorme)",
+      "Pieve San Giovanni Battista",
+      "Collegiata di Sant'Andrea",
+      "Chiesa Parrocchiale di San Lorenzo",
+      "Chiesa di San Pietro a Marcignana"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Sala Il Momento",
+      "Teatro Shalom",
+      "Cinema Teatro Excelsior",
+      "Sala Duemila"
+    ],
+    "stadi": [
+      "Stadio Carlo Castellani (19.847 posti)"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sankt Georgen an der Gusen (Austria), dal marzo 1997",
+      "Toledo (Castiglia-La Mancia, Spagna)",
+      "Namur (Belgio)",
+      "Besançon (Franca Contea, Francia)",
+      "Aubervilliers (Île-de-France, Francia), dal maggio 1997"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dicomano",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048013",
+    "codice_catastale": "D299",
+    "popolazione": 5563,
+    "superficie_kmq": 61.76,
+    "densita": 90.1,
+    "cap": "50062",
+    "prefisso_telefonico": "055",
+    "patrono": "Sant'Onofrio",
+    "festa_patronale": "12 giugno",
+    "demonimo": "dicomanesi",
+    "etimologia": "Deriva dal latino decumanus con il significato di \"limite divisorio del terreno\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Montagna Fiorentina"
+    ],
+    "localita_frazioni": [
+      "Carbonile",
+      "Celle",
+      "Corella",
+      "Frascole",
+      "Orticaia",
+      "Sandetole",
+      "Santa Lucia",
+      "Dicomano Campagna",
+      "Vicolagna",
+      "Vicorati",
+      "Villa"
+    ],
+    "comuni_confinanti": [
+      "Londa",
+      "Marradi",
+      "Pontassieve",
+      "Rufina",
+      "San Godenzo",
+      "Vicchio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dalle Pozze",
+      "Palazzo della Nave",
+      "Villa a' Riconi",
+      "Villa di Cansana",
+      "Villa di Celle"
+    ],
+    "chiese": [
+      "Pieve di Santa Maria a Dicomano",
+      "Pieve di San Martino a Corella",
+      "Pieve di San Giovanni Battista a Sandetole",
+      "Oratorio di Sant'Onofrio",
+      "Oratorio di Montedomini",
+      "Oratorio della Santissima Annunziata",
+      "Chiesa di Sant'Andrea a Tizzano",
+      "Chiesa parrocchiale di Sant'Antonio Abate",
+      "Chiesa di Santa Maria a Agnano",
+      "Chiesa di San Jacopo a Frascole",
+      "Chiesa di San Donnino e San Pietro a Celle",
+      "Chiesa di San Donato in Villa",
+      "Chiesa delle Santissime Lucia e Cristina",
+      "Chiesa di Santo Stefano a Vicolagna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Certaldo",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048012",
+    "codice_catastale": "C540",
+    "popolazione": 16159,
+    "superficie_kmq": 75.24,
+    "densita": 214.8,
+    "cap": "50052",
+    "prefisso_telefonico": "0571",
+    "patrono": "San Tommaso",
+    "festa_patronale": "3 luglio",
+    "demonimo": "certaldesi",
+    "etimologia": "Probabilmente il nome è un composto di cer- (da cerreto) e dell'aggettivo alto o del nome di persona Aldo.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Fiano",
+      "Marcialla",
+      "Sciano",
+      "San Donnino",
+      "Pino",
+      "San Martino a Maiano",
+      "Bagnano"
+    ],
+    "comuni_confinanti": [
+      "Barberino Val d'Elsa",
+      "Castelfiorentino",
+      "Gambassi Terme",
+      "Montespertoli",
+      "San Gimignano (SI)",
+      "Tavarnelle Val di Pesa"
+    ],
+    "musei": [
+      "Museo di Palazzo Pretorio",
+      "Museo di Arte Sacra",
+      "Casa del Boccaccio"
+    ],
+    "ville_palazzi": [
+      "Palazzo Giannozzi",
+      "Palazzo Machiavelli",
+      "Palazzo Stiozzi Ridolfi (XIII secolo)"
+    ],
+    "chiese": [
+      "Pieve di San Giovanni Battista in Jerusalem",
+      "Pieve di San Lazzaro a Lucardo",
+      "Chiesa di San Tommaso",
+      "Chiesa dei Santi Jacopo e Filippo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Mercantia (penultima settimana di luglio), festival internazionale del teatro di strada",
+      "Sagra del Tartufo Marzuolo (ultimi due weekend di marzo)"
+    ],
+    "gemellaggi": [
+      "Kanramachi (Giappone)",
+      "Ripatransone (Ascoli Piceno - Marche)",
+      "Canterbury (Inghilterra)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Giovanni Boccaccio (Firenze o Certaldo, 1313 - Certaldo, 1375), scrittore",
+      "Ernesto Calindri (1909 - 1999), attore"
+    ]
+  },
+  {
+    "nome": "Cerreto Guidi",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048011",
+    "codice_catastale": "C529",
+    "popolazione": 10929,
+    "superficie_kmq": 49.33,
+    "densita": 221.5,
+    "cap": "50050",
+    "prefisso_telefonico": "0571",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "cerretesi",
+    "etimologia": "Deriva dal latino Cerrus, ossia cerro, una particolare specie di quercia presente in zona. La specifica si riferisce ai conti Guidi che ne ebbero la giurisdizione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Nazionale Città del Vino",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Stabbia",
+      "Lazzeretto",
+      "Bassa",
+      "Gavena",
+      "Pieve a Ripoli",
+      "Poggio Tempesti",
+      "Corliano",
+      "San Zio"
+    ],
+    "comuni_confinanti": [
+      "Empoli",
+      "Fucecchio",
+      "Lamporecchio (PT)",
+      "Larciano (PT)",
+      "San Miniato (PI)",
+      "Vinci"
+    ],
+    "musei": [
+      "Museo della Villa Medicea"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Santissima Trinità",
+      "Pieve di San Leonardo",
+      "Santuario di Santa Liberata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio del Cerro (ultimo fine settimana di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelfiorentino",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048010",
+    "codice_catastale": "C101",
+    "popolazione": 17450,
+    "superficie_kmq": 66.56,
+    "densita": 262.2,
+    "cap": "50051",
+    "prefisso_telefonico": "0571",
+    "patrono": "Santa Verdiana",
+    "festa_patronale": "primo febbraio",
+    "demonimo": "castellani",
+    "etimologia": "Attestato con il nome di Castel Timignano. Il nome odierno si riferisce alla funzione difensiva che il paese assunse quando divenne possesso dei fiorentini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Cambiano",
+      "Castelnuovo d'Elsa",
+      "Coiano",
+      "Dogana",
+      "Fontanella",
+      "Granaiolo",
+      "Petrazzi"
+    ],
+    "comuni_confinanti": [
+      "Certaldo",
+      "Empoli",
+      "Gambassi Terme",
+      "Montaione",
+      "Montespertoli",
+      "San Miniato (PI)"
+    ],
+    "musei": [
+      "Museo di Santa Verdiana",
+      "Museo Benozzo Gozzoli"
+    ],
+    "ville_palazzi": [
+      "Villa Rinascimentale di Cambiano"
+    ],
+    "chiese": [
+      "Santuario di Santa Verdiana",
+      "Pieve di Coiano",
+      "Pieve dei Santi Ippolito e Biagio",
+      "Oratorio dei Santi Lorenzo e Barbara",
+      "Collegiata dei Santi Lorenzo e Leonardo",
+      "Chiesa di San Prospero",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Oliveto"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Ridotto del Teatro del Popolo"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capraia e Limite",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048008",
+    "codice_catastale": "B684",
+    "popolazione": 7717,
+    "superficie_kmq": 25.0,
+    "densita": 308.7,
+    "cap": "50050",
+    "prefisso_telefonico": "0571",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "limitesi",
+    "etimologia": "Nato dall'unione dei due comuni, il primo è documentato con il nome di Cerbaria Capraia, derivante da capra con l'aggiunta del suffisso -aria. Limite probabilmente ha il significato di confine, termine.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Circondario Empolese Valdelsa"
+    ],
+    "localita_frazioni": [
+      "Capraia Fiorentina",
+      "Castellina",
+      "Castra",
+      "Conio",
+      "La Nave di Camaioni",
+      "Limite sull'Arno"
+    ],
+    "comuni_confinanti": [
+      "A est e nord: Carmignano (PO); a ovest: Vinci; a sud: Empoli",
+      "Montelupo Fiorentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santo Stefano (a Capraia)",
+      "Chiesa di Santa Maria (a Limite)",
+      "Chiesa di San Pietro (a Castra)",
+      "Badia di San Giusto",
+      "Abbazia di San Martino in Campo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Villa Bibbiani (sul versante meridionale del Montalbano)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio di San Lorenzo (ultima domenica di luglio o il sabato sera)",
+      "Palio della Montata (secondo o terzo fine settimana di settembre), gara a remi sulle acque dell'Arno tra i quattro rioni storici: la Castellina, la Punta, il Rione di Sotto, il Rione di Sopra"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campi Bisenzio",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048006",
+    "codice_catastale": "B507",
+    "popolazione": 46878,
+    "superficie_kmq": 28.62,
+    "densita": 1637.9,
+    "cap": "50013",
+    "prefisso_telefonico": "055",
+    "patrono": "Beata Teresa Maria Manetti",
+    "festa_patronale": "23 aprile",
+    "demonimo": "campigiani",
+    "etimologia": "La prima parte del nome si riferisce alla suddivisione del terreno in numerosi campi. La seconda parte si riferisce all'omonimo fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Capalle",
+      "Il Rosi",
+      "La Villa",
+      "Sant'Angelo a Lecore",
+      "San Cresci",
+      "San Donnino",
+      "San Giusto",
+      "San Lorenzo",
+      "Santa Maria",
+      "San Martino",
+      "San Piero a Ponti",
+      "Santo Stefano"
+    ],
+    "comuni_confinanti": [
+      "Calenzano",
+      "Firenze",
+      "Poggio a Caiano (PO)",
+      "Prato (PO)",
+      "Scandicci",
+      "Sesto Fiorentino",
+      "Signa"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Rucellai",
+      "Villa Montalvo",
+      "Villa il Palagio"
+    ],
+    "chiese": [
+      "Chiesa dell'Autostrada",
+      "Pieve di Santo Stefano",
+      "Convento delle Bettine",
+      "Chiesetta di San Martino",
+      "Chiesa di Santa Maria",
+      "Chiesa di San Quirico e Giulitta",
+      "Chiesa di San Lorenzo",
+      "Chiesa di San Donnino",
+      "Chiesa di San Andrea a Brozzi",
+      "Chiesa del Sacro Cuore",
+      "Chiesa dei Santi Pietro e Paolo (San Piero a Ponti)",
+      "Chiesa di San Cresci"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Auditorium Gianni Rodari",
+      "Teatro MCL Gorinello Cesare Rugli",
+      "Teatro Dante"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calenzano",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048005",
+    "codice_catastale": "B406",
+    "popolazione": 17703,
+    "superficie_kmq": 76.87,
+    "densita": 230.3,
+    "cap": "50041",
+    "prefisso_telefonico": "055",
+    "patrono": "San Niccolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "calenzanesi",
+    "etimologia": "Deriva dal nome latino di persona Calentius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Baroncoli",
+      "Carraia",
+      "Collina",
+      "Croci di Calenzano",
+      "Leccio",
+      "Legri",
+      "Osteria degli Alberi",
+      "Querciola",
+      "San Donato",
+      "San Pietro in Casaglia",
+      "Secciano",
+      "Settimello",
+      "Sommaia",
+      "Spazzavento",
+      "Travalle"
+    ],
+    "comuni_confinanti": [
+      "Barberino di Mugello",
+      "Campi Bisenzio",
+      "Prato (PO)",
+      "Scarperia e San Piero",
+      "Sesto Fiorentino",
+      "Vaglia",
+      "Vaiano (PO)"
+    ],
+    "musei": [
+      "Museo del Soldatino e della Figurina Storica"
+    ],
+    "ville_palazzi": [
+      "Villa di Travalle",
+      "Villa di Volmiano",
+      "Villa di San Donato"
+    ],
+    "chiese": [
+      "Chiesa di Santa Lucia (a Settimello)",
+      "Chiesa di San Rufignano (in località Sommaia)",
+      "Chiesa di San Pietro a Casaglia",
+      "Pieve di Legri, dedicata a San Severo",
+      "Pieve di San Donato",
+      "Oratorio della Compagnia del Santissimo Sacramento",
+      "Pieve di Santa Maria (in località Carraia)",
+      "Pieve di San Niccolò"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Manzoni"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borgo San Lorenzo",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048004",
+    "codice_catastale": "B036",
+    "popolazione": 18388,
+    "superficie_kmq": 146.15,
+    "densita": 125.8,
+    "cap": "50032",
+    "prefisso_telefonico": "055",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "borghigiani",
+    "etimologia": "La prima parte del nome, ossia Borgo, deriva dal latino burgus (luogo fortificato). La seconda parte si riferisce alla chiesa dedicata al santo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Mugello"
+    ],
+    "localita_frazioni": [
+      "Arliano",
+      "Cardetole",
+      "Casaglia",
+      "Casaglia (Colle di)",
+      "Faltona",
+      "Figliano",
+      "Grezzano",
+      "Luco Mugello",
+      "Madonna Tre Fiumi",
+      "Montefloscoli",
+      "Mucciano (Chiesa)",
+      "Panicaglia",
+      "Piazzano",
+      "Poggiolo-Salaiole",
+      "Polcanto",
+      "Pulicciano",
+      "Rabatta",
+      "Razzuolo",
+      "Ronta",
+      "Sagginale",
+      "San Cresci (Chiesa)",
+      "San Giovanni Maggiore",
+      "Tassaia"
+    ],
+    "comuni_confinanti": [
+      "A est: Vicchio; a nord: Firenzuola",
+      "Palazzuolo sul Senio; a nord-est: Marradi; a ovest: Scarperia e San Piero; a sud: Fiesole",
+      "Pontassieve; a sud-ovest: Vaglia"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina di Casa d'Erci",
+      "Museo Comunale della Manifattura \"Chini\""
+    ],
+    "ville_palazzi": [
+      "Villa Brocchi",
+      "Villa di Belvedere (a Arliano)",
+      "Villa Gerini-Sacchetti (in località Poggio)",
+      "Villa Guiducci-Massani (a Serravalle)",
+      "Villa Pecori Giraldi"
+    ],
+    "chiese": [
+      "Oratorio della Misericordia",
+      "Santuario della Madonna dei Tre Fiumi",
+      "Pieve di Santa Maria a Olmi",
+      "Pieve di San Lorenzo",
+      "Pieve di San Cresci in Valcava",
+      "Oratorio del Santissimo Crocifisso dei Miracoli",
+      "Chiesa di Santo Stefano (a Grezzano)",
+      "Chiesa di San Pietro (a Luco)",
+      "Chiesa di San Michele (a Figliano)",
+      "Chiesa di San Francesco, in stile gotico",
+      "Chiesa di San Donato (a Polcanto)",
+      "Chiesa dei Santissimi Clemente e Michele (a Tassaia)",
+      "Badia di San Paolo di Razzuolo",
+      "Badia del Buonsollazzo",
+      "Pieve di San Giovanni Maggiore (a Panicaglia)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Cinema Teatro Don Bosco",
+      "Cinema Teatro Giotto"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Barberino Val d'Elsa",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048003",
+    "codice_catastale": "A633",
+    "popolazione": 4406,
+    "superficie_kmq": 65.88,
+    "densita": 66.9,
+    "cap": "50021",
+    "prefisso_telefonico": "055",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "barberinesi",
+    "etimologia": "La sua provenienza è incerta, si è ipotizzata una derivazione da un nome latino di persona o da un nome di pianta, più probabilmente deriva da un nome tardo-antico: Barbarus. La specifica si riferisce alla sua collocazione geografica tra la Val D'Elsa e la Val di Pesa.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Cortine",
+      "Linari",
+      "Marcialla",
+      "Monsanto",
+      "Petrognano",
+      "San Filippo a Ponzano",
+      "Sant'Appiano",
+      "Tignano",
+      "Vico d'Elsa"
+    ],
+    "comuni_confinanti": [
+      "Castellina in Chianti (SI)",
+      "Certaldo",
+      "Montespertoli",
+      "Poggibonsi (SI)",
+      "San Gimignano (SI)",
+      "Tavarnelle Val di Pesa"
+    ],
+    "musei": [
+      "Antiquarium di Sant'Appiano"
+    ],
+    "ville_palazzi": [
+      "Villa Guicciardini, in origine apparteneva alla famiglia Brancadoro",
+      "Villa Cortine",
+      "Villa Prummiano"
+    ],
+    "chiese": [
+      "Chiesa di Santo Stefano a Linari",
+      "Chiesa di San Martino a Pastine",
+      "Chiesa di San Lorenzo a Vigliano",
+      "Chiesa di San Lorenzo a Cortine",
+      "Chiesa di San Filippo a Ponzano",
+      "Chiesa di San Bartolomeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Regina Margherita"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Schliersee (Baviera",
+      "Germania)",
+      "dal 1986"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Barberino di Mugello",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048002",
+    "codice_catastale": "A632",
+    "popolazione": 10840,
+    "superficie_kmq": 133.71,
+    "densita": 81.1,
+    "cap": "50031",
+    "prefisso_telefonico": "055",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "barberinesi",
+    "etimologia": "La sua provenienza è incerta, si è ipotizzata una derivazione da un nome latino di persona o da un nome di pianta non ben identificato. Più probabilmente deriva da un nome tardo-antico: Barbarus. La specifica deriva dal nome latino di persona Mucellus, diminutivo di un nome di origine etrusca: Mucius. Secondo alcuni si riferisce al termine muc, ossia altura.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Comunità Montana Mugello"
+    ],
+    "localita_frazioni": [
+      "Cagaggiolo",
+      "Casaglia Poggiolino",
+      "Cavallina",
+      "Galliano",
+      "Mangona",
+      "Montecarelli",
+      "Montecuccoli",
+      "Santa Lucia"
+    ],
+    "comuni_confinanti": [
+      "Calenzano",
+      "Cantagallo (PO)",
+      "Castiglione dei Pepoli (BO)",
+      "Firenzuola",
+      "Scarperia e San Piero",
+      "Vaiano (PO)",
+      "Vernio (PO)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa dei Ricci",
+      "Villa delle Maschere",
+      "Villa di Cafaggiolo"
+    ],
+    "chiese": [
+      "Chiesa di San Bartolommeo a Mangona",
+      "Badia di Santa Maria a Vigesimo",
+      "Chiesa di San Lorenzo a Collina o a Mozzanello",
+      "Chiesa di San Jacopo e di Santa Maria",
+      "Pieve di Santa Reparata a Pimonte",
+      "Pieve di San Silvestro",
+      "Pieve di San Michele a Montecuccoli",
+      "Pieve di San Giovanni in Petroio",
+      "Pieve di San Gavino Adimari",
+      "Pieve di San Bartolomeo",
+      "Oratorio dei Ss. Sebastiano e Rocco",
+      "Chiesa di San Michele a Montecarelli",
+      "Chiesa di San Lorenzo a Croci",
+      "Chiesa di San Lorenzo a Bovecchio"
+    ],
+    "castelli_fortificazioni": [
+      "Castelletto di Villanova"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Cantamaggio (una domenica di maggio)",
+      "festa contadina in abiti dell'Ottocento"
+    ],
+    "gemellaggi": [
+      "Betton (Bretagna",
+      "Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bagno a Ripoli",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048001",
+    "codice_catastale": "A564",
+    "popolazione": 25569,
+    "superficie_kmq": 74.09,
+    "densita": 345.1,
+    "cap": "50012",
+    "prefisso_telefonico": "055",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "ripolesi",
+    "etimologia": "La prima parte del nome allude alla presenza di antiche terme in loco. La specifica si riferisce a Pian di Ripoli (da ripa, ossia riva).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno"
+    ],
+    "localita_frazioni": [
+      "Antella",
+      "Candeli",
+      "Capannuccia",
+      "Grassina",
+      "Ponte a Ema",
+      "Meoste",
+      "Osteria Nuova",
+      "Ponte a Niccheri",
+      "Rimaggio",
+      "San Donato in Collina",
+      "Vallina",
+      "Villamagna"
+    ],
+    "comuni_confinanti": [
+      "Fiesole",
+      "Firenze",
+      "Greve in Chianti",
+      "Impruneta",
+      "Pontassieve",
+      "Rignano sull'Arno"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa La Tana",
+      "Villa di Mondeggi",
+      "Villa Medicea di Lappeggi",
+      "Casina delle Fate"
+    ],
+    "chiese": [
+      "Oratorio del Beato Gherardo",
+      "Chiesa di Santa Lucia a Terzano",
+      "Chiesa di San Tommaso a Baroncelli",
+      "Chiesa di San Quirico a Ruballa, detta anche dell'Apparita",
+      "Chiesa di San Piero a Ema",
+      "Chiesa di San Michele Arcangelo a Tegolaia",
+      "Chiesa di San Martino a Strada o ai Cipressi",
+      "Chiesa di San Giusto",
+      "Chiesa di San Giorgio a Ruballa",
+      "Chiesa di San Donato",
+      "Chiesa di San Bartolomeo"
+    ],
+    "castelli_fortificazioni": [
+      "Castel Belforte"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Villa Cedri \"L'Orto Sconcluso\"",
+      "Circolo Ricreativo Culturale",
+      "Nuovo Teatro Comunale",
+      "Teatro SMS di Grassina"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Firenze",
+    "provincia": "Firenze",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "048017",
+    "codice_catastale": "D612",
+    "popolazione": 382258,
+    "superficie_kmq": 102.41,
+    "densita": 3732.6,
+    "cap": "50100",
+    "prefisso_telefonico": "055",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "fiorentini",
+    "etimologia": "Deriva da Florentia (come buon auspicio, dal latino florere, fiorire). Attestato con il nome di Fiorenza, il nome odierno è il genitivo locativo Florentiae.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Arno",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Città italiane per la mobilità sostenibile e lo sviluppo dei trasporti",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "Galluzzo",
+      "Settignano"
+    ],
+    "comuni_confinanti": [
+      "Bagno a Ripoli",
+      "Campi Bisenzio",
+      "Fiesole",
+      "Impruneta",
+      "Scandicci",
+      "Sesto Fiorentino"
+    ],
+    "musei": [
+      "(scheda musei in preparazione)"
+    ],
+    "ville_palazzi": [
+      "Palazzo Vecchio o della Signoria",
+      "Palazzo Strozzi",
+      "Palazzo Pitti"
+    ],
+    "chiese": [
+      "Santuario Santa Maria del Fiore - Duomo di Firenze"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza da Basso",
+      "Fortezza di San Miniato"
+    ],
+    "fontane": [
+      "Fontana di Bacco",
+      "Fontana del Porcellino"
+    ],
+    "giardini_orti_botanici": [
+      "Orto Botanico Giardino dei Semplici",
+      "Giardino Tropicale dell'Istituto Agronomico per l'Oltremare",
+      "Giardino di Castello",
+      "Giardino di Boboli"
+    ],
+    "luoghi_interesse": [
+      "Osservatorio Astrofisico di Arcetri",
+      "Ponte Vecchio"
+    ],
+    "teatri": [
+      "Stazione Leopolda Fabbrica Europa",
+      "Teatro Saschall",
+      "Teatro Estivo Il Boschetto",
+      "Teatro Arena San Salvi",
+      "Teatro Cantiere Florida",
+      "Teatro del Cestello",
+      "Teatro del Maggio Musicale Fiorentino e Ridotto",
+      "Teatro della Compagnia",
+      "Teatro della Limonaia di Villa Strozzi",
+      "Teatro della Pergola e \"Saloncino\"",
+      "Teatro di Rifredi",
+      "Teatro Verdi",
+      "Teatro Everest",
+      "Teatro Goldoni e \"Saloncino Castinelli\"",
+      "Teatro La Fiaba",
+      "Teatro Le Laudi",
+      "Teatro Nuovo",
+      "Teatro Puccini",
+      "Teatro Reims",
+      "Teatro dell'Istituto Francese",
+      "Sala Vanni",
+      "Teatro 13",
+      "Arena Cinecittà Teatro San Quirico",
+      "Auditorium Clinica Medica",
+      "Auditorium FLOG",
+      "Cinema Teatro Nuovo Sentiero",
+      "Circolo Teatro del Sale",
+      "Sala del Conservatorio Luigi Cherubini",
+      "Sala Teatro Cinema ACLI Ponte a Ema"
+    ],
+    "stadi": [
+      "Stadio Artemio Franchi"
+    ],
+    "eventi_feste_sagre": [
+      "Fòchi di San Giovanni (24 giugno)",
+      "Calcio in Costume (terza decade di giugno), con lo scontro tra le squadre dei quattro quartieri storici di Firenze: gli Azzurri di Santa Croce, i Bianchi di Santo Spirito, i Rossi di Santa Maria Novella, i Verdi di San Giovanni",
+      "Cavalcata dei Re Magi (6 gennaio), con il Corteo della Repubblica Fiorentina e con i tamburini del gruppo storico della Filarmonica Rossini",
+      "Festa della Rificolona (7 settembre)",
+      "Scoppio del Carro (Pasqua)",
+      "Festa del Grillo (Ascensione)"
+    ],
+    "gemellaggi": [
+      "Reims (Champagne-Ardenne, Francia), dal luglio 1954",
+      "Budapest (Ungheria), dal maggio 2008",
+      "Dresda (Sassonia, Germania), dal maggio 1978",
+      "Edimburgo (Scozia, Regno Unito), dal maggio 1965",
+      "Esfahan (Iran), dal maggio 1998",
+      "Fez (Marocco), dal settembre 1961",
+      "Filadelfia (Usa), dall'ottobre 1964",
+      "Kiev (Ucraina), dal luglio 1967",
+      "Kuwait City (Kuwait), dal novembre 1991",
+      "Kyoto (Giappone), dal settembre 1965",
+      "Nazareth (Israele), dal marzo 1996",
+      "Riga (Lettonia), dall'aprile 2000",
+      "Salvador Bahia (Brasile), dal maggio 1991",
+      "Tirana (Albania), dal febbraio 2001",
+      "Turku (Finlandia), dal febbraio 1992",
+      "Nanchino (Repubblica Popolare Cinese), dal febbraio 1980",
+      "Atene (Grecia), dal settembre 2002",
+      "Aaiun (Repubblica Araba Saharawi Democratica), dal marzo 1996"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

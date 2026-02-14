@@ -1,0 +1,16 @@
+{
+  "nome": "Enna",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "EN",
+  "codice_istat": "086",
+  "popolazione": 168052,
+  "popolazione_maschi": 81146,
+  "popolazione_femmine": 86906,
+  "superficie_kmq": 2561.73,
+  "densita": 65.6,
+  "num_comuni": 20,
+  "capoluogo": "Enna",
+  "iso_3166_2": "IT-EN",
+  "nuts": "ITG16"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Carbonia-Iglesias",
+  "regione": "Sardegna",
+  "zona": null,
+  "sigla": "CI",
+  "codice_istat": "107",
+  "popolazione": 126324,
+  "popolazione_maschi": 61790,
+  "popolazione_femmine": 64534,
+  "superficie_kmq": 1494.95,
+  "densita": 84.5,
+  "num_comuni": 23,
+  "capoluogo": null,
+  "iso_3166_2": "IT-CI",
+  "nuts": "ITG2C"
+}

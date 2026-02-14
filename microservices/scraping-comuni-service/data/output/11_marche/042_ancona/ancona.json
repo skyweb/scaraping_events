@@ -1,0 +1,16 @@
+{
+  "nome": "Ancona",
+  "regione": "Marche",
+  "zona": null,
+  "sigla": "AN",
+  "codice_istat": "042",
+  "popolazione": 474124,
+  "popolazione_maschi": 228765,
+  "popolazione_femmine": 245359,
+  "superficie_kmq": 1940.16,
+  "densita": 244.4,
+  "num_comuni": 47,
+  "capoluogo": "Ancona",
+  "iso_3166_2": "IT-AN",
+  "nuts": "ITE32"
+}

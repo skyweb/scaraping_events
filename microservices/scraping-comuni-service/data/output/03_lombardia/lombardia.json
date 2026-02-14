@@ -1,0 +1,14 @@
+{
+  "nome": "Lombardia",
+  "codice_istat": "03",
+  "popolazione": 10018806,
+  "popolazione_maschi": 4894363,
+  "popolazione_femmine": 5124803,
+  "superficie_kmq": 23862.86,
+  "densita": 419.8,
+  "num_province": 12,
+  "num_comuni": 1527,
+  "capoluogo": "Milano",
+  "iso_3166_2": "IT-25",
+  "nuts": "ITC4"
+}

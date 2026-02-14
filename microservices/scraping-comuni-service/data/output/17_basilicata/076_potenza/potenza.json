@@ -1,0 +1,16 @@
+{
+  "nome": "Potenza",
+  "regione": "Basilicata",
+  "zona": null,
+  "sigla": "PZ",
+  "codice_istat": "076",
+  "popolazione": 370680,
+  "popolazione_maschi": 181987,
+  "popolazione_femmine": 188693,
+  "superficie_kmq": 6548.49,
+  "densita": 56.6,
+  "num_comuni": 100,
+  "capoluogo": "Potenza",
+  "iso_3166_2": "IT-PZ",
+  "nuts": "ITF51"
+}

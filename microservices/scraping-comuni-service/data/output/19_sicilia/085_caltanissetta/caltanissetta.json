@@ -1,0 +1,16 @@
+{
+  "nome": "Caltanissetta",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "CL",
+  "codice_istat": "085",
+  "popolazione": 269710,
+  "popolazione_maschi": 131145,
+  "popolazione_femmine": 138565,
+  "superficie_kmq": 2124.52,
+  "densita": 127.0,
+  "num_comuni": 22,
+  "capoluogo": "Caltanissetta",
+  "iso_3166_2": "IT-CL",
+  "nuts": "ITG15"
+}

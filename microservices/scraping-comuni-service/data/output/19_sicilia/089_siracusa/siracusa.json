@@ -1,0 +1,16 @@
+{
+  "nome": "Siracusa",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "SR",
+  "codice_istat": "089",
+  "popolazione": 402822,
+  "popolazione_maschi": 198466,
+  "popolazione_femmine": 204356,
+  "superficie_kmq": 2108.8,
+  "densita": 191.0,
+  "num_comuni": 21,
+  "capoluogo": "Siracusa",
+  "iso_3166_2": "IT-SR",
+  "nuts": "ITG19"
+}

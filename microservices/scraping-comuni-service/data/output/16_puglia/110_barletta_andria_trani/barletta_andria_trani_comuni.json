@@ -1,0 +1,529 @@
+[
+  {
+    "nome": "Trinitapoli",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110010",
+    "codice_catastale": "B915",
+    "popolazione": 14715,
+    "superficie_kmq": 147.62,
+    "densita": 99.7,
+    "cap": "76015",
+    "prefisso_telefonico": "0883",
+    "patrono": "Santo Stefano",
+    "festa_patronale": null,
+    "demonimo": "trinitapolesi",
+    "etimologia": "Chiamato in passato Casale de Palia, poi Casale de Fabrica, il paese fu donato all'Abbazia della Trinità e quindi assunse il nome di Casaltrinità che fu trasformato, nel 1863, in quello attuale che è un composto di Trinità e del termine greco polis (città), quindi città della Trinità.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Barletta",
+      "Cerignola (FG)",
+      "Margherita di Savoia",
+      "San Ferdinando di Puglia",
+      "Zapponeta (FG)"
+    ],
+    "musei": [
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Beata Maria Vergine di Loreto",
+      "Chiesa Madre",
+      "Chiesa Cristo Lavoratore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Spinazzola",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110008",
+    "codice_catastale": "I907",
+    "popolazione": 6536,
+    "superficie_kmq": 182.64,
+    "densita": 35.8,
+    "cap": "76014",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "12 agosto",
+    "demonimo": "spinazzolesi",
+    "etimologia": "Deriva dal latino spina, ossia \"pianta spinosa\", o spinus, biancospino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Nord-Ovest",
+      "Regione Agraria n. 2 - Murge Ofantine",
+      "Parco Nazionale dell'Alta Murgia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Andria",
+      "Banzi (PZ)",
+      "Genzano di Lucania (PZ)",
+      "Gravina in Puglia (BA)",
+      "Minervino Murge",
+      "Montemilone (PZ)",
+      "Palazzo San Gervasio (PZ)",
+      "Poggiorsini (BA)",
+      "Ruvo di Puglia (BA)",
+      "Venosa (PZ)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Ferdinando di Puglia",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110007",
+    "codice_catastale": "H839",
+    "popolazione": 13936,
+    "superficie_kmq": 41.82,
+    "densita": 333.2,
+    "cap": "76017",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Ferdinando Re",
+    "festa_patronale": "30 maggio",
+    "demonimo": "sanferdinandesi",
+    "etimologia": "Il nome onora il santo patrono del paese. In passato il luogo era chiamato San Casciano. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Barletta",
+      "Canosa di Puglia",
+      "Cerignola (FG)",
+      "Trinitapoli"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera Nazionale del Carciofo Mediterraneo e del prodotto ortofrutticolo (fine ottobre/inizio novembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Minervino Murge",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110006",
+    "codice_catastale": "F220",
+    "popolazione": 8943,
+    "superficie_kmq": 255.39,
+    "densita": 35.0,
+    "cap": "76013",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "minervinesi",
+    "etimologia": "La prima parte del nome potrebbe riflettere un culto di Minerva oppure potrebbe riferirsi ad un nome di persona non ben identificato con l'aggiunta del suffisso -inus. La specifica si riferisce al noto altopiano pugliese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Murgia Barese Nord-Ovest",
+      "Regione Agraria n. 2 - Murge Ofantine",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Andria",
+      "Canosa di Puglia",
+      "Lavello (PZ)",
+      "Montemilone (PZ)",
+      "Spinazzola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dell'Agnello e del Formaggio Pecorino (ultima domenica di marzo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Margherita di Savoia",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110005",
+    "codice_catastale": "E946",
+    "popolazione": 11855,
+    "superficie_kmq": 36.35,
+    "densita": 326.1,
+    "cap": "76016",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Salvatore Maria Addolorata",
+    "festa_patronale": "6 agosto",
+    "demonimo": "margheritani o salinari",
+    "etimologia": "Fino al 1879 era identificato con il nome di Saline di Barletta. Il nome attuale fu assegnato in onore della regina.",
+    "il_comune_e": [
+      "Città Termale (Grand Hotel Terme)"
+    ],
+    "fa_parte_di": [
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Barletta",
+      "Trinitapoli",
+      "Zapponeta (FG)"
+    ],
+    "musei": [
+      "Pinacoteca Comunale \"F. Galante Civera\"",
+      "Museo Storico delle Saline"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale SS. Salvatore",
+      "Chiesa parrocchiale Maria SS. Ausiliatrice",
+      "Chiesa parrocchiale Maria SS. Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Canosa di Puglia",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110004",
+    "codice_catastale": "B619",
+    "popolazione": 30091,
+    "superficie_kmq": 149.53,
+    "densita": 201.2,
+    "cap": "76012",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Sabino",
+    "festa_patronale": "primo agosto",
+    "demonimo": "canosini",
+    "etimologia": "La sua origine è incerta. Potrebbe derivare da gand con il significato di terreno roccioso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Murge di Andria",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Loconia"
+    ],
+    "comuni_confinanti": [
+      "Andria",
+      "Barletta",
+      "Cerignola (FG)",
+      "Lavello (PZ)",
+      "Minervino Murge",
+      "San Ferdinando di Puglia"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Torremaggiore (Foggia-Puglia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bisceglie",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110003",
+    "codice_catastale": "A883",
+    "popolazione": 55390,
+    "superficie_kmq": 68.48,
+    "densita": 808.8,
+    "cap": "76011",
+    "prefisso_telefonico": "080",
+    "patrono": "San Mauro, San Sergio, San Pantaleo",
+    "festa_patronale": "primo lunedì di agosto",
+    "demonimo": "biscegliesi",
+    "etimologia": "Deriva dal latino vigiliae, ossia \"posto di guardia\" collocato sulla strada romana.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Barletta",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Corato (BA)",
+      "Molfetta (BA)",
+      "Ruvo di Puglia (BA)",
+      "Terlizzi (BA)",
+      "Trani"
+    ],
+    "musei": [
+      "Museo Civico Del Mare",
+      "Museo Civico Archeologico \"F. Saverio Majellaro\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Andrea Apostolo",
+      "Chiesa di Sant'Agostino",
+      "Chiesa di Sant'Adoeno",
+      "Chiesa di Santa Maria di Costantinopoli",
+      "Chiesa di San Domenico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Dolmen"
+    ],
+    "teatri": null,
+    "stadi": [
+      "Stadio Gustavo Ventura (capienza: oltre 5.000 posti)"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trani",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110009",
+    "codice_catastale": "L328",
+    "popolazione": 56076,
+    "superficie_kmq": 102.08,
+    "densita": 549.3,
+    "cap": "76125",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Nicola Pellegrino di Trani",
+    "festa_patronale": "prima domenica precedente il 1° agosto",
+    "demonimo": "tranesi",
+    "etimologia": "Potrebbe derivare da Traiano (celebre imperatore) o derivare da trana o traina, nel senso di insenatura adatta alla pesca.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Barletta",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Andria",
+      "Barletta",
+      "Bisceglie",
+      "Corato (BA)"
+    ],
+    "musei": [
+      "Museo Diocesano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Ognisanti",
+      "Chiesa di San Domenico",
+      "Cattedrale di Trani"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Federico II"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Andria",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110001",
+    "codice_catastale": "A285",
+    "popolazione": 100331,
+    "superficie_kmq": 407.86,
+    "densita": 246.0,
+    "cap": "76123",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Riccardo",
+    "festa_patronale": "terza domenica di settembre",
+    "demonimo": "andriesi",
+    "etimologia": "La sua derivazione è incerta. Secondo alcuni potrebbe significare \"la forte\", secondo altri potrebbe riferirsi ad un nome di persona non ben identificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Murge di Andria",
+      "Parco Nazionale dell'Alta Murgia",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Barletta",
+      "Canosa di Puglia",
+      "Corato (BA)",
+      "Minervino Murge",
+      "Ruvo di Puglia (BA)",
+      "Spinazzola",
+      "Trani"
+    ],
+    "musei": [
+      "Museo del Confetto"
+    ],
+    "ville_palazzi": [
+      "Palazzo Ducale",
+      "Palazzo Vescovile"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria di Porta Santa",
+      "Chiesa di San Nicola Trimodiense",
+      "Chiesa di San Francesco",
+      "Chiesa di San Domenico",
+      "Chiesa di Madonna di Pompei",
+      "Santuario Santa Maria dei Miracoli :: Frati Agostiniani",
+      "Chiesa di Sant'Agostino"
+    ],
+    "castelli_fortificazioni": [
+      "Castel del Monte"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Degli Ulivi",
+      "Stadio Sant'Angelo dei Ricchi"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Barletta",
+    "provincia": "Barletta-Andria-Trani",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "110002",
+    "codice_catastale": "A669",
+    "popolazione": 94673,
+    "superficie_kmq": 146.91,
+    "densita": 644.4,
+    "cap": "76121",
+    "prefisso_telefonico": "0883",
+    "patrono": "San Ruggiero",
+    "festa_patronale": "seconda domenica di luglio",
+    "demonimo": "barlettani",
+    "etimologia": "Deriva da bard, ossia fango, riferendosi alla qualità del terreno. Secondo la tradizione il nome si accosta a Bari, come se la città fosse la \"sorella minore\" o a Molfetta, paese limitrofo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura di Barletta",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Rete delle Città Strategiche (RECS)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Andria",
+      "Canosa di Puglia",
+      "Margherita di Savoia",
+      "San Ferdinando di Puglia",
+      "Trani",
+      "Trinitapoli"
+    ],
+    "musei": [
+      "Antiquarium di Canne",
+      "Museo e Pinacoteca"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria dello Sterpeto :: Oblati di San Giuseppe"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Barletta"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Giuseppe Curci"
+    ],
+    "stadi": [
+      "Stadio Comunale \"Cosimo Puttilli\""
+    ],
+    "eventi_feste_sagre": [
+      "Certame Cavalleresco - Disfida di Barletta (penultimo fine settimana di luglio)"
+    ],
+    "gemellaggi": [
+      "Herceg Novi",
+      "in italiano Castelnuovo di Cattaro (Montenegro)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Pietro Mennea",
+      "atleta e saggista (Barletta",
+      "28 giugno 1952 – Roma",
+      "21 marzo 2013)"
+    ]
+  }
+]

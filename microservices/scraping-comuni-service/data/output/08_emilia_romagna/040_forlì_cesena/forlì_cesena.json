@@ -1,0 +1,16 @@
+{
+  "nome": "Forlì-Cesena",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "FC",
+  "codice_istat": "040",
+  "popolazione": 394067,
+  "popolazione_maschi": 191130,
+  "popolazione_femmine": 202937,
+  "superficie_kmq": 2376.8,
+  "densita": 165.8,
+  "num_comuni": 30,
+  "capoluogo": "Forlì",
+  "iso_3166_2": "IT-FC",
+  "nuts": "ITD58"
+}

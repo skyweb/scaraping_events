@@ -2,7 +2,7 @@
 -- SCHEMA: Crea schema per gli eventi
 -- =============================================================================
 CREATE SCHEMA IF NOT EXISTS events_data;
-CREATE SCHEMA IF NOT EXISTS comuni_italiani;
+CREATE SCHEMA IF NOT EXISTS comuni_istat;
 CREATE SCHEMA IF NOT EXISTS events_data;
 
 -- =============================================================================

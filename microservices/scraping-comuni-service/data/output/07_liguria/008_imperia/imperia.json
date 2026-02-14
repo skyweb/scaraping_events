@@ -1,0 +1,16 @@
+{
+  "nome": "Imperia",
+  "regione": "Liguria",
+  "zona": null,
+  "sigla": "IM",
+  "codice_istat": "008",
+  "popolazione": 215130,
+  "popolazione_maschi": 103381,
+  "popolazione_femmine": 111749,
+  "superficie_kmq": 1156.13,
+  "densita": 186.1,
+  "num_comuni": 67,
+  "capoluogo": "Imperia",
+  "iso_3166_2": "IT-IM",
+  "nuts": "ITC31"
+}

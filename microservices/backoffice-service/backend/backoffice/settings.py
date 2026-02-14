@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django_celery_beat',
     'django_celery_results',
     'django_ckeditor_5',
-    'comuni_italiani',
-    'comuni_italiani_ingestion',
+    'comuni_istat',
+    'comuni_istat_ingestion',
     'etl',
     'scraping',
     'events',
@@ -202,6 +202,8 @@ API per la gestione degli eventi, monitoraggio ETL e integrazione con servizi es
 
 - **API interne**: Session authentication (Django admin login)
 - **API esterne** (`/api/external/v1/`): OAuth2 Client Credentials (versionata)
+- **CMS** (`/api/cms/`): Pubblico, senza autenticazione
+- **Comuni ISTAT Ingestion** (`/api/comuni-istat/`): Session authentication
 
 #### OAuth2 Flow
 
@@ -259,6 +261,8 @@ Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) non sono versionate.
         {'name': 'ETL', 'description': 'Monitoraggio esecuzioni e errori ETL'},
         {'name': 'Staging Events', 'description': 'API esterna OAuth2 v1 - gestione staging events'},
         {'name': 'Bulk Operations', 'description': 'Operazioni massive (bulk create, clear source)'},
+        {'name': 'CMS', 'description': 'Pagine città CMS: sezioni, articoli, eventi'},
+        {'name': 'Comuni ISTAT Ingestion', 'description': 'Ingestione dati scraping comuni-italiani.it (raw JSON)'},
     ],
 }
 
@@ -436,14 +440,45 @@ UNFOLD = {
                 "separator": True,
                 "items": [
                     {
-                        "title": "Comuni italiani",
+                        "title": "Comuni (geo)",
                         "icon": "location_city",
-                        "link": "/admin/comuni_italiani/comuneitaliano/",
+                        "link": "/admin/comuni_istat/comuneitaliano/",
+                    },
+                    {
+                        "title": "Province (geo)",
+                        "icon": "map",
+                        "link": "/admin/comuni_istat/provinciaitaliana/",
+                    },
+                ],
+            },
+            {
+                "title": "Comuni Ingestion",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Regioni",
+                        "icon": "public",
+                        "link": "/admin/comuni_istat_ingestion/regione/",
                     },
                     {
                         "title": "Province",
                         "icon": "map",
-                        "link": "/admin/comuni_italiani/provinciaitaliana/",
+                        "link": "/admin/comuni_istat_ingestion/provincia/",
+                    },
+                    {
+                        "title": "Comuni",
+                        "icon": "location_city",
+                        "link": "/admin/comuni_istat_ingestion/comune/",
+                    },
+                    {
+                        "title": "Appartenenze",
+                        "icon": "groups",
+                        "link": "/admin/comuni_istat_ingestion/comuneappartenenza/",
+                    },
+                    {
+                        "title": "Raw Data",
+                        "icon": "database",
+                        "link": "/admin/comuni_istat_ingestion/comuniistatrawdata/",
                     },
                 ],
             },

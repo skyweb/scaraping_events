@@ -1,0 +1,1076 @@
+[
+  {
+    "nome": "Sortino",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089019",
+    "codice_catastale": "I864",
+    "popolazione": 8657,
+    "superficie_kmq": 93.21,
+    "densita": 92.9,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "sortinesi",
+    "etimologia": "Chiamato in passato Xuthinum, potrebbe derivare da un nome siciliano di famiglia, forse Sciurtisco che ha origine araba, da surti che significa poliziotto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline Orientali degli Iblei",
+      "Associazione Nazionale Italiana le Città del Miele"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carlentini",
+      "Cassaro",
+      "Ferla",
+      "Melilli",
+      "Palazzolo Acreide",
+      "Priolo Gargallo",
+      "Solarino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Mariano Matera Valguarnera",
+      "Palazzo Parlato Tartaglia",
+      "Palazzo Rigazzi Leopoldo"
+    ],
+    "chiese": [
+      "Convento e Chiesa dei Padri Cappuccini",
+      "Chiesa Madre, dedicata a San Giovanni Evangelista",
+      "Chiesa di Santa Sofia",
+      "Chiesa di San Sebastiano (1720)",
+      "Chiesa di San Pietro",
+      "Chiesa di San Francesco (1737)",
+      "Chiesa della SS. Annunziata",
+      "Chiesa della Natività di Maria",
+      "Chiesa del Purgatorio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Miele (primo fine settimana di ottobre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Solarino",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089018",
+    "codice_catastale": "I785",
+    "popolazione": 8178,
+    "superficie_kmq": 13.01,
+    "densita": 628.6,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "solarinesi",
+    "etimologia": "Deriva dal dialetto sularinu, ossia solitario, forse riferendosi alla collocazione della sua primitiva chiesa in un luogo solitario.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piana di Siracusa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Floridia",
+      "Palazzolo Acreide",
+      "Priolo Gargallo",
+      "Siracusa",
+      "Sortino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madonna delle Lacrime"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rosolini",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089016",
+    "codice_catastale": "H574",
+    "popolazione": 21322,
+    "superficie_kmq": 76.15,
+    "densita": 280.0,
+    "cap": "96019",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Luigi Gonzaga",
+    "festa_patronale": "prima domenica di agosto",
+    "demonimo": "rosolinesi",
+    "etimologia": "Secondo alcuni potrebbe derivare dal dialetto rusulinaru, di significato sconosciuto. Secondo altri deriva dall'unione di \"rosa\" e \"lino\", in riferimento alle due coltivazioni presenti in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline orientali di Noto",
+      "Patto Territoriale Pachino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ispica (RG)",
+      "Modica (RG)",
+      "Noto",
+      "Ragusa (RG)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario del Sacro Cuore",
+      "Chiesetta parrocchiale del SS. Salvatore (in contrada Carbonaro)",
+      "Chiesa Parrocchiale Cuore Immacolato di Maria",
+      "Chiesa del SS. Crocifisso",
+      "Chiesa Madre",
+      "Chiesa di Santa Caterina da Siena"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Priolo Gargallo",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089021",
+    "codice_catastale": "M279",
+    "popolazione": 11986,
+    "superficie_kmq": 57.59,
+    "densita": 208.1,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "Angelo Custode",
+    "festa_patronale": "2 ottobre",
+    "demonimo": "priolesi",
+    "etimologia": "La prima parte del nome deriva dal greco priolos, ossia priore, in riferimento alla storia del paese che fu proprietà ecclesiastica. La seconda parte, ossia Gargallo, è il nome dei marchesi che governarono il luogo nel XIX secolo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piana di Siracusa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Melilli; a nord-ovest: Sortino; a ovest: Solarino; a sud: Siracusa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre di Magnisi",
+      "Torre del Fico"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Portopalo di Capo Passero",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089020",
+    "codice_catastale": "M257",
+    "popolazione": 3916,
+    "superficie_kmq": 14.87,
+    "densita": 263.3,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Gaetano Thiene",
+    "festa_patronale": "7 agosto",
+    "demonimo": "portopalesi",
+    "etimologia": "La prima parte del nome deriva dal latino palorum portus, forse dal latino palus che può significare sia palo che palude o forse porto. La seconda parte, aggiunta nel 1975, si riferisce al promontorio limitrofo.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline orientali di Noto",
+      "Circuito dei Borghi Marinari (le Città del Mare)",
+      "Associazione Nazionale Città del Pesce di Mare",
+      "Patto Territoriale Pachino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Pachino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Gaetano (1812)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello spagnolo (XVI secolo",
+      "sull'isolotto di Capo Passero)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palazzolo Acreide",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089015",
+    "codice_catastale": "G267",
+    "popolazione": 8730,
+    "superficie_kmq": 86.32,
+    "densita": 101.1,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "palazzolesi",
+    "etimologia": "La prima parte del nome deriva dal termine latino palatium, ossia palazzo, con l'aggiunta del suffisso --eolu. La seconda parte deriva dal greco akra, ossia sommità.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Val di Noto",
+      "Regione Agraria n. 1 - Colline Orientali degli Iblei",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Patto Territoriale Pachino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Buscemi",
+      "Cassaro",
+      "Floridia",
+      "Noto",
+      "Siracusa",
+      "Solarino",
+      "Sortino"
+    ],
+    "musei": [
+      "Casa Museo Antonino Uccello"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Paolo (27-29 giugno)"
+    ],
+    "gemellaggi": [
+      "Sikyon (Grecia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pachino",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089014",
+    "codice_catastale": "G211",
+    "popolazione": 22263,
+    "superficie_kmq": 50.47,
+    "densita": 441.1,
+    "cap": "96018",
+    "prefisso_telefonico": "0931",
+    "patrono": "Madonna Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "pachinesi",
+    "etimologia": "La sua derivazione è incerta, potrebbe avere origine greca e derivare quindi dal greco classico Pakhunos o dal latino pachynus dal significato oscuro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline orientali di Noto",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Pachino"
+    ],
+    "localita_frazioni": [
+      "Borghi: Marzamemi"
+    ],
+    "comuni_confinanti": [
+      "Ispica (RG)",
+      "Noto",
+      "Portopalo di Capo Passero"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Villa Dorata (borgata: Marzamemi)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale San Francesco di Paola",
+      "Chiesa parrocchiale Sacro Cuore",
+      "Chiesa parrocchiale Madonna Del Rosario Di Pompei",
+      "Chiesa Evangelica Valdese"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Scibini"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "borgo marinaro di Marzamemi",
+      "Tonnara di Vendicari"
+    ],
+    "teatri": [
+      "Teatro San Corrado"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Noto",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089013",
+    "codice_catastale": "F943",
+    "popolazione": 24074,
+    "superficie_kmq": 551.12,
+    "densita": 43.7,
+    "cap": "96017",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Corrado Confalonieri",
+    "festa_patronale": "19 febbraio",
+    "demonimo": "notinesi o netini",
+    "etimologia": "Deriva dal nome latino Netum con la modifica subita nel tempo della \"e\" in \"o\".",
+    "il_comune_e": [
+      "Località balneare segnalata con cinque vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Area Geografica: Val di Noto",
+      "Regione Agraria n. 3 - Colline orientali di Noto",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Avola",
+      "Canicattini Bagni",
+      "Ispica (RG)",
+      "Modica (RG)",
+      "Pachino",
+      "Palazzolo Acreide",
+      "Rosolini",
+      "Siracusa"
+    ],
+    "musei": [
+      "Museo etnografico",
+      "Museo delle Carte",
+      "Museo del Presepe",
+      "Museo Civico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Ducezio",
+      "Villa del Tellaro",
+      "Palazzo Nicolaci di Villadorata"
+    ],
+    "chiese": [
+      "Chiesa di San Domenico",
+      "Duomo (o Chiesa Madre)",
+      "Chiesa di San Francesco all'Immacolata",
+      "Chiesa di San Carlo",
+      "Chiesa del Carmine",
+      "Basilica del SS. Salvatore",
+      "Chiesa di Santa Chiara (1748)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Tina di Lorenzo"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Infiorata (terza domenica di maggio)",
+      "Festa di San Corrado (19 febbraio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Melilli",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089012",
+    "codice_catastale": "F107",
+    "popolazione": 13598,
+    "superficie_kmq": 136.08,
+    "densita": 99.9,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "melillesi",
+    "etimologia": "Chiamato in latino Melillis, potrebbe riferirsi al siciliano mili, ossia melo che deriva dal latino volgare melus, melo. Secondo alcuni il nome potrebbe anche riferirsi ad un nome di famiglia Melillo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piana di Siracusa"
+    ],
+    "localita_frazioni": [
+      "frazioni: Villasmundo",
+      "Città Giardino"
+    ],
+    "comuni_confinanti": [
+      "Augusta",
+      "Carlentini",
+      "Priolo Gargallo",
+      "Sortino"
+    ],
+    "musei": [
+      "Museo di Storia Naturale"
+    ],
+    "ville_palazzi": [
+      "Palazzo Moncada",
+      "Palazzo Municipale"
+    ],
+    "chiese": [
+      "Chiesa Sant'Antonio Abate",
+      "Chiesa Madre San Nicolò Vescovo",
+      "Chiesa Madonna del Soccorso",
+      "Basilica San Sebastiano Bimartire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Pirrera di San Antonio (grotta)",
+      "Necropoli del Bronzo Antico di Cava Bernardina",
+      "Grotta di Mastro Pietro"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dei Nuri",
+      "in onore di San Sebastiano (tre e quattro maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lentini",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089011",
+    "codice_catastale": "E532",
+    "popolazione": 23761,
+    "superficie_kmq": 215.84,
+    "densita": 110.1,
+    "cap": "96016",
+    "prefisso_telefonico": "095",
+    "patrono": "SS. Alfio, Filadelfo e Cirino",
+    "festa_patronale": "10 maggio",
+    "demonimo": "lentinesi",
+    "etimologia": "Deriva dal latino classico Leontini (nome di popolo) collegandosi a Leon (baia di Siracusa).",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belpasso (CT)",
+      "Carlentini",
+      "Catania (CT)",
+      "Francofonte",
+      "Militello in Val di Catania (CT)",
+      "Palagonia (CT)",
+      "Ramacca (CT)",
+      "Scordia (CT)"
+    ],
+    "musei": [
+      "Museo Archeologico di Lentini"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Immacolata",
+      "Chiesa SS. Trinità e San Marziano",
+      "Chiesa Santa Maria la Cava e Sant'Alfio",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di San Luca",
+      "Chiesa di San Francesco di Paola",
+      "Chiesa di Cristo Re",
+      "Chiesa della Fontana o dei Tre Santi",
+      "Chiesa di Gesù e Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino del Biviere"
+    ],
+    "luoghi_interesse": [
+      "Parco Archeologico di Leontinoi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Francofonte",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089010",
+    "codice_catastale": "D768",
+    "popolazione": 12727,
+    "superficie_kmq": 73.95,
+    "densita": 172.1,
+    "cap": "96015",
+    "prefisso_telefonico": "095",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "francofontesi",
+    "etimologia": "E' un composto normanno del termine fonte e dell'aggettivo che lo precede, con chiaro significato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litoranee di Carlentini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Lentini; a nord-est: Militello in Val di Catania (CT); a ovest: Vizzini (CT); a sud: Carlentini; a sud e ovest: Buccheri"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Palagonia (1705-1710)"
+    ],
+    "chiese": [
+      "Chiesa Madre",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di San Girolamo",
+      "Chiesa della Santa Croce",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Floridia",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089009",
+    "codice_catastale": "D636",
+    "popolazione": 22726,
+    "superficie_kmq": 26.22,
+    "densita": 866.7,
+    "cap": "96014",
+    "prefisso_telefonico": "0931",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "8 dicembre",
+    "demonimo": "floridiani",
+    "etimologia": "Potrebbe derivare da Florae dies che si traduce come \"giorno di Flora\" in riferimento a Santa Flora verso cui gli originari abitanti provavano una forte venerazione. Secondo altri il nome si riferisce all'aggettivo latino florida, fiorita, ma quest'ultima ipotesi non è condivisa da molti in quanto l'aggettivo non si accorda foneticamente.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piana di Siracusa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Palazzolo Acreide",
+      "Siracusa",
+      "Solarino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ferla",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089008",
+    "codice_catastale": "D540",
+    "popolazione": 2479,
+    "superficie_kmq": 24.77,
+    "densita": 100.1,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "ferlesi",
+    "etimologia": "Potrebbe legarsi al vicino fiume Ferla legandosi al termine latino ferula, ossia canna, in riferimento alla massiccia presenza di queste piante in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline Orientali degli Iblei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Buccheri",
+      "Buscemi",
+      "Carlentini",
+      "Cassaro",
+      "Sortino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Sebastiano",
+      "Chiesa di Santa Maria del Gesù"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cassaro",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089007",
+    "codice_catastale": "C006",
+    "popolazione": 800,
+    "superficie_kmq": 19.4,
+    "densita": 41.2,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "cassaresi",
+    "etimologia": "Deriva dall'arabo qasr che significa rocca oppure castello legandosi al termine greco kastron risalendo dal latino castrum, ossia castello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline Orientali degli Iblei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Buscemi",
+      "Ferla",
+      "Palazzolo Acreide",
+      "Sortino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carlentini",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089006",
+    "codice_catastale": "B787",
+    "popolazione": 17768,
+    "superficie_kmq": 158.02,
+    "densita": 112.4,
+    "cap": "96013",
+    "prefisso_telefonico": "095",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "quarta domenica di agosto",
+    "demonimo": "carlentinesi",
+    "etimologia": "La prima parte del nome onora Carlo V, la seconda deriva dal latino classico Leontini (nome di popolo) collegandosi a Leon (baia di Siracusa).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litoranee di Carlentini"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Borgo Rizza",
+      "Pedagaggi;\nContrade: Contrada Cannellazza"
+    ],
+    "comuni_confinanti": [
+      "Augusta",
+      "Buccheri",
+      "Catania (CT)",
+      "Ferla",
+      "Francofonte",
+      "Lentini",
+      "Melilli",
+      "Sortino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa al Cuore Immacolato di Maria e Sant'Anna",
+      "Chiesa Madre, intitolata all'Immacolata Concezione",
+      "Chiesa di San Sebastiano",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Giuseppe (lunedì dell'Angelo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Canicattini Bagni",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089005",
+    "codice_catastale": "B603",
+    "popolazione": 7125,
+    "superficie_kmq": 15.11,
+    "densita": 471.5,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "canicattinesi",
+    "etimologia": "La prima parte del nome potrebbe riferirsi al termine arabo al-qatta, ossia il \"tagliapietre\" oppure dalla forma latina Candicattinum (dall'arabo handaq at-tin, ossia \"fossato di fango\"). La seconda parte si riferisce alla massiccia presenza di acque sorgive.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piana di Siracusa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Noto",
+      "Siracusa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria degli Angeli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Buscemi",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089004",
+    "codice_catastale": "B287",
+    "popolazione": 1035,
+    "superficie_kmq": 51.57,
+    "densita": 20.1,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "Madonna del Bosco",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "buscemesi",
+    "etimologia": "Potrebbe riferirsi al termine arabo qal'at abi sama che significa \"rocca di quel dal neo\" (roccaforte di colui che ha il neo).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline Orientali degli Iblei"
+    ],
+    "localita_frazioni": [
+      "Monte"
+    ],
+    "comuni_confinanti": [
+      "A est: Cassaro; a nord: Buccheri",
+      "Ferla; a ovest: Giarratana (RG); a sud: Modica (RG)",
+      "Palazzolo Acreide"
+    ],
+    "musei": [
+      "Museo Civico",
+      "Museo \"I Luoghi del Lavoro Contadino\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre",
+      "Chiesa di Sant'Antonino",
+      "Chiesa di San Sebastiano (con affreschi del '700)",
+      "Chiesa di San Pietro (V secolo)",
+      "Chiesa di San Giacomo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Buscemi (contrada Monte)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Buccheri",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089003",
+    "codice_catastale": "B237",
+    "popolazione": 1979,
+    "superficie_kmq": 57.43,
+    "densita": 34.5,
+    "cap": "96010",
+    "prefisso_telefonico": "0931",
+    "patrono": "Sant'Ambrogio",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "buccheresi",
+    "etimologia": "Denominato Buccherie, potrebbe derivare dall'arabo baqar, ossia vaccheria, oppure derivare da un nome di persona o un nome di famiglia non ben identificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline Orientali degli Iblei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Buscemi",
+      "Carlentini",
+      "Ferla",
+      "Francofonte",
+      "Giarratana (RG)",
+      "Vizzini (CT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna delle Grazie",
+      "Chiesa di Santa Maria Maddalena",
+      "Basilica di Sant'Antonio Abbate"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Chiesa di Sant'Andrea (rudere)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Avola",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089002",
+    "codice_catastale": "A522",
+    "popolazione": 31576,
+    "superficie_kmq": 74.26,
+    "densita": 425.2,
+    "cap": "96012",
+    "prefisso_telefonico": "0931",
+    "patrono": "Santa Venera",
+    "festa_patronale": "ultima domenica di luglio",
+    "demonimo": "avolesi",
+    "etimologia": "Deriva da Abola, dal greco Abolla o dal latino Abola, di significato oscuro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline orientali di Noto"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Noto",
+      "Siracusa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre, dedicata a San Nicolò di Mira, in Piazza Umberto I",
+      "Chiesa di Sant'Antonio Abate (XVIII secolo), in Piazza Regina Elena",
+      "Chiesa di Santa Venera, in Piazza Teatro",
+      "Chiesa di San Giovanni Battista, in Piazza Trieste",
+      "Chiesa di San Antonio da Padova, in Piazza Vittorio Veneto",
+      "Chiesa della SS. Annunziata",
+      "Chiesa della Santa Croce, in piazza F. Crispi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Augusta",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089001",
+    "codice_catastale": "A494",
+    "popolazione": 36091,
+    "superficie_kmq": 109.33,
+    "densita": 330.1,
+    "cap": "96011",
+    "prefisso_telefonico": "0931",
+    "patrono": "San Domenico di Guzman",
+    "festa_patronale": "24 maggio",
+    "demonimo": "augustani o augustanesi",
+    "etimologia": "Chiamata Agosta fino al 1860, il nome fa riferimento al fatto che fu colonia di Ottaviano Augusto. In seguito assunse il nome attuale di Augusta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piana di Siracusa"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carlentini",
+      "Melilli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei Domenicani",
+      "Chiesa della Anime Sante (XVII secolo)",
+      "Chiesa Madre"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Porta Spagnola (1681)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Megara (Grecia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Siracusa",
+    "provincia": "Siracusa",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "089017",
+    "codice_catastale": "I754",
+    "popolazione": 122031,
+    "superficie_kmq": 204.08,
+    "densita": 598.0,
+    "cap": "96100",
+    "prefisso_telefonico": "0931",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "siracusani",
+    "etimologia": "Si riferisce al greco Surakousai o al latino Syracusae derivando da sur-aku, ossia acqua salata con l'aggiunta del suffisso -os -iache si riferisce al termine indoeuropeo su- suro- che significa salato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Piana di Siracusa",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Cassibile",
+      "Belvedere",
+      "Arenella",
+      "Fontane Binche"
+    ],
+    "comuni_confinanti": [
+      "Avola",
+      "Canicattini Bagni",
+      "Floridia",
+      "Noto",
+      "Palazzolo Acreide",
+      "Priolo Gargallo",
+      "Solarino"
+    ],
+    "musei": [
+      "Museo del Papiro",
+      "Museo Arkimedeion",
+      "Museo Archeologico Regionale Paolo Orsi",
+      "Galleria Regionale Palazzo Bellomo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna delle Lacrime",
+      "Santuario di Santa Lucia al Sepolcro"
+    ],
+    "castelli_fortificazioni": [
+      "Castel Maniace",
+      "Castel Eurialo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Santa Lucia (13 dicembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

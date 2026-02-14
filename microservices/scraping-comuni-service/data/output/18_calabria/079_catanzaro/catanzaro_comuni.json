@@ -1,0 +1,4323 @@
+[
+  {
+    "nome": "Zagarise",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079157",
+    "codice_catastale": "M140",
+    "popolazione": 1628,
+    "superficie_kmq": 48.79,
+    "densita": 33.4,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "9 luglio",
+    "demonimo": "zagaritani",
+    "etimologia": "Deriva dal nome greco di persona Zacharia(s), ossia Zaccaria con l'aggiunta del suffisso -ense che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale",
+      "Parco Nazionale della Sila",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albi",
+      "Magisano",
+      "Mesoraca (KR)",
+      "Petronà",
+      "Sellia",
+      "Sellia Marina",
+      "Sersale",
+      "Soveria Simeri",
+      "Taverna"
+    ],
+    "musei": [
+      "Museo d'Arte Sacra Silvestro Frangipane",
+      "Museo d’Arte Sacra"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Rosario",
+      "Chiesa di Santa Maria dell'Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Normanno"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vallefiorita",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079151",
+    "codice_catastale": "I322",
+    "popolazione": 1751,
+    "superficie_kmq": 13.83,
+    "densita": 126.6,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "vallefioritesi",
+    "etimologia": "Chiamato Sant'Elia fino al 1863, l'amministrazione mutò il nome in quello attuale attraverso la fusione del termine valle e dell'aggettivo fiorito.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Amaroni",
+      "Cenadi",
+      "Centrache",
+      "Cortale",
+      "Girifalco",
+      "Olivadi",
+      "Palermiti",
+      "Squillace"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Calogero",
+      "Palazzo Bongarzone"
+    ],
+    "chiese": [
+      "Chiesa di San Sergio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Vecchio Frantoio",
+      "Antico Biviere"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torre di Ruggiero",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079148",
+    "codice_catastale": "L240",
+    "popolazione": 1015,
+    "superficie_kmq": 24.81,
+    "densita": 40.9,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "Santa Domenica",
+    "festa_patronale": "7 luglio",
+    "demonimo": "torresi",
+    "etimologia": "Chiamata in passato Torre di Spadola, deriva dal dialetto calabrese turri, ossia casa colonica. La specifica che si crede risalga al 1864 è di origine sconosciuta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": [
+      "Logge di Torre di Ruggiero"
+    ],
+    "comuni_confinanti": [
+      "A est: Cardinale; a nord: Capistrano (VV); a nord-est: Chiaravalle Centrale; a ovest: San Nicola da Crissa (VV)",
+      "Vallelonga (VV); a sud: Simbario (VV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Domenica"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tiriolo",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079147",
+    "codice_catastale": "L177",
+    "popolazione": 3880,
+    "superficie_kmq": 28.98,
+    "densita": 133.9,
+    "cap": "88056",
+    "prefisso_telefonico": "0961",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "tiriolesi",
+    "etimologia": "Secondo alcuni il nome si collega alla base pelatina taur, ossia monte in riferimento alla sua collocazione geografica. Secondo altri si collega all'antico ager Teuranus in riferimento ai campi Teurani.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": [
+      "Pratora",
+      "Sarrottino",
+      "Rocca",
+      "Ferrito",
+      "Soluri"
+    ],
+    "comuni_confinanti": [
+      "Catanzaro",
+      "Gimigliano",
+      "Marcellinara",
+      "Miglierina",
+      "San Pietro Apostolo",
+      "Settingiano"
+    ],
+    "musei": [
+      "Antiquarium Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre di Maria SS. della Neve",
+      "Chiesa di Sant'Antonio",
+      "Chiesa dello Spirito Santo",
+      "Chiesa della Rocca",
+      "Chiesa Conventuale Maria SS. delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna della Neve (5 agosto)",
+      "'A Pigghiata (14 agosto, ogni sette anni)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Taverna",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079146",
+    "codice_catastale": "L070",
+    "popolazione": 2683,
+    "superficie_kmq": 132.46,
+    "densita": 20.3,
+    "cap": "88055",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "tavernesi",
+    "etimologia": "Dal latino taberna, ossia taverna che in passato identificava un luogo di sosta per i viaggiatori.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  2 - Sila Piccola Settentrionale",
+      "Parco Nazionale della Sila"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albi",
+      "Aprigliano (CS)",
+      "Colosimi (CS)",
+      "Cotronei (KR)",
+      "Fossato Serralta",
+      "Mesoraca (KR)",
+      "Parenti (CS)",
+      "Petilia Policastro (KR)",
+      "San Giovanni in Fiore (CS)",
+      "Sorbo San Basile",
+      "Zagarise"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa arcipretale di Santa Barbara",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa di Santa Caterina Piccola",
+      "Chiesa di San Martino",
+      "Chiesa di San Domenico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Zurrico (Malta)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Stalettì",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079143",
+    "codice_catastale": "I937",
+    "popolazione": 2406,
+    "superficie_kmq": 11.94,
+    "densita": 201.5,
+    "cap": "88069",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Gregorio",
+    "festa_patronale": "17 novembre",
+    "demonimo": "stalettesi",
+    "etimologia": "Il nome deriva dal greco stalakte, ossia grotta gocciolante (dal greco stalaktos, ossia \"di goccia\").",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord-est: Squillace; a ovest: Montauro"
+    ],
+    "musei": [
+      "Museo Naturalistico \"Libero Gatti\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Maria del Mare",
+      "Chiesa di San Gregorio (VI secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Sito Archeologico Santa Maria del Mare"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Squillace",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079142",
+    "codice_catastale": "I929",
+    "popolazione": 3642,
+    "superficie_kmq": 33.77,
+    "densita": 107.8,
+    "cap": "88069",
+    "prefisso_telefonico": "0961",
+    "patrono": "Sant'Agazio",
+    "festa_patronale": "7 maggio",
+    "demonimo": "squillacesi o squillacioti",
+    "etimologia": "Il nome deriva da Skulletion, antica città greca chiamata Skullakion dai romani e divenuta poi Squillacium.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato",
+      "Associazione Italiana Città della Ceramica (AICC)"
+    ],
+    "localita_frazioni": [
+      "frazioni: Squillace Marina; \ncontrade:  Fiasco Baldaya"
+    ],
+    "comuni_confinanti": [
+      "Amaroni",
+      "Borgia",
+      "Girifalco",
+      "Montauro",
+      "Palermiti",
+      "Stalettì",
+      "Vallefiorita"
+    ],
+    "musei": [
+      "Archivio Diocesano",
+      "Museo Diocesano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Pietà (XIII secolo)",
+      "Cattedrale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soveria Simeri",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079139",
+    "codice_catastale": "I875",
+    "popolazione": 1553,
+    "superficie_kmq": 22.09,
+    "densita": 70.3,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Donato Vescovo e Martire",
+    "festa_patronale": "7 agosto",
+    "demonimo": "soveritani",
+    "etimologia": "La prima parte del nome deriva da sorbo che a sua volta si riferisce al greco sourbia (sughero) che in dialetto calabrese è suveru. La seconda parte del nome si riferisce ad un antico centro ormai decaduto chiamato Simeri.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Sellia",
+      "Sellia Marina",
+      "Simeri Crichi",
+      "Zagarise"
+    ],
+    "musei": [
+      "Museo civico",
+      "Museo attrezzi contadini",
+      "Museo arte naif"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Rita",
+      "Chiesa dell'Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soveria Mannelli",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079138",
+    "codice_catastale": "I874",
+    "popolazione": 3048,
+    "superficie_kmq": 20.37,
+    "densita": 149.6,
+    "cap": "88049",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "soveritani",
+    "etimologia": "La prima parte del nome deriva da sorbo che a sua volta si riferisce al greco sourbia (sughero) che in dialetto calabrese è suveru. La seconda parte è un cognome, forse del proprietario del feudo. Secondo altri il termine identifica gli strumenti usati per lavorare il lino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Colla",
+      "San Tommaso",
+      "Pirillo"
+    ],
+    "comuni_confinanti": [
+      "Bianchi (CS)",
+      "Carlopoli",
+      "Colosimi (CS)",
+      "Decollatura",
+      "Gimigliano",
+      "Pedivigliano (CS)"
+    ],
+    "musei": [
+      "Museo Laboratorio del Tessile"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo (località San Tommaso)",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa della Madonna della Salute (località Pirillo)",
+      "Chiesa della Madonna del Rosario (località Colla)",
+      "Chiesa della Madonna degli Abbandonati (località Abbandonati)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soverato",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079137",
+    "codice_catastale": "I872",
+    "popolazione": 9152,
+    "superficie_kmq": 7.65,
+    "densita": 1196.3,
+    "cap": "88068",
+    "prefisso_telefonico": "0967",
+    "patrono": "Madonna Addolorata",
+    "festa_patronale": "terza domenica di settembre",
+    "demonimo": "soveratesi",
+    "etimologia": "Il nome deriva dal latino Castrum Suberate da suber, ossia sughero. Il significato per esteso potrebbe riferirsi alla possibilità che in loco si trovi un sughereto.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Montepaone",
+      "Petrizzi",
+      "Satriano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Gregoraci",
+      "Palazzo Marincola",
+      "Palazzo Romiti"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "Chiesa della Madonna del Rosario",
+      "Chiesa della SS. Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Botanico Santicelli",
+      "su un'altura che si affaccia verso il golfo di Squillace e sulla cosiddetta \"baia dell'ippocampo\""
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sorbo San Basile",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079134",
+    "codice_catastale": "I844",
+    "popolazione": 802,
+    "superficie_kmq": 58.69,
+    "densita": 13.7,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Francesco Saverio",
+    "festa_patronale": "3 dicembre",
+    "demonimo": "sorbesi",
+    "etimologia": "Il nome deriva dal latino sorbus, ossia sorbo. La specifica del nome risale al 1863 ed è in onore di San Basile (che non è il santo patrono del luogo).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  2 - Sila Piccola Settentrionale"
+    ],
+    "localita_frazioni": [
+      "contrade: Melitello",
+      "Cutura",
+      "Piano di moggio in Sila"
+    ],
+    "comuni_confinanti": [
+      "Bianchi (CS)",
+      "Carlopoli",
+      "Cicala",
+      "Colosimi (CS)",
+      "Fossato Serralta",
+      "Gimigliano",
+      "Panettieri (CS)",
+      "Taverna"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Mercurio (o Mercuri)",
+      "cinquecentesco"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Simeri Crichi",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079133",
+    "codice_catastale": "I745",
+    "popolazione": 4705,
+    "superficie_kmq": 46.75,
+    "densita": 100.6,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "crichesi",
+    "etimologia": "Chiamato nei documenti Symari, deriva dal nome del fiume Simeri. La seconda parte del nome, ossia Crichi deriva dal greco Krikos che significa anello o dal latino ocris che significa monte sassoso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": [
+      "Simeri",
+      "Simeri Mare",
+      "Crichi",
+      "Apostolello",
+      "Roccani"
+    ],
+    "comuni_confinanti": [
+      "Catanzaro",
+      "Sellia",
+      "Sellia Marina",
+      "Soveria Simeri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Lucia (a Simeri Mare, in località Chiusa)",
+      "Chiesa di San Nicola di Bari, in Piazza Roma"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Settingiano",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079131",
+    "codice_catastale": "I704",
+    "popolazione": 3157,
+    "superficie_kmq": 14.29,
+    "densita": 220.9,
+    "cap": "88040",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Martino Vescovo di Tours",
+    "festa_patronale": "11 novembre",
+    "demonimo": "settingianesi",
+    "etimologia": "Deriva dal nome di persona Septimius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato",
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caraffa di Catanzaro",
+      "Catanzaro",
+      "Marcellinara",
+      "Tiriolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino Vescovo",
+      "Chiesa del Convento"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sersale",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079130",
+    "codice_catastale": "I671",
+    "popolazione": 4605,
+    "superficie_kmq": 53.01,
+    "densita": 86.9,
+    "cap": "88054",
+    "prefisso_telefonico": "0961",
+    "patrono": "Santa Maria del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "sersalesi",
+    "etimologia": "Il nome del paese è il cognome della famiglia che era proprietaria del fondo concesso ai boscaioli su cui nel 1620 nacque il paese. Il cognome della famiglia è appunto Sersale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale",
+      "Parco Nazionale della Sila"
+    ],
+    "localita_frazioni": [
+      "Trebisina",
+      "Borda"
+    ],
+    "comuni_confinanti": [
+      "Cerva",
+      "Cropani",
+      "Magisano",
+      "Petronà",
+      "Sellia Marina",
+      "Zagarise"
+    ],
+    "musei": [
+      "Agorà dell'Arte"
+    ],
+    "ville_palazzi": [
+      "Palazzo Talarico",
+      "Palazzo Gentile, in Via Indipendenza",
+      "Palazzo Colosimo (sede del Municipio)"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Anna",
+      "Chiesa di San Pasquale, in Piazza Borelli",
+      "Chiesa dell'Immacolata",
+      "Chiesa della Madonna del Carmine",
+      "Chiesa del Monte Crozze"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serrastretta",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079129",
+    "codice_catastale": "I655",
+    "popolazione": 3149,
+    "superficie_kmq": 41.2,
+    "densita": 76.4,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Gaetano",
+    "festa_patronale": null,
+    "demonimo": "serrastrettesi",
+    "etimologia": "Il nome è un composto di \"serra\" e \"stretta\", riferendosi alla posizione geografica del paese, collocato in una gola tra le serre.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": [
+      "Accaria",
+      "Angoli",
+      "Cancello",
+      "Forestella",
+      "Migliuso",
+      "Nocelle",
+      "Polidonti",
+      "San Michele",
+      "Viterale"
+    ],
+    "comuni_confinanti": [
+      "Amato",
+      "Decollatura",
+      "Feroleto Antico",
+      "Lamezia Terme",
+      "Miglierina",
+      "Pianopoli",
+      "Platania",
+      "San Pietro Apostolo"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina",
+      "Casa-Museo Dalida"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Immacolata (Migliuso)",
+      "Chiesa Matrice",
+      "Chiesa Maria SS. di Costantinopoli (località Parco Pingitore)",
+      "Chiesa di San Michele Arcangelo (San Michele)",
+      "Chiesa di San Giuseppe (Angoli)",
+      "Chiesa dell'Immacolata (Accaria)",
+      "Chiesa di San Giorgio Martire (Cancello)",
+      "Chiesa del Rosario (Accaria)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sellia Marina",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079127",
+    "codice_catastale": "I590",
+    "popolazione": 7681,
+    "superficie_kmq": 40.86,
+    "densita": 188.0,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Nicola",
+    "festa_patronale": "7 maggio",
+    "demonimo": "seliesi",
+    "etimologia": "La prima parte del nome deriva dal greco sellion, ovvero \"piccola sella\", oppure da asulia che significa \"diritto d'asilo\". La specifica si riferisce alla sua vicinanza al mare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": [
+      "frazioni: Uria",
+      "Calabricata;\nlocalità: La Petrizia",
+      "Feudo De Seta",
+      "Frasso",
+      "Rocca",
+      "Ruggero",
+      "Pirarella",
+      "Grandini",
+      "Chiaro",
+      "Cipollina",
+      "Finocchiara",
+      "San Vincenzo",
+      "Sena"
+    ],
+    "comuni_confinanti": [
+      "A nord: Sersale; a nord e est: Cropani; a ovest: Soveria Simeri",
+      "Zagarise; a sud e ovest: Simeri Crichi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa De' Nobili (in frazione La Petrizia)",
+      "Palazzo De Seta (in località Feudo De Seta)"
+    ],
+    "chiese": [
+      "Chiesetta del Santissimo Rosario (in frazione Calabricata)",
+      "Chiesa Stella Maris (in località Chyubica)",
+      "Chiesa della Madonna del Carmine (in frazione Uria)",
+      "Chiesa del SS. Rosario",
+      "Cappella di Santa Rita (in contrada Frasso)",
+      "Cappella De Seta (in località Feudo De Seta)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sellia",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079126",
+    "codice_catastale": "I589",
+    "popolazione": 527,
+    "superficie_kmq": 12.7,
+    "densita": 41.5,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "seliesi",
+    "etimologia": "Potrebbe derivare dal greco sellion, ossia \"piccola sella\", oppure da asulia che significa \"diritto d'asilo\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albi",
+      "Catanzaro",
+      "Magisano",
+      "Pentone",
+      "Simeri Crichi",
+      "Soveria Simeri",
+      "Zagarise"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola di Bari",
+      "Chiesa della Madonna della Neve",
+      "Chiesa della Madonna del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Satriano",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079123",
+    "codice_catastale": "I463",
+    "popolazione": 3429,
+    "superficie_kmq": 22.02,
+    "densita": 155.7,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Teodoro",
+    "festa_patronale": "9 novembre",
+    "demonimo": "satrianesi",
+    "etimologia": "Deriva dal nome latino di persona Satrius con l'aggiunta del suffisso di possesso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Laganosa"
+    ],
+    "comuni_confinanti": [
+      "A nord: Gagliato",
+      "Petrizzi; a nord-est: Soverato; a nord-ovest e sud: Davoli",
+      "San Sostene; a ovest: Cardinale"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria d'Altavilla"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Andrea Apostolo dello Ionio",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079118",
+    "codice_catastale": "I266",
+    "popolazione": 1900,
+    "superficie_kmq": 20.44,
+    "densita": 93.0,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "andreolesi",
+    "etimologia": "Il nome riflette la devozione verso Sant'Andrea Apostolo, patrono del paese. La specifica indica la sua posizione geografica e risale al 1863.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Isca sullo Ionio",
+      "San Sostene"
+    ],
+    "musei": [
+      "Museo della Memoria"
+    ],
+    "ville_palazzi": [
+      "Palazzo Calabretta",
+      "Palazzo Damiani",
+      "Palazzo Jannoni",
+      "Palazzo Migali",
+      "Palazzo Parise",
+      "Villa Condò, ottocentesca",
+      "Palazzo Armogida"
+    ],
+    "chiese": [
+      "Chiesa di Campo, in precedenza di San Martino e poi di Santa Maria di Campo",
+      "Chiesa di Sant'Andrea",
+      "Chiesa di San Raffaele",
+      "Chiesa del Sacro Cuore",
+      "Chiesa dei SS. Pietro e Paolo",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Caterina dello Ionio",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079117",
+    "codice_catastale": "I170",
+    "popolazione": 2194,
+    "superficie_kmq": 41.24,
+    "densita": 53.2,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "25 novembre",
+    "demonimo": "caterisani",
+    "etimologia": "Il nome deriva dalla devozione per la santa patrona: Santa Caterina. La specifica indica la sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Badolato",
+      "Brognaturo (VV)",
+      "Guardavalle"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vito sullo Ionio",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079122",
+    "codice_catastale": "I393",
+    "popolazione": 1826,
+    "superficie_kmq": 17.37,
+    "densita": 105.1,
+    "cap": "88067",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "sanvitesi",
+    "etimologia": "Il nome riflette la forte venerazione per il santo patrono del paese. Nel 1863 fu introdotta la specifica \"sullo Ionio\" che si riferisce alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale",
+      "Associazione dei Comuni Virtuosi"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Capistrano (VV)",
+      "Cenadi",
+      "Chiaravalle Centrale",
+      "Monterosso Calabro (VV)",
+      "Olivadi",
+      "Petrizzi",
+      "Polia (VV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Vito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Sostene",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079116",
+    "codice_catastale": "I164",
+    "popolazione": 1365,
+    "superficie_kmq": 31.92,
+    "densita": 42.8,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "sansostenesi",
+    "etimologia": "Il nome riflette la devozione verso Sanctus Sosthenes, ossia San Sostene.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Marina",
+      "Casolariti",
+      "Chiaranzano",
+      "Lacco"
+    ],
+    "comuni_confinanti": [
+      "Badolato",
+      "Brognaturo (VV)",
+      "Cardinale",
+      "Davoli",
+      "Isca sullo Ionio",
+      "Sant'Andrea Apostolo dello Ionio",
+      "Satriano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Eredi Giovanbattista Gatto",
+      "Palazzo Mongiardo",
+      "Palazzo Puliti",
+      "Palazzo Ranieri",
+      "Palazzo Scicchitano"
+    ],
+    "chiese": [
+      "Chiesa della Madonna del Rosario",
+      "Chiesa SS. Vergine Maria del Monte"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pietro Apostolo",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079115",
+    "codice_catastale": "I095",
+    "popolazione": 1676,
+    "superficie_kmq": 11.51,
+    "densita": 145.6,
+    "cap": "88040",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Pietro",
+    "festa_patronale": null,
+    "demonimo": "pietresi",
+    "etimologia": "In passato chiamato San Pietro a Tirolo, dal 1863 è in vigore il nome attuale che è ispirato dalla devozione verso il santo patrono del paese San Pietro (insieme a San Paolo).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": [
+      "Bivio Zeta",
+      "Pasqualazzo"
+    ],
+    "comuni_confinanti": [
+      "Decollatura",
+      "Gimigliano",
+      "Miglierina",
+      "Serrastretta",
+      "Tiriolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice",
+      "Chiesa della Lettera",
+      "Chiesa del Carmelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pietro a Maida",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079114",
+    "codice_catastale": "I093",
+    "popolazione": 4151,
+    "superficie_kmq": 16.35,
+    "densita": 253.9,
+    "cap": "88025",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "sanpietresi",
+    "etimologia": "Il nome riflette la devozione verso San Pietro, anche se il santo patrono del paese è San Nicola. La specifica si riferisce al paese limitrofo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": [
+      "San Pietro Scalo",
+      "Serre",
+      "Samboni"
+    ],
+    "comuni_confinanti": [
+      "Curinga",
+      "Jacurso",
+      "Lamezia Terme",
+      "Maida"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Scalise",
+      "Palazzo Melito",
+      "Palazzo Fabiani"
+    ],
+    "chiese": [
+      "Santuario della Madonna del Carmelo",
+      "Chiesa di San Nicola di Bari",
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Mango d'Aquino",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079110",
+    "codice_catastale": "H976",
+    "popolazione": 1546,
+    "superficie_kmq": 6.99,
+    "densita": 221.2,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Tommaso d'Aquino",
+    "festa_patronale": "28 gennaio",
+    "demonimo": "sanmanghesi",
+    "etimologia": "Il nome riflette la devozione verso San Mango Sanctus Magnus, anche se il santo patrono del paese è San Tommaso d'Aquino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Collina Litoranea di Capo Suvero"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cleto (CS)",
+      "Martirano Lombardo",
+      "Nocera Terinese"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice, intitolata a San Tommaso d'Aquino",
+      "Chiesa della Madonna della Buda"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Floro",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079108",
+    "codice_catastale": "H846",
+    "popolazione": 731,
+    "superficie_kmq": 18.16,
+    "densita": 40.3,
+    "cap": "88021",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Floro",
+    "festa_patronale": "18 agosto",
+    "demonimo": "sanfloresi",
+    "etimologia": "Il nome riflette la forte venerazione verso il santo patrono del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Borgia",
+      "Caraffa di Catanzaro",
+      "Catanzaro",
+      "Cortale",
+      "Girifalco",
+      "Maida"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Floro (prima domenica di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Platania",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079099",
+    "codice_catastale": "G734",
+    "popolazione": 2134,
+    "superficie_kmq": 24.64,
+    "densita": 86.6,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "platanesi",
+    "etimologia": "Il nome è un termine greco, ossia platania che significa plataneto (terreno piantato a platani).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": [
+      "Campo Chiesa",
+      "Pietra",
+      "Sambate",
+      "Mercuri",
+      "Difesa Zito",
+      "Fossa don Paolo",
+      "Foresta",
+      "Sirurgo"
+    ],
+    "comuni_confinanti": [
+      "Conflenti",
+      "Decollatura",
+      "Lamezia Terme",
+      "Serrastretta"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele",
+      "Chiesa della Madonna del Riposo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra delle Castagne (fine novembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pianopoli",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079096",
+    "codice_catastale": "D546",
+    "popolazione": 2609,
+    "superficie_kmq": 24.35,
+    "densita": 107.1,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Tommaso d'Aquino",
+    "festa_patronale": "7 marzo",
+    "demonimo": "pianopoletani",
+    "etimologia": "Chiamato in passato Feroleto Piano, il nome attuale fu assunto nel 1872 ed è un composto di piano con significato evidente ed il termine greco polis (città).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": [
+      "Rizzuto"
+    ],
+    "comuni_confinanti": [
+      "Amato",
+      "Feroleto Antico",
+      "Maida",
+      "Marcellinara",
+      "Serrastretta"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Anastasio",
+      "Palazzo Torcia",
+      "Palazzo Stella",
+      "Palazzo Andreaggi",
+      "Palazzo Fialà"
+    ],
+    "chiese": [
+      "Chiesa dell'Addolorata",
+      "Chiesa di San Tommaso d'Aquino",
+      "Chiesa di Santa Croce",
+      "Chiesa di San Giuseppe (in frazione Rizzuto)",
+      "Chiesa di Sant'Agostino (2001)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Petronà",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079095",
+    "codice_catastale": "G518",
+    "popolazione": 2594,
+    "superficie_kmq": 45.5,
+    "densita": 57.0,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "petronesi",
+    "etimologia": "Deriva dal greco petron o dal latino petra per indicare un luogo sassoso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale"
+    ],
+    "localita_frazioni": [
+      "Arietta"
+    ],
+    "comuni_confinanti": [
+      "Belcastro",
+      "Cerva",
+      "Marcedusa",
+      "Mesoraca (KR)",
+      "Sersale",
+      "Zagarise"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Pietro Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Petrizzi",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079094",
+    "codice_catastale": "G517",
+    "popolazione": 1136,
+    "superficie_kmq": 21.48,
+    "densita": 52.9,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "seconda domenica di agosto",
+    "demonimo": "petrizzesi",
+    "etimologia": "Probabilmente deriva dal latino petra che diventa petricius, zona pietrosa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Argusto",
+      "Centrache",
+      "Chiaravalle Centrale",
+      "Gagliato",
+      "Montepaone",
+      "Olivadi",
+      "San Vito sullo Ionio",
+      "Satriano",
+      "Soverato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale Maria S.S. della Pietra",
+      "Chiesa della S.S. Trinità"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pentone",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079092",
+    "codice_catastale": "G439",
+    "popolazione": 2072,
+    "superficie_kmq": 12.29,
+    "densita": 168.6,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "pentonesi",
+    "etimologia": "Probabilmente deriva dal latino penta (sasso), che ritroviamo anche nel dialetto calabro con il nome di pentone che significa zolla.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "frazioni: Sant'Elia",
+      "Visconte",
+      "Bonaventura;\ncontrade: Termine",
+      "Cafarda"
+    ],
+    "comuni_confinanti": [
+      "Albi",
+      "Catanzaro",
+      "Fossato Serralta",
+      "Gimigliano",
+      "Sellia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Capilupi",
+      "Palazzo Marini"
+    ],
+    "chiese": [
+      "Santuario Madonna delle Grazie di Termine",
+      "Chiesa di San Nicola di Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna di Termine (seconda domenica di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palermiti",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079089",
+    "codice_catastale": "G272",
+    "popolazione": 1189,
+    "superficie_kmq": 18.27,
+    "densita": 65.1,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "Madonna della Luce",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "palermitesi",
+    "etimologia": "Nei documenti antichi è menzionato con il nome di Palarmici forse derivando da palermitano con l'aggiunta di -iti (da Palermo che è l'unione di pas e hormos e che significa \"ampio porto\").",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Centrache",
+      "Gasperina",
+      "Montauro",
+      "Montepaone",
+      "Squillace",
+      "Vallefiorita"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Migali (1763)",
+      "Palazzo Jannini",
+      "Palazzo Pregoni"
+    ],
+    "chiese": [
+      "Santuario Maria SS. della Luce",
+      "Chiesa di San Nicola Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana dei Baci",
+      "Fontana Pietraelisa"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Olivadi",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079088",
+    "codice_catastale": "G034",
+    "popolazione": 540,
+    "superficie_kmq": 7.07,
+    "densita": 76.4,
+    "cap": "88067",
+    "prefisso_telefonico": "0967",
+    "patrono": "Sant'Elia",
+    "festa_patronale": "19 luglio",
+    "demonimo": "olivadesi",
+    "etimologia": "Documentato come Libathi deriva dal greco libadion che significa pianura. Secondo alcuni potrebbe derivare da un cognome abbastanza frequente in zona Olivas.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale",
+      "Associazione dei Comuni Virtuosi"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cenadi",
+      "Centrache",
+      "Petrizzi",
+      "San Vito sullo Ionio",
+      "Vallefiorita"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Corapi",
+      "Palazzo De Septis",
+      "Palazzo Molea"
+    ],
+    "chiese": [
+      "Chiesetta di San Giuseppe",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa dell'Addolorata",
+      "Chiesa del Crocifisso, in origine dedicata a San Nicola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Sant'Elia (all'aperto)"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nocera Terinese",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079087",
+    "codice_catastale": "F910",
+    "popolazione": 4742,
+    "superficie_kmq": 46.23,
+    "densita": 102.6,
+    "cap": "88047",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "noceresi",
+    "etimologia": "La prima parte del nome probabilmente deriva dal latino nuceria, con il significato di \"città nuova\". La specifica risale al 1863 e si riferisce all'antica città di Terina.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  7 - Collina Litoranea di Capo Suvero"
+    ],
+    "localita_frazioni": [
+      "Nocera Torinese Marina",
+      "Salice",
+      "Varano",
+      "Ferole",
+      "Acquafredda",
+      "Piano delle Pere",
+      "Maletta",
+      "San Cataldo",
+      "Campodorato",
+      "Gullieri"
+    ],
+    "comuni_confinanti": [
+      "Amantea (CS)",
+      "Cleto (CS)",
+      "Falerna",
+      "Lamezia Terme",
+      "Martirano Lombardo",
+      "San Mango d'Aquino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Pietà",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Francesco",
+      "Chiesa dell'Annunziata",
+      "Chiesa del Suffraggio",
+      "Chiesa dei Padri Cappuccini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "I Vattienti (Sabato Santo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Motta Santa Lucia",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079083",
+    "codice_catastale": "F780",
+    "popolazione": 840,
+    "superficie_kmq": 25.69,
+    "densita": 32.7,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "mottesi",
+    "etimologia": "Il nome è un composto del termine dialettale motta che significa zolla o mucchio di terra, in aggiunta del nome della Santa particolarmente venerata in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Altilia (CS)",
+      "Conflenti",
+      "Decollatura",
+      "Martirano",
+      "Pedivigliano (CS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di Santa Lucia",
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Francesco",
+      "Chiesa della Cona"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montepaone",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079081",
+    "codice_catastale": "F586",
+    "popolazione": 5327,
+    "superficie_kmq": 16.95,
+    "densita": 314.3,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Felice Martire",
+    "festa_patronale": "prima domenica di agosto",
+    "demonimo": "montepaonesi",
+    "etimologia": "Il nome è un composto di monte e del termine latino pavo, -onis (pavone). Pavone o Paone potrebbe essere il cognome del proprietario del feudo oppure potrebbe riferirsi ai numerosi pavoni che vivevano sulla collina dove poi sorse il paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": [
+      "Montepaone Centro",
+      "Montepaone Lido",
+      "Timponello"
+    ],
+    "comuni_confinanti": [
+      "Centrache",
+      "Gasperina",
+      "Montauro",
+      "Palermiti",
+      "Petrizzi",
+      "Soverato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Maria SS Immacolata",
+      "Chiesa San Giovanni Battista (località: Montepaone Lido)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montauro",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079080",
+    "codice_catastale": "F432",
+    "popolazione": 1749,
+    "superficie_kmq": 11.54,
+    "densita": 151.6,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Pantaleone",
+    "festa_patronale": "27 luglio",
+    "demonimo": "montauresi",
+    "etimologia": "Potrebbe derivare da Mentaurum che è un composto di monte ed auro, quindi monte dell'oro. Secondo alcuni potrebbe riferirsi a Montorio, ossia un composto di monte e del nome di persona Tauro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": [
+      "Montauro Scalo",
+      "Calalunga",
+      "Pietragrande",
+      "Conca",
+      "Costa degli Aranci",
+      "Costaraba",
+      "Prospero",
+      "Basile",
+      "Coscinà"
+    ],
+    "comuni_confinanti": [
+      "Gasperina",
+      "Montepaone",
+      "Palermiti",
+      "Squillace",
+      "Stalettì"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Madonna",
+      "Palazzo Pellegrini",
+      "Palazzo Terracini",
+      "Palazzo Spadea"
+    ],
+    "chiese": [
+      "Chiesetta della Madonna dello \"Zalarmichello\"",
+      "Chiesa Madre di San Pantaleone",
+      "Chiesa di Sant'Anna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Miglierina",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079077",
+    "codice_catastale": "F200",
+    "popolazione": 767,
+    "superficie_kmq": 13.9,
+    "densita": 55.2,
+    "cap": "88040",
+    "prefisso_telefonico": "0961",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "miglierinesi",
+    "etimologia": "Deriva dal dialetto calabrese migliarina, una specie di pianta erbacea che rovina il miglio (da latino milium ).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Amato",
+      "Marcellinara",
+      "San Pietro Apostolo",
+      "Serrastretta",
+      "Tiriolo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Don Nino",
+      "Palazzo Scalzo",
+      "Palazzo Torcia"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria del Principio, o del Rosario",
+      "Chiesa di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Martirano Lombardo",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079074",
+    "codice_catastale": "E991",
+    "popolazione": 1097,
+    "superficie_kmq": 19.83,
+    "densita": 55.3,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "Madonna del Carmelo",
+    "festa_patronale": "16 luglio",
+    "demonimo": "martiranesi",
+    "etimologia": "La prima parte del nome si riferisce al nome del proprietario del feudo Martyrus o Marturus con l'aggiunta del suffisso -anus. La specifica fu inserita nel 1929 perché il paese fu realizzato dopo il terremoto del 1905 con la ricostruzione di Martirano da parte del comitato lombardo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": [
+      "Pietrebianche",
+      "San Nicola",
+      "Passeri",
+      "Santa Croce – Macchie",
+      "Nocella",
+      "Decollata – Praticello"
+    ],
+    "comuni_confinanti": [
+      "Aiello Calabro (CS)",
+      "Cleto (CS)",
+      "Conflenti",
+      "Lamezia Terme",
+      "Martirano",
+      "Nocera Terinese",
+      "San Mango d'Aquino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Sacro Cuore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Martirano",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079073",
+    "codice_catastale": "E990",
+    "popolazione": 884,
+    "superficie_kmq": 14.57,
+    "densita": 60.7,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "martiranesi",
+    "etimologia": "Deriva dal nome latino di persona Martyrus o Marturus con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": [
+      "Persico",
+      "San Fili",
+      "San Gennaro"
+    ],
+    "comuni_confinanti": [
+      "Aiello Calabro (CS)",
+      "Altilia (CS)",
+      "Conflenti",
+      "Grimaldi (CS)",
+      "Martirano Lombardo",
+      "Motta Santa Lucia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria",
+      "Chiesa di San Marco",
+      "Chiesa di San Francesco",
+      "Chiesa dell'Immacolata",
+      "Chiesa del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marcellinara",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079072",
+    "codice_catastale": "E925",
+    "popolazione": 2281,
+    "superficie_kmq": 20.63,
+    "densita": 110.6,
+    "cap": "88044",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Francesco di Paola",
+    "festa_patronale": "seconda domenica di agosto",
+    "demonimo": "marcillinaresi",
+    "etimologia": "Chiamato nei documenti con il nome di Marcinara è di origine incerta. Potrebbe derivare da mercenaria, da merce, con il significato di \"luogo di mercato\". Secondo alcuni è riconducibile al dialetto calabrese marcidara che significa \"arboscello di mirto\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": [
+      "Licari",
+      "Serramonda"
+    ],
+    "comuni_confinanti": [
+      "Amato",
+      "Caraffa di Catanzaro",
+      "Maida",
+      "Miglierina",
+      "Pianopoli",
+      "Settingiano",
+      "Tiriolo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Augelli",
+      "Palazzo Perrelli",
+      "Palazzo Sanseverino"
+    ],
+    "chiese": [
+      "Chiesa di San Nicola",
+      "Chiesa di Maria SS. Assunta, in piazza Don Francesco Scerbo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marcedusa",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079071",
+    "codice_catastale": "E923",
+    "popolazione": 439,
+    "superficie_kmq": 15.27,
+    "densita": 28.7,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "Sant'Andrea Apostolo",
+    "festa_patronale": "30 novembre",
+    "demonimo": "marcedusani",
+    "etimologia": "Il nome deriva dal calabrese marcida, ossia mirto. In passato e per lungo tempo il nome fu accostato al latino marcidus, ossia marcio, putrido.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belcastro",
+      "Mesoraca (KR)",
+      "Petronà"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Greco",
+      "Palazzo Dardano",
+      "Palazzo Spada",
+      "Palazzo Barletta"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Andrea Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Maida",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079069",
+    "codice_catastale": "E834",
+    "popolazione": 4623,
+    "superficie_kmq": 58.24,
+    "densita": 79.4,
+    "cap": "88025",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Francesco di Paola",
+    "festa_patronale": "2 aprile",
+    "demonimo": "maidesi",
+    "etimologia": "Il nome potrebbe derivare dal greco Magis o dal latino Magida con il significato di \"conca di terra\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caraffa di Catanzaro",
+      "Cortale",
+      "Feroleto Antico",
+      "Jacurso",
+      "Lamezia Terme",
+      "Marcellinara",
+      "Pianopoli",
+      "San Floro",
+      "San Pietro a Maida"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Domenico, seicentesco",
+      "Chiesa Parrocchiale di San Nicola de Latinis"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Magisano",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079068",
+    "codice_catastale": "E806",
+    "popolazione": 1230,
+    "superficie_kmq": 31.7,
+    "densita": 38.8,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "Immacolata Concezione",
+    "festa_patronale": "13 agosto",
+    "demonimo": "magisanesi",
+    "etimologia": "Potrebbe derivare dal nome latino di persona Magisius o Maggisius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale",
+      "Parco Nazionale della Sila"
+    ],
+    "localita_frazioni": [
+      "Frazioni: San Pietro Magisano",
+      "Vincolise; \nLocalità: Polito"
+    ],
+    "comuni_confinanti": [
+      "Albi",
+      "Sellia",
+      "Sersale",
+      "Zagarise"
+    ],
+    "musei": [
+      "Museo etnografico e risorgimentale (frazione Vincolise)"
+    ],
+    "ville_palazzi": [
+      "Palazzo Corrado",
+      "Palazzo Grande"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria della Luce",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte del diavolo (località: Polito)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lamezia Terme",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079160",
+    "codice_catastale": "M208",
+    "popolazione": 70891,
+    "superficie_kmq": 160.24,
+    "densita": 442.4,
+    "cap": "88046",
+    "prefisso_telefonico": "0968",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "lametini",
+    "etimologia": "La prima parte del nome si riferisce al fiume Amato che in passato era chiamato Lamato, dal latino Lamatus. La specifica \"Terme\" si riferisce alla presenza nel luogo delle \"Terme Caronte\".",
+    "il_comune_e": [
+      "Città Termale (Terme Caronte SpA (in frazione Sambiase))"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 11 - Piana di Sant'Eufemia"
+    ],
+    "localita_frazioni": [
+      "Nicastro",
+      "Sambiase",
+      "Sant'Eufemia Lamezia"
+    ],
+    "comuni_confinanti": [
+      "Conflenti",
+      "Curinga",
+      "Falerna",
+      "Feroleto Antico",
+      "Gizzeria",
+      "Maida",
+      "Martirano Lombardo",
+      "Nocera Terinese",
+      "Platania",
+      "San Pietro a Maida",
+      "Serrastretta"
+    ],
+    "musei": [
+      "Museo Archeologico Lametino",
+      "Ecomuseo - Luogo della Memoria",
+      "Museo Diocesano",
+      "Casa del libro antico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Santa Lucia",
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Teodoro",
+      "Chiesa di San Francesco",
+      "Chiesa di San Domenico",
+      "Chiesa della Veterana",
+      "Chiesa della Sanità",
+      "Chiesa dei Capuccini",
+      "Chiesa Cattedrale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino botanico"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Grandinetti",
+      "Teatro Politeama",
+      "Teatro Umberto"
+    ],
+    "stadi": [
+      "Stadio Comunale G. D'Ippolito",
+      "Stadio Gianni Renda"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Jacurso",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079065",
+    "codice_catastale": "E274",
+    "popolazione": 623,
+    "superficie_kmq": 21.64,
+    "densita": 28.8,
+    "cap": "88020",
+    "prefisso_telefonico": "0968",
+    "patrono": "Madonna della Salvazione",
+    "festa_patronale": "quarta domenica di luglio",
+    "demonimo": "jacursesi",
+    "etimologia": "Deriva dal nome di un santo greco: Accursio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cortale",
+      "Curinga",
+      "Filadelfia (VV)",
+      "Maida",
+      "Polia (VV)",
+      "San Pietro a Maida"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Salvazione",
+      "Chiesa Parrocchiale di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isca sullo Ionio",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079063",
+    "codice_catastale": "E328",
+    "popolazione": 1648,
+    "superficie_kmq": 22.97,
+    "densita": 71.7,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Marziale",
+    "festa_patronale": "10 luglio",
+    "demonimo": "iscani",
+    "etimologia": "Il termine isca è dialettale e deriva dal latino insula indicando un terreno bagnato dall'acqua o una terra grassa, collocata vicino al fiume. \"Sullo Ionio\" è una specifica relativa alla sua ubicazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Badolato",
+      "Brognaturo (VV)",
+      "San Sostene",
+      "Sant'Andrea Apostolo dello Ionio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola",
+      "Chiesa della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Guardavalle",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079061",
+    "codice_catastale": "E239",
+    "popolazione": 4504,
+    "superficie_kmq": 60.4,
+    "densita": 74.6,
+    "cap": "88065",
+    "prefisso_telefonico": "0967",
+    "patrono": "Sant'Agazio",
+    "festa_patronale": "7 maggio",
+    "demonimo": "guardavallesi",
+    "etimologia": "Si crede che il nome sia un composto di guarda e valle con significato evidentemente riferito alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bivongi (RC)",
+      "Brognaturo (VV)",
+      "Monasterace (RC)",
+      "Santa Caterina dello Ionio",
+      "Stilo (RC)"
+    ],
+    "musei": [
+      "Museo Pietrarotta"
+    ],
+    "ville_palazzi": [
+      "Palazzo Salerno",
+      "Palazzo Spedalieri",
+      "Palazzo Falletti"
+    ],
+    "chiese": [
+      "Chiesa Matrice o di Sant'Agazio o del Rosario",
+      "Chiesa di San Carlo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gizzeria",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079060",
+    "codice_catastale": "E068",
+    "popolazione": 5093,
+    "superficie_kmq": 35.93,
+    "densita": 141.7,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "gizzeroti o gizzeresi",
+    "etimologia": "Il nome si riferisce al cognome calabrese e siciliano Gizzi, che si riferisce a sua volta al latino aegyptius che può significare sia \"straniero\" che \"nericcio\". Secondo altri il nome si riferisce ad una colonia greca chiamata in passato Izzaria.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  7 - Collina Litoranea di Capo Suvero"
+    ],
+    "localita_frazioni": [
+      "Prisa",
+      "Scaramella",
+      "Destra Lido",
+      "Lenzi",
+      "Mortilla"
+    ],
+    "comuni_confinanti": [
+      "Falerna",
+      "Lamezia Terme"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Vieux Condé (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Girifalco",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079059",
+    "codice_catastale": "E050",
+    "popolazione": 5905,
+    "superficie_kmq": 43.08,
+    "densita": 137.1,
+    "cap": "88024",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "girifalcesi",
+    "etimologia": "Probabilmente deriva dal termine girifalco che identifica una specie di falcone. Secondo un'altra ipotesi il nome deriva dal greco Kur-Phalkos, ossia \"signora Falcus\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Amaroni",
+      "Borgia",
+      "Cortale",
+      "San Floro",
+      "Squillace",
+      "Vallefiorita"
+    ],
+    "musei": [
+      "Collezione Privata \"Tolone Azzariti\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Neve",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gimigliano",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079058",
+    "codice_catastale": "E031",
+    "popolazione": 3341,
+    "superficie_kmq": 32.44,
+    "densita": 103.0,
+    "cap": "88045",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "gimiglianesi",
+    "etimologia": "Deriva dal nome latino di persona Gemellius con l'aggiunta del suffisso -anus che indica possesso. Secondo alcuni il nome deriva dal greco Gimilon con il significato di \"abbondante di frutta\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale"
+    ],
+    "localita_frazioni": [
+      "Cuturelle",
+      "Visconte",
+      "Trearie",
+      "Corbino",
+      "Cavorà",
+      "Porto",
+      "Umbri",
+      "Colla",
+      "Acqua del Signore"
+    ],
+    "comuni_confinanti": [
+      "Carlopoli",
+      "Catanzaro",
+      "Cicala",
+      "Decollatura",
+      "Fossato Serralta",
+      "Pentone",
+      "San Pietro Apostolo",
+      "Sorbo San Basile",
+      "Soveria Mannelli",
+      "Tiriolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del SS. Salvatore",
+      "Chiesa della Consolazione",
+      "Santuario della Madonna di Porto",
+      "Chiesa Maria SS. Assunta",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Biagio",
+      "Chiesa dell'Immacolata",
+      "Chiesa della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna di Costantinopoli (Pentecoste)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gasperina",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079056",
+    "codice_catastale": "D932",
+    "popolazione": 2174,
+    "superficie_kmq": 6.86,
+    "densita": 316.9,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "Santo Innocenzo Martire",
+    "festa_patronale": "6 agosto",
+    "demonimo": "gasparinesi",
+    "etimologia": "Deriva dal nome di persona Gaspara o Gaspare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": [
+      "frazioni: Melitì",
+      "Pilinga;\nnuclei sparsi: Montagnola",
+      "Zilleria",
+      "Aurunci"
+    ],
+    "comuni_confinanti": [
+      "Montauro",
+      "Montepaone",
+      "Palermiti"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Nicola Vescovo, in Piazza E. Fermi",
+      "Chiesa di San Giuseppe",
+      "Chiesa di Sant'Anna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gagliato",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079055",
+    "codice_catastale": "D852",
+    "popolazione": 480,
+    "superficie_kmq": 6.99,
+    "densita": 68.7,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "gagliatesi",
+    "etimologia": "Probabilmente il nome deriva dal latino galeatus, ossia \"armato di galea\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Argusto",
+      "Cardinale",
+      "Petrizzi",
+      "Satriano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Nicola Pelaggi, in via Amedeo",
+      "Palazzo Nocita, in via Regina Margherita",
+      "Palazzo Romiti, in via Roma",
+      "Palazzo Vincenzo Pelaggi, in via Roma"
+    ],
+    "chiese": [
+      "Chiesa di San Nicola (XVI secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fossato Serralta",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079052",
+    "codice_catastale": "D744",
+    "popolazione": 590,
+    "superficie_kmq": 12.31,
+    "densita": 47.9,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Francesco di Paola",
+    "festa_patronale": "prima domenica di agosto",
+    "demonimo": "fossatesi",
+    "etimologia": "La prima parte del nome deriva da fossato che in calabrese può significare anche \"borgo fortificato\". La seconda parte del nome, ossia Serralta, risale al 1863 e si riferisce al monte che sorge nei pressi del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale"
+    ],
+    "localita_frazioni": [
+      "frazioni: Maranise",
+      "Canne",
+      "Savuci;\ncontrade: Umbri",
+      "Noce"
+    ],
+    "comuni_confinanti": [
+      "Albi",
+      "Gimigliano",
+      "Pentone",
+      "Sorbo San Basile",
+      "Taverna"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Colao",
+      "in corso Vittorio Emanuele III"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Nicola (in frazione Maranise)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fonte Noce (in frazione Maranise)"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Feroleto Antico",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079048",
+    "codice_catastale": "D544",
+    "popolazione": 2159,
+    "superficie_kmq": 22.01,
+    "densita": 98.1,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "feroletani",
+    "etimologia": "Il nome deriva dal latino feruletum, ossia \"piantagione di canne\", e dall'aggettivo antico. Anche se alcuni credono che il termine feruletum significhi \"portatore di morte\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Lamezia Terme",
+      "Maida",
+      "Pianopoli",
+      "Serrastretta"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Dipodi",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa della Natività"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Falerna",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079047",
+    "codice_catastale": "D476",
+    "popolazione": 3993,
+    "superficie_kmq": 23.85,
+    "densita": 167.4,
+    "cap": "88042",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Tommaso d'Aquino",
+    "festa_patronale": "7 marzo",
+    "demonimo": "falernesi",
+    "etimologia": "Esistono diverse ipotesi sulla provenienza del nome. Secondo alcuni deriva dal nome latino di persona Falernus, secondo altri deriva il suo nome dal vino Falerno, noto in Campania ed in Calabria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  7 - Collina Litoranea di Capo Suvero",
+      "Associazione Borghi Autentici d'Italia"
+    ],
+    "localita_frazioni": [
+      "Castiglione Marittimo",
+      "località Falerna Scalo"
+    ],
+    "comuni_confinanti": [
+      "Gizzeria",
+      "Lamezia Terme",
+      "Nocera Terinese"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Tommaso d'Aquino",
+      "Chiesa dell'Annunziata",
+      "Chiesa di Sant'Antonio Abate (o di Foca)",
+      "Chiesa della Provvidenza",
+      "Chiesa della Madonna del Rosario",
+      "Chiesa degli Agostiniani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Decollatura",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079043",
+    "codice_catastale": "D261",
+    "popolazione": 3163,
+    "superficie_kmq": 50.35,
+    "densita": 62.8,
+    "cap": "88041",
+    "prefisso_telefonico": "0968",
+    "patrono": "Madonna dell'Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "decollaturesi",
+    "etimologia": "Deriva dal verbo latino decollare, ossia decapitare riferendosi ad un disboscamento della zona. Poiché è menzionato anche con il nome di Collatura potrebbe derivare anche da \"colle\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": [
+      "frazioni: Adami",
+      "Casenove",
+      "San Bernardo",
+      "Cerrisi",
+      "Tomaini;\nlocalità: Praticello",
+      "Cianflone",
+      "Passaggio",
+      "Notarianni",
+      "Gesariello",
+      "Santa Maria",
+      "Carricella",
+      "Junci",
+      "Liardi",
+      "Pagliaia",
+      "Muraglie",
+      "Andrea Perri",
+      "Sottana",
+      "Bonacci",
+      "Cancello",
+      "Molini",
+      "Fosso",
+      "Orsi",
+      "Rizzi",
+      "Romano"
+    ],
+    "comuni_confinanti": [
+      "Conflenti",
+      "Gimigliano",
+      "Motta Santa Lucia",
+      "Pedivigliano (CS)",
+      "Platania",
+      "San Pietro Apostolo",
+      "Serrastretta",
+      "Soveria Mannelli"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Bernardo",
+      "Chiesa della Beata Vergine del Monte Carmelo",
+      "Chiesa della Beata Vergine dei Sette Dolori",
+      "Chiesa della Beata Maria SS. Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Davoli",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079042",
+    "codice_catastale": "D257",
+    "popolazione": 5550,
+    "superficie_kmq": 25.73,
+    "densita": 215.7,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Vittore",
+    "festa_patronale": "21 luglio",
+    "demonimo": "davolesi",
+    "etimologia": "Il nome deriva dal greco daulos, ossia \"fitto\" e si riferisce alla folta vegetazione della zona. Secondo alcuni il nome si riferisce a Daulis, antica città greca.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cardinale",
+      "San Sostene",
+      "Satriano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Badolisani",
+      "Palazzo Gregoraci",
+      "Palazzo Gualtieri"
+    ],
+    "chiese": [
+      "Cappella di San Francesco",
+      "Chiesa di Santa Lucia",
+      "Chiesa di Santa Caterina",
+      "Chiesa di Santa Barbara",
+      "Chiesa di San Roberto Bellarmino (a Marina di Davoli)",
+      "Chiesa di San Pietro",
+      "Chiesa di San Nicola",
+      "Cappella di San Giuseppe",
+      "Chiesa della Misericordia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Curinga",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079039",
+    "codice_catastale": "D218",
+    "popolazione": 6761,
+    "superficie_kmq": 51.47,
+    "densita": 131.4,
+    "cap": "88022",
+    "prefisso_telefonico": "0968",
+    "patrono": "Sant'Andrea Apostolo",
+    "festa_patronale": "30 novembre",
+    "demonimo": "curinghesi",
+    "etimologia": "La sua origine è incerta, infatti esistono diverse ipotesi. Secondo alcuni potrebbe derivare da curinghe, ossia i luoghi dove si riunivano i saggi. Secondo altri fa riferimento al termine greco korukos che significa globo, pallone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  9 - Colline Litoranee di Curinga"
+    ],
+    "localita_frazioni": [
+      "Centone",
+      "Jancarella",
+      "San Salvatore",
+      "Zecca",
+      "Ergadi",
+      "Acconia"
+    ],
+    "comuni_confinanti": [
+      "Filadelfia (VV)",
+      "Francavilla Angitola (VV)",
+      "Jacurso",
+      "Lamezia Terme",
+      "Pizzo (VV)",
+      "San Pietro a Maida"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Maria SS. del Carmelo",
+      "Chiesa di Sant'Andrea Apostolo",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": [
+      "Torrevecchia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cropani",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079036",
+    "codice_catastale": "D181",
+    "popolazione": 4804,
+    "superficie_kmq": 43.83,
+    "densita": 109.6,
+    "cap": "88051",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "cropanesi",
+    "etimologia": "Il nome deriva dal greco Kopranon, ossia letame indicando una \"terra concimata\".",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": [
+      "Cropani Marina",
+      "Cuturella"
+    ],
+    "comuni_confinanti": [
+      "Andali",
+      "Botricello",
+      "Cerva",
+      "Sellia Marina",
+      "Sersale"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Lucia",
+      "Duomo",
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cortale",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079034",
+    "codice_catastale": "D049",
+    "popolazione": 2085,
+    "superficie_kmq": 29.29,
+    "densita": 71.2,
+    "cap": "88020",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cortalesi",
+    "etimologia": "Chiamato nei documenti con il nome di Curtalo, deriva dal latino cohortalis, ossia \"relativo alla stalla\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caraffa di Catanzaro",
+      "Cenadi",
+      "Girifalco",
+      "Jacurso",
+      "Maida",
+      "Polia (VV)",
+      "San Floro",
+      "Vallefiorita"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Cefaly",
+      "era proprietà di Andrea Cefaly Senior"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Cattolica",
+      "Chiesa di Santa Maria Cattolica Maggiore",
+      "Chiesa di San Giovanni Battista (detta di Santa Croce)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ponte Lambro (Como-Lombardia)",
+      "dal 2010"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Conflenti",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079033",
+    "codice_catastale": "C960",
+    "popolazione": 1408,
+    "superficie_kmq": 31.0,
+    "densita": 45.4,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "Madonna della Quercia di Visora",
+    "festa_patronale": "7 febbraio",
+    "demonimo": "conflentesi",
+    "etimologia": "Il nome deriva dal latino confluentes \"confluenti\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  1 - Montagna del Reventino"
+    ],
+    "localita_frazioni": [
+      "Annetta",
+      "Augurelli",
+      "Caria",
+      "Croscaro",
+      "Costa",
+      "Lisca",
+      "Passo",
+      "Ceraso",
+      "Stranges",
+      "Querciola",
+      "Vallone Cupo",
+      "Sciosci",
+      "Calusci",
+      "Abritti"
+    ],
+    "comuni_confinanti": [
+      "Decollatura",
+      "Lamezia Terme",
+      "Martirano",
+      "Martirano Lombardo",
+      "Motta Santa Lucia",
+      "Platania"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Quercia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cicala",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079030",
+    "codice_catastale": "C674",
+    "popolazione": 963,
+    "superficie_kmq": 9.08,
+    "densita": 106.1,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "cicalesi",
+    "etimologia": "Il nome si riferisce all'antico proprietario del luogo: Carlo Cicala.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  2 - Sila Piccola Settentrionale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carlopoli",
+      "Fossato Serralta",
+      "Gimigliano",
+      "Sorbo San Basile"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giacomo",
+      "Chiesa dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chiaravalle Centrale",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079029",
+    "codice_catastale": "C616",
+    "popolazione": 5660,
+    "superficie_kmq": 23.33,
+    "densita": 242.6,
+    "cap": "88064",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "chiaravallesi",
+    "etimologia": "Deriva da Claravallis, ossia è un nome composto da clara e vallis, con evidente significato. La specifica fu aggiunta nel 1863 in relazione alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Argusto",
+      "Capistrano (VV)",
+      "Cardinale",
+      "Petrizzi",
+      "San Vito sullo Ionio",
+      "Torre di Ruggiero"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Pietra",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dell'Immacolata Concezione (8 dicembre)",
+      "con falò augurali"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerva",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079027",
+    "codice_catastale": "C542",
+    "popolazione": 1212,
+    "superficie_kmq": 21.01,
+    "densita": 57.7,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "SS. Nome di Maria Vergine",
+    "festa_patronale": "seconda domenica di settembre",
+    "demonimo": "cervesi",
+    "etimologia": "Il nome si riferisce, secondo la leggenda, ad un cervo che viveva in loco o ad un serpente non velenoso. Questa insicurezza è data dal fatto che in calabrese la parola cervu significa sia l'una che l'altra cosa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Andali",
+      "Belcastro",
+      "Cropani",
+      "Petronà",
+      "Sersale"
+    ],
+    "musei": [
+      "Museo della Castagna"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Immacolata",
+      "Chiesa del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Centrache",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079025",
+    "codice_catastale": "C472",
+    "popolazione": 391,
+    "superficie_kmq": 7.87,
+    "densita": 49.7,
+    "cap": "88067",
+    "prefisso_telefonico": "0967",
+    "patrono": "Sant'Onofrio",
+    "festa_patronale": null,
+    "demonimo": "centrachesi",
+    "etimologia": "Chiamato nei documenti con il nome di Centrico o Centracchi, deriva dal greco Kentrikos, ossia \"centrale\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Montepaone",
+      "Olivadi",
+      "Palermiti",
+      "Petrizzi",
+      "Vallefiorita"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Molea",
+      "Palazzo Murgida"
+    ],
+    "chiese": [
+      "Chiesa dell'Annunciazione",
+      "Chiesa della Madonna del Rosario (in località San Goria)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cenadi",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079024",
+    "codice_catastale": "C453",
+    "popolazione": 568,
+    "superficie_kmq": 11.16,
+    "densita": 50.9,
+    "cap": "88067",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cenadesi",
+    "etimologia": "Documentato con il nome Locinade, potrebbe derivare dal nome latino di persona Lucinus con l'aggiunta del suffisso -adi o dal nome siciliano Cinà che deriva dal greco lukainas e significa \"cacciatore di lupi\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": [
+      "contrade: Crocicelle",
+      "San Martino",
+      "Cara",
+      "Fossella",
+      "Ritegno",
+      "Minichello",
+      "Torro",
+      "Ravecchia",
+      "San Nicola",
+      "Minghozzo"
+    ],
+    "comuni_confinanti": [
+      "Cortale",
+      "Olivadi",
+      "Polia (VV)",
+      "San Vito sullo Ionio",
+      "Vallefiorita"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Fera",
+      "Palazzo Casalinuovo",
+      "Palazzo Gallo",
+      "Palazzo Geracioti"
+    ],
+    "chiese": [
+      "Chiesa di San Michele",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carlopoli",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079020",
+    "codice_catastale": "B790",
+    "popolazione": 1515,
+    "superficie_kmq": 16.32,
+    "densita": 92.8,
+    "cap": "88040",
+    "prefisso_telefonico": "0968",
+    "patrono": "Maria SS. del Carmelo",
+    "festa_patronale": "prima domenica di agosto",
+    "demonimo": "carlopolesi",
+    "etimologia": "Il nome è un composto di \"Carlo\", in onore di Carlo Cicala di Tirolo e del termine greco polis, ossia città.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Tiriolo-Reventino-Mancuso",
+      "Regione Agraria n.  2 - Sila Piccola Settentrionale"
+    ],
+    "localita_frazioni": [
+      "frazione: Castagna;\ncontrade: Corazzo",
+      "Bivio Bonacci",
+      "Terzo delle Castagne"
+    ],
+    "comuni_confinanti": [
+      "Bianchi (CS)",
+      "Cicala",
+      "Gimigliano",
+      "Panettieri (CS)",
+      "Sorbo San Basile",
+      "Soveria Mannelli"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Bilotti, in via Vittorio Emanuele",
+      "Palazzo Cigala",
+      "Palazzo Rocca, in piazza Brutto",
+      "Palazzo Sacchi (a Castagna)"
+    ],
+    "chiese": [
+      "Chiesa dello Spirito Santo",
+      "Chiesa dell'Addolorata (in località Grillo)",
+      "Chiesa del Carmelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cardinale",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079018",
+    "codice_catastale": "B758",
+    "popolazione": 2113,
+    "superficie_kmq": 31.19,
+    "densita": 67.7,
+    "cap": "88062",
+    "prefisso_telefonico": "0967",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "cardinalesi",
+    "etimologia": "Deriva dal latino cardinalis (cardinale, linea di confine). Secondo alcuni si riferisce ad un nome di persona non ben identificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n.  4 - Montagna di Soverato",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "frazione: Novalba; località: Razzona",
+      "San Giorgio"
+    ],
+    "comuni_confinanti": [
+      "Argusto",
+      "Brognaturo (VV)",
+      "Chiaravalle Centrale",
+      "Davoli",
+      "Gagliato",
+      "San Sostene",
+      "Satriano",
+      "Simbario (VV)",
+      "Torre di Ruggiero"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo De Luca, detto di Don Martino",
+      "Palazzo Mammone",
+      "Palazzo Nisticò, in Piazza Umberto",
+      "Palazzo Pelaggi",
+      "Palazzo Salvi"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie (1795)",
+      "Chiesa di San Nicola di Bari",
+      "Chiesa di Maria Santissima delle Grazie (in frazione Novalba)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Filangieri"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caraffa di Catanzaro",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079017",
+    "codice_catastale": "B717",
+    "popolazione": 1840,
+    "superficie_kmq": 24.7,
+    "densita": 74.5,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "Santa Domenica",
+    "festa_patronale": "6 luglio",
+    "demonimo": "caraffoti",
+    "etimologia": "Secondo alcuni il nome si riferisce al cognome dei proprietari del luogo. Secondo altri il nome \"Caraffa\", in dialetto calabrese garrafa, deriva dall'arabo garrafa con il significato di \"vaso di creta\". In passato era chiamato Arenoso perché costruito in una zona sabbiosa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Catanzaro",
+      "Cortale",
+      "Maida",
+      "Marcellinara",
+      "San Floro",
+      "Settingiano"
+    ],
+    "musei": [
+      "Istituto della Cultura Arbereshe \"Giuseppe Gangale\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Domenica"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Botricello",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079012",
+    "codice_catastale": "B085",
+    "popolazione": 5254,
+    "superficie_kmq": 15.24,
+    "densita": 344.8,
+    "cap": "88070",
+    "prefisso_telefonico": "0961",
+    "patrono": "Madonna di Pompei",
+    "festa_patronale": "prima domenica dopo il 15 agosto",
+    "demonimo": "botricellesi",
+    "etimologia": "Il nome deriva da bothros (fosso) con l'aggiunta del suffisso -icellu.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": [
+      "Botricello Inferiore",
+      "Botricello Superiore"
+    ],
+    "comuni_confinanti": [
+      "Andali",
+      "Belcastro",
+      "Cropani"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa de Grazia",
+      "ottocentesco"
+    ],
+    "chiese": [
+      "Santuario della Madonna di Pompei",
+      "Chiesa di San Francesco di Paola",
+      "Chiesa di San Michele e della Santissima Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Biveri (a Botricello Superiore)"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Borgia",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079011",
+    "codice_catastale": "B002",
+    "popolazione": 7647,
+    "superficie_kmq": 42.0,
+    "densita": 182.1,
+    "cap": "88021",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "borgesi",
+    "etimologia": "Il suo nome si riferisce al principe Borgia d'Aragona che nel XVI secolo fondò il paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato"
+    ],
+    "localita_frazioni": [
+      "Donnantona",
+      "Roccelletta",
+      "Vallo"
+    ],
+    "comuni_confinanti": [
+      "Caraffa di Catanzaro",
+      "Catanzaro",
+      "Girifalco",
+      "San Floro",
+      "Squillace"
+    ],
+    "musei": [
+      "Parco Archeologico di Scolacium",
+      "Istituto della Cultura Arbereshe \"Giuseppe Gangale\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Sgromo",
+      "Palazzo dei Salesiani",
+      "Palazzo Francica",
+      "Palazzo Massara",
+      "Palazzo Mazza"
+    ],
+    "chiese": [
+      "Duomo - Chiesa di San Giovanni Battista, in piazza Ortona",
+      "Chiesa di Santa Maria della Roccella (in frazione Roccelletta)",
+      "Chiesa di San Leonardo, in corso Mazzini",
+      "Chiesa dell'Immacolata",
+      "Chiesa del SS. Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Belcastro",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079009",
+    "codice_catastale": "A736",
+    "popolazione": 1413,
+    "superficie_kmq": 52.78,
+    "densita": 26.8,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Tommaso d'Aquino",
+    "festa_patronale": "21 marzo",
+    "demonimo": "belcastresi",
+    "etimologia": "Il nome del paese è un composto di bellum e castrum, scelto dal re Carlo II d'Angiò nel 1330 che, da baronia qual era, la elevò a contea, affidandola a Tommaso II d'Aquino. Si crede che il termine bellum non derivi dal latino bensì dall'italiano, con evidente significato, mentre castrum si riferisca al latino, quindi il nome indica, un \"bel castello (accampamento militare)\" o, secondo alcuni, \"bella città\". Il nome attuale si contrappone all'antico nome di Genicocastro o Geneococastro ossia \"Città delle origini\" (dal greco ghénos, originario), dato dal generale bizantino Niceforo Foca nell'880, anno in cui scacciò dal paese gli arabi che l'occupavano dall'840. Secondo alcuni storici del IX secolo, la città veniva chiamata Kallipolis dal greco Kale (bella) e polis (città), questa ipotesi è stata però con il tempo screditata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro"
+    ],
+    "localita_frazioni": [
+      "Acquavona",
+      "Marina di Belcastro (Fieri",
+      "Condolè",
+      "Arango",
+      "Magliacane)"
+    ],
+    "comuni_confinanti": [
+      "Andali",
+      "Botricello",
+      "Cerva",
+      "Cutro (KR)",
+      "Marcedusa",
+      "Mesoraca (KR)",
+      "Petronà"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Poerio (detto anche palazzo Cirillo)",
+      "costruito dalla famiglia dei duchi Sersale"
+    ],
+    "chiese": [
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa della Pietà"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Conti d'Aquino"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Isola Capo Rizzuto (Crotone-Calabria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Badolato",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079008",
+    "codice_catastale": "A542",
+    "popolazione": 3046,
+    "superficie_kmq": 34.1,
+    "densita": 89.3,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "Sant'Andrea Avellino",
+    "festa_patronale": "10 novembre",
+    "demonimo": "badolatesi",
+    "etimologia": "Il nome è un composto di due termini latini: vadum (passaggio) e latum (largo).",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Versante Jonico",
+      "Regione Agraria n. 10 - Colline Litoranee di Soverato",
+      "Parco Naturale delle Serre"
+    ],
+    "localita_frazioni": [
+      "Badolato Marina"
+    ],
+    "comuni_confinanti": [
+      "A nord: Isca sullo Ionio",
+      "San Sostene; a ovest: Brognaturo (VV); a sud: Santa Caterina dello Ionio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria degli Angeli",
+      "Chiesa parrocchiale di Santa Caterina",
+      "Chiesa di Sant'Andrea Avellino (XVIII secolo)",
+      "Chiesa del Rosario",
+      "Chiesa di Sant'Isidoro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Argusto",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079007",
+    "codice_catastale": "A397",
+    "popolazione": 514,
+    "superficie_kmq": 7.12,
+    "densita": 72.2,
+    "cap": "88060",
+    "prefisso_telefonico": "0967",
+    "patrono": "Sant'Ilario",
+    "festa_patronale": "13 gennaio",
+    "demonimo": "argustesi",
+    "etimologia": "Potrebbe derivare dal latino arbustum, ossia \"piantagione di alberi\", o dal greco argastos con il significato di \"non lavorato\". Secondo altri si riferisce ad un cognome greco non ben specificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": [
+      "frazione: San Pietro;\ncontrade: Castagnara",
+      "Fumarica",
+      "Malvaradi",
+      "Papara",
+      "Scamardi"
+    ],
+    "comuni_confinanti": [
+      "Cardinale",
+      "Chiaravalle Centrale",
+      "Gagliato",
+      "Petrizzi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Principe",
+      "Palazzo Parisi"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Ilario Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Andali",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079005",
+    "codice_catastale": "A272",
+    "popolazione": 745,
+    "superficie_kmq": 17.92,
+    "densita": 41.6,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": null,
+    "demonimo": "andalesi",
+    "etimologia": "Potrebbe derivare dal nome longobardo di persona Andilo oppure riferirsi al termine anda, ossia terreno incolto. Un'altra ipotesi è che il nome derivi dalla frase che venne pronunciata agli albanesi sbarcati in loco, ossia \"andate lì\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belcastro",
+      "Botricello",
+      "Cerva",
+      "Cropani"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Amato",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079004",
+    "codice_catastale": "A257",
+    "popolazione": 823,
+    "superficie_kmq": 20.9,
+    "densita": 39.4,
+    "cap": "88040",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Francesco da Paola",
+    "festa_patronale": "seconda Domenica di agosto",
+    "demonimo": "amatesi",
+    "etimologia": "Deriva dal nome del fiume Lamento o dal nome di persona Amato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  5 - Collina dell'Amato"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Marcellinara",
+      "Miglierina",
+      "Pianopoli",
+      "Serrastretta"
+    ],
+    "musei": [
+      "Museo del Borgo"
+    ],
+    "ville_palazzi": [
+      "Palazzo Feudale dei Mottola"
+    ],
+    "chiese": [
+      "Chiesa della Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Amaroni",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079003",
+    "codice_catastale": "A255",
+    "popolazione": 1827,
+    "superficie_kmq": 9.7,
+    "densita": 188.4,
+    "cap": "88050",
+    "prefisso_telefonico": "0961",
+    "patrono": "Santa Barbara",
+    "festa_patronale": "4 dicembre",
+    "demonimo": "amaronesi",
+    "etimologia": "Deriva dal nome latino di persona Amarus con l'aggiunta del suffisso -oni che dà alla parola il significato di \"discendenti di Amarus\" riferendosi agli abitanti del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Fossa del Lupo",
+      "Regione Agraria n.  6 - Collina dell'Ancinale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Squillace; a ovest: Girifalco; a sud: Vallefiorita"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Barbara"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Risch (Svizzera)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albi",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079002",
+    "codice_catastale": "A155",
+    "popolazione": 945,
+    "superficie_kmq": 28.86,
+    "densita": 32.7,
+    "cap": "88055",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Nicola da Tolentino",
+    "festa_patronale": null,
+    "demonimo": "albesi",
+    "etimologia": "Secondo alcuni deriva dal nome latino di persona Albius o dal cognome Albo. Una leggenda narra che il paese sia stata fondato in un luogo di proprietà di un certo Agostino Albo, da cui derivò il nome. Secondo altri deriva dal latino album (bianco) e si riferisce al colore delle pietre del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Presila Catanzarese",
+      "Regione Agraria n.  3 - Sila Piccola Meridionale",
+      "Parco Nazionale della Sila"
+    ],
+    "localita_frazioni": [
+      "frazione: San Giovanni d'Albi;\nvillaggi: Buturo",
+      "Acquafredda"
+    ],
+    "comuni_confinanti": [
+      "Fossato Serralta",
+      "Magisano",
+      "Pentone",
+      "Sellia",
+      "Taverna",
+      "Zagarise"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Curia",
+      "Palazzo Coschi",
+      "Palazzo Garcea (nel rione Dardanise)",
+      "Palazzo Parrotta"
+    ],
+    "chiese": [
+      "Chiesa della Madonna Assunta in Cielo",
+      "Chiesa dei SS. Apostoli Filippo e Giacomo",
+      "Chiesa di Santa Caterina (in frazione San Giovanni d'Albi)",
+      "Chiesa dei Santi Pietro e Paolo, in largo Giovanni XXIII"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Catanzaro",
+    "provincia": "Catanzaro",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "079023",
+    "codice_catastale": "C352",
+    "popolazione": 90240,
+    "superficie_kmq": 111.34,
+    "densita": 810.5,
+    "cap": "88100",
+    "prefisso_telefonico": "0961",
+    "patrono": "San Vitaliano da Capua",
+    "festa_patronale": "16 luglio",
+    "demonimo": "catanzaresi",
+    "etimologia": "Chiamata in passato Catanciarium, deriva dall'unione di due termini arabi: Kato (sotto) e Antsari (terrazza) in riferimento alla zona che circondava la città che era terrazzata con molti giardini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  8 - Colline Litoranee di Catanzaro",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Alli",
+      "Barone",
+      "Bellavista",
+      "Catanzaro Lido",
+      "Gagliano",
+      "Santa Maria",
+      "Sant'Antonio",
+      "Mater Domini",
+      "Siano",
+      "Sala",
+      "San Janni",
+      "Cava",
+      "Signorello",
+      "Germaneto",
+      "Pistoia",
+      "il Corvo"
+    ],
+    "comuni_confinanti": [
+      "Borgia",
+      "Caraffa di Catanzaro",
+      "Gimigliano",
+      "Pentone",
+      "San Floro",
+      "Sellia",
+      "Settingiano",
+      "Simeri Crichi",
+      "Tiriolo"
+    ],
+    "musei": [
+      "Museo Diocesano di Arte Sacra",
+      "Museo delle Carrozze",
+      "Museo dell'Arte della Seta",
+      "Museo della Lambretta",
+      "Museo del Risorgimento",
+      "Museo Archeologico",
+      "Casa della Memoria \"Rotella House\"",
+      "Museo storico militare Brigata Catanzaro",
+      "Marca - Museo delle Arti di Catanzaro",
+      "Museo Naturalistico \"Libero Gatti\"",
+      "Museo Numismatico Provinciale"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Masciari",
+      "Teatro Politeama"
+    ],
+    "stadi": [
+      "Stadio Nicola Ceravolo"
+    ],
+    "eventi_feste_sagre": [
+      "La Naca (Venerdì Santo)",
+      "Mirabilia (dalla seconda alla terza domenica di luglio), con corteo storico con la cavalcata dei cavallieri della seta"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Renato Dulbecco (1914-)",
+      "Premio Nobel per la Medicina"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "nome": "Napoli",
+  "regione": "Campania",
+  "zona": null,
+  "sigla": "NA",
+  "codice_istat": "063",
+  "popolazione": 3107006,
+  "popolazione_maschi": 1506979,
+  "popolazione_femmine": 1600027,
+  "superficie_kmq": 1170.78,
+  "densita": 2653.8,
+  "num_comuni": 92,
+  "capoluogo": "Napoli",
+  "iso_3166_2": "IT-NA",
+  "nuts": "ITF33"
+}

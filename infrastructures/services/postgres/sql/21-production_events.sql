@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS events_data.production_events (
 
     -- Location
     city VARCHAR(100),                 -- Nome città
-    city_id INTEGER,                   -- FK a comuni_italiani.comuni(id)
+    city_id INTEGER,                   -- FK a comuni_istat.comuni(id)
     location_name VARCHAR(255),
     location_address TEXT,
     location_coords GEOMETRY(Point, 4326), -- Coordinate PostGIS (Long/Lat)
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS events_data.production_events (
 
     -- Foreign Key
     CONSTRAINT fk_production_city FOREIGN KEY (city_id)
-        REFERENCES comuni_italiani.comuni(id) ON DELETE SET NULL
+        REFERENCES comuni_istat.comuni(id) ON DELETE SET NULL
 );
 
 -- Commenti
@@ -56,7 +56,7 @@ COMMENT ON COLUMN events_data.production_events.uuid IS 'Hash univoco interno (t
 COMMENT ON COLUMN events_data.production_events.content_hash IS 'Hash del contenuto per rilevare modifiche.';
 COMMENT ON COLUMN events_data.production_events.source IS 'Codice della fonte dati (es. city_today).';
 COMMENT ON COLUMN events_data.production_events.category IS 'Array di categorie (TEXT[]).';
-COMMENT ON COLUMN events_data.production_events.city_id IS 'FK a comuni_italiani.comuni per join geografici.';
+COMMENT ON COLUMN events_data.production_events.city_id IS 'FK a comuni_istat.comuni per join geografici.';
 COMMENT ON COLUMN events_data.production_events.location_coords IS 'Coordinate PostGIS (SRID 4326). Usare ST_SetSRID(ST_MakePoint(lng, lat), 4326).';
 COMMENT ON COLUMN events_data.production_events.date_display IS 'Rappresentazione testuale della data (es. "dal 31 gennaio al 1 febbraio").';
 COMMENT ON COLUMN events_data.production_events.raw_data IS 'Dump completo del JSON scaricato dalla fonte.';
@@ -94,7 +94,7 @@ CREATE OR REPLACE VIEW events_data.active_events AS
 SELECT * FROM events_data.production_events WHERE is_active = TRUE;
 
 -- =============================================================================
--- VIEW: Eventi con info comune (join con comuni_italiani)
+-- VIEW: Eventi con info comune (join con comuni_istat)
 -- =============================================================================
 CREATE OR REPLACE VIEW events_data.events_with_location AS
 SELECT
@@ -105,7 +105,7 @@ SELECT
     p.sigla AS provincia_sigla,
     r.den_reg AS regione
 FROM events_data.production_events e
-LEFT JOIN comuni_italiani.comuni c ON e.city_id = c.id
-LEFT JOIN comuni_italiani.province p ON c.cod_uts = p.cod_uts
-LEFT JOIN comuni_italiani.regioni r ON c.cod_reg = r.cod_reg
+LEFT JOIN comuni_istat.comuni c ON e.city_id = c.id
+LEFT JOIN comuni_istat.province p ON c.cod_uts = p.cod_uts
+LEFT JOIN comuni_istat.regioni r ON c.cod_reg = r.cod_reg
 WHERE e.is_active = TRUE;

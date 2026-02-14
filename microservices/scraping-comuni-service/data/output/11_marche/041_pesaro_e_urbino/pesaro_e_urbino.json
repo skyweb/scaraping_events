@@ -1,0 +1,16 @@
+{
+  "nome": "Pesaro e Urbino",
+  "regione": "Marche",
+  "zona": null,
+  "sigla": "PU",
+  "codice_istat": "041",
+  "popolazione": 360711,
+  "popolazione_maschi": 175782,
+  "popolazione_femmine": 184929,
+  "superficie_kmq": 2564.21,
+  "densita": 140.7,
+  "num_comuni": 57,
+  "capoluogo": "Pesaro",
+  "iso_3166_2": "IT-PU",
+  "nuts": "ITE31"
+}

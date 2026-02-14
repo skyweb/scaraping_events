@@ -1,0 +1,2407 @@
+[
+  {
+    "nome": "Villa Minozzo",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035045",
+    "codice_catastale": "L969",
+    "popolazione": 3686,
+    "superficie_kmq": 167.9,
+    "densita": 22.0,
+    "cap": "42030",
+    "prefisso_telefonico": "0522",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "villesi o villaminozzesi",
+    "etimologia": "Il nome è un composto di Villa e Minozzo, un paese vicino chiamato in passato Menocij e Minocio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 1 - Montagna tra l'Alto Enza e Alto Dolo",
+      "Parco del Gigante",
+      "Parco Nazionale dell'Appennino Tosco-Emiliano"
+    ],
+    "localita_frazioni": [
+      "Asta",
+      "Carniana",
+      "Carù",
+      "Cerrè Sologno",
+      "Cervarolo",
+      "Civago",
+      "Coriano",
+      "Costabona",
+      "Febbio",
+      "Gazzano",
+      "Gova",
+      "Minozzo",
+      "Morsiano",
+      "Novellano",
+      "Poiano",
+      "Secchio",
+      "Sologno"
+    ],
+    "comuni_confinanti": [
+      "Carpineti",
+      "Castelnovo ne' Monti",
+      "Castiglione di Garfagnana (LU)",
+      "Frassinoro (MO)",
+      "Sillano Giuncugnano (LU)",
+      "Toano",
+      "Ventasso",
+      "Villa Collemandina (LU)"
+    ],
+    "musei": [
+      "Museo del Maggio",
+      "Museo dei Presepi",
+      "Centro Visita \"Il tempo e le stelle\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria Assunta",
+      "Chiesa di Sant'Andrea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Viano",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035044",
+    "codice_catastale": "L831",
+    "popolazione": 3356,
+    "superficie_kmq": 45.2,
+    "densita": 74.2,
+    "cap": "42030",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Salvatore",
+    "festa_patronale": "26 maggio",
+    "demonimo": "vianesi",
+    "etimologia": "Deriva dal nome latino di persona Vilius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Scandiano; a nord: Albinea; a ovest: Casina",
+      "Vezzano sul Crostolo; a sud: Baiso",
+      "Carpineti",
+      "Castellarano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vezzano sul Crostolo",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035043",
+    "codice_catastale": "L820",
+    "popolazione": 4246,
+    "superficie_kmq": 37.64,
+    "densita": 112.8,
+    "cap": "42030",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "vezzanesi",
+    "etimologia": "La prima parte deriva dal nome latino di persona Vettius con l'aggiunta del suffisso -anus che indica possesso. La specifica fa riferimento al torrente Crostolo che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "La Vecchia",
+      "Montalto",
+      "Paderna",
+      "Pecorile",
+      "Sedrio"
+    ],
+    "comuni_confinanti": [
+      "Albinea",
+      "Canossa",
+      "Casina",
+      "Quattro Castella",
+      "San Polo d'Enza",
+      "Viano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Martino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vetto",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035042",
+    "codice_catastale": "L815",
+    "popolazione": 1854,
+    "superficie_kmq": 53.3,
+    "densita": 34.8,
+    "cap": "42020",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "vettesi",
+    "etimologia": "La sua origine è fortemente dubbia, potrebbe derivare forse dal cognome latino Vetto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 2 - Montagna tra Medio Enza e Dolo"
+    ],
+    "localita_frazioni": [
+      "Castellaro",
+      "Cola",
+      "Crovara",
+      "Gottano",
+      "Groppo",
+      "Legoreccio",
+      "Piagnolo",
+      "Pineto",
+      "Rosano",
+      "Santo Stefano",
+      "Sole",
+      "Spigone",
+      "Tizzolo"
+    ],
+    "comuni_confinanti": [
+      "Canossa",
+      "Castelnovo ne' Monti",
+      "Neviano degli Arduini (PR)",
+      "Palanzano (PR)",
+      "Ventasso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Madonna di Montalto (a Gottano), detto anche \"delle Formiche\"",
+      "Oratorio dedicato alla Visitazione della Beata Vergine Maria (nel borgo Sole)",
+      "Chiesa di Santo Stefano",
+      "Chiesa di San Pietro e San Paolo (a Gottano)",
+      "Chiesa di San Lorenzo (a Rosano)",
+      "Chiesa di San Giorgio (a Crovara)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ventasso",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035046",
+    "codice_catastale": "M364",
+    "popolazione": 4247,
+    "superficie_kmq": 257.11,
+    "densita": 16.5,
+    "cap": "42032",
+    "prefisso_telefonico": "0522",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": null,
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Reggiano",
+      "Unione Comuni dell'Alto Appennino Reggiano",
+      "Regione Agraria n. 1 - Montagna tra l'Alto Enza e Alto Dolo",
+      "Parco del Gigante",
+      "Parco Nazionale dell'Appennino Tosco-Emiliano"
+    ],
+    "localita_frazioni": [
+      "frazioni: Busana",
+      "Collagna",
+      "Ligonchio",
+      "Ramiseto",
+      "Acquabona",
+      "Cerreto Alpi",
+      "Cerreto Lago",
+      "Valbona",
+      "Vallisnera",
+      "Cà Ferrari",
+      "Casale",
+      "Cà Manari",
+      "Cervarezza",
+      "Frassinedolo",
+      "Marmoreto",
+      "Nismozza",
+      "Talada;borgate: Boschi",
+      "Cà Caiti",
+      "Ponte Sechia",
+      "Rosto",
+      "Santa Lucia delle Fonti",
+      "Tassaro"
+    ],
+    "comuni_confinanti": [
+      "Castelnovo ne' Monti",
+      "Comano (MS)",
+      "Fivizzano (MS)",
+      "Monchio delle Corti (PR)",
+      "Palanzano (PR)",
+      "Sillano Giuncugnano (LU)",
+      "Vetto",
+      "Villa Minozzo"
+    ],
+    "musei": [
+      "Centro Visita \"L'uomo e la montagna\" (frazione: Ramiseto)",
+      "Centro Visita \"Il museo dell'acqua\" (frazione: Collagna)",
+      "Centro Visita \"Gli animali nel parco\" (frazione: Ligonchio)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Venanzio (frazione: Busana)",
+      "Chiesa di San Michele (frazione: Busana)",
+      "Chiesa di San Giovanni (frazione: Collagna)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Mulino del Chioso (frazione: Busana)",
+      "Mulino del Rosto (frazione: Busana)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Toano",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035041",
+    "codice_catastale": "L184",
+    "popolazione": 4465,
+    "superficie_kmq": 67.44,
+    "densita": 66.2,
+    "cap": "42010",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "toanesi",
+    "etimologia": "Deriva dal nome latino di persona Tullius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 2 - Montagna tra Medio Enza e Dolo"
+    ],
+    "localita_frazioni": [
+      "Cavola",
+      "Cerredolo",
+      "Cerrè Marabino",
+      "Corneto",
+      "Manno",
+      "Massa",
+      "Monzone",
+      "Quara",
+      "Vogno"
+    ],
+    "comuni_confinanti": [
+      "A est: Palagano (MO)",
+      "Prignano sulla Secchia (MO); a nord: Baiso",
+      "Carpineti; a sud: Frassinoro (MO)",
+      "Montefiorino (MO); a sud e ovest: Villa Minozzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "I Misteri (5 agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scandiano",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035040",
+    "codice_catastale": "I496",
+    "popolazione": 25663,
+    "superficie_kmq": 49.81,
+    "densita": 515.2,
+    "cap": "42019",
+    "prefisso_telefonico": "0522",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "25 novembre",
+    "demonimo": "scandianesi",
+    "etimologia": "Deriva dal nome latino di persona Scandilius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Arceto",
+      "Cacciola",
+      "Ca' de Caroli",
+      "Chiozza",
+      "Fellegara",
+      "Jano",
+      "Pratissolo",
+      "Bosco",
+      "Rondinara",
+      "San Ruffino",
+      "Ventoso"
+    ],
+    "comuni_confinanti": [
+      "Albinea",
+      "Casalgrande",
+      "Castellarano",
+      "Reggio Emilia",
+      "Viano"
+    ],
+    "musei": [
+      "Casa di Lazzaro Spallanzani"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Savino (a Fellegara)",
+      "Chiesa San Giacomo Maggiore",
+      "Chiesa di Santa Maria Vergine",
+      "Chiesa di San Ruffino",
+      "Chiesa di San Giuseppe",
+      "Chiesa di San Giovanni Battista (in frazione Rondinara)",
+      "Chiesa di Pratissolo, dedicata ai Santi Gervasio e Protasio",
+      "Chiesa di Iano, dedicata all'Assunzione della Vergine",
+      "Chiesa dei Cappuccini",
+      "Chiesa Archipresbiteriale della Natività della B.V. Maria - Pieve di Santa Maria",
+      "Chiesa di Ventoso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Tubize (Belgio), dal 1975",
+      "Blansko (Repubblica Ceca), dal settembre 1964",
+      "Almansa (Spagna), dal settembre 1989"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Ilario d'Enza",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035039",
+    "codice_catastale": "I342",
+    "popolazione": 11261,
+    "superficie_kmq": 20.19,
+    "densita": 557.8,
+    "cap": "42049",
+    "prefisso_telefonico": "0522",
+    "patrono": "Santa Eulalia",
+    "festa_patronale": "10 dicembre",
+    "demonimo": "santilariesi",
+    "etimologia": "Vi sono dubbi in merito all'identificazione del santo a cui il nome si riferisce. Secondo alcuni potrebbe riferirsi a Sant'Eulalia, secondo altri a Sant'Ilario. La specifica si riferisce al fiume che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia"
+    ],
+    "localita_frazioni": [
+      "Calerno"
+    ],
+    "comuni_confinanti": [
+      "Campegine",
+      "Gattatico",
+      "Montecchio Emilia",
+      "Montechiarugolo (PR)",
+      "Parma (PR)",
+      "Reggio Emilia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Eulalia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Polo d'Enza",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035038",
+    "codice_catastale": "I123",
+    "popolazione": 6106,
+    "superficie_kmq": 32.58,
+    "densita": 187.4,
+    "cap": "42020",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "sampolesi",
+    "etimologia": "Il nome si riferisce a San Paolo, patrono del luogo. La specifica si riferisce al torrente che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "Barcaccia",
+      "Grassano",
+      "Pontenovo"
+    ],
+    "comuni_confinanti": [
+      "Bibbiano",
+      "Canossa",
+      "Montecchio Emilia",
+      "Montechiarugolo (PR)",
+      "Quattro Castella",
+      "Traversetolo (PR)",
+      "Vezzano sul Crostolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve dei Santi Pietro e Paolo",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Martino in Rio",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035037",
+    "codice_catastale": "I011",
+    "popolazione": 8102,
+    "superficie_kmq": 22.65,
+    "densita": 357.7,
+    "cap": "42018",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "sammartinesi",
+    "etimologia": "Il nome attesta la forte venerazione verso il santo patrono del luogo. La specifica in Rio si riferisce probabilmente alla presenza in loco di un fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia",
+      "Associazione dei Comuni Reggio Nord"
+    ],
+    "localita_frazioni": [
+      "Gazzata",
+      "Stiolo",
+      "Trignano"
+    ],
+    "comuni_confinanti": [
+      "Campogalliano (MO)",
+      "Correggio",
+      "Reggio Emilia",
+      "Rubiera"
+    ],
+    "musei": [
+      "Museo dell'Automobile",
+      "Museo dell'Agricoltura e del Mondo Rurale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale e Collegiata di San Martino Vescovo",
+      "Chiesa di San Carlo Borromeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rubiera",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035036",
+    "codice_catastale": "H628",
+    "popolazione": 14882,
+    "superficie_kmq": 25.31,
+    "densita": 588.0,
+    "cap": "42048",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "rubieresi",
+    "etimologia": "Chiamato Herberia, deriva da herba, ossia erba con l'aggiunta del suffisso -erio o -ario.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia"
+    ],
+    "localita_frazioni": [
+      "Fontana",
+      "San Faustino",
+      "Sant'Agata"
+    ],
+    "comuni_confinanti": [
+      "Campogalliano (MO)",
+      "Casalgrande",
+      "Modena (MO)",
+      "Reggio Emilia",
+      "San Martino in Rio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve Romanica di San Faustino e Giovita",
+      "Chiesa di Sant'Agata a Casale",
+      "Chiesa dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Neulingen (Germania), dal luglio 1991",
+      "Györújbarát (Ungheria), dall'aprile 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rolo",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035035",
+    "codice_catastale": "H500",
+    "popolazione": 4112,
+    "superficie_kmq": 14.02,
+    "densita": 293.3,
+    "cap": "42047",
+    "prefisso_telefonico": "0522",
+    "patrono": "Santa Vincenza e San Zenone",
+    "festa_patronale": "terza domenica di giugno",
+    "demonimo": "rolesi",
+    "etimologia": "Deriva probabilmente da areolus dal latino areola, ossia aiuola.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana",
+      "Associazione dei Comuni Reggio Nord"
+    ],
+    "localita_frazioni": [
+      "Tullie"
+    ],
+    "comuni_confinanti": [
+      "Carpi (MO)",
+      "Fabbrico",
+      "Moglia (MN)",
+      "Novi di Modena (MO)",
+      "Reggiolo"
+    ],
+    "musei": [
+      "Museo della Tarsia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio seicentesco di San Francesco Saverio",
+      "Chiesa Parrocchiale di San Zenone"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rio Saliceto",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035034",
+    "codice_catastale": "H298",
+    "popolazione": 6133,
+    "superficie_kmq": 22.55,
+    "densita": 272.0,
+    "cap": "42010",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Giorgio Martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "riesi",
+    "etimologia": "Deriva dal latino rivus, ossia \"ruscello\". La seconda parte si riferisce al nome latino di pianta salix, ossia salice.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana",
+      "Associazione dei Comuni Reggio Nord"
+    ],
+    "localita_frazioni": [
+      "Ca' De' Frati",
+      "Osteriola",
+      "San Lodovico"
+    ],
+    "comuni_confinanti": [
+      "Campagnola Emilia",
+      "Carpi (MO)",
+      "Correggio",
+      "Fabbrico"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Reggiolo",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035032",
+    "codice_catastale": "H225",
+    "popolazione": 9192,
+    "superficie_kmq": 43.01,
+    "densita": 213.7,
+    "cap": "42046",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Venerio",
+    "festa_patronale": "7 luglio",
+    "demonimo": "reggiolesi",
+    "etimologia": "Chiamato in passato Razolo e Regiolum deriva probabilmente dal termine dialettale raza (rovo) con l'aggiunta del suffisso -olo. Potrebbe però riferirsi anche al nome di luogo Reggio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Brugneto",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Campagnola Emilia",
+      "Fabbrico",
+      "Gonzaga (MN)",
+      "Guastalla",
+      "Luzzara",
+      "Moglia (MN)",
+      "Novellara",
+      "Rolo"
+    ],
+    "musei": [
+      "Museo \"Antonio Ruggero Giorgi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Zucca (ultima settimana di settembre)",
+      "manifestazione in costumi rinascimentali",
+      "con rievocazione degli antichi mestieri"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Quattro Castella",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035030",
+    "codice_catastale": "H122",
+    "popolazione": 13185,
+    "superficie_kmq": 46.12,
+    "densita": 285.9,
+    "cap": "42020",
+    "prefisso_telefonico": "0522",
+    "patrono": "Sant'Antonino",
+    "festa_patronale": "2 settembre",
+    "demonimo": "castellesi",
+    "etimologia": "Il nome deriva dall'antica presenza in loco di quattro poderi con quattro castelli.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "Quattro Castella: Bergonzano",
+      "Bianello",
+      "Calinzano",
+      "Ghesiola",
+      "La Fornace",
+      "Madonna della Battaglia",
+      "Mangalano",
+      "Salvarola",
+      "Rio Corte",
+      "Monticelli",
+      "Fossetta",
+      "Fornaci",
+      "Mediana",
+      "Casa Valle",
+      "Ca' Rosso",
+      "Ca' Marzano",
+      "Ca' Noce",
+      "Ca' Ruspecchio",
+      "Ca' del Pomo",
+      "Ca' Zecchini;\nMontecavolo: Cantone",
+      "Orologia",
+      "Scampate",
+      "Fola",
+      "La Buca",
+      "Bambasino",
+      "Costa",
+      "Valestra",
+      "Ca' Nuova",
+      "Ca' Soldette",
+      "Ca' Moreda",
+      "Montelocco",
+      "Pellizzara",
+      "Tempie;\nPuianello: Botteghe",
+      "Braglie",
+      "Ca' Matta",
+      "Cammelline",
+      "Casalè",
+      "Boschi",
+      "San Felice",
+      "Ca' del Rio",
+      "Casone",
+      "Mucciatella",
+      "Corticella",
+      "La Rosta",
+      "Le Forche",
+      "Montegaio",
+      "Fornasotto",
+      "Il Più Bello",
+      "Pamperduto",
+      "La Copela;\nRoncolo: Colombara",
+      "Cerro",
+      "Ghiardello",
+      "Tripoli",
+      "Rubbianino; \nSalvarano: Bedogno",
+      "Cereto",
+      "Molinetto",
+      "Piazza Navona",
+      "Tramicello",
+      "Pinotta",
+      "Ca' Montebello"
+    ],
+    "comuni_confinanti": [
+      "A est: Albinea; a nord: Bibbiano",
+      "Reggio Emilia; a sud: Vezzano sul Crostolo; a sud e ovest: San Polo d'Enza"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Madonna della Battaglia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corteo Storico Matildico (nel mese di maggio)",
+      "con la Quintana dell'Anello e la Tenzone del Ponte (detta anche Gran Passo d'Armi)"
+    ],
+    "gemellaggi": [
+      "Weilburg (Germania), dal 2002",
+      "Buzet (Croazia)",
+      "Brye (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poviglio",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035029",
+    "codice_catastale": "G947",
+    "popolazione": 7330,
+    "superficie_kmq": 43.69,
+    "densita": 167.8,
+    "cap": "42028",
+    "prefisso_telefonico": "0522",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "povigliesi",
+    "etimologia": "Deriva dal latino Popilius, nome del proprietario del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Casalpo'",
+      "Enzola",
+      "Fodico",
+      "Godezza",
+      "San Sisto;località: Sant'Anna",
+      "San Bartolomeo",
+      "Le Grazie"
+    ],
+    "comuni_confinanti": [
+      "Boretto; a est e sud: Castelnovo di Sotto; a nord e ovest: Brescello; a sud e ovest: Gattatico"
+    ],
+    "musei": [
+      "Museo della Terramara"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santo Stefano (XI secolo)",
+      "Chiesa di San Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Plédran (Côtes-d'Armor",
+      "Bretagna",
+      "Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Novellara",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035028",
+    "codice_catastale": "F960",
+    "popolazione": 13670,
+    "superficie_kmq": 58.18,
+    "densita": 235.0,
+    "cap": "42017",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Cassiano",
+    "festa_patronale": "4 maggio",
+    "demonimo": "novellaresi",
+    "etimologia": "Deriva dal termine latino nebula o nubila che significa nuvola in riferimento alla frequente presenza della nebbia. Secondo la tradizione popolare il nome del luogo si riferisce al latino nuvoletum (coltivazione di viti novelle) o da nobil aria, con chiaro significato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana",
+      "Associazione Italiana Paesi Dipinti",
+      "Associazione dei Comuni Virtuosi"
+    ],
+    "localita_frazioni": [
+      "frazioni: San Bernardino",
+      "Santa Maria",
+      "San Giovanni della Fossa\nborgate: Bettolino",
+      "Carobbio",
+      "Bernolda",
+      "Minghella",
+      "Mulino di Sotto"
+    ],
+    "comuni_confinanti": [
+      "A est: Campagnola Emilia; a nord: Reggiolo; a nord-ovest: Guastalla; a ovest: Cadelbosco di Sopra; a sud: Bagnolo in Piano"
+    ],
+    "musei": [
+      "Museo Gonzaga"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Beata Vergine della Fossetta",
+      "Chiesa della Beata Vergine del Popolo",
+      "Chiesa dei Servi",
+      "Chiesa Collegiata di Santo Stefano"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca dei Gonzaga"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Sancti Spiritus (Cuba), dal gennaio 1998",
+      "Novy Jicin (Repubblica Ceca), dal settembre 1964",
+      "Nevè Shalom (Israele), dal novembre 1994",
+      "Santa Gertrudes (Sao Paulo, Brasile), dall'ottobre 1999"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montecchio Emilia",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035027",
+    "codice_catastale": "F463",
+    "popolazione": 10622,
+    "superficie_kmq": 24.65,
+    "densita": 430.9,
+    "cap": "42027",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Donnino",
+    "festa_patronale": "9 ottobre",
+    "demonimo": "montecchiesi",
+    "etimologia": "Deriva dal latino monticulus, ossia \"ponticello, piccolo monte\". La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa"
+    ],
+    "localita_frazioni": [
+      "Aiola"
+    ],
+    "comuni_confinanti": [
+      "Bibbiano",
+      "Montechiarugolo (PR)",
+      "Reggio Emilia",
+      "San Polo d'Enza",
+      "Sant'Ilario d'Enza"
+    ],
+    "musei": [
+      "Museo del Parmigiano Reggiano della Val d'Enza"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Maggio Aiolese (primo maggio)",
+      "rassegna di usi della civiltà contadina e dimostrazione di antichi mestieri artigianali"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Luzzara",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035026",
+    "codice_catastale": "E772",
+    "popolazione": 9132,
+    "superficie_kmq": 39.18,
+    "densita": 233.1,
+    "cap": "42045",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "luzzaresi",
+    "etimologia": "Il nome deriva dal latino luteus che significa \"fangoso\", in riferimento alla natura del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Casoni",
+      "Codisotto",
+      "Villarotta"
+    ],
+    "comuni_confinanti": [
+      "Dosolo (MN)",
+      "Gonzaga (MN)",
+      "Guastalla",
+      "Reggiolo",
+      "Suzzara (MN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Guastalla",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035024",
+    "codice_catastale": "E253",
+    "popolazione": 15100,
+    "superficie_kmq": 52.56,
+    "densita": 287.3,
+    "cap": "42016",
+    "prefisso_telefonico": "0522",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "25 novembre",
+    "demonimo": "guastallesi",
+    "etimologia": "Deriva dal termine longobardo wardistall, ossia \"posto di guardia\" in riferimento alla funzione che assolveva in passato il luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana",
+      "Associazione Itinerari Gonzagheschi"
+    ],
+    "localita_frazioni": [
+      "San Giacomo",
+      "San Girolamo",
+      "San Martino",
+      "San Rocco",
+      "Tagliata"
+    ],
+    "comuni_confinanti": [
+      "Cadelbosco di Sopra",
+      "Dosolo (MN)",
+      "Gualtieri",
+      "Luzzara",
+      "Novellara",
+      "Reggiolo"
+    ],
+    "musei": [
+      "Museo della Città"
+    ],
+    "ville_palazzi": [
+      "Palazzo Ducale"
+    ],
+    "chiese": [
+      "Santuario Beata Vergine della Porta :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Gnoccata (un fine settimana di metà maggio",
+      "a cadenza triennale)",
+      "con corteo di carri e personaggi in costume che rievocano mestieri ed aspetti della vita ottocentesca"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gualtieri",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035023",
+    "codice_catastale": "E232",
+    "popolazione": 6465,
+    "superficie_kmq": 36.1,
+    "densita": 179.1,
+    "cap": "42044",
+    "prefisso_telefonico": "0522",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "gualtieresi",
+    "etimologia": "Deriva dal nome longobardo Waltari o Walthari che in latino diventa Waltherius o Gualterius ed in italiano Gualtieri, nome del padrone del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Santa Vittoria",
+      "Pieve Saliceto"
+    ],
+    "comuni_confinanti": [
+      "Boretto",
+      "Cadelbosco di Sopra",
+      "Castelnovo di Sotto",
+      "Dosolo (MN)",
+      "Guastalla",
+      "Pomponesco (MN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria della Neve",
+      "Chiesa di Sant'Andrea",
+      "Chiesa di Santa Vittoria Vergine",
+      "Chiesa della Santissima Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gattatico",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035022",
+    "codice_catastale": "D934",
+    "popolazione": 5801,
+    "superficie_kmq": 42.37,
+    "densita": 136.9,
+    "cap": "42043",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Matteo",
+    "festa_patronale": "11 settembre",
+    "demonimo": "gattaticesi",
+    "etimologia": "Deriva dal nome di persona Cato con l'aggiunta del suffisso -aticus. Secondo alcuni il nome si riferisce al termine gatto, anche se si crede che non sia un'ipotesi corretta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Olmo",
+      "Nocetolo",
+      "Ponte Enza",
+      "Praticello (sede del Municipio)",
+      "Taneto Fiesso"
+    ],
+    "comuni_confinanti": [
+      "Brescello",
+      "Campegine",
+      "Castelnovo di Sotto",
+      "Parma (PR)",
+      "Poviglio",
+      "Sant'Ilario d'Enza",
+      "Sorbolo (PR)"
+    ],
+    "musei": [
+      "Museo \"Cervi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Tommaso da Canterbury"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fabbrico",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035021",
+    "codice_catastale": "D450",
+    "popolazione": 6650,
+    "superficie_kmq": 23.04,
+    "densita": 288.6,
+    "cap": "42042",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Genesio",
+    "festa_patronale": "25 agosto",
+    "demonimo": "fabbricesi",
+    "etimologia": "Potrebbe derivare da fabricus, ossia fabbro, in riferimento al mestiere che svolgeva il proprietario del feudo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana",
+      "Associazione dei Comuni Reggio Nord"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Campagnola Emilia",
+      "Carpi (MO)",
+      "Reggiolo",
+      "Rio Saliceto",
+      "Rolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Correggio",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035020",
+    "codice_catastale": "D037",
+    "popolazione": 25694,
+    "superficie_kmq": 77.79,
+    "densita": 330.3,
+    "cap": "42015",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Quirino",
+    "festa_patronale": "4 giugno",
+    "demonimo": "correggesi",
+    "etimologia": "Deriva dal latino corrigia o corrigium, che significa \"striscia di cuoio\" con estensione del significato a \"striscia di terra tra paludi\" o \"striscia di terra tra le acque\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia",
+      "Associazione dei Comuni Reggio Nord"
+    ],
+    "localita_frazioni": [
+      "Mandrio",
+      "Martino",
+      "San Biagio",
+      "Fazzano",
+      "Lemizzone",
+      "Prato",
+      "Mandriolo",
+      "Canolo",
+      "Fosdondo",
+      "San Prospero",
+      "Budrio"
+    ],
+    "comuni_confinanti": [
+      "A est: Campogalliano (MO); a nord: Bagnolo in Piano",
+      "Campagnola Emilia",
+      "Novellara",
+      "Rio Saliceto; a nord e est: Carpi (MO); a sud e est: San Martino in Rio; a sud e ovest: Reggio Emilia"
+    ],
+    "musei": [
+      "Museo delle Arti e Tradizioni Popolari",
+      "Museo Civico \"Il Correggio\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Misericordia",
+      "Chiesa di Santa Chiara",
+      "Chiesa di San Sebastiano",
+      "Chiesa di San Giuseppe",
+      "Chiesa di San Francesco",
+      "Chiesa della Madonna della Rosa",
+      "Basilica dei Santi Quirino e Michele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Asioli"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cavriago",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035017",
+    "codice_catastale": "C405",
+    "popolazione": 9892,
+    "superficie_kmq": 17.0,
+    "densita": 581.9,
+    "cap": "42025",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cavriaghesi",
+    "etimologia": "Deriva dal nome latino di persona Corvilius o Curvelius con l'aggiunta del suffisso -acu.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord",
+      "est e sud: Reggio Emilia; a sud-ovest: Bibbiano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Terenziano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnovo ne' Monti",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035016",
+    "codice_catastale": "C219",
+    "popolazione": 10451,
+    "superficie_kmq": 96.5,
+    "densita": 108.3,
+    "cap": "42035",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "12 maggio",
+    "demonimo": "castelnovesi",
+    "etimologia": "La prima parte del nome si riferisce ad un Castrum novum, ossia un Castello nuovo. La specifica ne' Monti è una tradizione dotta con evidente significato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 2 - Montagna tra Medio Enza e Dolo",
+      "Parco Nazionale dell'Appennino Tosco-Emiliano",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Canossa",
+      "Carpineti",
+      "Casina",
+      "Ventasso",
+      "Vetto",
+      "Villa Minozzo"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna della Pietra di Bismantova"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Bismantova"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnovo di Sotto",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035015",
+    "codice_catastale": "C218",
+    "popolazione": 8493,
+    "superficie_kmq": 34.59,
+    "densita": 245.5,
+    "cap": "42024",
+    "prefisso_telefonico": "0522",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "castelnovesi",
+    "etimologia": "La prima parte del nome si riferisce al Castello risalente al XII secolo che fu restaurato nel XVIII, la specifica si riferisce all'ubicazione del comune \"sotto\" rispetto ad un fiume o ad una strada difficilmente identificabile oggi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Cogruzzo",
+      "Meletole",
+      "San Savino"
+    ],
+    "comuni_confinanti": [
+      "A est: Cadelbosco di Sopra; a nord: Boretto",
+      "Gualtieri; a nord e ovest: Poviglio; a ovest: Gattatico; a sud: Campegine"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Andrea Apostolo",
+      "Chiesa della Beata Vergine della Misericordia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio Astronomico Pubblico \"Padre Angelo Secchi\""
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Carnevale di Castelnovo di Sotto (domeniche di carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castellarano",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035014",
+    "codice_catastale": "C141",
+    "popolazione": 15271,
+    "superficie_kmq": 57.49,
+    "densita": 265.6,
+    "cap": "42014",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Pancrazio",
+    "festa_patronale": "12 maggio",
+    "demonimo": "castellaranesi",
+    "etimologia": "E' un composto di Castrum (castello) e Arianum derivato dal nome di persona Arrius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "Roteglia",
+      "Tressano",
+      "Cadiroggio",
+      "Montebabbio",
+      "San Valentino"
+    ],
+    "comuni_confinanti": [
+      "Baiso",
+      "Casalgrande",
+      "Prignano sulla Secchia (MO)",
+      "Sassuolo (MO)",
+      "Scandiano",
+      "Viano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Campiano",
+      "Pieve di San Valentino",
+      "Chiesa parrocchiale Santa Maria Assunta",
+      "Chiesa di Santa Croce"
+    ],
+    "castelli_fortificazioni": [
+      "La Rocca",
+      "Rocchetta"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dell’Orologio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dell'Uva (terza domenica di Settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casina",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035013",
+    "codice_catastale": "B967",
+    "popolazione": 4522,
+    "superficie_kmq": 63.78,
+    "densita": 70.9,
+    "cap": "42034",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "casinesi",
+    "etimologia": "Il nome del luogo è il diminutivo del termine casa, con evidente significato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "Casina (capoluogo)",
+      "Cortogno",
+      "Giandeto",
+      "Leguigno",
+      "Migliara",
+      "Paullo",
+      "Pianzo",
+      "Sarzano",
+      "Bergogno",
+      "Sordiglio",
+      "Brugna",
+      "Faieto",
+      "Vercallo",
+      "Barazzone",
+      "Montale",
+      "Busanella",
+      "Beleo",
+      "Il Bocco",
+      "La Stella",
+      "Banzola",
+      "Costaferrata",
+      "Monchio dei Ferri"
+    ],
+    "comuni_confinanti": [
+      "Canossa",
+      "Carpineti",
+      "Castelnovo ne' Monti",
+      "Vezzano sul Crostolo",
+      "Viano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Bartolomeo (a Paullo)",
+      "Oratorio di Beleo",
+      "Chiesa di Pianzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalgrande",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035012",
+    "codice_catastale": "B893",
+    "popolazione": 19215,
+    "superficie_kmq": 37.73,
+    "densita": 509.3,
+    "cap": "42013",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "casalgrandesi",
+    "etimologia": "La derivazione del nome ed il significato sono abbastanza intuitivi. Il nome deriva dall'unione di casale e grande.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "Casalgrande Alto",
+      "Dinazzano",
+      "Sant'Antonino",
+      "Salvaterra",
+      "Veggia",
+      "Villalunga",
+      "San Donnino di Liguria"
+    ],
+    "comuni_confinanti": [
+      "Castellarano",
+      "Formigine (MO)",
+      "Modena (MO)",
+      "Reggio Emilia",
+      "Rubiera",
+      "Sassuolo (MO)",
+      "Scandiano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Spalletti"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello di Casalgrande Alto",
+      "Castello di Dinazzano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carpineti",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035011",
+    "codice_catastale": "B825",
+    "popolazione": 4011,
+    "superficie_kmq": 89.52,
+    "densita": 44.8,
+    "cap": "42033",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Prospero",
+    "festa_patronale": "24 novembre",
+    "demonimo": "carpinetani",
+    "etimologia": "Deriva da carpinus, ossia carpine con l'aggiunta del suffisso collettivo -etum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 2 - Montagna tra Medio Enza e Dolo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baiso",
+      "Casina",
+      "Castelnovo ne' Monti",
+      "Toano",
+      "Viano",
+      "Villa Minozzo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Canossa",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035018",
+    "codice_catastale": "C669",
+    "popolazione": 3778,
+    "superficie_kmq": 53.36,
+    "densita": 70.8,
+    "cap": "42026",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "canossiani",
+    "etimologia": "Chiamato Ciano d'Enza fino al 1991, il nome attuale si riferisce probabilmente a canus (bianco) riferendosi al fatto che fu realizzato un castello in loco su di una roccia biancastra. Secondo altri potrebbe derivare da canna per la presenza in loco di questa pianta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Casina",
+      "Vezzano sul Crostolo; a nord: San Polo d'Enza; a ovest: Neviano degli Arduini (PR)",
+      "Traversetolo (PR); a sud: Castelnovo ne' Monti",
+      "Vetto"
+    ],
+    "musei": [
+      "Museo Nazionale di Canossa \"N. Campanini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello di Canossa"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica Canossana (prima domenica di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campegine",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035010",
+    "codice_catastale": "B502",
+    "popolazione": 5045,
+    "superficie_kmq": 22.24,
+    "densita": 226.8,
+    "cap": "42040",
+    "prefisso_telefonico": "0522",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "campeginesi",
+    "etimologia": "Deriva dal latino campus (campo, pianura) con l'aggiunta del suffisso -ico o -ino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Caprara",
+      "Case Cocconi",
+      "Lora"
+    ],
+    "comuni_confinanti": [
+      "Cadelbosco di Sopra",
+      "Castelnovo di Sotto",
+      "Gattatico",
+      "Reggio Emilia",
+      "Sant'Ilario d'Enza"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di SS. Pietro e Paolo",
+      "Chiesa di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campagnola Emilia",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035009",
+    "codice_catastale": "B499",
+    "popolazione": 5639,
+    "superficie_kmq": 24.73,
+    "densita": 228.0,
+    "cap": "42012",
+    "prefisso_telefonico": "0522",
+    "patrono": "SS. Gervasio e Protasio",
+    "festa_patronale": "19 giugno",
+    "demonimo": "campagnolesi",
+    "etimologia": "Si riferisce al termine dialettale campagnoeula che significa \"villetta, podere\". La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana",
+      "Associazione dei Comuni Reggio Nord"
+    ],
+    "localita_frazioni": [
+      "Cognento",
+      "Ponte Vettigano"
+    ],
+    "comuni_confinanti": [
+      "Correggio",
+      "Fabbrico",
+      "Novellara",
+      "Reggiolo",
+      "Rio Saliceto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Gervasio e Protasio",
+      "Abbazia della SS. Trinità",
+      "Chiesa di Sant'Andrea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cadelbosco di Sopra",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035008",
+    "codice_catastale": "B328",
+    "popolazione": 10637,
+    "superficie_kmq": 44.22,
+    "densita": 240.5,
+    "cap": "42023",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Celestino",
+    "festa_patronale": "6 aprile",
+    "demonimo": "cadelboschesi",
+    "etimologia": "La prima parte del nome è un composto di casa e bosco, nel senso di casa nel (o del) bosco. La seconda parte del nome lo distingue dalla frazione Cadelbosco di Sotto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Cadelbosco di Sopra",
+      "Cadelbosco di Sotto",
+      "Villa Argine",
+      "Villa Seta"
+    ],
+    "comuni_confinanti": [
+      "Bagnolo in Piano",
+      "Campegine",
+      "Castelnovo di Sotto",
+      "Gualtieri",
+      "Guastalla",
+      "Novellara",
+      "Reggio Emilia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Giustina e San Cipriano (a Villa Argine)",
+      "Chiesa di San Celestino e Annunziata",
+      "Chiesa di San Bernardino (a Villa Seta)",
+      "Chiesa della Santissima Annunziata (a Cadelbosco di Sotto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Brescello",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035006",
+    "codice_catastale": "B156",
+    "popolazione": 5621,
+    "superficie_kmq": 24.53,
+    "densita": 229.1,
+    "cap": "42041",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Genesio",
+    "festa_patronale": "25 agosto",
+    "demonimo": "brescellesi",
+    "etimologia": "Il nome si collega al termine brica o briga, ossia \"altura, colle\" riferendosi dunque ad un particolare geografico.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "Lentigione",
+      "Coenzo a Mane",
+      "Sorbolo a Mane"
+    ],
+    "comuni_confinanti": [
+      "Boretto",
+      "Gattatico",
+      "Mezzani (PR)",
+      "Poviglio",
+      "Sorbolo (PR)",
+      "Viadana (MN)"
+    ],
+    "musei": [
+      "Museo di \"Peppone e Don Camillo\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Boretto",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035005",
+    "codice_catastale": "A988",
+    "popolazione": 5293,
+    "superficie_kmq": 19.16,
+    "densita": 276.3,
+    "cap": "42022",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Marco",
+    "festa_patronale": "25 aprile",
+    "demonimo": "borettesi",
+    "etimologia": "Chiamato nei documenti Bisrupto deriva dal latino bis ruptus, ossia \"rotto due volte\". Si riferisce allo straripamento del Po e quindi alla \"rottura degli argini\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa reggiana"
+    ],
+    "localita_frazioni": [
+      "San Rocco",
+      "Santa Croce"
+    ],
+    "comuni_confinanti": [
+      "Brescello",
+      "Castelnovo di Sotto",
+      "Gualtieri",
+      "Pomponesco (MN)",
+      "Poviglio",
+      "Viadana (MN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Croce",
+      "Chiesa di San Rocco (in località San Rocco)",
+      "Basilica Minore di San Marco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bibbiano",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035004",
+    "codice_catastale": "A850",
+    "popolazione": 10276,
+    "superficie_kmq": 28.02,
+    "densita": 366.7,
+    "cap": "42021",
+    "prefisso_telefonico": "0522",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "bibbianesi",
+    "etimologia": "Deriva dal nome latino di persona Baebius o Vibius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia"
+    ],
+    "localita_frazioni": [
+      "Piazzola",
+      "Corniano",
+      "Ghiardo",
+      "Fossa",
+      "Barco"
+    ],
+    "comuni_confinanti": [
+      "Cavriago",
+      "Montecchio Emilia",
+      "Quattro Castella",
+      "Reggio Emilia",
+      "San Polo d'Enza"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro (in località Barco)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Baiso",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035003",
+    "codice_catastale": "A586",
+    "popolazione": 3285,
+    "superficie_kmq": 75.31,
+    "densita": 43.6,
+    "cap": "42031",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "baisani",
+    "etimologia": "Potrebbe derivare dal nome latino di persona Badisius o Badusius da Baius con l'aggiunta del suffisso -isi o -isio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Reggiano",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "San Romano",
+      "Visignolo",
+      "San Cassiano",
+      "Levizzano"
+    ],
+    "comuni_confinanti": [
+      "A est: Castellarano",
+      "Prignano sulla Secchia (MO); a nord: Viano; a ovest: Carpineti; a sud: Toano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di SS. Cassiano ed Ippolito (frazione San Cassiano)",
+      "San Giorgio (frazione Levizzano)",
+      "Chiesa di Santa Maria Assunta (frazione Visignolo)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Baiso"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Antica Chiesa plebana di San Lorenzo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bagnolo in Piano",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035002",
+    "codice_catastale": "A573",
+    "popolazione": 9788,
+    "superficie_kmq": 26.74,
+    "densita": 366.0,
+    "cap": "42011",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Francesco di Paola",
+    "festa_patronale": "2 aprile",
+    "demonimo": "bagnolesi",
+    "etimologia": "Il termine Bagnolo indica la presenza di acque in superficie in zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia"
+    ],
+    "localita_frazioni": [
+      "Pieve Rossa",
+      "San Michele",
+      "San Tommaso della Fossa"
+    ],
+    "comuni_confinanti": [
+      "Cadelbosco di Sopra",
+      "Correggio",
+      "Novellara",
+      "Reggio Emilia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve Rossa",
+      "Parrocchiale di San Francesco da Paola",
+      "Chiesa Parrocchiale di San Michele della Fossa",
+      "Chiesa di San Tommaso della Fossa"
+    ],
+    "castelli_fortificazioni": [
+      "Torrazzo (cella campanaria di stile barocco su una struttura massiccia in mattoni grezzi",
+      "testimonianza dell'antica rocca di Bagnolo)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Gonzaga \"Ilva Ligabue\""
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albinea",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035001",
+    "codice_catastale": "A162",
+    "popolazione": 8821,
+    "superficie_kmq": 44.02,
+    "densita": 200.4,
+    "cap": "42020",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Prospero",
+    "festa_patronale": "24 novembre",
+    "demonimo": "albinetani",
+    "etimologia": "Deriva da albina, dal latino albarus (albaro) con l'aggiunta del suffisso collettivo -etum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 3 - Colline tra Enza e Secchia"
+    ],
+    "localita_frazioni": [
+      "capoluogo: Albinea (nome tradizionale Fola);\nfrazioni: Borzano",
+      "Montericco;\nlocalità: Bellarosa (nome tradizionale Roncosano)",
+      "Broletto",
+      "Botteghe",
+      "Caselline",
+      "Noce"
+    ],
+    "comuni_confinanti": [
+      "Quattro Castella",
+      "Reggio Emilia",
+      "Scandiano",
+      "Vezzano sul Crostolo",
+      "Viano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Arnò",
+      "Villa Crocioni",
+      "Villa Tacoli (Villa Giorgia)",
+      "Villa Tarabini, nota anche come Villa Viganò"
+    ],
+    "chiese": [
+      "Chiesa Santa Maria dell'Uliveto"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Albinea",
+      "Castello di Borzano",
+      "Castello di Montericco"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Reggio Emilia",
+    "provincia": "Reggio Emilia",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "035033",
+    "codice_catastale": "H223",
+    "popolazione": 171491,
+    "superficie_kmq": 231.56,
+    "densita": 740.6,
+    "cap": "42100",
+    "prefisso_telefonico": "0522",
+    "patrono": "San Prospero di Reggio nell'Emilia",
+    "festa_patronale": "24 novembre",
+    "demonimo": "reggiani",
+    "etimologia": "La prima parte del nome deriva dall'antica denominazione del paese: Regium Lepidi, riferendosi a M. Emilio Lepido. Secondo altre ipotesi il nome si riferisce al greco Rhegion o al latino regnum. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Reggio Emilia",
+      "Associazione Italiana Città Ciclabili",
+      "Circuito Città d'Arte della Pianura Padana"
+    ],
+    "localita_frazioni": [
+      "Ville di Gaida",
+      "Cadè",
+      "Cella",
+      "Roncocesi",
+      "Cavazzoli",
+      "Pieve Modolena",
+      "Sesso",
+      "San Prospero",
+      "Mancasale",
+      "Pratofontana",
+      "Massenzatico",
+      "Gavassa",
+      "San Maurizio",
+      "Masone",
+      "Castellazzo",
+      "Bagno",
+      "Marmirolo",
+      "Sabbione",
+      "Roncadella",
+      "Gavasseto",
+      "Fogliano",
+      "San Pellegrino",
+      "Ospizio",
+      "Canali",
+      "Rivalta",
+      "Coviolo",
+      "San Bartolomeo",
+      "Codemondo"
+    ],
+    "comuni_confinanti": [
+      "Albinea",
+      "Bagnolo in Piano",
+      "Bibbiano",
+      "Cadelbosco di Sopra",
+      "Campegine",
+      "Casalgrande",
+      "Cavriago",
+      "Correggio",
+      "Montecchio Emilia",
+      "Quattro Castella",
+      "Rubiera",
+      "San Martino in Rio",
+      "Sant'Ilario d'Enza",
+      "Scandiano"
+    ],
+    "musei": [
+      "Museo Tesoro del Tempio della Beata Vergine della Ghiara",
+      "Il Mauriziano",
+      "Collezioni dei Cappuccini Emiliani",
+      "Civici Musei e Gallerie",
+      "Civica Galleria \"Anna e Luigi Parmeggiani\"",
+      "Centro di Documentazione di Storia della Psichiatria"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Beata Vergine della Ghiara :: Servi di Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Ariosto",
+      "Teatro Cavallerizza",
+      "Teatro Comunale Romolo Valli",
+      "Teatro Piccolo Orologio"
+    ],
+    "stadi": [
+      "Stadio Giglio",
+      "Stadio Mirabello"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

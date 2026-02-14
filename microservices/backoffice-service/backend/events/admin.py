@@ -24,8 +24,8 @@ from rest_framework_tracking.models import APIRequestLog
 from .models import ProductionEvent, StagingEvent
 from .admin_mixins import EventDisplayMixin
 from .admin_utils import format_datetime_italian, render_chip
-from comuni_italiani.models import ComuneItaliano
-from comuni_italiani.admin import ProvinciaFilter, RegioneFilter
+from comuni_istat.models import ComuneItaliano
+from comuni_istat.admin import ProvinciaFilter, RegioneFilter
 from scraping.admin import CategoryFilter
 
 logger = logging.getLogger(__name__)

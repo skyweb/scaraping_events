@@ -1,0 +1,1191 @@
+[
+  {
+    "nome": "Villagrande Strisaili",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105023",
+    "codice_catastale": "L953",
+    "popolazione": 3243,
+    "superficie_kmq": 210.8,
+    "densita": 15.4,
+    "cap": "08049",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Gabriele",
+    "festa_patronale": "primo agosto",
+    "demonimo": "villagrandesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  3 - Gennargentu Orientale",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzana",
+      "Desulo (NU)",
+      "Fonni (NU)",
+      "Girasole",
+      "Lotzorai",
+      "Orgosolo (NU)",
+      "Talana",
+      "Tortolì"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tempio Nuragico S'Arcu e Is Forros",
+      "Tempietto di Sa Carcaredda (di tipo a megaron) e Tomba dei Giganti (in tecnica dolmenica)",
+      "Tomba dei giganti di Pradu su Chiai"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ussassai",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105022",
+    "codice_catastale": "L514",
+    "popolazione": 567,
+    "superficie_kmq": 47.3,
+    "densita": 12.0,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Giovanni Decollato",
+    "festa_patronale": "29 agosto",
+    "demonimo": "ussassesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  4 - Montagna della Barbagia di Seulo",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Gairo",
+      "Osini",
+      "Seui",
+      "Ulassai"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Salvatore (XII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Urzulei",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105021",
+    "codice_catastale": "L506",
+    "popolazione": 1231,
+    "superficie_kmq": 129.92,
+    "densita": 9.5,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "urzuleini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  3 - Gennargentu Orientale",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baunei",
+      "Dorgali (NU)",
+      "Orgosolo (NU)",
+      "Talana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa patronale di San Giorgio",
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Chiesa campestre di San Basilio in Mannorri",
+      "Chiesetta di Sant'Antonio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tombe dei Giganti S'Arena",
+      "Nuraghe Perdeballa (di tipo complesso)",
+      "Gola di Gorroppu"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ulassai",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105020",
+    "codice_catastale": "L489",
+    "popolazione": 1457,
+    "superficie_kmq": 122.11,
+    "densita": 11.9,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "Sant'Antioco",
+    "festa_patronale": "quindici giorni dopo Pasqua",
+    "demonimo": "ulassesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  9 - Colline del Flumendosa e Flumineddu",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Esterzili (CA)",
+      "Gairo",
+      "Jerzu",
+      "Osini",
+      "Perdasdefogu",
+      "Seui",
+      "Tertenia",
+      "Ussassai",
+      "Villaputzu (CA)"
+    ],
+    "musei": [
+      "Museo La Stazione dell'Arte"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa romanica di Santa Barbara"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Triei",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105019",
+    "codice_catastale": "L423",
+    "popolazione": 1118,
+    "superficie_kmq": 28.54,
+    "densita": 39.2,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "Santi Cosma e Damiano",
+    "festa_patronale": "26 settembre",
+    "demonimo": "triesini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 13 - Colline litoranee di Dorgali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baunei",
+      "Lotzorai",
+      "Talana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tomba dei giganti di Osono",
+      "Nuraghe Bau Nuraxi (di tipo complesso pentalobato)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tertenia",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105017",
+    "codice_catastale": "L140",
+    "popolazione": 3941,
+    "superficie_kmq": 117.77,
+    "densita": 33.5,
+    "cap": "08047",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "tertenesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cardedu",
+      "Gairo",
+      "Jerzu",
+      "Lanusei",
+      "Loceri",
+      "Osini",
+      "Ulassai"
+    ],
+    "musei": [
+      "Museo d'Arte Moderna"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghi Aleri e Nastasi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Talana",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105016",
+    "codice_catastale": "L036",
+    "popolazione": 1030,
+    "superficie_kmq": 117.92,
+    "densita": 8.7,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "Santa Marta",
+    "festa_patronale": "29 luglio",
+    "demonimo": "talanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  3 - Gennargentu Orientale",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baunei",
+      "Lotzorai",
+      "Orgosolo (NU)",
+      "Triei",
+      "Urzulei",
+      "Villagrande Strisaili"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Seui",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105015",
+    "codice_catastale": "I706",
+    "popolazione": 1292,
+    "superficie_kmq": 148.2,
+    "densita": 8.7,
+    "cap": "08037",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "seuesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  4 - Montagna della Barbagia di Seulo",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Rio Flumendosa",
+      "Monte Margiani Pubusa"
+    ],
+    "comuni_confinanti": [
+      "Arzana",
+      "Escalaplano (CA)",
+      "Esterzili (CA)",
+      "Gairo",
+      "Perdasdefogu",
+      "Sadali (CA)",
+      "Seulo (CA)",
+      "Ulassai",
+      "Ussassai"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina, Pastorale, Artigianale e della Miniera",
+      "Museo dell'arte e della civiltà contadina"
+    ],
+    "ville_palazzi": [
+      "Casa Farci"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Maddalena",
+      "Chiesa di Santa Lucia",
+      "Chiesa di San Sebastiano",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Cristoforo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Antico carcere spagnolo",
+      "Complesso nuragico Ardasai o Montarbu",
+      "Foresta di Montarbu"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Perdasdefogu",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105014",
+    "codice_catastale": "G445",
+    "popolazione": 1933,
+    "superficie_kmq": 77.73,
+    "densita": 24.9,
+    "cap": "08046",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "foghesini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  9 - Colline del Flumendosa e Flumineddu"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ballao (CA); a nord: Seui; a nord e est: Ulassai; a ovest: Escalaplano (CA); a sud: Villaputzu (CA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Osini",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105013",
+    "codice_catastale": "G158",
+    "popolazione": 790,
+    "superficie_kmq": 39.68,
+    "densita": 19.9,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "Santa Susanna",
+    "festa_patronale": "11 agosto",
+    "demonimo": "osinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cardedu",
+      "Gairo",
+      "Jerzu",
+      "Lanusei",
+      "Loceri",
+      "Tertenia",
+      "Ulassai",
+      "Ussassai"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Complesso Nuragico e Grotta di Serbissi",
+      "Nuraghe Urceni (di tipo monotorre semplice)",
+      "Nuraghi Sanu e Oruttu"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lotzorai",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105012",
+    "codice_catastale": "E700",
+    "popolazione": 2185,
+    "superficie_kmq": 16.84,
+    "densita": 129.8,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "Sant'Elena",
+    "festa_patronale": "18 agosto",
+    "demonimo": "lotzoraesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 13 - Colline litoranee di Dorgali",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baunei",
+      "Girasole",
+      "Talana",
+      "Tortolì",
+      "Triei",
+      "Villagrande Strisaili"
+    ],
+    "musei": [
+      "Museo 'Sa Domu De Donna Nassia"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello della Medusa (in rovina)",
+      "costruito nel XIII secolo dai Giudici del Giudicato di Cagliari"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Domus De Janas",
+      "zona archeologica"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Loceri",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105011",
+    "codice_catastale": "E644",
+    "popolazione": 1294,
+    "superficie_kmq": 19.31,
+    "densita": 67.0,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "loceresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bari Sardo",
+      "Ilbono",
+      "Lanusei",
+      "Osini",
+      "Tertenia"
+    ],
+    "musei": [
+      "Museo Sa Domu de S'Olia"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Jerzu",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105009",
+    "codice_catastale": "E387",
+    "popolazione": 3166,
+    "superficie_kmq": 102.61,
+    "densita": 30.9,
+    "cap": "08044",
+    "prefisso_telefonico": "0782",
+    "patrono": "Sant'Erasmo",
+    "festa_patronale": "2 giugno",
+    "demonimo": "jerzesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzana",
+      "Cardedu",
+      "Gairo",
+      "Lanusei",
+      "Osini",
+      "Tertenia",
+      "Ulassai",
+      "Villaputzu (CA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Erasmo",
+      "Chiesa di Sant'Antonio da Padova"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ilbono",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105008",
+    "codice_catastale": "E283",
+    "popolazione": 2251,
+    "superficie_kmq": 30.91,
+    "densita": 72.8,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "ilbonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzana",
+      "Bari Sardo",
+      "Elini",
+      "Lanusei",
+      "Loceri",
+      "Tortolì"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Cristofaro",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Complesso Nuragico e Domus De Janas di Scerì"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Girasole",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105007",
+    "codice_catastale": "E049",
+    "popolazione": 1294,
+    "superficie_kmq": 12.98,
+    "densita": 99.7,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "Madonna di Monserrato",
+    "festa_patronale": "8 settembre",
+    "demonimo": "girasolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 13 - Colline litoranee di Dorgali",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Lotzorai",
+      "Tortolì",
+      "Villagrande Strisaili"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Nostra Signora di Monserrato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gairo",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105006",
+    "codice_catastale": "D859",
+    "popolazione": 1445,
+    "superficie_kmq": 78.46,
+    "densita": 18.4,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "Sant'Elena",
+    "festa_patronale": "18 agosto",
+    "demonimo": "gairesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzana",
+      "Cardedu",
+      "Jerzu",
+      "Lanusei",
+      "Osini",
+      "Seui",
+      "Tertenia",
+      "Ulassai",
+      "Ussassai"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Elena"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta di Taquisara",
+      "detta anche grotta del Marmo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Elini",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105005",
+    "codice_catastale": "D395",
+    "popolazione": 557,
+    "superficie_kmq": 10.9,
+    "densita": 51.1,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Gavino",
+    "festa_patronale": "18 maggio",
+    "demonimo": "elinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzana",
+      "Ilbono",
+      "Lanusei"
+    ],
+    "musei": [
+      "Casa Museo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madonna del Carmine",
+      "Chiesa di San Gavino Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Funtana Manna"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Parco Carmine"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cardedu",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105004",
+    "codice_catastale": "M285",
+    "popolazione": 1914,
+    "superficie_kmq": 32.33,
+    "densita": 59.2,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "cardedesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bari Sardo",
+      "Gairo",
+      "Jerzu",
+      "Lanusei",
+      "Osini",
+      "Tertenia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Baunei",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105003",
+    "codice_catastale": "A722",
+    "popolazione": 3623,
+    "superficie_kmq": 216.45,
+    "densita": 16.7,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "baunesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Baunei e Santa Maria Navarrese)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 13 - Colline litoranee di Dorgali",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Santa Maria Navarrese"
+    ],
+    "comuni_confinanti": [
+      "Dorgali (NU)",
+      "Lotzorai",
+      "Talana",
+      "Triei",
+      "Urzulei"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Nicola di Bari",
+      "Chiesa di San Pietro (inizio XVIII secolo)"
+    ],
+    "castelli_fortificazioni": [
+      "Torre dei Saraceni",
+      "torre spagnola del XVII secolo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Coe Serra"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bari Sardo",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105002",
+    "codice_catastale": "A663",
+    "popolazione": 3981,
+    "superficie_kmq": 37.53,
+    "densita": 106.1,
+    "cap": "08042",
+    "prefisso_telefonico": "0782",
+    "patrono": "Beata Vergine di Monserrato",
+    "festa_patronale": "8 settembre",
+    "demonimo": "bariesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cardedu",
+      "Ilbono",
+      "Lanusei",
+      "Loceri",
+      "Tortolì"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della Beata Vergine di Monserrato",
+      "Chiesa medioevale di San Leonardo"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Bari"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Area Sacra e Menhir di Sa Perdalonga"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dei Nenniris - Festa di San Giovanni Battista (24 giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arzana",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105001",
+    "codice_catastale": "A454",
+    "popolazione": 2431,
+    "superficie_kmq": 162.6,
+    "densita": 15.0,
+    "cap": "08040",
+    "prefisso_telefonico": "0782",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "arzanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n.  3 - Gennargentu Orientale",
+      "Parco Nazionale del Gennargentu e Golfo di Orosei",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aritzo (NU)",
+      "Desulo (NU)",
+      "Elini",
+      "Gairo",
+      "Ilbono",
+      "Jerzu",
+      "Lanusei",
+      "Seui",
+      "Seulo (CA)",
+      "Tortolì",
+      "Villagrande Strisaili",
+      "Villaputzu (CA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Villaggio nuragico di Ruinas",
+      "Cascata di Pirincanis"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Vincenzo Ferreri (ultima domenica di agosto). con esibizione di costumi e canti e balli tradizionali"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lanusei",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105010",
+    "codice_catastale": "E441",
+    "popolazione": 5383,
+    "superficie_kmq": 53.38,
+    "densita": 100.8,
+    "cap": "08045",
+    "prefisso_telefonico": "0782",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "lanuseini",
+    "etimologia": "La sua origine è incerta. Secondo alcuni potrebbe derivare dall'accezione fenicia che identifica un'abitazione. Secondo altri deriva del greco lainos, pietroso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzana",
+      "Bari Sardo",
+      "Cardedu",
+      "Elini",
+      "Gairo",
+      "Ilbono",
+      "Jerzu",
+      "Loceri",
+      "Osini",
+      "Tertenia"
+    ],
+    "musei": [
+      "Museo Diocesano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Tempio di Don Bosco",
+      "Santuario di Nostra Signora d'Ogliastra",
+      "Chiesa di Santa Maria Maddalena (Cattedrale)",
+      "Chiesa di Cristo Re"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tombe dei Giganti e Nuraghe Seleni"
+    ],
+    "teatri": [
+      "Teatro Tonio Dei"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tortolì",
+    "provincia": "Provincia dell'Ogliastra",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "105018",
+    "codice_catastale": "A355",
+    "popolazione": 11059,
+    "superficie_kmq": 39.97,
+    "densita": 276.7,
+    "cap": "08048",
+    "prefisso_telefonico": "0782",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "tortoliesi",
+    "etimologia": "Nel 1928 ha assunto il nome di Arbatax di Tortolì, per poi riprendere il nome di Tortolì nel 1940. La sua origine è incerta, potrebbe riferirsi al latino turturile, da turtur (tortora). Altri ritengono derivi da Portus Ilii, dal latino Ilienses, nome degli abitanti dei monti vicini.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Ogliastra",
+      "Regione Agraria n. 14 - Colline litoranee dell'Ogliastra e del Salto di Quirra",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Arbatax"
+    ],
+    "comuni_confinanti": [
+      "Arzana",
+      "Bari Sardo",
+      "Girasole",
+      "Ilbono",
+      "Lotzorai",
+      "Villagrande Strisaili"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzotto Vescovile"
+    ],
+    "chiese": [
+      "Chiesa di Stella Maris (ad Arbatax)",
+      "Chiesa di Sant'Antonio",
+      "Chiesa di Sant'Anna",
+      "Chiesa di Sant'Andrea, ex Cattedrale",
+      "Chiesa di San Salvatore",
+      "Chiesa di San Lussorio",
+      "Chiesa di San Giuseppe",
+      "Chiesa di San Giorgio",
+      "Chiesa di San Gemiliano"
+    ],
+    "castelli_fortificazioni": [
+      "Torre spagnola di Arbatax",
+      "Torre di San Gemiliano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe",
+      "Tomba dei Giganti e Menhir S'Ortali e Su Monti"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

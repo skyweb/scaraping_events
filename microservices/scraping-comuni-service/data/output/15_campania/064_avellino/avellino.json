@@ -1,0 +1,16 @@
+{
+  "nome": "Avellino",
+  "regione": "Campania",
+  "zona": null,
+  "sigla": "AV",
+  "codice_istat": "064",
+  "popolazione": 423506,
+  "popolazione_maschi": 207660,
+  "popolazione_femmine": 215846,
+  "superficie_kmq": 2791.64,
+  "densita": 151.7,
+  "num_comuni": 118,
+  "capoluogo": "Avellino",
+  "iso_3166_2": "IT-AV",
+  "nuts": "ITF34"
+}

@@ -1,0 +1,4386 @@
+[
+  {
+    "nome": "Zerfaliu",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095075",
+    "codice_catastale": "M168",
+    "popolazione": 1092,
+    "superficie_kmq": 15.46,
+    "densita": 70.6,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santissima Trasfigurazione",
+    "festa_patronale": "6 agosto",
+    "demonimo": "zerfaliesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ollastra",
+      "Paulilatino",
+      "Simaxis",
+      "Solarussa",
+      "Villanova Truschedu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra degli Agrumi (inizio febbraio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Zeddiani",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095074",
+    "codice_catastale": "M153",
+    "popolazione": 1152,
+    "superficie_kmq": 11.88,
+    "densita": 97.0,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Apollonia",
+    "festa_patronale": "9 febbraio",
+    "demonimo": "zeddianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baratili San Pietro",
+      "Oristano",
+      "San Vero Milis",
+      "Siamaggiore",
+      "Tramatza"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio o della Madonna delle Grazie (XII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villaurbana",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095072",
+    "codice_catastale": "M030",
+    "popolazione": 1645,
+    "superficie_kmq": 58.48,
+    "densita": 28.1,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Margherita",
+    "festa_patronale": "20 luglio",
+    "demonimo": "villaurbanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea",
+      "Associazione Città del Pane"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Allai",
+      "Mogorella",
+      "Oristano",
+      "Palmas Arborea",
+      "Ruinas",
+      "Siamanna",
+      "Usellus",
+      "Villa Verde"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villanova Truschedu",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095071",
+    "codice_catastale": "L991",
+    "popolazione": 305,
+    "superficie_kmq": 16.56,
+    "densita": 18.4,
+    "cap": "09084",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "villanovesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Fordongianus",
+      "Ollastra",
+      "Paulilatino",
+      "Zerfaliu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario San Gemiliano (in stile gotico-catalano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Santa Barbara (di tipo a tancato)",
+      "Nuraghe di Santa Barbara"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villa Verde",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095073",
+    "codice_catastale": "A609",
+    "popolazione": 319,
+    "superficie_kmq": 17.34,
+    "densita": 18.4,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "villaverdesi o villaverdini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ales",
+      "Palmas Arborea",
+      "Pau",
+      "Usellus",
+      "Villaurbana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Complesso nuragico di Su Bruncu e S'Omu"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villa Sant'Antonio",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095048",
+    "codice_catastale": "I298",
+    "popolazione": 352,
+    "superficie_kmq": 19.13,
+    "densita": 18.4,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "prima domenica di giugno",
+    "demonimo": "santantonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albagiara",
+      "Assolo",
+      "Asuni",
+      "Mogorella",
+      "Ruinas",
+      "Senis"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Menhir di Monte Curru Tundu (di tipo aniconico)",
+      "Domus de janas Genna Salixi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Usellus",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095070",
+    "codice_catastale": "L508",
+    "popolazione": 773,
+    "superficie_kmq": 35.1,
+    "densita": 22.0,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "usellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albagiara",
+      "Ales",
+      "Gonnosnò",
+      "Mogorella",
+      "Villa Verde",
+      "Villaurbana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Reparata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Uras",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095069",
+    "codice_catastale": "L496",
+    "popolazione": 2853,
+    "superficie_kmq": 39.36,
+    "densita": 72.5,
+    "cap": "09099",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "uresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Masullas; a nord e nord-ovest: Terralba; a nord-est: Morgongiori; a nord-ovest: Marrubiu; a sud-est: Mogoro; a sud-ovest: San Nicolò d'Arcidano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Sa Omu Beccia (di genere pentalobato)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ulà Tirso",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095068",
+    "codice_catastale": "L488",
+    "popolazione": 567,
+    "superficie_kmq": 18.76,
+    "densita": 30.2,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "ulesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus"
+    ],
+    "localita_frazioni": [
+      "Santa Chiara"
+    ],
+    "comuni_confinanti": [
+      "Ardauli",
+      "Busachi",
+      "Ghilarza",
+      "Neoneli",
+      "Ortueri (NU)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di Sant'Andrea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tresnuraghes",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095067",
+    "codice_catastale": "L393",
+    "popolazione": 1148,
+    "superficie_kmq": 31.55,
+    "densita": 36.4,
+    "cap": "09079",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "tresnuraghesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Arci Grighine",
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cuglieri",
+      "Flussio",
+      "Magomadas",
+      "Sennariolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario campestre di San Marco",
+      "Chiesetta di Sant'Antonio da Padova",
+      "Chiesa Parrocchiale di San Giorgio"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Foghe",
+      "su un'altura",
+      "a picco sul mare al di sopra della foce del Riu Mannu"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Betilo e Tomba dei Giganti Pischinainos",
+      "Dolmen di Su Jù Malmuradu (ovvero \"giogo pietrificato\")"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tramatza",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095066",
+    "codice_catastale": "L321",
+    "popolazione": 978,
+    "superficie_kmq": 16.79,
+    "densita": 58.2,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "tramatzesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bauladu",
+      "Milis",
+      "San Vero Milis",
+      "Siamaggiore",
+      "Solarussa",
+      "Zeddiani"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maddalena",
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte Romano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Giovanni Battista e Sagra della pecora (24 giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tinnura",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095088",
+    "codice_catastale": "L172",
+    "popolazione": 247,
+    "superficie_kmq": 3.79,
+    "densita": 65.2,
+    "cap": "08010",
+    "prefisso_telefonico": "0785",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "tinnuresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n.  5 - Colline di Campeda e del Marghine",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Flussio",
+      "Sagama",
+      "Suni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Anna"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Complesso nuragico di Tres Bias"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Terralba",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095065",
+    "codice_catastale": "L122",
+    "popolazione": 10259,
+    "superficie_kmq": 34.87,
+    "densita": 294.2,
+    "cap": "09098",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "terralbesi",
+    "etimologia": "Corrisponde a terra alba, ossia \"terra bianca\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arborea",
+      "Arbus (VS)",
+      "Guspini (VS)",
+      "Marrubiu",
+      "San Nicolò d'Arcidano",
+      "Uras"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tadasuni",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095064",
+    "codice_catastale": "L023",
+    "popolazione": 152,
+    "superficie_kmq": 4.62,
+    "densita": 32.9,
+    "cap": "09080",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "tadasunesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ardauli",
+      "Boroneddu",
+      "Ghilarza",
+      "Sorradile"
+    ],
+    "musei": [
+      "Museo degli Strumenti della Musica Popolare Sarda"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Suni",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095087",
+    "codice_catastale": "L006",
+    "popolazione": 1092,
+    "superficie_kmq": 47.32,
+    "densita": 23.1,
+    "cap": "08010",
+    "prefisso_telefonico": "0785",
+    "patrono": "Santa Maria della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "sunesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n.  5 - Colline di Campeda e del Marghine",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bosa",
+      "Flussio",
+      "Modolo",
+      "Pozzomaggiore (SS)",
+      "Sagama",
+      "Sindia (NU)",
+      "Tinnura"
+    ],
+    "musei": [
+      "Casa Museo \"Tiu Virgiliu\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta campestre di San Narciso",
+      "Chiesa parrocchiale di Santa Maria della Neve",
+      "Chiesa di San Pancrazio (in stile gotico-catalano)",
+      "Chiesa dei Santi Cosma e Damiano (XVII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Seneghe (di tipo a corridoio)",
+      "Nuraghe Nuraddeo",
+      "Domus De Janas Chirisconis"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sorradile",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095063",
+    "codice_catastale": "I861",
+    "popolazione": 379,
+    "superficie_kmq": 28.34,
+    "densita": 13.4,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "19 gennaio",
+    "demonimo": "sorradilesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": [
+      "Lago Omodeo"
+    ],
+    "comuni_confinanti": [
+      "Ardauli",
+      "Bidonì",
+      "Ghilarza",
+      "Nughedu Santa Vittoria",
+      "Olzai (NU)",
+      "Sedilo",
+      "Tadasuni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Sebastiano",
+      "Chiesa di Santa Maria Turrana",
+      "Chiesa di Santa Maria Salomè",
+      "Chiesa di San Nicola",
+      "Chiesa di San Michele",
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghi sommersi del Lago Omodeo: Iscòva, Perdu Mannu, Bentòsu, Pajolu, Biùgias Pilicas e Aurù, Songhe, Su Pranu",
+      "Area archeologica Necropoli di Prunittu"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Solarussa",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095062",
+    "codice_catastale": "I791",
+    "popolazione": 2420,
+    "superficie_kmq": 31.89,
+    "densita": 75.9,
+    "cap": "09077",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Pietro Apostolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "solarussesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore",
+      "Associazione Nazionale Città della Terra Cruda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bauladu",
+      "Oristano",
+      "Paulilatino",
+      "Siamaggiore",
+      "Simaxis",
+      "Tramatza",
+      "Zerfaliu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Pietro Apostolo",
+      "Chiesa romanica di San Gregorio",
+      "Chiesa di San Gregorio",
+      "Chiesa delle Grazie",
+      "Chiesa delle Anime"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Complesso Nuragico di Pidighi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di san Gregorio magno",
+      "il martedì successivo alla seconda domenica di ottobre"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soddì",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095078",
+    "codice_catastale": "I778",
+    "popolazione": 120,
+    "superficie_kmq": 5.45,
+    "densita": 22.0,
+    "cap": "09080",
+    "prefisso_telefonico": "0785",
+    "patrono": "Spirito Santo",
+    "festa_patronale": "15 ottobre",
+    "demonimo": "soddiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Aidomaggiore; a ovest e sud: Boroneddu; a sud: Ghilarza"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Crastu (di tipo a corridoio)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Siris",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095061",
+    "codice_catastale": "I757",
+    "popolazione": 229,
+    "superficie_kmq": 6.02,
+    "densita": 38.0,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "sirighesi o siresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Masullas",
+      "Morgongiori",
+      "Pompu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghi Su Sensu, Pranu Forru e Porcilis",
+      "Nuraghe De Inus (di tipo complesso, trilobato), sorge sulla Giara di Siris, alle pendici del Monte Arci"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sini",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095060",
+    "codice_catastale": "I749",
+    "popolazione": 522,
+    "superficie_kmq": 8.73,
+    "densita": 59.8,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Chiara",
+    "festa_patronale": "12 agosto",
+    "demonimo": "sinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baradili",
+      "Genoni",
+      "Genuri (VS)",
+      "Gonnosnò"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Pani'e Saba (sagra del pane sapato",
+      "23-25 aprile)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Simaxis",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095059",
+    "codice_catastale": "I743",
+    "popolazione": 2244,
+    "superficie_kmq": 27.77,
+    "densita": 80.8,
+    "cap": "09088",
+    "prefisso_telefonico": "0783",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "simaxesi o simascesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": [
+      "San Vero Congius"
+    ],
+    "comuni_confinanti": [
+      "Ollastra",
+      "Oristano",
+      "Siamanna",
+      "Siapiccia",
+      "Solarussa",
+      "Zerfaliu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Teodoro (a San Vero Congius)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Simala",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095058",
+    "codice_catastale": "I742",
+    "popolazione": 325,
+    "superficie_kmq": 13.38,
+    "densita": 24.3,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "simalesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baressa",
+      "Curcuris",
+      "Gonnoscodina",
+      "Gonnosnò",
+      "Masullas",
+      "Pompu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Siapiccia",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095076",
+    "codice_catastale": "I721",
+    "popolazione": 359,
+    "superficie_kmq": 17.94,
+    "densita": 20.0,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "siapiccesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Allai",
+      "Fordongianus",
+      "Ollastra",
+      "Siamanna",
+      "Simaxis"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicolò di Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Siamanna",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095057",
+    "codice_catastale": "I718",
+    "popolazione": 812,
+    "superficie_kmq": 28.32,
+    "densita": 28.7,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "siamannesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Arci Grighine",
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Allai",
+      "Oristano",
+      "Ruinas",
+      "Siapiccia",
+      "Simaxis",
+      "Villaurbana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Siamaggiore",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095056",
+    "codice_catastale": "I717",
+    "popolazione": 924,
+    "superficie_kmq": 13.22,
+    "densita": 69.9,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Costantino",
+    "festa_patronale": "23 aprile",
+    "demonimo": "siamaggioreresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Oristano",
+      "Solarussa",
+      "Tramatza",
+      "Zeddiani"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sennariolo",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095055",
+    "codice_catastale": "I613",
+    "popolazione": 188,
+    "superficie_kmq": 15.68,
+    "densita": 12.0,
+    "cap": "09078",
+    "prefisso_telefonico": "0785",
+    "patrono": "Sant'Andrea Apostolo",
+    "festa_patronale": "30 novembre",
+    "demonimo": "sennariolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Arci Grighine",
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cuglieri",
+      "Flussio",
+      "Scano di Montiferro",
+      "Tresnuraghes"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Sa Copelcada",
+      "monumento sepolcrale"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sa Festa e Santa 'Ittoria",
+      "seconda domenica di maggio"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Senis",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095054",
+    "codice_catastale": "I609",
+    "popolazione": 441,
+    "superficie_kmq": 16.05,
+    "densita": 27.5,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "seniesi o senighesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Assolo",
+      "Asuni",
+      "Laconi",
+      "Nureci",
+      "Villa Sant'Antonio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Spagnola"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Seneghe",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095053",
+    "codice_catastale": "I605",
+    "popolazione": 1770,
+    "superficie_kmq": 57.82,
+    "densita": 30.6,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "seneghesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bonarcado",
+      "Cuglieri",
+      "Milis",
+      "Narbolia",
+      "San Vero Milis",
+      "Santu Lussurgiu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro di Milis Piccinnu",
+      "Chiesa parrocchiale di Santa Maria Immacolata",
+      "Chiesa di Santa Maria della Rosa"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tomba dei Giganti di Sa Fache e S'Artare",
+      "Nuraghe Ruju (monotorre)",
+      "Nuraghe Mesumaiore o Mesone Majore (di tipo quadrilobato)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sedilo",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095052",
+    "codice_catastale": "I564",
+    "popolazione": 2121,
+    "superficie_kmq": 68.88,
+    "densita": 30.8,
+    "cap": "09076",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "sedilesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aidomaggiore",
+      "Bidonì",
+      "Dualchi (NU)",
+      "Ghilarza",
+      "Noragugume (NU)",
+      "Olzai (NU)",
+      "Ottana (NU)",
+      "Sorradile"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Antine",
+      "Chiesa parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe",
+      "Tombe dei Giganti e Domus De Janas di Iloi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "San Costantino: S'Ardia (6-7 luglio)",
+      "rievocazione storica"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scano di Montiferro",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095051",
+    "codice_catastale": "I503",
+    "popolazione": 1516,
+    "superficie_kmq": 60.48,
+    "densita": 25.1,
+    "cap": "09078",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "scanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Borore (NU)",
+      "Cuglieri",
+      "Flussio",
+      "Macomer (NU)",
+      "Sagama",
+      "Santu Lussurgiu",
+      "Sennariolo",
+      "Sindia (NU)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Pietro Apostolo",
+      "Chiesa di Santa Vittoria",
+      "Chiesa di San Giorgio",
+      "Chiesa campestre di Sant'Antioco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Nuracale (di tipo quadrilobato)",
+      "Nuraghe Santa Arvara, detto anche Entrepiches o Bentripiches",
+      "Nuraghe e Domus de Janas Abbaudi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santu Lussurgiu",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095049",
+    "codice_catastale": "I374",
+    "popolazione": 2372,
+    "superficie_kmq": 99.67,
+    "densita": 23.8,
+    "cap": "09075",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Lussorio",
+    "festa_patronale": "21 agosto",
+    "demonimo": "lussurgesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": [
+      "San Leonardo di Siete Fuentes"
+    ],
+    "comuni_confinanti": [
+      "Abbasanta",
+      "Bonarcado",
+      "Borore (NU)",
+      "Cuglieri",
+      "Norbello",
+      "Paulilatino",
+      "Scano di Montiferro",
+      "Seneghe"
+    ],
+    "musei": [
+      "Museo della Tecnologia Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Leonardo (in frazione San Leonardo di Siete Fuentes)",
+      "Chiesa di Santa Maria degli Angeli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Piricu (di tipo monotorre)",
+      "Nuraghe Elighe Onna o Crasta (di tipo complesso)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Giusta",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095047",
+    "codice_catastale": "I205",
+    "popolazione": 4816,
+    "superficie_kmq": 69.17,
+    "densita": 69.6,
+    "cap": "09096",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Giusta",
+    "festa_patronale": "terza domenica di maggio",
+    "demonimo": "santagiustesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Arci Grighine",
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ales",
+      "Arborea",
+      "Marrubiu",
+      "Morgongiori",
+      "Oristano",
+      "Palmas Arborea",
+      "Pau"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Severa",
+      "Basilica di Santa Giusta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Regata de is Fassonis (primo agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vero Milis",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095050",
+    "codice_catastale": "I384",
+    "popolazione": 2494,
+    "superficie_kmq": 72.2,
+    "densita": 34.5,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Sofia",
+    "festa_patronale": "17 giugno",
+    "demonimo": "sanveresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baratili San Pietro",
+      "Milis",
+      "Narbolia",
+      "Riola Sardo",
+      "Seneghe",
+      "Tramatza",
+      "Zeddiani"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Sofia",
+      "Chiesa di San Teodoro",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe su Uraki"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Nicolò d'Arcidano",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095046",
+    "codice_catastale": "A368",
+    "popolazione": 2661,
+    "superficie_kmq": 28.36,
+    "densita": 93.8,
+    "cap": "09097",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Nicolò",
+    "festa_patronale": "10 settembre",
+    "demonimo": "arcidanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Guspini (VS)",
+      "Mogoro",
+      "Pabillonis (VS)",
+      "Terralba",
+      "Uras"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Nicolò"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Samugheo",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095045",
+    "codice_catastale": "H756",
+    "popolazione": 3031,
+    "superficie_kmq": 81.27,
+    "densita": 37.3,
+    "cap": "09086",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "samughesi",
+    "etimologia": "Il nome Samugheo deriva da Sammach, Summugheo, Summucley, Simagleo, San Miguel",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Atzara (NU)",
+      "Laconi",
+      "Meana Sardo (NU); a nord: Busachi",
+      "Ortueri (NU)",
+      "Sorgono (NU); a ovest: Allai",
+      "Ruinas; a sud: Asuni"
+    ],
+    "musei": [
+      "Museo Unico Regionale dell’Arte Tessile Sarda"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa campestre di San Basilio",
+      "Chiesa parrocchiale di San Sebastiano (XV secolo)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Medusa"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sagama",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095086",
+    "codice_catastale": "H661",
+    "popolazione": 201,
+    "superficie_kmq": 11.67,
+    "densita": 17.2,
+    "cap": "08010",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Gabriele",
+    "festa_patronale": "24 marzo",
+    "demonimo": "sagamesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n.  5 - Colline di Campeda e del Marghine"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Flussio",
+      "Scano di Montiferro",
+      "Sindia (NU)",
+      "Suni",
+      "Tinnura"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ruinas",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095044",
+    "codice_catastale": "F271",
+    "popolazione": 669,
+    "superficie_kmq": 30.38,
+    "densita": 22.0,
+    "cap": "09085",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giorgio Martire",
+    "festa_patronale": "una giornata fra il 15 e il 20 di agosto",
+    "demonimo": "ruinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 2 - Colline di Fordongianus"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Allai",
+      "Asuni",
+      "Mogorella",
+      "Samugheo",
+      "Siamanna",
+      "Villa Sant'Antonio",
+      "Villaurbana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santu Teru (San Teodoro)",
+      "Chiesa di San Giorgio Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Riola Sardo",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095043",
+    "codice_catastale": "H301",
+    "popolazione": 2152,
+    "superficie_kmq": 48.23,
+    "densita": 44.6,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "riolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baratili San Pietro",
+      "Cabras",
+      "Narbolia",
+      "Nurachi",
+      "San Vero Milis"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Anna e San Martino",
+      "Chiesa di Santa Corona (resti)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pompu",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095042",
+    "codice_catastale": "G817",
+    "popolazione": 256,
+    "superficie_kmq": 5.08,
+    "densita": 50.4,
+    "cap": "09093",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "pompesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Curcuris",
+      "Masullas",
+      "Morgongiori",
+      "Simala",
+      "Siris"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria",
+      "nota originariamente come parrocchia di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Paulilatino",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095041",
+    "codice_catastale": "G384",
+    "popolazione": 2229,
+    "superficie_kmq": 103.8,
+    "densita": 21.5,
+    "cap": "09070",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Teodoro Martire",
+    "festa_patronale": "9 novembre",
+    "demonimo": "paulesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 4 - Tirso Inferiore",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "borgata di Santa Cristina"
+    ],
+    "comuni_confinanti": [
+      "Abbasanta",
+      "Bauladu",
+      "Bonarcado",
+      "Fordongianus",
+      "Ghilarza",
+      "Santu Lussurgiu",
+      "Solarussa",
+      "Villanova Truschedu",
+      "Zerfaliu"
+    ],
+    "musei": [
+      "Museo Archeologico Etnografico \"Palazzo Atzori\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tomba dei Giganti Mura Cuada",
+      "Tomba dei giganti di Perdu Pes",
+      "Tomba dei Giganti Bidil' e Pira",
+      "Pozzo e e Villaggio Nuragico di Santa Cristina",
+      "Nuraghe Ortei",
+      "Nuraghe Lugherras",
+      "Nuraghe Atzara (di tipo complesso trilobato)",
+      "Nuraghe Battizzone (di tipo trilobato)",
+      "Tombe dei Giganti Goronna"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pau",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095040",
+    "codice_catastale": "G379",
+    "popolazione": 301,
+    "superficie_kmq": 14.08,
+    "densita": 21.4,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giorgio martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "pauesi",
+    "etimologia": "Il nome deriva dal latino  pagus cioè villaggio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": [
+      "Argioleddas"
+    ],
+    "comuni_confinanti": [
+      "Ales",
+      "Palmas Arborea",
+      "Santa Giusta",
+      "Villa Verde"
+    ],
+    "musei": [
+      "Museo dell'Ossidiana"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Prisca Martire",
+      "Chiesa parrocchiale di San Giorgio Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palmas Arborea",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095039",
+    "codice_catastale": "G286",
+    "popolazione": 1523,
+    "superficie_kmq": 39.32,
+    "densita": 38.7,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Antioco",
+    "festa_patronale": "seconda domenica dopo Pasqua",
+    "demonimo": "palmaresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Arci Grighine",
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": [
+      "Tiria Alta"
+    ],
+    "comuni_confinanti": [
+      "Ales",
+      "Oristano",
+      "Pau",
+      "Santa Giusta",
+      "Villa Verde",
+      "Villaurbana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Pariglie Palmaresi (terza domenica dopo Pasqua)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ollastra",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095037",
+    "codice_catastale": "G043",
+    "popolazione": 1217,
+    "superficie_kmq": 21.52,
+    "densita": 56.6,
+    "cap": "09088",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "ollastrini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Fordongianus",
+      "Siapiccia",
+      "Simaxis",
+      "Villanova Truschedu",
+      "Zerfaliu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Sebastiano",
+      "Chiesa di Santa Severa",
+      "Chiesa di San Marco",
+      "Chiesa di San Costantino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nureci",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095036",
+    "codice_catastale": "F985",
+    "popolazione": 360,
+    "superficie_kmq": 12.89,
+    "densita": 27.9,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Barbara",
+    "festa_patronale": "4 dicembre",
+    "demonimo": "nurecesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Assolo",
+      "Genoni",
+      "Laconi",
+      "Senis"
+    ],
+    "musei": [
+      "Museo Permanente della Natura"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nurachi",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095035",
+    "codice_catastale": "F980",
+    "popolazione": 1789,
+    "superficie_kmq": 15.94,
+    "densita": 112.2,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "nurachesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baratili San Pietro",
+      "Cabras",
+      "Oristano",
+      "Riola Sardo"
+    ],
+    "musei": [
+      "Museo Comunale Peppetto Pau"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nughedu Santa Vittoria",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095034",
+    "codice_catastale": "F974",
+    "popolazione": 483,
+    "superficie_kmq": 28.56,
+    "densita": 16.9,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "nughedesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ardauli",
+      "Austis (NU)",
+      "Bidonì",
+      "Neoneli",
+      "Olzai (NU)",
+      "Sorradile"
+    ],
+    "musei": [
+      "Museo naturalistico dell'Oasi di Assai"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Domus De Janas Arzolas De Goi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Norbello",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095033",
+    "codice_catastale": "F934",
+    "popolazione": 1231,
+    "superficie_kmq": 26.12,
+    "densita": 47.1,
+    "cap": "09070",
+    "prefisso_telefonico": "0785",
+    "patrono": "SS. Quirico e Giulitta",
+    "festa_patronale": "15 luglio",
+    "demonimo": "norbellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": [
+      "frazione Domusnovas Canales",
+      "agglomerato di Sant'Ignazio"
+    ],
+    "comuni_confinanti": [
+      "Abbasanta",
+      "Aidomaggiore",
+      "Borore (NU)",
+      "Ghilarza",
+      "Santu Lussurgiu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale dei Santi Giulitta e Quirico",
+      "Chiesa di Santa Maria della Mercede",
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Neoneli",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095032",
+    "codice_catastale": "F867",
+    "popolazione": 682,
+    "superficie_kmq": 48.0,
+    "densita": 14.2,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "neonelesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ardauli",
+      "Austis (NU)",
+      "Nughedu Santa Vittoria",
+      "Ortueri (NU)",
+      "Sorgono (NU)",
+      "Ulà Tirso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Pietro (ricostruita nel 1611)",
+      "Chiesa de S'Angelu"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Barigadu o di Orisetto (resti)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Narbolia",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095031",
+    "codice_catastale": "F840",
+    "popolazione": 1790,
+    "superficie_kmq": 40.49,
+    "densita": 44.2,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Reparata",
+    "festa_patronale": "8 ottobre",
+    "demonimo": "narboliesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cuglieri",
+      "Riola Sardo",
+      "San Vero Milis",
+      "Seneghe"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa de S'Eremita Matteu"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Tradori, in basalto nero",
+      "Nuraghe Accas (di tipo monotorre)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Morgongiori",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095030",
+    "codice_catastale": "F727",
+    "popolazione": 721,
+    "superficie_kmq": 45.28,
+    "densita": 15.9,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "morgongioresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ales",
+      "Curcuris",
+      "Marrubiu",
+      "Masullas",
+      "Pompu",
+      "Santa Giusta",
+      "Siris",
+      "Uras"
+    ],
+    "musei": [
+      "Museo vivente dell'arte tessile"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Sofia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tempio ipogeico nuragico sotterraneo \"Sa Grutta de Is Caombus\"",
+      "Domus de Janas \"Su Forru de Luxia Arrabiosa\""
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montresta",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095085",
+    "codice_catastale": "F698",
+    "popolazione": 483,
+    "superficie_kmq": 23.79,
+    "densita": 20.3,
+    "cap": "08010",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Cristoforo",
+    "festa_patronale": "28 aprile",
+    "demonimo": "montrestini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n. 10 - Colline litoranee di Bosa",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bosa",
+      "Villanova Monteleone (SS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa San Cristoforo Martire",
+      "Chiesa Sacro Cuore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mogoro",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095029",
+    "codice_catastale": "F272",
+    "popolazione": 4155,
+    "superficie_kmq": 48.94,
+    "densita": 84.9,
+    "cap": "09095",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Bernardino da Siena",
+    "festa_patronale": "20 maggio",
+    "demonimo": "mogoresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Serra Neba",
+      "Cuccurada",
+      "Morimenta"
+    ],
+    "comuni_confinanti": [
+      "A est: Collinas (VS)",
+      "Gonnostramatza; a nord: Masullas; a ovest: San Nicolò d'Arcidano",
+      "Uras; a sud: Pabillonis (VS)",
+      "Sardara (VS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Bernardino da Siena",
+      "Chiesa della Madonna di Carcaxia",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Cuccurada (di tipo polilobato)",
+      "Villaggio Neolitico di Puisteris"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mogorella",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095028",
+    "codice_catastale": "F270",
+    "popolazione": 443,
+    "superficie_kmq": 17.18,
+    "densita": 25.8,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "mogorellesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albagiara",
+      "Ruinas",
+      "Usellus",
+      "Villa Sant'Antonio",
+      "Villaurbana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghi Friarosu e Luas"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Modolo",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095084",
+    "codice_catastale": "F261",
+    "popolazione": 168,
+    "superficie_kmq": 2.52,
+    "densita": 66.7,
+    "cap": "08019",
+    "prefisso_telefonico": "0785",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "modolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n. 10 - Colline litoranee di Bosa",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bosa",
+      "Flussio",
+      "Magomadas",
+      "Suni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Milis",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095027",
+    "codice_catastale": "F208",
+    "popolazione": 1552,
+    "superficie_kmq": 18.71,
+    "densita": 83.0,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "milesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bauladu",
+      "Bonarcado",
+      "San Vero Milis",
+      "Seneghe",
+      "Tramatza"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Marchesi Boyl di Putifigari"
+    ],
+    "chiese": [
+      "Chiesa romanica di San Paolo Apostolo (XII secolo)",
+      "Chiesa parrocchiale di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Cobulas",
+      "con impianto a tholos"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Masullas",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095026",
+    "codice_catastale": "F050",
+    "popolazione": 1070,
+    "superficie_kmq": 18.88,
+    "densita": 56.7,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "Madonna delle Grazie",
+    "festa_patronale": "2 luglio",
+    "demonimo": "masullesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Gonnoscodina",
+      "Gonnostramatza",
+      "Mogoro",
+      "Morgongiori",
+      "Simala",
+      "Siris",
+      "Uras"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Sebastiano",
+      "Chiesa di San Leonardo (XIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marrubiu",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095025",
+    "codice_catastale": "E972",
+    "popolazione": 4829,
+    "superficie_kmq": 61.21,
+    "densita": 78.9,
+    "cap": "09094",
+    "prefisso_telefonico": "0783",
+    "patrono": "Madonna del Rimedio",
+    "festa_patronale": "8 settembre",
+    "demonimo": "marrubiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Arci Grighine",
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ales",
+      "Arborea",
+      "Morgongiori",
+      "Santa Giusta",
+      "Terralba",
+      "Uras"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna di Monserrato",
+      "Chiesa della Madonna di Zuradìli"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Magomadas",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095083",
+    "codice_catastale": "E825",
+    "popolazione": 664,
+    "superficie_kmq": 8.95,
+    "densita": 74.2,
+    "cap": "08010",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "magomadesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n. 10 - Colline litoranee di Bosa",
+      "Associazione Nazionale Città del Vino",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bosa",
+      "Flussio",
+      "Modolo",
+      "Tresnuraghes"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Chiesa di Santa Croce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Laconi",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095082",
+    "codice_catastale": "E400",
+    "popolazione": 1879,
+    "superficie_kmq": 124.87,
+    "densita": 15.0,
+    "cap": "08034",
+    "prefisso_telefonico": "0782",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "laconesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sarcidano Barbagia di Seulo",
+      "Regione Agraria n.  8 - Colline del Sarcidano",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Santa Sofia",
+      "Crastu",
+      "Su Lau"
+    ],
+    "comuni_confinanti": [
+      "Aritzo (NU)",
+      "Asuni",
+      "Gadoni (NU)",
+      "Genoni",
+      "Isili (CA)",
+      "Meana Sardo (NU)",
+      "Nuragus (CA)",
+      "Nurallao (CA)",
+      "Nureci",
+      "Samugheo",
+      "Senis",
+      "Villanova Tulo (CA)"
+    ],
+    "musei": [
+      "Museo delle Statue Menhir"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Ambrogio e Sant'Ignazio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Aymerich"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco Aymerich",
+      "con collezione di piante esotiche"
+    ],
+    "luoghi_interesse": [
+      "Nuraghe Gennà e Corte",
+      "Menhir di Perda Iddocca (di tipo protoantropomorfo)",
+      "Menhir e Dolmen Corte Noa",
+      "Sito archeologico Cromlech Is Cirquittus"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gonnostramatza",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095024",
+    "codice_catastale": "E088",
+    "popolazione": 896,
+    "superficie_kmq": 17.53,
+    "densita": 51.1,
+    "cap": "09093",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "gonnostramatzesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Collinas (VS)",
+      "Gonnoscodina",
+      "Masullas",
+      "Mogoro",
+      "Siddi (VS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Sant'Antonio Abate",
+      "Chiesa parrocchiale di San Michele",
+      "Chiesa di San Paolo di Serzela"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Domus De Janas di Bingia e Monti"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gonnosnò",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095023",
+    "codice_catastale": "D585",
+    "popolazione": 772,
+    "superficie_kmq": 15.45,
+    "densita": 50.0,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Elena",
+    "festa_patronale": "18 agosto",
+    "demonimo": "gonnosnoesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": [
+      "Figu"
+    ],
+    "comuni_confinanti": [
+      "Albagiara",
+      "Ales",
+      "Baradili",
+      "Baressa",
+      "Curcuris",
+      "Genoni",
+      "Simala",
+      "Sini",
+      "Usellus"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Elena",
+      "Chiesa di Santa Maria (in frazione Figu)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Pozzo Sacro Nuragico di San Salvatore"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gonnoscodina",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095022",
+    "codice_catastale": "E087",
+    "popolazione": 478,
+    "superficie_kmq": 8.85,
+    "densita": 54.0,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "gonnoscodinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baressa",
+      "Gonnostramatza",
+      "Masullas",
+      "Siddi (VS)",
+      "Simala"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di San Sebastiano",
+      "Chiesa di San Daniele"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ghilarza",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095021",
+    "codice_catastale": "E004",
+    "popolazione": 4502,
+    "superficie_kmq": 53.48,
+    "densita": 84.2,
+    "cap": "09074",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Palmerio",
+    "festa_patronale": "secondo lunedì di luglio",
+    "demonimo": "ghilarzesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "frazione: Zuri;\nagglomerati: San Giovanni",
+      "San Michele",
+      "San Serafino",
+      "Trempu"
+    ],
+    "comuni_confinanti": [
+      "Abbasanta",
+      "Aidomaggiore",
+      "Ardauli",
+      "Bidonì",
+      "Boroneddu",
+      "Busachi",
+      "Fordongianus",
+      "Norbello",
+      "Paulilatino",
+      "Sedilo",
+      "Soddì",
+      "Sorradile",
+      "Tadasuni",
+      "Ulà Tirso"
+    ],
+    "musei": [
+      "Casa Museo \"A. Gramsci\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro, in stile romanico-lombardo",
+      "Chiesa di San Palmerio"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Aragonese (XV secolo",
+      "in stile gotico catalano)"
+    ],
+    "fontane": [
+      "Fontana de Su Cantaru"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Orgono (di tipo a corridoio)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Su Carruzu a S'Antiga (penultima domenica di carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Genoni",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095081",
+    "codice_catastale": "D968",
+    "popolazione": 832,
+    "superficie_kmq": 43.89,
+    "densita": 19.0,
+    "cap": "08030",
+    "prefisso_telefonico": "0782",
+    "patrono": "Santa Barbara",
+    "festa_patronale": "4 dicembre",
+    "demonimo": "genonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sarcidano Barbagia di Seulo",
+      "Regione Agraria n.  8 - Colline del Sarcidano",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Gonnosnò; a nord: Laconi; a nord-ovest: Assolo; a ovest: Albagiara",
+      "Nureci; a sud: Genuri (VS)",
+      "Gesturi (VS)",
+      "Setzu (VS); a sud-est: Nuragus (CA); a sud-ovest: Sini"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Fortificazioni nuragiche e puniche di Monte Santo Antine"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fordongianus",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095020",
+    "codice_catastale": "D695",
+    "popolazione": 889,
+    "superficie_kmq": 39.4,
+    "densita": 22.6,
+    "cap": "09083",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "fordongianesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Città Termale (Terme di Fordongianus)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Allai",
+      "Busachi",
+      "Ghilarza",
+      "Ollastra",
+      "Paulilatino",
+      "Siapiccia",
+      "Villanova Truschedu"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Aragonese",
+      "con decorazioni scolpite in stile gotico-aragonese"
+    ],
+    "chiese": [
+      "Chiesa romanica di San Lussorio",
+      "Chiesa parrocchiale di San Pietro Apostolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Area archeologica Terme di Forum Traiani"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Flussio",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095080",
+    "codice_catastale": "D640",
+    "popolazione": 438,
+    "superficie_kmq": 6.92,
+    "densita": 63.3,
+    "cap": "08010",
+    "prefisso_telefonico": "0785",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "flussiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n. 10 - Colline litoranee di Bosa",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Magomadas",
+      "Modolo",
+      "Sagama",
+      "Scano di Montiferro",
+      "Sennariolo",
+      "Suni",
+      "Tinnura",
+      "Tresnuraghes"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Neve",
+      "Chiesa di San Bartolomeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Curcuris",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095077",
+    "codice_catastale": "D214",
+    "popolazione": 307,
+    "superficie_kmq": 8.08,
+    "densita": 38.0,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "curcuresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ales",
+      "Gonnosnò",
+      "Morgongiori",
+      "Pompu",
+      "Simala"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Sebastiano",
+      "Chiesa della Beata Vergine Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cuglieri",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095019",
+    "codice_catastale": "D200",
+    "popolazione": 2671,
+    "superficie_kmq": 120.54,
+    "densita": 22.2,
+    "cap": "09073",
+    "prefisso_telefonico": "0785",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "cuglieritani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru",
+      "Associazione Nazionale Città dell'Olio",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Santa Caterina di Pittinuri",
+      "S'Archittu",
+      "Torre del Pozzo"
+    ],
+    "comuni_confinanti": [
+      "Narbolia",
+      "Santu Lussurgiu",
+      "Scano di Montiferro",
+      "Seneghe",
+      "Sennariolo",
+      "Tresnuraghes"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Basilica di Santa Maria della Neve",
+      "Chiesa di San Paolo (in stile romanico-pisano)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Montiferru (ruderi)",
+      "detto anche Casteddu Ezzu"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Insediamento paleocristiano di Cornus-Columbaris"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cabras",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095018",
+    "codice_catastale": "B314",
+    "popolazione": 9165,
+    "superficie_kmq": 102.18,
+    "densita": 89.7,
+    "cap": "09072",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "24 maggio",
+    "demonimo": "cabraresi",
+    "etimologia": "Attestato anche con il nome di Capras, riflette il latino capra o il sardo crapa, crawa (capra).",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano",
+      "Associazione Nazionale Città dell'Olio",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Funtana Meiga",
+      "San Giovanni di Sinis",
+      "San Salvatore di Sinis",
+      "Solanas"
+    ],
+    "comuni_confinanti": [
+      "Nurachi",
+      "Oristano",
+      "Riola Sardo"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santo Spirito",
+      "Chiesa Sacro Cuore di Gesù",
+      "Chiesa di San Salvatore",
+      "Chiesa parrocchiale di Santa Maria",
+      "Chiesa di San Pietro Apostolo (a Solanas)",
+      "Chiesa di San Giovanni"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Villaggi Neolitici, Domus De Janas e Pozzo Sacro Nuragico di Cuccuru Is Arrius",
+      "Ipogeo di San Salvatore",
+      "Area archeologica città di Tharros"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "San Salvatore e Corsa degli Scalzi (primo fine settimana di settembre)",
+      "Sagra della Bottarga (fine agosto - inizio settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Busachi",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095017",
+    "codice_catastale": "B281",
+    "popolazione": 1292,
+    "superficie_kmq": 59.3,
+    "densita": 21.8,
+    "cap": "09082",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "busachesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Allai",
+      "Fordongianus",
+      "Ghilarza",
+      "Ortueri (NU)",
+      "Samugheo",
+      "Ulà Tirso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Susanna",
+      "Chiesa parrocchiale di Sant'Antonio da Padova",
+      "Chiesa di San Bernardino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Domus De Janas di Grugos"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bosa",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095079",
+    "codice_catastale": "B068",
+    "popolazione": 7926,
+    "superficie_kmq": 135.67,
+    "densita": 58.4,
+    "cap": "08013",
+    "prefisso_telefonico": "0785",
+    "patrono": "Sant'Emilio e San Priamo",
+    "festa_patronale": "28 maggio",
+    "demonimo": "bosani",
+    "etimologia": "Dall'etnico Bosenses, di origine prelatina, confrontabile con i nomi locali del nord Africa.",
+    "il_comune_e": [
+      "Località balneare segnalata con cinque vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Marghine Planargia",
+      "Regione Agraria n. 10 - Colline litoranee di Bosa",
+      "Club I Borghi più Belli d'Italia",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Bosa Marina"
+    ],
+    "comuni_confinanti": [
+      "Magomadas",
+      "Modolo",
+      "Montresta",
+      "Padria (SS)",
+      "Pozzomaggiore (SS)",
+      "Suni",
+      "Villanova Monteleone (SS)"
+    ],
+    "musei": [
+      "Pinacoteca Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro (ex cattedrale della diocesi di Bosa)",
+      "Chiesa di Nostra Signora di Regnos Altos (XIV secolo)",
+      "Chiesa del Carmine",
+      "Cattedrale dell'Immacolata"
+    ],
+    "castelli_fortificazioni": [
+      "Torre dell'Isola Rossa (in frazione Bosa Marina)",
+      "Castello di Serravalle"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Nostra Signora di Regnos Altos (seconda domenica di settembre)",
+      "Festa di Santa Maria del Mare (prima domenica di agosto)",
+      "Carnevale (giovedì e martedì di Carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Boroneddu",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095016",
+    "codice_catastale": "B055",
+    "popolazione": 149,
+    "superficie_kmq": 4.65,
+    "densita": 32.0,
+    "cap": "09080",
+    "prefisso_telefonico": "0785",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "boroneddesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": [
+      "Su Chinau de susu",
+      "Su Chinau de bassu",
+      "Sa Maghinedda",
+      "Sa Corte",
+      "Su Nurache",
+      "Sas Codinas",
+      "San Salvatore"
+    ],
+    "comuni_confinanti": [
+      "Ghilarza",
+      "Soddì",
+      "Tadasuni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Lorenzo Martire",
+      "Chiesa di San Salvatore, nei pressi del lago Omodeo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bonarcado",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095015",
+    "codice_catastale": "A960",
+    "popolazione": 1594,
+    "superficie_kmq": 28.54,
+    "densita": 55.9,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Romualdo",
+    "festa_patronale": "7 febbraio",
+    "demonimo": "bonarcadesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Montiferru",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bauladu",
+      "Milis",
+      "Paulilatino",
+      "Santu Lussurgiu",
+      "Seneghe"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Nostra Signora di Bonacatu",
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Quau",
+      "Nuraghe Nargius, di tipo a \"tancato\""
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bidonì",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095014",
+    "codice_catastale": "A856",
+    "popolazione": 146,
+    "superficie_kmq": 11.67,
+    "densita": 12.5,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "bidonesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ghilarza",
+      "Nughedu Santa Vittoria",
+      "Sedilo",
+      "Sorradile"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro (in stile romanico toscano)",
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Chiesetta di Santa Maria di Ossolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tempio di Giove",
+      "Nuraghe Bentosu",
+      "Sito archeologico del Tempio di Giove"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bauladu",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095013",
+    "codice_catastale": "A721",
+    "popolazione": 689,
+    "superficie_kmq": 24.21,
+    "densita": 28.5,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Gregorio Magno",
+    "festa_patronale": "3 settembre",
+    "demonimo": "bauladesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Tirso Inferiore"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bonarcado",
+      "Milis",
+      "Paulilatino",
+      "Solarussa",
+      "Tramatza"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Gregorio (XIII secolo",
+      "rimaneggiata nel XVIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Crabia"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Baressa",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095012",
+    "codice_catastale": "A655",
+    "popolazione": 649,
+    "superficie_kmq": 12.55,
+    "densita": 51.7,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "baressesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baradili",
+      "Gonnoscodina",
+      "Gonnosnò",
+      "Siddi (VS)",
+      "Simala",
+      "Turri (VS)",
+      "Ussaramanna (VS)"
+    ],
+    "musei": [
+      "Casa Museo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra della Mandorla (12 e 13 settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Baratili San Pietro",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095011",
+    "codice_catastale": "A621",
+    "popolazione": 1321,
+    "superficie_kmq": 6.05,
+    "densita": 218.3,
+    "cap": "09070",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "baratilesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Nurachi",
+      "Oristano",
+      "Riola Sardo",
+      "San Vero Milis",
+      "Zeddiani"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Baradili",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095010",
+    "codice_catastale": "A614",
+    "popolazione": 83,
+    "superficie_kmq": 5.61,
+    "densita": 14.8,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "Santa Margherita",
+    "festa_patronale": "20 luglio",
+    "demonimo": "baradilesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline dell'Arborea",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Baressa",
+      "Genuri (VS)",
+      "Gonnosnò",
+      "Sini",
+      "Turri (VS)",
+      "Ussaramanna (VS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Asuni",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095009",
+    "codice_catastale": "A480",
+    "popolazione": 345,
+    "superficie_kmq": 21.2,
+    "densita": 16.3,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "asunesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Laconi",
+      "Nureci",
+      "Ruinas",
+      "Samugheo",
+      "Senis",
+      "Villa Sant'Antonio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello medievale della Medusa (rovine)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Su stampu de Muscione Stunnu, grotta costituita da due cavità sovrapposte",
+      "Domus de Janas"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Assolo",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095008",
+    "codice_catastale": "A477",
+    "popolazione": 387,
+    "superficie_kmq": 16.32,
+    "densita": 23.7,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "assolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albagiara",
+      "Genoni",
+      "Nureci",
+      "Senis",
+      "Villa Sant'Antonio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ardauli",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095007",
+    "codice_catastale": "A380",
+    "popolazione": 869,
+    "superficie_kmq": 20.55,
+    "densita": 42.3,
+    "cap": "09081",
+    "prefisso_telefonico": "0783",
+    "patrono": "Beata Vergine del Buon Cammino",
+    "festa_patronale": "terza domenica di ottobre",
+    "demonimo": "ardaulesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ghilarza",
+      "Neoneli",
+      "Nughedu Santa Vittoria",
+      "Sorradile",
+      "Tadasuni",
+      "Ulà Tirso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna d'Itria",
+      "Chiesa romanica dei SS. Cosma e Damiano (XII secolo)",
+      "Chiesa parrocchiale di Santa Maria della Guardia o Vergine del Buon Cammino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Su Culunzu Pertuntu",
+      "la \"roccia bucata\": monolite trachitico scolpito dagli agenti atmosferici"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arborea",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095006",
+    "codice_catastale": "A357",
+    "popolazione": 3910,
+    "superficie_kmq": 115.5,
+    "densita": 33.9,
+    "cap": "09092",
+    "prefisso_telefonico": "0783",
+    "patrono": "Cristo Redentore",
+    "festa_patronale": "terza domenica di luglio",
+    "demonimo": "arborensi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Una Città di Fondazione (centri urbani realizzati con progetto unitario)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano"
+    ],
+    "localita_frazioni": [
+      "Linnas",
+      "Luri",
+      "Torrevecchia",
+      "Pompongias",
+      "S'Ungroni",
+      "Centro 1 Sassu",
+      "Centro 2 Sassu"
+    ],
+    "comuni_confinanti": [
+      "Marrubiu",
+      "Santa Giusta",
+      "Terralba"
+    ],
+    "musei": [
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale del Cristo Redentore (1927)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Villorba (Treviso-Veneto)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Allai",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095005",
+    "codice_catastale": "A204",
+    "popolazione": 366,
+    "superficie_kmq": 27.38,
+    "densita": 13.4,
+    "cap": "09080",
+    "prefisso_telefonico": "0783",
+    "patrono": "Spirito Santo",
+    "festa_patronale": "16 maggio",
+    "demonimo": "allaesi",
+    "etimologia": "Probabilmente nasce dall'ebraico El-Alah (\"luogo divino\"), rimandando alle antiche origini del centro",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Busachi",
+      "Fordongianus",
+      "Ruinas",
+      "Samugheo",
+      "Siamanna",
+      "Siapiccia",
+      "Villaurbana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dello Spirito Santo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte romano (detto \"Ponti Ecciu\"",
+      "ponte vecchio)",
+      "sul Rio Massari"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ales",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095004",
+    "codice_catastale": "A180",
+    "popolazione": 1436,
+    "superficie_kmq": 21.65,
+    "densita": 66.3,
+    "cap": "09091",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Pietro Martire",
+    "festa_patronale": "29 giugno",
+    "demonimo": "aleresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "Zeppara"
+    ],
+    "comuni_confinanti": [
+      "Albagiara",
+      "Curcuris",
+      "Gonnosnò",
+      "Marrubiu",
+      "Morgongiori",
+      "Palmas Arborea",
+      "Pau",
+      "Santa Giusta",
+      "Usellus",
+      "Villa Verde"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale di San Pietro"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Barumele (rovine)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Antonio Gramsci (1891 - 1937)",
+      "uomo politico",
+      "scrittore e filosofo"
+    ]
+  },
+  {
+    "nome": "Albagiara",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095003",
+    "codice_catastale": "A126",
+    "popolazione": 264,
+    "superficie_kmq": 8.95,
+    "densita": 29.5,
+    "cap": "09090",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "albagiaresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Alta Marmilla",
+      "Regione Agraria n. 3 - Colline dell'Arborea"
+    ],
+    "localita_frazioni": [
+      "vicinati: San Pietro",
+      "Planu-Ibba",
+      "Pinna Fiscura",
+      "Su Forraxi"
+    ],
+    "comuni_confinanti": [
+      "Ales",
+      "Assolo",
+      "Genoni",
+      "Gonnosnò",
+      "Mogorella",
+      "Usellus",
+      "Villa Sant'Antonio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe di San Lussorio",
+      "in un avvallamento ai piedi della Giara di Gesturi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aidomaggiore",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095002",
+    "codice_catastale": "A097",
+    "popolazione": 451,
+    "superficie_kmq": 41.33,
+    "densita": 10.9,
+    "cap": "09070",
+    "prefisso_telefonico": "0785",
+    "patrono": "Madonna delle Palme",
+    "festa_patronale": "24 maggio",
+    "demonimo": "aidomaggioresi",
+    "etimologia": "Deriva da \"Aditus Major\" che significa \"ingresso principale\", punto di collegamento tra l'altopiano e la valle del lago Omodeo",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Borore (NU)",
+      "Dualchi (NU)",
+      "Ghilarza",
+      "Norbello",
+      "Sedilo",
+      "Soddì"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Gavino (XIV secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Sanilo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Abbasanta",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095001",
+    "codice_catastale": "A007",
+    "popolazione": 2724,
+    "superficie_kmq": 39.85,
+    "densita": 68.4,
+    "cap": "09071",
+    "prefisso_telefonico": "0785",
+    "patrono": "Santa Caterina d'Alessandria",
+    "festa_patronale": "25 novembre",
+    "demonimo": "abbasantesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 1 - Colline del Lago Omodeo e del Monte Ferru"
+    ],
+    "localita_frazioni": [
+      "Tanca Regia",
+      "Sant'Agostino"
+    ],
+    "comuni_confinanti": [
+      "Ghilarza",
+      "Norbello",
+      "Paulilatino",
+      "Santu Lussurgiu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Caterina di Alessandria",
+      "Chiesa di Sant'Agostino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tomba dei giganti Su Pranu",
+      "Nuraghe Losa, di epoca prepunica",
+      "Domus de janas di Bonorchis",
+      "Area funeraria preistorica di Mesu Enas"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Oristano",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095038",
+    "codice_catastale": "G113",
+    "popolazione": 31670,
+    "superficie_kmq": 84.63,
+    "densita": 374.2,
+    "cap": "09170",
+    "prefisso_telefonico": "0783",
+    "patrono": "San Archelao",
+    "festa_patronale": "13 febbraio",
+    "demonimo": "oristanesi",
+    "etimologia": "Deriva dal nome latino di persona Aristius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Campidano di Oristano",
+      "Associazione Italiana Città della Ceramica (AICC)",
+      "Area Minoranza Linguistica Sarda"
+    ],
+    "localita_frazioni": [
+      "frazioni: Sili",
+      "Donigala Fenughedu",
+      "Massama",
+      "Nuraxinieddu;\nborgate: Torregrande",
+      "San Quirico",
+      "Tiria"
+    ],
+    "comuni_confinanti": [
+      "Baratili San Pietro",
+      "Cabras",
+      "Nurachi",
+      "Palmas Arborea",
+      "Santa Giusta",
+      "Siamaggiore",
+      "Siamanna",
+      "Simaxis",
+      "Solarussa",
+      "Villaurbana",
+      "Zeddiani"
+    ],
+    "musei": [
+      "Museo Archeologico Antiquarium Arborense",
+      "Raccolta dell'Opera del Duomo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio delle Anime (in frazione Massama)",
+      "Santuario del SS. Crocifisso in San Francesco :: Frati Minori Conventuali",
+      "Chiesa di Santa Chiara",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di San Cristoforo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sa Sartiglia (domenica e martedì di carnevale)",
+      "Sartill'e Canna (penultima domenica di carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "nome": "Pisa",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "PI",
+  "codice_istat": "050",
+  "popolazione": 421851,
+  "popolazione_maschi": 204931,
+  "popolazione_femmine": 216920,
+  "superficie_kmq": 2444.38,
+  "densita": 172.6,
+  "num_comuni": 37,
+  "capoluogo": "Pisa",
+  "iso_3166_2": "IT-PI",
+  "nuts": "ITE17"
+}

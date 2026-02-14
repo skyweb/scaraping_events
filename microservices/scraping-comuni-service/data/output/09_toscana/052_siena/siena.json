@@ -1,0 +1,16 @@
+{
+  "nome": "Siena",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "SI",
+  "codice_istat": "052",
+  "popolazione": 268341,
+  "popolazione_maschi": 128797,
+  "popolazione_femmine": 139544,
+  "superficie_kmq": 3821.22,
+  "densita": 70.2,
+  "num_comuni": 36,
+  "capoluogo": "Siena",
+  "iso_3166_2": "IT-SI",
+  "nuts": "ITE19"
+}

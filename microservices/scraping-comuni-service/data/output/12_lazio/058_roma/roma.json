@@ -1,0 +1,16 @@
+{
+  "nome": "Roma",
+  "regione": "Lazio",
+  "zona": null,
+  "sigla": "RM",
+  "codice_istat": "058",
+  "popolazione": 4353738,
+  "popolazione_maschi": 2088283,
+  "popolazione_femmine": 2265455,
+  "superficie_kmq": 5351.81,
+  "densita": 813.5,
+  "num_comuni": 121,
+  "capoluogo": "Roma",
+  "iso_3166_2": "IT-RM",
+  "nuts": "ITE43"
+}

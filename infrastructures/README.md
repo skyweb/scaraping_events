@@ -152,25 +152,60 @@ scraping/
 
 ## Database Schema
 
-```sql
--- Schema: events
--- Tabella: events_data.eventi
+Il database `today_events` utilizza 3 schema PostgreSQL:
 
+| Schema | Descrizione |
+|--------|-------------|
+| `events_data` | Eventi staging e production, viste |
+| `comuni_istat` | Confini amministrativi ISTAT con geometrie PostGIS |
+| `comuni_istat_ingestion` | Dati scraping comuni-italiani.it (modelli relazionali + raw JSON) |
+
+### Schema `events_data`
+
+```sql
 SELECT uuid, title, city, date_start, source
-FROM events_data.eventi
+FROM events_data.staging_events
 ORDER BY date_start;
 ```
-
-### Campi principali
 
 | Campo | Tipo | Descrizione |
 |-------|------|-------------|
 | uuid | VARCHAR(16) | ID univoco (hash titolo+data+luogo) |
 | content_hash | VARCHAR(16) | Hash contenuto (per detect modifiche) |
 | source | VARCHAR(50) | 'city_today' o 'zero_eu' |
+| city_id | INTEGER | FK a `comuni_istat.comuni(id)` |
 | location_coords | GEOMETRY | Coordinate PostGIS |
 | category | TEXT[] | Array categorie |
 | raw_data | JSONB | JSON originale |
+
+### Schema `comuni_istat`
+
+Confini amministrativi ISTAT al 01/01/2025 con geometrie PostGIS:
+
+| Tabella | Record | Descrizione |
+|---------|--------|-------------|
+| `ripartizioni` | 5 | Nord-Ovest, Nord-Est, Centro, Sud, Isole |
+| `regioni` | 20 | Con geometrie MultiPolygon |
+| `province` | 107 | Con sigla, geometrie |
+| `comuni` | ~7900 | Con centroide, codice catastale, CAP, popolazione |
+
+### Schema `comuni_istat_ingestion`
+
+Dati arricchiti dallo scraping di comuni-italiani.it:
+
+| Tabella | Descrizione |
+|---------|-------------|
+| `regioni` | 20 regioni con dati demografici |
+| `province` | 110 province |
+| `comuni` | ~8000 comuni con patrono, etimologia, demonimo |
+| `comune_frazioni` | Frazioni e localita |
+| `comune_confinanti` | Comuni limitrofi |
+| `comune_appartenenze` | Comunita montane, parchi |
+| `comune_punti_interesse` | Musei, chiese, castelli, teatri |
+| `comune_eventi` | Feste, sagre tradizionali |
+| `comune_gemellaggi` | Gemellaggi |
+| `comune_cittadini_illustri` | Personaggi illustri |
+| `raw_data` | JSON grezzi dallo scraping |
 
 ## Comandi Utili
 

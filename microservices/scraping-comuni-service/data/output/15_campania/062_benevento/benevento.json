@@ -1,0 +1,16 @@
+{
+  "nome": "Benevento",
+  "regione": "Campania",
+  "zona": null,
+  "sigla": "BN",
+  "codice_istat": "062",
+  "popolazione": 279675,
+  "popolazione_maschi": 136736,
+  "popolazione_femmine": 142939,
+  "superficie_kmq": 2070.63,
+  "densita": 135.1,
+  "num_comuni": 78,
+  "capoluogo": "Benevento",
+  "iso_3166_2": "IT-BN",
+  "nuts": "ITF32"
+}

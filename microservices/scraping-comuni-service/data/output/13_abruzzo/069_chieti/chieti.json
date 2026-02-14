@@ -1,0 +1,16 @@
+{
+  "nome": "Chieti",
+  "regione": "Abruzzo",
+  "zona": null,
+  "sigla": "CH",
+  "codice_istat": "069",
+  "popolazione": 389169,
+  "popolazione_maschi": 189194,
+  "popolazione_femmine": 199975,
+  "superficie_kmq": 2588.35,
+  "densita": 150.4,
+  "num_comuni": 104,
+  "capoluogo": "Chieti",
+  "iso_3166_2": "IT-CH",
+  "nuts": "ITF14"
+}

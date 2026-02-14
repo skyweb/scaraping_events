@@ -1,0 +1,16 @@
+{
+  "nome": "Spezia",
+  "regione": "Liguria",
+  "zona": null,
+  "sigla": "SP",
+  "codice_istat": "011",
+  "popolazione": 220698,
+  "popolazione_maschi": 106107,
+  "popolazione_femmine": 114591,
+  "superficie_kmq": 880.87,
+  "densita": 250.5,
+  "num_comuni": 32,
+  "capoluogo": "La Spezia",
+  "iso_3166_2": "IT-SP",
+  "nuts": "ITC34"
+}

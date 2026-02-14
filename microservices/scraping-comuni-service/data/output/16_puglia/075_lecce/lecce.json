@@ -1,0 +1,16 @@
+{
+  "nome": "Lecce",
+  "regione": "Puglia",
+  "zona": null,
+  "sigla": "LE",
+  "codice_istat": "075",
+  "popolazione": 802082,
+  "popolazione_maschi": 383893,
+  "popolazione_femmine": 418189,
+  "superficie_kmq": 2759.4,
+  "densita": 290.7,
+  "num_comuni": 97,
+  "capoluogo": "Lecce",
+  "iso_3166_2": "IT-LE",
+  "nuts": "ITF45"
+}

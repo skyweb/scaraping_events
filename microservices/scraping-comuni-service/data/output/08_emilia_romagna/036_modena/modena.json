@@ -1,0 +1,16 @@
+{
+  "nome": "Modena",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "MO",
+  "codice_istat": "036",
+  "popolazione": 700862,
+  "popolazione_maschi": 341821,
+  "popolazione_femmine": 359041,
+  "superficie_kmq": 2688.65,
+  "densita": 260.7,
+  "num_comuni": 47,
+  "capoluogo": "Modena",
+  "iso_3166_2": "IT-MO",
+  "nuts": "ITD54"
+}

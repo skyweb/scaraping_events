@@ -1,0 +1,16 @@
+{
+  "nome": "Mantova",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "MN",
+  "codice_istat": "020",
+  "popolazione": 412610,
+  "popolazione_maschi": 202255,
+  "popolazione_femmine": 210355,
+  "superficie_kmq": 2338.84,
+  "densita": 176.4,
+  "num_comuni": 69,
+  "capoluogo": "Mantova",
+  "iso_3166_2": "IT-MN",
+  "nuts": "ITC4B"
+}

@@ -1,0 +1,1712 @@
+[
+  {
+    "nome": "Sorano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053026",
+    "codice_catastale": "I841",
+    "popolazione": 3381,
+    "superficie_kmq": 174.6,
+    "densita": 19.4,
+    "cap": "58010",
+    "prefisso_telefonico": "0564",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "soranesi",
+    "etimologia": "Deriva dal nome antico di persona Soranus privo di suffissi.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Colline del Fiora",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Castell'Ottieri",
+      "Elmo",
+      "Montebuono",
+      "Montorio",
+      "Montevitozzo",
+      "San Quirico",
+      "San Giovanni delle Contee",
+      "Sovana"
+    ],
+    "comuni_confinanti": [
+      "Acquapendente (VT)",
+      "Castell'Azzara",
+      "Latera (VT)",
+      "Manciano",
+      "Onano (VT)",
+      "Pitigliano",
+      "Proceno (VT)",
+      "Semproniano"
+    ],
+    "musei": [
+      "Museo del Medioevo e del Rinascimento",
+      "Centro di Documentazione dell'Area Archeologica di Sovana"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo di San Pietro e Paolo",
+      "Chiesa di Santa Maria dell'Aquila",
+      "Chiesa di Santa Maria",
+      "Chiesa di San Nicola",
+      "Chiesa di Castell'Ottieri",
+      "Cappella della Madonna del Borgo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Semproniano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053028",
+    "codice_catastale": "I601",
+    "popolazione": 1070,
+    "superficie_kmq": 81.44,
+    "densita": 13.1,
+    "cap": "58055",
+    "prefisso_telefonico": "0564",
+    "patrono": "SS. Vincenzo e Anastasio",
+    "festa_patronale": "22 gennaio",
+    "demonimo": "sempronianesi",
+    "etimologia": "Deriva dal nome latino di persona Sempronius con l'aggiunta del suffisso -anus che indica appartenenza. Il paese fu chiamato Samprugnano fino al 1963.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana"
+    ],
+    "localita_frazioni": [
+      "frazioni: Catabbio",
+      "Cellena",
+      "Petricci",
+      "Rocchette"
+    ],
+    "comuni_confinanti": [
+      "Castell'Azzara",
+      "Manciano",
+      "Roccalbegna",
+      "Santa Fiora",
+      "Sorano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna delle Grazie",
+      "Chiesa di Santa Croce",
+      "Chiesa della Madonna (in località Rocchette di Fazio)",
+      "Pieve di San Vincenzo e Anastasio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Seggiano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053025",
+    "codice_catastale": "I571",
+    "popolazione": 965,
+    "superficie_kmq": 49.53,
+    "densita": 19.5,
+    "cap": "58038",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "25 agosto",
+    "demonimo": "seggianesi",
+    "etimologia": "Deriva dal nome latino di persona Seius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Strada del Vino Montecucco"
+    ],
+    "localita_frazioni": [
+      "Pescina"
+    ],
+    "comuni_confinanti": [
+      "Abbadia San Salvatore (SI)",
+      "Castel del Piano",
+      "Castiglione d'Orcia (SI)"
+    ],
+    "musei": [
+      "Museo dell'olio",
+      "Giardino di Daniel Spoerri"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Bartolomeo",
+      "Santuario della Madonna della Carità",
+      "Chiesa del Corpus Domini",
+      "Chiesa di San Bernardino"
+    ],
+    "castelli_fortificazioni": [
+      "Castello del Potentino"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino di Daniel Spoerri"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scarlino",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053024",
+    "codice_catastale": "I510",
+    "popolazione": 3842,
+    "superficie_kmq": 88.38,
+    "densita": 43.5,
+    "cap": "58020",
+    "prefisso_telefonico": "0566",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "scarlinesi",
+    "etimologia": "Deriva dal nome germanico di persona Skerilo al diminutivo Sker(i)lino.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Scarlino Scalo",
+      "Puntone"
+    ],
+    "comuni_confinanti": [
+      "Castiglione della Pescaia",
+      "Follonica",
+      "Gavorrano",
+      "Massa Marittima"
+    ],
+    "musei": [
+      "Centro di Documentazione del Territorio"
+    ],
+    "ville_palazzi": [
+      "Palazzo Guelfi"
+    ],
+    "chiese": [
+      "Chiesa di San Donato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scansano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053023",
+    "codice_catastale": "I504",
+    "popolazione": 4354,
+    "superficie_kmq": 273.57,
+    "densita": 15.9,
+    "cap": "58054",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "scansanesi",
+    "etimologia": "Deriva dal nome etrusco di persona Scansna o latino Scansa con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Colline del Fiora",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Murci",
+      "Poggioferro",
+      "Pomonte",
+      "Pancole",
+      "Polveraia",
+      "Montorgiali",
+      "Baccinello"
+    ],
+    "comuni_confinanti": [
+      "Campagnatico",
+      "Grosseto",
+      "Magliano in Toscana",
+      "Manciano",
+      "Roccalbegna"
+    ],
+    "musei": [
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Biagio (a Montorgiali)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale Castagnoli"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Fiora",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053022",
+    "codice_catastale": "I187",
+    "popolazione": 2611,
+    "superficie_kmq": 62.91,
+    "densita": 41.5,
+    "cap": "58037",
+    "prefisso_telefonico": "0564",
+    "patrono": "Sante Flora e Lucilla",
+    "festa_patronale": "29 luglio",
+    "demonimo": "santafioresi",
+    "etimologia": "Il nome si riferisce alla pieve dedicata alla santa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana",
+      "Associazione Italiana Città del Vulcano"
+    ],
+    "localita_frazioni": [
+      "Bagnolo",
+      "Bagnore",
+      "Selva"
+    ],
+    "comuni_confinanti": [
+      "Abbadia San Salvatore (SI)",
+      "Arcidosso",
+      "Castel del Piano",
+      "Castell'Azzara",
+      "Piancastagnaio (SI)",
+      "Roccalbegna",
+      "Semproniano"
+    ],
+    "musei": [
+      "Museo delle Miniere di Mercurio del Monte Amiata"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Agostino",
+      "Oratorio della Madonna delle Nevi",
+      "Chiesa di Santo Stefano",
+      "Convento della Santissima Trinità della Selva",
+      "Pieve delle Sante Flora e Lucilla"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roccastrada",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053021",
+    "codice_catastale": "H449",
+    "popolazione": 9166,
+    "superficie_kmq": 284.37,
+    "densita": 32.2,
+    "cap": "58036",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "roccastradini",
+    "etimologia": "Il nome è un composto di rocca e strada. Indicando un luogo fortificato posto lungo la strada.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Colline Metallifere",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "Sticciano",
+      "Ribolla",
+      "Montemassi",
+      "Roccatederighi",
+      "Sassofortino",
+      "Torniella",
+      "Piloni"
+    ],
+    "comuni_confinanti": [
+      "Campagnatico",
+      "Chiusdino (SI)",
+      "Civitella Paganico",
+      "Gavorrano",
+      "Grosseto",
+      "Massa Marittima",
+      "Monticiano (SI)",
+      "Montieri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Compagnia (a Torniella)",
+      "Chiesa di San Sebastiano (a Roccatederighi)",
+      "Chiesa di San Mustiola (a Sticciano)",
+      "Chiesa di San Giovanni Battista (a Torniella)",
+      "Chiesa della Santissima Concezione (a Sticciano)",
+      "Chiesa dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale dei Concordi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Artannes sur Indre (Francia), dal giugno 2003",
+      "Bonrepòs i Mirambell (Region Valenciana, Spagna), dal marzo 2006",
+      "Zeiskam (Germania), dal maggio 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roccalbegna",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053020",
+    "codice_catastale": "H417",
+    "popolazione": 1024,
+    "superficie_kmq": 124.95,
+    "densita": 8.2,
+    "cap": "58053",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Cristoforo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "rocchigiani",
+    "etimologia": "Il nome è un composto di rocca, con significato di luogo fortificato e del nome di fiume Albegna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana",
+      "Associazione Strada del Vino Montecucco"
+    ],
+    "localita_frazioni": [
+      "Cana",
+      "Santa Caterina",
+      "Triana",
+      "Vallerona"
+    ],
+    "comuni_confinanti": [
+      "Arcidosso",
+      "Campagnatico",
+      "Manciano",
+      "Santa Fiora",
+      "Scansano",
+      "Semproniano"
+    ],
+    "musei": [
+      "Raccolta d'Arte",
+      "Museo Etnografico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Bichi-Ruspoli",
+      "Palazzo Amphous - Cinciari",
+      "Palazzo del Portino (in località Cana)",
+      "Palazzo della Lana"
+    ],
+    "chiese": [
+      "Pieve dei Santi Pietro e Paolo",
+      "Chiesetta di Santa Caterina d'Alessandria",
+      "Chiesa della Madonna del Soccorso (originariamente intitolata alla Santa Croce)",
+      "Chiesa della Madonna del Conforto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pitigliano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053019",
+    "codice_catastale": "G716",
+    "popolazione": 3795,
+    "superficie_kmq": 102.9,
+    "densita": 36.9,
+    "cap": "58017",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "pitiglianesi",
+    "etimologia": "Deriva dal nome latino di persona Petillius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Colline del Fiora",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Casone"
+    ],
+    "comuni_confinanti": [
+      "Farnese (VT)",
+      "Ischia di Castro (VT)",
+      "Latera (VT)",
+      "Manciano",
+      "Sorano",
+      "Valentano (VT)"
+    ],
+    "musei": [
+      "Museo Diocesano",
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna delle Grazie",
+      "Duomo, in Piazza Gregorio VII",
+      "Chiesa di Santa Maria (già San Rocco), in Via Orsini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Orbetello",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053018",
+    "codice_catastale": "G088",
+    "popolazione": 14844,
+    "superficie_kmq": 226.98,
+    "densita": 65.4,
+    "cap": "58015",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "orbetellani",
+    "etimologia": "Denominato anche Orbetellum o Orbitellus, deriva da Orbeto, dal latino herba (erba) con l'aggiunta del suffisso -etum formando quindi ervum che significa \"lero\".",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale della Maremma"
+    ],
+    "localita_frazioni": [
+      "Albinia",
+      "Fonteblanda",
+      "Talamone",
+      "Ansedonia",
+      "Giannella",
+      "La Polverosa",
+      "Orbetello Scalo",
+      "San Donato"
+    ],
+    "comuni_confinanti": [
+      "Capalbio",
+      "Magliano in Toscana",
+      "Manciano",
+      "Monte Argentario"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale di Cosa",
+      "Museo Ambientale del W.W.F."
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo - Cattedrale di Santa Maria Assunta",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Molino Spagnolo",
+      "Acquario della Laguna di Orbetello"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montieri",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053017",
+    "codice_catastale": "F677",
+    "popolazione": 1186,
+    "superficie_kmq": 108.34,
+    "densita": 10.9,
+    "cap": "58026",
+    "prefisso_telefonico": "0566",
+    "patrono": "San Giacomo da Montieri",
+    "festa_patronale": "28 dicembre",
+    "demonimo": "montierini",
+    "etimologia": "Deriva dal latino mons aeris, ossia \"monte del rame\", in riferimento alla presenza in loco di miniere di rame.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Colline Metallifere"
+    ],
+    "localita_frazioni": [
+      "Boccheggiano",
+      "Gerfalco",
+      "Travale"
+    ],
+    "comuni_confinanti": [
+      "Castelnuovo di Val di Cecina (PI)",
+      "Chiusdino (SI)",
+      "Massa Marittima",
+      "Monterotondo Marittimo",
+      "Radicondoli (SI)",
+      "Roccastrada"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Biagio (a Gerfalco)",
+      "Pieve di San Bartolomeo (a Boccheggiano), con all'interno statua in marmo di San Sebastiano",
+      "Chiesa Parrocchiale di San Paolo",
+      "Chiesa e Convento di Sant'Agostino (a Gerfalco)",
+      "Chiesa di San Michele (a Travale)",
+      "Chiesa di San Giacomo",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Sala Teatrale Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monterotondo Marittimo",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053027",
+    "codice_catastale": "F612",
+    "popolazione": 1328,
+    "superficie_kmq": 102.51,
+    "densita": 13.0,
+    "cap": "58025",
+    "prefisso_telefonico": "0566",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "monterotondini",
+    "etimologia": "La prima parte del nome descrive le caratteristiche geografiche del paese. La specifica significa maremmano.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Colline Metallifere",
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina"
+    ],
+    "localita_frazioni": [
+      "Frassine",
+      "Lago Boracifero",
+      "Terme del Bagnolo"
+    ],
+    "comuni_confinanti": [
+      "Castelnuovo di Val di Cecina (PI)",
+      "Massa Marittima",
+      "Monteverdi Marittimo (PI)",
+      "Montieri",
+      "Pomarance (PI)",
+      "Suvereto (LI)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Frassine",
+      "Chiesa di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Argentario",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053016",
+    "codice_catastale": "F437",
+    "popolazione": 12570,
+    "superficie_kmq": 60.29,
+    "densita": 208.5,
+    "cap": "58019",
+    "prefisso_telefonico": "0564",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "santostefanesi e portercolesi",
+    "etimologia": "Il nome identifica la posizione del paese, sul monte Argentario (dal latino argentum, ossia argento).",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Cala Galera)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Porto Santo Stefano",
+      "Porto Ercole"
+    ],
+    "comuni_confinanti": [
+      "Orbetello"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Paolo della Croce (a Porto Ercole)",
+      "Chiesa dell'Immacolata (1979, a Porto Santo Stefano)",
+      "Chiesa di Sant'Erasmo (a Porto Ercole)",
+      "Santuario della Presentazione di Maria Santissima e di San Paolo della Croce :: Padri Passionari"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza Spagnola",
+      "La Rocca (a Porto Ercole)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio di Ferragosto (15 agosto)",
+      "in località Porto Santo Stefano",
+      "con sfilata storica con costumi spagnoli"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Massa Marittima",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053015",
+    "codice_catastale": "F032",
+    "popolazione": 8331,
+    "superficie_kmq": 283.72,
+    "densita": 29.4,
+    "cap": "58024",
+    "prefisso_telefonico": "0566",
+    "patrono": "San Cerbone",
+    "festa_patronale": "10 ottobre",
+    "demonimo": "massetani",
+    "etimologia": "La prima parte del nome deriva probabilmente dal termine latino massa (ammasso), che indica anche un possedimento terriero. La specifica si riferisce alla Maremma.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Colline Metallifere",
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Valpiana",
+      "Niccioleta",
+      "Prata",
+      "Tatti",
+      "Ghirlanda",
+      "Cura Nuova",
+      "Capanne",
+      "La Pesta"
+    ],
+    "comuni_confinanti": [
+      "A est: Roccastrada; a nord: Monterotondo Marittimo; a nord-est: Montieri; a ovest: Suvereto (LI); a sud: Gavorrano",
+      "Scarlino; a sud-ovest: Follonica"
+    ],
+    "musei": [
+      "Pinacoteca Comunale",
+      "Museo di Arte e Storia delle Miniere",
+      "Museo della Miniera",
+      "Museo Civico Archeologico",
+      "Mostra Permanente della Resistenza",
+      "Antico Frantoio"
+    ],
+    "ville_palazzi": [
+      "Palazzo Comunale",
+      "Palazzo dei conti di Biserno",
+      "Palazzo Malfatti",
+      "Palazzo Pannocchieschi",
+      "Palazzo Pretorio o del Podestà"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Agostino, in Piazza Socci",
+      "Chiesa di San Francesco",
+      "Chiesa della Madonna del Canale (a Prata)",
+      "Basilica Cattedrale di San Cerbone"
+    ],
+    "castelli_fortificazioni": [
+      "Torre del Candeliere e Fortezza dei Senesi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Balestro del Girifalco e San Bernardino (20 maggio se festivo",
+      "o la domenica successiva)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Manciano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053014",
+    "codice_catastale": "E875",
+    "popolazione": 7326,
+    "superficie_kmq": 372.04,
+    "densita": 19.7,
+    "cap": "58014",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "mancianesi",
+    "etimologia": "Deriva dal nome latino di persona Mancius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": [
+      "Città Termale (Terme di Saturnia Srl",
+      "in frazione Saturnia)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Colline del Fiora"
+    ],
+    "localita_frazioni": [
+      "Montemerano",
+      "Marsiliana",
+      "Saturnia",
+      "Poggio Murella",
+      "San Martino sul Fiora",
+      "Poderi di Montemerano",
+      "Capanne",
+      "Sgrilla"
+    ],
+    "comuni_confinanti": [
+      "Canino (VT)",
+      "Capalbio",
+      "Ischia di Castro (VT)",
+      "Magliano in Toscana",
+      "Montalto di Castro (VT)",
+      "Orbetello",
+      "Pitigliano",
+      "Roccalbegna",
+      "Scansano",
+      "Semproniano",
+      "Sorano"
+    ],
+    "musei": [
+      "Museo di Preistoria e Protostoria della Valle del Fiume Fiora"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giorgio (in località Montemerano)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello degli Stachilagi (la Castellaccia), noto come Castrum Elsa",
+      "Castello di Manciano",
+      "Castello di Scerpena"
+    ],
+    "fontane": [
+      "Fontana Monumentale del Rosignoli"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Area Archeologica Saturnia"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Magliano in Toscana",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053013",
+    "codice_catastale": "E810",
+    "popolazione": 3584,
+    "superficie_kmq": 250.68,
+    "densita": 14.3,
+    "cap": "58051",
+    "prefisso_telefonico": "0564",
+    "patrono": "SS. Annunziata",
+    "festa_patronale": "primo maggio",
+    "demonimo": "maglianesi",
+    "etimologia": "Deriva dal nome latino di persona Mallius con l'aggiunta del suffisso -anus che indica appartenenza. Ricordiamo che sullo stemma è rappresentato un maglio, parola che ha una pronuncia simile a magliano. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Naturale della Maremma"
+    ],
+    "localita_frazioni": [
+      "Montiano",
+      "Pereta",
+      "Collecchio"
+    ],
+    "comuni_confinanti": [
+      "Grosseto",
+      "Manciano",
+      "Orbetello",
+      "Scansano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Priori (1430)",
+      "Palazzo di Checco il Bello, in stile tardo-gotico senese"
+    ],
+    "chiese": [
+      "Pieve di San Giovanni Battista",
+      "Chiesa di San Martino",
+      "Chiesa dell'Annunziata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Magliano",
+      "Torre della Bella Marsilia (a Collecchio)",
+      "Torre di Cala di Forno"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Porta del '400 (frazione Pereta)",
+      "Torre dell'orologio (frazione Pereta)",
+      "Ruderi di San Bruzio",
+      "Scavi di Doganella - Kalousion"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola del Giglio",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053012",
+    "codice_catastale": "E348",
+    "popolazione": 1436,
+    "superficie_kmq": 23.8,
+    "densita": 60.3,
+    "cap": "58012",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Mamiliano",
+    "festa_patronale": "15 settembre",
+    "demonimo": "gigliesi",
+    "etimologia": "L'origine è incerta e si riferisce al termine antico Igilium diventato poi giglio per similitudine nella pronuncia.",
+    "il_comune_e": [
+      "Località balneare segnalata con cinque vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco Nazionale Arcipelago Toscano",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Giglio Porto",
+      "Giglio Castello",
+      "Giglio Campese"
+    ],
+    "comuni_confinanti": null,
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro Apostolo",
+      "Chiesa di Giglio Porto"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Campese (a Giglio Campese)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Faro Vecchio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Mamiliano (15 settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gavorrano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053010",
+    "codice_catastale": "D948",
+    "popolazione": 8535,
+    "superficie_kmq": 164.03,
+    "densita": 52.0,
+    "cap": "58023",
+    "prefisso_telefonico": "0566",
+    "patrono": "San Giuliano",
+    "festa_patronale": "28 agosto",
+    "demonimo": "gavorranesi",
+    "etimologia": "Potrebbe derivare da Calvorano, dal latino calvulus, o dal nome latino di persona Gavorrus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Caldana",
+      "Giuncarico",
+      "Ravi",
+      "Casteani",
+      "Bagno di Gavorrano",
+      "Castel di Pietra",
+      "Filare",
+      "Grilli",
+      "I Forni",
+      "Potassa",
+      "Bivio Ravi"
+    ],
+    "comuni_confinanti": [
+      "Castiglione della Pescaia",
+      "Grosseto",
+      "Massa Marittima",
+      "Roccastrada",
+      "Scarlino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Giuliano",
+      "Chiesa di Sant'Egidio (in località Giuncarico)",
+      "Chiesa di San Leonardo (in località Ravi)",
+      "Chiesa di San Biagio (in località Caldana)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro delle Rocce"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Follonica",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053009",
+    "codice_catastale": "D656",
+    "popolazione": 21443,
+    "superficie_kmq": 55.83,
+    "densita": 384.1,
+    "cap": "58022",
+    "prefisso_telefonico": "0566",
+    "patrono": "San Leopoldo",
+    "festa_patronale": "15 novembre",
+    "demonimo": "follonichesi",
+    "etimologia": "Deriva dal latino fullonica, da fullo, -onis che significa lavapanni oppure potrebbe derivare dal Poggio di Follona riferendosi al nome etrusco di persona Fullona.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Massa Marittima",
+      "Piombino (LI)",
+      "Scarlino",
+      "Suvereto (LI)"
+    ],
+    "musei": [
+      "Museo del Ferro e della Ghisa",
+      "Pinacoteca Civica ''A. Modigliani''"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve del Pastorale",
+      "Arcipretura di San Giuliano Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Civitella Paganico",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053008",
+    "codice_catastale": "C782",
+    "popolazione": 3173,
+    "superficie_kmq": 192.71,
+    "densita": 16.5,
+    "cap": "58045",
+    "prefisso_telefonico": "0564",
+    "patrono": "SS. Fabiano e Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "civitellini o paganichesi",
+    "etimologia": "Chiamata anche Civitella Marittima, la prima parte del nome deriva dal latino civitas, ossia città. \"Paganico\", sostituito a \"marittima\" nel 1928, deriva dal termine tardo antico paganus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Strada del Vino Montecucco"
+    ],
+    "localita_frazioni": [
+      "Civitella Marittima",
+      "Paganico",
+      "Pari",
+      "Casale di Pari",
+      "Monte Antico",
+      "Casenovole",
+      "Dogana",
+      "Petriolo"
+    ],
+    "comuni_confinanti": [
+      "Campagnatico",
+      "Cinigiano",
+      "Montalcino (SI)",
+      "Monticiano (SI)",
+      "Murlo (SI)",
+      "Roccastrada"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Peci (frazione: Civitella Marittima)",
+      "Palazzo Franceschini (frazione: Civitella Marittima)"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria in Montibus (frazione: Civitella Marittima)",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Donato (frazione: Casale di Pari)",
+      "Chiesa di San Biagio (frazione: Pari)",
+      "Abbazia di San Lorenzo dell’ Ardenghesca (frazione: Civitella Marittima)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Casenovole"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatrino Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Quissac (Languedoc-Roussillon - département du Gard",
+      "Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cinigiano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053007",
+    "codice_catastale": "C705",
+    "popolazione": 2580,
+    "superficie_kmq": 161.64,
+    "densita": 16.0,
+    "cap": "58044",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "cinigianesi",
+    "etimologia": "Deriva da cinigia o dal latino cinisia che significa \"cenere calda con fuoco\" e si riferisce probabilmente al colore del terreno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Castagno",
+      "Associazione Strada del Vino Montecucco"
+    ],
+    "localita_frazioni": [
+      "frazioni: Monticello Amiata",
+      "Castiglioncello Bandini",
+      "Sasso d'Ombrone",
+      "Poggi del Sasso",
+      "Porrona;\nborgate: Borgo Santa Rita"
+    ],
+    "comuni_confinanti": [
+      "Arcidosso",
+      "Campagnatico",
+      "Castel del Piano",
+      "Civitella Paganico",
+      "Montalcino (SI)"
+    ],
+    "musei": [
+      "Casa Museo di Monticello Amiata"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Donato (in frazione Porrona)",
+      "Monastero di Siloe"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Colle Massari",
+      "Castello di Porrona"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Auditorium Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castiglione della Pescaia",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053006",
+    "codice_catastale": "C310",
+    "popolazione": 7287,
+    "superficie_kmq": 208.96,
+    "densita": 34.9,
+    "cap": "58043",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Guglielmo",
+    "festa_patronale": "secondo lunedì di maggio",
+    "demonimo": "castiglionesi",
+    "etimologia": "La prima parte del nome si riferisce alla presenza di un castello. La specifica deriva dal termine latino piscaria, ossia pescheria.",
+    "il_comune_e": [
+      "Località balneare segnalata con cinque vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di Punta Ala)"
+    ],
+    "fa_parte_di": [
+      "Comprensorio del Consorzio di Bonifica della Val di Cornia Venturina",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Tirli",
+      "Buriano",
+      "Vetulonia",
+      "Punta Ala"
+    ],
+    "comuni_confinanti": [
+      "Gavorrano",
+      "Grosseto",
+      "Scarlino"
+    ],
+    "musei": [
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santa Maria del Giglio",
+      "Pieve di Santa Maria Assunta (in località Buriano)",
+      "Oratorio di Tirli",
+      "Chiesina della Madonna del Romitorio",
+      "Chiesa di San Simone (in località Vetulonia)",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa della Madonna delle Grazie (in località Vetulonia)"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Aragonese (XIV-XV secolo)",
+      "Castello di Buriano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castell'Azzara",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053005",
+    "codice_catastale": "C147",
+    "popolazione": 1450,
+    "superficie_kmq": 64.72,
+    "densita": 22.4,
+    "cap": "58034",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "castellazzaresi",
+    "etimologia": "Chiamato in passato Castellum Lazzarii è un composto del termine castellum (ossia castello) e del nome latino di persona Lazzarus o Lazzarius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Selvena;\nlocalità: Sforzesca;\nborgate: Querciolaia",
+      "Poggio Montone"
+    ],
+    "comuni_confinanti": [
+      "Piancastagnaio (SI)",
+      "Proceno (VT)",
+      "Santa Fiora",
+      "Semproniano",
+      "Sorano"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa la Sforzesca"
+    ],
+    "chiese": [
+      "Oratorio della Madonna del Rosario",
+      "Chiesa di San Niccolò",
+      "Chiesa di San Gregorio Magno (in località La Sforzesca)"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Silvana (in località Selvena",
+      "ruderi)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel del Piano",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053004",
+    "codice_catastale": "C085",
+    "popolazione": 4771,
+    "superficie_kmq": 67.79,
+    "densita": 70.4,
+    "cap": "58033",
+    "prefisso_telefonico": "0564",
+    "patrono": "Maria SS. delle Grazie",
+    "festa_patronale": "8 settembre",
+    "demonimo": "cioli",
+    "etimologia": "Il nome si riferisce evidentemente ad un castello o un borgo situato su di una pianura.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada del Vino Montecucco"
+    ],
+    "localita_frazioni": [
+      "Montenero d'Orcia",
+      "Montegiovi",
+      "Monte Amiata versante grossetano"
+    ],
+    "comuni_confinanti": [
+      "Abbadia San Salvatore (SI)",
+      "Arcidosso",
+      "Castiglione d'Orcia (SI)",
+      "Cinigiano",
+      "Montalcino (SI)",
+      "Santa Fiora",
+      "Seggiano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell'Opera (o Propositura dei SS. Niccolò e Lucia)",
+      "Basilica di San Leonardo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Amiatino"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna delle Grazie (8 settembre)",
+      "con il Palio delle contrade e sfilata storica in costume"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Capalbio",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053003",
+    "codice_catastale": "B646",
+    "popolazione": 4105,
+    "superficie_kmq": 187.6,
+    "densita": 21.9,
+    "cap": "58011",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Bernardino",
+    "festa_patronale": "20 maggio",
+    "demonimo": "capalbiesi",
+    "etimologia": "Deriva da capo albulo, dal latino caput albulum, ossia capo bianco. Secondo un'altra ipotesi il nome deriva dal latino caput Albi o caput Albii.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazioni: Capalbio",
+      "Capalbio Scalo",
+      "Borgo Carige",
+      "Torba",
+      "Pescia Fiorentina;\ncentri abitati: Chiarone",
+      "Carige Alta",
+      "Selva nera",
+      "Giardino"
+    ],
+    "comuni_confinanti": [
+      "Manciano",
+      "Montalto di Castro (VT)",
+      "Orbetello"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Collacchioni",
+      "sorge sui resti della Rocca Aldobrandesca"
+    ],
+    "chiese": [
+      "Pieve di San Nicola",
+      "Oratorio della Provvidenza"
+    ],
+    "castelli_fortificazioni": [
+      "Torre del Buranaccio (in frazione Capalbio Scalo)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Porta Senese"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campagnatico",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053002",
+    "codice_catastale": "B497",
+    "popolazione": 2450,
+    "superficie_kmq": 162.15,
+    "densita": 15.1,
+    "cap": "58042",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "campagnatichesi",
+    "etimologia": "Potrebbe riferirsi al nome latino di persona Campanius con l'aggiunta del suffisso -aticus che indica possesso. Secondo altri potrebbe riferirsi a campagna, anche se è un'ipotesi poco condivisa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada del Vino Montecucco"
+    ],
+    "localita_frazioni": [
+      "frazioni geografiche: Campagnatico",
+      "Arcille",
+      "Marrucheti",
+      "Montorsaio;\ncentri abitati: Campagnatico",
+      "Montorsaio",
+      "Arcille;\nnuclei abitati: Migliorini",
+      "Marrucheti",
+      "Pianetto",
+      "Granaione",
+      "Sabatina",
+      "Sticcianese",
+      "Sant'Antonio"
+    ],
+    "comuni_confinanti": [
+      "Arcidosso",
+      "Cinigiano",
+      "Civitella Paganico",
+      "Grosseto",
+      "Roccalbegna",
+      "Roccastrada",
+      "Scansano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria",
+      "Chiesa di Sant'Antonio Abate",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Mura Medievali e Torre degli Aldobrandeschi"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arcidosso",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053001",
+    "codice_catastale": "A369",
+    "popolazione": 4295,
+    "superficie_kmq": 93.39,
+    "densita": 46.0,
+    "cap": "58031",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "arcidossini",
+    "etimologia": "Deriva da arcidossum, ed è un composto di arcis, dal latino arx (ossia roccia) o arcus (arco), e di dorsum che significa dosso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Amiata Grossetana",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Strada del Vino Montecucco"
+    ],
+    "localita_frazioni": [
+      "Bagnoli",
+      "Macchie",
+      "Montelaterone",
+      "Salaiola",
+      "San Lorenzo",
+      "Stribugliano",
+      "Zancona"
+    ],
+    "comuni_confinanti": [
+      "Campagnatico",
+      "Castel del Piano",
+      "Cinigiano",
+      "Roccalbegna",
+      "Santa Fiora"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna delle Grazie (o della Madonna Incoronata)",
+      "Pieve di Santa Maria ad Lamulas",
+      "Chiesa di Sant'Andrea",
+      "Chiesa di Santa Mustiola",
+      "Chiesa di San Niccolò",
+      "Chiesa di San Leonardo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Arcidosso",
+      "Torre di Monte Labbro"
+    ],
+    "fontane": [
+      "Fonte del Poggiolo",
+      "fontana neogotica in ghisa"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro degli Unanimi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Castagna in Festa (ultimi due weekend di ottobre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grosseto",
+    "provincia": "Grosseto",
+    "regione": "Toscana",
+    "zona": "Italia Centrale",
+    "codice_istat": "053011",
+    "codice_catastale": "E202",
+    "popolazione": 82143,
+    "superficie_kmq": 474.46,
+    "densita": 173.1,
+    "cap": "58100",
+    "prefisso_telefonico": "0564",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "grossetani",
+    "etimologia": "Potrebbe riferirsi alla presenza di un bosco con grosse piante, anche se potrebbe riferirsi anche al latino grossus intendendo un fico che non giunge a maturazione o all'italiano grossa riferendosi ad un tipo di uva.",
+    "il_comune_e": [
+      "Località balneare (Marina di Grosseto) segnalata con quattro vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007 (Marina e Principina a Mare)",
+      "Bandiera Blu Approdi Turistici 2007 (Marina di San Rocco)"
+    ],
+    "fa_parte_di": [
+      "Parco Naturale della Maremma"
+    ],
+    "localita_frazioni": [
+      "Alberese",
+      "Batignano",
+      "Braccagni",
+      "Istia d'Ombrone",
+      "Marina di Grosseto",
+      "Montepescali",
+      "Roselle",
+      "Santa Maria di Rispescia"
+    ],
+    "comuni_confinanti": [
+      "Campagnatico",
+      "Castiglione della Pescaia",
+      "Gavorrano",
+      "Magliano in Toscana",
+      "Roccastrada",
+      "Scansano"
+    ],
+    "musei": [
+      "Museo Diocesano d'Arte Sacra",
+      "Museo della Cultura Popolare Grossetana",
+      "Museo Archeologico e d'Arte della Maremma"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo - Cattedrale di San Lorenzo",
+      "Chiesa di San Salvatore (a Istia d'Ombrone)",
+      "Chiesa di San Pietro",
+      "Chiesa di San Martino (a Batignano)",
+      "Chiesa di San Lorenzo (a Montepescali)",
+      "Chiesa di San Giovanni",
+      "Chiesa di San Francesco",
+      "Chiesa dei Santi Lodovico e Gherardo, detta dei Bigi",
+      "Basilica del Sacro Cuore"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza Medicea"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro degli Industri",
+      "Anfiteatro Romano",
+      "Teatro Moderno"
+    ],
+    "stadi": [
+      "Stadio Comunale Olimpico"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

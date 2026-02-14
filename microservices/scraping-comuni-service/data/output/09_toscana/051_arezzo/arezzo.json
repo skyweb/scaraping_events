@@ -1,0 +1,16 @@
+{
+  "nome": "Arezzo",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "AR",
+  "codice_istat": "051",
+  "popolazione": 344374,
+  "popolazione_maschi": 167181,
+  "popolazione_femmine": 177193,
+  "superficie_kmq": 3235.15,
+  "densita": 106.4,
+  "num_comuni": 37,
+  "capoluogo": "Arezzo",
+  "iso_3166_2": "IT-AR",
+  "nuts": "ITE18"
+}

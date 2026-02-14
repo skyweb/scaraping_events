@@ -1,0 +1,16 @@
+{
+  "nome": "Treviso",
+  "regione": "Veneto",
+  "zona": null,
+  "sigla": "TV",
+  "codice_istat": "026",
+  "popolazione": 885972,
+  "popolazione_maschi": 434507,
+  "popolazione_femmine": 451465,
+  "superficie_kmq": 2476.68,
+  "densita": 357.7,
+  "num_comuni": 95,
+  "capoluogo": "Treviso",
+  "iso_3166_2": "IT-TV",
+  "nuts": "ITD34"
+}

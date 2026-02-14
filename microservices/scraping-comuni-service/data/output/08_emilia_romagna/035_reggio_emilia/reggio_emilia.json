@@ -1,0 +1,16 @@
+{
+  "nome": "Reggio Emilia",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "RE",
+  "codice_istat": "035",
+  "popolazione": 532483,
+  "popolazione_maschi": 261370,
+  "popolazione_femmine": 271113,
+  "superficie_kmq": 2292.89,
+  "densita": 232.2,
+  "num_comuni": 42,
+  "capoluogo": "Reggio Emilia",
+  "iso_3166_2": "IT-RE",
+  "nuts": "ITD53"
+}

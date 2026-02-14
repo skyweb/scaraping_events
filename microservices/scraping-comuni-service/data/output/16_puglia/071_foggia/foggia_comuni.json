@@ -1,0 +1,3061 @@
+[
+  {
+    "nome": "Zapponeta",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071064",
+    "codice_catastale": "M267",
+    "popolazione": 3422,
+    "superficie_kmq": 40.04,
+    "densita": 85.5,
+    "cap": "71030",
+    "prefisso_telefonico": "0884",
+    "patrono": "Madonna della Misericordia",
+    "festa_patronale": "12 settembre",
+    "demonimo": "zapponetani",
+    "etimologia": "Deriva dal latino sappinus, ossia abete. Con l'aggiunta del suffisso collettivo -etum diventando sappinetum.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cerignola",
+      "Manfredonia",
+      "Margherita di Savoia (BT)",
+      "Trinitapoli (BT)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Volturino",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071062",
+    "codice_catastale": "M132",
+    "popolazione": 1712,
+    "superficie_kmq": 58.01,
+    "densita": 29.5,
+    "cap": "71030",
+    "prefisso_telefonico": "0881",
+    "patrono": "Maria SS. della Serritella",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "volturinesi",
+    "etimologia": "Deriva dal latino vulturinus, ossia \"di avvoltoio\", che a sua volta deriva da vultur, ossia avvoltoio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": [
+      "Carignani"
+    ],
+    "comuni_confinanti": [
+      "Alberona",
+      "Lucera",
+      "Motta Montecorvino",
+      "Pietramontecorvino",
+      "Volturara Appula"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Badiale",
+      "dedicata a Santa Maria Assunta in Cielo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Volturara Appula",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071061",
+    "codice_catastale": "M131",
+    "popolazione": 416,
+    "superficie_kmq": 51.88,
+    "densita": 8.0,
+    "cap": "71030",
+    "prefisso_telefonico": "0881",
+    "patrono": "Maria Santissima della Sanità",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "volturaresi",
+    "etimologia": "Deriva da Vulturariam, dal latino vultur, ossia avvoltoio con l'aggiunta del suffisso -aria. La specifica deriva dal latino Apulia, ossia Puglia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alberona",
+      "Celenza Valfortore",
+      "Motta Montecorvino",
+      "San Bartolomeo in Galdo (BN)",
+      "San Marco la Catola",
+      "Volturino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Caracciolo"
+    ],
+    "chiese": [
+      "Cattedrale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vieste",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071060",
+    "codice_catastale": "L858",
+    "popolazione": 13946,
+    "superficie_kmq": 167.52,
+    "densita": 83.2,
+    "cap": "71019",
+    "prefisso_telefonico": "0884",
+    "patrono": "Madonna di Merino",
+    "festa_patronale": "9 maggio",
+    "demonimo": "viestani",
+    "etimologia": "Deriva dall'antico nome Vesta o Vestanus.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Mattinata",
+      "Monte Sant'Angelo",
+      "Peschici",
+      "Vico del Gargano"
+    ],
+    "musei": [
+      "Museo Civico Archeologico \"M. Petrone\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale SS Sacramento",
+      "Chiesa parrocchiale Gesù Buon Pastore",
+      "Chiesa parrocchiale di Santa Maria delle Grazie",
+      "Chiesa di San Francesco",
+      "Chiesa Beata Maria di Costantinopoli",
+      "Cattedrale di Santa Maria di Merino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vico del Gargano",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071059",
+    "codice_catastale": "L842",
+    "popolazione": 7725,
+    "superficie_kmq": 110.53,
+    "densita": 69.9,
+    "cap": "71018",
+    "prefisso_telefonico": "0884",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "vichesi",
+    "etimologia": "La prima parte del nome deriva da vicus, ossia gruppo di case, villaggio. La specifica è identificativa della sua collocazione.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano",
+      "Club I Borghi più Belli d'Italia",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carpino",
+      "Ischitella",
+      "Monte Sant'Angelo",
+      "Peschici",
+      "Rodi Garganico",
+      "Vieste"
+    ],
+    "musei": [
+      "Museo Comunale Trappeto Maratea",
+      "Antiquarium Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dell'Arancia (settimana di San Valentino)",
+      "Messa Pazza (Venerdì Santo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Troia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071058",
+    "codice_catastale": "L447",
+    "popolazione": 7152,
+    "superficie_kmq": 167.21,
+    "densita": 42.8,
+    "cap": "71029",
+    "prefisso_telefonico": "0881",
+    "patrono": "SS. Anastasio, Urbano, Secondino, Ponziano ed Eleuterio",
+    "festa_patronale": "19 luglio",
+    "demonimo": "troiani",
+    "etimologia": "Deriva probabilmente dal greco Troas, ossia la triade o triodia \"i trivi\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Biccari",
+      "Castelluccio dei Sauri",
+      "Castelluccio Valmaggiore",
+      "Celle di San Vito",
+      "Foggia",
+      "Lucera",
+      "Orsara di Puglia"
+    ],
+    "musei": [
+      "Tesoro della Cattedrale",
+      "Museo Civico",
+      "Museo Diocesano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria Mediatrice :: Missionari Comboniani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Processione del Bacio (Pasqua)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torremaggiore",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071056",
+    "codice_catastale": "L273",
+    "popolazione": 17208,
+    "superficie_kmq": 208.57,
+    "densita": 82.5,
+    "cap": "71017",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Sabino",
+    "festa_patronale": "prima domenica di giugno",
+    "demonimo": "torremaggioresi",
+    "etimologia": "Deriva da Turris Maioris è un composto di torre e maggiore, con allusione alle torri del monastero sorto in loco. Secondo altri il nome si riferisce alle quattro torri del castello del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casalvecchio di Puglia",
+      "Castelnuovo della Daunia",
+      "Lucera",
+      "Rotello (CB)",
+      "San Paolo di Civitate",
+      "San Severo",
+      "Santa Croce di Magliano (CB)",
+      "Serracapriola"
+    ],
+    "musei": [
+      "Museo Civico Giacomo Negri"
+    ],
+    "ville_palazzi": [
+      "Palazzo di Città"
+    ],
+    "chiese": [
+      "Santuario Santa Maria della Fontana"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Parco Archeologico"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Corteo Storico di Fiorentino e di Federico II (seconda domenica di Giugno)"
+    ],
+    "gemellaggi": [
+      "Buffalo (USA)",
+      "Canosa di Puglia (Barletta Andria Trani-Puglia)",
+      "Villafalletto (Cuneo-Piemonte)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Stornarella",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071055",
+    "codice_catastale": "I963",
+    "popolazione": 5389,
+    "superficie_kmq": 33.87,
+    "densita": 159.1,
+    "cap": "71048",
+    "prefisso_telefonico": "0885",
+    "patrono": "San Francesco da Paola",
+    "festa_patronale": "2 aprile",
+    "demonimo": "stornarellesi",
+    "etimologia": "E' il diminutivo del nome del vicino paese Stornara.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ascoli Satriano",
+      "Cerignola",
+      "Orta Nova",
+      "Stornara"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Beata Vergine Maria della Stella"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Stornara",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071054",
+    "codice_catastale": "I962",
+    "popolazione": 5768,
+    "superficie_kmq": 33.65,
+    "densita": 171.4,
+    "cap": "71047",
+    "prefisso_telefonico": "0885",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "stornaresi",
+    "etimologia": "Deriva da sturnaria da sturnus, storno.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cerignola",
+      "Orta Nova",
+      "Stornarella"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Schiavone"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Rocco",
+      "in precedenza dedicata a Santa Maria della Stella"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serracapriola",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071053",
+    "codice_catastale": "I641",
+    "popolazione": 3943,
+    "superficie_kmq": 143.06,
+    "densita": 27.6,
+    "cap": "71010",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Mercurio",
+    "festa_patronale": null,
+    "demonimo": "serrani",
+    "etimologia": "E' un composto di \"serra\", ossia monte e capriolo in riferimento alla numerosa presenza di questo animale in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Nazionale del Gargano",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Chieuti",
+      "Lesina",
+      "Rotello (CB)",
+      "San Martino in Pensilis (CB)",
+      "San Paolo di Civitate",
+      "Torremaggiore"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Anna",
+      "Chiesa di Sant'Angelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Agata di Puglia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071052",
+    "codice_catastale": "I193",
+    "popolazione": 1929,
+    "superficie_kmq": 115.8,
+    "densita": 16.7,
+    "cap": "71028",
+    "prefisso_telefonico": "0881",
+    "patrono": "Sant'Agata",
+    "festa_patronale": "5 febbraio",
+    "demonimo": "santagatesi",
+    "etimologia": "Il nome attesta la forte devozione verso la santa patrona del paese. La specifica è identificativa della zona",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accadia",
+      "Anzano di Puglia",
+      "Candela",
+      "Deliceto",
+      "Lacedonia (AV)",
+      "Monteleone di Puglia",
+      "Rocchetta Sant'Antonio",
+      "Scampitella (AV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Severo",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071051",
+    "codice_catastale": "I158",
+    "popolazione": 53434,
+    "superficie_kmq": 333.17,
+    "densita": 160.4,
+    "cap": "71016",
+    "prefisso_telefonico": "0882",
+    "patrono": "Madonna del Soccorso",
+    "festa_patronale": "terza domenica di maggio",
+    "demonimo": "sanseveresi",
+    "etimologia": "Il nome onora il santo a cui è dedicata una chiesa in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricena",
+      "Foggia",
+      "Lucera",
+      "Rignano Garganico",
+      "San Marco in Lamis",
+      "San Paolo di Civitate",
+      "Torremaggiore"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": [
+      "Palazzo dei Celestini (ex Monastero dell'Ordine dei Celestini)"
+    ],
+    "chiese": [
+      "Santuario Santa Maria Incoronata del Soccorso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Verdi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Paolo di Civitate",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071050",
+    "codice_catastale": "I072",
+    "popolazione": 5777,
+    "superficie_kmq": 90.7,
+    "densita": 63.7,
+    "cap": "71010",
+    "prefisso_telefonico": "0882",
+    "patrono": "Sant'Antonio da Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "sampaolesi",
+    "etimologia": "La prima parte del nome si riferisce alla presenza di un monastero in loco dedicato al santo. La specifica Civitate fa riferimento ad un antico centro medioevale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricena",
+      "Lesina",
+      "Poggio Imperiale",
+      "San Severo",
+      "Serracapriola",
+      "Torremaggiore"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Nicandro Garganico",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071049",
+    "codice_catastale": "I054",
+    "popolazione": 15423,
+    "superficie_kmq": 172.65,
+    "densita": 89.3,
+    "cap": "71015",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Nicandro Marciano",
+    "festa_patronale": "17 giugno",
+    "demonimo": "sannicandresi",
+    "etimologia": "Il nome onora il santo patrono del paese. La specifica identifica la zona.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricena",
+      "Cagnano Varano",
+      "Lesina",
+      "San Marco in Lamis"
+    ],
+    "musei": [
+      "Museo Storico Archeologico Etnografico e della Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria del Borgo",
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Marco la Catola",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071048",
+    "codice_catastale": "H986",
+    "popolazione": 990,
+    "superficie_kmq": 28.41,
+    "densita": 34.8,
+    "cap": "71030",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Liberato Martire",
+    "festa_patronale": "19 agosto",
+    "demonimo": "sammarchesi",
+    "etimologia": "Il nome attesta la venerazione per San Marco. La specifica si riferisce al nome del torrente limitrofo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Celenza Valfortore",
+      "San Bartolomeo in Galdo (BN)",
+      "Tufara (CB)",
+      "Volturara Appula"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ducale"
+    ],
+    "chiese": [
+      "Chiesa Madre",
+      "Chiesa di Santa Maria di Giosafat"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Giostra della Jaletta (20 agosto)",
+      "partecipano sette rioni: Port'ammont",
+      "Portabasc",
+      "Sant-Laurenz",
+      "u Jardin",
+      "Stanc Cavall",
+      "Via Nova di Sott",
+      "Vall Saccon"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Marco in Lamis",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071047",
+    "codice_catastale": "H985",
+    "popolazione": 13725,
+    "superficie_kmq": 232.82,
+    "densita": 59.0,
+    "cap": "71014",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Marco Evangelista",
+    "festa_patronale": "25 aprile",
+    "demonimo": "sammarchesi",
+    "etimologia": "Il nome onora Sanctum Marcum (San Marco). La specifica deriva dal latino lama, ossia palude.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": [
+      "Borgo Celano"
+    ],
+    "comuni_confinanti": [
+      "Apricena",
+      "Cagnano Varano",
+      "Foggia",
+      "Manfredonia",
+      "Monte Sant'Angelo",
+      "Rignano Garganico",
+      "San Giovanni Rotondo",
+      "San Nicandro Garganico",
+      "San Severo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Matteo Apostolo :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Le Fracchie (Venerdì Santo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giovanni Rotondo",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071046",
+    "codice_catastale": "H926",
+    "popolazione": 27156,
+    "superficie_kmq": 259.62,
+    "densita": 104.6,
+    "cap": "71013",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "sangiovannesi",
+    "etimologia": "Il nome si riferisce alla presenza di una chiesetta dedicata a San Giovanni chiamata \"della Rotonda\" per la sua forma circolare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Foggia",
+      "Manfredonia",
+      "Monte Sant'Angelo",
+      "San Marco in Lamis"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Nuovo Santuario Beato Padre Pio :: Frati Minori Cappuccini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Pietrelcina (Benevento - Campania)",
+      "Bucchianico (Abruzzo-Italia)",
+      "Wadowice (Polonia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roseto Valfortore",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071044",
+    "codice_catastale": "H568",
+    "popolazione": 1083,
+    "superficie_kmq": 49.71,
+    "densita": 21.8,
+    "cap": "71039",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Filippo Neri",
+    "festa_patronale": "26 maggio",
+    "demonimo": "rosetani",
+    "etimologia": "Deriva dal latino rosetum, ossia roseto. La specifica si riferisce alla sua ubicazione nella valle del fiume Fortore.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alberona",
+      "Biccari",
+      "Castelfranco in Miscano (BN)",
+      "Faeto",
+      "Foiano di Val Fortore (BN)",
+      "Montefalcone di Val Fortore (BN)",
+      "San Bartolomeo in Galdo (BN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rodi Garganico",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071043",
+    "codice_catastale": "H480",
+    "popolazione": 3679,
+    "superficie_kmq": 13.23,
+    "densita": 278.1,
+    "cap": "71012",
+    "prefisso_telefonico": "0884",
+    "patrono": "Madonna della Libera",
+    "festa_patronale": "2 luglio",
+    "demonimo": "rodiani o rodiesi",
+    "etimologia": "Deriva dal nome longobardo di persona Rodo. La specifica è identificativa della zona.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ischitella",
+      "Vico del Gargano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola di Mira",
+      "Chiesa di San Pietro (XIII secolo)",
+      "Chiesa del SS. Crocifisso",
+      "Santuario della Madonna della Libera (XVIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rocchetta Sant'Antonio",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071042",
+    "codice_catastale": "H467",
+    "popolazione": 1843,
+    "superficie_kmq": 71.9,
+    "densita": 25.6,
+    "cap": "71020",
+    "prefisso_telefonico": "0885",
+    "patrono": "Sant'Antonio Abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "rocchettani",
+    "etimologia": "La prima parte del nome si riferisce alla rocca normanna che dominava il paese. La seconda parte del nome onora il santo patrono del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Candela",
+      "Lacedonia (AV)",
+      "Melfi (PZ)",
+      "Sant'Agata di Puglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Collegno (Torino - Piemonte)",
+      "dal maggio 1999"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rignano Garganico",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071041",
+    "codice_catastale": "H287",
+    "popolazione": 2045,
+    "superficie_kmq": 88.94,
+    "densita": 23.0,
+    "cap": "71010",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "rignanesi",
+    "etimologia": "La prima parte deriva dal nome latino di persona Rinnius o Ran(n)ius con l'aggiunta del suffisso -anus. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricena",
+      "Foggia",
+      "San Marco in Lamis",
+      "San Severo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poggio Imperiale",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071040",
+    "codice_catastale": "G761",
+    "popolazione": 2719,
+    "superficie_kmq": 52.37,
+    "densita": 51.9,
+    "cap": "71010",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Placido",
+    "festa_patronale": "5 ottobre",
+    "demonimo": "poggioimperialesi",
+    "etimologia": "Il nome del luogo si riferisce all'imperatore Placido Imperiale che creando nel 1874 un palazzo diede vita al paese. La parola \"poggio\" deriva dal latino podium, ossia rialzo.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricena",
+      "Lesina",
+      "San Paolo di Civitate"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Nazario",
+      "Chiesa parrocchiale di San Placido Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pietramontecorvino",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071039",
+    "codice_catastale": "G604",
+    "popolazione": 2699,
+    "superficie_kmq": 71.17,
+    "densita": 37.9,
+    "cap": "71038",
+    "prefisso_telefonico": "0881",
+    "patrono": "Sant'Alberto",
+    "festa_patronale": "16 maggio",
+    "demonimo": "petraioli",
+    "etimologia": "E' formato da pietra (roccia) e montecorvino che la tradizione identifica con una torre su cui i corvi crearono un nido.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casalnuovo Monterotaro",
+      "Casalvecchio di Puglia",
+      "Castelnuovo della Daunia",
+      "Celenza Valfortore",
+      "Lucera",
+      "Motta Montecorvino",
+      "Volturino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo ducale"
+    ],
+    "chiese": [
+      "Chiesa Madre"
+    ],
+    "castelli_fortificazioni": [
+      "Torre normanna"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Sant'Alberto - Processione dei Palij (16 maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Peschici",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071038",
+    "codice_catastale": "G487",
+    "popolazione": 4511,
+    "superficie_kmq": 48.92,
+    "densita": 92.2,
+    "cap": "71010",
+    "prefisso_telefonico": "0884",
+    "patrono": "Sant'Elia",
+    "festa_patronale": "20 luglio",
+    "demonimo": "peschiciani",
+    "etimologia": "Potrebbe riferirsi al serbo-croato pijesak (sabbia) riferendosi forse alla presenza di slavi in loco arrivati via mare.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Vico del Gargano",
+      "Vieste"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa abbaziale di Santa Maria di Calena (XI secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Panni",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071037",
+    "codice_catastale": "G312",
+    "popolazione": 789,
+    "superficie_kmq": 32.59,
+    "densita": 24.2,
+    "cap": "71020",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Costanzo",
+    "festa_patronale": "26 agosto",
+    "demonimo": "pannesi",
+    "etimologia": "Potrebbe derivare dal nome germanico di persona Pando. Secondo alcuni il nome è riconducibile al latino pandus (curvo), riferito a qualche elemento del paesaggio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accadia",
+      "Bovino",
+      "Montaguto (AV)",
+      "Monteleone di Puglia",
+      "Orsara di Puglia",
+      "Savignano Irpino (AV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Calvario",
+      "Chiesa di San Vito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Orta Nova",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071036",
+    "codice_catastale": "G131",
+    "popolazione": 17808,
+    "superficie_kmq": 103.83,
+    "densita": 171.5,
+    "cap": "71045",
+    "prefisso_telefonico": "0885",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "ortesi",
+    "etimologia": "Deriva dal tardo latino hortua, ossia giardino, orto. La specifica risale al 1862 e lo distingue dagli omonimi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ascoli Satriano",
+      "Carapelle",
+      "Cerignola",
+      "Ordona",
+      "Stornara",
+      "Stornarella"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Orsara di Puglia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071035",
+    "codice_catastale": "G125",
+    "popolazione": 2738,
+    "superficie_kmq": 82.23,
+    "densita": 33.3,
+    "cap": "71027",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "orsaresi",
+    "etimologia": "Chiamata Orsara Dauno Irpina fino al 1864. Il nome attuale deriva dal latino ursus, ossia orso con l'aggiunta del suffisso -aria per indicare un luogo con la presenza di orsi. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali",
+      "Movimento Cittaslow (rete internazionale delle città del buon vivere)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bovino",
+      "Castelluccio dei Sauri",
+      "Celle di San Vito",
+      "Faeto",
+      "Greci (AV)",
+      "Montaguto (AV)",
+      "Panni",
+      "Troia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Terlizzi",
+      "Palazzo Varo",
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa Madonna della Neve",
+      "Chiesa Evangelica Valdese, in via Vittorio Emanuele",
+      "Chiesa di Santa Maria delle Grazie, nota come Chiesa dei Morti",
+      "Chiesa di San Nicola di Bari",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa dell'Angelo o dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta di San Michele Arcangelo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ordona",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071063",
+    "codice_catastale": "M266",
+    "popolazione": 2833,
+    "superficie_kmq": 39.96,
+    "densita": 70.9,
+    "cap": "71040",
+    "prefisso_telefonico": "0885",
+    "patrono": "San Leone Vescovo",
+    "festa_patronale": "22 gennaio",
+    "demonimo": "ordonesi",
+    "etimologia": "Deriva da Herdonia(e) che è l'antico nome del luogo. Divenne poi Herdonea, poi Erdona fino a Ordoni.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ascoli Satriano",
+      "Carapelle",
+      "Foggia",
+      "Orta Nova"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Sito archeologico romano antica città di Herdonia"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Motta Montecorvino",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071034",
+    "codice_catastale": "F777",
+    "popolazione": 718,
+    "superficie_kmq": 19.7,
+    "densita": 36.4,
+    "cap": "71030",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "6 maggio",
+    "demonimo": "mottesi",
+    "etimologia": "E' un composto di \"motta\" che indica un \"rialzo di terreno\" e il termine montecorvino che è un composto di \"monte\" e corvino che deriva da corvo. Questa seconda parte del nome si riferisce all'antica città distrutta nel 1456.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Celenza Valfortore",
+      "Pietramontecorvino",
+      "Volturara Appula",
+      "Volturino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa arcipretale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monteleone di Puglia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071032",
+    "codice_catastale": "F538",
+    "popolazione": 1020,
+    "superficie_kmq": 36.04,
+    "densita": 28.3,
+    "cap": "71020",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "monteleonesi",
+    "etimologia": "La prima parte del nome è un composto di \"monte\" e del nome di persona Leone. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accadia",
+      "Anzano di Puglia",
+      "Ariano Irpino (AV)",
+      "Panni",
+      "San Sossio Baronia (AV)",
+      "Sant'Agata di Puglia",
+      "Savignano Irpino (AV)",
+      "Zungoli (AV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista",
+      "Chiesa del Carmine"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Sant'Angelo",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071033",
+    "codice_catastale": "F631",
+    "popolazione": 12534,
+    "superficie_kmq": 242.8,
+    "densita": 51.6,
+    "cap": "71037",
+    "prefisso_telefonico": "0884",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "montanari",
+    "etimologia": "Deriva da Montis S. Angeli ed è un composto di \"monte\" e del nome del santo.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": [
+      "Macchia (Marina di Monte Sant’Angelo)",
+      "Ruggiano"
+    ],
+    "comuni_confinanti": [
+      "Cagnano Varano",
+      "Carpino",
+      "Manfredonia",
+      "Mattinata",
+      "San Giovanni Rotondo",
+      "San Marco in Lamis",
+      "Vico del Gargano",
+      "Vieste"
+    ],
+    "musei": [
+      "Museo Arti e Tradizioni Popolari del Gargano \"G. Tancredi\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Carmine",
+      "Abbazia di Santa Maria di Pulsano",
+      "Chiesa di San Francesco",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa di San Benedetto",
+      "Santuario di San Michele Arcangelo :: Padri Michaeliti",
+      "Chiesa di Sant'Antonio Abate"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Normanno-Svevo-Aragonese"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mattinata",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071031",
+    "codice_catastale": "F059",
+    "popolazione": 6313,
+    "superficie_kmq": 72.81,
+    "densita": 86.7,
+    "cap": "71030",
+    "prefisso_telefonico": "0884",
+    "patrono": "Santa Maria della Luce",
+    "festa_patronale": "15 settembre",
+    "demonimo": "mattinatesi",
+    "etimologia": "Deriva da matina che significa terreno coltivato o collina, dal latino mat- (altura).",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Monte Sant'Angelo",
+      "Vieste"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria della Luce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Faraglioni"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Manfredonia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071029",
+    "codice_catastale": "E885",
+    "popolazione": 57100,
+    "superficie_kmq": 356.93,
+    "densita": 160.0,
+    "cap": "71043",
+    "prefisso_telefonico": "0884",
+    "patrono": null,
+    "festa_patronale": "30 agosto",
+    "demonimo": "manfredoniani o sipontini",
+    "etimologia": "Il nome onora il suo antico fondatore, il re Manfredi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": [
+      "Borgo Mezzanone",
+      "Montagna"
+    ],
+    "comuni_confinanti": [
+      "Carapelle",
+      "Cerignola",
+      "Foggia",
+      "Monte Sant'Angelo",
+      "San Giovanni Rotondo",
+      "San Marco in Lamis",
+      "Zapponeta"
+    ],
+    "musei": [
+      "Raccolta Etnografica del Centro Studi Pugliesi",
+      "Museo Archeologico Nazionale"
+    ],
+    "ville_palazzi": [
+      "Palazzo Cessa",
+      "Palazzo De Florio",
+      "Palazzo Delli Santi"
+    ],
+    "chiese": [
+      "Santuario di Santa Maria di Siponto",
+      "Duomo, dedicato a San Lorenzo Maiorano",
+      "Chiesa di San Leonardo",
+      "Chiesa di San Francesco",
+      "Chiesa di San Domenico",
+      "Chiesa di San Benedetto"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Manfredi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Miramare"
+    ],
+    "eventi_feste_sagre": [
+      "Sagra della Farrata (a Carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lucera",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071028",
+    "codice_catastale": "E716",
+    "popolazione": 33447,
+    "superficie_kmq": 338.65,
+    "densita": 98.8,
+    "cap": "71036",
+    "prefisso_telefonico": "0881",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "lucerini",
+    "etimologia": "Esistono svariate ipotesi riguardanti l'etimologia del nome. Secondo alcuni il nome si riferisce ad una tribù serviana: Luceres. Altri credono risalga al nome del re dauno Lucius, altri ancora da Lux Cereris, riferendosi alla presenza in passato di un tempio dedicato alla dea Cerere. Un'ipotesi racconta che il nome si riferisce all'etrusco luceri che deriva dall'unione di luc, bosco ed eri sacro. In passato il paese era chiamato Nuceria.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alberona",
+      "Biccari",
+      "Castelnuovo della Daunia",
+      "Foggia",
+      "Pietramontecorvino",
+      "San Severo",
+      "Torremaggiore",
+      "Troia",
+      "Volturino"
+    ],
+    "musei": [
+      "Museo Civico Fiorelli"
+    ],
+    "ville_palazzi": [
+      "Palazzo Cavalli",
+      "Palazzo Uva"
+    ],
+    "chiese": [
+      "Chiesa di Sant’Antonio Abate",
+      "Chiesa di San Francesco",
+      "Chiesa di San Domenico"
+    ],
+    "castelli_fortificazioni": [
+      "Fortezza Angioina"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Anfiteatro romano"
+    ],
+    "teatri": [
+      "Teatro Garibaldi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Torneo delle Chiavi (13-14 agosto)",
+      "con corteo storico"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lesina",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071027",
+    "codice_catastale": "E549",
+    "popolazione": 6352,
+    "superficie_kmq": 159.74,
+    "densita": 39.8,
+    "cap": "71010",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Primiano Martire",
+    "festa_patronale": "15 maggio",
+    "demonimo": "lesinesi",
+    "etimologia": "Esistono diverse ipotesi in merito alla provenienza del nome, potrebbe derivare da un prelatino les- (baratro), dal germanico alisna, ossia lima o dallo slavo lesi, ossia boscoso.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apricena",
+      "Poggio Imperiale",
+      "San Nicandro Garganico",
+      "San Paolo di Civitate",
+      "Serracapriola"
+    ],
+    "musei": [
+      "Museo Naturalistico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa SS. Annunziata",
+      "Chiesa di San Primiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isole Tremiti",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071026",
+    "codice_catastale": "E363",
+    "popolazione": 489,
+    "superficie_kmq": 3.13,
+    "densita": 156.2,
+    "cap": "71040",
+    "prefisso_telefonico": "0882",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "tremitesi",
+    "etimologia": "Fino al 1932 era chiamato Colonia Penale, il nome attuale deriva da Trimerus, ossia \"le tre parti\" per indicare le tre isole maggiori. Un'ipotesi oggi non più condivisa ritiene che il nome derivi dal latino termes, ossia ulivo.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": null,
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ischitella",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071025",
+    "codice_catastale": "E332",
+    "popolazione": 4427,
+    "superficie_kmq": 87.37,
+    "densita": 50.7,
+    "cap": "71010",
+    "prefisso_telefonico": "0884",
+    "patrono": "Sant'Eustachio",
+    "festa_patronale": "20 maggio",
+    "demonimo": "ischitellani",
+    "etimologia": "Deriva dal pugliese (l)isca, ossia \"isola\" con il significato di \"terra tra due fiumi\". Secondo altri potrebbe derivare dal latino aesculus, ossia quercia, con l'aggiunta del suffisso -etum.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": [
+      "località: Isola Varano",
+      "Scopparone",
+      "Foce Varano",
+      "Pozzo Gattiparro",
+      "Forchione",
+      "Parco della Chiesa",
+      "Belvedere",
+      "Defensola",
+      "Fosso dei Mulini;\ncontrade: Principe"
+    ],
+    "comuni_confinanti": [
+      "Cagnano Varano",
+      "Carpino",
+      "Rodi Garganico",
+      "Vico del Gargano"
+    ],
+    "musei": [
+      "Muse Archeologico di Ischitella"
+    ],
+    "ville_palazzi": [
+      "Palazzo De Cata"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Eustachio",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa del Purgatorio"
+    ],
+    "castelli_fortificazioni": [
+      "Palazzo Pinto o Ventrella"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Faeto",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071023",
+    "codice_catastale": "D459",
+    "popolazione": 621,
+    "superficie_kmq": 26.19,
+    "densita": 23.7,
+    "cap": "71020",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Prospero",
+    "festa_patronale": "seconda domenica di agosto",
+    "demonimo": "faetani",
+    "etimologia": "Il nome significa \"faggeto\", derivando dal latino fagus, ossia faggio, con l'aggiunta del suffisso collettivo -etum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali",
+      "Area Minoranza Linguistica Franco-Provenzale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Biccari",
+      "Castelfranco in Miscano (BN)",
+      "Celle di San Vito",
+      "Greci (AV)",
+      "Orsara di Puglia",
+      "Roseto Valfortore"
+    ],
+    "musei": [
+      "MuCiviTe Museo Civico del Territorio"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre del Santissimo Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Riserva Naturale di Faeto"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Deliceto",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071022",
+    "codice_catastale": "D269",
+    "popolazione": 3784,
+    "superficie_kmq": 75.65,
+    "densita": 50.0,
+    "cap": "71026",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Benvenuto",
+    "festa_patronale": "5 maggio",
+    "demonimo": "delicetani",
+    "etimologia": "Deriva dal latino ilicetum da ilex, -icis, ossia leccio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Ascoli Satriano; a nord e nord-ovest: Bovino",
+      "Castelluccio dei Sauri; a sud: Sant'Agata di Puglia; a sud-est: Candela; a sud-ovest: Accadia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Convento e Chiesa di Sant'Antonio",
+      "Chiesa Matrice o del Santissimo Salvatore",
+      "Chiesa dell'Annunziata",
+      "Chiesa di Sant'Anna e Morti",
+      "Cappella di Sant'Antonio Abate, in corso Regina Margherita",
+      "Cappella di San Gerardo (in contrada Scarano)",
+      "Cappella di Maria SS. dell'Olmitello",
+      "Cappella della Madonna di Loreto (in contrada Scarano)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Normanno-Svevo-Angioino"
+    ],
+    "fontane": [
+      "Fontana Mariamalia"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte romano Resega, attraversa il torrente Carapellotto",
+      "Ponte romano Cavallerizza, sul  torrente Carapellotto"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chieuti",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071021",
+    "codice_catastale": "C633",
+    "popolazione": 1679,
+    "superficie_kmq": 60.91,
+    "densita": 27.6,
+    "cap": "71010",
+    "prefisso_telefonico": "0882",
+    "patrono": "San Giorgio Martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "chieutini",
+    "etimologia": "Chiamato in passato Pleuctum deriva forse da pleute, collegandosi al greco pleuron (costa).",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Campomarino (CB)",
+      "San Martino in Pensilis (CB)",
+      "Serracapriola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Giorgio (23 aprile)",
+      "con corsa di buoi"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerignola",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071020",
+    "codice_catastale": "C514",
+    "popolazione": 58517,
+    "superficie_kmq": 593.71,
+    "densita": 98.6,
+    "cap": "71042",
+    "prefisso_telefonico": "0885",
+    "patrono": "Madonna di Ripalta",
+    "festa_patronale": "8 settembre",
+    "demonimo": "cerignolani",
+    "etimologia": "Deriva dal latino cydonium che significa \"cotogno\". Secondo alcuni potrebbe derivare da Lacedonia, secondo altri da Aquiloniola accostandosi forse ad un nome di persona.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ascoli Satriano",
+      "Canosa di Puglia (BT)",
+      "Carapelle",
+      "Foggia",
+      "Lavello (PZ)",
+      "Manfredonia",
+      "Orta Nova",
+      "San Ferdinando di Puglia (BT)",
+      "Stornara",
+      "Stornarella",
+      "Trinitapoli (BT)",
+      "Zapponeta"
+    ],
+    "musei": [
+      "Museo Etnografico Cerignolano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria di Ripalta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio comunale Domenico Monterisi"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Nicola Zingarelli (1860 - 1935)",
+      "filologo",
+      "autore del \"Vocabolario della lingua italiana\""
+    ]
+  },
+  {
+    "nome": "Celle di San Vito",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071019",
+    "codice_catastale": "C442",
+    "popolazione": 162,
+    "superficie_kmq": 18.21,
+    "densita": 8.9,
+    "cap": "71020",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Vincenzo Ferreri",
+    "festa_patronale": "13 agosto",
+    "demonimo": "cellesi",
+    "etimologia": "Il termine deriva dal latino cella che può assumere diversi significati: piccola stanza, oratorio o anche azienda agraria alle dipendenze di un monastero. La specifica si riferisce alla vicinanza al monte San Vito.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali",
+      "Area Minoranza Linguistica Franco-Provenzale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Biccari",
+      "Castelluccio Valmaggiore",
+      "Faeto",
+      "Orsara di Puglia",
+      "Troia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Caterina a V.M.",
+      "Chiesa di San Vito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Celenza Valfortore",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071018",
+    "codice_catastale": "C429",
+    "popolazione": 1581,
+    "superficie_kmq": 66.49,
+    "densita": 23.8,
+    "cap": "71035",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "celenzani",
+    "etimologia": "La prima parte del nome potrebbe derivare da Celentia che a sua volta potrebbe riferirsi al latino caelum o all'osco kaila (tempio). La specifica si riferisce alla valle del fiume Fortore.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carlantino",
+      "Casalnuovo Monterotaro",
+      "Gambatesa (CB)",
+      "Macchia Valfortore (CB)",
+      "Motta Montecorvino",
+      "Pietramontecorvino",
+      "San Marco la Catola",
+      "Tufara (CB)",
+      "Volturara Appula"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Croce",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnuovo della Daunia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071017",
+    "codice_catastale": "C222",
+    "popolazione": 1429,
+    "superficie_kmq": 60.95,
+    "densita": 23.4,
+    "cap": "71034",
+    "prefisso_telefonico": "0881",
+    "patrono": "Maria SS. della Murgia",
+    "festa_patronale": "15 settembre",
+    "demonimo": "castelnovesi o castelnuovesi",
+    "etimologia": "Chiamato in passato Castelluccio degli schiavi facendo riferimento alla presenza in loco degli slavi. Il nome attuale è un composto di \"castel\" e \"nuovo\", con ovvio significato. La specifica si riferisce al subappennino pugliese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casalnuovo Monterotaro",
+      "Casalvecchio di Puglia",
+      "Lucera",
+      "Pietramontecorvino",
+      "San Giuliano di Puglia (CB)",
+      "Santa Croce di Magliano (CB)",
+      "Torremaggiore"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale Maria SS. della Murgia (1199)",
+      "Chiesa della Madonna Incoronata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelluccio Valmaggiore",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071016",
+    "codice_catastale": "C202",
+    "popolazione": 1297,
+    "superficie_kmq": 26.66,
+    "densita": 48.6,
+    "cap": "71020",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "castelluccesi",
+    "etimologia": "La prima parte del nome è un diminutivo di castello, la seconda parte potrebbe riferirsi al fatto che la zona appartenne alla baronia di Vallemaggiore (riferendosi al monte Maggiore o per indicare che essa è la valle principale).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Biccari",
+      "Celle di San Vito",
+      "Troia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": [
+      "Torre bizantina"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "\"Piscero\", lavatoio pubblico",
+      "Fontana di Via Salita Torre",
+      "Fontana monumentale"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelluccio dei Sauri",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071015",
+    "codice_catastale": "C198",
+    "popolazione": 2105,
+    "superficie_kmq": 51.31,
+    "densita": 41.0,
+    "cap": "71025",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Salvatore",
+    "festa_patronale": "5 agosto",
+    "demonimo": "castelluccesi",
+    "etimologia": "Deriva da Castellucium de Sauro. La prima parte del nome assume il significato di fortezza o villaggio fortificato. La specifica è di difficile interpretazione, potrebbe riferirsi ad un nome di persona o di luogo non ben identificato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ascoli Satriano",
+      "Bovino",
+      "Deliceto",
+      "Foggia",
+      "Orsara di Puglia",
+      "Troia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madonna delle Grazie",
+      "Chiesa del SS. Salvatore",
+      "Cappella di San Gerardo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ippodromo dei Sauri"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalvecchio di Puglia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071014",
+    "codice_catastale": "B917",
+    "popolazione": 1866,
+    "superficie_kmq": 31.72,
+    "densita": 58.8,
+    "cap": "71030",
+    "prefisso_telefonico": "0881",
+    "patrono": "Madonna delle Grazie",
+    "festa_patronale": "terza domenica di maggio",
+    "demonimo": "casalvecchiesi",
+    "etimologia": "La prima parte deriva dall'accostamento della parola \"casale\" con l'aggettivo \"vecchio\". Il termine casale deriva dal latino casalis che nel medioevo assunse il significato di \"insieme di case difese da mura\". La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casalnuovo Monterotaro",
+      "Castelnuovo della Daunia",
+      "Pietramontecorvino",
+      "Torremaggiore"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei SS. Pietro e Paolo"
+    ],
+    "castelli_fortificazioni": [
+      "Torre dei Briganti"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casalnuovo Monterotaro",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071013",
+    "codice_catastale": "B904",
+    "popolazione": 1535,
+    "superficie_kmq": 48.1,
+    "densita": 31.9,
+    "cap": "71033",
+    "prefisso_telefonico": "0881",
+    "patrono": "Santa Maria della Rocca",
+    "festa_patronale": "15 agosto",
+    "demonimo": "casalnovesi o casalnuovesi",
+    "etimologia": "La prima parte del nome deriva dall'accostamento della parola \"casale\" con l'aggettivo \"nuovo\". Il termine casale deriva dal latino casalis che nel medioevo assunse il significato di \"insieme di case difese da mura\". La specifica si riferisce al monte Rotaro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": [
+      "Località: Monterotaro"
+    ],
+    "comuni_confinanti": [
+      "Carlantino",
+      "Casalvecchio di Puglia",
+      "Castelnuovo della Daunia",
+      "Celenza Valfortore",
+      "Colletorto (CB)",
+      "Pietramontecorvino",
+      "San Giuliano di Puglia (CB)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria della Rocca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carpino",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071012",
+    "codice_catastale": "B829",
+    "popolazione": 4139,
+    "superficie_kmq": 82.49,
+    "densita": 50.2,
+    "cap": "71010",
+    "prefisso_telefonico": "0884",
+    "patrono": "San Cirillo",
+    "festa_patronale": "18 maggio",
+    "demonimo": "carpinesi",
+    "etimologia": "Deriva dal nome latino di persona Carpius con l'aggiunta del suffisso -anus che indica appartenenza. E' improbabile l'accostamento al termine latino carpinus, ossia carpine.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cagnano Varano",
+      "Ischitella",
+      "Monte Sant'Angelo",
+      "Vico del Gargano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Santa Croce",
+      "Chiesa di San Nicola di Mira",
+      "Chiesa di San Giorgio",
+      "Chiesa di San Cirillo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Pizzoli (L'Aquila",
+      "Abruzzo)",
+      "dall'agosto 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carlantino",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071011",
+    "codice_catastale": "B784",
+    "popolazione": 946,
+    "superficie_kmq": 34.25,
+    "densita": 27.6,
+    "cap": "71030",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Donato",
+    "festa_patronale": "7 agosto",
+    "demonimo": "carlantinesi",
+    "etimologia": "Potrebbe derivare dal nome di persona Carlo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casalnuovo Monterotaro",
+      "Celenza Valfortore",
+      "Colletorto (CB)",
+      "Macchia Valfortore (CB)",
+      "Sant'Elia a Pianisi (CB)"
+    ],
+    "musei": [
+      "Grande Museo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Donato",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carapelle",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071010",
+    "codice_catastale": "B724",
+    "popolazione": 6667,
+    "superficie_kmq": 24.86,
+    "densita": 268.2,
+    "cap": "71041",
+    "prefisso_telefonico": "0885",
+    "patrono": "San Francesco da Paola",
+    "festa_patronale": "2 aprile",
+    "demonimo": "carapellesi",
+    "etimologia": "Si riferisce al nome del torrente Carapelle, dal latino carapo- con il significato di \"gorgo\".",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cerignola",
+      "Foggia",
+      "Manfredonia",
+      "Ordona",
+      "Orta Nova"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Maria SS. del Rosario",
+      "Chiesa di San Giuseppe"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Cingul d granars (ad agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Candela",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071009",
+    "codice_catastale": "B584",
+    "popolazione": 2802,
+    "superficie_kmq": 96.04,
+    "densita": 29.2,
+    "cap": "71024",
+    "prefisso_telefonico": "0885",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "candelesi",
+    "etimologia": "Potrebbe riferirsi all'omonima pianta oppure riferirsi a candila che significa pioppo tremulo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est e nord: Ascoli Satriano; a ovest: Sant'Agata di Puglia; a ovest e nord: Deliceto; a sud: Melfi (PZ); a sud e ovest: Rocchetta Sant'Antonio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Doria"
+    ],
+    "chiese": [
+      "Chiesa di San Tommaso",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Rocco",
+      "Chiesa dell'Incoronata",
+      "Chiesa della Concezione",
+      "Chiesa del Purgatorio",
+      "Chiesa del Carmine",
+      "Chiesa Madre dedicata a Santa Maria della Purificazione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cagnano Varano",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071008",
+    "codice_catastale": "B357",
+    "popolazione": 7284,
+    "superficie_kmq": 158.83,
+    "densita": 45.9,
+    "cap": "71010",
+    "prefisso_telefonico": "0884",
+    "patrono": "SS. Michele e Cataldo",
+    "festa_patronale": "10 maggio",
+    "demonimo": "cagnanesi",
+    "etimologia": "Deriva dal nome latino di persona Canius con l'aggiunta del suffisso -anus. La specifica fa riferimento al lago Varano sito nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Gargano",
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": [
+      "San Nicola Imbuti",
+      "Capoiale"
+    ],
+    "comuni_confinanti": [
+      "Carpino",
+      "Ischitella",
+      "Monte Sant'Angelo",
+      "San Marco in Lamis",
+      "San Nicandro Garganico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale"
+    ],
+    "chiese": [
+      "Chiesa Madre di Santa Maria della Pietà"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bovino",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071007",
+    "codice_catastale": "B104",
+    "popolazione": 3275,
+    "superficie_kmq": 84.14,
+    "densita": 38.9,
+    "cap": "71023",
+    "prefisso_telefonico": "0881",
+    "patrono": "Maria SS. di Valleverde",
+    "festa_patronale": "29 agosto",
+    "demonimo": "bovinesi",
+    "etimologia": "Chiamata in passato Vibinum, si riferisce a Vibona che deriva a sua volta dal greco Hipponium (da hippos, cavallo).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali",
+      "Club I Borghi più Belli d'Italia",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Accadia",
+      "Castelluccio dei Sauri",
+      "Deliceto",
+      "Orsara di Puglia",
+      "Panni"
+    ],
+    "musei": [
+      "Museo Civico \"C. G. Nicastro\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria di Valleverde :: Padri Vocazionisti",
+      "Chiesetta di San Pietro",
+      "Chiesa di San Marco"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Bovino"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Biccari",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071006",
+    "codice_catastale": "A854",
+    "popolazione": 2768,
+    "superficie_kmq": 106.3,
+    "densita": 26.0,
+    "cap": "71032",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Donato",
+    "festa_patronale": "7 agosto",
+    "demonimo": "biccaresi",
+    "etimologia": "Potrebbe derivare dal latino vicus, ossia villaggio, al diminutivo viculus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali"
+    ],
+    "localita_frazioni": [
+      "ertiveri",
+      "Santa Maria in Vulgano",
+      "Berardinon"
+    ],
+    "comuni_confinanti": [
+      "A est e nord-est: Lucera; a nord-ovest: Alberona; a ovest e sud-ovest: Roseto Valfortore; a sud: Castelluccio Valmaggiore",
+      "Celle di San Vito",
+      "Faeto; a sud-est: Troia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Caracciolo",
+      "Palazzo Goffredo",
+      "Palazzo Pignatelli di Tertiveri"
+    ],
+    "chiese": [
+      "Convento di Sant'Antonio (1477)",
+      "Chiesa di San Quirico",
+      "Chiesa di Maria Santissima Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Bizantina"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ascoli Satriano",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071005",
+    "codice_catastale": "A463",
+    "popolazione": 6204,
+    "superficie_kmq": 334.56,
+    "densita": 18.5,
+    "cap": "71022",
+    "prefisso_telefonico": "0885",
+    "patrono": "San Potito Martire",
+    "festa_patronale": "14 gennaio",
+    "demonimo": "ascolani",
+    "etimologia": "Anticamente chiamata Ausculum, da aus(s), ossia fonte. La specifica potrebbe riferirsi all'antica Satricum che sorgeva nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": [
+      "San Carlo"
+    ],
+    "comuni_confinanti": [
+      "Candela",
+      "Castelluccio dei Sauri",
+      "Cerignola",
+      "Deliceto",
+      "Foggia",
+      "Lavello (PZ)",
+      "Melfi (PZ)",
+      "Ordona",
+      "Orta Nova",
+      "Stornarella"
+    ],
+    "musei": [
+      "Museo Civico \"Pasquale Rosario\""
+    ],
+    "ville_palazzi": [
+      "Palazzo d'Autilia"
+    ],
+    "chiese": [
+      "Chiesa di Santa Lucia",
+      "Chiesa di San Potito Martire",
+      "Chiesa di San Giovanni Battista (XII secolo)",
+      "Chiesa dell'Incoronata",
+      "Chiesa del Santissimo Sacramento",
+      "Basilica Cattedrale Natività Beata Vergine Maria"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Ducale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Porta Sant'Antonio, detta anche dell'Ospedale",
+      "Ponte Romano, sul fiume Carapelle, a tre arcate",
+      "Parco Archeologico dei Dauni"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Michele Placido (1946 -)",
+      "attore e regista"
+    ]
+  },
+  {
+    "nome": "Apricena",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071004",
+    "codice_catastale": "A339",
+    "popolazione": 13287,
+    "superficie_kmq": 171.49,
+    "densita": 77.5,
+    "cap": "71011",
+    "prefisso_telefonico": "0882",
+    "patrono": "Maria SS.ma Incoronata",
+    "festa_patronale": "ultima domenica di maggio",
+    "demonimo": "apricenesi",
+    "etimologia": "In precedenza il luogo era identificato con il nome di Pricine e Procina, dal latino porcus, ossia \"cinghiale\". Secondo la tradizione il nome si riferisce ad una cena durante la quale Federico II fece appunto uccidere un cinghiale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Parco Nazionale del Gargano"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Lesina",
+      "Poggio Imperiale",
+      "Rignano Garganico",
+      "San Marco in Lamis",
+      "San Nicandro Garganico",
+      "San Paolo di Civitate",
+      "San Severo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Baronale o Torrione"
+    ],
+    "chiese": [
+      "Monastero di San Giovanni in Piano",
+      "Chiesa Madre"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dell'Orologio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Anzano di Puglia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071003",
+    "codice_catastale": "A320",
+    "popolazione": 1268,
+    "superficie_kmq": 11.12,
+    "densita": 114.0,
+    "cap": "71020",
+    "prefisso_telefonico": "0881",
+    "patrono": "Madonna di Anzano",
+    "festa_patronale": "lunedì dopo la Pentecoste",
+    "demonimo": "anzanesi",
+    "etimologia": "Deriva dal nome di persona latino Antius con l'aggiunta del suffisso -anus che indica appartenenza. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": [
+      "rioni: Rione Casette",
+      "Rione Morra",
+      "Rione Pioppo Pontieri",
+      "Rione Nocelle",
+      "Rione Carifano",
+      "Rione Calabrone",
+      "Rione Lo Russo",
+      "Rione Lo Scialpo",
+      "Rione Mastralessio (Portolecchia)"
+    ],
+    "comuni_confinanti": [
+      "Monteleone di Puglia",
+      "San Sossio Baronia (AV)",
+      "Sant'Agata di Puglia",
+      "Scampitella (AV)",
+      "Zungoli (AV)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria di Anzano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alberona",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071002",
+    "codice_catastale": "A150",
+    "popolazione": 980,
+    "superficie_kmq": 49.26,
+    "densita": 19.9,
+    "cap": "71031",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": null,
+    "demonimo": "alberonesi",
+    "etimologia": "Il termine \"Alberona\" significa \"pioppaia\" ed è composto da \"albero\" (appunto pioppo) con l'aggiunta del sufisso -one o -ona.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Settentrionali",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Biccari",
+      "Lucera",
+      "Roseto Valfortore",
+      "San Bartolomeo in Galdo (BN)",
+      "Volturara Appula",
+      "Volturino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa Madre, dedicata alla Natività di Maria Vergine",
+      "Chiesa di San Giuseppe (XVI secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Muta",
+      "La Fontanella"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre del Gran Priore"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Accadia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071001",
+    "codice_catastale": "A015",
+    "popolazione": 2372,
+    "superficie_kmq": 30.48,
+    "densita": 77.8,
+    "cap": "71021",
+    "prefisso_telefonico": "0881",
+    "patrono": "San Sebastiano",
+    "festa_patronale": "20 gennaio",
+    "demonimo": "accadiesi",
+    "etimologia": "Deriva da Aquediae, dal latino aqua(ca)diva, ossia acqua che cade.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Monti Dauni Meridionali"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bovino",
+      "Deliceto",
+      "Monteleone di Puglia",
+      "Panni",
+      "Sant'Agata di Puglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria dei Teutoni",
+      "Santuario Madonna SS. del Carmine, sul Monte Crispignano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana Monumentale"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Foggia",
+    "provincia": "Foggia",
+    "regione": "Puglia",
+    "zona": "Italia Meridionale",
+    "codice_istat": "071024",
+    "codice_catastale": "D643",
+    "popolazione": 151726,
+    "superficie_kmq": 507.8,
+    "densita": 298.8,
+    "cap": "71100",
+    "prefisso_telefonico": "0881",
+    "patrono": null,
+    "festa_patronale": "22 marzo",
+    "demonimo": "foggiani",
+    "etimologia": "Chiamato Castro Fogie, deriva dal latino fovea, ossia buca, con il significato di \"fossa per la conservazione del frumento\" o \"serbatoio per l'acqua\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Arpinova",
+      "Borgo Mezzanone",
+      "Cervaro",
+      "L'Incoronata",
+      "Tavernola",
+      "Segezia"
+    ],
+    "comuni_confinanti": [
+      "Ascoli Satriano",
+      "Carapelle",
+      "Castelluccio dei Sauri",
+      "Cerignola",
+      "Lucera",
+      "Manfredonia",
+      "Ordona",
+      "Rignano Garganico",
+      "San Giovanni Rotondo",
+      "San Marco in Lamis",
+      "San Severo",
+      "Troia"
+    ],
+    "musei": [
+      "Museo Provinciale di Storia Naturale",
+      "Museo Interattivo delle Scienze",
+      "Museo del Territorio"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madre di Dio Incoronata :: Opera Don Orione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale Pino Zaccheria"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

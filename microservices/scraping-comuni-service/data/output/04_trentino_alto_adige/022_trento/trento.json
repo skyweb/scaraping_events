@@ -1,0 +1,16 @@
+{
+  "nome": "Trento",
+  "regione": "Trentino-Alto Adige",
+  "zona": null,
+  "sigla": "TN",
+  "codice_istat": "022",
+  "popolazione": 538604,
+  "popolazione_maschi": 263650,
+  "popolazione_femmine": 274954,
+  "superficie_kmq": 6206.9,
+  "densita": 86.8,
+  "num_comuni": 177,
+  "capoluogo": "Trento",
+  "iso_3166_2": "IT-TN",
+  "nuts": "ITD20"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Teramo",
+  "regione": "Abruzzo",
+  "zona": null,
+  "sigla": "TE",
+  "codice_istat": "067",
+  "popolazione": 309859,
+  "popolazione_maschi": 151378,
+  "popolazione_femmine": 158481,
+  "superficie_kmq": 1947.64,
+  "densita": 159.1,
+  "num_comuni": 47,
+  "capoluogo": "Teramo",
+  "iso_3166_2": "IT-TE",
+  "nuts": "ITF12"
+}

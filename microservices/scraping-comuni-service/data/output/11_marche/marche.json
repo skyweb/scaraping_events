@@ -1,0 +1,14 @@
+{
+  "nome": "Marche",
+  "codice_istat": "11",
+  "popolazione": 1538055,
+  "popolazione_maschi": 745486,
+  "popolazione_femmine": 792569,
+  "superficie_kmq": 9365.86,
+  "densita": 164.2,
+  "num_province": 5,
+  "num_comuni": 234,
+  "capoluogo": "Ancona",
+  "iso_3166_2": "IT-57",
+  "nuts": "ITE3"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Monza e della Brianza",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "MB",
+  "codice_istat": "108",
+  "popolazione": 868859,
+  "popolazione_maschi": 425127,
+  "popolazione_femmine": 443732,
+  "superficie_kmq": 405.5,
+  "densita": 2142.7,
+  "num_comuni": 55,
+  "capoluogo": "Monza",
+  "iso_3166_2": "IT-MB",
+  "nuts": "-"
+}

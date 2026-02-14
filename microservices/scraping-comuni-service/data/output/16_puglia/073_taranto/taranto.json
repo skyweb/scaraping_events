@@ -1,0 +1,16 @@
+{
+  "nome": "Taranto",
+  "regione": "Puglia",
+  "zona": null,
+  "sigla": "TA",
+  "codice_istat": "073",
+  "popolazione": 583479,
+  "popolazione_maschi": 282787,
+  "popolazione_femmine": 300692,
+  "superficie_kmq": 2436.67,
+  "densita": 239.5,
+  "num_comuni": 29,
+  "capoluogo": "Taranto",
+  "iso_3166_2": "IT-TA",
+  "nuts": "ITF43"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Trapani",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "TP",
+  "codice_istat": "081",
+  "popolazione": 434476,
+  "popolazione_maschi": 212904,
+  "popolazione_femmine": 221572,
+  "superficie_kmq": 2460.08,
+  "densita": 176.6,
+  "num_comuni": 24,
+  "capoluogo": "Trapani",
+  "iso_3166_2": "IT-TP",
+  "nuts": "ITG11"
+}

@@ -1,0 +1,14 @@
+{
+  "nome": "Trentino-Alto Adige",
+  "codice_istat": "04",
+  "popolazione": 1062860,
+  "popolazione_maschi": 522598,
+  "popolazione_femmine": 540262,
+  "superficie_kmq": 13606.87,
+  "densita": 78.1,
+  "num_province": 2,
+  "num_comuni": 293,
+  "capoluogo": "Trento",
+  "iso_3166_2": "IT-32",
+  "nuts": "-"
+}

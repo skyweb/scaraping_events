@@ -1,0 +1,16 @@
+{
+  "nome": "Prato",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "PO",
+  "codice_istat": "100",
+  "popolazione": 254608,
+  "popolazione_maschi": 123604,
+  "popolazione_femmine": 131004,
+  "superficie_kmq": 365.26,
+  "densita": 697.1,
+  "num_comuni": 7,
+  "capoluogo": "Prato",
+  "iso_3166_2": "IT-PO",
+  "nuts": "ITE15"
+}

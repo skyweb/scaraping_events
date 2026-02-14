@@ -1,0 +1,16 @@
+{
+  "nome": "Grosseto",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "GR",
+  "codice_istat": "053",
+  "popolazione": 223045,
+  "popolazione_maschi": 107300,
+  "popolazione_femmine": 115745,
+  "superficie_kmq": 4504.29,
+  "densita": 49.5,
+  "num_comuni": 28,
+  "capoluogo": "Grosseto",
+  "iso_3166_2": "IT-GR",
+  "nuts": "ITE1A"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Rovigo",
+  "regione": "Veneto",
+  "zona": null,
+  "sigla": "RO",
+  "codice_istat": "029",
+  "popolazione": 238588,
+  "popolazione_maschi": 115637,
+  "popolazione_femmine": 122951,
+  "superficie_kmq": 1789.93,
+  "densita": 133.3,
+  "num_comuni": 50,
+  "capoluogo": "Rovigo",
+  "iso_3166_2": "IT-RO",
+  "nuts": "ITD37"
+}

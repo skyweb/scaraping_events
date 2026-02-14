@@ -1,0 +1,1267 @@
+[
+  {
+    "nome": "Villaperuccio",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107023",
+    "codice_catastale": "M278",
+    "popolazione": 1095,
+    "superficie_kmq": 36.3,
+    "densita": 30.2,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Madonna del Rosario",
+    "festa_patronale": "22 agosto",
+    "demonimo": "villaperuccesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Basso Sulcis",
+      "Regione Agraria n.  4 - Colline dell'Iglesiente Meridionale"
+    ],
+    "localita_frazioni": [
+      "Is Pireddas",
+      "Is Grazias",
+      "Terrazzu"
+    ],
+    "comuni_confinanti": [
+      "Narcao",
+      "Nuxis",
+      "Perdaxius",
+      "Piscinas",
+      "Santadi",
+      "Tratalias"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Beata Vergine del Rosario"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Necropoli di Montessu",
+      "necropoli rupestre preistorica"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villamassargia",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107022",
+    "codice_catastale": "L968",
+    "popolazione": 3598,
+    "superficie_kmq": 91.47,
+    "densita": 39.3,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "villamassargesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sulcis Iglesiente",
+      "Regione Agraria n.  4 - Colline dell'Iglesiente Meridionale",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città della Terra Cruda"
+    ],
+    "localita_frazioni": [
+      "Monte Cadelano",
+      "Caput Acquas",
+      "S'Ortu Mannu",
+      "Tallaroga",
+      "Monte Gioiosa Guardia",
+      "Arriali",
+      "Tuerra Manna",
+      "Astia"
+    ],
+    "comuni_confinanti": [
+      "Domusnovas",
+      "Iglesias",
+      "Musei",
+      "Narcao",
+      "Siliqua (CA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonna del Pilar",
+      "Chiesa Parrocchiale di Santa Maria della Neve"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Gioiosa Guardia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tratalias",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107021",
+    "codice_catastale": "L337",
+    "popolazione": 1084,
+    "superficie_kmq": 30.96,
+    "densita": 35.0,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Madonna di Monserrato",
+    "festa_patronale": "domenica dopo l'Ascensione",
+    "demonimo": "trataliesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Basso Sulcis",
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Carbonia",
+      "Giba",
+      "Perdaxius",
+      "Piscinas",
+      "San Giovanni Suergiu",
+      "Villaperuccio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria di Monserrato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Nuraghe Meurras",
+      "formato da un bastione e quattro torri"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Fumane (Verona-Veneto)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Antioco",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107020",
+    "codice_catastale": "I294",
+    "popolazione": 11252,
+    "superficie_kmq": 87.53,
+    "densita": 128.6,
+    "cap": "09017",
+    "prefisso_telefonico": "0781",
+    "patrono": "Sant'Antioco",
+    "festa_patronale": "quindici giorni dopo Pasqua",
+    "demonimo": "antiochensi",
+    "etimologia": "Il nome del paese riprende quello del santo della chiesa parrocchiale.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calasetta",
+      "San Giovanni Suergiu"
+    ],
+    "musei": [
+      "Museo Etnografico \"Su Magasinu 'e su Binu\"",
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Sant'Antioco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tomba dei Giganti Su Nidu e Su Crobu",
+      "Nuraghe S'Ega De Marteddu, nelle vicinanze della spiaggia di Maladroxia",
+      "Menhirs Su Para e Sa Mongia, menhirs prenuragici",
+      "Complesso Nuragico di Grutti Acqua"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di Sant'Antioco Martire (15° giorno dopo la domenica di Pasqua)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Anna Arresi",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107019",
+    "codice_catastale": "M209",
+    "popolazione": 2738,
+    "superficie_kmq": 36.69,
+    "densita": 74.6,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "arresini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Su Cambusciu",
+      "Sa Carrubedda",
+      "Case Ghisu (Is Ciappas)",
+      "Corrumanciu",
+      "Is Chillaus",
+      "Is Cinus",
+      "Is Faddas",
+      "Su Furriadroxeddu",
+      "Is Lais",
+      "Is Meis",
+      "Montemargiani",
+      "Is Palas",
+      "Paniesu",
+      "Is Peis",
+      "Is Pillonis",
+      "Is Spigas",
+      "Is Porcus",
+      "Portopineddu",
+      "Porto Pino",
+      "Su Portu de Su Trigu",
+      "Is Potettus",
+      "Is Serras",
+      "Is Uccheddus"
+    ],
+    "comuni_confinanti": [
+      "Masainas",
+      "Teulada (CA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santadi",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107018",
+    "codice_catastale": "I182",
+    "popolazione": 3434,
+    "superficie_kmq": 115.59,
+    "densita": 29.7,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "santadesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Basso Sulcis",
+      "Regione Agraria n.  4 - Colline dell'Iglesiente Meridionale",
+      "Associazione Nazionale Città dell'Olio"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Assemini (CA)",
+      "Domus De Maria (CA)",
+      "Nuxis",
+      "Piscinas",
+      "Pula (CA)",
+      "Teulada (CA)",
+      "Villa San Pietro (CA)",
+      "Villaperuccio"
+    ],
+    "musei": [
+      "Casa Museo \"Sa Domu Antiga\"",
+      "Museo Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicolò",
+      "ottocentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Fortezza Fenicio Punica Pani Loriga"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Matrimonio Mauritano (prima domenica di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giovanni Suergiu",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107017",
+    "codice_catastale": "G287",
+    "popolazione": 6048,
+    "superficie_kmq": 70.63,
+    "densita": 85.6,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "sangiovannesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": [
+      "Matzaccara",
+      "Is Urigus",
+      "Palmas",
+      "centro INPS",
+      "Is Achenzas",
+      "Is Garaus",
+      "Is Pistis",
+      "Cortiois",
+      "Grazia Bullegas",
+      "Is Orrus",
+      "Riu Sassu",
+      "Santa Lucia",
+      "Colonie C.B.B.S.",
+      "colonie I.N.P.S.",
+      "colonie Marcu Pinna",
+      "colonie Munari",
+      "Bruncu Teula",
+      "Santa Caterina",
+      "Campu Frassoi",
+      "Is Arribottus",
+      "Is Arrubius",
+      "Chiccu Collu",
+      "Is Collus",
+      "Is Cordeddas",
+      "Is Gannaus",
+      "Is Garau",
+      "Nicola Garau",
+      "Is Ghisus",
+      "Is Imperas",
+      "Maria Impera",
+      "Is Langonis",
+      "Is Lionis",
+      "Is Loccis",
+      "Is Loccis Diana",
+      "Is Loccis Santus",
+      "Is Loccis Trottus",
+      "Luscia Collu",
+      "Is Massaius",
+      "Is Melonis",
+      "Is Nonnis",
+      "Palangiai",
+      "Is Peddis",
+      "Is Perdiaxius",
+      "Is Perdixis",
+      "Is Pes",
+      "Is Pintus",
+      "Is Pirronis",
+      "Piscinì",
+      "Is Pitzus",
+      "Is Pusceddus",
+      "Is Spinas",
+      "Santu Milanu",
+      "Sa Carabia",
+      "Su Barraconi",
+      "S'Oru de Mari",
+      "Is Scarteddus"
+    ],
+    "comuni_confinanti": [
+      "Carbonia",
+      "Giba",
+      "Portoscuso",
+      "Sant'Antioco",
+      "Tratalias"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Necropoli di Loccis Santus"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Portoscuso",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107016",
+    "codice_catastale": "G922",
+    "popolazione": 5145,
+    "superficie_kmq": 39.06,
+    "densita": 131.7,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Santa Maria d'Itria",
+    "festa_patronale": "martedì di Pentecoste",
+    "demonimo": "portoscusesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": [
+      "Paringianu",
+      "Bruncu Teula"
+    ],
+    "comuni_confinanti": [
+      "Carbonia",
+      "Gonnesa",
+      "San Giovanni Suergiu"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria d'Itria"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Spagnola"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra di Sant'Antonio e del Tonno (13 giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Piscinas",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107015",
+    "codice_catastale": "M291",
+    "popolazione": 856,
+    "superficie_kmq": 14.0,
+    "densita": 61.1,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Madonna della Neve",
+    "festa_patronale": "5 agosto",
+    "demonimo": "piscinai",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Giba",
+      "Masainas",
+      "Santadi",
+      "Teulada (CA)",
+      "Tratalias",
+      "Villaperuccio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Salazar",
+      "nota anche come Villa Bice"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Perdaxius",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107014",
+    "codice_catastale": "G446",
+    "popolazione": 1455,
+    "superficie_kmq": 29.55,
+    "densita": 49.2,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "perdaxini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Basso Sulcis",
+      "Regione Agraria n.  4 - Colline dell'Iglesiente Meridionale"
+    ],
+    "localita_frazioni": [
+      "Pesus",
+      "Mitza Justa",
+      "Is Manais",
+      "Is Porcus",
+      "Bingixedda",
+      "Is Pillonis",
+      "Is Senis",
+      "Is Cadonis",
+      "Is Atzoris",
+      "San Leonardo",
+      "Is Pistis"
+    ],
+    "comuni_confinanti": [
+      "Carbonia",
+      "Narcao",
+      "Tratalias",
+      "Villaperuccio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giacomo (in stile romanico, XIII secolo)",
+      "Chiesa campestre di San Leonardo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nuxis",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107013",
+    "codice_catastale": "F991",
+    "popolazione": 1561,
+    "superficie_kmq": 61.46,
+    "densita": 25.4,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Pietro Apostolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "nusciai",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Basso Sulcis",
+      "Regione Agraria n.  4 - Colline dell'Iglesiente Meridionale"
+    ],
+    "localita_frazioni": [
+      "frazioni: Acquacadda; \nlocalità: Is Pinnas",
+      "Is Pittaus",
+      "Is Santus",
+      "S'Acqua Callenti de Basciu",
+      "S'Acqua Callenti de Susu",
+      "Su Peppi Mereu",
+      "Pranedda",
+      "Tattinu;"
+    ],
+    "comuni_confinanti": [
+      "Assemini (CA)",
+      "Capoterra (CA)",
+      "Narcao",
+      "Santadi",
+      "Siliqua (CA)",
+      "Villaperuccio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta campestre di Sant' Elia di Tattinu",
+      "Chiesa di San Pietro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Narcao",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107012",
+    "codice_catastale": "F841",
+    "popolazione": 3296,
+    "superficie_kmq": 85.96,
+    "densita": 38.3,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Nicola",
+    "festa_patronale": "14 agosto",
+    "demonimo": "narcaresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sulcis Iglesiente",
+      "Regione Agraria n.  4 - Colline dell'Iglesiente Meridionale"
+    ],
+    "localita_frazioni": [
+      "frazioni: Riomurtas",
+      "Terraseo",
+      "Is Sais",
+      "Is Cherchis",
+      "Pesus",
+      "Is Canèas",
+      "Is Meddas",
+      "Terrubia",
+      "Is Aiòs"
+    ],
+    "comuni_confinanti": [
+      "Carbonia",
+      "Iglesias",
+      "Nuxis",
+      "Perdaxius",
+      "Siliqua (CA)",
+      "Villamassargia",
+      "Villaperuccio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola di Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Proto-nuraghe di Monte Atzei",
+      "Tempio Punico Terraseo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Musei",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107011",
+    "codice_catastale": "F822",
+    "popolazione": 1531,
+    "superficie_kmq": 20.26,
+    "densita": 75.6,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Sant'Ignazio di Loyola",
+    "festa_patronale": "31 luglio",
+    "demonimo": "museghesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  2 - Colline dell'Iglesiente Settentrionale",
+      "Associazione Nazionale Città della Terra Cruda"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Domusnovas",
+      "Iglesias",
+      "Siliqua (CA)",
+      "Villamassargia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Ignazio da Loyola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Masainas",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107010",
+    "codice_catastale": "M270",
+    "popolazione": 1308,
+    "superficie_kmq": 22.0,
+    "densita": 59.5,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "masainesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": [
+      "Is Solinas",
+      "Cannigonis",
+      "Is Fiascus",
+      "Is Lois",
+      "Is Lais",
+      "Is Crobeddus",
+      "Is Murronis",
+      "Su Pranu (o Medau Sabiu)"
+    ],
+    "comuni_confinanti": [
+      "Giba",
+      "Piscinas",
+      "Sant'Anna Arresi",
+      "Teulada (CA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gonnesa",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107008",
+    "codice_catastale": "E086",
+    "popolazione": 5032,
+    "superficie_kmq": 47.45,
+    "densita": 106.0,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "gonnesini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": [
+      "Nuraxi Figus"
+    ],
+    "comuni_confinanti": [
+      "Carbonia",
+      "Iglesias",
+      "Portoscuso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Andrea Apostolo",
+      "Chiesa di Sant'Isidoro (frazione Nuraxi Figus)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Complesso nuragico di Seruci"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Giba",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107007",
+    "codice_catastale": "E022",
+    "popolazione": 2063,
+    "superficie_kmq": 34.65,
+    "densita": 59.5,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "gibesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": [
+      "Villarios"
+    ],
+    "comuni_confinanti": [
+      "Masainas",
+      "Piscinas",
+      "San Giovanni Suergiu",
+      "Tratalias"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchia San Giuseppe Sposo della B.V. (frazione Villarois)",
+      "Chiesa di Santa Marta (a Villarios)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Pane (prima decade d'Agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fluminimaggiore",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107006",
+    "codice_catastale": "D639",
+    "popolazione": 2880,
+    "superficie_kmq": 108.21,
+    "densita": 26.6,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "fluminesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sulcis Iglesiente",
+      "Regione Agraria n.  5 - Colline litoranee di Iglesias"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arbus (VS)",
+      "Buggerru",
+      "Domusnovas",
+      "Gonnosfanadiga (VS)",
+      "Iglesias"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Tempio di Antas",
+      "punico-romano"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Domusnovas",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107005",
+    "codice_catastale": "D334",
+    "popolazione": 6207,
+    "superficie_kmq": 80.47,
+    "densita": 77.1,
+    "cap": "09015",
+    "prefisso_telefonico": "0781",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "domusnovesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sulcis Iglesiente",
+      "Regione Agraria n.  2 - Colline dell'Iglesiente Settentrionale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Fluminimaggiore",
+      "Gonnosfanadiga (VS)",
+      "Iglesias",
+      "Musei",
+      "Villacidro (VS)",
+      "Villamassargia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Barbara",
+      "Chiesa Parrocchiale di Santa Maria Assunta (in stile neoromanico), in piazza Matteotti"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Complesso Nuragico Sa Domu e S'Orku",
+      "Pozzo Sacro (in località Pedru Cossu)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carloforte",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107004",
+    "codice_catastale": "B789",
+    "popolazione": 6211,
+    "superficie_kmq": 50.24,
+    "densita": 123.6,
+    "cap": "09014",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "carlofortini",
+    "etimologia": null,
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": [
+      "Isola di San Pietro",
+      "Isola Piana"
+    ],
+    "comuni_confinanti": null,
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio della Madonna dello Schiavo, in via XX Settembre",
+      "Chiesa parrocchiale di San Carlo Borromeo",
+      "Chiesa di San Pietro (settecentesca)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Girotonno (inizio giugno)",
+      "ad Isola di San Pietro"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calasetta",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107002",
+    "codice_catastale": "B383",
+    "popolazione": 2908,
+    "superficie_kmq": 30.98,
+    "densita": 93.9,
+    "cap": "09011",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Maurizio",
+    "festa_patronale": "22 settembre",
+    "demonimo": "calasettani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Sant'Antioco"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Maurizio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Pesce (a luglio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Buggerru",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107001",
+    "codice_catastale": "B250",
+    "popolazione": 1070,
+    "superficie_kmq": 48.23,
+    "densita": 22.2,
+    "cap": "09010",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "buggerrai",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sulcis Iglesiente",
+      "Regione Agraria n.  5 - Colline litoranee di Iglesias"
+    ],
+    "localita_frazioni": [
+      "San Nicolò",
+      "Portisceddu",
+      "Is Ortus De Mari",
+      "Piscina Morta",
+      "Grugua",
+      "Cala Domestica",
+      "Caitas",
+      "Pranu Sartu",
+      "Candiazzus",
+      "Su Fundu Mannu"
+    ],
+    "comuni_confinanti": [
+      "Fluminimaggiore",
+      "Iglesias"
+    ],
+    "musei": [
+      "Museo del Minatore"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Iglesias",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107009",
+    "codice_catastale": "E281",
+    "popolazione": 26988,
+    "superficie_kmq": 207.63,
+    "densita": 130.0,
+    "cap": "09016",
+    "prefisso_telefonico": "0781",
+    "patrono": "Santa Chiara",
+    "festa_patronale": "11 agosto",
+    "demonimo": "iglesienti",
+    "etimologia": "Documentato con il nome di Ecclesiarum, deriva dal latino ecclesia, chiesa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sulcis Iglesiente",
+      "Regione Agraria n.  5 - Colline litoranee di Iglesias"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Musei",
+      "Siliqua (CA)",
+      "Vallermosa (CA)",
+      "Villacidro (VS); a est: Domusnovas",
+      "Villamassargia; a nord: Buggerru",
+      "Fluminimaggiore; a ovest: Gonnesa; a sud: Carbonia",
+      "Narcao"
+    ],
+    "musei": [
+      "Museo Mineralogico Sardo",
+      "Museo dell'arte Mineraria"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale di Santa Chiara (in stile romanico-gotico pisano, rimaneggiata poi in stile gotico-catalano)",
+      "Chiesa di Valverde",
+      "Chiesa di San Francesco",
+      "Chiesa della Madonna delle Grazie (intitolata in precedenza a San Saturno)",
+      "Chiesa della Purissima"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Montano Linasia (in località Case Marganai)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carbonia",
+    "provincia": "Carbonia-Iglesias",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "107003",
+    "codice_catastale": "B745",
+    "popolazione": 28564,
+    "superficie_kmq": 145.63,
+    "densita": 196.1,
+    "cap": "09013",
+    "prefisso_telefonico": "0781",
+    "patrono": "San Ponziano",
+    "festa_patronale": "13 agosto",
+    "demonimo": "carboniensi",
+    "etimologia": "Si ricollega all'industria carbonifera presente in zona.",
+    "il_comune_e": [
+      "Una Città di Fondazione (centri urbani realizzati con progetto unitario)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Sulcis Iglesiente",
+      "Regione Agraria n.  7 - Colline litoranee del Sulcis",
+      "Rete delle Città Strategiche (RECS)"
+    ],
+    "localita_frazioni": [
+      "Bacu Abis",
+      "Barbusi",
+      "Corongiu",
+      "Cortoghiana",
+      "Flumentepido",
+      "Serbariu",
+      "Sirri",
+      "Is Gannaus"
+    ],
+    "comuni_confinanti": [
+      "Gonnesa",
+      "Iglesias",
+      "Narcao",
+      "Perdaxius",
+      "Portoscuso",
+      "San Giovanni Suergiu",
+      "Tratalias"
+    ],
+    "musei": [
+      "Museo Archeologico di Villa Sulcis",
+      "Museo di Paleontologia e Speleologia \"E. A. Martel\"",
+      "Museo del Carbone"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Ponziano, in Piazza Roma",
+      "Chiesa di Santa Maria (in frazione Flumentepido)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Insediamento fenicio-punico di Monte Sirai"
+    ],
+    "teatri": [
+      "Teatro Centrale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

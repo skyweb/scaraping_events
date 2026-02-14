@@ -1,0 +1,2978 @@
+[
+  {
+    "nome": "Zoppola",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093051",
+    "codice_catastale": "M190",
+    "popolazione": 8488,
+    "superficie_kmq": 45.36,
+    "densita": 187.1,
+    "cap": "33080",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "zoppolani",
+    "etimologia": "E' documentata con il nome di Zaupola Romana (che allude all'insediamento di \"parlata\" latina, cioè romanza). E' un derivato di zaupo, a cui deriva il friulano ciaup (tronco), poi trogolo, abbeveratoio, pozza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Castions",
+      "Cusano",
+      "Murlis",
+      "Orcenico Inferiore",
+      "Orcenico Superiore",
+      "Ovoledo",
+      "Poincicco",
+      "Cevraia",
+      "San Valentino"
+    ],
+    "comuni_confinanti": [
+      "Casarsa della Delizia",
+      "Cordenons",
+      "Fiume Veneto",
+      "Pordenone",
+      "San Giorgio della Richinvelda",
+      "Valvasone Arzene"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Panciera (a Murlis)"
+    ],
+    "chiese": [
+      "Chiesetta di San Michele di Ovoledo",
+      "Chiesa parrocchiale (a Castions), in vicolo Sant'Andrea"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Zoppola"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Tonneins (Francia)",
+      "St. Georgen am Langsee (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vivaro",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093050",
+    "codice_catastale": "M096",
+    "popolazione": 1357,
+    "superficie_kmq": 37.57,
+    "densita": 36.1,
+    "cap": "33099",
+    "prefisso_telefonico": "0427",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "vivaresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Basaldella",
+      "Tesis"
+    ],
+    "comuni_confinanti": [
+      "Arba",
+      "Cordenons",
+      "Maniago",
+      "San Giorgio della Richinvelda",
+      "San Quirino",
+      "Spilimbergo"
+    ],
+    "musei": [
+      "Antiquarium di Tesis"
+    ],
+    "ville_palazzi": [
+      "Villa Cigolotti (a Basaldella)"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Maria",
+      "Chiesa di San Paolo (a Tesis)",
+      "Chiesa delle Sante Fosca e Maura (a Basaldella)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vito d'Asio",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093049",
+    "codice_catastale": "M085",
+    "popolazione": 753,
+    "superficie_kmq": 53.85,
+    "densita": 14.0,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": "Santa Margherita",
+    "festa_patronale": "20 luglio",
+    "demonimo": "vitesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Comunità Montana del Friuli occidentale",
+      "Unione Comuni della Val d'Arzino"
+    ],
+    "localita_frazioni": [
+      "Anduins",
+      "Casiacco",
+      "Pielungo",
+      "S. Francesco",
+      "Battaias",
+      "Cedolins",
+      "Celante di Vito",
+      "Fruins",
+      "Marinis",
+      "Paveon",
+      "Reonis",
+      "Selets",
+      "Valentinis"
+    ],
+    "comuni_confinanti": [
+      "Castelnovo del Friuli",
+      "Cavazzo Carnico (UD)",
+      "Clauzetto",
+      "Forgaria nel Friuli (UD)",
+      "Pinzano al Tagliamento",
+      "Preone (UD)",
+      "Tramonti di Sotto",
+      "Trasaghis (UD)",
+      "Verzegnis (UD)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Martino d'Asio",
+      "Chiesa di Sant'Antonio (a Pielungo)",
+      "Chiesa di Santa Margherita (ad Anduins)",
+      "Chiesa di San Michele Arcangelo, in Vicolo Fontana"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Valvasone Arzene",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093053",
+    "codice_catastale": "M346",
+    "popolazione": 3954,
+    "superficie_kmq": 29.92,
+    "densita": 132.2,
+    "cap": "33098",
+    "prefisso_telefonico": "0434",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "valvasonesi, arzenesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Valvasone",
+      "Arzene",
+      "San Lorenzo",
+      "Casamatta",
+      "Fornasini",
+      "Grava",
+      "Majaroff",
+      "Ponte Delizia",
+      "Pozzodipinto",
+      "San Gaetano",
+      "Sassonia",
+      "Tabina",
+      "Torricella"
+    ],
+    "comuni_confinanti": [
+      "Casarsa della Delizia",
+      "Codroipo (UD)",
+      "San Giorgio della Richinvelda",
+      "San Martino al Tagliamento",
+      "San Vito al Tagliamento",
+      "Sedegliano (UD)",
+      "Zoppola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo - Chiesa parrocchiale del Santissimo Corpo di Cristo (località: Valvasone)",
+      "Chiesa parrocchiale di San Michele Arcangelo (località: Arzene)",
+      "Chiesa di Santa Margherita (località: Arzene)",
+      "Chiesa di San Pietro Apostolo (località: Valvasone)",
+      "Chiesa di San Lorenzo (località: Arzene)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Valvasone"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica Medioevo (secondo fine settimana di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vajont",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093052",
+    "codice_catastale": "M265",
+    "popolazione": 1695,
+    "superficie_kmq": 1.58,
+    "densita": 1072.8,
+    "cap": "33080",
+    "prefisso_telefonico": "0427",
+    "patrono": "Esaltazione della Santa Croce",
+    "festa_patronale": "14 settembre",
+    "demonimo": "vajontesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Maniago"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale Gesù Crocifisso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Travesio",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093047",
+    "codice_catastale": "L347",
+    "popolazione": 1790,
+    "superficie_kmq": 28.82,
+    "densita": 62.1,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "travesiani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Molevana",
+      "Toppo",
+      "Usago",
+      "Zancan"
+    ],
+    "comuni_confinanti": [
+      "Castelnovo del Friuli",
+      "Meduno",
+      "Pinzano al Tagliamento",
+      "Sequals",
+      "Tramonti di Sotto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tramonti di Sotto",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093046",
+    "codice_catastale": "L325",
+    "popolazione": 372,
+    "superficie_kmq": 85.19,
+    "densita": 4.4,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "tramontini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Tramonti di Mezzo",
+      "Campone",
+      "Beloz",
+      "Cleva",
+      "Faidona",
+      "Muinta",
+      "Sclaf",
+      "Sghittosa",
+      "Sialin",
+      "Tamarat",
+      "Tridis",
+      "Valent",
+      "Zanon",
+      "Palcoda",
+      "San Vincenzo"
+    ],
+    "comuni_confinanti": [
+      "Castelnovo del Friuli",
+      "Clauzetto",
+      "Frisanco",
+      "Meduno",
+      "Preone (UD)",
+      "Socchieve (UD)",
+      "Tramonti di Sopra",
+      "Travesio",
+      "Verzegnis (UD)",
+      "Vito d'Asio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio (nella frazione di Tramonti di Mezzo)",
+      "Chiesa di Santa Maria Maggiore, in Via Roma"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tramonti di Sopra",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093045",
+    "codice_catastale": "L324",
+    "popolazione": 318,
+    "superficie_kmq": 125.11,
+    "densita": 2.5,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Floriano",
+    "festa_patronale": "4 maggio",
+    "demonimo": "tramontini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Parco Naturale Dolomiti Friulane"
+    ],
+    "localita_frazioni": [
+      "Chievolis",
+      "Redona",
+      "Chiarsuela",
+      "Inglagna",
+      "Maleon",
+      "Pradiel",
+      "Pradis di Tramonti",
+      "Quas",
+      "Selva",
+      "Staligial",
+      "Valentinis",
+      "Frasseneit",
+      "Tronconere"
+    ],
+    "comuni_confinanti": [
+      "Claut",
+      "Forni di Sotto (UD)",
+      "Frisanco",
+      "Socchieve (UD)",
+      "Tramonti di Sotto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta della Salute",
+      "Chiesa di San Floriano, a navata unica"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa della Madonna della Salute (terzo fine settimana di novembre)",
+      "Festa della Vera Pitina (penultimo e ultimo fine settimana di luglio e primo e 2 agosto)",
+      "Sagra della Pitina (fine luglio - inizio agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Spilimbergo",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093044",
+    "codice_catastale": "I904",
+    "popolazione": 12113,
+    "superficie_kmq": 72.47,
+    "densita": 167.1,
+    "cap": "33097",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "spilimberghesi",
+    "etimologia": "Potrebbe essere un composto del latino speculum (luogo di vedetta) e del germanico berg (monte, castello).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Barbeano",
+      "Baseglia",
+      "Gaio",
+      "Gradisca",
+      "Istrago",
+      "Tauriano",
+      "Vacile",
+      "Brindisi",
+      "Bussolino",
+      "Casasola",
+      "La Favorita",
+      "Navarons"
+    ],
+    "comuni_confinanti": [
+      "A est: Dignano (UD)",
+      "San Daniele del Friuli (UD); a nord: Pinzano al Tagliamento",
+      "Sequals; a ovest: Arba",
+      "Vivaro; a sud: San Giorgio della Richinvelda"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Tadea",
+      "Palazzo Dipinto"
+    ],
+    "chiese": [
+      "Santuario dell'Ancona, in Via Tagliamento",
+      "Duomo di Santa Maria Maggiore",
+      "Chiesa di Santo Stefano (a Gradisca)",
+      "Chiesa di Santa Croce (a Baseglia), in Via Malvinis",
+      "Chiesa di Santa Cecilia, in Piazza Duomo",
+      "Chiesa di San Lorenzo (a Vacile), in via Conciliazione",
+      "Chiesa di San Giovanni dei Battuti, costruita dalla Confraternita dei Battuti",
+      "Chiesa di San Biagio (a Istrago)",
+      "Chiesa dei Santi Pantaleone e Giuseppe, in via Mazzini"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Spilimbergo",
+      "in piazza Castello"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Giornate Medievali della Macia (settimana di Ferragosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sesto al Reghena",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093043",
+    "codice_catastale": "I686",
+    "popolazione": 6300,
+    "superficie_kmq": 40.53,
+    "densita": 155.4,
+    "cap": "33079",
+    "prefisso_telefonico": "0434",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "sestensi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento"
+    ],
+    "localita_frazioni": [
+      "Bagnarola",
+      "Marignana",
+      "Ramuscello",
+      "Banduzzo",
+      "Borgo della Siega",
+      "Borgo di Sotto",
+      "Borgo Magredo",
+      "Borgo Sacile",
+      "Braida",
+      "Braidacurti",
+      "Casette",
+      "Fratticelle",
+      "Melmosa",
+      "Mure",
+      "Venchieredo",
+      "Versiola",
+      "Vissignano"
+    ],
+    "comuni_confinanti": [
+      "Chions",
+      "Cinto Caomaggiore (VE)",
+      "Cordovado",
+      "Gruaro (VE)",
+      "Morsano al Tagliamento",
+      "San Vito al Tagliamento"
+    ],
+    "musei": [
+      "Museo Abbazia Benedettina di Santa Maria in Sylvis"
+    ],
+    "ville_palazzi": [
+      "Villa Attimis (frazione: Ramuscello)",
+      "Villa Zanardini"
+    ],
+    "chiese": [
+      "Chiesetta di San Pietro",
+      "Chiesa di Tutti i Santi (frazione: Bagnarola)",
+      "Abbazia Benedettina di Santa Maria in Sylvis, in piazza Castello"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sequals",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093042",
+    "codice_catastale": "I621",
+    "popolazione": 2226,
+    "superficie_kmq": 27.95,
+    "densita": 79.6,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "sequalsesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Lestans",
+      "Solimbergo"
+    ],
+    "comuni_confinanti": [
+      "Arba",
+      "Cavasso Nuovo",
+      "Meduno",
+      "Pinzano al Tagliamento",
+      "Spilimbergo",
+      "Travesio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Carnera",
+      "Villa Ciani",
+      "Villa Savorgnan (a Lestans)"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Andrea Apostolo",
+      "Chiesetta di San Nicolò"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vito al Tagliamento",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093041",
+    "codice_catastale": "I403",
+    "popolazione": 15034,
+    "superficie_kmq": 60.71,
+    "densita": 247.6,
+    "cap": "33078",
+    "prefisso_telefonico": "0434",
+    "patrono": "SS. Vito, Modesto e Crescenzia",
+    "festa_patronale": "15 giugno",
+    "demonimo": "sanvitesi",
+    "etimologia": "Il nome potrebbe riferirsi al santo patrono del paese, ma non si esclude un adattamento al latino vicus, villaggio, il cui esito in friulano è vit. La specifica si riferisce al vicino fiume Tagliamento.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Carbona",
+      "Gleris",
+      "Ligugnana",
+      "Prodolone",
+      "Savorgnano",
+      "Braida Bottari",
+      "Casabianca",
+      "Rosa"
+    ],
+    "comuni_confinanti": [
+      "Camino al Tagliamento (UD)",
+      "Casarsa della Delizia",
+      "Chions",
+      "Codroipo (UD)",
+      "Fiume Veneto",
+      "Morsano al Tagliamento",
+      "Sesto al Reghena",
+      "Valvasone Arzene"
+    ],
+    "musei": [
+      "Museo Provinciale della Vita Contadina",
+      "Museo Civico \"F. De Rocco\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna di Rosa :: Frati Minori Francescani",
+      "Duomo dei Santi Vito, Modesto e Crescenza, in piazza del Popolo",
+      "Chiesa di Santa Maria delle Grazie (a Prodolone), in via delle Scuole",
+      "Chiesa di Santa Maria dei Battuti (XV secolo), in via Bellunello"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Stadtlohn (Germania)",
+      "Sankt Veit an der Glan (Carinzia - Austria)",
+      "Nagyatád (Ungheria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Quirino",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093040",
+    "codice_catastale": "I136",
+    "popolazione": 4367,
+    "superficie_kmq": 51.19,
+    "densita": 85.3,
+    "cap": "33080",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Quirino",
+    "festa_patronale": "4 giugno",
+    "demonimo": "sanquirinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Sedrano",
+      "San Foca",
+      "Roiatta",
+      "Sospisio",
+      "Villotte"
+    ],
+    "comuni_confinanti": [
+      "Aviano",
+      "Cordenons",
+      "Maniago",
+      "Montereale Valcellina",
+      "Pordenone",
+      "Roveredo in Piano",
+      "Vivaro"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Cattaneo (XVIII secolo)"
+    ],
+    "chiese": [
+      "Chiesa di San Quirino",
+      "Chiesa di San Giacomo (frazione: Sedrano)",
+      "Chiesa dei Santi Rocco e Sebastiano (a San Foca)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Martino al Tagliamento",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093039",
+    "codice_catastale": "H999",
+    "popolazione": 1458,
+    "superficie_kmq": 17.83,
+    "densita": 81.8,
+    "cap": "33098",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "sammartinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento"
+    ],
+    "localita_frazioni": [
+      "Arzenutto",
+      "Postoncicco",
+      "Sant'Osvaldo"
+    ],
+    "comuni_confinanti": [
+      "San Giorgio della Richinvelda",
+      "Sedegliano (UD)",
+      "Valvasone Arzene"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo di Prampero",
+      "Villa Partenio",
+      "Villa Italia"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Martino",
+      "Chiesa dei SS. Filippo e Giacomo (località: Arzenutto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giorgio della Richinvelda",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093038",
+    "codice_catastale": "H891",
+    "popolazione": 4644,
+    "superficie_kmq": 47.92,
+    "densita": 96.9,
+    "cap": "33095",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sangiorgini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Aurava",
+      "Cosa",
+      "Domanins",
+      "Pozzo",
+      "Provesano",
+      "Rauscedo"
+    ],
+    "comuni_confinanti": [
+      "Cordenons",
+      "Dignano (UD)",
+      "Flaibano (UD)",
+      "San Martino al Tagliamento",
+      "Sedegliano (UD)",
+      "Spilimbergo",
+      "Valvasone Arzene",
+      "Vivaro",
+      "Zoppola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Spilimbergo (a Cosa)",
+      "Villa Spilimbergo (a Domanins)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Michele Arcangelo (a Domanins)",
+      "Chiesa di San Leonardo (in località Provesano)",
+      "Chiesa di San Nicolò, trecentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sacile",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093037",
+    "codice_catastale": "H657",
+    "popolazione": 19853,
+    "superficie_kmq": 32.62,
+    "densita": 608.6,
+    "cap": "33077",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "sacilesi",
+    "etimologia": "Deriva dal latino saccus, sacco, con il significato di insenatura.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Cavolano",
+      "Cornadella",
+      "Ronche",
+      "San Giovanni del Tempio",
+      "San Giovanni di Livenza",
+      "San Michele",
+      "Sant'Odorico",
+      "Schiavoi",
+      "Topaligo",
+      "Villorba",
+      "Vistorta"
+    ],
+    "comuni_confinanti": [
+      "Brugnera",
+      "Caneva",
+      "Cordignano (TV)",
+      "Fontanafredda",
+      "Gaiarine (TV)",
+      "Orsago (TV)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Canonica, nota come Palazzo Ovio-Gobbi, in piazza del Duomo",
+      "Palazzo Flangini-Biglia, in viale Zancanaro"
+    ],
+    "chiese": [
+      "Duomo",
+      "dedicato a San Nicolò",
+      "in piazza Duomo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Sacile (resti)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roveredo in Piano",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093036",
+    "codice_catastale": "H609",
+    "popolazione": 5952,
+    "superficie_kmq": 15.92,
+    "densita": 373.9,
+    "cap": "33080",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "roveredani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aviano",
+      "Fontanafredda",
+      "Porcia",
+      "Pordenone",
+      "San Quirino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pravisdomini",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093035",
+    "codice_catastale": "H010",
+    "popolazione": 3461,
+    "superficie_kmq": 16.14,
+    "densita": 214.4,
+    "cap": "33076",
+    "prefisso_telefonico": "0434",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "pravisdominesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Barco",
+      "Frattina",
+      "Panigai"
+    ],
+    "comuni_confinanti": [
+      "Annone Veneto (VE)",
+      "Azzano Decimo",
+      "Chions",
+      "Meduna di Livenza (TV)",
+      "Pasiano di Pordenone",
+      "Pramaggiore (VE)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Panigai"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Prata di Pordenone",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093034",
+    "codice_catastale": "G994",
+    "popolazione": 8439,
+    "superficie_kmq": 22.91,
+    "densita": 368.4,
+    "cap": "33080",
+    "prefisso_telefonico": "0434",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "pratensi",
+    "etimologia": "Riflette il latino prata, neutro plurale di pratum, prato. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Ghirano",
+      "Villanova",
+      "Puja",
+      "Prata di Sopra;\nLocalità:  Borgo Passo",
+      "Le Monde",
+      "Peressine"
+    ],
+    "comuni_confinanti": [
+      "Brugnera",
+      "Mansuè (TV)",
+      "Pasiano di Pordenone",
+      "Porcia",
+      "Pordenone",
+      "Portobuffolè (TV)"
+    ],
+    "musei": [
+      "Museo della Miniera"
+    ],
+    "ville_palazzi": [
+      "Villa Morosini Memmo (ora Municipio)",
+      "Villa Brunetta"
+    ],
+    "chiese": [
+      "Chiesetta dei Ss. Simone e Giuda",
+      "Chiesa parrocchiale di Prata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Porcia",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093032",
+    "codice_catastale": "G886",
+    "popolazione": 15250,
+    "superficie_kmq": 29.49,
+    "densita": 517.1,
+    "cap": "33080",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "purliliesi",
+    "etimologia": "Deriva dal latino porcilia, plurale di porcile, con il significato di \"recinto o pascolo per porci\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Palse",
+      "Pieve",
+      "Rondover",
+      "Roraipiccolo",
+      "Sant'Antonio",
+      "Spinazzedo",
+      "Talponedo"
+    ],
+    "comuni_confinanti": [
+      "Brugnera",
+      "Fontanafredda",
+      "Pordenone",
+      "Prata di Pordenone",
+      "Roveredo in Piano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giorgio",
+      "in via Marconi"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Porcia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Polcenigo",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093031",
+    "codice_catastale": "G780",
+    "popolazione": 3165,
+    "superficie_kmq": 49.19,
+    "densita": 64.3,
+    "cap": "33070",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Giacomo",
+    "festa_patronale": "26 luglio",
+    "demonimo": "polcenighesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Rete di comuni \"Alleanza nelle Alpi\""
+    ],
+    "localita_frazioni": [
+      "Coltura",
+      "Mezzomonte",
+      "San Giovanni",
+      "Gorgazzo",
+      "Range",
+      "Santissima"
+    ],
+    "comuni_confinanti": [
+      "Budoia",
+      "Caneva",
+      "Fontanafredda",
+      "Tambre (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giacomo e Convento"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Polcenigo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pinzano al Tagliamento",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093030",
+    "codice_catastale": "G680",
+    "popolazione": 1510,
+    "superficie_kmq": 21.76,
+    "densita": 69.4,
+    "cap": "33094",
+    "prefisso_telefonico": "0432",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "pinzanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Comunità Montana del Friuli occidentale",
+      "Unione Comuni della Val d'Arzino"
+    ],
+    "localita_frazioni": [
+      "frazioni: Valeriano",
+      "Manazzons;\nlocalità: Pradaldon",
+      "Colle",
+      "Pontaiba",
+      "Campeis",
+      "Costabeorchia",
+      "Borgo Mizzari",
+      "Borgo Ampiano"
+    ],
+    "comuni_confinanti": [
+      "Castelnovo del Friuli",
+      "Clauzetto",
+      "Forgaria nel Friuli (UD)",
+      "Ragogna (UD)",
+      "San Daniele del Friuli (UD)",
+      "Sequals",
+      "Spilimbergo",
+      "Travesio",
+      "Vito d'Asio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Santa Maria dei Battuti",
+      "Chiesa parrocchiale di San Martino, in via Vittorio Veneto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pasiano di Pordenone",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093029",
+    "codice_catastale": "G353",
+    "popolazione": 7717,
+    "superficie_kmq": 45.5,
+    "densita": 169.6,
+    "cap": "33087",
+    "prefisso_telefonico": "0434",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "pasianesi",
+    "etimologia": "Documentato con il nome di Pasiliano, Paseliano, Pasiliano, deriva dal nome latino di persona Pacilius, con l'aggiunta del suffisso -anus che indica appartenenza. La specifica identifica la collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Cecchini",
+      "Visinale",
+      "Rivarotta",
+      "Azzanello",
+      "Sant'Andrea"
+    ],
+    "comuni_confinanti": [
+      "Azzano Decimo",
+      "Gorgo al Monticano (TV)",
+      "Mansuè (TV)",
+      "Meduna di Livenza (TV)",
+      "Porcia",
+      "Pordenone",
+      "Prata di Pordenone",
+      "Pravisdomini"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Cavazza (in località Visinale)",
+      "Villa Gozzi (a Visinale)",
+      "Villa Montereale - Mantica",
+      "Villa Zancariol (a Visinale)"
+    ],
+    "chiese": [
+      "Chiesa di San Paolo",
+      "Chiesa di San'Anna (a Sant'Andrea)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Canton de Fronsac (Aquitania",
+      "Francia)",
+      "dal 1999"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Morsano al Tagliamento",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093028",
+    "codice_catastale": "F750",
+    "popolazione": 2808,
+    "superficie_kmq": 32.16,
+    "densita": 87.3,
+    "cap": "33075",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "morsanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento"
+    ],
+    "localita_frazioni": [
+      "Bando",
+      "Bolzano",
+      "Mussons",
+      "Saletto",
+      "San Paolo"
+    ],
+    "comuni_confinanti": [
+      "Camino al Tagliamento (UD)",
+      "Cordovado",
+      "Fossalta di Portogruaro (VE)",
+      "San Michele al Tagliamento (VE)",
+      "San Vito al Tagliamento",
+      "Sesto al Reghena",
+      "Teglio Veneto (VE)",
+      "Varmo (UD)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Pietro - Sagra del Gambero (ultimo fine settimana di giugno - primo luglio)",
+      "con il Palio delle Frazioni"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montereale Valcellina",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093027",
+    "codice_catastale": "F596",
+    "popolazione": 4415,
+    "superficie_kmq": 67.85,
+    "densita": 65.1,
+    "cap": "33086",
+    "prefisso_telefonico": "0427",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "monterealini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Rete di comuni \"Alleanza nelle Alpi\""
+    ],
+    "localita_frazioni": [
+      "Grizzo",
+      "Malnisio",
+      "San Leonardo"
+    ],
+    "comuni_confinanti": [
+      "Andreis",
+      "Aviano",
+      "Barcis",
+      "Maniago",
+      "San Quirino"
+    ],
+    "musei": [
+      "Museo della Centrale idroelettrica di Malnisio"
+    ],
+    "ville_palazzi": [
+      "Palazzo Toffoli"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio sociale di Montereale Valcellina dell'Associazione Pordenonese di Astronomia  (in località Grizzo)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Meduno",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093026",
+    "codice_catastale": "F089",
+    "popolazione": 1561,
+    "superficie_kmq": 31.25,
+    "densita": 50.0,
+    "cap": "33092",
+    "prefisso_telefonico": "0427",
+    "patrono": "Madonna di Meduno",
+    "festa_patronale": "ultima domenica di settembre",
+    "demonimo": "medunesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Navarons",
+      "Avon",
+      "Ciago",
+      "Cilia",
+      "Costa",
+      "Del Bianco",
+      "Mizzeri",
+      "Pitagora",
+      "Romanis",
+      "San Martino",
+      "Sottomonte",
+      "Valle"
+    ],
+    "comuni_confinanti": [
+      "Cavasso Nuovo",
+      "Frisanco",
+      "Sequals",
+      "Tramonti di Sotto",
+      "Travesio"
+    ],
+    "musei": [
+      "Museo del Risorgimento (frazione: Navarons)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria Maggiore",
+      "Chiesa di San Pellegrino (frazione: Navarons)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Maniago",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093025",
+    "codice_catastale": "E889",
+    "popolazione": 11744,
+    "superficie_kmq": 69.11,
+    "densita": 169.9,
+    "cap": "33085",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Mauro Martire",
+    "festa_patronale": null,
+    "demonimo": "maniaghesi",
+    "etimologia": "Deriva dal nome latino di persona Manilius, con l'aggiunta del suffisso -icus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Campagna",
+      "Dandolo; \nLocalità: Fratta",
+      "Maniagolibero",
+      "Maniago di mezzo"
+    ],
+    "comuni_confinanti": [
+      "Andreis",
+      "Arba",
+      "Fanna",
+      "Frisanco",
+      "Montereale Valcellina",
+      "San Quirino",
+      "Vajont",
+      "Vivaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo di San Mauro, in piazza Italia",
+      "Chiesetta di San Carlo Borromeo",
+      "Chiesa di Sant'Antonio Abate (località Fratta)",
+      "Chiesa dell'Immacolata Concezione"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Maniago (ruderi)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frisanco",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093024",
+    "codice_catastale": "D804",
+    "popolazione": 597,
+    "superficie_kmq": 61.2,
+    "densita": 9.8,
+    "cap": "33080",
+    "prefisso_telefonico": "0427",
+    "patrono": "Sante Fosca e Maura",
+    "festa_patronale": "13 febbraio",
+    "demonimo": "frisanchini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Parco Naturale Dolomiti Friulane",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Casasola",
+      "Poffabro",
+      "Cudili",
+      "Fornasette",
+      "Fulin",
+      "Gobbo",
+      "Pian delle Merie",
+      "Piè d'Uviel",
+      "Polaz",
+      "Preplans",
+      "Valdefrina",
+      "Valdestali",
+      "Vallavan",
+      "Vals"
+    ],
+    "comuni_confinanti": [
+      "Andreis",
+      "Barcis",
+      "Cavasso Nuovo",
+      "Claut",
+      "Fanna",
+      "Maniago",
+      "Meduno",
+      "Tramonti di Sopra",
+      "Tramonti di Sotto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicolò Vescovo (a Pofabbro)",
+      "Chiesetta della Stangjada",
+      "Chiesa di Sant'Antonio del Lunghet",
+      "Chiesa di SS. Fosca e Maura"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fontanafredda",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093022",
+    "codice_catastale": "D670",
+    "popolazione": 12359,
+    "superficie_kmq": 46.33,
+    "densita": 266.8,
+    "cap": "33074",
+    "prefisso_telefonico": "0434",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "fontanafreddesi",
+    "etimologia": "Documentato con il nome fontanafrigida, è un composto di \"fontana\" e dell'aggettivo \"fredda\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Camolli",
+      "Casut",
+      "Ceolini",
+      "Forcate",
+      "Nave",
+      "Ranzano",
+      "Romano",
+      "Talmassons",
+      "Vigonovo",
+      "Villadolt"
+    ],
+    "comuni_confinanti": [
+      "Aviano",
+      "Brugnera",
+      "Budoia",
+      "Caneva",
+      "Polcenigo",
+      "Porcia",
+      "Roveredo in Piano",
+      "Sacile"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Pierozan",
+      "ora Villa Zilli"
+    ],
+    "chiese": [
+      "Chiesetta della Beata Vergine del Rosario (a Romano)",
+      "Chiesa di Sant'Antonio Abate (a Nave)",
+      "Chiesa di Santa Maria Assunta (a Vigonovo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Saint-Jean (Francia)",
+      "dall'ottobre del 1996"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiume Veneto",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093021",
+    "codice_catastale": "D621",
+    "popolazione": 11701,
+    "superficie_kmq": 35.76,
+    "densita": 327.2,
+    "cap": "33080",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Nicolò da Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "fiumani",
+    "etimologia": "Documentato come Flumen o Flumo, deriva dal latino flumen (fiume). La specifica allude alla sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Bannia",
+      "Cimpello",
+      "Pescincanna",
+      "Praturlone"
+    ],
+    "comuni_confinanti": [
+      "Azzano Decimo",
+      "Casarsa della Delizia",
+      "Chions",
+      "Pordenone",
+      "San Vito al Tagliamento"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di San Girolamo (a Marzinis)",
+      "Chiesa di San Tommaso Apostolo (a Cimpello)",
+      "Chiesa di San Michele Arcangelo (a Pescincanna)",
+      "Chiesa di San Giacomo Apostolo (a Praturlone)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Albeck Sirinitz (Austria)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fanna",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093020",
+    "codice_catastale": "D487",
+    "popolazione": 1535,
+    "superficie_kmq": 10.13,
+    "densita": 151.5,
+    "cap": "33092",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "fannesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Borgo Sottila",
+      "Madonna di Strada"
+    ],
+    "comuni_confinanti": [
+      "Arba",
+      "Cavasso Nuovo",
+      "Frisanco",
+      "Maniago"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna di Strada"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Erto e Casso",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093019",
+    "codice_catastale": "D426",
+    "popolazione": 381,
+    "superficie_kmq": 52.22,
+    "densita": 7.3,
+    "cap": "33080",
+    "prefisso_telefonico": "0427",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "ertani e cassani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Friuli occidentale",
+      "Parco Naturale Dolomiti Friulane"
+    ],
+    "localita_frazioni": [
+      "Cavalle",
+      "Col della Ruava",
+      "Forcai",
+      "Liron",
+      "Pineda",
+      "Val del Pont"
+    ],
+    "comuni_confinanti": [
+      "Alpago (BL)",
+      "Cimolais",
+      "Claut",
+      "Ospitale di Cadore (BL)",
+      "Perarolo di Cadore (BL)",
+      "Soverzene (BL); a ovest: Longarone (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Bartolomeo (a Erto)",
+      "Chiesa dei SS. Gervasio e Protasio (a Casso)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sacra Rappresentazione del Venerdì Santo (il Venerdì Santo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cordovado",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093018",
+    "codice_catastale": "C993",
+    "popolazione": 2782,
+    "superficie_kmq": 12.12,
+    "densita": 229.5,
+    "cap": "33075",
+    "prefisso_telefonico": "0434",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "cordovadesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Belvedere",
+      "Saccudello",
+      "Suzzolins"
+    ],
+    "comuni_confinanti": [
+      "Gruaro (VE)",
+      "Morsano al Tagliamento",
+      "Sesto al Reghena",
+      "Teglio Veneto (VE)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Attimis"
+    ],
+    "chiese": [
+      "Santuario Madonna delle Grazie",
+      "Chiesa di Sant'Andrea, in Piazza al Tiglio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica in Costume (ultimo fine settimana di agosto - primo di settembre)",
+      "con elezione della Dominabella e spettacolo pirotecnico"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cordenons",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093017",
+    "codice_catastale": "C991",
+    "popolazione": 18230,
+    "superficie_kmq": 56.78,
+    "densita": 321.1,
+    "cap": "33084",
+    "prefisso_telefonico": "0434",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "cordenonesi",
+    "etimologia": "Attestato con il nome di Cortis Naon e Cordenons, corrisponde a Corte (de) Naone, composto di Corte e Naone, antico nome del fiume Noncello.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Nogaredo",
+      "Romans",
+      "Sclavons",
+      "Villa d'Arco",
+      "San Giacomo",
+      "San Giovanni",
+      "Tramit",
+      "Pasch"
+    ],
+    "comuni_confinanti": [
+      "Pordenone",
+      "San Giorgio della Richinvelda",
+      "San Quirino",
+      "Vivaro",
+      "Zoppola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro Apostolo (a Sclavons)",
+      "Chiesa di Santa Maria Maggiore",
+      "Chiesa di San Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Clauzetto",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093016",
+    "codice_catastale": "C791",
+    "popolazione": 372,
+    "superficie_kmq": 27.96,
+    "densita": 13.3,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "clauzettani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "frazioni: Clauzetto (Capoluogo)",
+      "Celante",
+      "Pradis di Sopra",
+      "Pradis di Sotto;\nborgate: Mulinars",
+      "Noraz",
+      "Trielieres",
+      "Raunie",
+      "Pedoi",
+      "Pernins",
+      "Crepes",
+      "Dominisia",
+      "Murs",
+      "Triviat",
+      "Villa",
+      "Sompforchial",
+      "Chiavade",
+      "Sompvilla",
+      "Dote",
+      "Ribons",
+      "Tonis-Aulis",
+      "Grillos",
+      "Zincos",
+      "Centens",
+      "Stifinins",
+      "Basei",
+      "Bullian",
+      "Corgnal",
+      "Zuanes",
+      "Fornez",
+      "Pezzettes",
+      "Pradat",
+      "Denel",
+      "Trentin",
+      "Rasces",
+      "Uminuz",
+      "Vaganins",
+      "Zocchìus",
+      "Molat",
+      "Queste",
+      "Coccius",
+      "Gerchia",
+      "Battei",
+      "Tunulins",
+      "Piani",
+      "Planelles",
+      "Blanchs",
+      "Rosc",
+      "Queste Fusian",
+      "Paludon",
+      "Sot Cel",
+      "Francescuz",
+      "Tascans",
+      "Fumatins",
+      "Pala Major",
+      "Zattes",
+      "Mineres",
+      "Fratta",
+      "Orton",
+      "Locandins",
+      "Mions",
+      "Omenars",
+      "Cruesc",
+      "Zuaniers",
+      "Rope",
+      "Gueres",
+      "Fraspedane",
+      "Mezzol",
+      "Durines",
+      "Val"
+    ],
+    "comuni_confinanti": [
+      "Castelnovo del Friuli",
+      "Pinzano al Tagliamento",
+      "Tramonti di Sotto",
+      "Vito d'Asio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fasjn il Butiro - Facciamo il Burro (25 luglio), a Casera Polpazza sul Monte Pala",
+      "Fieste da la Balote (prima metà di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Claut",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093015",
+    "codice_catastale": "C790",
+    "popolazione": 944,
+    "superficie_kmq": 165.98,
+    "densita": 5.7,
+    "cap": "33080",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Giorgio Martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "clautani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Friuli occidentale",
+      "Parco Naturale Dolomiti Friulane"
+    ],
+    "localita_frazioni": [
+      "Cellino di Sopra",
+      "Cellino di Sotto",
+      "Contron",
+      "Creppi",
+      "Lesis Stoc",
+      "Matan",
+      "Vit"
+    ],
+    "comuni_confinanti": [
+      "Alpago (BL)",
+      "Barcis",
+      "Chies d'Alpago (BL)",
+      "Cimolais",
+      "Erto e Casso",
+      "Forni di Sopra (UD)",
+      "Forni di Sotto (UD)",
+      "Frisanco",
+      "Tramonti di Sopra"
+    ],
+    "musei": [
+      "Museo Casa Clautana \"E. Borsatti\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giorgio Martire (XIX secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cimolais",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093014",
+    "codice_catastale": "C699",
+    "popolazione": 377,
+    "superficie_kmq": 101.21,
+    "densita": 3.7,
+    "cap": "33080",
+    "prefisso_telefonico": "0427",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "cimoliani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Area Geografica: Bacino Idrografico del Fiume Piave",
+      "Comunità Montana del Friuli occidentale",
+      "Parco Naturale Dolomiti Friulane",
+      "Rete di comuni \"Alleanza nelle Alpi\""
+    ],
+    "localita_frazioni": [
+      "San Floriano"
+    ],
+    "comuni_confinanti": [
+      "Claut",
+      "Domegge di Cadore (BL)",
+      "Erto e Casso",
+      "Forni di Sopra (UD)",
+      "Perarolo di Cadore (BL)",
+      "Pieve di Cadore (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Maggiore",
+      "ottocentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Chions",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093013",
+    "codice_catastale": "C640",
+    "popolazione": 5185,
+    "superficie_kmq": 33.47,
+    "densita": 154.9,
+    "cap": "33083",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "chionsesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Basedo",
+      "Taiedo",
+      "Villotta",
+      "Torrate",
+      "Villafranca",
+      "Villalta",
+      "Villutta"
+    ],
+    "comuni_confinanti": [
+      "Azzano Decimo",
+      "Cinto Caomaggiore (VE)",
+      "Fiume Veneto",
+      "Pramaggiore (VE)",
+      "Pravisdomini",
+      "San Vito al Tagliamento",
+      "Sesto al Reghena"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Liberale",
+      "Chiesa di San Giorgio Martire, con facciata neogotica",
+      "Chiesa di San Bartolomeo Apostolo (a Basedo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Villanueva Del Pardilllo (Spagna), dal 2003",
+      "Luisant (Francia) dal 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cavasso Nuovo",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093012",
+    "codice_catastale": "C385",
+    "popolazione": 1512,
+    "superficie_kmq": 10.46,
+    "densita": 144.6,
+    "cap": "33092",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Remigio",
+    "festa_patronale": "primo ottobre",
+    "demonimo": "cavassini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Orgnese",
+      "Dreon",
+      "Grilli",
+      "Mas",
+      "Petrucco",
+      "Runcis",
+      "Vescovi"
+    ],
+    "comuni_confinanti": [
+      "Arba",
+      "Fanna",
+      "Frisanco",
+      "Meduno",
+      "Sequals"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Polcenigo (XVIII secolo)",
+      "detto \"Palazat\""
+    ],
+    "chiese": [
+      "Chiesa di San Remigio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnovo del Friuli",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093011",
+    "codice_catastale": "C217",
+    "popolazione": 861,
+    "superficie_kmq": 22.59,
+    "densita": 38.1,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "castellani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Tagliamento",
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Almadis",
+      "Celante di Castelnovo",
+      "Costa",
+      "Molevana",
+      "Mostacins",
+      "Oltrerugo",
+      "Paludea",
+      "Praforte",
+      "Vidunza",
+      "Vigna"
+    ],
+    "comuni_confinanti": [
+      "Clauzetto",
+      "Pinzano al Tagliamento",
+      "Tramonti di Sotto",
+      "Travesio",
+      "Vito d'Asio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicolò Vescovo (a Vigna)",
+      "Chiesa di San Carlo (1933, a Paludea)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica: Alla Conquista del Castello (primi di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casarsa della Delizia",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093010",
+    "codice_catastale": "B940",
+    "popolazione": 8431,
+    "superficie_kmq": 20.41,
+    "densita": 413.1,
+    "cap": "33072",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "casarsesi",
+    "etimologia": "La prima parte del nome deriva da casarsa, ossia \"casa bruciata\" (dal latino arusus, bruciato, in riferimento alle devastazioni ungariche). La specifica fu aggiunta nel 1867 e si riferisce alla località che si trova nei pressi, nome che indica un \"luogo prospero\"; secondo altre tradizioni, potrebbe derivare da edilizia, in riferimento agli importanti lavori pubblici che ivi promosse Napoleone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "San Giovanni",
+      "Comunale",
+      "San Floriano",
+      "Sile",
+      "Versutta"
+    ],
+    "comuni_confinanti": [
+      "A nord-est e est: Valvasone Arzene; a nord-ovest: Zoppola; a sud e est: San Vito al Tagliamento; a sud-ovest: Fiume Veneto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Sant'Antonio Abate (in località Versutta)",
+      "Chiesa Parrocchiale di Santa Croce, in via XXIV Maggio",
+      "Chiesa di San Giovanni Battista, in stile neogotico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caneva",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093009",
+    "codice_catastale": "B598",
+    "popolazione": 6403,
+    "superficie_kmq": 41.95,
+    "densita": 152.6,
+    "cap": "33070",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Tommaso",
+    "festa_patronale": "2 luglio",
+    "demonimo": "canevesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Rete di comuni \"Alleanza nelle Alpi\""
+    ],
+    "localita_frazioni": [
+      "Fiaschetti",
+      "Fratta",
+      "Sarone",
+      "Stevenà",
+      "Crosetta del Cansiglio",
+      "Gaiardin",
+      "Lama de Carpen",
+      "Malconsei",
+      "Pradego",
+      "Tambruz"
+    ],
+    "comuni_confinanti": [
+      "Cordignano (TV)",
+      "Fontanafredda",
+      "Fregona (TV)",
+      "Polcenigo",
+      "Sacile",
+      "Sarmede (TV)",
+      "Tambre (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Tomaso Apostolo, in Piazza Martiri",
+      "Chiesa di Santa Maria Immacolata (a Sarone)",
+      "Chiesa di Santa Maria Assunta (a Fratta)",
+      "Chiesa di San Marco (a Stevenà)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Neumarkt-Sankt Veit (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Budoia",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093008",
+    "codice_catastale": "B247",
+    "popolazione": 2562,
+    "superficie_kmq": 37.67,
+    "densita": 68.0,
+    "cap": "33070",
+    "prefisso_telefonico": "0434",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "budoiesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Rete di comuni \"Alleanza nelle Alpi\""
+    ],
+    "localita_frazioni": [
+      "Dardago",
+      "Santa Lucia",
+      "Val de Croda",
+      "Mezzomonte"
+    ],
+    "comuni_confinanti": [
+      "Aviano",
+      "Fontanafredda",
+      "Polcenigo",
+      "Tambre (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria Maggiore (a Dardago)",
+      "Chiesa di Sant'Andrea Apostolo",
+      "Chiesa di Santa Lucia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Brugnera",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093007",
+    "codice_catastale": "B215",
+    "popolazione": 9333,
+    "superficie_kmq": 29.24,
+    "densita": 319.2,
+    "cap": "33070",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "brugneresi o brugnariotti",
+    "etimologia": "Dal nome latino di pianta prunea, prugna, con l'aggiunta del suffisso collettivo -aria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Maron",
+      "San Cassiano di Livenza",
+      "Tamai",
+      "Villa Varda"
+    ],
+    "comuni_confinanti": [
+      "A est: Prata di Pordenone; a nord: Fontanafredda",
+      "Porcia; a ovest: Sacile; a sud-ovest: Gaiarine (TV)",
+      "Portobuffolè (TV)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Varda"
+    ],
+    "chiese": [
+      "Chiesa di San Michele Arcangelo (a Maron), ottocentesca",
+      "Chiesa di Santa Margherita (a Tamai)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Barcis",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093006",
+    "codice_catastale": "A640",
+    "popolazione": 252,
+    "superficie_kmq": 103.1,
+    "densita": 2.4,
+    "cap": "33080",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "barciani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Armasio",
+      "Arcola",
+      "Cimacosta",
+      "Fontane",
+      "Losie",
+      "Molassa",
+      "Pentina",
+      "Pezzeda",
+      "Portuz",
+      "Predaia",
+      "Ribe",
+      "Roppe",
+      "Vallata"
+    ],
+    "comuni_confinanti": [
+      "Andreis",
+      "Aviano",
+      "Chies d'Alpago (BL)",
+      "Claut",
+      "Frisanco",
+      "Montereale Valcellina",
+      "Tambre (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Centi"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Giuseppe Malattia della Vallata (1875 - 1948)",
+      "bibliofilo",
+      "letterato",
+      "poeta"
+    ]
+  },
+  {
+    "nome": "Azzano Decimo",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093005",
+    "codice_catastale": "A530",
+    "popolazione": 15744,
+    "superficie_kmq": 51.4,
+    "densita": 306.3,
+    "cap": "33082",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "azzanesi",
+    "etimologia": "Deriva dal nome latino di persona Accius o Attius, con l'aggiunta del suffisso -anus, che indica appartenenza. La specifica si riferisce alla distanza antica di dieci miglia romane da Concordia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza"
+    ],
+    "localita_frazioni": [
+      "Corva",
+      "Fagnigola",
+      "Fiumesino",
+      "Fratte",
+      "Tiezzo",
+      "Borgo Facca",
+      "Capo di Sopra",
+      "Capo di Sotto",
+      "Cesena",
+      "Colle",
+      "Mantova",
+      "Piagno",
+      "Runtine",
+      "Villacriccola",
+      "Zuiano"
+    ],
+    "comuni_confinanti": [
+      "Chions",
+      "Fiume Veneto",
+      "Pasiano di Pordenone",
+      "Pordenone",
+      "Pravisdomini"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa della Torre (a Tiezzo)",
+      "detta villa Pedrina"
+    ],
+    "chiese": [
+      "Chiesa di San Bartolomeo Apostolo",
+      "Chiesa di San Marino Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa Paesana e Mostra del Formaggio Montasio (metà giugno)",
+      "in località Fagnigola"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Aviano",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093004",
+    "codice_catastale": "A516",
+    "popolazione": 9066,
+    "superficie_kmq": 113.46,
+    "densita": 79.9,
+    "cap": "33081",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Zenone",
+    "festa_patronale": "secondo lunedì dopo Pasqua",
+    "demonimo": "avianesi",
+    "etimologia": "Deriva dal nome latino di persona Avidius o Avillius con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Rete di comuni \"Alleanza nelle Alpi\""
+    ],
+    "localita_frazioni": [
+      "Castel d'Aviano",
+      "Giais",
+      "Marsure",
+      "San Martino di Campagna",
+      "Villotta",
+      "Beorchia",
+      "Costa Ornedo",
+      "Pedemonte",
+      "Piancavallo",
+      "Somprado",
+      "Selva"
+    ],
+    "comuni_confinanti": [
+      "Barcis",
+      "Budoia",
+      "Fontanafredda",
+      "Montereale Valcellina",
+      "Roveredo in Piano",
+      "San Quirino",
+      "Tambre (BL)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Menegozzi",
+      "Villa Policreti"
+    ],
+    "chiese": [
+      "Duomo - Chiesa di San Zenone Vescovo",
+      "Santuario Madonna del Monte",
+      "Chiesetta di San Gregorio (a Borgo Castello)",
+      "Chiesa di Santa Giuliana (a Castel d'Aviano)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arba",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093002",
+    "codice_catastale": "A354",
+    "popolazione": 1289,
+    "superficie_kmq": 14.76,
+    "densita": 87.3,
+    "cap": "33090",
+    "prefisso_telefonico": "0427",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "arbesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale"
+    ],
+    "localita_frazioni": [
+      "Colle"
+    ],
+    "comuni_confinanti": [
+      "Cavasso Nuovo",
+      "Fanna",
+      "Maniago",
+      "Sequals",
+      "Spilimbergo",
+      "Vivaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Andreis",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093001",
+    "codice_catastale": "A283",
+    "popolazione": 252,
+    "superficie_kmq": 26.89,
+    "densita": 9.4,
+    "cap": "33080",
+    "prefisso_telefonico": "0427",
+    "patrono": "Maria SS. delle Grazie",
+    "festa_patronale": "8 ottobre",
+    "demonimo": "andreani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Comunità Montana del Friuli occidentale",
+      "Parco Naturale Dolomiti Friulane",
+      "Rete di comuni \"Alleanza nelle Alpi\""
+    ],
+    "localita_frazioni": [
+      "Alcheda",
+      "Bosplans",
+      "Prapiero",
+      "Rompagnel"
+    ],
+    "comuni_confinanti": [
+      "Barcis",
+      "Frisanco",
+      "Maniago",
+      "Montereale Valcellina"
+    ],
+    "musei": [
+      "Museo Civico (dell'Artigianato e del Lavoro Contadino)"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pordenone",
+    "provincia": "Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "093033",
+    "codice_catastale": "G888",
+    "popolazione": 51139,
+    "superficie_kmq": 38.23,
+    "densita": 1337.7,
+    "cap": "33170",
+    "prefisso_telefonico": "0434",
+    "patrono": "San Marco Evangelista",
+    "festa_patronale": "8 settembre",
+    "demonimo": "pordenonesi",
+    "etimologia": "Da Portus Naonis, citata comePortunaone, è un composto di portus (porto) e Naone, nome del fiume che bagnava la città, oggi conosciuto come \"Noncello\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Livenza",
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": [
+      "Borgomeduna",
+      "Roraigrande",
+      "Torre",
+      "Vallenoncello",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Azzano Decimo",
+      "Cordenons",
+      "Fiume Veneto",
+      "Pasiano di Pordenone",
+      "Porcia",
+      "Prata di Pordenone",
+      "Roveredo in Piano",
+      "San Quirino",
+      "Zoppola"
+    ],
+    "musei": [
+      "Museo Diocesano",
+      "Museo Civico delle Scienze",
+      "Museo Civico d'Arte"
+    ],
+    "ville_palazzi": [
+      "Villa Carinzia, in viale Martelli",
+      "Villa Marini (a Villanova), nota come Villa Cattaneo"
+    ],
+    "chiese": [
+      "Santuario Beata Vergine delle Grazie",
+      "Duomo di San Marco, nell'omonima piazza",
+      "Chiesa ottagonale della Santissima Trinità, oltre il ponte sul Noncello",
+      "Chiesa di Sant'Ulderico (a Villanova)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Auditorium Concordia",
+      "Nuovo Teatro Giuseppe Verdi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

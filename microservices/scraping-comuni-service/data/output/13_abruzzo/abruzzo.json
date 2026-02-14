@@ -1,0 +1,14 @@
+{
+  "nome": "Abruzzo",
+  "codice_istat": "13",
+  "popolazione": 1322247,
+  "popolazione_maschi": 643698,
+  "popolazione_femmine": 678549,
+  "superficie_kmq": 10795.12,
+  "densita": 122.5,
+  "num_province": 4,
+  "num_comuni": 305,
+  "capoluogo": "L'Aquila",
+  "iso_3166_2": "IT-65",
+  "nuts": "ITF1"
+}

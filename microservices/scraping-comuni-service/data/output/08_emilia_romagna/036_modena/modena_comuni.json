@@ -1,0 +1,2804 @@
+[
+  {
+    "nome": "Zocca",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036047",
+    "codice_catastale": "M183",
+    "popolazione": 4628,
+    "superficie_kmq": 69.11,
+    "densita": 67.0,
+    "cap": "41059",
+    "prefisso_telefonico": "059",
+    "patrono": "Sacro Cuore di Gesù",
+    "festa_patronale": "ultima domenica di maggio",
+    "demonimo": "zocchesi",
+    "etimologia": "Deriva probabilmente dal dialetto zoca, ossia \"tronco tagliato\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Modena Est",
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Parco dei Sassi di Roccamalatina",
+      "Associazione Nazionale Città del Castagno",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Arenata",
+      "Casa Miro",
+      "Ciano",
+      "Le Strade",
+      "Missano",
+      "Montalbano",
+      "Montecorone",
+      "Monteombraro",
+      "Montetorto",
+      "Rosola",
+      "Zocchetta"
+    ],
+    "comuni_confinanti": [
+      "Castel d'Aiano (BO)",
+      "Guiglia",
+      "Montese",
+      "Pavullo nel Frignano",
+      "Valsamoggia (BO)",
+      "Vergato (BO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vignola",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036046",
+    "codice_catastale": "L885",
+    "popolazione": 25383,
+    "superficie_kmq": 22.9,
+    "densita": 1108.4,
+    "cap": "41058",
+    "prefisso_telefonico": "059",
+    "patrono": "SS. Nazario e Celso",
+    "festa_patronale": "13 ottobre",
+    "demonimo": "vignolesi",
+    "etimologia": "Deriva dal latino vinea, ossia vigna.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Parco dei Sassi di Roccamalatina",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Bettolino",
+      "Campiglio",
+      "Tavernelle"
+    ],
+    "comuni_confinanti": [
+      "Castelvetro di Modena",
+      "Marano sul Panaro",
+      "Savignano sul Panaro",
+      "Spilamberto"
+    ],
+    "musei": [
+      "Museo Civico di Vignola"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello di Vignola"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dei Ciliegi in Fiore (tutto il mese di aprile)"
+    ],
+    "gemellaggi": [
+      "Angol (Cile)",
+      "Barbezieux Saint Hilaire (Charente, Francia), dal 1982",
+      "Witzenhausen (Werra-Meissner, Germania), dal 1982"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Spilamberto",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036045",
+    "codice_catastale": "I903",
+    "popolazione": 12744,
+    "superficie_kmq": 29.52,
+    "densita": 431.7,
+    "cap": "41057",
+    "prefisso_telefonico": "059",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "spilambertesi",
+    "etimologia": "Il nome è un composto di spinum (spineto) e del nome di persona Lamberto perché, secondo la tradizione, qui morì l'imperatore Lamberto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 6 - Pianura di Modena",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Poggioli",
+      "San Vito"
+    ],
+    "comuni_confinanti": [
+      "Castelnuovo Rangone",
+      "Castelvetro di Modena",
+      "Modena",
+      "San Cesario sul Panaro",
+      "Savignano sul Panaro",
+      "Vignola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera di San Giovanni Battista (fine settimana del 24 giugno)",
+      "con il Palio dell'Aceto Balsamico Tradizionale"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soliera",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036044",
+    "codice_catastale": "I802",
+    "popolazione": 15285,
+    "superficie_kmq": 51.08,
+    "densita": 299.2,
+    "cap": "41019",
+    "prefisso_telefonico": "059",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "solieresi",
+    "etimologia": "Deriva dal termine latino solaria, plurale di solarium che significa terrazzo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Carpi"
+    ],
+    "localita_frazioni": [
+      "Appalto",
+      "Castello di Sozzigalli",
+      "Limidi",
+      "Secchia",
+      "Sozzigalli"
+    ],
+    "comuni_confinanti": [
+      "Bastiglia",
+      "Bomporto",
+      "Carpi",
+      "Modena",
+      "San Prospero"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casino Vecchi",
+      "Villa Bassani - Benvenuti Messerotti - Razzaboni",
+      "Villa Casarini-Ferrari (località: Appalto)",
+      "Villa Cavazzuti  (località: Limidi)",
+      "Villa Manzini (località: Secchia)",
+      "Villa Redeghieri (località: Soliera)"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Chiesa di San Pietro in Vincoli (località: Limidi)",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Campori"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Nuovo Cinema Teatro Italia"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Paiporta (Valencia",
+      "Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sestola",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036043",
+    "codice_catastale": "I689",
+    "popolazione": 2486,
+    "superficie_kmq": 52.43,
+    "densita": 47.4,
+    "cap": "41029",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "sestolesi",
+    "etimologia": "Probabilmente deriva dal femminile del nome latino di persona Sextus. Secondo un'ipotesi poco condivisa potrebbe accostarsi al numerale latino sextus, ossia sesto.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Parco del Frignano"
+    ],
+    "localita_frazioni": [
+      "Casine",
+      "Castellaro",
+      "Pian del Falco",
+      "Poggioraso",
+      "Ponte Val di Sasso",
+      "Rocchetta",
+      "Roncoscaglia",
+      "Vesale"
+    ],
+    "comuni_confinanti": [
+      "Fanano",
+      "Fiumalbo",
+      "Lizzano in Belvedere (BO)",
+      "Montecreto",
+      "Montese",
+      "Pavullo nel Frignano",
+      "Riolunato"
+    ],
+    "musei": [
+      "Museo della Civiltà Montanara",
+      "Museo degli Strumenti Musicali Meccanici"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Botanico Alpino Esperia (ai piedi del monte Cimone)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serramazzoni",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036042",
+    "codice_catastale": "F357",
+    "popolazione": 8288,
+    "superficie_kmq": 93.34,
+    "densita": 88.8,
+    "cap": "41028",
+    "prefisso_telefonico": "0536",
+    "patrono": "Beata Vergine di Pompei",
+    "festa_patronale": "8 maggio",
+    "demonimo": "serramazzonesi",
+    "etimologia": "Fino al 1948 il paese era identificato con il nome di Monfestino in Serra Mazzoni. Il nome attuale è un composto di serra con il significato di \"dorso di monte\" e del nome di famiglia Mazzoni.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Campodolio",
+      "Casa Stella",
+      "Faeto",
+      "Granarolo",
+      "Ligorzano",
+      "Monfestino",
+      "Montagnana",
+      "Montardone",
+      "Pazzano di Sopra",
+      "Pompeano",
+      "Riccò",
+      "Rocca Santa Maria",
+      "San Dalmazio",
+      "Selva",
+      "Valle"
+    ],
+    "comuni_confinanti": [
+      "Fiorano Modenese",
+      "Maranello",
+      "Marano sul Panaro",
+      "Pavullo nel Frignano",
+      "Polinago",
+      "Prignano sulla Secchia",
+      "Sassuolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Savignano sul Panaro",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036041",
+    "codice_catastale": "I473",
+    "popolazione": 9172,
+    "superficie_kmq": 25.38,
+    "densita": 361.4,
+    "cap": "41056",
+    "prefisso_telefonico": "059",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "savignanesi",
+    "etimologia": "Deriva dal nome latino di persona Sabinius con l'aggiunta del suffisso di appartenenza -anus. La specifica si riferisce al fiume che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Parco dei Sassi di Roccamalatina",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Castello di Savignano sul Panaro",
+      "Doccia",
+      "Formiche",
+      "Garofano",
+      "La Torre",
+      "Magazzino",
+      "Mulino"
+    ],
+    "comuni_confinanti": [
+      "Guiglia",
+      "Marano sul Panaro",
+      "San Cesario sul Panaro",
+      "Spilamberto",
+      "Valsamoggia (BO)",
+      "Vignola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "La Spada dei Contrari (terzo fine settimana di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sassuolo",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036040",
+    "codice_catastale": "I462",
+    "popolazione": 40813,
+    "superficie_kmq": 38.69,
+    "densita": 1054.9,
+    "cap": "41049",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sassolesi",
+    "etimologia": "Il nome è un diminutivo del termine latino saxum, ossia sasso.",
+    "il_comune_e": [
+      "Città Termale (Terme della Salvarola SpA)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Associazione dei Comuni Modenesi del Distretto Ceramico"
+    ],
+    "localita_frazioni": [
+      "quartieri: Ponte Nuovo",
+      "Quattroponti",
+      "Borgo Venezia",
+      "Ancora",
+      "Pista",
+      "Villa Segrè",
+      "Madonna di Sotto",
+      "Rometta",
+      "Braida",
+      "Rocca",
+      "Villaggio Artigiano",
+      "Parco",
+      "Le Muraglie; \nfrazioni: Salvarola Terme",
+      "San Michele dei Mucchietti",
+      "Montegibbio"
+    ],
+    "comuni_confinanti": [
+      "Casalgrande (RE)",
+      "Castellarano (RE)",
+      "Fiorano Modenese",
+      "Formigine",
+      "Prignano sulla Secchia",
+      "Serramazzoni"
+    ],
+    "musei": [
+      "Raccolta delle Piastrelle di Ceramica"
+    ],
+    "ville_palazzi": [
+      "Palazzo Ducale"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": [
+      "Stadio Comunale E. Ricci"
+    ],
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Prospero",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036039",
+    "codice_catastale": "I133",
+    "popolazione": 5927,
+    "superficie_kmq": 34.44,
+    "densita": 172.1,
+    "cap": "41030",
+    "prefisso_telefonico": "059",
+    "patrono": "San Prospero",
+    "festa_patronale": "24 novembre",
+    "demonimo": "sanprosperesi",
+    "etimologia": "Il nome si riferisce alla forte devozione verso il santo patrono del luogo: San Prospero.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 5 - Pianura di Carpi",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazioni: San Lorenzo della Pioppa",
+      "San Martino Secchia",
+      "San Pietro in Elda",
+      "Staggia;\nlocalità: Verdeta",
+      "S. Silvestro",
+      "Badia",
+      "Belfiore"
+    ],
+    "comuni_confinanti": [
+      "Bomporto",
+      "Carpi",
+      "Cavezzo",
+      "Medolla",
+      "Soliera"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Prospero Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Possidonio",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036038",
+    "codice_catastale": "I128",
+    "popolazione": 3603,
+    "superficie_kmq": 17.04,
+    "densita": 211.4,
+    "cap": "41039",
+    "prefisso_telefonico": "0535",
+    "patrono": "San Possidonio",
+    "festa_patronale": "16 maggio",
+    "demonimo": "possidiesi",
+    "etimologia": "Il nome attesta la venerazione per San Possidonio che probabilmente fu sepolto in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Bellaria",
+      "Forcello",
+      "Pioppa",
+      "Ponte Rovere"
+    ],
+    "comuni_confinanti": [
+      "Cavezzo",
+      "Concordia sulla Secchia",
+      "Mirandola",
+      "Novi di Modena"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Vinay (Alvernia Rodano Alpi-Francia)",
+      "dal 2016"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Felice sul Panaro",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036037",
+    "codice_catastale": "H835",
+    "popolazione": 10831,
+    "superficie_kmq": 51.5,
+    "densita": 210.3,
+    "cap": "41038",
+    "prefisso_telefonico": "0535",
+    "patrono": "San Felice",
+    "festa_patronale": "24 ottobre",
+    "demonimo": "sanfeliciani",
+    "etimologia": "Il nome si riferisce alla forte devozione verso il santo patrono del luogo: San Felice. La specifica si riferisce al fiume che scorre nei pressi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Dogaro",
+      "Pavignane",
+      "Rivara",
+      "San Biagio",
+      "Villa Gardè"
+    ],
+    "comuni_confinanti": [
+      "Camposanto",
+      "Finale Emilia",
+      "Medolla",
+      "Mirandola"
+    ],
+    "musei": [
+      "Mostra Permanente dell'Età del Bronzo",
+      "Mostra Archeologica \"Giuseppe Venturini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Cesario sul Panaro",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036036",
+    "codice_catastale": "H794",
+    "popolazione": 6463,
+    "superficie_kmq": 27.37,
+    "densita": 236.1,
+    "cap": "41018",
+    "prefisso_telefonico": "059",
+    "patrono": "San Cesario Diacono e Martire",
+    "festa_patronale": "primo novembre",
+    "demonimo": "sancesaresi",
+    "etimologia": "Il nome attesta la venerazione per San Cesario o San Cesareo. La specifica si riferisce alla vicinanza al fiume Panaro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura di Modena"
+    ],
+    "localita_frazioni": [
+      "Sant'Anna",
+      "Altolà",
+      "Ponte Sant'Ambrogio"
+    ],
+    "comuni_confinanti": [
+      "Castelfranco Emilia",
+      "Modena",
+      "Savignano sul Panaro",
+      "Spilamberto",
+      "Valsamoggia (BO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Riolunato",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036035",
+    "codice_catastale": "H303",
+    "popolazione": 703,
+    "superficie_kmq": 45.17,
+    "densita": 15.6,
+    "cap": "41020",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "riolunatesi",
+    "etimologia": "Chiamato Rivononati e Ridenonato, il nome significa letteralmente \"rio lunato\", ossia \"a forma di luna\". Secondo altri deriva da Rivus nonatus poi Rivus lonatus indicando che la zona è illuminata dal sole dalla ora nona, ossia dalle 15.00 in poi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Parco del Frignano"
+    ],
+    "localita_frazioni": [
+      "Castellino",
+      "Castello di Riolunato",
+      "Cento Croci",
+      "Frassineto",
+      "Roncombrellaro",
+      "Serpiano nel Frignano"
+    ],
+    "comuni_confinanti": [
+      "Fiumalbo",
+      "Frassinoro",
+      "Lama Mocogno",
+      "Montecreto",
+      "Palagano",
+      "Pievepelago",
+      "Sestola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Maggio delle Ragazze e Maggio delle Anime Purganti (30 aprile - primo maggio",
+      "seconda e terza domenica di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ravarino",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036034",
+    "codice_catastale": "H195",
+    "popolazione": 6154,
+    "superficie_kmq": 28.53,
+    "densita": 215.7,
+    "cap": "41017",
+    "prefisso_telefonico": "059",
+    "patrono": "San Antonio da Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "ravarinesi",
+    "etimologia": "Deriva dal latino rapa, ossia \"rapa\" o da rava, burrone o fanghiglia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni del Sorbara",
+      "Regione Agraria n. 5 - Pianura di Carpi"
+    ],
+    "localita_frazioni": [
+      "Casoni",
+      "Rami",
+      "Stuffione"
+    ],
+    "comuni_confinanti": [
+      "Bomporto",
+      "Camposanto",
+      "Crevalcore (BO)",
+      "Nonantola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Bonasi Benucci",
+      "Palazzo di Donna Clarina",
+      "La Buca"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale della  Beata Vergine delle Grazie",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Prignano sulla Secchia",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036033",
+    "codice_catastale": "H061",
+    "popolazione": 3729,
+    "superficie_kmq": 80.51,
+    "densita": 46.3,
+    "cap": "41048",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "prignanesi",
+    "etimologia": "Deriva dal nome di persona Perennius con l'aggiunta del suffisso di appartenenza -anus. La specifica si riferisce al fiume che scorre nei pressi del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Modena Ovest",
+      "Regione Agraria n. 3 - Colline Modenesi"
+    ],
+    "localita_frazioni": [
+      "Casa Azzoni",
+      "Castelvecchio",
+      "La Pioppa",
+      "La Volta",
+      "Moncerrato",
+      "Montebaranzone",
+      "Morano",
+      "Pescarola",
+      "Pigneto",
+      "Saltino",
+      "San Pellegrinetto",
+      "Serra",
+      "Volta di Saltino"
+    ],
+    "comuni_confinanti": [
+      "Baiso (RE)",
+      "Castellarano (RE)",
+      "Palagano",
+      "Polinago",
+      "Sassuolo",
+      "Serramazzoni",
+      "Toano (RE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Polinago",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036032",
+    "codice_catastale": "G789",
+    "popolazione": 1645,
+    "superficie_kmq": 53.84,
+    "densita": 30.6,
+    "cap": "41040",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "polinaghesi",
+    "etimologia": "Deriva dal nome di persona Polinus con l'aggiunta del suffisso -acus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 1 - Valli del Dragone e del Rossenna"
+    ],
+    "localita_frazioni": [
+      "Brandola",
+      "Cassano",
+      "Gombola",
+      "San Martino",
+      "Talbignano"
+    ],
+    "comuni_confinanti": [
+      "Lama Mocogno",
+      "Palagano",
+      "Pavullo nel Frignano",
+      "Prignano sulla Secchia",
+      "Serramazzoni"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pievepelago",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036031",
+    "codice_catastale": "G649",
+    "popolazione": 2271,
+    "superficie_kmq": 76.44,
+    "densita": 29.7,
+    "cap": "41027",
+    "prefisso_telefonico": "0536",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "pievaroli o pelagesi",
+    "etimologia": "Chiamato in passato Plebe de Pelavo o Pelago. La parola Pelago deriva dal latino pelagus che significa \"piccola laguna\" riferendosi al fiume che scorreva nei pressi. Quindi il nome si riferisce alla Pieve (paese) sorta nei pressi del pelago.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Parco del Frignano"
+    ],
+    "localita_frazioni": [
+      "Borra",
+      "Cadagnolo",
+      "Casoni",
+      "Lago Santo Modenese",
+      "Ponte Modino",
+      "Roccapelago",
+      "Rovaceto",
+      "Sant'Andrea Pelago",
+      "Sant'Anna Pelago",
+      "Sega",
+      "Selvella",
+      "Tagliole."
+    ],
+    "comuni_confinanti": [
+      "Barga (LU)",
+      "Castiglione di Garfagnana (LU)",
+      "Coreglia Antelminelli (LU)",
+      "Fiumalbo",
+      "Fosciandora (LU)",
+      "Frassinoro",
+      "Pieve Fosciana (LU)",
+      "Riolunato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Infiorata del Corpus Domini (al Corpus Domini)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pavullo nel Frignano",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036030",
+    "codice_catastale": "G393",
+    "popolazione": 17400,
+    "superficie_kmq": 144.07,
+    "densita": 120.8,
+    "cap": "41026",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "pavullesi",
+    "etimologia": "Deriva dal latino palus, -dis (palude, terreno acquitrinoso) in riferimento all'antica natura del terreno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Benedello",
+      "Camatta",
+      "Castagneto",
+      "Coscogno",
+      "Crocette",
+      "Frassineti",
+      "Gaiato",
+      "Iddiano",
+      "Niviano",
+      "Miceno",
+      "Montebonello",
+      "Montecuccolo",
+      "Montorso",
+      "Monzone",
+      "Olina",
+      "Renno",
+      "Sassoguidano",
+      "Verica"
+    ],
+    "comuni_confinanti": [
+      "Guiglia",
+      "Lama Mocogno",
+      "Marano sul Panaro",
+      "Montecreto",
+      "Montese",
+      "Polinago",
+      "Serramazzoni",
+      "Sestola",
+      "Zocca"
+    ],
+    "musei": [
+      "Museo Naturalistico del Frignano"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei Cappuccini"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Cinema Teatro Walter Mac Mazzieri"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Strzegom (Polonia), dal 2005",
+      "Pescia (Pistoia-Toscana), dal 1992"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palagano",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036029",
+    "codice_catastale": "G250",
+    "popolazione": 2156,
+    "superficie_kmq": 60.43,
+    "densita": 35.7,
+    "cap": "41046",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Giovanni Evangelista",
+    "festa_patronale": "27 dicembre",
+    "demonimo": "palaganesi",
+    "etimologia": "Deriva dal latino palaga. Secondo alcuni questo termine è riferibile alla letteratura latina e significa \"verga d'oro\", secondo altri invece è accostabile alla tecnica mineraria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Modena Ovest",
+      "Regione Agraria n. 1 - Valli del Dragone e del Rossenna"
+    ],
+    "localita_frazioni": [
+      "Boccassuolo",
+      "Costrignano",
+      "Lama di Monchio",
+      "Monchio",
+      "Monte Molino",
+      "Savoniero",
+      "Susano"
+    ],
+    "comuni_confinanti": [
+      "Frassinoro",
+      "Lama Mocogno",
+      "Montefiorino",
+      "Polinago",
+      "Prignano sulla Secchia",
+      "Riolunato",
+      "Toano (RE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera del Ciaccio Montanaro (secondo fine settimana di giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Novi di Modena",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036028",
+    "codice_catastale": "F966",
+    "popolazione": 10141,
+    "superficie_kmq": 51.82,
+    "densita": 195.7,
+    "cap": "41016",
+    "prefisso_telefonico": "059",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "novesi",
+    "etimologia": "La prima parte del nome deriva dal latino novem, ossia nove riferendosi ad una misura agraria che dipende dalla divisione delle centurie. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Rovereto",
+      "Sant'Antonio in Mercadello"
+    ],
+    "comuni_confinanti": [
+      "Carpi",
+      "Cavezzo",
+      "Concordia sulla Secchia",
+      "Moglia (MN)",
+      "Rolo (RE)",
+      "San Possidonio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Facci, nei pressi di Ponte Garbese",
+      "Villa delle Rose, con grande parco giardino"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Michele Arcangelo",
+      "Oratorio di San Gaetano (in precedenza detto \"del borgo\"), in corso Marconi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dell'Orologio",
+      "in piazza Primo Maggio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nonantola",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036027",
+    "codice_catastale": "F930",
+    "popolazione": 15882,
+    "superficie_kmq": 55.4,
+    "densita": 286.7,
+    "cap": "41015",
+    "prefisso_telefonico": "059",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "nonantolani",
+    "etimologia": "Deriva dal latino nonaginta, ossia novanta riferito alle misure agrarie che dipendono dalla divisione delle centurie",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 5 - Pianura di Carpi"
+    ],
+    "localita_frazioni": [
+      "Bagazzano",
+      "Campazzo",
+      "La Grande",
+      "Le Casette",
+      "Redù",
+      "Rubbiara",
+      "Sottobosco",
+      "Via Larga"
+    ],
+    "comuni_confinanti": [
+      "Bomporto",
+      "Castelfranco Emilia",
+      "Crevalcore (BO)",
+      "Modena",
+      "Ravarino",
+      "Sant'Agata Bolognese (BO)"
+    ],
+    "musei": [
+      "Museo Benedettino Nonantolano e Diocesano di Arte Sacra",
+      "Antiquarium"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Filomena",
+      "Chiesa di San Silvestro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montese",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036026",
+    "codice_catastale": "F642",
+    "popolazione": 3353,
+    "superficie_kmq": 80.8,
+    "densita": 41.5,
+    "cap": "41055",
+    "prefisso_telefonico": "059",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "montesini",
+    "etimologia": "Deriva dal latino montensis, ossia \"di montagna\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Modena Est",
+      "Regione Agraria n. 2 - Alto Panaro"
+    ],
+    "localita_frazioni": [
+      "Bertocchi",
+      "Castelluccio di Moscheda",
+      "Iola",
+      "Maserno",
+      "Montalto",
+      "Montespecchio",
+      "San Giacomo Maggiore",
+      "San Martino",
+      "Salto",
+      "Semelano"
+    ],
+    "comuni_confinanti": [
+      "Castel d'Aiano (BO)",
+      "Fanano",
+      "Gaggio Montano (BO)",
+      "Lizzano in Belvedere (BO)",
+      "Pavullo nel Frignano",
+      "Sestola",
+      "Zocca"
+    ],
+    "musei": [
+      "Museo Storico",
+      "Museo Augusto Righi",
+      "Raccolta di cose montesine"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montefiorino",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036025",
+    "codice_catastale": "F503",
+    "popolazione": 2183,
+    "superficie_kmq": 45.35,
+    "densita": 48.1,
+    "cap": "41045",
+    "prefisso_telefonico": "0536",
+    "patrono": "Beata Vergine Maria di Loreto",
+    "festa_patronale": "10 dicembre",
+    "demonimo": "montefiorinesi",
+    "etimologia": "E' un composto di monte e del nome latino di persona Florinus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Modena Ovest",
+      "Regione Agraria n. 1 - Valli del Dragone e del Rossenna",
+      "Associazione Nazionale Città del Tartufo"
+    ],
+    "localita_frazioni": [
+      "Casola",
+      "Corzago",
+      "Farneta",
+      "Gusciola",
+      "Lago",
+      "La Verna",
+      "Macognano",
+      "Rubbiano",
+      "Vitriola"
+    ],
+    "comuni_confinanti": [
+      "Frassinoro",
+      "Palagano",
+      "Toano (RE)"
+    ],
+    "musei": [
+      "Museo della Repubblica Partigiana"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montecreto",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036024",
+    "codice_catastale": "F484",
+    "popolazione": 930,
+    "superficie_kmq": 31.14,
+    "densita": 29.9,
+    "cap": "41025",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "montecretesi",
+    "etimologia": "E' un composto di monte e cretto (spaccatura) con evidente significato e riferimento all'aspetto geografico. Meno probabile è l'interpretazione del termine cretto come \"esile\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Parco del Frignano",
+      "Associazione Nazionale Città del Castagno"
+    ],
+    "localita_frazioni": [
+      "Acquaria",
+      "Magrignana"
+    ],
+    "comuni_confinanti": [
+      "Lama Mocogno",
+      "Pavullo nel Frignano",
+      "Riolunato",
+      "Sestola"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Borra (XVI-XVII secolo)"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Andrea (ad Acquarla)",
+      "Chiesa di San Geminiano (a Magrignana)",
+      "Chiesa del Trogolino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mirandola",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036022",
+    "codice_catastale": "F240",
+    "popolazione": 23661,
+    "superficie_kmq": 137.13,
+    "densita": 172.5,
+    "cap": "41037",
+    "prefisso_telefonico": "0535",
+    "patrono": "San Possidonio",
+    "festa_patronale": "16 maggio",
+    "demonimo": "mirandolesi",
+    "etimologia": "Deriva dal termine latino miranda che identifica un luogo di osservazione, da cui ammirare.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Baia",
+      "Carrobbio Zeni",
+      "Cividale",
+      "Confine",
+      "Gavello",
+      "Mortizzuolo",
+      "Quarantoli",
+      "San Giacomo Roncole",
+      "San Martino Carano",
+      "San Martino Spino",
+      "Santa Giustina Vigona",
+      "Tramuschio",
+      "Tre Gobbi"
+    ],
+    "comuni_confinanti": [
+      "Bondeno (FE)",
+      "Cavezzo",
+      "Concordia sulla Secchia",
+      "Finale Emilia",
+      "Medolla",
+      "Poggio Rusco (MN)",
+      "San Felice sul Panaro",
+      "San Giovanni del Dosso (MN)",
+      "San Possidonio",
+      "Sermide (MN)"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Nuovo"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Villejuif (Francia), dal 1958",
+      "Ostfildern (Germania), dal 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Medolla",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036021",
+    "codice_catastale": "F087",
+    "popolazione": 6270,
+    "superficie_kmq": 26.81,
+    "densita": 233.9,
+    "cap": "41036",
+    "prefisso_telefonico": "0535",
+    "patrono": "SS. Senesio e Teopompo",
+    "festa_patronale": "21 maggio",
+    "demonimo": "medollesi",
+    "etimologia": "Deriva dal latino meta, ossia \"mucchio, cumulo\" ad indicare \"capanne di paglia\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Camurana",
+      "Malcantone",
+      "Villafranca",
+      "Montalbano",
+      "Bruino"
+    ],
+    "comuni_confinanti": [
+      "Camposanto",
+      "Cavezzo",
+      "Mirandola",
+      "San Felice sul Panaro",
+      "San Prospero"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marano sul Panaro",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036020",
+    "codice_catastale": "E905",
+    "popolazione": 5108,
+    "superficie_kmq": 45.17,
+    "densita": 113.1,
+    "cap": "41054",
+    "prefisso_telefonico": "059",
+    "patrono": "San Lorenzo Martire",
+    "festa_patronale": "10 agosto",
+    "demonimo": "maranesi",
+    "etimologia": "Deriva dal nome latino di persona Marius con l'aggiunta del suffisso di appartenenza -anus. La specifica si riferisce al fiume che scorre in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Modena Est",
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Parco dei Sassi di Roccamalatina",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Ca' Bernabei",
+      "Casona",
+      "Denzano",
+      "Festà",
+      "Ospitaletto",
+      "Osteria Vecchia",
+      "Rodiano",
+      "Spino",
+      "VillaBianca"
+    ],
+    "comuni_confinanti": [
+      "Castelvetro di Modena",
+      "Guiglia",
+      "Maranello",
+      "Pavullo nel Frignano",
+      "Savignano sul Panaro",
+      "Serramazzoni",
+      "Vignola"
+    ],
+    "musei": [
+      "Museo di Ecologia e Storia Naturale",
+      "Museo delle Energie"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Kofina (Isola di Creta - Grecia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Maranello",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036019",
+    "codice_catastale": "E904",
+    "popolazione": 17492,
+    "superficie_kmq": 32.74,
+    "densita": 534.3,
+    "cap": "41053",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "maranellesi",
+    "etimologia": "Deriva dal nome latino di persona Marius con l'aggiunta del suffisso di appartenenza -anus ed il suffisso diminutivo -ellu.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Associazione dei Comuni Modenesi del Distretto Ceramico"
+    ],
+    "localita_frazioni": [
+      "Bell'Italia",
+      "Ca' Zironi",
+      "Fogliano",
+      "Gorzano",
+      "Pozza",
+      "San Venanzio",
+      "Torre delle Oche",
+      "Torre Maina"
+    ],
+    "comuni_confinanti": [
+      "Castelvetro di Modena",
+      "Fiorano Modenese",
+      "Formigine",
+      "Marano sul Panaro",
+      "Serramazzoni"
+    ],
+    "musei": [
+      "Galleria \"Ferrari\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Auditorium Enzo Ferrari"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lama Mocogno",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036018",
+    "codice_catastale": "E426",
+    "popolazione": 2715,
+    "superficie_kmq": 63.77,
+    "densita": 42.6,
+    "cap": "41023",
+    "prefisso_telefonico": "0536",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "16 luglio",
+    "demonimo": "lamesi",
+    "etimologia": "La prima parte del nome deriva dal latino lama, ossia \"palude, terreno acquitrinoso\". La seconda parte del nome deriva dal nome di persona di origine celtica Mocconius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro"
+    ],
+    "localita_frazioni": [
+      "Lama",
+      "Barigazzo",
+      "Borra",
+      "Cadignano",
+      "La Santona",
+      "Mocogno",
+      "Montecenere",
+      "Pianorso",
+      "Piane di Mocogno",
+      "Sassostorno",
+      "Vaglio"
+    ],
+    "comuni_confinanti": [
+      "Montecreto",
+      "Palagano",
+      "Pavullo nel Frignano",
+      "Polinago",
+      "Riolunato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna di Montecerreto (in frazione Pianorso)",
+      "Chiesa di San Giovanni Battista (a Mocogno)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Osservatorio Astronomico del Frignano (in frazione Piane di Mocogno)"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Guiglia",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036017",
+    "codice_catastale": "E264",
+    "popolazione": 3886,
+    "superficie_kmq": 49.0,
+    "densita": 79.3,
+    "cap": "41052",
+    "prefisso_telefonico": "059",
+    "patrono": "San Geminiano",
+    "festa_patronale": "31 gennaio",
+    "demonimo": "gugliesi",
+    "etimologia": "Potrebbe derivare dal nome di persona latino Aquilia o germanico Wilia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dell'Appennino Modena Est",
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Parco dei Sassi di Roccamalatina"
+    ],
+    "localita_frazioni": [
+      "Braglia",
+      "Castellino Formiche",
+      "Gainazzo",
+      "Monteorsello",
+      "Pieve Trebbio",
+      "Rocchetta",
+      "Roccamalatina",
+      "Samone",
+      "Tagliata"
+    ],
+    "comuni_confinanti": [
+      "Marano sul Panaro",
+      "Pavullo nel Frignano",
+      "Savignano sul Panaro",
+      "Valsamoggia (BO)",
+      "Zocca"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Frassinoro",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036016",
+    "codice_catastale": "D783",
+    "popolazione": 1918,
+    "superficie_kmq": 95.93,
+    "densita": 20.0,
+    "cap": "41044",
+    "prefisso_telefonico": "0536",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "frassinoresi",
+    "etimologia": "Deriva dal nome di pianta fraxinu (frassino) al genitivo plurale fraxinorum, ossia \"dei frassini\", sottintendendo la parola silva, ossia bosco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Comunità Montana dell'Appennino Modena Ovest",
+      "Regione Agraria n. 1 - Valli del Dragone e del Rossenna",
+      "Parco del Frignano"
+    ],
+    "localita_frazioni": [
+      "Caldie",
+      "Cargedolo",
+      "Casa Abbadina",
+      "Casa Ceccarini",
+      "Casoni di Fontanaluccia",
+      "Fontanaluccia",
+      "Madonna di Pietravolta",
+      "Muschioso",
+      "Pian degli Ontani",
+      "Piandelagotti",
+      "Riccavolto Nuovo",
+      "Romanoro",
+      "Rovolo",
+      "Sassatella"
+    ],
+    "comuni_confinanti": [
+      "Castiglione di Garfagnana (LU)",
+      "Montefiorino",
+      "Palagano",
+      "Pievepelago",
+      "Riolunato",
+      "Toano (RE)",
+      "Villa Minozzo (RE)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Via Crucis Vivente (Venerdì Santo",
+      "ogni tre anni",
+      "la prossima nel 2012)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Formigine",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036015",
+    "codice_catastale": "D711",
+    "popolazione": 34327,
+    "superficie_kmq": 46.98,
+    "densita": 730.7,
+    "cap": "41043",
+    "prefisso_telefonico": "059",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "formiginesi",
+    "etimologia": "Deriva da forma con il significato di \"fossa d'acqua\" con l'aggiunta del suffisso -ino o -ico.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura di Modena",
+      "Associazione dei Comuni Modenesi del Distretto Ceramico"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Casinalbo",
+      "Colombaro",
+      "Magreta",
+      "Corlo;\nlocalità: Bertola",
+      "Tabina",
+      "Ubersetto"
+    ],
+    "comuni_confinanti": [
+      "Casalgrande (RE)",
+      "Castelnuovo Rangone",
+      "Castelvetro di Modena",
+      "Fiorano Modenese",
+      "Maranello",
+      "Modena",
+      "Sassuolo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Loggia",
+      "Villa Gandini, nota anche come Villa della Resistenza o Aggazzotti"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Bartolomeo",
+      "Chiesa Evangelica Riformata Battista in Italia",
+      "Chiesa della SS. Annunciata",
+      "Chiesa della Madonna del Ponte"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Medievale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Kilkenny (Irlanda)",
+      "Samur (Francia), dal 2013"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiumalbo",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036014",
+    "codice_catastale": "D617",
+    "popolazione": 1249,
+    "superficie_kmq": 39.32,
+    "densita": 31.8,
+    "cap": "41022",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "fiumalbini",
+    "etimologia": "E' un composto di flumen (fiume) e albus (bianco), divenne Flumenalbo poi Fiumalbo.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Parco del Frignano"
+    ],
+    "localita_frazioni": [
+      "Bivio di Fiumalbo",
+      "Dogana",
+      "Faidello",
+      "Montalecchio",
+      "Rotari",
+      "San Michele",
+      "Versurone"
+    ],
+    "comuni_confinanti": [
+      "Abetone (PT)",
+      "Coreglia Antelminelli (LU)",
+      "Cutigliano (PT)",
+      "Fanano",
+      "Pievepelago",
+      "Riolunato",
+      "Sestola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Bartolomeo",
+      "Oratorio di San Rocco (XVI secolo)",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiorano Modenese",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036013",
+    "codice_catastale": "D607",
+    "popolazione": 17034,
+    "superficie_kmq": 26.37,
+    "densita": 646.0,
+    "cap": "41042",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "8 settembre",
+    "demonimo": "fioranesi",
+    "etimologia": "Deriva dal latino Florianus che a sua volta deriva dal nome latino di persona Florius con l'aggiunta del suffisso di appartenenza -anus. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Associazione dei Comuni Modenesi del Distretto Ceramico"
+    ],
+    "localita_frazioni": [
+      "Nirano",
+      "Spezzano",
+      "Fiorano"
+    ],
+    "comuni_confinanti": [
+      "Formigine",
+      "Maranello",
+      "Sassuolo",
+      "Serramazzoni"
+    ],
+    "musei": [
+      "Museo 'Presepe dal Mondo'",
+      "Museo della Ceramica",
+      "Mostra Permanente degli ex Voto",
+      "Collezione di Ceramiche artistiche sassolesi. Mostra Permanente"
+    ],
+    "ville_palazzi": [
+      "Villa Coccapani",
+      "Villa Campori",
+      "Villa Cuoghi",
+      "Villa Guastalla",
+      "Villa Messori",
+      "Villa Pace"
+    ],
+    "chiese": [
+      "Chiesa di San Lorenzo Martire (località: Nirano)",
+      "Santuario Beata Vergine del Castello",
+      "Chiesa parrocchiale di San Giovanni Apostolo ed Evangelista (località: Spezzano)",
+      "Chiesa parrocchiale di San Giovanni Battista (località: Fiorano)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Spezzano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Finale Emilia",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036012",
+    "codice_catastale": "D599",
+    "popolazione": 15597,
+    "superficie_kmq": 104.72,
+    "densita": 148.9,
+    "cap": "41034",
+    "prefisso_telefonico": "0535",
+    "patrono": "San Zenone",
+    "festa_patronale": "8 settembre",
+    "demonimo": "finalesi",
+    "etimologia": "Il nome si riferisce all'ubicazione del paese, che è posto presso l'ultimo confine separatorio della zona modenese da quella ferrarese e bolognese. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Apostolica",
+      "Ca' Bianca",
+      "Canaletto",
+      "Casoni",
+      "Entrà",
+      "Massa Finalese",
+      "Obici",
+      "Reno Finalese",
+      "Villa Rovere"
+    ],
+    "comuni_confinanti": [
+      "Bondeno (FE)",
+      "Camposanto",
+      "Cento (FE)",
+      "Crevalcore (BO)",
+      "Mirandola",
+      "San Felice sul Panaro"
+    ],
+    "musei": [
+      "Museo Civico: Sezione Museo del Territorio",
+      "Museo Civico: Sezione Archeologia e Storia Naturale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo (intitolata ai SS. Filippo e Giacomo)",
+      "Chiesa dell'Annunciata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello delle Rocche"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Finalestense (secondo fine settimana di giugno)",
+      "con il Palio delle Cerchie"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fanano",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036011",
+    "codice_catastale": "D486",
+    "popolazione": 2975,
+    "superficie_kmq": 89.92,
+    "densita": 33.1,
+    "cap": "41021",
+    "prefisso_telefonico": "0536",
+    "patrono": "San Silvestro",
+    "festa_patronale": "31 dicembre",
+    "demonimo": "fananesi",
+    "etimologia": "Deriva da Fann(i)anus, ossia del nome latino di persona Fannius con il suffisso -anus che indica appartenenza. Secondo la tradizione il nome potrebbe riferirsi alla presenza in loco di un tempio di Giano (Fanum Iani), ma l'ipotesi non è verosimile.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Frignano",
+      "Regione Agraria n. 2 - Alto Panaro",
+      "Parco del Frignano"
+    ],
+    "localita_frazioni": [
+      "Canevare",
+      "Fellicarolo",
+      "Lotta",
+      "Ospitale",
+      "Serrazzone",
+      "Trentino",
+      "Trignano"
+    ],
+    "comuni_confinanti": [
+      "Cutigliano (PT)",
+      "Fiumalbo",
+      "Lizzano in Belvedere (BO)",
+      "Montese",
+      "San Marcello Pistoiese (PT)",
+      "Sestola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio di Sant'Anna (in frazione Lotta)",
+      "Oratorio di San Giovanni Decollato",
+      "Oratorio della Beata Vergine delle Grazie detto della Madonna del Ponte",
+      "Chiesa Parrocchiale di Santa Margherita (in frazione Lotta)",
+      "Chiesa parrocchiale di San Pietro e San Giusto Martire (in frazione Trignano)",
+      "Chiesa parrocchiale di San Pietro (in frazione Fellicarolo)",
+      "Chiesa parrocchiale di San Michele (in frazione Canevare)",
+      "Chiesa parrocchiale di San Lorenzo (in frazione Trentino)",
+      "Chiesa parrocchiale di San Giacomo (in frazione Ospitale)",
+      "Chiesa di San Silvestro Papa",
+      "Chiesa di San Giuseppe Sposo di Maria",
+      "Chiesa di San Francesco d'Assisi",
+      "Chiesa di San Colombano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana \"di Piazza\"",
+      "intitolata ad Odoardo Corsini"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Concordia sulla Secchia",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036010",
+    "codice_catastale": "C951",
+    "popolazione": 8521,
+    "superficie_kmq": 41.19,
+    "densita": 206.9,
+    "cap": "41033",
+    "prefisso_telefonico": "0535",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "concordiesi",
+    "etimologia": "Secondo la tradizione il nome del paese si riferisce ad alcuni accordi non ben identificati presi dalla famiglia Pico, feudataria del luogo. La specifica si riferisce al fiume che ivi scorre.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Fossa",
+      "San Giovanni di Concordia",
+      "Santa Caterina di Concordia",
+      "Vallalta"
+    ],
+    "comuni_confinanti": [
+      "Mirandola",
+      "Moglia (MN)",
+      "Novi di Modena",
+      "Quistello (MN)",
+      "San Giacomo delle Segnate (MN)",
+      "San Giovanni del Dosso (MN)",
+      "San Possidonio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Bianca (a Vallalta)",
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Pietro (a Fossa)",
+      "Chiesa di San Paolo",
+      "Chiesa di San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cavezzo",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036009",
+    "codice_catastale": "C398",
+    "popolazione": 7022,
+    "superficie_kmq": 26.83,
+    "densita": 261.7,
+    "cap": "41032",
+    "prefisso_telefonico": "0535",
+    "patrono": "Sant'Egidio",
+    "festa_patronale": "primo settembre",
+    "demonimo": "cavezzesi",
+    "etimologia": "Potrebbe derivare dal latino cavaedium, ossia \"spazio chiuso da muri\" attraverso la forma cavaediciu.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "Botteghino",
+      "Cantone Motta",
+      "Disvetro",
+      "Ponte Motta",
+      "Villa Motta"
+    ],
+    "comuni_confinanti": [
+      "Carpi",
+      "Medolla",
+      "Mirandola",
+      "Novi di Modena",
+      "San Possidonio",
+      "San Prospero"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelvetro di Modena",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036008",
+    "codice_catastale": "C287",
+    "popolazione": 11195,
+    "superficie_kmq": 49.72,
+    "densita": 225.2,
+    "cap": "41014",
+    "prefisso_telefonico": "059",
+    "patrono": "SS. Senesio e Teopompo",
+    "festa_patronale": "4 gennaio",
+    "demonimo": "castelvetresi",
+    "etimologia": "Deriva da Castrovetere ed è un composto di castrum (castello, fortezza) e dell'aggettivo latino vetus (vecchio). La specifica identifica la zona.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 3 - Colline Modenesi",
+      "Parco dei Sassi di Roccamalatina",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Ca' di Sola",
+      "Ca' Montanari",
+      "Levizzano",
+      "Madonna di Puianello",
+      "Sant'Eusebio",
+      "Settecani",
+      "Solignano Nuovo"
+    ],
+    "comuni_confinanti": [
+      "Castelnuovo Rangone",
+      "Formigine",
+      "Maranello",
+      "Marano sul Panaro",
+      "Spilamberto",
+      "Vignola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnuovo Rangone",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036007",
+    "codice_catastale": "C242",
+    "popolazione": 14930,
+    "superficie_kmq": 22.61,
+    "densita": 660.3,
+    "cap": "41051",
+    "prefisso_telefonico": "059",
+    "patrono": "San Celestino",
+    "festa_patronale": "6 aprile",
+    "demonimo": "castelnovesi",
+    "etimologia": "Il nome deriva da Castrum Novum, ossia Castello Nuovo, con evidente significato. La specifica si riferisce al cognome del feudatario: Jacopino Rangone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Terre di Castelli",
+      "Regione Agraria n. 6 - Pianura di Modena",
+      "Associazione Strada dei Vini e dei Sapori del Territorio Città Castelli Ciliegi"
+    ],
+    "localita_frazioni": [
+      "Montale",
+      "Cavidole."
+    ],
+    "comuni_confinanti": [
+      "Castelvetro di Modena",
+      "Formigine",
+      "Modena",
+      "Spilamberto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelfranco Emilia",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036006",
+    "codice_catastale": "C107",
+    "popolazione": 32607,
+    "superficie_kmq": 102.47,
+    "densita": 318.2,
+    "cap": "41013",
+    "prefisso_telefonico": "059",
+    "patrono": "San Donnino",
+    "festa_patronale": "9 ottobre",
+    "demonimo": "castelfranchesi",
+    "etimologia": "Il nome deriva dall'unione delle parole \"castel\" e \"franco\", quest'ultima probabilmente è da intendersi con il significato di \"libero\", esonerato dal pagamento delle tasse. La specifica è identificativa della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura di Modena"
+    ],
+    "localita_frazioni": [
+      "Cavazzona",
+      "Gaggio",
+      "Manzolino",
+      "Panzano",
+      "Piumazzo",
+      "Rastellino",
+      "Recovato",
+      "Riolo"
+    ],
+    "comuni_confinanti": [
+      "Anzola dell'Emilia (BO)",
+      "Modena",
+      "Nonantola",
+      "San Cesario sul Panaro",
+      "San Giovanni in Persiceto (BO)",
+      "Sant'Agata Bolognese (BO)",
+      "Valsamoggia (BO)"
+    ],
+    "musei": [
+      "Raccolta del Museo Archeologico Etnologico di Villa Sorra",
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": [
+      "Villa Sorra",
+      "Villa Solimei",
+      "Villa Crotti - Lenzarini",
+      "Villa Albergati",
+      "Palazzo Piella",
+      "Palazzo Griffoni - Aldrovandi",
+      "Palazzo Cappi"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria della Neve",
+      "Chiesa di Santa Maria",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Giacomo",
+      "Chiesa di San Filippo e San Giacomo",
+      "Chiesa di San Bartolomeo",
+      "Chiesa dei Santi Maurizio e Lazzaro",
+      "Chiesa di San Pietro"
+    ],
+    "castelli_fortificazioni": [
+      "Bastia",
+      "Castello Malvasia",
+      "Forte Urbano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco Botanico \"Chico Mendez\"",
+      "Parco di Villa Sorra"
+    ],
+    "luoghi_interesse": [
+      "Complesso ex-fornace Cuccoli"
+    ],
+    "teatri": [
+      "Teatro Dada'"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa di San Nicola - Sagra del Tortellino (seconda settimana di settembre)",
+      "con rievocazione storica in costume"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Carpi",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036005",
+    "codice_catastale": "B819",
+    "popolazione": 71060,
+    "superficie_kmq": 131.56,
+    "densita": 540.1,
+    "cap": "41012",
+    "prefisso_telefonico": "059",
+    "patrono": "San Bernardino",
+    "festa_patronale": "20 maggio",
+    "demonimo": "carpigiani",
+    "etimologia": "Potrebbe derivare dal latino carpinus, ossia \"carpine\", un tipo di albero che è raffigurato anche nello stemma comunale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Carpi",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Botteghino di Quartirolo",
+      "Botteghino Valle",
+      "Budrione",
+      "Cantone",
+      "Cortile",
+      "Fòssoli",
+      "Fossoli Gruppo",
+      "Gargallo",
+      "Cantone di Gargallo",
+      "Gruppo",
+      "Migliarina Roma",
+      "Ponte Nuovo",
+      "Ponte Pietra",
+      "San Marino",
+      "San Martino",
+      "Santa Croce",
+      "Vittoria"
+    ],
+    "comuni_confinanti": [
+      "Campogalliano",
+      "Cavezzo",
+      "Correggio (RE)",
+      "Fabbrico (RE)",
+      "Modena",
+      "Novi di Modena",
+      "Rio Saliceto (RE)",
+      "Rolo (RE)",
+      "San Prospero",
+      "Soliera"
+    ],
+    "musei": [
+      "Museo Monumento al Deportato",
+      "Museo di Xilografia"
+    ],
+    "ville_palazzi": [
+      "Palazzo dei Pio"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria in Castello (la Sagra)",
+      "Chiesa di San Nicolò",
+      "Chiesa dell'Assunta (Cattedrale)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camposanto",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036004",
+    "codice_catastale": "B566",
+    "popolazione": 3185,
+    "superficie_kmq": 22.69,
+    "densita": 140.4,
+    "cap": "41031",
+    "prefisso_telefonico": "0535",
+    "patrono": "San Nicolò di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "camposantesi",
+    "etimologia": "Esistono diverse ipotesi sull'origine del nome. Alcuni credono che sia un composto del termine latino campus(campo) e dell'aggettivo latino sanctus , diventato poi Camposancto in riferimento ad un antico camposanto che sorgeva in loco. Altri, che ritengo non veritiera la prima ipotesi, credono che il nome sia correlato a quello dei Santi , nobile famiglia ferrarese che ottenne dagli Este vaste investiture di terreno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Modenesi Area Nord",
+      "Regione Agraria n. 4 - Bassa Modenese"
+    ],
+    "localita_frazioni": [
+      "località: Capoluogo",
+      "Cadecoppi",
+      "Cabianca",
+      "Passovecchio",
+      "Ghirone",
+      "Bottegone",
+      "Bosco",
+      "Gorzano",
+      "Passo",
+      "Tre Case",
+      "Sant'Anna"
+    ],
+    "comuni_confinanti": [
+      "Bomporto",
+      "Crevalcore (BO)",
+      "Finale Emilia",
+      "Medolla",
+      "Ravarino",
+      "San Felice sul Panaro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campogalliano",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036003",
+    "codice_catastale": "B539",
+    "popolazione": 8824,
+    "superficie_kmq": 35.05,
+    "densita": 251.8,
+    "cap": "41011",
+    "prefisso_telefonico": "059",
+    "patrono": "Sant'Orsola",
+    "festa_patronale": "21 ottobre",
+    "demonimo": "campogallianesi",
+    "etimologia": "Il nome è un composto del termine latino campus (campo) e del nome latino di persona Gallianus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Carpi"
+    ],
+    "localita_frazioni": [
+      "Panzano",
+      "Saliceto Buzzalino"
+    ],
+    "comuni_confinanti": [
+      "Carpi",
+      "Correggio (RE)",
+      "Modena",
+      "Rubiera (RE)",
+      "San Martino in Rio (RE)"
+    ],
+    "musei": [
+      "Museo della Bilancia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Beata Vergine della Sassola",
+      "Chiesa Parrocchiale di Santa Orsola"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bomporto",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036002",
+    "codice_catastale": "A959",
+    "popolazione": 10161,
+    "superficie_kmq": 39.11,
+    "densita": 259.8,
+    "cap": "41030",
+    "prefisso_telefonico": "059",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "bomportesi",
+    "etimologia": "Fino al secolo scorso fu chiamato Buon porto, riferendosi al fatto che era un rifugio sicuro per i pescherecci.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni del Sorbara",
+      "Regione Agraria n. 5 - Pianura di Carpi",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "frazioni: Solara",
+      "Sorbara;\nlocalità: Cristo",
+      "Gorghetto",
+      "San Michele",
+      "Villavara"
+    ],
+    "comuni_confinanti": [
+      "A est: Nonantola",
+      "Ravarino; a nord: Medolla; a nord e est: Camposanto; a ovest: San Prospero",
+      "Soliera; a sud e ovest: Bastiglia",
+      "Modena"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Agnese (frazione Sorbara)",
+      "Chiesa parrocchiale di San Niccolò"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte sul Naviglio",
+      "con le porte vinciane"
+    ],
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera di San Martino (novembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bastiglia",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036001",
+    "codice_catastale": "A713",
+    "popolazione": 4228,
+    "superficie_kmq": 10.52,
+    "densita": 401.9,
+    "cap": "41030",
+    "prefisso_telefonico": "059",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "bastigliesi",
+    "etimologia": "Il nome deriva dal francese bastille da bastie (fortezza) e dal germanico bastjan, ossia costruire.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni del Sorbara",
+      "Regione Agraria n. 5 - Pianura di Carpi"
+    ],
+    "localita_frazioni": [
+      "San Clemente"
+    ],
+    "comuni_confinanti": [
+      "Bomporto",
+      "Modena",
+      "Soliera"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale della Beata Vergine Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Modena",
+    "provincia": "Modena",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "036023",
+    "codice_catastale": "F257",
+    "popolazione": 184727,
+    "superficie_kmq": 182.74,
+    "densita": 1010.9,
+    "cap": "41100",
+    "prefisso_telefonico": "059",
+    "patrono": "San Geminiano di Modena",
+    "festa_patronale": "31 gennaio",
+    "demonimo": "modenesi",
+    "etimologia": "Deriva dall'antico termine Mutina che a sua volta deriva dalla base mut(t) o mot(t) (collina, rialzo di terra).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura di Modena",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)",
+      "Circuito Città d'Arte della Pianura Padana"
+    ],
+    "localita_frazioni": [
+      "Albareto",
+      "Baggiovara",
+      "Ca' Fusara",
+      "Cittanova",
+      "Cognento",
+      "Collegara",
+      "Ganaceto",
+      "Lesignana",
+      "Marzaglia",
+      "Navicello",
+      "Portile",
+      "San Donnino",
+      "Tre Olmi",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Bastiglia",
+      "Bomporto",
+      "Campogalliano",
+      "Carpi",
+      "Casalgrande (RE)",
+      "Castelfranco Emilia",
+      "Castelnuovo Rangone",
+      "Formigine",
+      "Nonantola",
+      "Rubiera (RE)",
+      "San Cesario sul Panaro",
+      "Soliera",
+      "Spilamberto"
+    ],
+    "musei": [
+      "Museo Muratoriano",
+      "Raccolta d'Arte della Provincia",
+      "Museo Lapidario e del Tesoro del Duomo",
+      "Museo di Mineralogia, di Petrografia e Geologia",
+      "Museo del Presepe",
+      "Museo del Combattente",
+      "Museo Civico d'Arte",
+      "Museo Civico Archeologico Etnologico",
+      "Mostra Permanente della Biblioteca Estense",
+      "Galleria Estense"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Beata Vergine Ausiliatrice del Popolo Modenese :: Padri Redentoristi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico Università di Modena e Reggio Emilia"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro delle Passioni",
+      "Teatro Pavarotti",
+      "Teatro Storchi"
+    ],
+    "stadi": [
+      "Stadio Alberto Braglia"
+    ],
+    "eventi_feste_sagre": [
+      "Balsamica - Terre del Balsamico (ultima decina di maggio - prima settimana di giugno)",
+      "Settimana Estense (seconda metà di giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

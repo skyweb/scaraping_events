@@ -1,0 +1,16 @@
+{
+  "nome": "Rimini",
+  "regione": "Emilia-Romagna",
+  "zona": null,
+  "sigla": "RN",
+  "codice_istat": "099",
+  "popolazione": 336786,
+  "popolazione_maschi": 162257,
+  "popolazione_femmine": 174529,
+  "superficie_kmq": 867.18,
+  "densita": 388.4,
+  "num_comuni": 25,
+  "capoluogo": "Rimini",
+  "iso_3166_2": "IT-RN",
+  "nuts": "ITD59"
+}

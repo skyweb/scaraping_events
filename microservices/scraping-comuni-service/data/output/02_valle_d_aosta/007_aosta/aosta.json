@@ -1,0 +1,16 @@
+{
+  "nome": "Aosta",
+  "regione": "Valle d'Aosta",
+  "zona": null,
+  "sigla": "AO",
+  "codice_istat": "007",
+  "popolazione": 126883,
+  "popolazione_maschi": 61976,
+  "popolazione_femmine": 64907,
+  "superficie_kmq": 3263.22,
+  "densita": 38.9,
+  "num_comuni": 74,
+  "capoluogo": "Aosta",
+  "iso_3166_2": "IT-AO",
+  "nuts": "ITC20"
+}

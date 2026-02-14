@@ -1,0 +1,16 @@
+{
+  "nome": "Brindisi",
+  "regione": "Puglia",
+  "zona": null,
+  "sigla": "BR",
+  "codice_istat": "074",
+  "popolazione": 397083,
+  "popolazione_maschi": 191268,
+  "popolazione_femmine": 205815,
+  "superficie_kmq": 1839.46,
+  "densita": 215.9,
+  "num_comuni": 20,
+  "capoluogo": "Brindisi",
+  "iso_3166_2": "IT-BR",
+  "nuts": "ITF44"
+}

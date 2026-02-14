@@ -1,0 +1,3247 @@
+[
+  {
+    "nome": "Visso",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043057",
+    "codice_catastale": "M078",
+    "popolazione": 1106,
+    "superficie_kmq": 99.89,
+    "densita": 11.1,
+    "cap": "62039",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "vissani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Aschio",
+      "Chiusita",
+      "Croce",
+      "Cupi",
+      "Fematre",
+      "Mevale",
+      "Molini",
+      "Orvano",
+      "Pontechiusita",
+      "Rasenna",
+      "Riofreddo",
+      "Villa Sant'Antonio"
+    ],
+    "comuni_confinanti": [
+      "Acquacanina",
+      "Castelsantangelo sul Nera",
+      "Cerreto di Spoleto (PG)",
+      "Fiordimonte",
+      "Foligno (PG)",
+      "Monte Cavallo",
+      "Pieve Torina",
+      "Preci (PG)",
+      "Sellano (PG)",
+      "Serravalle di Chienti",
+      "Ussita"
+    ],
+    "musei": [
+      "Museo-Pinacoteca Civico e Diocesano e Museo dei Manoscritti Leopardiani"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Macereto",
+      "Pieve di Santa Maria Assunta (in frazione Fematre)",
+      "Collegiata di Santa Maria"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ussita",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043056",
+    "codice_catastale": "L517",
+    "popolazione": 445,
+    "superficie_kmq": 55.22,
+    "densita": 8.1,
+    "cap": "62039",
+    "prefisso_telefonico": "0737",
+    "patrono": "Santissimo Crocifisso",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "ussitani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": [
+      "Calcara",
+      "Capovallazza",
+      "Casali",
+      "Castelfantellino",
+      "Cuore di Sorbo",
+      "Fluminata",
+      "Frontignano",
+      "Pian dell'Arco",
+      "Pieve",
+      "Sant'Eusebio",
+      "Sasso",
+      "Sorbo",
+      "Tempori",
+      "Vallazza",
+      "Vallestretta"
+    ],
+    "comuni_confinanti": [
+      "Acquacanina",
+      "Bolognola",
+      "Castelsantangelo sul Nera",
+      "Montefortino (FM)",
+      "Pieve Torina",
+      "Visso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Ss. Vincenzo e Anastasio (località Casali)",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Urbisaglia",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043055",
+    "codice_catastale": "L501",
+    "popolazione": 2594,
+    "superficie_kmq": 22.8,
+    "densita": 113.8,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "urbisagliesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "centri abitati: Abbadia di Fiastra",
+      "Convento",
+      "Maestà;\ncontrade: Anfiteatro",
+      "Colli Vasari",
+      "Entogge",
+      "Fiastra",
+      "Illuminati",
+      "Montedoro",
+      "Pezzalunga",
+      "Selva",
+      "Valleresco",
+      "Villamagna"
+    ],
+    "comuni_confinanti": [
+      "Colmurano",
+      "Corridonia",
+      "Loro Piceno",
+      "Petriolo",
+      "Tolentino"
+    ],
+    "musei": [
+      "Museo delle Armi e delle Uniformi",
+      "Museo Archeologico Statale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Abbazia di Chiaravalle di Fiastra (1142)",
+      "Chiesa della SS. Addolorata",
+      "Chiesa della Madonna della Maestà, detta anche Santa Maria del Massaccio"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Medioevale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Treia",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043054",
+    "codice_catastale": "L366",
+    "popolazione": 9389,
+    "superficie_kmq": 93.07,
+    "densita": 100.9,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Patrizio",
+    "festa_patronale": "17 marzo",
+    "demonimo": "treiesi",
+    "etimologia": "Riprende il nome dell'antico insediamento romano di Treia, nome di origine incerta, forse risalente al dialetto umbro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza",
+      "Associazione Nazionale Città della Terra Cruda",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Appignano",
+      "Cingoli",
+      "Macerata",
+      "Pollenza",
+      "San Severino Marche",
+      "Tolentino"
+    ],
+    "musei": [
+      "Museo Civico Archeologico",
+      "Accademia Georgica"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario del SS. Crocifisso :: Frati Minori Francescani"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Villa Votalarca"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Disfida del Bracciale (prima domenica di agosto)",
+      "Sagra del calcione e del raviolo (metà maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tolentino",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043053",
+    "codice_catastale": "L191",
+    "popolazione": 19831,
+    "superficie_kmq": 94.86,
+    "densita": 209.1,
+    "cap": "62029",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Catervo",
+    "festa_patronale": "17 ottobre",
+    "demonimo": "tolentinati o tolentinesi",
+    "etimologia": "Deriva da Tollentinum, dal greco Taulantinoi, nome di un'antica popolazione.",
+    "il_comune_e": [
+      "Città Termale (Terme di Santa Lucia)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri",
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Belforte del Chienti",
+      "Camporotondo di Fiastrone",
+      "Colmurano",
+      "Corridonia",
+      "Macerata",
+      "Petriolo",
+      "Pollenza",
+      "San Ginesio",
+      "San Severino Marche",
+      "Serrapetrona",
+      "Treia",
+      "Urbisaglia"
+    ],
+    "musei": [
+      "Museo Internazionale della Caricatura",
+      "Museo dell'Arciconfraternita del SS. Cuore di Gesù",
+      "Museo Civico Archeologico \"Aristide Gentiloni Silverj\"",
+      "Basilica di San Nicola: Museo dell'Opera",
+      "Basilica di San Nicola: Museo delle Ceramiche",
+      "Basilica di San Nicola: Museo degli Ex Voto"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Nicola :: Frati Agostiniani"
+    ],
+    "castelli_fortificazioni": [
+      "Castello della Rancia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Nicola Vaccaj"
+    ],
+    "stadi": [
+      "Stadio Comunale Della Vittoria"
+    ],
+    "eventi_feste_sagre": [
+      "Tolentino 815 - Rievocazione Storica in costume della Battaglia di Tolentino (prima domenica di maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serravalle di Chienti",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043052",
+    "codice_catastale": "I661",
+    "popolazione": 1050,
+    "superficie_kmq": 95.81,
+    "densita": 11.0,
+    "cap": "62038",
+    "prefisso_telefonico": "0737",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "serravallesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Camerino",
+      "Fiuminata",
+      "Foligno (PG)",
+      "Monte Cavallo",
+      "Muccia",
+      "Nocera Umbra (PG)",
+      "Pieve Torina",
+      "Sefro",
+      "Visso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna del Piano",
+      "Chiesa di Santa Lucia",
+      "Chiesa della Madonna del Sasso (località San Martino)",
+      "Basilica di Plestia",
+      "Abbazia camaldolese"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Serrapetrona",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043051",
+    "codice_catastale": "I651",
+    "popolazione": 956,
+    "superficie_kmq": 37.56,
+    "densita": 25.5,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Clemente",
+    "festa_patronale": "23 novembre",
+    "demonimo": "serrapetronesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "località: Villa d'Aria",
+      "Collina",
+      "Castel San Venanzo",
+      "Colli",
+      "Madonna del Monte;frazioni: Borgiano",
+      "Borgianello;contrada: Collina"
+    ],
+    "comuni_confinanti": [
+      "Belforte del Chienti",
+      "Caldarola",
+      "Camerino",
+      "Castelraimondo",
+      "San Severino Marche",
+      "Tolentino"
+    ],
+    "musei": [
+      "Museo d'Arte Sacra Contemporanea",
+      "Museo dell'Uomo"
+    ],
+    "ville_palazzi": [
+      "Palazzo Claudi"
+    ],
+    "chiese": [
+      "Santuario Madonna Della Neve (località: Madonna del Monte)",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di Santa Elena (località: Villa d'Aria)",
+      "Chiesa di San Paolo (frazione: Borgiano)",
+      "Chiesa di San Lorenzo (località: Castel San Venanzo)",
+      "Chiesa di San Giuseppe (frazione: Borgiano)",
+      "Chiesa di San Giovanni Battista (località: Collina)",
+      "Chiesa di San Fracesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sefro",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043050",
+    "codice_catastale": "I569",
+    "popolazione": 419,
+    "superficie_kmq": 42.31,
+    "densita": 9.9,
+    "cap": "62025",
+    "prefisso_telefonico": "0737",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "sefrani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza"
+    ],
+    "localita_frazioni": [
+      "Agolla",
+      "Sorti"
+    ],
+    "comuni_confinanti": [
+      "Camerino",
+      "Fiuminata",
+      "Pioraco",
+      "Serravalle di Chienti"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Tossano (nella frazione Agolla)",
+      "Chiesa di San Biagio e di San Paolo (nella frazione Sorti)"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Varano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sarnano",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043049",
+    "codice_catastale": "I436",
+    "popolazione": 3263,
+    "superficie_kmq": 62.94,
+    "densita": 51.8,
+    "cap": "62028",
+    "prefisso_telefonico": "0733",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "sarnanesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano",
+      "Città Termale (Terme di Sarnano)"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "Brilli",
+      "Cadiciotto",
+      "Campanotico",
+      "Cannavina",
+      "Ciammartino",
+      "Coldipastine Colleciccangelo",
+      "Colmorello",
+      "Fontemarta",
+      "Grassetti",
+      "Grisciotti",
+      "Marinaccio",
+      "Marinella",
+      "Molliconi",
+      "Morelli",
+      "Mucchi",
+      "Palura",
+      "Pietramanuccia",
+      "Rinci",
+      "Romani",
+      "Sabbioni",
+      "San Rocco - Taliani",
+      "Boccadicane",
+      "Cardagnano",
+      "Casale",
+      "Case Rosse",
+      "Grazie",
+      "Pianello",
+      "Piano",
+      "Picarelli",
+      "Poggio",
+      "Sassetto",
+      "Valcajano",
+      "Vecciola",
+      "Colle",
+      "Afoco",
+      "Borghetti",
+      "Callarella",
+      "Carsoducci",
+      "Gabba",
+      "Gabella Nuova",
+      "San Cassiano",
+      "Terro",
+      "Cese",
+      "Coste",
+      "Giampereto",
+      "Margani - Nocelleto",
+      "Piobbico",
+      "Sassotetto",
+      "Stinco",
+      "Nucleo Speciale Hotel Hermitage",
+      "Bisio",
+      "Col di Bisio",
+      "Fontanelle",
+      "Gattari",
+      "Mazzanti",
+      "Migliarucci",
+      "Pianelle",
+      "Piani di Tenna",
+      "Servigliani",
+      "Schito",
+      "Speciale Monte Berro"
+    ],
+    "comuni_confinanti": [
+      "Acquacanina",
+      "Amandola (FM)",
+      "Bolognola",
+      "Fiastra",
+      "Gualdo",
+      "Montefortino (FM)",
+      "San Ginesio"
+    ],
+    "musei": [
+      "Pinacoteca Comunale e Musei Civici"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria o San Biagio a Piobbico",
+      "Chiesa di Santa Maria Assunta",
+      "Abbadia di Piobbico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro della Vittoria"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio del Serafino (seconda e terza domenica di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Angelo in Pontano",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043048",
+    "codice_catastale": "I286",
+    "popolazione": 1421,
+    "superficie_kmq": 27.43,
+    "densita": 51.8,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Nicola da Tolentino",
+    "festa_patronale": "10 settembre",
+    "demonimo": "santangiolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Falerone (FM)",
+      "Gualdo",
+      "Loro Piceno",
+      "Montappone (FM)",
+      "Penna San Giovanni",
+      "Ripe San Ginesio",
+      "San Ginesio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Nicola",
+      "Chiesa di San Salvatore",
+      "Chiesa di Santa Maria della Misericordia, detta \"delle Pietre\""
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di San Filippo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Nicola Antonio Angeletti"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Severino Marche",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043047",
+    "codice_catastale": "I156",
+    "popolazione": 12630,
+    "superficie_kmq": 193.77,
+    "densita": 65.2,
+    "cap": "62027",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Severino",
+    "festa_patronale": "8 giugno",
+    "demonimo": "sanseverinati o settempedani",
+    "etimologia": "La prima parte onora il santo patrono del luogo. La specifica fu aggiunta nel 1863 e si riferisce alla posizione geografica del paese.",
+    "il_comune_e": [
+      "Comune Amico del Turismo Itinerante"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apiro",
+      "Castelraimondo",
+      "Cingoli",
+      "Gagliole",
+      "Matelica",
+      "Pollenza",
+      "Serrapetrona",
+      "Tolentino",
+      "Treia"
+    ],
+    "musei": [
+      "Pinacoteca Comunale \"Tacchi-Venturi\"",
+      "Museo del Territorio",
+      "Museo Civico Archeologico \"Giuseppe Moretti\"",
+      "Galleria d'Arte Moderna Comunale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria dei Lumi :: Monaci Benedettini Cistercensi"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Carpignano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Feronia"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio dei Castelli (prima metà di giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Ginesio",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043046",
+    "codice_catastale": "H876",
+    "popolazione": 3442,
+    "superficie_kmq": 77.72,
+    "densita": 44.3,
+    "cap": "62026",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Ginesio",
+    "festa_patronale": "25 agosto",
+    "demonimo": "ginesini",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri",
+      "Parco Nazionale dei Monti Sibillini",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquacanina",
+      "Camporotondo di Fiastrone",
+      "Cessapalombo",
+      "Colmurano",
+      "Fiastra",
+      "Gualdo",
+      "Loro Piceno",
+      "Ripe San Ginesio",
+      "Sant'Angelo in Pontano",
+      "Sarnano",
+      "Tolentino"
+    ],
+    "musei": [
+      "Museo e Pinacoteca \"S. Gentili\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di San Liberato",
+      "Collegiata-Chiesa di Santa Maria Assunta",
+      "Chiesa di San Tommaso e Barnaba",
+      "Chiesa di San Francesco",
+      "Abbazia di Santa Maria delle Macchie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio (15 agosto)",
+      "partecipano 4 Rioni: Alvaneto",
+      "Ascarana",
+      "Offuna",
+      "Picena"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ripe San Ginesio",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043045",
+    "codice_catastale": "H323",
+    "popolazione": 851,
+    "superficie_kmq": 10.11,
+    "densita": 84.2,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Michele",
+    "festa_patronale": "prima domenica di maggio",
+    "demonimo": "ripani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Colmurano",
+      "Loro Piceno",
+      "San Ginesio",
+      "Sant'Angelo in Pontano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Leonina (XIII secolo)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Recanati",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043044",
+    "codice_catastale": "H211",
+    "popolazione": 21241,
+    "superficie_kmq": 102.77,
+    "densita": 206.7,
+    "cap": "62019",
+    "prefisso_telefonico": "071",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "recanatesi",
+    "etimologia": "Deriva dal nome locale latino Ricina. Secondo un'altra ipotesi deriva da un nome latino di persona Recanatus al genitivo.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "rioni: Castelnuovo",
+      "Centro",
+      "Mercato",
+      "Montemorello;\nquartieri: Fonti S.Lorenzo",
+      "Le Grazie",
+      "Villa Teresa;\nfrazioni: Montefiore",
+      "Villa Musone",
+      "Sambucheto;\ncontrade: Addolorata",
+      "Bagnolo",
+      "Castelnuovo",
+      "Chiarino",
+      "Duomo",
+      "Mattonata",
+      "Ricciola",
+      "Saletta",
+      "Sant'Agostino",
+      "Santa Croce",
+      "San Francesco",
+      "San Pietro",
+      "Valdice",
+      "Vallememoria"
+    ],
+    "comuni_confinanti": [
+      "Castelfidardo (AN)",
+      "Loreto (AN)",
+      "Macerata",
+      "Montecassiano",
+      "Montefano",
+      "Montelupone",
+      "Osimo (AN)",
+      "Porto Recanati",
+      "Potenza Picena"
+    ],
+    "musei": [
+      "Museo \"Beniamino Gigli\"",
+      "Museo Civico Villa Colloredo Mels",
+      "Centro Nazionale di Studi Leopardiani",
+      "Biblioteca Privata \"Leopardi\"",
+      "Museo di Arte Contemporanea e dei Pittori dell'Emigrazione"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Cattedrale di San Flaviano",
+      "Chiesa di San Domenico"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Giacomo Leopardi (1798 - 1837)",
+      "scrittore e poeta"
+    ]
+  },
+  {
+    "nome": "Potenza Picena",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043043",
+    "codice_catastale": "F632",
+    "popolazione": 15836,
+    "superficie_kmq": 47.62,
+    "densita": 332.5,
+    "cap": "62018",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Girio",
+    "festa_patronale": "25 maggio",
+    "demonimo": "potentini",
+    "etimologia": "Documentato con il nome di Mons Sanctus in Piceno, ha assunto la denominazione attuale nel 1862. La prima parte del nome deriva dal classico Potentia, \"la potente\", la seconda parte si riferisce alla sua collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Porto Potenza Picena",
+      "San Girio",
+      "Montecanepino"
+    ],
+    "comuni_confinanti": [
+      "Civitanova Marche",
+      "Montecosaro",
+      "Montelupone",
+      "Porto Recanati",
+      "Recanati"
+    ],
+    "musei": [
+      "Civica Raccolta d'Arte \"B. Biancolini\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Bruno Mugellini"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Porto Recanati",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043042",
+    "codice_catastale": "G919",
+    "popolazione": 12571,
+    "superficie_kmq": 17.32,
+    "densita": 725.8,
+    "cap": "62017",
+    "prefisso_telefonico": "071",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "portorecanatesi",
+    "etimologia": "Sorto presso il luogo dell'antica romana Potentia, deriva il suo nome dall'essere lo sbocco a mare con funzione di portuale in dipendenza di Recanati.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007 (Scossicci)"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Quartiere Nord - Scossicci",
+      "Quartiere Ovest - Grotte - Montarice",
+      "Quartiere Sud - Santa Maria in Potenza",
+      "Quartiere Centro - Castelnuovo - San Marino"
+    ],
+    "comuni_confinanti": [
+      "Castelfidardo (AN)",
+      "Loreto (AN)",
+      "Numana (AN)",
+      "Potenza Picena",
+      "Recanati"
+    ],
+    "musei": [
+      "Mostra Archeologica Permanente \"Divi & Dee\"",
+      "Pinacoteca A. Moroni",
+      "Pinacoteca Comunale \"Attilio Moroni\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta delle Suore",
+      "Chiesetta del Suffragio",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa del Preziosissimo Sangue",
+      "Abbazia di Santa Maria in Potenza"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Svevo"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Area Archeologica di Potentia"
+    ],
+    "teatri": [
+      "Teatro Kursaal"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Bara di Notte (Venerdì Santo)",
+      "Palio Storico di San Giovanni (ultima settimana di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pollenza",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043041",
+    "codice_catastale": "F567",
+    "popolazione": 6577,
+    "superficie_kmq": 39.47,
+    "densita": 166.6,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "pollentini",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Macerata",
+      "San Severino Marche",
+      "Tolentino",
+      "Treia"
+    ],
+    "musei": [
+      "Museo Memorie Patrie Pollentine"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei Santi Francesco e Antonio",
+      "Chiesa di San Giuseppe",
+      "Chiesa della Madonna della Pace",
+      "Abbazia di Rambona",
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Giuseppe Verdi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poggio San Vicino",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043040",
+    "codice_catastale": "D566",
+    "popolazione": 244,
+    "superficie_kmq": 12.91,
+    "densita": 18.9,
+    "cap": "62021",
+    "prefisso_telefonico": "0733",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "30 aprile",
+    "demonimo": "poggesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del San Vicino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apiro",
+      "Cerreto d'Esi (AN)",
+      "Fabriano (AN)",
+      "Matelica",
+      "Serra San Quirico (AN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Torre civica"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pioraco",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043039",
+    "codice_catastale": "G690",
+    "popolazione": 1162,
+    "superficie_kmq": 19.48,
+    "densita": 59.7,
+    "cap": "62025",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Vittorino",
+    "festa_patronale": "8 giugno",
+    "demonimo": "piorachesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza"
+    ],
+    "localita_frazioni": [
+      "Seppio"
+    ],
+    "comuni_confinanti": [
+      "A nord: Matelica; a nord-est: Castelraimondo; a ovest: Fiuminata; a sud: Sefro; a sud-est: Camerino"
+    ],
+    "musei": [
+      "Museo della Carta e della Filigrana",
+      "Museo dei Fossili e Mostra dei Funghi"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Grotta",
+      "Chiesa di San Vittorino",
+      "Chiesa di San Francesco",
+      "Chiesa della Madonna delle Lacrime di Seppio",
+      "Chiesa del S.S. Crocefisso"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pievebovigliana",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043037",
+    "codice_catastale": "G637",
+    "popolazione": 844,
+    "superficie_kmq": 27.33,
+    "densita": 30.9,
+    "cap": "62035",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Macario",
+    "festa_patronale": "2 maggio",
+    "demonimo": "pieveboviglianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caldarola",
+      "Camerino",
+      "Cessapalombo",
+      "Fiastra",
+      "Fiordimonte",
+      "Muccia",
+      "Pieve Torina"
+    ],
+    "musei": [
+      "Museo \"Raffaele Campelli\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa del Rosario",
+      "Chiesa di San Giusto in San Maroto",
+      "Chiesa di San Francesco",
+      "Chiesa di San Giovanni",
+      "Chiesa di Santa Maria Maddalena",
+      "Chiesa di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Conti di San Maroto (ruderi)",
+      "Castello di Beldiletto"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pieve Torina",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043038",
+    "codice_catastale": "G657",
+    "popolazione": 1439,
+    "superficie_kmq": 74.85,
+    "densita": 19.2,
+    "cap": "62036",
+    "prefisso_telefonico": "0737",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "pievetorinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": [
+      "Antico",
+      "Appennino",
+      "Capecchiara",
+      "Capodacqua",
+      "Capriglia",
+      "Casavecchia Alta",
+      "Fiume",
+      "Giulo",
+      "Le Rote",
+      "Lucciano",
+      "Pie' Casavecchia",
+      "Piecollina",
+      "Seggiole",
+      "Tazza",
+      "Torricchio",
+      "Vari"
+    ],
+    "comuni_confinanti": [
+      "Fiordimonte",
+      "Monte Cavallo",
+      "Muccia",
+      "Pievebovigliana",
+      "Serravalle di Chienti",
+      "Ussita",
+      "Visso"
+    ],
+    "musei": [
+      "Pinacoteca \"Chiesa di San Giovanni\"",
+      "Museo della Nostra Terra"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario di Santa Maria in Caspriano di Casavecchia",
+      "Santuario di Santa Maria in Carpineto",
+      "Eremo Santuario di Sant'Angelo in Prefoglio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Petriolo",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043036",
+    "codice_catastale": "G515",
+    "popolazione": 1996,
+    "superficie_kmq": 15.63,
+    "densita": 127.7,
+    "cap": "62014",
+    "prefisso_telefonico": "0733",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "petriolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Corridonia",
+      "Loro Piceno",
+      "Mogliano",
+      "Tolentino",
+      "Urbisaglia"
+    ],
+    "musei": [
+      "Museo dei Legni Processionali"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria del Soccorso",
+      "Chiesa della Madonna delle Grazie",
+      "Chiesa della Madonna della Misericordia",
+      "Chiesa dei SS. Martino e Marco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Penna San Giovanni",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043035",
+    "codice_catastale": "G436",
+    "popolazione": 1076,
+    "superficie_kmq": 28.18,
+    "densita": 38.2,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "29 agosto",
+    "demonimo": "pennesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Servigliano (FM); a est e nord-est: Falerone (FM); a nord: Sant'Angelo in Pontano; a ovest e nord-ovest: Gualdo; a sud: Monte San Martino; a sud-ovest: Amandola (FM)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Giovanni Battista",
+      "Chiesa di Santa Filomena",
+      "Chiesa di San Giuseppe",
+      "Chiesa di San Francesco (XV secolo, rimodernata nel 1700)",
+      "Chiesa di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Flora"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Muccia",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043034",
+    "codice_catastale": "F793",
+    "popolazione": 910,
+    "superficie_kmq": 25.65,
+    "densita": 35.5,
+    "cap": "62034",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "muccesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera"
+    ],
+    "localita_frazioni": [
+      "Massaprofoglio",
+      "Maddalena",
+      "Costafiore",
+      "Vallicchio",
+      "Giove",
+      "Col di Giove",
+      "Pian di Giove",
+      "Colle della Rena",
+      "Fonticelle",
+      "Marzocco",
+      "Rocchetta",
+      "Starnacchio",
+      "Coda di Muccia",
+      "Acquamoscia",
+      "Palazzi",
+      "Beato Rizzerio",
+      "Varano",
+      "Palatina",
+      "La Torre"
+    ],
+    "comuni_confinanti": [
+      "Camerino",
+      "Pieve Torina",
+      "Pievebovigliana",
+      "Serravalle di Chienti"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Eremo Beato Rizzerio :: Sorelle Francescane"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Morrovalle",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043033",
+    "codice_catastale": "F749",
+    "popolazione": 10150,
+    "superficie_kmq": 42.6,
+    "densita": 238.3,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "morrovallesi",
+    "etimologia": "E' un composto di Morro (spuntone, roccia) e valle, aggiunto successivamente per distinguerlo dagli omonimi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Corridonia",
+      "Macerata",
+      "Monte San Giusto",
+      "Montecosaro",
+      "Montegranaro (FM)",
+      "Montelupone"
+    ],
+    "musei": [
+      "Museo Internazionale del Presepio"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Madonna della Quercia :: Padri Passionisti"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montelupone",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043030",
+    "codice_catastale": "F552",
+    "popolazione": 3594,
+    "superficie_kmq": 32.74,
+    "densita": 109.8,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Firmano",
+    "festa_patronale": "11 marzo",
+    "demonimo": "monteluponesi",
+    "etimologia": null,
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": [
+      "San Firmano"
+    ],
+    "comuni_confinanti": [
+      "Macerata",
+      "Montecosaro",
+      "Morrovalle",
+      "Potenza Picena",
+      "Recanati"
+    ],
+    "musei": [
+      "Pinacoteca Civica"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Chiara",
+      "Chiesa di San Francesco",
+      "Chiesa di San Firmano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Nicola degli Angeli"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montefano",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043029",
+    "codice_catastale": "F496",
+    "popolazione": 3506,
+    "superficie_kmq": 34.12,
+    "densita": 102.8,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Donato",
+    "festa_patronale": "7 agosto",
+    "demonimo": "montefanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Appignano",
+      "Filottrano (AN)",
+      "Montecassiano",
+      "Osimo (AN)",
+      "Recanati"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Filippo Benizi",
+      "Chiesa di Santa Maria",
+      "Collegiata San Donato"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montecosaro",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043028",
+    "codice_catastale": "F482",
+    "popolazione": 7144,
+    "superficie_kmq": 21.68,
+    "densita": 329.5,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "montecosaresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": [
+      "Montecosaro Scalo",
+      "Casette-Molino"
+    ],
+    "comuni_confinanti": [
+      "Civitanova Marche",
+      "Montegranaro (FM)",
+      "Montelupone",
+      "Morrovalle",
+      "Potenza Picena",
+      "Sant'Elpidio a Mare (FM)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santa Maria a Piè di Chienti (a Montecosaro Scalo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montecassiano",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043026",
+    "codice_catastale": "F454",
+    "popolazione": 7116,
+    "superficie_kmq": 32.99,
+    "densita": 215.7,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "montecassianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Appignano",
+      "Macerata",
+      "Montefano",
+      "Recanati"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata di Santa Maria della Misericordia",
+      "Collegiata di Santa Maria Assunta",
+      "Chiesa di San Nicolò",
+      "Chiesa di San Marco",
+      "Chiesa di San Giacomo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte San Martino",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043032",
+    "codice_catastale": "F622",
+    "popolazione": 746,
+    "superficie_kmq": 18.5,
+    "densita": 40.3,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "montesammartinesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": [
+      "contrade: Santa Maria Maddalena",
+      "Santo Stefano",
+      "San Venanzo",
+      "Barchetta",
+      "Molino"
+    ],
+    "comuni_confinanti": [
+      "Amandola (FM)",
+      "Montefalcone Appennino (FM)",
+      "Penna San Giovanni",
+      "Santa Vittoria in Matenano (FM)",
+      "Servigliano (FM)",
+      "Smerillo (FM)"
+    ],
+    "musei": [
+      "Pinacoteca Civica \"Monsignor Armindo Ricci\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Urbani"
+    ],
+    "chiese": [
+      "Chiesa Santa Maria delle Grazie",
+      "Chiesa di Sant'Agostino",
+      "Chiesa di San Martino",
+      "Chiesa di Santa Maria del Pozzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte San Giusto",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043031",
+    "codice_catastale": "F621",
+    "popolazione": 7995,
+    "superficie_kmq": 19.99,
+    "densita": 399.9,
+    "cap": "62015",
+    "prefisso_telefonico": "0733",
+    "patrono": "Madonna Incoronata",
+    "festa_patronale": "8 settembre",
+    "demonimo": "sangiustesi",
+    "etimologia": "La sua composizione è molto semplice: è un composto di \"monte\" e del nome del santo venerato in loco: \"San Giusto\".",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Corridonia",
+      "Monte San Pietrangeli (FM)",
+      "Montegranaro (FM)",
+      "Morrovalle"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Giuseppe",
+      "Chiesa di Santo Stefano, detta \"La Collegiata\"",
+      "Chiesa di Santa Maria delle Panette",
+      "Chiesa di San Filippo Neri (Nuova)",
+      "Chiesa di Santa Maria della Pietà in Telusiano",
+      "Chiesa delle Grazie",
+      "Chiesa della Purità, detta anche \"chiesa dei Frati\"",
+      "Chiesa del Monastero Benedettine Maria Santissima Assunta in Cielo",
+      "Chiesa di San Filippo Neri (Vecchia)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monte Cavallo",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043027",
+    "codice_catastale": "F460",
+    "popolazione": 133,
+    "superficie_kmq": 38.62,
+    "densita": 3.4,
+    "cap": "62036",
+    "prefisso_telefonico": "0737",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "montecavallesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera"
+    ],
+    "localita_frazioni": [
+      "Collattoni",
+      "Cascine",
+      "Selvapiana",
+      "Valcaldara",
+      "Castello",
+      "Cesure",
+      "Collebianco",
+      "Valle-San Benedetto",
+      "Piandellanoce",
+      "Cerreto",
+      "Pantaneto",
+      "Piedelsasso (Capoluogo)"
+    ],
+    "comuni_confinanti": [
+      "Pieve Torina",
+      "Serravalle di Chienti",
+      "Visso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Benedetto (località San Benedetto)",
+      "Chiesa di Cerreto (località Cerreto)",
+      "Chiesa Parrocchiale di San Niccolò (località Valcadara)",
+      "Chiesa di San Michele Arcangelo (località Pian della Noce)",
+      "Chiesa di Santa Maria Assunta (località Pantaneto)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mogliano",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043025",
+    "codice_catastale": "F268",
+    "popolazione": 4641,
+    "superficie_kmq": 29.26,
+    "densita": 158.6,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "moglianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Corridonia",
+      "Fermo (FM)",
+      "Francavilla d'Ete (FM)",
+      "Loro Piceno",
+      "Massa Fermana (FM)",
+      "Petriolo"
+    ],
+    "musei": [
+      "Museo Parrocchiale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Arcipretale di Santa Maria di Mogliano",
+      "Santuario del SS. Crocifisso",
+      "Monastero di San Giuseppe",
+      "Chiesa di Santa Maria in Piazza",
+      "Chiesa di Santa Colomba",
+      "Chiesa del SS. Crocifisso d'Ete (località Santa Croce)",
+      "Chiesa di San Gregorio Magno"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Mogliano 1744 (dal primo giovedì di luglio fino alla domenica successiva)",
+      "Presepe Vivente (29 dicembre - 5 gennaio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Matelica",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043024",
+    "codice_catastale": "F051",
+    "popolazione": 9870,
+    "superficie_kmq": 81.04,
+    "densita": 121.8,
+    "cap": "62024",
+    "prefisso_telefonico": "0737",
+    "patrono": "Sant'Adriano",
+    "festa_patronale": "16 settembre",
+    "demonimo": "matelicesi o mateliani",
+    "etimologia": "Anticamente chiamata Matilica, è nome di origine incerta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Italiana le Città del Miele"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apiro",
+      "Castelraimondo",
+      "Cerreto d'Esi (AN)",
+      "Esanatoglia",
+      "Fabriano (AN)",
+      "Fiuminata",
+      "Gagliole",
+      "Poggio San Vicino",
+      "San Severino Marche"
+    ],
+    "musei": [
+      "Pinacoteca Comunale Raffaele Fidanza",
+      "Museo Civico Archeologico",
+      "Museo \"Piersanti\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Monti-De Luca",
+      "Palazzo Ottoni (1472)",
+      "Palazzo Pettinelli",
+      "Palazzo Razzanti"
+    ],
+    "chiese": [
+      "Monastero e Chiesa di San Francesco",
+      "Chiesa di Sant'Agostino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Giuseppe Piermarini"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Las Rosas (Argentina)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Loro Piceno",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043022",
+    "codice_catastale": "E694",
+    "popolazione": 2407,
+    "superficie_kmq": 32.49,
+    "densita": 74.1,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "loresi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Colmurano",
+      "Massa Fermana (FM)",
+      "Mogliano",
+      "Montappone (FM)",
+      "Petriolo",
+      "Ripe San Ginesio",
+      "Sant'Angelo in Pontano",
+      "Urbisaglia"
+    ],
+    "musei": [
+      "Museo delle Due Guerre Mondiali"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio da Padova",
+      "Chiesa di Santa Maria di Piazza",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gualdo",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043021",
+    "codice_catastale": "E228",
+    "popolazione": 809,
+    "superficie_kmq": 22.11,
+    "densita": 36.6,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Savino",
+    "festa_patronale": "primo sabato dopo Ferragosto",
+    "demonimo": "gualdesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": [
+      "contrade: Bartolotti",
+      "Castello",
+      "Contro",
+      "Fanelli",
+      "Marchesi",
+      "Massignano",
+      "Morrone",
+      "Picacchi",
+      "Scarchi",
+      "Tomassucci",
+      "Valle",
+      "Zazza"
+    ],
+    "comuni_confinanti": [
+      "Amandola (FM)",
+      "Penna San Giovanni",
+      "San Ginesio",
+      "Sant'Angelo in Pontano",
+      "Sarnano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Savino",
+      "Chiesa Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gagliole",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043020",
+    "codice_catastale": "D853",
+    "popolazione": 627,
+    "superficie_kmq": 24.06,
+    "densita": 26.1,
+    "cap": "62022",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "gagliolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castelraimondo",
+      "Matelica",
+      "San Severino Marche"
+    ],
+    "musei": [
+      "Museo di Storia Naturale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Lorenzo a Torreto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiuminata",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043019",
+    "codice_catastale": "D628",
+    "popolazione": 1378,
+    "superficie_kmq": 76.67,
+    "densita": 18.0,
+    "cap": "62025",
+    "prefisso_telefonico": "0737",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "fiuminatesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castelraimondo",
+      "Esanatoglia",
+      "Fabriano (AN)",
+      "Matelica",
+      "Nocera Umbra (PG)",
+      "Pioraco",
+      "Sefro",
+      "Serravalle di Chienti"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Beata Vergine di Valcora",
+      "Chiesa di Santa Maria della Spina a Poggio",
+      "Chiesa di Santa Maria Assunta in Massa",
+      "Chiesa di San Paolo di Orpiano",
+      "Chiesa di San Giovanni Battista a Castello",
+      "Chiesa dei SS. Carlo e Martino alla Forcatura di Caneggia",
+      "Chiesa di Santa Maria di Laverino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiordimonte",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043018",
+    "codice_catastale": "D609",
+    "popolazione": 201,
+    "superficie_kmq": 21.22,
+    "densita": 9.5,
+    "cap": "62035",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Gregorio",
+    "festa_patronale": "30 gennaio",
+    "demonimo": "fiordimontesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": [
+      "Alfi",
+      "Arciano",
+      "Castello",
+      "Marzoli",
+      "Nemi",
+      "Petrignano",
+      "Taro",
+      "Valle",
+      "Vico di Sotto",
+      "Vico di Sopra",
+      "Villanova di Sotto",
+      "Villanovadi Sopra"
+    ],
+    "comuni_confinanti": [
+      "Acquacanina",
+      "Fiastra",
+      "Pieve Torina",
+      "Pievebovigliana",
+      "Visso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio (in frazione Castello)",
+      "Chiesa di Santa Maria Assunta (in frazione Nemi)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiastra",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043017",
+    "codice_catastale": "D564",
+    "popolazione": 544,
+    "superficie_kmq": 57.57,
+    "densita": 9.4,
+    "cap": "62035",
+    "prefisso_telefonico": "0737",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "fiastrani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": [
+      "Trebbio"
+    ],
+    "comuni_confinanti": [
+      "Acquacanina",
+      "Camerino",
+      "Cessapalombo",
+      "Fiordimonte",
+      "Pievebovigliana",
+      "San Ginesio",
+      "Sarnano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria di Chiaravalle di Fiastra :: Monaci Benedettini Cistercensi",
+      "Pieve di San Marco in Colpolina",
+      "Chiesa parrocchiale di San Paolo"
+    ],
+    "castelli_fortificazioni": [
+      "Castello dei Megalotti"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Esanatoglia",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043016",
+    "codice_catastale": "D429",
+    "popolazione": 1990,
+    "superficie_kmq": 47.82,
+    "densita": 41.6,
+    "cap": "62024",
+    "prefisso_telefonico": "0737",
+    "patrono": "Sant'Anatolia",
+    "festa_patronale": "9 luglio",
+    "demonimo": "esanatogliesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Matelica; a nord e ovest: Fabriano (AN); a sud: Fiuminata"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria",
+      "Chiesa della Madonna del Gonfalone",
+      "Chiesa di Santa Caterina (XIV Secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Corridonia",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043015",
+    "codice_catastale": "D042",
+    "popolazione": 15461,
+    "superficie_kmq": 62.02,
+    "densita": 249.3,
+    "cap": "62014",
+    "prefisso_telefonico": "0733",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "corridoniani",
+    "etimologia": "Chiamato anticamente Mont'Olmo, ha assunto il nome di Pausala, sostituito poi con la denominazione attuale per onorare il sindacalista Filippo Corridoni, nativo del luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Francavilla d'Ete (FM)",
+      "Macerata",
+      "Mogliano",
+      "Monte San Giusto",
+      "Monte San Pietrangeli (FM)",
+      "Morrovalle",
+      "Petriolo",
+      "Tolentino",
+      "Urbisaglia"
+    ],
+    "musei": [
+      "Raccolta \"Filippo Corridoni\"",
+      "Pinacoteca Parrocchiale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Francesco",
+      "Chiesa dei SS. Pietro, Paolo e Donato",
+      "Abbazia di San Claudio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Gian Battista Velluti",
+      "Piazza del Popolo"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Contesa della Margutta (prima domenica di settembre e settimana precedente)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colmurano",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043014",
+    "codice_catastale": "C886",
+    "popolazione": 1255,
+    "superficie_kmq": 11.17,
+    "densita": 112.4,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Donato",
+    "festa_patronale": "7 agosto",
+    "demonimo": "colmuranesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Loro Piceno",
+      "Ripe San Ginesio",
+      "San Ginesio",
+      "Tolentino",
+      "Urbisaglia"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa di San Donato",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Civitanova Marche",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043013",
+    "codice_catastale": "C770",
+    "popolazione": 42251,
+    "superficie_kmq": 45.8,
+    "densita": 922.5,
+    "cap": "62012",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Marone",
+    "festa_patronale": "18 agosto",
+    "demonimo": "civitanovesi",
+    "etimologia": "Nel 1913 ha assunto la denominazione di Porto Civitanova e nel 1938 quella attuale che si lega al latino civitas (città) con l'aggiunta dell'aggettivo novus (nuovo), quindi \"città nuova\". La specifica identifica geograficamente la collocazione.",
+    "il_comune_e": [
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Montecosaro",
+      "Porto Sant'Elpidio (FM)",
+      "Potenza Picena",
+      "Sant'Elpidio a Mare (FM)"
+    ],
+    "musei": [
+      "Museo Storico del Trotto",
+      "Museo delle Arti e Tradizioni Popolari",
+      "Galleria d'Arte Moderna \"M. Moretti\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Annibal Caro",
+      "Teatro Enrico Cecchetti",
+      "Teatro Rossini"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Esine (Brescia - Lombardia), dal marzo 1989",
+      "General San Martin (Argentina), dal maggio del 1990",
+      "Sebenico (Croazia), dal 2002",
+      "Skawina (Polonia), dal 2005"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cingoli",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043012",
+    "codice_catastale": "C704",
+    "popolazione": 10289,
+    "superficie_kmq": 147.98,
+    "densita": 69.5,
+    "cap": "62011",
+    "prefisso_telefonico": "0733",
+    "patrono": "Sant'Esuperanzio",
+    "festa_patronale": "24 gennaio",
+    "demonimo": "cingolani",
+    "etimologia": "E' l'antico genitivo locativo del termine latino cingulum, recinto circolare o area di forma rotonda, da cui deriva anche la voce cengia, dei dialetti alpini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del San Vicino",
+      "Club I Borghi più Belli d'Italia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Apiro",
+      "Appignano",
+      "Filottrano (AN)",
+      "Jesi (AN)",
+      "San Severino Marche",
+      "Staffolo (AN)",
+      "Treia"
+    ],
+    "musei": [
+      "Museo del Sidecar",
+      "Museo Archeologico Statale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Collegiata di San Esuperanzio (XII secolo)",
+      "Chiesa di Santo Spirito",
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Francesco",
+      "Chiesa di San Filippo Neri (XIII secolo)",
+      "Chiesa di San Esuperanzio",
+      "Cattedrale di Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana del Maltempo"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Farnese"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Cingoli 1848 (terza domenica di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cessapalombo",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043011",
+    "codice_catastale": "C582",
+    "popolazione": 504,
+    "superficie_kmq": 27.78,
+    "densita": 18.1,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "cessapalombesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acquacanina",
+      "Caldarola",
+      "Camporotondo di Fiastrone",
+      "Fiastra",
+      "Pievebovigliana",
+      "San Ginesio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Benedetto",
+      "Chiesa di Monastero",
+      "Chiesa Parrochiale di Cessapalombo",
+      "Chiesa di San Filippo Neri",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa Santa Maria Ausiliatrice"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Montalto",
+      "La Roccaccia di Col di Pietra"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta dei Frati"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelsantangelo sul Nera",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043010",
+    "codice_catastale": "C267",
+    "popolazione": 273,
+    "superficie_kmq": 70.71,
+    "densita": 3.9,
+    "cap": "62039",
+    "prefisso_telefonico": "0737",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "castellani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": [
+      "Gualdo",
+      "Macchie",
+      "Nocelleto",
+      "Nocria",
+      "Vallinfante",
+      "Rapegna"
+    ],
+    "comuni_confinanti": [
+      "Montefortino (FM)",
+      "Montemonaco (AP)",
+      "Norcia (PG)",
+      "Preci (PG)",
+      "Ussita",
+      "Visso"
+    ],
+    "musei": [
+      "Ecomuseo del Cervo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa romanica di San Martino",
+      "Chiesa di San Sebastiano",
+      "Chiesa di San Liberatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelraimondo",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043009",
+    "codice_catastale": "C251",
+    "popolazione": 4564,
+    "superficie_kmq": 44.92,
+    "densita": 101.6,
+    "cap": "62022",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "castelraimondesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Zona H Alte Valli del Potenza"
+    ],
+    "localita_frazioni": [
+      "frazioni: Crispiero",
+      "Collina",
+      "Rustano",
+      "Castel Santa Maria",
+      "Castel Sant'Angelo",
+      "Brondoleto;\nlocalità: Carsignano",
+      "Valeano",
+      "Torricella",
+      "Nani",
+      "Seano",
+      "RoccaFranca",
+      "Stroppigliosi",
+      "Vagliole",
+      "Masconi",
+      "Marzolari",
+      "Lanciano",
+      "Torre del Parco"
+    ],
+    "comuni_confinanti": [
+      "Camerino",
+      "Gagliole",
+      "Matelica",
+      "Pioraco",
+      "San Severino Marche",
+      "Serrapetrona"
+    ],
+    "musei": [
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Biagio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Lanciano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camporotondo di Fiastrone",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043008",
+    "codice_catastale": "B562",
+    "popolazione": 541,
+    "superficie_kmq": 8.83,
+    "densita": 61.3,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "camporotondesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": [
+      "contrade: contrada Colvenale",
+      "contrada Carufo",
+      "contrada Palombare",
+      "contrada Ceca",
+      "contrada Case Nuove"
+    ],
+    "comuni_confinanti": [
+      "Belforte del Chienti",
+      "Caldarola",
+      "Cessapalombo",
+      "San Ginesio",
+      "Tolentino"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria di Carufo",
+      "Chiesa di San Francesco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Camerino",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043007",
+    "codice_catastale": "B474",
+    "popolazione": 7007,
+    "superficie_kmq": 129.69,
+    "densita": 54.0,
+    "cap": "62032",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Venanzio",
+    "festa_patronale": "18 maggio",
+    "demonimo": "camerinesi o camerti",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caldarola",
+      "Castelraimondo",
+      "Fiastra",
+      "Muccia",
+      "Pievebovigliana",
+      "Pioraco",
+      "Sefro",
+      "Serrapetrona",
+      "Serravalle di Chienti"
+    ],
+    "musei": [
+      "Pinacoteca Civica",
+      "Museo Storico Cappuccino",
+      "Museo Diocesiano (Palazzo Arcivescovile)",
+      "Museo di Scienze Naturali dell'Università",
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Ducale (oggi sede dell'Università)"
+    ],
+    "chiese": [
+      "Cattedrale",
+      "Basilica di San Venanzio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico dell'Università di Camerino",
+      "Giardino della Rocca d'Ajello",
+      "Arboretum Appenninicum (in località Tuseggia)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Filippo Marchetti"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Torrone (terzo weekend di gennaio)",
+      "La Corsa alla Spada (17 maggio e domenica successiva)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caldarola",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043006",
+    "codice_catastale": "B398",
+    "popolazione": 1809,
+    "superficie_kmq": 29.09,
+    "densita": 62.2,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "caldarolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": [
+      "Croce",
+      "Pievafavera",
+      "Valcimarra",
+      "Vestignano"
+    ],
+    "comuni_confinanti": [
+      "Belforte del Chienti",
+      "Camerino",
+      "Camporotondo di Fiastrone",
+      "Cessapalombo",
+      "Pievebovigliana",
+      "Serrapetrona"
+    ],
+    "musei": [
+      "Museo Civico della Resistenza",
+      "Museo Antiquarium",
+      "Museo Castello Pallotta"
+    ],
+    "ville_palazzi": [
+      "Palazzo Pallotta (sede del Municipio)"
+    ],
+    "chiese": [
+      "Chiesa di Vestignano",
+      "Santuario Madonna del Sasso (Valcimarra)",
+      "Collegiata di San Martino",
+      "Chiesa di Pievefavera",
+      "Santuario di Maria SS. del Monte"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Croce",
+      "Castello di Vestignano",
+      "Castello Pallotta"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Presepe Vivente (26 dicembre - 2 gennaio)",
+      "Giostra de le Castella (prima e seconda domenica di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bolognola",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043005",
+    "codice_catastale": "A947",
+    "popolazione": 137,
+    "superficie_kmq": 25.86,
+    "densita": 5.3,
+    "cap": "62035",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Fortunato",
+    "festa_patronale": "primo giugno",
+    "demonimo": "bolognolesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": [
+      "Pintura",
+      "Villa Bentivoglio",
+      "Villa Malvezzi",
+      "Villa Pepoli"
+    ],
+    "comuni_confinanti": [
+      "Montefortino (FM); a est e nord-est: Sarnano; a nord",
+      "ovest e sud: Acquacanina; a sud: Ussita"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Maurizi",
+      "Palazzo Primavera"
+    ],
+    "chiese": [
+      "Chiesetta di Santa Maria a pié del Sasso",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di San Nicolò di Bari",
+      "Chiesa di San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Cascata dell'Acquasanta"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Belforte del Chienti",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043004",
+    "codice_catastale": "A739",
+    "popolazione": 1877,
+    "superficie_kmq": 15.93,
+    "densita": 117.8,
+    "cap": "62020",
+    "prefisso_telefonico": "0733",
+    "patrono": "Sant'Eustachio",
+    "festa_patronale": "20 maggio",
+    "demonimo": "belfortesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana dei Monti Azzurri"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caldarola",
+      "Camporotondo di Fiastrone",
+      "Serrapetrona",
+      "Tolentino"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Bonfranceschi",
+      "Palazzo Vicomandi"
+    ],
+    "chiese": [
+      "Chiesa di San Giovanni",
+      "Chiesa Sant'Eustachio",
+      "Chiesa San Sebastiano",
+      "Chiesa di Santa Maria e Monastero Silvestrino (ora San Pietro Apostolo)",
+      "Chiesa di Santa Maria di Villa Pianiglioli (XVI secolo)",
+      "Chiesa di Santa Maria d'Antegiano (XV secolo)",
+      "Chiesa di San Salvatore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Appignano",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043003",
+    "codice_catastale": "A334",
+    "popolazione": 4214,
+    "superficie_kmq": 22.7,
+    "densita": 185.6,
+    "cap": "62010",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "appignanesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": null,
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cingoli",
+      "Filottrano (AN)",
+      "Macerata",
+      "Montecassiano",
+      "Montefano",
+      "Treia"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Tusculano"
+    ],
+    "chiese": [
+      "Chiesa di San Giovanni Battista",
+      "Chiesa dell'Addolorata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Apiro",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043002",
+    "codice_catastale": "A329",
+    "popolazione": 2264,
+    "superficie_kmq": 53.65,
+    "densita": 42.2,
+    "cap": "62021",
+    "prefisso_telefonico": "0733",
+    "patrono": "Sant'Urbano",
+    "festa_patronale": "25 maggio",
+    "demonimo": "apirani",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del San Vicino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cingoli",
+      "Cupramontana (AN)",
+      "Matelica",
+      "Poggio San Vicino",
+      "San Severino Marche",
+      "Serra San Quirico (AN)",
+      "Staffolo (AN)"
+    ],
+    "musei": [
+      "Raccolta Sant' Urbano",
+      "Pinacoteca Comunale",
+      "Museo Permanente di Usi e Costumi Locali"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Felicita",
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa di San Leopardo",
+      "Chiesa di San Francesco delle Favete",
+      "Chiesa della Madonna della Misericordia (o della Figura)",
+      "Abbazia di Sant'Urbano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro \"Giovanni Mestica\""
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acquacanina",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043001",
+    "codice_catastale": "A031",
+    "popolazione": 122,
+    "superficie_kmq": 26.71,
+    "densita": 4.6,
+    "cap": "62035",
+    "prefisso_telefonico": "0737",
+    "patrono": "San Michele",
+    "festa_patronale": "8 maggio",
+    "demonimo": "acquacaninesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alte Valli del Fiastrone-Chienti-Nera",
+      "Parco Nazionale dei Monti Sibillini"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bolognola",
+      "Fiastra",
+      "Fiordimonte",
+      "San Ginesio",
+      "Sarnano",
+      "Ussita",
+      "Visso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Margherita",
+      "Chiesa della Madonna del Vallone",
+      "Abbazia di Santa Maria di Rio Sacro"
+    ],
+    "castelli_fortificazioni": [
+      "Ruderi Castello Varano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Macerata",
+    "provincia": "Macerata",
+    "regione": "Marche",
+    "zona": "Italia Centrale",
+    "codice_istat": "043023",
+    "codice_catastale": "E783",
+    "popolazione": 42209,
+    "superficie_kmq": 92.73,
+    "densita": 455.2,
+    "cap": "62100",
+    "prefisso_telefonico": "0733",
+    "patrono": "San Giuliano",
+    "festa_patronale": "31 agosto",
+    "demonimo": "maceratesi",
+    "etimologia": "Deriva dal latino maceria (per maceries) con riferimento ai ruderi dell'antica Helvia Ricina. Un'altra ipotesi ritiene che il nome si riferisca a macera, luogo adibito alla macerazione di canapa e lino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Associazione delle Città d'Arte e Cultura (CIDAC)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Appignano",
+      "Corridonia",
+      "Montecassiano",
+      "Montelupone",
+      "Morrovalle",
+      "Pollenza",
+      "Recanati",
+      "Tolentino",
+      "Treia"
+    ],
+    "musei": [
+      "Collezione del '900 italiano a Palazzo Ricci",
+      "Museo Tipologico del Presepe",
+      "Museo e Pinacoteca Comunale",
+      "Museo della Carrozza",
+      "Museo di Storia Naturale \"Romano Dezi e Rita Ramazzotti\""
+    ],
+    "ville_palazzi": [
+      "Palazzo Buonaccorsi"
+    ],
+    "chiese": [
+      "Santuario Madonna della Misericordia",
+      "Santuario dell'Immacolata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Arena Sferisterio",
+      "Teatro Comunale Lauro Rossi"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

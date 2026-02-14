@@ -1,0 +1,16 @@
+{
+  "nome": "Cosenza",
+  "regione": "Calabria",
+  "zona": null,
+  "sigla": "CS",
+  "codice_istat": "078",
+  "popolazione": 711739,
+  "popolazione_maschi": 348285,
+  "popolazione_femmine": 363454,
+  "superficie_kmq": 6649.96,
+  "densita": 107.0,
+  "num_comuni": 155,
+  "capoluogo": "Cosenza",
+  "iso_3166_2": "IT-CS",
+  "nuts": "ITF61"
+}

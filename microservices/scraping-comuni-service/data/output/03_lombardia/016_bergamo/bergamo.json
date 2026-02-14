@@ -1,0 +1,16 @@
+{
+  "nome": "Bergamo",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "BG",
+  "codice_istat": "016",
+  "popolazione": 1109933,
+  "popolazione_maschi": 549853,
+  "popolazione_femmine": 560080,
+  "superficie_kmq": 2722.86,
+  "densita": 407.6,
+  "num_comuni": 242,
+  "capoluogo": "Bergamo",
+  "iso_3166_2": "IT-BG",
+  "nuts": "ITC46"
+}

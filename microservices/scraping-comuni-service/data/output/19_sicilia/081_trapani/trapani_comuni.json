@@ -1,0 +1,1227 @@
+[
+  {
+    "nome": "Vita",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081023",
+    "codice_catastale": "M081",
+    "popolazione": 2039,
+    "superficie_kmq": 8.88,
+    "densita": 229.6,
+    "cap": "91010",
+    "prefisso_telefonico": "0924",
+    "patrono": "San Vito Martire",
+    "festa_patronale": "15 giugno",
+    "demonimo": "vitesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Patto Territoriale Valle del Belice"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord e est: Calatafimi Segesta; a sud e ovest: Salemi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Maria SS di Tagliavia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Valderice",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081022",
+    "codice_catastale": "G319",
+    "popolazione": 12279,
+    "superficie_kmq": 52.9,
+    "densita": 232.1,
+    "cap": "91019",
+    "prefisso_telefonico": "0923",
+    "patrono": "Cristo Re",
+    "festa_patronale": "prima domenica di agosto",
+    "demonimo": "valdericini",
+    "etimologia": "Il paese fu costituito nel 1955 con il nome di Paparella San Marco. Il nome attuale risale al 1958 ed è un composto di \"valle\" (con evidente significato) ed \"erice\" (dal latino Eryx). L'antico nome del comune è oggi denominazione di due sue frazioni: Paparella e San Marco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litorale di Erice",
+      "Patto Territoriale Trapani Nord"
+    ],
+    "localita_frazioni": [
+      "capoluogo (Fico",
+      "San Marco",
+      "Paparella",
+      "Misericordia)",
+      "Bonagia",
+      "Sant'Andrea",
+      "Crocevia",
+      "Lentina",
+      "Casalbianco",
+      "Chiesanuova",
+      "Crocci",
+      "Lenzi"
+    ],
+    "comuni_confinanti": [
+      "Buseto Palizzolo",
+      "Custonaci",
+      "Erice"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dell’apostolo Sant’Andrea",
+      "Santuario di Nostra Signora della Misericordia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Santa Ninfa",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081019",
+    "codice_catastale": "I291",
+    "popolazione": 5000,
+    "superficie_kmq": 63.52,
+    "densita": 78.7,
+    "cap": "91029",
+    "prefisso_telefonico": "0924",
+    "patrono": "Santa Ninfa",
+    "festa_patronale": "12 novembre",
+    "demonimo": "santaninfesi",
+    "etimologia": "Il culto riflette il nome della santa patrona del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Valle del Belice"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calatafimi Segesta",
+      "Castelvetrano",
+      "Gibellina",
+      "Partanna",
+      "Salaparuta",
+      "Salemi"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Di Stefano",
+      "Palazzo Mauro",
+      "Palazzo Patti"
+    ],
+    "chiese": [
+      "Chiesa della Badia",
+      "Chiesa del Purgatorio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Vito Lo Capo",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081020",
+    "codice_catastale": "I407",
+    "popolazione": 4702,
+    "superficie_kmq": 59.68,
+    "densita": 78.8,
+    "cap": "91010",
+    "prefisso_telefonico": "0923",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "sanvitesi",
+    "etimologia": "Il nome si ispira alla chiesa del paese dedicata a San Vito. La specifica \"Lo Capo\" indica la sua posizione su di un promontorio.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litorale di Erice",
+      "Patto Territoriale Golfo di Castellammare"
+    ],
+    "localita_frazioni": [
+      "Macari",
+      "Castelluzzo"
+    ],
+    "comuni_confinanti": [
+      "Castellammare del Golfo",
+      "Custonaci"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre (il Santuario",
+      "seicentesca)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Salemi",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081018",
+    "codice_catastale": "H700",
+    "popolazione": 10638,
+    "superficie_kmq": 181.71,
+    "densita": 58.5,
+    "cap": "91018",
+    "prefisso_telefonico": "0924",
+    "patrono": "San Nicola di Mira",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "salemitani",
+    "etimologia": "Chiamata in passato Helicyae potrebbe derivare dall'arabo salam, ossia pace, salute oppure sicurezza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Trapani Sud"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calatafimi Segesta",
+      "Castelvetrano",
+      "Marsala",
+      "Mazara del Vallo",
+      "Santa Ninfa",
+      "Vita"
+    ],
+    "musei": [
+      "Museo Civico",
+      "Mostra di Cimeli del Risorgimento"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello di Salemi"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Salaparuta",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081017",
+    "codice_catastale": "H688",
+    "popolazione": 1681,
+    "superficie_kmq": 41.68,
+    "densita": 40.3,
+    "cap": "91020",
+    "prefisso_telefonico": "0924",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "salaparutani o salitani",
+    "etimologia": "Deriva dal latino Sala parutae, composto da sala (dimora) e paruta che sarebbe il cognome della famiglia dei baroni feudatari.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Valle del Belice"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Contessa Entellina (PA)",
+      "Gibellina",
+      "Montevago (AG)",
+      "Partanna",
+      "Poggioreale",
+      "Santa Margherita di Belice (AG)",
+      "Santa Ninfa"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poggioreale",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081016",
+    "codice_catastale": "G767",
+    "popolazione": 1494,
+    "superficie_kmq": 37.62,
+    "densita": 39.7,
+    "cap": "91020",
+    "prefisso_telefonico": "0924",
+    "patrono": "Sant'Antonio da Padova",
+    "festa_patronale": "13 giugno",
+    "demonimo": "poggiorealesi",
+    "etimologia": "Deriva dal latino podium regale, ossia poggio regale, dunque \"degno di re\" perché collocato in una bella posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Valle del Belice"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Contessa Entellina (PA)",
+      "Gibellina",
+      "Monreale (PA)",
+      "Salaparuta"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Petrosino",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081024",
+    "codice_catastale": "M281",
+    "popolazione": 8142,
+    "superficie_kmq": 44.54,
+    "densita": 182.8,
+    "cap": "91020",
+    "prefisso_telefonico": "0923",
+    "patrono": "SS. Maria delle Grazie",
+    "festa_patronale": "31 maggio",
+    "demonimo": "petrosileni",
+    "etimologia": "Deriva dal termine siciliano pitrusinu, ossia prezzemolo, che deriva a sua volta dal greco petroselinon dal latino petroselinum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Pianura di Trapani",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Trapani Sud"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A nord: Marsala; a nord-est e sud-est: Mazara del Vallo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Partanna",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081015",
+    "codice_catastale": "G347",
+    "popolazione": 10478,
+    "superficie_kmq": 82.42,
+    "densita": 127.1,
+    "cap": "91028",
+    "prefisso_telefonico": "0924",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "partannesi",
+    "etimologia": "La sua origine è incerta, potrebbe derivare da un termine dialettale siciliano con l'aggiunta del suffisso -anna. Secondo alcuni il termine potrebbe accostarsi a Parthini o al termine greco parthenos, ossia vergine.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Valle del Belice"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Montevago (AG)",
+      "Salaparuta; a nord: Santa Ninfa; a sud: Castelvetrano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Parrocchiale di San Nicolò",
+      "Chiesa di San Francesco (XVIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pantelleria",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081014",
+    "codice_catastale": "G315",
+    "popolazione": 7665,
+    "superficie_kmq": 83.02,
+    "densita": 92.3,
+    "cap": "91017",
+    "prefisso_telefonico": "0923",
+    "patrono": "San Fortunato",
+    "festa_patronale": "16 ottobre",
+    "demonimo": "panteschi",
+    "etimologia": "La sua origine è incerta, potrebbe riferirsi al termine latino pontalaria che significa tettoia. Secondo alcuni il termine potrebbe derivare da pantanello o da Panthalassia che deriva dal greco pan (tutto) e thalassia (marina) anche se non tutti condividono questa ipotesi.",
+    "il_comune_e": [
+      "Località balneare segnalata con quattro vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Isola di Pantelleria",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Pantelleria"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": null,
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Paceco",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081013",
+    "codice_catastale": "G208",
+    "popolazione": 11336,
+    "superficie_kmq": 58.26,
+    "densita": 194.6,
+    "cap": "91027",
+    "prefisso_telefonico": "0923",
+    "patrono": "Santa Caterina d'Alessandria",
+    "festa_patronale": "25 novembre",
+    "demonimo": "pacecoti",
+    "etimologia": "Deriva dal nome di Teresa Pacheco, marchesa di Vigliena, nipote del viceré di Sicilia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Pianura di Trapani",
+      "Patto Territoriale Trapani Nord"
+    ],
+    "localita_frazioni": [
+      "Dattilo",
+      "Nubia"
+    ],
+    "comuni_confinanti": [
+      "Marsala; a est: Erice; a nord e sud: Trapani"
+    ],
+    "musei": [
+      "Museo del Sale",
+      "Museo Preistorico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mazara del Vallo",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081012",
+    "codice_catastale": "F061",
+    "popolazione": 51604,
+    "superficie_kmq": 275.51,
+    "densita": 187.3,
+    "cap": "91026",
+    "prefisso_telefonico": "0923",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "mazaresi",
+    "etimologia": "Il nome del luogo si riferisce al vicino fiume Mazaro, forse di origine fenicia. La specifica fu aggiunta nel 1863 e si riferisce al fatto che per lungo tempo fu capoluogo di uno dei tre valli in cui fu divisa amministrativamente la Sicilia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Mazara del Vallo",
+      "Circuito dei Borghi Marinari (le Città del Mare)",
+      "Associazione Nazionale Città del Pesce di Mare",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Trapani Sud"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Campobello di Mazara",
+      "Castelvetrano",
+      "Marsala",
+      "Petrosino",
+      "Salemi"
+    ],
+    "musei": [
+      "Museo Diocesano",
+      "Museo Civico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "U Fistinu di Santu Vitu (penultimo giovedì e domenica di agosto)",
+      "con quadri viventi"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marsala",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081011",
+    "codice_catastale": "E974",
+    "popolazione": 83232,
+    "superficie_kmq": 241.64,
+    "densita": 344.4,
+    "cap": "91025",
+    "prefisso_telefonico": "0923",
+    "patrono": "Madonna della Cava",
+    "festa_patronale": "19 gennaio",
+    "demonimo": "marsalesi",
+    "etimologia": "Deriva dall'arabo marsa 'Ali, ossia \"porto di Alì\".",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Pianura di Trapani",
+      "Circuito dei Borghi Marinari (le Città del Mare)",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Patto Territoriale Trapani Sud"
+    ],
+    "localita_frazioni": [
+      "Birgi",
+      "Ranna",
+      "Bosco",
+      "Paolini",
+      "Terrenove",
+      "Strasatti",
+      "Ciavalotto"
+    ],
+    "comuni_confinanti": [
+      "Buseto Palizzolo",
+      "Calatafimi Segesta",
+      "Erice",
+      "Mazara del Vallo",
+      "Paceco",
+      "Petrosino",
+      "Salemi"
+    ],
+    "musei": [
+      "Museo Giuseppe Whitaker",
+      "Museo degli Arazzi",
+      "Museo Archeologico Baglio Anselmi",
+      "Mostra Nazionale di Pittura Contemporanea \"Città di Marsala\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Matteo (XI secolo)",
+      "Duomo (1628)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Impero"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sacra Rappresentazione (Giovedì Santo)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gibellina",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081010",
+    "codice_catastale": "E023",
+    "popolazione": 4035,
+    "superficie_kmq": 45.02,
+    "densita": 89.6,
+    "cap": "91024",
+    "prefisso_telefonico": "0924",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "gibellinesi",
+    "etimologia": "Potrebbe derivare dal termine arabo gabal che al plurale è gibal e significa \"monte\", con l'aggiunta del suffisso -ina.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Valle del Belice"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Calatafimi Segesta",
+      "Monreale (PA)",
+      "Poggioreale",
+      "Salaparuta",
+      "Santa Ninfa"
+    ],
+    "musei": [
+      "Museo Civico",
+      "Museo delle Trame Mediterranee",
+      "Museo Etno-Antropologico della Valle del Belice"
+    ],
+    "ville_palazzi": [
+      "Palazzo Di Lorenzo"
+    ],
+    "chiese": [
+      "Chiesa Madre"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Favignana",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081009",
+    "codice_catastale": "D518",
+    "popolazione": 4292,
+    "superficie_kmq": 37.45,
+    "densita": 114.6,
+    "cap": "91023",
+    "prefisso_telefonico": "0923",
+    "patrono": "Santissimo Crocifisso",
+    "festa_patronale": "14 settembre",
+    "demonimo": "favignanesi",
+    "etimologia": "Deriva dal nome latino di persona Favonius.",
+    "il_comune_e": [
+      "Località balneare segnalata con tre vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Patto Territoriale Pantelleria"
+    ],
+    "localita_frazioni": [
+      "arcipelago delle isole Egadi: isola di Favignana",
+      "isola di Marettimo",
+      "isola di Levanzo",
+      "isola di Formica",
+      "isola del Maraone"
+    ],
+    "comuni_confinanti": null,
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Florio"
+    ],
+    "chiese": [
+      "Chiesa Madre Immacolata Concezione"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Erice",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081008",
+    "codice_catastale": "D423",
+    "popolazione": 27928,
+    "superficie_kmq": 47.3,
+    "densita": 590.4,
+    "cap": "91016",
+    "prefisso_telefonico": "0923",
+    "patrono": "Madonna di Custonaci",
+    "festa_patronale": "ultimo mercoledì di agosto",
+    "demonimo": "ericini",
+    "etimologia": "Era l'antica città degli Elimi, chiamata in latino Eryx ed in greco Erux. Fino al 1934 fu chiamata Monte San Giuliano.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litorale di Erice",
+      "Patto Territoriale Trapani Nord"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Marsala; a est: Valderice; a ovest: Trapani; a sud: Paceco; a sud-est: Buseto Palizzolo"
+    ],
+    "musei": [
+      "Museo Paul A.M. Dirac",
+      "Museo Daniel Chalonge",
+      "Museo Civico Antonio Cordici",
+      "Museo Agro-Forestale San Matteo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice (1314)",
+      "Chiesa del Salvatore"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Venere",
+      "Castello Pepoli"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Gebel Hamed"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Custonaci",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081007",
+    "codice_catastale": "D234",
+    "popolazione": 5587,
+    "superficie_kmq": 69.57,
+    "densita": 80.3,
+    "cap": "91015",
+    "prefisso_telefonico": "0923",
+    "patrono": "Maria SS. di Custonaci",
+    "festa_patronale": "ultimo mercoledì del mese di agosto",
+    "demonimo": "custonacesi",
+    "etimologia": "Potrebbe derivare dal greco moderno kastanaki che significa piccola castagna. In dialetto il nome è accostato a custuni, ossia costa. Secodo altri il nome potrebbe derivare dal greco moderno Kostantinakes da Kostantinos.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litorale di Erice",
+      "Patto Territoriale Trapani Nord"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Buseto Palizzolo",
+      "Castellammare del Golfo",
+      "San Vito Lo Capo",
+      "Valderice"
+    ],
+    "musei": [
+      "Museo d’arte sacra"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna di Custonaci"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta Buffa",
+      "I bagli (dall’arabo bahal, cortile)",
+      "Grotta Maria di Custonaci",
+      "Grotta Mangiapane"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Presepe Vivente (24-25 dicembre)",
+      "si svolge nella Grotta Mangiapane di Scurati"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelvetrano",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081006",
+    "codice_catastale": "C286",
+    "popolazione": 31691,
+    "superficie_kmq": 206.43,
+    "densita": 153.5,
+    "cap": "91022",
+    "prefisso_telefonico": "0924",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "castelvetranesi",
+    "etimologia": "E' un composto di castello e veteranus che deriva dal latino vetus, -eris, ossia vecchio, riferendosi all'antico castello collocato nei pressi.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Mazara del Vallo",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Città del Pane",
+      "Associazione Città del Bio",
+      "Patto Territoriale Valle del Belice"
+    ],
+    "localita_frazioni": [
+      "Marinella di Selinunte",
+      "Triscina"
+    ],
+    "comuni_confinanti": [
+      "Campobello di Mazara",
+      "Mazara del Vallo",
+      "Menfi (AG)",
+      "Montevago (AG)",
+      "Partanna",
+      "Salemi",
+      "Santa Ninfa"
+    ],
+    "musei": [
+      "Museo Civico",
+      "Enoagrimuseum"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre (o Chiesa dell'Assunta, 1520)",
+      "Chiesa di San Giovanni Battista (fine XVI secolo)",
+      "Chiesa di San Domenico (XV secolo)",
+      "Chiesa della Santa Trinità di Delia"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Fontana della Ninfa (seicentesca)"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Sacro Cuore di Maria (penultima domenica di agosto)",
+      "con processione sul mare"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castellammare del Golfo",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081005",
+    "codice_catastale": "C130",
+    "popolazione": 15293,
+    "superficie_kmq": 127.14,
+    "densita": 120.3,
+    "cap": "91014",
+    "prefisso_telefonico": "0924",
+    "patrono": "Madonna del Soccorso",
+    "festa_patronale": "21 agosto",
+    "demonimo": "castellammaresi",
+    "etimologia": "Gli studiosi collegano il nome del paese alla sua posizione geografica. Un castello sul mare entro il golfo.",
+    "il_comune_e": [
+      "Città Termale (Terme Segestane",
+      "in località Ponte Bagni)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litorale di Erice",
+      "Patto Territoriale Golfo di Castellammare"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Alcamo",
+      "Buseto Palizzolo",
+      "Calatafimi Segesta",
+      "Custonaci",
+      "San Vito Lo Capo"
+    ],
+    "musei": [
+      "Museo Etno-Antropologico Annalisa Buccellato",
+      "Museo dell'Acqua e dei Mulini ad Acqua"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre (settecentesca)"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Arabo-Normanno"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Riserva Naturale Orientata dello Zingaro"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Campobello di Mazara",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081004",
+    "codice_catastale": "B521",
+    "popolazione": 11898,
+    "superficie_kmq": 65.77,
+    "densita": 180.9,
+    "cap": "91021",
+    "prefisso_telefonico": "0924",
+    "patrono": "San Vito",
+    "festa_patronale": "15 giugno",
+    "demonimo": "campobellesi",
+    "etimologia": "La prima parte del nome è un composto del termine campo e dell'aggettivo bello, in riferimento alla gradevole collocazione del luogo. La specifica si riferisce alla vicinanza al luogo.",
+    "il_comune_e": [
+      "Località balneare segnalata con una vela nella Guida Blu di Legambiente"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Pianura di Mazara del Vallo",
+      "Associazione Nazionale Città dell'Olio",
+      "Patto Territoriale Trapani Sud"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castelvetrano",
+      "Mazara del Vallo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Michele Arcangelo",
+      "Chiesa Madre dedicata a Santa Maria delle Grazie, in via Garibaldi"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre dell'Orologio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Calatafimi Segesta",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081003",
+    "codice_catastale": "B385",
+    "popolazione": 6616,
+    "superficie_kmq": 154.79,
+    "densita": 42.7,
+    "cap": "91013",
+    "prefisso_telefonico": "0924",
+    "patrono": null,
+    "festa_patronale": null,
+    "demonimo": "calatafimesi",
+    "etimologia": "Deriva da Calataphim probabilmente dall'arabo qal'at fimi che significa \"la rocca di Eufemio\", dal nome Euphemios.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Colline del Belice e del Fiumefreddo",
+      "Patto Territoriale Golfo di Castellammare"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Alcamo",
+      "Monreale (PA); a nord: Buseto Palizzolo",
+      "Castellammare del Golfo; a ovest: Marsala",
+      "Salemi",
+      "Vita; a sud: Gibellina",
+      "Santa Ninfa"
+    ],
+    "musei": [
+      "Museo Etno-Antropologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Madre",
+      "Chiesa di Santa Caterina (barocca, settecentesca)",
+      "Chiesa del Crocifisso (barocca, settecentesca)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Crocifisso (ogni cinque anni",
+      "prossima nel 2007",
+      "dal 1° al 3 maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Buseto Palizzolo",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081002",
+    "codice_catastale": "B288",
+    "popolazione": 2947,
+    "superficie_kmq": 72.72,
+    "densita": 40.5,
+    "cap": "91012",
+    "prefisso_telefonico": "0923",
+    "patrono": "Maria S.S. del Monte Carmelo",
+    "festa_patronale": "16 luglio",
+    "demonimo": "busetani",
+    "etimologia": "La prima parte del nome ha origine sconosciuta, la seconda potrebbe essere una variante del termine palazzolo, da palazzo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litorale di Erice",
+      "Patto Territoriale Trapani Nord"
+    ],
+    "localita_frazioni": [
+      "Buseto centro",
+      "Buseto soprano",
+      "Battaglia",
+      "Badia",
+      "Pianoneve-Luziano",
+      "Bruca",
+      "Tangi-Blindano"
+    ],
+    "comuni_confinanti": [
+      "Calatafimi Segesta",
+      "Castellammare del Golfo",
+      "Custonaci",
+      "Erice",
+      "Marsala",
+      "Valderice"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Maria SS. Addolorata (a Tangi)",
+      "Chiesa di Santa Teresa del Bambino Gesù (a Badia)",
+      "Chiesa di Maria SS. Immacolata (a Bruca)",
+      "Chiesa di Maria SS. di Fatima (a Pianoneve)",
+      "Chiesa di Maria SS. del Carmelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Alcamo",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081001",
+    "codice_catastale": "A176",
+    "popolazione": 45371,
+    "superficie_kmq": 130.79,
+    "densita": 346.9,
+    "cap": "91011",
+    "prefisso_telefonico": "0924",
+    "patrono": "SS. Maria dei Miracoli",
+    "festa_patronale": null,
+    "demonimo": "alcamesi",
+    "etimologia": "La sua origine è incerta, potrebbe derivare dal nome arabo di persona Alqama(h) o da un nome di pianta alqamah che potrebbe ipoteticamente identificarsi con il latino citrullus colocynthis.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Colline litorale di Erice",
+      "Associazione Nazionale Città del Vino",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)",
+      "Patto Territoriale Golfo di Castellammare"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Balestrate (PA)",
+      "Calatafimi Segesta",
+      "Camporeale (PA)",
+      "Castellammare del Golfo",
+      "Monreale (PA)",
+      "Partinico (PA)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa dei Santi Cosma e Damiano",
+      "Chiesetta di San Tommaso (XV secolo)",
+      "Chiesa Madre (dedicata all'Assunta)",
+      "Chiesa di San Salvatore",
+      "Chiesa di San Francesco di Paola (prima metà del XVIII secolo, detta \"Badia Nuova\")",
+      "Chiesa di San Francesco d'Assisi",
+      "Chiesa del Collegio"
+    ],
+    "castelli_fortificazioni": [
+      "Castello (trecentesco",
+      "dei conti di Modica)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Cielo D'Alcamo"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trapani",
+    "provincia": "Trapani",
+    "regione": "Sicilia",
+    "zona": "Italia Insulare",
+    "codice_istat": "081021",
+    "codice_catastale": "L331",
+    "popolazione": 68528,
+    "superficie_kmq": 271.72,
+    "densita": 252.2,
+    "cap": "91100",
+    "prefisso_telefonico": "0923",
+    "patrono": "Sant'Alberto",
+    "festa_patronale": "7 agosto",
+    "demonimo": "trapanesi",
+    "etimologia": "Deriva dal latino Drepanum o Drepana dal greco drepane, ossia falce, riferendosi al promontorio su cui sorge la città che è \"falcato\" (curvato). Secondo alcuni studiosi il nome deriva dal termine indigeno Zanke da Zanklon, ossia falce.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 4 - Pianura di Trapani",
+      "Associazione Nazionale Città del Vino",
+      "Patto Territoriale Trapani Nord"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Erice",
+      "Paceco"
+    ],
+    "musei": [
+      "Museo Regionale Conte Agostino Pepoli",
+      "Museo di Preistoria e del Mare"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Santa Maria Annunziata :: Frati Carmelitani"
+    ],
+    "castelli_fortificazioni": [
+      "Forte della Colombaia"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

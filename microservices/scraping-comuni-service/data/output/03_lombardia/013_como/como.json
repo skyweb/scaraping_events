@@ -1,0 +1,16 @@
+{
+  "nome": "Como",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "CO",
+  "codice_istat": "013",
+  "popolazione": 600190,
+  "popolazione_maschi": 293861,
+  "popolazione_femmine": 306329,
+  "superficie_kmq": 1288.07,
+  "densita": 466.0,
+  "num_comuni": 154,
+  "capoluogo": "Como",
+  "iso_3166_2": "IT-CO",
+  "nuts": "ITC42"
+}

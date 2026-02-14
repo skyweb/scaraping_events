@@ -1,0 +1,16 @@
+{
+  "nome": "Barletta-Andria-Trani",
+  "regione": "Puglia",
+  "zona": null,
+  "sigla": "BT",
+  "codice_istat": "110",
+  "popolazione": 392546,
+  "popolazione_maschi": 193934,
+  "popolazione_femmine": 198612,
+  "superficie_kmq": 1538.68,
+  "densita": 255.1,
+  "num_comuni": 10,
+  "capoluogo": null,
+  "iso_3166_2": "IT-BT",
+  "nuts": "-"
+}

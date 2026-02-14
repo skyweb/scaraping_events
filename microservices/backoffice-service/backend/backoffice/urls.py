@@ -31,7 +31,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/version/', api_version_view, name='api-version'),
     path('api/', include('events.urls')),
-    path('api/comuni-italiani/', include('comuni_italiani_ingestion.urls')),
+    path('api/comuni-istat/', include('comuni_istat_ingestion.urls')),
     path('api/cms/', include('cms.urls')),
 
     # API Documentation

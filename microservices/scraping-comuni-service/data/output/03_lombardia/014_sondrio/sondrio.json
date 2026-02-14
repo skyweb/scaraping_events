@@ -1,0 +1,16 @@
+{
+  "nome": "Sondrio",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "SO",
+  "codice_istat": "014",
+  "popolazione": 181437,
+  "popolazione_maschi": 88922,
+  "popolazione_femmine": 92515,
+  "superficie_kmq": 3211.9,
+  "densita": 56.5,
+  "num_comuni": 77,
+  "capoluogo": "Sondrio",
+  "iso_3166_2": "IT-SO",
+  "nuts": "ITC44"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Alessandria",
+  "regione": "Piemonte",
+  "zona": null,
+  "sigla": "AL",
+  "codice_istat": "006",
+  "popolazione": 426658,
+  "popolazione_maschi": 206399,
+  "popolazione_femmine": 220259,
+  "superficie_kmq": 3562.24,
+  "densita": 119.8,
+  "num_comuni": 190,
+  "capoluogo": "Alessandria",
+  "iso_3166_2": "IT-AL",
+  "nuts": "ITC18"
+}

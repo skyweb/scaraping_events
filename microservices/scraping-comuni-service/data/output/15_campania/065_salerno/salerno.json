@@ -1,0 +1,16 @@
+{
+  "nome": "Salerno",
+  "regione": "Campania",
+  "zona": null,
+  "sigla": "SA",
+  "codice_istat": "065",
+  "popolazione": 1104731,
+  "popolazione_maschi": 539881,
+  "popolazione_femmine": 564850,
+  "superficie_kmq": 4917.47,
+  "densita": 224.7,
+  "num_comuni": 158,
+  "capoluogo": "Salerno",
+  "iso_3166_2": "IT-SA",
+  "nuts": "ITF35"
+}

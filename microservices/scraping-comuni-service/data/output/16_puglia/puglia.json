@@ -1,0 +1,14 @@
+{
+  "nome": "Puglia",
+  "codice_istat": "16",
+  "popolazione": 4063888,
+  "popolazione_maschi": 1974157,
+  "popolazione_femmine": 2089731,
+  "superficie_kmq": 19370.67,
+  "densita": 209.8,
+  "num_province": 6,
+  "num_comuni": 258,
+  "capoluogo": "Bari",
+  "iso_3166_2": "IT-75",
+  "nuts": "ITF4"
+}

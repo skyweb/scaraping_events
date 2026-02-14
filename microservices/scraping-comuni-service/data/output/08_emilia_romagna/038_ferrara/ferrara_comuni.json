@@ -1,0 +1,1443 @@
+[
+  {
+    "nome": "Voghiera",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038023",
+    "codice_catastale": "M110",
+    "popolazione": 3736,
+    "superficie_kmq": 40.51,
+    "densita": 92.2,
+    "cap": "44019",
+    "prefisso_telefonico": "0532",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "voghieresi",
+    "etimologia": "La sua provenienza è incerta, potrebbe derivare da Vico Veria o da vicus (contrada) aera che può derivare sia da aes (rame, ricchezza) ed assumere quindi il significato di \"contrada di ricchezza\" che da aer (aria) identificando quindi un \"luogo arioso\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale"
+    ],
+    "localita_frazioni": [
+      "Ducentola",
+      "Gualdo",
+      "Montesanto",
+      "Voghenza"
+    ],
+    "comuni_confinanti": [
+      "Argenta",
+      "Ferrara",
+      "Masi Torello",
+      "Portomaggiore"
+    ],
+    "musei": [
+      "Museo del Modellismo Storico",
+      "Museo Civico di Belriguardo"
+    ],
+    "ville_palazzi": [
+      "Delizia di Belriguardo (1435)"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Leo (in località Voghenza)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra dell'Aglio di Voghiera (prima settimana di agosto)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vigarano Mainarda",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038022",
+    "codice_catastale": "L868",
+    "popolazione": 7590,
+    "superficie_kmq": 42.28,
+    "densita": 179.5,
+    "cap": "44049",
+    "prefisso_telefonico": "0532",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "vigaranesi",
+    "etimologia": "Deriva dal latino Vicus (contrada) Varianus. Quest'ultimo deriva dal nome latino di persona o di famiglia Varius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Pianura di Ferrara"
+    ],
+    "localita_frazioni": [
+      "Vigarano Pieve",
+      "Madonna Boschi"
+    ],
+    "comuni_confinanti": [
+      "Bondeno",
+      "Ferrara",
+      "Mirabello",
+      "Poggio Renatico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Delizia Estense della Diamantina"
+    ],
+    "chiese": [
+      "Chiesa dei SS. Pietro e Paolo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Salgòtàrian (Ungheria)",
+      "Caudebec les Elbeuf (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tresigallo",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038024",
+    "codice_catastale": "L390",
+    "popolazione": 4434,
+    "superficie_kmq": 20.79,
+    "densita": 213.3,
+    "cap": "44039",
+    "prefisso_telefonico": "0533",
+    "patrono": "Sant'Apollinare",
+    "festa_patronale": "20 luglio",
+    "demonimo": "tresigallesi",
+    "etimologia": "Chiamato nei documenti Tresegale deriva dal latino trans segallum che significa \"al di là dei campi di segale\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale",
+      "Associazione Borghi Autentici d'Italia",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione dei Comuni del Copparese"
+    ],
+    "localita_frazioni": [
+      "Final di Rero",
+      "Rero",
+      "Roncodigà"
+    ],
+    "comuni_confinanti": [
+      "Ferrara",
+      "Fiscaglia",
+      "Formignana",
+      "Jolanda di Savoia",
+      "Ostellato",
+      "Valsamoggia (BO)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Pio"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Apollinare Vescovo e Martire (a Tresigallo)",
+      "Chiesa parrocchiale di San Pietro Apostolo (a Rero)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Agostino",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038021",
+    "codice_catastale": "I209",
+    "popolazione": 6842,
+    "superficie_kmq": 35.21,
+    "densita": 194.3,
+    "cap": "44047",
+    "prefisso_telefonico": "0532",
+    "patrono": "Sant'Agostino",
+    "festa_patronale": "28 agosto",
+    "demonimo": "santagostinesi",
+    "etimologia": "Il nome si riferisce al santo patrono del luogo: Sant'Agostino.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Pianura di Ferrara"
+    ],
+    "localita_frazioni": [
+      "San Carlo",
+      "Dosso"
+    ],
+    "comuni_confinanti": [
+      "Bondeno",
+      "Cento",
+      "Galliera (BO)",
+      "Mirabello",
+      "Pieve di Cento (BO)",
+      "Poggio Renatico"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo delle Quattro Torri"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ro",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038020",
+    "codice_catastale": "H360",
+    "popolazione": 3247,
+    "superficie_kmq": 43.03,
+    "densita": 75.5,
+    "cap": "44030",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "roesi",
+    "etimologia": "Esistono svariate ipotesi sulla sua provenienza: potrebbe riferirsi alla lettera r, a Rhodos (Rodi) o al latino rota (ruota). Secondo altre ipotesi il nome sarebbe riconducibile al nome germanico di persona Rodo o al latino aratus, ossia arato.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale",
+      "Associazione Italiana Città Ciclabili",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione dei Comuni del Copparese"
+    ],
+    "localita_frazioni": [
+      "Alberone",
+      "Guarda",
+      "Ruina",
+      "Zocca"
+    ],
+    "comuni_confinanti": [
+      "A est: Canaro (RO); a nord: Crespino (RO)",
+      "Guarda Veneta (RO); a nord-est: Polesella (RO); a ovest: Berra; a sud-est: Ferrara; a sud-ovest: Copparo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale della Beata Vergine Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa dla Salama da Tai (maggio-giugno)",
+      "in località Guarda"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Portomaggiore",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038019",
+    "codice_catastale": "G916",
+    "popolazione": 11756,
+    "superficie_kmq": 126.4,
+    "densita": 93.0,
+    "cap": "44015",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Carlo",
+    "festa_patronale": "4 novembre",
+    "demonimo": "portuensi",
+    "etimologia": "Deriva da Portus Maior, ossia dall'unione di portus e maior (comparativo di magnus, grande), perché in antichità vi era in loco uno dei porti principali.",
+    "il_comune_e": [
+      "Comune Amico del Turismo Itinerante"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale"
+    ],
+    "localita_frazioni": [
+      "Gambulaga",
+      "Maiero",
+      "Portorotta",
+      "Portoverrara",
+      "Quartiere",
+      "Ripapersico",
+      "Runco",
+      "Sandolo"
+    ],
+    "comuni_confinanti": [
+      "Argenta",
+      "Comacchio",
+      "Masi Torello",
+      "Ostellato",
+      "Voghiera"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Delizia Estense del Verginese (in località Gambulaga)",
+      "Palazzo Angelini",
+      "Palazzo Fioravanti - Vaccari",
+      "Palazzo Gulinelli",
+      "Palazzo Vaccari",
+      "Villa Aventi"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di San Giorgio (in località Gambulaga)",
+      "Oratorio della Beata Vergine dell'Olmo",
+      "Pieve di San Michele Arcangelo (in località Sandolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio Portuense (primo fine settimana di luglio)",
+      "con danze rinascimentali di figuranti in costume"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Poggio Renatico",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038018",
+    "codice_catastale": "G768",
+    "popolazione": 9869,
+    "superficie_kmq": 79.79,
+    "densita": 123.7,
+    "cap": "44028",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "poggesi",
+    "etimologia": "La prima parte del nome deriva dal latino podium, ossia rialzo o dosso. La seconda parte del nome si riferisce al fiume Reno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Pianura di Ferrara"
+    ],
+    "localita_frazioni": [
+      "Poggio Renatico",
+      "Chiesa Nuova",
+      "Coronella",
+      "Gallo",
+      "Madonna Boschi"
+    ],
+    "comuni_confinanti": [
+      "Baricella (BO)",
+      "Ferrara",
+      "Galliera (BO)",
+      "Malalbergo (BO)",
+      "Mirabello",
+      "Sant'Agostino",
+      "Vigarano Mainarda"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Sanguettola",
+      "Villa Vezzani",
+      "Villa Gualandi"
+    ],
+    "chiese": [
+      "Chiesa Abbaziale San Michele Arcangelo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ostellato",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038017",
+    "codice_catastale": "G184",
+    "popolazione": 6129,
+    "superficie_kmq": 173.7,
+    "densita": 35.3,
+    "cap": "44020",
+    "prefisso_telefonico": "0533",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "ostellatesi",
+    "etimologia": "Deriva da ustulatus, ossia \"bruciato\", riferendosi forse ad una tecnica agricola sconosciuta o all'incendio di un edificio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Bonifica ferrarese orientale",
+      "Parco del Delta del Po"
+    ],
+    "localita_frazioni": [
+      "Medelana"
+    ],
+    "comuni_confinanti": [
+      "Argenta",
+      "Comacchio",
+      "Ferrara",
+      "Fiscaglia",
+      "Lagosanto",
+      "Masi Torello",
+      "Portomaggiore",
+      "Tresigallo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di San Vito"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Barattoni"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mirabello",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038016",
+    "codice_catastale": "F235",
+    "popolazione": 3162,
+    "superficie_kmq": 16.09,
+    "densita": 196.5,
+    "cap": "44043",
+    "prefisso_telefonico": "0532",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "mirabellesi",
+    "etimologia": "Il nome ha un significato abbastanza intuitivo, è un composto di \"mira\" e \"bello\", riferendosi al belvedere della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Pianura di Ferrara"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bondeno",
+      "Poggio Renatico",
+      "Sant'Agostino",
+      "Vigarano Mainarda"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Sessa (Palazzo Aldovrandi)"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mesola",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038014",
+    "codice_catastale": "F156",
+    "popolazione": 6852,
+    "superficie_kmq": 84.25,
+    "densita": 81.3,
+    "cap": "44026",
+    "prefisso_telefonico": "0533",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "mesolani",
+    "etimologia": "Deriva dal latino mensula (da mensa, ossia tavola). Si crede che sia opportuno dare al nome un significato traslato di tavola, riferendosi ad una striscia di terra pianeggiante.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Bonifica ferrarese orientale",
+      "Parco del Delta del Po"
+    ],
+    "localita_frazioni": [
+      "Bosco",
+      "Ariano",
+      "Monticelli",
+      "Massenzatica",
+      "Santa Giustina"
+    ],
+    "comuni_confinanti": [
+      "Ariano nel Polesine (RO)",
+      "Berra",
+      "Codigoro",
+      "Goro"
+    ],
+    "musei": [
+      "Centro Educazione Ambientale"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello Estense della Mesola"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Fiera dell'Asparago di Mesola (fine aprile - inizio maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Masi Torello",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038012",
+    "codice_catastale": "F016",
+    "popolazione": 2319,
+    "superficie_kmq": 22.92,
+    "densita": 101.2,
+    "cap": "44020",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Leonardo",
+    "festa_patronale": "6 novembre",
+    "demonimo": "masesi",
+    "etimologia": "La prima parte del nome deriva da maso (podere) o da masum (dimora). La seconda parte è un nome di famiglia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale"
+    ],
+    "localita_frazioni": [
+      "Masi San Giacomo",
+      "Borgo Sant'Anna"
+    ],
+    "comuni_confinanti": [
+      "Ferrara",
+      "Ostellato",
+      "Portomaggiore",
+      "Voghiera"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lagosanto",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038011",
+    "codice_catastale": "E410",
+    "popolazione": 4874,
+    "superficie_kmq": 34.23,
+    "densita": 142.4,
+    "cap": "44023",
+    "prefisso_telefonico": "0533",
+    "patrono": "San Venanzio",
+    "festa_patronale": "5 agosto",
+    "demonimo": "laghesi",
+    "etimologia": "Il nome deriva da lacus sanctus, ossia laguna dal Santo. Il nome si riferisce alla storia del monaco benedettino Sant'Appiano che si trasferì nel paese in quanto, essendo la zona piena di saline, ivi raccoglieva il sale. La zona era denominata Lago (appunto per la presenza massiccia di saline) e quando il santo morì fu aggiunta la specifica in suo onore.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Bonifica ferrarese orientale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Codigoro",
+      "Comacchio",
+      "Fiscaglia",
+      "Ostellato"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Jolanda di Savoia",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038010",
+    "codice_catastale": "E320",
+    "popolazione": 2923,
+    "superficie_kmq": 108.09,
+    "densita": 27.0,
+    "cap": "44037",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "jolandini",
+    "etimologia": "Chiamato in passato Le Venezie, il nome attuale fu assegnato nel 1911 in onore dei Savoia. Precisamente Jolanda di Savoia era la figlia primogenita di Vittorio Emanuele III.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione dei Comuni del Copparese"
+    ],
+    "localita_frazioni": [
+      "Gherardi",
+      "Contane"
+    ],
+    "comuni_confinanti": [
+      "Berra",
+      "Codigoro",
+      "Copparo",
+      "Fiscaglia",
+      "Formignana",
+      "Tresigallo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Borovany (Repubblica Ceca)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Goro",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038025",
+    "codice_catastale": "E107",
+    "popolazione": 3761,
+    "superficie_kmq": 31.38,
+    "densita": 119.9,
+    "cap": "44020",
+    "prefisso_telefonico": "0533",
+    "patrono": "Santa Maria delle Grazie",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "goresi o goranti",
+    "etimologia": "Chiamata in passato Gor e Gauro riprende il nome di un canale del Po (Goro) che assunse il significato di fossato, canale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Bonifica ferrarese orientale",
+      "Parco del Delta del Po"
+    ],
+    "localita_frazioni": [
+      "Gorino"
+    ],
+    "comuni_confinanti": [
+      "A nord e est: Ariano nel Polesine (RO); a ovest: Codigoro; a sud e ovest: Mesola"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Faro di Goro",
+      "Casa del popolo"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Bala in Po - Rito dello Sposalizio del Fiume (Ascensione - sesta domenica dopo Pasqua)",
+      "Festa di Sant'Antonio da Padova (domenica successiva al 13 giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Formignana",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038009",
+    "codice_catastale": "D713",
+    "popolazione": 2731,
+    "superficie_kmq": 22.33,
+    "densita": 122.3,
+    "cap": "44035",
+    "prefisso_telefonico": "0533",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "2 agosto",
+    "demonimo": "formignanesi",
+    "etimologia": "Deriva da Furmignanus che è dato dall'unione del nome latino di persona Firminius ed il suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione dei Comuni del Copparese"
+    ],
+    "localita_frazioni": [
+      "Brazzolo"
+    ],
+    "comuni_confinanti": [
+      "A est: Jolanda di Savoia; a nord e ovest: Copparo; a ovest: Ferrara; a sud: Tresigallo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fiscaglia",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038027",
+    "codice_catastale": "M323",
+    "popolazione": 9031,
+    "superficie_kmq": 115.72,
+    "densita": 78.0,
+    "cap": "44027",
+    "prefisso_telefonico": "0533",
+    "patrono": "Madonna della Corba",
+    "festa_patronale": "13 maggio",
+    "demonimo": "fiscagliesi",
+    "etimologia": "Il nome Fiscaglia si accosta al latino fiscalia (loca) ossia \"zona in cui il fisco imperiale imponeva tasse\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Bonifica ferrarese orientale"
+    ],
+    "localita_frazioni": [
+      "Migliarino",
+      "Massa di Fiscaglia",
+      "Migliaro",
+      "Bassa Cornacervina",
+      "Tieni",
+      "Valcesura",
+      "Gallumara"
+    ],
+    "comuni_confinanti": [
+      "Codigoro",
+      "Jolanda di Savoia",
+      "Tresigallo; a est: Lagosanto; a sud sud-ovest: Ostellato"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Boccaccini (frazione: Migliaro)",
+      "Palazzo Gallare (frazione: Migliaro)",
+      "Palazzo Rosso (frazione: Migliaro)"
+    ],
+    "chiese": [
+      "Santuario della Madonna della Corba (frazione: Massa di Fiscaglia)",
+      "Chiesa dei SS. Pietro e Giacomo (frazione: Massa di Fiscaglia)"
+    ],
+    "castelli_fortificazioni": [
+      "Torre di Tieni (frazione: Massa di Fiscaglia)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Treveneuc (Francia)",
+      "dal 1998"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Copparo",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038007",
+    "codice_catastale": "C980",
+    "popolazione": 16428,
+    "superficie_kmq": 157.0,
+    "densita": 104.6,
+    "cap": "44034",
+    "prefisso_telefonico": "0532",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "copparesi",
+    "etimologia": "Esistono varie ipotesi in merito alla provenienza del nome. Secondo alcuni deriva dal latino cuppus, ossia tegola riferendosi alla presenza in loco di una fabbrica di tegole. Secondo altri potrebbe riferirsi alla coppa d'oro, Coppa aurium (contratto poi in Cuparium), che si narra fu ritrovata in loco durante la fondazione del paese e che è rappresentata sullo stemma comunale. Un'altra ipotesi ritiene che il nome derivi dal latino avis capio arium, ossia luogo per la caccia degli ucceli, contratto poi in Aucuparium. Infine, un'ipotesi meno accreditata sostiene che il nome sia l'unione dei termini dialettali Cò (luogo) e Paro (pianeggiante) in riferimento alle caratteristiche del territorio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione dei Comuni del Copparese"
+    ],
+    "localita_frazioni": [
+      "Ambrogio",
+      "Barazzolo",
+      "Coccanile-Cesta",
+      "Fossalta",
+      "Gradizza",
+      "Sabbioncello San Pietro",
+      "Sabbioncello San Vittore",
+      "Saletta - Cà Matte",
+      "Sant'Apollinare",
+      "Tamara",
+      "Ponte San Pietro"
+    ],
+    "comuni_confinanti": [
+      "A est: Jolanda di Savoia; a nord: Berra; a nord e ovest: Ro; a sud: Formignana; a sud e ovest: Ferrara"
+    ],
+    "musei": [
+      "Museo della Civiltà Contadina \"La Tratta\""
+    ],
+    "ville_palazzi": [
+      "Casa Bighi",
+      "Delizia Estense",
+      "La Mensa"
+    ],
+    "chiese": [
+      "Chiesa romanica di Santa Maria Savonuzzo",
+      "detta di San Venanzio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre estense"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio di Copparo (7-20 giugno)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Comacchio",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038006",
+    "codice_catastale": "C912",
+    "popolazione": 22369,
+    "superficie_kmq": 283.77,
+    "densita": 78.8,
+    "cap": "44022",
+    "prefisso_telefonico": "0533",
+    "patrono": "San Cassiano di Imola",
+    "festa_patronale": "13 agosto",
+    "demonimo": "comacchiesi",
+    "etimologia": "Deriva dal latino commeatus, ossia \"flotta navale\". Diventato Comaclum, Comaclio e poi Comiachio.",
+    "il_comune_e": [
+      "Località balneare segnalata con due vele nella Guida Blu di Legambiente",
+      "Bandiera Blu delle Spiagge 2007"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Bonifica ferrarese orientale",
+      "Parco del Delta del Po",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione Unione di Prodotto Costa"
+    ],
+    "localita_frazioni": [
+      "Porto Garibaldi (centri: Lido degli Estensi",
+      "Lido di Spina) San Giuseppe (centri: Lido delle Nazioni)",
+      "Lido di Pomposa",
+      "Lido degli Scacchi",
+      "Lido di Volano",
+      "Vaccolino",
+      "Volania",
+      "le Valli"
+    ],
+    "comuni_confinanti": [
+      "Argenta",
+      "Codigoro",
+      "Lagosanto",
+      "Ostellato",
+      "Portomaggiore",
+      "Ravenna (RA)"
+    ],
+    "musei": [
+      "Museo Ospedale degli Infermi",
+      "Museo Mariano d'Arte Sacra Contemporanea",
+      "Museo delle Valli",
+      "Museo della Nave Romana",
+      "Manifattura dei Marinati"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Santa Maria in Aula Regia (1655)",
+      "Chiesa del Carmine",
+      "Cattedrale di San Cassiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Comacchio... Un Presepe d'Acqua (24 dicembre)",
+      "con finale di fuochi piroteatrali"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Codigoro",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038005",
+    "codice_catastale": "C814",
+    "popolazione": 11852,
+    "superficie_kmq": 169.79,
+    "densita": 69.8,
+    "cap": "44021",
+    "prefisso_telefonico": "0533",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "codigoresi",
+    "etimologia": "Documentato con il nome di caput Gauri era un composto di caput (capo, inizio) e Goro (nome di un canale del Po) che assunse, con il tempo, il significato di fossato, canale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Bonifica ferrarese orientale",
+      "Parco del Delta del Po"
+    ],
+    "localita_frazioni": [
+      "Mezzogoro",
+      "Pomposa",
+      "Pontelangorino",
+      "Pontemaodino",
+      "Volano"
+    ],
+    "comuni_confinanti": [
+      "A est: Goro; a nord: Berra; a nord e nord-est: Mesola; a ovest: Jolanda di Savoia; a ovest e sud-ovest: Fiscaglia; a sud: Lagosanto; a sud-est: Comacchio"
+    ],
+    "musei": [
+      "Museo Pomposiano"
+    ],
+    "ville_palazzi": [
+      "Palazzo del Vescovo"
+    ],
+    "chiese": [
+      "Abbazia di Pomposa"
+    ],
+    "castelli_fortificazioni": [
+      "Torre della Finanza"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Arena"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cento",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038004",
+    "codice_catastale": "C469",
+    "popolazione": 35582,
+    "superficie_kmq": 64.77,
+    "densita": 549.4,
+    "cap": "44042",
+    "prefisso_telefonico": "051",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "centesi",
+    "etimologia": "Deriva dal latino centum da cui poi proviene il termine centuria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Pianura di Ferrara"
+    ],
+    "localita_frazioni": [
+      "Alberone",
+      "Bevilacqua",
+      "Buonacompra",
+      "Casumaro",
+      "Corporeno",
+      "Dodici Morelli",
+      "Renazzo",
+      "Reno Centese",
+      "Molino Albergati"
+    ],
+    "comuni_confinanti": [
+      "Bondeno",
+      "Castello d'Argile (BO)",
+      "Crevalcore (BO)",
+      "Finale Emilia (MO)",
+      "Pieve di Cento (BO)",
+      "San Giovanni in Persiceto (BO)",
+      "Sant'Agostino"
+    ],
+    "musei": [
+      "Pinacoteca Civica",
+      "Museo del Teatro \"Giuseppe Borgatti\"",
+      "Galleria d'Arte Moderna \"Aroldo Bonzagni\""
+    ],
+    "ville_palazzi": [
+      "Palazzo del Governatore",
+      "con annessa Torre dell'Orologio"
+    ],
+    "chiese": [
+      "Basilica Collegiata di San Biagio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Sagra del Cotechino (ultima settimana di agosto), ad Alberone",
+      "Sagra della Salama da Sugo (ultime due settimane di luglio), nella frazione di Buonacompra"
+    ],
+    "gemellaggi": [
+      "Vicente Lopez (Buenos Aires - Argentina), dal 2000",
+      "Székesfehérvar (Ungheria), dal 1998"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bondeno",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038003",
+    "codice_catastale": "A965",
+    "popolazione": 14440,
+    "superficie_kmq": 175.17,
+    "densita": 82.4,
+    "cap": "44012",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "bondenesi",
+    "etimologia": "Il nome si riferisce ad un canale sito sulla destra del Po presso cui è sorto il borgo. Potrebbe infatti derivare dal termine gallico bunda, ossia conca.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Terre di Matilde di Canossa",
+      "Regione Agraria n. 1 - Pianura di Ferrara",
+      "Associazione Città del Pane"
+    ],
+    "localita_frazioni": [
+      "frazioni: Scortichino",
+      "Gavello",
+      "Pilastri",
+      "Burana",
+      "Stellata",
+      "Zerbinate",
+      "Salvatonica",
+      "Settepolesini",
+      "Ponte Rodoni",
+      "Santa Bianca",
+      "Casumaro;\nlocalità: Ospitale",
+      "Ponti Spagna",
+      "San Biagio",
+      "Senetica"
+    ],
+    "comuni_confinanti": [
+      "Cento",
+      "Felonica (MN)",
+      "Ferrara",
+      "Ficarolo (RO)",
+      "Finale Emilia (MO)",
+      "Mirabello",
+      "Mirandola (MO)",
+      "Sant'Agostino",
+      "Sermide (MN)",
+      "Vigarano Mainarda"
+    ],
+    "musei": [
+      "Pinacoteca Civica \"Galileo Cattabriga\""
+    ],
+    "ville_palazzi": [
+      "Villa Covezzi",
+      "Villa Bernardi (a Pilastri), già dei Mosti"
+    ],
+    "chiese": [
+      "Chiesa di San Giovanni",
+      "Santuario della Madonna Lauretana, detto della Pioppa",
+      "Chiesetta di Senetica (in località Ospitale)",
+      "Chiesa di San Pietro Apostolo (a Santa Bianca)",
+      "Chiesa della Natività della Beata Vergine Maria",
+      "Chiesa dei Servi",
+      "Cappella della Madonna del Gamberone",
+      "Chiesa di Sant'Antonio (in frazione Gavello)"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca Possente di Stellata (in località Stellata)"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Berra",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038002",
+    "codice_catastale": "A806",
+    "popolazione": 4785,
+    "superficie_kmq": 68.62,
+    "densita": 69.7,
+    "cap": "44033",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "berresi",
+    "etimologia": "Potrebbe derivare dal nome Ber(r)ia o riferirsi al cognome veneto La Berra che deriva a sua volta dal nome germanico di persona Bera.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione dei Comuni del Copparese"
+    ],
+    "localita_frazioni": [
+      "Cologna",
+      "Serravalle"
+    ],
+    "comuni_confinanti": [
+      "Ariano nel Polesine (RO)",
+      "Codigoro",
+      "Copparo",
+      "Crespino (RO)",
+      "Jolanda di Savoia",
+      "Mesola",
+      "Papozze (RO)",
+      "Ro",
+      "Villanova Marchesana (RO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Galvana",
+      "Chiesa Parrocchiale di San Rocco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Argenta",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038001",
+    "codice_catastale": "A393",
+    "popolazione": 21641,
+    "superficie_kmq": 311.02,
+    "densita": 69.6,
+    "cap": "44011",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "argentani",
+    "etimologia": "Deriva dal latino argentum, ossia \"argento\" riferendosi al colore chiaro e caratteristico del terreno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 2 - Bonifica ferrarese occidentale",
+      "Parco del Delta del Po",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "Anita",
+      "Bando",
+      "Benvignante",
+      "Boccaleone",
+      "Campotto",
+      "Consandolo",
+      "Filo",
+      "La Fiorana",
+      "Longastrino",
+      "Ospitalmonacale",
+      "San Biagio",
+      "San Nicolò",
+      "Santa Maria Codifiume",
+      "Traghetto"
+    ],
+    "comuni_confinanti": [
+      "Alfonsine (RA)",
+      "Baricella (BO)",
+      "Comacchio",
+      "Conselice (RA)",
+      "Ferrara",
+      "Imola (BO)",
+      "Medicina (BO)",
+      "Molinella (BO)",
+      "Portomaggiore",
+      "Ravenna (RA)",
+      "Voghiera"
+    ],
+    "musei": [
+      "Museo Civico",
+      "Museo della Bonifica",
+      "Museo delle Valli di Argenta"
+    ],
+    "ville_palazzi": [
+      "Delizia Estense di Benvignante"
+    ],
+    "chiese": [
+      "Santuario della Beata Vergine della Celletta",
+      "Pieve di San Giorgio",
+      "Chiesa di San Domenico, in origine dedicata a San Giovanni Battista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro dei Fluttuanti"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ferrara",
+    "provincia": "Ferrara",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "038008",
+    "codice_catastale": "D548",
+    "popolazione": 132009,
+    "superficie_kmq": 404.26,
+    "densita": 326.5,
+    "cap": "44100",
+    "prefisso_telefonico": "0532",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "ferraresi",
+    "etimologia": "Deriva dal latino ferraria, ossia miniera di ferro. Secondo altri è da accostare a ferraria (terra) con il significato di terra piantata a farro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 1 - Pianura di Ferrara",
+      "Associazione Città del Pane",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione Rete Italiana Città Sane - OMS",
+      "Associazione Italiana Città Ciclabili"
+    ],
+    "localita_frazioni": [
+      "Aguscello",
+      "Albarea",
+      "Baura",
+      "Boara",
+      "Bova",
+      "Casaglia",
+      "Chiesuol del Fosso",
+      "Cocomaro di Cona",
+      "Cocomaro di Focomorto",
+      "Codrea",
+      "Cona",
+      "Contrapo",
+      "Corlo",
+      "Correggio",
+      "Denore",
+      "Fossa d'Albero",
+      "Fossanova San Biagio",
+      "Fossanova San Marco",
+      "Francolino",
+      "Gaibana",
+      "Gaibanella",
+      "Malborghetto di Boara",
+      "Marrara",
+      "Monestirolo",
+      "Montalbano",
+      "Parasacco",
+      "Pescara",
+      "Pontegradella",
+      "Pontelagoscuro",
+      "Porotto-Cassana",
+      "Porporana",
+      "Quartesana",
+      "Ravalle",
+      "San Bartolomeo in Bosco",
+      "San Martino",
+      "Sant'Egidio",
+      "Scoline",
+      "Spinazzino",
+      "Viconovo",
+      "Villanova"
+    ],
+    "comuni_confinanti": [
+      "Argenta",
+      "Baricella (BO)",
+      "Bondeno",
+      "Canaro (RO)",
+      "Copparo",
+      "Ficarolo (RO)",
+      "Formignana",
+      "Gaiba (RO)",
+      "Masi Torello",
+      "Occhiobello (RO)",
+      "Ostellato",
+      "Poggio Renatico",
+      "Ro",
+      "Stienta (RO)",
+      "Tresigallo",
+      "Vigarano Mainarda",
+      "Voghiera"
+    ],
+    "musei": [
+      "Museo Archeologico Nazionale",
+      "Pinacoteca Nazionale",
+      "Palazzo Schifanoia: Musei Civici di Arte Antica",
+      "Palazzina di Marfisa d'Este",
+      "Museo Geo-Paleontologico",
+      "Museo Ebraico",
+      "Museo di Architettura - Casa di Biagio Rossetti",
+      "Museo dell'Illustrazione",
+      "Museo della Cattedrale",
+      "Museo del Risorgimento e della Resistenza",
+      "Museo Civico di Storia Naturale",
+      "Museo Anatomico \"G. Tumiati\"",
+      "Museo \"Michelangelo Antonioni\"",
+      "Museo \"Giovanni Boldini\" e Museo dell'Ottocento",
+      "Lapidario Civico",
+      "Centro di Documentazione del Mondo Agricolo Ferrarese",
+      "Casa Romei",
+      "Casa dell'Ariosto",
+      "Museo d'Arte Moderna e Contemporanea \"Filippo de Pisis\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Paolo",
+      "Chiesa di San Giorgio",
+      "Chiesa di San Francesco",
+      "Chiesa di San Domenico",
+      "Chiesa di San Cristoforo alla Certosa",
+      "Chiesa del Gesù",
+      "Cattedrale",
+      "Oratorio dell'Annunziata",
+      "Santuario del Prodigioso Sangue Basilica di Santa Maria in Vado :: Missionari del Preziosissimo Sangue"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Estense"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico dell'Università di Ferrara"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Comunale",
+      "Teatro Nuovo"
+    ],
+    "stadi": [
+      "Stadio Comunale Paolo Mazza"
+    ],
+    "eventi_feste_sagre": [
+      "Palio di Ferrara (tutti i fine settimana di maggio)"
+    ],
+    "gemellaggi": [
+      "Saint Etienne (Francia)",
+      "Broni (Pavia, Lombardia), dal 2001",
+      "Buenos Aires (Argentina)",
+      "Formia (Latina, Lazio)",
+      "Giessen (Germania)",
+      "Kallithea (Grecia)",
+      "Kaufbeuren (Germania)",
+      "Lerida (Spagna)",
+      "Praga (Repubblica Ceca)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  }
+]

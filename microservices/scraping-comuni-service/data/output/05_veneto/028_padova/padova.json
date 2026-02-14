@@ -1,0 +1,16 @@
+{
+  "nome": "Padova",
+  "regione": "Veneto",
+  "zona": null,
+  "sigla": "PD",
+  "codice_istat": "028",
+  "popolazione": 936274,
+  "popolazione_maschi": 455386,
+  "popolazione_femmine": 480888,
+  "superficie_kmq": 2141.59,
+  "densita": 437.2,
+  "num_comuni": 104,
+  "capoluogo": "Padova",
+  "iso_3166_2": "IT-PD",
+  "nuts": "ITD36"
+}

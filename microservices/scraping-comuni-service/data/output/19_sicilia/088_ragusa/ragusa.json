@@ -1,0 +1,16 @@
+{
+  "nome": "Ragusa",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "RG",
+  "codice_istat": "088",
+  "popolazione": 321359,
+  "popolazione_maschi": 159305,
+  "popolazione_femmine": 162054,
+  "superficie_kmq": 1614.02,
+  "densita": 199.1,
+  "num_comuni": 12,
+  "capoluogo": "Ragusa",
+  "iso_3166_2": "IT-RG",
+  "nuts": "ITG18"
+}

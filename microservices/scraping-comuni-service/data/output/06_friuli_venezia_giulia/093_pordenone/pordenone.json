@@ -1,0 +1,16 @@
+{
+  "nome": "Pordenone",
+  "regione": "Friuli-Venezia Giulia",
+  "zona": null,
+  "sigla": "PN",
+  "codice_istat": "093",
+  "popolazione": 312051,
+  "popolazione_maschi": 152551,
+  "popolazione_femmine": 159500,
+  "superficie_kmq": 2273.22,
+  "densita": 137.3,
+  "num_comuni": 50,
+  "capoluogo": "Pordenone",
+  "iso_3166_2": "IT-PN",
+  "nuts": "ITD41"
+}

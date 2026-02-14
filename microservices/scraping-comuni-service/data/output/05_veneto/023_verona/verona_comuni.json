@@ -1,0 +1,5203 @@
+[
+  {
+    "nome": "Zimella",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023098",
+    "codice_catastale": "M178",
+    "popolazione": 4896,
+    "superficie_kmq": 20.08,
+    "densita": 243.8,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "Madonna di Monte Berico",
+    "festa_patronale": "25 agosto",
+    "demonimo": "zimellesi",
+    "etimologia": "Attestato come Zumellae, Zomella, Zumella, deriva dal latino gemellus, nel senso di \"doppio, duplice\": il paese, infatti, è diviso dal fiume Novo in due parti, congiunte da un ponte. In passato il nome era inteso come riflesso della voce medievale iumella, un'unità di misura.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Adige Guà",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà"
+    ],
+    "localita_frazioni": [
+      "capoluogo: Santo Stefano; frazioni: Zimella",
+      "Bonaldo",
+      "Volpino"
+    ],
+    "comuni_confinanti": [
+      "Arcole",
+      "Cologna Veneta",
+      "Lonigo (VI)",
+      "Veronella"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Zevio",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023097",
+    "codice_catastale": "M172",
+    "popolazione": 15018,
+    "superficie_kmq": 55.02,
+    "densita": 273.0,
+    "cap": "37059",
+    "prefisso_telefonico": "045",
+    "patrono": "Santa Toscana",
+    "festa_patronale": "14 luglio",
+    "demonimo": "zeviani",
+    "etimologia": "Attestato con il nome di Gebitus, riflette il latino Gaepidae (Gepidi), nome di popolo di stirpe gotica giunto in Italia a seguito dei longobardi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": [
+      "Bosco",
+      "Perzacco",
+      "Santa Maria",
+      "Volon",
+      "Campagnola"
+    ],
+    "comuni_confinanti": [
+      "Belfiore",
+      "Caldiero",
+      "Lavagno",
+      "Oppeano",
+      "Palù",
+      "Ronco all'Adige",
+      "San Giovanni Lupatoto",
+      "San Martino Buon Albergo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villafranca di Verona",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023096",
+    "codice_catastale": "L949",
+    "popolazione": 33185,
+    "superficie_kmq": 57.43,
+    "densita": 577.8,
+    "cap": "37069",
+    "prefisso_telefonico": "045",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "villafranchesi",
+    "etimologia": "Il nome è un composto di villa e franca. L'aggettivo potrebbe riferirsi alla condizione dei suoi abitanti che erano appunto \"franchi\", ossia esonerati dal pagamento delle tasse. La specifica, aggiunta nel 1863, identifica la sua ubicazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "Alpo",
+      "Rosegaferro",
+      "Quaderni",
+      "Pizzoletta",
+      "Dossobuono",
+      "Rizza"
+    ],
+    "comuni_confinanti": [
+      "Castel d'Azzano",
+      "Mozzecane",
+      "Povegliano Veronese",
+      "Sommacampagna",
+      "Valeggio sul Mincio",
+      "Verona",
+      "Vigasio"
+    ],
+    "musei": [
+      "Museo del Risorgimento",
+      "Museo \"Nicolis\" dell'Auto, della Tecnica, della Meccanica"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Villa Bartolomea",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023095",
+    "codice_catastale": "L912",
+    "popolazione": 5837,
+    "superficie_kmq": 53.24,
+    "densita": 109.6,
+    "cap": "37049",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "villabartolomeesi",
+    "etimologia": "E' un composto di Villa e di San Bartolomea, patrono del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Legnago"
+    ],
+    "localita_frazioni": [
+      "Carpi",
+      "Spinimbecco",
+      "San Zeno in Valle"
+    ],
+    "comuni_confinanti": [
+      "Castagnaro",
+      "Castelnovo Bariano (RO)",
+      "Giacciano con Baruchella (RO)",
+      "Legnago",
+      "Terrazzo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzina veneta dei Sambonifacio"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santa Margherita (frazione: Carpi)",
+      "Chiesa parrocchiale di San Bartolomeo Apostolo",
+      "Chiesa di Santa Maria Assunta (frazione: Spinimbecco)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vigasio",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023094",
+    "codice_catastale": "L869",
+    "popolazione": 9976,
+    "superficie_kmq": 30.8,
+    "densita": 323.9,
+    "cap": "37068",
+    "prefisso_telefonico": "045",
+    "patrono": "San Michele",
+    "festa_patronale": "29 settembre",
+    "demonimo": "vigasiani",
+    "etimologia": "Documentato come Vico Aderis, Adhecis, Athesis E' un composto di Vico e di Athesis, nome antico del fiume Adige, ma tale interpretazione è incerta, perché il luogo non è mai stato prossimo al fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Veronese TartaroTione",
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Isolalta",
+      "Forette"
+    ],
+    "comuni_confinanti": [
+      "Buttapietra",
+      "Castel d'Azzano",
+      "Isola della Scala",
+      "Nogarole Rocca",
+      "Povegliano Veronese",
+      "Trevenzuolo",
+      "Villafranca di Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Malaspina (in frazione Forette)",
+      "Villa Carnevali (a Isolalta)",
+      "Villa La Zambonina"
+    ],
+    "chiese": [
+      "Chiesetta santuario della Madonna di Campagna Magra"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Vestenanova",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023093",
+    "codice_catastale": "L810",
+    "popolazione": 2586,
+    "superficie_kmq": 23.93,
+    "densita": 108.1,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Leonardo",
+    "festa_patronale": "15 ottobre",
+    "demonimo": "vestenesi",
+    "etimologia": "Deriva da un antico nome di persona Vestina. La sua formazione si confronta con Vestenavecchia, nome di una frazione del comune ed allude alla costituzione di un nuovo insediamento.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia"
+    ],
+    "localita_frazioni": [
+      "Castelvero",
+      "Bolca",
+      "Vestenavecchia"
+    ],
+    "comuni_confinanti": [
+      "Altissimo (VI)",
+      "Badia Calavena",
+      "Chiampo (VI)",
+      "Crespadoro (VI)",
+      "San Giovanni Ilarione",
+      "San Pietro Mussolino (VI)",
+      "Selva di Progno",
+      "Tregnago"
+    ],
+    "musei": [
+      "Museo dei Fossili"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Veronella",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023092",
+    "codice_catastale": "D193",
+    "popolazione": 5077,
+    "superficie_kmq": 20.84,
+    "densita": 243.6,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "Madonna del Carmine",
+    "festa_patronale": "terzo lunedì di luglio",
+    "demonimo": "veronellesi",
+    "etimologia": "La precedente denominazione del paese era Cucca, che fu sostituita con quella attuale nel 1902, perché ritenuta poco dignitosa (da cuccare, imbrogliare). La denominazione attuale è un'evidente diminutivo di Verona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Adige Guà",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà",
+      "Associazione Sentinella dei Fiumi"
+    ],
+    "localita_frazioni": [
+      "San Gregorio",
+      "Miega"
+    ],
+    "comuni_confinanti": [
+      "Albaredo d'Adige",
+      "Arcole",
+      "Belfiore",
+      "Bonavigo",
+      "Cologna Veneta",
+      "Minerbe",
+      "Pressana",
+      "Zimella"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Lavagnoli - Dal Covolo - Ferraro, (a San Gregorio)",
+      "Villa Cortesia Serego, detta La Cuca"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di San Giovanni Battista",
+      "Chiesa di San Gregorio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Velo Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023090",
+    "codice_catastale": "L722",
+    "popolazione": 759,
+    "superficie_kmq": 19.07,
+    "densita": 39.8,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "velesi",
+    "etimologia": "La prima parte ha origini sconosciute, potrebbe legarsi al latino villus, nel senso di \"suolo rivestito d'erba\". Nel 1867 fu aggiunta la specifica che identifica la collocazione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": [
+      "Contrade: Baltieri",
+      "Battisteri",
+      "Campe",
+      "Camposilvano",
+      "Comerlati",
+      "Carrà",
+      "Croce",
+      "Foi",
+      "Garzin di Sotto",
+      "Menotti",
+      "Pozze",
+      "Purga",
+      "Riva",
+      "Salaorno",
+      "Scrivazzi",
+      "Stauder",
+      "Taioli",
+      "Tecchie",
+      "Tezze di Sopra",
+      "Tezze di Sotto",
+      "Valle di Velo",
+      "Valle",
+      "Viaverde"
+    ],
+    "comuni_confinanti": [
+      "Badia Calavena",
+      "Roverè Veronese",
+      "San Mauro di Saline",
+      "Selva di Progno"
+    ],
+    "musei": [
+      "Museo Geopaleontologico dei Fossili della Lessinia"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Valeggio sul Mincio",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023089",
+    "codice_catastale": "L567",
+    "popolazione": 15308,
+    "superficie_kmq": 63.96,
+    "densita": 239.3,
+    "cap": "37067",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "valeggiani",
+    "etimologia": "Dal latino vallensis o valliceus, deriva da vallis (valle). La specifica identifica la sua posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Club I Borghi più Belli d'Italia",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "Santa Lucia",
+      "Salionze",
+      "Borghetto",
+      "Vanoni"
+    ],
+    "comuni_confinanti": [
+      "Castelnuovo del Garda",
+      "Marmirolo (MN)",
+      "Monzambano (MN)",
+      "Mozzecane",
+      "Peschiera del Garda",
+      "Ponti sul Mincio (MN)",
+      "Roverbella (MN)",
+      "Sommacampagna",
+      "Sona",
+      "Villafranca di Verona",
+      "Volta Mantovana (MN)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Comunale",
+      "Palazzo Guarienti",
+      "Villa Maffei Sigurtà"
+    ],
+    "chiese": [
+      "Chiesa di San Pietro in Cattedra",
+      "Chiesa di San Marco Evangelista"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Scaligero"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Parco Sigurtà"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Antica Sagra di Salionze (metà luglio)",
+      "con rievocazione in costume"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Trevenzuolo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023088",
+    "codice_catastale": "L396",
+    "popolazione": 2754,
+    "superficie_kmq": 26.99,
+    "densita": 102.0,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "Santa Maria Maddalena",
+    "festa_patronale": "22 luglio",
+    "demonimo": "trevenzuolesi",
+    "etimologia": "Documentato con il nome di Tribunciolum, deriva da un nome di persona antico Trebuntius o Trebentius o Terventius, con l'aggiunta del suffisso -olo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Veronese TartaroTione",
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Roncolevà",
+      "Fagnano"
+    ],
+    "comuni_confinanti": [
+      "Castelbelforte (MN)",
+      "Erbè",
+      "Isola della Scala",
+      "Nogarole Rocca",
+      "Roverbella (MN)",
+      "Vigasio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Allegri - Nodari - Farina, detta Corte Nuova",
+      "Villa Giona - Treves de' Bonfigli, detta Corte San Bernardino",
+      "Villa Pellegrini, detta Corte Chiara",
+      "Villa Tretti (a Roncolevà), detta Cortalta"
+    ],
+    "chiese": [
+      "Parrocchiale del Nome di Maria (a Fagnano)",
+      "Chiesa parrocchiale San Zeno Vescovo (frazione Roncolevà)",
+      "Chiesa parrocchiale di Santa Maria Maddalena"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Tregnago",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023087",
+    "codice_catastale": "L364",
+    "popolazione": 4966,
+    "superficie_kmq": 37.42,
+    "densita": 132.7,
+    "cap": "37039",
+    "prefisso_telefonico": "045",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "tregnaghesi",
+    "etimologia": "Deriva dal nome latino di persona Trinius, con l'aggiunta del suffisso aggettivale -acus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 5 - Colline Progno Alpone"
+    ],
+    "localita_frazioni": [
+      "Centro",
+      "Cogollo",
+      "Finetti",
+      "Marcemigo",
+      "Scorgnano",
+      "Rancani"
+    ],
+    "comuni_confinanti": [
+      "Badia Calavena",
+      "Cazzano di Tramigna",
+      "Illasi",
+      "Mezzane di Sotto",
+      "San Giovanni Ilarione",
+      "San Mauro di Saline",
+      "Verona",
+      "Vestenanova"
+    ],
+    "musei": [
+      "Museo Del Ferro Battuto"
+    ],
+    "ville_palazzi": [
+      "Villa Cipolla",
+      "Villa Cavaggioni",
+      "Villa Ferrari dalle Spade",
+      "Villa Pellegrini"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di Cogollo",
+      "Chiesa di Sant'Egidio",
+      "Chiesa di Santa Maria Assunta",
+      "Chiesa della Disciplina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ollolai (Nuoro)",
+      "dal novembre 2002"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Torri del Benaco",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023086",
+    "codice_catastale": "L287",
+    "popolazione": 3025,
+    "superficie_kmq": 51.39,
+    "densita": 58.9,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "San Filippo",
+    "festa_patronale": "26 maggio",
+    "demonimo": "torresani",
+    "etimologia": "La prima parte si riferisce alle torri del castello Scaligero che ivi si trova. Nel 1867 ha assunto la specifica da Benaco, antico nome del lago di Garda sulla cui sponda orientale è posto il paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Associazione Nazionale Città dell'Olio",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Gardone Riviera (BS)",
+      "Gargnano (BS)",
+      "Salò (BS)",
+      "San Felice del Benaco (BS)",
+      "Toscolano-Maderno (BS); a est: Costermano; a nord: Brenzone sul Garda",
+      "San Zeno di Montagna; a sud: Garda"
+    ],
+    "musei": [
+      "Museo del Castello Scaligero"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Giovanni",
+      "Chiesa Parrocchiale SS. Pietro e Paolo",
+      "Chiesa della Santissima Trinità",
+      "Chiesetta di San Faustino e Giovita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Terrazzo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023085",
+    "codice_catastale": "L136",
+    "popolazione": 2219,
+    "superficie_kmq": 20.53,
+    "densita": 108.1,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "Conversione di San Paolo",
+    "festa_patronale": "25 gennaio",
+    "demonimo": "terrazzani",
+    "etimologia": "Dal latino terracium, con riferimento ad un \"terrapieno\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Dall'Adige al Fratta",
+      "Regione Agraria n. 9 - Pianura di Legnago"
+    ],
+    "localita_frazioni": [
+      "Begosso",
+      "Nichesola"
+    ],
+    "comuni_confinanti": [
+      "Urbana (PD); a est: Castelbaldo (PD)",
+      "Merlara (PD); a nord: Bevilacqua",
+      "Boschi Sant'Anna; a ovest: Legnago; a sud: Badia Polesine (RO)",
+      "Castagnaro",
+      "Villa Bartolomea"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro Celestino",
+      "Chiesa di San Paolo Apostolo",
+      "Chiesa di San Lorenzo Maritre"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sorgà",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023084",
+    "codice_catastale": "I850",
+    "popolazione": 3000,
+    "superficie_kmq": 31.51,
+    "densita": 95.2,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "Santa Croce",
+    "festa_patronale": "3 maggio",
+    "demonimo": "sorgaresi",
+    "etimologia": "Deriva dal nome di pianta sorgo (dal latino suricum).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Bonferraro",
+      "Pontepassero",
+      "Pampuro"
+    ],
+    "comuni_confinanti": [
+      "Bigarello (MN)",
+      "Castel d'Ario (MN)",
+      "Castelbelforte (MN)",
+      "Erbè",
+      "Gazzo Veronese",
+      "Nogara",
+      "Villimpenta (MN)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sona",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023083",
+    "codice_catastale": "I826",
+    "popolazione": 17630,
+    "superficie_kmq": 41.15,
+    "densita": 428.4,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "San Luigi",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "sonesi",
+    "etimologia": "Documentato come Asiona e Xona, generalmente è ricondotto a iliceona, dal nome latino di pianta ilex, -icis (leccio), ma è un'ipotesi incerta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco"
+    ],
+    "localita_frazioni": [
+      "Lugagnano",
+      "Palazzolo",
+      "San Giorgio in Salici"
+    ],
+    "comuni_confinanti": [
+      "Bussolengo",
+      "Castelnuovo del Garda",
+      "Sommacampagna",
+      "Valeggio sul Mincio",
+      "Verona"
+    ],
+    "musei": [
+      "Museo Paleontologico \"Attilio Fedrigo\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Wadowice (Polonia), dal 1993",
+      "Soyaux (Francia), dal 2014"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sommacampagna",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023082",
+    "codice_catastale": "I821",
+    "popolazione": 14746,
+    "superficie_kmq": 40.91,
+    "densita": 360.4,
+    "cap": "37066",
+    "prefisso_telefonico": "045",
+    "patrono": "Sant'Andrea",
+    "festa_patronale": "30 novembre",
+    "demonimo": "sommacampagnesi",
+    "etimologia": "Corrisponde a \"al sommo (della) campagna\", \"in fondo alla campagna\". Il termine campagna designa la pianura vasta e incolta, senza limiti di divisione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Nazionale Comuni Aeroportuali Italiani"
+    ],
+    "localita_frazioni": [
+      "Caselle",
+      "Custoza"
+    ],
+    "comuni_confinanti": [
+      "Sona",
+      "Valeggio sul Mincio",
+      "Verona",
+      "Villafranca di Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Campostrini, detta \"La Decima\"",
+      "Villa della Vecchia",
+      "Villa Masi",
+      "Villa Ottolini Pignatti Morano (a Custoza)",
+      "Villa Ravignani",
+      "Villa Venier, detta \"La Bassa\"",
+      "Villa Bocca Trezza, detta \"Mille e una Rosa\"",
+      "Cà Zenobia"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale del Redentore (a Caselle)",
+      "Pieve Romanica di Sant'Andrea (X secolo)",
+      "Chiesa parrocchiale dell'Immacolata e di Sant'Andrea Apostolo",
+      "Chiesa di San Rocco al Castello",
+      "Chiesa della Madonna della Salute",
+      "Chiesa della Madonna del Monte (XIII secolo)",
+      "Chiesa parrocchiale San Pietro in Vinculis (a Custoza)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Broccoletto di Custoza (inizio gennaio)",
+      "Sagra del Vino Bianco di Custoza (secondo weekend di settembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Soave",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023081",
+    "codice_catastale": "I775",
+    "popolazione": 7146,
+    "superficie_kmq": 22.67,
+    "densita": 315.2,
+    "cap": "37038",
+    "prefisso_telefonico": "045",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "soavesi",
+    "etimologia": "Deriva dall'etnico Svevi, attraverso la forma Svavi (con passaggio da e ad a).",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Progno Alpone",
+      "Associazione Strada del Vino Soave",
+      "Walled Towns Friendship Circle (WTFC)"
+    ],
+    "localita_frazioni": [
+      "Castelletto",
+      "Costeggiola",
+      "Castelcerino",
+      "Fittà"
+    ],
+    "comuni_confinanti": [
+      "Belfiore",
+      "Cazzano di Tramigna",
+      "Colognola ai Colli",
+      "Montecchia di Crosara",
+      "Monteforte d'Alpone",
+      "San Bonifacio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Duomo di San Lorenzo",
+      "Chiesa di Santa Maria di Monte Santo dei Padri Domenicani",
+      "Chiesa di San Giorgio"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Claye-Souilli (Francia)",
+      "dal maggio 1999"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Selva di Progno",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023080",
+    "codice_catastale": "I594",
+    "popolazione": 911,
+    "superficie_kmq": 41.25,
+    "densita": 22.1,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "selvaprognesi",
+    "etimologia": "La prima parte del nome deriva dal latino silva. La specifica progno (torrente), dal latino petroneu, da pronus (inclinato), per estensione: corso d'acqua scorrente in pendio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": [
+      "Campofontana",
+      "San Bortolo",
+      "Giazza"
+    ],
+    "comuni_confinanti": [
+      "Ala (TN)",
+      "Badia Calavena",
+      "Bosco Chiesanuova",
+      "Crespadoro (VI)",
+      "Recoaro Terme (VI)",
+      "Roverè Veronese",
+      "Velo Veronese",
+      "Vestenanova"
+    ],
+    "musei": [
+      "Museo Etnografico dei Cimbri",
+      "Museo dei Trombini di San Bortolo",
+      "Museo dei Trombini di Lessinia"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale Santa Maria Assunta"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Anna d'Alfaedo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023078",
+    "codice_catastale": "I292",
+    "popolazione": 2538,
+    "superficie_kmq": 43.71,
+    "densita": 58.1,
+    "cap": "37020",
+    "prefisso_telefonico": "045",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "faetini",
+    "etimologia": "Riflette il nome della santa patrona, mentre la specifica è un nome locale corrispondente a \"al faggeto\" ed è attestata come Faetum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia"
+    ],
+    "localita_frazioni": [
+      "Cerna",
+      "Fosse",
+      "Ceredo",
+      "Giare",
+      "Ronconi"
+    ],
+    "comuni_confinanti": [
+      "Ala (TN)",
+      "Avio (TN)",
+      "Dolcè",
+      "Erbezzo",
+      "Fumane",
+      "Grezzana",
+      "Marano di Valpolicella",
+      "Negrar"
+    ],
+    "musei": [
+      "Museo Preistorico e Paleontologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Ponte di Veja",
+      "monumento di origine naturale"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sant'Ambrogio di Valpolicella",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023077",
+    "codice_catastale": "I259",
+    "popolazione": 11758,
+    "superficie_kmq": 23.5,
+    "densita": 500.3,
+    "cap": "37015",
+    "prefisso_telefonico": "045",
+    "patrono": "Sant'Ambrogio",
+    "festa_patronale": "7 dicembre",
+    "demonimo": "ambrosiani",
+    "etimologia": "Il nome onora il santo patrone del paese. La specifica si riferisce alla sua posizione tra le colline della Valpolicella.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 4 - Colline Valpolicella"
+    ],
+    "localita_frazioni": [
+      "Domegliara",
+      "Gargagnago",
+      "Ponton",
+      "Monte",
+      "San Giorgio"
+    ],
+    "comuni_confinanti": [
+      "Cavaion Veronese",
+      "Dolcè",
+      "Fumane",
+      "Pastrengo",
+      "Pescantina",
+      "Rivoli Veronese",
+      "San Pietro in Cariano"
+    ],
+    "musei": [
+      "Museo della Pieve"
+    ],
+    "ville_palazzi": [
+      "Villa Nichesola (a Ponton)",
+      "Villa Rovereti (a Domegliara)",
+      "Villa Serego-Alighieri (a Gargagnago)"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa de le Fa'e (prima domenica di novembre)",
+      "in località San Giorgio"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Sanguinetto",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023072",
+    "codice_catastale": "H944",
+    "popolazione": 4067,
+    "superficie_kmq": 13.63,
+    "densita": 298.4,
+    "cap": "37058",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "sanguinettani",
+    "etimologia": "Deriva dal nome veronese di pianta sanguena (sanguine, sanguinella). L'attestazione come Sancto Gioneto è una falsa ricostruzione etimologica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Casaleone",
+      "Cerea",
+      "Concamarise",
+      "Gazzo Veronese",
+      "Nogara",
+      "Salizzole"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Oratorio delle Tre Vie, detto anche anche Chiesetta della Rotonda o Chiesetta del Capo di Sotto",
+      "Chiesa e il Convento di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Zeno di Montagna",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023079",
+    "codice_catastale": "I414",
+    "popolazione": 1362,
+    "superficie_kmq": 28.26,
+    "densita": 48.2,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "San Zeno",
+    "festa_patronale": "12 aprile",
+    "demonimo": "sanzenesi",
+    "etimologia": "Il nome onora il santo patrono del comune. La specifica si riferisce al nome della frazione Ca' Montagna, di evidente etimologia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 1 - Montagna del Benaco Orientale",
+      "Associazione Nazionale Città del Castagno",
+      "Rete di comuni \"Alleanza nelle Alpi\"",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "frazioni: Lumini",
+      "Prada;\ncontrade: San Zeno",
+      "Canevoi",
+      "Cà Schena",
+      "Le Tese",
+      "Cà Sartori",
+      "Cà Montagna",
+      "Castello",
+      "Laguna",
+      "Villanova",
+      "La Cà",
+      "La Pora",
+      "Borno",
+      "Cà Longa",
+      "Prà Bestemà"
+    ],
+    "comuni_confinanti": [
+      "Brenzone sul Garda",
+      "Caprino Veronese",
+      "Costermano",
+      "Ferrara di Monte Baldo",
+      "Torri del Benaco"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ca’ Montagna"
+    ],
+    "chiese": [
+      "Chiesa Santa Eurosia (a Lumini)",
+      "Chiesa San Zeno Vescovo (a San Zeno)",
+      "Chiesa di San Eustachio (a Montesel)",
+      "Chiesa di San Bartolomeo (a Prada)",
+      "Chiesa della Madonna della Neve (in località Ortigara)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "Le Fontane (in contrada Cà Schena)",
+      "suddivisa in quattro vasche"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pietro in Cariano",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023076",
+    "codice_catastale": "I109",
+    "popolazione": 12851,
+    "superficie_kmq": 20.25,
+    "densita": 634.6,
+    "cap": "37029",
+    "prefisso_telefonico": "045",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "sanpietrini",
+    "etimologia": "Il nome onora il santo patrono del paese. La specifica deriva dal nome latino di persona Carillius, con l'aggiunta del suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Pedemonte",
+      "San Floriano",
+      "Corrubio",
+      "Castelrotto",
+      "Bure"
+    ],
+    "comuni_confinanti": [
+      "Fumane",
+      "Marano di Valpolicella",
+      "Negrar",
+      "Pescantina",
+      "Sant'Ambrogio di Valpolicella",
+      "Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Serego (XVI secolo)",
+      "in frazione Pedemonte",
+      "località Santa Sofia"
+    ],
+    "chiese": [
+      "Pieve di San Floriano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Pietro di Morubio",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023075",
+    "codice_catastale": "I105",
+    "popolazione": 3008,
+    "superficie_kmq": 16.02,
+    "densita": 187.8,
+    "cap": "37050",
+    "prefisso_telefonico": "045",
+    "patrono": "San Gaetano",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "morubiani",
+    "etimologia": "Il nome onora il santo a cui è dedicata la parrocchiale. La specifica riflette il nome latino di pianta marrubium (marrobbio).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Destra - Adige",
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Bonavicina",
+      "Borgo"
+    ],
+    "comuni_confinanti": [
+      "Angiari",
+      "Bovolone",
+      "Cerea",
+      "Isola Rizza",
+      "Roverchiara"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Volpini Vinerbini",
+      "Villa Loredan, Wallner, Gaspari-Pasti",
+      "Villa Gobetti"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Pietro e Paolo",
+      "Chiesa di Santa Caterina (a Borgo)",
+      "Chiesa dei Santi Filippo e Giacomo (a Bonavicina)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Mauro di Saline",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023074",
+    "codice_catastale": "H712",
+    "popolazione": 563,
+    "superficie_kmq": 11.1,
+    "densita": 50.7,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Matteo",
+    "festa_patronale": "21 settembre",
+    "demonimo": "salinesi",
+    "etimologia": "Chiamato Saline, riflette l'antico appellativo salina, derivato dal latino sal (sale) che designava un terreno ricco di sale, quindi sterile. La denominazione attuale, assunta nel 1867, riflette il nome del patrono del luogo San Mauro.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": [
+      "contrada Vago"
+    ],
+    "comuni_confinanti": [
+      "Badia Calavena",
+      "Roverè Veronese",
+      "Tregnago",
+      "Velo Veronese",
+      "Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Leonardo in Castro"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Martino Buon Albergo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023073",
+    "codice_catastale": "I003",
+    "popolazione": 15148,
+    "superficie_kmq": 35.3,
+    "densita": 429.1,
+    "cap": "37036",
+    "prefisso_telefonico": "045",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "sammartinesi",
+    "etimologia": "Riflette il nome del santo patrono a cui era dedicata anche la chiesa. La specifica allude a favorevoli condizioni del luogo, se non a qualche ospizio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Caldiero",
+      "Lavagno",
+      "Mezzane di Sotto",
+      "San Giovanni Lupatoto",
+      "Verona",
+      "Zevio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giovanni Lupatoto",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023071",
+    "codice_catastale": "H924",
+    "popolazione": 25205,
+    "superficie_kmq": 18.94,
+    "densita": 1330.8,
+    "cap": "37057",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "lupatotini",
+    "etimologia": "Attestato con il nome di Sanctus Iohannes ad lupum totum, ripete il nome del patrono San Giovanni Battista, la specifica non corrisponde alla traduzione letteraria della forma storica menzionata (letteralmente \"San Giovanni presso il luogo tutto lupi\"), ma è una falsa costruzione di un derivato del latino lupus (lupo), con doppio suffisso -att-ottus con il valore di \"da lupo\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": [
+      "Camacici",
+      "Pozzo",
+      "Raldon"
+    ],
+    "comuni_confinanti": [
+      "Buttapietra",
+      "Oppeano",
+      "San Martino Buon Albergo",
+      "Verona",
+      "Zevio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa della Madonnina (XVIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Giovanni Ilarione",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023070",
+    "codice_catastale": "H916",
+    "popolazione": 5115,
+    "superficie_kmq": 25.32,
+    "densita": 202.0,
+    "cap": "37035",
+    "prefisso_telefonico": "045",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "25 novembre",
+    "demonimo": "sangiovannesi e ilarionesi",
+    "etimologia": "Documentato come Sancto Ioanne e nel 1685 come S. Giovanni Ilarione, è un composto dal nome San Giovanni Battista (a cui è intitolata la chiesa) e di Ilarione, di etimo incerto, che sembra non abbia relazione con il nome Ilario, ma alluda a rogna, forse come designazione di una qualità di terreno poco adatto alla coltivazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 5 - Colline Progno Alpone",
+      "Parco Naturale Regionale della Lessinia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cazzano di Tramigna",
+      "Chiampo (VI)",
+      "Montecchia di Crosara",
+      "Roncà",
+      "Tregnago",
+      "Vestenanova"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Balzi Tanara"
+    ],
+    "chiese": [
+      "Chiesa di Santa Caterina",
+      "Chiesa di San Zeno",
+      "Chiesa di San Giovanni Battista",
+      "Chiesa di San Benedetto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Bonifacio",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023069",
+    "codice_catastale": "H783",
+    "popolazione": 21258,
+    "superficie_kmq": 33.9,
+    "densita": 627.1,
+    "cap": "37047",
+    "prefisso_telefonico": "045",
+    "patrono": "Sant'Abbondio Vescovo",
+    "festa_patronale": "ultima domenica di agosto",
+    "demonimo": "sambonifacesi",
+    "etimologia": "Trae il nome da una piccola chiesa dedicata a San Bonifacio da Milone, marchese di Verona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà"
+    ],
+    "localita_frazioni": [
+      "Locara",
+      "Lobia",
+      "Motta",
+      "Prova",
+      "Villanova / Villabella"
+    ],
+    "comuni_confinanti": [
+      "Arcole",
+      "Belfiore",
+      "Gambellara (VI)",
+      "Lonigo (VI)",
+      "Monteforte d'Alpone",
+      "Soave"
+    ],
+    "musei": [
+      "Museo Civico Geopaleontologico"
+    ],
+    "ville_palazzi": [
+      "Villa Carlotti",
+      "Villa Gritti",
+      "Villa Scudellari"
+    ],
+    "chiese": [
+      "Chiesa di Sant'Abbondio a Motta",
+      "Abbazia Benedettina di San Pietro a Villanova"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Salizzole",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023068",
+    "codice_catastale": "H714",
+    "popolazione": 3772,
+    "superficie_kmq": 30.65,
+    "densita": 123.1,
+    "cap": "37056",
+    "prefisso_telefonico": "045",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "salizzolesi",
+    "etimologia": "Dal latino salix (salice), attraverso la forma aggettivale saliceus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Bionde",
+      "Engazzà",
+      "Valmorsel"
+    ],
+    "comuni_confinanti": [
+      "Bovolone",
+      "Concamarise",
+      "Isola della Scala",
+      "Nogara",
+      "Sanguinetto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roveredo di Guà",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023066",
+    "codice_catastale": "H610",
+    "popolazione": 1575,
+    "superficie_kmq": 10.16,
+    "densita": 155.0,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Pietro Apostolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "roveredani",
+    "etimologia": "Riflette il latino roburetum (querceto), collettivo di robur (rovere). La specifica, assunta nel 1867, riflette un aquata (da aqua, acqua) ed allude alla collocazione del paese sul fiume.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Adige Guà",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà",
+      "Comprensorio del Consorzio di Bonifica Euganeo"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cologna Veneta",
+      "Montagnana (PD)",
+      "Pojana Maggiore (VI)",
+      "Pressana"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roverè Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023067",
+    "codice_catastale": "H608",
+    "popolazione": 2115,
+    "superficie_kmq": 36.47,
+    "densita": 58.0,
+    "cap": "37028",
+    "prefisso_telefonico": "045",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "roveresi",
+    "etimologia": "Denominato Rovere di Velo fino al 1908, è il riflesso del latino robur (rovere), con il suffisso -etum.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bosco Chiesanuova",
+      "Cerro Veronese",
+      "Grezzana",
+      "San Mauro di Saline",
+      "Selva di Progno",
+      "Velo Veronese",
+      "Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa parrocchiale di San Nicolò",
+      "Chiesa di San Vitale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roverchiara",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023065",
+    "codice_catastale": "H606",
+    "popolazione": 2750,
+    "superficie_kmq": 19.79,
+    "densita": 139.0,
+    "cap": "37050",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Zeno",
+    "festa_patronale": "12 aprile",
+    "demonimo": "roverchiaresi",
+    "etimologia": "Documentato come Roveclaria, Roveclara e Rueclara. Presuppone un rubiclaria dal latino rubus (rovo).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Destra - Adige",
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Roverchiaretta"
+    ],
+    "comuni_confinanti": [
+      "Albaredo d'Adige",
+      "Angiari",
+      "Bonavigo",
+      "Isola Rizza",
+      "Ronco all'Adige",
+      "San Pietro di Morubio"
+    ],
+    "musei": [
+      "Museo \"Lionello Fiumi\""
+    ],
+    "ville_palazzi": [
+      "Villa Pindemonte-Fiumi"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale San Zeno"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ronco all'Adige",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023064",
+    "codice_catastale": "H540",
+    "popolazione": 6008,
+    "superficie_kmq": 42.58,
+    "densita": 141.1,
+    "cap": "37055",
+    "prefisso_telefonico": "045",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "ronchesani",
+    "etimologia": "La prima parte deriva dal latino runcare (estirpare) con riferimento ad un luogo disboscato. La specifica, assunta nel 1867, allude alla collocazione dell'insediamento sulla destra dell'Adige.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Sentinella dei Fiumi",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "frazioni: Albaro",
+      "Scardevara",
+      "Tombazosana"
+    ],
+    "comuni_confinanti": [
+      "Albaredo d'Adige",
+      "Belfiore",
+      "Isola Rizza",
+      "Oppeano",
+      "Palù",
+      "Roverchiara",
+      "Zevio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Roncà",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023063",
+    "codice_catastale": "H522",
+    "popolazione": 3834,
+    "superficie_kmq": 18.22,
+    "densita": 210.4,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Pietro",
+    "festa_patronale": "25 marzo",
+    "demonimo": "roncaesi",
+    "etimologia": "Riflette una formazione aggettivale (terra) runcata, ovvero (terra) disboscata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Progno Alpone",
+      "Parco Naturale Regionale della Lessinia",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada del Vino Soave"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Arzignano (VI)",
+      "Chiampo (VI)",
+      "Gambellara (VI)",
+      "Montebello Vicentino (VI)",
+      "Montecchia di Crosara",
+      "Montorso Vicentino (VI)",
+      "San Giovanni Ilarione"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Wackernheim  (Germania)",
+      "dal 2000"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rivoli Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023062",
+    "codice_catastale": "H356",
+    "popolazione": 2182,
+    "superficie_kmq": 18.46,
+    "densita": 118.2,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "San Isidoro",
+    "festa_patronale": "31 luglio",
+    "demonimo": "rivolesi",
+    "etimologia": "Dal latino rivulus (piccolo rivo). La specifica fu aggiunta nel 1867 e identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Affi",
+      "Brentino Belluno",
+      "Caprino Veronese",
+      "Cavaion Veronese",
+      "Costermano",
+      "Dolcè",
+      "Sant'Ambrogio di Valpolicella"
+    ],
+    "musei": [
+      "Museo Napoleonico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Sara Simeoni (1953-)",
+      "atleta",
+      "campionessa olimpica"
+    ]
+  },
+  {
+    "nome": "Pressana",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023061",
+    "codice_catastale": "H048",
+    "popolazione": 2528,
+    "superficie_kmq": 17.72,
+    "densita": 142.7,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "pressanesi",
+    "etimologia": "Documentato con il nome di Persiana, riflette il nome latino di persona Persius, con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Adige Guà",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà",
+      "Comprensorio del Consorzio di Bonifica Euganeo",
+      "Associazione Sentinella dei Fiumi"
+    ],
+    "localita_frazioni": [
+      "Caselle",
+      "Crosare"
+    ],
+    "comuni_confinanti": [
+      "Cologna Veneta",
+      "Minerbe",
+      "Montagnana (PD)",
+      "Roveredo di Guà",
+      "Veronella"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Grimani",
+      "Villa Gaudio",
+      "Villa Querini"
+    ],
+    "chiese": [
+      "Oratorio di San Sebastiano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Povegliano Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023060",
+    "codice_catastale": "G945",
+    "popolazione": 7180,
+    "superficie_kmq": 18.69,
+    "densita": 384.2,
+    "cap": "37064",
+    "prefisso_telefonico": "045",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "poveglianesi",
+    "etimologia": "Deriva dal nome latino di persona Popilius, con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Mozzecane",
+      "Nogarole Rocca",
+      "Vigasio",
+      "Villafranca di Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Martino Vescovo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ockenheim (Germania)",
+      "La Concepcion (Ecuador)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Peschiera del Garda",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023059",
+    "codice_catastale": "G489",
+    "popolazione": 10465,
+    "superficie_kmq": 17.63,
+    "densita": 593.6,
+    "cap": "37019",
+    "prefisso_telefonico": "045",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "arilicensi o peschierani o peschierotti",
+    "etimologia": "Dal latino piscaria (mercato del pesce) ma, in questo caso, con il significato di vivaio di pesci. La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Fornaci",
+      "San Benedetto di Lugana"
+    ],
+    "comuni_confinanti": [
+      "Castelnuovo del Garda",
+      "Desenzano del Garda (BS)",
+      "Ponti sul Mincio (MN)",
+      "Pozzolengo (BS)",
+      "Sirmione (BS)",
+      "Valeggio sul Mincio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo dei Provveditori"
+    ],
+    "chiese": [
+      "Santuario Madonna del Frassino :: Frati Minori Francescani",
+      "Chiesa parrocchiale di San Martino, settecentesca"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Rievocazione Storica della Caduta della Serenissima (primo fine settimana di luglio)"
+    ],
+    "gemellaggi": [
+      "Villa Carlos Paz (Argentina), dal settembre 2000",
+      "Ula Tirso (Provincia di Oristano), dal maggio 2002",
+      "Capoterra (Cagliari-Sardegna), dal 2007"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pescantina",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023058",
+    "codice_catastale": "G481",
+    "popolazione": 17133,
+    "superficie_kmq": 19.66,
+    "densita": 871.5,
+    "cap": "37026",
+    "prefisso_telefonico": "045",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "pescantinesi",
+    "etimologia": "Deve essere connesso al veneto antico pescante (pescatore) e non a pesco e pescheti per quanto siano numerosi nel territorio.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": [
+      "Settimo",
+      "Balconi",
+      "Arcè",
+      "Ospedaletto",
+      "Santa Lucia"
+    ],
+    "comuni_confinanti": [
+      "A est: Verona; a nord: San Pietro in Cariano; a nord e ovest: Sant'Ambrogio di Valpolicella; a ovest: Bussolengo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Rocco",
+      "Chiesa di San Michele (Arcè)",
+      "Chiesa di San Lorenzo Martire",
+      "Chiesa della Madonnina"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Pastrengo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023057",
+    "codice_catastale": "G365",
+    "popolazione": 3112,
+    "superficie_kmq": 8.96,
+    "densita": 347.3,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "San Gaetano",
+    "festa_patronale": "7 agosto",
+    "demonimo": "pastrenghesi",
+    "etimologia": "E' un derivato con il suffisso -engo, di origine germanica, con riferimento ad una proprietà, ma non è chiaro il nome di persona alla base della formazione.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "Pol",
+      "Piovezzano"
+    ],
+    "comuni_confinanti": [
+      "A est: Pescantina",
+      "Sant'Ambrogio di Valpolicella; a est e sud: Bussolengo; a nord: Cavaion Veronese; a ovest: Bardolino",
+      "Lazise"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Casa Segattini",
+      "Villa Scappini",
+      "Casa Randina"
+    ],
+    "chiese": [
+      "Chiesa Parrocchiale di Santa Croce",
+      "Chiesetta di San Rocco (a Pol)",
+      "Chiesa di San Zeno",
+      "Santuario di Santa Maria Assunta di Pol"
+    ],
+    "castelli_fortificazioni": [
+      "Forte Poggio Croce",
+      "Forte Poggio Pol",
+      "Forte Monte Folaga",
+      "Forte di Piovezzano"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Telegrafo Ottico di Pastrengo",
+      "sul colle di San Martino"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Palù",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023056",
+    "codice_catastale": "G297",
+    "popolazione": 1251,
+    "superficie_kmq": 13.46,
+    "densita": 92.9,
+    "cap": "37050",
+    "prefisso_telefonico": "045",
+    "patrono": "San Zeno",
+    "festa_patronale": "21 maggio",
+    "demonimo": "palmensi",
+    "etimologia": "Dal latino palus, paludis (palude).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Oppeano",
+      "Ronco all'Adige",
+      "Zevio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Zenone"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Oppeano",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023055",
+    "codice_catastale": "G080",
+    "popolazione": 9972,
+    "superficie_kmq": 46.95,
+    "densita": 212.4,
+    "cap": "37050",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "oppeanesi",
+    "etimologia": "Si riferisce all'aggettivo latino oppidanus (di città, cittadino).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Ca' degli Oppi",
+      "Vallese",
+      "Mazzantica"
+    ],
+    "comuni_confinanti": [
+      "Bovolone",
+      "Buttapietra",
+      "Isola della Scala",
+      "Isola Rizza",
+      "Palù",
+      "Ronco all'Adige",
+      "San Giovanni Lupatoto",
+      "Zevio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Altichieri"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Montegranaro (Fermo-Marche)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nogarole Rocca",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023054",
+    "codice_catastale": "F921",
+    "popolazione": 3637,
+    "superficie_kmq": 29.24,
+    "densita": 124.4,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "nogarolesi",
+    "etimologia": "La prima parte deriva dal nome latino di pianta nux, nucis (noce), attraverso un nucaria, che designa la pianta. La specifica, assunta nel 1867, in riferimento al castello eretto nel 1243, ora trasformato in fattoria.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Veronese TartaroTione",
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Bagnolo",
+      "Colombare",
+      "Pradelle"
+    ],
+    "comuni_confinanti": [
+      "Mozzecane",
+      "Povegliano Veronese",
+      "Roverbella (MN)",
+      "Trevenzuolo",
+      "Vigasio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Martino (località: Bagnolo)",
+      "Chiesa parrocchiale di San Lorenzo Martire"
+    ],
+    "castelli_fortificazioni": [
+      "Rocca di Nogarole"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Nogara",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023053",
+    "codice_catastale": "F918",
+    "popolazione": 8493,
+    "superficie_kmq": 38.86,
+    "densita": 218.6,
+    "cap": "37054",
+    "prefisso_telefonico": "0442",
+    "patrono": "Madonna del Carmelo",
+    "festa_patronale": "16 luglio",
+    "demonimo": "nogaresi",
+    "etimologia": "Dal nome latino di pianta nux, nucis (noce), attraverso un nucaria, che designa la pianta.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Barabò",
+      "Brancon",
+      "Calcinara",
+      "Campalano",
+      "Caselle",
+      "Motta"
+    ],
+    "comuni_confinanti": [
+      "Erbè",
+      "Gazzo Veronese",
+      "Isola della Scala",
+      "Salizzole",
+      "Sanguinetto",
+      "Sorgà"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Campalano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Negrar",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023052",
+    "codice_catastale": "F861",
+    "popolazione": 17105,
+    "superficie_kmq": 40.52,
+    "densita": 422.1,
+    "cap": "37024",
+    "prefisso_telefonico": "045",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "negraresi",
+    "etimologia": "Deriva, probabilmente, dall'aggettivo latino niger, nigrum (nero), in riferimento al colore della terra, con l'aggiunta del suffisso -arium,",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 4 - Colline Valpolicella",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Arbizzano",
+      "Santa Maria",
+      "San Vito",
+      "San Peretto",
+      "Mazzano",
+      "Torbe",
+      "Prun",
+      "Fane",
+      "Montecchio"
+    ],
+    "comuni_confinanti": [
+      "Grezzana",
+      "Marano di Valpolicella",
+      "San Pietro in Cariano",
+      "Sant'Anna d'Alfaedo",
+      "Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mozzecane",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023051",
+    "codice_catastale": "F789",
+    "popolazione": 7546,
+    "superficie_kmq": 24.71,
+    "densita": 305.4,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "Santi Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "mozzecanesi",
+    "etimologia": "Ha origine incerta. Forse riflette un Mutius Canis (formazione non meglio precisata) o, piuttosto, un soprannome corrispondente a mozza-cane o, meno probabilmente, mozza-canne.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Veronese TartaroTione",
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Grezzano",
+      "Quistello",
+      "San Zeno",
+      "Tormine"
+    ],
+    "comuni_confinanti": [
+      "Nogarole Rocca",
+      "Povegliano Veronese",
+      "Roverbella (MN)",
+      "Valeggio sul Mincio",
+      "Villafranca di Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Monteforte d'Alpone",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023050",
+    "codice_catastale": "F508",
+    "popolazione": 8939,
+    "superficie_kmq": 20.4,
+    "densita": 438.2,
+    "cap": "37032",
+    "prefisso_telefonico": "045",
+    "patrono": "Santa Maria Maggiore",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "montefortiani",
+    "etimologia": "Evidentemente il nome deriva dall'unione di \"Monte\" e \"forte\", in riferimento ad una roccaforte o un castello presente in zona. La specifica allude alla sua vicinanza al torrente Alpone.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Progno Alpone",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada del Vino Soave"
+    ],
+    "localita_frazioni": [
+      "Brognoligo",
+      "Costalunga",
+      "Sarmazza"
+    ],
+    "comuni_confinanti": [
+      "Gambellara (VI)",
+      "Montecchia di Crosara",
+      "San Bonifacio",
+      "Soave"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Montecchia di Crosara",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023049",
+    "codice_catastale": "F461",
+    "popolazione": 4347,
+    "superficie_kmq": 21.1,
+    "densita": 206.0,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "montescledensi o monscledensi",
+    "etimologia": "Si potrebbe presupporre un montic(u)leta, diminutivo di \"Monte\" corrispondente quasi a \"monticelli\". La specifica deriva da un nome locale che equivale al veneto crosara, \"incrocio\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Progno Alpone",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada del Vino Soave"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cazzano di Tramigna",
+      "Gambellara (VI)",
+      "Monteforte d'Alpone",
+      "Roncà",
+      "San Giovanni Ilarione",
+      "Soave"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Desulo (in provincia di Nuoro)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Minerbe",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023048",
+    "codice_catastale": "F218",
+    "popolazione": 4626,
+    "superficie_kmq": 29.69,
+    "densita": 155.8,
+    "cap": "37046",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "8 agosto",
+    "demonimo": "minerbesi",
+    "etimologia": "Attestato con il nome di Minervae, è da ricondurre alla divinità pagana Minerva.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Dall'Adige al Fratta",
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Comprensorio del Consorzio di Bonifica Euganeo"
+    ],
+    "localita_frazioni": [
+      "Anson",
+      "Santo Stefano",
+      "San Zenone"
+    ],
+    "comuni_confinanti": [
+      "Bevilacqua",
+      "Bonavigo",
+      "Boschi Sant'Anna",
+      "Legnago",
+      "Montagnana (PD)",
+      "Pressana",
+      "Veronella"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Da Prato",
+      "Villa Spolverini, detta \"Il Palazzone\""
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria dell'Ospedale oggi di Santa Lucia (XV secolo)",
+      "Chiesa di San Zenone"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Schwabenhein (Mainz - Germania)",
+      "dal 2001"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Mezzane di Sotto",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023047",
+    "codice_catastale": "F172",
+    "popolazione": 2483,
+    "superficie_kmq": 19.58,
+    "densita": 126.8,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "Assunzione di Maria",
+    "festa_patronale": "15 agosto",
+    "demonimo": "mezzanesi",
+    "etimologia": "Da nome latino di persona Metius, con l'aggiunta del suffisso -anus, che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Verona Est",
+      "Regione Agraria n. 5 - Colline Progno Alpone",
+      "Associazione Nazionale Città dell'Olio",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Mezzane di Sopra",
+      "Castagnè"
+    ],
+    "comuni_confinanti": [
+      "Illasi",
+      "Lavagno",
+      "San Martino Buon Albergo",
+      "Tregnago",
+      "Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Marano di Valpolicella",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023046",
+    "codice_catastale": "E911",
+    "popolazione": 3145,
+    "superficie_kmq": 18.64,
+    "densita": 168.7,
+    "cap": "37020",
+    "prefisso_telefonico": "045",
+    "patrono": "Santi Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "maranesi",
+    "etimologia": "E' probabilmente legato al nome latino di persona Marius più il suffisso -anus che indica appartenenza, ossia proprietà. La specifica si riferisce alla sua posizione tra le colline della Valpolicella.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 4 - Colline Valpolicella",
+      "Parco Naturale Regionale della Lessinia",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Valgatara",
+      "San Rocco"
+    ],
+    "comuni_confinanti": [
+      "Fumane",
+      "Negrar",
+      "San Pietro in Cariano",
+      "Sant'Anna d'Alfaedo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Guantieri",
+      "in località Fasanara a Valgatara"
+    ],
+    "chiese": [
+      "Chiesetta campestre di San Marco (in località Pozzo di Valgatara)",
+      "in precedenza dedicata a Santo Stefano"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Appenheim (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Malcesine",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023045",
+    "codice_catastale": "E848",
+    "popolazione": 3704,
+    "superficie_kmq": 68.14,
+    "densita": 54.4,
+    "cap": "37018",
+    "prefisso_telefonico": "045",
+    "patrono": "Santo Stefano",
+    "festa_patronale": "26 dicembre",
+    "demonimo": "malcesinesi",
+    "etimologia": "E' un composto di mala silice o malo silice, ossia \"cattiva strada selciata\", con silice equivalente di \"via lastricata a grosse pietre lavorate\", tipica delle strade romane.",
+    "il_comune_e": [
+      "Bandiera Arancione del Touring Club Italiano"
+    ],
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 1 - Montagna del Benaco Orientale"
+    ],
+    "localita_frazioni": [
+      "Cassone",
+      "Navene"
+    ],
+    "comuni_confinanti": [
+      "Avio (TN)",
+      "Brentonico (TN)",
+      "Brenzone sul Garda",
+      "Ferrara di Monte Baldo",
+      "Limone sul Garda (BS)",
+      "Nago-Torbole (TN)",
+      "Riva del Garda (TN)",
+      "Tignale (BS)",
+      "Tremosine sul Garda (BS)"
+    ],
+    "musei": [
+      "Musei del Castello Scaligero"
+    ],
+    "ville_palazzi": [
+      "Palazzo dei Capitani del Lago"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Santo Stefano, settecentesca",
+      "Chiesa della Madonna del Rosario"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Scaligero"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Legnago",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023044",
+    "codice_catastale": "E512",
+    "popolazione": 25265,
+    "superficie_kmq": 79.67,
+    "densita": 317.1,
+    "cap": "37045",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "legnaghesi",
+    "etimologia": "Attestato con il nome Lemniacum, è stato interpretato fantasiosamente risalendo agli Argonauti, che avrebbero scoperto la località chiamandola così in onore della loro patria, Lemno. Secondo altri deriva da legno, per la folta foresta che vi era. L'ipotesi più accreditata vuole che il nome derivi dal nome latino di persona Laenius, con l'aggiunta del suffisso -acus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Regione Agraria n. 9 - Pianura di Legnago"
+    ],
+    "localita_frazioni": [
+      "Vigo",
+      "Canove",
+      "Torretta",
+      "Porto",
+      "San Pietro",
+      "San Vito",
+      "Terranegra",
+      "Vangadizza"
+    ],
+    "comuni_confinanti": [
+      "Angiari",
+      "Bergantino (RO)",
+      "Bonavigo",
+      "Boschi Sant'Anna",
+      "Castelnovo Bariano (RO)",
+      "Cerea",
+      "Minerbe",
+      "Terrazzo",
+      "Villa Bartolomea"
+    ],
+    "musei": [
+      "Centro Ambientale Archeologico Museo Civico"
+    ],
+    "ville_palazzi": [
+      "Palazzetto Bianchi"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lazise",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023043",
+    "codice_catastale": "E502",
+    "popolazione": 6916,
+    "superficie_kmq": 64.95,
+    "densita": 106.5,
+    "cap": "37017",
+    "prefisso_telefonico": "045",
+    "patrono": "San Martino",
+    "festa_patronale": "11 novembre",
+    "demonimo": "lazisiensi",
+    "etimologia": "Documentato come Laceses e Lacenses, deriva dal latino lacus (lago).",
+    "il_comune_e": [
+      "Città Termale (Parco Termale del Garda",
+      "Villa dei Cedri SpA",
+      "in località Colà)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Associazione Nazionale Italiana le Città del Miele"
+    ],
+    "localita_frazioni": [
+      "Frazioni: Pacengo",
+      "Colà;località: Mondragone"
+    ],
+    "comuni_confinanti": [
+      "Bardolino",
+      "Bussolengo",
+      "Castelnuovo del Garda",
+      "Padenghe sul Garda (BS)",
+      "Pastrengo",
+      "Sirmione (BS)"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo della Dogana",
+      "Villa Bagatta",
+      "Villa Balladoro",
+      "Villa Barbaro detta “La Bottona”",
+      "Villa Benciolini",
+      "Villa Cavazzocca Mazzanti detta “Pergolana”"
+    ],
+    "chiese": [
+      "Santuario della Madonna della Neve (frazione: Colà)",
+      "Chiesa parrocchiale di San Martino",
+      "Chiesa dei Santi Fermo e Rustico",
+      "Chiesa di Santa Maria delle Grazie \"La Pergolana\"",
+      "Chiesa dei Santi Faustino e Giovita (località: Mondragone)",
+      "Chiesa dei Santi Faustino e Giovita",
+      "Chiesa di San Nicolò"
+    ],
+    "castelli_fortificazioni": [
+      "Castello di Lazise"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Rosenheim (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Lavagno",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023042",
+    "codice_catastale": "E489",
+    "popolazione": 8425,
+    "superficie_kmq": 14.65,
+    "densita": 575.1,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Pietro",
+    "festa_patronale": "29 giugno",
+    "demonimo": "lavagnesi",
+    "etimologia": "Deriva dal latino lavannei, dal latino labes (frana), attraverso la forma labaneus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà"
+    ],
+    "localita_frazioni": [
+      "San Briccio",
+      "San Pietro",
+      "Vago"
+    ],
+    "comuni_confinanti": [
+      "Caldiero",
+      "Colognola ai Colli",
+      "Illasi",
+      "Mezzane di Sotto",
+      "San Martino Buon Albergo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Alberti",
+      "Villa Da Lisca",
+      "Villa Fraccaroli",
+      "Villa Verità"
+    ],
+    "chiese": [
+      "Chiesa San Pietro di Lavagno",
+      "Chiesa di Vago",
+      "Chiesa di San Giacomo",
+      "Chiesa di San Briccio"
+    ],
+    "castelli_fortificazioni": [
+      "Forte di San Briccio"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola Rizza",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023041",
+    "codice_catastale": "E358",
+    "popolazione": 3262,
+    "superficie_kmq": 16.84,
+    "densita": 193.7,
+    "cap": "37050",
+    "prefisso_telefonico": "045",
+    "patrono": "SS. Pietro e Paolo",
+    "festa_patronale": "29 giugno",
+    "demonimo": "isolani",
+    "etimologia": "In passato si chiamava Isola Porcarizza, nome ritenuto indecoroso e modificato, nel 1872, in quello attuale. La denominazione Porcarizza deriva dal latino porcus (maiale) e designa in origine un luogo di porci, con il suffisso -ara. Isola designa un luogo delimitato da corsi d'acqua.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Destra - Adige",
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Roverchiara; a nord e est: Ronco all'Adige; a nord e ovest: Oppeano; a sud: San Pietro di Morubio; a sud e ovest: Bovolone"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Isola della Scala",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023040",
+    "codice_catastale": "E349",
+    "popolazione": 11572,
+    "superficie_kmq": 69.89,
+    "densita": 165.6,
+    "cap": "37063",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "isolani",
+    "etimologia": "La prima parte del nome alludeva alla posizione geografica del luogo tra due fiumi. La specifica si riferisce a un possesso della nobile famiglia degli Scaligeri.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Casalbergo",
+      "Caselle",
+      "Gabbia",
+      "Pellegrina",
+      "Tarmassia",
+      "Villafontana",
+      "Vo' Pindemonte"
+    ],
+    "comuni_confinanti": [
+      "A est: Bovolone",
+      "Oppeano; a nord: Buttapietra",
+      "Vigasio; a ovest: Erbè",
+      "Trevenzuolo; a sud: Nogara",
+      "Salizzole"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Budenheim (Germania)",
+      "Eaubonne (Francia)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Illasi",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023039",
+    "codice_catastale": "E284",
+    "popolazione": 5253,
+    "superficie_kmq": 25.04,
+    "densita": 209.8,
+    "cap": "37031",
+    "prefisso_telefonico": "045",
+    "patrono": "San Bartolomeo",
+    "festa_patronale": "24 agosto",
+    "demonimo": "illasiani",
+    "etimologia": "Deriva dal nome latino di persona Gelasius.",
+    "il_comune_e": [
+      "Comune Amico del Turismo Itinerante"
+    ],
+    "fa_parte_di": [
+      "Unione Comuni Verona Est",
+      "Regione Agraria n. 5 - Colline Progno Alpone",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada del Vino Soave"
+    ],
+    "localita_frazioni": [
+      "Cellore"
+    ],
+    "comuni_confinanti": [
+      "Cazzano di Tramigna",
+      "Colognola ai Colli",
+      "Lavagno",
+      "Mezzane di Sotto",
+      "Tregnago"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Pompei Carlotti (XVIII secolo)",
+      "Villa Perez Pompei (XVIII secolo)"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": [
+      "Castello Scaligero"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Woerth Isar (Baviera-Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Grezzana",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023038",
+    "codice_catastale": "E171",
+    "popolazione": 10802,
+    "superficie_kmq": 52.01,
+    "densita": 207.7,
+    "cap": "37023",
+    "prefisso_telefonico": "045",
+    "patrono": "Madonna della Cintura",
+    "festa_patronale": "prima domenica di settembre",
+    "demonimo": "grezzanesi",
+    "etimologia": "Deriva del nome latino di persona Graecius, con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 4 - Colline Valpolicella",
+      "Parco Naturale Regionale della Lessinia"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bosco Chiesanuova",
+      "Cerro Veronese",
+      "Erbezzo",
+      "Negrar",
+      "Roverè Veronese",
+      "Sant'Anna d'Alfaedo",
+      "Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Villa Arvedi"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Gazzo Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023037",
+    "codice_catastale": "D957",
+    "popolazione": 5359,
+    "superficie_kmq": 56.75,
+    "densita": 94.4,
+    "cap": "37060",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Tarcisio",
+    "festa_patronale": "primo lunedì di maggio",
+    "demonimo": "gazzesi",
+    "etimologia": "E' un riflesso longobardo gahagi (terreno riservato). La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "San Pietro In Valle",
+      "Corezzo",
+      "Roncanova",
+      "Maccacari",
+      "Pradele"
+    ],
+    "comuni_confinanti": [
+      "Casaleone",
+      "Nogara",
+      "Ostiglia (MN)",
+      "Sanguinetto",
+      "Serravalle a Po (MN)",
+      "Sorgà",
+      "Sustinente (MN)",
+      "Villimpenta (MN)"
+    ],
+    "musei": [
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": [
+      "Villa Montanari (XV secolo)",
+      "in frazione Pradelle"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Garda",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023036",
+    "codice_catastale": "D915",
+    "popolazione": 4105,
+    "superficie_kmq": 16.11,
+    "densita": 254.8,
+    "cap": "37016",
+    "prefisso_telefonico": "045",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "gardesani",
+    "etimologia": "Deriva da garda (guardia), alludendo ad un \"posto di guardia\", dal germanico warda.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "Castei",
+      "Giare",
+      "Punta San Vigilio",
+      "Scaveaghe"
+    ],
+    "comuni_confinanti": [
+      "Bardolino",
+      "Costermano",
+      "Manerba del Garda (BS)",
+      "San Felice del Benaco (BS)",
+      "Torri del Benaco"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Carlotti",
+      "Palazzo Fregoso",
+      "Villa Albertini, ottocentesca"
+    ],
+    "chiese": [
+      "Parrocchiale dell'Assunta, settecentesca",
+      "Chiesa di Santa Maria Maggiore"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Palio delle Contrade (15 agosto)",
+      "regata notturna sulle acque del lago"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Fumane",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023035",
+    "codice_catastale": "D818",
+    "popolazione": 4092,
+    "superficie_kmq": 34.28,
+    "densita": 119.4,
+    "cap": "37022",
+    "prefisso_telefonico": "045",
+    "patrono": "San Zenone",
+    "festa_patronale": "12 aprile",
+    "demonimo": "fumanesi",
+    "etimologia": "Attestato con il nome di Curia Fumani, Fumane. Deriva dal latino fumus, fumo, in riferimento alla formazione di nubi attorno alla cima dei monti della zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 4 - Colline Valpolicella",
+      "Parco Naturale Regionale della Lessinia"
+    ],
+    "localita_frazioni": [
+      "Cavalo",
+      "Mazzurega",
+      "Breonio",
+      "Molina",
+      "Verago",
+      "Gorgusello",
+      "Manune",
+      "Casterna"
+    ],
+    "comuni_confinanti": [
+      "Dolcè",
+      "Marano di Valpolicella",
+      "San Pietro in Cariano",
+      "Sant'Ambrogio di Valpolicella",
+      "Sant'Anna d'Alfaedo"
+    ],
+    "musei": [
+      "Museo Botanico della Lessinia"
+    ],
+    "ville_palazzi": [
+      "Villa Selle (XV secolo)",
+      "in località Volta"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Urdinarrain (Argentina)",
+      "Tratalias (Carbonia-Iglesias - Sardegna)",
+      "Atapuerca  (Spagna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Ferrara di Monte Baldo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023034",
+    "codice_catastale": "D549",
+    "popolazione": 228,
+    "superficie_kmq": 26.91,
+    "densita": 8.5,
+    "cap": "37020",
+    "prefisso_telefonico": "045",
+    "patrono": "Santa Caterina",
+    "festa_patronale": "25 novembre",
+    "demonimo": "ferraresi",
+    "etimologia": "Dal latino ferreria, miniera di ferro. La specifica, attestata nel 1163, è di etimologia incerta ma è stata interpretata come derivata da Bald (nome germanico di persona) o ward (bosco).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 1 - Montagna del Benaco Orientale"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Avio (TN)",
+      "Brentino Belluno",
+      "Brenzone sul Garda",
+      "Caprino Veronese",
+      "Malcesine",
+      "San Zeno di Montagna"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Orto Botanico del monte Baldo (in località Novezzina)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Erbezzo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023033",
+    "codice_catastale": "D420",
+    "popolazione": 720,
+    "superficie_kmq": 32.44,
+    "densita": 22.2,
+    "cap": "37020",
+    "prefisso_telefonico": "045",
+    "patrono": "SS. Filippo e Giacomo",
+    "festa_patronale": "3 maggio",
+    "demonimo": "erbezzini",
+    "etimologia": "Deriva dal latino herba, erba. Meno chiara è l'origine del suffisso, forse derivato dal verbo erbeggiare, verdeggiare come l'erba.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ala (TN)",
+      "Bosco Chiesanuova",
+      "Grezzana",
+      "Sant'Anna d'Alfaedo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Formaggio Monte Veronese DOP (fine maggio)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Erbè",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023032",
+    "codice_catastale": "D419",
+    "popolazione": 1888,
+    "superficie_kmq": 15.94,
+    "densita": 118.4,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "erbetani",
+    "etimologia": "Indicato come Erbeto nell'846, deriva dal latino herba, erba. Potrebbe essere stato accostato al suffisso -etum, poi diventato -e.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Veronese TartaroTione",
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castelbelforte (MN)",
+      "Isola della Scala",
+      "Nogara",
+      "Sorgà",
+      "Trevenzuolo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Dolcè",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023031",
+    "codice_catastale": "D317",
+    "popolazione": 2587,
+    "superficie_kmq": 39.43,
+    "densita": 65.6,
+    "cap": "37020",
+    "prefisso_telefonico": "045",
+    "patrono": "Santa Lucia",
+    "festa_patronale": "13 dicembre",
+    "demonimo": "dolceati",
+    "etimologia": "Dal latino dulcis (dolce) nel senso di \"molle\", \"morbido\" con riferimento al terreno.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": [
+      "Volargne"
+    ],
+    "comuni_confinanti": [
+      "Avio (TN)",
+      "Brentino Belluno",
+      "Fumane",
+      "Rivoli Veronese",
+      "Sant'Ambrogio di Valpolicella",
+      "Sant'Anna d'Alfaedo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa del Bene (XVI secolo), in frazione Volargne",
+      "Palazzo Salgari",
+      "Palazzo Guerrieri - Rizzardi"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Undenheim (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Costermano",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023030",
+    "codice_catastale": "D118",
+    "popolazione": 3733,
+    "superficie_kmq": 16.93,
+    "densita": 220.5,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "Sant'Antonio abate",
+    "festa_patronale": "17 gennaio",
+    "demonimo": "costermanesi",
+    "etimologia": "Deriva da costa e dal nome germanico di persona Ermanno. Un'altra ipotesi propone una derivazione da costa Arimannorum, dal longobardo harimann (addetto alla milizia), latinizzato arimannus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "Castion",
+      "Marciaga",
+      "Albaré"
+    ],
+    "comuni_confinanti": [
+      "Affi",
+      "Bardolino",
+      "Caprino Veronese",
+      "Garda",
+      "Rivoli Veronese",
+      "San Zeno di Montagna",
+      "Torri del Benaco"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Pellegrini (XVIII secolo)",
+      "in frazione Castion Veronese"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Oberndorf Am Lech (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Concamarise",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023029",
+    "codice_catastale": "C943",
+    "popolazione": 1085,
+    "superficie_kmq": 7.89,
+    "densita": 137.5,
+    "cap": "37050",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Lorenzo",
+    "festa_patronale": "10 agosto",
+    "demonimo": "concamarisini",
+    "etimologia": "E' un composto di conca e di Marise. Da confrontare con Val Marisa, entrambi possibili derivati dal latino meridies (mezzogiorno), che in senso toponomastico può indicare il \"luogo dove ci si ferma a meriggiare\".",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bovolone",
+      "Cerea",
+      "Salizzole",
+      "Sanguinetto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Lorenzo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Colognola ai Colli",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023028",
+    "codice_catastale": "C897",
+    "popolazione": 8631,
+    "superficie_kmq": 20.85,
+    "densita": 414.0,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "colognolesi",
+    "etimologia": "Attestato con il nome di Colonias, è un diminutivo del latino colonia nel senso di \"casa colonica, masseria\", ha assunto nel 1867 la specificazione ai colli che si riferisce alla posizione sulle estreme propaggini dei Monti Lessini.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Verona Est",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà",
+      "Associazione Nazionale Città del Vino",
+      "Associazione Strada del Vino Soave"
+    ],
+    "localita_frazioni": [
+      "Monte",
+      "San Zeno",
+      "Pieve",
+      "Stra",
+      "San Vittore",
+      "Villa"
+    ],
+    "comuni_confinanti": [
+      "A est: Soave; a nord: Cazzano di Tramigna",
+      "Illasi; a ovest: Lavagno; a sud: Belfiore",
+      "Caldiero"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Peverelli Mascotto",
+      "Villa Acquadevita",
+      "Villa Apollonio",
+      "Villa Baldo",
+      "Villa Maffei"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria della Pieve"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cologna Veneta",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023027",
+    "codice_catastale": "C890",
+    "popolazione": 8605,
+    "superficie_kmq": 42.99,
+    "densita": 200.2,
+    "cap": "37044",
+    "prefisso_telefonico": "0442",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "colognesi",
+    "etimologia": "La colonia romana, stazione di coloni, riedificata da Teodorico con il nome di Colonia Gotica. Ha assunto nel 1867 la specifica che identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Adige Guà",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà",
+      "Comprensorio del Consorzio di Bonifica Euganeo",
+      "Associazione Sentinella dei Fiumi"
+    ],
+    "localita_frazioni": [
+      "Baldarìa",
+      "Sabbion",
+      "Sant'Andrea",
+      "San Sebastiano",
+      "Spessa",
+      "Strà",
+      "Sule"
+    ],
+    "comuni_confinanti": [
+      "Asigliano Veneto (VI)",
+      "Lonigo (VI)",
+      "Orgiano (VI)",
+      "Pojana Maggiore (VI)",
+      "Pressana",
+      "Roveredo di Guà",
+      "Veronella",
+      "Zimella"
+    ],
+    "musei": [
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": [
+      "Palazzo Pretorio o del Podesta o Palazzo Capitaniato",
+      "Palazzo di Cittá"
+    ],
+    "chiese": [
+      "Duomo o Chiesa Cattedrale"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Torre Civica o dell'Orologio"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": [
+      "Festa del Mandorlato (inizio dicembre)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerro Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023026",
+    "codice_catastale": "C538",
+    "popolazione": 2461,
+    "superficie_kmq": 10.17,
+    "densita": 242.0,
+    "cap": "37020",
+    "prefisso_telefonico": "045",
+    "patrono": "Sant'Osvaldo",
+    "festa_patronale": "5 agosto",
+    "demonimo": "cerresi",
+    "etimologia": "Dal latino cerrus (cerro). La specifica identifica la zona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 4 - Colline Valpolicella",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bosco Chiesanuova",
+      "Grezzana",
+      "Roverè Veronese"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cerea",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023025",
+    "codice_catastale": "C498",
+    "popolazione": 16601,
+    "superficie_kmq": 70.41,
+    "densita": 235.8,
+    "cap": "37053",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Zeno",
+    "festa_patronale": "21 maggio",
+    "demonimo": "ceretani o cereani",
+    "etimologia": "Dal latino cerrus, \"cerro\" con l'aggiunta del suffisso -etum.",
+    "il_comune_e": [
+      "Comune Amico del Turismo Itinerante"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Aselogna",
+      "Asparetto",
+      "Santa Teresa in Valle"
+    ],
+    "comuni_confinanti": [
+      "A est: Angiari",
+      "Legnago; a nord: San Pietro di Morubio; a nord e ovest: Bovolone; a ovest: Casaleone",
+      "Concamarise",
+      "Ostiglia (MN)",
+      "Sanguinetto; a sud: Melara (RO); a sud e ovest: Bergantino (RO)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cazzano di Tramigna",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023024",
+    "codice_catastale": "C412",
+    "popolazione": 1513,
+    "superficie_kmq": 12.25,
+    "densita": 123.5,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giorgio Martire",
+    "festa_patronale": "23 aprile",
+    "demonimo": "cazzanesi",
+    "etimologia": "Dal nome di persona latino Cattius con l'aggiunta del suffisso -anus. La specifica allude al fiume Tramigna, il cui nome latino è terminea, da termen (segno di confine).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 5 - Colline Progno Alpone"
+    ],
+    "localita_frazioni": [
+      "frazioni: Campiano",
+      "Costeggiola;contrade: Caliari"
+    ],
+    "comuni_confinanti": [
+      "Colognola ai Colli",
+      "Illasi",
+      "Montecchia di Crosara",
+      "San Giovanni Ilarione",
+      "Soave",
+      "Tregnago"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Pietro in Briano",
+      "Chiesa parrocchiale di San Giorgio Martire",
+      "Chiesa parrocchiale di San Bernardo (in frazione Campiano)",
+      "Chiesa di San Felice",
+      "Cappella della Beata Vergine (contrada: Caliari)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": [
+      "fontana di Cazzano"
+    ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Cavaion Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023023",
+    "codice_catastale": "C370",
+    "popolazione": 5910,
+    "superficie_kmq": 12.85,
+    "densita": 459.9,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "cavaionesi",
+    "etimologia": "Attestato come Cavaliono e Capaliono, va accostato al veneto cavaion (toscano cavaglione), pagliaio a due spioventi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Associazione Nazionale Città dell'Olio",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Affi",
+      "Bardolino",
+      "Pastrengo",
+      "Rivoli Veronese",
+      "Sant'Ambrogio di Valpolicella"
+    ],
+    "musei": [
+      "Museo Civico Archeologico"
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castelnuovo del Garda",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023022",
+    "codice_catastale": "C225",
+    "popolazione": 13284,
+    "superficie_kmq": 34.68,
+    "densita": 383.0,
+    "cap": "37014",
+    "prefisso_telefonico": "045",
+    "patrono": "Natività di Maria Vergine",
+    "festa_patronale": "8 settembre",
+    "demonimo": "castelnovesi",
+    "etimologia": "La prima parte del nome si riferisce alla presenza di un castello realizzato più recentemente rispetto ad uno ad esso limitrofo. Nel 1867 ha assunto la denominazione di Castelnuovo di Verona e nel 1970 quella attuale.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco"
+    ],
+    "localita_frazioni": [
+      "Cavalcaselle",
+      "Sandrà",
+      "Oliosi",
+      "Camalacivina",
+      "Ronchi"
+    ],
+    "comuni_confinanti": [
+      "Bussolengo",
+      "Lazise",
+      "Peschiera del Garda",
+      "Sirmione (BS)",
+      "Sona",
+      "Valeggio sul Mincio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": [
+      "Dim Teatro Comunale"
+    ],
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castel d'Azzano",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023021",
+    "codice_catastale": "C078",
+    "popolazione": 11804,
+    "superficie_kmq": 9.7,
+    "densita": 1216.9,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "San Zeno",
+    "festa_patronale": "12 aprile",
+    "demonimo": "casteldazzanesi",
+    "etimologia": "In dialetto Asan o San, è un composto di Castello e del nome locale Azzano, dal nome latino di persona Attius con il suffisso -anus.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": [
+      "Azzano",
+      "Beccacivetta",
+      "La Rizza",
+      "San Martino"
+    ],
+    "comuni_confinanti": [
+      "Buttapietra",
+      "Verona",
+      "Vigasio",
+      "Villafranca di Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Castagnaro",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023020",
+    "codice_catastale": "C041",
+    "popolazione": 3779,
+    "superficie_kmq": 34.74,
+    "densita": 108.8,
+    "cap": "37043",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Nicola",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "castagnaresi",
+    "etimologia": "Riflette il veronese castagnar (castagno), dal latino castanea, nome di pianta molto comune nella zona veronese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Legnago"
+    ],
+    "localita_frazioni": [
+      "Menà Vallestrema"
+    ],
+    "comuni_confinanti": [
+      "Badia Polesine (RO)",
+      "Giacciano con Baruchella (RO)",
+      "Terrazzo",
+      "Villa Bartolomea"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Casaleone",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023019",
+    "codice_catastale": "B886",
+    "popolazione": 5766,
+    "superficie_kmq": 38.28,
+    "densita": 150.6,
+    "cap": "37052",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "casaleonesi",
+    "etimologia": "E' un composto del sostantivo casa e del nome di persona Leone.",
+    "il_comune_e": [
+      "Comune Amico del Turismo Itinerante"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cerea",
+      "Gazzo Veronese",
+      "Ostiglia (MN)",
+      "Sanguinetto"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caprino Veronese",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023018",
+    "codice_catastale": "B709",
+    "popolazione": 8394,
+    "superficie_kmq": 47.31,
+    "densita": 177.4,
+    "cap": "37013",
+    "prefisso_telefonico": "045",
+    "patrono": "Maria SS. Assunta",
+    "festa_patronale": "2 agosto",
+    "demonimo": "caprinesi",
+    "etimologia": "Chiamatosi solo Caprino fino al 1867, deriva dal latino capra, con evidente significato, con l'aggiunta del suffisso -inus. La specifica identifica il luogo geograficamente.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 1 - Montagna del Benaco Orientale",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "Spiazzi",
+      "Pesina"
+    ],
+    "comuni_confinanti": [
+      "Brentino Belluno",
+      "Costermano",
+      "Ferrara di Monte Baldo",
+      "Rivoli Veronese",
+      "San Zeno di Montagna"
+    ],
+    "musei": [
+      "Museo Civico Villa Carlotti"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario della Madonna della Corona (in frazione Spiazzi)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Saulieu (Francia)",
+      "Gau-Algesheim (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Caldiero",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023017",
+    "codice_catastale": "B402",
+    "popolazione": 7826,
+    "superficie_kmq": 10.42,
+    "densita": 751.1,
+    "cap": "37042",
+    "prefisso_telefonico": "045",
+    "patrono": "San Mattia e San Pietro",
+    "festa_patronale": "ultima domenica di febbraio",
+    "demonimo": "caldieresi",
+    "etimologia": "Dal latino calidarium (bagno caldo) in riferimento alle acque termali.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Verona Est",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà"
+    ],
+    "localita_frazioni": [
+      "frazione Caldierino",
+      "località Strà"
+    ],
+    "comuni_confinanti": [
+      "A nord: Colognola ai Colli; a ovest: Lavagno",
+      "San Martino Buon Albergo; a sud: Zevio; a sud e est: Belfiore"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale dei Santi Apostoli Pietro e Mattia",
+      "Chiesa di San Lorenzo Martire",
+      "Chiesetta di San Pietro in colle"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Buttapietra",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023016",
+    "codice_catastale": "B304",
+    "popolazione": 7035,
+    "superficie_kmq": 17.19,
+    "densita": 409.2,
+    "cap": "37060",
+    "prefisso_telefonico": "045",
+    "patrono": "Esaltazione della Santa Croce",
+    "festa_patronale": "17 settembre",
+    "demonimo": "buttapietrini",
+    "etimologia": "Attestato con il nome di Buttapreda, composto da un verbo all'imperativo e da un complemento oggetto, con allusione ad un terreno pietroso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": [
+      "Bovo",
+      "Marchesino",
+      "Settimo Gallese"
+    ],
+    "comuni_confinanti": [
+      "Castel d'Azzano",
+      "Isola della Scala",
+      "Oppeano",
+      "San Giovanni Lupatoto",
+      "Verona",
+      "Vigasio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bussolengo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023015",
+    "codice_catastale": "B296",
+    "popolazione": 20027,
+    "superficie_kmq": 24.28,
+    "densita": 824.8,
+    "cap": "37012",
+    "prefisso_telefonico": "045",
+    "patrono": "San Valentino",
+    "festa_patronale": "14 febbraio",
+    "demonimo": "bussolenghesi",
+    "etimologia": "Deriva dal nome germanico di persona Gozilo o Gauzilo con l'aggiunta del suffisso -engo che si riferisce alla proprietà.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Castelnuovo del Garda",
+      "Lazise",
+      "Pastrengo",
+      "Pescantina",
+      "Sona",
+      "Verona"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Brenzone sul Garda",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023014",
+    "codice_catastale": "B154",
+    "popolazione": 2452,
+    "superficie_kmq": 50.1,
+    "densita": 48.9,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "brenzoniani",
+    "etimologia": "In dialetto Brenson, attestato con il nome di Brenzione e Brencione, potrebbe derivare dal nome germanico di persona Berinza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 1 - Montagna del Benaco Orientale",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Ferrara di Monte Baldo",
+      "Gargnano (BS)",
+      "Malcesine",
+      "San Zeno di Montagna",
+      "Tignale (BS)",
+      "Torri del Benaco",
+      "Tremosine sul Garda (BS)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Brentino Belluno",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023013",
+    "codice_catastale": "B152",
+    "popolazione": 1388,
+    "superficie_kmq": 26.48,
+    "densita": 52.4,
+    "cap": "37020",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giacomo apostolo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "brentesi",
+    "etimologia": "Connesso con le voci brenta e brento (vasca) riferito ad un terreno a forma di conca. Belluno deriva da Belo-dunum, dove dunum è di origine celtica ed equivale al latino oppidum (città fortificata). La radice bel significa brillante.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Baldo",
+      "Regione Agraria n. 1 - Montagna del Benaco Orientale",
+      "Associazione Nazionale Città del Vino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Avio (TN)",
+      "Caprino Veronese",
+      "Dolcè",
+      "Ferrara di Monte Baldo",
+      "Rivoli Veronese"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bovolone",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023012",
+    "codice_catastale": "B107",
+    "popolazione": 15874,
+    "superficie_kmq": 41.41,
+    "densita": 383.3,
+    "cap": "37051",
+    "prefisso_telefonico": "045",
+    "patrono": "San Biagio",
+    "festa_patronale": "3 febbraio",
+    "demonimo": "bovolonesi",
+    "etimologia": "E' attestato con il nome di Bodolone o Buvolone. Potrebbe derivare dal nome longobardo di persona Bodo, con la caduta della d e l'inserzione della v.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 8 - Pianura Veronese del Tartaro",
+      "Associazione Strada del Riso Vialone Nano Veronese IGP"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cerea",
+      "Concamarise",
+      "Isola della Scala",
+      "Isola Rizza",
+      "Oppeano",
+      "Salizzole",
+      "San Pietro di Morubio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Vescovile",
+      "Villa Gagliardi"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Stadecken-Elsheim (Germania)",
+      "Sinnai (Cagliari - Sardegna)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bosco Chiesanuova",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023011",
+    "codice_catastale": "B073",
+    "popolazione": 3599,
+    "superficie_kmq": 64.64,
+    "densita": 55.7,
+    "cap": "37021",
+    "prefisso_telefonico": "045",
+    "patrono": "San Vitale",
+    "festa_patronale": "29 gennaio",
+    "demonimo": "boscochiesanuovesi",
+    "etimologia": "La sua etimologia è chiara, in dialetto è chiamato Ceanoa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Parco Naturale Regionale della Lessinia",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": [
+      "Corbiolo",
+      "Lughezzano-Arzerè",
+      "Valdiporro"
+    ],
+    "comuni_confinanti": [
+      "Ala (TN)",
+      "Cerro Veronese",
+      "Erbezzo",
+      "Grezzana",
+      "Roverè Veronese",
+      "Selva di Progno"
+    ],
+    "musei": [
+      "Museo Civico Etnografico \"La Lessinia: l'Uomo e l'Ambiente\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di Sant'Antonio Abate (in frazione Valdiporro)",
+      "Chiesa di Santa Margherita"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Boschi Sant'Anna",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023010",
+    "codice_catastale": "B070",
+    "popolazione": 1400,
+    "superficie_kmq": 8.97,
+    "densita": 156.1,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "Sant'Anna",
+    "festa_patronale": "26 luglio",
+    "demonimo": "santanesi",
+    "etimologia": "In dialetto Santana,allude alla presenza in zona di vaste selve e a Sant'Anna, patrona del paese.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Dall'Adige al Fratta",
+      "Regione Agraria n. 9 - Pianura di Legnago"
+    ],
+    "localita_frazioni": [
+      "Boschi San Marco",
+      "Oni"
+    ],
+    "comuni_confinanti": [
+      "Bevilacqua",
+      "Legnago",
+      "Minerbe",
+      "Terrazzo"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Rosso",
+      "Villa Donà delle Rose"
+    ],
+    "chiese": [
+      "Chiesa parrocchiale di Sant'Anna",
+      "Chiesa parrocchiale di Santa Giustina",
+      "Chiesa parrocchiale di San Marco"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Choni (Repubblica di Georgia)",
+      "dal maggio 2008"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bonavigo",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023009",
+    "codice_catastale": "A964",
+    "popolazione": 2040,
+    "superficie_kmq": 17.8,
+    "densita": 114.6,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Giovanni Battista",
+    "festa_patronale": "24 giugno",
+    "demonimo": "bonavighesi",
+    "etimologia": "Documentato con il nome di Budanigo, Bodanigo e Bonadigo. Deriva da un antico nome di persona Botena, con l'aggiunta del suffisso -icus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Dall'Adige al Fratta",
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Sentinella dei Fiumi"
+    ],
+    "localita_frazioni": [
+      "frazione: Orti; località: Pilastro",
+      "Bernardine",
+      "Raniera"
+    ],
+    "comuni_confinanti": [
+      "Albaredo d'Adige",
+      "Angiari",
+      "Legnago",
+      "Minerbe",
+      "Roverchiara"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Ober-Hilbersheim (Germania)"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bevilacqua",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023008",
+    "codice_catastale": "A837",
+    "popolazione": 1713,
+    "superficie_kmq": 12.12,
+    "densita": 141.3,
+    "cap": "37040",
+    "prefisso_telefonico": "0442",
+    "patrono": "Santa Monica",
+    "festa_patronale": "seconda domenica di maggio",
+    "demonimo": "bevilacquesi",
+    "etimologia": "Prende il nome dalla famiglia veronese Bevilacqua, in particolare Guglielmo Bevilacqua che visse qui per diverso tempo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Unione Comuni Dall'Adige al Fratta",
+      "Regione Agraria n. 9 - Pianura di Legnago",
+      "Associazione Sentinella dei Fiumi"
+    ],
+    "localita_frazioni": [
+      "Marega"
+    ],
+    "comuni_confinanti": [
+      "Boschi Sant'Anna",
+      "Minerbe",
+      "Montagnana (PD)",
+      "Terrazzo",
+      "Urbana (PD)"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Belfiore",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023007",
+    "codice_catastale": "A737",
+    "popolazione": 3147,
+    "superficie_kmq": 26.47,
+    "densita": 118.9,
+    "cap": "37050",
+    "prefisso_telefonico": "045",
+    "patrono": "Natività di Maria",
+    "festa_patronale": "8 settembre",
+    "demonimo": "belfioresi",
+    "etimologia": "Si è chiamato Belfiore di Porcile fino al 1867. Anticamente si chiamava solo Porcile, dal latino porcus, nel senso di \"stallo per porci\". Gli abitanti del luogo, considerando il nome disdicevole, proposero, nel 1547, il nome di Belfiore in riferimento alla bellezza dei fiori e dei frutti di quel luogo.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Albaredo d'Adige",
+      "Arcole",
+      "Caldiero",
+      "Colognola ai Colli",
+      "Ronco all'Adige",
+      "San Bonifacio",
+      "Soave",
+      "Veronella",
+      "Zevio"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Panterona"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Bardolino",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023006",
+    "codice_catastale": "A650",
+    "popolazione": 7086,
+    "superficie_kmq": 54.81,
+    "densita": 129.3,
+    "cap": "37011",
+    "prefisso_telefonico": "045",
+    "patrono": "San Nicolò",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "bardolinesi",
+    "etimologia": "Dal nome germanico di persona Bardilo. Una leggenda lo riconduce al mito di Troia, facendo derivare la radice del nome da Paradali o Bardali, figlia del re Aulete, fratello di Ocno, figlio dell'eroina tebana Manto, che fondò Mantova.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Associazione Nazionale Città del Vino",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "Calmasino",
+      "Cisano"
+    ],
+    "comuni_confinanti": [
+      "Affi",
+      "Cavaion Veronese",
+      "Costermano",
+      "Garda",
+      "Lazise",
+      "Manerba del Garda (BS)",
+      "Moniga del Garda (BS)",
+      "Padenghe sul Garda (BS)",
+      "Pastrengo"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Pieve di Santa Maria (in località Cisano)",
+      "Chiesa di San Zeno",
+      "Chiesa di San Severo"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Badia Calavena",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023005",
+    "codice_catastale": "A540",
+    "popolazione": 2654,
+    "superficie_kmq": 26.87,
+    "densita": 98.8,
+    "cap": "37030",
+    "prefisso_telefonico": "045",
+    "patrono": "San Vito e Modesto",
+    "festa_patronale": "15 giugno",
+    "demonimo": "badioti",
+    "etimologia": "Si riferisce alla vicina Badia o abbazia benedettina di San Pietro. La seconda parte è riconducibile al nome latino di persona Calavius.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana della Lessinia",
+      "Regione Agraria n. 2 - Monti Lessini",
+      "Area Minoranza Linguistica Cimbra"
+    ],
+    "localita_frazioni": [
+      "Badia Calavena",
+      "Sant'Andrea",
+      "Santissima Trinita'",
+      "San Valentino",
+      "Sprea"
+    ],
+    "comuni_confinanti": [
+      "San Mauro di Saline",
+      "Selva di Progno",
+      "Tregnago",
+      "Velo Veronese",
+      "Vestenanova"
+    ],
+    "musei": [
+      "Museo della Selce",
+      "Ecomuseo"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Pietro",
+      "Chiesa di Sprea",
+      "Chiesa di San Valentino",
+      "Abbazia benedettina di Badia Calavena",
+      "Chiesa di Sant'Andrea"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Arcole",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023004",
+    "codice_catastale": "A374",
+    "popolazione": 6255,
+    "superficie_kmq": 18.81,
+    "densita": 332.5,
+    "cap": "37040",
+    "prefisso_telefonico": "045",
+    "patrono": "San Giorgio",
+    "festa_patronale": "23 aprile",
+    "demonimo": "arcolesi",
+    "etimologia": "Documentato come Arcuare, si riconduce a arcora, plurale di arcus (arco) piuttosto che ad arculae, diminutivo di arca (depositi di grano, piccoli sepolcri).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà"
+    ],
+    "localita_frazioni": [
+      "Gazzolo",
+      "Volpino"
+    ],
+    "comuni_confinanti": [
+      "Belfiore",
+      "Lonigo (VI)",
+      "San Bonifacio",
+      "Veronella",
+      "Zimella"
+    ],
+    "musei": [
+      "Museo Civiltà Contadina",
+      "Museo Napoleonico \"G. Antonelli\""
+    ],
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Angiari",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023003",
+    "codice_catastale": "A292",
+    "popolazione": 2274,
+    "superficie_kmq": 13.47,
+    "densita": 168.8,
+    "cap": "37050",
+    "prefisso_telefonico": "0442",
+    "patrono": "San Michele Arcangelo",
+    "festa_patronale": "29 settembre",
+    "demonimo": "angiaresi",
+    "etimologia": "Dal latino angulus, angolo o angularis (terra erosa da correnti fluviali). Una tradizione popolare lo ritiene derivato da un'espressione latina in glareis (nelle ghiaie) in riferimento al fatto che in zona si scaricavano sabbia e ghiaia per le costruzioni edilizie.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Destra - Adige",
+      "Regione Agraria n. 9 - Pianura di Legnago"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bonavigo",
+      "Cerea",
+      "Legnago",
+      "Roverchiara",
+      "San Pietro di Morubio"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Parrocchiale di San Michele",
+      "Chiesa di Santa Croce"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albaredo d'Adige",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023002",
+    "codice_catastale": "A137",
+    "popolazione": 5239,
+    "superficie_kmq": 28.22,
+    "densita": 185.6,
+    "cap": "37041",
+    "prefisso_telefonico": "045",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "albaretani",
+    "etimologia": "Albaredo deriva dal latino arbor \"albero\" oppure da albulus termine latino che significa \"bianchiccio\", molto usato nel dialetto del luogo per identificare un particolare tipo di pioppo. La specifica, aggiunta nel 1867, identifica la posizione geografica.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Area Geografica: Bacino Idrografico del Fiume Brenta-Bacchiglione",
+      "Regione Agraria n. 7 - Pianura Veronese Alpone Guà"
+    ],
+    "localita_frazioni": [
+      "Coriano",
+      "Michellore",
+      "Presina"
+    ],
+    "comuni_confinanti": [
+      "Belfiore",
+      "Bonavigo",
+      "Ronco all'Adige",
+      "Roverchiara",
+      "Veronella"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Brena",
+      "Villa Malaspina Pellegrini",
+      "Villa Perosini Fontana"
+    ],
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Affi",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023001",
+    "codice_catastale": "A061",
+    "popolazione": 2341,
+    "superficie_kmq": 9.85,
+    "densita": 237.7,
+    "cap": "37010",
+    "prefisso_telefonico": "045",
+    "patrono": "San Pietro in Vincoli",
+    "festa_patronale": "10 luglio",
+    "demonimo": "affiesi",
+    "etimologia": "Dal nome latino di persona Affius o dal nome germanico Alfo. Alcuni lo ritengono derivato dal nome germanico Affi.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Morenica Nord Orientale Benaco",
+      "Comunità del Garda (associazioni enti del bacino del lago di Garda)"
+    ],
+    "localita_frazioni": [
+      "Incaffi",
+      "Ca Orsa"
+    ],
+    "comuni_confinanti": [
+      "Bardolino",
+      "Cavaion Veronese",
+      "Costermano",
+      "Rivoli Veronese"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Poggi (già da Persico)"
+    ],
+    "chiese": [
+      "Chiesa romanica di Sant'Andrea (XI secolo)",
+      "Chiesa di San Pietro in Vincoli",
+      "Chiesa di San Bartolomeo a Caorsa (XIII secolo)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Verona",
+    "provincia": "Verona",
+    "regione": "Veneto",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "023091",
+    "codice_catastale": "L781",
+    "popolazione": 257353,
+    "superficie_kmq": 206.64,
+    "densita": 1245.4,
+    "cap": "37100",
+    "prefisso_telefonico": "045",
+    "patrono": "San Zeno",
+    "festa_patronale": "21 maggio",
+    "demonimo": "veronesi",
+    "etimologia": "Ha origine incerta, potrebbe derivare dalla forma etrusca veru, verona, che potrebbero essere nome di persona, con l'aggiunta del suffisso -ona.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 6 - Pianura Veronese",
+      "Associazione Italiana Città Ciclabili",
+      "Associazione Città Italiane Patrimonio Mondiale Unesco",
+      "Associazione Città del Bio",
+      "Rete delle Città Strategiche (RECS)",
+      "Associazione delle Città d'Arte e Cultura (CIDAC)",
+      "Circuito Città d'Arte della Pianura Padana"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Bussolengo",
+      "Buttapietra",
+      "Castel d'Azzano",
+      "Grezzana",
+      "Mezzane di Sotto",
+      "Negrar",
+      "Pescantina",
+      "Roverè Veronese",
+      "San Giovanni Lupatoto",
+      "San Martino Buon Albergo",
+      "San Mauro di Saline",
+      "San Pietro in Cariano",
+      "Sommacampagna",
+      "Sona",
+      "Tregnago",
+      "Villafranca di Verona"
+    ],
+    "musei": [
+      "Museo Lapidario Maffeiano",
+      "Museo di Castelvecchio",
+      "Museo degli Affreschi e Tomba di Giulietta",
+      "Museo Archeologico al Teatro Romano",
+      "Museo Civico di Storia Naturale",
+      "Fondazione Museo \"Miniscalchi-Erizzo\"",
+      "Museo Canonicale"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Santuario Nostra Signora di Lourdes :: Padri Stimmatini",
+      "Santuario di Santa Teresa di Gesù Bambino :: Frati Carmelitani Scalzi"
+    ],
+    "castelli_fortificazioni": [
+      "Castelvecchio"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardino Giusti",
+      "Giardino Officinale (a Marzana)"
+    ],
+    "luoghi_interesse": null,
+    "teatri": [
+      "Teatro Alba",
+      "Arena di Verona",
+      "Teatro Corallo",
+      "Teatro Filarmonico",
+      "Teatro Filippini",
+      "Teatro Tenda Estravagario",
+      "Cinema Teatro Alcione"
+    ],
+    "stadi": [
+      "Stadio Comunale Marc'Antonio Bentegodi"
+    ],
+    "eventi_feste_sagre": [
+      "Bacanal del Gnoco (venerdì di carnevale)"
+    ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": [
+      "Emilio Salgari (1862 - 1911)",
+      "scrittore"
+    ]
+  }
+]

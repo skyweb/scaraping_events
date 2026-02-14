@@ -1,0 +1,16 @@
+{
+  "nome": "Lodi",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "LO",
+  "codice_istat": "098",
+  "popolazione": 229338,
+  "popolazione_maschi": 112928,
+  "popolazione_femmine": 116410,
+  "superficie_kmq": 782.25,
+  "densita": 293.2,
+  "num_comuni": 61,
+  "capoluogo": "Lodi",
+  "iso_3166_2": "IT-LO",
+  "nuts": "ITC49"
+}

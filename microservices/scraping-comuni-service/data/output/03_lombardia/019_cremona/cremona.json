@@ -1,0 +1,16 @@
+{
+  "nome": "Cremona",
+  "regione": "Lombardia",
+  "zona": null,
+  "sigla": "CR",
+  "codice_istat": "019",
+  "popolazione": 359388,
+  "popolazione_maschi": 176295,
+  "popolazione_femmine": 183093,
+  "superficie_kmq": 1770.57,
+  "densita": 203.0,
+  "num_comuni": 115,
+  "capoluogo": "Cremona",
+  "iso_3166_2": "IT-CR",
+  "nuts": "ITC4A"
+}

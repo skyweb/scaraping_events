@@ -1,0 +1,16 @@
+{
+  "nome": "Pescara",
+  "regione": "Abruzzo",
+  "zona": null,
+  "sigla": "PE",
+  "codice_istat": "068",
+  "popolazione": 321309,
+  "popolazione_maschi": 154431,
+  "popolazione_femmine": 166878,
+  "superficie_kmq": 1224.67,
+  "densita": 262.4,
+  "num_comuni": 46,
+  "capoluogo": "Pescara",
+  "iso_3166_2": "IT-PE",
+  "nuts": "ITF13"
+}

@@ -1,0 +1,16 @@
+{
+  "nome": "Messina",
+  "regione": "Sicilia",
+  "zona": null,
+  "sigla": "ME",
+  "codice_istat": "083",
+  "popolazione": 636653,
+  "popolazione_maschi": 306911,
+  "popolazione_femmine": 329742,
+  "superficie_kmq": 3247.34,
+  "densita": 196.1,
+  "num_comuni": 108,
+  "capoluogo": "Messina",
+  "iso_3166_2": "IT-ME",
+  "nuts": "ITG13"
+}

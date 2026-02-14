@@ -1,0 +1,16 @@
+{
+  "nome": "Pistoia",
+  "regione": "Toscana",
+  "zona": null,
+  "sigla": "PT",
+  "codice_istat": "047",
+  "popolazione": 291839,
+  "popolazione_maschi": 140311,
+  "popolazione_femmine": 151528,
+  "superficie_kmq": 964.98,
+  "densita": 302.4,
+  "num_comuni": 22,
+  "capoluogo": "Pistoia",
+  "iso_3166_2": "IT-PT",
+  "nuts": "ITE13"
+}

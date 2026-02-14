@@ -1,0 +1,16 @@
+{
+  "nome": "Catanzaro",
+  "regione": "Calabria",
+  "zona": null,
+  "sigla": "CZ",
+  "codice_istat": "079",
+  "popolazione": 362343,
+  "popolazione_maschi": 176581,
+  "popolazione_femmine": 185762,
+  "superficie_kmq": 2391.35,
+  "densita": 151.5,
+  "num_comuni": 80,
+  "capoluogo": "Catanzaro",
+  "iso_3166_2": "IT-CZ",
+  "nuts": "ITF63"
+}
