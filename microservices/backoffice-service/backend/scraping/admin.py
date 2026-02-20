@@ -8,7 +8,7 @@ from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 from unfold.admin import ModelAdmin
 
-from .models import ScrapingCategory, ScrapingLocation
+from .models import ScrapingCategory, ScrapingLocation, ScrapingWebsite
 from events.admin_utils import format_date_italian, format_datetime_italian, render_event_status_chip
 
 
@@ -113,3 +113,66 @@ class ScrapingLocationAdmin(ModelAdmin):
         )
         return mark_safe(header + ''.join([str(r) for r in rows]) + '</tbody></table>')
     related_events.short_description = "Eventi"
+
+
+@admin.register(ScrapingWebsite)
+class ScrapingWebsiteAdmin(ModelAdmin):
+    """Admin per i portali web scrapati con relativi spider e CMS."""
+    list_display = ['name', 'spider_name', 'cms_badge', 'source_url_link', 'status_chip']
+    list_display_links = ['name']
+    list_filter = ['cms', 'is_active']
+    search_fields = ['name', 'spider_name', 'source_url']
+    ordering = ['name']
+
+    fieldsets = (
+        (None, {
+            'fields': ('name', 'source_url', 'is_active'),
+        }),
+        ('Spider', {
+            'fields': ('spider_name', 'cms'),
+        }),
+        ('Note', {
+            'fields': ('notes',),
+            'classes': ['wide'],
+        }),
+    )
+
+    def cms_badge(self, obj):
+        """Badge colorato per il tipo di CMS."""
+        colors = {
+            'drupal': ('#0678be', '#fff'),
+            'wordpress': ('#21759b', '#fff'),
+            'api_rest': ('#16a34a', '#fff'),
+            'custom': ('#6b7280', '#fff'),
+        }
+        bg, fg = colors.get(obj.cms, ('#6b7280', '#fff'))
+        return format_html(
+            '<span style="background:{};color:{};padding:2px 8px;border-radius:9999px;'
+            'font-size:0.75rem;font-weight:600;">{}</span>',
+            bg, fg, obj.get_cms_display(),
+        )
+    cms_badge.short_description = 'CMS'
+    cms_badge.admin_order_field = 'cms'
+
+    def source_url_link(self, obj):
+        """URL del sito come link cliccabile."""
+        return format_html(
+            '<a href="{}" target="_blank" rel="noopener" style="color:#7c3aed;">{}</a>',
+            obj.source_url,
+            obj.source_url,
+        )
+    source_url_link.short_description = 'URL'
+
+    def status_chip(self, obj):
+        """Chip colorato per lo stato attivo/inattivo."""
+        if obj.is_active:
+            return format_html(
+                '<span style="background:#dcfce7;color:#16a34a;padding:2px 10px;'
+                'border-radius:9999px;font-size:0.75rem;font-weight:600;">Attivo</span>'
+            )
+        return format_html(
+            '<span style="background:#fee2e2;color:#dc2626;padding:2px 10px;'
+            'border-radius:9999px;font-size:0.75rem;font-weight:600;">Inattivo</span>'
+        )
+    status_chip.short_description = 'Stato'
+    status_chip.admin_order_field = 'is_active'

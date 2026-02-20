@@ -1,4 +1,4 @@
-pos# Events Scraper
+# Events Scraper
 
 Progetto Scrapy per lo scraping di eventi da diverse fonti italiane
 
@@ -9,6 +9,8 @@ Progetto Scrapy per lo scraping di eventi da diverse fonti italiane
 | `zero_eu` | [zero.eu](https://zero.eu) | Eventi culturali (concerti, mostre, teatro) |
 | `city_today` | Rete *Today.it | 50+ città italiane (MilanoToday, RomaToday, etc.) |
 | `artribune` | [artribune.com](https://artribune.com) | Mostre d'arte e eventi culturali |
+| `in_lombardia` | [in-lombardia.it](https://www.in-lombardia.it) | Portale eventi della Lombardia (JSON-LD Schema.org) |
+| `la_mia_liguria` | [lamialiguria.it](https://lamialiguria.it) | Portale turistico eventi della Liguria (WordPress) |
 
 ## Quick Start
 
@@ -127,6 +129,24 @@ curl http://localhost:6800/cancel.json \
 |-----------|-------------|---------|
 | `max_pages` | Limite pagine | Tutte |
 | `per_page` | Eventi per pagina | 100 |
+
+### in_lombardia
+
+| Parametro | Descrizione | Default |
+|-----------|-------------|---------|
+| `max_pages` | Numero massimo pagine listing | `5` |
+
+Usa JSON-LD Schema.org `@type: Event` per titolo, date, location, immagine.
+Integra categoria (tassonomia Drupal), prezzo e orario dall'HTML.
+
+### la_mia_liguria
+
+| Parametro | Descrizione | Default |
+|-----------|-------------|---------|
+| `max_pages` | Numero massimo pagine listing | `5` |
+
+Sito WordPress con JSON-LD `WebPage`. Date da `.data-inizio`/`.data-fine`,
+città da `.event-location`, categoria dalla card listing.
 
 ## Output
 

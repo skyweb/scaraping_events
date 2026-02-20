@@ -503,9 +503,14 @@ UNFOLD = {
                 "separator": True,
                 "items": [
                     {
+                        "title": "Websites",
+                        "icon": "language",
+                        "link": "/admin/scraping/scrapingwebsite/",
+                    },
+                    {
                         "title": "Categorie",
                         "icon": "category",
-                        "link": "/admin/scraping/scrapingcategoria/",
+                        "link": "/admin/scraping/scrapingcategory/",
                     },
                     {
                         "title": "Location",
