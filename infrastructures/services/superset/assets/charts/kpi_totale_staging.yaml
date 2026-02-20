@@ -1,0 +1,23 @@
+slice_name: Totale Staging
+viz_type: big_number_total
+params:
+  viz_type: big_number_total
+  metric:
+    expressionType: SIMPLE
+    column:
+      column_name: id
+      type: INTEGER
+    aggregate: COUNT
+    label: COUNT(id)
+    hasCustomLabel: false
+  adhoc_filters: []
+  time_range: "No filter"
+  header_font_size: 0.3
+  subheader_font_size: 0.125
+  y_axis_format: SMART_NUMBER
+  extra_form_data: {}
+query_context: null
+cache_timeout: null
+uuid: c0000001-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+version: 1.0.0
+dataset_uuid: b1b1b1b1-b1b1-b1b1-b1b1-b1b1b1b1b1b1

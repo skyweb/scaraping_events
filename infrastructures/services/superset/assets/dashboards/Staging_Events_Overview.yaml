@@ -1,0 +1,202 @@
+dashboard_title: Staging Events Overview
+description: Dashboard di monitoraggio eventi in staging - dati grezzi da scraping
+css: ''
+slug: staging-events-overview
+uuid: d0000001-d0d0-d0d0-d0d0-d0d0d0d0d0d0
+version: 1.0.0
+position:
+  DASHBOARD_VERSION_KEY: v2
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  GRID_ID:
+    children:
+    - ROW-kpi
+    - ROW-bar
+    - ROW-trend
+    - ROW-table
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+
+  # Riga 1 — KPI
+  ROW-kpi:
+    children:
+    - CHART-kpi1
+    - CHART-kpi2
+    - CHART-kpi3
+    - CHART-kpi4
+    id: ROW-kpi
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  CHART-kpi1:
+    children: []
+    id: CHART-kpi1
+    meta:
+      chartId: 0
+      height: 50
+      sliceName: Totale Staging
+      uuid: c0000001-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-kpi
+    type: CHART
+  CHART-kpi2:
+    children: []
+    id: CHART-kpi2
+    meta:
+      chartId: 0
+      height: 50
+      sliceName: Attivi
+      uuid: c0000002-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-kpi
+    type: CHART
+  CHART-kpi3:
+    children: []
+    id: CHART-kpi3
+    meta:
+      chartId: 0
+      height: 50
+      sliceName: Fonti attive
+      uuid: c0000003-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-kpi
+    type: CHART
+  CHART-kpi4:
+    children: []
+    id: CHART-kpi4
+    meta:
+      chartId: 0
+      height: 50
+      sliceName: "Citt\xE0 coperte"
+      uuid: c0000004-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-kpi
+    type: CHART
+
+  # Riga 2 — Bar chart fonti e città
+  ROW-bar:
+    children:
+    - CHART-bar1
+    - CHART-bar2
+    id: ROW-bar
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  CHART-bar1:
+    children: []
+    id: CHART-bar1
+    meta:
+      chartId: 0
+      height: 100
+      sliceName: Eventi per fonte
+      uuid: c0000005-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-bar
+    type: CHART
+  CHART-bar2:
+    children: []
+    id: CHART-bar2
+    meta:
+      chartId: 0
+      height: 100
+      sliceName: "Top 15 citt\xE0"
+      uuid: c0000006-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-bar
+    type: CHART
+
+  # Riga 3 — Trend scraping
+  ROW-trend:
+    children:
+    - CHART-trend
+    id: ROW-trend
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  CHART-trend:
+    children: []
+    id: CHART-trend
+    meta:
+      chartId: 0
+      height: 100
+      sliceName: Trend scraping (ultimi 30 giorni)
+      uuid: c0000007-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-trend
+    type: CHART
+
+  # Riga 4 — Tabella ultimi eventi
+  ROW-table:
+    children:
+    - CHART-table
+    id: ROW-table
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  CHART-table:
+    children: []
+    id: CHART-table
+    meta:
+      chartId: 0
+      height: 160
+      sliceName: Ultimi eventi scrapati
+      uuid: c0000008-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-table
+    type: CHART
+
+metadata:
+  native_filter_configuration: []
+  chart_configuration: {}
+  color_scheme: supersetColors
+  expanded_slices: {}
+  filter_scopes: {}
+  label_colors: {}
+  shared_label_colors: []
+  color_scheme_domain: []
+  cross_filters_enabled: false
+  import_time: 1740000000
+  refresh_frequency: 0
+  remote_id: null
+  timed_refresh_immune_slices: []

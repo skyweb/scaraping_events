@@ -1,0 +1,20 @@
+slice_name: Attivi
+viz_type: big_number_total
+params:
+  viz_type: big_number_total
+  metric:
+    expressionType: SQL
+    sqlExpression: "COUNT(CASE WHEN is_active IS TRUE THEN 1 END)"
+    label: Attivi
+    hasCustomLabel: true
+  adhoc_filters: []
+  time_range: "No filter"
+  header_font_size: 0.3
+  subheader_font_size: 0.125
+  y_axis_format: SMART_NUMBER
+  extra_form_data: {}
+query_context: null
+cache_timeout: null
+uuid: c0000002-c0c0-c0c0-c0c0-c0c0c0c0c0c0
+version: 1.0.0
+dataset_uuid: b1b1b1b1-b1b1-b1b1-b1b1-b1b1b1b1b1b1

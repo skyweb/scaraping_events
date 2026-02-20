@@ -292,6 +292,68 @@ services:
         aliases:
           - grafana
 
+  # Apache Superset Init (setup una tantum)
+  superset-init:
+    image: apache/superset:4.0.2
+    container_name: dev-superset-init
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY:-superset-secret-dev-change-me}
+      DATABASE_HOST: postgres
+      DATABASE_USER: ${POSTGRES_USER}
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_PORT: "5432"
+      DATABASE_DB: superset
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      SUPERSET_ADMIN_USER: ${SUPERSET_ADMIN_USER:-admin}
+      SUPERSET_ADMIN_EMAIL: ${SUPERSET_ADMIN_EMAIL:-admin@superset.local}
+      SUPERSET_ADMIN_PASSWORD: ${SUPERSET_ADMIN_PASSWORD:-admin}
+      # DB applicativo da esporre come sorgente dati in Superset
+      EVENTS_DB_NAME: ${POSTGRES_DB:-today_events}
+    volumes:
+      - ./services/superset/superset_config.py:/app/pythonpath/superset_config.py:ro
+      - ./services/superset/init.sh:/app/init.sh:ro
+      - ./services/superset/assets:/app/assets:ro
+    command: bash /app/init.sh
+    networks:
+      - dev-network
+    restart: "no"
+
+  # Apache Superset (BI Dashboard eventi)
+  superset:
+    image: apache/superset:4.0.2
+    container_name: dev-superset
+    depends_on:
+      superset-init:
+        condition: service_completed_successfully
+    environment:
+      SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY:-superset-secret-dev-change-me}
+      DATABASE_HOST: postgres
+      DATABASE_USER: ${POSTGRES_USER}
+      DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_PORT: "5432"
+      DATABASE_DB: superset
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      SUPERSET_CONFIG_PATH: /app/pythonpath/superset_config.py
+    volumes:
+      - ./services/superset/superset_config.py:/app/pythonpath/superset_config.py:ro
+      - superset-dev-data:/app/superset_home
+    ports:
+      - "${SUPERSET_PORT:-8088}:8088"
+    restart: unless-stopped
+    networks:
+      dev-network:
+        aliases:
+          - superset
+
   # Nginx Reverse Proxy
   nginx:
     image: nginx:alpine
@@ -366,6 +428,8 @@ volumes:
     name: dev-loki-data
   grafana-dev-data:
     name: dev-grafana-data
+  superset-dev-data:
+    name: dev-superset-data
 
 networks:
   dev-network:

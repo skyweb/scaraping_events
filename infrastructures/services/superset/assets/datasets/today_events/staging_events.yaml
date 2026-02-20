@@ -1,0 +1,190 @@
+table_name: staging_events
+main_dttm_col: scraped_at
+description: Tabella staging eventi da scraping - dati grezzi pre-validazione ETL
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: events_data
+sql: null
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: '{}'
+uuid: b1b1b1b1-b1b1-b1b1-b1b1-b1b1b1b1b1b1
+version: 1.0.0
+database_uuid: a1a1a1a1-a1a1-a1a1-a1a1-a1a1a1a1a1a1
+metrics:
+  - metric_name: count
+    verbose_name: Totale eventi
+    metric_type: count
+    expression: COUNT(*)
+    description: Conteggio totale righe staging
+    d3format: null
+    extra: '{}'
+    warning_text: null
+  - metric_name: count_active
+    verbose_name: Eventi attivi
+    metric_type: count
+    expression: COUNT(CASE WHEN is_active THEN 1 END)
+    description: Conteggio eventi attivi
+    d3format: null
+    extra: '{}'
+    warning_text: null
+  - metric_name: count_distinct_source
+    verbose_name: Fonti distinte
+    metric_type: count_distinct
+    expression: COUNT(DISTINCT source)
+    description: Numero fonti uniche
+    d3format: null
+    extra: '{}'
+    warning_text: null
+  - metric_name: count_distinct_city
+    verbose_name: Città coperte
+    metric_type: count_distinct
+    expression: COUNT(DISTINCT city)
+    description: Numero città uniche
+    d3format: null
+    extra: '{}'
+    warning_text: null
+columns:
+  - column_name: id
+    verbose_name: ID
+    is_dttm: false
+    is_active: true
+    type: INTEGER
+    groupby: false
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: uuid
+    verbose_name: UUID Evento
+    is_dttm: false
+    is_active: true
+    type: VARCHAR(16)
+    groupby: true
+    filterable: true
+    expression: ''
+    description: Hash univoco (titolo+data+location)
+    python_date_format: null
+  - column_name: source
+    verbose_name: Fonte
+    is_dttm: false
+    is_active: true
+    type: VARCHAR(50)
+    groupby: true
+    filterable: true
+    expression: ''
+    description: 'Sorgente scraping: city_today, zero_eu, artribune'
+    python_date_format: null
+  - column_name: title
+    verbose_name: Titolo
+    is_dttm: false
+    is_active: true
+    type: TEXT
+    groupby: false
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: city
+    verbose_name: Città
+    is_dttm: false
+    is_active: true
+    type: VARCHAR(100)
+    groupby: true
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: location_name
+    verbose_name: Venue
+    is_dttm: false
+    is_active: true
+    type: VARCHAR(255)
+    groupby: true
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: price
+    verbose_name: Prezzo
+    is_dttm: false
+    is_active: true
+    type: TEXT
+    groupby: false
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: is_active
+    verbose_name: Attivo
+    is_dttm: false
+    is_active: true
+    type: BOOLEAN
+    groupby: true
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: date_start
+    verbose_name: Data Inizio
+    is_dttm: true
+    is_active: true
+    type: DATE
+    groupby: true
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: date_end
+    verbose_name: Data Fine
+    is_dttm: true
+    is_active: true
+    type: DATE
+    groupby: true
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: scraped_at
+    verbose_name: Scrapato il
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP WITH TIME ZONE
+    groupby: true
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: created_at
+    verbose_name: Creato il
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP WITH TIME ZONE
+    groupby: true
+    filterable: true
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: updated_at
+    verbose_name: Aggiornato il
+    is_dttm: true
+    is_active: true
+    type: TIMESTAMP WITH TIME ZONE
+    groupby: false
+    filterable: false
+    expression: ''
+    description: null
+    python_date_format: null
+  - column_name: url
+    verbose_name: URL
+    is_dttm: false
+    is_active: true
+    type: TEXT
+    groupby: false
+    filterable: false
+    expression: ''
+    description: null
+    python_date_format: null
