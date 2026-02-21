@@ -33,6 +33,7 @@ urlpatterns = [
     path('api/', include('events.urls')),
     path('api/comuni-istat/', include('comuni_istat_ingestion.urls')),
     path('api/cms/', include('cms.urls')),
+    path('api/scraping/', include('scraping.urls')),
 
     # API Documentation
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

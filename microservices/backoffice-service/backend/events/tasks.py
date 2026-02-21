@@ -24,7 +24,7 @@ def process_bulk_events(self, events_data, spider_name='unknown'):
     Returns:
         dict con spider_name, created_count, failed_count, failed_events
     """
-    from .serializers import StagingEventCreateSerializer
+    from .serializers import StagingEventScrapingSerializer
     from .models import StagingEvent
 
     logger.info(f"Processing bulk events from spider: {spider_name} ({len(events_data)} events)")
@@ -36,7 +36,7 @@ def process_bulk_events(self, events_data, spider_name='unknown'):
 
     # 1. Validate each item
     for idx, data in enumerate(events_data):
-        serializer = StagingEventCreateSerializer(data=data)
+        serializer = StagingEventScrapingSerializer(data=data)
         if serializer.is_valid():
             valid_instances.append(StagingEvent(**serializer.validated_data))
             span.add_event("event.validated", attributes={

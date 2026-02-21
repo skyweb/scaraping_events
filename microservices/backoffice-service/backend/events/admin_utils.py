@@ -32,7 +32,7 @@ def render_event_status_chip(date_start, date_end):
     """
     Restituisce un chip colorato in base allo stato temporale dell'evento.
 
-    - Rosso: Passato (date_end < oggi)
+    - Rosso: Scaduto (date_end < oggi)
     - Verde: In corso (oggi compreso tra start e end)
     - Blu: Futuro (date_start > oggi)
 
@@ -45,11 +45,11 @@ def render_event_status_chip(date_start, date_end):
     end = date_end if date_end else date_start
 
     if end < today:
-        return render_chip('Passato', '#991b1b', '#fee2e2')
+        return render_chip('Scaduto', '#991b1b', '#fee2e2')
     elif date_start <= today <= end:
         return render_chip('In corso', '#166534', '#dcfce7')
     else:
-        return render_chip('Futuro', '#1e40af', '#dbeafe')
+        return render_chip('Prossimamente', '#1e40af', '#dbeafe')
 
 
 # =============================================================================

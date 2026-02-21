@@ -1,54 +1,47 @@
 {
-  "event_template": {
-    "id": null,
-    "url": "",
-    "slug": "",
-    "title": "",
-    "description": "",
-    "category": [],
-    "image_url": "",
-    "city": "",
-    "location_name": "",
-    "location_address": "",
-    "location_coords": {
-      "lat": null,
-      "lng": null
-    },
-    "price": "",
-    "date_start": "YYYY-MM-DD",
-    "date_end": "YYYY-MM-DD",
-    "date_display": "",
-    "time_start": "HH:MM",
-    "time_end": "HH:MM",
-    "time_info": "",
-    "schedule": "",
-    "weekdays": "",
-    "dates": [
-      {
-        "date": "YYYY-MM-DD",
-        "weekday": "",
-        "time_start": "HH:MM",
-        "time_end": "HH:MM"
-      }
-    ],
-    "website": "",
-    "scraped_at": "ISO8601",
-    "source": "zero_eu | city_today"
-  },
-  "sources": {
-    "zero_eu": {
-      "fields": ["id", "url", "slug", "title", "description", "category", "image_url", "city", "location_name", "location_coords", "location_address", "price", "date_start", "date_end", "date_display", "time_start", "time_end", "date_scope", "scraped_at"]
-    },
-    "city_today": {
-      "fields": ["url", "title", "category", "image_url", "city", "location_name", "location_address", "price", "description", "website", "date_start", "date_end", "time_info", "schedule", "weekdays", "dates", "scraped_at"]
+  "spider": "puglia_culture",
+  "events": [
+    {
+      "uuid": "e6a0e6b56d8f6308",
+      "content_hash": "79bf946ea175a6ab",
+      "source": "puglia_culture",
+      "title": "LA DEA DEL CERCHIO",
+      "stars": 3,
+      "category": [
+        "teatro","La scena dei ragazzi"
+      ],
+      "section": {
+        "teatro": {
+          "rassegna": "TORREMAGGIORE – La Scena dei Ragazzi 2025/26",
+          "cast": "La luna nel letto<br>\nLA DEA DEL CERCHIO<br>\ndi e con Marianna di Muro<br>\nregia, scene e luci MICHELANGELO CAMPANALE",
+        }
+      },
+      "city": {
+        "city_id": null,
+        "city_name": "",
+        "location_name": "Sala Consiliare del Castello Ducale di Torremaggiore - Torremaggiore",
+        "location_address": "test",
+        "location_coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "dates": {
+        "date_start": "2026-02-04",
+        "time_start": "10:00",
+        "date_end": "2026-04-13",
+        "time_end": "11:30",
+        "time_info": "<div class=\"event-dates\">\n<strong></strong> <ul>\n<li class=\"single_data\">\n<div class=\"giorno_esteso\" style=\"background-color:#ACBC3A26; color:#ACBC3A;\">04<br>febbraio</div>\n<div class=\"data_event_single\" style=\"background-color:#ACBC3A\">mercoledì 04 febbraio 2026<br><strong>H: 10:00</strong>\n</div> </li>\n<li class=\"single_data\">\n<div class=\"giorno_esteso\" style=\"background-color:#ACBC3A26; color:#ACBC3A;\">04<br>febbraio</div>\n<div class=\"data_event_single\" style=\"background-color:#ACBC3A\">mercoledì 04 febbraio 2026<br><strong>H: 11:30</strong>\n</div> </li>\n</ul>\n</div>"
+      },
+      "url": "https://www.pugliaculture.it/evento/la-dea-del-cerchio-2/",
+      "description": "<p>La dea del cerchio è una storia di bambini, di giochi nei cortili. Una storia personale che si incrocia con il mondo mitico dell’antica Grecia. Così Marianna riapre la sua scatola dei giochi e torna a quell’estate del 1988. Ogni giorno giocava in cortile con le sue amiche e i suoi amici, sotto la statua della dea Atena, la dea della saggezza, della sapienza, delle arti femminili. La presenza della statua aiutava tutti a rimanere ligi alle regole del gioco, onesticongliavversari.Delgiocodicuieranopiùbrave,lebambinediventavanodee.Mariannaerastataladea del cerchio per tre anni di seguito, fino a quando non è arrivata lei, Elisa.Unastoriasull’invidia,unastoriaincuièfacilericonoscersiperchéprovareinvidianonèsbagliato,èsolo umano.</p>",
+      "image_url": "https://www.pugliaculture.it/wp-content/uploads/2024/11/La-luna-nel-letto_la-dea-del-cerchio-2.jpg",
+      "price": "4",
+      "info_extra": {
+        "info_e_costi": "DOMENICALI - Sala Consiliare del Castello Ducale<br>Spettacoli ore 17.30<br>Biglietto € 4<br><br>Matinée PER LE SCUOLE - Sala Consiliare del Castello Ducale<br>Biglietto € 4<br><br>Info e biglietteria<br>Ufficio Cultura Comune di Torremaggiore 0882- 605000/391114<br>servizi.culturali@comune.torremaggiore.fg.it<br>Biglietteria",
+        "info_e_contatti": "Ufficio Cultura Comune di Torremaggiore 0882- 605000/391114"
+      },
+      "scraped_at": "2026-02-20 20:12:18"
     }
-  },
-  "field_mapping": {
-    "category": "Array in zero_eu, String in city_today - normalize to Array",
-    "time_start/time_end": "Direct in zero_eu, inside dates[] in city_today",
-    "location_coords": "Only in zero_eu",
-    "dates": "Only in city_today - array of individual dates with times",
-    "website": "Only in city_today",
-    "slug": "Only in zero_eu"
-  }
+  ]
 }

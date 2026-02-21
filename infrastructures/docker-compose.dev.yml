@@ -211,6 +211,24 @@ services:
     networks:
       - dev-network
 
+  # Flower — UI monitoraggio Celery
+  flower:
+    image: mher/flower:2.0
+    container_name: dev-flower
+    restart: unless-stopped
+    command: celery flower --broker=${CELERY_BROKER_URL} --url-prefix=flower --persistent=True --db=/data/flower.db
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+    volumes:
+      - flower-dev-data:/data
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      dev-network:
+        aliases:
+          - flower
+
   # Frontend (React + Vite dev server)
   frontend:
     build:
@@ -430,6 +448,8 @@ volumes:
     name: dev-grafana-data
   superset-dev-data:
     name: dev-superset-data
+  flower-dev-data:
+    name: dev-flower-data
 
 networks:
   dev-network:

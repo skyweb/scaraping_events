@@ -74,11 +74,14 @@ EVENT_FORM_WIDGETS = {
     'title': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'description': CKEditor5Widget(config_name='default'),
     'raw_data': forms.Textarea(attrs={'rows': 15, 'style': 'font-family: monospace; width: 100%;'}),
+    'info_extra': forms.Textarea(attrs={'rows': 8, 'style': 'font-family: monospace; width: 100%;'}),
     'city': CityAutocompleteWidget(),
+    'city_name': CityAutocompleteWidget(),
     'category': CategoryChipsWidget(),
     'location_name': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'location_address': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'price': forms.TextInput(attrs={'style': 'width: 100%;'}),
+    'image_url': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'website': forms.URLInput(attrs={'style': 'width: 100%;'}),
 }
 
@@ -152,12 +155,12 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             'all': ('events/css/admin_custom.css',)
         }
 
-    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city', 'source', 'loaded_at']
+    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city_name', 'source', 'created_at']
     list_display_links = ['title']
-    list_filter = [TemporalStatusFilter, 'city', 'source', CategoryFilter]
+    list_filter = [TemporalStatusFilter, 'city_name', 'source', CategoryFilter]
     search_fields = ['title', 'description', 'uuid']
     readonly_fields = [
-        'loaded_at', 'image_preview', 'image_thumbnail', 'description_preview',
+        'created_at', 'image_preview', 'image_thumbnail', 'description_preview',
         'json_preview', 'clickable_url', 'clickable_image_url', 'source', 'uuid',
         'content_hash', 'category_list', 'date_start_display', 'date_start_ro', 'date_end_ro',
         'event_status_chip', 'creation_date_display',
@@ -170,7 +173,9 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 ('source', 'uuid', 'creation_date_display'),
                 ('date_start_ro', 'date_end_ro', 'event_status_chip'),
                 'title',
-                ('city', 'location_address', 'location_name'),
+                'section',
+                ('city_name', 'location_name', 'location_address'),
+                'location_coordinates',
                 'category_list',
                 'clickable_url',
             ),
@@ -181,7 +186,8 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 'description',
                 'category',
                 ('image_preview', 'clickable_image_url'),
-                ('price', 'website'),
+                'price',
+                'info_extra',
             ),
             'classes': ['tab'],
         }),
@@ -190,7 +196,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 'date_start_display',
                 ('date_start', 'date_end'),
                 ('time_start', 'time_end'),
-                ('time_info', 'schedule', 'weekdays'),
+                'time_info',
             ),
             'classes': ['tab'],
         }),
@@ -205,8 +211,8 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
     )
 
     def creation_date_display(self, obj):
-        """Data di creazione (loaded_at) formattata dd/mm/yyyy HH:MM."""
-        return format_datetime_italian(obj.loaded_at)
+        """Data di creazione (created_at) formattata dd/mm/yyyy HH:MM."""
+        return format_datetime_italian(obj.created_at)
     creation_date_display.short_description = "Data creazione"
 
 

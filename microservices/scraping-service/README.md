@@ -148,6 +148,13 @@ Integra categoria (tassonomia Drupal), prezzo e orario dall'HTML.
 Sito WordPress con JSON-LD `WebPage`. Date da `.data-inizio`/`.data-fine`,
 città da `.event-location`, categoria dalla card listing.
 
+## Docker 
+
+```bash
+$ make crawl SPIDER=puglia_culture ARGS="-a max_pages=1"
+$ docker compose exec scrapyd scrapy crawl puglia_culture -a max_pages=1 
+```
+
 ## Output
 
 Gli eventi vengono estratti con la seguente struttura:

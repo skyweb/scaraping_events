@@ -18,12 +18,13 @@ from .serializers import (
     ProductionEventSerializer,
     ProductionEventListSerializer,
     StagingEventSerializer,
-    StagingEventCreateSerializer,
+    StagingEventScrapingSerializer,
+    StagingEventLegacySerializer,
     EtlRunSerializer,
     EtlErrorSerializer,
     DashboardStatsSerializer,
-    FailedEventSerializer,  # New
-    BulkProcessResponseSerializer, # New
+    FailedEventSerializer,
+    BulkProcessResponseSerializer,
 )
 
 
@@ -34,7 +35,7 @@ class BulkCreateResponseSerializer(drf_serializers.Serializer):
 
 
 class BulkCreateRequestSerializer(drf_serializers.Serializer):
-    events = StagingEventCreateSerializer(many=True)
+    events = StagingEventScrapingSerializer(many=True)
 
 
 class ClearSourceResponseSerializer(drf_serializers.Serializer):
@@ -420,7 +421,7 @@ class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
 
     def get_serializer_class(self):
         if self.action in ['create', 'update', 'partial_update', 'bulk_create']:
-            return StagingEventCreateSerializer
+            return StagingEventScrapingSerializer
         return StagingEventSerializer
 
     @extend_schema(
@@ -592,12 +593,22 @@ Crea multipli staging events in una sola richiesta.
         )
 
     def _bulk_sync(self, events_data):
-        """Logica sincrona per il bulk create (backward compatible)."""
+        """Logica sincrona per il bulk create.
+
+        Rileva il formato automaticamente:
+        - Formato event scraping (con 'uuid', 'city', 'dates'): usa StagingEventScrapingSerializer
+        - Formato legacy (nested con 'details'): usa StagingEventLegacySerializer
+        """
         successful_events = []
         failed_events = []
 
         for index, item_data in enumerate(events_data):
-            serializer = StagingEventCreateSerializer(data=item_data)
+            # Rileva formato in base alla struttura delle chiavi
+            if 'details' in item_data:
+                serializer = StagingEventLegacySerializer(data=item_data)
+            else:
+                serializer = StagingEventScrapingSerializer(data=item_data)
+
             if serializer.is_valid():
                 try:
                     instance = serializer.save()
@@ -615,24 +626,19 @@ Crea multipli staging events in una sola richiesta.
                     'index': index
                 })
 
-        response_data = {
+        if successful_events and not failed_events:
+            status_code = status.HTTP_201_CREATED
+        elif not successful_events and failed_events:
+            status_code = status.HTTP_400_BAD_REQUEST
+        else:
+            status_code = status.HTTP_200_OK
+
+        return Response({
             'successful_events': StagingEventSerializer(successful_events, many=True).data,
             'failed_events': failed_events,
             'created_count': len(successful_events),
             'failed_count': len(failed_events),
-        }
-        response_serializer = BulkProcessResponseSerializer(data=response_data)
-        response_serializer.is_valid(raise_exception=True)
-
-        status_code = status.HTTP_200_OK
-        if successful_events and failed_events:
-            status_code = status.HTTP_200_OK
-        elif not successful_events and failed_events:
-            status_code = status.HTTP_400_BAD_REQUEST
-        elif successful_events and not failed_events:
-            status_code = status.HTTP_201_CREATED
-
-        return Response(response_serializer.data, status=status_code)
+        }, status=status_code)
 
     @extend_schema(
         summary="Stato bulk task asincrono",

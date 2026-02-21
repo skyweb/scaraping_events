@@ -221,20 +221,53 @@ class PugliaCultureSpider(BaseEventSpider):
         # ── Date e orari ──────────────────────────────────────────────────────
         date_info = self._extract_dates(response)
         date_start = date_info.get("date_start")
-        date_end = date_info.get("date_end")
+        # Se non c'è una date_end distinta, è uguale a date_start
+        date_end = date_info.get("date_end") or date_start
         date_display = date_info.get("display")
         time_start = date_info.get("time_start")
 
         # ── Luogo (Teatro) ────────────────────────────────────────────────────
         location_name = self._extract_location(response)
 
-        # ── Descrizione artistica (Cast) ──────────────────────────────────────
+        # ── City name: parte dopo " - " in location_name ──────────────────────
+        # es: "Teatro Comunale di Nardò - Nardò" → "Nardò"
+        city_name = None
+        if location_name and " - " in location_name:
+            city_name = location_name.rsplit(" - ", 1)[-1].strip() or None
+
+        # ── Descrizione (HTML grezzo da div.spettacolo-content) ───────────────
         description = self._extract_description(response)
 
         # ── COSTI E INFO (blocco completo) ────────────────────────────────────
         costi_info = self._extract_costi_info(response)
         price = self._extract_price_from_costi(costi_info)
         website = self._extract_website_from_costi(response)
+
+        # ── Time info (HTML raw del blocco date) ──────────────────────────────
+        time_info = response.css("div.event-dates").get() or None
+
+        # ── Section annidato (prima categoria come chiave) ────────────────────
+        section = {}
+        if category:
+            section_key = category[0]
+            section_data = {}
+            # Rassegna = seconda categoria (es: "La Scena dei Ragazzi")
+            if len(category) > 1:
+                section_data["rassegna"] = category[1]
+            # Cast = HTML grezzo del blocco cast/regia
+            cast_html = response.css("div.event_cast").get()
+            if cast_html:
+                section_data["cast"] = cast_html
+            elif description:
+                section_data["cast"] = description
+            section[section_key] = section_data
+
+        # ── Info extra (costi + contatti) ─────────────────────────────────────
+        info_extra = {}
+        if costi_info:
+            info_extra["info_e_costi"] = costi_info
+        if website:
+            info_extra["info_e_contatti"] = website
 
         slug = response.meta.get("slug") or response.url.rstrip("/").split("/")[-1]
 
@@ -246,11 +279,15 @@ class PugliaCultureSpider(BaseEventSpider):
             date_end=date_end,
             date_display=date_display,
             time_start=time_start,
+            city=city_name,
             location_name=location_name,
             image_url=image_url,
             category=category,
             price=price,
             website=website,
+            section=section or None,
+            info_extra=info_extra or None,
+            time_info=time_info,
             slug=slug,
             event_id=response.meta.get("event_id", slug),
             raw_data={"costi_info": costi_info},
@@ -279,12 +316,14 @@ class PugliaCultureSpider(BaseEventSpider):
         Estrae date e orari dall'HTML.
 
         Struttura reale della pagina:
-            <li>
-              <div>13</div>
-              <div>venerdì 13 marzo 2026H: 21:00</div>
+            <li class="single_data">
+              <div class="giorno_esteso">04<br>febbraio</div>
+              <div class="data_event_single">
+                mercoledì 04 febbraio 2026
+                <strong>H: 10:00</strong>
+              </div>
             </li>
 
-        La data + orario sono concatenati senza spazio nel secondo div.
         Prende la prima data come date_start e l'ultima come date_end.
 
         Returns:
@@ -295,25 +334,26 @@ class PugliaCultureSpider(BaseEventSpider):
         parsed_dates = []
         first_time = None
 
-        # Ogni <li> con un div figlio che contiene un mese italiano
-        for li in response.xpath("//li[div]"):
-            divs = li.css("div::text").getall()
-            # Il testo con la data è solitamente nel secondo div
-            date_text = None
-            for div_text in divs:
-                dt = self.clean_text(div_text) or ""
-                if any(m in dt.lower() for m in MESI_IT):
-                    date_text = dt
-                    break
+        for li in response.css("li.single_data"):
+            # Testo data: "mercoledì 04 febbraio 2026"
+            date_text = self.clean_text(
+                li.css("div.data_event_single::text").get() or ""
+            )
+            # Orario: "H: 10:00"
+            time_text = self.clean_text(
+                li.css("div.data_event_single strong::text").get() or ""
+            )
 
-            if not date_text:
+            combined = f"{date_text} {time_text}".strip()
+            if not any(m in combined.lower() for m in MESI_IT):
                 continue
 
-            parsed_date, parsed_time = parse_italian_date_time(date_text)
+            parsed_date, parsed_time = parse_italian_date_time(combined)
             if not parsed_date:
                 continue
 
-            parsed_dates.append(parsed_date)
+            if parsed_date not in parsed_dates:
+                parsed_dates.append(parsed_date)
             if first_time is None and parsed_time:
                 first_time = parsed_time
 
@@ -352,19 +392,15 @@ class PugliaCultureSpider(BaseEventSpider):
 
     def _extract_description(self, response) -> Optional[str]:
         """
-        Estrae la descrizione artistica dall'HTML.
+        Estrae la descrizione dell'evento come HTML grezzo da div.spettacolo-content.
 
-        Usa il blocco div.event_cast che contiene il cast e le note di regia.
+        Il contenuto viene restituito senza alterazioni (no clean_text, no strip HTML).
 
         Returns:
-            Testo descrizione artistica o None
+            HTML grezzo del blocco descrizione, o None se assente
         """
-        block = response.css("div.event_cast")
-        if block:
-            text = self.clean_text(block[0].xpath("string()").get())
-            if text and len(text) > 10:
-                return text
-        return None
+        html = response.css("div.spettacolo-content").get()
+        return html if html else None
 
     def _extract_costi_info(self, response) -> Optional[str]:
         """
@@ -408,18 +444,39 @@ class PugliaCultureSpider(BaseEventSpider):
 
         return None
 
+    # Domini da escludere nella ricerca del sito web esterno
+    _EXCLUDED_DOMAINS = (
+        "iubenda.com", "facebook.com", "instagram.com", "youtube.com",
+        "twitter.com", "x.com", "linkedin.com", "google.com",
+        "teatropubblicopugliese.it", "whatsapp.com", "tiktok.com",
+    )
+
     def _extract_website_from_costi(self, response) -> Optional[str]:
         """
-        Estrae il sito web esterno se presente nella pagina (es: vivaticket.com).
+        Estrae il sito web esterno di prenotazione/info dal blocco COSTI E INFO,
+        escludendo social network e domini di utilità.
 
         Returns:
-            URL del sito esterno o None
+            URL del sito esterno (es: vivaticket.com) o None
         """
-        external = response.xpath(
+        # Cerca prima nel blocco event_costi (più probabile contenga link biglietteria)
+        for link in response.css("div.event_costi a[href]::attr(href)").getall():
+            if link.startswith("http") and not self._is_excluded_url(link):
+                return link
+
+        # Fallback: qualsiasi link esterno nella pagina
+        for link in response.xpath(
             '//a[starts-with(@href, "http") '
             'and not(contains(@href, "pugliaculture.it"))]/@href'
-        ).get()
-        return external or None
+        ).getall():
+            if not self._is_excluded_url(link):
+                return link
+
+        return None
+
+    def _is_excluded_url(self, url: str) -> bool:
+        """Restituisce True se l'URL appartiene a un dominio da escludere."""
+        return any(domain in url for domain in self._EXCLUDED_DOMAINS)
 
     def _extract_category(self, response) -> list:
         """

@@ -91,6 +91,12 @@ class EventItem(scrapy.Item):
     # === Dettagli ===
     price = scrapy.Field()          # Info prezzo
     website = scrapy.Field()        # Sito web evento
+    stars = scrapy.Field()          # Rating stelle (intero, opzionale)
+
+    # === Contenuto strutturato ===
+    section = scrapy.Field()        # Dict annidato sezione (es: {"teatro": {"cast": "...", "rassegna": "..."}})
+    info_extra = scrapy.Field()     # Dict info aggiuntive spider-specific (es: info_e_costi, info_e_contatti)
+    time_info = scrapy.Field()      # Testo/HTML raw dell'informazione date (per il campo dates.time_info)
 
     # === Debug ===
     raw_data = scrapy.Field()       # Dati grezzi originali

@@ -309,13 +309,7 @@ class ApiPipeline:
         }
     """
 
-    # Campi da inviare all'API (mappati al StagingEventCreateSerializer)
-    API_FIELDS = [
-        "uuid", "content_hash", "source", "url", "title", "description",
-        "category", "image_url", "city", "location_name", "location_address",
-        "price", "website", "date_start", "date_end", "time_start", "time_end",
-        "time_info", "schedule", "weekdays", "raw_data", "scraped_at"
-    ]
+    # Formato di output: templates.json (annidato con city, dates, section, info_extra)
 
     def __init__(
         self,
@@ -481,16 +475,66 @@ class ApiPipeline:
             return False
 
     def _item_to_dict(self, item) -> Dict[str, Any]:
-        """Converte item Scrapy in dict per l'API."""
+        """
+        Converte item Scrapy nel formato annidato atteso dall'API (templates.json).
+
+        Struttura output:
+            {uuid, content_hash, source, title, stars, category, section,
+             city: {city_id, city_name, location_name, location_address, location_coordinates},
+             dates: {date_start, time_start, date_end, time_end, time_info},
+             url, description, image_url, price,
+             info_extra: {info_e_costi, info_e_contatti, ...},
+             scraped_at}
+        """
         adapter = ItemAdapter(item)
-        data = {}
 
-        for field in self.API_FIELDS:
-            value = adapter.get(field)
-            if value is not None:
-                data[field] = value
+        # Coordinate geografiche
+        coords = adapter.get("location_coords") or {}
+        location_coordinates = {
+            "lat": coords.get("lat", "") if isinstance(coords, dict) else "",
+            "lng": coords.get("lng", "") if isinstance(coords, dict) else "",
+        }
 
-        return data
+        # Blocco city annidato
+        city = {
+            "city_id": adapter.get("city_id"),
+            "city_name": adapter.get("city") or "",
+            "location_name": adapter.get("location_name") or "",
+            "location_address": adapter.get("location_address") or "",
+            "location_coordinates": location_coordinates,
+        }
+
+        # Blocco dates annidato
+        dates = {
+            "date_start": adapter.get("date_start") or "",
+            "time_start": adapter.get("time_start") or "",
+            "date_end": adapter.get("date_end") or "",
+            "time_end": adapter.get("time_end") or "",
+            "time_info": adapter.get("time_info") or "",
+        }
+
+        # Formatta scraped_at come "YYYY-MM-DD HH:MM:SS"
+        scraped_at = adapter.get("scraped_at")
+        if scraped_at and "T" in str(scraped_at):
+            scraped_at = str(scraped_at).replace("T", " ")[:19]
+
+        return {
+            "uuid": adapter.get("uuid"),
+            "content_hash": adapter.get("content_hash"),
+            "source": adapter.get("source"),
+            "title": adapter.get("title"),
+            "stars": adapter.get("stars"),
+            "category": adapter.get("category") or [],
+            "section": adapter.get("section") or {},
+            "city": city,
+            "dates": dates,
+            "url": adapter.get("url"),
+            "description": adapter.get("description"),
+            "image_url": adapter.get("image_url"),
+            "price": adapter.get("price"),
+            "info_extra": adapter.get("info_extra") or {},
+            "scraped_at": scraped_at,
+        }
 
     def _save_batch_json(self, events: List[Dict[str, Any]]) -> None:
         """Salva il batch come file JSON nella cartella di output."""
