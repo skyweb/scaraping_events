@@ -54,3 +54,8 @@ FEATURE_FLAGS = {
 # Timeout query SQL (secondi)
 SQLLAB_TIMEOUT = 300
 SUPERSET_WEBSERVER_TIMEOUT = 300
+
+# Sub-path /superset/ via nginx
+# ProxyFix legge X-Forwarded-Prefix inviato da nginx e riscrive gli URL generati
+ENABLE_PROXY_FIX = True
+PROXY_FIX_CONFIG = {"x_for": 1, "x_proto": 1, "x_host": 1, "x_prefix": 1}

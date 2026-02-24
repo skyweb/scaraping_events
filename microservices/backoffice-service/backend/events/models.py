@@ -48,7 +48,7 @@ class StagingEvent(models.Model):
     source = models.CharField(max_length=50,db_comment='sorgente dati')
     title = models.TextField()
     category = ArrayField(models.TextField(), blank=True, null=True)
-    section = models.TextField(blank=True, null=True,db_comment='dati in base alla sezione')
+    section = models.JSONField(blank=True, null=True, db_comment='dati strutturati della sezione (cast, rassegna, ecc.)')
 
     # locations
     city_name = models.CharField(max_length=100, blank=True, null=True)

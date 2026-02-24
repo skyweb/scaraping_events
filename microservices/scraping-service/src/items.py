@@ -45,8 +45,6 @@ class EventItem(scrapy.Item):
         - date_display: Data in formato leggibile
         - time_start: Orario inizio (HH:MM)
         - time_end: Orario fine (HH:MM)
-        - date_scope: Ambito temporale (es: "weekend", "settimana")
-        - schedule: Orari dettagliati
 
     Campi aggiuntivi:
         - price: Informazioni sul prezzo
@@ -63,7 +61,6 @@ class EventItem(scrapy.Item):
     uuid = scrapy.Field()           # Hash univoco per deduplicazione
     content_hash = scrapy.Field()   # Hash contenuto per rilevare modifiche
     event_id = scrapy.Field()       # ID originale dalla fonte
-    slug = scrapy.Field()           # Slug URL
 
     # === Contenuto ===
     title = scrapy.Field()          # Titolo evento
@@ -73,11 +70,11 @@ class EventItem(scrapy.Item):
     image_urls = scrapy.Field()     # Lista tutte le immagini
 
     # === Location ===
-    city = scrapy.Field()           # Nome città
-    city_id = scrapy.Field()        # FK a comuni_istat.comuni.id
-    location_name = scrapy.Field()  # Nome venue/luogo
-    location_address = scrapy.Field()  # Indirizzo completo
-    location_coords = scrapy.Field()   # Dict con lat/lng
+    city = scrapy.Field()               # Nome città
+    city_id = scrapy.Field()            # FK a comuni_istat.comuni.id
+    location_name = scrapy.Field()      # Nome venue/luogo
+    location_address = scrapy.Field()   # Indirizzo completo
+    location_coords = scrapy.Field()    # Dict con lat/lng
 
     # === Date e orari ===
     date_start = scrapy.Field()     # YYYY-MM-DD
@@ -85,8 +82,6 @@ class EventItem(scrapy.Item):
     date_display = scrapy.Field()   # Testo leggibile
     time_start = scrapy.Field()     # HH:MM
     time_end = scrapy.Field()       # HH:MM
-    date_scope = scrapy.Field()     # Ambito temporale
-    schedule = scrapy.Field()       # Orari dettagliati
 
     # === Dettagli ===
     price = scrapy.Field()          # Info prezzo
@@ -94,7 +89,7 @@ class EventItem(scrapy.Item):
     stars = scrapy.Field()          # Rating stelle (intero, opzionale)
 
     # === Contenuto strutturato ===
-    section = scrapy.Field()        # Dict annidato sezione (es: {"teatro": {"cast": "...", "rassegna": "..."}})
+    section = scrapy.Field()        # Dict annidato sezione (es: {"cast": "...", "rassegna": "..."})
     info_extra = scrapy.Field()     # Dict info aggiuntive spider-specific (es: info_e_costi, info_e_contatti)
     time_info = scrapy.Field()      # Testo/HTML raw dell'informazione date (per il campo dates.time_info)
 

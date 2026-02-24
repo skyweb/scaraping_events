@@ -1,369 +1,132 @@
 # Infrastructure - Today Events
 
-Stack Docker per la gestione degli eventi:
-- **PostgreSQL 16** con PostGIS 3.4
-- **Redis 7**
-- **Apache Airflow 2.8**
-- **Scrapy Events** (container per spider)
-
-## Quick Start
-
-```bash
-$ cd infrastructures
-
-# 1. Build immagine Scrapy
-$ docker-compose build scrapy-events
-
-# 2. Avvia i servizi
-$ docker compose up -d
-$ docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-# 3. Verifica lo stato
-$ docker-compose ps
-```
+Stack Docker per lo sviluppo locale (`docker-compose.dev.yml`):
+- **PostgreSQL 16** con PostGIS 3.4 — database principale
+- **Redis 7** — cache e message broker Celery
+- **Django + Celery** — backoffice, worker, beat, flower
+- **React + Vite** — frontend dev server
+- **Nginx** — reverse proxy su porta 80, espone tutti i servizi su `http://localhost`
+- **Grafana · Loki · Prometheus · Jaeger** — observability (log, metriche, tracing)
+- **Apache Superset** — BI dashboard eventi
+- **Apache Airflow** — orchestrazione DAG (scraping, import comuni)
+- **Scrapyd** — daemon spider (compose separato in `microservices/scraping-service/`)
 
 ## Servizi
 
+### Applicativi (tutti via Nginx — http://localhost)
+
+| Servizio | URL | Porta diretta | Descrizione |
+|----------|-----|--------------|-------------|
+| Frontend React + Vite | `http://localhost/` | `:3000` | SPA frontend, dev server Vite |
+| Backoffice API | `http://localhost/api/` | `:8000` | DRF REST API eventi staging e production |
+| Django Admin | `http://localhost/admin/` | `:8000` | Pannello admin Unfold |
+| OAuth2 | `http://localhost/o/` | `:8000` | Token endpoint client credentials |
+| Flower | `http://localhost/flower/` | — | UI monitoraggio task Celery |
+| Grafana | `http://localhost/grafana/` | `:3001` | Dashboard log, metriche, traces |
+| Jaeger | `http://localhost/jaeger/` | `:16686` | UI distributed tracing |
+| Prometheus | `http://localhost/prometheus/` | `:9090` | Query metriche time-series |
+| Superset | `http://localhost/superset/` | `:8088` | BI dashboard eventi |
+| Airflow | `http://localhost/airflow/` | `:8080` | Orchestrazione DAG |
+| Loki | `http://localhost/loki/` | `:3100` | API log backend |
+| Redis Exporter | `http://localhost/redis-exporter/` | `:9121` | Metriche Redis |
+| cAdvisor | `http://localhost/cadvisor/` | `:8081` | Metriche container Docker |
+
+### Infrastruttura
+
 | Servizio | Porta | Descrizione |
 |----------|-------|-------------|
-| PostgreSQL + PostGIS | 5432 | Database eventi |
-| Redis | 6379 | Cache e message broker |
-| Airflow Webserver | 8080 | UI Airflow |
-| scrapy-events | - | Container per scraping |
+| Nginx | `:80` | Reverse proxy — entry point unico |
+| PostgreSQL + PostGIS | `:5432` | Database principale con estensioni geospaziali |
+| Redis | `:6379` | Cache sessioni e message broker per Celery |
+| Celery Worker | — | Esecuzione task asincroni (es. `process_bulk_events`) |
+| Celery Beat | — | Scheduler task periodici (usa `django_celery_beat`) |
+| Airflow Scheduler | — | Esecuzione DAG Airflow |
+| Scrapyd | `:6800` (int.) | Daemon Scrapy — scheduling spider via HTTP API |
 
-  ┌────────────────────────────────────┬──────────┬──────────────────┐
-  │              Servizio              │  Stato   │      Porta       │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Postgres (PostGIS)                 │ Healthy  │ 5432             │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Redis                              │ Healthy  │ 6379             │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Backoffice (Django dev server)     │ Starting │ 8000 (via Nginx) │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Backoffice Celery Worker           │ Starting │ -                │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Backoffice Celery Beat             │ Starting │ -                │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Nginx                              │ Up       │ 80               │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Airflow Webserver                  │ Starting │ 8080             │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Airflow Scheduler/Worker/Triggerer │ Starting │ -                │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Flower (Celery monitor)            │ Starting │ 5555             │
-  ├────────────────────────────────────┼──────────┼──────────────────┤
-  │ Redis UI (RedisInsight)            │ Up       │ 5540             │
-  └────────────────────────────────────┴──────────┴──────────────────┘
+### Observability
 
+| Servizio | Porta | Descrizione |
+|----------|-------|-------------|
+| Grafana | `:3001` | Dashboard unificata: log (Loki), metriche (Prometheus), traces (Jaeger) |
+| Jaeger | `:16686` | UI distributed tracing con Monitor/SPM |
+| Prometheus | `:9090` | Storage e query metriche time-series |
+| Loki | `:3100` | Backend aggregazione e query log |
+| OpenTelemetry Collector | `:4317` gRPC · `:4318` HTTP | Raccolta e routing telemetry OTLP |
+| Promtail | — | Collector log dai container Docker → Loki |
+| Redis Exporter | `:9121` | Metriche Redis → Prometheus |
+| Celery Exporter | `:9808` | Metriche task Celery → Prometheus |
+| cAdvisor | `:8081` | Metriche risorse container Docker → Prometheus |
 
-## Container Scrapy
+### Business Intelligence
 
-L'immagine `scrapy-events:latest` contiene tutti gli spider.
+| Servizio | Porta | Descrizione |
+|----------|-------|-------------|
+| Apache Superset | `:8088` | Dashboard BI con datasource pre-configurato su `events_data` |
 
-### Utilizzo manuale
+### Orchestrazione DAG
 
-```bash
-# Build
-$ docker-compose build scrapy-events
-
-# Esegui city_today per Milano
-$ docker run --rm -v $(pwd)/data:/data/output scrapy-events:latest \
-    city_today milano --periodo=questa-settimana
-
-# Esegui zero_eu per Roma e Bologna
-$ docker run --rm -v $(pwd)/data:/data/output scrapy-events:latest \
-    zero_eu roma bologna
-
-# Mostra help
-$ docker run --rm scrapy-events:latest city_today
-```
-
-### Comandi disponibili
-
-```bash
-# city_today
-$ scrapy-events city_today <città> [--periodo=PERIODO]
-
-# zero_eu
-$ scrapy-events zero_eu <città>
-```
-
-**Periodi city_today**: oggi, domani, weekend, questa-settimana, prossima-settimana, questo-mese
-
-## DAG Airflow
-
-### scrape_events_daily
-- **Schedule**: Ogni giorno alle 6:00
-- **Pipeline**:
-  1. `scrape_city_today` → Scraping tutte le città (questa-settimana)
-  2. `scrape_zero_eu` → Scraping tutte le città
-  3. `load_events_to_database` → Caricamento in PostgreSQL
-
-### scrape_events_weekly
-- **Schedule**: Ogni domenica alle 8:00
-- **Task**: Scraping prossima settimana
-
-### scrape_events_monthly
-- **Schedule**: Primo del mese alle 4:00
-- **Task**: Scraping questo mese
+| Servizio | Porta | Descrizione |
+|----------|-------|-------------|
+| Apache Airflow Webserver | `:8080` | UI scheduling e monitoraggio DAG |
+| Apache Airflow Scheduler | — | Esecuzione DAG (LocalExecutor su PostgreSQL) |
 
 ## Accesso
 
-### PostgreSQL
-```bash
-psql -h localhost -U events -d today_events
-# Password: events_secret_2026
-```
-
-### Redis
-```bash
-docker exec -it events-redis redis-cli -a redis_secret_2026
-```
-
-### Airflow
-- URL: http://localhost:8080
-- User: `admin`
-- Password: `admin_secret_2026`
+| Servizio | URL | Credenziali |
+|----------|-----|-------------|
+| Frontend | `http://localhost/` | — |
+| Django Admin | `http://localhost/admin/` | `admin` / vedi `.env` |
+| Backoffice API | `http://localhost/api/` | OAuth2 client credentials |
+| Flower | `http://localhost/flower/` | — |
+| Grafana | `http://localhost/grafana/` | `admin` / `admin` (primo accesso) |
+| Jaeger | `http://localhost/jaeger/` | — |
+| Prometheus | `http://localhost/prometheus/` | — |
+| Superset | `http://localhost/superset/` | `admin` / vedi `.env` |
+| Airflow | `http://localhost/airflow/` | `admin` / `admin_secret_2026` |
 
 ## Struttura Directory
 
 ```
 infrastructures/
-├── docker-compose.yml
-├── .env
-├── README.md
-├── config/
-│   ├── postgres/
-│   │   └── init.sql
-│   └── redis/
-│       └── redis.conf
-├── dags/
-│   └── scrape_events_data.py
-├── data/                    # Output JSON dagli spider
-├── logs/
-└── plugins/
-
-scraping/
-├── Dockerfile              # Immagine scrapy-events
-├── entrypoint.sh
-├── requirements.txt
-├── city_today/
-└── zero_eu/
+├── docker-compose.dev.yml     # Stack dev completo
+├── .env                       # Variabili d'ambiente (non in git)
+├── .env.example               # Template variabili
+├── Makefile                   # Comandi rapidi (make up, make logs-*, ...)
+├── logs/                      # Log runtime (montati dai container)
+└── services/                  # Configurazioni per servizio
+    ├── airflow/               # DAG, plugin, dags/, logs/
+    │   ├── DAG.md             # Documentazione DAG disponibili
+    │   ├── dags/              # File DAG Python
+    │   ├── data/              # Dataset per DAG
+    │   ├── logs/              # Log Airflow
+    │   └── plugins/           # Plugin custom Airflow
+    ├── grafana/               # Provisioning datasource + dashboard
+    ├── jaeger/                # jaeger-v2-config.yaml
+    ├── loki/                  # loki-config.yaml
+    ├── nginx/                 # nginx.conf + 502.html
+    ├── otel-collector/        # otel-collector-config.yaml
+    ├── postgres/              # init SQL (schema PostGIS)
+    ├── prometheus/            # prometheus.yml + alert rules
+    ├── promtail/              # promtail-config.yaml
+    ├── redis/                 # redis.conf
+    └── superset/              # superset_config.py + init script
 ```
 
-## Database Schema
+## Note di configurazione
 
-Il database `today_events` utilizza 3 schema PostgreSQL:
+### Subpath routing via nginx
 
-| Schema | Descrizione |
-|--------|-------------|
-| `events_data` | Eventi staging e production, viste |
-| `comuni_istat` | Confini amministrativi ISTAT con geometrie PostGIS |
-| `comuni_istat_ingestion` | Dati scraping comuni-italiani.it (modelli relazionali + raw JSON) |
+Ogni servizio è configurato per funzionare sotto un sotto-percorso `/nome/`:
 
-### Schema `events_data`
+| Servizio | Meccanismo |
+|----------|------------|
+| Grafana | `GF_SERVER_SERVE_FROM_SUB_PATH=true` + `GF_SERVER_ROOT_URL` |
+| Jaeger | `base_path: /jaeger` in `jaeger-v2-config.yaml` |
+| Prometheus | `--web.route-prefix=/prometheus` nel command |
+| Superset | `ENABLE_PROXY_FIX=True` + header `X-Forwarded-Prefix` |
+| Airflow | `AIRFLOW__WEBSERVER__BASE_URL=http://localhost/airflow` + `ENABLE_PROXY_FIX` |
 
-```sql
-SELECT uuid, title, city, date_start, source
-FROM events_data.staging_events
-ORDER BY date_start;
-```
+### Rete Docker
 
-| Campo | Tipo | Descrizione |
-|-------|------|-------------|
-| uuid | VARCHAR(16) | ID univoco (hash titolo+data+luogo) |
-| content_hash | VARCHAR(16) | Hash contenuto (per detect modifiche) |
-| source | VARCHAR(50) | 'city_today' o 'zero_eu' |
-| city_id | INTEGER | FK a `comuni_istat.comuni(id)` |
-| location_coords | GEOMETRY | Coordinate PostGIS |
-| category | TEXT[] | Array categorie |
-| raw_data | JSONB | JSON originale |
-
-### Schema `comuni_istat`
-
-Confini amministrativi ISTAT al 01/01/2025 con geometrie PostGIS:
-
-| Tabella | Record | Descrizione |
-|---------|--------|-------------|
-| `ripartizioni` | 5 | Nord-Ovest, Nord-Est, Centro, Sud, Isole |
-| `regioni` | 20 | Con geometrie MultiPolygon |
-| `province` | 107 | Con sigla, geometrie |
-| `comuni` | ~7900 | Con centroide, codice catastale, CAP, popolazione |
-
-### Schema `comuni_istat_ingestion`
-
-Dati arricchiti dallo scraping di comuni-italiani.it:
-
-| Tabella | Descrizione |
-|---------|-------------|
-| `regioni` | 20 regioni con dati demografici |
-| `province` | 110 province |
-| `comuni` | ~8000 comuni con patrono, etimologia, demonimo |
-| `comune_frazioni` | Frazioni e localita |
-| `comune_confinanti` | Comuni limitrofi |
-| `comune_appartenenze` | Comunita montane, parchi |
-| `comune_punti_interesse` | Musei, chiese, castelli, teatri |
-| `comune_eventi` | Feste, sagre tradizionali |
-| `comune_gemellaggi` | Gemellaggi |
-| `comune_cittadini_illustri` | Personaggi illustri |
-| `raw_data` | JSON grezzi dallo scraping |
-
-## Comandi Utili
-
-```bash
-# Avvia tutto
-$ docker-compose up -d
-
-# Build immagine scrapy
-$ docker-compose build scrapy-events
-
-# Stop tutto
-$ docker-compose down
-
-# Visualizza log
-$ docker-compose logs -f airflow-scheduler
-
-# Test scraping manuale
-$ docker run --rm --network events-network \
-    -v $(pwd)/data:/data/output \
-    scrapy-events:latest city_today milano
-
-# Query eventi
-$ docker exec -it events-postgres psql -U events -d today_events \
-    -c "SELECT COUNT(*), city FROM events_data.eventi GROUP BY city;"
-```
-
-## Configurazione Airflow Connection
-
-Dopo l'avvio, crea la connection PostgreSQL in Airflow:
-
-1. Vai su http://localhost:8080
-2. Admin → Connections → Add
-3. Configura:
-   - Connection Id: `events_postgres`
-   - Connection Type: `Postgres`
-   - Host: `postgres`
-   - Schema: `today_events`
-   - Login: `events`
-   - Password: `events_secret_2026`
-   - Port: `5432`
-
-  Funzioni SQL:
-  - events_data.truncate_staging()
-  - events_data.upsert_from_staging()
-  - events_data.mark_missing_inactive()
-
-  Accesso:
-  - Airflow: http://localhost:8080 (admin / admin_secret_2026)
-  - PostgreSQL: psql -h localhost -U events -d today_events
-
-  Prossimo passo: Configura la connection PostgreSQL in Airflow:
-  1. http://localhost:8080 → Admin → Connections → +
-  2. Connection Id: events_postgres
-  3. Type: Postgres
-  4. Host: postgres, Port: 5432
-  5. Schema: today_events
-  6. Login: events, Password: events_secret_2026
-
-## Bulk Ingestion Asincrono
-
-L'endpoint `POST /api/external/staging/bulk/` supporta due modalita':
-
-### Async (default)
-```
-POST /api/external/staging/bulk/
-→ 202 Accepted + { task_id, status: "PENDING", message }
-```
-Il batch viene processato in background dal Celery worker. Per verificare lo stato:
-```
-GET /api/external/staging/bulk-status/{task_id}/
-→ { task_id, status: "SUCCESS|PENDING|STARTED|FAILURE", result }
-```
-
-### Sync (backward compatible)
-```
-POST /api/external/staging/bulk/?sync=true
-→ 201/200/400 + { created_count, failed_count, successful_events, failed_events }
-```
-Comportamento sincrono originale.
-
-### Flusso Async
-
-```
-Scrapy ApiPipeline
-    │ POST /api/external/staging/bulk/
-    ▼
-┌──────────────────────────┐
-│ bulk() view              │
-│ → valida payload         │
-│ → process_bulk.delay()   │  ← dispatch a Celery
-│ → return 202 + task_id   │  ← risposta immediata
-└──────────────────────────┘
-    │
-    ▼ (Redis queue)
-┌──────────────────────────┐
-│ Celery Worker            │
-│ process_bulk_events()    │
-│ → validate each item     │
-│ → bulk_create (batch DB) │  ← 1 query invece di N
-│ → retry su errore DB     │
-│ → salva risultato        │
-└──────────────────────────┘
-```
-
-## Test API Staging Events
-
-Test Django che leggono lo schema OpenAPI (drf-spectacular) ed eseguono
-le richieste usando gli esempi JSON definiti nelle `@extend_schema`.
-
-### Cosa testano
-
-| Classe | Descrizione |
-|--------|-------------|
-| `OpenAPISchemaTest` | Validita' schema: paths, esempi, campi obbligatori |
-| `StagingEventCreateFromSchemaTest` | POST `/api/external/staging/` con ogni esempio OpenAPI |
-| `StagingEventBulkFromSchemaTest` | POST `/api/external/staging/bulk/` con esempi valid/partial/invalid |
-| `StagingEventCRUDTest` | Ciclo completo: list, retrieve, create, update, patch, delete, filtri, search |
-| `StagingEventClearSourceTest` | DELETE `/api/external/staging/clear_source/?source=xxx` |
-| `StagingEventAuthTest` | OAuth2: token assente, scaduto, invalido, scope read vs write |
-
-### Come lanciare
-
-```bash
-# Output tabellare (endpoint, metodo, status, esito)
-docker exec -w /app/backend events-backoffice \
-  python manage.py test events.tests.test_staging_api \
-  --testrunner events.tests.runner.TableTestRunner
-
-# Output standard Django (-v2 per dettaglio)
-docker exec -w /app/backend events-backoffice \
-  python manage.py test events.tests.test_staging_api -v2
-
-# Solo una classe specifica
-docker exec -w /app/backend events-backoffice \
-  python manage.py test events.tests.test_staging_api.StagingEventBulkFromSchemaTest -v2
-
-# Solo un singolo test
-docker exec -w /app/backend events-backoffice \
-  python manage.py test events.tests.test_staging_api.StagingEventCRUDTest.test_create_event -v2
-```
-
-### Esempio output tabellare
-
-```
-Metodo | Endpoint                            | Status | Esito | Test
--------+-------------------------------------+--------+-------+------------------------------------------
-GET    | /api/external/staging/              | 200    | PASS  | test_list_events
-POST   | /api/external/staging/              | 201    | PASS  | test_create_with_each_schema_example
-POST   | /api/external/staging/bulk/         | 201    | PASS  | test_bulk_create_all_valid
-DELETE | /api/external/staging/clear_source/ | 200    | PASS  | test_clear_source_deletes_matching
-GET    | /api/external/staging/              | 401    | PASS  | test_no_token_returns_401
-...
-Totale: 36  |  Pass: 36
-```
-
-### Note
-
-- I test creano un database temporaneo (`test_today_events`) e lo distruggono a fine esecuzione
-- Le migrazioni RunSQL creano automaticamente lo schema `events_data` nel DB di test
-- L'autenticazione OAuth2 viene simulata con token creati in `setUpTestData`
-- Gli esempi JSON vengono estratti dallo schema generato da `SchemaGenerator` di drf-spectacular
+Tutti i servizi sono collegati alla rete esterna `dev-network` (creata con `docker network create dev-network`).
+Il compose Scrapyd (`microservices/scraping-service/docker-compose.yml`) usa la stessa rete.

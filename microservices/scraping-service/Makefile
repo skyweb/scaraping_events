@@ -6,6 +6,7 @@
 # Variables
 # =============================================================================
 SERVICE_NAME := scrapyd
+CONTAINER_NAME := dev-scrapyd
 COMPOSE_DEV := docker compose
 
 # Infra stack (backoffice, postgres, redis, nginx)
@@ -14,6 +15,9 @@ COMPOSE_INFRA := docker compose -f $(INFRA_DIR)/docker-compose.dev.yml --env-fil
 
 # Local dev
 SRC_DIR := src
+
+# Spider default per test rapido
+SPIDER ?= puglia_culture
 
 # Colori
 GREEN := \033[0;32m
@@ -24,7 +28,7 @@ NC := \033[0m
 # =============================================================================
 
 .PHONY: help spiders dev dev-build dev-up dev-down dev-restart dev-logs dev-shell dev-ps \
-        crawl crawl-all infra-up infra-down infra-ps \
+        crawl crawl-all test infra-up infra-down infra-ps \
         clean
 
 # =============================================================================
@@ -118,21 +122,31 @@ spiders: ## Mostra elenco spider disponibili con esempi di utilizzo
 # Spider commands
 # =============================================================================
 
-crawl: ## Lancia uno spider: make crawl SPIDER=city_today ARGS="-a cities=milano"
-	@if [ -z "$(SPIDER)" ]; then \
-		echo "Uso: make crawl SPIDER=<nome> [ARGS=\"-a cities=milano\"]"; \
-		exit 1; \
-	fi
+DOCKER_EXEC := docker exec -i -w /app/events_scraper $(CONTAINER_NAME)
+
+crawl: ## Lancia uno spider dal container: make crawl SPIDER=puglia_culture ARGS="-a max_pages=2"
 	@echo "$(GREEN)Lancio spider: $(SPIDER)$(NC)"
-	$(COMPOSE_DEV) exec $(SERVICE_NAME) scrapy crawl $(SPIDER) $(ARGS)
+	$(DOCKER_EXEC) scrapy crawl $(SPIDER) $(ARGS)
+
+test: ## Test rapido spider (1 pagina, output JSON, no API): make test [SPIDER=puglia_culture]
+	@echo "$(GREEN)Test spider: $(SPIDER) (max_pages=1, no API)$(NC)"
+	@mkdir -p data/output
+	$(DOCKER_EXEC) scrapy crawl $(SPIDER) \
+		-a max_pages=1 \
+		-o /data/output/test_$(SPIDER).json \
+		-s 'ITEM_PIPELINES={"pipelines.ValidationPipeline": 100, "pipelines.HashGeneratorPipeline": 200}' \
+		$(ARGS)
+	@echo "$(GREEN)Output: data/output/test_$(SPIDER).json$(NC)"
 
 crawl-all: ## Lancia tutti gli spider in sequenza
 	@echo "$(GREEN)Lancio city_today...$(NC)"
-	$(COMPOSE_DEV) exec $(SERVICE_NAME) scrapy crawl city_today || true
+	$(DOCKER_EXEC) scrapy crawl city_today || true
 	@echo "$(GREEN)Lancio zero_eu...$(NC)"
-	$(COMPOSE_DEV) exec $(SERVICE_NAME) scrapy crawl zero_eu || true
+	$(DOCKER_EXEC) scrapy crawl zero_eu || true
 	@echo "$(GREEN)Lancio artribune...$(NC)"
-	$(COMPOSE_DEV) exec $(SERVICE_NAME) scrapy crawl artribune || true
+	$(DOCKER_EXEC) scrapy crawl artribune || true
+	@echo "$(GREEN)Lancio puglia_culture...$(NC)"
+	$(DOCKER_EXEC) scrapy crawl puglia_culture || true
 
 # =============================================================================
 # Infra stack shortcuts

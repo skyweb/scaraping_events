@@ -2,14 +2,76 @@
 Middleware personalizzati:
 - ApiVersionHeaderMiddleware: aggiunge X-API-Version alle risposte API
 - AdminRequestLoggingMiddleware: logga richieste all'area admin
+- OAuth2ProxyAdminMiddleware: SSO trasparente per /admin/ via oauth2-proxy
 """
 
 import logging
 import time
 
 from django.conf import settings
+from django.contrib.auth import get_user_model, login
+from django.http import HttpRequest, HttpResponse
+from django.template.response import TemplateResponse
 
 logger = logging.getLogger("admin.requests")
+
+
+sso_logger = logging.getLogger("admin.sso")
+
+
+class OAuth2ProxyAdminMiddleware:
+    """
+    SSO trasparente per Django Admin via oauth2-proxy (Approccio A).
+
+    Flusso:
+      1. nginx verifica l'autenticazione Google tramite auth_request → oauth2-proxy
+      2. oauth2-proxy imposta X-Auth-Request-Email nell'header della richiesta
+      3. nginx forwarda l'header a Django
+      4. Questo middleware legge l'email e fa il login automatico
+
+    Attivo solo su /admin/. Le API (/api/, /o/) non sono toccate.
+    Non crea utenti automaticamente: l'utente Django deve esistere con la stessa email
+    e avere is_staff=True. In caso contrario restituisce 403 con istruzioni.
+    """
+
+    def __init__(self, get_response) -> None:
+        self.get_response = get_response
+
+    def __call__(self, request: HttpRequest) -> HttpResponse:
+        # Solo per /admin/, solo se non già autenticato
+        if not request.path.startswith("/admin/") or request.user.is_authenticated:
+            return self.get_response(request)
+
+        email = request.META.get("HTTP_X_AUTH_REQUEST_EMAIL", "").strip()
+        if not email:
+            # Header assente: oauth2-proxy non attivo o accesso diretto (es. :8000)
+            return self.get_response(request)
+
+        User = get_user_model()
+        try:
+            user = User.objects.get(email=email, is_active=True)
+        except User.DoesNotExist:
+            return TemplateResponse(
+                request,
+                "admin/oauth2_proxy_denied.html",
+                {"email": email, "not_staff": False},
+                status=403,
+            ).render()
+
+        if not user.is_staff:
+            return TemplateResponse(
+                request,
+                "admin/oauth2_proxy_denied.html",
+                {"email": email, "not_staff": True},
+                status=403,
+            ).render()
+
+        login(request, user, backend="django.contrib.auth.backends.ModelBackend")
+        sso_logger.info(
+            "SSO login via oauth2-proxy",
+            extra={"email": email, "user": user.get_username()},
+        )
+        return self.get_response(request)
 
 
 class ApiVersionHeaderMiddleware:

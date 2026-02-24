@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'backoffice.middleware.OAuth2ProxyAdminMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'backoffice.middleware.ApiVersionHeaderMiddleware',
@@ -366,6 +367,11 @@ LOGGING = {
             'propagate': False,
         },
         'admin.requests': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'admin.sso': {
             'handlers': ['console'],
             'level': 'INFO',
             'propagate': False,

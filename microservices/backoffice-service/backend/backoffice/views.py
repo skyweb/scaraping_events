@@ -1,6 +1,18 @@
 from django.conf import settings
+from django.contrib.auth import logout as auth_logout
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+
+
+def admin_sso_logout(request):
+    """
+    Logout unificato SSO: cancella la sessione Django E il cookie oauth2-proxy.
+    Sovrascrive /admin/logout/ prima che venga gestito da admin.site.urls.
+    Senza questo, Django cancella la sessione ma il cookie oauth2-proxy rimane
+    valido → il middleware ri-autentica l'utente al prossimo accesso.
+    """
+    auth_logout(request)
+    return redirect("/oauth2/sign_out?rd=/")
 
 
 def permission_denied_view(request, exception):

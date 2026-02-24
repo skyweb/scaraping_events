@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.views.static import serve
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView
 
-from backoffice.views import permission_denied_view, api_version_view, scalar_view
+from backoffice.views import admin_sso_logout, permission_denied_view, api_version_view, scalar_view
 
 # ... (rest of the file) ...
 
@@ -28,6 +28,9 @@ def serve_frontend_assets(request, path):
 
 
 urlpatterns = [
+    # Logout SSO: deve stare PRIMA di admin/ per intercettare /admin/logout/
+    # Django logout cancella la sessione, poi oauth2-proxy cancella il suo cookie
+    path('admin/logout/', admin_sso_logout, name='admin-sso-logout'),
     path('admin/', admin.site.urls),
     path('api/version/', api_version_view, name='api-version'),
     path('api/', include('events.urls')),

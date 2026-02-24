@@ -104,8 +104,6 @@ class CustomRetryMiddleware(ScrapyRetryMiddleware):
 class SpiderOpenCloseMiddleware:
     """
     Middleware per logging all'apertura/chiusura spider.
-
-    Utile per setup e cleanup risorse.
     """
 
     @classmethod
