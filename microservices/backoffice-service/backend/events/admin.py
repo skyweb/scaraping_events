@@ -163,7 +163,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         'created_at', 'image_preview', 'image_thumbnail', 'description_preview',
         'json_preview', 'clickable_url', 'clickable_image_url', 'source', 'uuid',
         'content_hash', 'category_list', 'date_start_display', 'date_start_ro', 'date_end_ro',
-        'event_status_chip', 'creation_date_display',
+        'event_status_chip', 'creation_date_display', 'info_extra_details', 'time_info_html',
     ]
     list_per_page = 50
 
@@ -188,6 +188,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 ('image_preview', 'clickable_image_url'),
                 'price',
                 'info_extra',
+                'info_extra_details',
             ),
             'classes': ['tab'],
         }),
@@ -196,7 +197,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 'date_start_display',
                 ('date_start', 'date_end'),
                 ('time_start', 'time_end'),
-                'time_info',
+                'time_info_html',
             ),
             'classes': ['tab'],
         }),
@@ -214,6 +215,49 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         """Data di creazione (created_at) formattata dd/mm/yyyy HH:MM."""
         return format_datetime_italian(obj.created_at)
     creation_date_display.short_description = "Data creazione"
+
+    def info_extra_details(self, obj):
+        """Mostra info_e_costi, info_e_contatti da info_extra e cast dalla section."""
+        style_label = (
+            "display:block;font-size:0.75rem;font-weight:600;"
+            "color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem;"
+        )
+        style_value = (
+            "display:block;white-space:pre-wrap;word-break:break-word;"
+            "background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.375rem;"
+            "padding:0.5rem 0.75rem;font-size:0.875rem;color:#111827;margin-bottom:1rem;"
+        )
+        parts = []
+
+        # Cast: primo valore trovato nella section (struttura: {chiave: {cast: "..."}})
+        if obj.section:
+            for section_data in obj.section.values():
+                if isinstance(section_data, dict) and section_data.get("cast"):
+                    parts.append(
+                        f'<div><span style="{style_label}">Cast</span>'
+                        f'<span style="{style_value}">{section_data["cast"]}</span></div>'
+                    )
+                    break
+
+        # Info extra: info_e_costi e info_e_contatti
+        if obj.info_extra:
+            for key, label in [("info_e_costi", "Info e Costi"), ("info_e_contatti", "Info e Contatti")]:
+                value = obj.info_extra.get(key)
+                if value:
+                    parts.append(
+                        f'<div><span style="{style_label}">{label}</span>'
+                        f'<span style="{style_value}">{value}</span></div>'
+                    )
+
+        return mark_safe("".join(parts)) if parts else "-"
+    info_extra_details.short_description = "Dettagli Info Extra"
+
+    def time_info_html(self, obj):
+        """Visualizza time_info con rendering HTML."""
+        if not obj.time_info:
+            return "-"
+        return mark_safe(obj.time_info)
+    time_info_html.short_description = "Orario info"
 
 
 # =============================================================================

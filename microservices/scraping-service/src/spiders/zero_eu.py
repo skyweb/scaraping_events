@@ -23,6 +23,7 @@ Parametri:
 
 import scrapy
 from spiders.base import BaseEventSpider
+from spiders.utils import DEFAULT_CRAWL_SETTINGS
 
 
 class ZeroEuSpider(BaseEventSpider):
@@ -39,15 +40,9 @@ class ZeroEuSpider(BaseEventSpider):
     source_name = "zero_eu"
     allowed_domains = ["zero.eu"]
 
-    # Impostazioni specifiche per questo spider
     custom_settings = {
-        "USER_AGENT": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/120.0.0.0 Safari/537.36"
-        ),
+        **DEFAULT_CRAWL_SETTINGS,
         "ROBOTSTXT_OBEY": False,  # API spesso bloccata da robots.txt
-        "CONCURRENT_REQUESTS": 2,
         "DOWNLOAD_DELAY": 0.5,
     }
 

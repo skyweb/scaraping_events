@@ -23,7 +23,6 @@ Parametri:
     per_page: Eventi per pagina (default: 100, max API: 100)
 """
 
-import json
 import re
 from datetime import datetime
 from typing import Dict, List, Optional
@@ -245,12 +244,32 @@ class ArtribuneSpider(BaseEventSpider):
         self.logger.debug(f"Scraping dettaglio: {item.get('title')}")
 
         # 1. Prova JSON-LD
-        json_ld = response.xpath(
-            '//script[@type="application/ld+json" and contains(text(), "Event")]/text()'
-        ).get()
+        event_obj = self.extract_jsonld_node(response, "Event")
+        if event_obj:
+            # Immagini
+            ld_images = event_obj.get("image")
+            if ld_images:
+                if isinstance(ld_images, list):
+                    item["image_urls"].extend(ld_images)
+                else:
+                    item["image_urls"].append(ld_images)
 
-        if json_ld:
-            self._parse_json_ld(item, json_ld)
+            # Prezzo
+            offers = event_obj.get("offers", {})
+            if isinstance(offers, dict):
+                price = offers.get("price")
+                if price:
+                    item["price"] = str(price)
+            elif isinstance(offers, list) and offers:
+                price = offers[0].get("price")
+                if price:
+                    item["price"] = str(price)
+
+            # Date
+            if not item.get("date_start"):
+                item["date_start"] = self.parse_date_iso(event_obj.get("startDate"))
+            if not item.get("date_end"):
+                item["date_end"] = self.parse_date_iso(event_obj.get("endDate"))
 
         # 2. Estrazione da HTML strutturato
         event_info = self._extract_event_info(response)
@@ -364,53 +383,6 @@ class ArtribuneSpider(BaseEventSpider):
 
         self.log_stats(item.get("city"))
         yield item
-
-    def _parse_json_ld(self, item, json_ld: str):
-        """Parsa dati da JSON-LD."""
-        try:
-            data = json.loads(json_ld)
-            event_obj = None
-
-            if isinstance(data, dict):
-                if "@graph" in data:
-                    events = [x for x in data["@graph"] if x.get("@type") == "Event"]
-                    if events:
-                        event_obj = events[0]
-                elif data.get("@type") == "Event":
-                    event_obj = data
-            elif isinstance(data, list):
-                events = [x for x in data if x.get("@type") == "Event"]
-                if events:
-                    event_obj = events[0]
-
-            if event_obj:
-                # Immagini
-                ld_images = event_obj.get("image")
-                if ld_images:
-                    if isinstance(ld_images, list):
-                        item["image_urls"].extend(ld_images)
-                    else:
-                        item["image_urls"].append(ld_images)
-
-                # Prezzo
-                offers = event_obj.get("offers", {})
-                if isinstance(offers, dict):
-                    price = offers.get("price")
-                    if price:
-                        item["price"] = str(price)
-                elif isinstance(offers, list) and offers:
-                    price = offers[0].get("price")
-                    if price:
-                        item["price"] = str(price)
-
-                # Date
-                if not item.get("date_start"):
-                    item["date_start"] = self.parse_date_iso(event_obj.get("startDate"))
-                if not item.get("date_end"):
-                    item["date_end"] = self.parse_date_iso(event_obj.get("endDate"))
-
-        except Exception as e:
-            self.logger.warning(f"Errore parsing JSON-LD: {e}")
 
     def _extract_event_info(self, response) -> dict:
         """Estrae informazioni evento dal widget HTML."""

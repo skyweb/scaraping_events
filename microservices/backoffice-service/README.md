@@ -210,3 +210,79 @@ docker exec dev-backoffice python manage.py import_scraping_comuni /tmp/scraping
 - **backend/**: Applicazione Django (API + Admin)
 - **frontend/**: Applicazione React/Vite (UI personalizzata)
 - **docker-compose.dev.yml**: Configurazione Docker per l'ambiente di sviluppo
+
+
+
+## Bulk Ingestion Asincrono
+
+L'endpoint `POST /api/external/staging/bulk/` supporta due modalita':
+
+### Async (default)
+```
+POST /api/external/staging/bulk/
+→ 202 Accepted + { task_id, status: "PENDING", message }
+```
+Il batch viene processato in background dal Celery worker. Per verificare lo stato:
+```
+GET /api/external/staging/bulk-status/{task_id}/
+→ { task_id, status: "SUCCESS|PENDING|STARTED|FAILURE", result }
+```
+
+### Sync (backward compatible)
+```
+POST /api/external/staging/bulk/?sync=true
+→ 201/200/400 + { created_count, failed_count, successful_events, failed_events }
+```
+Comportamento sincrono originale.
+
+### Flusso Async
+
+```
+Scrapy ApiPipeline
+    │ POST /api/external/staging/bulk/
+    ▼
+┌──────────────────────────┐
+│ bulk() view              │
+│ → valida payload         │
+│ → process_bulk.delay()   │  ← dispatch a Celery
+│ → return 202 + task_id   │  ← risposta immediata
+└──────────────────────────┘
+    │
+    ▼ (Redis queue)
+┌──────────────────────────┐
+│ Celery Worker            │
+│ process_bulk_events()    │
+│ → validate each item     │
+│ → bulk_create (batch DB) │  ← 1 query invece di N
+│ → retry su errore DB     │
+│ → salva risultato        │
+└──────────────────────────┘
+```
+
+## Test API Staging Events
+
+Test Django che leggono lo schema OpenAPI (drf-spectacular) ed eseguono
+le richieste usando gli esempi JSON definiti nelle `@extend_schema`.
+
+### Cosa testano
+
+| Classe | Descrizione |
+|--------|-------------|
+| `OpenAPISchemaTest` | Validita' schema: paths, esempi, campi obbligatori |
+| `StagingEventCreateFromSchemaTest` | POST `/api/external/staging/` con ogni esempio OpenAPI |
+| `StagingEventBulkFromSchemaTest` | POST `/api/external/staging/bulk/` con esempi valid/partial/invalid |
+| `StagingEventCRUDTest` | Ciclo completo: list, retrieve, create, update, patch, delete, filtri, search |
+| `StagingEventClearSourceTest` | DELETE `/api/external/staging/clear_source/?source=xxx` |
+| `StagingEventAuthTest` | OAuth2: token assente, scaduto, invalido, scope read vs write |
+
+### Esempio output tabellare
+
+```
+Metodo | Endpoint                            | Status | Esito | Test
+-------+-------------------------------------+--------+-------+------------------------------------------
+GET    | /api/external/staging/              | 200    | PASS  | test_list_events
+POST   | /api/external/staging/              | 201    | PASS  | test_create_with_each_schema_example
+POST   | /api/external/staging/bulk/         | 201    | PASS  | test_bulk_create_all_valid
+DELETE | /api/external/staging/clear_source/ | 200    | PASS  | test_clear_source_deletes_matching
+GET    | /api/external/staging/              | 401    | PASS  | test_no_token_returns_401
+...

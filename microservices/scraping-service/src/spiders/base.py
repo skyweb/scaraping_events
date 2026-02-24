@@ -10,6 +10,7 @@ Fornisce funzionalità comuni:
 """
 
 import hashlib
+import json
 import re
 from abc import ABC, abstractmethod
 from datetime import datetime
@@ -213,6 +214,85 @@ class BaseEventSpider(scrapy.Spider, ABC):
                 item[key] = value
 
         return item
+
+    # =========================================================================
+    # METODI DI UTILITÀ JSON-LD
+    # =========================================================================
+
+    def extract_jsonld_node(self, response, type_name: str) -> Optional[dict]:
+        """
+        Cerca e restituisce il primo nodo JSON-LD con @type == type_name.
+
+        Gestisce i tre formati comuni:
+        - { "@graph": [{ "@type": "Event", ... }] }
+        - { "@type": "Event", ... }
+        - [{ "@type": "Event", ... }]
+
+        Args:
+            response: Risposta Scrapy con HTML
+            type_name: Valore di @type da cercare (es. "Event", "WebPage")
+
+        Returns:
+            Dizionario del nodo trovato o None
+        """
+        for script_text in response.css('script[type="application/ld+json"]::text').getall():
+            try:
+                data = json.loads(script_text)
+            except (json.JSONDecodeError, ValueError):
+                continue
+
+            node = self._find_jsonld_node(data, type_name)
+            if node:
+                return node
+
+        return None
+
+    def _find_jsonld_node(self, data, type_name: str) -> Optional[dict]:
+        """Trova il primo nodo con @type == type_name in una struttura JSON-LD."""
+        if isinstance(data, dict):
+            if "@graph" in data:
+                for node in data["@graph"]:
+                    if isinstance(node, dict) and node.get("@type") == type_name:
+                        return node
+            if data.get("@type") == type_name:
+                return data
+        elif isinstance(data, list):
+            for node in data:
+                if isinstance(node, dict) and node.get("@type") == type_name:
+                    return node
+        return None
+
+    # =========================================================================
+    # METODI DI UTILITÀ TESTO STRUTTURATO
+    # =========================================================================
+
+    def extract_phone_from_text(self, text: str) -> Optional[str]:
+        """
+        Estrae un numero di telefono dal testo con regex standard italiana.
+
+        Args:
+            text: Testo in cui cercare il numero
+
+        Returns:
+            Numero di telefono trovato o None
+        """
+        if not text:
+            return None
+        match = re.search(r"\b[\d][\d\s.\-/]{5,14}[\d]\b", text)
+        return match.group(0).strip() if match else None
+
+    @staticmethod
+    def slug_from_url(url: str) -> str:
+        """
+        Estrae lo slug dall'ultimo segmento dell'URL.
+
+        Args:
+            url: URL della pagina evento
+
+        Returns:
+            Slug (ultima parte del path, senza slash finale)
+        """
+        return url.rstrip("/").split("/")[-1]
 
     # =========================================================================
     # LOGGING

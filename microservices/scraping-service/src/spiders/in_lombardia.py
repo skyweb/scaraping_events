@@ -23,13 +23,13 @@ Parametri:
     max_pages: Numero massimo di pagine listing da scansionare (default: 5)
 """
 
-import json
 import re
 from typing import Optional
 
 import scrapy
 
 from spiders.base import BaseEventSpider
+from spiders.utils import DEFAULT_CRAWL_SETTINGS
 
 
 class InLombardiaSpider(BaseEventSpider):
@@ -50,17 +50,7 @@ class InLombardiaSpider(BaseEventSpider):
     BASE_URL = "https://www.in-lombardia.it"
     EVENTS_URL = "https://www.in-lombardia.it/it/eventi"
 
-    custom_settings = {
-        "USER_AGENT": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/120.0.0.0 Safari/537.36"
-        ),
-        "ROBOTSTXT_OBEY": True,
-        "CONCURRENT_REQUESTS": 2,
-        "DOWNLOAD_DELAY": 1.5,
-        "RANDOMIZE_DOWNLOAD_DELAY": True,
-    }
+    custom_settings = {**DEFAULT_CRAWL_SETTINGS}
 
     def __init__(self, max_pages: str = "5", *args, **kwargs):
         """
@@ -129,7 +119,7 @@ class InLombardiaSpider(BaseEventSpider):
             response: Risposta HTTP della pagina dettaglio
         """
         # Estrai JSON-LD
-        ld_event = self._extract_jsonld_event(response)
+        ld_event = self.extract_jsonld_node(response, "Event")
         if not ld_event:
             self.logger.warning(f"Nessun JSON-LD Event trovato: {response.url}")
             return
@@ -186,7 +176,7 @@ class InLombardiaSpider(BaseEventSpider):
             image_url = str(image_data) if image_data else None
 
         # Slug ed event_id dall'URL
-        slug = response.url.rstrip("/").split("/")[-1]
+        slug = self.slug_from_url(response.url)
 
         # Campi integrativi dall'HTML
         category = self._extract_category(response)
@@ -232,46 +222,6 @@ class InLombardiaSpider(BaseEventSpider):
 
         self.log_stats(item.get("city"))
         yield item
-
-    # =========================================================================
-    # METODI ESTRAZIONE JSON-LD
-    # =========================================================================
-
-    def _extract_jsonld_event(self, response) -> Optional[dict]:
-        """
-        Estrae il nodo Event dal JSON-LD della pagina.
-
-        La struttura attesa è:
-            { "@context": ..., "@graph": [{ "@type": "Event", ... }] }
-        oppure direttamente:
-            { "@type": "Event", ... }
-
-        Returns:
-            Dizionario con i dati dell'evento o None
-        """
-        for script_text in response.css('script[type="application/ld+json"]::text').getall():
-            try:
-                data = json.loads(script_text)
-            except (json.JSONDecodeError, ValueError):
-                continue
-
-            # Formato @graph
-            if isinstance(data, dict) and "@graph" in data:
-                for node in data["@graph"]:
-                    if isinstance(node, dict) and node.get("@type") == "Event":
-                        return node
-
-            # Formato diretto
-            if isinstance(data, dict) and data.get("@type") == "Event":
-                return data
-
-            # Formato array di oggetti
-            if isinstance(data, list):
-                for node in data:
-                    if isinstance(node, dict) and node.get("@type") == "Event":
-                        return node
-
-        return None
 
     # =========================================================================
     # METODI ESTRAZIONE HTML (integrativi)
@@ -378,10 +328,7 @@ class InLombardiaSpider(BaseEventSpider):
         contatti["raw"] = raw_all if raw_all else None
 
         if contatti["raw"]:
-            # Cerca pattern telefono: cifre, punti, trattini
-            phone_match = re.search(r"\b[\d][\d\s.\-/]{5,14}[\d]\b", contatti["raw"])
-            if phone_match:
-                contatti["phone"] = phone_match.group(0).strip()
+            contatti["phone"] = self.extract_phone_from_text(contatti["raw"])
 
         if website_href:
             contatti["website"] = website_href

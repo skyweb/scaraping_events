@@ -23,13 +23,13 @@ Parametri:
     max_pages: Numero massimo di pagine listing da scansionare (default: 5)
 """
 
-import json
 import re
 from typing import Optional
 
 import scrapy
 
 from spiders.base import BaseEventSpider
+from spiders.utils import DEFAULT_CRAWL_SETTINGS
 
 
 class LaMiaLiguriaSpider(BaseEventSpider):
@@ -50,17 +50,7 @@ class LaMiaLiguriaSpider(BaseEventSpider):
     BASE_URL = "https://lamialiguria.it"
     EVENTS_URL = "https://lamialiguria.it/vivi-la-liguria/liguria-eventi/"
 
-    custom_settings = {
-        "USER_AGENT": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/120.0.0.0 Safari/537.36"
-        ),
-        "ROBOTSTXT_OBEY": True,
-        "CONCURRENT_REQUESTS": 2,
-        "DOWNLOAD_DELAY": 1.5,
-        "RANDOMIZE_DOWNLOAD_DELAY": True,
-    }
+    custom_settings = {**DEFAULT_CRAWL_SETTINGS}
 
     def __init__(self, max_pages: str = "5", *args, **kwargs):
         """
@@ -138,7 +128,7 @@ class LaMiaLiguriaSpider(BaseEventSpider):
             response: Risposta HTTP della pagina dettaglio
         """
         # ── JSON-LD WebPage ───────────────────────────────────────────────────
-        ld_page = self._extract_jsonld_webpage(response)
+        ld_page = self.extract_jsonld_node(response, "WebPage")
 
         # Titolo: JSON-LD name → h1 → og:title
         title = (
@@ -182,7 +172,7 @@ class LaMiaLiguriaSpider(BaseEventSpider):
         category = [category_value] if category_value else []
 
         # Slug ed event_id dall'URL
-        slug = response.url.rstrip("/").split("/")[-1]
+        slug = self.slug_from_url(response.url)
 
         # Costruzione item
         item = self.create_item(
@@ -214,35 +204,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
 
         self.log_stats(item.get("city"))
         yield item
-
-    # =========================================================================
-    # METODI ESTRAZIONE JSON-LD
-    # =========================================================================
-
-    def _extract_jsonld_webpage(self, response) -> Optional[dict]:
-        """
-        Estrae il nodo WebPage dal JSON-LD della pagina.
-
-        Returns:
-            Dizionario con i dati della pagina o None
-        """
-        for script_text in response.css('script[type="application/ld+json"]::text').getall():
-            try:
-                data = json.loads(script_text)
-            except (json.JSONDecodeError, ValueError):
-                continue
-
-            # Formato @graph
-            if isinstance(data, dict) and "@graph" in data:
-                for node in data["@graph"]:
-                    if isinstance(node, dict) and node.get("@type") == "WebPage":
-                        return node
-
-            # Formato diretto
-            if isinstance(data, dict) and data.get("@type") == "WebPage":
-                return data
-
-        return None
 
     # =========================================================================
     # METODI ESTRAZIONE HTML
@@ -358,9 +319,7 @@ class LaMiaLiguriaSpider(BaseEventSpider):
                 contatti["website"] = website
 
             if raw:
-                phone_match = re.search(r"\b[\d][\d\s.\-/]{5,14}[\d]\b", raw)
-                if phone_match:
-                    contatti["phone"] = phone_match.group(0).strip()
+                contatti["phone"] = self.extract_phone_from_text(raw)
 
         return contatti
 

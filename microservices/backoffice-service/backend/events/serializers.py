@@ -113,10 +113,6 @@ class StagingEventScrapingSerializer(serializers.Serializer):
         stars = validated.get('stars')
         info_extra = dict(validated.get('info_extra') or {})
 
-        # Sezione: prima chiave come stringa, dict completo in info_extra
-        section_str = next(iter(section_raw), None)
-        if section_raw:
-            info_extra['section'] = section_raw
         if stars is not None:
             info_extra['stars'] = stars
 
@@ -133,9 +129,8 @@ class StagingEventScrapingSerializer(serializers.Serializer):
             'image_url': validated.get('image_url') or None,
             'price': validated.get('price') or None,
             'scraped_at': validated.get('scraped_at'),
-            'raw_data': validated.get('raw_data'),
             'category': [c for c in (validated.get('category') or []) if c] or None,
-            'section': section_str,
+            'section': section_raw or None,
             'city_name': city.get('city_name') or None,
             'location_name': city.get('location_name') or None,
             'location_address': city.get('location_address') or None,

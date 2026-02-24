@@ -36,6 +36,7 @@ import scrapy
 from scrapy import Selector
 
 from spiders.base import BaseEventSpider
+from spiders.utils import DEFAULT_CRAWL_SETTINGS
 
 
 # =============================================================================
@@ -164,13 +165,7 @@ class CityTodaySpider(BaseEventSpider):
     source_name = "city_today"
 
     custom_settings = {
-        "USER_AGENT": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/120.0.0.0 Safari/537.36"
-        ),
-        "ROBOTSTXT_OBEY": True,
-        "CONCURRENT_REQUESTS": 2,
+        **DEFAULT_CRAWL_SETTINGS,
         "DOWNLOAD_DELAY": 1,
     }
 

@@ -4,17 +4,10 @@ Spider per pugliaculture.it - Portale eventi culturali della Puglia.
 
 Il sito usa WordPress con Elementor come page builder.
 Il contenuto strutturato (date, luogo, prezzo, cast) è nei blocchi
-div.elementor-text-editor; il content.rendered dell'API REST è vuoto.
 
 Strategia:
 - WP REST API (/wp-json/wp/v2/evento) per il listing con paginazione nativa
-  (header X-WP-TotalPages, 100 eventi/pagina)
 - HTML scraping della pagina dettaglio per estrarre:
-  - Cast / descrizione artistica  → blocco elementor-text-editor con <strong>Cast</strong>
-  - COSTI E INFO                  → blocco elementor-text-editor con <strong>COSTI</strong>
-  - Teatro / location             → <p><strong>Teatro:</strong> ...</p>
-  - Date e orari                  → <ul><li> con span mesi italiani + "H:"
-  - Categoria                     → link /categoria/
 - Immagine da yoast_head_json.og_image nell'API
 
 Utilizzo:
@@ -36,63 +29,14 @@ Parametri:
 
 import json
 import re
-from datetime import datetime
 from typing import Optional
 
 import scrapy
 
 from spiders.base import BaseEventSpider
-
-
-# Mappa mesi italiani → numero mese
-MESI_IT = {
-    'gennaio': 1, 'febbraio': 2, 'marzo': 3, 'aprile': 4,
-    'maggio': 5, 'giugno': 6, 'luglio': 7, 'agosto': 8,
-    'settembre': 9, 'ottobre': 10, 'novembre': 11, 'dicembre': 12,
-}
+from spiders.utils import DEFAULT_CRAWL_SETTINGS, MESI_IT, parse_italian_date_time
 
 API_URL = "https://www.pugliaculture.it/wp-json/wp/v2/evento"
-
-
-def parse_italian_date_time(text: str) -> tuple:
-    """
-    Converte una stringa data/ora italiana in (YYYY-MM-DD, HH:MM).
-
-    Gestisce:
-    - "venerdì 13 marzo 2026 H: 21:00"
-    - "venerdì 13 marzo 2026H: 21:00"   (senza spazio prima di H:)
-    - "venerdì 13 marzo 2026"
-    - "13 marzo 2026"
-    - "13 marzo"
-
-    Returns:
-        Tupla (data YYYY-MM-DD o None, ora HH:MM o None)
-    """
-    text = text.strip()
-
-    # Estrai orario se presente (es: "H: 21:00", "H:21:00", "H 21:00")
-    time_match = re.search(r"H:?\s*(\d{1,2}:\d{2})", text, re.IGNORECASE)
-    time_str = time_match.group(1) if time_match else None
-    # Rimuovi la parte orario per parsare la data
-    date_text = re.sub(r"H:?\s*\d{1,2}:\d{2}", "", text, flags=re.IGNORECASE).strip()
-
-    parts = date_text.lower().split()
-    # Rimuovi giorno della settimana se la prima parola non è un numero
-    if parts and not parts[0][0].isdigit():
-        parts = parts[1:]
-
-    if len(parts) < 2:
-        return None, time_str
-
-    try:
-        day = int(parts[0])
-        month = MESI_IT.get(parts[1])
-        if not month:
-            return None, time_str
-        year = int(parts[2]) if len(parts) >= 3 else datetime.now().year
-        return f"{year:04d}-{month:02d}-{day:02d}", time_str
-    except (ValueError, IndexError):
-        return None, time_str
 
 
 class PugliaCultureSpider(BaseEventSpider):
@@ -100,24 +44,13 @@ class PugliaCultureSpider(BaseEventSpider):
     Spider per pugliaculture.it.
 
     Usa la WP REST API per il listing e HTML scraping Elementor per i dettagli.
-    Estrae: cast/descrizione artistica, costi e info, teatro, date multiple, categoria.
     """
 
     name = "puglia_culture"
     source_name = "puglia_culture"
     allowed_domains = ["www.pugliaculture.it", "pugliaculture.it"]
 
-    custom_settings = {
-        "USER_AGENT": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/120.0.0.0 Safari/537.36"
-        ),
-        "ROBOTSTXT_OBEY": True,
-        "CONCURRENT_REQUESTS": 2,
-        "DOWNLOAD_DELAY": 1.5,
-        "RANDOMIZE_DOWNLOAD_DELAY": True,
-    }
+    custom_settings = {**DEFAULT_CRAWL_SETTINGS}
 
     def __init__(self, max_pages: str = "5", *args, **kwargs):
         """
@@ -234,6 +167,7 @@ class PugliaCultureSpider(BaseEventSpider):
         city_name = None
         if location_name and " - " in location_name:
             city_name = location_name.rsplit(" - ", 1)[-1].strip() or None
+            # cancella city_name da location_name
 
         # ── Descrizione (HTML grezzo da div.spettacolo-content) ───────────────
         description = self._extract_description(response)
@@ -246,7 +180,7 @@ class PugliaCultureSpider(BaseEventSpider):
         # ── Time info (HTML raw del blocco date) ──────────────────────────────
         time_info = response.css("div.event-dates").get() or None
 
-        # ── Section annidato (prima categoria come chiave) ────────────────────
+        # ── Section annidato ────────────────────
         section = {}
         if category:
             section_key = category[0]
@@ -269,7 +203,7 @@ class PugliaCultureSpider(BaseEventSpider):
         if website:
             info_extra["info_e_contatti"] = website
 
-        slug = response.meta.get("slug") or response.url.rstrip("/").split("/")[-1]
+        slug = response.meta.get("slug") or self.slug_from_url(response.url)
 
         item = self.create_item(
             url=response.url,
@@ -393,8 +327,6 @@ class PugliaCultureSpider(BaseEventSpider):
     def _extract_description(self, response) -> Optional[str]:
         """
         Estrae la descrizione dell'evento come HTML grezzo da div.spettacolo-content.
-
-        Il contenuto viene restituito senza alterazioni (no clean_text, no strip HTML).
 
         Returns:
             HTML grezzo del blocco descrizione, o None se assente
