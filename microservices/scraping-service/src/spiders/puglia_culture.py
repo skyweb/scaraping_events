@@ -224,7 +224,7 @@ class PugliaCultureSpider(BaseEventSpider):
             time_info=time_info,
             slug=slug,
             event_id=response.meta.get("event_id", slug),
-            raw_data={"costi_info": costi_info},
+            raw_data={},
         )
 
         item["uuid"] = self.generate_uuid(
