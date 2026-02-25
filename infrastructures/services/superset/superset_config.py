@@ -59,3 +59,8 @@ SUPERSET_WEBSERVER_TIMEOUT = 300
 # ProxyFix legge X-Forwarded-Prefix inviato da nginx e riscrive gli URL generati
 ENABLE_PROXY_FIX = True
 PROXY_FIX_CONFIG = {"x_for": 1, "x_proto": 1, "x_host": 1, "x_prefix": 1}
+
+# Nota: per SSO automatico via oauth2-proxy header "Remote-User" sarebbe necessario
+# un middleware WSGI che mappi HTTP_REMOTE_USER → REMOTE_USER nell'environ.
+# In dev si usa AUTH_DB (default) con login admin/admin dalla form Superset.
+# La form di login è raggiungibile su /superset/login/ (nginx strippa → /login/).
