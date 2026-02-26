@@ -31,8 +31,6 @@ extensions:
       metrics: promstore
     ui:
       config_file: /etc/jaeger/ui-config.json
-    # Sub-path /jaeger/ via nginx
-    base_path: /jaeger
 
 connectors:
   spanmetrics:
