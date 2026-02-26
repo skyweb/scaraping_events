@@ -571,6 +571,32 @@ services:
         aliases:
           - n8n
 
+  # Traefik — reverse proxy e service discovery via Docker labels
+  traefik:
+    image: traefik:v3.1
+    container_name: dev-traefik
+    restart: unless-stopped
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --providers.docker.network=dev-network
+      - --entrypoints.web.address=:80
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --log.level=INFO
+    ports:
+      - "8082:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.${DOMAIN}`)"
+      - "traefik.http.routers.traefik-dashboard.entrypoints=web"
+      - "traefik.http.routers.traefik-dashboard.service=api@internal"
+      - "traefik.http.routers.traefik-dashboard.middlewares=forward-auth"
+    networks:
+      - dev-network
+
   # Nginx Reverse Proxy
   nginx:
     image: nginx:alpine
