@@ -464,7 +464,7 @@ services:
     env_file:
       - .env
     environment:
-      AIRFLOW__WEBSERVER__BASE_URL: http://localhost/airflow
+      AIRFLOW__WEBSERVER__BASE_URL: http://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
@@ -497,7 +497,7 @@ services:
     env_file:
       - .env
     environment:
-      AIRFLOW__WEBSERVER__BASE_URL: http://localhost/airflow
+      AIRFLOW__WEBSERVER__BASE_URL: http://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
     command: webserver
     volumes:
@@ -505,10 +505,14 @@ services:
       - ./services/airflow/plugins:/opt/airflow/plugins:ro
       - ./services/airflow/data:/opt/airflow/data
       - airflow-logs-dev:/opt/airflow/logs
-    ports:
-      - "8080:8080"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.airflow.rule=Host(`airflow.${DOMAIN}`)"
+      - "traefik.http.routers.airflow.entrypoints=web"
+      - "traefik.http.routers.airflow.middlewares=forward-auth"
+      - "traefik.http.services.airflow.loadbalancer.server.port=8080"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/airflow/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -529,7 +533,7 @@ services:
     env_file:
       - .env
     environment:
-      AIRFLOW__WEBSERVER__BASE_URL: http://localhost/airflow
+      AIRFLOW__WEBSERVER__BASE_URL: http://airflow.${DOMAIN}
     command: scheduler
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
