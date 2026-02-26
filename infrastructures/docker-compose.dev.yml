@@ -336,8 +336,12 @@ services:
     volumes:
       - ./services/loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
       - loki-dev-data:/loki
-    ports:
-      - "3100:3100"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.loki.rule=Host(`loki.${DOMAIN}`)"
+      - "traefik.http.routers.loki.entrypoints=web"
+      - "traefik.http.routers.loki.middlewares=forward-auth"
+      - "traefik.http.services.loki.loadbalancer.server.port=3100"
     healthcheck:
       test: ["CMD-SHELL", "wget --quiet --tries=1 --output-document=- http://localhost:3100/ready | grep -q ready || exit 1"]
       interval: 10s
@@ -560,8 +564,12 @@ services:
     restart: unless-stopped
     volumes:
       - ollama-dev-data:/root/.ollama
-    ports:
-      - "11434:11434"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ollama.rule=Host(`ollama.${DOMAIN}`)"
+      - "traefik.http.routers.ollama.entrypoints=web"
+      - "traefik.http.routers.ollama.middlewares=forward-auth"
+      - "traefik.http.services.ollama.loadbalancer.server.port=11434"
     healthcheck:
       test: ["CMD-SHELL", "ollama list || exit 1"]
       interval: 10s
@@ -675,8 +683,12 @@ services:
     environment:
       REDIS_ADDR: redis://redis:6379
       REDIS_PASSWORD: ${REDIS_PASSWORD}
-    ports:
-      - "9121:9121"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.redis-exporter.rule=Host(`redis-exporter.${DOMAIN}`)"
+      - "traefik.http.routers.redis-exporter.entrypoints=web"
+      - "traefik.http.routers.redis-exporter.middlewares=forward-auth"
+      - "traefik.http.services.redis-exporter.loadbalancer.server.port=9121"
     depends_on:
       redis:
         condition: service_healthy
@@ -691,8 +703,12 @@ services:
     container_name: dev-celery-exporter
     environment:
       CE_BROKER_URL: ${CELERY_BROKER_URL}
-    ports:
-      - "9808:9808"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.celery-exporter.rule=Host(`celery-exporter.${DOMAIN}`)"
+      - "traefik.http.routers.celery-exporter.entrypoints=web"
+      - "traefik.http.routers.celery-exporter.middlewares=forward-auth"
+      - "traefik.http.services.celery-exporter.loadbalancer.server.port=9808"
     depends_on:
       redis:
         condition: service_healthy
@@ -706,14 +722,16 @@ services:
     image: gcr.io/cadvisor/cadvisor:v0.49.1
     container_name: dev-cadvisor
     privileged: true
-    command:
-      - --url_base_prefix=/cadvisor
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
-    ports:
-      - "8081:8080"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.cadvisor.rule=Host(`cadvisor.${DOMAIN}`)"
+      - "traefik.http.routers.cadvisor.entrypoints=web"
+      - "traefik.http.routers.cadvisor.middlewares=forward-auth"
+      - "traefik.http.services.cadvisor.loadbalancer.server.port=8080"
     networks:
       dev-network:
         aliases:
