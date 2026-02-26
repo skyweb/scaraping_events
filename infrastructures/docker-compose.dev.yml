@@ -119,12 +119,12 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-django-insecure-dev-key}
       DJANGO_DEBUG: "True"
-      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,backoffice,nginx}
+      DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},backoffice,localhost,127.0.0.1"
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
-      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost,http://localhost:80,http://localhost:8000}
-      CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-http://localhost,http://localhost:80,http://localhost:8000}
+      CORS_ALLOWED_ORIGINS: "http://frontend.${DOMAIN},http://localhost:3000"
+      CSRF_TRUSTED_ORIGINS: "http://frontend.${DOMAIN},http://localhost:3000"
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
       CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:redis_secret_2026@redis:6379/2}
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
@@ -132,8 +132,21 @@ services:
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
     volumes:
       - ../microservices/backoffice-service/backend:/app/backend
-    ports:
-      - "${BACKOFFICE_PORT:-8000}:8000"
+    labels:
+      - "traefik.enable=true"
+      # Router protetto per /admin/ — priorità alta
+      - "traefik.http.routers.backoffice-admin.rule=Host(`backoffice.${DOMAIN}`) && PathPrefix(`/admin/`)"
+      - "traefik.http.routers.backoffice-admin.entrypoints=web"
+      - "traefik.http.routers.backoffice-admin.service=backoffice-svc"
+      - "traefik.http.routers.backoffice-admin.middlewares=forward-auth"
+      - "traefik.http.routers.backoffice-admin.priority=10"
+      # Router default per API, static, oauth2 — nessuna auth
+      - "traefik.http.routers.backoffice.rule=Host(`backoffice.${DOMAIN}`)"
+      - "traefik.http.routers.backoffice.entrypoints=web"
+      - "traefik.http.routers.backoffice.service=backoffice-svc"
+      - "traefik.http.routers.backoffice.priority=1"
+      # Definizione servizio (condivisa tra i due router)
+      - "traefik.http.services.backoffice-svc.loadbalancer.server.port=8000"
     depends_on:
       postgres:
         condition: service_healthy
