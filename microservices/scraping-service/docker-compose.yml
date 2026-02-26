@@ -21,8 +21,6 @@ services:
     container_name: dev-scrapyd
     working_dir: /app/events_scraper
     restart: unless-stopped
-    ports:
-      - "6800"
     env_file:
       - .env
     environment:
@@ -43,6 +41,12 @@ services:
       timeout: 10s
       retries: 3
       start_period: 10s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.scrapyd.rule=Host(`scrapyd.${DOMAIN}`)"
+      - "traefik.http.routers.scrapyd.entrypoints=web"
+      - "traefik.http.routers.scrapyd.middlewares=forward-auth"
+      - "traefik.http.services.scrapyd.loadbalancer.server.port=6800"
     networks:
       - dev-network
 
