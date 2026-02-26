@@ -289,12 +289,15 @@ services:
     container_name: dev-frontend
     restart: unless-stopped
     environment:
-      VITE_API_URL: http://localhost/api
+      VITE_API_URL: http://backoffice.${DOMAIN}/api
     volumes:
       - ../microservices/frontend-service:/app
       - /app/node_modules
-    ports:
-      - "${FRONTEND_PORT:-3000}:5173"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=Host(`frontend.${DOMAIN}`)"
+      - "traefik.http.routers.frontend.entrypoints=web"
+      - "traefik.http.services.frontend.loadbalancer.server.port=5173"
     networks:
       dev-network:
         aliases:
