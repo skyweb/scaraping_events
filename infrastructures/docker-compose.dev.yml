@@ -449,8 +449,12 @@ services:
     volumes:
       - ./services/superset/superset_config.py:/app/pythonpath/superset_config.py:ro
       - superset-dev-data:/app/superset_home
-    ports:
-      - "${SUPERSET_PORT:-8088}:8088"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.superset.rule=Host(`superset.${DOMAIN}`)"
+      - "traefik.http.routers.superset.entrypoints=web"
+      - "traefik.http.routers.superset.middlewares=forward-auth"
+      - "traefik.http.services.superset.loadbalancer.server.port=8088"
     restart: unless-stopped
     networks:
       dev-network:
