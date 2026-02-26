@@ -103,7 +103,7 @@ infrastructures/
     ├── grafana/               # Provisioning datasource + dashboard
     ├── jaeger/                # jaeger-v2-config.yaml
     ├── loki/                  # loki-config.yaml
-    ├── nginx/                 # nginx.conf + 502.html
+    ├── traefik/               # (configurazione via Docker labels in docker-compose.dev.yml)
     ├── otel-collector/        # otel-collector-config.yaml
     ├── postgres/              # init SQL (schema PostGIS)
     ├── prometheus/            # prometheus.yml + alert rules
@@ -114,17 +114,28 @@ infrastructures/
 
 ## Note di configurazione
 
-### Subpath routing via nginx
+### Subdomain routing via Traefik
 
-Ogni servizio è configurato per funzionare sotto un sotto-percorso `/nome/`:
+Ogni servizio è accessibile al proprio sottodominio `nomeservizio.${DOMAIN}` (es. `grafana.127.0.0.1.nip.io`).
+Il routing è configurato tramite Docker labels direttamente in `docker-compose.dev.yml`.
 
-| Servizio | Meccanismo |
-|----------|------------|
-| Grafana | `GF_SERVER_SERVE_FROM_SUB_PATH=true` + `GF_SERVER_ROOT_URL` |
-| Jaeger | `base_path: /jaeger` in `jaeger-v2-config.yaml` |
-| Prometheus | `--web.route-prefix=/prometheus` nel command |
-| Superset | `ENABLE_PROXY_FIX=True` + header `X-Forwarded-Prefix` |
-| Airflow | `AIRFLOW__WEBSERVER__BASE_URL=http://localhost/airflow` + `ENABLE_PROXY_FIX` |
+| Servizio | Sottodominio | Auth |
+|----------|--------------|------|
+| Frontend | `frontend.${DOMAIN}` | No |
+| Backoffice API | `backoffice.${DOMAIN}` | `/admin/` protetto |
+| Grafana | `grafana.${DOMAIN}` | ForwardAuth |
+| Jaeger | `jaeger.${DOMAIN}` | ForwardAuth |
+| Prometheus | `prometheus.${DOMAIN}` | ForwardAuth |
+| Superset | `superset.${DOMAIN}` | ForwardAuth |
+| Airflow | `airflow.${DOMAIN}` | ForwardAuth |
+| Flower | `flower.${DOMAIN}` | ForwardAuth |
+| Loki | `loki.${DOMAIN}` | ForwardAuth |
+| n8n | `n8n.${DOMAIN}` | ForwardAuth |
+| Ollama | `ollama.${DOMAIN}` | ForwardAuth |
+| oauth2-proxy | `auth.${DOMAIN}` | Pubblico |
+| Traefik dashboard | `traefik.${DOMAIN}` | ForwardAuth |
+
+`DOMAIN` si imposta in `infrastructures/.env` (default: `127.0.0.1.nip.io`).
 
 ### Rete Docker
 
