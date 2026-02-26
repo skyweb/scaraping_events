@@ -23,13 +23,16 @@ NC    := \033[0m
 
 .PHONY: help \
         up down restart ps logs build pull \
-        up-core up-observability up-bi up-airflow \
+        up-core up-observability up-bi up-airflow up-llm \
         logs-backoffice logs-celery logs-frontend logs-nginx logs-db logs-redis \
         logs-grafana logs-jaeger logs-loki logs-superset logs-airflow logs-oauth2 \
+        logs-ollama logs-n8n \
         restart-backoffice restart-frontend restart-nginx restart-celery restart-airflow restart-oauth2 \
+        restart-ollama restart-n8n \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
         open-admin open-flower open-grafana open-jaeger open-prometheus \
-        open-superset open-loki open-airflow \
+        open-superset open-loki open-airflow open-n8n \
+        ollama-pull \
         clean clean-logs
 
 # =============================================================================
@@ -48,6 +51,8 @@ up: ## Avvia tutto lo stack (build immagini custom se necessario)
 	@echo "$(CYAN)  http://localhost/prometheus/$(NC)   Prometheus"
 	@echo "$(CYAN)  http://localhost/superset/$(NC)     Superset"
 	@echo "$(CYAN)  http://localhost/airflow/$(NC)      Airflow"
+	@echo "$(CYAN)  http://localhost/n8n/$(NC)          n8n (workflow automation)"
+	@echo "$(CYAN)  http://localhost/ollama/$(NC)       Ollama (LLM API)"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -96,6 +101,10 @@ up-airflow: ## Avvia solo Apache Airflow (webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
+up-llm: ## Avvia Ollama (LLM) + n8n (workflow automation)
+	@echo "$(GREEN)Avvio LLM stack (Ollama + n8n)...$(NC)"
+	$(COMPOSE) up -d ollama ollama-init n8n
+
 # =============================================================================
 # Log per servizio
 # =============================================================================
@@ -136,6 +145,12 @@ logs-airflow: ## Logs Airflow webserver + scheduler (follow)
 logs-oauth2: ## Logs oauth2-proxy (follow)
 	$(COMPOSE) logs -f oauth2-proxy
 
+logs-ollama: ## Logs Ollama LLM (follow)
+	$(COMPOSE) logs -f ollama
+
+logs-n8n: ## Logs n8n workflow automation (follow)
+	$(COMPOSE) logs -f n8n
+
 # =============================================================================
 # Restart per servizio
 # =============================================================================
@@ -163,6 +178,14 @@ restart-airflow: ## Riavvia Airflow webserver + scheduler
 restart-oauth2: ## Riavvia oauth2-proxy
 	@echo "$(GREEN)Riavvio oauth2-proxy...$(NC)"
 	$(COMPOSE) restart oauth2-proxy
+
+restart-ollama: ## Riavvia Ollama
+	@echo "$(GREEN)Riavvio Ollama...$(NC)"
+	$(COMPOSE) restart ollama
+
+restart-n8n: ## Riavvia n8n
+	@echo "$(GREEN)Riavvio n8n...$(NC)"
+	$(COMPOSE) restart n8n
 
 # =============================================================================
 # Database / Django
@@ -231,6 +254,14 @@ open-redis-exporter: ## Apre Redis Exporter  →  http://localhost/redis-exporte
 open-airflow: ## Apre Apache Airflow  →  http://localhost/airflow/
 	@echo "$(CYAN)Apertura Airflow...$(NC)"
 	@$(OPEN) http://localhost/airflow/
+
+open-n8n: ## Apre n8n workflow automation  →  http://localhost/n8n/
+	@echo "$(CYAN)Apertura n8n...$(NC)"
+	@$(OPEN) http://localhost/n8n/
+
+ollama-pull: ## Scarica un modello Ollama (es: make ollama-pull MODEL=llama3.1:8b)
+	@echo "$(GREEN)Pull modello Ollama: $(MODEL)...$(NC)"
+	$(COMPOSE) exec ollama ollama pull $(MODEL)
 
 # =============================================================================
 # Pulizia
