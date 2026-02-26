@@ -237,11 +237,17 @@ services:
     image: mher/flower:2.0
     container_name: dev-flower
     restart: unless-stopped
-    command: celery flower --broker=${CELERY_BROKER_URL} --url-prefix=flower --persistent=True --db=/data/flower.db
+    command: celery flower --broker=${CELERY_BROKER_URL} --persistent=True --db=/data/flower.db
     environment:
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
     volumes:
       - flower-dev-data:/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.flower.rule=Host(`flower.${DOMAIN}`)"
+      - "traefik.http.routers.flower.entrypoints=web"
+      - "traefik.http.routers.flower.middlewares=forward-auth"
+      - "traefik.http.services.flower.loadbalancer.server.port=5555"
     depends_on:
       redis:
         condition: service_healthy
@@ -583,10 +589,8 @@ services:
     container_name: dev-n8n
     restart: unless-stopped
     environment:
-      # Sub-path /n8n/ via nginx
-      N8N_PATH: /n8n/
-      WEBHOOK_URL: http://localhost/n8n/
-      N8N_EDITOR_BASE_URL: http://localhost/n8n/
+      WEBHOOK_URL: http://n8n.${DOMAIN}/
+      N8N_EDITOR_BASE_URL: http://n8n.${DOMAIN}/
       # Database PostgreSQL
       DB_TYPE: postgresdb
       DB_POSTGRESDB_HOST: postgres
@@ -601,8 +605,12 @@ services:
       N8N_VERSION_NOTIFICATIONS_ENABLED: "false"
     volumes:
       - n8n-dev-data:/home/node/.n8n
-    ports:
-      - "5678:5678"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.n8n.rule=Host(`n8n.${DOMAIN}`)"
+      - "traefik.http.routers.n8n.entrypoints=web"
+      - "traefik.http.routers.n8n.middlewares=forward-auth"
+      - "traefik.http.services.n8n.loadbalancer.server.port=5678"
     depends_on:
       postgres:
         condition: service_healthy
