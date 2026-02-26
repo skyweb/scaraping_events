@@ -8,6 +8,9 @@
 
 COMPOSE := docker compose -f docker-compose.dev.yml --env-file .env
 
+# Legge DOMAIN dal .env (default: 127.0.0.1.nip.io)
+DOMAIN := $(shell grep '^DOMAIN=' .env 2>/dev/null | cut -d= -f2 | tr -d '[:space:]' || echo "127.0.0.1.nip.io")
+
 # Comando per aprire URL nel browser (macOS + Linux)
 OPEN := $(shell which open 2>/dev/null || which xdg-open 2>/dev/null)
 
@@ -24,14 +27,14 @@ NC    := \033[0m
 .PHONY: help \
         up down restart ps logs build pull \
         up-core up-observability up-bi up-airflow up-llm \
-        logs-backoffice logs-celery logs-frontend logs-nginx logs-db logs-redis \
+        logs-backoffice logs-celery logs-frontend logs-traefik logs-db logs-redis \
         logs-grafana logs-jaeger logs-loki logs-superset logs-airflow logs-oauth2 \
         logs-ollama logs-n8n \
-        restart-backoffice restart-frontend restart-nginx restart-celery restart-airflow restart-oauth2 \
+        restart-backoffice restart-frontend restart-traefik restart-celery restart-airflow restart-oauth2 \
         restart-ollama restart-n8n \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
         open-admin open-flower open-grafana open-jaeger open-prometheus \
-        open-superset open-loki open-airflow open-n8n \
+        open-superset open-loki open-airflow open-n8n open-traefik \
         ollama-pull \
         clean clean-logs
 
@@ -43,16 +46,17 @@ up: ## Avvia tutto lo stack (build immagini custom se necessario)
 	@echo "$(GREEN)Avvio stack dev...$(NC)"
 	$(COMPOSE) up --build -d
 	@echo ""
-	@echo "$(CYAN)  http://localhost/$(NC)              Frontend + API"
-	@echo "$(CYAN)  http://localhost/admin/$(NC)        Django Admin"
-	@echo "$(CYAN)  http://localhost/flower/$(NC)       Flower (Celery)"
-	@echo "$(CYAN)  http://localhost/grafana/$(NC)      Grafana"
-	@echo "$(CYAN)  http://localhost/jaeger/$(NC)       Jaeger"
-	@echo "$(CYAN)  http://localhost/prometheus/$(NC)   Prometheus"
-	@echo "$(CYAN)  http://localhost/superset/$(NC)     Superset"
-	@echo "$(CYAN)  http://localhost/airflow/$(NC)      Airflow"
-	@echo "$(CYAN)  http://localhost/n8n/$(NC)          n8n (workflow automation)"
-	@echo "$(CYAN)  http://localhost/ollama/$(NC)       Ollama (LLM API)"
+	@echo "$(CYAN)  http://frontend.$(DOMAIN)/$(NC)         Frontend"
+	@echo "$(CYAN)  http://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
+	@echo "$(CYAN)  http://flower.$(DOMAIN)/$(NC)           Flower (Celery)"
+	@echo "$(CYAN)  http://grafana.$(DOMAIN)/$(NC)          Grafana"
+	@echo "$(CYAN)  http://jaeger.$(DOMAIN)/$(NC)           Jaeger"
+	@echo "$(CYAN)  http://prometheus.$(DOMAIN)/$(NC)       Prometheus"
+	@echo "$(CYAN)  http://superset.$(DOMAIN)/$(NC)         Superset"
+	@echo "$(CYAN)  http://airflow.$(DOMAIN)/$(NC)          Airflow"
+	@echo "$(CYAN)  http://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
+	@echo "$(CYAN)  http://ollama.$(DOMAIN)/$(NC)           Ollama (LLM API)"
+	@echo "$(CYAN)  http://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -81,11 +85,11 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 # Avvio per gruppo
 # =============================================================================
 
-up-core: ## Avvia solo il core (postgres, redis, backoffice, celery, nginx, frontend)
+up-core: ## Avvia solo il core (postgres, redis, traefik, backoffice, celery, frontend)
 	@echo "$(GREEN)Avvio core stack...$(NC)"
-	$(COMPOSE) up -d postgres redis backoffice \
+	$(COMPOSE) up -d postgres redis traefik oauth2-proxy backoffice \
 	    backoffice-celery-worker backoffice-celery-beat flower \
-	    frontend nginx
+	    frontend
 
 up-observability: ## Avvia solo lo stack observability (prometheus, otel, jaeger, loki, promtail, grafana, esportatori)
 	@echo "$(GREEN)Avvio observability stack...$(NC)"
@@ -118,8 +122,8 @@ logs-celery: ## Logs Celery worker + beat (follow)
 logs-frontend: ## Logs frontend React/Vite (follow)
 	$(COMPOSE) logs -f frontend
 
-logs-nginx: ## Logs nginx (follow)
-	$(COMPOSE) logs -f nginx
+logs-traefik: ## Logs Traefik (follow)
+	$(COMPOSE) logs -f traefik
 
 logs-db: ## Logs PostgreSQL (follow)
 	$(COMPOSE) logs -f postgres
@@ -163,9 +167,9 @@ restart-frontend: ## Riavvia solo il frontend
 	@echo "$(GREEN)Riavvio frontend...$(NC)"
 	$(COMPOSE) restart frontend
 
-restart-nginx: ## Riavvia solo nginx (per ricaricare la config)
-	@echo "$(GREEN)Riavvio nginx...$(NC)"
-	$(COMPOSE) restart nginx
+restart-traefik: ## Riavvia solo Traefik
+	@echo "$(GREEN)Riavvio Traefik...$(NC)"
+	$(COMPOSE) restart traefik
 
 restart-celery: ## Riavvia worker + beat Celery
 	@echo "$(GREEN)Riavvio Celery worker e beat...$(NC)"
@@ -215,49 +219,53 @@ shell-backoffice: ## Bash nel container backoffice
 # Apri nel browser
 # =============================================================================
 
-open-admin: ## Apre Django Admin  →  http://localhost/admin/
+open-admin: ## Apre Django Admin  →  http://backoffice.${DOMAIN}/admin/
 	@echo "$(CYAN)Apertura Django Admin...$(NC)"
-	@$(OPEN) http://localhost/admin/
+	@$(OPEN) http://backoffice.$(DOMAIN)/admin/
 
-open-flower: ## Apre Flower (Celery)  →  http://localhost/flower/
+open-flower: ## Apre Flower (Celery)  →  http://flower.${DOMAIN}/
 	@echo "$(CYAN)Apertura Flower...$(NC)"
-	@$(OPEN) http://localhost/flower/
+	@$(OPEN) http://flower.$(DOMAIN)/
 
-open-grafana: ## Apre Grafana  →  http://localhost:3001
+open-grafana: ## Apre Grafana  →  http://grafana.${DOMAIN}/
 	@echo "$(CYAN)Apertura Grafana...$(NC)"
-	@$(OPEN) http://localhost:3001
+	@$(OPEN) http://grafana.$(DOMAIN)/
 
-open-jaeger: ## Apre Jaeger UI  →  http://localhost:16686
+open-jaeger: ## Apre Jaeger UI  →  http://jaeger.${DOMAIN}/
 	@echo "$(CYAN)Apertura Jaeger...$(NC)"
-	@$(OPEN) http://localhost:16686
+	@$(OPEN) http://jaeger.$(DOMAIN)/
 
-open-prometheus: ## Apre Prometheus  →  http://localhost:9090
+open-prometheus: ## Apre Prometheus  →  http://prometheus.${DOMAIN}/
 	@echo "$(CYAN)Apertura Prometheus...$(NC)"
-	@$(OPEN) http://localhost:9090
+	@$(OPEN) http://prometheus.$(DOMAIN)/
 
-open-superset: ## Apre Apache Superset  →  http://localhost:8088
+open-superset: ## Apre Apache Superset  →  http://superset.${DOMAIN}/
 	@echo "$(CYAN)Apertura Superset...$(NC)"
-	@$(OPEN) http://localhost:8088
+	@$(OPEN) http://superset.$(DOMAIN)/
 
-open-loki: ## Apre Loki (API status)  →  http://localhost/loki/ready
+open-loki: ## Apre Loki (API status)  →  http://loki.${DOMAIN}/ready
 	@echo "$(CYAN)Apertura Loki...$(NC)"
-	@$(OPEN) http://localhost/loki/ready
+	@$(OPEN) http://loki.$(DOMAIN)/ready
 
-open-cadvisor: ## Apre cAdvisor  →  http://localhost/cadvisor/
+open-cadvisor: ## Apre cAdvisor  →  http://cadvisor.${DOMAIN}/
 	@echo "$(CYAN)Apertura cAdvisor...$(NC)"
-	@$(OPEN) http://localhost/cadvisor/
+	@$(OPEN) http://cadvisor.$(DOMAIN)/
 
-open-redis-exporter: ## Apre Redis Exporter  →  http://localhost/redis-exporter/
+open-redis-exporter: ## Apre Redis Exporter  →  http://redis-exporter.${DOMAIN}/
 	@echo "$(CYAN)Apertura Redis Exporter...$(NC)"
-	@$(OPEN) http://localhost/redis-exporter/
+	@$(OPEN) http://redis-exporter.$(DOMAIN)/
 
-open-airflow: ## Apre Apache Airflow  →  http://localhost/airflow/
+open-airflow: ## Apre Apache Airflow  →  http://airflow.${DOMAIN}/
 	@echo "$(CYAN)Apertura Airflow...$(NC)"
-	@$(OPEN) http://localhost/airflow/
+	@$(OPEN) http://airflow.$(DOMAIN)/
 
-open-n8n: ## Apre n8n workflow automation  →  http://localhost/n8n/
+open-n8n: ## Apre n8n workflow automation  →  http://n8n.${DOMAIN}/
 	@echo "$(CYAN)Apertura n8n...$(NC)"
-	@$(OPEN) http://localhost/n8n/
+	@$(OPEN) http://n8n.$(DOMAIN)/
+
+open-traefik: ## Apre Traefik dashboard  →  http://traefik.${DOMAIN}/
+	@echo "$(CYAN)Apertura Traefik dashboard...$(NC)"
+	@$(OPEN) http://traefik.$(DOMAIN)/
 
 ollama-pull: ## Scarica un modello Ollama (es: make ollama-pull MODEL=llama3.1:8b)
 	@echo "$(GREEN)Pull modello Ollama: $(MODEL)...$(NC)"
