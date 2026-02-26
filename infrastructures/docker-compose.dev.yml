@@ -645,6 +645,7 @@ services:
       - --api.insecure=true
       - --log.level=INFO
     ports:
+      - "80:80"
       - "8082:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -654,25 +655,6 @@ services:
       - "traefik.http.routers.traefik-dashboard.entrypoints=web"
       - "traefik.http.routers.traefik-dashboard.service=api@internal"
       - "traefik.http.routers.traefik-dashboard.middlewares=forward-auth"
-    networks:
-      - dev-network
-
-  # Nginx Reverse Proxy
-  nginx:
-    image: nginx:alpine
-    container_name: dev-nginx
-    restart: unless-stopped
-    volumes:
-      - ./services/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./services/nginx/502.html:/etc/nginx/conf.d/502.html:ro
-    ports:
-      - "80:80"
-    depends_on:
-      - backoffice
-      - frontend
-      - oauth2-proxy
-      - airflow-webserver
-      - ollama
     networks:
       - dev-network
 
