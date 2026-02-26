@@ -29,12 +29,12 @@ NC    := \033[0m
         up-core up-observability up-bi up-airflow up-llm \
         logs-backoffice logs-celery logs-frontend logs-traefik logs-db logs-redis \
         logs-grafana logs-jaeger logs-loki logs-superset logs-airflow logs-oauth2 \
-        logs-ollama logs-n8n \
+        logs-ollama logs-n8n logs-ollama-webui \
         restart-backoffice restart-frontend restart-traefik restart-celery restart-airflow restart-oauth2 \
-        restart-ollama restart-n8n \
+        restart-ollama restart-n8n restart-ollama-webui \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
         open-admin open-flower open-grafana open-jaeger open-prometheus \
-        open-superset open-loki open-airflow open-n8n open-traefik \
+        open-superset open-loki open-airflow open-n8n open-traefik open-chat \
         ollama-pull \
         clean clean-logs
 
@@ -56,6 +56,7 @@ up: ## Avvia tutto lo stack (build immagini custom se necessario)
 	@echo "$(CYAN)  http://airflow.$(DOMAIN)/$(NC)          Airflow"
 	@echo "$(CYAN)  http://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
 	@echo "$(CYAN)  http://ollama.$(DOMAIN)/$(NC)           Ollama (LLM API)"
+	@echo "$(CYAN)  http://chat.$(DOMAIN)/$(NC)             Ollama WebUI Lite (chat)"
 	@echo "$(CYAN)  http://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
 	@echo ""
 
@@ -85,9 +86,9 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 # Avvio per gruppo
 # =============================================================================
 
-up-core: ## Avvia solo il core (postgres, redis, traefik, backoffice, celery, frontend)
+up-core: ## Avvia solo il core (postgres, redis, docker-api-proxy, traefik, backoffice, celery, frontend)
 	@echo "$(GREEN)Avvio core stack...$(NC)"
-	$(COMPOSE) up -d postgres redis traefik oauth2-proxy backoffice \
+	$(COMPOSE) up -d postgres redis docker-api-proxy traefik oauth2-proxy backoffice \
 	    backoffice-celery-worker backoffice-celery-beat flower \
 	    frontend
 
@@ -105,9 +106,9 @@ up-airflow: ## Avvia solo Apache Airflow (webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
-up-llm: ## Avvia Ollama (LLM) + n8n (workflow automation)
-	@echo "$(GREEN)Avvio LLM stack (Ollama + n8n)...$(NC)"
-	$(COMPOSE) up -d ollama ollama-init n8n
+up-llm: ## Avvia Ollama (LLM) + Ollama WebUI Lite + n8n (workflow automation)
+	@echo "$(GREEN)Avvio LLM stack (Ollama + WebUI + n8n)...$(NC)"
+	$(COMPOSE) up -d ollama ollama-init ollama-webui n8n
 
 # =============================================================================
 # Log per servizio
@@ -155,6 +156,9 @@ logs-ollama: ## Logs Ollama LLM (follow)
 logs-n8n: ## Logs n8n workflow automation (follow)
 	$(COMPOSE) logs -f n8n
 
+logs-ollama-webui: ## Logs Ollama WebUI Lite (follow)
+	$(COMPOSE) logs -f ollama-webui
+
 # =============================================================================
 # Restart per servizio
 # =============================================================================
@@ -190,6 +194,10 @@ restart-ollama: ## Riavvia Ollama
 restart-n8n: ## Riavvia n8n
 	@echo "$(GREEN)Riavvio n8n...$(NC)"
 	$(COMPOSE) restart n8n
+
+restart-ollama-webui: ## Riavvia Ollama WebUI Lite
+	@echo "$(GREEN)Riavvio Ollama WebUI Lite...$(NC)"
+	$(COMPOSE) restart ollama-webui
 
 # =============================================================================
 # Database / Django
@@ -266,6 +274,10 @@ open-n8n: ## Apre n8n workflow automation  →  http://n8n.${DOMAIN}/
 open-traefik: ## Apre Traefik dashboard  →  http://traefik.${DOMAIN}/
 	@echo "$(CYAN)Apertura Traefik dashboard...$(NC)"
 	@$(OPEN) http://traefik.$(DOMAIN)/
+
+open-chat: ## Apre Ollama WebUI Lite  →  http://chat.${DOMAIN}/
+	@echo "$(CYAN)Apertura Ollama WebUI Lite...$(NC)"
+	@$(OPEN) http://chat.$(DOMAIN)/
 
 ollama-pull: ## Scarica un modello Ollama (es: make ollama-pull MODEL=llama3.1:8b)
 	@echo "$(GREEN)Pull modello Ollama: $(MODEL)...$(NC)"

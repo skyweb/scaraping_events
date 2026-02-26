@@ -141,3 +141,22 @@ Il routing è configurato tramite Docker labels direttamente in `docker-compose.
 
 Tutti i servizi sono collegati alla rete esterna `dev-network` (creata con `docker network create dev-network`).
 Il compose Scrapyd (`microservices/scraping-service/docker-compose.yml`) usa la stessa rete.
+
+
+OOM kill — il modello llama3.1:8B richiede ~4.7 GB di RAM solo per i pesi (CPU). Il processo viene terminato dal kernel per mancanza di memoria.
+                                                                                                                                                                                                                                                           
+  Soluzioni:                                                                                                                                                                                                                                               
+                                         
+  1. Usa un modello più piccolo (consigliato per dev su CPU):                                                                                                                                                                                              
+  # qwen2.5:1.5b — ~1 GB RAM, veloce su CPU                
+  make ollama-pull MODEL=qwen2.5:1.5b    
+
+  # oppure llama3.2:1b — ~0.6 GB RAM
+  make ollama-pull MODEL=llama3.2:1b
+
+  Poi nell'interfaccia chat seleziona il modello piccolo dal menu in alto.
+
+  2. Verifica quanta RAM ha Docker disponibile:
+  docker info --format '{{.MemTotal}}' | awk '{printf "%.1f GB\n", $1/1073741824}'
+
+  L8B è troppo pesante per girare in CPU dentro Docker su una macchina di sviluppo. Con qwen2.5:1.5b o llama3.2:1b funziona senza problemi.

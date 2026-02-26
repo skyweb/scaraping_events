@@ -25,12 +25,12 @@ class Migration(migrations.Migration):
             sql="""
                 CREATE OR REPLACE VIEW events_data.v_locations AS
                 SELECT
-                    COALESCE(location_name, '') || '|||' || COALESCE(city, '') AS location_name,
-                    city,
+                    COALESCE(location_name, '') || '|||' || COALESCE(city_name, '') AS location_name,
+                    city_name,
                     COUNT(*) AS count
                 FROM events_data.staging_events
                 WHERE location_name IS NOT NULL
-                GROUP BY location_name, city
+                GROUP BY location_name, city_name
                 ORDER BY location_name;
             """,
             reverse_sql="DROP VIEW IF EXISTS events_data.v_locations;",

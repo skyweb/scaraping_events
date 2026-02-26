@@ -282,21 +282,41 @@ services:
       OAUTH2_PROXY_REVERSE_PROXY: "true"
       OAUTH2_PROXY_REAL_CLIENT_IP_HEADER: "X-Real-IP"
       # Cookie cross-subdomain: tutti i servizi sotto .${DOMAIN} condividono la sessione
-      OAUTH2_PROXY_COOKIE_DOMAIN: ".${DOMAIN}"
+      # NOTA: deve essere COOKIE_DOMAINS (plurale) — oauth2-proxy ignora COOKIE_DOMAIN (singolare)
+      OAUTH2_PROXY_COOKIE_DOMAINS: "${DOMAIN}"
       OAUTH2_PROXY_SKIP_AUTH_PREFLIGHT: "true"
       # Abilita header X-Auth-Request-Email / X-Auth-Request-User sulle richieste autenticate
       # Usato da OAuth2ProxyAdminMiddleware per il login automatico in Django Admin
       OAUTH2_PROXY_SET_XAUTHREQUEST: "true"
+      # Whitelist domini per redirect post-auth (URL assoluti passati come ?rd=)
+      OAUTH2_PROXY_WHITELIST_DOMAINS: ".${DOMAIN}"
+      # CSRF cookie unico per flusso OAuth → evita collisioni multi-tab / multi-subdomain
+      OAUTH2_PROXY_COOKIE_CSRF_PER_REQUEST: "true"
+      # Template personalizzato: auto-redirect JS su 401 (via Traefik errors middleware)
+      OAUTH2_PROXY_CUSTOM_TEMPLATES_DIR: "/etc/oauth2-proxy/templates"
+      OAUTH2_PROXY_LOGGING_FILENAME: ""
+      OAUTH2_PROXY_STANDARD_LOGGING: "true"
+      OAUTH2_PROXY_REQUEST_LOGGING: "true"
+      OAUTH2_PROXY_AUTH_LOGGING: "true"
     labels:
       - "traefik.enable=true"
       # Route pubblica per sign_in, callback, sign_out, userinfo
       - "traefik.http.routers.auth.rule=Host(`auth.${DOMAIN}`)"
       - "traefik.http.routers.auth.entrypoints=web"
       - "traefik.http.services.auth.loadbalancer.server.port=4180"
-      # Middleware ForwardAuth — usato da tutti i servizi protetti
-      - "traefik.http.middlewares.forward-auth.forwardauth.address=http://oauth2-proxy:4180/oauth2/auth"
-      - "traefik.http.middlewares.forward-auth.forwardauth.trustForwardHeader=true"
-      - "traefik.http.middlewares.forward-auth.forwardauth.authResponseHeaders=X-Auth-Request-User,X-Auth-Request-Email,Set-Cookie"
+      # ForwardAuth (fw-auth): controlla sessione su /oauth2/auth → 202 ok, 401 non autenticato
+      - "traefik.http.middlewares.fw-auth.forwardauth.address=http://oauth2-proxy:4180/oauth2/auth"
+      - "traefik.http.middlewares.fw-auth.forwardauth.trustForwardHeader=true"
+      - "traefik.http.middlewares.fw-auth.forwardauth.authResponseHeaders=X-Auth-Request-User,X-Auth-Request-Email,Set-Cookie"
+      # Errors: intercetta 401 da fw-auth e fa redirect → /oauth2/start (che restituisce 302 → Google OAuth)
+      - "traefik.http.middlewares.auth-errors.errors.status=401"
+      - "traefik.http.middlewares.auth-errors.errors.service=auth-redirect@docker"
+      - "traefik.http.middlewares.auth-errors.errors.query=/"
+      # Chain forward-auth = auth-errors (esterno) + fw-auth (interno)
+      # Tutti i router esistenti che usano "forward-auth" continuano a funzionare senza modifiche
+      - "traefik.http.middlewares.forward-auth.chain.middlewares=auth-errors,fw-auth"
+    volumes:
+      - ./services/oauth2-proxy/templates:/etc/oauth2-proxy/templates:ro
     depends_on:
       redis:
         condition: service_healthy
@@ -612,6 +632,8 @@ services:
       DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
       # Encryption key per credenziali (cambiare in produzione)
       N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:-n8n-encryption-key-dev-change-me}
+      # Cookie non-secure in dev (HTTP) — true solo con HTTPS in produzione
+      N8N_SECURE_COOKIE: "false"
       # Disabilita telemetria
       N8N_DIAGNOSTICS_ENABLED: "false"
       N8N_VERSION_NOTIFICATIONS_ENABLED: "false"
@@ -631,15 +653,69 @@ services:
         aliases:
           - n8n
 
+  # Open WebUI (slim) — interfaccia chat leggera per Ollama (successore di ollama-webui-lite)
+  ollama-webui:
+    image: ghcr.io/open-webui/open-webui:main-slim
+    container_name: dev-ollama-webui
+    restart: unless-stopped
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+      WEBUI_AUTH: "false"
+    volumes:
+      - ollama-webui-dev-data:/app/backend/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ollama-webui.rule=Host(`chat.${DOMAIN}`)"
+      - "traefik.http.routers.ollama-webui.entrypoints=web"
+      - "traefik.http.routers.ollama-webui.middlewares=forward-auth"
+      - "traefik.http.services.ollama-webui.loadbalancer.server.port=8080"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    networks:
+      dev-network:
+        aliases:
+          - ollama-webui
+
+  # auth-redirect — pagina statica con JS redirect verso auth.DOMAIN/oauth2/start
+  # Usata da Traefik errors middleware per intercettare 401 senza manipolare cookie
+  auth-redirect:
+    image: nginx:alpine
+    container_name: dev-auth-redirect
+    restart: unless-stopped
+    volumes:
+      - ./services/auth-redirect/index.html:/usr/share/nginx/html/index.html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.auth-redirect.loadbalancer.server.port=80"
+    networks:
+      - dev-network
+
+  # docker-api-proxy — nginx che riscrive versioni API Docker obsolete a 1.47
+  # Fix per Docker Desktop 4.62+ che richiede MinAPIVersion=1.44 ma
+  # Traefik SDK usa di default una versione inferiore.
+  docker-api-proxy:
+    image: nginx:alpine
+    container_name: dev-docker-api-proxy
+    restart: unless-stopped
+    volumes:
+      - ./services/docker-proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ${DOCKER_SOCK:-/var/run/docker.sock}:/var/run/docker.sock
+    networks:
+      - dev-network
+
   # Traefik — reverse proxy e service discovery via Docker labels
   traefik:
-    image: traefik:v3.1
+    image: traefik:v3.3
     container_name: dev-traefik
     restart: unless-stopped
+    depends_on:
+      - docker-api-proxy
     command:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
       - --providers.docker.network=dev-network
+      - --providers.docker.endpoint=tcp://docker-api-proxy:2375
       - --entrypoints.web.address=:80
       - --api.dashboard=true
       - --api.insecure=true
@@ -647,8 +723,6 @@ services:
     ports:
       - "80:80"
       - "8082:8080"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.${DOMAIN}`)"
@@ -736,6 +810,8 @@ volumes:
     name: dev-airflow-logs
   ollama-dev-data:
     name: dev-ollama-data
+  ollama-webui-dev-data:
+    name: dev-ollama-webui-data
   n8n-dev-data:
     name: dev-n8n-data
 

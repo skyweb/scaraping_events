@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Accesso in corso...</title>
+<style>
+  body { font-family: sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#f5f5f5; }
+  .box { text-align:center; padding:2rem; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+  a { color:#1a73e8; }
+</style>
+</head>
+<body>
+<div class="box">
+  <p>Reindirizzamento al login...</p>
+  <p><a id="link">Clicca qui se non vieni reindirizzato automaticamente</a></p>
+</div>
+<script>
+// Estrae il dominio base (es. 127.0.0.1.nip.io da backoffice.127.0.0.1.nip.io)
+var domain = window.location.hostname.replace(/^[^.]+\./, '');
+var rd = encodeURIComponent(window.location.href);
+var loginUrl = 'http://auth.' + domain + '/oauth2/start?rd=' + rd;
+document.getElementById('link').href = loginUrl;
+window.location.replace(loginUrl);
+</script>
+</body>
+</html>
