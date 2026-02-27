@@ -3329,6 +3329,56 @@
     "cittadini_illustri": null
   },
   {
+    "nome": "Busachi",
+    "provincia": "Oristano",
+    "regione": "Sardegna",
+    "zona": "Italia Insulare",
+    "codice_istat": "095017",
+    "codice_catastale": "B281",
+    "popolazione": 1292,
+    "superficie_kmq": 59.3,
+    "densita": 21.8,
+    "cap": "09082",
+    "prefisso_telefonico": "0783",
+    "patrono": "Sant'Antonio",
+    "festa_patronale": "13 giugno",
+    "demonimo": "busachesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Barigadu",
+      "Regione Agraria n. 2 - Colline di Fordongianus"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Allai",
+      "Fordongianus",
+      "Ghilarza",
+      "Ortueri (NU)",
+      "Samugheo",
+      "Ulà Tirso"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di Santa Susanna",
+      "Chiesa parrocchiale di Sant'Antonio da Padova",
+      "Chiesa di San Bernardino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Domus De Janas di Grugos"
+    ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
     "nome": "Cabras",
     "provincia": "Oristano",
     "regione": "Sardegna",
@@ -3389,56 +3439,6 @@
       "San Salvatore e Corsa degli Scalzi (primo fine settimana di settembre)",
       "Sagra della Bottarga (fine agosto - inizio settembre)"
     ],
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
-    "nome": "Busachi",
-    "provincia": "Oristano",
-    "regione": "Sardegna",
-    "zona": "Italia Insulare",
-    "codice_istat": "095017",
-    "codice_catastale": "B281",
-    "popolazione": 1292,
-    "superficie_kmq": 59.3,
-    "densita": 21.8,
-    "cap": "09082",
-    "prefisso_telefonico": "0783",
-    "patrono": "Sant'Antonio",
-    "festa_patronale": "13 giugno",
-    "demonimo": "busachesi",
-    "etimologia": null,
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana del Barigadu",
-      "Regione Agraria n. 2 - Colline di Fordongianus"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "Allai",
-      "Fordongianus",
-      "Ghilarza",
-      "Ortueri (NU)",
-      "Samugheo",
-      "Ulà Tirso"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesetta di Santa Susanna",
-      "Chiesa parrocchiale di Sant'Antonio da Padova",
-      "Chiesa di San Bernardino"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": [
-      "Domus De Janas di Grugos"
-    ],
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
     "gemellaggi": null,
     "stazioni_ferroviarie": null,
     "cittadini_illustri": null

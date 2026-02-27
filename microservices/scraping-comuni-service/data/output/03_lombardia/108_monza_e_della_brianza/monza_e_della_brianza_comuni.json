@@ -2507,53 +2507,6 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Albiate",
-    "provincia": "Monza e della Brianza",
-    "regione": "Lombardia",
-    "zona": "Italia Nord Occidentale",
-    "codice_istat": "108003",
-    "codice_catastale": "A159",
-    "popolazione": 6319,
-    "superficie_kmq": 2.9,
-    "densita": 2179.0,
-    "cap": "20847",
-    "prefisso_telefonico": "0362",
-    "patrono": "San Fermo",
-    "festa_patronale": "9 agosto",
-    "demonimo": "albiatesi",
-    "etimologia": "Deriva dal nome latino di persona Albius con il suffisso -ate oppure dal termine dialettale albi che significa conca e potrebbe riferirsi al suo aspetto.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Regione Agraria n. 3 - Pianura di Seveso",
-      "Parco della Valle del Lambro",
-      "Associazione Rete Italiana Città Sane - OMS"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "A est: Triuggio; a nord: Carate Brianza; a ovest: Seregno; a sud: Sovico; a sud-ovest: Lissone"
-    ],
-    "musei": null,
-    "ville_palazzi": [
-      "Villa Tanzi",
-      "Villa Campello",
-      "Palazzo Tomini"
-    ],
-    "chiese": [
-      "Santuario di San Fermo",
-      "Chiesa di San Giovanni Evangelista"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
     "nome": "Arcore",
     "provincia": "Monza e della Brianza",
     "regione": "Lombardia",
@@ -2609,6 +2562,53 @@
     "gemellaggi": [
       "Corinaldo (Ancona - Marche)"
     ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Albiate",
+    "provincia": "Monza e della Brianza",
+    "regione": "Lombardia",
+    "zona": "Italia Nord Occidentale",
+    "codice_istat": "108003",
+    "codice_catastale": "A159",
+    "popolazione": 6319,
+    "superficie_kmq": 2.9,
+    "densita": 2179.0,
+    "cap": "20847",
+    "prefisso_telefonico": "0362",
+    "patrono": "San Fermo",
+    "festa_patronale": "9 agosto",
+    "demonimo": "albiatesi",
+    "etimologia": "Deriva dal nome latino di persona Albius con il suffisso -ate oppure dal termine dialettale albi che significa conca e potrebbe riferirsi al suo aspetto.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Regione Agraria n. 3 - Pianura di Seveso",
+      "Parco della Valle del Lambro",
+      "Associazione Rete Italiana Città Sane - OMS"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "A est: Triuggio; a nord: Carate Brianza; a ovest: Seregno; a sud: Sovico; a sud-ovest: Lissone"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Villa Tanzi",
+      "Villa Campello",
+      "Palazzo Tomini"
+    ],
+    "chiese": [
+      "Santuario di San Fermo",
+      "Chiesa di San Giovanni Evangelista"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
     "stazioni_ferroviarie": null,
     "cittadini_illustri": null
   },

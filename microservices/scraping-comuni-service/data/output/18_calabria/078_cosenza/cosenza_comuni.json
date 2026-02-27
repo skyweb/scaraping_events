@@ -743,6 +743,56 @@
     "cittadini_illustri": null
   },
   {
+    "nome": "Spezzano Albanese",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078142",
+    "codice_catastale": "I895",
+    "popolazione": 6990,
+    "superficie_kmq": 33.33,
+    "densita": 209.7,
+    "cap": "87019",
+    "prefisso_telefonico": "0981",
+    "patrono": "Madonna delle Grazie",
+    "festa_patronale": "martedì dopo Pasqua",
+    "demonimo": "spezzanesi",
+    "etimologia": "\"Spezzano\" deriva dal nome latino di persona Spedius con l'aggiunta del suffisso -anus che indica appartenenza. La specifica si riferisce alla presenza di albanesi in loco.",
+    "il_comune_e": [
+      "Città Termale (Terme di Spezzano)"
+    ],
+    "fa_parte_di": [
+      "Regione Agraria n. 19 - Piana di Sibari",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Cassano all'Ionio",
+      "Castrovillari",
+      "Corigliano Calabro",
+      "San Lorenzo del Vallo",
+      "Tarsia",
+      "Terranova da Sibari"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesetta di San Salvatore",
+      "Chiesa di SS. Pietro e Paolo",
+      "Chiesa di Santa Maria delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
     "nome": "Serra Pedace",
     "provincia": "Cosenza",
     "regione": "Calabria",
@@ -837,56 +887,6 @@
     "chiese": [
       "Chiesa parrocchiale di San Martino",
       "Chiesa dell'Immacolata"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
-    "nome": "Spezzano Albanese",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078142",
-    "codice_catastale": "I895",
-    "popolazione": 6990,
-    "superficie_kmq": 33.33,
-    "densita": 209.7,
-    "cap": "87019",
-    "prefisso_telefonico": "0981",
-    "patrono": "Madonna delle Grazie",
-    "festa_patronale": "martedì dopo Pasqua",
-    "demonimo": "spezzanesi",
-    "etimologia": "\"Spezzano\" deriva dal nome latino di persona Spedius con l'aggiunta del suffisso -anus che indica appartenenza. La specifica si riferisce alla presenza di albanesi in loco.",
-    "il_comune_e": [
-      "Città Termale (Terme di Spezzano)"
-    ],
-    "fa_parte_di": [
-      "Regione Agraria n. 19 - Piana di Sibari",
-      "Area Minoranza Linguistica Albanese (Arbëresh)"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "Cassano all'Ionio",
-      "Castrovillari",
-      "Corigliano Calabro",
-      "San Lorenzo del Vallo",
-      "Tarsia",
-      "Terranova da Sibari"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesetta di San Salvatore",
-      "Chiesa di SS. Pietro e Paolo",
-      "Chiesa di Santa Maria delle Grazie"
     ],
     "castelli_fortificazioni": null,
     "fontane": null,
@@ -1548,6 +1548,65 @@
     "cittadini_illustri": null
   },
   {
+    "nome": "San Sosti",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078128",
+    "codice_catastale": "I165",
+    "popolazione": 2180,
+    "superficie_kmq": 43.54,
+    "densita": 50.1,
+    "cap": "87010",
+    "prefisso_telefonico": "0981",
+    "patrono": "San Giuseppe",
+    "festa_patronale": "19 marzo",
+    "demonimo": "sansostesi",
+    "etimologia": "Il nome si riferisce al santo patrono del paese: San Sostene.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Unione delle Valli",
+      "Regione Agraria n.  2 - Versante Nord/Est della catena costiera",
+      "Parco Nazionale del Pollino",
+      "Associazione Italiana Paesi Dipinti"
+    ],
+    "localita_frazioni": [
+      "borgate: Macellara",
+      "Fravitta"
+    ],
+    "comuni_confinanti": [
+      "Altomonte",
+      "Buonvicino",
+      "Grisolia",
+      "Malvito",
+      "Mottafollone",
+      "Roggiano Gravina",
+      "San Donato di Ninea"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Abbazia di San Sozonte",
+      "Chiesa Madre Santa Caterina Vergine e Martire",
+      "Abbazia di San Nicola",
+      "Santuario del Pettoruto"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": [
+      "Bra (in provincia di Cuneo",
+      "Piemonte)",
+      "dal 2007"
+    ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
     "nome": "San Pietro in Guarano",
     "provincia": "Cosenza",
     "regione": "Calabria",
@@ -1660,6 +1719,118 @@
     "fontane": [
       "Fontana Antica (1900)"
     ],
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Nicola Arcella",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078125",
+    "codice_catastale": "I060",
+    "popolazione": 1988,
+    "superficie_kmq": 11.46,
+    "densita": 173.5,
+    "cap": "87020",
+    "prefisso_telefonico": "0985",
+    "patrono": "San Nicola da Tolentino",
+    "festa_patronale": "10 settembre",
+    "demonimo": "sannicolesi",
+    "etimologia": "Il nome riflette la venerazione per il santo patrono del paese. La specifica arcella assume il significato di \"piccolo confine quadrangolare\" oppure deriva dal latino arx, ossia roccia.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Dorsale Appenninica Alto Tirreno",
+      "Regione Agraria n.  7 - Montagna Litoranea del Lao"
+    ],
+    "localita_frazioni": [
+      "contrade: Vannefora",
+      "San Giorgio;\nlocalità: Dino"
+    ],
+    "comuni_confinanti": [
+      "Praia a Mare",
+      "Santa Domenica Talao",
+      "Scalea"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo del Principe"
+    ],
+    "chiese": [
+      "Chiesa di San Nicola da Tolentino"
+    ],
+    "castelli_fortificazioni": [
+      "Torre Saracena (in località Dino)",
+      "Torre di San Nicola, detta Torre Crawford"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "San Martino di Finita",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078124",
+    "codice_catastale": "H992",
+    "popolazione": 1074,
+    "superficie_kmq": 23.74,
+    "densita": 45.2,
+    "cap": "87010",
+    "prefisso_telefonico": "0984",
+    "patrono": "San Martino Vescovo",
+    "festa_patronale": "11 novembre",
+    "demonimo": "sammartinesi",
+    "etimologia": "Il nome riflette la venerazione per il santo patrono del paese. La specifica si riferisce al nome del torrente che scorre nei pressi del paese il cui nome deriva dal latino finitus, ossia confinato (confine).",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Media Valle Crati",
+      "Regione Agraria n. 12 - Medio Crati Occidentale",
+      "Area Minoranza Linguistica Albanese (Arbëresh)"
+    ],
+    "localita_frazioni": [
+      "frazione: Santa Maria Le Grotte;\ncontrade: Brugnano",
+      "San Bartolo",
+      "Veltri"
+    ],
+    "comuni_confinanti": [
+      "Cerzeto",
+      "Lattarico",
+      "Rota Greca",
+      "Torano Castello"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Alimena",
+      "Palazzo Carci",
+      "Palazzo Garrafa",
+      "Palazzo Scavello",
+      "Palazzo Musacchio"
+    ],
+    "chiese": [
+      "Chiesa dell'Assunta (in frazione Santa Maria Le Grotte)",
+      "Chiesa della Misericordia o del Borgo",
+      "Chiesa di Santa Rita (in contrada Brugnano)",
+      "Chiesa di Sant'Antonio (in frazione Santa Maria Le Grotte)",
+      "Chiesa di San Martino Vescovo",
+      "Santuario Madonna della Misericordia  (in contrada San Bartolo)",
+      "Chiesetta dell'Annunziata"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
     "giardini_orti_botanici": null,
     "luoghi_interesse": null,
     "teatri": null,
@@ -2343,55 +2514,6 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Rota Greca",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078109",
-    "codice_catastale": "H585",
-    "popolazione": 1129,
-    "superficie_kmq": 12.87,
-    "densita": 87.7,
-    "cap": "87010",
-    "prefisso_telefonico": "0984",
-    "patrono": "Santa Maria Assunta",
-    "festa_patronale": "15 agosto",
-    "demonimo": "rotesi",
-    "etimologia": "Deriva dal latino rota o il calabrese rota che significa \"ruota da mulino\" e per estensione \"mulino\". La specifica risale al 1863 e si riferisce ad un particolare rito religioso greco effettuato dagli albanesi in loco.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Media Valle Crati",
-      "Regione Agraria n. 12 - Medio Crati Occidentale"
-    ],
-    "localita_frazioni": [
-      "Porgano"
-    ],
-    "comuni_confinanti": [
-      "Cerzeto",
-      "Fuscaldo",
-      "Lattarico",
-      "San Martino di Finita"
-    ],
-    "musei": null,
-    "ville_palazzi": [
-      "Palazzo Ricci"
-    ],
-    "chiese": [
-      "Chiesa di Santa Maria Assunta (XVIII)",
-      "Chiesa di San Francesco di Paola"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
     "nome": "Rovito",
     "provincia": "Cosenza",
     "regione": "Calabria",
@@ -2433,6 +2555,55 @@
       "Chiesa di Santa Maria de Nives (XVI secolo, in frazione Flavetto)",
       "Chiesa di Santa Barbara (XVI secolo)",
       "Chiesa della Riforma"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rota Greca",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078109",
+    "codice_catastale": "H585",
+    "popolazione": 1129,
+    "superficie_kmq": 12.87,
+    "densita": 87.7,
+    "cap": "87010",
+    "prefisso_telefonico": "0984",
+    "patrono": "Santa Maria Assunta",
+    "festa_patronale": "15 agosto",
+    "demonimo": "rotesi",
+    "etimologia": "Deriva dal latino rota o il calabrese rota che significa \"ruota da mulino\" e per estensione \"mulino\". La specifica risale al 1863 e si riferisce ad un particolare rito religioso greco effettuato dagli albanesi in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Media Valle Crati",
+      "Regione Agraria n. 12 - Medio Crati Occidentale"
+    ],
+    "localita_frazioni": [
+      "Porgano"
+    ],
+    "comuni_confinanti": [
+      "Cerzeto",
+      "Fuscaldo",
+      "Lattarico",
+      "San Martino di Finita"
+    ],
+    "musei": null,
+    "ville_palazzi": [
+      "Palazzo Ricci"
+    ],
+    "chiese": [
+      "Chiesa di Santa Maria Assunta (XVIII)",
+      "Chiesa di San Francesco di Paola"
     ],
     "castelli_fortificazioni": null,
     "fontane": null,
@@ -2499,56 +2670,6 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Rose",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078106",
-    "codice_catastale": "H565",
-    "popolazione": 4419,
-    "superficie_kmq": 47.09,
-    "densita": 93.8,
-    "cap": "87040",
-    "prefisso_telefonico": "0984",
-    "patrono": "San Lorenzo Martire",
-    "festa_patronale": "10 agosto",
-    "demonimo": "rosetani",
-    "etimologia": "Il nome si riferisce evidentemente al nome del fiore. E' documentato anche con il nome di Rosis o Rosa.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Destra Crati",
-      "Regione Agraria n.  4 - Sila Grande"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "Acri",
-      "Castiglione Cosentino",
-      "Celico",
-      "Luzzi",
-      "Montalto Uffugo",
-      "Rende",
-      "San Pietro in Guarano"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesa Matrice",
-      "Chiesa della SS. Annunziata"
-    ],
-    "castelli_fortificazioni": [
-      "Castello Feudale"
-    ],
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
     "nome": "Roseto Capo Spulico",
     "provincia": "Cosenza",
     "regione": "Calabria",
@@ -2599,6 +2720,108 @@
     "gemellaggi": [
       "Romentino (Novara-Piemonte)"
     ],
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rose",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078106",
+    "codice_catastale": "H565",
+    "popolazione": 4419,
+    "superficie_kmq": 47.09,
+    "densita": 93.8,
+    "cap": "87040",
+    "prefisso_telefonico": "0984",
+    "patrono": "San Lorenzo Martire",
+    "festa_patronale": "10 agosto",
+    "demonimo": "rosetani",
+    "etimologia": "Il nome si riferisce evidentemente al nome del fiore. E' documentato anche con il nome di Rosis o Rosa.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Destra Crati",
+      "Regione Agraria n.  4 - Sila Grande"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Acri",
+      "Castiglione Cosentino",
+      "Celico",
+      "Luzzi",
+      "Montalto Uffugo",
+      "Rende",
+      "San Pietro in Guarano"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice",
+      "Chiesa della SS. Annunziata"
+    ],
+    "castelli_fortificazioni": [
+      "Castello Feudale"
+    ],
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Rogliano",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078105",
+    "codice_catastale": "H490",
+    "popolazione": 5782,
+    "superficie_kmq": 41.36,
+    "densita": 139.8,
+    "cap": "87054",
+    "prefisso_telefonico": "0984",
+    "patrono": "Madonna dell'Immacolata",
+    "festa_patronale": "8 dicembre",
+    "demonimo": "roglianesi",
+    "etimologia": "E' menzionato nei documenti come Rugiani o Rublani dal nome latino di persona Rubulus o Rullius con l'aggiunta del suffisso -anus che indica possesso.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana del Savuto",
+      "Regione Agraria n.  6 - Sila Piccola Cosentina"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aprigliano",
+      "Marzi",
+      "Parenti",
+      "Santo Stefano di Rogliano"
+    ],
+    "musei": [
+      "Museo di Arte Sacra San Giuseppe"
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa Matrice di San Pietro",
+      "Chiesa Madonna del Carmine",
+      "Chiesa di Sant'Ippolito",
+      "Chiesa di Santa Maria delle Grazie",
+      "Chiesa di Santa Maria dell'Assunta",
+      "Chiesa di San Domenico e San Nicola",
+      "Chiesa di San Giorgio Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
     "stazioni_ferroviarie": null,
     "cittadini_illustri": null
   },
@@ -2664,47 +2887,43 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Rogliano",
+    "nome": "Rocca Imperiale",
     "provincia": "Cosenza",
     "regione": "Calabria",
     "zona": "Italia Meridionale",
-    "codice_istat": "078105",
-    "codice_catastale": "H490",
-    "popolazione": 5782,
-    "superficie_kmq": 41.36,
-    "densita": 139.8,
-    "cap": "87054",
-    "prefisso_telefonico": "0984",
-    "patrono": "Madonna dell'Immacolata",
-    "festa_patronale": "8 dicembre",
-    "demonimo": "roglianesi",
-    "etimologia": "E' menzionato nei documenti come Rugiani o Rublani dal nome latino di persona Rubulus o Rullius con l'aggiunta del suffisso -anus che indica possesso.",
+    "codice_istat": "078103",
+    "codice_catastale": "H416",
+    "popolazione": 3321,
+    "superficie_kmq": 53.76,
+    "densita": 61.8,
+    "cap": "87074",
+    "prefisso_telefonico": "0981",
+    "patrono": "Madonna della Nova",
+    "festa_patronale": null,
+    "demonimo": "rocchesi",
+    "etimologia": "Deriva da Rocce Imperialis. La prima parte del nome si riferisce alla presenza di un castello (rocca) realizzato per volontà di Federico II di Svevia. Proprio all'imperatore è riferita la specifica.",
     "il_comune_e": null,
     "fa_parte_di": [
-      "Comunità Montana del Savuto",
-      "Regione Agraria n.  6 - Sila Piccola Cosentina"
+      "Comunità Montana Alto Jonio",
+      "Regione Agraria n. 15 - Colline Litoranee di Amendolara"
     ],
     "localita_frazioni": null,
     "comuni_confinanti": [
-      "Aprigliano",
-      "Marzi",
-      "Parenti",
-      "Santo Stefano di Rogliano"
+      "Canna",
+      "Montegiordano",
+      "Nova Siri (MT)"
     ],
     "musei": [
-      "Museo di Arte Sacra San Giuseppe"
+      "Museo delle Cere"
     ],
     "ville_palazzi": null,
     "chiese": [
-      "Chiesa Matrice di San Pietro",
-      "Chiesa Madonna del Carmine",
-      "Chiesa di Sant'Ippolito",
-      "Chiesa di Santa Maria delle Grazie",
-      "Chiesa di Santa Maria dell'Assunta",
-      "Chiesa di San Domenico e San Nicola",
-      "Chiesa di San Giorgio Martire"
+      "Chiesa di Santa Maria Assunta",
+      "Cappella della Madonna della Nova"
     ],
-    "castelli_fortificazioni": null,
+    "castelli_fortificazioni": [
+      "La Rocca"
+    ],
     "fontane": null,
     "giardini_orti_botanici": null,
     "luoghi_interesse": null,
@@ -2772,54 +2991,6 @@
     "stadi": [
       "Stadio Comunale Marco Lorenzon"
     ],
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
-    "nome": "Rocca Imperiale",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078103",
-    "codice_catastale": "H416",
-    "popolazione": 3321,
-    "superficie_kmq": 53.76,
-    "densita": 61.8,
-    "cap": "87074",
-    "prefisso_telefonico": "0981",
-    "patrono": "Madonna della Nova",
-    "festa_patronale": null,
-    "demonimo": "rocchesi",
-    "etimologia": "Deriva da Rocce Imperialis. La prima parte del nome si riferisce alla presenza di un castello (rocca) realizzato per volontà di Federico II di Svevia. Proprio all'imperatore è riferita la specifica.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Alto Jonio",
-      "Regione Agraria n. 15 - Colline Litoranee di Amendolara"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "Canna",
-      "Montegiordano",
-      "Nova Siri (MT)"
-    ],
-    "musei": [
-      "Museo delle Cere"
-    ],
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesa di Santa Maria Assunta",
-      "Cappella della Madonna della Nova"
-    ],
-    "castelli_fortificazioni": [
-      "La Rocca"
-    ],
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
     "eventi_feste_sagre": null,
     "gemellaggi": null,
     "stazioni_ferroviarie": null,
@@ -2988,6 +3159,50 @@
     "cittadini_illustri": null
   },
   {
+    "nome": "Pietrafitta",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078098",
+    "codice_catastale": "G615",
+    "popolazione": 1277,
+    "superficie_kmq": 9.19,
+    "densita": 139.0,
+    "cap": "87050",
+    "prefisso_telefonico": "0984",
+    "patrono": "San Nicola di Bari",
+    "festa_patronale": "6 dicembre",
+    "demonimo": "pietrafittesi",
+    "etimologia": "Il nome significa \"pietra conficcata\" e si riferisce ad una pietra anticamente conficcata sul terreno come segno di confine. Secondo alcuni il nome si riferisce alla posizione del paese alle falde di un monte.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Silana",
+      "Regione Agraria n.  4 - Sila Grande"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aprigliano",
+      "Cosenza",
+      "Pedace"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Convento Sant'Antonio dei Frati Minori",
+      "Chiesa Parrocchiale di San Nicola di Bari"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
     "nome": "Piane Crati",
     "provincia": "Cosenza",
     "regione": "Calabria",
@@ -3090,50 +3305,6 @@
       "Chiesa di San Pietro e Paolo",
       "Chiesa di San Francesco d'Assisi",
       "Cattedrale Santa Maria Assunta"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
-    "nome": "Pietrafitta",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078098",
-    "codice_catastale": "G615",
-    "popolazione": 1277,
-    "superficie_kmq": 9.19,
-    "densita": 139.0,
-    "cap": "87050",
-    "prefisso_telefonico": "0984",
-    "patrono": "San Nicola di Bari",
-    "festa_patronale": "6 dicembre",
-    "demonimo": "pietrafittesi",
-    "etimologia": "Il nome significa \"pietra conficcata\" e si riferisce ad una pietra anticamente conficcata sul terreno come segno di confine. Secondo alcuni il nome si riferisce alla posizione del paese alle falde di un monte.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Silana",
-      "Regione Agraria n.  4 - Sila Grande"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "Aprigliano",
-      "Cosenza",
-      "Pedace"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Convento Sant'Antonio dei Frati Minori",
-      "Chiesa Parrocchiale di San Nicola di Bari"
     ],
     "castelli_fortificazioni": null,
     "fontane": null,
@@ -3328,57 +3499,6 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Papasidero",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078092",
-    "codice_catastale": "G320",
-    "popolazione": 711,
-    "superficie_kmq": 54.64,
-    "densita": 13.0,
-    "cap": "87020",
-    "prefisso_telefonico": "0981",
-    "patrono": "San Rocco",
-    "festa_patronale": "16 agosto",
-    "demonimo": "papasideresi",
-    "etimologia": "Probabilmente deriva dal greco papas Isidoros che significa \"prete Isidoro\" e si riferisce al capo di una comunità basiliana che viveva in loco.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Dorsale Appenninica Alto Tirreno",
-      "Regione Agraria n.  7 - Montagna Litoranea del Lao",
-      "Parco Nazionale del Pollino"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "Aieta",
-      "Laino Castello",
-      "Mormanno",
-      "Orsomarso",
-      "Praia a Mare",
-      "Santa Domenica Talao"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesa di San Francesco di Paola",
-      "Chiesa di San Costantino"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": [
-      "Grotta del Romito",
-      "Avena"
-    ],
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
     "nome": "Parenti",
     "provincia": "Cosenza",
     "regione": "Calabria",
@@ -3430,6 +3550,57 @@
     "fontane": null,
     "giardini_orti_botanici": null,
     "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Papasidero",
+    "provincia": "Cosenza",
+    "regione": "Calabria",
+    "zona": "Italia Meridionale",
+    "codice_istat": "078092",
+    "codice_catastale": "G320",
+    "popolazione": 711,
+    "superficie_kmq": 54.64,
+    "densita": 13.0,
+    "cap": "87020",
+    "prefisso_telefonico": "0981",
+    "patrono": "San Rocco",
+    "festa_patronale": "16 agosto",
+    "demonimo": "papasideresi",
+    "etimologia": "Probabilmente deriva dal greco papas Isidoros che significa \"prete Isidoro\" e si riferisce al capo di una comunità basiliana che viveva in loco.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Dorsale Appenninica Alto Tirreno",
+      "Regione Agraria n.  7 - Montagna Litoranea del Lao",
+      "Parco Nazionale del Pollino"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Aieta",
+      "Laino Castello",
+      "Mormanno",
+      "Orsomarso",
+      "Praia a Mare",
+      "Santa Domenica Talao"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Francesco di Paola",
+      "Chiesa di San Costantino"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": [
+      "Grotta del Romito",
+      "Avena"
+    ],
     "teatri": null,
     "stadi": null,
     "eventi_feste_sagre": null,
@@ -8453,177 +8624,6 @@
       "Fiera di San Giuseppe (17-22 marzo)"
     ],
     "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
-    "nome": "San Martino di Finita",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078124",
-    "codice_catastale": "H992",
-    "popolazione": 1074,
-    "superficie_kmq": 23.74,
-    "densita": 45.2,
-    "cap": "87010",
-    "prefisso_telefonico": "0984",
-    "patrono": "San Martino Vescovo",
-    "festa_patronale": "11 novembre",
-    "demonimo": "sammartinesi",
-    "etimologia": "Il nome riflette la venerazione per il santo patrono del paese. La specifica si riferisce al nome del torrente che scorre nei pressi del paese il cui nome deriva dal latino finitus, ossia confinato (confine).",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Media Valle Crati",
-      "Regione Agraria n. 12 - Medio Crati Occidentale",
-      "Area Minoranza Linguistica Albanese (Arbëresh)"
-    ],
-    "localita_frazioni": [
-      "frazione: Santa Maria Le Grotte;\ncontrade: Brugnano",
-      "San Bartolo",
-      "Veltri"
-    ],
-    "comuni_confinanti": [
-      "Cerzeto",
-      "Lattarico",
-      "Rota Greca",
-      "Torano Castello"
-    ],
-    "musei": null,
-    "ville_palazzi": [
-      "Palazzo Alimena",
-      "Palazzo Carci",
-      "Palazzo Garrafa",
-      "Palazzo Scavello",
-      "Palazzo Musacchio"
-    ],
-    "chiese": [
-      "Chiesa dell'Assunta (in frazione Santa Maria Le Grotte)",
-      "Chiesa della Misericordia o del Borgo",
-      "Chiesa di Santa Rita (in contrada Brugnano)",
-      "Chiesa di Sant'Antonio (in frazione Santa Maria Le Grotte)",
-      "Chiesa di San Martino Vescovo",
-      "Santuario Madonna della Misericordia  (in contrada San Bartolo)",
-      "Chiesetta dell'Annunziata"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
-    "nome": "San Nicola Arcella",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078125",
-    "codice_catastale": "I060",
-    "popolazione": 1988,
-    "superficie_kmq": 11.46,
-    "densita": 173.5,
-    "cap": "87020",
-    "prefisso_telefonico": "0985",
-    "patrono": "San Nicola da Tolentino",
-    "festa_patronale": "10 settembre",
-    "demonimo": "sannicolesi",
-    "etimologia": "Il nome riflette la venerazione per il santo patrono del paese. La specifica arcella assume il significato di \"piccolo confine quadrangolare\" oppure deriva dal latino arx, ossia roccia.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Dorsale Appenninica Alto Tirreno",
-      "Regione Agraria n.  7 - Montagna Litoranea del Lao"
-    ],
-    "localita_frazioni": [
-      "contrade: Vannefora",
-      "San Giorgio;\nlocalità: Dino"
-    ],
-    "comuni_confinanti": [
-      "Praia a Mare",
-      "Santa Domenica Talao",
-      "Scalea"
-    ],
-    "musei": null,
-    "ville_palazzi": [
-      "Palazzo del Principe"
-    ],
-    "chiese": [
-      "Chiesa di San Nicola da Tolentino"
-    ],
-    "castelli_fortificazioni": [
-      "Torre Saracena (in località Dino)",
-      "Torre di San Nicola, detta Torre Crawford"
-    ],
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
-    "nome": "San Sosti",
-    "provincia": "Cosenza",
-    "regione": "Calabria",
-    "zona": "Italia Meridionale",
-    "codice_istat": "078128",
-    "codice_catastale": "I165",
-    "popolazione": 2180,
-    "superficie_kmq": 43.54,
-    "densita": 50.1,
-    "cap": "87010",
-    "prefisso_telefonico": "0981",
-    "patrono": "San Giuseppe",
-    "festa_patronale": "19 marzo",
-    "demonimo": "sansostesi",
-    "etimologia": "Il nome si riferisce al santo patrono del paese: San Sostene.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Unione delle Valli",
-      "Regione Agraria n.  2 - Versante Nord/Est della catena costiera",
-      "Parco Nazionale del Pollino",
-      "Associazione Italiana Paesi Dipinti"
-    ],
-    "localita_frazioni": [
-      "borgate: Macellara",
-      "Fravitta"
-    ],
-    "comuni_confinanti": [
-      "Altomonte",
-      "Buonvicino",
-      "Grisolia",
-      "Malvito",
-      "Mottafollone",
-      "Roggiano Gravina",
-      "San Donato di Ninea"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Abbazia di San Sozonte",
-      "Chiesa Madre Santa Caterina Vergine e Martire",
-      "Abbazia di San Nicola",
-      "Santuario del Pettoruto"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": [
-      "Bra (in provincia di Cuneo",
-      "Piemonte)",
-      "dal 2007"
-    ],
     "stazioni_ferroviarie": null,
     "cittadini_illustri": null
   }

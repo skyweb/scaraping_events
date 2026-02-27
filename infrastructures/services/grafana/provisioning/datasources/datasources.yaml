@@ -14,13 +14,14 @@ datasources:
   # Log — con link derivato ai traces via Jaeger
   - name: Loki
     type: loki
+    uid: loki
     access: proxy
     url: http://loki:3100
     editable: false
     jsonData:
       derivedFields:
         - datasourceUid: jaeger
-          matcherRegex: 'trace_id=(\w+)'
+          matcherRegex: '"otelTraceID":\\s*"(\\w+)"'
           name: TraceID
           url: '$${__value.raw}'
 

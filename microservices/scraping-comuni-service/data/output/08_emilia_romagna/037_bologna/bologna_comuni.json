@@ -1210,72 +1210,6 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Marzabotto",
-    "provincia": "Bologna",
-    "regione": "Emilia-Romagna",
-    "zona": "Italia Nord Orientale",
-    "codice_istat": "037036",
-    "codice_catastale": "B689",
-    "popolazione": 6812,
-    "superficie_kmq": 74.55,
-    "densita": 91.4,
-    "cap": "40043",
-    "prefisso_telefonico": "051",
-    "patrono": "San Giuseppe Lavoratore",
-    "festa_patronale": "terza domenica dopo Pasqua",
-    "demonimo": "marzabottesi",
-    "etimologia": "La storia che spiega l'origine del nome di questo paese è molto simpatica. Si racconta infatti il nome abbia una formazione dialettale, attraverso l'unione del verbo marza (impregna) e bot (rospo). Secondo altri il nome alludeva alle \"botti\" usate per la lavorazione la canapa coltivata.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Alta e Media Valle del Reno",
-      "Regione Agraria n. 4 - Colline del Reno",
-      "Parco Storico Monte Sole",
-      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
-    ],
-    "localita_frazioni": [
-      "Allocco",
-      "Gardeletta",
-      "Lama di Reno",
-      "Lama di Setta",
-      "Luminasio",
-      "Malfolle",
-      "Medelana",
-      "Montasico",
-      "Panico",
-      "Pian di Venola",
-      "Pioppe di Salvaro",
-      "Quercia",
-      "Sibano",
-      "Sirano",
-      "Sperticano"
-    ],
-    "comuni_confinanti": [
-      "Grizzana Morandi",
-      "Monte San Pietro",
-      "Monzuno",
-      "Sasso Marconi",
-      "Valsamoggia",
-      "Vergato"
-    ],
-    "musei": [
-      "Museo Nazionale Etrusco \"P. Aria\""
-    ],
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesa di San Lorenzo Martire (a Panico)"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
     "nome": "Medicina",
     "provincia": "Bologna",
     "regione": "Emilia-Romagna",
@@ -1352,6 +1286,72 @@
     "cittadini_illustri": null
   },
   {
+    "nome": "Marzabotto",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037036",
+    "codice_catastale": "B689",
+    "popolazione": 6812,
+    "superficie_kmq": 74.55,
+    "densita": 91.4,
+    "cap": "40043",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giuseppe Lavoratore",
+    "festa_patronale": "terza domenica dopo Pasqua",
+    "demonimo": "marzabottesi",
+    "etimologia": "La storia che spiega l'origine del nome di questo paese è molto simpatica. Si racconta infatti il nome abbia una formazione dialettale, attraverso l'unione del verbo marza (impregna) e bot (rospo). Secondo altri il nome alludeva alle \"botti\" usate per la lavorazione la canapa coltivata.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Alta e Media Valle del Reno",
+      "Regione Agraria n. 4 - Colline del Reno",
+      "Parco Storico Monte Sole",
+      "Rete dei Comuni Solidali: Comuni della Terra per il Mondo (Recosol)"
+    ],
+    "localita_frazioni": [
+      "Allocco",
+      "Gardeletta",
+      "Lama di Reno",
+      "Lama di Setta",
+      "Luminasio",
+      "Malfolle",
+      "Medelana",
+      "Montasico",
+      "Panico",
+      "Pian di Venola",
+      "Pioppe di Salvaro",
+      "Quercia",
+      "Sibano",
+      "Sirano",
+      "Sperticano"
+    ],
+    "comuni_confinanti": [
+      "Grizzana Morandi",
+      "Monte San Pietro",
+      "Monzuno",
+      "Sasso Marconi",
+      "Valsamoggia",
+      "Vergato"
+    ],
+    "musei": [
+      "Museo Nazionale Etrusco \"P. Aria\""
+    ],
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Lorenzo Martire (a Panico)"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
     "nome": "Malalbergo",
     "provincia": "Bologna",
     "regione": "Emilia-Romagna",
@@ -1405,6 +1405,61 @@
       "Sagra dell'Asparago Verde di Altedo (terza settimana di maggio)",
       "Sagra dell'Ortica (ultimo fine settimana di agosto e primo di settembre)"
     ],
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Loiano",
+    "provincia": "Bologna",
+    "regione": "Emilia-Romagna",
+    "zona": "Italia Nord Orientale",
+    "codice_istat": "037034",
+    "codice_catastale": "E655",
+    "popolazione": 4315,
+    "superficie_kmq": 52.41,
+    "densita": 82.3,
+    "cap": "40050",
+    "prefisso_telefonico": "051",
+    "patrono": "San Giacomo",
+    "festa_patronale": "25 luglio",
+    "demonimo": "loianesi",
+    "etimologia": "Deriva dal nome latino di persona Lollius con l'aggiunta del suffisso -anus che indica appartenenza.",
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Unione Comuni Savena-Idice",
+      "Regione Agraria n. 4 - Colline del Reno"
+    ],
+    "localita_frazioni": [
+      "Anconella",
+      "Barbarolo",
+      "Bibulano",
+      "Case sparse",
+      "La Guarda",
+      "Quinzano",
+      "Roncastaldo",
+      "Sabbioni",
+      "Scanello",
+      "Scascoli"
+    ],
+    "comuni_confinanti": [
+      "Monghidoro",
+      "Monterenzio",
+      "Monzuno",
+      "Pianoro"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": null,
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": [
+      "Giardini del Casoncello"
+    ],
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
     "gemellaggi": null,
     "stazioni_ferroviarie": null,
     "cittadini_illustri": null
@@ -1482,61 +1537,6 @@
       "Enzo Biagi (1920-2007)",
       "giornalista e scrittore"
     ]
-  },
-  {
-    "nome": "Loiano",
-    "provincia": "Bologna",
-    "regione": "Emilia-Romagna",
-    "zona": "Italia Nord Orientale",
-    "codice_istat": "037034",
-    "codice_catastale": "E655",
-    "popolazione": 4315,
-    "superficie_kmq": 52.41,
-    "densita": 82.3,
-    "cap": "40050",
-    "prefisso_telefonico": "051",
-    "patrono": "San Giacomo",
-    "festa_patronale": "25 luglio",
-    "demonimo": "loianesi",
-    "etimologia": "Deriva dal nome latino di persona Lollius con l'aggiunta del suffisso -anus che indica appartenenza.",
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Unione Comuni Savena-Idice",
-      "Regione Agraria n. 4 - Colline del Reno"
-    ],
-    "localita_frazioni": [
-      "Anconella",
-      "Barbarolo",
-      "Bibulano",
-      "Case sparse",
-      "La Guarda",
-      "Quinzano",
-      "Roncastaldo",
-      "Sabbioni",
-      "Scanello",
-      "Scascoli"
-    ],
-    "comuni_confinanti": [
-      "Monghidoro",
-      "Monterenzio",
-      "Monzuno",
-      "Pianoro"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": null,
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": [
-      "Giardini del Casoncello"
-    ],
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
   },
   {
     "nome": "Imola",

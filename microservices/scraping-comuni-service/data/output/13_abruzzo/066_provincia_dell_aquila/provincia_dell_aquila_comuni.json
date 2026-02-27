@@ -5591,59 +5591,6 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Acciano",
-    "provincia": "Provincia dell'Aquila",
-    "regione": "Abruzzo",
-    "zona": "Italia Meridionale",
-    "codice_istat": "066001",
-    "codice_catastale": "A018",
-    "popolazione": 318,
-    "superficie_kmq": 32.36,
-    "densita": 9.8,
-    "cap": "67020",
-    "prefisso_telefonico": "0864",
-    "patrono": "Santa Petronilla",
-    "festa_patronale": "31 maggio",
-    "demonimo": "accianesi",
-    "etimologia": null,
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Sirentina",
-      "Parco Naturale Sirente-Velino"
-    ],
-    "localita_frazioni": [
-      "Beffi",
-      "Roccapreturo",
-      "Succiano",
-      "San Lorenzo"
-    ],
-    "comuni_confinanti": [
-      "Caporciano",
-      "Molina Aterno",
-      "Navelli",
-      "San Benedetto in Perillis",
-      "Secinaro",
-      "Tione degli Abruzzi"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesa parrocchiale di San Pietro",
-      "Chiesa di Santa Petronilla",
-      "Chiesa della Madonna delle Grazie"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
     "nome": "Aielli",
     "provincia": "Provincia dell'Aquila",
     "regione": "Abruzzo",
@@ -5690,6 +5637,59 @@
     "luoghi_interesse": [
       "Osservatorio Astronomico Torre delle Stelle (Unione Astrofili \"Filippo Angelitti\")"
     ],
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Acciano",
+    "provincia": "Provincia dell'Aquila",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "066001",
+    "codice_catastale": "A018",
+    "popolazione": 318,
+    "superficie_kmq": 32.36,
+    "densita": 9.8,
+    "cap": "67020",
+    "prefisso_telefonico": "0864",
+    "patrono": "Santa Petronilla",
+    "festa_patronale": "31 maggio",
+    "demonimo": "accianesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Sirentina",
+      "Parco Naturale Sirente-Velino"
+    ],
+    "localita_frazioni": [
+      "Beffi",
+      "Roccapreturo",
+      "Succiano",
+      "San Lorenzo"
+    ],
+    "comuni_confinanti": [
+      "Caporciano",
+      "Molina Aterno",
+      "Navelli",
+      "San Benedetto in Perillis",
+      "Secinaro",
+      "Tione degli Abruzzi"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa parrocchiale di San Pietro",
+      "Chiesa di Santa Petronilla",
+      "Chiesa della Madonna delle Grazie"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
     "teatri": null,
     "stadi": null,
     "eventi_feste_sagre": null,

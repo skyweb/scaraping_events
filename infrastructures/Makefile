@@ -42,9 +42,16 @@ NC    := \033[0m
 # Stack completo
 # =============================================================================
 
-up: ## Avvia tutto lo stack (build immagini custom se necessario)
-	@echo "$(GREEN)Avvio stack dev...$(NC)"
-	$(COMPOSE) up --build -d
+up: ## Avvia tutto lo stack ESCLUSO LLM (build immagini custom se necessario)
+	@echo "$(GREEN)Avvio stack dev (senza LLM)...$(NC)"
+	$(COMPOSE) up --build -d \
+	    postgres redis docker-api-proxy traefik auth-redirect oauth2-proxy \
+	    backoffice backoffice-celery-worker backoffice-celery-beat flower \
+	    frontend \
+	    prometheus otel-collector jaeger loki promtail grafana \
+	    redis-exporter celery-exporter cadvisor \
+	    superset-init superset \
+	    airflow-init airflow-webserver airflow-scheduler
 	@echo ""
 	@echo "$(CYAN)  http://frontend.$(DOMAIN)/$(NC)         Frontend"
 	@echo "$(CYAN)  http://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
@@ -54,10 +61,12 @@ up: ## Avvia tutto lo stack (build immagini custom se necessario)
 	@echo "$(CYAN)  http://prometheus.$(DOMAIN)/$(NC)       Prometheus"
 	@echo "$(CYAN)  http://superset.$(DOMAIN)/$(NC)         Superset"
 	@echo "$(CYAN)  http://airflow.$(DOMAIN)/$(NC)          Airflow"
-	@echo "$(CYAN)  http://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
-	@echo "$(CYAN)  http://ollama.$(DOMAIN)/$(NC)           Ollama (LLM API)"
-	@echo "$(CYAN)  http://chat.$(DOMAIN)/$(NC)             Ollama WebUI Lite (chat)"
 	@echo "$(CYAN)  http://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
+	@echo ""
+	@echo "$(YELLOW)  LLM stack non avviato. Usa 'make up-llm' per:$(NC)"
+	@echo "$(YELLOW)    http://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
+	@echo "$(YELLOW)    http://ollama.$(DOMAIN)/$(NC)           Ollama (LLM API)"
+	@echo "$(YELLOW)    http://chat.$(DOMAIN)/$(NC)             Ollama WebUI (avvio manuale)$(NC)"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -106,9 +115,14 @@ up-airflow: ## Avvia solo Apache Airflow (webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
-up-llm: ## Avvia Ollama (LLM) + Ollama WebUI Lite + n8n (workflow automation)
-	@echo "$(GREEN)Avvio LLM stack (Ollama + WebUI + n8n)...$(NC)"
-	$(COMPOSE) up -d ollama ollama-init ollama-webui n8n
+up-llm: ## Avvia Ollama + metrics proxy + WebUI + n8n
+	@echo "$(GREEN)Avvio LLM stack (Ollama + Metrics + WebUI + n8n)...$(NC)"
+	$(COMPOSE) up -d ollama ollama-init ollama-metrics ollama-webui n8n
+	@echo ""
+	@echo "$(CYAN)  http://ollama.$(DOMAIN)/$(NC)           Ollama API (via metrics proxy)"
+	@echo "$(CYAN)  http://chat.$(DOMAIN)/$(NC)             Ollama WebUI (chat)"
+	@echo "$(CYAN)  http://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
+	@echo ""
 
 # =============================================================================
 # Log per servizio

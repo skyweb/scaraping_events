@@ -681,49 +681,6 @@
     "cittadini_illustri": null
   },
   {
-    "nome": "Scerni",
-    "provincia": "Chieti",
-    "regione": "Abruzzo",
-    "zona": "Italia Meridionale",
-    "codice_istat": "069087",
-    "codice_catastale": "I520",
-    "popolazione": 3259,
-    "superficie_kmq": 41.05,
-    "densita": 79.4,
-    "cap": "66020",
-    "prefisso_telefonico": "0873",
-    "patrono": "San Panfilo",
-    "festa_patronale": "28 aprile",
-    "demonimo": "scernesi",
-    "etimologia": null,
-    "il_comune_e": null,
-    "fa_parte_di": [
-      "Comunità Montana Medio Vastese"
-    ],
-    "localita_frazioni": null,
-    "comuni_confinanti": [
-      "Atessa",
-      "Gissi",
-      "Monteodorisio",
-      "Pollutri"
-    ],
-    "musei": null,
-    "ville_palazzi": null,
-    "chiese": [
-      "Chiesa di San Panfilo"
-    ],
-    "castelli_fortificazioni": null,
-    "fontane": null,
-    "giardini_orti_botanici": null,
-    "luoghi_interesse": null,
-    "teatri": null,
-    "stadi": null,
-    "eventi_feste_sagre": null,
-    "gemellaggi": null,
-    "stazioni_ferroviarie": null,
-    "cittadini_illustri": null
-  },
-  {
     "nome": "Schiavi di Abruzzo",
     "provincia": "Chieti",
     "regione": "Abruzzo",
@@ -767,6 +724,49 @@
     "ville_palazzi": null,
     "chiese": [
       "Chiesa Madre di San Maurizio Martire"
+    ],
+    "castelli_fortificazioni": null,
+    "fontane": null,
+    "giardini_orti_botanici": null,
+    "luoghi_interesse": null,
+    "teatri": null,
+    "stadi": null,
+    "eventi_feste_sagre": null,
+    "gemellaggi": null,
+    "stazioni_ferroviarie": null,
+    "cittadini_illustri": null
+  },
+  {
+    "nome": "Scerni",
+    "provincia": "Chieti",
+    "regione": "Abruzzo",
+    "zona": "Italia Meridionale",
+    "codice_istat": "069087",
+    "codice_catastale": "I520",
+    "popolazione": 3259,
+    "superficie_kmq": 41.05,
+    "densita": 79.4,
+    "cap": "66020",
+    "prefisso_telefonico": "0873",
+    "patrono": "San Panfilo",
+    "festa_patronale": "28 aprile",
+    "demonimo": "scernesi",
+    "etimologia": null,
+    "il_comune_e": null,
+    "fa_parte_di": [
+      "Comunità Montana Medio Vastese"
+    ],
+    "localita_frazioni": null,
+    "comuni_confinanti": [
+      "Atessa",
+      "Gissi",
+      "Monteodorisio",
+      "Pollutri"
+    ],
+    "musei": null,
+    "ville_palazzi": null,
+    "chiese": [
+      "Chiesa di San Panfilo"
     ],
     "castelli_fortificazioni": null,
     "fontane": null,
