@@ -25,6 +25,22 @@ spec:
     spec:
       nodeSelector:
         workload: heavy
+      securityContext:
+        fsGroup: 0
+      initContainers:
+        - name: fix-log-permissions
+          image: docker.io/busybox:1.36
+          command: ["sh", "-c", "chown -R 50000:0 /opt/airflow/logs"]
+          volumeMounts:
+            - name: logs
+              mountPath: /opt/airflow/logs
+          resources:
+            requests:
+              cpu: 10m
+              memory: 16Mi
+            limits:
+              cpu: 50m
+              memory: 32Mi
       containers:
         - name: webserver
           image: docker.io/apache/airflow:2.9.2
