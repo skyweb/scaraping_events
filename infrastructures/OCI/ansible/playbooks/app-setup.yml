@@ -169,7 +169,7 @@
               app: airflow
           type: Opaque
           stringData:
-            AIRFLOW__CORE__SQL_ALCHEMY_CONN: "postgresql+psycopg2://{{ postgres_user }}:{{ postgres_k8s_password }}@postgres.events.svc:5432/{{ postgres_db }}"
+            AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: "postgresql+psycopg2://{{ postgres_user }}:{{ postgres_k8s_password }}@postgres.events.svc:5432/{{ postgres_db }}"
             AIRFLOW__CORE__FERNET_KEY: "{{ airflow_fernet_key }}"
             AIRFLOW__WEBSERVER__SECRET_KEY: "{{ airflow_webserver_secret_key }}"
             AIRFLOW_ADMIN_PASSWORD: "{{ airflow_admin_password }}"

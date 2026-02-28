@@ -44,7 +44,7 @@ spec:
       containers:
         - name: webserver
           image: docker.io/apache/airflow:2.9.2
-          command: ["airflow", "webserver"]
+          command: ["airflow", "webserver", "--pid", "/tmp/airflow-webserver.pid"]
           ports:
             - containerPort: 8080
               protocol: TCP
@@ -91,11 +91,11 @@ spec:
             failureThreshold: 5
           resources:
             requests:
-              cpu: 100m
-              memory: 256Mi
-            limits:
-              cpu: 500m
+              cpu: 200m
               memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
         - name: git-sync
           image: registry.k8s.io/git-sync/git-sync:v4.4.0
           env:
