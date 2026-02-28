@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backoffice
+  namespace: events
+  labels:
+    app: backoffice
+    component: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backoffice
+      component: web
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: backoffice
+        component: web
+    spec:
+      nodeSelector:
+        workload: heavy
+      imagePullSecrets:
+        - name: ocir-secret
+      containers:
+        - name: backoffice
+          image: eu-milan-1.ocir.io/axbuakdjv1li/events/backoffice:latest
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: backoffice-config
+            - secretRef:
+                name: backoffice-secret
+          readinessProbe:
+            httpGet:
+              path: /api/version/
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /api/version/
+              port: 8000
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 5
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

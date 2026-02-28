@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: celery-beat
+  namespace: events
+  labels:
+    app: backoffice
+    component: celery-beat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backoffice
+      component: celery-beat
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: backoffice
+        component: celery-beat
+    spec:
+      nodeSelector:
+        workload: heavy
+      imagePullSecrets:
+        - name: ocir-secret
+      containers:
+        - name: celery-beat
+          image: eu-milan-1.ocir.io/axbuakdjv1li/events/backoffice:latest
+          command: ["celery"]
+          args: ["-A", "backoffice", "beat", "-l", "info", "--scheduler", "django_celery_beat.schedulers:DatabaseScheduler"]
+          envFrom:
+            - configMapRef:
+                name: backoffice-config
+            - secretRef:
+                name: backoffice-secret
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi

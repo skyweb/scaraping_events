@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: celery-worker
+  namespace: events
+  labels:
+    app: backoffice
+    component: celery-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backoffice
+      component: celery-worker
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: backoffice
+        component: celery-worker
+    spec:
+      nodeSelector:
+        workload: heavy
+      imagePullSecrets:
+        - name: ocir-secret
+      containers:
+        - name: celery-worker
+          image: eu-milan-1.ocir.io/axbuakdjv1li/events/backoffice:latest
+          command: ["celery"]
+          args: ["-A", "backoffice", "worker", "-l", "info"]
+          envFrom:
+            - configMapRef:
+                name: backoffice-config
+            - secretRef:
+                name: backoffice-secret
+          livenessProbe:
+            exec:
+              command:
+                - celery
+                - -A
+                - backoffice
+                - inspect
+                - ping
+            initialDelaySeconds: 30
+            periodSeconds: 60
+            timeoutSeconds: 10
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

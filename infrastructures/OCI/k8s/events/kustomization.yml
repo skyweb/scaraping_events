@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - backoffice-configmap.yml
+  - backoffice-deployment.yml
+  - backoffice-service.yml
+  - celery-worker-deployment.yml
+  - celery-beat-deployment.yml
