@@ -166,6 +166,11 @@ velero_s3_url: "https://YOUR_TENANCY_NAMESPACE.compat.objectstorage.eu-milan-1.o
 velero_backup_schedule: "0 2 * * *"  # ogni notte alle 02:00
 velero_backup_ttl: "168h"            # retention 7 giorni
 
+# Velero UI (otwld/velero-ui) — Dashboard web per Velero
+install_velero_ui: true
+# velero_subdomain: "velero"  # velero.oci.santocaruso.eu
+auth_velero: true  # extra layer auth middleware (BasicAuth/OAuth2) sopra BasicAuth nativo
+
 # =============================================================================
 # Data Services (PostgreSQL + Redis) — namespace events
 # =============================================================================
@@ -200,7 +205,7 @@ argocd_target_revision: "main"
 # Airflow (Orchestrazione DAG)
 # =============================================================================
 install_airflow: true
-airflow_image: "apache/airflow:2.9.2"
+airflow_image: "docker.io/apache/airflow:2.9.2"
 # airflow_subdomain: "airflow"  # airflow.oci.santocaruso.eu
 auth_airflow: true  # proteggi con BasicAuth/OAuth2 (extra layer sopra auth nativa)
 

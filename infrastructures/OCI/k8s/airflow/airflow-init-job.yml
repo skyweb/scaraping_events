@@ -21,7 +21,7 @@ spec:
       restartPolicy: OnFailure
       containers:
         - name: airflow-init
-          image: apache/airflow:2.9.2
+          image: docker.io/apache/airflow:2.9.2
           command:
             - bash
             - -c
