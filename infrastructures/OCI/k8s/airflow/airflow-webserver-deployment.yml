@@ -58,6 +58,17 @@ spec:
               mountPath: /opt/airflow/dags
             - name: logs
               mountPath: /opt/airflow/logs
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 8080
+              httpHeaders:
+                - name: Host
+                  value: localhost
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 30
           readinessProbe:
             httpGet:
               path: /health
@@ -65,10 +76,9 @@ spec:
               httpHeaders:
                 - name: Host
                   value: localhost
-            initialDelaySeconds: 60
             periodSeconds: 10
             timeoutSeconds: 5
-            failureThreshold: 5
+            failureThreshold: 3
           livenessProbe:
             httpGet:
               path: /health
@@ -76,7 +86,6 @@ spec:
               httpHeaders:
                 - name: Host
                   value: localhost
-            initialDelaySeconds: 60
             periodSeconds: 20
             timeoutSeconds: 5
             failureThreshold: 5
