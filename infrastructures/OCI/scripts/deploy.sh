@@ -38,7 +38,13 @@ echo "Step 2: Piano infrastruttura..."
 terraform plan -out=tfplan
 
 echo ""
-read -p "Vuoi applicare questo piano? (yes/no): " confirm
+if [ ! -t 0 ]; then
+    echo "Errore: questo script richiede un terminale interattivo."
+    echo "Eseguilo direttamente: ./scripts/deploy.sh"
+    rm -f tfplan
+    exit 1
+fi
+read -r -p "Vuoi applicare questo piano? (yes/no): " confirm
 if [ "$confirm" != "yes" ]; then
     echo "Deploy annullato."
     rm -f tfplan
@@ -86,24 +92,10 @@ kubectl get nodes -o wide
 echo ""
 kubectl get nodes --show-labels | grep workload || true
 
-# Step 7: Ansible post-setup
-echo ""
-echo "Step 7: Ansible post-cluster setup..."
-if command -v ansible-playbook &> /dev/null; then
-    if [ -f "ansible/vars/oke.yml" ]; then
-        ansible-playbook ansible/playbooks/post-cluster-setup.yml
-    else
-        echo "  Salta Ansible: ansible/vars/oke.yml non trovato."
-        echo "  Copia ansible/vars/oke.yml.example e configuralo."
-    fi
-else
-    echo "  Ansible non installato, salta post-setup."
-fi
-
 # Summary
 echo ""
 echo "=========================================="
-echo "  Deploy completato!"
+echo "  Infrastruttura OCI pronta!"
 echo "=========================================="
 echo ""
 cd terraform
@@ -119,6 +111,10 @@ echo "  kubectl get nodes"
 echo "  kubectl get pods -A"
 echo "  kubectl get ns"
 echo ""
-echo "Per installare CI/CD (ArgoCD + Tekton + Kaniko):"
-echo "  ansible-playbook ansible/playbooks/ci-setup.yml"
+# Genera summary markdown
+cd "${PROJECT_ROOT}"
+./scripts/generate-summary.sh
+
+echo "Prossimo step — configurazione cluster con Ansible:"
+echo "  ./scripts/post-setup.sh"
 echo ""

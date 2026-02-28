@@ -13,23 +13,23 @@
 ---
 
 # OCIR (Oracle Container Registry)
-ocir_auth_token: "YOUR_AUTH_TOKEN"
+ocir_auth_token: "1R1W926Q6d_+oWuv5]My"
 
 # Grafana
-grafana_admin_password: "CHANGE_ME"
+grafana_admin_password: "wetfire2k"
 
 # Velero (Backup)
 velero_aws_access_key_id: "YOUR_ACCESS_KEY_ID"
 velero_aws_secret_access_key: "YOUR_SECRET_ACCESS_KEY"
 
 # Redis (password per Redis Exporter e Celery broker)
-redis_k8s_password: "CHANGE_ME"
-celery_broker_url: "redis://:CHANGE_ME@redis.events.svc:6379/0"
+redis_k8s_password: "wetfire2k"
+celery_broker_url: "redis://:wetfire2k@redis.events.svc:6379/0"
 
 # BasicAuth (Opzione A — decommentare se si usa BasicAuth)
 # basicauth_users: "admin:$$2y$$05$$HASH_HERE"
 
 # OAuth2 Proxy (Opzione B — decommentare se si usa Google SSO)
-# oauth2_proxy_client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com"
-# oauth2_proxy_client_secret: "YOUR_CLIENT_SECRET"
-# oauth2_proxy_cookie_secret: "YOUR_COOKIE_SECRET"
+oauth2_proxy_client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+oauth2_proxy_client_secret="YOUR_GOOGLE_CLIENT_SECRET"
+oauth2_proxy_cookie_secret="f7993dcccaad3a3edfc5f0ff2b1ebbb7"

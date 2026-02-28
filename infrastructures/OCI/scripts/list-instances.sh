@@ -173,27 +173,32 @@ if [ "${RUNNING_COUNT}" -gt 0 ]; then
     echo "📝 Comandi utili:"
     echo ""
 
-    echo "${INSTANCES_JSON}" | jq -r '.[] | select(.state == "RUNNING") | .id' | head -1 | while read -r FIRST_ID; do
-        FIRST_VNIC=$(oci compute vnic-attachment list \
+    # SSH per ogni istanza RUNNING (utente opc, chiave oci-key)
+    echo "${INSTANCES_JSON}" | jq -r '.[] | select(.state == "RUNNING") | "\(.id)|\(.name)"' | while IFS='|' read -r ID NAME; do
+        VNIC_ID=$(oci compute vnic-attachment list \
             --compartment-id "${COMPARTMENT_OCID}" \
-            --instance-id "${FIRST_ID}" \
+            --instance-id "${ID}" \
             --profile "${OCI_PROFILE}" \
             --query "data[0].\"vnic-id\"" \
             --raw-output 2>/dev/null)
 
-        if [ -n "${FIRST_VNIC}" ] && [ "${FIRST_VNIC}" != "null" ]; then
-            FIRST_IP=$(oci network vnic get \
-                --vnic-id "${FIRST_VNIC}" \
+        if [ -n "${VNIC_ID}" ] && [ "${VNIC_ID}" != "null" ]; then
+            IP=$(oci network vnic get \
+                --vnic-id "${VNIC_ID}" \
                 --profile "${OCI_PROFILE}" \
                 --query "data.\"public-ip\"" \
                 --raw-output 2>/dev/null)
 
-            if [ -n "${FIRST_IP}" ] && [ "${FIRST_IP}" != "null" ]; then
-                echo "  SSH al manager:        ssh ubuntu@${FIRST_IP}"
-                echo "  Stato Docker Swarm:    ssh ubuntu@${FIRST_IP} 'docker node ls'"
-                echo "  Servizi stack:         ssh ubuntu@${FIRST_IP} 'docker stack services events'"
+            if [ -n "${IP}" ] && [ "${IP}" != "null" ]; then
+                echo "  SSH ${NAME}:  ssh -i oci-key opc@${IP}"
             fi
         fi
     done
+
+    echo ""
+    echo "  Cluster K8s:           kubectl get nodes -o wide"
+    echo "  Pod status:            kubectl get pods -A"
+    echo "  Risorse nodi:          kubectl top nodes"
+    echo "  IngressRoute:          kubectl get ingressroute -A"
     echo ""
 fi

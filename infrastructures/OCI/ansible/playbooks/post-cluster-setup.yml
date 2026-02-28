@@ -124,7 +124,8 @@
         --set "certificatesResolvers.letsencrypt.acme.httpChallenge.entryPoint=web"
         --set ports.web.hostPort=80
         --set ports.websecure.hostPort=443
-        --set ports.web.redirectTo.port=websecure
+        --set ports.web.redirections.entryPoint.to=websecure
+        --set ports.web.redirections.entryPoint.scheme=https
         --set persistence.enabled=true
         --set persistence.path=/data
         --set persistence.size=128Mi
@@ -133,6 +134,29 @@
       when:
         - install_traefik | default(false)
         - base_domain is defined
+        - not (install_reverse_proxy | default(false))
+
+    - name: Installa Traefik via Helm (reverse proxy — Caddy gestisce TLS)
+      ansible.builtin.command: >
+        helm upgrade --install traefik traefik/traefik
+        --namespace traefik
+        --set service.type=NodePort
+        --set ports.web.nodePort={{ traefik_http_nodeport }}
+        --set ports.websecure.nodePort={{ traefik_https_nodeport }}
+        --set ports.traefik.expose.default=true
+        --set ports.traefik.nodePort={{ traefik_dashboard_nodeport }}
+        --set nodeSelector.workload=light
+        --set ingressClass.enabled=true
+        --set ingressClass.isDefaultClass=true
+        --set providers.kubernetesIngress.enabled=true
+        --set providers.kubernetesCRD.enabled=true
+        --set providers.kubernetesCRD.allowCrossNamespace=true
+      register: traefik_result
+      changed_when: "'STATUS: deployed' in traefik_result.stdout"
+      when:
+        - install_traefik | default(false)
+        - base_domain is defined
+        - install_reverse_proxy | default(false)
 
     - name: Attendi Traefik ready
       ansible.builtin.command: >
@@ -268,6 +292,7 @@
         helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
         --namespace monitoring
         --set app.scheduling.nodeSelector.workload=light
+        --set kong.image.repository=docker.io/library/kong
       register: dash_result
       changed_when: "'STATUS: deployed' in dash_result.stdout"
       when: install_dashboard | default(false)

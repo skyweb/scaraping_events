@@ -12,12 +12,7 @@ echo "Recupero kubeconfig dal cluster OKE..."
 
 # Ottieni cluster_id e region dal Terraform output
 CLUSTER_ID=$(terraform output -raw cluster_id)
-REGION=$(terraform output -raw cluster_endpoint | sed 's|https://[^.]*\.\([^.]*\)\..*|\1|' || echo "")
-
-# Fallback: leggi region dal tfvars
-if [ -z "$REGION" ]; then
-    REGION=$(grep '^region' terraform.tfvars | sed 's/.*= *"\(.*\)"/\1/')
-fi
+REGION=$(terraform output -raw region)
 
 echo "  Cluster ID: ${CLUSTER_ID}"
 echo "  Region: ${REGION}"

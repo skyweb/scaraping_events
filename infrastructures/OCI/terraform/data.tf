@@ -55,9 +55,10 @@ data "oci_objectstorage_namespace" "ns" {
 }
 
 locals {
-  # Service per Object Storage / OCIR
-  oci_services_id   = [for s in data.oci_core_services.all.services : s.id if can(regex("all-.*-services-in-oracle-services-network", s.cidr_block))][0]
-  oci_services_cidr = [for s in data.oci_core_services.all.services : s.cidr_block if can(regex("all-.*-services-in-oracle-services-network", s.cidr_block))][0]
+  # Service Gateway per solo Object Storage (compatibile con IGW nella stessa route table)
+  # "All Services" NON è compatibile con IGW nella stessa RT — OCI restituisce 400
+  oci_services_id   = [for s in data.oci_core_services.all.services : s.id if can(regex("objectstorage", s.cidr_block))][0]
+  oci_services_cidr = [for s in data.oci_core_services.all.services : s.cidr_block if can(regex("objectstorage", s.cidr_block))][0]
 
   # S3-compatible endpoint per Velero
   s3_endpoint = "https://${data.oci_objectstorage_namespace.ns.namespace}.compat.objectstorage.${var.region}.oraclecloud.com"

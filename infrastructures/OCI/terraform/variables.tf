@@ -131,9 +131,14 @@ variable "micro_vm_count" {
 }
 
 variable "micro_vm_boot_volume_gb" {
-  description = "GB boot volume per le micro VM"
+  description = "GB boot volume per le micro VM (minimo OCI: 50)"
   type        = number
   default     = 50
+
+  validation {
+    condition     = var.micro_vm_boot_volume_gb >= 50
+    error_message = "Il boot volume minimo OCI e' 50 GB."
+  }
 }
 
 # =============================================================================
@@ -159,4 +164,10 @@ variable "ocir_repositories" {
 variable "ocir_email" {
   description = "Email per OCIR username (formato: namespace/email)"
   type        = string
+}
+
+variable "create_ocir_auth_token" {
+  description = "Crea un nuovo Auth Token per OCIR. Disattivare se la quota di 2 token e' gia' raggiunta."
+  type        = bool
+  default     = true
 }

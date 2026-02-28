@@ -24,6 +24,9 @@ ansible/vars/oke-vault.yml
 ansible/*.log
 ansible/.ansible_async/
 
+# Deploy summary (contiene IP e OCID)
+docs/deploy-summary.md
+
 # Kubernetes
 kubeconfig
 kubeconfig.yaml

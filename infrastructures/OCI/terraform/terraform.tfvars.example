@@ -35,5 +35,6 @@ micro_vm_boot_volume_gb = 50
 velero_bucket_name = "velero-backups"
 
 # OCIR (Oracle Container Image Registry, gratuito)
-ocir_repositories = ["events/backoffice", "events/scraping"]
-ocir_email        = "your-email@example.com"
+ocir_repositories      = ["events/backoffice", "events/scraping"]
+ocir_email             = "your-email@example.com"
+create_ocir_auth_token = true  # false se la quota di 2 auth token OCI e' gia' raggiunta

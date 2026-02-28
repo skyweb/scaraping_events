@@ -71,7 +71,7 @@
         helm upgrade --install argocd argo/argo-cd
         --namespace argocd
         --set global.nodeSelector.workload=light
-        --set configs.params.server\.insecure=true
+        --set "configs.params.server\.insecure=true"
         --set server.service.type=ClusterIP
         --set dex.enabled=false
         --set notifications.enabled=false
@@ -142,7 +142,7 @@
     - name: Installa Tekton Dashboard
       ansible.builtin.command: >
         kubectl apply -f
-        https://storage.googleapis.com/tekton-releases/dashboard/previous/{{ tekton_dashboard_version }}/release.yaml
+        https://github.com/tektoncd/dashboard/releases/download/{{ tekton_dashboard_version }}/release.yaml
       register: tekton_dash_result
       changed_when: "'created' in tekton_dash_result.stdout"
       when: install_tekton | default(false)

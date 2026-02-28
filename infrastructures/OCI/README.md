@@ -93,17 +93,23 @@ OCI/
 │       ├── backup-setup.yml              # Backup & DR (Velero + OCI Object Storage)
 │       ├── observability-cluster-setup.yml  # Observability K8s (Prometheus, Loki, Promtail, OTEL)
 │       ├── observability-vm-setup.yml       # Grafana su micro VM (Podman + Caddy HTTPS)
-│       └── domain-setup.yml                 # HTTPS routing via sottodomini (IngressRoute)
+│       ├── domain-setup.yml                 # HTTPS routing via sottodomini (IngressRoute)
+│       └── reverse-proxy-setup.yml          # Caddy reverse proxy su micro-cirunner (IP stabile)
 │
 ├── scripts/
-│   ├── deploy.sh                # Deploy completo
+│   ├── deploy.sh                # Provisioning infrastruttura (Terraform + kubeconfig + wait nodes)
+│   ├── post-setup.sh            # Configurazione cluster (Ansible post-cluster-setup)
 │   ├── destroy.sh               # Distruggi tutto
 │   ├── get-kubeconfig.sh        # Configura kubectl
 │   ├── generate-ssh-key.sh      # Genera chiavi SSH
 │   ├── generate-inventory.sh    # Genera inventory Ansible da Terraform output
 │   ├── generate-vars.sh         # Genera ansible/vars/oke.yml da Terraform output
+│   ├── generate-summary.sh     # Genera docs/deploy-summary.md con tutti gli output
 │   ├── list-instances.sh        # Lista istanze OCI
 │   └── get_oci_info.sh          # Info configurazione OCI
+│
+├── docs/
+│   └── deploy-summary.md       # Output deploy (gitignored, generato da generate-summary.sh)
 │
 ├── README.md
 └── .gitignore
@@ -129,36 +135,44 @@ OCI/
 cp terraform/terraform.tfvars.example terraform/terraform.tfvars
 # Edita con i tuoi dati OCI
 
-# 3. Deploy completo (Terraform + kubeconfig + wait nodes)
+# 3. Provisioning infrastruttura (Terraform + kubeconfig + wait nodes)
 ./scripts/deploy.sh
 
 # 4. Genera variabili Ansible da Terraform output (oppure copia manuale)
 ./scripts/generate-vars.sh
+./scripts/generate-inventory.sh
 # Oppure manualmente: cp ansible/vars/oke.yml.example ansible/vars/oke.yml
-# Verifica e modifica grafana_admin_password in ansible/vars/oke.yml
-ansible-playbook ansible/playbooks/post-cluster-setup.yml
 
-# 5. (Opzionale) CI/CD - ArgoCD + Tekton + Kaniko
+# 5. Configurazione cluster (Ansible — infrastruttura base)
+./scripts/post-setup.sh
+
+# 6. (Opzionale) CI/CD - ArgoCD + Tekton + Kaniko
 ansible-playbook ansible/playbooks/ci-setup.yml
 
-# 6. (Opzionale) Security - Kyverno policy engine
+# 7. (Opzionale) Security - Kyverno policy engine
 ansible-playbook ansible/playbooks/security-setup.yml
 
-# 7. (Opzionale) Backup & DR - Velero + OCI Object Storage
+# 8. (Opzionale) Backup & DR - Velero + OCI Object Storage
 ansible-playbook ansible/playbooks/backup-setup.yml
 
-# 8. (Opzionale) Observability - Prometheus + Loki + Grafana
+# 9. (Opzionale) Observability - Prometheus + Loki + Grafana
 ansible-playbook ansible/playbooks/observability-cluster-setup.yml
-./scripts/generate-inventory.sh
 ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml
 
-# 9. (Opzionale) Domain Setup - HTTPS via sottodomini
+# 10. (Opzionale) Domain Setup - HTTPS via sottodomini
 # Configurare base_domain in ansible/vars/oke.yml, creare DNS A record,
 # poi ri-eseguire post-cluster-setup.yml (Traefik con ACME) e domain-setup.yml
 ansible-playbook ansible/playbooks/post-cluster-setup.yml
 ansible-playbook ansible/playbooks/domain-setup.yml
 # Per Grafana HTTPS: ri-eseguire anche observability-vm-setup.yml (aggiunge Caddy)
 ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml
+
+# 11. (Opzionale) Reverse Proxy - Caddy su micro-cirunner (IP stabile)
+# Alternativa al domain setup diretto: DNS → micro-cirunner → Caddy (TLS) → Traefik
+# Configurare install_reverse_proxy: true in ansible/vars/oke.yml
+ansible-playbook ansible/playbooks/post-cluster-setup.yml       # Traefik senza hostPort/ACME
+ansible-playbook ansible/playbooks/domain-setup.yml             # IngressRoute con entryPoint web
+ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/reverse-proxy-setup.yml  # Caddy
 ```
 
 ## Deploy Manuale
@@ -421,6 +435,16 @@ install_grafana_alerting: true     # Alert rules K8s-adapted
 # Domain Setup (domain-setup.yml) — scegliere una opzione:
 # basicauth_users: "admin:$$..."  # Opzione A: BasicAuth
 install_oauth2_proxy: false        # Opzione B: Google SSO (OAuth2 Proxy)
+
+# Reverse Proxy (reverse-proxy-setup.yml)
+install_reverse_proxy: false       # Caddy su micro-cirunner (IP stabile → Traefik)
+# Auth per-servizio (true = auth middleware, false = no auth):
+auth_traefik: true                 # Traefik Dashboard
+auth_prometheus: true              # Prometheus
+auth_alertmanager: true            # Alertmanager
+auth_loki: true                    # Loki
+auth_dashboard: true               # K8s Dashboard
+auth_jaeger: true                  # Jaeger
 ```
 
 ### Traefik
@@ -694,6 +718,93 @@ ssh opc@<MICRO_MONITOR_IP> sudo systemctl status caddy
 
 > **Nota**: I NodePort (30080/30443) restano attivi per comunicazione interna VCN (es. Grafana → Prometheus/Loki). Le IngressRoute PathPrefix esistenti in `ci-setup.yml` restano come fallback per chi non configura `base_domain`.
 
+### Reverse Proxy (Caddy su micro-cirunner — IP stabile)
+
+L'IP pubblico del nodo K8s light e' **effimero** — cambia se il nodo viene ricreato (scaling, upgrade, crash), rompendo tutti i DNS A record. La micro VM `micro-cirunner` ha invece un IP pubblico stabile.
+
+**Soluzione**: usare micro-cirunner come reverse proxy Caddy. DNS punta a micro-cirunner → Caddy termina TLS (Let's Encrypt) → inoltra HTTP a Traefik sul cluster via VCN privata.
+
+```
+Internet → DNS → micro-cirunner:80/443 (Caddy, IP stabile)
+                   │
+                   ├── traefik.domain      → k8s light node:30080 (→ Traefik → api@internal)
+                   ├── argocd.domain       → k8s light node:30080 (→ Traefik → ArgoCD, auth nativa)
+                   ├── tekton.domain       → k8s light node:30080 (→ Traefik → Tekton)
+                   ├── prometheus.domain   → k8s light node:30080 (→ Traefik → Prometheus, +auth)
+                   ├── alertmanager.domain → k8s light node:30080 (→ Traefik → Alertmanager, +auth)
+                   ├── loki.domain         → k8s light node:30080 (→ Traefik → Loki, +auth)
+                   ├── dashboard.domain    → k8s light node:30080 (→ Traefik → K8s Dashboard, +auth)
+                   ├── jaeger.domain       → k8s light node:30080 (→ Traefik → Jaeger, +auth)
+                   ├── auth.domain         → k8s light node:30080 (→ Traefik → OAuth2 Proxy)
+                   └── grafana.domain      → micro-monitor:3000   (→ Grafana, auth nativa)
+```
+
+Caddy preserva l'header `Host:` → Traefik fa L7 routing basato sul dominio → le IngressRoute matchano.
+
+#### Differenze rispetto al modo diretto
+
+| | Traefik diretto | Reverse Proxy (Caddy) |
+|---|---|---|
+| **TLS** | Traefik (ACME, hostPort 80/443) | Caddy (Let's Encrypt, su micro-cirunner) |
+| **DNS target** | IP nodo K8s light (effimero) | IP micro-cirunner (stabile) |
+| **Traefik entryPoint** | `websecure` (443) | `web` (HTTP, porta 30080) |
+| **Grafana** | Caddy su micro-monitor | Caddy su micro-cirunner → micro-monitor:3000 |
+
+#### Auth per-servizio
+
+Ogni servizio protetto puo' essere escluso dall'auth middleware:
+
+```yaml
+# In ansible/vars/oke.yml — default: true (auth abilitata)
+auth_traefik: true       # Traefik Dashboard con auth
+auth_prometheus: true    # Prometheus con auth
+auth_alertmanager: true  # Alertmanager con auth
+auth_loki: true          # Loki con auth
+auth_dashboard: true     # K8s Dashboard con auth
+auth_jaeger: false       # Jaeger SENZA auth (esempio)
+```
+
+Servizi con auth nativa (ArgoCD, Grafana) non usano mai il middleware.
+
+#### Setup
+
+```bash
+# 1. Configurare in ansible/vars/oke.yml
+install_reverse_proxy: true
+micro_monitor_private_ip: "10.0.3.8"  # terraform output micro_vm_private_ips
+auth_prometheus: true     # scegli per ogni servizio
+auth_jaeger: false        # esempio: jaeger senza auth
+
+# 2. Ri-eseguire post-cluster-setup (Traefik senza hostPort/ACME)
+ansible-playbook ansible/playbooks/post-cluster-setup.yml
+
+# 3. Creare IngressRoute (con entryPoint web + auth per-servizio)
+ansible-playbook ansible/playbooks/domain-setup.yml
+
+# 4. Installare Caddy reverse proxy su micro-cirunner
+ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/reverse-proxy-setup.yml
+
+# 5. Aggiornare DNS: TUTTI i sottodomini → IP micro-cirunner
+```
+
+#### Verifica
+
+```bash
+# Caddy status su micro-cirunner
+ssh micro-cirunner sudo systemctl status caddy
+
+# Caddyfile generato
+ssh micro-cirunner cat /opt/caddy/Caddyfile
+
+# Test HTTPS
+curl -I https://prometheus.example.com   # 302 (OAuth2) o 401 (BasicAuth)
+curl -I https://argocd.example.com       # 200 (auth nativa)
+curl -I https://jaeger.example.com       # 200 (se auth_jaeger: false)
+
+# Certificati Let's Encrypt (Caddy)
+ssh micro-cirunner sudo ls /opt/caddy/data/caddy/certificates/
+```
+
 ## Comandi Utili
 
 ```bash
@@ -751,6 +862,11 @@ ssh opc@<MICRO_MONITOR_IP> sudo systemctl status grafana  # stato Grafana
 ssh opc@<MICRO_MONITOR_IP> sudo systemctl status caddy    # stato Caddy (se domain setup)
 # In Grafana: OCI Monitoring datasource → query metriche infra OCI
 # Metriche OCI: CpuUtilization, MemoryUtilization, NetworkBytesIn/Out, DiskBytesRead/Written
+
+# Reverse Proxy (Caddy su micro-cirunner)
+ssh micro-cirunner sudo systemctl status caddy        # stato Caddy
+ssh micro-cirunner cat /opt/caddy/Caddyfile           # Caddyfile generato
+ssh micro-cirunner sudo ls /opt/caddy/data/caddy/certificates/  # cert Let's Encrypt
 
 # Terraform
 terraform output                    # Tutti gli output

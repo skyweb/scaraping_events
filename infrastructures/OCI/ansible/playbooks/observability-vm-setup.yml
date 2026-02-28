@@ -5,6 +5,7 @@
 # Uso: ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml
 - name: OKE Observability - Grafana su Micro VM
   hosts: micro-monitor
+  become: true
   gather_facts: true
 
   vars_files:
@@ -33,9 +34,9 @@
       failed_when: false
 
     - name: Installa Podman (Oracle Linux 8)
-      ansible.builtin.dnf:
-        name: podman
-        state: present
+      ansible.builtin.command: dnf install -y podman
+      register: podman_install
+      changed_when: "'Complete!' in podman_install.stdout"
       when: podman_check.rc != 0
 
     # =========================================================================
@@ -301,6 +302,8 @@
         --env GF_SECURITY_ADMIN_PASSWORD={{ grafana_admin_password | default('admin') }}
         --env GF_SERVER_ROOT_URL={{ grafana_root_url }}
         --env GF_USERS_ALLOW_SIGN_UP=false
+        --env GF_AUTH_ANONYMOUS_ENABLED={{ grafana_allow_anonymous | default(false) | lower }}
+        --env GF_AUTH_ANONYMOUS_ORG_ROLE={{ grafana_anonymous_role | default('Viewer') }}
         --env GF_INSTALL_PLUGINS=oci-metrics-datasource,oci-logs-datasource
         --restart always
         {{ grafana_image }}
@@ -360,6 +363,7 @@
 
     # =========================================================================
     # Caddy reverse proxy (HTTPS automatico per Grafana)
+    # Saltato quando install_reverse_proxy: true (Caddy su micro-cirunner gestisce tutto)
     # =========================================================================
     - name: Crea directory Caddy
       ansible.builtin.file:
@@ -372,7 +376,9 @@
         - "{{ caddy_base_dir }}"
         - "{{ caddy_base_dir }}/data"
         - "{{ caddy_base_dir }}/config"
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Scrivi Caddyfile
       ansible.builtin.copy:
@@ -385,27 +391,35 @@
             reverse_proxy localhost:{{ grafana_port | default(3000) }}
           }
       notify: Restart Caddy
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Ferma container Caddy esistente (se presente)
       ansible.builtin.command: podman stop {{ caddy_container_name }}
       register: stop_caddy
       changed_when: stop_caddy.rc == 0
       failed_when: false
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Rimuovi container Caddy esistente (se presente)
       ansible.builtin.command: podman rm {{ caddy_container_name }}
       register: rm_caddy
       changed_when: rm_caddy.rc == 0
       failed_when: false
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Pull immagine Caddy
       ansible.builtin.command: podman pull {{ caddy_image }}
       register: caddy_pull
       changed_when: "'Copying' in caddy_pull.stderr or 'Writing' in caddy_pull.stderr"
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Crea container Caddy
       ansible.builtin.command: >
@@ -420,7 +434,9 @@
         {{ caddy_image }}
       register: caddy_create
       changed_when: caddy_create.rc == 0
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Genera systemd unit per Caddy
       ansible.builtin.command: >
@@ -429,7 +445,9 @@
         --new
       register: caddy_systemd
       changed_when: false
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Scrivi systemd unit file Caddy
       ansible.builtin.copy:
@@ -439,7 +457,9 @@
         group: root
         mode: "0644"
       notify: Reload systemd
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     - name: Abilita e avvia Caddy service
       ansible.builtin.systemd:
@@ -447,7 +467,9 @@
         enabled: true
         state: started
         daemon_reload: true
-      when: base_domain is defined
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
 
     # =========================================================================
     # Health check

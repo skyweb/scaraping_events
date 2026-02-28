@@ -1,0 +1,319 @@
+---
+# Caddy Reverse Proxy su micro-cirunner (IP stabile)
+# Termina TLS (Let's Encrypt) e inoltra HTTP a Traefik sul cluster K8s via VCN privata.
+# Preserva l'header Host: → Traefik fa L7 routing basato sul dominio.
+#
+# Prerequisiti:
+#   - install_reverse_proxy: true in oke.yml
+#   - base_domain configurato in oke.yml
+#   - k8s_node_ip configurato in oke.yml (IP privato nodo light)
+#   - Inventory con micro-cirunner
+#
+# Uso: ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/reverse-proxy-setup.yml
+- name: Caddy Reverse Proxy su micro-cirunner (IP stabile → Traefik K8s)
+  hosts: micro-cirunner
+  become: true
+  gather_facts: true
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    caddy_base_dir: /opt/caddy
+    caddy_container_name: caddy
+    caddy_image: "docker.io/library/caddy:2-alpine"
+    domain_traefik: "{{ traefik_subdomain | default('traefik') }}.{{ base_domain }}"
+    domain_argocd: "{{ argocd_subdomain | default('argocd') }}.{{ base_domain }}"
+    domain_tekton: "{{ tekton_subdomain | default('tekton') }}.{{ base_domain }}"
+    domain_prometheus: "{{ prometheus_subdomain | default('prometheus') }}.{{ base_domain }}"
+    domain_alertmanager: "{{ alertmanager_subdomain | default('alertmanager') }}.{{ base_domain }}"
+    domain_loki: "{{ loki_subdomain | default('loki') }}.{{ base_domain }}"
+    domain_dashboard: "{{ dashboard_subdomain | default('dashboard') }}.{{ base_domain }}"
+    domain_jaeger: "{{ jaeger_subdomain | default('jaeger') }}.{{ base_domain }}"
+    domain_auth: "{{ auth_subdomain | default('auth') }}.{{ base_domain }}"
+    domain_grafana: "{{ grafana_subdomain | default('grafana') }}.{{ base_domain }}"
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica che install_reverse_proxy sia abilitato
+      ansible.builtin.assert:
+        that: install_reverse_proxy | default(false)
+        fail_msg: "install_reverse_proxy non abilitato in oke.yml."
+
+    - name: Verifica che base_domain sia definito
+      ansible.builtin.assert:
+        that: base_domain is defined
+        fail_msg: "base_domain non definito in oke.yml."
+
+    - name: Verifica che k8s_node_ip sia definito
+      ansible.builtin.assert:
+        that:
+          - k8s_node_ip is defined
+          - k8s_node_ip != "K8S_NODE_PRIVATE_IP"
+        fail_msg: "k8s_node_ip non configurato in oke.yml. Ottenere con: kubectl get nodes -o wide → INTERNAL-IP del nodo light."
+
+    # =========================================================================
+    # Prerequisiti - Podman
+    # =========================================================================
+    - name: Verifica se Podman e' installato
+      ansible.builtin.command: podman --version
+      register: podman_check
+      changed_when: false
+      failed_when: false
+
+    - name: Installa Podman (Oracle Linux 8)
+      ansible.builtin.command: dnf install -y podman
+      register: podman_install
+      changed_when: "'Complete!' in podman_install.stdout"
+      when: podman_check.rc != 0
+
+    # =========================================================================
+    # Directory Caddy
+    # =========================================================================
+    - name: Crea directory Caddy
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
+      loop:
+        - "{{ caddy_base_dir }}"
+        - "{{ caddy_base_dir }}/data"
+        - "{{ caddy_base_dir }}/config"
+
+    # =========================================================================
+    # Caddyfile (generato con Jinja2)
+    # Un blocco reverse_proxy per ogni sottodominio attivo.
+    # Caddy termina TLS (Let's Encrypt) → inoltra HTTP a Traefik NodePort.
+    # Grafana va direttamente alla micro-monitor VM (IP privato VCN).
+    # =========================================================================
+    - name: Genera Caddyfile
+      ansible.builtin.copy:
+        dest: "{{ caddy_base_dir }}/Caddyfile"
+        owner: root
+        group: root
+        mode: "0644"
+        content: |
+          # Caddyfile generato da Ansible — NON modificare manualmente
+          # Caddy termina TLS (Let's Encrypt) e inoltra a Traefik/servizi via VCN privata
+
+          {% if install_traefik | default(false) %}
+          {{ domain_traefik }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_argocd | default(false) %}
+          {{ domain_argocd }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_tekton | default(false) %}
+          {{ domain_tekton }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_prometheus | default(false) %}
+          {{ domain_prometheus }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_alertmanager | default(false) %}
+          {{ domain_alertmanager }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_loki | default(false) %}
+          {{ domain_loki }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_dashboard | default(false) %}
+          {{ domain_dashboard }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_jaeger | default(false) %}
+          {{ domain_jaeger }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_oauth2_proxy | default(false) %}
+          {{ domain_auth }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_grafana_vm | default(false) %}
+          {{ domain_grafana }} {
+            reverse_proxy http://{{ micro_monitor_private_ip | default('10.0.3.8') }}:{{ grafana_port | default(3000) }}
+          }
+
+          {% endif %}
+      notify: Restart Caddy
+
+    # =========================================================================
+    # Container Caddy (Podman)
+    # =========================================================================
+    - name: Ferma container Caddy esistente (se presente)
+      ansible.builtin.command: podman stop {{ caddy_container_name }}
+      register: stop_caddy
+      changed_when: stop_caddy.rc == 0
+      failed_when: false
+
+    - name: Rimuovi container Caddy esistente (se presente)
+      ansible.builtin.command: podman rm {{ caddy_container_name }}
+      register: rm_caddy
+      changed_when: rm_caddy.rc == 0
+      failed_when: false
+
+    - name: Pull immagine Caddy
+      ansible.builtin.command: podman pull {{ caddy_image }}
+      register: caddy_pull
+      changed_when: "'Copying' in caddy_pull.stderr or 'Writing' in caddy_pull.stderr"
+
+    - name: Crea container Caddy
+      ansible.builtin.command: >
+        podman create
+        --replace
+        --name {{ caddy_container_name }}
+        --publish 80:80
+        --publish 443:443
+        --volume {{ caddy_base_dir }}/Caddyfile:/etc/caddy/Caddyfile:Z
+        --volume {{ caddy_base_dir }}/data:/data:Z
+        --volume {{ caddy_base_dir }}/config:/config:Z
+        --restart always
+        {{ caddy_image }}
+      register: caddy_create
+      changed_when: caddy_create.rc == 0
+
+    # =========================================================================
+    # Systemd service (auto-start)
+    # =========================================================================
+    - name: Genera systemd unit per Caddy
+      ansible.builtin.command: >
+        podman generate systemd
+        --name {{ caddy_container_name }}
+        --new
+      register: caddy_systemd
+      changed_when: false
+
+    - name: Scrivi systemd unit file Caddy
+      ansible.builtin.copy:
+        dest: /etc/systemd/system/caddy.service
+        content: "{{ caddy_systemd.stdout }}"
+        owner: root
+        group: root
+        mode: "0644"
+      notify: Reload systemd
+
+    - name: Abilita e avvia Caddy service
+      ansible.builtin.systemd:
+        name: caddy
+        enabled: true
+        state: started
+        daemon_reload: true
+
+    # =========================================================================
+    # Firewalld (porte 80/443)
+    # =========================================================================
+    - name: Apri porta HTTP in firewalld
+      ansible.builtin.command: >
+        firewall-cmd --permanent --add-port=80/tcp
+      register: fw_http
+      changed_when: "'success' in fw_http.stdout"
+      failed_when: false
+
+    - name: Apri porta HTTPS in firewalld
+      ansible.builtin.command: >
+        firewall-cmd --permanent --add-port=443/tcp
+      register: fw_https
+      changed_when: "'success' in fw_https.stdout"
+      failed_when: false
+
+    - name: Ricarica firewalld
+      ansible.builtin.command: firewall-cmd --reload
+      changed_when: false
+      failed_when: false
+
+    # =========================================================================
+    # Health check
+    # =========================================================================
+    - name: Attendi che Caddy sia pronto (max 120s)
+      ansible.builtin.command: podman ps --filter name=caddy --filter status=running --format "{{ '{{' }}.Names{{ '}}' }}"
+      register: health_check
+      retries: 24
+      delay: 5
+      until: "'caddy' in health_check.stdout"
+      changed_when: false
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Caddy Reverse Proxy
+      ansible.builtin.debug:
+        msg:
+          - "=== Caddy Reverse Proxy su micro-cirunner Completato ==="
+          - ""
+          - "IP stabile:  {{ ansible_host }}"
+          - "Target K8s:  http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }}"
+          - "Base domain: {{ base_domain }}"
+          - ""
+          - "--- Sottodomini attivi ---"
+          - "{{ 'Traefik:      https://' ~ domain_traefik if (install_traefik | default(false)) else '' }}"
+          - "{{ 'ArgoCD:       https://' ~ domain_argocd if (install_argocd | default(false)) else '' }}"
+          - "{{ 'Tekton:       https://' ~ domain_tekton if (install_tekton | default(false)) else '' }}"
+          - "{{ 'Prometheus:   https://' ~ domain_prometheus if (install_prometheus | default(false)) else '' }}"
+          - "{{ 'Alertmanager: https://' ~ domain_alertmanager if (install_alertmanager | default(false)) else '' }}"
+          - "{{ 'Loki:         https://' ~ domain_loki if (install_loki | default(false)) else '' }}"
+          - "{{ 'Dashboard:    https://' ~ domain_dashboard if (install_dashboard | default(false)) else '' }}"
+          - "{{ 'Jaeger:       https://' ~ domain_jaeger if (install_jaeger | default(false)) else '' }}"
+          - "{{ 'OAuth2:       https://' ~ domain_auth if (install_oauth2_proxy | default(false)) else '' }}"
+          - "{{ 'Grafana:      https://' ~ domain_grafana ~ ' → http://' ~ (micro_monitor_private_ip | default('10.0.3.8')) ~ ':' ~ (grafana_port | default(3000)) if (install_grafana_vm | default(false)) else '' }}"
+          - ""
+          - "--- Comandi utili ---"
+          - "sudo systemctl status caddy"
+          - "cat /opt/caddy/Caddyfile"
+          - "sudo ls /opt/caddy/data/caddy/certificates/"
+          - ""
+          - "--- DNS ---"
+          - "Puntare TUTTI i sottodomini *.{{ base_domain }} → {{ ansible_host }}"
+
+  handlers:
+    - name: Reload systemd
+      ansible.builtin.systemd:
+        daemon_reload: true
+
+    - name: Restart Caddy
+      ansible.builtin.systemd:
+        name: caddy
+        state: restarted

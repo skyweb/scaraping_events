@@ -151,8 +151,8 @@ output "ocir_docker_server" {
 }
 
 output "ocir_auth_token" {
-  description = "Auth Token per docker login OCIR"
-  value       = oci_identity_auth_token.ocir.token
+  description = "Auth Token per docker login OCIR (vuoto se create_ocir_auth_token = false)"
+  value       = var.create_ocir_auth_token ? oci_identity_auth_token.ocir[0].token : ""
   sensitive   = true
 }
 

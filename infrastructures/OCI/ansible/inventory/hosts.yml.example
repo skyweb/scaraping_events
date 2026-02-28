@@ -16,12 +16,14 @@ all:
           ansible_host: "MICRO_MONITOR_PUBLIC_IP"    # terraform output micro_vm_public_ips[0]
           private_ip: "MICRO_MONITOR_PRIVATE_IP"     # terraform output micro_vm_private_ips[0]
           ansible_user: opc
-          ansible_ssh_private_key_file: "../../oci-key"
+          ansible_ssh_private_key_file: "./oci-key"
+          ansible_python_interpreter: /usr/bin/python3.9
         micro-cirunner:
           ansible_host: "MICRO_CIRUNNER_PUBLIC_IP"   # terraform output micro_vm_public_ips[1]
           private_ip: "MICRO_CIRUNNER_PRIVATE_IP"    # terraform output micro_vm_private_ips[1]
           ansible_user: opc
-          ansible_ssh_private_key_file: "../../oci-key"
+          ansible_ssh_private_key_file: "./oci-key"
+          ansible_python_interpreter: /usr/bin/python3.9
 
     # Localhost per playbook K8s (kubectl/helm)
     local:

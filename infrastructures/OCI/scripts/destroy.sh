@@ -18,7 +18,12 @@ echo "  - 2 Micro VM standalone"
 echo "  - VCN, subnet, gateways"
 echo ""
 
-read -p "Sei sicuro di voler distruggere tutto? (yes/no): " confirm
+if [ ! -t 0 ]; then
+    echo "Errore: questo script richiede un terminale interattivo."
+    echo "Eseguilo direttamente: ./scripts/destroy.sh"
+    exit 1
+fi
+read -r -p "Sei sicuro di voler distruggere tutto? (yes/no): " confirm
 if [ "$confirm" != "yes" ]; then
     echo "Distruzione annullata."
     exit 0

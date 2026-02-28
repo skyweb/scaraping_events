@@ -67,6 +67,22 @@
         --set backgroundController.nodeSelector.workload=light
         --set cleanupController.nodeSelector.workload=light
         --set reportsController.nodeSelector.workload=light
+        --set admissionController.container.resources.requests.cpu=10m
+        --set admissionController.container.resources.requests.memory=64Mi
+        --set admissionController.container.resources.limits.cpu=200m
+        --set admissionController.container.resources.limits.memory=256Mi
+        --set backgroundController.resources.requests.cpu=5m
+        --set backgroundController.resources.requests.memory=32Mi
+        --set backgroundController.resources.limits.cpu=100m
+        --set backgroundController.resources.limits.memory=128Mi
+        --set cleanupController.resources.requests.cpu=5m
+        --set cleanupController.resources.requests.memory=32Mi
+        --set cleanupController.resources.limits.cpu=100m
+        --set cleanupController.resources.limits.memory=128Mi
+        --set reportsController.resources.requests.cpu=5m
+        --set reportsController.resources.requests.memory=32Mi
+        --set reportsController.resources.limits.cpu=100m
+        --set reportsController.resources.limits.memory=128Mi
       register: kyverno_result
       changed_when: "'STATUS: deployed' in kyverno_result.stdout"
       when: install_kyverno | default(false)

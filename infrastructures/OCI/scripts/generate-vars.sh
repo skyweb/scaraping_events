@@ -311,7 +311,7 @@ echo ""
 if command -v ansible-vault &>/dev/null; then
     echo "Vuoi criptare oke-vault.yml ora? (richiede una password)"
     read -rp "Criptare con ansible-vault? [y/N] " ENCRYPT
-    if [[ "${ENCRYPT,,}" == "y" ]]; then
+    if [[ "$ENCRYPT" == "y" || "$ENCRYPT" == "Y" ]]; then
         ansible-vault encrypt "$VAULT_FILE"
         echo "File criptato. Usa --ask-vault-pass per eseguire i playbook."
     else

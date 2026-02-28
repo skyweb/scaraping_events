@@ -32,7 +32,10 @@ resource "oci_artifacts_container_repository" "repos" {
 }
 
 # Auth Token per docker login / imagePullSecret K8s
+# OCI ha un limite di 2 auth token per utente. Se la quota e' piena,
+# imposta create_ocir_auth_token = false in terraform.tfvars e usa un token esistente.
 resource "oci_identity_auth_token" "ocir" {
+  count       = var.create_ocir_auth_token ? 1 : 0
   description = "ocir-docker-login"
   user_id     = var.user_ocid
 }

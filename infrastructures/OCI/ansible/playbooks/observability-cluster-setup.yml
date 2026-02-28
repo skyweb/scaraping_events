@@ -70,7 +70,7 @@
                 cpu: {{ prometheus_server_cpu_limit | default('500m') }}
                 memory: {{ prometheus_server_memory_limit | default('512Mi') }}
               requests:
-                cpu: 100m
+                cpu: 50m
                 memory: 128Mi
             nodeSelector:
               workload: light
@@ -167,7 +167,7 @@
 
     - name: Attendi Alertmanager ready
       ansible.builtin.command: >
-        kubectl rollout status deployment prometheus-alertmanager
+        kubectl rollout status statefulset prometheus-alertmanager
         --namespace monitoring --timeout=180s
       changed_when: false
       when:
@@ -191,27 +191,59 @@
       changed_when: false
       when: install_loki | default(false)
 
+    - name: Crea values file Loki
+      ansible.builtin.copy:
+        dest: /tmp/loki-values.yml
+        mode: "0644"
+        content: |
+          deploymentMode: SingleBinary
+          loki:
+            auth_enabled: false
+            commonConfig:
+              replication_factor: 1
+            storage:
+              type: filesystem
+            limits_config:
+              retention_period: {{ loki_retention_period | default('168h') }}
+            schemaConfig:
+              configs:
+                - from: "2024-01-01"
+                  store: tsdb
+                  object_store: filesystem
+                  schema: v13
+                  index:
+                    prefix: index_
+                    period: 24h
+          singleBinary:
+            replicas: 1
+            resources:
+              limits:
+                cpu: {{ loki_cpu_limit | default('250m') }}
+                memory: {{ loki_memory_limit | default('256Mi') }}
+              requests:
+                cpu: 10m
+                memory: 64Mi
+            nodeSelector:
+              workload: light
+          read:
+            replicas: 0
+          write:
+            replicas: 0
+          backend:
+            replicas: 0
+          gateway:
+            enabled: false
+          chunksCache:
+            enabled: false
+          resultsCache:
+            enabled: false
+      when: install_loki | default(false)
+
     - name: Installa Loki via Helm (SingleBinary)
       ansible.builtin.command: >
         helm upgrade --install loki grafana/loki
         --namespace monitoring
-        --set deploymentMode=SingleBinary
-        --set loki.auth_enabled=false
-        --set loki.commonConfig.replication_factor=1
-        --set loki.storage.type=filesystem
-        --set loki.limits_config.retention_period={{ loki_retention_period | default('168h') }}
-        --set singleBinary.replicas=1
-        --set singleBinary.resources.limits.cpu={{ loki_cpu_limit | default('250m') }}
-        --set singleBinary.resources.limits.memory={{ loki_memory_limit | default('256Mi') }}
-        --set singleBinary.resources.requests.cpu=50m
-        --set singleBinary.resources.requests.memory=64Mi
-        --set singleBinary.nodeSelector.workload=light
-        --set read.replicas=0
-        --set write.replicas=0
-        --set backend.replicas=0
-        --set gateway.enabled=false
-        --set chunksCache.enabled=false
-        --set resultsCache.enabled=false
+        --values /tmp/loki-values.yml
       register: loki_result
       changed_when: "'STATUS: deployed' in loki_result.stdout"
       when: install_loki | default(false)
@@ -325,13 +357,13 @@
         content: |
           mode: daemonset
           image:
-            repository: otel/opentelemetry-collector-contrib
+            repository: docker.io/otel/opentelemetry-collector-contrib
           resources:
             limits:
               cpu: {{ otel_cpu_limit | default('200m') }}
               memory: {{ otel_memory_limit | default('128Mi') }}
             requests:
-              cpu: 50m
+              cpu: 10m
               memory: 64Mi
           ports:
             spanmetrics:
@@ -356,7 +388,6 @@
                   - name: http.method
                   - name: http.status_code
                   - name: http.route
-                  - name: service.name
             processors:
               batch:
                 timeout: 5s
@@ -460,7 +491,7 @@
                 cpu: {{ jaeger_cpu_limit | default('500m') }}
                 memory: {{ jaeger_memory_limit | default('512Mi') }}
               requests:
-                cpu: 100m
+                cpu: 50m
                 memory: 128Mi
             nodeSelector:
               workload: light
@@ -544,7 +575,7 @@
                   workload: light
                 containers:
                   - name: redis-exporter
-                    image: oliver006/redis_exporter:latest
+                    image: docker.io/oliver006/redis_exporter:latest
                     ports:
                       - containerPort: 9121
                     env:
@@ -607,7 +638,7 @@
                   workload: light
                 containers:
                   - name: celery-exporter
-                    image: danihodovic/celery-exporter:latest
+                    image: docker.io/danihodovic/celery-exporter:latest
                     ports:
                       - containerPort: 9808
                     args:

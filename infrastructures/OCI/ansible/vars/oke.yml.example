@@ -36,7 +36,7 @@ install_argocd: true
 # Tekton Pipelines + Kaniko (CI/CD cloud-native)
 install_tekton: true
 tekton_version: "v0.65.2"
-tekton_dashboard_version: "v0.46.0"
+tekton_dashboard_version: "v0.64.0"
 
 # cert-manager
 install_cert_manager: true
@@ -129,6 +129,9 @@ grafana_version: "11.4.0"             # versione container pinned
 grafana_port: 3000
 install_grafana_dashboards: true
 install_grafana_alerting: true
+# Accesso anonimo (senza login): true = chiunque vede le dashboard, false = richiede login
+grafana_allow_anonymous: false
+# grafana_anonymous_role: "Viewer"    # ruolo utente anonimo: Viewer, Editor, Admin
 
 # IP privato di un nodo K8s (per datasource Grafana → Prometheus/Loki via NodePort)
 # Ottenere con: kubectl get nodes -o wide → INTERNAL-IP del nodo light
@@ -163,15 +166,41 @@ velero_backup_schedule: "0 2 * * *"  # ogni notte alle 02:00
 velero_backup_ttl: "168h"            # retention 7 giorni
 
 # =============================================================================
+# Reverse Proxy (Caddy su micro-cirunner — IP stabile)
+# =============================================================================
+# Quando abilitato, Caddy su micro-cirunner (IP stabile) termina TLS e
+# inoltra HTTP a Traefik sul cluster K8s via VCN privata.
+# DNS punta a micro-cirunner → Caddy (Let's Encrypt) → Traefik (L7 routing).
+# Vantaggi: IP stabile (non cambia se il nodo K8s viene ricreato).
+install_reverse_proxy: false
+
+# IP privato micro-monitor (per Caddy → Grafana via VCN, senza passare da Traefik)
+# Ottenere con: terraform output micro_vm_private_ips
+micro_monitor_private_ip: "10.0.3.8"
+
+# Auth per-servizio (override: true = auth middleware, false = no auth)
+# Servizi con auth nativa (ArgoCD, Grafana) sono sempre senza middleware.
+# Attivo solo quando auth_available (BasicAuth o OAuth2 Proxy configurato).
+auth_traefik: true
+auth_prometheus: true
+auth_alertmanager: true
+auth_loki: true
+auth_dashboard: true
+auth_jaeger: true
+
+# =============================================================================
 # Domain Setup (HTTPS via sottodomini)
 # =============================================================================
 # Decommentare e configurare per abilitare routing HTTPS via sottodomini.
 # Richiede: DNS A record per ogni sottodominio → IP pubblico corretto.
 #
-# Servizi K8s → A record → IP pubblico del nodo light (K8s)
-# Grafana     → A record → IP pubblico della micro-monitor VM
+# Senza reverse proxy:
+#   Servizi K8s → A record → IP pubblico del nodo light (K8s)
+#   Grafana     → A record → IP pubblico della micro-monitor VM
+# Con reverse proxy (install_reverse_proxy: true):
+#   TUTTI i sottodomini → A record → IP pubblico micro-cirunner (stabile)
 
-base_domain: "k8s.santocaruso.eu"
+base_domain: "oci.santocaruso.eu"
 
 # Sottodomini (default se non specificati)
 # traefik_subdomain: "traefik"        # traefik.example.com   → Traefik Dashboard
@@ -195,4 +224,7 @@ base_domain: "k8s.santocaruso.eu"
 # install_oauth2_proxy: false
 # oauth2_proxy_allowed_emails:
 #   - "your.email@gmail.com"
+#   - "altro.utente@gmail.com"
+# Google Cloud Console: Credentials → OAuth 2.0 Client ID (tipo: Web application)
+# Authorized redirect URI: https://auth.<base_domain>/oauth2/callback
 # I secret (client_id, client_secret, cookie_secret) → in oke-vault.yml
