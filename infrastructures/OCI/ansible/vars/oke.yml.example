@@ -10,7 +10,7 @@
 ocir_region: "eu-milan-1"
 ocir_endpoint: "eu-milan-1.ocir.io"
 ocir_namespace: "YOUR_TENANCY_NAMESPACE"  # terraform output objectstorage_namespace
-ocir_username: "YOUR_TENANCY_NAMESPACE/YOUR_EMAIL"
+ocir_username: "YOUR_TENANCY_NAMESPACE/YOUR_EMAIL"  # formato: <objectstorage_namespace>/<email> (NON il tenancy name)
 # ocir_auth_token → in oke-vault.yml
 
 # Namespaces da creare nel cluster

@@ -13,7 +13,7 @@
 ---
 
 # OCIR (Oracle Container Registry)
-ocir_auth_token: "1R1W926Q6d_+oWuv5]My"
+ocir_auth_token: "CHANGE_ME"  # Console OCI: My Profile → Auth tokens → Generate token
 
 # Grafana
 grafana_admin_password: "wetfire2k"
