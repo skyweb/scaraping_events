@@ -474,6 +474,8 @@
         content: |
           provisionDataStore:
             cassandra: false
+          image:
+            registry: docker.io
           allInOne:
             enabled: true
             replicas: 1

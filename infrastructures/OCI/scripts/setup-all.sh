@@ -78,8 +78,9 @@ fi
 # ── Playbook in ordine ───────────────────────────────────────
 PLAYBOOKS=(
     "post-cluster-setup.yml|Infrastruttura base (Traefik, cert-manager, metrics, dashboard)"
-    "observability-cluster-setup.yml|Observability K8s (Prometheus, Loki, Promtail, Jaeger)"
+    "data-setup.yml|Data Services (PostgreSQL, Redis)"
     "ci-setup.yml|CI/CD (ArgoCD, Tekton)"
+    "observability-cluster-setup.yml|Observability K8s (Prometheus, Loki, Promtail, Jaeger)"
     "security-setup.yml|Security (Kyverno)"
     "backup-setup.yml|Backup (Velero)"
     "observability-vm-setup.yml|Observability VM (Grafana)"

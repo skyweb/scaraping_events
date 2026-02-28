@@ -166,6 +166,28 @@ velero_backup_schedule: "0 2 * * *"  # ogni notte alle 02:00
 velero_backup_ttl: "168h"            # retention 7 giorni
 
 # =============================================================================
+# Data Services (PostgreSQL + Redis) — namespace events
+# =============================================================================
+
+# PostgreSQL 16 + PostGIS 3.4 (StatefulSet, nodo heavy)
+install_postgres: true
+postgres_image: "docker.io/imresamu/postgis:16-3.4"
+postgres_storage_size: "20Gi"
+postgres_cpu_limit: "1000m"
+postgres_memory_limit: "1Gi"
+postgres_db: "events"
+postgres_user: "events"
+# postgres_k8s_password → in oke-vault.yml
+
+# Redis 7 Alpine (Deployment, nodo light)
+install_redis: true
+redis_image: "docker.io/redis:7-alpine"
+redis_storage_size: "2Gi"
+redis_cpu_limit: "200m"
+redis_memory_limit: "128Mi"
+# redis_k8s_password → in oke-vault.yml (già presente)
+
+# =============================================================================
 # Reverse Proxy (Caddy su micro-cirunner — IP stabile)
 # =============================================================================
 # Quando abilitato, Caddy su micro-cirunner (IP stabile) termina TLS e

@@ -1,0 +1,339 @@
+---
+# Data Services: PostgreSQL (PostGIS) + Redis su namespace events
+# Esegue su localhost (richiede kubectl configurato)
+#
+# Uso: ansible-playbook ansible/playbooks/data-setup.yml --ask-vault-pass
+- name: OKE Data Services Setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica namespace events esiste
+      ansible.builtin.command: kubectl get namespace events
+      register: ns_check
+      changed_when: false
+      failed_when: false
+
+    - name: Crea namespace events se mancante
+      ansible.builtin.command: kubectl create namespace events
+      when: ns_check.rc != 0
+      register: ns_result
+      changed_when: "'created' in ns_result.stdout"
+
+    # =========================================================================
+    # PostgreSQL 16 + PostGIS 3.4 (StatefulSet, nodo heavy)
+    # =========================================================================
+    - name: Crea Secret PostgreSQL
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: postgres-secret
+            namespace: events
+          type: Opaque
+          stringData:
+            POSTGRES_USER: "{{ postgres_user | default('events') }}"
+            POSTGRES_PASSWORD: "{{ postgres_k8s_password }}"
+            POSTGRES_DB: "{{ postgres_db | default('events') }}"
+      register: pg_secret_result
+      changed_when: "'created' in pg_secret_result.stdout or 'configured' in pg_secret_result.stdout"
+      when: install_postgres | default(false)
+
+    - name: Crea ConfigMap init scripts PostgreSQL
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: ConfigMap
+          metadata:
+            name: postgres-init-scripts
+            namespace: events
+          data:
+            01-extensions.sql: |
+              CREATE EXTENSION IF NOT EXISTS postgis;
+              CREATE EXTENSION IF NOT EXISTS postgis_topology;
+              CREATE EXTENSION IF NOT EXISTS pg_trgm;
+      register: pg_cm_result
+      changed_when: "'created' in pg_cm_result.stdout or 'configured' in pg_cm_result.stdout"
+      when: install_postgres | default(false)
+
+    - name: Deploy PostgreSQL StatefulSet + Service
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: PersistentVolumeClaim
+          metadata:
+            name: postgres-data
+            namespace: events
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: {{ postgres_storage_size | default('20Gi') }}
+          ---
+          apiVersion: apps/v1
+          kind: StatefulSet
+          metadata:
+            name: postgres
+            namespace: events
+            labels:
+              app: postgres
+          spec:
+            serviceName: postgres
+            replicas: 1
+            selector:
+              matchLabels:
+                app: postgres
+            template:
+              metadata:
+                labels:
+                  app: postgres
+              spec:
+                nodeSelector:
+                  workload: heavy
+                containers:
+                  - name: postgres
+                    image: {{ postgres_image | default('docker.io/imresamu/postgis:16-3.4') }}
+                    ports:
+                      - containerPort: 5432
+                        name: postgres
+                    envFrom:
+                      - secretRef:
+                          name: postgres-secret
+                    volumeMounts:
+                      - name: postgres-data
+                        mountPath: /var/lib/postgresql/data
+                        subPath: pgdata
+                      - name: init-scripts
+                        mountPath: /docker-entrypoint-initdb.d
+                    resources:
+                      limits:
+                        cpu: {{ postgres_cpu_limit | default('1000m') }}
+                        memory: {{ postgres_memory_limit | default('1Gi') }}
+                      requests:
+                        cpu: 100m
+                        memory: 256Mi
+                    readinessProbe:
+                      exec:
+                        command:
+                          - pg_isready
+                          - -U
+                          - $(POSTGRES_USER)
+                      initialDelaySeconds: 10
+                      periodSeconds: 10
+                      timeoutSeconds: 5
+                    livenessProbe:
+                      exec:
+                        command:
+                          - pg_isready
+                          - -U
+                          - $(POSTGRES_USER)
+                      initialDelaySeconds: 30
+                      periodSeconds: 15
+                      timeoutSeconds: 5
+                volumes:
+                  - name: postgres-data
+                    persistentVolumeClaim:
+                      claimName: postgres-data
+                  - name: init-scripts
+                    configMap:
+                      name: postgres-init-scripts
+          ---
+          apiVersion: v1
+          kind: Service
+          metadata:
+            name: postgres
+            namespace: events
+            labels:
+              app: postgres
+          spec:
+            type: ClusterIP
+            selector:
+              app: postgres
+            ports:
+              - name: postgres
+                port: 5432
+                targetPort: 5432
+      register: pg_result
+      changed_when: "'created' in pg_result.stdout or 'configured' in pg_result.stdout"
+      when: install_postgres | default(false)
+
+    - name: Attendi PostgreSQL ready
+      ansible.builtin.command: >
+        kubectl rollout status statefulset postgres
+        --namespace events --timeout=180s
+      changed_when: false
+      when: install_postgres | default(false)
+
+    # =========================================================================
+    # Redis 7 Alpine (Deployment Recreate, nodo light)
+    # =========================================================================
+    - name: Crea Secret Redis
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: redis-secret
+            namespace: events
+          type: Opaque
+          stringData:
+            REDIS_PASSWORD: "{{ redis_k8s_password }}"
+      register: redis_secret_result
+      changed_when: "'created' in redis_secret_result.stdout or 'configured' in redis_secret_result.stdout"
+      when: install_redis | default(false)
+
+    - name: Deploy Redis + PVC + Service
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: PersistentVolumeClaim
+          metadata:
+            name: redis-data
+            namespace: events
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: {{ redis_storage_size | default('2Gi') }}
+          ---
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: redis
+            namespace: events
+            labels:
+              app: redis
+          spec:
+            replicas: 1
+            strategy:
+              type: Recreate
+            selector:
+              matchLabels:
+                app: redis
+            template:
+              metadata:
+                labels:
+                  app: redis
+              spec:
+                nodeSelector:
+                  workload: light
+                containers:
+                  - name: redis
+                    image: {{ redis_image | default('docker.io/redis:7-alpine') }}
+                    ports:
+                      - containerPort: 6379
+                        name: redis
+                    command:
+                      - redis-server
+                      - --requirepass
+                      - $(REDIS_PASSWORD)
+                      - --appendonly
+                      - "yes"
+                      - --appendfsync
+                      - everysec
+                    env:
+                      - name: REDIS_PASSWORD
+                        valueFrom:
+                          secretKeyRef:
+                            name: redis-secret
+                            key: REDIS_PASSWORD
+                    volumeMounts:
+                      - name: redis-data
+                        mountPath: /data
+                    resources:
+                      limits:
+                        cpu: {{ redis_cpu_limit | default('200m') }}
+                        memory: {{ redis_memory_limit | default('128Mi') }}
+                      requests:
+                        cpu: 50m
+                        memory: 64Mi
+                    readinessProbe:
+                      exec:
+                        command:
+                          - sh
+                          - -c
+                          - redis-cli -a $REDIS_PASSWORD ping | grep -q PONG
+                      initialDelaySeconds: 5
+                      periodSeconds: 10
+                      timeoutSeconds: 3
+                    livenessProbe:
+                      exec:
+                        command:
+                          - sh
+                          - -c
+                          - redis-cli -a $REDIS_PASSWORD ping | grep -q PONG
+                      initialDelaySeconds: 15
+                      periodSeconds: 15
+                      timeoutSeconds: 3
+                volumes:
+                  - name: redis-data
+                    persistentVolumeClaim:
+                      claimName: redis-data
+          ---
+          apiVersion: v1
+          kind: Service
+          metadata:
+            name: redis
+            namespace: events
+            labels:
+              app: redis
+          spec:
+            type: ClusterIP
+            selector:
+              app: redis
+            ports:
+              - name: redis
+                port: 6379
+                targetPort: 6379
+      register: redis_result
+      changed_when: "'created' in redis_result.stdout or 'configured' in redis_result.stdout"
+      when: install_redis | default(false)
+
+    - name: Attendi Redis ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment redis
+        --namespace events --timeout=120s
+      changed_when: false
+      when: install_redis | default(false)
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Data Services
+      ansible.builtin.debug:
+        msg:
+          - "=== Data Services Setup Completato ==="
+          - ""
+          - "--- Componenti installati (namespace: events) ---"
+          - "PostgreSQL:  {{ 'StatefulSet | ' ~ (postgres_image | default('postgis:16-3.4')) ~ ' | PVC: ' ~ (postgres_storage_size | default('20Gi')) ~ ' | postgres.events.svc:5432 (nodo heavy)' if (install_postgres | default(false)) else 'saltato' }}"
+          - "Redis:       {{ 'Deployment Recreate | ' ~ (redis_image | default('redis:7-alpine')) ~ ' | PVC: ' ~ (redis_storage_size | default('2Gi')) ~ ' | redis.events.svc:6379 (nodo light)' if (install_redis | default(false)) else 'saltato' }}"
+          - ""
+          - "--- Verifica ---"
+          - "kubectl get pods -n events"
+          - "kubectl get svc -n events"
+          - "kubectl get pvc -n events"
+          - ""
+          - "--- Test connessione ---"
+          - "kubectl exec -it postgres-0 -n events -- pg_isready"
+          - "kubectl exec -it deploy/redis -n events -- redis-cli -a $PASSWORD ping"

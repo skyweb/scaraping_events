@@ -562,7 +562,7 @@
               - match: Host(`{{ domain_jaeger }}`)
                 kind: Rule
                 services:
-                  - name: jaeger-query
+                  - name: jaeger
                     port: 16686
           {% if (auth_jaeger | default(true)) and (auth_available | bool) %}
                 middlewares:

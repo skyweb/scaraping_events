@@ -22,6 +22,9 @@ grafana_admin_password: "wetfire2k"
 velero_aws_access_key_id: "YOUR_ACCESS_KEY_ID"
 velero_aws_secret_access_key: "YOUR_SECRET_ACCESS_KEY"
 
+# PostgreSQL (password per il database K8s)
+postgres_k8s_password: "wetfire2k"
+
 # Redis (password per Redis Exporter e Celery broker)
 redis_k8s_password: "wetfire2k"
 celery_broker_url: "redis://:wetfire2k@redis.events.svc:6379/0"
