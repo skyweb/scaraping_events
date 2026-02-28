@@ -42,6 +42,9 @@ spec:
             httpGet:
               path: /api/version/
               port: 8000
+              httpHeaders:
+                - name: Host
+                  value: localhost
             initialDelaySeconds: 60
             periodSeconds: 10
             timeoutSeconds: 5
@@ -50,7 +53,10 @@ spec:
             httpGet:
               path: /api/version/
               port: 8000
-            initialDelaySeconds: 90
+              httpHeaders:
+                - name: Host
+                  value: localhost
+            initialDelaySeconds: 60
             periodSeconds: 20
             timeoutSeconds: 5
             failureThreshold: 5
