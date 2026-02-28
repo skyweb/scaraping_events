@@ -1,0 +1,48 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: airflow-init
+  namespace: airflow
+  labels:
+    app: airflow
+    component: init
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  template:
+    metadata:
+      labels:
+        app: airflow
+        component: init
+    spec:
+      nodeSelector:
+        workload: heavy
+      restartPolicy: OnFailure
+      containers:
+        - name: airflow-init
+          image: apache/airflow:2.9.2
+          command:
+            - bash
+            - -c
+            - |
+              airflow db migrate &&
+              airflow users create \
+                --username admin \
+                --password "$AIRFLOW_ADMIN_PASSWORD" \
+                --firstname Admin \
+                --lastname User \
+                --role Admin \
+                --email admin@airflow.local || true
+          envFrom:
+            - configMapRef:
+                name: airflow-config
+            - secretRef:
+                name: airflow-secret
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

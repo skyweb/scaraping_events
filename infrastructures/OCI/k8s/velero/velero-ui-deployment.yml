@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: velero-ui
+  namespace: velero
+  labels:
+    app: velero-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: velero-ui
+  template:
+    metadata:
+      labels:
+        app: velero-ui
+    spec:
+      serviceAccountName: velero-ui
+      nodeSelector:
+        workload: light
+      containers:
+        - name: velero-ui
+          image: otwld/velero-ui:latest
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          env:
+            - name: VELERO_NAMESPACE
+              value: "velero"
+            - name: BASIC_AUTH_ENABLED
+              value: "true"
+            - name: BASIC_AUTH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: velero-ui-secret
+                  key: BASIC_AUTH_PASSWORD
+            - name: NODE_ENV
+              value: "production"
+          volumeMounts:
+            - name: policies
+              mountPath: /policies/policies.csv
+              subPath: policies.csv
+              readOnly: true
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
+      volumes:
+        - name: policies
+          configMap:
+            name: velero-ui

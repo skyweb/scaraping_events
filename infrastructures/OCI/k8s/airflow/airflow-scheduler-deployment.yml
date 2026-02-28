@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airflow-scheduler
+  namespace: airflow
+  labels:
+    app: airflow
+    component: scheduler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: airflow
+      component: scheduler
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: airflow
+        component: scheduler
+    spec:
+      nodeSelector:
+        workload: heavy
+      containers:
+        - name: scheduler
+          image: apache/airflow:2.9.2
+          command: ["airflow", "scheduler"]
+          envFrom:
+            - configMapRef:
+                name: airflow-config
+            - secretRef:
+                name: airflow-secret
+          volumeMounts:
+            - name: dags
+              mountPath: /opt/airflow/dags
+            - name: logs
+              mountPath: /opt/airflow/logs
+          livenessProbe:
+            exec:
+              command:
+                - bash
+                - -c
+                - airflow jobs check --job-type SchedulerJob --hostname $(hostname)
+            initialDelaySeconds: 60
+            periodSeconds: 30
+            timeoutSeconds: 10
+            failureThreshold: 5
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+        - name: git-sync
+          image: registry.k8s.io/git-sync/git-sync:v4.4.0
+          env:
+            - name: GITSYNC_REPO
+              valueFrom:
+                secretKeyRef:
+                  name: airflow-secret
+                  key: GITSYNC_REPO
+            - name: GITSYNC_REF
+              value: "main"
+            - name: GITSYNC_PERIOD
+              value: "60s"
+            - name: GITSYNC_ROOT
+              value: "/git"
+            - name: GITSYNC_LINK
+              value: "repo"
+            - name: GITSYNC_USERNAME
+              value: "git"
+            - name: GITSYNC_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: airflow-secret
+                  key: GITSYNC_PASSWORD
+          volumeMounts:
+            - name: dags
+              mountPath: /git
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 100m
+              memory: 128Mi
+      volumes:
+        - name: dags
+          emptyDir: {}
+        - name: logs
+          persistentVolumeClaim:
+            claimName: airflow-logs

@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - airflow-configmap.yml
+  - airflow-pvc.yml
+  - airflow-init-job.yml
+  - airflow-webserver-deployment.yml
+  - airflow-scheduler-deployment.yml
+  - airflow-service.yml

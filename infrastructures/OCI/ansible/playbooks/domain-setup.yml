@@ -29,6 +29,8 @@
     domain_jaeger: "{{ jaeger_subdomain | default('jaeger') }}.{{ base_domain }}"
     domain_auth: "{{ auth_subdomain | default('auth') }}.{{ base_domain }}"
     domain_events: "{{ events_subdomain | default('events') }}.{{ base_domain }}"
+    domain_airflow: "{{ airflow_subdomain | default('airflow') }}.{{ base_domain }}"
+    domain_velero: "{{ velero_subdomain | default('velero') }}.{{ base_domain }}"
     # Middleware dinamico: google-auth (OAuth2 Proxy) oppure basicauth (htpasswd)
     auth_middleware_name: "{{ 'google-auth' if (install_oauth2_proxy | default(false)) else 'basicauth' }}"
     auth_available: "{{ (install_oauth2_proxy | default(false)) or (basicauth_users is defined) }}"
@@ -608,6 +610,74 @@
       when: install_backoffice | default(false)
 
     # =========================================================================
+    # Airflow (HTTPS + auth per-servizio — extra layer sopra auth nativa Airflow)
+    # =========================================================================
+    - name: Crea IngressRoute per Airflow
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: airflow-webserver-https
+            namespace: airflow
+          spec:
+            entryPoints:
+              - {{ route_entrypoint }}
+            routes:
+              - match: Host(`{{ domain_airflow }}`)
+                kind: Rule
+                services:
+                  - name: airflow-webserver
+                    port: 8080
+          {% if (auth_airflow | default(true)) and (auth_available | bool) %}
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+          {% endif %}
+          {% if not (install_reverse_proxy | default(false)) %}
+            tls:
+              certResolver: letsencrypt
+          {% endif %}
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when: install_airflow | default(false)
+
+    # =========================================================================
+    # Velero UI (HTTPS + auth per-servizio — extra layer sopra BasicAuth nativo)
+    # =========================================================================
+    - name: Crea IngressRoute per Velero UI
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: velero-ui-https
+            namespace: velero
+          spec:
+            entryPoints:
+              - {{ route_entrypoint }}
+            routes:
+              - match: Host(`{{ domain_velero }}`)
+                kind: Rule
+                services:
+                  - name: velero-ui
+                    port: 80
+          {% if (auth_velero | default(true)) and (auth_available | bool) %}
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+          {% endif %}
+          {% if not (install_reverse_proxy | default(false)) %}
+            tls:
+              certResolver: letsencrypt
+          {% endif %}
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when: install_velero_ui | default(false)
+
+    # =========================================================================
     # Riepilogo
     # =========================================================================
     - name: Riepilogo Domain Setup
@@ -631,6 +701,8 @@
           - "Jaeger:            {{ 'https://' ~ domain_jaeger ~ (' (' ~ auth_middleware_name ~ ')' if ((auth_jaeger | default(true)) and (auth_available | bool)) else ' (no auth)') if (install_jaeger | default(false)) else 'saltato' }}"
           - "{{ 'OAuth2 Proxy:     https://' ~ domain_auth ~ ' (callback Google)' if (install_oauth2_proxy | default(false)) else '' }}"
           - "Backoffice:        {{ 'https://' ~ domain_events ~ ' (auth nativa)' if (install_backoffice | default(false)) else 'saltato' }}"
+          - "Airflow:           {{ 'https://' ~ domain_airflow ~ (' (' ~ auth_middleware_name ~ ')' if ((auth_airflow | default(true)) and (auth_available | bool)) else ' (auth nativa)') if (install_airflow | default(false)) else 'saltato' }}"
+          - "Velero UI:         {{ 'https://' ~ domain_velero ~ (' (' ~ auth_middleware_name ~ ')' if ((auth_velero | default(true)) and (auth_available | bool)) else ' (BasicAuth nativo)') if (install_velero_ui | default(false)) else 'saltato' }}"
           - ""
           - "--- DNS A Record richiesti ---"
           - "{{ 'TUTTI i sottodomini → IP pubblico micro-cirunner (reverse proxy)' if (install_reverse_proxy | default(false)) else '' }}"

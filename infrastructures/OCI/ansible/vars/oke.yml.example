@@ -23,6 +23,7 @@ namespaces:
   - tekton-pipelines
   - velero
   - kyverno
+  - airflow
 
 # Traefik Ingress Controller
 install_traefik: true
@@ -194,6 +195,14 @@ install_backoffice: true
 argocd_repo_url: "https://github.com/YOUR_USER/scaraping_events.git"
 argocd_target_revision: "main"
 # events_subdomain: "events"  # events.oci.santocaruso.eu
+
+# =============================================================================
+# Airflow (Orchestrazione DAG)
+# =============================================================================
+install_airflow: true
+airflow_image: "apache/airflow:2.9.2"
+# airflow_subdomain: "airflow"  # airflow.oci.santocaruso.eu
+auth_airflow: true  # proteggi con BasicAuth/OAuth2 (extra layer sopra auth nativa)
 
 # =============================================================================
 # Reverse Proxy (Caddy su micro-cirunner — IP stabile)

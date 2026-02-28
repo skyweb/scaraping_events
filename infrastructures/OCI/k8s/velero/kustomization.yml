@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - velero-ui-serviceaccount.yml
+  - velero-ui-rbac.yml
+  - velero-ui-configmap.yml
+  - velero-ui-deployment.yml
+  - velero-ui-service.yml

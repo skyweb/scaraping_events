@@ -124,6 +124,55 @@
       when: install_velero | default(false)
 
     # =========================================================================
+    # Velero UI (otwld/velero-ui) — Dashboard web per Velero
+    # =========================================================================
+    - name: Crea Secret velero-ui-secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: velero-ui-secret
+            namespace: velero
+            labels:
+              app: velero-ui
+          type: Opaque
+          stringData:
+            BASIC_AUTH_PASSWORD: "{{ velero_ui_password }}"
+      register: velero_ui_secret_result
+      changed_when: "'created' in velero_ui_secret_result.stdout or 'configured' in velero_ui_secret_result.stdout"
+      when: install_velero_ui | default(false)
+
+    - name: Crea ArgoCD Application velero-ui
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            name: velero-ui
+            namespace: argocd
+          spec:
+            project: default
+            source:
+              repoURL: "{{ argocd_repo_url }}"
+              targetRevision: "{{ argocd_target_revision | default('main') }}"
+              path: infrastructures/OCI/k8s/velero
+            destination:
+              server: https://kubernetes.default.svc
+              namespace: velero
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+              syncOptions:
+                - CreateNamespace=false
+      register: velero_ui_app_result
+      changed_when: "'created' in velero_ui_app_result.stdout or 'configured' in velero_ui_app_result.stdout"
+      when: install_velero_ui | default(false)
+
+    # =========================================================================
     # Verifica connessione al bucket
     # =========================================================================
     - name: Verifica BackupStorageLocation disponibile
@@ -198,6 +247,7 @@
           - ""
           - "Backup Storage: OCI Object Storage ({{ velero_bucket_name }})"
           - "S3 Endpoint:    {{ velero_s3_url }}"
+          - "Velero UI:      {{ 'ArgoCD app velero-ui (ns velero)' if (install_velero_ui | default(false)) else 'non installato' }}"
           - ""
           - "--- Schedule configurati ---"
           - "daily-full-backup:     {{ velero_backup_schedule }} (ns: events, monitoring) - retention {{ velero_backup_ttl }}"
@@ -210,4 +260,9 @@
           - "velero schedule get                                   # lista schedule"
           - "kubectl get backups -n velero                         # backup via kubectl"
           - "kubectl logs deployment/velero -n velero              # log Velero"
+          - ""
+          - "--- Velero UI ---"
+          - "{{ 'kubectl get app velero-ui -n argocd              # ArgoCD sync status' if (install_velero_ui | default(false)) else '' }}"
+          - "{{ 'kubectl get pods -n velero -l app=velero-ui      # Pod status' if (install_velero_ui | default(false)) else '' }}"
+          - "{{ 'kubectl logs -n velero -l app=velero-ui --tail=20  # Logs' if (install_velero_ui | default(false)) else '' }}"
       when: install_velero | default(false)

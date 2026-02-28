@@ -34,6 +34,8 @@
     domain_auth: "{{ auth_subdomain | default('auth') }}.{{ base_domain }}"
     domain_grafana: "{{ grafana_subdomain | default('grafana') }}.{{ base_domain }}"
     domain_events: "{{ events_subdomain | default('events') }}.{{ base_domain }}"
+    domain_airflow: "{{ airflow_subdomain | default('airflow') }}.{{ base_domain }}"
+    domain_velero: "{{ velero_subdomain | default('velero') }}.{{ base_domain }}"
 
   tasks:
     # =========================================================================
@@ -188,6 +190,22 @@
           }
 
           {% endif %}
+          {% if install_airflow | default(false) %}
+          {{ domain_airflow }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
+          {% if install_velero_ui | default(false) %}
+          {{ domain_velero }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
       notify: Restart Caddy
 
     # =========================================================================
@@ -309,6 +327,8 @@
           - "{{ 'OAuth2:       https://' ~ domain_auth if (install_oauth2_proxy | default(false)) else '' }}"
           - "{{ 'Grafana:      https://' ~ domain_grafana ~ ' → http://' ~ (micro_monitor_private_ip | default('10.0.3.8')) ~ ':' ~ (grafana_port | default(3000)) if (install_grafana_vm | default(false)) else '' }}"
           - "{{ 'Backoffice:   https://' ~ domain_events if (install_backoffice | default(false)) else '' }}"
+          - "{{ 'Airflow:      https://' ~ domain_airflow if (install_airflow | default(false)) else '' }}"
+          - "{{ 'Velero UI:    https://' ~ domain_velero if (install_velero_ui | default(false)) else '' }}"
           - ""
           - "--- Comandi utili ---"
           - "sudo systemctl status caddy"

@@ -1,17 +1,19 @@
 ---
-# Application Setup - Backoffice Django (Secret + ArgoCD Application)
+# Application Setup - Backoffice Django + Airflow (Secret + ArgoCD Application)
 # Crea risorse NON gestite da Git (Secret, ArgoCD Application).
-# I manifest K8s (Deployment, Service, ConfigMap) sono in infrastructures/OCI/k8s/events/
+# I manifest K8s (Deployment, Service, ConfigMap) sono in:
+#   - infrastructures/OCI/k8s/events/ (Backoffice)
+#   - infrastructures/OCI/k8s/airflow/ (Airflow)
 # e vengono sincronizzati da ArgoCD automaticamente.
 #
 # Prerequisiti:
 #   - ci-setup.yml (ArgoCD + Tekton installati)
 #   - data-setup.yml (PostgreSQL + Redis)
-#   - Immagine Docker buildata e pushata su OCIR
+#   - Immagine Docker buildata e pushata su OCIR (per backoffice)
 #   - Manifest K8s committati su Git
 #
 # Uso: ansible-playbook ansible/playbooks/app-setup.yml
-- name: OKE Application Setup (Backoffice secrets + ArgoCD)
+- name: OKE Application Setup (Backoffice + Airflow secrets + ArgoCD)
   hosts: localhost
   connection: local
   gather_facts: false
@@ -140,6 +142,75 @@
       when: install_backoffice | default(false)
 
     # =========================================================================
+    # Airflow - Namespace
+    # =========================================================================
+    - name: Crea namespace airflow
+      ansible.builtin.command: kubectl create namespace airflow
+      register: ns_airflow_result
+      changed_when: "'created' in ns_airflow_result.stdout"
+      failed_when:
+        - ns_airflow_result.rc != 0
+        - "'already exists' not in ns_airflow_result.stderr"
+      when: install_airflow | default(false)
+
+    # =========================================================================
+    # Airflow - Secret (credenziali DB, Fernet key, admin password, git-sync)
+    # =========================================================================
+    - name: Crea Secret airflow-secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: airflow-secret
+            namespace: airflow
+            labels:
+              app: airflow
+          type: Opaque
+          stringData:
+            AIRFLOW__CORE__SQL_ALCHEMY_CONN: "postgresql+psycopg2://{{ postgres_user }}:{{ postgres_k8s_password }}@postgres.events.svc:5432/{{ postgres_db }}"
+            AIRFLOW__CORE__FERNET_KEY: "{{ airflow_fernet_key }}"
+            AIRFLOW__WEBSERVER__SECRET_KEY: "{{ airflow_webserver_secret_key }}"
+            AIRFLOW_ADMIN_PASSWORD: "{{ airflow_admin_password }}"
+            GITSYNC_REPO: "{{ argocd_repo_url }}"
+            GITSYNC_PASSWORD: "{{ argocd_repo_token }}"
+      register: airflow_secret_result
+      changed_when: "'created' in airflow_secret_result.stdout or 'configured' in airflow_secret_result.stdout"
+      when: install_airflow | default(false)
+
+    # =========================================================================
+    # ArgoCD Application - airflow
+    # =========================================================================
+    - name: Crea ArgoCD Application airflow
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            name: airflow
+            namespace: argocd
+          spec:
+            project: default
+            source:
+              repoURL: "{{ argocd_repo_url }}"
+              targetRevision: "{{ argocd_target_revision | default('main') }}"
+              path: infrastructures/OCI/k8s/airflow
+            destination:
+              server: https://kubernetes.default.svc
+              namespace: airflow
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+              syncOptions:
+                - CreateNamespace=false
+      register: airflow_app_result
+      changed_when: "'created' in airflow_app_result.stdout or 'configured' in airflow_app_result.stdout"
+      when: install_airflow | default(false)
+
+    # =========================================================================
     # Riepilogo
     # =========================================================================
     - name: Riepilogo Application Setup
@@ -152,6 +223,9 @@
           - "Backoffice Secret: {{ 'backoffice-secret nel namespace events' if (install_backoffice | default(false)) else 'saltato' }}"
           - "ArgoCD Repo:       {{ 'repo-events nel namespace argocd' if (install_backoffice | default(false)) else 'saltato' }}"
           - "ArgoCD App:        {{ 'events-backoffice (auto-sync + prune + selfHeal)' if (install_backoffice | default(false)) else 'saltato' }}"
+          - "Airflow Namespace: {{ 'airflow' if (install_airflow | default(false)) else 'saltato' }}"
+          - "Airflow Secret:    {{ 'airflow-secret nel namespace airflow' if (install_airflow | default(false)) else 'saltato' }}"
+          - "ArgoCD App:        {{ 'airflow (auto-sync + prune + selfHeal)' if (install_airflow | default(false)) else 'saltato' }}"
           - ""
           - "--- Primo build immagine (Tekton PipelineRun) ---"
           - "kubectl create -f - <<EOF"
@@ -174,10 +248,17 @@
           - "    serviceAccountName: tekton-build"
           - "EOF"
           - ""
-          - "--- Verifica ---"
+          - "--- Verifica Backoffice ---"
           - "kubectl get app events-backoffice -n argocd                            # ArgoCD sync status"
           - "kubectl get pods -n events -l app=backoffice                           # Pod status"
           - "kubectl exec deploy/backoffice -n events -- curl -s localhost:8000/api/version/  # Health check"
           - "kubectl logs -n events -l component=web --tail=50                      # Logs Django"
           - "kubectl logs -n events -l component=celery-worker --tail=50            # Logs Celery Worker"
           - "kubectl logs -n events -l component=celery-beat --tail=50              # Logs Celery Beat"
+          - ""
+          - "--- Verifica Airflow ---"
+          - "kubectl get app airflow -n argocd                                      # ArgoCD sync status"
+          - "kubectl get pods -n airflow                                            # Pod status"
+          - "kubectl get jobs -n airflow                                            # Init job"
+          - "kubectl logs -n airflow -l component=webserver --tail=50               # Logs webserver"
+          - "kubectl exec deploy/airflow-webserver -n airflow -- curl -s localhost:8080/health  # Health check"
