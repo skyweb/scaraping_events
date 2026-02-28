@@ -1,0 +1,58 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform/
+.terraform.lock.hcl
+tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ansible
+ansible/inventory.yml
+ansible/inventory/hosts.yml
+ansible/vars/ocir.yml
+ansible/vars/oke.yml
+ansible/vars/oke-vault.yml
+*.retry
+.ansible/
+ansible/*.log
+ansible/.ansible_async/
+
+# Kubernetes
+kubeconfig
+kubeconfig.yaml
+.kube/
+
+# SSH Keys
+*.pem
+*.pub
+id_rsa*
+oci-key
+oci-key.pub
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.backup

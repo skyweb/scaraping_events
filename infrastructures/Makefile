@@ -7,6 +7,7 @@
 # =============================================================================
 
 COMPOSE := docker compose -f docker-compose.dev.yml --env-file .env
+COMPOSE_PROD := docker compose -f docker-compose.prod.yml --env-file .env
 
 # Legge DOMAIN dal .env (default: 127.0.0.1.nip.io)
 DOMAIN := $(shell grep '^DOMAIN=' .env 2>/dev/null | cut -d= -f2 | tr -d '[:space:]' || echo "127.0.0.1.nip.io")
@@ -27,6 +28,7 @@ NC    := \033[0m
 .PHONY: help \
         up down restart ps logs build pull \
         up-core up-observability up-bi up-airflow up-llm \
+        prod-up prod-down prod-ps prod-logs \
         logs-backoffice logs-celery logs-frontend logs-traefik logs-db logs-redis \
         logs-grafana logs-jaeger logs-loki logs-superset logs-airflow logs-oauth2 \
         logs-ollama logs-n8n logs-ollama-webui \
@@ -53,20 +55,20 @@ up: ## Avvia tutto lo stack ESCLUSO LLM (build immagini custom se necessario)
 	    superset-init superset \
 	    airflow-init airflow-webserver airflow-scheduler
 	@echo ""
-	@echo "$(CYAN)  http://frontend.$(DOMAIN)/$(NC)         Frontend"
-	@echo "$(CYAN)  http://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
-	@echo "$(CYAN)  http://flower.$(DOMAIN)/$(NC)           Flower (Celery)"
-	@echo "$(CYAN)  http://grafana.$(DOMAIN)/$(NC)          Grafana"
-	@echo "$(CYAN)  http://jaeger.$(DOMAIN)/$(NC)           Jaeger"
-	@echo "$(CYAN)  http://prometheus.$(DOMAIN)/$(NC)       Prometheus"
-	@echo "$(CYAN)  http://superset.$(DOMAIN)/$(NC)         Superset"
-	@echo "$(CYAN)  http://airflow.$(DOMAIN)/$(NC)          Airflow"
-	@echo "$(CYAN)  http://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
+	@echo "$(CYAN)  https://frontend.$(DOMAIN)/$(NC)         Frontend"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
+	@echo "$(CYAN)  https://flower.$(DOMAIN)/$(NC)           Flower (Celery)"
+	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
+	@echo "$(CYAN)  https://jaeger.$(DOMAIN)/$(NC)           Jaeger"
+	@echo "$(CYAN)  https://prometheus.$(DOMAIN)/$(NC)       Prometheus"
+	@echo "$(CYAN)  https://superset.$(DOMAIN)/$(NC)         Superset"
+	@echo "$(CYAN)  https://airflow.$(DOMAIN)/$(NC)          Airflow"
+	@echo "$(CYAN)  https://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
 	@echo ""
 	@echo "$(YELLOW)  LLM stack non avviato. Usa 'make up-llm' per:$(NC)"
-	@echo "$(YELLOW)    http://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
-	@echo "$(YELLOW)    http://ollama.$(DOMAIN)/$(NC)           Ollama (LLM API)"
-	@echo "$(YELLOW)    http://chat.$(DOMAIN)/$(NC)             Ollama WebUI (avvio manuale)$(NC)"
+	@echo "$(YELLOW)    https://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
+	@echo "$(YELLOW)    https://ollama.$(DOMAIN)/$(NC)           Ollama (LLM API)"
+	@echo "$(YELLOW)    https://chat.$(DOMAIN)/$(NC)             Ollama WebUI (avvio manuale)$(NC)"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -119,9 +121,9 @@ up-llm: ## Avvia Ollama + metrics proxy + WebUI + n8n
 	@echo "$(GREEN)Avvio LLM stack (Ollama + Metrics + WebUI + n8n)...$(NC)"
 	$(COMPOSE) up -d ollama ollama-init ollama-metrics ollama-webui n8n
 	@echo ""
-	@echo "$(CYAN)  http://ollama.$(DOMAIN)/$(NC)           Ollama API (via metrics proxy)"
-	@echo "$(CYAN)  http://chat.$(DOMAIN)/$(NC)             Ollama WebUI (chat)"
-	@echo "$(CYAN)  http://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
+	@echo "$(CYAN)  https://ollama.$(DOMAIN)/$(NC)           Ollama API (via metrics proxy)"
+	@echo "$(CYAN)  https://chat.$(DOMAIN)/$(NC)             Ollama WebUI (chat)"
+	@echo "$(CYAN)  https://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
 	@echo ""
 
 # =============================================================================
@@ -241,61 +243,90 @@ shell-backoffice: ## Bash nel container backoffice
 # Apri nel browser
 # =============================================================================
 
-open-admin: ## Apre Django Admin  →  http://backoffice.${DOMAIN}/admin/
+open-admin: ## Apre Django Admin  →  https://backoffice.${DOMAIN}/admin/
 	@echo "$(CYAN)Apertura Django Admin...$(NC)"
-	@$(OPEN) http://backoffice.$(DOMAIN)/admin/
+	@$(OPEN) https://backoffice.$(DOMAIN)/admin/
 
-open-flower: ## Apre Flower (Celery)  →  http://flower.${DOMAIN}/
+open-flower: ## Apre Flower (Celery)  →  https://flower.${DOMAIN}/
 	@echo "$(CYAN)Apertura Flower...$(NC)"
-	@$(OPEN) http://flower.$(DOMAIN)/
+	@$(OPEN) https://flower.$(DOMAIN)/
 
-open-grafana: ## Apre Grafana  →  http://grafana.${DOMAIN}/
+open-grafana: ## Apre Grafana  →  https://grafana.${DOMAIN}/
 	@echo "$(CYAN)Apertura Grafana...$(NC)"
-	@$(OPEN) http://grafana.$(DOMAIN)/
+	@$(OPEN) https://grafana.$(DOMAIN)/
 
-open-jaeger: ## Apre Jaeger UI  →  http://jaeger.${DOMAIN}/
+open-jaeger: ## Apre Jaeger UI  →  https://jaeger.${DOMAIN}/
 	@echo "$(CYAN)Apertura Jaeger...$(NC)"
-	@$(OPEN) http://jaeger.$(DOMAIN)/
+	@$(OPEN) https://jaeger.$(DOMAIN)/
 
-open-prometheus: ## Apre Prometheus  →  http://prometheus.${DOMAIN}/
+open-prometheus: ## Apre Prometheus  →  https://prometheus.${DOMAIN}/
 	@echo "$(CYAN)Apertura Prometheus...$(NC)"
-	@$(OPEN) http://prometheus.$(DOMAIN)/
+	@$(OPEN) https://prometheus.$(DOMAIN)/
 
-open-superset: ## Apre Apache Superset  →  http://superset.${DOMAIN}/
+open-superset: ## Apre Apache Superset  →  https://superset.${DOMAIN}/
 	@echo "$(CYAN)Apertura Superset...$(NC)"
-	@$(OPEN) http://superset.$(DOMAIN)/
+	@$(OPEN) https://superset.$(DOMAIN)/
 
-open-loki: ## Apre Loki (API status)  →  http://loki.${DOMAIN}/ready
+open-loki: ## Apre Loki (API status)  →  https://loki.${DOMAIN}/ready
 	@echo "$(CYAN)Apertura Loki...$(NC)"
-	@$(OPEN) http://loki.$(DOMAIN)/ready
+	@$(OPEN) https://loki.$(DOMAIN)/ready
 
-open-cadvisor: ## Apre cAdvisor  →  http://cadvisor.${DOMAIN}/
+open-cadvisor: ## Apre cAdvisor  →  https://cadvisor.${DOMAIN}/
 	@echo "$(CYAN)Apertura cAdvisor...$(NC)"
-	@$(OPEN) http://cadvisor.$(DOMAIN)/
+	@$(OPEN) https://cadvisor.$(DOMAIN)/
 
-open-redis-exporter: ## Apre Redis Exporter  →  http://redis-exporter.${DOMAIN}/
+open-redis-exporter: ## Apre Redis Exporter  →  https://redis-exporter.${DOMAIN}/
 	@echo "$(CYAN)Apertura Redis Exporter...$(NC)"
-	@$(OPEN) http://redis-exporter.$(DOMAIN)/
+	@$(OPEN) https://redis-exporter.$(DOMAIN)/
 
-open-airflow: ## Apre Apache Airflow  →  http://airflow.${DOMAIN}/
+open-airflow: ## Apre Apache Airflow  →  https://airflow.${DOMAIN}/
 	@echo "$(CYAN)Apertura Airflow...$(NC)"
-	@$(OPEN) http://airflow.$(DOMAIN)/
+	@$(OPEN) https://airflow.$(DOMAIN)/
 
-open-n8n: ## Apre n8n workflow automation  →  http://n8n.${DOMAIN}/
+open-n8n: ## Apre n8n workflow automation  →  https://n8n.${DOMAIN}/
 	@echo "$(CYAN)Apertura n8n...$(NC)"
-	@$(OPEN) http://n8n.$(DOMAIN)/
+	@$(OPEN) https://n8n.$(DOMAIN)/
 
-open-traefik: ## Apre Traefik dashboard  →  http://traefik.${DOMAIN}/
+open-traefik: ## Apre Traefik dashboard  →  https://traefik.${DOMAIN}/
 	@echo "$(CYAN)Apertura Traefik dashboard...$(NC)"
-	@$(OPEN) http://traefik.$(DOMAIN)/
+	@$(OPEN) https://traefik.$(DOMAIN)/
 
-open-chat: ## Apre Ollama WebUI Lite  →  http://chat.${DOMAIN}/
+open-chat: ## Apre Ollama WebUI Lite  →  https://chat.${DOMAIN}/
 	@echo "$(CYAN)Apertura Ollama WebUI Lite...$(NC)"
-	@$(OPEN) http://chat.$(DOMAIN)/
+	@$(OPEN) https://chat.$(DOMAIN)/
 
 ollama-pull: ## Scarica un modello Ollama (es: make ollama-pull MODEL=llama3.1:8b)
 	@echo "$(GREEN)Pull modello Ollama: $(MODEL)...$(NC)"
 	$(COMPOSE) exec ollama ollama pull $(MODEL)
+
+# =============================================================================
+# Produzione (HTTPS — Let's Encrypt)
+# =============================================================================
+
+prod-up: ## Avvia stack PRODUZIONE con HTTPS (Let's Encrypt)
+	@echo "$(GREEN)Avvio stack prod (HTTPS)...$(NC)"
+	$(COMPOSE_PROD) up --build -d
+	@echo ""
+	@echo "$(CYAN)  https://frontend.$(DOMAIN)/$(NC)         Frontend"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
+	@echo "$(CYAN)  https://flower.$(DOMAIN)/$(NC)           Flower (Celery)"
+	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
+	@echo "$(CYAN)  https://jaeger.$(DOMAIN)/$(NC)           Jaeger"
+	@echo "$(CYAN)  https://prometheus.$(DOMAIN)/$(NC)       Prometheus"
+	@echo "$(CYAN)  https://superset.$(DOMAIN)/$(NC)         Superset"
+	@echo "$(CYAN)  https://airflow.$(DOMAIN)/$(NC)          Airflow"
+	@echo "$(CYAN)  https://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
+	@echo ""
+
+prod-down: ## Ferma stack produzione (i volumi restano)
+	@echo "$(GREEN)Stop stack prod...$(NC)"
+	$(COMPOSE_PROD) down
+
+prod-ps: ## Stato container produzione
+	$(COMPOSE_PROD) ps
+
+prod-logs: ## Logs produzione (follow)
+	$(COMPOSE_PROD) logs -f
 
 # =============================================================================
 # Pulizia
@@ -341,6 +372,10 @@ help: ## Mostra questo messaggio di aiuto
 	@echo ""
 	@echo "$(CYAN)Apri nel browser:$(NC)"
 	@grep -E '^open-[a-z]+:.*?## .*$$' $(MAKEFILE_LIST) \
+	    | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-28s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+	@echo "$(CYAN)Produzione (HTTPS):$(NC)"
+	@grep -E '^prod-[a-z]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	    | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-28s\033[0m %s\n", $$1, $$2}'
 	@echo ""
 	@echo "$(CYAN)Pulizia:$(NC)"

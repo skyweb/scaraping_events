@@ -88,7 +88,8 @@ Stack Docker per lo sviluppo locale (`docker-compose.dev.yml`):
 
 ```
 infrastructures/
-├── docker-compose.dev.yml     # Stack dev completo
+├── docker-compose.dev.yml     # Stack dev completo (HTTP)
+├── docker-compose.prod.yml    # Stack produzione (HTTPS — Let's Encrypt)
 ├── .env                       # Variabili d'ambiente (non in git)
 ├── .env.example               # Template variabili
 ├── Makefile                   # Comandi rapidi (make up, make logs-*, ...)
@@ -111,6 +112,61 @@ infrastructures/
     ├── redis/                 # redis.conf
     └── superset/              # superset_config.py + init script
 ```
+
+## Produzione (HTTPS — Let's Encrypt)
+
+Lo stack di produzione usa `docker-compose.prod.yml` con Traefik che gestisce certificati SSL automatici via Let's Encrypt (ACME HTTP-01).
+
+### Prerequisiti
+
+1. **DNS**: wildcard `*.tuodominio.com` -> IP del server (oppure un A record per ogni sottodominio)
+2. **Firewall**: porte 80 e 443 aperte (80 serve per il challenge ACME anche se tutto il traffico viene rediretto a 443)
+3. **`.env`**: configurare `DOMAIN` con il dominio reale e `ACME_EMAIL` con un'email valida
+4. **Google OAuth2**: aggiornare il redirect URI in Google Cloud Console da `http://` a `https://auth.DOMAIN/oauth2/callback`
+
+### Avvio
+
+```bash
+cd infrastructures
+
+# Configurare .env
+DOMAIN=events.example.com
+ACME_EMAIL=admin@example.com
+
+# Avviare
+make prod-up
+
+# Verificare stato
+make prod-ps
+
+# Logs
+make prod-logs
+```
+
+### Differenze rispetto al dev
+
+| Aspetto | Dev (`docker-compose.dev.yml`) | Prod (`docker-compose.prod.yml`) |
+|---------|-------------------------------|----------------------------------|
+| Protocollo | HTTP (porta 80) | HTTPS (porta 443) + redirect da HTTP |
+| Certificati | Nessuno | Let's Encrypt automatici |
+| Django | `runserver` + volume mount + DEBUG=True | `gunicorn` + immagine build + DEBUG=False |
+| Frontend | Vite dev server (porta 5173) | Build statico nginx (porta 80) |
+| Cookie OAuth2 | `secure=false` | `secure=true` |
+| Cookie n8n | `secure=false` | `secure=true` |
+| Traefik dashboard | Esposto su porta 8082 (insecure) | Solo via router autenticato HTTPS |
+| Container prefix | `dev-*` | `prod-*` |
+| Volumi | `dev-*` | `prod-*` + volume `acme-data` |
+| Rete | `dev-network` | `prod-network` |
+
+### Primo avvio e certificati
+
+Al primo avvio, Traefik richiede i certificati per tutti i sottodomini. Questo puo richiedere 30-60 secondi. I certificati vengono salvati nel volume `prod-acme-data` e rinnovati automaticamente.
+
+Per testare senza consumare rate limit Let's Encrypt, aggiungere temporaneamente al comando Traefik in `docker-compose.prod.yml`:
+```yaml
+- --certificatesresolvers.letsencrypt.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
+```
+I certificati staging mostrano warning nel browser ma confermano che il flusso ACME funziona. Rimuovere la riga per passare ai certificati di produzione.
 
 ## Note di configurazione
 

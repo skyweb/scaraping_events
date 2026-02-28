@@ -1,0 +1,31 @@
+# Inventory Ansible per le Micro VM OCI
+# Generato automaticamente da: ./scripts/generate-inventory.sh
+# Oppure copiare questo template e compilare manualmente:
+#   cp ansible/inventory/hosts.yml.example ansible/inventory/hosts.yml
+#
+# Gli IP si ottengono da:
+#   cd terraform && terraform output micro_vm_public_ips
+#   cd terraform && terraform output micro_vm_private_ips
+---
+all:
+  children:
+    # Micro VM standalone (E2.1.Micro, Oracle Linux 8)
+    micro_vms:
+      hosts:
+        micro-monitor:
+          ansible_host: "MICRO_MONITOR_PUBLIC_IP"    # terraform output micro_vm_public_ips[0]
+          private_ip: "MICRO_MONITOR_PRIVATE_IP"     # terraform output micro_vm_private_ips[0]
+          ansible_user: opc
+          ansible_ssh_private_key_file: "../../oci-key"
+        micro-cirunner:
+          ansible_host: "MICRO_CIRUNNER_PUBLIC_IP"   # terraform output micro_vm_public_ips[1]
+          private_ip: "MICRO_CIRUNNER_PRIVATE_IP"    # terraform output micro_vm_private_ips[1]
+          ansible_user: opc
+          ansible_ssh_private_key_file: "../../oci-key"
+
+    # Localhost per playbook K8s (kubectl/helm)
+    local:
+      hosts:
+        localhost:
+          ansible_connection: local
+          ansible_python_interpreter: "{{ ansible_playbook_python }}"

@@ -1,0 +1,198 @@
+# Configurazione non-sensibile — i secret sono in oke-vault.yml (criptato)
+# Vedi oke-vault.yml.example per il template dei secret.
+
+# OCIR (Oracle Container Registry) - per imagePullSecret Kubernetes
+# Questi valori si ottengono dagli output Terraform dopo il deploy:
+#   terraform output ocir_endpoint              → ocir_endpoint
+#   terraform output objectstorage_namespace    → ocir_namespace
+#   terraform output -raw ocir_auth_token       → ocir_auth_token (→ oke-vault.yml)
+#   terraform output ocir_repositories          → lista immagini full path
+ocir_region: "eu-milan-1"
+ocir_endpoint: "eu-milan-1.ocir.io"
+ocir_namespace: "YOUR_TENANCY_NAMESPACE"  # terraform output objectstorage_namespace
+ocir_username: "YOUR_TENANCY_NAMESPACE/YOUR_EMAIL"
+# ocir_auth_token → in oke-vault.yml
+
+# Namespaces da creare nel cluster
+namespaces:
+  - events
+  - monitoring
+  - traefik
+  - cert-manager
+  - argocd
+  - tekton-pipelines
+  - velero
+  - kyverno
+
+# Traefik Ingress Controller
+install_traefik: true
+traefik_http_nodeport: 30080
+traefik_https_nodeport: 30443
+traefik_dashboard_nodeport: 30090
+
+# ArgoCD (GitOps)
+install_argocd: true
+
+# Tekton Pipelines + Kaniko (CI/CD cloud-native)
+install_tekton: true
+tekton_version: "v0.65.2"
+tekton_dashboard_version: "v0.46.0"
+
+# cert-manager
+install_cert_manager: true
+cert_manager_version: "v1.17.2"
+letsencrypt_email: "YOUR_EMAIL@example.com"
+
+# metrics-server
+install_metrics_server: true
+
+# Kubernetes Dashboard
+install_dashboard: true
+
+# Kyverno (Policy Engine - Security)
+install_kyverno: true
+# Audit = solo log violazioni, Enforce = blocca le risorse non conformi
+kyverno_enforcement_mode: "Audit"
+# Namespace esclusi dalle policy (sistema e infrastruttura)
+kyverno_excluded_namespaces:
+  - kube-system
+  - kyverno
+  - traefik
+  - cert-manager
+  - monitoring
+  - argocd
+  - tekton-pipelines
+  - velero
+
+# =============================================================================
+# Observability - Cluster (K8s)
+# =============================================================================
+
+# Prometheus (prometheus-community/prometheus)
+install_prometheus: true
+prometheus_nodeport: 31090
+prometheus_retention: "7d"
+prometheus_storage_size: "10Gi"
+prometheus_server_cpu_limit: "500m"
+prometheus_server_memory_limit: "512Mi"
+
+# Alertmanager (gestione alert e notifiche)
+install_alertmanager: true
+alertmanager_nodeport: 31093
+alertmanager_cpu_limit: "100m"
+alertmanager_memory_limit: "128Mi"
+
+# Loki (grafana/loki) - SingleBinary mode
+install_loki: true
+loki_nodeport: 31100
+loki_retention_period: "168h"  # 7 giorni
+loki_cpu_limit: "250m"
+loki_memory_limit: "256Mi"
+
+# Promtail (grafana/promtail) - DaemonSet log shipper
+install_promtail: true
+promtail_cpu_limit: "100m"
+promtail_memory_limit: "64Mi"
+
+# OpenTelemetry Collector (open-telemetry/opentelemetry-collector) - DaemonSet
+install_otel_collector: true
+otel_otlp_grpc_nodeport: 31317
+otel_cpu_limit: "200m"
+otel_memory_limit: "128Mi"
+
+# Jaeger (jaegertracing/jaeger) - Tracing UI
+install_jaeger: true
+jaeger_nodeport: 31686
+jaeger_cpu_limit: "500m"
+jaeger_memory_limit: "512Mi"
+
+# Redis Exporter (metriche Prometheus per Redis)
+install_redis_exporter: false    # false fino a deploy app su K8s
+redis_exporter_cpu_limit: "50m"
+redis_exporter_memory_limit: "64Mi"
+redis_k8s_host: "redis://redis.events.svc:6379"
+# redis_k8s_password → in oke-vault.yml
+
+# Celery Exporter (metriche Prometheus per Celery)
+install_celery_exporter: false   # false fino a deploy app su K8s
+celery_exporter_cpu_limit: "50m"
+celery_exporter_memory_limit: "64Mi"
+# celery_broker_url → in oke-vault.yml
+
+# =============================================================================
+# Observability - Grafana su Micro VM
+# =============================================================================
+
+install_grafana_vm: true
+grafana_version: "11.4.0"             # versione container pinned
+# grafana_admin_password → in oke-vault.yml
+grafana_port: 3000
+install_grafana_dashboards: true
+install_grafana_alerting: true
+
+# IP privato di un nodo K8s (per datasource Grafana → Prometheus/Loki via NodePort)
+# Ottenere con: kubectl get nodes -o wide → INTERNAL-IP del nodo light
+k8s_node_ip: "K8S_NODE_PRIVATE_IP"
+
+# OCI Monitoring (Grafana plugin oci-metrics-datasource + oci-logs-datasource)
+# Usa Instance Principal: Terraform crea dynamic group + IAM policy
+# Metriche: CPU, RAM, disco, rete delle VM e nodi OKE + log OCI
+install_oci_datasources: true
+oci_tenancy_ocid: "YOUR_TENANCY_OCID"  # terraform output tenancy_ocid (o da terraform.tfvars)
+oci_region: "eu-milan-1"
+
+# =============================================================================
+# Backup & Disaster Recovery
+# =============================================================================
+
+# Velero (Backup & Disaster Recovery)
+install_velero: true
+# OCI Object Storage (S3-compatible) per backup
+# Questi valori si ottengono dagli output Terraform dopo il deploy:
+#   terraform output velero_bucket_name
+#   terraform output velero_s3_endpoint
+#   terraform output velero_s3_access_key
+#   terraform output -raw velero_s3_secret_key
+velero_bucket_name: "velero-backups"
+velero_s3_region: "eu-milan-1"
+velero_s3_url: "https://YOUR_TENANCY_NAMESPACE.compat.objectstorage.eu-milan-1.oraclecloud.com"
+# velero_aws_access_key_id → in oke-vault.yml
+# velero_aws_secret_access_key → in oke-vault.yml
+# Schedule backup automatici (cron)
+velero_backup_schedule: "0 2 * * *"  # ogni notte alle 02:00
+velero_backup_ttl: "168h"            # retention 7 giorni
+
+# =============================================================================
+# Domain Setup (HTTPS via sottodomini)
+# =============================================================================
+# Decommentare e configurare per abilitare routing HTTPS via sottodomini.
+# Richiede: DNS A record per ogni sottodominio → IP pubblico corretto.
+#
+# Servizi K8s → A record → IP pubblico del nodo light (K8s)
+# Grafana     → A record → IP pubblico della micro-monitor VM
+
+base_domain: "k8s.santocaruso.eu"
+
+# Sottodomini (default se non specificati)
+# traefik_subdomain: "traefik"        # traefik.example.com   → Traefik Dashboard
+# argocd_subdomain: "argocd"          # argocd.example.com    → ArgoCD
+# tekton_subdomain: "tekton"          # tekton.example.com    → Tekton Dashboard
+# prometheus_subdomain: "prometheus"  # prometheus.example.com → Prometheus
+# alertmanager_subdomain: "alertmanager"  # alertmanager.example.com → Alertmanager
+# loki_subdomain: "loki"              # loki.example.com      → Loki
+# dashboard_subdomain: "dashboard"    # dashboard.example.com → K8s Dashboard
+# grafana_subdomain: "grafana"        # grafana.example.com   → Grafana (Caddy su micro VM)
+# jaeger_subdomain: "jaeger"          # jaeger.example.com    → Jaeger UI
+# auth_subdomain: "auth"              # auth.example.com      → OAuth2 Proxy callback
+
+# --- Autenticazione servizi senza auth nativa ---
+# Scegliere UNA delle due opzioni: BasicAuth OPPURE OAuth2 Proxy (Google SSO)
+# I secret (basicauth_users, oauth2_proxy_*) vanno in oke-vault.yml
+
+# Opzione A: BasicAuth — configurare basicauth_users in oke-vault.yml
+
+# Opzione B: OAuth2 Proxy (Google SSO)
+# install_oauth2_proxy: false
+# oauth2_proxy_allowed_emails:
+#   - "your.email@gmail.com"
+# I secret (client_id, client_secret, cookie_secret) → in oke-vault.yml

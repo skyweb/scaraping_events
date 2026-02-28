@@ -1,0 +1,364 @@
+---
+# CI/CD Setup per OKE - ArgoCD + Tekton + Kaniko
+# Esegue su localhost (richiede kubectl configurato)
+# Prerequisito: post-cluster-setup.yml (namespaces + Traefik)
+#
+# Uso: ansible-playbook ansible/playbooks/ci-setup.yml
+- name: OKE CI/CD Setup (ArgoCD + Tekton + Kaniko)
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica Helm disponibile
+      ansible.builtin.command: helm version --short
+      register: helm_version
+      changed_when: false
+
+    - name: Verifica namespace argocd esiste
+      ansible.builtin.command: kubectl get namespace argocd
+      register: ns_argocd
+      changed_when: false
+      failed_when: false
+
+    - name: Crea namespace argocd se mancante
+      ansible.builtin.command: kubectl create namespace argocd
+      when: ns_argocd.rc != 0
+      changed_when: true
+
+    - name: Verifica namespace tekton-pipelines esiste
+      ansible.builtin.command: kubectl get namespace tekton-pipelines
+      register: ns_tekton
+      changed_when: false
+      failed_when: false
+
+    - name: Crea namespace tekton-pipelines se mancante
+      ansible.builtin.command: kubectl create namespace tekton-pipelines
+      when: ns_tekton.rc != 0
+      changed_when: true
+
+    - name: Aggiorna Helm repos
+      ansible.builtin.command: helm repo update
+      changed_when: false
+      failed_when: false
+
+    # =========================================================================
+    # ArgoCD (GitOps continuous delivery)
+    # =========================================================================
+    - name: Aggiungi Helm repo argo
+      ansible.builtin.command: helm repo add argo https://argoproj.github.io/argo-helm
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+      when: install_argocd | default(false)
+
+    - name: Installa ArgoCD via Helm
+      ansible.builtin.command: >
+        helm upgrade --install argocd argo/argo-cd
+        --namespace argocd
+        --set global.nodeSelector.workload=light
+        --set configs.params.server\.insecure=true
+        --set server.service.type=ClusterIP
+        --set dex.enabled=false
+        --set notifications.enabled=false
+        --set applicationSet.enabled=false
+      register: argocd_result
+      changed_when: "'STATUS: deployed' in argocd_result.stdout"
+      when: install_argocd | default(false)
+
+    - name: Attendi ArgoCD server ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment argocd-server
+        --namespace argocd --timeout=180s
+      changed_when: false
+      when: install_argocd | default(false)
+
+    - name: Crea IngressRoute per ArgoCD via Traefik
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: argocd-server
+            namespace: argocd
+          spec:
+            entryPoints:
+              - web
+            routes:
+              - match: PathPrefix(`/argocd`)
+                kind: Rule
+                services:
+                  - name: argocd-server
+                    port: 80
+                middlewares:
+                  - name: argocd-stripprefix
+          ---
+          apiVersion: traefik.io/v1alpha1
+          kind: Middleware
+          metadata:
+            name: argocd-stripprefix
+            namespace: argocd
+          spec:
+            stripPrefix:
+              prefixes:
+                - /argocd
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when: (install_argocd | default(false)) and (install_traefik | default(false))
+
+    # =========================================================================
+    # Tekton Pipelines (CI/CD cloud-native)
+    # =========================================================================
+    - name: Installa Tekton Pipelines
+      ansible.builtin.command: >
+        kubectl apply -f
+        https://storage.googleapis.com/tekton-releases/pipeline/previous/{{ tekton_version }}/release.yaml
+      register: tekton_result
+      changed_when: "'created' in tekton_result.stdout"
+      when: install_tekton | default(false)
+
+    - name: Attendi Tekton controller ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment tekton-pipelines-controller
+        --namespace tekton-pipelines --timeout=180s
+      changed_when: false
+      when: install_tekton | default(false)
+
+    - name: Installa Tekton Dashboard
+      ansible.builtin.command: >
+        kubectl apply -f
+        https://storage.googleapis.com/tekton-releases/dashboard/previous/{{ tekton_dashboard_version }}/release.yaml
+      register: tekton_dash_result
+      changed_when: "'created' in tekton_dash_result.stdout"
+      when: install_tekton | default(false)
+
+    - name: Attendi Tekton Dashboard ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment tekton-dashboard
+        --namespace tekton-pipelines --timeout=120s
+      changed_when: false
+      when: install_tekton | default(false)
+
+    - name: Crea IngressRoute per Tekton Dashboard via Traefik
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: tekton-dashboard
+            namespace: tekton-pipelines
+          spec:
+            entryPoints:
+              - web
+            routes:
+              - match: PathPrefix(`/tekton`)
+                kind: Rule
+                services:
+                  - name: tekton-dashboard
+                    port: 9097
+                middlewares:
+                  - name: tekton-stripprefix
+          ---
+          apiVersion: traefik.io/v1alpha1
+          kind: Middleware
+          metadata:
+            name: tekton-stripprefix
+            namespace: tekton-pipelines
+          spec:
+            stripPrefix:
+              prefixes:
+                - /tekton
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when: (install_tekton | default(false)) and (install_traefik | default(false))
+
+    # =========================================================================
+    # Kaniko - Build immagini senza Docker daemon
+    # =========================================================================
+    - name: Crea OCIR secret per Tekton/Kaniko
+      ansible.builtin.command: >
+        kubectl create secret docker-registry ocir-secret
+        --docker-server={{ ocir_endpoint }}
+        --docker-username={{ ocir_username }}
+        --docker-password={{ ocir_auth_token }}
+        --namespace=tekton-pipelines
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout"
+      failed_when:
+        - secret_result.rc != 0
+        - "'already exists' not in secret_result.stderr"
+      when: install_tekton | default(false)
+
+    - name: Crea ServiceAccount per Tekton con accesso OCIR
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: ServiceAccount
+          metadata:
+            name: tekton-build
+            namespace: tekton-pipelines
+          secrets:
+            - name: ocir-secret
+          imagePullSecrets:
+            - name: ocir-secret
+      register: sa_result
+      changed_when: "'created' in sa_result.stdout or 'configured' in sa_result.stdout"
+      when: install_tekton | default(false)
+
+    - name: Crea Tekton Task - kaniko-build
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: tekton.dev/v1
+          kind: Task
+          metadata:
+            name: kaniko-build
+            namespace: tekton-pipelines
+          spec:
+            params:
+              - name: IMAGE
+                description: "Immagine destinazione (es: eu-milan-1.ocir.io/namespace/app:tag)"
+                type: string
+              - name: DOCKERFILE
+                description: "Path al Dockerfile"
+                type: string
+                default: "./Dockerfile"
+              - name: CONTEXT
+                description: "Build context"
+                type: string
+                default: "."
+              - name: EXTRA_ARGS
+                description: "Argomenti extra per Kaniko"
+                type: array
+                default: []
+            workspaces:
+              - name: source
+                description: "Sorgente con Dockerfile"
+            results:
+              - name: IMAGE_DIGEST
+                description: "Digest dell'immagine buildata"
+              - name: IMAGE_URL
+                description: "URL completo dell'immagine"
+            steps:
+              - name: build-and-push
+                image: gcr.io/kaniko-project/executor:latest
+                args:
+                  - --dockerfile=$(params.DOCKERFILE)
+                  - --context=$(workspaces.source.path)/$(params.CONTEXT)
+                  - --destination=$(params.IMAGE)
+                  - --digest-file=$(results.IMAGE_DIGEST.path)
+                  - $(params.EXTRA_ARGS[*])
+                securityContext:
+                  runAsUser: 0
+              - name: write-url
+                image: docker.io/library/busybox:latest
+                script: |
+                  echo -n "$(params.IMAGE)" | tee "$(results.IMAGE_URL.path)"
+      register: task_result
+      changed_when: "'created' in task_result.stdout or 'configured' in task_result.stdout"
+      when: install_tekton | default(false)
+
+    - name: Crea Tekton Task - git-clone (dal catalogo)
+      ansible.builtin.command: >
+        kubectl apply -f
+        https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.9/git-clone.yaml
+        -n tekton-pipelines
+      register: gitclone_result
+      changed_when: "'created' in gitclone_result.stdout or 'configured' in gitclone_result.stdout"
+      when: install_tekton | default(false)
+
+    - name: Crea Pipeline build-and-push
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: tekton.dev/v1
+          kind: Pipeline
+          metadata:
+            name: build-and-push
+            namespace: tekton-pipelines
+          spec:
+            params:
+              - name: repo-url
+                description: "URL del repository Git"
+                type: string
+              - name: revision
+                description: "Branch o tag"
+                type: string
+                default: "main"
+              - name: image
+                description: "Immagine di destinazione"
+                type: string
+              - name: dockerfile
+                description: "Path al Dockerfile"
+                type: string
+                default: "./Dockerfile"
+            workspaces:
+              - name: shared-workspace
+            tasks:
+              - name: clone
+                taskRef:
+                  name: git-clone
+                workspaces:
+                  - name: output
+                    workspace: shared-workspace
+                params:
+                  - name: url
+                    value: $(params.repo-url)
+                  - name: revision
+                    value: $(params.revision)
+              - name: build
+                taskRef:
+                  name: kaniko-build
+                runAfter:
+                  - clone
+                workspaces:
+                  - name: source
+                    workspace: shared-workspace
+                params:
+                  - name: IMAGE
+                    value: $(params.image)
+                  - name: DOCKERFILE
+                    value: $(params.dockerfile)
+      register: pipeline_result
+      changed_when: "'created' in pipeline_result.stdout or 'configured' in pipeline_result.stdout"
+      when: install_tekton | default(false)
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo CI/CD
+      ansible.builtin.debug:
+        msg:
+          - "=== CI/CD Setup Completato ==="
+          - ""
+          - "--- Applicazioni installate ---"
+          - "ArgoCD:            {{ 'installato in ns argocd' if (install_argocd | default(false)) else 'saltato' }}"
+          - "  UI:              {{ 'http://<NODE_IP>:30080/argocd/ oppure port-forward :8080' if (install_argocd | default(false)) else '' }}"
+          - "Tekton Pipelines:  {{ 'installato in ns tekton-pipelines' if (install_tekton | default(false)) else 'saltato' }}"
+          - "  Dashboard:       {{ 'http://<NODE_IP>:30080/tekton/ oppure port-forward :9097' if (install_tekton | default(false)) else '' }}"
+          - "Kaniko:            {{ 'Task kaniko-build + Pipeline build-and-push' if (install_tekton | default(false)) else 'saltato' }}"
+          - "  ServiceAccount:  {{ 'tekton-build (con credenziali OCIR)' if (install_tekton | default(false)) else '' }}"
+          - ""
+          - "--- Comandi utili ---"
+          - "kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d  # password ArgoCD"
+          - "kubectl -n argocd port-forward svc/argocd-server 8080:80            # accesso ArgoCD"
+          - "kubectl get tasks,pipelines -n tekton-pipelines                     # risorse Tekton"
+          - "kubectl get pipelineruns -n tekton-pipelines                        # pipeline eseguite"
+          - "kubectl -n tekton-pipelines port-forward svc/tekton-dashboard 9097  # dashboard Tekton"

@@ -242,7 +242,7 @@
     </div>
 
     <div class="footer">
-      <a class="btn btn-primary" href="/oauth2/sign_out?rd=/">
+      <a class="btn btn-primary" id="sign-out-link" href="#">
         <span class="material-symbols-outlined">logout</span>
         Cambia account Google
       </a>
@@ -253,5 +253,10 @@
     </div>
 
   </div>
+  <script>
+    var domain = window.location.hostname.replace(/^[^.]+\./, '');
+    var proto = window.location.protocol;
+    document.getElementById('sign-out-link').href = proto + '//auth.' + domain + '/oauth2/sign_out?rd=' + proto + '//frontend.' + domain + '/';
+  </script>
 </body>
 </html>

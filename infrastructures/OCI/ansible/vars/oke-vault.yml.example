@@ -1,0 +1,35 @@
+# Secret e credenziali — questo file viene criptato con Ansible Vault
+#
+# Copiare: cp oke-vault.yml.example oke-vault.yml
+# Editare con i valori reali, poi criptare:
+#   ansible-vault encrypt oke-vault.yml
+#
+# Per editare dopo la cifratura:
+#   ansible-vault edit oke-vault.yml
+#
+# I playbook caricano questo file automaticamente via vars_files.
+# Lanciare con: ansible-playbook ... --ask-vault-pass
+# Oppure con vault password file: ansible-playbook ... --vault-password-file ~/.vault_pass
+---
+
+# OCIR (Oracle Container Registry)
+ocir_auth_token: "YOUR_AUTH_TOKEN"
+
+# Grafana
+grafana_admin_password: "CHANGE_ME"
+
+# Velero (Backup)
+velero_aws_access_key_id: "YOUR_ACCESS_KEY_ID"
+velero_aws_secret_access_key: "YOUR_SECRET_ACCESS_KEY"
+
+# Redis (password per Redis Exporter e Celery broker)
+redis_k8s_password: "CHANGE_ME"
+celery_broker_url: "redis://:CHANGE_ME@redis.events.svc:6379/0"
+
+# BasicAuth (Opzione A — decommentare se si usa BasicAuth)
+# basicauth_users: "admin:$$2y$$05$$HASH_HERE"
+
+# OAuth2 Proxy (Opzione B — decommentare se si usa Google SSO)
+# oauth2_proxy_client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com"
+# oauth2_proxy_client_secret: "YOUR_CLIENT_SECRET"
+# oauth2_proxy_cookie_secret: "YOUR_COOKIE_SECRET"

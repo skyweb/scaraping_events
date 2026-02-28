@@ -1,0 +1,5 @@
+# Traefik dynamic configuration — certificati mkcert per dev locale
+tls:
+  certificates:
+    - certFile: /certs/_wildcard.127.0.0.1.nip.io+1.pem
+      keyFile: /certs/_wildcard.127.0.0.1.nip.io+1-key.pem

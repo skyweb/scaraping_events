@@ -1,0 +1,591 @@
+---
+# Domain Setup - HTTPS routing via sottodomini per tutti i servizi K8s
+# Supporta BasicAuth (htpasswd) OPPURE OAuth2 Proxy (Google SSO)
+# Crea IngressRoute Traefik CRD con TLS Let's Encrypt (ACME built-in)
+# Prerequisiti: post-cluster-setup.yml (Traefik con ACME), DNS A record configurati
+#
+# Uso: ansible-playbook ansible/playbooks/domain-setup.yml
+- name: OKE Domain Setup (HTTPS IngressRoute per tutti i servizi)
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    domain_traefik: "{{ traefik_subdomain | default('traefik') }}.{{ base_domain }}"
+    domain_argocd: "{{ argocd_subdomain | default('argocd') }}.{{ base_domain }}"
+    domain_tekton: "{{ tekton_subdomain | default('tekton') }}.{{ base_domain }}"
+    domain_prometheus: "{{ prometheus_subdomain | default('prometheus') }}.{{ base_domain }}"
+    domain_alertmanager: "{{ alertmanager_subdomain | default('alertmanager') }}.{{ base_domain }}"
+    domain_loki: "{{ loki_subdomain | default('loki') }}.{{ base_domain }}"
+    domain_dashboard: "{{ dashboard_subdomain | default('dashboard') }}.{{ base_domain }}"
+    domain_jaeger: "{{ jaeger_subdomain | default('jaeger') }}.{{ base_domain }}"
+    domain_auth: "{{ auth_subdomain | default('auth') }}.{{ base_domain }}"
+    # Middleware dinamico: google-auth (OAuth2 Proxy) oppure basicauth (htpasswd)
+    auth_middleware_name: "{{ 'google-auth' if (install_oauth2_proxy | default(false)) else 'basicauth' }}"
+    auth_available: "{{ (install_oauth2_proxy | default(false)) or (basicauth_users is defined) }}"
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica che base_domain sia definito
+      ansible.builtin.assert:
+        that: base_domain is defined
+        fail_msg: "base_domain non definito in oke.yml. Configurare per abilitare HTTPS routing."
+
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica che almeno un metodo di auth sia configurato
+      ansible.builtin.debug:
+        msg: >
+          ATTENZIONE: nessun metodo di autenticazione configurato.
+          Configurare basicauth_users OPPURE install_oauth2_proxy in oke.yml.
+          Le IngressRoute per servizi protetti non verranno create.
+      when: not (auth_available | bool)
+
+    # =========================================================================
+    # Opzione A: BasicAuth Secret + Middleware (quando OAuth2 Proxy NON attivo)
+    # =========================================================================
+    - name: Crea Secret BasicAuth per Traefik
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: basicauth-secret
+            namespace: traefik
+          type: Opaque
+          stringData:
+            users: "{{ basicauth_users }}"
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
+      when:
+        - basicauth_users is defined
+        - not (install_oauth2_proxy | default(false))
+
+    - name: Crea Middleware BasicAuth
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: Middleware
+          metadata:
+            name: basicauth
+            namespace: traefik
+          spec:
+            basicAuth:
+              secret: basicauth-secret
+      register: mw_result
+      changed_when: "'created' in mw_result.stdout or 'configured' in mw_result.stdout"
+      when:
+        - basicauth_users is defined
+        - not (install_oauth2_proxy | default(false))
+
+    # =========================================================================
+    # Opzione B: OAuth2 Proxy (Google SSO)
+    # Deploy: ConfigMap email + Deployment + Service + ForwardAuth Middleware
+    # IngressRoute: auth.DOMAIN (callback) + catch-all /oauth2/ (sign-in)
+    # =========================================================================
+    - name: Crea ConfigMap email autorizzate
+      ansible.builtin.shell: |
+        kubectl create configmap oauth2-proxy-emails \
+          --namespace traefik \
+          --from-literal=allowed-emails.txt="{{ oauth2_proxy_allowed_emails | join('\n') }}" \
+          --dry-run=client -o yaml | kubectl apply -f -
+      register: cm_result
+      changed_when: "'created' in cm_result.stdout or 'configured' in cm_result.stdout"
+      when: install_oauth2_proxy | default(false)
+
+    - name: Deploy OAuth2 Proxy
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: oauth2-proxy
+            namespace: traefik
+            labels:
+              app: oauth2-proxy
+          spec:
+            replicas: 1
+            selector:
+              matchLabels:
+                app: oauth2-proxy
+            template:
+              metadata:
+                labels:
+                  app: oauth2-proxy
+              spec:
+                nodeSelector:
+                  workload: light
+                containers:
+                  - name: oauth2-proxy
+                    image: quay.io/oauth2-proxy/oauth2-proxy:latest
+                    args:
+                      - --provider=google
+                      - --client-id={{ oauth2_proxy_client_id }}
+                      - --client-secret={{ oauth2_proxy_client_secret }}
+                      - --cookie-secret={{ oauth2_proxy_cookie_secret }}
+                      - --cookie-domain=.{{ base_domain }}
+                      - --whitelist-domain=.{{ base_domain }}
+                      - --email-domain=*
+                      - --authenticated-emails-file=/config/allowed-emails.txt
+                      - --reverse-proxy=true
+                      - --set-xauthrequest=true
+                      - --upstream=static://202
+                      - --redirect-url=https://{{ domain_auth }}/oauth2/callback
+                      - --http-address=0.0.0.0:4180
+                    ports:
+                      - containerPort: 4180
+                    resources:
+                      limits:
+                        cpu: 100m
+                        memory: 128Mi
+                      requests:
+                        cpu: 10m
+                        memory: 32Mi
+                    volumeMounts:
+                      - name: emails
+                        mountPath: /config
+                        readOnly: true
+                volumes:
+                  - name: emails
+                    configMap:
+                      name: oauth2-proxy-emails
+          ---
+          apiVersion: v1
+          kind: Service
+          metadata:
+            name: oauth2-proxy
+            namespace: traefik
+            labels:
+              app: oauth2-proxy
+          spec:
+            selector:
+              app: oauth2-proxy
+            ports:
+              - name: http
+                port: 4180
+                targetPort: 4180
+      register: oauth2_result
+      changed_when: "'created' in oauth2_result.stdout or 'configured' in oauth2_result.stdout"
+      when: install_oauth2_proxy | default(false)
+
+    - name: Attendi OAuth2 Proxy ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment oauth2-proxy
+        --namespace traefik --timeout=120s
+      changed_when: false
+      when: install_oauth2_proxy | default(false)
+
+    - name: Crea Middleware ForwardAuth (Google SSO)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: Middleware
+          metadata:
+            name: google-auth
+            namespace: traefik
+          spec:
+            forwardAuth:
+              address: http://oauth2-proxy.traefik.svc:4180
+              trustForwardHeader: true
+              authResponseHeaders:
+                - X-Auth-Request-User
+                - X-Auth-Request-Email
+      register: fa_result
+      changed_when: "'created' in fa_result.stdout or 'configured' in fa_result.stdout"
+      when: install_oauth2_proxy | default(false)
+
+    - name: Crea IngressRoute auth.DOMAIN (OAuth2 callback da Google)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: oauth2-proxy-auth-domain
+            namespace: traefik
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_auth }}`)
+                kind: Rule
+                services:
+                  - name: oauth2-proxy
+                    port: 4180
+            tls:
+              certResolver: letsencrypt
+      register: auth_route_result
+      changed_when: "'created' in auth_route_result.stdout or 'configured' in auth_route_result.stdout"
+      when: install_oauth2_proxy | default(false)
+
+    - name: Crea IngressRoute catch-all /oauth2/ (sign-in su qualsiasi host)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: oauth2-proxy-catchall
+            namespace: traefik
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: PathPrefix(`/oauth2/`)
+                kind: Rule
+                priority: 1000
+                services:
+                  - name: oauth2-proxy
+                    port: 4180
+            tls:
+              certResolver: letsencrypt
+      register: catchall_result
+      changed_when: "'created' in catchall_result.stdout or 'configured' in catchall_result.stdout"
+      when: install_oauth2_proxy | default(false)
+
+    # =========================================================================
+    # Traefik Dashboard (HTTPS + auth)
+    # =========================================================================
+    - name: Crea IngressRoute HTTPS per Traefik Dashboard
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: traefik-dashboard-https
+            namespace: traefik
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_traefik }}`)
+                kind: Rule
+                services:
+                  - kind: TraefikService
+                    name: api@internal
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when:
+        - install_traefik | default(false)
+        - auth_available | bool
+
+    # =========================================================================
+    # ArgoCD (HTTPS, no auth middleware - ha auth nativa)
+    # =========================================================================
+    - name: Rimuovi vecchia IngressRoute PathPrefix ArgoCD
+      ansible.builtin.command: >
+        kubectl delete ingressroute argocd-server
+        --namespace argocd --ignore-not-found
+      register: delete_result
+      changed_when: "'deleted' in delete_result.stdout"
+      when: install_argocd | default(false)
+
+    - name: Rimuovi vecchia Middleware stripprefix ArgoCD
+      ansible.builtin.command: >
+        kubectl delete middleware argocd-stripprefix
+        --namespace argocd --ignore-not-found
+      register: delete_result
+      changed_when: "'deleted' in delete_result.stdout"
+      when: install_argocd | default(false)
+
+    - name: Crea IngressRoute HTTPS per ArgoCD
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: argocd-server-https
+            namespace: argocd
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_argocd }}`)
+                kind: Rule
+                services:
+                  - name: argocd-server
+                    port: 80
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when: install_argocd | default(false)
+
+    # =========================================================================
+    # Tekton Dashboard (HTTPS, no auth middleware)
+    # =========================================================================
+    - name: Rimuovi vecchia IngressRoute PathPrefix Tekton
+      ansible.builtin.command: >
+        kubectl delete ingressroute tekton-dashboard
+        --namespace tekton-pipelines --ignore-not-found
+      register: delete_result
+      changed_when: "'deleted' in delete_result.stdout"
+      when: install_tekton | default(false)
+
+    - name: Rimuovi vecchia Middleware stripprefix Tekton
+      ansible.builtin.command: >
+        kubectl delete middleware tekton-stripprefix
+        --namespace tekton-pipelines --ignore-not-found
+      register: delete_result
+      changed_when: "'deleted' in delete_result.stdout"
+      when: install_tekton | default(false)
+
+    - name: Crea IngressRoute HTTPS per Tekton Dashboard
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: tekton-dashboard-https
+            namespace: tekton-pipelines
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_tekton }}`)
+                kind: Rule
+                services:
+                  - name: tekton-dashboard
+                    port: 9097
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when: install_tekton | default(false)
+
+    # =========================================================================
+    # Prometheus (HTTPS + auth)
+    # =========================================================================
+    - name: Crea IngressRoute HTTPS per Prometheus
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: prometheus-https
+            namespace: monitoring
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_prometheus }}`)
+                kind: Rule
+                services:
+                  - name: prometheus-server
+                    port: 80
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when:
+        - install_prometheus | default(false)
+        - auth_available | bool
+
+    # =========================================================================
+    # Alertmanager (HTTPS + auth)
+    # =========================================================================
+    - name: Crea IngressRoute HTTPS per Alertmanager
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: alertmanager-https
+            namespace: monitoring
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_alertmanager }}`)
+                kind: Rule
+                services:
+                  - name: prometheus-alertmanager
+                    port: 9093
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when:
+        - install_alertmanager | default(false)
+        - auth_available | bool
+
+    # =========================================================================
+    # Loki (HTTPS + auth)
+    # =========================================================================
+    - name: Crea IngressRoute HTTPS per Loki
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: loki-https
+            namespace: monitoring
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_loki }}`)
+                kind: Rule
+                services:
+                  - name: loki
+                    port: 3100
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when:
+        - install_loki | default(false)
+        - auth_available | bool
+
+    # =========================================================================
+    # Kubernetes Dashboard (HTTPS + auth + insecureSkipVerify)
+    # =========================================================================
+    - name: Crea ServersTransport per K8s Dashboard (skip self-signed cert)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: ServersTransport
+          metadata:
+            name: dashboard-transport
+            namespace: monitoring
+          spec:
+            insecureSkipVerify: true
+      register: transport_result
+      changed_when: "'created' in transport_result.stdout or 'configured' in transport_result.stdout"
+      when:
+        - install_dashboard | default(false)
+        - auth_available | bool
+
+    - name: Crea IngressRoute HTTPS per K8s Dashboard
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: kubernetes-dashboard-https
+            namespace: monitoring
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_dashboard }}`)
+                kind: Rule
+                services:
+                  - name: kubernetes-dashboard-kong-proxy
+                    port: 443
+                    serversTransport: dashboard-transport
+                    scheme: https
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when:
+        - install_dashboard | default(false)
+        - auth_available | bool
+
+    # =========================================================================
+    # Jaeger (HTTPS + auth)
+    # =========================================================================
+    - name: Crea IngressRoute HTTPS per Jaeger
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: jaeger-https
+            namespace: monitoring
+          spec:
+            entryPoints:
+              - websecure
+            routes:
+              - match: Host(`{{ domain_jaeger }}`)
+                kind: Rule
+                services:
+                  - name: jaeger-query
+                    port: 16686
+                middlewares:
+                  - name: {{ auth_middleware_name }}
+                    namespace: traefik
+            tls:
+              certResolver: letsencrypt
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when:
+        - install_jaeger | default(false)
+        - auth_available | bool
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Domain Setup
+      ansible.builtin.debug:
+        msg:
+          - "=== Domain Setup Completato ==="
+          - ""
+          - "Base domain: {{ base_domain }}"
+          - "Auth:        {{ 'OAuth2 Proxy (Google SSO)' if (install_oauth2_proxy | default(false)) else ('BasicAuth (htpasswd)' if (basicauth_users is defined) else 'NESSUNO') }}"
+          - ""
+          - "--- IngressRoute HTTPS ---"
+          - "Traefik Dashboard: {{ 'https://' ~ domain_traefik ~ ' (' ~ auth_middleware_name ~ ')' if (install_traefik | default(false) and (auth_available | bool)) else 'saltato' }}"
+          - "ArgoCD:            {{ 'https://' ~ domain_argocd if (install_argocd | default(false)) else 'saltato' }}"
+          - "Tekton Dashboard:  {{ 'https://' ~ domain_tekton if (install_tekton | default(false)) else 'saltato' }}"
+          - "Prometheus:        {{ 'https://' ~ domain_prometheus ~ ' (' ~ auth_middleware_name ~ ')' if (install_prometheus | default(false) and (auth_available | bool)) else 'saltato' }}"
+          - "Alertmanager:      {{ 'https://' ~ domain_alertmanager ~ ' (' ~ auth_middleware_name ~ ')' if (install_alertmanager | default(false) and (auth_available | bool)) else 'saltato' }}"
+          - "Loki:              {{ 'https://' ~ domain_loki ~ ' (' ~ auth_middleware_name ~ ')' if (install_loki | default(false) and (auth_available | bool)) else 'saltato' }}"
+          - "K8s Dashboard:     {{ 'https://' ~ domain_dashboard ~ ' (' ~ auth_middleware_name ~ ')' if (install_dashboard | default(false) and (auth_available | bool)) else 'saltato' }}"
+          - "Jaeger:            {{ 'https://' ~ domain_jaeger ~ ' (' ~ auth_middleware_name ~ ')' if (install_jaeger | default(false) and (auth_available | bool)) else 'saltato' }}"
+          - "{{ 'OAuth2 Proxy:     https://' ~ domain_auth ~ ' (callback Google)' if (install_oauth2_proxy | default(false)) else '' }}"
+          - ""
+          - "--- DNS A Record richiesti ---"
+          - "{{ domain_traefik }}      → IP pubblico nodo K8s light"
+          - "{{ domain_argocd }}       → IP pubblico nodo K8s light"
+          - "{{ domain_tekton }}       → IP pubblico nodo K8s light"
+          - "{{ domain_prometheus }}   → IP pubblico nodo K8s light"
+          - "{{ domain_alertmanager }} → IP pubblico nodo K8s light"
+          - "{{ domain_loki }}         → IP pubblico nodo K8s light"
+          - "{{ domain_dashboard }}    → IP pubblico nodo K8s light"
+          - "{{ domain_jaeger }}       → IP pubblico nodo K8s light"
+          - "{{ domain_auth ~ '       → IP pubblico nodo K8s light' if (install_oauth2_proxy | default(false)) else '' }}"
+          - ""
+          - "--- Verifica ---"
+          - "kubectl get ingressroute -A"
+          - "curl -I https://{{ domain_traefik }}"

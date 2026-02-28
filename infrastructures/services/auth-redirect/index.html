@@ -17,7 +17,7 @@
 <script>
 var domain = window.location.hostname.replace(/^[^.]+\./, '');
 var rd = encodeURIComponent(window.location.href);
-var loginUrl = 'http://auth.' + domain + '/oauth2/start?rd=' + rd;
+var loginUrl = window.location.protocol + '//auth.' + domain + '/oauth2/start?rd=' + rd;
 document.getElementById('link').href = loginUrl;
 window.location.replace(loginUrl);
 </script>

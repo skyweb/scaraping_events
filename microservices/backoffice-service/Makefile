@@ -25,7 +25,7 @@ NC := \033[0m
 .PHONY: help build-frontend \
         dev dev-build dev-up dev-down dev-restart dev-logs dev-shell \
         dev-migrate dev-makemigrations dev-superuser dev-collectstatic \
-        dev-ps dev-oauth2 build build-no-cache clean
+        dev-ps dev-oauth2 dev-import-comuni build build-no-cache clean
 
 help:
 	@echo "$(GREEN)Comandi disponibili per Service Events:$(NC)"
@@ -58,6 +58,7 @@ help:
 	@echo "    dev-superuser    Crea superuser dentro il container"
 	@echo "    dev-collectstatic  Raccoglie file statici dentro il container"
 	@echo "    dev-oauth2       Crea/mostra credenziali OAuth2 per lo scraper"
+	@echo "    dev-import-comuni  Importa JSON scraping comuni nel DB (richiede DATA_DIR)"
 	@echo ""
 	@echo "  Docker Production:"
 	@echo "    build            Build immagine Docker produzione"
@@ -162,6 +163,27 @@ export OAUTH2_SCRIPT
 dev-oauth2:
 	@echo "$(GREEN)Creazione/recupero credenziali OAuth2 per scraper...$(NC)"
 	@echo "$$OAUTH2_SCRIPT" | $(COMPOSE_DEV) exec -T backoffice python manage.py shell
+
+# =============================================================================
+# Importazione dati scraping comuni
+# =============================================================================
+
+SCRAPING_COMUNI_OUTPUT := ../scraping-comuni-service/data/output
+CONTAINER_IMPORT_PATH := /tmp/scraping_output
+
+dev-import-comuni: ## Importa JSON scraping comuni nel DB (--flush opzionale)
+	@echo "$(GREEN)Copia JSON nel container dev-backoffice...$(NC)"
+	@if [ ! -d "$(SCRAPING_COMUNI_OUTPUT)" ]; then \
+		echo "Errore: directory $(SCRAPING_COMUNI_OUTPUT) non trovata"; \
+		echo "Lancia prima 'make crawl' nel scraping-comuni-service"; \
+		exit 1; \
+	fi
+	docker cp $(SCRAPING_COMUNI_OUTPUT) dev-backoffice:$(CONTAINER_IMPORT_PATH)
+	@echo "$(GREEN)Importazione in corso...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py import_scraping_comuni $(CONTAINER_IMPORT_PATH) $(FLUSH)
+	@echo "$(GREEN)Pulizia file temporanei nel container...$(NC)"
+	$(COMPOSE_DEV) exec backoffice rm -rf $(CONTAINER_IMPORT_PATH)
+	@echo "$(GREEN)Importazione completata.$(NC)"
 
 # =============================================================================
 # Docker Production

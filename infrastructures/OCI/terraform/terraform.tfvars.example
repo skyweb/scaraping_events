@@ -1,0 +1,39 @@
+# OCI Authentication
+tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaaXXXXXX"
+user_ocid        = "ocid1.user.oc1..aaaaaaaaXXXXXX"
+fingerprint      = "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+private_key_path = "~/.oci/oci_api_key.pem"
+region           = "eu-milan-1"
+
+# Compartment
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaaXXXXXX"
+
+# SSH Key
+ssh_public_key = "ssh-rsa AAAAB3... your-email@example.com"
+
+# OKE Configuration
+cluster_name     = "events-oke"
+vcn_cidr         = "10.0.0.0/16"
+
+# Node Pool - Heavy (75% risorse ARM64)
+heavy_pool_ocpus          = 3
+heavy_pool_memory_gb      = 18
+heavy_pool_boot_volume_gb = 150
+heavy_pool_size           = 1
+
+# Node Pool - Light (25% risorse ARM64)
+light_pool_ocpus          = 1
+light_pool_memory_gb      = 6
+light_pool_boot_volume_gb = 50
+light_pool_size           = 1
+
+# Micro VMs standalone (AMD E2.1.Micro free tier)
+micro_vm_count          = 2
+micro_vm_boot_volume_gb = 50
+
+# Object Storage (Velero backup, free tier: 20 GB)
+velero_bucket_name = "velero-backups"
+
+# OCIR (Oracle Container Image Registry, gratuito)
+ocir_repositories = ["events/backoffice", "events/scraping"]
+ocir_email        = "your-email@example.com"

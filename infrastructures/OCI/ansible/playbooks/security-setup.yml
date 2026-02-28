@@ -1,0 +1,348 @@
+---
+# Security Setup per OKE - Kyverno Policy Engine
+# Esegue su localhost (richiede kubectl configurato)
+# Prerequisito: post-cluster-setup.yml (namespaces)
+#
+# Uso: ansible-playbook ansible/playbooks/security-setup.yml
+- name: OKE Security Setup (Kyverno)
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica Helm disponibile
+      ansible.builtin.command: helm version --short
+      register: helm_version
+      changed_when: false
+
+    - name: Verifica namespace kyverno esiste
+      ansible.builtin.command: kubectl get namespace kyverno
+      register: ns_kyverno
+      changed_when: false
+      failed_when: false
+
+    - name: Crea namespace kyverno se mancante
+      ansible.builtin.command: kubectl create namespace kyverno
+      when: ns_kyverno.rc != 0
+      changed_when: true
+
+    - name: Aggiorna Helm repos
+      ansible.builtin.command: helm repo update
+      changed_when: false
+      failed_when: false
+
+    # =========================================================================
+    # Kyverno - Policy Engine per Kubernetes
+    # =========================================================================
+    - name: Aggiungi Helm repo kyverno
+      ansible.builtin.command: helm repo add kyverno https://kyverno.github.io/kyverno/
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+      when: install_kyverno | default(false)
+
+    - name: Installa Kyverno via Helm
+      ansible.builtin.command: >
+        helm upgrade --install kyverno kyverno/kyverno
+        --namespace kyverno
+        --set admissionController.replicas=1
+        --set backgroundController.replicas=1
+        --set cleanupController.replicas=1
+        --set reportsController.replicas=1
+        --set admissionController.nodeSelector.workload=light
+        --set backgroundController.nodeSelector.workload=light
+        --set cleanupController.nodeSelector.workload=light
+        --set reportsController.nodeSelector.workload=light
+      register: kyverno_result
+      changed_when: "'STATUS: deployed' in kyverno_result.stdout"
+      when: install_kyverno | default(false)
+
+    - name: Attendi Kyverno admission controller ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment kyverno-admission-controller
+        --namespace kyverno --timeout=180s
+      changed_when: false
+      when: install_kyverno | default(false)
+
+    - name: Attendi Kyverno background controller ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment kyverno-background-controller
+        --namespace kyverno --timeout=120s
+      changed_when: false
+      when: install_kyverno | default(false)
+
+    # =========================================================================
+    # Policy: Disallow Privileged Containers
+    # =========================================================================
+    - name: "Policy: Disallow Privileged Containers"
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: kyverno.io/v1
+          kind: ClusterPolicy
+          metadata:
+            name: disallow-privileged-containers
+            annotations:
+              policies.kyverno.io/title: Disallow Privileged Containers
+              policies.kyverno.io/category: Pod Security Standards (Baseline)
+              policies.kyverno.io/severity: high
+          spec:
+            validationFailureAction: {{ kyverno_enforcement_mode | default('Audit') }}
+            background: true
+            rules:
+              - name: privileged-containers
+                match:
+                  any:
+                    - resources:
+                        kinds:
+                          - Pod
+                exclude:
+                  any:
+                    - resources:
+                        namespaces: {{ kyverno_excluded_namespaces | default(['kube-system', 'kyverno']) | to_json }}
+                validate:
+                  message: "I container privilegiati sono vietati."
+                  pattern:
+                    spec:
+                      containers:
+                        - securityContext:
+                            privileged: "!true"
+      register: policy_result
+      changed_when: "'created' in policy_result.stdout or 'configured' in policy_result.stdout"
+      when: install_kyverno | default(false)
+
+    # =========================================================================
+    # Policy: Disallow Host Namespaces
+    # =========================================================================
+    - name: "Policy: Disallow Host Namespaces"
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: kyverno.io/v1
+          kind: ClusterPolicy
+          metadata:
+            name: disallow-host-namespaces
+            annotations:
+              policies.kyverno.io/title: Disallow Host Namespaces
+              policies.kyverno.io/category: Pod Security Standards (Baseline)
+              policies.kyverno.io/severity: high
+          spec:
+            validationFailureAction: {{ kyverno_enforcement_mode | default('Audit') }}
+            background: true
+            rules:
+              - name: host-namespaces
+                match:
+                  any:
+                    - resources:
+                        kinds:
+                          - Pod
+                exclude:
+                  any:
+                    - resources:
+                        namespaces: {{ kyverno_excluded_namespaces | default(['kube-system', 'kyverno']) | to_json }}
+                validate:
+                  message: "Accesso ai namespace host (hostNetwork, hostPID, hostIPC) non consentito."
+                  pattern:
+                    spec:
+                      =(hostNetwork): "false"
+                      =(hostPID): "false"
+                      =(hostIPC): "false"
+      register: policy_result
+      changed_when: "'created' in policy_result.stdout or 'configured' in policy_result.stdout"
+      when: install_kyverno | default(false)
+
+    # =========================================================================
+    # Policy: Disallow Latest Tag
+    # =========================================================================
+    - name: "Policy: Disallow Latest Tag"
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: kyverno.io/v1
+          kind: ClusterPolicy
+          metadata:
+            name: disallow-latest-tag
+            annotations:
+              policies.kyverno.io/title: Disallow Latest Tag
+              policies.kyverno.io/category: Best Practices
+              policies.kyverno.io/severity: medium
+          spec:
+            validationFailureAction: {{ kyverno_enforcement_mode | default('Audit') }}
+            background: true
+            rules:
+              - name: disallow-latest-tag
+                match:
+                  any:
+                    - resources:
+                        kinds:
+                          - Pod
+                exclude:
+                  any:
+                    - resources:
+                        namespaces: {{ kyverno_excluded_namespaces | default(['kube-system', 'kyverno']) | to_json }}
+                validate:
+                  message: "L'uso del tag ':latest' non e' consentito. Specificare un tag esplicito."
+                  pattern:
+                    spec:
+                      containers:
+                        - image: "*:*"
+      register: policy_result
+      changed_when: "'created' in policy_result.stdout or 'configured' in policy_result.stdout"
+      when: install_kyverno | default(false)
+
+    # =========================================================================
+    # Policy: Require Resource Limits
+    # =========================================================================
+    - name: "Policy: Require Resource Limits"
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: kyverno.io/v1
+          kind: ClusterPolicy
+          metadata:
+            name: require-resource-limits
+            annotations:
+              policies.kyverno.io/title: Require Resource Limits
+              policies.kyverno.io/category: Best Practices
+              policies.kyverno.io/severity: medium
+          spec:
+            validationFailureAction: {{ kyverno_enforcement_mode | default('Audit') }}
+            background: true
+            rules:
+              - name: require-limits
+                match:
+                  any:
+                    - resources:
+                        kinds:
+                          - Pod
+                exclude:
+                  any:
+                    - resources:
+                        namespaces: {{ kyverno_excluded_namespaces | default(['kube-system', 'kyverno']) | to_json }}
+                validate:
+                  message: "Ogni container deve specificare resources.limits (cpu e memory)."
+                  pattern:
+                    spec:
+                      containers:
+                        - resources:
+                            limits:
+                              memory: "?*"
+                              cpu: "?*"
+      register: policy_result
+      changed_when: "'created' in policy_result.stdout or 'configured' in policy_result.stdout"
+      when: install_kyverno | default(false)
+
+    # =========================================================================
+    # Policy: Require Labels (app.kubernetes.io/name)
+    # =========================================================================
+    - name: "Policy: Require Labels"
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: kyverno.io/v1
+          kind: ClusterPolicy
+          metadata:
+            name: require-labels
+            annotations:
+              policies.kyverno.io/title: Require Labels
+              policies.kyverno.io/category: Best Practices
+              policies.kyverno.io/severity: low
+          spec:
+            validationFailureAction: {{ kyverno_enforcement_mode | default('Audit') }}
+            background: true
+            rules:
+              - name: require-app-label
+                match:
+                  any:
+                    - resources:
+                        kinds:
+                          - Pod
+                exclude:
+                  any:
+                    - resources:
+                        namespaces: {{ kyverno_excluded_namespaces | default(['kube-system', 'kyverno']) | to_json }}
+                validate:
+                  message: "Il label 'app.kubernetes.io/name' e' obbligatorio."
+                  pattern:
+                    metadata:
+                      labels:
+                        app.kubernetes.io/name: "?*"
+      register: policy_result
+      changed_when: "'created' in policy_result.stdout or 'configured' in policy_result.stdout"
+      when: install_kyverno | default(false)
+
+    # =========================================================================
+    # Policy: Restrict Image Registries (solo OCIR)
+    # =========================================================================
+    - name: "Policy: Restrict Image Registries"
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: kyverno.io/v1
+          kind: ClusterPolicy
+          metadata:
+            name: restrict-image-registries
+            annotations:
+              policies.kyverno.io/title: Restrict Image Registries
+              policies.kyverno.io/category: Best Practices
+              policies.kyverno.io/severity: high
+          spec:
+            validationFailureAction: {{ kyverno_enforcement_mode | default('Audit') }}
+            background: true
+            rules:
+              - name: validate-registries
+                match:
+                  any:
+                    - resources:
+                        kinds:
+                          - Pod
+                        namespaces:
+                          - events
+                validate:
+                  message: "Le immagini nel namespace 'events' devono provenire da OCIR ({{ ocir_endpoint }})."
+                  pattern:
+                    spec:
+                      containers:
+                        - image: "{{ ocir_endpoint }}/*"
+      register: policy_result
+      changed_when: "'created' in policy_result.stdout or 'configured' in policy_result.stdout"
+      when: install_kyverno | default(false)
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Security
+      ansible.builtin.debug:
+        msg:
+          - "=== Security Setup Completato ==="
+          - ""
+          - "--- Kyverno Policy Engine ---"
+          - "Kyverno:         {{ 'installato in ns kyverno' if (install_kyverno | default(false)) else 'saltato' }}"
+          - "Modalita':       {{ kyverno_enforcement_mode | default('Audit') }} (Audit = solo log, Enforce = blocca)"
+          - ""
+          - "--- Policy applicate ---"
+          - "1. disallow-privileged-containers  (severity: high)"
+          - "2. disallow-host-namespaces        (severity: high)"
+          - "3. disallow-latest-tag             (severity: medium)"
+          - "4. require-resource-limits         (severity: medium)"
+          - "5. require-labels                  (severity: low)"
+          - "6. restrict-image-registries       (severity: high, solo ns events)"
+          - ""
+          - "--- Comandi utili ---"
+          - "kubectl get clusterpolicy                        # lista policy"
+          - "kubectl get policyreport -A                      # report violazioni"
+          - "kubectl describe clusterpolicy <nome-policy>     # dettaglio policy"

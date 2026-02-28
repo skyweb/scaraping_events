@@ -1,0 +1,319 @@
+---
+# Post-cluster setup per OKE - Infrastruttura base
+# Esegue su localhost (richiede kubectl configurato)
+#
+# Uso: ansible-playbook ansible/playbooks/post-cluster-setup.yml
+- name: OKE Post-Cluster Setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Mostra info cluster
+      ansible.builtin.debug:
+        var: cluster_info.stdout_lines
+
+    - name: Verifica Helm disponibile
+      ansible.builtin.command: helm version --short
+      register: helm_version
+      changed_when: false
+
+    # =========================================================================
+    # Creazione Namespaces
+    # =========================================================================
+    - name: Crea namespaces
+      ansible.builtin.command: kubectl create namespace {{ item }}
+      loop: "{{ namespaces }}"
+      register: ns_result
+      changed_when: "'created' in ns_result.stdout"
+      failed_when:
+        - ns_result.rc != 0
+        - "'already exists' not in ns_result.stderr"
+
+    - name: Verifica namespaces
+      ansible.builtin.command: kubectl get namespaces
+      register: ns_list
+      changed_when: false
+
+    - name: Mostra namespaces
+      ansible.builtin.debug:
+        var: ns_list.stdout_lines
+
+    # =========================================================================
+    # OCIR imagePullSecret
+    # =========================================================================
+    - name: Crea OCIR imagePullSecret in ogni namespace
+      ansible.builtin.command: >
+        kubectl create secret docker-registry ocir-secret
+        --docker-server={{ ocir_endpoint }}
+        --docker-username={{ ocir_username }}
+        --docker-password={{ ocir_auth_token }}
+        --namespace={{ item }}
+      loop: "{{ namespaces }}"
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout"
+      failed_when:
+        - secret_result.rc != 0
+        - "'already exists' not in secret_result.stderr"
+
+    # =========================================================================
+    # Traefik Ingress Controller (Helm)
+    # =========================================================================
+    - name: Aggiungi Helm repo traefik
+      ansible.builtin.command: helm repo add traefik https://traefik.github.io/charts
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+      when: install_traefik | default(false)
+
+    - name: Aggiorna Helm repos
+      ansible.builtin.command: helm repo update
+      changed_when: false
+
+    - name: Installa Traefik via Helm (base)
+      ansible.builtin.command: >
+        helm upgrade --install traefik traefik/traefik
+        --namespace traefik
+        --set service.type=NodePort
+        --set ports.web.nodePort={{ traefik_http_nodeport }}
+        --set ports.websecure.nodePort={{ traefik_https_nodeport }}
+        --set ports.traefik.expose.default=true
+        --set ports.traefik.nodePort={{ traefik_dashboard_nodeport }}
+        --set nodeSelector.workload=light
+        --set ingressClass.enabled=true
+        --set ingressClass.isDefaultClass=true
+        --set providers.kubernetesIngress.enabled=true
+        --set providers.kubernetesCRD.enabled=true
+      register: traefik_result
+      changed_when: "'STATUS: deployed' in traefik_result.stdout"
+      when:
+        - install_traefik | default(false)
+        - base_domain is not defined
+
+    - name: Installa Traefik via Helm (con ACME HTTPS + hostPort)
+      ansible.builtin.command: >
+        helm upgrade --install traefik traefik/traefik
+        --namespace traefik
+        --set service.type=NodePort
+        --set ports.web.nodePort={{ traefik_http_nodeport }}
+        --set ports.websecure.nodePort={{ traefik_https_nodeport }}
+        --set ports.traefik.expose.default=true
+        --set ports.traefik.nodePort={{ traefik_dashboard_nodeport }}
+        --set nodeSelector.workload=light
+        --set ingressClass.enabled=true
+        --set ingressClass.isDefaultClass=true
+        --set providers.kubernetesIngress.enabled=true
+        --set providers.kubernetesCRD.enabled=true
+        --set providers.kubernetesCRD.allowCrossNamespace=true
+        --set "certificatesResolvers.letsencrypt.acme.email={{ letsencrypt_email }}"
+        --set "certificatesResolvers.letsencrypt.acme.storage=/data/acme.json"
+        --set "certificatesResolvers.letsencrypt.acme.httpChallenge.entryPoint=web"
+        --set ports.web.hostPort=80
+        --set ports.websecure.hostPort=443
+        --set ports.web.redirectTo.port=websecure
+        --set persistence.enabled=true
+        --set persistence.path=/data
+        --set persistence.size=128Mi
+      register: traefik_result
+      changed_when: "'STATUS: deployed' in traefik_result.stdout"
+      when:
+        - install_traefik | default(false)
+        - base_domain is defined
+
+    - name: Attendi Traefik ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment traefik
+        --namespace traefik --timeout=120s
+      changed_when: false
+      when: install_traefik | default(false)
+
+    # =========================================================================
+    # cert-manager (certificati TLS automatici con Let's Encrypt)
+    # =========================================================================
+    - name: Aggiungi Helm repo jetstack (cert-manager)
+      ansible.builtin.command: helm repo add jetstack https://charts.jetstack.io
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+      when: install_cert_manager | default(false)
+
+    - name: Installa cert-manager CRDs
+      ansible.builtin.command: >
+        kubectl apply -f
+        https://github.com/cert-manager/cert-manager/releases/download/{{ cert_manager_version }}/cert-manager.crds.yaml
+      register: crds_result
+      changed_when: "'created' in crds_result.stdout"
+      when: install_cert_manager | default(false)
+
+    - name: Installa cert-manager via Helm
+      ansible.builtin.command: >
+        helm upgrade --install cert-manager jetstack/cert-manager
+        --namespace cert-manager
+        --version {{ cert_manager_version }}
+        --set nodeSelector.workload=light
+      register: cm_result
+      changed_when: "'STATUS: deployed' in cm_result.stdout"
+      when: install_cert_manager | default(false)
+
+    - name: Attendi cert-manager ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment cert-manager
+        --namespace cert-manager --timeout=120s
+      changed_when: false
+      when: install_cert_manager | default(false)
+
+    - name: Crea ClusterIssuer Let's Encrypt (staging)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: cert-manager.io/v1
+          kind: ClusterIssuer
+          metadata:
+            name: letsencrypt-staging
+          spec:
+            acme:
+              server: https://acme-staging-v02.api.letsencrypt.org/directory
+              email: {{ letsencrypt_email }}
+              privateKeySecretRef:
+                name: letsencrypt-staging-key
+              solvers:
+                - http01:
+                    ingress:
+                      class: traefik
+      register: issuer_result
+      changed_when: "'created' in issuer_result.stdout or 'configured' in issuer_result.stdout"
+      when: install_cert_manager | default(false)
+
+    - name: Crea ClusterIssuer Let's Encrypt (production)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: cert-manager.io/v1
+          kind: ClusterIssuer
+          metadata:
+            name: letsencrypt-prod
+          spec:
+            acme:
+              server: https://acme-v02.api.letsencrypt.org/directory
+              email: {{ letsencrypt_email }}
+              privateKeySecretRef:
+                name: letsencrypt-prod-key
+              solvers:
+                - http01:
+                    ingress:
+                      class: traefik
+      register: issuer_result
+      changed_when: "'created' in issuer_result.stdout or 'configured' in issuer_result.stdout"
+      when: install_cert_manager | default(false)
+
+    # =========================================================================
+    # metrics-server (kubectl top, HPA)
+    # =========================================================================
+    - name: Aggiungi Helm repo metrics-server
+      ansible.builtin.command: helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+      when: install_metrics_server | default(false)
+
+    - name: Installa metrics-server via Helm
+      ansible.builtin.command: >
+        helm upgrade --install metrics-server metrics-server/metrics-server
+        --namespace kube-system
+        --set args[0]=--kubelet-preferred-address-types=InternalIP
+        --set nodeSelector.workload=light
+      register: ms_result
+      changed_when: "'STATUS: deployed' in ms_result.stdout"
+      when: install_metrics_server | default(false)
+
+    - name: Attendi metrics-server ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment metrics-server
+        --namespace kube-system --timeout=120s
+      changed_when: false
+      when: install_metrics_server | default(false)
+
+    # =========================================================================
+    # Kubernetes Dashboard
+    # =========================================================================
+    - name: Aggiungi Helm repo kubernetes-dashboard
+      ansible.builtin.command: helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+      when: install_dashboard | default(false)
+
+    - name: Installa Kubernetes Dashboard via Helm
+      ansible.builtin.command: >
+        helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
+        --namespace monitoring
+        --set app.scheduling.nodeSelector.workload=light
+      register: dash_result
+      changed_when: "'STATUS: deployed' in dash_result.stdout"
+      when: install_dashboard | default(false)
+
+    - name: Crea ServiceAccount admin per Dashboard
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: ServiceAccount
+          metadata:
+            name: dashboard-admin
+            namespace: monitoring
+          ---
+          apiVersion: rbac.authorization.k8s.io/v1
+          kind: ClusterRoleBinding
+          metadata:
+            name: dashboard-admin-binding
+          roleRef:
+            apiGroup: rbac.authorization.k8s.io
+            kind: ClusterRole
+            name: cluster-admin
+          subjects:
+            - kind: ServiceAccount
+              name: dashboard-admin
+              namespace: monitoring
+      register: sa_result
+      changed_when: "'created' in sa_result.stdout or 'configured' in sa_result.stdout"
+      when: install_dashboard | default(false)
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo finale
+      ansible.builtin.debug:
+        msg:
+          - "=== OKE Post-Setup Completato ==="
+          - ""
+          - "Namespaces: {{ namespaces | join(', ') }}"
+          - "OCIR Secret: ocir-secret (in tutti i namespaces)"
+          - ""
+          - "--- Applicazioni installate ---"
+          - "Traefik:           {{ 'NodePort ' ~ traefik_http_nodeport ~ '/' ~ traefik_https_nodeport ~ ', dashboard :' ~ traefik_dashboard_nodeport ~ ' (nodo light)' if (install_traefik | default(false)) else 'saltato' }}"
+          - "cert-manager:      {{ 'installato - ClusterIssuer staging+prod (solver: traefik)' if (install_cert_manager | default(false)) else 'saltato' }}"
+          - "metrics-server:    {{ 'installato - kubectl top abilitato' if (install_metrics_server | default(false)) else 'saltato' }}"
+          - "K8s Dashboard:     {{ 'installato in ns monitoring' if (install_dashboard | default(false)) else 'saltato' }}"
+          - ""
+          - "--- Per installare CI/CD (ArgoCD + Tekton + Kaniko) ---"
+          - "ansible-playbook ansible/playbooks/ci-setup.yml"

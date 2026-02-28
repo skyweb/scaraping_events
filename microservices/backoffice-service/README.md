@@ -31,7 +31,7 @@ $ docker-compose up -d
 4. lancio manuale
    ```bash
    $ export DJANGO_DEBUG=True
-   $ export POSTGRES_HOST=localhost 
+   $ export POSTGRES_HOST=localhost
    ```
 
 ## Accesso ai Servizi
@@ -59,30 +59,6 @@ Per scaricare lo schema in formato specifico:
 GET /api/schema/?format=yaml
 GET /api/schema/?format=json
 ```
-
-### API Endpoints
-
-**API Interne** (prefisso `/api/`):
-
-| Endpoint | Descrizione |
-|---|---|
-| `/api/events/` | CRUD Production Events |
-| `/api/events/{id}/toggle_active/` | Toggle attivo/inattivo evento |
-| `/api/events/cities/` | Lista citta con conteggio eventi |
-| `/api/events/sources/` | Lista sorgenti con conteggio eventi |
-| `/api/staging/` | Lista Staging Events (read-only) |
-| `/api/etl-runs/` | Storico esecuzioni ETL |
-| `/api/etl-errors/` | Storico errori ETL |
-| `/api/dashboard/` | Statistiche aggregate |
-
-**API Esterne - OAuth2** (prefisso `/api/external/`):
-
-| Endpoint | Metodi | Scope | Descrizione |
-|---|---|---|---|
-| `/api/external/staging/` | GET, POST, PUT, PATCH, DELETE | read/write | CRUD Staging Events |
-| `/api/external/staging/bulk/` | POST | write | Creazione massiva eventi |
-| `/api/external/staging/clear_source/?source=xxx` | DELETE | write | Elimina eventi per sorgente |
-
 ### Autenticazione API Esterne
 
 Le API esterne richiedono un token OAuth2 (Client Credentials):
@@ -93,10 +69,6 @@ curl -X POST http://localhost:8000/oauth/token/ \
   -d "grant_type=client_credentials" \
   -d "client_id=YOUR_CLIENT_ID" \
   -d "client_secret=YOUR_CLIENT_SECRET"
-
-# 2. Usa il token nelle richieste
-curl -H "Authorization: Bearer ACCESS_TOKEN" \
-  http://localhost:8000/api/external/staging/
 ```
 
 ### Celery (Task asincroni)
@@ -117,7 +89,7 @@ I task periodici sono configurabili da Django Admin nella sezione **Celery** > *
 Per accedere all'interfaccia di amministrazione di Django o al Backoffice come amministratore, devi creare un superuser. Esegui questo comando mentre i container sono attivi:
 
 ```bash
-docker exec -it backoffice-backend-dev python manage.py createsuperuser
+docker exec -it dev-backoffice python manage.py createsuperuser
 ```
 
 Segui le istruzioni a schermo per impostare username, email e password.
@@ -128,90 +100,56 @@ Segui le istruzioni a schermo per impostare username, email e password.
 
 Applicare le migrazioni:
 ```bash
-docker exec -it backoffice-backend-dev python manage.py migrate
+docker exec -it dev-backoffice python manage.py migrate
 ```
 
 Creare nuove migrazioni (dopo aver modificato i modelli):
 ```bash
-docker exec -it backoffice-backend-dev python manage.py makemigrations
+docker exec -it dev-backoffice python manage.py makemigrations
 ```
 
 ### Logs
 
 Vedere i log del backend:
 ```bash
-docker logs -f backoffice-backend-dev
+docker logs -f dev-backoffice
 ```
 
 Vedere i log del frontend:
 ```bash
 docker logs -f backoffice-frontend-dev
 ```
-
-## Django Apps
-
-| App | Descrizione |
-|-----|-------------|
-| `events` | Gestione eventi (Staging + Production), ETL, API esterne OAuth2 |
-| `scraping` | Configurazione spider e categorie |
-| `cms` | CMS pagine citta: sezioni, articoli, staging events integrati |
-| `comuni_istat` | Confini amministrativi ISTAT (regioni, province, comuni con geometrie PostGIS) |
-| `comuni_istat_ingestion` | Dati scraping comuni-italiani.it: modelli relazionali + raw data JSON |
-| `etl` | Storico esecuzioni e errori ETL |
-
-### App `comuni_istat_ingestion`
-
-Contiene i modelli relazionali per i dati scraping da comuni-italiani.it:
-
-| Modello | Tabella DB | Descrizione |
-|---------|-----------|-------------|
-| `Regione` | `regioni` | 20 regioni con dati demografici |
-| `Provincia` | `province` | 110 province con sigla, popolazione, superficie |
-| `Comune` | `comuni` | ~8000 comuni con CAP, patrono, etimologia, ecc. |
-| `ComuneFrazione` | `comune_frazioni` | Frazioni e localita |
-| `ComuneConfinante` | `comune_confinanti` | Comuni confinanti |
-| `ComuneAppartenenza` | `comune_appartenenze` | Comunita montane, parchi, associazioni |
-| `ComunePuntoInteresse` | `comune_punti_interesse` | Musei, chiese, castelli, teatri, stadi |
-| `ComuneEvento` | `comune_eventi` | Feste, sagre, eventi tradizionali |
-| `ComuneGemellaggio` | `comune_gemellaggi` | Gemellaggi con altre citta |
-| `ComuneCittadinoIllustre` | `comune_cittadini_illustri` | Cittadini illustri |
-| `ComuniIstatRawData` | `raw_data` | Dati JSON grezzi dallo scraping |
-
-Tutte le tabelle sono nello schema PostgreSQL `comuni_istat_ingestion`.
-
 #### Management Command: `import_scraping_comuni`
 
-Importa i JSON generati dallo spider `comuni_spider` nelle tabelle relazionali:
+Importa i JSON generati dallo spider `comuni_spider` nelle tabelle relazionali.
+
+**Via Makefile (consigliato):**
 
 ```bash
-# Copia i JSON nel container
-docker cp /path/to/scraping-comuni-service/data/output dev-backoffice:/tmp/scraping_output
+cd microservices/backoffice-service
 
-# Importa (--flush cancella i dati esistenti prima)
-docker exec dev-backoffice python manage.py import_scraping_comuni /tmp/scraping_output --flush
+# Importazione (legge automaticamente da ../scraping-comuni-service/data/output)
+make dev-import-comuni
+
+# Con flush dei dati esistenti prima dell'import
+make dev-import-comuni FLUSH=--flush
 ```
 
-### API Endpoints Comuni
+**Manualmente via Docker:**
 
-| Endpoint | Metodi | Descrizione |
-|----------|--------|-------------|
-| `/api/comuni-istat/ingestion/` | POST | Ingestione singolo record |
-| `/api/comuni-istat/ingestion/bulk/` | POST | Ingestione bulk |
+```bash
+# 1. Copia i JSON nel container
+docker cp microservices/scraping-comuni-service/data/output dev-backoffice:/tmp/scraping_output
 
-### CMS
+# 2. Importa
+docker exec dev-backoffice python manage.py import_scraping_comuni /tmp/scraping_output
 
-| Endpoint | Metodi | Descrizione |
-|----------|--------|-------------|
-| `/api/cms/citta/` | GET | Lista pagine citta attive |
-| `/api/cms/citta/{slug}/` | GET | Dettaglio pagina citta con sezioni e articoli |
+# 2b. Oppure con flush (cancella dati esistenti prima)
+docker exec dev-backoffice python manage.py import_scraping_comuni /tmp/scraping_output --flush
 
-## Struttura
-
-- **backend/**: Applicazione Django (API + Admin)
-- **frontend/**: Applicazione React/Vite (UI personalizzata)
-- **docker-compose.dev.yml**: Configurazione Docker per l'ambiente di sviluppo
-
-
+# 3. Pulizia file temporanei
+docker exec dev-backoffice rm -rf /tmp/scraping_output
+```
 
 ## Bulk Ingestion Asincrono
 
@@ -258,31 +196,3 @@ Scrapy ApiPipeline
 │ → salva risultato        │
 └──────────────────────────┘
 ```
-
-## Test API Staging Events
-
-Test Django che leggono lo schema OpenAPI (drf-spectacular) ed eseguono
-le richieste usando gli esempi JSON definiti nelle `@extend_schema`.
-
-### Cosa testano
-
-| Classe | Descrizione |
-|--------|-------------|
-| `OpenAPISchemaTest` | Validita' schema: paths, esempi, campi obbligatori |
-| `StagingEventCreateFromSchemaTest` | POST `/api/external/staging/` con ogni esempio OpenAPI |
-| `StagingEventBulkFromSchemaTest` | POST `/api/external/staging/bulk/` con esempi valid/partial/invalid |
-| `StagingEventCRUDTest` | Ciclo completo: list, retrieve, create, update, patch, delete, filtri, search |
-| `StagingEventClearSourceTest` | DELETE `/api/external/staging/clear_source/?source=xxx` |
-| `StagingEventAuthTest` | OAuth2: token assente, scaduto, invalido, scope read vs write |
-
-### Esempio output tabellare
-
-```
-Metodo | Endpoint                            | Status | Esito | Test
--------+-------------------------------------+--------+-------+------------------------------------------
-GET    | /api/external/staging/              | 200    | PASS  | test_list_events
-POST   | /api/external/staging/              | 201    | PASS  | test_create_with_each_schema_example
-POST   | /api/external/staging/bulk/         | 201    | PASS  | test_bulk_create_all_valid
-DELETE | /api/external/staging/clear_source/ | 200    | PASS  | test_clear_source_deletes_matching
-GET    | /api/external/staging/              | 401    | PASS  | test_no_token_returns_401
-...

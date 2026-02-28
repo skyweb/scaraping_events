@@ -12,7 +12,12 @@ def admin_sso_logout(request):
     valido → il middleware ri-autentica l'utente al prossimo accesso.
     """
     auth_logout(request)
-    return redirect("/oauth2/sign_out?rd=/")
+    # Redirect all'endpoint sign_out di oauth2-proxy sul suo sottodominio (auth.DOMAIN)
+    scheme = "https" if request.is_secure() else "http"
+    host = request.get_host()  # es. backoffice.127.0.0.1.nip.io
+    domain = host.split(".", 1)[1] if "." in host else host  # es. 127.0.0.1.nip.io
+    sign_out_url = f"{scheme}://auth.{domain}/oauth2/sign_out?rd={scheme}://frontend.{domain}/"
+    return redirect(sign_out_url)
 
 
 def permission_denied_view(request, exception):

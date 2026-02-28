@@ -58,7 +58,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.${DOMAIN}`)"
-      - "traefik.http.routers.prometheus.entrypoints=web"
+      - "traefik.http.routers.prometheus.entrypoints=websecure"
+      - "traefik.http.routers.prometheus.tls=true"
       - "traefik.http.routers.prometheus.middlewares=forward-auth"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
     networks:
@@ -97,7 +98,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.jaeger.rule=Host(`jaeger.${DOMAIN}`)"
-      - "traefik.http.routers.jaeger.entrypoints=web"
+      - "traefik.http.routers.jaeger.entrypoints=websecure"
+      - "traefik.http.routers.jaeger.tls=true"
       - "traefik.http.routers.jaeger.middlewares=forward-auth"
       - "traefik.http.services.jaeger.loadbalancer.server.port=16686"
     depends_on:
@@ -128,8 +130,8 @@ services:
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
-      CORS_ALLOWED_ORIGINS: "http://frontend.${DOMAIN},http://localhost:3000"
-      CSRF_TRUSTED_ORIGINS: "http://frontend.${DOMAIN},http://localhost:3000"
+      CORS_ALLOWED_ORIGINS: "https://frontend.${DOMAIN},http://localhost:3000"
+      CSRF_TRUSTED_ORIGINS: "https://frontend.${DOMAIN},https://backoffice.${DOMAIN},http://localhost:3000"
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
       CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:redis_secret_2026@redis:6379/2}
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
@@ -141,13 +143,15 @@ services:
       - "traefik.enable=true"
       # Router protetto per /admin/ — priorità alta
       - "traefik.http.routers.backoffice-admin.rule=Host(`backoffice.${DOMAIN}`) && PathPrefix(`/admin/`)"
-      - "traefik.http.routers.backoffice-admin.entrypoints=web"
+      - "traefik.http.routers.backoffice-admin.entrypoints=websecure"
+      - "traefik.http.routers.backoffice-admin.tls=true"
       - "traefik.http.routers.backoffice-admin.service=backoffice-svc"
       - "traefik.http.routers.backoffice-admin.middlewares=forward-auth"
       - "traefik.http.routers.backoffice-admin.priority=10"
       # Router default per API, static, oauth2 — nessuna auth
       - "traefik.http.routers.backoffice.rule=Host(`backoffice.${DOMAIN}`)"
-      - "traefik.http.routers.backoffice.entrypoints=web"
+      - "traefik.http.routers.backoffice.entrypoints=websecure"
+      - "traefik.http.routers.backoffice.tls=true"
       - "traefik.http.routers.backoffice.service=backoffice-svc"
       - "traefik.http.routers.backoffice.priority=1"
       # Definizione servizio (condivisa tra i due router)
@@ -245,7 +249,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.flower.rule=Host(`flower.${DOMAIN}`)"
-      - "traefik.http.routers.flower.entrypoints=web"
+      - "traefik.http.routers.flower.entrypoints=websecure"
+      - "traefik.http.routers.flower.tls=true"
       - "traefik.http.routers.flower.middlewares=forward-auth"
       - "traefik.http.services.flower.loadbalancer.server.port=5555"
     depends_on:
@@ -269,12 +274,12 @@ services:
       # Restrizione email — * = qualsiasi account Google, oppure es. "mycompany.com"
       OAUTH2_PROXY_EMAIL_DOMAINS: ${OAUTH2_EMAIL_DOMAINS:-*}
       OAUTH2_PROXY_HTTP_ADDRESS: "0.0.0.0:4180"
-      OAUTH2_PROXY_REDIRECT_URL: "http://auth.${DOMAIN}/oauth2/callback"
+      OAUTH2_PROXY_REDIRECT_URL: "https://auth.${DOMAIN}/oauth2/callback"
       # Redis session store — DB 5 (Django: 0-2, Superset: 3-4)
       OAUTH2_PROXY_SESSION_STORE_TYPE: redis
       OAUTH2_PROXY_REDIS_CONNECTION_URL: "redis://:${REDIS_PASSWORD}@redis:6379/5"
-      # Cookie — false in dev (HTTP), true in produzione (HTTPS)
-      OAUTH2_PROXY_COOKIE_SECURE: "false"
+      # Cookie — true perche' dev usa HTTPS (mkcert)
+      OAUTH2_PROXY_COOKIE_SECURE: "true"
       OAUTH2_PROXY_COOKIE_SAMESITE: "lax"
       OAUTH2_PROXY_COOKIE_NAME: "_oauth2_proxy"
       # Upstream placeholder: Traefik usa ForwardAuth, non il proxy diretto
@@ -302,7 +307,8 @@ services:
       - "traefik.enable=true"
       # Route pubblica per sign_in, callback, sign_out, userinfo
       - "traefik.http.routers.auth.rule=Host(`auth.${DOMAIN}`)"
-      - "traefik.http.routers.auth.entrypoints=web"
+      - "traefik.http.routers.auth.entrypoints=websecure"
+      - "traefik.http.routers.auth.tls=true"
       - "traefik.http.services.auth.loadbalancer.server.port=4180"
       # ForwardAuth (fw-auth): controlla sessione su /oauth2/auth → 202 ok, 401 non autenticato
       - "traefik.http.middlewares.fw-auth.forwardauth.address=http://oauth2-proxy:4180/oauth2/auth"
@@ -333,14 +339,15 @@ services:
     container_name: dev-frontend
     restart: unless-stopped
     environment:
-      VITE_API_URL: http://backoffice.${DOMAIN}/api
+      VITE_API_URL: https://backoffice.${DOMAIN}/api
     volumes:
       - ../microservices/frontend-service:/app
       - /app/node_modules
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.frontend.rule=Host(`frontend.${DOMAIN}`)"
-      - "traefik.http.routers.frontend.entrypoints=web"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.tls=true"
       - "traefik.http.services.frontend.loadbalancer.server.port=5173"
     networks:
       dev-network:
@@ -359,7 +366,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.loki.rule=Host(`loki.${DOMAIN}`)"
-      - "traefik.http.routers.loki.entrypoints=web"
+      - "traefik.http.routers.loki.entrypoints=websecure"
+      - "traefik.http.routers.loki.tls=true"
       - "traefik.http.routers.loki.middlewares=forward-auth"
       - "traefik.http.services.loki.loadbalancer.server.port=3100"
     healthcheck:
@@ -399,14 +407,15 @@ services:
       GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
       GF_AUTH_DISABLE_LOGIN_FORM: "true"
       GF_SERVER_SERVE_FROM_SUB_PATH: "false"
-      GF_SERVER_ROOT_URL: "http://grafana.${DOMAIN}/"
+      GF_SERVER_ROOT_URL: "https://grafana.${DOMAIN}/"
     volumes:
       - ./services/grafana/provisioning:/etc/grafana/provisioning:ro
       - grafana-dev-data:/var/lib/grafana
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.grafana.rule=Host(`grafana.${DOMAIN}`)"
-      - "traefik.http.routers.grafana.entrypoints=web"
+      - "traefik.http.routers.grafana.entrypoints=websecure"
+      - "traefik.http.routers.grafana.tls=true"
       - "traefik.http.routers.grafana.middlewares=forward-auth"
       - "traefik.http.services.grafana.loadbalancer.server.port=3001"
     depends_on:
@@ -476,7 +485,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.superset.rule=Host(`superset.${DOMAIN}`)"
-      - "traefik.http.routers.superset.entrypoints=web"
+      - "traefik.http.routers.superset.entrypoints=websecure"
+      - "traefik.http.routers.superset.tls=true"
       - "traefik.http.routers.superset.middlewares=forward-auth"
       - "traefik.http.services.superset.loadbalancer.server.port=8088"
     restart: unless-stopped
@@ -498,7 +508,7 @@ services:
     env_file:
       - .env
     environment:
-      AIRFLOW__WEBSERVER__BASE_URL: http://airflow.${DOMAIN}
+      AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
@@ -531,7 +541,7 @@ services:
     env_file:
       - .env
     environment:
-      AIRFLOW__WEBSERVER__BASE_URL: http://airflow.${DOMAIN}
+      AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
     command: webserver
     volumes:
@@ -542,7 +552,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.airflow.rule=Host(`airflow.${DOMAIN}`)"
-      - "traefik.http.routers.airflow.entrypoints=web"
+      - "traefik.http.routers.airflow.entrypoints=websecure"
+      - "traefik.http.routers.airflow.tls=true"
       - "traefik.http.routers.airflow.middlewares=forward-auth"
       - "traefik.http.services.airflow.loadbalancer.server.port=8080"
     healthcheck:
@@ -567,7 +578,7 @@ services:
     env_file:
       - .env
     environment:
-      AIRFLOW__WEBSERVER__BASE_URL: http://airflow.${DOMAIN}
+      AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
     command: scheduler
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
@@ -621,7 +632,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.ollama.rule=Host(`ollama.${DOMAIN}`)"
-      - "traefik.http.routers.ollama.entrypoints=web"
+      - "traefik.http.routers.ollama.entrypoints=websecure"
+      - "traefik.http.routers.ollama.tls=true"
       - "traefik.http.routers.ollama.middlewares=forward-auth"
       - "traefik.http.services.ollama.loadbalancer.server.port=8080"
     depends_on:
@@ -638,8 +650,8 @@ services:
     container_name: dev-n8n
     restart: unless-stopped
     environment:
-      WEBHOOK_URL: http://n8n.${DOMAIN}/
-      N8N_EDITOR_BASE_URL: http://n8n.${DOMAIN}/
+      WEBHOOK_URL: https://n8n.${DOMAIN}/
+      N8N_EDITOR_BASE_URL: https://n8n.${DOMAIN}/
       # Database PostgreSQL
       DB_TYPE: postgresdb
       DB_POSTGRESDB_HOST: postgres
@@ -659,7 +671,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.n8n.rule=Host(`n8n.${DOMAIN}`)"
-      - "traefik.http.routers.n8n.entrypoints=web"
+      - "traefik.http.routers.n8n.entrypoints=websecure"
+      - "traefik.http.routers.n8n.tls=true"
       - "traefik.http.routers.n8n.middlewares=forward-auth"
       - "traefik.http.services.n8n.loadbalancer.server.port=5678"
     depends_on:
@@ -684,7 +697,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.ollama-webui.rule=Host(`chat.${DOMAIN}`)"
-      - "traefik.http.routers.ollama-webui.entrypoints=web"
+      - "traefik.http.routers.ollama-webui.entrypoints=websecure"
+      - "traefik.http.routers.ollama-webui.tls=true"
       - "traefik.http.routers.ollama-webui.middlewares=forward-auth"
       - "traefik.http.services.ollama-webui.loadbalancer.server.port=8080"
     depends_on:
@@ -723,6 +737,7 @@ services:
       - dev-network
 
   # Traefik — reverse proxy e service discovery via Docker labels
+  # HTTPS locale con certificati mkcert (trusted dal browser)
   traefik:
     image: traefik:v3.3
     container_name: dev-traefik
@@ -734,7 +749,15 @@ services:
       - --providers.docker.exposedbydefault=false
       - --providers.docker.network=dev-network
       - --providers.docker.endpoint=tcp://docker-api-proxy:2375
+      # HTTP entrypoint + redirect a HTTPS
       - --entrypoints.web.address=:80
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      # HTTPS entrypoint (certificati mkcert via dynamic config)
+      - --entrypoints.websecure.address=:443
+      # Configurazione dinamica (certificati TLS)
+      - --providers.file.filename=/etc/traefik/dynamic.yml
+      - --providers.file.watch=true
       - --api.dashboard=true
       - --api.insecure=true
       - --metrics.prometheus=true
@@ -743,11 +766,16 @@ services:
       - --log.level=INFO
     ports:
       - "80:80"
+      - "443:443"
       - "8082:8080"
+    volumes:
+      - ./services/traefik/dynamic.yml:/etc/traefik/dynamic.yml:ro
+      - ./services/traefik/certs:/certs:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.${DOMAIN}`)"
-      - "traefik.http.routers.traefik-dashboard.entrypoints=web"
+      - "traefik.http.routers.traefik-dashboard.entrypoints=websecure"
+      - "traefik.http.routers.traefik-dashboard.tls=true"
       - "traefik.http.routers.traefik-dashboard.service=api@internal"
       - "traefik.http.routers.traefik-dashboard.middlewares=forward-auth"
     networks:
@@ -763,7 +791,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.redis-exporter.rule=Host(`redis-exporter.${DOMAIN}`)"
-      - "traefik.http.routers.redis-exporter.entrypoints=web"
+      - "traefik.http.routers.redis-exporter.entrypoints=websecure"
+      - "traefik.http.routers.redis-exporter.tls=true"
       - "traefik.http.routers.redis-exporter.middlewares=forward-auth"
       - "traefik.http.services.redis-exporter.loadbalancer.server.port=9121"
     depends_on:
@@ -783,7 +812,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.celery-exporter.rule=Host(`celery-exporter.${DOMAIN}`)"
-      - "traefik.http.routers.celery-exporter.entrypoints=web"
+      - "traefik.http.routers.celery-exporter.entrypoints=websecure"
+      - "traefik.http.routers.celery-exporter.tls=true"
       - "traefik.http.routers.celery-exporter.middlewares=forward-auth"
       - "traefik.http.services.celery-exporter.loadbalancer.server.port=9808"
     depends_on:
@@ -806,7 +836,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.cadvisor.rule=Host(`cadvisor.${DOMAIN}`)"
-      - "traefik.http.routers.cadvisor.entrypoints=web"
+      - "traefik.http.routers.cadvisor.entrypoints=websecure"
+      - "traefik.http.routers.cadvisor.tls=true"
       - "traefik.http.routers.cadvisor.middlewares=forward-auth"
       - "traefik.http.services.cadvisor.loadbalancer.server.port=8080"
     networks:
