@@ -29,6 +29,13 @@ postgres_k8s_password: "wetfire2k"
 redis_k8s_password: "wetfire2k"
 celery_broker_url: "redis://:wetfire2k@redis.events.svc:6379/0"
 
+# Django Backoffice
+django_secret_key: "CHANGE_ME"
+django_superuser_password: "CHANGE_ME"
+
+# ArgoCD repo privato
+argocd_repo_token: "ghp_CHANGE_ME"  # GitHub Personal Access Token
+
 # BasicAuth (Opzione A — decommentare se si usa BasicAuth)
 # basicauth_users: "admin:$$2y$$05$$HASH_HERE"
 

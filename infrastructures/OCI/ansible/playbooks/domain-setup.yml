@@ -28,6 +28,7 @@
     domain_dashboard: "{{ dashboard_subdomain | default('dashboard') }}.{{ base_domain }}"
     domain_jaeger: "{{ jaeger_subdomain | default('jaeger') }}.{{ base_domain }}"
     domain_auth: "{{ auth_subdomain | default('auth') }}.{{ base_domain }}"
+    domain_events: "{{ events_subdomain | default('events') }}.{{ base_domain }}"
     # Middleware dinamico: google-auth (OAuth2 Proxy) oppure basicauth (htpasswd)
     auth_middleware_name: "{{ 'google-auth' if (install_oauth2_proxy | default(false)) else 'basicauth' }}"
     auth_available: "{{ (install_oauth2_proxy | default(false)) or (basicauth_users is defined) }}"
@@ -578,6 +579,35 @@
       when: install_jaeger | default(false)
 
     # =========================================================================
+    # Backoffice Django (HTTPS, no auth middleware - ha auth nativa: Django admin + OAuth2 API)
+    # =========================================================================
+    - name: Crea IngressRoute per Backoffice Django
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: traefik.io/v1alpha1
+          kind: IngressRoute
+          metadata:
+            name: events-backoffice-https
+            namespace: events
+          spec:
+            entryPoints:
+              - {{ route_entrypoint }}
+            routes:
+              - match: Host(`{{ domain_events }}`)
+                kind: Rule
+                services:
+                  - name: backoffice
+                    port: 8000
+          {% if not (install_reverse_proxy | default(false)) %}
+            tls:
+              certResolver: letsencrypt
+          {% endif %}
+      register: route_result
+      changed_when: "'created' in route_result.stdout or 'configured' in route_result.stdout"
+      when: install_backoffice | default(false)
+
+    # =========================================================================
     # Riepilogo
     # =========================================================================
     - name: Riepilogo Domain Setup
@@ -600,6 +630,7 @@
           - "K8s Dashboard:     {{ 'https://' ~ domain_dashboard ~ (' (' ~ auth_middleware_name ~ ')' if ((auth_dashboard | default(true)) and (auth_available | bool)) else ' (no auth)') if (install_dashboard | default(false)) else 'saltato' }}"
           - "Jaeger:            {{ 'https://' ~ domain_jaeger ~ (' (' ~ auth_middleware_name ~ ')' if ((auth_jaeger | default(true)) and (auth_available | bool)) else ' (no auth)') if (install_jaeger | default(false)) else 'saltato' }}"
           - "{{ 'OAuth2 Proxy:     https://' ~ domain_auth ~ ' (callback Google)' if (install_oauth2_proxy | default(false)) else '' }}"
+          - "Backoffice:        {{ 'https://' ~ domain_events ~ ' (auth nativa)' if (install_backoffice | default(false)) else 'saltato' }}"
           - ""
           - "--- DNS A Record richiesti ---"
           - "{{ 'TUTTI i sottodomini → IP pubblico micro-cirunner (reverse proxy)' if (install_reverse_proxy | default(false)) else '' }}"

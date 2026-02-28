@@ -84,6 +84,7 @@ PLAYBOOKS=(
     "security-setup.yml|Security (Kyverno)"
     "backup-setup.yml|Backup (Velero)"
     "observability-vm-setup.yml|Observability VM (Grafana)"
+    "app-setup.yml|Application (Backoffice secrets + ArgoCD)"
     "domain-setup.yml|HTTPS sottodomini (IngressRoute)"
     "reverse-proxy-setup.yml|Reverse proxy (Caddy)"
 )

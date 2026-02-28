@@ -1,0 +1,183 @@
+---
+# Application Setup - Backoffice Django (Secret + ArgoCD Application)
+# Crea risorse NON gestite da Git (Secret, ArgoCD Application).
+# I manifest K8s (Deployment, Service, ConfigMap) sono in infrastructures/OCI/k8s/events/
+# e vengono sincronizzati da ArgoCD automaticamente.
+#
+# Prerequisiti:
+#   - ci-setup.yml (ArgoCD + Tekton installati)
+#   - data-setup.yml (PostgreSQL + Redis)
+#   - Immagine Docker buildata e pushata su OCIR
+#   - Manifest K8s committati su Git
+#
+# Uso: ansible-playbook ansible/playbooks/app-setup.yml
+- name: OKE Application Setup (Backoffice secrets + ArgoCD)
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica namespace events esiste
+      ansible.builtin.command: kubectl get namespace events
+      register: ns_events
+      changed_when: false
+
+    - name: Verifica ArgoCD installato
+      ansible.builtin.command: kubectl get deployment argocd-server -n argocd
+      register: argocd_check
+      changed_when: false
+      when: install_backoffice | default(false)
+
+    # =========================================================================
+    # OCIR imagePullSecret (namespace events)
+    # =========================================================================
+    - name: Crea OCIR imagePullSecret nel namespace events
+      ansible.builtin.command: >
+        kubectl create secret docker-registry ocir-secret
+        --docker-server={{ ocir_endpoint }}
+        --docker-username={{ ocir_username }}
+        --docker-password={{ ocir_auth_token }}
+        --namespace=events
+      register: ocir_secret_result
+      changed_when: "'created' in ocir_secret_result.stdout"
+      failed_when:
+        - ocir_secret_result.rc != 0
+        - "'already exists' not in ocir_secret_result.stderr"
+      when: install_backoffice | default(false)
+
+    # =========================================================================
+    # Secret backoffice-secret (credenziali Django, DB, Redis)
+    # =========================================================================
+    - name: Crea Secret backoffice-secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: backoffice-secret
+            namespace: events
+            labels:
+              app: backoffice
+          type: Opaque
+          stringData:
+            DJANGO_SECRET_KEY: "{{ django_secret_key }}"
+            POSTGRES_PASSWORD: "{{ postgres_k8s_password }}"
+            CELERY_BROKER_URL: "{{ celery_broker_url }}"
+            CACHE_REDIS_URL: "redis://:{{ redis_k8s_password }}@redis.events.svc:6379/1"
+            DJANGO_SUPERUSER_USERNAME: "{{ django_superuser_username | default('admin') }}"
+            DJANGO_SUPERUSER_EMAIL: "{{ django_superuser_email | default('admin@events.local') }}"
+            DJANGO_SUPERUSER_PASSWORD: "{{ django_superuser_password }}"
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
+      when: install_backoffice | default(false)
+
+    # =========================================================================
+    # ArgoCD - Repository Secret (repo privato HTTPS)
+    # =========================================================================
+    - name: Crea ArgoCD Repository Secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: repo-events
+            namespace: argocd
+            labels:
+              argocd.argoproj.io/secret-type: repository
+          type: Opaque
+          stringData:
+            type: git
+            url: "{{ argocd_repo_url }}"
+            username: "git"
+            password: "{{ argocd_repo_token }}"
+      register: repo_secret_result
+      changed_when: "'created' in repo_secret_result.stdout or 'configured' in repo_secret_result.stdout"
+      when: install_backoffice | default(false)
+
+    # =========================================================================
+    # ArgoCD Application - events-backoffice
+    # =========================================================================
+    - name: Crea ArgoCD Application events-backoffice
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            name: events-backoffice
+            namespace: argocd
+          spec:
+            project: default
+            source:
+              repoURL: "{{ argocd_repo_url }}"
+              targetRevision: "{{ argocd_target_revision | default('main') }}"
+              path: infrastructures/OCI/k8s/events
+            destination:
+              server: https://kubernetes.default.svc
+              namespace: events
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+              syncOptions:
+                - CreateNamespace=false
+      register: app_result
+      changed_when: "'created' in app_result.stdout or 'configured' in app_result.stdout"
+      when: install_backoffice | default(false)
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Application Setup
+      ansible.builtin.debug:
+        msg:
+          - "=== Application Setup Completato ==="
+          - ""
+          - "--- Risorse create ---"
+          - "OCIR Secret:       {{ 'ocir-secret nel namespace events' if (install_backoffice | default(false)) else 'saltato' }}"
+          - "Backoffice Secret: {{ 'backoffice-secret nel namespace events' if (install_backoffice | default(false)) else 'saltato' }}"
+          - "ArgoCD Repo:       {{ 'repo-events nel namespace argocd' if (install_backoffice | default(false)) else 'saltato' }}"
+          - "ArgoCD App:        {{ 'events-backoffice (auto-sync + prune + selfHeal)' if (install_backoffice | default(false)) else 'saltato' }}"
+          - ""
+          - "--- Primo build immagine (Tekton PipelineRun) ---"
+          - "kubectl create -f - <<EOF"
+          - "apiVersion: tekton.dev/v1"
+          - "kind: PipelineRun"
+          - "metadata:"
+          - "  generateName: backoffice-build-"
+          - "  namespace: tekton-pipelines"
+          - "spec:"
+          - "  pipelineRef: { name: build-and-push }"
+          - "  params:"
+          - "    - { name: repo-url, value: \"{{ argocd_repo_url | default('<REPO_URL>') }}\" }"
+          - "    - { name: image, value: \"eu-milan-1.ocir.io/{{ ocir_namespace }}/events/backoffice:latest\" }"
+          - "    - { name: context, value: \"microservices/backoffice-service\" }"
+          - "  workspaces:"
+          - "    - name: shared-workspace"
+          - "      volumeClaimTemplate:"
+          - "        spec: { accessModes: [ReadWriteOnce], resources: { requests: { storage: 1Gi } } }"
+          - "  taskRunTemplate:"
+          - "    serviceAccountName: tekton-build"
+          - "EOF"
+          - ""
+          - "--- Verifica ---"
+          - "kubectl get app events-backoffice -n argocd                            # ArgoCD sync status"
+          - "kubectl get pods -n events -l app=backoffice                           # Pod status"
+          - "kubectl exec deploy/backoffice -n events -- curl -s localhost:8000/api/version/  # Health check"
+          - "kubectl logs -n events -l component=web --tail=50                      # Logs Django"
+          - "kubectl logs -n events -l component=celery-worker --tail=50            # Logs Celery Worker"
+          - "kubectl logs -n events -l component=celery-beat --tail=50              # Logs Celery Beat"

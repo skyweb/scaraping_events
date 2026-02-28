@@ -309,6 +309,10 @@
                 description: "Path al Dockerfile"
                 type: string
                 default: "./Dockerfile"
+              - name: context
+                description: "Build context (subdirectory del repo)"
+                type: string
+                default: "."
             workspaces:
               - name: shared-workspace
             tasks:
@@ -336,6 +340,8 @@
                     value: $(params.image)
                   - name: DOCKERFILE
                     value: $(params.dockerfile)
+                  - name: CONTEXT
+                    value: $(params.context)
       register: pipeline_result
       changed_when: "'created' in pipeline_result.stdout or 'configured' in pipeline_result.stdout"
       when: install_tekton | default(false)

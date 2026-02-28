@@ -188,6 +188,14 @@ redis_memory_limit: "128Mi"
 # redis_k8s_password → in oke-vault.yml (già presente)
 
 # =============================================================================
+# Application Deployment (Backoffice + Celery)
+# =============================================================================
+install_backoffice: true
+argocd_repo_url: "https://github.com/YOUR_USER/scaraping_events.git"
+argocd_target_revision: "main"
+# events_subdomain: "events"  # events.oci.santocaruso.eu
+
+# =============================================================================
 # Reverse Proxy (Caddy su micro-cirunner — IP stabile)
 # =============================================================================
 # Quando abilitato, Caddy su micro-cirunner (IP stabile) termina TLS e

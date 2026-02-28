@@ -33,6 +33,7 @@
     domain_jaeger: "{{ jaeger_subdomain | default('jaeger') }}.{{ base_domain }}"
     domain_auth: "{{ auth_subdomain | default('auth') }}.{{ base_domain }}"
     domain_grafana: "{{ grafana_subdomain | default('grafana') }}.{{ base_domain }}"
+    domain_events: "{{ events_subdomain | default('events') }}.{{ base_domain }}"
 
   tasks:
     # =========================================================================
@@ -179,6 +180,14 @@
           }
 
           {% endif %}
+          {% if install_backoffice | default(false) %}
+          {{ domain_events }} {
+            reverse_proxy http://{{ k8s_node_ip }}:{{ traefik_http_nodeport | default(30080) }} {
+              header_up X-Forwarded-Proto https
+            }
+          }
+
+          {% endif %}
       notify: Restart Caddy
 
     # =========================================================================
@@ -299,6 +308,7 @@
           - "{{ 'Jaeger:       https://' ~ domain_jaeger if (install_jaeger | default(false)) else '' }}"
           - "{{ 'OAuth2:       https://' ~ domain_auth if (install_oauth2_proxy | default(false)) else '' }}"
           - "{{ 'Grafana:      https://' ~ domain_grafana ~ ' → http://' ~ (micro_monitor_private_ip | default('10.0.3.8')) ~ ':' ~ (grafana_port | default(3000)) if (install_grafana_vm | default(false)) else '' }}"
+          - "{{ 'Backoffice:   https://' ~ domain_events if (install_backoffice | default(false)) else '' }}"
           - ""
           - "--- Comandi utili ---"
           - "sudo systemctl status caddy"
