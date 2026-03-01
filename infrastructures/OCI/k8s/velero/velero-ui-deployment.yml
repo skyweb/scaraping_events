@@ -20,7 +20,7 @@ spec:
         workload: heavy
       containers:
         - name: velero-ui
-          image: otwld/velero-ui:latest
+          image: docker.io/otwld/velero-ui:latest
           ports:
             - containerPort: 3000
               protocol: TCP
