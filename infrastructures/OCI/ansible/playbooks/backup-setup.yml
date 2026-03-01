@@ -112,6 +112,8 @@
         --set initContainers[0].volumeMounts[0].mountPath=/target
         --set initContainers[0].volumeMounts[0].name=plugins
         --set nodeSelector.workload=light
+        --set kubectl.image.repository=docker.io/bitnamilegacy/kubectl
+        --set kubectl.image.tag=1.33.4
       register: velero_result
       changed_when: "'STATUS: deployed' in velero_result.stdout"
       when: install_velero | default(false)
@@ -201,8 +203,8 @@
             namespace: velero
           spec:
             schedule: "{{ velero_backup_schedule }}"
-            ttl: "{{ velero_backup_ttl }}"
             template:
+              ttl: "{{ velero_backup_ttl }}"
               includedNamespaces:
                 - events
                 - monitoring
@@ -223,8 +225,8 @@
             namespace: velero
           spec:
             schedule: "0 3 * * 0"
-            ttl: "720h"
             template:
+              ttl: "720h"
               includedNamespaces:
                 - "*"
               excludedNamespaces:
