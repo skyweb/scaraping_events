@@ -8,3 +8,4 @@ resources:
   - airflow-webserver-deployment.yml
   - airflow-scheduler-deployment.yml
   - airflow-service.yml
+  - airflow-ingressroute.yml

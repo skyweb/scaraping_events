@@ -1,0 +1,45 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: kaniko-build
+  namespace: tekton-pipelines
+spec:
+  params:
+    - name: IMAGE
+      description: "Immagine destinazione (es: eu-milan-1.ocir.io/namespace/app:tag)"
+      type: string
+    - name: DOCKERFILE
+      description: "Path al Dockerfile"
+      type: string
+      default: "./Dockerfile"
+    - name: CONTEXT
+      description: "Build context"
+      type: string
+      default: "."
+    - name: EXTRA_ARGS
+      description: "Argomenti extra per Kaniko"
+      type: array
+      default: []
+  workspaces:
+    - name: source
+      description: "Sorgente con Dockerfile"
+  results:
+    - name: IMAGE_DIGEST
+      description: "Digest dell'immagine buildata"
+    - name: IMAGE_URL
+      description: "URL completo dell'immagine"
+  steps:
+    - name: build-and-push
+      image: gcr.io/kaniko-project/executor:latest
+      args:
+        - --dockerfile=$(params.DOCKERFILE)
+        - --context=$(workspaces.source.path)/$(params.CONTEXT)
+        - --destination=$(params.IMAGE)
+        - --digest-file=$(results.IMAGE_DIGEST.path)
+        - $(params.EXTRA_ARGS[*])
+      securityContext:
+        runAsUser: 0
+    - name: write-url
+      image: docker.io/library/busybox:latest
+      script: |
+        echo -n "$(params.IMAGE)" | tee "$(results.IMAGE_URL.path)"

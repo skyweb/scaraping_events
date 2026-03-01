@@ -7,3 +7,4 @@ resources:
   - backoffice-service.yml
   - celery-worker-deployment.yml
   - celery-beat-deployment.yml
+  - backoffice-ingressroute.yml

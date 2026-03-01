@@ -1,0 +1,85 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wireguard
+  namespace: wireguard
+  labels:
+    app: wireguard
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: wireguard
+  template:
+    metadata:
+      labels:
+        app: wireguard
+    spec:
+      nodeSelector:
+        workload: heavy
+      containers:
+        - name: wg-easy
+          image: ghcr.io/wg-easy/wg-easy:latest
+          ports:
+            - containerPort: 51820
+              hostPort: 51820
+              name: wireguard
+              protocol: UDP
+            - containerPort: 51821
+              name: web-ui
+              protocol: TCP
+          env:
+            - name: WG_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: wireguard-config
+                  key: WG_HOST
+            - name: WG_PORT
+              value: "51820"
+            - name: WG_DEFAULT_DNS
+              value: "10.96.5.5, 8.8.8.8"
+            - name: WG_ALLOWED_IPS
+              value: "10.0.0.0/16, 10.96.0.0/12"
+            - name: PASSWORD_HASH
+              valueFrom:
+                secretKeyRef:
+                  name: wireguard-secret
+                  key: PASSWORD_HASH
+            - name: LANG
+              value: "it"
+          volumeMounts:
+            - name: wireguard-config
+              mountPath: /etc/wireguard
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+                - SYS_MODULE
+            privileged: true
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 51821
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 3
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 51821
+            initialDelaySeconds: 15
+            periodSeconds: 20
+            timeoutSeconds: 3
+      volumes:
+        - name: wireguard-config
+          persistentVolumeClaim:
+            claimName: wireguard-config

@@ -116,18 +116,6 @@ resource "oci_core_security_list" "node_sl" {
     stateless   = false
   }
 
-  # Ingress: SSH da ovunque
-  ingress_security_rules {
-    protocol    = "6"
-    source      = "0.0.0.0/0"
-    stateless   = false
-    description = "SSH"
-    tcp_options {
-      min = 22
-      max = 22
-    }
-  }
-
   # Ingress: tutto il traffico intra-VCN (pod-to-pod, node-to-node)
   ingress_security_rules {
     protocol    = "all"
@@ -160,18 +148,6 @@ resource "oci_core_security_list" "node_sl" {
     }
   }
 
-  # Ingress: NodePort da ovunque (accesso diretto)
-  ingress_security_rules {
-    protocol    = "6"
-    source      = "0.0.0.0/0"
-    stateless   = false
-    description = "NodePort from internet"
-    tcp_options {
-      min = 30000
-      max = 32767
-    }
-  }
-
   # Ingress: HTTP (Traefik hostPort per ACME HTTP-01 e redirect HTTPS)
   ingress_security_rules {
     protocol    = "6"
@@ -193,6 +169,18 @@ resource "oci_core_security_list" "node_sl" {
     tcp_options {
       min = 443
       max = 443
+    }
+  }
+
+  # Ingress: WireGuard VPN (NodePort UDP)
+  ingress_security_rules {
+    protocol    = "17"
+    source      = "0.0.0.0/0"
+    stateless   = false
+    description = "WireGuard VPN hostPort"
+    udp_options {
+      min = 51820
+      max = 51820
     }
   }
 
@@ -341,30 +329,6 @@ resource "oci_core_security_list" "micro_sl" {
     tcp_options {
       min = 443
       max = 443
-    }
-  }
-
-  # Ingress: Uptime Kuma default port
-  ingress_security_rules {
-    protocol    = "6"
-    source      = "0.0.0.0/0"
-    stateless   = false
-    description = "Uptime Kuma"
-    tcp_options {
-      min = 3001
-      max = 3001
-    }
-  }
-
-  # Ingress: Grafana (Podman container)
-  ingress_security_rules {
-    protocol    = "6"
-    source      = "0.0.0.0/0"
-    stateless   = false
-    description = "Grafana"
-    tcp_options {
-      min = 3000
-      max = 3000
     }
   }
 

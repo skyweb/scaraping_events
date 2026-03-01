@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: tekton-dashboard-https
+  namespace: tekton-pipelines
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`tekton.oci.santocaruso.eu`)
+      kind: Rule
+      services:
+        - name: tekton-dashboard
+          port: 9097

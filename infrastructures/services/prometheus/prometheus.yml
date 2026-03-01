@@ -35,6 +35,3 @@ scrape_configs:
     static_configs:
       - targets: ["traefik:8080"]
 
-  - job_name: ollama
-    static_configs:
-      - targets: ["ollama-metrics:8080"]

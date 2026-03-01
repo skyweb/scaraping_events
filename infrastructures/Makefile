@@ -31,13 +31,12 @@ NC    := \033[0m
         prod-up prod-down prod-ps prod-logs \
         logs-backoffice logs-celery logs-frontend logs-traefik logs-db logs-redis \
         logs-grafana logs-jaeger logs-loki logs-superset logs-airflow logs-oauth2 \
-        logs-ollama logs-n8n logs-ollama-webui \
+        logs-n8n \
         restart-backoffice restart-frontend restart-traefik restart-celery restart-airflow restart-oauth2 \
-        restart-ollama restart-n8n restart-ollama-webui \
+        restart-n8n \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
         open-admin open-flower open-grafana open-jaeger open-prometheus \
-        open-superset open-loki open-airflow open-n8n open-traefik open-chat \
-        ollama-pull \
+        open-superset open-loki open-airflow open-n8n open-traefik \
         clean clean-logs
 
 # =============================================================================
@@ -67,8 +66,6 @@ up: ## Avvia tutto lo stack ESCLUSO LLM (build immagini custom se necessario)
 	@echo ""
 	@echo "$(YELLOW)  LLM stack non avviato. Usa 'make up-llm' per:$(NC)"
 	@echo "$(YELLOW)    https://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
-	@echo "$(YELLOW)    https://ollama.$(DOMAIN)/$(NC)           Ollama (LLM API)"
-	@echo "$(YELLOW)    https://chat.$(DOMAIN)/$(NC)             Ollama WebUI (avvio manuale)$(NC)"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -117,12 +114,10 @@ up-airflow: ## Avvia solo Apache Airflow (webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
-up-llm: ## Avvia Ollama + metrics proxy + WebUI + n8n
-	@echo "$(GREEN)Avvio LLM stack (Ollama + Metrics + WebUI + n8n)...$(NC)"
-	$(COMPOSE) up -d ollama ollama-init ollama-metrics ollama-webui n8n
+up-llm: ## Avvia n8n (workflow automation)
+	@echo "$(GREEN)Avvio LLM stack (n8n)...$(NC)"
+	$(COMPOSE) up -d n8n
 	@echo ""
-	@echo "$(CYAN)  https://ollama.$(DOMAIN)/$(NC)           Ollama API (via metrics proxy)"
-	@echo "$(CYAN)  https://chat.$(DOMAIN)/$(NC)             Ollama WebUI (chat)"
 	@echo "$(CYAN)  https://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
 	@echo ""
 
@@ -166,14 +161,8 @@ logs-airflow: ## Logs Airflow webserver + scheduler (follow)
 logs-oauth2: ## Logs oauth2-proxy (follow)
 	$(COMPOSE) logs -f oauth2-proxy
 
-logs-ollama: ## Logs Ollama LLM (follow)
-	$(COMPOSE) logs -f ollama
-
 logs-n8n: ## Logs n8n workflow automation (follow)
 	$(COMPOSE) logs -f n8n
-
-logs-ollama-webui: ## Logs Ollama WebUI Lite (follow)
-	$(COMPOSE) logs -f ollama-webui
 
 # =============================================================================
 # Restart per servizio
@@ -203,17 +192,9 @@ restart-oauth2: ## Riavvia oauth2-proxy
 	@echo "$(GREEN)Riavvio oauth2-proxy...$(NC)"
 	$(COMPOSE) restart oauth2-proxy
 
-restart-ollama: ## Riavvia Ollama
-	@echo "$(GREEN)Riavvio Ollama...$(NC)"
-	$(COMPOSE) restart ollama
-
 restart-n8n: ## Riavvia n8n
 	@echo "$(GREEN)Riavvio n8n...$(NC)"
 	$(COMPOSE) restart n8n
-
-restart-ollama-webui: ## Riavvia Ollama WebUI Lite
-	@echo "$(GREEN)Riavvio Ollama WebUI Lite...$(NC)"
-	$(COMPOSE) restart ollama-webui
 
 # =============================================================================
 # Database / Django
@@ -290,14 +271,6 @@ open-n8n: ## Apre n8n workflow automation  →  https://n8n.${DOMAIN}/
 open-traefik: ## Apre Traefik dashboard  →  https://traefik.${DOMAIN}/
 	@echo "$(CYAN)Apertura Traefik dashboard...$(NC)"
 	@$(OPEN) https://traefik.$(DOMAIN)/
-
-open-chat: ## Apre Ollama WebUI Lite  →  https://chat.${DOMAIN}/
-	@echo "$(CYAN)Apertura Ollama WebUI Lite...$(NC)"
-	@$(OPEN) https://chat.$(DOMAIN)/
-
-ollama-pull: ## Scarica un modello Ollama (es: make ollama-pull MODEL=llama3.1:8b)
-	@echo "$(GREEN)Pull modello Ollama: $(MODEL)...$(NC)"
-	$(COMPOSE) exec ollama ollama pull $(MODEL)
 
 # =============================================================================
 # Produzione (HTTPS — Let's Encrypt)

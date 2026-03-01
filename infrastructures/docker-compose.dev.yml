@@ -588,62 +588,6 @@ services:
     networks:
       - dev-network
 
-  # Ollama — LLM locale (API REST su :11434)
-  # Il traffico esterno passa da ollama-metrics (proxy con metriche Prometheus)
-  ollama:
-    image: ollama/ollama:latest
-    container_name: dev-ollama
-    restart: unless-stopped
-    volumes:
-      - ollama-dev-data:/root/.ollama
-    healthcheck:
-      test: ["CMD-SHELL", "ollama list || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 30s
-    networks:
-      dev-network:
-        aliases:
-          - ollama
-
-  # Ollama Init — scarica llama3.1:8b al primo avvio
-  ollama-init:
-    image: ollama/ollama:latest
-    container_name: dev-ollama-init
-    restart: "no"
-    depends_on:
-      ollama:
-        condition: service_healthy
-    environment:
-      OLLAMA_HOST: http://ollama:11434
-    entrypoint: ["ollama", "pull", "llama3.1:8b"]
-    networks:
-      - dev-network
-
-  # Ollama Metrics — proxy trasparente con metriche Prometheus per Ollama
-  ollama-metrics:
-    image: ghcr.io/norskhelsenett/ollama-metrics:latest
-    container_name: dev-ollama-metrics
-    restart: unless-stopped
-    environment:
-      OLLAMA_HOST: http://ollama:11434
-      PORT: "8080"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.ollama.rule=Host(`ollama.${DOMAIN}`)"
-      - "traefik.http.routers.ollama.entrypoints=websecure"
-      - "traefik.http.routers.ollama.tls=true"
-      - "traefik.http.routers.ollama.middlewares=forward-auth"
-      - "traefik.http.services.ollama.loadbalancer.server.port=8080"
-    depends_on:
-      ollama:
-        condition: service_healthy
-    networks:
-      dev-network:
-        aliases:
-          - ollama-metrics
-
   # n8n — workflow automation
   n8n:
     image: n8nio/n8n:latest
@@ -682,32 +626,6 @@ services:
       dev-network:
         aliases:
           - n8n
-
-  # Open WebUI (slim) — interfaccia chat leggera per Ollama (successore di ollama-webui-lite)
-  # Usa ollama-metrics come proxy per catturare metriche Prometheus
-  ollama-webui:
-    image: ghcr.io/open-webui/open-webui:main-slim
-    container_name: dev-ollama-webui
-    restart: unless-stopped
-    environment:
-      OLLAMA_BASE_URL: http://ollama-metrics:8080
-      WEBUI_AUTH: "false"
-    volumes:
-      - ollama-webui-dev-data:/app/backend/data
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.ollama-webui.rule=Host(`chat.${DOMAIN}`)"
-      - "traefik.http.routers.ollama-webui.entrypoints=websecure"
-      - "traefik.http.routers.ollama-webui.tls=true"
-      - "traefik.http.routers.ollama-webui.middlewares=forward-auth"
-      - "traefik.http.services.ollama-webui.loadbalancer.server.port=8080"
-    depends_on:
-      ollama-metrics:
-        condition: service_started
-    networks:
-      dev-network:
-        aliases:
-          - ollama-webui
 
   # auth-redirect — pagina statica con JS redirect verso auth.DOMAIN/oauth2/start
   # Usata da Traefik errors middleware per intercettare 401 senza manipolare cookie
@@ -860,10 +778,6 @@ volumes:
     name: dev-flower-data
   airflow-logs-dev:
     name: dev-airflow-logs
-  ollama-dev-data:
-    name: dev-ollama-data
-  ollama-webui-dev-data:
-    name: dev-ollama-webui-data
   n8n-dev-data:
     name: dev-n8n-data
 

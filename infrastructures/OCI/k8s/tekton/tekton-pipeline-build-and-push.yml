@@ -1,0 +1,54 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: build-and-push
+  namespace: tekton-pipelines
+spec:
+  params:
+    - name: repo-url
+      description: "URL del repository Git"
+      type: string
+    - name: revision
+      description: "Branch o tag"
+      type: string
+      default: "main"
+    - name: image
+      description: "Immagine di destinazione"
+      type: string
+    - name: dockerfile
+      description: "Path al Dockerfile"
+      type: string
+      default: "./Dockerfile"
+    - name: context
+      description: "Build context (subdirectory del repo)"
+      type: string
+      default: "."
+  workspaces:
+    - name: shared-workspace
+  tasks:
+    - name: clone
+      taskRef:
+        name: git-clone
+      workspaces:
+        - name: output
+          workspace: shared-workspace
+      params:
+        - name: url
+          value: $(params.repo-url)
+        - name: revision
+          value: $(params.revision)
+    - name: build
+      taskRef:
+        name: kaniko-build
+      runAfter:
+        - clone
+      workspaces:
+        - name: source
+          workspace: shared-workspace
+      params:
+        - name: IMAGE
+          value: $(params.image)
+        - name: DOCKERFILE
+          value: $(params.dockerfile)
+        - name: CONTEXT
+          value: $(params.context)
