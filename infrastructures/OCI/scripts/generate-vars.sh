@@ -165,6 +165,16 @@ loki_memory_limit: "256Mi"
 k8s_node_ip: "${K8S_NODE_IP}"
 
 # =============================================================================
+# Reverse Proxy (TCP forwarding via firewalld su micro-gw)
+# =============================================================================
+install_reverse_proxy: true
+
+# =============================================================================
+# WireGuard VPN (server nativo su micro-gw)
+# =============================================================================
+install_wireguard: true
+
+# =============================================================================
 # Backup & Disaster Recovery
 # =============================================================================
 
@@ -185,25 +195,19 @@ velero_backup_ttl: "168h"            # retention 7 giorni
 #
 # Servizi K8s -> A record -> IP pubblico del nodo light (K8s)
 
-# base_domain: "example.com"
+base_domain: "oci.santocaruso.eu"
 
 # Sottodomini (default se non specificati)
 # traefik_subdomain: "traefik"        # traefik.example.com   -> Traefik Dashboard
-# argocd_subdomain: "argocd"          # argocd.example.com    -> ArgoCD
-# tekton_subdomain: "tekton"          # tekton.example.com    -> Tekton Dashboard
-# prometheus_subdomain: "prometheus"  # prometheus.example.com -> Prometheus
-# alertmanager_subdomain: "alertmanager"  # alertmanager.example.com -> Alertmanager
-# loki_subdomain: "loki"              # loki.example.com      -> Loki
-# dashboard_subdomain: "dashboard"    # dashboard.example.com -> K8s Dashboard
-# jaeger_subdomain: "jaeger"          # jaeger.example.com    -> Jaeger UI
 # auth_subdomain: "auth"              # auth.example.com      -> OAuth2 Proxy callback
 
 # --- Autenticazione servizi senza auth nativa ---
 # OAuth2 Proxy (Google SSO)
 # I secret (oauth2_proxy_*) vanno in oke-vault.yml
-# install_oauth2_proxy: false
+install_oauth2_proxy: true
 # oauth2_proxy_allowed_emails:
-#   - "your.email@gmail.com"
+   - "santo.caruso@gmail.com"
+   - "santo.caruso@altrama.com"
 # I secret (client_id, client_secret, cookie_secret) -> in oke-vault.yml
 YAML
 
@@ -231,9 +235,14 @@ redis_k8s_password: "CHANGE_ME"
 celery_broker_url: "redis://:CHANGE_ME@redis.events.svc:6379/0"
 
 # OAuth2 Proxy (Google SSO — decommentare se si usa)
-# oauth2_proxy_client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com"
-# oauth2_proxy_client_secret: "YOUR_CLIENT_SECRET"
-# oauth2_proxy_cookie_secret: "YOUR_COOKIE_SECRET"
+oauth2_proxy_client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com"
+oauth2_proxy_client_secret: "YOUR_CLIENT_SECRET"
+oauth2_proxy_cookie_secret: "YOUR_COOKIE_SECRET"
+
+# WireGuard VPN (server su micro-gw)
+# Generare con: wg genkey
+wg_server_private_key: "CHANGE_ME"
+# wg_peers: []
 YAML
 
 echo "Generato: $VAULT_FILE"
@@ -258,6 +267,8 @@ fi
 echo ""
 echo "TODO:"
 echo "  1. Cambia redis_k8s_password e celery_broker_url in oke-vault.yml"
+echo "  2. Genera chiave WireGuard: wg genkey | tee privatekey | wg pubkey > publickey"
+echo "     Imposta wg_server_private_key in oke-vault.yml"
 if [ "$K8S_NODE_IP" = "K8S_NODE_PRIVATE_IP" ]; then
     echo "  3. Imposta k8s_node_ip in oke.yml con: kubectl get nodes -l workload=light -o wide"
 fi

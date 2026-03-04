@@ -58,24 +58,6 @@
         reload: true
 
     # =========================================================================
-    # Firewalld — Cleanup regole vecchie
-    # =========================================================================
-    - name: Recupera forward-port rules esistenti
-      ansible.builtin.command: firewall-cmd --list-forward-ports
-      register: existing_forwards
-      changed_when: false
-      failed_when: false
-
-    - name: Rimuovi vecchie forward-port rules
-      ansible.builtin.command: >
-        firewall-cmd --permanent --remove-forward-port={{ item }}
-      loop: "{{ existing_forwards.stdout_lines | default([]) }}"
-      register: remove_fw
-      changed_when: "'success' in remove_fw.stdout"
-      failed_when: false
-      when: existing_forwards.stdout_lines | default([]) | length > 0
-
-    # =========================================================================
     # Firewalld — DNAT rules (TCP forwarding)
     # =========================================================================
     - name: Aggiungi forward-port HTTP (80 → k8s NodePort HTTP)

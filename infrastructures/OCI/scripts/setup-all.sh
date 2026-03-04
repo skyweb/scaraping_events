@@ -82,6 +82,7 @@ PLAYBOOKS=(
     "backup-setup.yml|Backup (Velero)"
     "domain-setup.yml|HTTPS sottodomini (IngressRoute)"
     "reverse-proxy-setup.yml|Reverse proxy (firewalld DNAT)"
+    "wireguard-setup.yml|WireGuard VPN (micro-gw)"
 )
 
 TOTAL=${#PLAYBOOKS[@]}
@@ -107,7 +108,7 @@ for entry in "${PLAYBOOKS[@]}"; do
     # Playbook che richiedono inventory micro VM
     EXTRA_ARGS=""
     case "${PLAYBOOK}" in
-        observability-vm-setup.yml|reverse-proxy-setup.yml)
+        observability-vm-setup.yml|reverse-proxy-setup.yml|wireguard-setup.yml)
             if [ -f "${INVENTORY}" ]; then
                 EXTRA_ARGS="-i ${INVENTORY}"
             else

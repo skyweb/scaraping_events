@@ -102,26 +102,11 @@ Installa tutti i servizi sul cluster K8s e sulle micro VM.
 # 7a. Infrastruttura base (Traefik, cert-manager, metrics-server, K8s Dashboard)
 ./scripts/post-setup.sh --ask-vault-pass
 
-# 7b. Data Services (PostgreSQL, Redis)
-ansible-playbook ansible/playbooks/data-setup.yml --ask-vault-pass
-
-# 7c. CI/CD (ArgoCD, Tekton, Kaniko)
-ansible-playbook ansible/playbooks/ci-setup.yml --ask-vault-pass
-
-# 7d. Observability K8s (Prometheus, Loki, Promtail, OTel Collector, Jaeger)
-ansible-playbook ansible/playbooks/observability-cluster-setup.yml --ask-vault-pass
-
 # 7e. Security (Kyverno + 6 ClusterPolicy)
 ansible-playbook ansible/playbooks/security-setup.yml --ask-vault-pass
 
 # 7f. Backup (Velero + schedule giornaliero/settimanale)
 ansible-playbook ansible/playbooks/backup-setup.yml --ask-vault-pass
-
-# 7g. Grafana su micro-monitor VM
-ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml --ask-vault-pass
-
-# 7h. Application (Secret + ArgoCD Application per Backoffice e Airflow)
-ansible-playbook ansible/playbooks/app-setup.yml --ask-vault-pass
 
 # 7i. HTTPS routing (IngressRoute + OAuth2 Proxy)
 ansible-playbook ansible/playbooks/domain-setup.yml --ask-vault-pass
@@ -147,13 +132,8 @@ vars.sh    inventory.sh      Configurazione Ansible
    setup-all.sh              Ansible (tutti i playbook)
         │
         ├── post-cluster-setup     Traefik, cert-manager, metrics-server, Dashboard
-        ├── data-setup             PostgreSQL, Redis
-        ├── ci-setup               ArgoCD, Tekton
-        ├── observability-cluster  Prometheus, Loki, Promtail, OTel, Jaeger
         ├── security-setup         Kyverno (6 policy)
         ├── backup-setup           Velero (backup giornaliero + settimanale)
-        ├── observability-vm       Grafana (micro-monitor VM)
-        ├── app-setup              Secret + ArgoCD App (Backoffice, Airflow)
         ├── domain-setup           IngressRoute + Auth (OAuth2 Proxy)
         └── reverse-proxy-setup    TCP forwarding (micro-gw, firewalld DNAT)
 ```

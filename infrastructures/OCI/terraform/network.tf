@@ -344,6 +344,18 @@ resource "oci_core_security_list" "micro_sl" {
     }
   }
 
+  # Ingress: WireGuard VPN (UDP)
+  ingress_security_rules {
+    protocol    = "17"
+    source      = "0.0.0.0/0"
+    stateless   = false
+    description = "WireGuard VPN"
+    udp_options {
+      min = 51820
+      max = 51820
+    }
+  }
+
   # Ingress: ICMP
   ingress_security_rules {
     protocol    = "1"

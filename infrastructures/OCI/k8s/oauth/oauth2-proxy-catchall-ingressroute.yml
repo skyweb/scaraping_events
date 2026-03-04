@@ -1,16 +1,17 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: airflow-webserver-https
-  namespace: airflow
+  name: oauth2-proxy-catchall
+  namespace: traefik
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`airflow.oci.santocaruso.eu`)
+    - match: PathPrefix(`/oauth2/`)
       kind: Rule
+      priority: 1000
       services:
-        - name: airflow-webserver
-          port: 8080
+        - name: oauth2-proxy
+          port: 4180
   tls:
     certResolver: letsencrypt
