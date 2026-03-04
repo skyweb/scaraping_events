@@ -2,7 +2,7 @@ apiVersion: traefik.io/v1alpha1
 kind: ServersTransport
 metadata:
   name: dashboard-transport
-  namespace: monitoring
+  namespace: clusters
 spec:
   insecureSkipVerify: true
 ---
@@ -10,7 +10,7 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: kubernetes-dashboard-https
-  namespace: monitoring
+  namespace: clusters
 spec:
   entryPoints:
     - websecure

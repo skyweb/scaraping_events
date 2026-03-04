@@ -5,6 +5,4 @@ resources:
   - backoffice-configmap.yml
   - backoffice-deployment.yml
   - backoffice-service.yml
-  - celery-worker-deployment.yml
-  - celery-beat-deployment.yml
   - backoffice-ingressroute.yml

@@ -29,4 +29,4 @@ resources:
     memory: 128Mi
 
 nodeSelector:
-  workload: heavy
+  workload: light

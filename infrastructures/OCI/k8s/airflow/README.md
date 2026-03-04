@@ -25,7 +25,7 @@ Webserver + Scheduler con LocalExecutor e git-sync per DAGs, namespace `airflow`
   ```bash
   kubectl create secret generic airflow-secret \
     --namespace airflow \
-    --from-literal=AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://<USER>:<PASSWORD>@postgres.events.svc:5432/airflow \
+    --from-literal=AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:<PASSWORD>@postgres.database.svc:5432/airflow \
     --from-literal=AIRFLOW__WEBSERVER__SECRET_KEY=<SECRET_KEY> \
     --from-literal=AIRFLOW_ADMIN_PASSWORD=<PASSWORD>
   ```

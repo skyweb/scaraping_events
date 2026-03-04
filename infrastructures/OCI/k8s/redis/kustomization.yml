@@ -5,3 +5,8 @@ resources:
   - redis-pvc.yml
   - redis-deployment.yml
   - redis-service.yml
+  - redis-exporter-deployment.yml
+  - celery-configmap.yml
+  - celery-worker-deployment.yml
+  - celery-beat-deployment.yml
+  - celery-exporter-deployment.yml

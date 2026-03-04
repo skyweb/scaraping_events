@@ -3,10 +3,10 @@ edition: community
 resources:
   limits:
     cpu: 500m
-    memory: 2Gi
+    memory: 1536Mi
   requests:
     cpu: 100m
-    memory: 1Gi
+    memory: 768Mi
 
 nodeSelector:
   workload: heavy
@@ -15,20 +15,16 @@ persistence:
   enabled: true
   size: 5Gi
 
+# Disabilita PostgreSQL integrato — usa istanza esistente nel cluster (postgres.database.svc)
 postgresql:
-  enabled: true
-  resources:
-    limits:
-      cpu: 250m
-      memory: 256Mi
-    requests:
-      cpu: 50m
-      memory: 128Mi
-  nodeSelector:
-    workload: heavy
-  persistence:
-    enabled: true
-    size: 5Gi
+  enabled: false
+
+jdbcOverwrite:
+  enable: true
+  jdbcUrl: "jdbc:postgresql://postgres.database.svc:5432/sonarqube"
+  jdbcUsername: "sonarqube"
+  jdbcSecretName: "sonarqube-secret"
+  jdbcSecretPasswordKey: "jdbc-password"
 
 account:
   existingSecret: sonarqube-secret

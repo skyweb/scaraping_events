@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: postgres-init-scripts
-  namespace: events
+  namespace: database
   labels:
     app: postgres
 data:

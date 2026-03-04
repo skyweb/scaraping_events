@@ -1,0 +1,178 @@
+---
+# Backstage — Spotify Developer Portal
+# Installa Backstage via Helm e applica i manifest K8s dalla directory k8s/backstage/
+#
+# Prerequisiti:
+#   - install_backstage: true in oke.yml
+#   - backstage_postgres_password in oke-vault.yml
+#   - PostgreSQL già installato nel namespace database (postgres.database.svc)
+#   - kubectl e helm configurati
+#   - Traefik installato (traefik-setup.yml)
+#   - OAuth2 Proxy installato (domain-setup.yml) per autenticazione
+#   - DNS A record: backstage.oci.santocaruso.eu verso IP pubblico
+#
+# Uso: ansible-playbook ansible/playbooks/backstage-setup.yml --ask-vault-pass
+- name: Backstage Setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    backstage_k8s_dir: "{{ playbook_dir }}/../../k8s/backstage"
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica che install_backstage sia abilitato
+      ansible.builtin.assert:
+        that: install_backstage | default(false)
+        fail_msg: "install_backstage non abilitato in oke.yml."
+
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica Helm disponibile
+      ansible.builtin.command: helm version --short
+      register: helm_version
+      changed_when: false
+
+    # =========================================================================
+    # Namespace
+    # =========================================================================
+    - name: Crea namespace devs
+      ansible.builtin.command: kubectl create namespace devs
+      register: ns_result
+      changed_when: "'created' in ns_result.stdout"
+      failed_when:
+        - ns_result.rc != 0
+        - "'already exists' not in ns_result.stderr"
+
+    # =========================================================================
+    # Database — Crea database backstage sul PostgreSQL esistente
+    # =========================================================================
+    - name: Crea database backstage su PostgreSQL esistente
+      ansible.builtin.shell: |
+        kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c \
+          "SELECT 'exists' FROM pg_database WHERE datname = 'backstage'" \
+          | grep -q exists \
+          || kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c "CREATE DATABASE backstage"
+      register: db_result
+      changed_when: "'CREATE DATABASE' in db_result.stdout"
+
+    - name: Crea utente backstage su PostgreSQL esistente
+      ansible.builtin.shell: |
+        kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c \
+          "SELECT 'exists' FROM pg_roles WHERE rolname = 'backstage'" \
+          | grep -q exists \
+          || kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c \
+          "CREATE USER backstage WITH PASSWORD '{{ backstage_postgres_password }}'; GRANT ALL PRIVILEGES ON DATABASE backstage TO backstage"
+      register: user_result
+      changed_when: "'CREATE ROLE' in user_result.stdout"
+
+    # =========================================================================
+    # Secret
+    # =========================================================================
+    - name: Crea Secret backstage-secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: backstage-secret
+            namespace: devs
+          type: Opaque
+          stringData:
+            POSTGRES_HOST: "postgres.database.svc"
+            POSTGRES_PORT: "5432"
+            POSTGRES_USER: "backstage"
+            POSTGRES_PASSWORD: "{{ backstage_postgres_password }}"
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
+
+    # =========================================================================
+    # Helm — Backstage
+    # =========================================================================
+    - name: Aggiungi Helm repo backstage
+      ansible.builtin.command: helm repo add backstage https://backstage.github.io/charts
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+
+    - name: Aggiorna Helm repos
+      ansible.builtin.command: helm repo update
+      changed_when: false
+
+    - name: Installa Backstage via Helm
+      ansible.builtin.command: >
+        helm upgrade --install backstage backstage/backstage
+        --namespace devs
+        -f {{ backstage_k8s_dir }}/backstage-values.yml
+      register: backstage_result
+      changed_when: "'STATUS: deployed' in backstage_result.stdout"
+
+    - name: Attendi Backstage ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment backstage
+        --namespace devs --timeout=300s
+      changed_when: false
+
+    # =========================================================================
+    # Manifest K8s (IngressRoute via Kustomize)
+    # =========================================================================
+    - name: Applica manifest Kustomize (IngressRoute)
+      ansible.builtin.command: kubectl apply -k {{ backstage_k8s_dir }}
+      register: kustomize_result
+      changed_when: "'created' in kustomize_result.stdout or 'configured' in kustomize_result.stdout"
+
+    # =========================================================================
+    # Verifica
+    # =========================================================================
+    - name: Verifica pods Backstage
+      ansible.builtin.command: kubectl get pods -n devs
+      register: pods_result
+      changed_when: false
+
+    - name: Verifica services Backstage
+      ansible.builtin.command: kubectl get svc -n devs
+      register: svc_result
+      changed_when: false
+
+    - name: Verifica IngressRoute
+      ansible.builtin.command: kubectl get ingressroute -n devs
+      register: ingress_result
+      changed_when: false
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Backstage
+      ansible.builtin.debug:
+        msg:
+          - "=== Backstage Setup Completato ==="
+          - ""
+          - "URL:          https://backstage.oci.santocaruso.eu"
+          - "Auth:         Google SSO (via OAuth2 Proxy)"
+          - "PostgreSQL:   postgres.database.svc:5432 (database: backstage, user: backstage)"
+          - ""
+          - "--- Pods ---"
+          - "{{ pods_result.stdout }}"
+          - ""
+          - "--- Services ---"
+          - "{{ svc_result.stdout }}"
+          - ""
+          - "--- IngressRoute ---"
+          - "{{ ingress_result.stdout }}"

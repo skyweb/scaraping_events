@@ -2,7 +2,7 @@ apiVersion: velero.io/v1
 kind: Schedule
 metadata:
   name: daily-full-backup
-  namespace: velero
+  namespace: clusters
 spec:
   schedule: "0 2 * * *"
   template:

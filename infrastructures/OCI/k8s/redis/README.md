@@ -1,6 +1,6 @@
 # Redis 7 Alpine
 
-Deployment Redis con persistenza AOF, namespace `events`, nodo light.
+Deployment Redis con persistenza AOF, namespace `database`, nodo light.
 
 ## File
 
@@ -14,7 +14,7 @@ Deployment Redis con persistenza AOF, namespace `events`, nodo light.
 
 - Namespace `events` esistente:
   ```bash
-  kubectl create namespace events
+  kubectl create namespace database
   ```
 - Secret `redis-secret` con chiave `REDIS_PASSWORD`
 
@@ -23,15 +23,15 @@ Deployment Redis con persistenza AOF, namespace `events`, nodo light.
 ```bash
 # Crea il Secret
 kubectl create secret generic redis-secret \
-  --namespace events \
+  --namespace database \
   --from-literal=REDIS_PASSWORD=<PASSWORD>
 
 # Applica i manifest
 kubectl apply -k infrastructures/OCI/k8s/redis/
 
 # Verifica
-kubectl rollout status deployment redis --namespace events --timeout=120s
-kubectl get pods -n events -l app=redis
+kubectl rollout status deployment redis --namespace database --timeout=120s
+kubectl get pods -n database -l app=redis
 ```
 
 ## Accesso
@@ -41,5 +41,5 @@ Redis e' un servizio interno al cluster, non esposto via IngressRoute.
 ## Connessione interna
 
 ```
-redis.events.svc:6379
+redis.database.svc:6379
 ```

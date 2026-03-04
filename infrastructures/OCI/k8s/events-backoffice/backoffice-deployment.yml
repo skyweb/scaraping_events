@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backoffice
-  namespace: events
+  namespace: apps
   labels:
     app: backoffice
     component: web

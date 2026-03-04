@@ -1,6 +1,6 @@
 # Backoffice Events (Django + Celery)
 
-Deployment Django backoffice con Celery worker e beat, namespace `events`, nodo heavy.
+Deployment Django backoffice con Celery worker e beat, namespace `apps`, nodo heavy.
 
 ## File
 
@@ -17,17 +17,17 @@ Deployment Django backoffice con Celery worker e beat, namespace `events`, nodo 
 
 - Namespace `events` esistente:
   ```bash
-  kubectl create namespace events
+  kubectl create namespace apps
   ```
 - PostgreSQL e Redis deployati (`k8s/postgres/`, `k8s/redis/`)
 - Secret `backoffice-secret` con credenziali Django, DB, Redis, Celery:
   ```bash
   kubectl create secret generic backoffice-secret \
-    --namespace events \
+    --namespace apps \
     --from-literal=SECRET_KEY=<DJANGO_SECRET_KEY> \
     --from-literal=POSTGRES_PASSWORD=<PASSWORD> \
-    --from-literal=CELERY_BROKER_URL=redis://:<REDIS_PASSWORD>@redis.events.svc:6379/0 \
-    --from-literal=CACHE_REDIS_URL=redis://:<REDIS_PASSWORD>@redis.events.svc:6379/1 \
+    --from-literal=CELERY_BROKER_URL=redis://:<REDIS_PASSWORD>@redis.database.svc:6379/0 \
+    --from-literal=CACHE_REDIS_URL=redis://:<REDIS_PASSWORD>@redis.database.svc:6379/1 \
     --from-literal=DJANGO_SUPERUSER_USERNAME=admin \
     --from-literal=DJANGO_SUPERUSER_EMAIL=admin@events.local \
     --from-literal=DJANGO_SUPERUSER_PASSWORD=<PASSWORD>
@@ -43,11 +43,11 @@ Deployment Django backoffice con Celery worker e beat, namespace `events`, nodo 
 kubectl apply -k infrastructures/OCI/k8s/events/
 
 # Verifica
-kubectl rollout status deployment backoffice --namespace events --timeout=180s
-kubectl rollout status deployment celery-worker --namespace events --timeout=120s
-kubectl rollout status deployment celery-beat --namespace events --timeout=120s
-kubectl get pods -n events -l app=backoffice
-kubectl get ingressroute -n events
+kubectl rollout status deployment backoffice --namespace apps --timeout=180s
+kubectl rollout status deployment celery-worker --namespace apps --timeout=120s
+kubectl rollout status deployment celery-beat --namespace apps --timeout=120s
+kubectl get pods -n apps -l app=backoffice
+kubectl get ingressroute -n apps
 ```
 
 ## Accesso
@@ -61,5 +61,5 @@ https://events.oci.santocaruso.eu
 ## Connessione interna
 
 ```
-backoffice.events.svc:8000
+backoffice.apps.svc:8000
 ```

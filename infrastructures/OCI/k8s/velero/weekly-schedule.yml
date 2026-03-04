@@ -2,7 +2,7 @@ apiVersion: velero.io/v1
 kind: Schedule
 metadata:
   name: weekly-cluster-backup
-  namespace: velero
+  namespace: clusters
 spec:
   schedule: "0 3 * * 0"
   template:

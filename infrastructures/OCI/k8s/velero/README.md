@@ -37,8 +37,8 @@ kubectl apply -k infrastructures/OCI/k8s/velero/
 
 # Verifica
 kubectl rollout status deployment velero-ui --namespace velero --timeout=120s
-kubectl get pods -n velero -l app=velero-ui
-kubectl get ingressroute -n velero
+kubectl get pods -n clusters -l app=velero-ui
+kubectl get ingressroute -n clusters
 ```
 
 ## Accesso

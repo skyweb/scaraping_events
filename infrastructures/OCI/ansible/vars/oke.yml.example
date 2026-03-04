@@ -15,12 +15,17 @@ ocir_username: "YOUR_TENANCY_NAMESPACE/YOUR_EMAIL"  # formato: <objectstorage_na
 
 # Namespaces da creare nel cluster
 namespaces:
-  - events
+  - database
+  - apps
+  - airflow
+  - devs
   - monitoring
+  - clusters
+  - traefik
   - cert-manager
-  - argocd
-  - velero
-  - kyverno
+  - linkerd
+  - linkerd-viz
+  - wireguard
 
 # Traefik Ingress Controller
 install_traefik: true
@@ -48,6 +53,26 @@ install_tempo: true
 # SonarQube (Code Quality & Security)
 install_sonarqube: true
 
+# Backstage (Spotify Developer Portal)
+install_backstage: true
+
+# Airflow (DAG Orchestration)
+install_airflow: true
+
+# MinIO (Object Storage S3-compatible)
+install_minio: true
+minio_storage_size: "50Gi"
+# Bucket da creare automaticamente al primo deploy (opzionale)
+minio_default_buckets:
+  - airflow-logs
+  - mlflow-artifacts
+
+# Kong API Gateway + Konga Admin UI
+install_kong: true
+
+# Linkerd (Service Mesh — mTLS)
+install_linkerd: true
+
 # Kyverno (Policy Engine - Security)
 install_kyverno: false
 # Audit = solo log violazioni, Enforce = blocca le risorse non conformi
@@ -55,12 +80,13 @@ kyverno_enforcement_mode: "Audit"
 # Namespace esclusi dalle policy (sistema e infrastruttura)
 kyverno_excluded_namespaces:
   - kube-system
-  - kyverno
+  - clusters
   - traefik
   - cert-manager
   - monitoring
-  - argocd
-  - velero
+  - database
+  - linkerd
+  - linkerd-viz
 
 # IP privato di un nodo K8s (usato da reverse-proxy-setup per DNAT → Traefik)
 # Ottenere con: kubectl get nodes -o wide → INTERNAL-IP del nodo light

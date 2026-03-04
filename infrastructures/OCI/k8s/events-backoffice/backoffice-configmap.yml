@@ -2,14 +2,14 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: backoffice-config
-  namespace: events
+  namespace: apps
   labels:
     app: backoffice
     component: web
 data:
   DJANGO_DEBUG: "False"
-  DJANGO_ALLOWED_HOSTS: "events.oci.santocaruso.eu,localhost,backoffice.events.svc"
-  POSTGRES_HOST: "postgres.events.svc"
+  DJANGO_ALLOWED_HOSTS: "events.oci.santocaruso.eu,localhost,backoffice.apps.svc"
+  POSTGRES_HOST: "postgres.database.svc"
   POSTGRES_PORT: "5432"
   POSTGRES_DB: "events"
   POSTGRES_USER: "events"

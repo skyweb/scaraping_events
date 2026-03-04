@@ -4,7 +4,8 @@
 #
 # Prerequisiti:
 #   - install_sonarqube: true in oke.yml
-#   - sonarqube_admin_password in oke-vault.yml
+#   - sonarqube_admin_password, sonarqube_postgres_password in oke-vault.yml
+#   - PostgreSQL già installato nel namespace database (postgres.database.svc)
 #   - kubectl e helm configurati
 #
 # Uso: ansible-playbook ansible/playbooks/sonarqube-setup.yml
@@ -42,13 +43,39 @@
     # =========================================================================
     # Namespace
     # =========================================================================
-    - name: Crea namespace sonarqube
-      ansible.builtin.command: kubectl create namespace sonarqube
+    - name: Crea namespace devs
+      ansible.builtin.command: kubectl create namespace devs
       register: ns_result
       changed_when: "'created' in ns_result.stdout"
       failed_when:
         - ns_result.rc != 0
         - "'already exists' not in ns_result.stderr"
+
+    # =========================================================================
+    # Database — Crea database sonarqube sul PostgreSQL esistente
+    # =========================================================================
+    - name: Crea database sonarqube su PostgreSQL esistente
+      ansible.builtin.shell: |
+        kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c \
+          "SELECT 'exists' FROM pg_database WHERE datname = 'sonarqube'" \
+          | grep -q exists \
+          || kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c "CREATE DATABASE sonarqube"
+      register: db_result
+      changed_when: "'CREATE DATABASE' in db_result.stdout"
+
+    - name: Crea utente sonarqube su PostgreSQL esistente
+      ansible.builtin.shell: |
+        kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c \
+          "SELECT 'exists' FROM pg_roles WHERE rolname = 'sonarqube'" \
+          | grep -q exists \
+          || kubectl exec -n database statefulset/postgres -- \
+          psql -U events -d events -c \
+          "CREATE USER sonarqube WITH PASSWORD '{{ sonarqube_postgres_password }}'; GRANT ALL PRIVILEGES ON DATABASE sonarqube TO sonarqube"
+      register: user_result
+      changed_when: "'CREATE ROLE' in user_result.stdout"
 
     # =========================================================================
     # Secret
@@ -61,11 +88,12 @@
           kind: Secret
           metadata:
             name: sonarqube-secret
-            namespace: sonarqube
+            namespace: devs
           type: Opaque
           stringData:
             password: "{{ sonarqube_admin_password }}"
             currentPassword: "admin"
+            jdbc-password: "{{ sonarqube_postgres_password }}"
       register: secret_result
       changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
 
@@ -87,7 +115,7 @@
     - name: Installa SonarQube via Helm
       ansible.builtin.command: >
         helm upgrade --install sonarqube sonarqube/sonarqube
-        --namespace sonarqube
+        --namespace devs
         -f {{ sonarqube_k8s_dir }}/sonarqube-values.yml
       register: sonarqube_result
       changed_when: "'STATUS: deployed' in sonarqube_result.stdout"
@@ -95,7 +123,7 @@
     - name: Attendi SonarQube ready
       ansible.builtin.command: >
         kubectl rollout status statefulset sonarqube-sonarqube
-        --namespace sonarqube --timeout=300s
+        --namespace devs --timeout=300s
       changed_when: false
 
     # =========================================================================
@@ -110,12 +138,12 @@
     # Verifica
     # =========================================================================
     - name: Verifica pods SonarQube
-      ansible.builtin.command: kubectl get pods -n sonarqube
+      ansible.builtin.command: kubectl get pods -n devs
       register: pods_result
       changed_when: false
 
     - name: Verifica IngressRoute
-      ansible.builtin.command: kubectl get ingressroute -n sonarqube
+      ansible.builtin.command: kubectl get ingressroute -n devs
       register: ingress_result
       changed_when: false
 
@@ -127,9 +155,10 @@
         msg:
           - "=== SonarQube Setup Completato ==="
           - ""
-          - "URL:      https://sonarqube.oci.santocaruso.eu"
-          - "User:     admin"
-          - "Password: (valore in sonarqube-secret)"
+          - "URL:        https://sonarqube.oci.santocaruso.eu"
+          - "User:       admin"
+          - "Password:   (valore in sonarqube-secret)"
+          - "PostgreSQL: postgres.database.svc:5432 (database: sonarqube, user: sonarqube)"
           - ""
           - "--- Pods ---"
           - "{{ pods_result.stdout }}"

@@ -1,0 +1,18 @@
+# IngressRoute per Kong Proxy — riceve traffico API da internet via Traefik
+# Nessun middleware auth: l'autenticazione è gestita dai plugin Kong (OAuth2/OIDC/API Key)
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kong-api-https
+  namespace: apps
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`api.oci.santocaruso.eu`)
+      kind: Rule
+      services:
+        - name: kong-kong-proxy
+          port: 8000
+  tls:
+    certResolver: letsencrypt

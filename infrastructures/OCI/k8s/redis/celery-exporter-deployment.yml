@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: celery-exporter
-  namespace: monitoring
+  namespace: database
   labels:
     app: celery-exporter
 spec:
@@ -16,7 +16,7 @@ spec:
         app: celery-exporter
     spec:
       nodeSelector:
-        workload: heavy
+        workload: light
       containers:
         - name: celery-exporter
           image: docker.io/danihodovic/celery-exporter:latest
@@ -26,7 +26,7 @@ spec:
             - name: CELERY_BROKER_URL
               valueFrom:
                 secretKeyRef:
-                  name: monitoring-secret
+                  name: redis-secret
                   key: CELERY_BROKER_URL
           args:
             - --broker-url=$(CELERY_BROKER_URL)
@@ -42,7 +42,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: celery-exporter
-  namespace: monitoring
+  namespace: database
   labels:
     app: celery-exporter
 spec:

@@ -232,7 +232,7 @@ velero_aws_secret_access_key: "${VELERO_SECRET_KEY}"
 
 # Redis (password per Redis Exporter e Celery broker)
 redis_k8s_password: "CHANGE_ME"
-celery_broker_url: "redis://:CHANGE_ME@redis.events.svc:6379/0"
+celery_broker_url: "redis://:CHANGE_ME@redis.database.svc:6379/0"
 
 # OAuth2 Proxy (Google SSO — decommentare se si usa)
 oauth2_proxy_client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com"

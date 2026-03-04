@@ -12,6 +12,14 @@ ports:
 nodeSelector:
   workload: light
 
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 300m
+    memory: 256Mi
+
 ingressClass:
   enabled: true
   isDefaultClass: true

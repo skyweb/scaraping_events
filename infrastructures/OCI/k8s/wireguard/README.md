@@ -71,10 +71,10 @@ Dopo la connessione VPN, i servizi interni del cluster sono raggiungibili:
 
 ```bash
 # PostgreSQL
-psql -h postgres.events.svc.cluster.local -p 5432 -U events
+psql -h postgres.database.svc.cluster.local -p 5432 -U events
 
 # Redis
-redis-cli -h redis.events.svc.cluster.local -a <password>
+redis-cli -h redis.database.svc.cluster.local -a <password>
 
 # Backoffice API
 curl http://backoffice.events.svc.cluster.local:8000/api/version/

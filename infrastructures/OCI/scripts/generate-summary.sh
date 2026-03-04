@@ -295,7 +295,6 @@ cat >> "${OUTPUT_FILE}" << EOF
 | Prometheus | \`http://${LIGHT_IP}:31090\` | |
 | Alertmanager | \`http://${LIGHT_IP}:31093\` | |
 | Loki | \`http://${LIGHT_IP}:31100/ready\` | |
-| Jaeger | \`http://${LIGHT_IP}:31686\` | |
 | ArgoCD | \`http://${LIGHT_IP}:30080/argocd/\` | Oppure port-forward :8080 |
 | Tekton | \`http://${LIGHT_IP}:30080/tekton/\` | |
 | K8s Dashboard | port-forward :8443 | \`kubectl -n monitoring port-forward svc/kubernetes-dashboard-kong-proxy 8443:443\` |
@@ -330,7 +329,6 @@ cat >> "${OUTPUT_FILE}" << EOF
 | Prometheus | \`https://prometheus.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
 | Alertmanager | \`https://alertmanager.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
 | Loki | \`https://loki.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
-| Jaeger | \`https://jaeger.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
 | K8s Dashboard | \`https://dashboard.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
 | OAuth2 Proxy | \`https://auth.${DOMAIN}\` | ${DNS_TARGET_LABEL} | Google callback |
 | Grafana | \`https://grafana.${DOMAIN}\` | ${DNS_TARGET_LABEL} | Nativa (admin) |
@@ -343,13 +341,13 @@ EOF
 
 if [ "$INSTALL_REVERSE_PROXY" = "true" ] && [ -n "$CIRUNNER_IP" ]; then
 cat >> "${OUTPUT_FILE}" << EOF
-| **TUTTI** (\`traefik\`, \`argocd\`, \`tekton\`, \`prometheus\`, \`alertmanager\`, \`loki\`, \`jaeger\`, \`dashboard\`, \`auth\`, \`grafana\`) | \`${CIRUNNER_IP}\` (micro-gw, reverse proxy) |
+| **TUTTI** (\`traefik\`, \`argocd\`, \`tekton\`, \`prometheus\`, \`alertmanager\`, \`loki\`, \`dashboard\`, \`auth\`, \`grafana\`) | \`${CIRUNNER_IP}\` (micro-gw, reverse proxy) |
 
 > **Reverse Proxy attivo**: micro-gw (IP stabile) inoltra traffico TCP (80/443) a Traefik K8s via firewalld DNAT.
 EOF
 else
 cat >> "${OUTPUT_FILE}" << EOF
-| \`traefik\`, \`argocd\`, \`tekton\`, \`prometheus\`, \`alertmanager\`, \`loki\`, \`jaeger\`, \`dashboard\`, \`auth\` | \`${LIGHT_IP}\` (light node) |
+| \`traefik\`, \`argocd\`, \`tekton\`, \`prometheus\`, \`alertmanager\`, \`loki\`, \`dashboard\`, \`auth\` | \`${LIGHT_IP}\` (light node) |
 EOF
 
 if [ -n "$MONITOR_IP" ]; then
@@ -371,7 +369,7 @@ kubectl get pods -A
 kubectl top nodes
 
 # ArgoCD password
-kubectl -n argocd get secret argocd-initial-admin-secret \
+kubectl -n clusters get secret argocd-initial-admin-secret \
   -o jsonpath='{.data.password}' | base64 -d; echo
 
 # K8s Dashboard token

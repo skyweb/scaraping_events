@@ -15,7 +15,7 @@ server:
 alertmanager:
   enabled: true
   nodeSelector:
-    workload: heavy
+    workload: light
   resources:
     limits:
       cpu: 100m
@@ -56,19 +56,19 @@ extraScrapeConfigs: |
 
   - job_name: django
     static_configs:
-      - targets: ['backoffice.events.svc:8000']
+      - targets: ['backoffice.apps.svc:8000']
     metrics_path: /metrics
     scrape_interval: 15s
 
   - job_name: redis-exporter
     static_configs:
-      - targets: ['redis-exporter.monitoring.svc:9121']
+      - targets: ['redis-exporter.database.svc:9121']
     metrics_path: /metrics
     scrape_interval: 15s
 
   - job_name: celery-exporter
     static_configs:
-      - targets: ['celery-exporter.monitoring.svc:9808']
+      - targets: ['celery-exporter.database.svc:9808']
     metrics_path: /metrics
     scrape_interval: 15s
 

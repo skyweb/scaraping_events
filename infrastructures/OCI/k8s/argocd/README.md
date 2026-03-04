@@ -37,7 +37,7 @@ kubectl apply -k infrastructures/OCI/k8s/argocd/
 
 # Verifica
 kubectl rollout status deployment argocd-server --namespace argocd --timeout=180s
-kubectl get ingressroute -n argocd
+kubectl get ingressroute -n clusters
 ```
 
 ## Accesso
@@ -51,5 +51,5 @@ https://argocd.oci.santocaruso.eu
 Password admin iniziale:
 
 ```bash
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d
+kubectl -n clusters get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d
 ```

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: celery-worker
-  namespace: events
+  namespace: database
   labels:
     app: backoffice
     component: celery-worker
@@ -31,9 +31,9 @@ spec:
           args: ["-A", "backoffice", "worker", "-l", "info"]
           envFrom:
             - configMapRef:
-                name: backoffice-config
+                name: celery-config
             - secretRef:
-                name: backoffice-secret
+                name: celery-secret
           livenessProbe:
             exec:
               command:
@@ -52,4 +52,4 @@ spec:
               memory: 512Mi
             limits:
               cpu: 1000m
-              memory: 1Gi
+              memory: 768Mi

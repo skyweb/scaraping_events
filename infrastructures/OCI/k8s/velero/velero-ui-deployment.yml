@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: velero-ui
-  namespace: velero
+  namespace: clusters
   labels:
     app: velero-ui
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       serviceAccountName: velero-ui
       nodeSelector:
-        workload: heavy
+        workload: light
       containers:
         - name: velero-ui
           image: docker.io/otwld/velero-ui:latest
@@ -26,7 +26,7 @@ spec:
               protocol: TCP
           env:
             - name: VELERO_NAMESPACE
-              value: "velero"
+              value: "clusters"
             - name: BASIC_AUTH_ENABLED
               value: "true"
             - name: BASIC_AUTH_PASSWORD

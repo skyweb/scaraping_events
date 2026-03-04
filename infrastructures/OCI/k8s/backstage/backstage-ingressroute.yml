@@ -1,0 +1,19 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: backstage-https
+  namespace: devs
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`backstage.oci.santocaruso.eu`)
+      kind: Rule
+      services:
+        - name: backstage
+          port: 7007
+      middlewares:
+        - name: google-auth
+          namespace: traefik
+  tls:
+    certResolver: letsencrypt

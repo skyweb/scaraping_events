@@ -94,6 +94,10 @@
         --namespace cert-manager
         --version {{ cert_manager_version }}
         --set nodeSelector.workload=light
+        --set resources.requests.cpu=10m
+        --set resources.requests.memory=32Mi
+        --set resources.limits.cpu=100m
+        --set resources.limits.memory=128Mi
       register: cm_result
       changed_when: "'STATUS: deployed' in cm_result.stdout"
       when: install_cert_manager | default(false)
@@ -167,6 +171,10 @@
         --namespace kube-system
         --set args[0]=--kubelet-preferred-address-types=InternalIP
         --set nodeSelector.workload=light
+        --set resources.requests.cpu=10m
+        --set resources.requests.memory=32Mi
+        --set resources.limits.cpu=100m
+        --set resources.limits.memory=128Mi
       register: ms_result
       changed_when: "'STATUS: deployed' in ms_result.stdout"
       when: install_metrics_server | default(false)
@@ -193,9 +201,13 @@
     - name: Installa Kubernetes Dashboard via Helm
       ansible.builtin.command: >
         helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
-        --namespace monitoring
+        --namespace clusters
         --set app.scheduling.nodeSelector.workload=light
         --set kong.image.repository=docker.io/library/kong
+        --set kong.resources.requests.cpu=10m
+        --set kong.resources.requests.memory=32Mi
+        --set kong.resources.limits.cpu=100m
+        --set kong.resources.limits.memory=128Mi
       register: dash_result
       changed_when: "'STATUS: deployed' in dash_result.stdout"
       when: install_dashboard | default(false)
@@ -208,7 +220,7 @@
           kind: ServiceAccount
           metadata:
             name: dashboard-admin
-            namespace: monitoring
+            namespace: clusters
           ---
           apiVersion: rbac.authorization.k8s.io/v1
           kind: ClusterRoleBinding
@@ -221,7 +233,7 @@
           subjects:
             - kind: ServiceAccount
               name: dashboard-admin
-              namespace: monitoring
+              namespace: clusters
       register: sa_result
       changed_when: "'created' in sa_result.stdout or 'configured' in sa_result.stdout"
       when: install_dashboard | default(false)
@@ -240,5 +252,5 @@
           - "--- Applicazioni installate ---"
           - "cert-manager:      {{ 'installato - ClusterIssuer staging+prod (solver: traefik)' if (install_cert_manager | default(false)) else 'saltato' }}"
           - "metrics-server:    {{ 'installato - kubectl top abilitato' if (install_metrics_server | default(false)) else 'saltato' }}"
-          - "K8s Dashboard:     {{ 'installato in ns monitoring' if (install_dashboard | default(false)) else 'saltato' }}"
+          - "K8s Dashboard:     {{ 'installato in ns clusters' if (install_dashboard | default(false)) else 'saltato' }}"
           - ""

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres
-  namespace: events
+  namespace: database
   labels:
     app: postgres
 spec:

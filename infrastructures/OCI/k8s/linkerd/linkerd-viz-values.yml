@@ -1,0 +1,50 @@
+dashboard:
+  replicas: 1
+  nodeSelector:
+    workload: light
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 32Mi
+      limit: 128Mi
+  enforcedHostRegexp: ".*"
+
+prometheus:
+  enabled: false
+
+prometheusUrl: http://prometheus-server.monitoring.svc:80
+
+metricsAPI:
+  nodeSelector:
+    workload: light
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 32Mi
+      limit: 128Mi
+
+tap:
+  nodeSelector:
+    workload: light
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 32Mi
+      limit: 128Mi
+
+tapInjector:
+  nodeSelector:
+    workload: light
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 32Mi
+      limit: 128Mi

@@ -33,14 +33,14 @@ helm repo update
 
 # Installa SonarQube
 helm upgrade --install sonarqube sonarqube/sonarqube \
-  -n sonarqube -f sonarqube-values.yml
+  -n devs -f sonarqube-values.yml
 
 # Applica IngressRoute
 kubectl apply -k infrastructures/OCI/k8s/sonarqube/
 
 # Verifica
 kubectl rollout status statefulset sonarqube-sonarqube --namespace sonarqube --timeout=300s
-kubectl get ingressroute -n sonarqube
+kubectl get ingressroute -n devs
 ```
 
 ## Accesso

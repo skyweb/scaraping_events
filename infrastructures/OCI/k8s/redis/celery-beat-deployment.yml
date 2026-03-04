@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: celery-beat
-  namespace: events
+  namespace: database
   labels:
     app: backoffice
     component: celery-beat
@@ -31,9 +31,9 @@ spec:
           args: ["-A", "backoffice", "beat", "-l", "info", "--scheduler", "django_celery_beat.schedulers:DatabaseScheduler"]
           envFrom:
             - configMapRef:
-                name: backoffice-config
+                name: celery-config
             - secretRef:
-                name: backoffice-secret
+                name: celery-secret
           resources:
             requests:
               cpu: 50m

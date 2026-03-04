@@ -25,13 +25,13 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: velero-ui
-    namespace: velero
+    namespace: clusters
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: velero-ui
-  namespace: velero
+  namespace: clusters
   labels:
     app: velero-ui
 rules:
@@ -49,7 +49,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: velero-ui
-  namespace: velero
+  namespace: clusters
   labels:
     app: velero-ui
 roleRef:
@@ -59,4 +59,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: velero-ui
-    namespace: velero
+    namespace: clusters

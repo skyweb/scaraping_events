@@ -1,0 +1,50 @@
+identityTrustAnchorsPEM: ""  # Sovrascritta dal playbook con il certificato CA generato da cert-manager
+
+nodeSelector:
+  workload: light
+
+proxy:
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 20Mi
+      limit: 64Mi
+
+destinationController:
+  nodeSelector:
+    workload: light
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 32Mi
+      limit: 128Mi
+
+identity:
+  issuer:
+    scheme: kubernetes.io/tls
+  nodeSelector:
+    workload: light
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 32Mi
+      limit: 128Mi
+
+proxyInjector:
+  nodeSelector:
+    workload: light
+  resources:
+    cpu:
+      request: 10m
+      limit: 100m
+    memory:
+      request: 32Mi
+      limit: 128Mi
+
+heartbeatSchedule: "0 0 * * *"

@@ -343,11 +343,11 @@ Micro VM (micro-monitor, 1 GB)       K8s Cluster (light node, 6 GB)
 ┌─────────────────────────┐          ┌────────────────────────────────┐
 │ Grafana (Podman) :3000  │──query──→│ Prometheus   :31090 (NodePort) │
 │ ~300 MB                 │──query──→│ Loki         :31100 (NodePort) │
-│ 8 dashboard provisioned │──query──→│ Jaeger       :31686 (NodePort) │
+│ 8 dashboard provisioned │──query──→│ Tempo        (trace backend)   │
 │ alert rules (K8s labels)│          │ Alertmanager :31093 (NodePort) │
 │ datasources auto-config │          │ OTEL Collect (DaemonSet, contrib)│
 └─────────────────────────┘          │   → spanmetrics → Prometheus   │
-                                     │   → traces     → Jaeger        │
+                                     │   → traces     → Tempo         │
                                      │ Promtail     (DaemonSet)       │
                                      │   → pipeline stages JSON parse │
                                      │ kube-state-metrics             │
@@ -374,8 +374,8 @@ ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-
 | **Alertmanager** (gestione alert) | Deployment | light | NodePort 31093 | 100m/128Mi |
 | **Loki** (single binary) | StatefulSet | light | NodePort 31100 | 250m/256Mi |
 | **Promtail** (pipeline stages: CRI + JSON parse) | DaemonSet | tutti | - | 100m/64Mi |
-| **OTEL Collector** (contrib, spanmetrics + Jaeger export) | DaemonSet | tutti | gRPC 4317, HTTP 4318, metrics 8889 | 200m/128Mi |
-| **Jaeger** (all-in-one, memory storage, SPM) | Deployment | light | NodePort 31686 | 500m/512Mi |
+| **OTEL Collector** (contrib, spanmetrics + Tempo export) | DaemonSet | tutti | gRPC 4317, HTTP 4318, metrics 8889 | 200m/128Mi |
+| **Tempo** (distributed tracing, local storage) | Deployment | light | ClusterIP | 250m/256Mi |
 | **Redis Exporter** (condizionale) | Deployment | light | ClusterIP 9121 | 50m/64Mi |
 | **Celery Exporter** (condizionale) | Deployment | light | ClusterIP 9808 | 50m/64Mi |
 | **Grafana** (Podman, 8 dashboard + alert rules) | micro VM | micro-monitor | 3000 | ~300 MB |
@@ -386,7 +386,7 @@ ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-
 
 Auth via **Instance Principal**: Terraform crea un Dynamic Group + IAM Policy che permette alla micro-monitor VM di leggere metriche e log OCI senza chiavi API. Il container Grafana si autentica automaticamente tramite il metadata service dell'istanza.
 
-Risorse stimate sul nodo light: ~1.7 GB / 6 GB = ~28% (con Jaeger). Redis/Celery Exporter aggiungono ~128 Mi quando abilitati.
+Risorse stimate sul nodo light: ~1.4 GB / 6 GB = ~23% (con Tempo). Redis/Celery Exporter aggiungono ~128 Mi quando abilitati.
 
 Verifica:
 ```bash
@@ -424,8 +424,8 @@ install_prometheus: true       # Prometheus + kube-state-metrics + node-exporter
 install_alertmanager: true     # Alertmanager (gestione alert)
 install_loki: true             # Loki (SingleBinary)
 install_promtail: true         # Promtail (DaemonSet, pipeline stages JSON parse)
-install_otel_collector: true   # OTEL Collector (contrib, spanmetrics → Prometheus, traces → Jaeger)
-install_jaeger: true           # Jaeger All-in-One (tracing UI, SPM via Prometheus)
+install_otel_collector: true   # OTEL Collector (contrib, spanmetrics → Prometheus, traces → Tempo)
+install_tempo: true            # Grafana Tempo (distributed tracing, sostituisce Jaeger)
 install_redis_exporter: false  # Redis Exporter (abilita dopo deploy app su K8s)
 install_celery_exporter: false # Celery Exporter (abilita dopo deploy app su K8s)
 install_grafana_vm: true       # Grafana su micro VM (Podman)
@@ -443,7 +443,7 @@ auth_prometheus: true              # Prometheus
 auth_alertmanager: true            # Alertmanager
 auth_loki: true                    # Loki
 auth_dashboard: true               # K8s Dashboard
-auth_jaeger: true                  # Jaeger
+auth_tempo: true                   # Tempo
 ```
 
 ### Traefik
@@ -466,7 +466,7 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: myapp
-  namespace: events
+  namespace: apps
 spec:
   entryPoints:
     - websecure
@@ -486,11 +486,11 @@ GitOps continuous delivery - sincronizza lo stato del cluster con un repository 
 
 ```bash
 # Password admin iniziale
-kubectl -n argocd get secret argocd-initial-admin-secret \
+kubectl -n clusters get secret argocd-initial-admin-secret \
   -o jsonpath='{.data.password}' | base64 -d; echo
 
 # Accesso via port-forward (http://localhost:8080)
-kubectl -n argocd port-forward svc/argocd-server 8080:80
+kubectl -n clusters port-forward svc/argocd-server 8080:80
 
 # Oppure via Traefik: http://<NODE_IP>:30080/argocd/
 
@@ -621,7 +621,7 @@ Internet → DNS
   │           ├── alertmanager.example.com → Alertmanager (auth)
   │           ├── loki.example.com       → Loki (auth)
   │           ├── dashboard.example.com  → K8s Dashboard (auth)
-  │           ├── jaeger.example.com     → Jaeger UI (auth)
+
   │           └── auth.example.com       → OAuth2 Proxy (Google SSO callback)
   │
   └── grafana.example.com → Traefik → ExternalName → micro-monitor:3000
@@ -640,7 +640,7 @@ Auth = OAuth2 Proxy (Google SSO)
 | Alertmanager | `https://alertmanager.DOMAIN` | OAuth2 Proxy | `prometheus-alertmanager:9093` |
 | Loki | `https://loki.DOMAIN` | OAuth2 Proxy | `loki:3100` |
 | K8s Dashboard | `https://dashboard.DOMAIN` | OAuth2 Proxy | `kubernetes-dashboard-kong-proxy:443` |
-| Jaeger | `https://jaeger.DOMAIN` | OAuth2 Proxy | `jaeger-query:16686` |
+| Tempo | — | Datasource Grafana | `tempo:3100` (interno) |
 | OAuth2 Proxy | `https://auth.DOMAIN` | - (callback Google) | `oauth2-proxy:4180` |
 | Grafana | `https://grafana.DOMAIN` | Nativa (admin) | ExternalName → `micro-monitor:3000` |
 
@@ -650,7 +650,7 @@ Creare **A record** per ogni sottodominio:
 
 | Sottodominio | IP |
 |---|---|
-| `traefik`, `argocd`, `tekton`, `prometheus`, `alertmanager`, `loki`, `dashboard`, `jaeger`, `grafana`, `auth` | IP pubblico nodo K8s **light** (o micro-gw se reverse proxy attivo) |
+| `traefik`, `argocd`, `tekton`, `prometheus`, `alertmanager`, `loki`, `dashboard`, `grafana`, `auth` | IP pubblico nodo K8s **light** (o micro-gw se reverse proxy attivo) |
 
 ### Setup
 
@@ -694,7 +694,7 @@ curl -I https://grafana.example.com        # 200 (via Traefik → ExternalName)
 
 # OAuth2 Proxy (Google SSO):
 curl -I https://traefik.example.com        # 302 → Google sign-in
-curl -I https://jaeger.example.com         # 302 → Google sign-in
+curl -I https://grafana.example.com        # 200 (auth nativa Grafana)
 kubectl get pods -n traefik | grep oauth2  # oauth2-proxy Running
 
 # Certificati TLS
@@ -739,7 +739,7 @@ auth_prometheus: true    # Prometheus con auth
 auth_alertmanager: true  # Alertmanager con auth
 auth_loki: true          # Loki con auth
 auth_dashboard: true     # K8s Dashboard con auth
-auth_jaeger: false       # Jaeger SENZA auth (esempio)
+auth_grafana: false      # Grafana SENZA auth OAuth2 (esempio)
 ```
 
 Servizi con auth nativa (ArgoCD, Grafana) non usano mai il middleware.
@@ -751,7 +751,7 @@ Servizi con auth nativa (ArgoCD, Grafana) non usano mai il middleware.
 install_reverse_proxy: true
 micro_monitor_private_ip: "10.0.3.8"  # terraform output micro_vm_private_ips
 auth_prometheus: true     # scegli per ogni servizio
-auth_jaeger: false        # esempio: jaeger senza auth
+auth_grafana: false       # esempio: grafana senza auth OAuth2
 
 # 2. Ri-eseguire post-cluster-setup (Traefik senza hostPort/ACME)
 ansible-playbook ansible/playbooks/post-cluster-setup.yml
@@ -776,7 +776,7 @@ ssh micro-gw sysctl net.ipv4.ip_forward
 # Test HTTPS
 curl -I https://prometheus.example.com   # 302 (OAuth2 → Google sign-in)
 curl -I https://argocd.example.com       # 200 (auth nativa)
-curl -I https://jaeger.example.com       # 200 (se auth_jaeger: false)
+curl -I https://grafana.example.com      # 200 (se auth_grafana: false)
 ```
 
 ## Comandi Utili
@@ -797,8 +797,8 @@ kubectl get ingressroute -A          # IngressRoute CRD
 # Dashboard: https://traefik.<DOMAIN> (con domain setup)
 
 # ArgoCD
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d; echo
-kubectl -n argocd port-forward svc/argocd-server 8080:80
+kubectl -n clusters get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d; echo
+kubectl -n clusters port-forward svc/argocd-server 8080:80
 # Oppure: https://argocd.<DOMAIN> (con domain setup)
 
 # Tekton + Kaniko

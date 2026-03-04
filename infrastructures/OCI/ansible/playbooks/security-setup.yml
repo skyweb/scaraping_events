@@ -27,14 +27,14 @@
       register: helm_version
       changed_when: false
 
-    - name: Verifica namespace kyverno esiste
-      ansible.builtin.command: kubectl get namespace kyverno
+    - name: Verifica namespace clusters esiste
+      ansible.builtin.command: kubectl get namespace clusters
       register: ns_kyverno
       changed_when: false
       failed_when: false
 
-    - name: Crea namespace kyverno se mancante
-      ansible.builtin.command: kubectl create namespace kyverno
+    - name: Crea namespace clusters se mancante
+      ansible.builtin.command: kubectl create namespace clusters
       when: ns_kyverno.rc != 0
       changed_when: true
 
@@ -58,7 +58,7 @@
     - name: Installa Kyverno via Helm
       ansible.builtin.command: >
         helm upgrade --install kyverno kyverno/kyverno
-        --namespace kyverno
+        --namespace clusters
         --set admissionController.replicas=1
         --set backgroundController.replicas=1
         --set cleanupController.replicas=1
@@ -90,14 +90,14 @@
     - name: Attendi Kyverno admission controller ready
       ansible.builtin.command: >
         kubectl rollout status deployment kyverno-admission-controller
-        --namespace kyverno --timeout=180s
+        --namespace clusters --timeout=180s
       changed_when: false
       when: install_kyverno | default(false)
 
     - name: Attendi Kyverno background controller ready
       ansible.builtin.command: >
         kubectl rollout status deployment kyverno-background-controller
-        --namespace kyverno --timeout=120s
+        --namespace clusters --timeout=120s
       changed_when: false
       when: install_kyverno | default(false)
 
@@ -327,9 +327,9 @@
                         kinds:
                           - Pod
                         namespaces:
-                          - events
+                          - apps
                 validate:
-                  message: "Le immagini nel namespace 'events' devono provenire da OCIR ({{ ocir_endpoint }})."
+                  message: "Le immagini nel namespace 'apps' devono provenire da OCIR ({{ ocir_endpoint }})."
                   pattern:
                     spec:
                       containers:
@@ -347,7 +347,7 @@
           - "=== Security Setup Completato ==="
           - ""
           - "--- Kyverno Policy Engine ---"
-          - "Kyverno:         {{ 'installato in ns kyverno' if (install_kyverno | default(false)) else 'saltato' }}"
+          - "Kyverno:         {{ 'installato in ns clusters' if (install_kyverno | default(false)) else 'saltato' }}"
           - "Modalita':       {{ kyverno_enforcement_mode | default('Audit') }} (Audit = solo log, Enforce = blocca)"
           - ""
           - "--- Policy applicate ---"

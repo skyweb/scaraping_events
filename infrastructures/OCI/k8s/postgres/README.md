@@ -1,6 +1,6 @@
 # PostgreSQL 16 + PostGIS 3.4
 
-StatefulSet PostgreSQL con estensioni PostGIS, namespace `events`, nodo heavy.
+StatefulSet PostgreSQL con estensioni PostGIS, namespace `database`, nodo heavy.
 
 ## File
 
@@ -15,7 +15,7 @@ StatefulSet PostgreSQL con estensioni PostGIS, namespace `events`, nodo heavy.
 
 - Namespace `events` esistente:
   ```bash
-  kubectl create namespace events
+  kubectl create namespace database
   ```
 - Secret `postgres-secret` con chiavi `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`
 
@@ -24,7 +24,7 @@ StatefulSet PostgreSQL con estensioni PostGIS, namespace `events`, nodo heavy.
 ```bash
 # Crea il Secret
 kubectl create secret generic postgres-secret \
-  --namespace events \
+  --namespace database \
   --from-literal=POSTGRES_USER=events \
   --from-literal=POSTGRES_PASSWORD=<PASSWORD> \
   --from-literal=POSTGRES_DB=events
@@ -33,14 +33,14 @@ kubectl create secret generic postgres-secret \
 kubectl apply -k infrastructures/OCI/k8s/postgres/
 
 # Verifica
-kubectl rollout status statefulset postgres --namespace events --timeout=180s
-kubectl get pods -n events -l app=postgres
+kubectl rollout status statefulset postgres --namespace database --timeout=180s
+kubectl get pods -n database -l app=postgres
 ```
 
 ## Connessione interna
 
 ```
-postgres.events.svc:5432
+postgres.database.svc:5432
 ```
 
 ## Accesso remoto
@@ -53,7 +53,7 @@ Di seguito le opzioni per raggiungerlo da remoto.
 Nessuna modifica al cluster. Richiede `kubectl` configurato localmente.
 
 ```bash
-kubectl port-forward svc/postgres 5432:5432 -n events
+kubectl port-forward svc/postgres 5432:5432 -n database
 ```
 
 Poi connettiti a `localhost:5432`:
@@ -68,7 +68,7 @@ Tunnel SSH verso un nodo del cluster che puo' raggiungere il ClusterIP di postgr
 
 ```bash
 # Trova il ClusterIP
-kubectl get svc postgres -n events -o jsonpath='{.spec.clusterIP}'
+kubectl get svc postgres -n database -o jsonpath='{.spec.clusterIP}'
 
 # Tunnel SSH (sostituisci <CLUSTER_IP> con il valore ottenuto)
 ssh -L 5432:<CLUSTER_IP>:5432 user@<K8S_NODE_IP>
@@ -82,7 +82,7 @@ Se non hai accesso SSH diretto ai nodi K8s ma hai la micro-gw:
 
 ```bash
 ssh -J user@<MICRO_GW_PUBLIC_IP> \
-    -L 5432:postgres.events.svc.cluster.local:5432 \
+    -L 5432:postgres.database.svc.cluster.local:5432 \
     user@<K8S_NODE_PRIVATE_IP>
 ```
 
@@ -96,7 +96,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres-nodeport
-  namespace: events
+  namespace: database
 spec:
   type: NodePort
   selector:

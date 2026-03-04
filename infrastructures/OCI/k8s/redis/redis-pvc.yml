@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: redis-data
-  namespace: events
+  namespace: database
   labels:
     app: redis
 spec:

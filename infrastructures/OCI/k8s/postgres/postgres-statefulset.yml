@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: postgres
-  namespace: events
+  namespace: database
   labels:
     app: postgres
 spec:

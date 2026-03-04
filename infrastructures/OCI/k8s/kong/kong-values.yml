@@ -1,0 +1,67 @@
+# Helm values per kong/kong
+# Kong in DB mode (PostgreSQL) — API Gateway per il traffico API
+# I secret (pg_password) vengono passati via kong-secret dal playbook Ansible.
+
+# Kong NON è ingress controller — Traefik gestisce l'ingress
+ingressController:
+  enabled: false
+
+env:
+  database: postgres
+  pg_host: postgres.database.svc
+  pg_port: "5432"
+  pg_user: kong
+  pg_database: kong
+  pg_password:
+    valueFrom:
+      secretKeyRef:
+        name: kong-secret
+        key: pg_password
+
+# Proxy — riceve traffico API da Traefik
+proxy:
+  enabled: true
+  type: ClusterIP
+  http:
+    enabled: true
+    containerPort: 8000
+    servicePort: 8000
+  tls:
+    enabled: false
+
+# Admin API — usata da Konga per gestione
+admin:
+  enabled: true
+  type: ClusterIP
+  http:
+    enabled: true
+    containerPort: 8001
+    servicePort: 8001
+  tls:
+    enabled: false
+
+# Migrations
+migrations:
+  preUpgrade: true
+  postUpgrade: true
+
+nodeSelector:
+  workload: heavy
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 384Mi
+
+# Prometheus plugin — metriche per Grafana
+serviceMonitor:
+  enabled: false
+
+# Status endpoint per health check
+status:
+  enabled: true
+  http:
+    containerPort: 8100

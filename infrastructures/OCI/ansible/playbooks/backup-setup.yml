@@ -42,8 +42,8 @@
     # =========================================================================
     # Namespace
     # =========================================================================
-    - name: Crea namespace velero
-      ansible.builtin.command: kubectl create namespace velero
+    - name: Crea namespace clusters
+      ansible.builtin.command: kubectl create namespace clusters
       register: ns_result
       changed_when: "'created' in ns_result.stdout"
       failed_when:
@@ -66,7 +66,7 @@
       ansible.builtin.command: >
         kubectl create secret generic velero-credentials
         --from-file=cloud=/tmp/velero-credentials
-        --namespace=velero
+        --namespace=clusters
       register: secret_result
       changed_when: "'created' in secret_result.stdout"
       failed_when:
@@ -96,7 +96,7 @@
     - name: Installa Velero via Helm
       ansible.builtin.command: >
         helm upgrade --install velero vmware-tanzu/velero
-        --namespace velero
+        --namespace clusters
         -f {{ velero_k8s_dir }}/velero-values.yml
         --set configuration.backupStorageLocation[0].bucket={{ velero_bucket_name }}
         --set configuration.backupStorageLocation[0].config.region={{ velero_s3_region }}
@@ -108,7 +108,7 @@
     - name: Attendi Velero ready
       ansible.builtin.command: >
         kubectl rollout status deployment velero
-        --namespace velero --timeout=180s
+        --namespace clusters --timeout=180s
       changed_when: false
 
     # =========================================================================
@@ -117,7 +117,7 @@
     - name: Crea Secret velero-ui-secret
       ansible.builtin.command: >
         kubectl create secret generic velero-ui-secret
-        --namespace velero
+        --namespace clusters
         --from-literal=BASIC_AUTH_PASSWORD={{ velero_ui_password }}
       register: velero_ui_secret_result
       changed_when: "'created' in velero_ui_secret_result.stdout"
@@ -149,12 +149,12 @@
     # Verifica
     # =========================================================================
     - name: Verifica BackupStorageLocation
-      ansible.builtin.command: kubectl get backupstoragelocation -n velero
+      ansible.builtin.command: kubectl get backupstoragelocation -n clusters
       register: bsl_result
       changed_when: false
 
     - name: Verifica pods Velero
-      ansible.builtin.command: kubectl get pods -n velero
+      ansible.builtin.command: kubectl get pods -n clusters
       register: pods_result
       changed_when: false
 
@@ -168,7 +168,7 @@
           - ""
           - "Backup Storage: OCI Object Storage ({{ velero_bucket_name }})"
           - "S3 Endpoint:    {{ velero_s3_url }}"
-          - "Velero UI:      {{ 'kubectl apply -k (ns velero)' if (install_velero_ui | default(false)) else 'non installato' }}"
+          - "Velero UI:      {{ 'kubectl apply -k (ns clusters)' if (install_velero_ui | default(false)) else 'non installato' }}"
           - ""
           - "--- BackupStorageLocation ---"
           - "{{ bsl_result.stdout }}"

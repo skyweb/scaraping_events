@@ -1,0 +1,40 @@
+backstage:
+  image:
+    registry: ghcr.io
+    repository: backstage/backstage
+    tag: latest
+
+  extraEnvVarsSecrets:
+    - backstage-secret
+
+  nodeSelector:
+    workload: light
+
+  resources:
+    limits:
+      cpu: 500m
+      memory: 384Mi
+    requests:
+      cpu: 100m
+      memory: 192Mi
+
+  appConfig:
+    app:
+      title: "Events Developer Portal"
+      baseUrl: https://backstage.oci.santocaruso.eu
+
+    backend:
+      baseUrl: https://backstage.oci.santocaruso.eu
+      listen:
+        port: 7007
+      database:
+        client: pg
+        connection:
+          host: ${POSTGRES_HOST}
+          port: ${POSTGRES_PORT}
+          user: ${POSTGRES_USER}
+          password: ${POSTGRES_PASSWORD}
+
+# Disabilita PostgreSQL integrato — usa istanza esistente nel cluster
+postgresql:
+  enabled: false
