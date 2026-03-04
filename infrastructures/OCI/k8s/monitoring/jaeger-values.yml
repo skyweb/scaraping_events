@@ -1,0 +1,33 @@
+provisionDataStore:
+  cassandra: false
+image:
+  registry: docker.io
+allInOne:
+  enabled: true
+  replicas: 1
+  extraEnv:
+    - name: METRICS_STORAGE_TYPE
+      value: prometheus
+    - name: PROMETHEUS_SERVER_URL
+      value: http://prometheus-server.monitoring.svc:80
+    - name: PROMETHEUS_QUERY_NORMALIZE_CALLS
+      value: "true"
+    - name: PROMETHEUS_QUERY_NORMALIZE_DURATION
+      value: "true"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi
+  nodeSelector:
+    workload: heavy
+storage:
+  type: memory
+agent:
+  enabled: false
+collector:
+  enabled: false
+query:
+  enabled: false

@@ -5,10 +5,12 @@ metadata:
   namespace: tekton-pipelines
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`tekton.oci.santocaruso.eu`)
       kind: Rule
       services:
         - name: tekton-dashboard
           port: 9097
+  tls:
+    certResolver: letsencrypt

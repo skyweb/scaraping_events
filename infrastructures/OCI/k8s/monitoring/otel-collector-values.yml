@@ -1,0 +1,76 @@
+mode: daemonset
+image:
+  repository: docker.io/otel/opentelemetry-collector-contrib
+resources:
+  limits:
+    cpu: 200m
+    memory: 128Mi
+  requests:
+    cpu: 10m
+    memory: 64Mi
+ports:
+  spanmetrics:
+    enabled: true
+    containerPort: 8889
+    servicePort: 8889
+    protocol: TCP
+config:
+  receivers:
+    otlp:
+      protocols:
+        grpc:
+          endpoint: 0.0.0.0:4317
+        http:
+          endpoint: 0.0.0.0:4318
+  connectors:
+    spanmetrics:
+      histogram:
+        explicit:
+          buckets: [5ms, 10ms, 25ms, 50ms, 100ms, 250ms, 500ms, 1s, 2.5s, 5s, 10s]
+      dimensions:
+        - name: http.method
+        - name: http.status_code
+        - name: http.route
+  processors:
+    batch:
+      timeout: 5s
+      send_batch_size: 512
+    memory_limiter:
+      check_interval: 5s
+      limit_mib: 100
+      spike_limit_mib: 20
+    resourcedetection:
+      detectors: [env, system]
+      timeout: 5s
+      override: false
+      system:
+        hostname_sources: ["os"]
+        resource_attributes:
+          host.name:
+            enabled: true
+          os.type:
+            enabled: true
+          host.arch:
+            enabled: true
+  exporters:
+    prometheusremotewrite:
+      endpoint: http://prometheus-server.monitoring.svc:80/api/v1/write
+    otlphttp/jaeger:
+      endpoint: http://jaeger.monitoring.svc:4318
+    prometheus:
+      endpoint: 0.0.0.0:8889
+    debug:
+      verbosity: basic
+  service:
+    pipelines:
+      traces:
+        receivers: [otlp]
+        processors: [memory_limiter, resourcedetection, batch]
+        exporters: [otlphttp/jaeger, spanmetrics, debug]
+      metrics/spanmetrics:
+        receivers: [spanmetrics]
+        exporters: [prometheus]
+      metrics:
+        receivers: [otlp]
+        processors: [memory_limiter, resourcedetection, batch]
+        exporters: [prometheusremotewrite, debug]

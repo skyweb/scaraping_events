@@ -43,7 +43,6 @@ cd "$TERRAFORM_DIR"
 echo "Lettura output Terraform..."
 
 REGION=$(terraform output -raw region)
-TENANCY_OCID=$(terraform output -raw tenancy_ocid)
 OCIR_ENDPOINT=$(terraform output -raw ocir_endpoint)
 OCIR_NAMESPACE=$(terraform output -raw objectstorage_namespace)
 OCIR_USERNAME=$(terraform output -raw ocir_username)
@@ -99,7 +98,6 @@ ocir_username: "${OCIR_USERNAME}"
 
 # Namespaces da creare nel cluster
 namespaces:
-  - events
   - monitoring
   - traefik
   - cert-manager
@@ -114,14 +112,6 @@ traefik_http_nodeport: 30080
 traefik_https_nodeport: 30443
 traefik_dashboard_nodeport: 30090
 
-# ArgoCD (GitOps)
-install_argocd: true
-
-# Tekton Pipelines + Kaniko (CI/CD cloud-native)
-install_tekton: true
-tekton_version: "v0.65.2"
-tekton_dashboard_version: "v0.46.0"
-
 # cert-manager
 install_cert_manager: true
 cert_manager_version: "v1.17.2"
@@ -134,7 +124,7 @@ install_metrics_server: true
 install_dashboard: true
 
 # Kyverno (Policy Engine - Security)
-install_kyverno: true
+install_kyverno: false
 kyverno_enforcement_mode: "Audit"
 kyverno_excluded_namespaces:
   - kube-system
@@ -171,54 +161,8 @@ loki_retention_period: "168h"  # 7 giorni
 loki_cpu_limit: "250m"
 loki_memory_limit: "256Mi"
 
-# Promtail (grafana/promtail) - DaemonSet log shipper
-install_promtail: true
-promtail_cpu_limit: "100m"
-promtail_memory_limit: "64Mi"
-
-# OpenTelemetry Collector (open-telemetry/opentelemetry-collector) - DaemonSet
-install_otel_collector: true
-otel_otlp_grpc_nodeport: 31317
-otel_cpu_limit: "200m"
-otel_memory_limit: "128Mi"
-
-# Jaeger (jaegertracing/jaeger) - Tracing UI
-install_jaeger: true
-jaeger_nodeport: 31686
-jaeger_cpu_limit: "500m"
-jaeger_memory_limit: "512Mi"
-
-# Redis Exporter (metriche Prometheus per Redis)
-install_redis_exporter: false    # false fino a deploy app su K8s
-redis_exporter_cpu_limit: "50m"
-redis_exporter_memory_limit: "64Mi"
-redis_k8s_host: "redis://redis.events.svc:6379"
-# redis_k8s_password -> in oke-vault.yml
-
-# Celery Exporter (metriche Prometheus per Celery)
-install_celery_exporter: false   # false fino a deploy app su K8s
-celery_exporter_cpu_limit: "50m"
-celery_exporter_memory_limit: "64Mi"
-# celery_broker_url -> in oke-vault.yml
-
-# =============================================================================
-# Observability - Grafana su Micro VM
-# =============================================================================
-
-install_grafana_vm: true
-grafana_version: "11.4.0"
-# grafana_admin_password -> in oke-vault.yml
-grafana_port: 3000
-install_grafana_dashboards: true
-install_grafana_alerting: true
-
-# IP privato di un nodo K8s (per datasource Grafana -> Prometheus/Loki via NodePort)
+# IP privato di un nodo K8s (usato da reverse-proxy-setup per DNAT -> Traefik)
 k8s_node_ip: "${K8S_NODE_IP}"
-
-# OCI Monitoring (Grafana plugin oci-metrics-datasource + oci-logs-datasource)
-install_oci_datasources: true
-oci_tenancy_ocid: "${TENANCY_OCID}"
-oci_region: "${REGION}"
 
 # =============================================================================
 # Backup & Disaster Recovery
@@ -240,7 +184,6 @@ velero_backup_ttl: "168h"            # retention 7 giorni
 # Richiede: DNS A record per ogni sottodominio -> IP pubblico corretto.
 #
 # Servizi K8s -> A record -> IP pubblico del nodo light (K8s)
-# Grafana     -> A record -> IP pubblico della micro-monitor VM
 
 # base_domain: "example.com"
 
@@ -252,17 +195,12 @@ velero_backup_ttl: "168h"            # retention 7 giorni
 # alertmanager_subdomain: "alertmanager"  # alertmanager.example.com -> Alertmanager
 # loki_subdomain: "loki"              # loki.example.com      -> Loki
 # dashboard_subdomain: "dashboard"    # dashboard.example.com -> K8s Dashboard
-# grafana_subdomain: "grafana"        # grafana.example.com   -> Grafana (Caddy su micro VM)
 # jaeger_subdomain: "jaeger"          # jaeger.example.com    -> Jaeger UI
 # auth_subdomain: "auth"              # auth.example.com      -> OAuth2 Proxy callback
 
 # --- Autenticazione servizi senza auth nativa ---
-# Scegliere UNA delle due opzioni: BasicAuth OPPURE OAuth2 Proxy (Google SSO)
-# I secret (basicauth_users, oauth2_proxy_*) vanno in oke-vault.yml
-
-# Opzione A: BasicAuth — configurare basicauth_users in oke-vault.yml
-
-# Opzione B: OAuth2 Proxy (Google SSO)
+# OAuth2 Proxy (Google SSO)
+# I secret (oauth2_proxy_*) vanno in oke-vault.yml
 # install_oauth2_proxy: false
 # oauth2_proxy_allowed_emails:
 #   - "your.email@gmail.com"
@@ -284,9 +222,6 @@ cat > "$VAULT_FILE" << YAML
 # OCIR (Oracle Container Registry)
 ocir_auth_token: "${OCIR_AUTH_TOKEN}"
 
-# Grafana
-grafana_admin_password: "CHANGE_ME"   # <-- CAMBIA QUESTA PASSWORD
-
 # Velero (Backup)
 velero_aws_access_key_id: "${VELERO_ACCESS_KEY}"
 velero_aws_secret_access_key: "${VELERO_SECRET_KEY}"
@@ -295,10 +230,7 @@ velero_aws_secret_access_key: "${VELERO_SECRET_KEY}"
 redis_k8s_password: "CHANGE_ME"
 celery_broker_url: "redis://:CHANGE_ME@redis.events.svc:6379/0"
 
-# BasicAuth (Opzione A -- decommentare se si usa BasicAuth)
-# basicauth_users: "admin:\$\$2y\$\$05\$\$HASH_HERE"
-
-# OAuth2 Proxy (Opzione B -- decommentare se si usa Google SSO)
+# OAuth2 Proxy (Google SSO — decommentare se si usa)
 # oauth2_proxy_client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com"
 # oauth2_proxy_client_secret: "YOUR_CLIENT_SECRET"
 # oauth2_proxy_cookie_secret: "YOUR_COOKIE_SECRET"
@@ -325,8 +257,7 @@ fi
 
 echo ""
 echo "TODO:"
-echo "  1. Cambia grafana_admin_password in oke-vault.yml"
-echo "  2. Cambia redis_k8s_password e celery_broker_url in oke-vault.yml"
+echo "  1. Cambia redis_k8s_password e celery_broker_url in oke-vault.yml"
 if [ "$K8S_NODE_IP" = "K8S_NODE_PRIVATE_IP" ]; then
     echo "  3. Imposta k8s_node_ip in oke.yml con: kubectl get nodes -l workload=light -o wide"
 fi

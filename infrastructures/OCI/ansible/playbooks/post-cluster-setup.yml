@@ -136,7 +136,7 @@
         - base_domain is defined
         - not (install_reverse_proxy | default(false))
 
-    - name: Installa Traefik via Helm (reverse proxy — Caddy gestisce TLS)
+    - name: Installa Traefik via Helm (reverse proxy — TCP forwarding, ACME su Traefik)
       ansible.builtin.command: >
         helm upgrade --install traefik traefik/traefik
         --namespace traefik
@@ -151,6 +151,14 @@
         --set providers.kubernetesIngress.enabled=true
         --set providers.kubernetesCRD.enabled=true
         --set providers.kubernetesCRD.allowCrossNamespace=true
+        --set "certificatesResolvers.letsencrypt.acme.email={{ letsencrypt_email }}"
+        --set "certificatesResolvers.letsencrypt.acme.storage=/data/acme.json"
+        --set "certificatesResolvers.letsencrypt.acme.httpChallenge.entryPoint=web"
+        --set ports.web.redirections.entryPoint.to=websecure
+        --set ports.web.redirections.entryPoint.scheme=https
+        --set persistence.enabled=true
+        --set persistence.path=/data
+        --set persistence.size=128Mi
       register: traefik_result
       changed_when: "'STATUS: deployed' in traefik_result.stdout"
       when:
@@ -340,5 +348,3 @@
           - "metrics-server:    {{ 'installato - kubectl top abilitato' if (install_metrics_server | default(false)) else 'saltato' }}"
           - "K8s Dashboard:     {{ 'installato in ns monitoring' if (install_dashboard | default(false)) else 'saltato' }}"
           - ""
-          - "--- Per installare CI/CD (ArgoCD + Tekton + Kaniko) ---"
-          - "ansible-playbook ansible/playbooks/ci-setup.yml"

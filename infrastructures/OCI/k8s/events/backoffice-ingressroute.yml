@@ -5,10 +5,12 @@ metadata:
   namespace: events
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`events.oci.santocaruso.eu`)
       kind: Rule
       services:
         - name: backoffice
           port: 8000
+  tls:
+    certResolver: letsencrypt

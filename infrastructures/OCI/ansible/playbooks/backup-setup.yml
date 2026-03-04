@@ -1,8 +1,6 @@
 ---
 # Backup & Disaster Recovery per OKE con Velero
-# Esegue su localhost (richiede kubectl configurato)
-# Prerequisito: post-cluster-setup.yml (namespaces)
-#
+
 # Velero usa OCI Object Storage (S3-compatible) come destinazione backup.
 #
 # Prima di eseguire:

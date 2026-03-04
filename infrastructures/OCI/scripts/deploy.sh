@@ -8,6 +8,10 @@ PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 cd "${PROJECT_ROOT}"
 
+# --- Configurazione retry per "Out of host capacity" ---
+RETRY_INTERVAL=${RETRY_INTERVAL:-300}   # secondi tra i tentativi (default: 5 minuti)
+MAX_RETRIES=${MAX_RETRIES:-288}         # tentativi massimi (default: 288 = 24 ore con intervallo 5 min)
+
 echo "=========================================="
 echo "  OKE Cluster + Micro VMs Deployment"
 echo "=========================================="
@@ -51,11 +55,61 @@ if [ "$confirm" != "yes" ]; then
     exit 0
 fi
 
-# Step 3: Apply
+# Step 3: Apply (con retry automatico per "Out of host capacity")
 echo ""
 echo "Step 3: Applicazione Terraform (15-20 minuti per OKE)..."
-terraform apply tfplan
-rm -f tfplan
+echo "  Se 'Out of host capacity': retry ogni ${RETRY_INTERVAL}s (max ${MAX_RETRIES} tentativi)"
+echo ""
+
+ATTEMPT=0
+while true; do
+    ATTEMPT=$((ATTEMPT + 1))
+
+    # Prima esecuzione usa il piano salvato, i retry usano apply diretto
+    if [ "$ATTEMPT" -eq 1 ] && [ -f tfplan ]; then
+        set +e
+        terraform apply tfplan 2>&1 | tee /tmp/tf-apply-output.log
+        TF_EXIT=${PIPESTATUS[0]}
+        set -e
+        rm -f tfplan
+    else
+        set +e
+        terraform apply -auto-approve 2>&1 | tee /tmp/tf-apply-output.log
+        TF_EXIT=${PIPESTATUS[0]}
+        set -e
+    fi
+
+    # Successo
+    if [ "$TF_EXIT" -eq 0 ]; then
+        echo ""
+        echo "Terraform apply completato con successo!"
+        [ "$ATTEMPT" -gt 1 ] && echo "  (riuscito al tentativo #${ATTEMPT})"
+        break
+    fi
+
+    # Controlla se l'errore e' "Out of host capacity"
+    if grep -qi "Out of host capacity" /tmp/tf-apply-output.log; then
+        if [ "$ATTEMPT" -ge "$MAX_RETRIES" ]; then
+            echo ""
+            echo "Errore: 'Out of host capacity' dopo ${MAX_RETRIES} tentativi."
+            echo "La regione non ha capacita' disponibile. Riprova piu' tardi."
+            rm -f /tmp/tf-apply-output.log
+            exit 1
+        fi
+
+        NEXT_TIME=$(date -v+${RETRY_INTERVAL}S +"%H:%M:%S" 2>/dev/null || date -d "+${RETRY_INTERVAL} seconds" +"%H:%M:%S" 2>/dev/null || echo "~$(( RETRY_INTERVAL / 60 )) min")
+        echo ""
+        echo "  [${ATTEMPT}/${MAX_RETRIES}] Out of host capacity — prossimo tentativo alle ${NEXT_TIME} (tra ${RETRY_INTERVAL}s)..."
+        sleep "$RETRY_INTERVAL"
+    else
+        # Errore diverso da capacity: fallisci subito
+        echo ""
+        echo "Errore Terraform (non legato a capacity). Controlla l'output sopra."
+        rm -f /tmp/tf-apply-output.log
+        exit 1
+    fi
+done
+rm -f /tmp/tf-apply-output.log
 
 # Step 4: Get kubeconfig
 echo ""

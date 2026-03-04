@@ -1,0 +1,79 @@
+server:
+  retention: "7d"
+  persistentVolume:
+    size: 10Gi
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi
+  nodeSelector:
+    workload: heavy
+
+alertmanager:
+  enabled: true
+  nodeSelector:
+    workload: heavy
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 32Mi
+  persistentVolume:
+    size: 2Gi
+
+prometheus-pushgateway:
+  enabled: false
+
+kube-state-metrics:
+  resources:
+    limits:
+      cpu: 100m
+      memory: 64Mi
+    requests:
+      cpu: 10m
+      memory: 32Mi
+
+prometheus-node-exporter:
+  resources:
+    limits:
+      cpu: 100m
+      memory: 64Mi
+    requests:
+      cpu: 10m
+      memory: 32Mi
+
+extraScrapeConfigs: |
+  - job_name: otel-spanmetrics
+    static_configs:
+      - targets: ['otel-collector-opentelemetry-collector.monitoring.svc:8889']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
+  - job_name: django
+    static_configs:
+      - targets: ['backoffice.events.svc:8000']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
+  - job_name: redis-exporter
+    static_configs:
+      - targets: ['redis-exporter.monitoring.svc:9121']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
+  - job_name: celery-exporter
+    static_configs:
+      - targets: ['celery-exporter.monitoring.svc:9808']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
+  - job_name: jaeger-spanmetrics
+    static_configs:
+      - targets: ['jaeger.monitoring.svc:8889']
+    metrics_path: /metrics
+    scrape_interval: 15s

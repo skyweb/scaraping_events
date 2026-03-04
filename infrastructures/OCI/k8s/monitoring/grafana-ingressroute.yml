@@ -1,16 +1,16 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argocd-server-https
-  namespace: argocd
+  name: grafana-https
+  namespace: monitoring
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`argocd.oci.santocaruso.eu`)
+    - match: Host(`grafana.oci.santocaruso.eu`)
       kind: Rule
       services:
-        - name: argocd-server
-          port: 80
+        - name: grafana-external
+          port: 3000
   tls:
     certResolver: letsencrypt

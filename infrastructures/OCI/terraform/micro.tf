@@ -3,11 +3,11 @@
 # =============================================================================
 # 2 istanze standalone fuori dal cluster OKE:
 #   micro-1: Monitoring
-#   micro-2: CI runner leggero
+#   micro-2: Gateway (reverse proxy + VPN)
 # =============================================================================
 
 locals {
-  micro_vm_names = ["micro-monitor", "micro-cirunner"]
+  micro_vm_names = ["micro-monitor", "micro-gw"]
 }
 
 resource "oci_core_instance" "micro_vm" {

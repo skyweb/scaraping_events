@@ -63,7 +63,7 @@ for ((i=0; i<VM_COUNT; i++)); do
     name=$(get_json_index "$NAMES" "$i")
     case "$name" in
         *monitor*) MONITOR_IDX=$i ;;
-        *cirunner*|*ci-runner*|*ci_runner*) CIRUNNER_IDX=$i ;;
+        *gw*|*cirunner*|*ci-runner*|*ci_runner*) CIRUNNER_IDX=$i ;;
     esac
 done
 
@@ -100,10 +100,10 @@ YAML
 if [ -n "$CIRUNNER_IDX" ]; then
     CIRUNNER_PUBLIC=$(get_json_index "$PUBLIC_IPS" "$CIRUNNER_IDX")
     CIRUNNER_PRIVATE=$(get_json_index "$PRIVATE_IPS" "$CIRUNNER_IDX")
-    echo "  micro-cirunner: $CIRUNNER_PUBLIC (public) / $CIRUNNER_PRIVATE (private)"
+    echo "  micro-gw: $CIRUNNER_PUBLIC (public) / $CIRUNNER_PRIVATE (private)"
 
     cat >> "$INVENTORY_FILE" << YAML
-        micro-cirunner:
+        micro-gw:
           ansible_host: "${CIRUNNER_PUBLIC}"
           private_ip: "${CIRUNNER_PRIVATE}"
           ansible_user: opc

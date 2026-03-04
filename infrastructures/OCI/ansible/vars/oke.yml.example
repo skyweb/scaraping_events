@@ -20,24 +20,14 @@ namespaces:
   - traefik
   - cert-manager
   - argocd
-  - tekton-pipelines
   - velero
   - kyverno
-  - airflow
 
 # Traefik Ingress Controller
 install_traefik: true
 traefik_http_nodeport: 30080
 traefik_https_nodeport: 30443
 traefik_dashboard_nodeport: 30090
-
-# ArgoCD (GitOps)
-install_argocd: true
-
-# Tekton Pipelines + Kaniko (CI/CD cloud-native)
-install_tekton: true
-tekton_version: "v0.65.2"
-tekton_dashboard_version: "v0.64.0"
 
 # cert-manager
 install_cert_manager: true
@@ -51,7 +41,7 @@ install_metrics_server: true
 install_dashboard: true
 
 # Kyverno (Policy Engine - Security)
-install_kyverno: true
+install_kyverno: false
 # Audit = solo log violazioni, Enforce = blocca le risorse non conformi
 kyverno_enforcement_mode: "Audit"
 # Namespace esclusi dalle policy (sistema e infrastruttura)
@@ -62,88 +52,11 @@ kyverno_excluded_namespaces:
   - cert-manager
   - monitoring
   - argocd
-  - tekton-pipelines
   - velero
 
-# =============================================================================
-# Observability - Cluster (K8s)
-# =============================================================================
-
-# Prometheus (prometheus-community/prometheus)
-install_prometheus: true
-prometheus_nodeport: 31090
-prometheus_retention: "7d"
-prometheus_storage_size: "10Gi"
-prometheus_server_cpu_limit: "500m"
-prometheus_server_memory_limit: "512Mi"
-
-# Alertmanager (gestione alert e notifiche)
-install_alertmanager: true
-alertmanager_nodeport: 31093
-alertmanager_cpu_limit: "100m"
-alertmanager_memory_limit: "128Mi"
-
-# Loki (grafana/loki) - SingleBinary mode
-install_loki: true
-loki_nodeport: 31100
-loki_retention_period: "168h"  # 7 giorni
-loki_cpu_limit: "250m"
-loki_memory_limit: "256Mi"
-
-# Promtail (grafana/promtail) - DaemonSet log shipper
-install_promtail: true
-promtail_cpu_limit: "100m"
-promtail_memory_limit: "64Mi"
-
-# OpenTelemetry Collector (open-telemetry/opentelemetry-collector) - DaemonSet
-install_otel_collector: true
-otel_otlp_grpc_nodeport: 31317
-otel_cpu_limit: "200m"
-otel_memory_limit: "128Mi"
-
-# Jaeger (jaegertracing/jaeger) - Tracing UI
-install_jaeger: true
-jaeger_nodeport: 31686
-jaeger_cpu_limit: "500m"
-jaeger_memory_limit: "512Mi"
-
-# Redis Exporter (metriche Prometheus per Redis)
-install_redis_exporter: false    # false fino a deploy app su K8s
-redis_exporter_cpu_limit: "50m"
-redis_exporter_memory_limit: "64Mi"
-redis_k8s_host: "redis://redis.events.svc:6379"
-# redis_k8s_password → in oke-vault.yml
-
-# Celery Exporter (metriche Prometheus per Celery)
-install_celery_exporter: false   # false fino a deploy app su K8s
-celery_exporter_cpu_limit: "50m"
-celery_exporter_memory_limit: "64Mi"
-# celery_broker_url → in oke-vault.yml
-
-# =============================================================================
-# Observability - Grafana su Micro VM
-# =============================================================================
-
-install_grafana_vm: true
-grafana_version: "11.4.0"             # versione container pinned
-# grafana_admin_password → in oke-vault.yml
-grafana_port: 3000
-install_grafana_dashboards: true
-install_grafana_alerting: true
-# Accesso anonimo (senza login): true = chiunque vede le dashboard, false = richiede login
-grafana_allow_anonymous: false
-# grafana_anonymous_role: "Viewer"    # ruolo utente anonimo: Viewer, Editor, Admin
-
-# IP privato di un nodo K8s (per datasource Grafana → Prometheus/Loki via NodePort)
+# IP privato di un nodo K8s (usato da reverse-proxy-setup per DNAT → Traefik)
 # Ottenere con: kubectl get nodes -o wide → INTERNAL-IP del nodo light
 k8s_node_ip: "K8S_NODE_PRIVATE_IP"
-
-# OCI Monitoring (Grafana plugin oci-metrics-datasource + oci-logs-datasource)
-# Usa Instance Principal: Terraform crea dynamic group + IAM policy
-# Metriche: CPU, RAM, disco, rete delle VM e nodi OKE + log OCI
-install_oci_datasources: true
-oci_tenancy_ocid: "YOUR_TENANCY_OCID"  # terraform output tenancy_ocid (o da terraform.tfvars)
-oci_region: "eu-milan-1"
 
 # =============================================================================
 # Backup & Disaster Recovery
@@ -151,6 +64,7 @@ oci_region: "eu-milan-1"
 
 # Velero (Backup & Disaster Recovery)
 install_velero: true
+
 # OCI Object Storage (S3-compatible) per backup
 # Questi valori si ottengono dagli output Terraform dopo il deploy:
 #   terraform output velero_bucket_name
@@ -169,68 +83,22 @@ velero_backup_ttl: "168h"            # retention 7 giorni
 # Velero UI (otwld/velero-ui) — Dashboard web per Velero
 install_velero_ui: true
 # velero_subdomain: "velero"  # velero.oci.santocaruso.eu
-auth_velero: true  # extra layer auth middleware (BasicAuth/OAuth2) sopra BasicAuth nativo
 
 # =============================================================================
-# Data Services (PostgreSQL + Redis) — namespace events
+# ArgoCD Application (usato da backup-setup.yml per Velero UI)
 # =============================================================================
-
-# PostgreSQL 16 + PostGIS 3.4 (StatefulSet, nodo heavy)
-install_postgres: true
-postgres_image: "docker.io/imresamu/postgis:16-3.4"
-postgres_storage_size: "20Gi"
-postgres_cpu_limit: "1000m"
-postgres_memory_limit: "1Gi"
-postgres_db: "events"
-postgres_user: "events"
-# postgres_k8s_password → in oke-vault.yml
-
-# Redis 7 Alpine (Deployment, nodo light)
-install_redis: true
-redis_image: "docker.io/redis:7-alpine"
-redis_storage_size: "2Gi"
-redis_cpu_limit: "200m"
-redis_memory_limit: "128Mi"
-# redis_k8s_password → in oke-vault.yml (già presente)
-
-# =============================================================================
-# Application Deployment (Backoffice + Celery)
-# =============================================================================
-install_backoffice: true
-argocd_repo_url: "https://github.com/YOUR_USER/scaraping_events.git"
+argocd_repo_url: "https://github.com/skyweb/scaraping_events.git"
 argocd_target_revision: "main"
-# events_subdomain: "events"  # events.oci.santocaruso.eu
 
 # =============================================================================
-# Airflow (Orchestrazione DAG)
+# Reverse Proxy (TCP forwarding via firewalld su micro-gw — IP stabile)
 # =============================================================================
-install_airflow: true
-airflow_image: "docker.io/apache/airflow:2.9.2"
-# airflow_subdomain: "airflow"  # airflow.oci.santocaruso.eu
-auth_airflow: true  # proteggi con BasicAuth/OAuth2 (extra layer sopra auth nativa)
-
-# =============================================================================
-# Reverse Proxy (Caddy su micro-cirunner — IP stabile)
-# =============================================================================
-# Quando abilitato, Caddy su micro-cirunner (IP stabile) termina TLS e
-# inoltra HTTP a Traefik sul cluster K8s via VCN privata.
-# DNS punta a micro-cirunner → Caddy (Let's Encrypt) → Traefik (L7 routing).
-# Vantaggi: IP stabile (non cambia se il nodo K8s viene ricreato).
-install_reverse_proxy: false
-
-# IP privato micro-monitor (per Caddy → Grafana via VCN, senza passare da Traefik)
-# Ottenere con: terraform output micro_vm_private_ips
-micro_monitor_private_ip: "10.0.3.8"
-
-# Auth per-servizio (override: true = auth middleware, false = no auth)
-# Servizi con auth nativa (ArgoCD, Grafana) sono sempre senza middleware.
-# Attivo solo quando auth_available (BasicAuth o OAuth2 Proxy configurato).
-auth_traefik: true
-auth_prometheus: true
-auth_alertmanager: true
-auth_loki: true
-auth_dashboard: true
-auth_jaeger: true
+# Quando abilitato, micro-gw (IP stabile) inoltra traffico TCP grezzo
+# (porte 80/443) a Traefik nel cluster K8s via firewalld DNAT.
+# Traefik gestisce TLS (Let's Encrypt ACME) e L7 routing.
+# Flusso: DNS → micro-gw (firewalld DNAT) → k8s NodePort → Traefik (TLS + L7)
+# Vantaggi: IP stabile, no duplicazione config (solo IngressRoute K8s).
+install_reverse_proxy: true
 
 # =============================================================================
 # Domain Setup (HTTPS via sottodomini)
@@ -240,35 +108,23 @@ auth_jaeger: true
 #
 # Senza reverse proxy:
 #   Servizi K8s → A record → IP pubblico del nodo light (K8s)
-#   Grafana     → A record → IP pubblico della micro-monitor VM
 # Con reverse proxy (install_reverse_proxy: true):
-#   TUTTI i sottodomini → A record → IP pubblico micro-cirunner (stabile)
+#   TUTTI i sottodomini → A record → IP pubblico micro-gw (stabile)
 
 base_domain: "oci.santocaruso.eu"
 
 # Sottodomini (default se non specificati)
 # traefik_subdomain: "traefik"        # traefik.example.com   → Traefik Dashboard
-# argocd_subdomain: "argocd"          # argocd.example.com    → ArgoCD
-# tekton_subdomain: "tekton"          # tekton.example.com    → Tekton Dashboard
-# prometheus_subdomain: "prometheus"  # prometheus.example.com → Prometheus
-# alertmanager_subdomain: "alertmanager"  # alertmanager.example.com → Alertmanager
-# loki_subdomain: "loki"              # loki.example.com      → Loki
 # dashboard_subdomain: "dashboard"    # dashboard.example.com → K8s Dashboard
-# grafana_subdomain: "grafana"        # grafana.example.com   → Grafana (Caddy su micro VM)
-# jaeger_subdomain: "jaeger"          # jaeger.example.com    → Jaeger UI
 # auth_subdomain: "auth"              # auth.example.com      → OAuth2 Proxy callback
 
 # --- Autenticazione servizi senza auth nativa ---
-# Scegliere UNA delle due opzioni: BasicAuth OPPURE OAuth2 Proxy (Google SSO)
-# I secret (basicauth_users, oauth2_proxy_*) vanno in oke-vault.yml
+# OAuth2 Proxy (Google SSO)
 
-# Opzione A: BasicAuth — configurare basicauth_users in oke-vault.yml
-
-# Opzione B: OAuth2 Proxy (Google SSO)
-# install_oauth2_proxy: false
-# oauth2_proxy_allowed_emails:
-#   - "your.email@gmail.com"
-#   - "altro.utente@gmail.com"
+install_oauth2_proxy: true
+oauth2_proxy_allowed_emails:
+  - "santo.caruso@gmail.com"
+  - "santo.caruso@altrama.com"
 # Google Cloud Console: Credentials → OAuth 2.0 Client ID (tipo: Web application)
 # Authorized redirect URI: https://auth.<base_domain>/oauth2/callback
 # I secret (client_id, client_secret, cookie_secret) → in oke-vault.yml

@@ -25,7 +25,7 @@ Cluster Kubernetes gestito (OKE) + 2 micro VM standalone su Oracle Cloud Free Ti
 │  │  micro-monitor  (1/8 OCPU, 1 GB, 50 GB)           │  │
 │  │  → Uptime Kuma, healthcheck, reverse proxy         │  │
 │  │                                                    │  │
-│  │  micro-cirunner (1/8 OCPU, 1 GB, 50 GB)           │  │
+│  │  micro-gw (1/8 OCPU, 1 GB, 50 GB)           │  │
 │  │  → CI runner leggero, task minimali                │  │
 │  │                                                    │  │
 │  └────────────────────────────────────────────────────┘  │
@@ -92,9 +92,9 @@ OCI/
 │       ├── security-setup.yml            # Security (Kyverno policy engine)
 │       ├── backup-setup.yml              # Backup & DR (Velero + OCI Object Storage)
 │       ├── observability-cluster-setup.yml  # Observability K8s (Prometheus, Loki, Promtail, OTEL)
-│       ├── observability-vm-setup.yml       # Grafana su micro VM (Podman + Caddy HTTPS)
+│       ├── observability-vm-setup.yml       # Grafana su micro VM (Podman)
 │       ├── domain-setup.yml                 # HTTPS routing via sottodomini (IngressRoute)
-│       └── reverse-proxy-setup.yml          # Caddy reverse proxy su micro-cirunner (IP stabile)
+│       └── reverse-proxy-setup.yml          # TCP forwarding su micro-gw (firewalld DNAT → Traefik)
 │
 ├── scripts/
 │   ├── deploy.sh                # Provisioning infrastruttura (Terraform + kubeconfig + wait nodes)
@@ -164,15 +164,15 @@ ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-
 # poi ri-eseguire post-cluster-setup.yml (Traefik con ACME) e domain-setup.yml
 ansible-playbook ansible/playbooks/post-cluster-setup.yml
 ansible-playbook ansible/playbooks/domain-setup.yml
-# Per Grafana HTTPS: ri-eseguire anche observability-vm-setup.yml (aggiunge Caddy)
+# Per Grafana: ri-eseguire anche observability-vm-setup.yml
 ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml
 
-# 11. (Opzionale) Reverse Proxy - Caddy su micro-cirunner (IP stabile)
-# Alternativa al domain setup diretto: DNS → micro-cirunner → Caddy (TLS) → Traefik
+# 11. (Opzionale) TCP Forwarding - micro-gw (IP stabile → Traefik K8s)
+# DNS → micro-gw (firewalld DNAT) → Traefik K8s (TLS ACME + L7 routing)
 # Configurare install_reverse_proxy: true in ansible/vars/oke.yml
-ansible-playbook ansible/playbooks/post-cluster-setup.yml       # Traefik senza hostPort/ACME
-ansible-playbook ansible/playbooks/domain-setup.yml             # IngressRoute con entryPoint web
-ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/reverse-proxy-setup.yml  # Caddy
+ansible-playbook ansible/playbooks/post-cluster-setup.yml       # Traefik con ACME
+ansible-playbook ansible/playbooks/domain-setup.yml             # IngressRoute
+ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/reverse-proxy-setup.yml  # firewalld DNAT
 ```
 
 ## Deploy Manuale
@@ -433,11 +433,10 @@ install_grafana_dashboards: true   # 8 dashboard JSON provisioned
 install_grafana_alerting: true     # Alert rules K8s-adapted
 
 # Domain Setup (domain-setup.yml) — scegliere una opzione:
-# basicauth_users: "admin:$$..."  # Opzione A: BasicAuth
-install_oauth2_proxy: false        # Opzione B: Google SSO (OAuth2 Proxy)
+install_oauth2_proxy: false        # Google SSO (OAuth2 Proxy)
 
 # Reverse Proxy (reverse-proxy-setup.yml)
-install_reverse_proxy: false       # Caddy su micro-cirunner (IP stabile → Traefik)
+install_reverse_proxy: false       # TCP forwarding su micro-gw (IP stabile → Traefik)
 # Auth per-servizio (true = auth middleware, false = no auth):
 auth_traefik: true                 # Traefik Dashboard
 auth_prometheus: true              # Prometheus
@@ -625,26 +624,25 @@ Internet → DNS
   │           ├── jaeger.example.com     → Jaeger UI (auth)
   │           └── auth.example.com       → OAuth2 Proxy (Google SSO callback)
   │
-  └── grafana.example.com → Micro VM Public IP
-        └── Caddy (auto-TLS) → Grafana :3000
+  └── grafana.example.com → Traefik → ExternalName → micro-monitor:3000
 
-Auth = BasicAuth (htpasswd) OPPURE OAuth2 Proxy (Google SSO)
+Auth = OAuth2 Proxy (Google SSO)
 ```
 
 ### Servizi e URL
 
 | Servizio | URL | Auth | Target |
 |---|---|---|---|
-| Traefik Dashboard | `https://traefik.DOMAIN` | BasicAuth / Google SSO | `api@internal` |
+| Traefik Dashboard | `https://traefik.DOMAIN` | OAuth2 Proxy | `api@internal` |
 | ArgoCD | `https://argocd.DOMAIN` | Nativa (admin) | `argocd-server:80` |
 | Tekton Dashboard | `https://tekton.DOMAIN` | - | `tekton-dashboard:9097` |
-| Prometheus | `https://prometheus.DOMAIN` | BasicAuth / Google SSO | `prometheus-server:80` |
-| Alertmanager | `https://alertmanager.DOMAIN` | BasicAuth / Google SSO | `prometheus-alertmanager:9093` |
-| Loki | `https://loki.DOMAIN` | BasicAuth / Google SSO | `loki:3100` |
-| K8s Dashboard | `https://dashboard.DOMAIN` | BasicAuth / Google SSO | `kubernetes-dashboard-kong-proxy:443` |
-| Jaeger | `https://jaeger.DOMAIN` | BasicAuth / Google SSO | `jaeger-query:16686` |
+| Prometheus | `https://prometheus.DOMAIN` | OAuth2 Proxy | `prometheus-server:80` |
+| Alertmanager | `https://alertmanager.DOMAIN` | OAuth2 Proxy | `prometheus-alertmanager:9093` |
+| Loki | `https://loki.DOMAIN` | OAuth2 Proxy | `loki:3100` |
+| K8s Dashboard | `https://dashboard.DOMAIN` | OAuth2 Proxy | `kubernetes-dashboard-kong-proxy:443` |
+| Jaeger | `https://jaeger.DOMAIN` | OAuth2 Proxy | `jaeger-query:16686` |
 | OAuth2 Proxy | `https://auth.DOMAIN` | - (callback Google) | `oauth2-proxy:4180` |
-| Grafana | `https://grafana.DOMAIN` | Nativa (admin) | Caddy → `localhost:3000` |
+| Grafana | `https://grafana.DOMAIN` | Nativa (admin) | ExternalName → `micro-monitor:3000` |
 
 ### Requisiti DNS
 
@@ -652,8 +650,7 @@ Creare **A record** per ogni sottodominio:
 
 | Sottodominio | IP |
 |---|---|
-| `traefik`, `argocd`, `tekton`, `prometheus`, `alertmanager`, `loki`, `dashboard`, `jaeger`, `auth` | IP pubblico nodo K8s **light** |
-| `grafana` | IP pubblico **micro-monitor** VM |
+| `traefik`, `argocd`, `tekton`, `prometheus`, `alertmanager`, `loki`, `dashboard`, `jaeger`, `grafana`, `auth` | IP pubblico nodo K8s **light** (o micro-gw se reverse proxy attivo) |
 
 ### Setup
 
@@ -663,10 +660,7 @@ base_domain: "example.com"
 
 # Scegliere UNA delle due opzioni di autenticazione:
 
-# Opzione A - BasicAuth (semplice):
-basicauth_users: "admin:$$2y$$05$$..."  # htpasswd -nB admin
-
-# Opzione B - Google SSO (OAuth2 Proxy):
+# Google SSO (OAuth2 Proxy):
 install_oauth2_proxy: true
 oauth2_proxy_client_id: "xxx.apps.googleusercontent.com"
 oauth2_proxy_client_secret: "GOCSPX-xxx"
@@ -687,7 +681,7 @@ ansible-playbook ansible/playbooks/post-cluster-setup.yml
 # 5. Creare IngressRoute HTTPS per tutti i servizi
 ansible-playbook ansible/playbooks/domain-setup.yml
 
-# 6. (Opzionale) Grafana HTTPS via Caddy su micro VM
+# 6. (Opzionale) Grafana su micro VM
 ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml
 ```
 
@@ -696,13 +690,9 @@ ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-
 ```bash
 kubectl get ingressroute -A
 curl -I https://argocd.example.com         # 200
-curl -I https://grafana.example.com        # 200 (Caddy)
+curl -I https://grafana.example.com        # 200 (via Traefik → ExternalName)
 
-# Con BasicAuth:
-curl -I https://traefik.example.com        # 401 (Unauthorized)
-curl -I https://prometheus.example.com     # 401 (Unauthorized)
-
-# Con OAuth2 Proxy (Google SSO):
+# OAuth2 Proxy (Google SSO):
 curl -I https://traefik.example.com        # 302 → Google sign-in
 curl -I https://jaeger.example.com         # 302 → Google sign-in
 kubectl get pods -n traefik | grep oauth2  # oauth2-proxy Running
@@ -711,44 +701,32 @@ kubectl get pods -n traefik | grep oauth2  # oauth2-proxy Running
 echo | openssl s_client -servername prometheus.example.com \
   -connect <K8S_NODE_IP>:443 2>/dev/null | openssl x509 -noout -issuer
 # issuer: Let's Encrypt
-
-# Caddy su micro VM
-ssh opc@<MICRO_MONITOR_IP> sudo systemctl status caddy
 ```
 
 > **Nota**: I NodePort (30080/30443) restano attivi per comunicazione interna VCN (es. Grafana → Prometheus/Loki). Le IngressRoute PathPrefix esistenti in `ci-setup.yml` restano come fallback per chi non configura `base_domain`.
 
-### Reverse Proxy (Caddy su micro-cirunner — IP stabile)
+### TCP Forwarding (micro-gw — IP stabile)
 
-L'IP pubblico del nodo K8s light e' **effimero** — cambia se il nodo viene ricreato (scaling, upgrade, crash), rompendo tutti i DNS A record. La micro VM `micro-cirunner` ha invece un IP pubblico stabile.
+L'IP pubblico del nodo K8s light e' **effimero** — cambia se il nodo viene ricreato (scaling, upgrade, crash), rompendo tutti i DNS A record. La micro VM `micro-gw` ha invece un IP pubblico stabile.
 
-**Soluzione**: usare micro-cirunner come reverse proxy Caddy. DNS punta a micro-cirunner → Caddy termina TLS (Let's Encrypt) → inoltra HTTP a Traefik sul cluster via VCN privata.
+**Soluzione**: usare micro-gw come TCP forwarder via firewalld DNAT. DNS punta a micro-gw → firewalld inoltra traffico TCP grezzo a Traefik nel cluster → Traefik gestisce TLS (Let's Encrypt ACME) e L7 routing.
 
 ```
-Internet → DNS → micro-cirunner:80/443 (Caddy, IP stabile)
+Internet → DNS → micro-gw:80/443 (firewalld DNAT, IP stabile)
                    │
-                   ├── traefik.domain      → k8s light node:30080 (→ Traefik → api@internal)
-                   ├── argocd.domain       → k8s light node:30080 (→ Traefik → ArgoCD, auth nativa)
-                   ├── tekton.domain       → k8s light node:30080 (→ Traefik → Tekton)
-                   ├── prometheus.domain   → k8s light node:30080 (→ Traefik → Prometheus, +auth)
-                   ├── alertmanager.domain → k8s light node:30080 (→ Traefik → Alertmanager, +auth)
-                   ├── loki.domain         → k8s light node:30080 (→ Traefik → Loki, +auth)
-                   ├── dashboard.domain    → k8s light node:30080 (→ Traefik → K8s Dashboard, +auth)
-                   ├── jaeger.domain       → k8s light node:30080 (→ Traefik → Jaeger, +auth)
-                   ├── auth.domain         → k8s light node:30080 (→ Traefik → OAuth2 Proxy)
-                   └── grafana.domain      → micro-monitor:3000   (→ Grafana, auth nativa)
+                   ├── :443 → k8s light node:30443 → Traefik (TLS ACME + L7 routing)
+                   └── :80  → k8s light node:30080 → Traefik (HTTP→HTTPS redirect)
 ```
 
-Caddy preserva l'header `Host:` → Traefik fa L7 routing basato sul dominio → le IngressRoute matchano.
+Traefik riceve il traffico TCP grezzo, termina TLS con Let's Encrypt ACME, e fa L7 routing basato sull'header `Host:` verso le IngressRoute.
 
 #### Differenze rispetto al modo diretto
 
-| | Traefik diretto | Reverse Proxy (Caddy) |
+| | Traefik diretto | TCP Forwarding (micro-gw) |
 |---|---|---|
-| **TLS** | Traefik (ACME, hostPort 80/443) | Caddy (Let's Encrypt, su micro-cirunner) |
-| **DNS target** | IP nodo K8s light (effimero) | IP micro-cirunner (stabile) |
-| **Traefik entryPoint** | `websecure` (443) | `web` (HTTP, porta 30080) |
-| **Grafana** | Caddy su micro-monitor | Caddy su micro-cirunner → micro-monitor:3000 |
+| **TLS** | Traefik (ACME, hostPort 80/443) | Traefik (ACME, via DNAT da micro-gw) |
+| **DNS target** | IP nodo K8s light (effimero) | IP micro-gw (stabile) |
+| **micro-gw** | Non usata | firewalld DNAT (trasparente) |
 
 #### Auth per-servizio
 
@@ -781,28 +759,24 @@ ansible-playbook ansible/playbooks/post-cluster-setup.yml
 # 3. Creare IngressRoute (con entryPoint web + auth per-servizio)
 ansible-playbook ansible/playbooks/domain-setup.yml
 
-# 4. Installare Caddy reverse proxy su micro-cirunner
+# 4. Configurare TCP forwarding su micro-gw (firewalld DNAT)
 ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/reverse-proxy-setup.yml
 
-# 5. Aggiornare DNS: TUTTI i sottodomini → IP micro-cirunner
+# 5. Aggiornare DNS: TUTTI i sottodomini → IP micro-gw
 ```
 
 #### Verifica
 
 ```bash
-# Caddy status su micro-cirunner
-ssh micro-cirunner sudo systemctl status caddy
-
-# Caddyfile generato
-ssh micro-cirunner cat /opt/caddy/Caddyfile
+# Firewalld status su micro-gw
+ssh micro-gw sudo firewall-cmd --list-forward-ports
+ssh micro-gw sudo firewall-cmd --query-masquerade
+ssh micro-gw sysctl net.ipv4.ip_forward
 
 # Test HTTPS
-curl -I https://prometheus.example.com   # 302 (OAuth2) o 401 (BasicAuth)
+curl -I https://prometheus.example.com   # 302 (OAuth2 → Google sign-in)
 curl -I https://argocd.example.com       # 200 (auth nativa)
 curl -I https://jaeger.example.com       # 200 (se auth_jaeger: false)
-
-# Certificati Let's Encrypt (Caddy)
-ssh micro-cirunner sudo ls /opt/caddy/data/caddy/certificates/
 ```
 
 ## Comandi Utili
@@ -857,16 +831,15 @@ kubectl get svc -n monitoring                          # servizi e NodePort
 curl http://<K8S_NODE_IP>:31090/api/v1/status/config   # Prometheus health
 curl http://<K8S_NODE_IP>:31100/ready                   # Loki health
 # Grafana: http://<MICRO_MONITOR_IP>:3000 (senza domain)
-# Grafana: https://grafana.<DOMAIN> (con domain setup + Caddy)
+# Grafana: https://grafana.<DOMAIN> (con domain setup, via Traefik → ExternalName)
 ssh opc@<MICRO_MONITOR_IP> sudo systemctl status grafana  # stato Grafana
-ssh opc@<MICRO_MONITOR_IP> sudo systemctl status caddy    # stato Caddy (se domain setup)
 # In Grafana: OCI Monitoring datasource → query metriche infra OCI
 # Metriche OCI: CpuUtilization, MemoryUtilization, NetworkBytesIn/Out, DiskBytesRead/Written
 
-# Reverse Proxy (Caddy su micro-cirunner)
-ssh micro-cirunner sudo systemctl status caddy        # stato Caddy
-ssh micro-cirunner cat /opt/caddy/Caddyfile           # Caddyfile generato
-ssh micro-cirunner sudo ls /opt/caddy/data/caddy/certificates/  # cert Let's Encrypt
+# TCP Forwarding (micro-gw)
+ssh micro-gw sudo firewall-cmd --list-forward-ports       # regole DNAT
+ssh micro-gw sudo firewall-cmd --query-masquerade          # masquerade attivo
+ssh micro-gw sysctl net.ipv4.ip_forward                    # IP forwarding
 
 # Terraform
 terraform output                    # Tutti gli output
@@ -940,8 +913,7 @@ Secret gestiti in `oke-vault.yml`:
 - `grafana_admin_password` — password admin Grafana
 - `velero_aws_access_key_id` / `velero_aws_secret_access_key` — credenziali S3 backup
 - `redis_k8s_password` / `celery_broker_url` — credenziali Redis/Celery
-- `basicauth_users` — hash BasicAuth (opzionale)
-- `oauth2_proxy_client_id` / `client_secret` / `cookie_secret` — credenziali Google SSO (opzionale)
+- `oauth2_proxy_client_id` / `client_secret` / `cookie_secret` — credenziali Google SSO
 
 ## License
 

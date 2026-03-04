@@ -7,16 +7,12 @@
 # Per editare dopo la cifratura:
 #   ansible-vault edit oke-vault.yml
 #
-# I playbook caricano questo file automaticamente via vars_files.
 # Lanciare con: ansible-playbook ... --ask-vault-pass
 # Oppure con vault password file: ansible-playbook ... --vault-password-file ~/.vault_pass
 ---
 
 # OCIR (Oracle Container Registry)
 ocir_auth_token: "CHANGE_ME"  # Console OCI: My Profile → Auth tokens → Generate token
-
-# Grafana
-grafana_admin_password: "CHANGE_ME"
 
 # Velero (Backup)
 velero_aws_access_key_id: "YOUR_ACCESS_KEY_ID"
@@ -25,29 +21,7 @@ velero_aws_secret_access_key: "YOUR_SECRET_ACCESS_KEY"
 # Velero UI
 velero_ui_password: "CHANGE_ME"
 
-# PostgreSQL (password per il database K8s)
-postgres_k8s_password: "CHANGE_ME"
-
-# Redis (password per Redis Exporter e Celery broker)
-redis_k8s_password: "CHANGE_ME"
-celery_broker_url: "redis://:CHANGE_ME@redis.events.svc:6379/0"
-
-# Django Backoffice
-django_secret_key: "CHANGE_ME"
-django_superuser_password: "CHANGE_ME"
-
-# ArgoCD repo privato
-argocd_repo_token: "ghp_CHANGE_ME"  # GitHub Personal Access Token
-
-# Airflow
-airflow_fernet_key: "CHANGE_ME"    # python3 -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
-airflow_webserver_secret_key: "CHANGE_ME"
-airflow_admin_password: "CHANGE_ME"
-
-# BasicAuth (Opzione A — decommentare se si usa BasicAuth)
-# basicauth_users: "admin:$$2y$$05$$HASH_HERE"
-
-# OAuth2 Proxy (Opzione B — decommentare se si usa Google SSO)
+# OAuth2 Proxy (Google SSO)
 oauth2_proxy_client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
 oauth2_proxy_client_secret="YOUR_GOOGLE_CLIENT_SECRET"
 oauth2_proxy_cookie_secret="f7993dcccaad3a3edfc5f0ff2b1ebbb7"

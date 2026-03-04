@@ -5,7 +5,7 @@ metadata:
   namespace: velero
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`velero.oci.santocaruso.eu`)
       kind: Rule
@@ -15,3 +15,5 @@ spec:
       middlewares:
         - name: google-auth
           namespace: traefik
+  tls:
+    certResolver: letsencrypt

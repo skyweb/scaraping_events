@@ -1,0 +1,29 @@
+apiVersion: traefik.io/v1alpha1
+kind: ServersTransport
+metadata:
+  name: dashboard-transport
+  namespace: monitoring
+spec:
+  insecureSkipVerify: true
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kubernetes-dashboard-https
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`dashboard.oci.santocaruso.eu`)
+      kind: Rule
+      services:
+        - name: kubernetes-dashboard-kong-proxy
+          port: 443
+          serversTransport: dashboard-transport
+          scheme: https
+      middlewares:
+        - name: google-auth
+          namespace: traefik
+  tls:
+    certResolver: letsencrypt

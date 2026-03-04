@@ -76,12 +76,12 @@ ssh -L 5432:<CLUSTER_IP>:5432 user@<K8S_NODE_IP>
 
 Poi connettiti a `localhost:5432` dal tuo PC.
 
-### Opzione 3: SSH jump via micro-cirunner
+### Opzione 3: SSH jump via micro-gw
 
-Se non hai accesso SSH diretto ai nodi K8s ma hai la micro-cirunner:
+Se non hai accesso SSH diretto ai nodi K8s ma hai la micro-gw:
 
 ```bash
-ssh -J user@<MICRO_CIRUNNER_PUBLIC_IP> \
+ssh -J user@<MICRO_GW_PUBLIC_IP> \
     -L 5432:postgres.events.svc.cluster.local:5432 \
     user@<K8S_NODE_PRIVATE_IP>
 ```
@@ -123,5 +123,5 @@ psql -h <K8S_NODE_IP> -p 31432 -U events -d events
 |---|---|---|---|
 | 1. kubectl port-forward | Nessuna | Alta | Buona (richiede kubectl) |
 | 2. SSH tunnel al nodo | Nessuna | Alta | Buona (richiede SSH) |
-| 3. SSH jump via cirunner | Nessuna | Alta | Media (doppio hop) |
+| 3. SSH jump via micro-gw | Nessuna | Alta | Media (doppio hop) |
 | 4. NodePort | Aggiunta Service | Bassa (porta esposta) | Alta (accesso diretto) |

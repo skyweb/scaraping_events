@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: celery-exporter
+  namespace: monitoring
+  labels:
+    app: celery-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: celery-exporter
+  template:
+    metadata:
+      labels:
+        app: celery-exporter
+    spec:
+      nodeSelector:
+        workload: heavy
+      containers:
+        - name: celery-exporter
+          image: docker.io/danihodovic/celery-exporter:latest
+          ports:
+            - containerPort: 9808
+          env:
+            - name: CELERY_BROKER_URL
+              valueFrom:
+                secretKeyRef:
+                  name: monitoring-secret
+                  key: CELERY_BROKER_URL
+          args:
+            - --broker-url=$(CELERY_BROKER_URL)
+          resources:
+            limits:
+              cpu: 50m
+              memory: 64Mi
+            requests:
+              cpu: 10m
+              memory: 32Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: celery-exporter
+  namespace: monitoring
+  labels:
+    app: celery-exporter
+spec:
+  selector:
+    app: celery-exporter
+  ports:
+    - name: metrics
+      port: 9808
+      targetPort: 9808

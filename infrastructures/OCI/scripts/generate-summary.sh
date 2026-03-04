@@ -178,7 +178,7 @@ Aggiungi al tuo \`~/.ssh/config\`:
 ${SSH_CONFIG}
 \`\`\`
 
-Poi basta: \`ssh micro-monitor\` o \`ssh micro-cirunner\`.
+Poi basta: \`ssh micro-monitor\` o \`ssh micro-gw\`.
 
 </details>
 
@@ -276,12 +276,12 @@ if [ "$MICRO_VM_COUNT" -gt 0 ]; then
     fi
 fi
 
-# IP target per DNS: se reverse proxy, usa micro-cirunner; altrimenti light node
+# IP target per DNS: se reverse proxy, usa micro-gw; altrimenti light node
 DNS_TARGET_IP="${LIGHT_IP}"
 DNS_TARGET_LABEL="light node"
 if [ "$INSTALL_REVERSE_PROXY" = "true" ] && [ -n "$CIRUNNER_IP" ]; then
     DNS_TARGET_IP="${CIRUNNER_IP}"
-    DNS_TARGET_LABEL="micro-cirunner (reverse proxy)"
+    DNS_TARGET_LABEL="micro-gw (reverse proxy)"
 fi
 
 cat >> "${OUTPUT_FILE}" << EOF
@@ -324,14 +324,14 @@ fi
 cat >> "${OUTPUT_FILE}" << EOF
 | Servizio | URL | Target IP | Auth |
 |---|---|---|---|
-| Traefik Dashboard | \`https://traefik.${DOMAIN}\` | ${DNS_TARGET_LABEL} | BasicAuth / OAuth2 |
+| Traefik Dashboard | \`https://traefik.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
 | ArgoCD | \`https://argocd.${DOMAIN}\` | ${DNS_TARGET_LABEL} | Nativa (admin) |
 | Tekton Dashboard | \`https://tekton.${DOMAIN}\` | ${DNS_TARGET_LABEL} | — |
-| Prometheus | \`https://prometheus.${DOMAIN}\` | ${DNS_TARGET_LABEL} | BasicAuth / OAuth2 |
-| Alertmanager | \`https://alertmanager.${DOMAIN}\` | ${DNS_TARGET_LABEL} | BasicAuth / OAuth2 |
-| Loki | \`https://loki.${DOMAIN}\` | ${DNS_TARGET_LABEL} | BasicAuth / OAuth2 |
-| Jaeger | \`https://jaeger.${DOMAIN}\` | ${DNS_TARGET_LABEL} | BasicAuth / OAuth2 |
-| K8s Dashboard | \`https://dashboard.${DOMAIN}\` | ${DNS_TARGET_LABEL} | BasicAuth / OAuth2 |
+| Prometheus | \`https://prometheus.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
+| Alertmanager | \`https://alertmanager.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
+| Loki | \`https://loki.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
+| Jaeger | \`https://jaeger.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
+| K8s Dashboard | \`https://dashboard.${DOMAIN}\` | ${DNS_TARGET_LABEL} | OAuth2 Proxy |
 | OAuth2 Proxy | \`https://auth.${DOMAIN}\` | ${DNS_TARGET_LABEL} | Google callback |
 | Grafana | \`https://grafana.${DOMAIN}\` | ${DNS_TARGET_LABEL} | Nativa (admin) |
 
@@ -343,9 +343,9 @@ EOF
 
 if [ "$INSTALL_REVERSE_PROXY" = "true" ] && [ -n "$CIRUNNER_IP" ]; then
 cat >> "${OUTPUT_FILE}" << EOF
-| **TUTTI** (\`traefik\`, \`argocd\`, \`tekton\`, \`prometheus\`, \`alertmanager\`, \`loki\`, \`jaeger\`, \`dashboard\`, \`auth\`, \`grafana\`) | \`${CIRUNNER_IP}\` (micro-cirunner, reverse proxy) |
+| **TUTTI** (\`traefik\`, \`argocd\`, \`tekton\`, \`prometheus\`, \`alertmanager\`, \`loki\`, \`jaeger\`, \`dashboard\`, \`auth\`, \`grafana\`) | \`${CIRUNNER_IP}\` (micro-gw, reverse proxy) |
 
-> **Reverse Proxy attivo**: Caddy su micro-cirunner (IP stabile) termina TLS e inoltra a Traefik/Grafana via VCN privata.
+> **Reverse Proxy attivo**: micro-gw (IP stabile) inoltra traffico TCP (80/443) a Traefik K8s via firewalld DNAT.
 EOF
 else
 cat >> "${OUTPUT_FILE}" << EOF

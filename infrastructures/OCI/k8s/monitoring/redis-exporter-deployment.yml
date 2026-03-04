@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-exporter
+  namespace: monitoring
+  labels:
+    app: redis-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-exporter
+  template:
+    metadata:
+      labels:
+        app: redis-exporter
+    spec:
+      nodeSelector:
+        workload: heavy
+      containers:
+        - name: redis-exporter
+          image: docker.io/oliver006/redis_exporter:latest
+          ports:
+            - containerPort: 9121
+          env:
+            - name: REDIS_ADDR
+              value: "redis://redis.events.svc:6379"
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: monitoring-secret
+                  key: REDIS_PASSWORD
+          resources:
+            limits:
+              cpu: 50m
+              memory: 64Mi
+            requests:
+              cpu: 10m
+              memory: 32Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-exporter
+  namespace: monitoring
+  labels:
+    app: redis-exporter
+spec:
+  selector:
+    app: redis-exporter
+  ports:
+    - name: metrics
+      port: 9121
+      targetPort: 9121
