@@ -1,0 +1,34 @@
+edition: community
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 2Gi
+  requests:
+    cpu: 100m
+    memory: 1Gi
+
+nodeSelector:
+  workload: heavy
+
+persistence:
+  enabled: true
+  size: 5Gi
+
+postgresql:
+  enabled: true
+  resources:
+    limits:
+      cpu: 250m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi
+  nodeSelector:
+    workload: heavy
+  persistence:
+    enabled: true
+    size: 5Gi
+
+account:
+  existingSecret: sonarqube-secret

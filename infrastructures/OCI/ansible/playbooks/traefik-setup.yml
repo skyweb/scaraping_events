@@ -1,0 +1,171 @@
+---
+# Traefik Ingress Controller per OKE
+# Installa Traefik via Helm usando i file in k8s/traefik/
+#
+# Tre modalità (scelta automatica in base a oke.yml):
+#   1. Base — senza ACME (base_domain non definito)
+#   2. ACME HTTPS + hostPort — accesso diretto (base_domain definito, no reverse proxy)
+#   3. Reverse proxy — TCP forwarding da micro-gw (base_domain + install_reverse_proxy)
+#
+# Prerequisiti:
+#   - install_traefik: true in oke.yml
+#   - namespace traefik esistente (creato da post-cluster-setup)
+#   - kubectl e helm configurati
+#
+# Uso: ansible-playbook ansible/playbooks/traefik-setup.yml --ask-vault-pass
+- name: Traefik Ingress Controller Setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    traefik_k8s_dir: "{{ playbook_dir }}/../../k8s/traefik"
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica che install_traefik sia abilitato
+      ansible.builtin.assert:
+        that: install_traefik | default(false)
+        fail_msg: "install_traefik non abilitato in oke.yml."
+
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica Helm disponibile
+      ansible.builtin.command: helm version --short
+      register: helm_version
+      changed_when: false
+
+    - name: Verifica namespace traefik esiste
+      ansible.builtin.command: kubectl get namespace traefik
+      changed_when: false
+
+    # =========================================================================
+    # Helm repo
+    # =========================================================================
+    - name: Aggiungi Helm repo traefik
+      ansible.builtin.command: helm repo add traefik https://traefik.github.io/charts
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+
+    - name: Aggiorna Helm repos
+      ansible.builtin.command: helm repo update
+      changed_when: false
+
+    # =========================================================================
+    # Helm — Traefik (base, senza ACME)
+    # =========================================================================
+    - name: Installa Traefik via Helm (base)
+      ansible.builtin.command: >
+        helm upgrade --install traefik traefik/traefik
+        --namespace traefik
+        -f {{ traefik_k8s_dir }}/traefik-values-base.yml
+        --set ports.web.nodePort={{ traefik_http_nodeport }}
+        --set ports.websecure.nodePort={{ traefik_https_nodeport }}
+        --set ports.traefik.nodePort={{ traefik_dashboard_nodeport }}
+      register: traefik_result
+      changed_when: "'STATUS: deployed' in traefik_result.stdout"
+      when:
+        - base_domain is not defined
+
+    # =========================================================================
+    # Helm — Traefik (ACME HTTPS + hostPort)
+    # =========================================================================
+    - name: Installa Traefik via Helm (ACME HTTPS + hostPort)
+      ansible.builtin.command: >
+        helm upgrade --install traefik traefik/traefik
+        --namespace traefik
+        -f {{ traefik_k8s_dir }}/traefik-values-acme.yml
+        --set ports.web.nodePort={{ traefik_http_nodeport }}
+        --set ports.websecure.nodePort={{ traefik_https_nodeport }}
+        --set ports.traefik.nodePort={{ traefik_dashboard_nodeport }}
+        --set "certificatesResolvers.letsencrypt.acme.email={{ letsencrypt_email }}"
+        --set "certificatesResolvers.letsencrypt.acme.storage=/data/acme.json"
+        --set "certificatesResolvers.letsencrypt.acme.httpChallenge.entryPoint=web"
+      register: traefik_result
+      changed_when: "'STATUS: deployed' in traefik_result.stdout"
+      when:
+        - base_domain is defined
+        - not (install_reverse_proxy | default(false))
+
+    # =========================================================================
+    # Helm — Traefik (reverse proxy — TCP forwarding da micro-gw)
+    # =========================================================================
+    - name: Installa Traefik via Helm (reverse proxy)
+      ansible.builtin.command: >
+        helm upgrade --install traefik traefik/traefik
+        --namespace traefik
+        -f {{ traefik_k8s_dir }}/traefik-values-reverse-proxy.yml
+        --set ports.web.nodePort={{ traefik_http_nodeport }}
+        --set ports.websecure.nodePort={{ traefik_https_nodeport }}
+        --set ports.traefik.nodePort={{ traefik_dashboard_nodeport }}
+        --set "certificatesResolvers.letsencrypt.acme.email={{ letsencrypt_email }}"
+        --set "certificatesResolvers.letsencrypt.acme.storage=/data/acme.json"
+        --set "certificatesResolvers.letsencrypt.acme.httpChallenge.entryPoint=web"
+      register: traefik_result
+      changed_when: "'STATUS: deployed' in traefik_result.stdout"
+      when:
+        - base_domain is defined
+        - install_reverse_proxy | default(false)
+
+    # =========================================================================
+    # Attendi ready
+    # =========================================================================
+    - name: Attendi Traefik ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment traefik
+        --namespace traefik --timeout=120s
+      changed_when: false
+
+    # =========================================================================
+    # Manifest K8s (IngressRoute Dashboard via Kustomize)
+    # =========================================================================
+    - name: Applica manifest Kustomize (Dashboard IngressRoute)
+      ansible.builtin.command: kubectl apply -k {{ traefik_k8s_dir }}
+      register: kustomize_result
+      changed_when: "'created' in kustomize_result.stdout or 'configured' in kustomize_result.stdout"
+      when: base_domain is defined
+
+    # =========================================================================
+    # Verifica
+    # =========================================================================
+    - name: Verifica pods Traefik
+      ansible.builtin.command: kubectl get pods -n traefik
+      register: pods_result
+      changed_when: false
+
+    - name: Verifica services Traefik
+      ansible.builtin.command: kubectl get svc -n traefik
+      register: svc_result
+      changed_when: false
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Traefik
+      ansible.builtin.debug:
+        msg:
+          - "=== Traefik Setup Completato ==="
+          - ""
+          - "NodePort HTTP:      {{ traefik_http_nodeport }}"
+          - "NodePort HTTPS:     {{ traefik_https_nodeport }}"
+          - "NodePort Dashboard: {{ traefik_dashboard_nodeport }}"
+          - "Modalità:           {{ 'reverse-proxy' if (base_domain is defined and install_reverse_proxy | default(false)) else ('ACME+hostPort' if base_domain is defined else 'base') }}"
+          - "Dashboard:          {{ 'https://traefik.oci.santocaruso.eu' if base_domain is defined else 'interno' }}"
+          - ""
+          - "--- Pods ---"
+          - "{{ pods_result.stdout }}"
+          - ""
+          - "--- Services ---"
+          - "{{ svc_result.stdout }}"

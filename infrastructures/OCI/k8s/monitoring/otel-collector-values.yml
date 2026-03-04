@@ -55,8 +55,8 @@ config:
   exporters:
     prometheusremotewrite:
       endpoint: http://prometheus-server.monitoring.svc:80/api/v1/write
-    otlphttp/jaeger:
-      endpoint: http://jaeger.monitoring.svc:4318
+    otlphttp/tempo:
+      endpoint: http://tempo.monitoring.svc:4318
     prometheus:
       endpoint: 0.0.0.0:8889
     debug:
@@ -66,7 +66,7 @@ config:
       traces:
         receivers: [otlp]
         processors: [memory_limiter, resourcedetection, batch]
-        exporters: [otlphttp/jaeger, spanmetrics, debug]
+        exporters: [otlphttp/tempo, spanmetrics, debug]
       metrics/spanmetrics:
         receivers: [spanmetrics]
         exporters: [prometheus]

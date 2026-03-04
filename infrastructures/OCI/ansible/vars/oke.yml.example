@@ -40,6 +40,15 @@ install_metrics_server: true
 # Kubernetes Dashboard
 install_dashboard: true
 
+# Grafana (in-cluster via Helm)
+install_grafana: true
+
+# Grafana Tempo (distributed tracing, sostituisce Jaeger)
+install_tempo: true
+
+# SonarQube (Code Quality & Security)
+install_sonarqube: true
+
 # Kyverno (Policy Engine - Security)
 install_kyverno: false
 # Audit = solo log violazioni, Enforce = blocca le risorse non conformi
@@ -99,6 +108,18 @@ argocd_target_revision: "main"
 # Flusso: DNS → micro-gw (firewalld DNAT) → k8s NodePort → Traefik (TLS + L7)
 # Vantaggi: IP stabile, no duplicazione config (solo IngressRoute K8s).
 install_reverse_proxy: true
+
+# =============================================================================
+# WireGuard VPN (server nativo su micro-gw)
+# =============================================================================
+# Quando abilitato, micro-gw esegue un server WireGuard nativo.
+# I client VPN possono raggiungere nodi K8s (10.0.1.0/24) e micro VM (10.0.3.0/28).
+# VPN Subnet: 10.10.0.0/24, Porta: 51820
+install_wireguard: true
+# CIDR K8s — abilita accesso VPN a pod e service del cluster
+# Ottenere da: kubectl cluster-info dump | grep -m1 cluster-cidr / service-cluster-ip-range
+wg_k8s_pod_cidr: "10.244.0.0/16"
+wg_k8s_service_cidr: "10.96.0.0/16"
 
 # =============================================================================
 # Domain Setup (HTTPS via sottodomini)

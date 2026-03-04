@@ -1,0 +1,21 @@
+# WireGuard server configuration — managed by Ansible
+# Non modificare manualmente: rieseguire wireguard-setup.yml
+
+[Interface]
+PrivateKey = {{ wg_server_private_key }}
+Address = {{ wg_server_address }}
+ListenPort = {{ wg_port }}
+
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o {{ ansible_default_ipv4.interface }} -j MASQUERADE{% if wg_k8s_pod_cidr is defined %}; ip route add {{ wg_k8s_pod_cidr }} via {{ k8s_node_ip }}; ip route add {{ wg_k8s_service_cidr }} via {{ k8s_node_ip }}{% endif %}
+
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o {{ ansible_default_ipv4.interface }} -j MASQUERADE{% if wg_k8s_pod_cidr is defined %}; ip route del {{ wg_k8s_pod_cidr }} via {{ k8s_node_ip }}; ip route del {{ wg_k8s_service_cidr }} via {{ k8s_node_ip }}{% endif %}
+
+{% for peer in wg_peers %}
+[Peer]
+PublicKey = {{ peer.public_key }}
+AllowedIPs = {{ peer.allowed_ips | default('10.10.0.' ~ (loop.index + 1) ~ '/32') }}
+{% if peer.preshared_key is defined %}
+PresharedKey = {{ peer.preshared_key }}
+{% endif %}
+
+{% endfor %}

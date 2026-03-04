@@ -1,0 +1,17 @@
+apiVersion: velero.io/v1
+kind: Schedule
+metadata:
+  name: weekly-cluster-backup
+  namespace: velero
+spec:
+  schedule: "0 3 * * 0"
+  template:
+    ttl: "720h"
+    includedNamespaces:
+      - "*"
+    excludedNamespaces:
+      - kube-system
+      - kube-public
+      - kube-node-lease
+    storageLocation: oci-objectstorage
+    defaultVolumesToFsBackup: true

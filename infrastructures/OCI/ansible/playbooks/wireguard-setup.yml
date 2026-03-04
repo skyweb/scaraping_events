@@ -1,0 +1,191 @@
+---
+# WireGuard VPN nativo su micro-gw (Oracle Linux 8, E2.1.Micro)
+# Permette ai client VPN di raggiungere nodi K8s (10.0.1.0/24)
+# e micro VM (10.0.3.0/28) nella VCN.
+#
+# VPN Subnet: 10.10.0.0/24, Server: 10.10.0.1/24, Porta: 51820
+#
+# Prerequisiti:
+#   - install_wireguard: true in oke.yml
+#   - wg_server_private_key in oke-vault.yml
+#   - wg_peers (opzionale) in oke-vault.yml
+#   - Inventory con micro-gw
+#
+# Uso: ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/wireguard-setup.yml
+
+- name: WireGuard VPN su micro-gw
+  hosts: micro-gw
+  become: true
+  gather_facts: true
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    wg_interface: wg0
+    wg_port: 51820
+    wg_subnet: "10.10.0.0/24"
+    wg_server_address: "10.10.0.1/24"
+    wg_peers: []
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica che install_wireguard sia abilitato
+      ansible.builtin.assert:
+        that: install_wireguard | default(false)
+        fail_msg: "install_wireguard non abilitato in oke.yml."
+
+    - name: Verifica che wg_server_private_key sia definita
+      ansible.builtin.assert:
+        that:
+          - wg_server_private_key is defined
+          - wg_server_private_key != "CHANGE_ME"
+        fail_msg: "wg_server_private_key non configurata in oke-vault.yml. Generare con: wg genkey"
+
+    # =========================================================================
+    # Installazione WireGuard
+    # =========================================================================
+    - name: Installa wireguard-tools e qrencode
+      ansible.builtin.dnf:
+        name:
+          - wireguard-tools
+          - qrencode
+        state: present
+
+    - name: Carica modulo kernel wireguard
+      community.general.modprobe:
+        name: wireguard
+        state: present
+
+    - name: Rendi persistente il modulo wireguard al boot
+      ansible.builtin.copy:
+        dest: /etc/modules-load.d/wireguard.conf
+        content: "wireguard\n"
+        mode: "0644"
+
+    # =========================================================================
+    # IP Forwarding
+    # =========================================================================
+    - name: Abilita IP forwarding (net.ipv4.ip_forward)
+      ansible.posix.sysctl:
+        name: net.ipv4.ip_forward
+        value: "1"
+        sysctl_set: true
+        state: present
+        reload: true
+
+    # =========================================================================
+    # Configurazione WireGuard
+    # =========================================================================
+    - name: Crea directory /etc/wireguard
+      ansible.builtin.file:
+        path: /etc/wireguard
+        state: directory
+        mode: "0700"
+
+    - name: Deploy configurazione wg0.conf
+      ansible.builtin.template:
+        src: ../templates/wg0.conf.j2
+        dest: /etc/wireguard/{{ wg_interface }}.conf
+        mode: "0600"
+      notify: Restart WireGuard
+
+    # =========================================================================
+    # Script wg-add-peer (aggiunta peer da CLI)
+    # =========================================================================
+    - name: Deploy script wg-add-peer
+      ansible.builtin.template:
+        src: ../templates/wg-add-peer.sh.j2
+        dest: /usr/local/bin/wg-add-peer
+        mode: "0750"
+        owner: root
+        group: root
+
+    # =========================================================================
+    # Firewalld — Apri porta WireGuard
+    # =========================================================================
+    - name: Apri porta UDP {{ wg_port }} in firewalld
+      ansible.builtin.command: firewall-cmd --permanent --add-port={{ wg_port }}/udp
+      register: fw_wg
+      changed_when: "'success' in fw_wg.stdout"
+      failed_when: false
+
+    - name: Abilita masquerade (necessario per NAT VPN → VCN)
+      ansible.builtin.command: firewall-cmd --permanent --add-masquerade
+      register: fw_masq
+      changed_when: "'success' in fw_masq.stdout"
+      failed_when: false
+
+    - name: Ricarica firewalld per applicare regole
+      ansible.builtin.command: firewall-cmd --reload
+      changed_when: false
+
+    # =========================================================================
+    # Servizio WireGuard
+    # =========================================================================
+    - name: Abilita e avvia wg-quick@{{ wg_interface }}
+      ansible.builtin.systemd:
+        name: "wg-quick@{{ wg_interface }}"
+        state: started
+        enabled: true
+
+    # =========================================================================
+    # Verifica
+    # =========================================================================
+    - name: Verifica interfaccia WireGuard
+      ansible.builtin.command: wg show {{ wg_interface }}
+      register: wg_status
+      changed_when: false
+
+    - name: Verifica porta UDP aperta in firewalld
+      ansible.builtin.command: firewall-cmd --list-ports
+      register: fw_ports
+      changed_when: false
+
+    - name: Verifica IP forwarding attivo
+      ansible.builtin.command: sysctl net.ipv4.ip_forward
+      register: verify_ipfwd
+      changed_when: false
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo WireGuard VPN
+      ansible.builtin.debug:
+        msg:
+          - "=== WireGuard VPN su micro-gw Completato ==="
+          - ""
+          - "Endpoint:       {{ ansible_host }}:{{ wg_port }}"
+          - "VPN Subnet:     {{ wg_subnet }}"
+          - "Server Address: {{ wg_server_address }}"
+          - ""
+          - "--- Stato ---"
+          - "IP forwarding:  {{ verify_ipfwd.stdout }}"
+          - "Firewall ports: {{ fw_ports.stdout }}"
+          - ""
+          - "--- wg show ---"
+          - "{{ wg_status.stdout }}"
+          - ""
+          - "--- Aggiungi peer ---"
+          - "wg-add-peer <nome>   (es: wg-add-peer laptop-santo)"
+          - ""
+          - "--- Configurazione client (manuale) ---"
+          - "[Interface]"
+          - "PrivateKey = <CLIENT_PRIVATE_KEY>"
+          - "Address = 10.10.0.2/32"
+          - "DNS = 1.1.1.1"
+          - ""
+          - "[Peer]"
+          - "PublicKey = <SERVER_PUBLIC_KEY>"
+          - "Endpoint = {{ ansible_host }}:{{ wg_port }}"
+          - "AllowedIPs = 10.0.1.0/24, 10.0.3.0/28, 10.10.0.0/24{{ ', ' ~ wg_k8s_pod_cidr ~ ', ' ~ wg_k8s_service_cidr if wg_k8s_pod_cidr is defined else '' }}"
+          - "PersistentKeepalive = 25"
+
+  handlers:
+    - name: Restart WireGuard
+      ansible.builtin.systemd:
+        name: "wg-quick@{{ wg_interface }}"
+        state: restarted

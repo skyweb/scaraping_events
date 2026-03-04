@@ -1,0 +1,103 @@
+#!/bin/bash
+# WireGuard — Aggiungi nuovo peer (client VPN)
+# Managed by Ansible — non modificare manualmente
+#
+# Uso: wg-add-peer <nome-peer>
+# Esempio: wg-add-peer laptop-santo
+
+set -euo pipefail
+
+WG_INTERFACE="{{ wg_interface }}"
+WG_CONF="/etc/wireguard/${WG_INTERFACE}.conf"
+WG_PORT="{{ wg_port }}"
+WG_SUBNET_PREFIX="10.10.0"
+WG_ENDPOINT="{{ ansible_host }}:${WG_PORT}"
+WG_ALLOWED_IPS="10.0.1.0/24, 10.0.3.0/28, 10.10.0.0/24{{ ', ' ~ wg_k8s_pod_cidr ~ ', ' ~ wg_k8s_service_cidr if wg_k8s_pod_cidr is defined else '' }}"
+PEERS_DIR="/etc/wireguard/peers"
+
+# --- Validazione ---
+if [[ $# -lt 1 ]]; then
+  echo "Uso: wg-add-peer <nome-peer>"
+  echo "Esempio: wg-add-peer laptop-santo"
+  exit 1
+fi
+
+PEER_NAME="$1"
+
+if [[ ! "$PEER_NAME" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+  echo "Errore: nome peer può contenere solo lettere, numeri, - e _"
+  exit 1
+fi
+
+mkdir -p "$PEERS_DIR"
+
+if [[ -f "${PEERS_DIR}/${PEER_NAME}.conf" ]]; then
+  echo "Errore: peer '${PEER_NAME}' esiste già (${PEERS_DIR}/${PEER_NAME}.conf)"
+  exit 1
+fi
+
+# --- Trova prossimo IP libero ---
+USED_IPS=$(grep -oP 'AllowedIPs\s*=\s*\K[0-9.]+' "$WG_CONF" | sort -t. -k4 -n)
+
+NEXT_IP=2
+for ip in $USED_IPS; do
+  LAST_OCTET="${ip##*.}"
+  if [[ "$LAST_OCTET" -ge "$NEXT_IP" ]]; then
+    NEXT_IP=$((LAST_OCTET + 1))
+  fi
+done
+
+if [[ "$NEXT_IP" -gt 254 ]]; then
+  echo "Errore: nessun IP disponibile nel range ${WG_SUBNET_PREFIX}.0/24"
+  exit 1
+fi
+
+PEER_IP="${WG_SUBNET_PREFIX}.${NEXT_IP}"
+
+# --- Genera chiavi ---
+PRIVATE_KEY=$(wg genkey)
+PUBLIC_KEY=$(echo "$PRIVATE_KEY" | wg pubkey)
+SERVER_PUBLIC_KEY=$(wg show "$WG_INTERFACE" public-key)
+
+# --- Aggiungi peer al server (live) ---
+wg set "$WG_INTERFACE" peer "$PUBLIC_KEY" allowed-ips "${PEER_IP}/32"
+
+# --- Persisti in wg0.conf ---
+cat >> "$WG_CONF" <<EOF
+
+# ${PEER_NAME} (aggiunto $(date +%Y-%m-%d))
+[Peer]
+PublicKey = ${PUBLIC_KEY}
+AllowedIPs = ${PEER_IP}/32
+EOF
+
+# --- Genera config client ---
+CLIENT_CONF="[Interface]
+PrivateKey = ${PRIVATE_KEY}
+Address = ${PEER_IP}/32
+DNS = 1.1.1.1
+
+[Peer]
+PublicKey = ${SERVER_PUBLIC_KEY}
+Endpoint = ${WG_ENDPOINT}
+AllowedIPs = ${WG_ALLOWED_IPS}
+PersistentKeepalive = 25"
+
+# Salva config client
+echo "$CLIENT_CONF" > "${PEERS_DIR}/${PEER_NAME}.conf"
+chmod 600 "${PEERS_DIR}/${PEER_NAME}.conf"
+
+echo "=== Peer '${PEER_NAME}' aggiunto ==="
+echo ""
+echo "IP assegnato: ${PEER_IP}"
+echo "Config salvata: ${PEERS_DIR}/${PEER_NAME}.conf"
+echo ""
+echo "--- Configurazione client ---"
+echo "$CLIENT_CONF"
+
+# QR code (se qrencode è installato)
+if command -v qrencode &>/dev/null; then
+  echo ""
+  echo "--- QR Code (scansiona con app WireGuard mobile) ---"
+  echo "$CLIENT_CONF" | qrencode -t ansiutf8
+fi

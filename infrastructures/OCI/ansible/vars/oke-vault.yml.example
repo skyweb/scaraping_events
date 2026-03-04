@@ -21,7 +21,23 @@ velero_aws_secret_access_key: "YOUR_SECRET_ACCESS_KEY"
 # Velero UI
 velero_ui_password: "CHANGE_ME"
 
+# Grafana
+grafana_admin_password: "CHANGE_ME"
+
+# SonarQube
+sonarqube_admin_password: "CHANGE_ME"
+
 # OAuth2 Proxy (Google SSO)
 oauth2_proxy_client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
 oauth2_proxy_client_secret="YOUR_GOOGLE_CLIENT_SECRET"
 oauth2_proxy_cookie_secret="f7993dcccaad3a3edfc5f0ff2b1ebbb7"
+
+# WireGuard VPN (server su micro-gw)
+# Generare con: wg genkey
+wg_server_private_key: "CHANGE_ME"
+# Lista peer (client VPN) — decommentare e configurare:
+# wg_peers:
+#   - public_key: "CLIENT_PUBLIC_KEY"
+#     allowed_ips: "10.10.0.2/32"
+#   - public_key: "ANOTHER_CLIENT_PUBLIC_KEY"
+#     allowed_ips: "10.10.0.3/32"

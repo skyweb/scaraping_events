@@ -1,0 +1,23 @@
+# Traefik base — senza ACME, senza reverse proxy
+# Valori dinamici (nodePort) passati via --set dal playbook Ansible.
+
+service:
+  type: NodePort
+
+ports:
+  traefik:
+    expose:
+      default: true
+
+nodeSelector:
+  workload: light
+
+ingressClass:
+  enabled: true
+  isDefaultClass: true
+
+providers:
+  kubernetesIngress:
+    enabled: true
+  kubernetesCRD:
+    enabled: true

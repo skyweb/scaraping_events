@@ -7,8 +7,5 @@ resources:
   - prometheus-ingressroute.yml
   - alertmanager-ingressroute.yml
   - loki-ingressroute.yml
-  - jaeger-ingressroute.yml
   - dashboard-ingressroute.yml
-  - traefik-dashboard-ingressroute.yml
-  - grafana-external-service.yml
   - grafana-ingressroute.yml

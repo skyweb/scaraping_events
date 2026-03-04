@@ -1,0 +1,138 @@
+---
+# SonarQube — Code Quality & Security Analysis
+# Installa SonarQube via Helm e applica i manifest K8s dalla directory k8s/sonarqube/
+#
+# Prerequisiti:
+#   - install_sonarqube: true in oke.yml
+#   - sonarqube_admin_password in oke-vault.yml
+#   - kubectl e helm configurati
+#
+# Uso: ansible-playbook ansible/playbooks/sonarqube-setup.yml
+- name: SonarQube Setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    sonarqube_k8s_dir: "{{ playbook_dir }}/../../k8s/sonarqube"
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica che install_sonarqube sia abilitato
+      ansible.builtin.assert:
+        that: install_sonarqube | default(false)
+        fail_msg: "install_sonarqube non abilitato in oke.yml."
+
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica Helm disponibile
+      ansible.builtin.command: helm version --short
+      register: helm_version
+      changed_when: false
+
+    # =========================================================================
+    # Namespace
+    # =========================================================================
+    - name: Crea namespace sonarqube
+      ansible.builtin.command: kubectl create namespace sonarqube
+      register: ns_result
+      changed_when: "'created' in ns_result.stdout"
+      failed_when:
+        - ns_result.rc != 0
+        - "'already exists' not in ns_result.stderr"
+
+    # =========================================================================
+    # Secret
+    # =========================================================================
+    - name: Crea Secret sonarqube-secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: sonarqube-secret
+            namespace: sonarqube
+          type: Opaque
+          stringData:
+            password: "{{ sonarqube_admin_password }}"
+            currentPassword: "admin"
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
+
+    # =========================================================================
+    # Helm — SonarQube
+    # =========================================================================
+    - name: Aggiungi Helm repo sonarqube
+      ansible.builtin.command: helm repo add sonarqube https://SonarSource.github.io/helm-chart-sonarqube
+      register: repo_result
+      changed_when: "'has been added' in repo_result.stdout"
+      failed_when:
+        - repo_result.rc != 0
+        - "'already exists' not in repo_result.stderr"
+
+    - name: Aggiorna Helm repos
+      ansible.builtin.command: helm repo update
+      changed_when: false
+
+    - name: Installa SonarQube via Helm
+      ansible.builtin.command: >
+        helm upgrade --install sonarqube sonarqube/sonarqube
+        --namespace sonarqube
+        -f {{ sonarqube_k8s_dir }}/sonarqube-values.yml
+      register: sonarqube_result
+      changed_when: "'STATUS: deployed' in sonarqube_result.stdout"
+
+    - name: Attendi SonarQube ready
+      ansible.builtin.command: >
+        kubectl rollout status statefulset sonarqube-sonarqube
+        --namespace sonarqube --timeout=300s
+      changed_when: false
+
+    # =========================================================================
+    # Manifest K8s (IngressRoute via Kustomize)
+    # =========================================================================
+    - name: Applica manifest Kustomize (IngressRoute)
+      ansible.builtin.command: kubectl apply -k {{ sonarqube_k8s_dir }}
+      register: kustomize_result
+      changed_when: "'created' in kustomize_result.stdout or 'configured' in kustomize_result.stdout"
+
+    # =========================================================================
+    # Verifica
+    # =========================================================================
+    - name: Verifica pods SonarQube
+      ansible.builtin.command: kubectl get pods -n sonarqube
+      register: pods_result
+      changed_when: false
+
+    - name: Verifica IngressRoute
+      ansible.builtin.command: kubectl get ingressroute -n sonarqube
+      register: ingress_result
+      changed_when: false
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo SonarQube
+      ansible.builtin.debug:
+        msg:
+          - "=== SonarQube Setup Completato ==="
+          - ""
+          - "URL:      https://sonarqube.oci.santocaruso.eu"
+          - "User:     admin"
+          - "Password: (valore in sonarqube-secret)"
+          - ""
+          - "--- Pods ---"
+          - "{{ pods_result.stdout }}"
+          - ""
+          - "--- IngressRoute ---"
+          - "{{ ingress_result.stdout }}"

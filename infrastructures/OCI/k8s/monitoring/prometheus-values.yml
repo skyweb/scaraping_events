@@ -72,8 +72,3 @@ extraScrapeConfigs: |
     metrics_path: /metrics
     scrape_interval: 15s
 
-  - job_name: jaeger-spanmetrics
-    static_configs:
-      - targets: ['jaeger.monitoring.svc:8889']
-    metrics_path: /metrics
-    scrape_interval: 15s

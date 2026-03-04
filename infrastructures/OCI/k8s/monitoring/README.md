@@ -14,11 +14,14 @@ kubectl create secret generic monitoring-secret --namespace monitoring \
   --from-literal=REDIS_PASSWORD=<PASSWORD> \
   --from-literal=CELERY_BROKER_URL=<BROKER_URL>
 
+# Secret per Grafana admin password
+kubectl create secret generic grafana-secret --namespace monitoring \
+  --from-literal=GF_SECURITY_ADMIN_PASSWORD=<GRAFANA_ADMIN_PASSWORD>
+
 # Helm repos
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
-helm repo add jaegertracing https://jaegertracing.github.io/helm-charts
 helm repo update
 ```
 
@@ -34,11 +37,14 @@ helm upgrade --install loki grafana/loki \
 helm upgrade --install promtail grafana/promtail \
   -n monitoring -f promtail-values.yml
 
+helm upgrade --install tempo grafana/tempo \
+  -n monitoring -f tempo-values.yml
+
+helm upgrade --install grafana grafana/grafana \
+  -n monitoring -f grafana-values.yml
+
 helm upgrade --install otel-collector open-telemetry/opentelemetry-collector \
   -n monitoring -f otel-collector-values.yml
-
-helm upgrade --install jaeger jaegertracing/jaeger \
-  -n monitoring -f jaeger-values.yml
 ```
 
 ## Manifest Nativi (Kustomize)
@@ -52,7 +58,7 @@ kubectl apply -k .
 Risorse incluse:
 - **redis-exporter**: Deployment + Service (porta 9121), metriche Redis per Prometheus
 - **celery-exporter**: Deployment + Service (porta 9808), metriche Celery per Prometheus
-- **IngressRoute**: prometheus, alertmanager, loki, jaeger, K8s Dashboard, Traefik Dashboard
+- **IngressRoute**: prometheus, alertmanager, loki, grafana, K8s Dashboard, Traefik Dashboard
 
 ## Verifica
 
@@ -71,6 +77,19 @@ kubectl get ingressroute -n traefik
 helm list -n monitoring
 ```
 
+## Accesso Grafana
+
+- URL: `https://grafana.oci.santocaruso.eu`
+- User: `admin`
+- Password: valore in `grafana-secret`
+
+Datasource pre-configurati (provisioning automatico):
+- **Prometheus** — metriche (default)
+- **Loki** — log
+- **Tempo** — traces (con link a Loki e Prometheus)
+
+Per esplorare i traces: Grafana → Explore → seleziona datasource **Tempo**.
+
 ## Componenti
 
 | Componente | Tipo | Accesso |
@@ -80,7 +99,8 @@ helm list -n monitoring
 | Loki | Helm chart (SingleBinary) | loki.oci.santocaruso.eu |
 | Promtail | Helm chart (DaemonSet) | interno (log shipper) |
 | OTEL Collector | Helm chart (DaemonSet) | interno (OTLP receiver) |
-| Jaeger | Helm chart (All-in-One) | jaeger.oci.santocaruso.eu |
+| Tempo | Helm chart (SingleBinary) | interno (trace backend) |
+| Grafana | Helm chart | grafana.oci.santocaruso.eu |
 | Redis Exporter | K8s Deployment | interno (ClusterIP :9121) |
 | Celery Exporter | K8s Deployment | interno (ClusterIP :9808) |
 | K8s Dashboard | IngressRoute only | dashboard.oci.santocaruso.eu |

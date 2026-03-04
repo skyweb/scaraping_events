@@ -1,14 +1,13 @@
 ---
 # Backup & Disaster Recovery per OKE con Velero
-
-# Velero usa OCI Object Storage (S3-compatible) come destinazione backup.
+# Installa Velero via Helm usando i file in k8s/velero/ e applica i manifest Kustomize.
 #
 # Prima di eseguire:
 #   1. Crea un bucket OCI Object Storage (velero-backups)
 #   2. Genera Customer Secret Key: OCI Console > User Settings > Customer Secret Keys
-#   3. Configura ansible/vars/oke.yml con le credenziali
+#   3. Configura ansible/vars/oke.yml e oke-vault.yml con le credenziali
 #
-# Uso: ansible-playbook ansible/playbooks/backup-setup.yml
+# Uso: ansible-playbook ansible/playbooks/backup-setup.yml --ask-vault-pass
 - name: OKE Backup Setup (Velero)
   hosts: localhost
   connection: local
@@ -18,10 +17,18 @@
     - ../vars/oke.yml
     - ../vars/oke-vault.yml
 
+  vars:
+    velero_k8s_dir: "{{ playbook_dir }}/../../k8s/velero"
+
   tasks:
     # =========================================================================
     # Verifica prerequisiti
     # =========================================================================
+    - name: Verifica che install_velero sia abilitato
+      ansible.builtin.assert:
+        that: install_velero | default(false)
+        fail_msg: "install_velero non abilitato in oke.yml."
+
     - name: Verifica kubectl disponibile
       ansible.builtin.command: kubectl cluster-info
       register: cluster_info
@@ -32,16 +39,16 @@
       register: helm_version
       changed_when: false
 
-    - name: Verifica namespace velero esiste
-      ansible.builtin.command: kubectl get namespace velero
-      register: ns_velero
-      changed_when: false
-      failed_when: false
-
-    - name: Crea namespace velero se mancante
+    # =========================================================================
+    # Namespace
+    # =========================================================================
+    - name: Crea namespace velero
       ansible.builtin.command: kubectl create namespace velero
-      when: ns_velero.rc != 0
-      changed_when: true
+      register: ns_result
+      changed_when: "'created' in ns_result.stdout"
+      failed_when:
+        - ns_result.rc != 0
+        - "'already exists' not in ns_result.stderr"
 
     # =========================================================================
     # Credenziali OCI Object Storage
@@ -54,9 +61,8 @@
           [default]
           aws_access_key_id={{ velero_aws_access_key_id }}
           aws_secret_access_key={{ velero_aws_secret_access_key }}
-      when: install_velero | default(false)
 
-    - name: Crea secret credenziali per Velero
+    - name: Crea Secret velero-credentials
       ansible.builtin.command: >
         kubectl create secret generic velero-credentials
         --from-file=cloud=/tmp/velero-credentials
@@ -66,16 +72,14 @@
       failed_when:
         - secret_result.rc != 0
         - "'already exists' not in secret_result.stderr"
-      when: install_velero | default(false)
 
     - name: Rimuovi file credenziali temporaneo
       ansible.builtin.file:
         path: /tmp/velero-credentials
         state: absent
-      when: install_velero | default(false)
 
     # =========================================================================
-    # Installazione Velero (Helm)
+    # Helm — Velero
     # =========================================================================
     - name: Aggiungi Helm repo vmware-tanzu
       ansible.builtin.command: helm repo add vmware-tanzu https://vmware-tanzu.github.io/helm-charts
@@ -84,158 +88,75 @@
       failed_when:
         - repo_result.rc != 0
         - "'already exists' not in repo_result.stderr"
-      when: install_velero | default(false)
 
     - name: Aggiorna Helm repos
       ansible.builtin.command: helm repo update
       changed_when: false
-      when: install_velero | default(false)
 
     - name: Installa Velero via Helm
       ansible.builtin.command: >
         helm upgrade --install velero vmware-tanzu/velero
         --namespace velero
-        --set credentials.existingSecret=velero-credentials
-        --set configuration.backupStorageLocation[0].name=oci-objectstorage
-        --set configuration.backupStorageLocation[0].provider=aws
+        -f {{ velero_k8s_dir }}/velero-values.yml
         --set configuration.backupStorageLocation[0].bucket={{ velero_bucket_name }}
         --set configuration.backupStorageLocation[0].config.region={{ velero_s3_region }}
-        --set configuration.backupStorageLocation[0].config.s3ForcePathStyle=true
         --set configuration.backupStorageLocation[0].config.s3Url={{ velero_s3_url }}
-        --set configuration.volumeSnapshotLocation[0].name=oci-snapshots
-        --set configuration.volumeSnapshotLocation[0].provider=aws
         --set configuration.volumeSnapshotLocation[0].config.region={{ velero_s3_region }}
-        --set initContainers[0].name=velero-plugin-for-aws
-        --set initContainers[0].image=docker.io/velero/velero-plugin-for-aws:v1.11.0
-        --set initContainers[0].volumeMounts[0].mountPath=/target
-        --set initContainers[0].volumeMounts[0].name=plugins
-        --set nodeSelector.workload=light
-        --set kubectl.image.repository=docker.io/bitnamilegacy/kubectl
-        --set kubectl.image.tag=1.33.4
       register: velero_result
       changed_when: "'STATUS: deployed' in velero_result.stdout"
-      when: install_velero | default(false)
 
     - name: Attendi Velero ready
       ansible.builtin.command: >
         kubectl rollout status deployment velero
         --namespace velero --timeout=180s
       changed_when: false
-      when: install_velero | default(false)
 
     # =========================================================================
-    # Velero UI (otwld/velero-ui) — Dashboard web per Velero
+    # Velero UI — Secret + Manifest Kustomize
     # =========================================================================
     - name: Crea Secret velero-ui-secret
-      ansible.builtin.command:
-        cmd: kubectl apply -f -
-        stdin: |
-          apiVersion: v1
-          kind: Secret
-          metadata:
-            name: velero-ui-secret
-            namespace: velero
-            labels:
-              app: velero-ui
-          type: Opaque
-          stringData:
-            BASIC_AUTH_PASSWORD: "{{ velero_ui_password }}"
-      register: velero_ui_secret_result
-      changed_when: "'created' in velero_ui_secret_result.stdout or 'configured' in velero_ui_secret_result.stdout"
-      when: install_velero_ui | default(false)
-
-    - name: Crea ArgoCD Application velero-ui
-      ansible.builtin.command:
-        cmd: kubectl apply -f -
-        stdin: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            name: velero-ui
-            namespace: argocd
-          spec:
-            project: default
-            source:
-              repoURL: "{{ argocd_repo_url }}"
-              targetRevision: "{{ argocd_target_revision | default('main') }}"
-              path: infrastructures/OCI/k8s/velero
-            destination:
-              server: https://kubernetes.default.svc
-              namespace: velero
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-              syncOptions:
-                - CreateNamespace=false
-      register: velero_ui_app_result
-      changed_when: "'created' in velero_ui_app_result.stdout or 'configured' in velero_ui_app_result.stdout"
-      when: install_velero_ui | default(false)
-
-    # =========================================================================
-    # Verifica connessione al bucket
-    # =========================================================================
-    - name: Verifica BackupStorageLocation disponibile
       ansible.builtin.command: >
-        kubectl get backupstoragelocation -n velero
+        kubectl create secret generic velero-ui-secret
+        --namespace velero
+        --from-literal=BASIC_AUTH_PASSWORD={{ velero_ui_password }}
+      register: velero_ui_secret_result
+      changed_when: "'created' in velero_ui_secret_result.stdout"
+      failed_when:
+        - velero_ui_secret_result.rc != 0
+        - "'already exists' not in velero_ui_secret_result.stderr"
+      when: install_velero_ui | default(false)
+
+    - name: Applica manifest Kustomize (Velero UI + IngressRoute)
+      ansible.builtin.command: kubectl apply -k {{ velero_k8s_dir }}
+      register: kustomize_result
+      changed_when: "'created' in kustomize_result.stdout or 'configured' in kustomize_result.stdout"
+      when: install_velero_ui | default(false)
+
+    # =========================================================================
+    # Backup schedule
+    # =========================================================================
+    - name: Applica schedule backup giornaliero
+      ansible.builtin.command: kubectl apply -f {{ velero_k8s_dir }}/daily-schedule.yml
+      register: daily_result
+      changed_when: "'created' in daily_result.stdout or 'configured' in daily_result.stdout"
+
+    - name: Applica schedule backup settimanale cluster
+      ansible.builtin.command: kubectl apply -f {{ velero_k8s_dir }}/weekly-schedule.yml
+      register: weekly_result
+      changed_when: "'created' in weekly_result.stdout or 'configured' in weekly_result.stdout"
+
+    # =========================================================================
+    # Verifica
+    # =========================================================================
+    - name: Verifica BackupStorageLocation
+      ansible.builtin.command: kubectl get backupstoragelocation -n velero
       register: bsl_result
       changed_when: false
-      when: install_velero | default(false)
 
-    - name: Mostra stato BackupStorageLocation
-      ansible.builtin.debug:
-        var: bsl_result.stdout_lines
-      when: install_velero | default(false)
-
-    # =========================================================================
-    # Backup schedule automatico
-    # =========================================================================
-    - name: Crea schedule backup giornaliero di tutti i namespace
-      ansible.builtin.command:
-        cmd: kubectl apply -f -
-        stdin: |
-          apiVersion: velero.io/v1
-          kind: Schedule
-          metadata:
-            name: daily-full-backup
-            namespace: velero
-          spec:
-            schedule: "{{ velero_backup_schedule }}"
-            template:
-              ttl: "{{ velero_backup_ttl }}"
-              includedNamespaces:
-                - events
-                - monitoring
-              storageLocation: oci-objectstorage
-              defaultVolumesToFsBackup: true
-      register: schedule_result
-      changed_when: "'created' in schedule_result.stdout or 'configured' in schedule_result.stdout"
-      when: install_velero | default(false)
-
-    - name: Crea schedule backup settimanale di tutto il cluster
-      ansible.builtin.command:
-        cmd: kubectl apply -f -
-        stdin: |
-          apiVersion: velero.io/v1
-          kind: Schedule
-          metadata:
-            name: weekly-cluster-backup
-            namespace: velero
-          spec:
-            schedule: "0 3 * * 0"
-            template:
-              ttl: "720h"
-              includedNamespaces:
-                - "*"
-              excludedNamespaces:
-                - kube-system
-                - kube-public
-                - kube-node-lease
-              storageLocation: oci-objectstorage
-              defaultVolumesToFsBackup: true
-      register: schedule_result
-      changed_when: "'created' in schedule_result.stdout or 'configured' in schedule_result.stdout"
-      when: install_velero | default(false)
+    - name: Verifica pods Velero
+      ansible.builtin.command: kubectl get pods -n velero
+      register: pods_result
+      changed_when: false
 
     # =========================================================================
     # Riepilogo
@@ -247,10 +168,16 @@
           - ""
           - "Backup Storage: OCI Object Storage ({{ velero_bucket_name }})"
           - "S3 Endpoint:    {{ velero_s3_url }}"
-          - "Velero UI:      {{ 'ArgoCD app velero-ui (ns velero)' if (install_velero_ui | default(false)) else 'non installato' }}"
+          - "Velero UI:      {{ 'kubectl apply -k (ns velero)' if (install_velero_ui | default(false)) else 'non installato' }}"
           - ""
-          - "--- Schedule configurati ---"
-          - "daily-full-backup:     {{ velero_backup_schedule }} (ns: events, monitoring) - retention {{ velero_backup_ttl }}"
+          - "--- BackupStorageLocation ---"
+          - "{{ bsl_result.stdout }}"
+          - ""
+          - "--- Pods ---"
+          - "{{ pods_result.stdout }}"
+          - ""
+          - "--- Schedule ---"
+          - "daily-full-backup:     02:00 (ns: events, monitoring) - retention 7 giorni"
           - "weekly-cluster-backup: dom 03:00 (tutto il cluster) - retention 30 giorni"
           - ""
           - "--- Comandi utili ---"
@@ -258,11 +185,3 @@
           - "velero backup create manual-backup --include-namespaces events  # backup manuale"
           - "velero restore create --from-backup manual-backup     # restore"
           - "velero schedule get                                   # lista schedule"
-          - "kubectl get backups -n velero                         # backup via kubectl"
-          - "kubectl logs deployment/velero -n velero              # log Velero"
-          - ""
-          - "--- Velero UI ---"
-          - "{{ 'kubectl get app velero-ui -n argocd              # ArgoCD sync status' if (install_velero_ui | default(false)) else '' }}"
-          - "{{ 'kubectl get pods -n velero -l app=velero-ui      # Pod status' if (install_velero_ui | default(false)) else '' }}"
-          - "{{ 'kubectl logs -n velero -l app=velero-ui --tail=20  # Logs' if (install_velero_ui | default(false)) else '' }}"
-      when: install_velero | default(false)

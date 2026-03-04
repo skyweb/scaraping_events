@@ -1,0 +1,30 @@
+# Helm values per vmware-tanzu/velero
+# I valori dinamici (bucket, region, s3Url) vengono passati via --set dal playbook Ansible.
+
+credentials:
+  existingSecret: velero-credentials
+
+configuration:
+  backupStorageLocation:
+    - name: oci-objectstorage
+      provider: aws
+      config:
+        s3ForcePathStyle: true
+  volumeSnapshotLocation:
+    - name: oci-snapshots
+      provider: aws
+
+initContainers:
+  - name: velero-plugin-for-aws
+    image: docker.io/velero/velero-plugin-for-aws:v1.11.0
+    volumeMounts:
+      - mountPath: /target
+        name: plugins
+
+nodeSelector:
+  workload: light
+
+kubectl:
+  image:
+    repository: docker.io/bitnamilegacy/kubectl
+    tag: "1.33.4"

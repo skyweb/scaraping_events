@@ -1,0 +1,34 @@
+# Traefik con reverse proxy — TCP forwarding da micro-gw, ACME su Traefik
+# Valori dinamici (nodePort, letsencrypt email) passati via --set dal playbook Ansible.
+
+service:
+  type: NodePort
+
+ports:
+  web:
+    redirections:
+      entryPoint:
+        to: websecure
+        scheme: https
+  traefik:
+    expose:
+      default: true
+
+nodeSelector:
+  workload: light
+
+ingressClass:
+  enabled: true
+  isDefaultClass: true
+
+providers:
+  kubernetesIngress:
+    enabled: true
+  kubernetesCRD:
+    enabled: true
+    allowCrossNamespace: true
+
+persistence:
+  enabled: true
+  path: /data
+  size: 128Mi
