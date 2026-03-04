@@ -9,7 +9,6 @@
 #
 # Prerequisiti:
 #   - install_traefik: true in oke.yml
-#   - namespace traefik esistente (creato da post-cluster-setup)
 #   - kubectl e helm configurati
 #
 # Uso: ansible-playbook ansible/playbooks/traefik-setup.yml --ask-vault-pass
@@ -44,9 +43,16 @@
       register: helm_version
       changed_when: false
 
-    - name: Verifica namespace traefik esiste
-      ansible.builtin.command: kubectl get namespace traefik
-      changed_when: false
+    # =========================================================================
+    # Namespace
+    # =========================================================================
+    - name: Crea namespace traefik
+      ansible.builtin.command: kubectl create namespace traefik
+      register: ns_result
+      changed_when: "'created' in ns_result.stdout"
+      failed_when:
+        - ns_result.rc != 0
+        - "'already exists' not in ns_result.stderr"
 
     # =========================================================================
     # Helm repo

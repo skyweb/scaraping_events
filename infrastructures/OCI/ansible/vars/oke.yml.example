@@ -17,7 +17,6 @@ ocir_username: "YOUR_TENANCY_NAMESPACE/YOUR_EMAIL"  # formato: <objectstorage_na
 namespaces:
   - events
   - monitoring
-  - traefik
   - cert-manager
   - argocd
   - velero
