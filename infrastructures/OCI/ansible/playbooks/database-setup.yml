@@ -1,0 +1,108 @@
+---
+# PostgreSQL — Database condiviso del cluster
+# Crea il Secret postgres-secret, applica i manifesti Kustomize e attende
+# che lo StatefulSet sia pronto.
+#
+# Prerequisiti:
+#   - Namespace "database" creato (post-cluster-setup.yml)
+#   - postgres_password in oke-vault.yml
+#   - kubectl configurato
+#
+# Uso: ansible-playbook ansible/playbooks/database-setup.yml --ask-vault-pass
+
+- name: "PostgreSQL Setup"
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    postgres_k8s_dir: "{{ playbook_dir }}/../../k8s/postgres"
+    postgres_user: "postgres"
+    postgres_db: "events"
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    - name: Verifica namespace database esiste
+      ansible.builtin.command: kubectl get namespace database
+      register: ns_result
+      changed_when: false
+      failed_when: ns_result.rc != 0
+
+    # =========================================================================
+    # Secret PostgreSQL
+    # =========================================================================
+    - name: Crea Secret postgres-secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: postgres-secret
+            namespace: database
+          type: Opaque
+          stringData:
+            POSTGRES_USER: "{{ postgres_user }}"
+            POSTGRES_PASSWORD: "{{ postgres_password }}"
+            POSTGRES_DB: "{{ postgres_db }}"
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
+
+    # =========================================================================
+    # Applica manifesti K8s (ConfigMap, PVC, StatefulSet, Service)
+    # =========================================================================
+    - name: Applica Kustomize manifesti PostgreSQL
+      ansible.builtin.command: kubectl apply -k {{ postgres_k8s_dir }}
+      register: kustomize_result
+      changed_when: "'created' in kustomize_result.stdout or 'configured' in kustomize_result.stdout"
+
+    - name: Attendi PostgreSQL ready
+      ansible.builtin.command: >
+        kubectl rollout status statefulset postgres
+        --namespace database --timeout=180s
+      changed_when: false
+
+    # =========================================================================
+    # Verifica
+    # =========================================================================
+    - name: Verifica pods PostgreSQL
+      ansible.builtin.command: kubectl get pods -n database -l app=postgres
+      register: pg_pods
+      changed_when: false
+
+    - name: Verifica service PostgreSQL
+      ansible.builtin.command: kubectl get svc -n database postgres
+      register: pg_svc
+      changed_when: false
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: PostgreSQL Setup completato
+      ansible.builtin.debug:
+        msg:
+          - "=== PostgreSQL Setup Completato ==="
+          - ""
+          - "StatefulSet:  postgres (namespace: database)"
+          - "Image:        postgis:16-3.4"
+          - "Service:      postgres.database.svc:5432"
+          - "Database:     {{ postgres_db }}"
+          - "User:         {{ postgres_user }}"
+          - "Extensions:   postgis, postgis_topology, pg_trgm"
+          - ""
+          - "--- Pods ---"
+          - "{{ pg_pods.stdout }}"
+          - ""
+          - "--- Service ---"
+          - "{{ pg_svc.stdout }}"

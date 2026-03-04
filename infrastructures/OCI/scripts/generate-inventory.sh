@@ -93,7 +93,7 @@ all:
           ansible_host: "${MONITOR_PUBLIC}"
           private_ip: "${MONITOR_PRIVATE}"
           ansible_user: opc
-          ansible_ssh_private_key_file: "../../oci-key"
+          ansible_ssh_private_key_file: "{{ playbook_dir }}/../../scripts/oci-key"
 YAML
 
 # Aggiungi cirunner se presente
@@ -107,7 +107,7 @@ if [ -n "$CIRUNNER_IDX" ]; then
           ansible_host: "${CIRUNNER_PUBLIC}"
           private_ip: "${CIRUNNER_PRIVATE}"
           ansible_user: opc
-          ansible_ssh_private_key_file: "../../oci-key"
+          ansible_ssh_private_key_file: "{{ playbook_dir }}/../../scripts/oci-key"
 YAML
 fi
 

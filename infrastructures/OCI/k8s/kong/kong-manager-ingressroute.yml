@@ -1,19 +1,19 @@
-# IngressRoute per Konga — admin UI per gestione Kong
-# Protetto da Google SSO (google-auth middleware)
+# IngressRoute per Kong Manager — Admin UI integrata in Kong
+# Protetto da google-auth middleware (OAuth2 Proxy)
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: konga-https
+  name: kong-manager-https
   namespace: apps
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`konga.oci.santocaruso.eu`)
+    - match: Host(`kong.oci.santocaruso.eu`)
       kind: Rule
       services:
-        - name: konga
-          port: 1337
+        - name: kong-kong-manager
+          port: 8002
       middlewares:
         - name: google-auth
           namespace: traefik

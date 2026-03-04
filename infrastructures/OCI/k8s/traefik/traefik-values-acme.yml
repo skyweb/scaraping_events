@@ -7,10 +7,11 @@ service:
 ports:
   web:
     hostPort: 80
-    redirections:
-      entryPoint:
-        to: websecure
-        scheme: https
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
   websecure:
     hostPort: 443
   traefik:

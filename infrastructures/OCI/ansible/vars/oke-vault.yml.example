@@ -24,6 +24,9 @@ velero_ui_password: "CHANGE_ME"
 # Grafana
 grafana_admin_password: "CHANGE_ME"
 
+# PostgreSQL (database condiviso)
+postgres_password: "CHANGE_ME"
+
 # SonarQube
 sonarqube_admin_password: "CHANGE_ME"
 sonarqube_postgres_password: "CHANGE_ME"
@@ -39,8 +42,9 @@ airflow_secret_key: "CHANGE_ME"
 # Kong API Gateway (PostgreSQL)
 kong_postgres_password: "CHANGE_ME"
 
-# Konga Admin UI (PostgreSQL)
-konga_postgres_password: "CHANGE_ME"
+# Kong API Keys (generare con: openssl rand -hex 32)
+kong_apikey_scraper: "CHANGE_ME"
+kong_apikey_airflow: "CHANGE_ME"
 
 # MinIO (Object Storage)
 minio_root_user: "minioadmin"

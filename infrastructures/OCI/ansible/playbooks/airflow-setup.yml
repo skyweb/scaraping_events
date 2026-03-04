@@ -55,22 +55,22 @@
     - name: Crea database airflow su PostgreSQL esistente
       ansible.builtin.shell: |
         kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "SELECT 'exists' FROM pg_database WHERE datname = 'airflow'" \
           | grep -q exists \
           || kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c "CREATE DATABASE airflow"
+          psql -U postgres -d postgres -c "CREATE DATABASE airflow"
       register: db_result
       changed_when: "'CREATE DATABASE' in db_result.stdout"
 
     - name: Crea utente airflow su PostgreSQL esistente
       ansible.builtin.shell: |
         kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "SELECT 'exists' FROM pg_roles WHERE rolname = 'airflow'" \
           | grep -q exists \
           || kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "CREATE USER airflow WITH PASSWORD '{{ airflow_postgres_password }}'; GRANT ALL PRIVILEGES ON DATABASE airflow TO airflow"
       register: user_result
       changed_when: "'CREATE ROLE' in user_result.stdout"

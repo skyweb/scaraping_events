@@ -144,20 +144,20 @@ cp terraform/terraform.tfvars.example terraform/terraform.tfvars
 # Oppure manualmente: cp ansible/vars/oke.yml.example ansible/vars/oke.yml
 
 # 5. Configurazione cluster (Ansible — infrastruttura base)
-./scripts/post-setup.sh
+./scripts/post-setup.sh  --ask-vault-pass
 
 # 6. (Opzionale) CI/CD - ArgoCD + Tekton + Kaniko
-ansible-playbook ansible/playbooks/ci-setup.yml
+ansible-playbook ansible/playbooks/ci-setup.yml  --ask-vault-pass
 
 # 7. (Opzionale) Security - Kyverno policy engine
-ansible-playbook ansible/playbooks/security-setup.yml
+ansible-playbook ansible/playbooks/security-setup.yml  --ask-vault-pass
 
 # 8. (Opzionale) Backup & DR - Velero + OCI Object Storage
-ansible-playbook ansible/playbooks/backup-setup.yml
+ansible-playbook ansible/playbooks/backup-setup.yml  --ask-vault-pass
 
 # 9. (Opzionale) Observability - Prometheus + Loki + Grafana
-ansible-playbook ansible/playbooks/observability-cluster-setup.yml
-ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml
+ansible-playbook ansible/playbooks/observability-cluster-setup.yml  --ask-vault-pass
+ansible-playbook -i ansible/inventory/hosts.yml ansible/playbooks/observability-vm-setup.yml  --ask-vault-pass
 
 # 10. (Opzionale) Domain Setup - HTTPS via sottodomini
 # Configurare base_domain in ansible/vars/oke.yml, creare DNS A record,

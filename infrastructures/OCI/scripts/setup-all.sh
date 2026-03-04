@@ -65,7 +65,7 @@ INVENTORY="ansible/inventory/hosts.yml"
 if [ -f "${INVENTORY}" ]; then
     echo "Provisioning micro VM: installazione Python 3.9..."
     MICRO_IPS=$(grep -A1 "micro-" "${INVENTORY}" | grep ansible_host | awk -F'"' '{print $2}')
-    SSH_KEY=$(grep ansible_ssh_private_key_file "${INVENTORY}" | head -1 | awk -F'"' '{print $2}')
+    SSH_KEY="${PROJECT_ROOT}/scripts/oci-key"
     for IP in ${MICRO_IPS}; do
         echo "  ${IP}: installazione python39..."
         ssh -i "${SSH_KEY}" -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 \
@@ -77,12 +77,28 @@ fi
 
 # ── Playbook in ordine ───────────────────────────────────────
 PLAYBOOKS=(
-    "post-cluster-setup.yml|Infrastruttura base (Traefik, cert-manager, metrics, dashboard)"
-    "security-setup.yml|Security (Kyverno)"
-    "backup-setup.yml|Backup (Velero)"
-    "domain-setup.yml|HTTPS sottodomini (IngressRoute)"
-    "reverse-proxy-setup.yml|Reverse proxy (firewalld DNAT)"
-    "wireguard-setup.yml|WireGuard VPN (micro-gw)"
+    # --- Fase 1: Infrastruttura base ---
+    "post-cluster-setup.yml|1. Infrastruttura base (namespace, cert-manager, metrics-server, dashboard)"
+    "traefik-setup.yml|2. Traefik Ingress Controller (CRD, Helm, NodePort)"
+    # --- Fase 2: Database ---
+    "database-setup.yml|3. PostgreSQL (Secret, Kustomize, StatefulSet)"
+    # --- Fase 3: Observability ---
+    "observability-cluster-setup.yml|4. Observability K8s (Prometheus, Loki, Tempo, OTEL)"
+    # --- Fase 4: Servizi applicativi ---
+    "linkerd-setup.yml|5. Linkerd Service Mesh"
+    "kong-setup.yml|6. Kong API Gateway + Konga"
+    "minio-setup.yml|7. MinIO Object Storage"
+    "backstage-setup.yml|8. Backstage Developer Portal"
+    "airflow-setup.yml|9. Apache Airflow"
+    "sonarqube-setup.yml|10. SonarQube Code Quality"
+    # --- Fase 5: Security & CI/CD ---
+    #"security-setup.yml|11. Security (Kyverno)"
+    "ci-setup.yml|12. CI/CD (ArgoCD, Tekton)"
+    "backup-setup.yml|13. Backup (Velero)"
+    # --- Fase 6: Domain, proxy, VPN ---
+    "domain-setup.yml|14. HTTPS sottodomini (OAuth2 Proxy, IngressRoute)"
+    "reverse-proxy-setup.yml|15. Reverse proxy (firewalld DNAT su micro-gw)"
+    "wireguard-setup.yml|16. WireGuard VPN (micro-gw)"
 )
 
 TOTAL=${#PLAYBOOKS[@]}

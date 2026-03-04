@@ -57,22 +57,22 @@
     - name: Crea database sonarqube su PostgreSQL esistente
       ansible.builtin.shell: |
         kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "SELECT 'exists' FROM pg_database WHERE datname = 'sonarqube'" \
           | grep -q exists \
           || kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c "CREATE DATABASE sonarqube"
+          psql -U postgres -d postgres -c "CREATE DATABASE sonarqube"
       register: db_result
       changed_when: "'CREATE DATABASE' in db_result.stdout"
 
     - name: Crea utente sonarqube su PostgreSQL esistente
       ansible.builtin.shell: |
         kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "SELECT 'exists' FROM pg_roles WHERE rolname = 'sonarqube'" \
           | grep -q exists \
           || kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "CREATE USER sonarqube WITH PASSWORD '{{ sonarqube_postgres_password }}'; GRANT ALL PRIVILEGES ON DATABASE sonarqube TO sonarqube"
       register: user_result
       changed_when: "'CREATE ROLE' in user_result.stdout"

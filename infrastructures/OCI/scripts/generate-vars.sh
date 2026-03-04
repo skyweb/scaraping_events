@@ -98,6 +98,11 @@ ocir_username: "${OCIR_USERNAME}"
 
 # Namespaces da creare nel cluster
 namespaces:
+  - database
+  - apps
+  - clusters
+  - devs
+  - airflow
   - monitoring
   - traefik
   - cert-manager
@@ -160,6 +165,32 @@ loki_nodeport: 31100
 loki_retention_period: "168h"  # 7 giorni
 loki_cpu_limit: "250m"
 loki_memory_limit: "256Mi"
+
+# =============================================================================
+# Servizi applicativi
+# =============================================================================
+
+# Linkerd Service Mesh
+install_linkerd: true
+
+# Kong API Gateway + Konga Admin UI
+install_kong: true
+
+# MinIO Object Storage
+install_minio: true
+minio_storage_size: "50Gi"
+minio_default_buckets:
+  - "velero-backups"
+  - "events-data"
+
+# Backstage Developer Portal
+install_backstage: true
+
+# Apache Airflow
+install_airflow: true
+
+# SonarQube Code Quality
+install_sonarqube: true
 
 # IP privato di un nodo K8s (usato da reverse-proxy-setup per DNAT -> Traefik)
 k8s_node_ip: "${K8S_NODE_IP}"

@@ -67,8 +67,16 @@ minio_default_buckets:
   - airflow-logs
   - mlflow-artifacts
 
-# Kong API Gateway + Konga Admin UI
+# Kong API Gateway + Konga Admin UI + SSO
 install_kong: true
+
+# Mapping email Google SSO → consumer Kong (per pre-function plugin)
+# Formato Lua table: ["email"] = "consumer-username"
+kong_sso_email_map: '["santo.caruso@gmail.com"] = "admin-sso", ["santo.caruso@altrama.com"] = "admin-sso"'
+
+# Rate limiting (per consumer, route api-external)
+kong_rate_limit_minute: 60
+kong_rate_limit_hour: 1000
 
 # Linkerd (Service Mesh — mTLS)
 install_linkerd: true

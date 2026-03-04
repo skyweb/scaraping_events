@@ -60,22 +60,22 @@
     - name: Crea database backstage su PostgreSQL esistente
       ansible.builtin.shell: |
         kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "SELECT 'exists' FROM pg_database WHERE datname = 'backstage'" \
           | grep -q exists \
           || kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c "CREATE DATABASE backstage"
+          psql -U postgres -d postgres -c "CREATE DATABASE backstage"
       register: db_result
       changed_when: "'CREATE DATABASE' in db_result.stdout"
 
     - name: Crea utente backstage su PostgreSQL esistente
       ansible.builtin.shell: |
         kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "SELECT 'exists' FROM pg_roles WHERE rolname = 'backstage'" \
           | grep -q exists \
           || kubectl exec -n database statefulset/postgres -- \
-          psql -U events -d events -c \
+          psql -U postgres -d postgres -c \
           "CREATE USER backstage WITH PASSWORD '{{ backstage_postgres_password }}'; GRANT ALL PRIVILEGES ON DATABASE backstage TO backstage"
       register: user_result
       changed_when: "'CREATE ROLE' in user_result.stdout"

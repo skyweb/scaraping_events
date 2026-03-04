@@ -2,6 +2,11 @@
 # Kong in DB mode (PostgreSQL) — API Gateway per il traffico API
 # I secret (pg_password) vengono passati via kong-secret dal playbook Ansible.
 
+# Immagine con registry completo (OKE/CRI-O richiede nomi non ambigui)
+image:
+  repository: docker.io/library/kong
+  tag: "3.9"
+
 # Kong NON è ingress controller — Traefik gestisce l'ingress
 ingressController:
   enabled: false
@@ -55,6 +60,17 @@ resources:
   limits:
     cpu: 500m
     memory: 384Mi
+
+# Kong Manager (Admin UI integrata — sostituisce Konga, supporta ARM64)
+manager:
+  enabled: true
+  type: ClusterIP
+  http:
+    enabled: true
+    containerPort: 8002
+    servicePort: 8002
+  tls:
+    enabled: false
 
 # Prometheus plugin — metriche per Grafana
 serviceMonitor:
