@@ -6,3 +6,4 @@ resources:
   - kong-gateway-ingressroute.yml
   - kong-manager-ingressroute.yml
   - kong-admin-ingressroute.yml
+  - kong-status-service.yml

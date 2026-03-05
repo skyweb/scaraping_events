@@ -61,3 +61,63 @@ datasources:
             datasourceUid: prometheus
           nodeGraph:
             enabled: true
+
+dashboardProviders:
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+      - name: kubernetes
+        orgId: 1
+        folder: Kubernetes
+        type: file
+        disableDeletion: false
+        editable: true
+        options:
+          path: /var/lib/grafana/dashboards/kubernetes
+      - name: nodes
+        orgId: 1
+        folder: Infrastructure
+        type: file
+        disableDeletion: false
+        editable: true
+        options:
+          path: /var/lib/grafana/dashboards/nodes
+
+dashboards:
+  kubernetes:
+    # Kubernetes / Views / Global — panoramica completa del cluster
+    k8s-views-global:
+      gnetId: 15760
+      revision: 37
+      datasource: Prometheus
+    # Kubernetes / Views / Namespaces — risorse per namespace
+    k8s-views-namespaces:
+      gnetId: 15757
+      revision: 43
+      datasource: Prometheus
+    # Kubernetes / Views / Nodes — CPU/RAM/disk per nodo
+    k8s-views-nodes:
+      gnetId: 15758
+      revision: 35
+      datasource: Prometheus
+    # Kubernetes / Views / Pods — CPU, RAM, restart, network per pod
+    k8s-views-pods:
+      gnetId: 15759
+      revision: 29
+      datasource: Prometheus
+    # Kubernetes Deployment / StatefulSet / DaemonSet — stato repliche
+    k8s-deployments:
+      gnetId: 8685
+      revision: 1
+      datasource: Prometheus
+    # Kubernetes Persistent Volumes — utilizzo PVC
+    k8s-pvcs:
+      gnetId: 13646
+      revision: 2
+      datasource: Prometheus
+  nodes:
+    # Node Exporter Full — metriche dettagliate CPU/RAM/disk/network dei nodi
+    node-exporter-full:
+      gnetId: 1860
+      revision: 37
+      datasource: Prometheus

@@ -8,11 +8,11 @@ monitoringPasscode: "sonarqube-monitoring"
 
 resources:
   limits:
-    cpu: "1"
-    memory: 2Gi
+    cpu: "500m"
+    memory: 3Gi
   requests:
-    cpu: 200m
-    memory: 1Gi
+    cpu: 250m
+    memory: 1536Mi
 
 startupProbe:
   failureThreshold: 60

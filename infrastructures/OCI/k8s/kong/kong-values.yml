@@ -77,8 +77,10 @@ manager:
 serviceMonitor:
   enabled: false
 
-# Status endpoint per health check
+# Status endpoint per health check e metriche Prometheus
 status:
   enabled: true
   http:
+    enabled: true
     containerPort: 8100
+    servicePort: 8100

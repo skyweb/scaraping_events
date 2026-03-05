@@ -94,10 +94,10 @@ spec:
             failureThreshold: 5
           resources:
             requests:
-              cpu: 200m
+              cpu: 100m
               memory: 512Mi
             limits:
-              cpu: "1"
+              cpu: 500m
               memory: 1Gi
         # git-sync sidecar disabilitato — riattivare quando il repo DAG è pronto
         # Aggiungere GITSYNC_REPO e GITSYNC_PASSWORD al secret airflow-secret

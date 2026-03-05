@@ -60,14 +60,14 @@ spec:
                 - airflow jobs check --job-type SchedulerJob --hostname $(hostname)
             initialDelaySeconds: 60
             periodSeconds: 30
-            timeoutSeconds: 10
+            timeoutSeconds: 30
             failureThreshold: 5
           resources:
             requests:
-              cpu: 100m
+              cpu: 200m
               memory: 256Mi
             limits:
-              cpu: 500m
+              cpu: 1000m
               memory: 512Mi
         # git-sync sidecar disabilitato — riattivare quando il repo DAG è pronto
         # Aggiungere GITSYNC_REPO e GITSYNC_PASSWORD al secret airflow-secret
