@@ -6,3 +6,15 @@
 -- n8n (workflow automation)
 SELECT 'CREATE DATABASE n8n OWNER ' || current_user
 WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'n8n') \gexec
+
+-- SonarQube (code quality)
+SELECT 'CREATE DATABASE sonarqube OWNER ' || current_user
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'sonarqube') \gexec
+
+-- Kong (API gateway)
+SELECT 'CREATE DATABASE kong OWNER ' || current_user
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'kong') \gexec
+
+-- Backstage (developer portal)
+SELECT 'CREATE DATABASE backstage OWNER ' || current_user
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'backstage') \gexec

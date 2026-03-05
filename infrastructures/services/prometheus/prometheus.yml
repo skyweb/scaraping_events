@@ -35,3 +35,7 @@ scrape_configs:
     static_configs:
       - targets: ["traefik:8080"]
 
+  - job_name: kong
+    static_configs:
+      - targets: ["kong:8100"]
+

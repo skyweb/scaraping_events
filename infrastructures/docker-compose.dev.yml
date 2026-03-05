@@ -742,6 +742,169 @@ services:
         aliases:
           - celery-exporter
 
+  # MinIO — S3-compatible object storage
+  minio:
+    image: minio/minio:latest
+    container_name: dev-minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin_secret_2026}
+    volumes:
+      - minio-dev-data:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    labels:
+      - "traefik.enable=true"
+      # Console UI
+      - "traefik.http.routers.minio-console.rule=Host(`minio.${DOMAIN}`)"
+      - "traefik.http.routers.minio-console.entrypoints=websecure"
+      - "traefik.http.routers.minio-console.tls=true"
+      - "traefik.http.routers.minio-console.middlewares=forward-auth"
+      - "traefik.http.routers.minio-console.service=minio-console-svc"
+      - "traefik.http.services.minio-console-svc.loadbalancer.server.port=9001"
+      # API S3
+      - "traefik.http.routers.minio-api.rule=Host(`s3.${DOMAIN}`)"
+      - "traefik.http.routers.minio-api.entrypoints=websecure"
+      - "traefik.http.routers.minio-api.tls=true"
+      - "traefik.http.routers.minio-api.service=minio-api-svc"
+      - "traefik.http.services.minio-api-svc.loadbalancer.server.port=9000"
+    networks:
+      dev-network:
+        aliases:
+          - minio
+
+  # SonarQube — code quality and security analysis
+  sonarqube:
+    image: sonarqube:community
+    container_name: dev-sonarqube
+    restart: unless-stopped
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://postgres:5432/sonarqube
+      SONAR_JDBC_USERNAME: ${POSTGRES_USER}
+      SONAR_JDBC_PASSWORD: ${SONARQUBE_JDBC_PASSWORD:-${POSTGRES_PASSWORD}}
+    volumes:
+      - sonarqube-dev-data:/opt/sonarqube/data
+      - sonarqube-dev-extensions:/opt/sonarqube/extensions
+      - sonarqube-dev-logs:/opt/sonarqube/logs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sonarqube.rule=Host(`sonarqube.${DOMAIN}`)"
+      - "traefik.http.routers.sonarqube.entrypoints=websecure"
+      - "traefik.http.routers.sonarqube.tls=true"
+      - "traefik.http.services.sonarqube.loadbalancer.server.port=9000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      dev-network:
+        aliases:
+          - sonarqube
+
+  # Kong — API Gateway (DB mode con PostgreSQL)
+  kong-migrations:
+    image: kong:3.9
+    container_name: dev-kong-migrations
+    restart: "no"
+    command: kong migrations bootstrap
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: postgres
+      KONG_PG_PORT: "5432"
+      KONG_PG_USER: ${POSTGRES_USER}
+      KONG_PG_PASSWORD: ${KONG_PG_PASSWORD:-${POSTGRES_PASSWORD}}
+      KONG_PG_DATABASE: kong
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - dev-network
+
+  kong:
+    image: kong:3.9
+    container_name: dev-kong
+    restart: unless-stopped
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: postgres
+      KONG_PG_PORT: "5432"
+      KONG_PG_USER: ${POSTGRES_USER}
+      KONG_PG_PASSWORD: ${KONG_PG_PASSWORD:-${POSTGRES_PASSWORD}}
+      KONG_PG_DATABASE: kong
+      KONG_PROXY_LISTEN: "0.0.0.0:8000"
+      KONG_ADMIN_LISTEN: "0.0.0.0:8001"
+      KONG_ADMIN_GUI_LISTEN: "0.0.0.0:8002"
+      KONG_ADMIN_GUI_URL: "https://kong.${DOMAIN}"
+      KONG_ADMIN_GUI_API_URL: "https://kong-admin.${DOMAIN}"
+    labels:
+      - "traefik.enable=true"
+      # Kong Manager (Admin UI)
+      - "traefik.http.routers.kong-manager.rule=Host(`kong.${DOMAIN}`)"
+      - "traefik.http.routers.kong-manager.entrypoints=websecure"
+      - "traefik.http.routers.kong-manager.tls=true"
+      - "traefik.http.routers.kong-manager.middlewares=forward-auth"
+      - "traefik.http.routers.kong-manager.service=kong-manager-svc"
+      - "traefik.http.services.kong-manager-svc.loadbalancer.server.port=8002"
+      # Kong Admin API
+      - "traefik.http.routers.kong-admin.rule=Host(`kong-admin.${DOMAIN}`)"
+      - "traefik.http.routers.kong-admin.entrypoints=websecure"
+      - "traefik.http.routers.kong-admin.tls=true"
+      - "traefik.http.routers.kong-admin.middlewares=forward-auth"
+      - "traefik.http.routers.kong-admin.service=kong-admin-svc"
+      - "traefik.http.services.kong-admin-svc.loadbalancer.server.port=8001"
+      # Kong Proxy (API Gateway)
+      - "traefik.http.routers.kong-proxy.rule=Host(`gateway.${DOMAIN}`)"
+      - "traefik.http.routers.kong-proxy.entrypoints=websecure"
+      - "traefik.http.routers.kong-proxy.tls=true"
+      - "traefik.http.routers.kong-proxy.service=kong-proxy-svc"
+      - "traefik.http.services.kong-proxy-svc.loadbalancer.server.port=8000"
+    depends_on:
+      kong-migrations:
+        condition: service_completed_successfully
+    networks:
+      dev-network:
+        aliases:
+          - kong
+
+  # Backstage — Developer Portal
+  backstage:
+    image: ghcr.io/backstage/backstage:latest
+    container_name: dev-backstage
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${BACKSTAGE_POSTGRES_PASSWORD:-${POSTGRES_PASSWORD}}
+      APP_CONFIG_app_title: "Events Developer Portal"
+      APP_CONFIG_app_baseUrl: "https://backstage.${DOMAIN}"
+      APP_CONFIG_backend_baseUrl: "https://backstage.${DOMAIN}"
+      APP_CONFIG_backend_listen_port: "7007"
+      APP_CONFIG_backend_database_client: pg
+      APP_CONFIG_backend_database_connection_host: postgres
+      APP_CONFIG_backend_database_connection_port: "5432"
+      APP_CONFIG_backend_database_connection_user: ${POSTGRES_USER}
+      APP_CONFIG_backend_database_connection_password: ${BACKSTAGE_POSTGRES_PASSWORD:-${POSTGRES_PASSWORD}}
+      APP_CONFIG_auth_providers_guest_dangerouslyAllowOutsideDevelopment: "true"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backstage.rule=Host(`backstage.${DOMAIN}`)"
+      - "traefik.http.routers.backstage.entrypoints=websecure"
+      - "traefik.http.routers.backstage.tls=true"
+      - "traefik.http.routers.backstage.middlewares=forward-auth"
+      - "traefik.http.services.backstage.loadbalancer.server.port=7007"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      dev-network:
+        aliases:
+          - backstage
+
   # cAdvisor (metriche risorse container Docker)
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:v0.49.1
@@ -780,6 +943,14 @@ volumes:
     name: dev-airflow-logs
   n8n-dev-data:
     name: dev-n8n-data
+  minio-dev-data:
+    name: dev-minio-data
+  sonarqube-dev-data:
+    name: dev-sonarqube-data
+  sonarqube-dev-extensions:
+    name: dev-sonarqube-extensions
+  sonarqube-dev-logs:
+    name: dev-sonarqube-logs
 
 networks:
   dev-network:
