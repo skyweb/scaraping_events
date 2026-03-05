@@ -25,7 +25,7 @@
 
   vars:
     kong_k8s_dir: "{{ playbook_dir }}/../../k8s/kong"
-    kong_admin: "http://{{ kong_admin_ip.stdout }}:8001"
+    kong_admin: "http://127.0.0.1:18001"
 
   tasks:
     # =========================================================================
@@ -128,18 +128,18 @@
       changed_when: "'created' in kustomize_result.stdout or 'configured' in kustomize_result.stdout"
 
     # =========================================================================
-    # Ottieni Kong Admin ClusterIP
+    # Port-forward Kong Admin API (ClusterIP non raggiungibile da localhost)
     # =========================================================================
-    - name: Ottieni Kong Admin ClusterIP
-      ansible.builtin.shell: >
-        kubectl get svc -n apps kong-kong-admin -o jsonpath='{.spec.clusterIP}'
-      register: kong_admin_ip
-      changed_when: false
-
-    - name: Attendi Kong Admin API pronto
+    - name: Avvia port-forward Kong Admin API
       ansible.builtin.shell: |
+        # Chiudi eventuali port-forward precedenti sulla stessa porta
+        lsof -ti:18001 | xargs kill -9 2>/dev/null || true
+        # nohup + setsid per sopravvivere alla chiusura della shell Ansible
+        nohup kubectl port-forward -n apps svc/kong-kong-admin 18001:8001 \
+          </dev/null >/dev/null 2>&1 &
+        # Attendi che il port-forward sia pronto
         for i in $(seq 1 30); do
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" {{ kong_admin }}/status 2>/dev/null)
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:18001/status 2>/dev/null)
           [ "$STATUS" = "200" ] && exit 0
           sleep 2
         done
@@ -678,3 +678,10 @@
           - "Kong Manager UI (SSO):   https://kong.{{ base_domain }}"
           - "  Auth: Google SSO via OAuth2 Proxy (no login richiesto)"
           - "Kong Admin API:          http://kong-kong-admin.apps.svc:8001 (solo interno)"
+
+    # =========================================================================
+    # Cleanup port-forward
+    # =========================================================================
+    - name: Chiudi port-forward Kong Admin
+      ansible.builtin.shell: lsof -ti:18001 | xargs kill -9 2>/dev/null || true
+      changed_when: false

@@ -29,6 +29,9 @@ providers:
     enabled: true
     allowCrossNamespace: true
 
+podSecurityContext:
+  fsGroup: 65532
+
 persistence:
   enabled: true
   path: /data

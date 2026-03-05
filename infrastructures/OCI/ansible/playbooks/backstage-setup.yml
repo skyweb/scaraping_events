@@ -76,7 +76,7 @@
           | grep -q exists \
           || kubectl exec -n database statefulset/postgres -- \
           psql -U postgres -d postgres -c \
-          "CREATE USER backstage WITH PASSWORD '{{ backstage_postgres_password }}'; GRANT ALL PRIVILEGES ON DATABASE backstage TO backstage"
+          "CREATE USER backstage WITH PASSWORD '{{ backstage_postgres_password }}' CREATEDB; GRANT ALL PRIVILEGES ON DATABASE backstage TO backstage"
       register: user_result
       changed_when: "'CREATE ROLE' in user_result.stdout"
 

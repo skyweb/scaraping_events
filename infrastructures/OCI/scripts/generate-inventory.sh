@@ -67,17 +67,6 @@ for ((i=0; i<VM_COUNT; i++)); do
     esac
 done
 
-if [ -z "$MONITOR_IDX" ]; then
-    echo "ERRORE: micro VM 'monitor' non trovata negli output terraform"
-    echo "Nomi trovati: $NAMES"
-    exit 1
-fi
-
-MONITOR_PUBLIC=$(get_json_index "$PUBLIC_IPS" "$MONITOR_IDX")
-MONITOR_PRIVATE=$(get_json_index "$PRIVATE_IPS" "$MONITOR_IDX")
-
-echo "  micro-monitor:  $MONITOR_PUBLIC (public) / $MONITOR_PRIVATE (private)"
-
 # Genera file inventory
 mkdir -p "$(dirname "$INVENTORY_FILE")"
 
@@ -89,18 +78,30 @@ all:
   children:
     micro_vms:
       hosts:
+YAML
+
+# Aggiungi micro-monitor se presente
+if [ -n "$MONITOR_IDX" ]; then
+    MONITOR_PUBLIC=$(get_json_index "$PUBLIC_IPS" "$MONITOR_IDX")
+    MONITOR_PRIVATE=$(get_json_index "$PRIVATE_IPS" "$MONITOR_IDX")
+    echo "  micro-monitor:  $MONITOR_PUBLIC (public) / $MONITOR_PRIVATE (private)"
+
+    cat >> "$INVENTORY_FILE" << YAML
         micro-monitor:
           ansible_host: "${MONITOR_PUBLIC}"
           private_ip: "${MONITOR_PRIVATE}"
           ansible_user: opc
           ansible_ssh_private_key_file: "{{ playbook_dir }}/../../scripts/oci-key"
 YAML
+else
+    echo "  micro-monitor:  NON presente in terraform state (skippato)"
+fi
 
-# Aggiungi cirunner se presente
+# Aggiungi micro-gw se presente
 if [ -n "$CIRUNNER_IDX" ]; then
     CIRUNNER_PUBLIC=$(get_json_index "$PUBLIC_IPS" "$CIRUNNER_IDX")
     CIRUNNER_PRIVATE=$(get_json_index "$PRIVATE_IPS" "$CIRUNNER_IDX")
-    echo "  micro-gw: $CIRUNNER_PUBLIC (public) / $CIRUNNER_PRIVATE (private)"
+    echo "  micro-gw:       $CIRUNNER_PUBLIC (public) / $CIRUNNER_PRIVATE (private)"
 
     cat >> "$INVENTORY_FILE" << YAML
         micro-gw:
@@ -109,6 +110,8 @@ if [ -n "$CIRUNNER_IDX" ]; then
           ansible_user: opc
           ansible_ssh_private_key_file: "{{ playbook_dir }}/../../scripts/oci-key"
 YAML
+else
+    echo "  micro-gw:       NON presente in terraform state (skippato)"
 fi
 
 # Aggiungi gruppo localhost

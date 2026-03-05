@@ -69,39 +69,8 @@ spec:
             limits:
               cpu: 500m
               memory: 512Mi
-        - name: git-sync
-          image: registry.k8s.io/git-sync/git-sync:v4.4.0
-          env:
-            - name: GITSYNC_REPO
-              valueFrom:
-                secretKeyRef:
-                  name: airflow-secret
-                  key: GITSYNC_REPO
-            - name: GITSYNC_REF
-              value: "main"
-            - name: GITSYNC_PERIOD
-              value: "60s"
-            - name: GITSYNC_ROOT
-              value: "/git"
-            - name: GITSYNC_LINK
-              value: "repo"
-            - name: GITSYNC_USERNAME
-              value: "git"
-            - name: GITSYNC_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: airflow-secret
-                  key: GITSYNC_PASSWORD
-          volumeMounts:
-            - name: dags
-              mountPath: /git
-          resources:
-            requests:
-              cpu: 50m
-              memory: 64Mi
-            limits:
-              cpu: 100m
-              memory: 128Mi
+        # git-sync sidecar disabilitato — riattivare quando il repo DAG è pronto
+        # Aggiungere GITSYNC_REPO e GITSYNC_PASSWORD al secret airflow-secret
       volumes:
         - name: dags
           emptyDir: {}

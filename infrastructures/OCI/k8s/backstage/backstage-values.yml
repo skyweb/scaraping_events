@@ -8,7 +8,7 @@ backstage:
     - backstage-secret
 
   nodeSelector:
-    workload: light
+    workload: heavy
 
   resources:
     limits:
