@@ -72,3 +72,9 @@ extraScrapeConfigs: |
     metrics_path: /metrics
     scrape_interval: 15s
 
+  - job_name: kong
+    static_configs:
+      - targets: ['kong-kong-proxy.apps.svc:8100']
+    metrics_path: /metrics
+    scrape_interval: 15s
+

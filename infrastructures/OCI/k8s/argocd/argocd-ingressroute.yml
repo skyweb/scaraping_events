@@ -2,13 +2,16 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: argocd-server-https
-  namespace: clusters
+  namespace: argocd
 spec:
   entryPoints:
     - websecure
   routes:
     - match: Host(`argocd.oci.santocaruso.eu`)
       kind: Rule
+      middlewares:
+        - name: google-auth
+          namespace: traefik
       services:
         - name: argocd-server
           port: 80

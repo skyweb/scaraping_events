@@ -22,6 +22,7 @@ env:
       secretKeyRef:
         name: kong-secret
         key: pg_password
+  admin_gui_api_url: https://kong-admin.oci.santocaruso.eu
 
 # Proxy — riceve traffico API da Traefik
 proxy:
@@ -34,7 +35,7 @@ proxy:
   tls:
     enabled: false
 
-# Admin API — usata da Konga per gestione
+# Admin API — esposta via IngressRoute per Kong Manager
 admin:
   enabled: true
   type: ClusterIP

@@ -23,6 +23,11 @@ backstage:
       title: "Events Developer Portal"
       baseUrl: https://backstage.oci.santocaruso.eu
 
+    auth:
+      providers:
+        guest:
+          dangerouslyAllowOutsideDevelopment: true
+
     backend:
       baseUrl: https://backstage.oci.santocaruso.eu
       listen:

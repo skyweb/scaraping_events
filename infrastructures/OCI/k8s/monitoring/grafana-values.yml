@@ -19,6 +19,17 @@ resources:
 nodeSelector:
   workload: heavy
 
+grafana.ini:
+  auth.proxy:
+    enabled: true
+    header_name: X-Auth-Request-Email
+    header_property: email
+    auto_sign_up: true
+  auth:
+    disable_login_form: true
+  users:
+    auto_assign_org_role: Admin
+
 datasources:
   datasources.yaml:
     apiVersion: 1

@@ -91,6 +91,7 @@ if [ -n "$MONITOR_IDX" ]; then
           ansible_host: "${MONITOR_PUBLIC}"
           private_ip: "${MONITOR_PRIVATE}"
           ansible_user: opc
+          ansible_python_interpreter: /usr/bin/python3.9
           ansible_ssh_private_key_file: "{{ playbook_dir }}/../../scripts/oci-key"
 YAML
 else
@@ -108,6 +109,7 @@ if [ -n "$CIRUNNER_IDX" ]; then
           ansible_host: "${CIRUNNER_PUBLIC}"
           private_ip: "${CIRUNNER_PRIVATE}"
           ansible_user: opc
+          ansible_python_interpreter: /usr/bin/python3.9
           ansible_ssh_private_key_file: "{{ playbook_dir }}/../../scripts/oci-key"
 YAML
 else

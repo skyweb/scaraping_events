@@ -58,6 +58,9 @@ spec:
               mountPath: /opt/airflow/dags
             - name: logs
               mountPath: /opt/airflow/logs
+            - name: webserver-config
+              mountPath: /opt/airflow/webserver_config.py
+              subPath: webserver_config.py
           startupProbe:
             httpGet:
               path: /health
@@ -104,3 +107,6 @@ spec:
         - name: logs
           persistentVolumeClaim:
             claimName: airflow-logs
+        - name: webserver-config
+          configMap:
+            name: airflow-webserver-config

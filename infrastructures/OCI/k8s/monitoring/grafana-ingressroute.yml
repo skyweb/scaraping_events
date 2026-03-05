@@ -9,6 +9,9 @@ spec:
   routes:
     - match: Host(`grafana.oci.santocaruso.eu`)
       kind: Rule
+      middlewares:
+        - name: google-auth
+          namespace: traefik
       services:
         - name: grafana
           port: 80

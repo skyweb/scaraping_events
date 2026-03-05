@@ -1,4 +1,7 @@
-edition: community
+community:
+  enabled: true
+
+monitoringPasscode: "sonarqube-monitoring"
 
 resources:
   limits:

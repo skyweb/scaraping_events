@@ -33,7 +33,7 @@ spec:
                 --firstname Admin \
                 --lastname User \
                 --role Admin \
-                --email admin@airflow.local || true
+                --email santo.caruso@gmail.com || true
           envFrom:
             - configMapRef:
                 name: airflow-config

@@ -83,7 +83,7 @@ PLAYBOOKS=(
     # --- Fase 2: Database ---
     "database-setup.yml|3. PostgreSQL (Secret, Kustomize, StatefulSet)"
     # --- Fase 3: Observability ---
-    "observability-cluster-setup.yml|4. Observability K8s (Prometheus, Loki, Tempo, OTEL)"
+    "monitoring-setup.yml|4. Monitoring (Prometheus, Grafana, Loki, Tempo, OTEL)"
     # --- Fase 4: Servizi applicativi ---
     "linkerd-setup.yml|5. Linkerd Service Mesh"
     "kong-setup.yml|6. Kong API Gateway + Konga"

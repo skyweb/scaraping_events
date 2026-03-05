@@ -1,0 +1,21 @@
+# IngressRoute per Kong Admin API — richiesta da Kong Manager per gestire routes/services/plugins
+# Protetto da google-auth middleware (OAuth2 Proxy)
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kong-admin-https
+  namespace: apps
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`kong-admin.oci.santocaruso.eu`)
+      kind: Rule
+      services:
+        - name: kong-kong-admin
+          port: 8001
+      middlewares:
+        - name: google-auth
+          namespace: traefik
+  tls:
+    certResolver: letsencrypt

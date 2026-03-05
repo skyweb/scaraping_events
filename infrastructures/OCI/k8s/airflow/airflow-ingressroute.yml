@@ -9,6 +9,9 @@ spec:
   routes:
     - match: Host(`airflow.oci.santocaruso.eu`)
       kind: Rule
+      middlewares:
+        - name: google-auth
+          namespace: traefik
       services:
         - name: airflow-webserver
           port: 8080
