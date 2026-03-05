@@ -56,6 +56,23 @@
         - "'already exists' not in secret_result.stderr"
       when: install_grafana | default(false)
 
+    - name: Crea Secret grafana-postgres-secret (credenziali per datasource PostgreSQL)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: grafana-postgres-secret
+            namespace: monitoring
+          type: Opaque
+          stringData:
+            POSTGRES_USER: "postgres"
+            POSTGRES_PASSWORD: "{{ postgres_password }}"
+      register: pg_secret_result
+      changed_when: "'created' in pg_secret_result.stdout or 'configured' in pg_secret_result.stdout"
+      when: install_grafana | default(false)
+
     # =========================================================================
     # Helm repos
     # =========================================================================
