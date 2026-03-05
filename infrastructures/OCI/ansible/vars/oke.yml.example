@@ -47,6 +47,16 @@ install_dashboard: true
 # Grafana (in-cluster via Helm)
 install_grafana: true
 
+# OCI API Key per Grafana plugin "oci-logs-datasource"
+# Valori ottenibili da: ~/.oci/config (o infrastructures/OCI/oci_ssh/config)
+# La chiave privata viene letta dal file indicato in oci_api_key_path
+oci_tenancy_ocid: "ocid1.tenancy.oc1..CHANGE_ME"
+oci_user_ocid: "ocid1.user.oc1..CHANGE_ME"
+oci_fingerprint: "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+oci_region: "eu-milan-1"
+# Percorso relativo alla cartella playbooks/ — punta alla chiave privata OCI API
+oci_api_key_path: "{{ playbook_dir }}/../oci-key/skywebsys@gmail.com-2026-01-09T23_32_30.160Z.pem"
+
 # Grafana Tempo (distributed tracing, sostituisce Jaeger)
 install_tempo: true
 

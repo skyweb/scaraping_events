@@ -32,11 +32,19 @@ grafana.ini:
   users:
     auto_assign_org_role: Admin
 
-# Credenziali PostgreSQL iniettate da grafana-postgres-secret (monitoring namespace)
-# Creato da monitoring-setup.yml con postgres_password da oke-vault.yml
+# Plugin esterni — installati automaticamente all'avvio del container Grafana
+plugins:
+  - oci-logs-datasource
+
+# Credenziali iniettate da secret K8s (monitoring namespace)
+# - grafana-postgres-secret: POSTGRES_USER, POSTGRES_PASSWORD (da oke-vault.yml)
+# - grafana-oci-secret: OCI_TENANCY_OCID, OCI_USER_OCID, OCI_FINGERPRINT, OCI_REGION, OCI_PRIVATE_KEY
+# Entrambi creati da monitoring-setup.yml
 extraEnvFrom:
   - secretRef:
       name: grafana-postgres-secret
+  - secretRef:
+      name: grafana-oci-secret
 
 datasources:
   datasources.yaml:
@@ -67,6 +75,17 @@ datasources:
         type: loki
         url: http://loki.monitoring.svc:3100
         access: proxy
+
+      - name: OCI Logs
+        type: oci-logs-datasource
+        jsonData:
+          tenancy: ${OCI_TENANCY_OCID}
+          user: ${OCI_USER_OCID}
+          fingerprint: ${OCI_FINGERPRINT}
+          region: ${OCI_REGION}
+          environment: oci-user
+        secureJsonData:
+          privateKey: ${OCI_PRIVATE_KEY}
 
       - name: Tempo
         type: tempo
