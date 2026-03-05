@@ -40,24 +40,13 @@ plugins:
 # - grafana-postgres-secret: POSTGRES_USER, POSTGRES_PASSWORD (da oke-vault.yml)
 # - grafana-oci-secret: OCI_TENANCY_OCID, OCI_USER_OCID, OCI_FINGERPRINT, OCI_REGION, OCI_PRIVATE_KEY
 # Entrambi creati da monitoring-setup.yml
+env:
+  OCI_GO_SDK_DEBUG: info
+
 envFromSecrets:
   - name: grafana-postgres-secret
   - name: grafana-oci-secret
 
-# Monta OCI config e chiave privata nel container Grafana
-# subPath monta singoli file del secret al path desiderato
-# /home/grafana/.oci/config è il path default dell'OCI SDK Go
-extraSecretMounts:
-  - name: oci-config-file
-    mountPath: /home/grafana/.oci/config
-    secretName: grafana-oci-secret
-    subPath: OCI_CONFIG
-    readOnly: true
-  - name: oci-key-file
-    mountPath: /home/grafana/.oci/key.pem
-    secretName: grafana-oci-secret
-    subPath: OCI_PRIVATE_KEY
-    readOnly: true
 
 datasources:
   datasources.yaml:
@@ -92,13 +81,17 @@ datasources:
       - name: OCI Logs
         type: oci-logs-datasource
         jsonData:
-          # local = User Principal: legge ~/.oci/config montato via volume
-          # Chiave API dedicata (senza passphrase) creata per Grafana
+          # local = User Principal con credenziali dirette in secureJsonData
+          # Nessun file di config necessario — tutto via env var da grafana-oci-secret
           environment: local
           tenancymode: single
           profile0: DEFAULT
-          tenancy0: ${OCI_TENANCY_OCID}
           region0: ${OCI_REGION}
+        secureJsonData:
+          tenancy0: ${OCI_TENANCY_OCID}
+          user0: ${OCI_USER_OCID}
+          fingerprint0: ${OCI_FINGERPRINT}
+          privkey0: ${OCI_PRIVATE_KEY}
 
       - name: Tempo
         type: tempo

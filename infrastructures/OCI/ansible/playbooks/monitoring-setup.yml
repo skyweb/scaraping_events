@@ -214,6 +214,38 @@
       when: install_grafana | default(false)
 
     # =========================================================================
+    # Helm — PostgreSQL Exporter (metriche PG per dashboard Grafana)
+    # =========================================================================
+    - name: Crea Secret postgres-exporter-secret (DSN completo per postgres-exporter)
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: postgres-exporter-secret
+            namespace: monitoring
+          type: Opaque
+          stringData:
+            DATA_SOURCE_NAME: "postgresql://postgres:{{ postgres_password }}@postgres.database.svc:5432/events?sslmode=disable"
+      register: pgexporter_secret_result
+      changed_when: "'created' in pgexporter_secret_result.stdout or 'configured' in pgexporter_secret_result.stdout"
+
+    - name: Installa postgres-exporter via Helm
+      ansible.builtin.command: >
+        helm upgrade --install postgres-exporter prometheus-community/prometheus-postgres-exporter
+        --namespace monitoring
+        -f {{ monitoring_k8s_dir }}/postgres-exporter-values.yml
+      register: pgexporter_result
+      changed_when: "'STATUS: deployed' in pgexporter_result.stdout"
+
+    - name: Attendi postgres-exporter ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment postgres-exporter-prometheus-postgres-exporter
+        --namespace monitoring --timeout=120s
+      changed_when: false
+
+    # =========================================================================
     # Helm — OTEL Collector
     # =========================================================================
     - name: Installa OTEL Collector via Helm

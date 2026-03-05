@@ -1,0 +1,21 @@
+resources:
+  limits:
+    cpu: 100m
+    memory: 64Mi
+  requests:
+    cpu: 10m
+    memory: 32Mi
+
+nodeSelector:
+  workload: heavy
+
+config:
+  # DSN completo da secret K8s (creato da monitoring-setup.yml)
+  # Il secret "postgres-exporter-secret" contiene DATA_SOURCE_NAME:
+  # postgresql://postgres:<password>@postgres.database.svc:5432/events?sslmode=disable
+  datasourceSecret:
+    name: postgres-exporter-secret
+    key: DATA_SOURCE_NAME
+
+serviceMonitor:
+  enabled: false
