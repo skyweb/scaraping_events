@@ -25,6 +25,8 @@ grafana.ini:
     header_name: X-Auth-Request-Email
     header_property: email
     auto_sign_up: true
+    enable_login_token: false
+    sync_ttl: 60
   auth:
     disable_login_form: true
   users:

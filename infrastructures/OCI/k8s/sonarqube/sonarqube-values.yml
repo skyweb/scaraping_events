@@ -1,3 +1,6 @@
+image:
+  repository: docker.io/library/sonarqube
+
 community:
   enabled: true
 
@@ -5,11 +8,15 @@ monitoringPasscode: "sonarqube-monitoring"
 
 resources:
   limits:
-    cpu: 500m
-    memory: 1536Mi
+    cpu: "1"
+    memory: 2Gi
   requests:
-    cpu: 100m
-    memory: 768Mi
+    cpu: 200m
+    memory: 1Gi
+
+startupProbe:
+  failureThreshold: 60
+  periodSeconds: 10
 
 nodeSelector:
   workload: heavy

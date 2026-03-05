@@ -9,6 +9,9 @@ spec:
   routes:
     - match: Host(`sonarqube.oci.santocaruso.eu`)
       kind: Rule
+      middlewares:
+        - name: google-auth
+          namespace: traefik
       services:
         - name: sonarqube-sonarqube
           port: 9000
