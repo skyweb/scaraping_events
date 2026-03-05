@@ -39,3 +39,4 @@ staticfiles/
 
 # Database
 /infrastructures/services/postgres/data/
+/infrastructures/OCI/oci_ssh/*
