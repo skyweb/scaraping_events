@@ -60,7 +60,6 @@ services:
       - "traefik.http.routers.prometheus.rule=Host(`prometheus.${DOMAIN}`)"
       - "traefik.http.routers.prometheus.entrypoints=websecure"
       - "traefik.http.routers.prometheus.tls=true"
-      - "traefik.http.routers.prometheus.middlewares=forward-auth"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
     networks:
       dev-network:
@@ -100,7 +99,6 @@ services:
       - "traefik.http.routers.jaeger.rule=Host(`jaeger.${DOMAIN}`)"
       - "traefik.http.routers.jaeger.entrypoints=websecure"
       - "traefik.http.routers.jaeger.tls=true"
-      - "traefik.http.routers.jaeger.middlewares=forward-auth"
       - "traefik.http.services.jaeger.loadbalancer.server.port=16686"
     depends_on:
       - prometheus
@@ -141,21 +139,10 @@ services:
       - ../microservices/backoffice-service/backend:/app/backend
     labels:
       - "traefik.enable=true"
-      # Router protetto per /admin/ — priorità alta
-      - "traefik.http.routers.backoffice-admin.rule=Host(`backoffice.${DOMAIN}`) && PathPrefix(`/admin/`)"
-      - "traefik.http.routers.backoffice-admin.entrypoints=websecure"
-      - "traefik.http.routers.backoffice-admin.tls=true"
-      - "traefik.http.routers.backoffice-admin.service=backoffice-svc"
-      - "traefik.http.routers.backoffice-admin.middlewares=forward-auth"
-      - "traefik.http.routers.backoffice-admin.priority=10"
-      # Router default per API, static, oauth2 — nessuna auth
       - "traefik.http.routers.backoffice.rule=Host(`backoffice.${DOMAIN}`)"
       - "traefik.http.routers.backoffice.entrypoints=websecure"
       - "traefik.http.routers.backoffice.tls=true"
-      - "traefik.http.routers.backoffice.service=backoffice-svc"
-      - "traefik.http.routers.backoffice.priority=1"
-      # Definizione servizio (condivisa tra i due router)
-      - "traefik.http.services.backoffice-svc.loadbalancer.server.port=8000"
+      - "traefik.http.services.backoffice.loadbalancer.server.port=8000"
     depends_on:
       postgres:
         condition: service_healthy
@@ -251,7 +238,6 @@ services:
       - "traefik.http.routers.flower.rule=Host(`flower.${DOMAIN}`)"
       - "traefik.http.routers.flower.entrypoints=websecure"
       - "traefik.http.routers.flower.tls=true"
-      - "traefik.http.routers.flower.middlewares=forward-auth"
       - "traefik.http.services.flower.loadbalancer.server.port=5555"
     depends_on:
       redis:
@@ -261,75 +247,6 @@ services:
         aliases:
           - flower
 
-  # oauth2-proxy — SSO Google OAuth2 con session store Redis
-  oauth2-proxy:
-    image: quay.io/oauth2-proxy/oauth2-proxy:v7.6.0
-    container_name: dev-oauth2-proxy
-    restart: unless-stopped
-    environment:
-      OAUTH2_PROXY_PROVIDER: google
-      OAUTH2_PROXY_CLIENT_ID: ${OAUTH2_CLIENT_ID}
-      OAUTH2_PROXY_CLIENT_SECRET: ${OAUTH2_CLIENT_SECRET}
-      OAUTH2_PROXY_COOKIE_SECRET: ${OAUTH2_COOKIE_SECRET}
-      # Restrizione email — * = qualsiasi account Google, oppure es. "mycompany.com"
-      OAUTH2_PROXY_EMAIL_DOMAINS: ${OAUTH2_EMAIL_DOMAINS:-*}
-      OAUTH2_PROXY_HTTP_ADDRESS: "0.0.0.0:4180"
-      OAUTH2_PROXY_REDIRECT_URL: "https://auth.${DOMAIN}/oauth2/callback"
-      # Redis session store — DB 5 (Django: 0-2, Superset: 3-4)
-      OAUTH2_PROXY_SESSION_STORE_TYPE: redis
-      OAUTH2_PROXY_REDIS_CONNECTION_URL: "redis://:${REDIS_PASSWORD}@redis:6379/5"
-      # Cookie — true perche' dev usa HTTPS (mkcert)
-      OAUTH2_PROXY_COOKIE_SECURE: "true"
-      OAUTH2_PROXY_COOKIE_SAMESITE: "lax"
-      OAUTH2_PROXY_COOKIE_NAME: "_oauth2_proxy"
-      # Upstream placeholder: Traefik usa ForwardAuth, non il proxy diretto
-      OAUTH2_PROXY_UPSTREAMS: "static://202"
-      OAUTH2_PROXY_REVERSE_PROXY: "true"
-      OAUTH2_PROXY_REAL_CLIENT_IP_HEADER: "X-Real-IP"
-      # Cookie cross-subdomain: tutti i servizi sotto .${DOMAIN} condividono la sessione
-      # NOTA: deve essere COOKIE_DOMAINS (plurale) — oauth2-proxy ignora COOKIE_DOMAIN (singolare)
-      OAUTH2_PROXY_COOKIE_DOMAINS: "${DOMAIN}"
-      OAUTH2_PROXY_SKIP_AUTH_PREFLIGHT: "true"
-      # Abilita header X-Auth-Request-Email / X-Auth-Request-User sulle richieste autenticate
-      # Usato da OAuth2ProxyAdminMiddleware per il login automatico in Django Admin
-      OAUTH2_PROXY_SET_XAUTHREQUEST: "true"
-      # Whitelist domini per redirect post-auth (URL assoluti passati come ?rd=)
-      OAUTH2_PROXY_WHITELIST_DOMAINS: ".${DOMAIN}"
-      # CSRF cookie unico per flusso OAuth → evita collisioni multi-tab / multi-subdomain
-      OAUTH2_PROXY_COOKIE_CSRF_PER_REQUEST: "true"
-      # Template personalizzato: auto-redirect JS su 401 (via Traefik errors middleware)
-      OAUTH2_PROXY_CUSTOM_TEMPLATES_DIR: "/etc/oauth2-proxy/templates"
-      OAUTH2_PROXY_LOGGING_FILENAME: ""
-      OAUTH2_PROXY_STANDARD_LOGGING: "true"
-      OAUTH2_PROXY_REQUEST_LOGGING: "true"
-      OAUTH2_PROXY_AUTH_LOGGING: "true"
-    labels:
-      - "traefik.enable=true"
-      # Route pubblica per sign_in, callback, sign_out, userinfo
-      - "traefik.http.routers.auth.rule=Host(`auth.${DOMAIN}`)"
-      - "traefik.http.routers.auth.entrypoints=websecure"
-      - "traefik.http.routers.auth.tls=true"
-      - "traefik.http.services.auth.loadbalancer.server.port=4180"
-      # ForwardAuth (fw-auth): controlla sessione su /oauth2/auth → 202 ok, 401 non autenticato
-      - "traefik.http.middlewares.fw-auth.forwardauth.address=http://oauth2-proxy:4180/oauth2/auth"
-      - "traefik.http.middlewares.fw-auth.forwardauth.trustForwardHeader=true"
-      - "traefik.http.middlewares.fw-auth.forwardauth.authResponseHeaders=X-Auth-Request-User,X-Auth-Request-Email,Set-Cookie"
-      # Errors: intercetta 401 da fw-auth e fa redirect → /oauth2/start (che restituisce 302 → Google OAuth)
-      - "traefik.http.middlewares.auth-errors.errors.status=401"
-      - "traefik.http.middlewares.auth-errors.errors.service=auth-redirect@docker"
-      - "traefik.http.middlewares.auth-errors.errors.query=/"
-      # Chain forward-auth = auth-errors (esterno) + fw-auth (interno)
-      # Tutti i router esistenti che usano "forward-auth" continuano a funzionare senza modifiche
-      - "traefik.http.middlewares.forward-auth.chain.middlewares=auth-errors,fw-auth"
-    volumes:
-      - ./services/oauth2-proxy/templates:/etc/oauth2-proxy/templates:ro
-    depends_on:
-      redis:
-        condition: service_healthy
-    networks:
-      dev-network:
-        aliases:
-          - oauth2-proxy
 
   # Frontend (React + Vite dev server)
   frontend:
@@ -368,7 +285,6 @@ services:
       - "traefik.http.routers.loki.rule=Host(`loki.${DOMAIN}`)"
       - "traefik.http.routers.loki.entrypoints=websecure"
       - "traefik.http.routers.loki.tls=true"
-      - "traefik.http.routers.loki.middlewares=forward-auth"
       - "traefik.http.services.loki.loadbalancer.server.port=3100"
     healthcheck:
       test: ["CMD-SHELL", "wget --quiet --tries=1 --output-document=- http://localhost:3100/ready | grep -q ready || exit 1"]
@@ -416,7 +332,6 @@ services:
       - "traefik.http.routers.grafana.rule=Host(`grafana.${DOMAIN}`)"
       - "traefik.http.routers.grafana.entrypoints=websecure"
       - "traefik.http.routers.grafana.tls=true"
-      - "traefik.http.routers.grafana.middlewares=forward-auth"
       - "traefik.http.services.grafana.loadbalancer.server.port=3001"
     depends_on:
       loki:
@@ -487,7 +402,6 @@ services:
       - "traefik.http.routers.superset.rule=Host(`superset.${DOMAIN}`)"
       - "traefik.http.routers.superset.entrypoints=websecure"
       - "traefik.http.routers.superset.tls=true"
-      - "traefik.http.routers.superset.middlewares=forward-auth"
       - "traefik.http.services.superset.loadbalancer.server.port=8088"
     restart: unless-stopped
     networks:
@@ -554,7 +468,6 @@ services:
       - "traefik.http.routers.airflow.rule=Host(`airflow.${DOMAIN}`)"
       - "traefik.http.routers.airflow.entrypoints=websecure"
       - "traefik.http.routers.airflow.tls=true"
-      - "traefik.http.routers.airflow.middlewares=forward-auth"
       - "traefik.http.services.airflow.loadbalancer.server.port=8080"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
@@ -617,7 +530,6 @@ services:
       - "traefik.http.routers.n8n.rule=Host(`n8n.${DOMAIN}`)"
       - "traefik.http.routers.n8n.entrypoints=websecure"
       - "traefik.http.routers.n8n.tls=true"
-      - "traefik.http.routers.n8n.middlewares=forward-auth"
       - "traefik.http.services.n8n.loadbalancer.server.port=5678"
     depends_on:
       postgres:
@@ -627,19 +539,6 @@ services:
         aliases:
           - n8n
 
-  # auth-redirect — pagina statica con JS redirect verso auth.DOMAIN/oauth2/start
-  # Usata da Traefik errors middleware per intercettare 401 senza manipolare cookie
-  auth-redirect:
-    image: nginx:alpine
-    container_name: dev-auth-redirect
-    restart: unless-stopped
-    volumes:
-      - ./services/auth-redirect/index.html:/usr/share/nginx/html/index.html:ro
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.services.auth-redirect.loadbalancer.server.port=80"
-    networks:
-      - dev-network
 
   # docker-api-proxy — nginx che riscrive versioni API Docker obsolete a 1.47
   # Fix per Docker Desktop 4.62+ che richiede MinAPIVersion=1.44 ma
@@ -695,7 +594,6 @@ services:
       - "traefik.http.routers.traefik-dashboard.entrypoints=websecure"
       - "traefik.http.routers.traefik-dashboard.tls=true"
       - "traefik.http.routers.traefik-dashboard.service=api@internal"
-      - "traefik.http.routers.traefik-dashboard.middlewares=forward-auth"
     networks:
       - dev-network
 
@@ -711,7 +609,6 @@ services:
       - "traefik.http.routers.redis-exporter.rule=Host(`redis-exporter.${DOMAIN}`)"
       - "traefik.http.routers.redis-exporter.entrypoints=websecure"
       - "traefik.http.routers.redis-exporter.tls=true"
-      - "traefik.http.routers.redis-exporter.middlewares=forward-auth"
       - "traefik.http.services.redis-exporter.loadbalancer.server.port=9121"
     depends_on:
       redis:
@@ -732,7 +629,6 @@ services:
       - "traefik.http.routers.celery-exporter.rule=Host(`celery-exporter.${DOMAIN}`)"
       - "traefik.http.routers.celery-exporter.entrypoints=websecure"
       - "traefik.http.routers.celery-exporter.tls=true"
-      - "traefik.http.routers.celery-exporter.middlewares=forward-auth"
       - "traefik.http.services.celery-exporter.loadbalancer.server.port=9808"
     depends_on:
       redis:
@@ -764,7 +660,6 @@ services:
       - "traefik.http.routers.minio-console.rule=Host(`minio.${DOMAIN}`)"
       - "traefik.http.routers.minio-console.entrypoints=websecure"
       - "traefik.http.routers.minio-console.tls=true"
-      - "traefik.http.routers.minio-console.middlewares=forward-auth"
       - "traefik.http.routers.minio-console.service=minio-console-svc"
       - "traefik.http.services.minio-console-svc.loadbalancer.server.port=9001"
       # API S3
@@ -846,14 +741,12 @@ services:
       - "traefik.http.routers.kong-manager.rule=Host(`kong.${DOMAIN}`)"
       - "traefik.http.routers.kong-manager.entrypoints=websecure"
       - "traefik.http.routers.kong-manager.tls=true"
-      - "traefik.http.routers.kong-manager.middlewares=forward-auth"
       - "traefik.http.routers.kong-manager.service=kong-manager-svc"
       - "traefik.http.services.kong-manager-svc.loadbalancer.server.port=8002"
       # Kong Admin API
       - "traefik.http.routers.kong-admin.rule=Host(`kong-admin.${DOMAIN}`)"
       - "traefik.http.routers.kong-admin.entrypoints=websecure"
       - "traefik.http.routers.kong-admin.tls=true"
-      - "traefik.http.routers.kong-admin.middlewares=forward-auth"
       - "traefik.http.routers.kong-admin.service=kong-admin-svc"
       - "traefik.http.services.kong-admin-svc.loadbalancer.server.port=8001"
       # Kong Proxy (API Gateway)
@@ -895,7 +788,6 @@ services:
       - "traefik.http.routers.backstage.rule=Host(`backstage.${DOMAIN}`)"
       - "traefik.http.routers.backstage.entrypoints=websecure"
       - "traefik.http.routers.backstage.tls=true"
-      - "traefik.http.routers.backstage.middlewares=forward-auth"
       - "traefik.http.services.backstage.loadbalancer.server.port=7007"
     depends_on:
       postgres:
@@ -904,27 +796,6 @@ services:
       dev-network:
         aliases:
           - backstage
-
-  # cAdvisor (metriche risorse container Docker)
-  cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v0.49.1
-    container_name: dev-cadvisor
-    privileged: true
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.cadvisor.rule=Host(`cadvisor.${DOMAIN}`)"
-      - "traefik.http.routers.cadvisor.entrypoints=websecure"
-      - "traefik.http.routers.cadvisor.tls=true"
-      - "traefik.http.routers.cadvisor.middlewares=forward-auth"
-      - "traefik.http.services.cadvisor.loadbalancer.server.port=8080"
-    networks:
-      dev-network:
-        aliases:
-          - cadvisor
 
 volumes:
   postgres-dev-data:

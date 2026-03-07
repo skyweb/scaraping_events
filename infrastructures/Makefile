@@ -26,46 +26,36 @@ NC    := \033[0m
 # =============================================================================
 
 .PHONY: help \
-        up down restart ps logs build pull \
-        up-core up-observability up-bi up-airflow up-llm \
+        up up-all down restart ps logs build pull \
+        up-core up-app up-celery up-observability up-bi up-airflow up-devtools \
         prod-up prod-down prod-ps prod-logs \
         logs-backoffice logs-celery logs-frontend logs-traefik logs-db logs-redis \
-        logs-grafana logs-jaeger logs-loki logs-superset logs-airflow logs-oauth2 \
+        logs-grafana logs-jaeger logs-loki logs-superset logs-airflow \
         logs-n8n \
-        restart-backoffice restart-frontend restart-traefik restart-celery restart-airflow restart-oauth2 \
+        restart-backoffice restart-frontend restart-traefik restart-celery restart-airflow \
         restart-n8n \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
         open-admin open-flower open-grafana open-jaeger open-prometheus \
-        open-superset open-loki open-airflow open-n8n open-traefik \
+        open-superset open-loki open-minio open-airflow open-n8n open-traefik \
         clean clean-logs
 
 # =============================================================================
 # Stack completo
 # =============================================================================
 
-up: ## Avvia tutto lo stack ESCLUSO LLM (build immagini custom se necessario)
-	@echo "$(GREEN)Avvio stack dev (senza LLM)...$(NC)"
+up: ## Avvia lo stack di sviluppo (core + observability + minio)
+	@echo "$(GREEN)Avvio stack dev...$(NC)"
 	$(COMPOSE) up --build -d \
-	    postgres redis docker-api-proxy traefik auth-redirect oauth2-proxy \
-	    backoffice backoffice-celery-worker backoffice-celery-beat flower \
-	    frontend \
-	    prometheus otel-collector jaeger loki promtail grafana \
-	    redis-exporter celery-exporter cadvisor \
-	    superset-init superset \
-	    airflow-init airflow-webserver airflow-scheduler
+	    postgres redis docker-api-proxy traefik \
+	    backoffice frontend minio \
+	    otel-collector jaeger loki promtail grafana
 	@echo ""
 	@echo "$(CYAN)  https://frontend.$(DOMAIN)/$(NC)         Frontend"
 	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
-	@echo "$(CYAN)  https://flower.$(DOMAIN)/$(NC)           Flower (Celery)"
 	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
 	@echo "$(CYAN)  https://jaeger.$(DOMAIN)/$(NC)           Jaeger"
-	@echo "$(CYAN)  https://prometheus.$(DOMAIN)/$(NC)       Prometheus"
-	@echo "$(CYAN)  https://superset.$(DOMAIN)/$(NC)         Superset"
-	@echo "$(CYAN)  https://airflow.$(DOMAIN)/$(NC)          Airflow"
+	@echo "$(CYAN)  https://minio.$(DOMAIN)/$(NC)            MinIO Console"
 	@echo "$(CYAN)  https://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
-	@echo ""
-	@echo "$(YELLOW)  LLM stack non avviato. Usa 'make up-llm' per:$(NC)"
-	@echo "$(YELLOW)    https://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -93,32 +83,61 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 # =============================================================================
 # Avvio per gruppo
 # =============================================================================
+#
+#   up          = core + app + observability (stack sviluppo quotidiano)
+#   up-all      = tutti i servizi
+#
+#   Gruppi individuali:
+#     up-core         infrastruttura base (postgres, redis, traefik)
+#     up-app          applicazione (backoffice, frontend, minio)
+#     up-celery       task processing (worker, beat, flower)
+#     up-observability monitoring (prometheus, otel, jaeger, loki, grafana, esportatori)
+#     up-bi           business intelligence (superset)
+#     up-airflow      orchestrazione DAG (airflow)
+#     up-devtools     strumenti dev (kong, sonarqube, backstage, n8n)
+#
 
-up-core: ## Avvia solo il core (postgres, redis, docker-api-proxy, traefik, backoffice, celery, frontend)
-	@echo "$(GREEN)Avvio core stack...$(NC)"
-	$(COMPOSE) up -d postgres redis docker-api-proxy traefik oauth2-proxy backoffice \
-	    backoffice-celery-worker backoffice-celery-beat flower \
-	    frontend
+up-core: ## Infrastruttura base (postgres, redis, traefik)
+	@echo "$(GREEN)Avvio core...$(NC)"
+	$(COMPOSE) up -d postgres redis docker-api-proxy traefik
 
-up-observability: ## Avvia solo lo stack observability (prometheus, otel, jaeger, loki, promtail, grafana, esportatori)
-	@echo "$(GREEN)Avvio observability stack...$(NC)"
+up-app: ## Applicazione (backoffice, frontend, minio)
+	@echo "$(GREEN)Avvio app...$(NC)"
+	$(COMPOSE) up --build -d backoffice frontend minio
+
+up-celery: ## Task processing (celery worker, beat, flower)
+	@echo "$(GREEN)Avvio Celery stack...$(NC)"
+	$(COMPOSE) up --build -d backoffice-celery-worker backoffice-celery-beat flower
+
+up-observability: ## Monitoring (prometheus, otel, jaeger, loki, promtail, grafana, esportatori)
+	@echo "$(GREEN)Avvio observability...$(NC)"
 	$(COMPOSE) up -d prometheus otel-collector jaeger \
 	    loki promtail grafana \
-	    redis-exporter celery-exporter cadvisor
+	    redis-exporter celery-exporter
 
-up-bi: ## Avvia solo Apache Superset (BI)
+up-bi: ## Business Intelligence (superset)
 	@echo "$(GREEN)Avvio Superset...$(NC)"
 	$(COMPOSE) up -d superset-init superset
 
-up-airflow: ## Avvia solo Apache Airflow (webserver + scheduler)
+up-airflow: ## Orchestrazione DAG (airflow webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
-up-llm: ## Avvia n8n (workflow automation)
-	@echo "$(GREEN)Avvio LLM stack (n8n)...$(NC)"
-	$(COMPOSE) up -d n8n
+up-devtools: ## Strumenti dev (kong, sonarqube, backstage, n8n)
+	@echo "$(GREEN)Avvio devtools...$(NC)"
+	$(COMPOSE) up -d kong-migrations kong sonarqube backstage n8n
 	@echo ""
-	@echo "$(CYAN)  https://n8n.$(DOMAIN)/$(NC)              n8n (workflow automation)"
+	@echo "$(CYAN)  https://kong.$(DOMAIN)/$(NC)             Kong Manager"
+	@echo "$(CYAN)  https://sonarqube.$(DOMAIN)/$(NC)        SonarQube"
+	@echo "$(CYAN)  https://backstage.$(DOMAIN)/$(NC)        Backstage"
+	@echo "$(CYAN)  https://n8n.$(DOMAIN)/$(NC)              n8n"
+	@echo ""
+
+up-all: ## Avvia TUTTI i servizi
+	@echo "$(GREEN)Avvio stack completo...$(NC)"
+	$(COMPOSE) up --build -d
+	@echo ""
+	@echo "$(CYAN)  Tutti i servizi avviati.$(NC)"
 	@echo ""
 
 # =============================================================================
@@ -158,9 +177,6 @@ logs-superset: ## Logs Superset (follow)
 logs-airflow: ## Logs Airflow webserver + scheduler (follow)
 	$(COMPOSE) logs -f airflow-webserver airflow-scheduler
 
-logs-oauth2: ## Logs oauth2-proxy (follow)
-	$(COMPOSE) logs -f oauth2-proxy
-
 logs-n8n: ## Logs n8n workflow automation (follow)
 	$(COMPOSE) logs -f n8n
 
@@ -187,10 +203,6 @@ restart-celery: ## Riavvia worker + beat Celery
 restart-airflow: ## Riavvia Airflow webserver + scheduler
 	@echo "$(GREEN)Riavvio Airflow...$(NC)"
 	$(COMPOSE) restart airflow-webserver airflow-scheduler
-
-restart-oauth2: ## Riavvia oauth2-proxy
-	@echo "$(GREEN)Riavvio oauth2-proxy...$(NC)"
-	$(COMPOSE) restart oauth2-proxy
 
 restart-n8n: ## Riavvia n8n
 	@echo "$(GREEN)Riavvio n8n...$(NC)"
@@ -252,9 +264,9 @@ open-loki: ## Apre Loki (API status)  →  https://loki.${DOMAIN}/ready
 	@echo "$(CYAN)Apertura Loki...$(NC)"
 	@$(OPEN) https://loki.$(DOMAIN)/ready
 
-open-cadvisor: ## Apre cAdvisor  →  https://cadvisor.${DOMAIN}/
-	@echo "$(CYAN)Apertura cAdvisor...$(NC)"
-	@$(OPEN) https://cadvisor.$(DOMAIN)/
+open-minio: ## Apre MinIO Console  →  https://minio.${DOMAIN}/
+	@echo "$(CYAN)Apertura MinIO Console...$(NC)"
+	@$(OPEN) https://minio.$(DOMAIN)/
 
 open-redis-exporter: ## Apre Redis Exporter  →  https://redis-exporter.${DOMAIN}/
 	@echo "$(CYAN)Apertura Redis Exporter...$(NC)"
