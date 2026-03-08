@@ -73,7 +73,6 @@ class CategoryChipsWidget(forms.TextInput):
 EVENT_FORM_WIDGETS = {
     'title': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'description': CKEditor5Widget(config_name='default'),
-    'raw_data': forms.Textarea(attrs={'rows': 15, 'style': 'font-family: monospace; width: 100%;'}),
     'info_extra': forms.Textarea(attrs={'rows': 8, 'style': 'font-family: monospace; width: 100%;'}),
     'city': CityAutocompleteWidget(),
     'city_name': CityAutocompleteWidget(),
@@ -204,7 +203,6 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">code</span> Dati Tecnici</span>'), {
             'fields': (
                 'content_hash',
-                'json_preview',
                 'scraped_at',
             ),
             'classes': ['tab'],
@@ -318,7 +316,6 @@ class ProductionEventAdmin(EventDisplayMixin, ModelAdmin):
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">code</span> Dati Tecnici</span>'), {
             'fields': (
                 'content_hash',
-                'json_preview',
                 ('scraped_at', 'created_at', 'updated_at'),
             ),
             'classes': ['tab'],

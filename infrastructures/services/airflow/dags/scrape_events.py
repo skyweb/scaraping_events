@@ -6,9 +6,15 @@ Pipeline:
 2. Scraping (DockerOperator) → ApiPipeline → Django API → staging_events
 3. Upsert staging → production_events (con confronto hash)
 4. Log ETL run
+
+Tracing distribuito:
+- Ogni DAG run genera un trace context (TRACEPARENT)
+- Il context viene propagato ai container Scrapy via env var
+- Scrapy lo usa come parent span → trace end-to-end visibile in Jaeger
 """
 
 import os
+import random
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -53,13 +59,35 @@ def get_scrapy_env():
         'API_BASE_URL': Variable.get('API_BASE_URL', default_var=os.getenv('API_BASE_URL', 'http://backoffice:8000')),
         'API_CLIENT_ID': Variable.get('API_CLIENT_ID', default_var=os.getenv('API_CLIENT_ID', '')),
         'API_CLIENT_SECRET': Variable.get('API_CLIENT_SECRET', default_var=os.getenv('API_CLIENT_SECRET', '')),
+        # OTel configurazione per i container Scrapy
+        'OTEL_ENABLED': 'true',
+        'OTEL_SERVICE_NAME': 'scraping-service',
+        'OTEL_EXPORTER_OTLP_ENDPOINT': Variable.get(
+            'OTEL_EXPORTER_OTLP_ENDPOINT',
+            default_var=os.getenv('OTEL_EXPORTER_OTLP_ENDPOINT', 'http://otel-collector:4317')
+        ),
     }
+
+
+def generate_traceparent(dag_id, run_id):
+    """Genera un traceparent W3C deterministico per DAG run.
+
+    Il trace_id è derivato da dag_id + run_id → stesso trace per tutti i container della stessa run.
+    Lo span_id è random per ogni container (generato nel template).
+    """
+    import hashlib
+    trace_id = hashlib.md5(f"{dag_id}:{run_id}".encode()).hexdigest()
+    span_id = '%016x' % random.getrandbits(64)
+    return f"00-{trace_id}-{span_id}-01"
 
 
 class FilterableDockerOperator(DockerOperator):
     """
     DockerOperator that skips execution if the city is not in the configuration.
     Expects 'filter_key' (e.g., 'cities_today', 'cities_zero') and 'city_name' in kwargs.
+
+    Inietta TRACEPARENT nell'env del container per propagare il trace context
+    della DAG run ai container Scrapy (tracing distribuito Airflow → Scrapy).
     """
     def __init__(self, filter_key, city_name, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -92,6 +120,10 @@ class FilterableDockerOperator(DockerOperator):
             print(f"Skipping {self.city_name}. Reason: {skip_reason}")
             raise AirflowSkipException(f"Skipped: {skip_reason}")
 
+        # Inietta TRACEPARENT deterministico (stesso trace_id per tutta la DAG run)
+        traceparent = generate_traceparent(dag_run.dag_id, dag_run.run_id)
+        self.environment = {**(self.environment or {}), 'TRACEPARENT': traceparent}
+
         return super().execute(context)
 
 
@@ -101,6 +133,10 @@ class FilterableDockerOperator(DockerOperator):
 
 def upsert_to_production(**context):
     """Upsert da staging a production usando la funzione SQL"""
+    dag_run = context['dag_run']
+    traceparent = generate_traceparent(dag_run.dag_id, dag_run.run_id)
+    print(f"[OTEL] traceparent={traceparent} (upsert_to_production)")
+
     hook = PostgresHook(postgres_conn_id=POSTGRES_CONN_ID)
     conn = hook.get_conn()
     cursor = conn.cursor()

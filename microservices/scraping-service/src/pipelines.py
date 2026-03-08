@@ -25,7 +25,7 @@ import psycopg2
 from itemadapter import ItemAdapter
 from scrapy.exceptions import CloseSpider, DropItem
 
-from otel_setup import tracer
+from otel_setup import tracer, airflow_context
 
 logger = logging.getLogger(__name__)
 
@@ -396,11 +396,15 @@ class ApiPipeline:
         if not events:
             return True
 
+        # Usa il context di Airflow come parent (se presente) per collegare lo span al DAG
+        ctx = airflow_context if airflow_context else None
         with tracer.start_as_current_span(
             "scraper.send_batch",
+            context=ctx,
             attributes={
                 "spider.name": self.spider_name,
                 "batch.size": len(events),
+                "batch.number": self.batch_count + 1,
             },
         ) as span:
             return self._do_send_batch(events, span)

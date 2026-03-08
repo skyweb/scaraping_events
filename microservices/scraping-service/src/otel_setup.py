@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 Inizializzazione OpenTelemetry per lo scraping service.
-Attiva RequestsInstrumentor per propagare automaticamente il trace context
-(header traceparent) nelle richieste HTTP verso il backoffice.
+
+- Attiva RequestsInstrumentor per propagare automaticamente il trace context
+  (header traceparent) nelle richieste HTTP verso il backoffice.
+- Se TRACEPARENT è presente come env var (iniettato da Airflow DAG),
+  lo usa come parent context per collegare lo spider al trace del DAG.
 """
 
 import os
@@ -13,9 +16,35 @@ logger = logging.getLogger(__name__)
 # Tracer globale — no-op se OTel è disabilitato
 tracer = None
 
+# Parent context ereditato da Airflow (se presente)
+airflow_context = None
+
+
+def _extract_parent_context():
+    """Estrae il parent context da TRACEPARENT env var (W3C Trace Context)."""
+    traceparent = os.getenv("TRACEPARENT")
+    if not traceparent:
+        return None
+
+    try:
+        from opentelemetry.propagate import extract
+
+        carrier = {"traceparent": traceparent}
+        tracestate = os.getenv("TRACESTATE")
+        if tracestate:
+            carrier["tracestate"] = tracestate
+
+        ctx = extract(carrier)
+        logger.info("Parent context estratto da TRACEPARENT=%s", traceparent)
+        return ctx
+    except Exception as e:
+        logger.warning("Impossibile estrarre parent context da TRACEPARENT: %s", e)
+        return None
+
 
 def _init_otel():
     """Inizializza OTel se OTEL_ENABLED=true, restituisce il tracer."""
+    global airflow_context
     from opentelemetry import trace
 
     if os.getenv("OTEL_ENABLED", "false").lower() != "true":
@@ -39,6 +68,9 @@ def _init_otel():
 
         # Auto-instrumentazione requests: inietta header traceparent in ogni richiesta HTTP
         RequestsInstrumentor().instrument()
+
+        # Estrai parent context da Airflow (se presente)
+        airflow_context = _extract_parent_context()
 
         logger.info("OpenTelemetry inizializzato: servizio=%s, endpoint=%s", service_name, otlp_endpoint)
         return trace.get_tracer(__name__)

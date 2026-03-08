@@ -11,6 +11,8 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter, OpenApiExample
 from drf_spectacular.types import OpenApiTypes
 from celery.result import AsyncResult
+from opentelemetry import trace
+from etl.tracing import log_trace_event
 
 from .models import ProductionEvent, StagingEvent
 from etl.models import EtlRun, EtlError
@@ -570,17 +572,39 @@ Crea multipli staging events in una sola richiesta.
                 status=status.HTTP_400_BAD_REQUEST
             )
 
+        spider_name = request.data.get('spider', 'unknown')
+        span = trace.get_current_span()
+        span.set_attribute("bulk.events_count", len(events_data))
+        span.set_attribute("bulk.spider", spider_name)
+
         sync_mode = request.query_params.get('sync', 'false').lower() in ('true', '1', 'yes')
+        span.set_attribute("bulk.mode", "sync" if sync_mode else "async")
+
+        log_trace_event(
+            'bulk.received',
+            f'Ricevuti {len(events_data)} eventi da {spider_name}',
+            metadata={'spider': spider_name, 'events_count': len(events_data), 'mode': 'sync' if sync_mode else 'async'},
+        )
 
         if sync_mode:
-            return self._bulk_sync(events_data)
+            return self._bulk_sync(events_data, span)
 
         # Async mode: dispatch to Celery
         from .tasks import process_bulk_events
-        spider_name = request.data.get('spider', 'unknown')
         task = process_bulk_events.apply_async(
             args=[events_data],
             kwargs={'spider_name': spider_name},
+        )
+        span.set_attribute("celery.task_id", task.id)
+        span.add_event("bulk.dispatched", attributes={
+            "celery.task_id": task.id,
+            "bulk.events_count": len(events_data),
+            "bulk.spider": spider_name,
+        })
+        log_trace_event(
+            'bulk.dispatched',
+            f'Batch inviato a Celery: task_id={task.id}',
+            metadata={'task_id': task.id, 'spider': spider_name, 'events_count': len(events_data)},
         )
         return Response(
             {
@@ -592,17 +616,24 @@ Crea multipli staging events in una sola richiesta.
             status=status.HTTP_202_ACCEPTED,
         )
 
-    def _bulk_sync(self, events_data):
+    def _bulk_sync(self, events_data, span=None):
         """Logica sincrona per il bulk create.
 
         Rileva il formato automaticamente:
         - Formato event scraping (con 'uuid', 'city', 'dates'): usa StagingEventScrapingSerializer
         - Formato legacy (nested con 'details'): usa StagingEventLegacySerializer
         """
+        from opentelemetry.trace import StatusCode
+
+        if span is None:
+            span = trace.get_current_span()
+
         successful_events = []
         failed_events = []
 
         for index, item_data in enumerate(events_data):
+            event_uuid = item_data.get('uuid', f'index_{index}')
+
             # Rileva formato in base alla struttura delle chiavi
             if 'details' in item_data:
                 serializer = StagingEventLegacySerializer(data=item_data)
@@ -613,11 +644,21 @@ Crea multipli staging events in una sola richiesta.
                 try:
                     instance = serializer.save()
                     successful_events.append(instance)
+                    span.add_event("event.created", attributes={
+                        "event.uuid": str(instance.uuid),
+                        "event.title": str(instance.title)[:80],
+                        "event.index": index,
+                    })
                 except Exception as e:
                     failed_events.append({
                         'original_data': item_data,
                         'errors': {'non_field_errors': [str(e)]},
                         'index': index
+                    })
+                    span.add_event("event.save_failed", attributes={
+                        "event.uuid": event_uuid,
+                        "event.index": index,
+                        "event.error": str(e)[:200],
                     })
             else:
                 failed_events.append({
@@ -625,6 +666,40 @@ Crea multipli staging events in una sola richiesta.
                     'errors': serializer.errors,
                     'index': index
                 })
+                span.add_event("event.validation_failed", attributes={
+                    "event.uuid": event_uuid,
+                    "event.index": index,
+                    "event.errors": str(serializer.errors)[:200],
+                })
+
+        span.set_attribute("bulk.created_count", len(successful_events))
+        span.set_attribute("bulk.failed_count", len(failed_events))
+
+        if failed_events:
+            span.set_status(StatusCode.ERROR, f"{len(failed_events)} eventi falliti su {len(events_data)}")
+            # Log errori individuali nel trace DB
+            failed_uuids = [e.get('original_data', {}).get('uuid', '?') for e in failed_events]
+            log_trace_event(
+                'bulk.partial_failure',
+                f'{len(failed_events)} eventi falliti su {len(events_data)}',
+                level='error',
+                metadata={
+                    'created_count': len(successful_events),
+                    'failed_count': len(failed_events),
+                    'failed_uuids': failed_uuids[:20],
+                    'failed_details': [{
+                        'uuid': e.get('original_data', {}).get('uuid', '?'),
+                        'index': e.get('index'),
+                        'errors': str(e.get('errors', ''))[:200],
+                    } for e in failed_events[:10]],
+                },
+            )
+        else:
+            log_trace_event(
+                'bulk.completed',
+                f'{len(successful_events)} eventi creati (sync)',
+                metadata={'created_count': len(successful_events)},
+            )
 
         if successful_events and not failed_events:
             status_code = status.HTTP_201_CREATED
