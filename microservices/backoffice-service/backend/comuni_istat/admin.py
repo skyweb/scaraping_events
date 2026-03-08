@@ -1,11 +1,17 @@
 from django.contrib import admin
 from django.db import connection
+from django.utils.safestring import mark_safe
 from unfold.admin import ModelAdmin
+
+from unfold.admin import TabularInline
+
 from .models import (
     RipartizioneGeografica,
     RegioneItaliana,
     ProvinciaItaliana,
     ComuneItaliano,
+    ComuneSoppresso,
+    DenominazionePrecedente,
 )
 
 
@@ -41,13 +47,64 @@ class ProvinciaFilter(admin.SimpleListFilter):
         return queryset
 
 
+class DenominazionePrecedenteInline(TabularInline):
+    model = DenominazionePrecedente
+    fk_name = 'comune_attuale'
+    fields = ['comune', 'sigla_uts', 'cod_den_storico']
+    readonly_fields = fields
+    extra = 0
+    can_delete = False
+    verbose_name = 'Denominazione storica'
+    verbose_name_plural = 'Denominazioni storiche'
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+
+class ComuneSoppressoInline(TabularInline):
+    model = ComuneSoppresso
+    fk_name = 'comune_attuale'
+    fields = ['comune', 'sigla_uts', 'anno', 'cod_variazione', 'data_inizio', 'pro_com_t']
+    readonly_fields = fields
+    extra = 0
+    can_delete = False
+    verbose_name = 'Denominazione precedente'
+    verbose_name_plural = 'Denominazioni precedenti (comuni soppressi)'
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+
 @admin.register(ComuneItaliano)
 class ComuneItalianoAdmin(ModelAdmin):
-    list_display = ['comune', 'cod_uts', 'popolazione']
-    search_fields = ['comune']
-    list_filter = [RegioneFilter, ProvinciaFilter]
+    list_display = ['comune', 'cod_uts', 'popolazione', 'attivo']
+    search_fields = ['comune', 'comuni_soppressi__comune', 'denominazioni_precedenti__comune']
+    list_filter = ['attivo', RegioneFilter, ProvinciaFilter]
     list_per_page = 50
     exclude = ['geom', 'centroid', 'shape_area', 'shape_length']
+    readonly_fields = ['mappa_confini']
+    inlines = [DenominazionePrecedenteInline, ComuneSoppressoInline]
+
+    class Media:
+        js = ['comuni_istat/js/mappa_confini.js']
+
+    def mappa_confini(self, obj):
+        """Mappa Leaflet con confini del comune e centroide."""
+        if not obj.geom:
+            return "Geometria non disponibile"
+
+        geojson = obj.geom.geojson
+        centroid_lat = obj.centroid.y if obj.centroid else obj.geom.centroid.y
+        centroid_lng = obj.centroid.x if obj.centroid else obj.geom.centroid.x
+
+        return mark_safe(
+            f'<div id="map-comune" style="height:450px;width:100%;border-radius:8px;margin-top:8px;"'
+            f' data-geojson=\'{geojson}\''
+            f' data-lat="{centroid_lat}"'
+            f' data-lng="{centroid_lng}"></div>'
+        )
+
+    mappa_confini.short_description = "Mappa confini"
 
 
 @admin.register(ProvinciaItaliana)

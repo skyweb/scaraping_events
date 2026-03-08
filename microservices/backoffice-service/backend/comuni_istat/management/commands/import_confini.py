@@ -9,10 +9,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # 1. Configuration & Paths
+        base_dir = str(settings.BASE_DIR)
         app_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        data_dir = os.path.join(app_dir, 'data', 'Limiti01012025')
+        data_dir = os.path.join(base_dir, 'fixtures', 'confini_istat', 'Limiti01012026')
 
-        # SQL schema file is in the data directory
+        # SQL schema file is in the app data directory
         sql_schema_file = os.path.join(app_dir, 'data', 'comuni-schema.sql')
 
         if not os.path.exists(data_dir):
@@ -47,10 +48,10 @@ class Command(BaseCommand):
         self.stdout.write(self.style.WARNING("\n[2/4] Importing shapefiles with ogr2ogr..."))
 
         shapefiles = [
-            ("RipGeo01012025/RipGeo01012025_WGS84.shp", "ripartizioni_import", "Ripartizioni"),
-            ("Reg01012025/Reg01012025_WGS84.shp", "regioni_import", "Regioni"),
-            ("ProvCM01012025/ProvCM01012025_WGS84.shp", "province_import", "Province"),
-            ("Com01012025/Com01012025_WGS84.shp", "comuni_import", "Comuni"),
+            ("RipGeo01012026/RipGeo01012026_WGS84.shp", "ripartizioni_import", "Ripartizioni"),
+            ("Reg01012026/Reg01012026_WGS84.shp", "regioni_import", "Regioni"),
+            ("ProvCM01012026/ProvCM01012026_WGS84.shp", "province_import", "Province"),
+            ("Com01012026/Com01012026_WGS84.shp", "comuni_import", "Comuni"),
         ]
 
         for shp_subpath, table_name, label in shapefiles:

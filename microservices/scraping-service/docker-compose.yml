@@ -45,7 +45,6 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.scrapyd.rule=Host(`scrapyd.${DOMAIN}`)"
       - "traefik.http.routers.scrapyd.entrypoints=web"
-      - "traefik.http.routers.scrapyd.middlewares=forward-auth"
       - "traefik.http.services.scrapyd.loadbalancer.server.port=6800"
     networks:
       - dev-network

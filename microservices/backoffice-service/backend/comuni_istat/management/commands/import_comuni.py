@@ -1,11 +1,12 @@
 import json
 import os
+from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from django.db import connection
 
 
 class Command(BaseCommand):
-    help = 'Import comuni data from comuni-json (CAP, codice catastale, popolazione)'
+    help = 'Import dati comuni-json (CAP, popolazione). Codice catastale solo se assente (priorità a ISTAT)'
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -15,8 +16,8 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        app_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        json_file = options.get('file') or os.path.join(app_dir, 'data', 'comuni.json')
+        base_dir = str(settings.BASE_DIR)
+        json_file = options.get('file') or os.path.join(base_dir, 'fixtures', 'comuni_json', 'comuni_2020.json')
 
         if not os.path.exists(json_file):
             raise CommandError(f"JSON file not found: {json_file}")
@@ -59,7 +60,7 @@ class Command(BaseCommand):
             cursor.execute("""
                 UPDATE comuni_istat.comuni c
                 SET
-                    codice_catastale = s.codice_catastale,
+                    codice_catastale = COALESCE(c.codice_catastale, s.codice_catastale),
                     cap = s.cap,
                     popolazione = s.popolazione
                 FROM comuni_istat.comuni_json_staging s
