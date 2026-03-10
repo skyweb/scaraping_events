@@ -1,0 +1,61 @@
+# Keycloak Helm values — Bitnami chart
+image:
+  registry: quay.io
+  repository: keycloak/keycloak
+  tag: "26.0"
+
+auth:
+  adminUser: admin
+  existingSecret: keycloak-secret
+  passwordSecretKey: admin-password
+
+production: true
+proxy: edge
+httpRelativePath: "/"
+
+extraEnvVars:
+  - name: KC_HEALTH_ENABLED
+    value: "true"
+  - name: KC_METRICS_ENABLED
+    value: "true"
+  - name: KC_TRACING_ENABLED
+    value: "true"
+  - name: KC_TRACING_ENDPOINT
+    value: "http://otel-collector.monitoring.svc:4317"
+
+postgresql:
+  enabled: false
+
+externalDatabase:
+  host: postgres.database.svc
+  port: 5432
+  database: keycloak
+  user: keycloak
+  existingSecret: keycloak-secret
+  existingSecretPasswordKey: db-password
+
+service:
+  type: ClusterIP
+  ports:
+    http: 8080
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 512Mi
+  limits:
+    cpu: 1000m
+    memory: 1Gi
+
+nodeSelector:
+  workload: heavy
+
+extraVolumes:
+  - name: realm-config
+    configMap:
+      name: keycloak-realm-config
+
+extraVolumeMounts:
+  - name: realm-config
+    mountPath: /opt/keycloak/data/import
+    readOnly: true
