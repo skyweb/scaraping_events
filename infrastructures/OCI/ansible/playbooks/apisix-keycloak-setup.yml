@@ -1,0 +1,172 @@
+---
+# Playbook: Setup APISIX API Gateway + Keycloak Identity Provider
+# Sostituisce: kong-setup.yml
+#
+# Prerequisiti: post-cluster-setup.yml completato
+# Esecuzione: ansible-playbook playbooks/apisix-keycloak-setup.yml --ask-vault-pass
+
+- name: Setup APISIX + Keycloak
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    keycloak_k8s_dir: "{{ playbook_dir }}/../../k8s/keycloak"
+    apisix_k8s_dir: "{{ playbook_dir }}/../../k8s/apisix"
+
+  tasks:
+    # =========================================================================
+    # Prerequisiti
+    # =========================================================================
+    - name: Verifica prerequisiti
+      block:
+        - name: Check kubectl
+          ansible.builtin.command: kubectl cluster-info
+          changed_when: false
+
+        - name: Check helm
+          ansible.builtin.command: helm version --short
+          changed_when: false
+
+    # =========================================================================
+    # Database Keycloak — crea ruolo e database su PostgreSQL condiviso
+    # =========================================================================
+    - name: Crea database e utente Keycloak
+      block:
+        - name: Crea utente keycloak in PostgreSQL
+          kubernetes.core.k8s_exec:
+            namespace: database
+            pod: postgres-0
+            command: >
+              psql -U postgres -c
+              "DO $$ BEGIN
+                IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'keycloak') THEN
+                  CREATE ROLE keycloak WITH LOGIN PASSWORD '{{ keycloak_db_password }}';
+                END IF;
+              END $$;"
+          changed_when: false
+
+        - name: Crea database keycloak
+          kubernetes.core.k8s_exec:
+            namespace: database
+            pod: postgres-0
+            command: >
+              psql -U postgres -c
+              "SELECT 'CREATE DATABASE keycloak OWNER keycloak'
+               WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'keycloak') \gexec"
+          changed_when: false
+
+    # =========================================================================
+    # Secret Keycloak — admin-password e db-password
+    # =========================================================================
+    - name: Crea secret Keycloak
+      kubernetes.core.k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: keycloak-secret
+            namespace: apps
+          type: Opaque
+          stringData:
+            admin-password: "{{ keycloak_admin_password }}"
+            db-password: "{{ keycloak_db_password }}"
+
+    # =========================================================================
+    # Deploy Keycloak via Helm (bitnami/keycloak)
+    # =========================================================================
+    - name: Deploy Keycloak via Helm
+      block:
+        - name: Aggiungi repo Bitnami
+          ansible.builtin.command: helm repo add bitnami https://charts.bitnami.com/bitnami
+          changed_when: false
+          failed_when: false
+
+        - name: Aggiorna repo Helm
+          ansible.builtin.command: helm repo update
+          changed_when: false
+
+        - name: Installa Keycloak
+          ansible.builtin.command: >
+            helm upgrade --install keycloak bitnami/keycloak
+            --namespace apps
+            --values {{ keycloak_k8s_dir }}/keycloak-values.yml
+            --wait --timeout 300s
+          register: keycloak_helm_result
+          changed_when: "'STATUS: deployed' in keycloak_helm_result.stdout"
+
+    # =========================================================================
+    # Apply Keycloak manifests (kustomize — IngressRoute, ConfigMap realm)
+    # =========================================================================
+    - name: Applica manifest Keycloak (IngressRoute, ConfigMap)
+      ansible.builtin.command: kubectl apply -k {{ keycloak_k8s_dir }}
+      register: keycloak_kustomize_result
+      changed_when: "'created' in keycloak_kustomize_result.stdout or 'configured' in keycloak_kustomize_result.stdout"
+
+    # =========================================================================
+    # Deploy APISIX via Helm (apisix/apisix — charts.apiseven.com)
+    # =========================================================================
+    - name: Deploy APISIX via Helm
+      block:
+        - name: Aggiungi repo APISIX
+          ansible.builtin.command: helm repo add apisix https://charts.apiseven.com
+          changed_when: false
+          failed_when: false
+
+        - name: Aggiorna repo Helm
+          ansible.builtin.command: helm repo update
+          changed_when: false
+
+        - name: Installa APISIX con Ingress Controller
+          ansible.builtin.command: >
+            helm upgrade --install apisix apisix/apisix
+            --namespace apps
+            --values {{ apisix_k8s_dir }}/apisix-values.yml
+            --wait --timeout 300s
+          register: apisix_helm_result
+          changed_when: "'STATUS: deployed' in apisix_helm_result.stdout"
+
+    # =========================================================================
+    # Apply APISIX manifests (kustomize — ApisixRoute, IngressRoute)
+    # =========================================================================
+    - name: Applica CRD routes e IngressRoute APISIX
+      ansible.builtin.command: kubectl apply -k {{ apisix_k8s_dir }}
+      register: apisix_kustomize_result
+      changed_when: "'created' in apisix_kustomize_result.stdout or 'configured' in apisix_kustomize_result.stdout"
+
+    # =========================================================================
+    # Verifica — stato pods e endpoint
+    # =========================================================================
+    - name: Verifica deployment
+      block:
+        - name: Verifica pods Keycloak
+          ansible.builtin.command: kubectl get pods -n apps -l app.kubernetes.io/name=keycloak -o wide
+          register: keycloak_pods
+          changed_when: false
+
+        - name: Verifica pods APISIX
+          ansible.builtin.command: kubectl get pods -n apps -l app.kubernetes.io/name=apisix -o wide
+          register: apisix_pods
+          changed_when: false
+
+        - name: Output stato e endpoint
+          ansible.builtin.debug:
+            msg:
+              - "=== APISIX + Keycloak Setup Completato ==="
+              - ""
+              - "--- Keycloak pods ---"
+              - "{{ keycloak_pods.stdout }}"
+              - ""
+              - "--- APISIX pods ---"
+              - "{{ apisix_pods.stdout }}"
+              - ""
+              - "--- Endpoint ---"
+              - "Keycloak:  https://auth.{{ base_domain }}"
+              - "API:       https://api.{{ base_domain }}"
+              - "Gateway:   https://gateway.{{ base_domain }}"
+              - "Dashboard: https://apisix.{{ base_domain }}"
