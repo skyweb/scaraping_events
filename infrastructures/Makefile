@@ -94,7 +94,7 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 #     up-observability monitoring (prometheus, otel, jaeger, loki, grafana, esportatori)
 #     up-bi           business intelligence (superset)
 #     up-airflow      orchestrazione DAG (airflow)
-#     up-devtools     strumenti dev (kong, sonarqube, backstage, n8n)
+#     up-devtools     strumenti dev (apisix, keycloak, sonarqube, backstage, n8n)
 #
 
 up-core: ## Infrastruttura base (postgres, redis, traefik)
@@ -123,11 +123,13 @@ up-airflow: ## Orchestrazione DAG (airflow webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
-up-devtools: ## Strumenti dev (kong, sonarqube, backstage, n8n)
+up-devtools: ## Strumenti dev (apisix, keycloak, sonarqube, backstage, n8n)
 	@echo "$(GREEN)Avvio devtools...$(NC)"
-	$(COMPOSE) up -d kong-migrations kong sonarqube backstage n8n
+	$(COMPOSE) up -d etcd apisix apisix-dashboard keycloak sonarqube backstage n8n
 	@echo ""
-	@echo "$(CYAN)  https://kong.$(DOMAIN)/$(NC)             Kong Manager"
+	@echo "$(CYAN)  https://apisix.$(DOMAIN)/$(NC)           APISIX Dashboard"
+	@echo "$(CYAN)  https://keycloak.$(DOMAIN)/$(NC)         Keycloak Admin"
+	@echo "$(CYAN)  https://gateway.$(DOMAIN)/$(NC)          API Gateway"
 	@echo "$(CYAN)  https://sonarqube.$(DOMAIN)/$(NC)        SonarQube"
 	@echo "$(CYAN)  https://backstage.$(DOMAIN)/$(NC)        Backstage"
 	@echo "$(CYAN)  https://n8n.$(DOMAIN)/$(NC)              n8n"
