@@ -39,21 +39,17 @@ airflow_postgres_password: "CHANGE_ME"
 airflow_admin_password: "CHANGE_ME"
 airflow_secret_key: "CHANGE_ME"
 
-# Kong API Gateway (PostgreSQL)
-kong_postgres_password: "CHANGE_ME"
-
-# Kong API Keys (generare con: openssl rand -hex 32)
-kong_apikey_scraper: "CHANGE_ME"
-kong_apikey_airflow: "CHANGE_ME"
+# Keycloak
+keycloak_admin_password: "CHANGE_ME"
+keycloak_db_password: "CHANGE_ME"
+keycloak_backoffice_client_secret: "CHANGE_ME"
+keycloak_scraper_client_secret: "CHANGE_ME"
+keycloak_airflow_client_secret: "CHANGE_ME"
+keycloak_google_client_secret: "CHANGE_ME"
 
 # MinIO (Object Storage)
 minio_root_user: "minioadmin"
 minio_root_password: "CHANGE_ME"
-
-# OAuth2 Proxy (Google SSO)
-oauth2_proxy_client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
-oauth2_proxy_client_secret="YOUR_GOOGLE_CLIENT_SECRET"
-oauth2_proxy_cookie_secret="f7993dcccaad3a3edfc5f0ff2b1ebbb7"
 
 # WireGuard VPN (server su micro-gw)
 # Generare con: wg genkey

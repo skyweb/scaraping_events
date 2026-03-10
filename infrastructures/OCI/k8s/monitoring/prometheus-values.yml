@@ -72,10 +72,16 @@ extraScrapeConfigs: |
     metrics_path: /metrics
     scrape_interval: 15s
 
-  - job_name: kong
+  - job_name: apisix
     static_configs:
-      - targets: ['kong-kong-status.apps.svc:8100']
+      - targets: ['apisix-gateway.apps.svc:9091']
     metrics_path: /metrics
+    scrape_interval: 15s
+
+  - job_name: keycloak
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['keycloak.apps.svc:8080']
     scrape_interval: 15s
 
   - job_name: postgres-exporter
