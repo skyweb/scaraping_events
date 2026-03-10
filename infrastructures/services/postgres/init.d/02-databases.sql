@@ -11,9 +11,9 @@ WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'n8n') \gexec
 SELECT 'CREATE DATABASE sonarqube OWNER ' || current_user
 WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'sonarqube') \gexec
 
--- Kong (API gateway)
-SELECT 'CREATE DATABASE kong OWNER ' || current_user
-WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'kong') \gexec
+-- Keycloak (identity provider)
+SELECT 'CREATE DATABASE keycloak OWNER ' || current_user
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'keycloak') \gexec
 
 -- Backstage (developer portal)
 SELECT 'CREATE DATABASE backstage OWNER ' || current_user
