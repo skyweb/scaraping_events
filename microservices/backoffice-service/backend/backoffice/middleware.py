@@ -2,7 +2,7 @@
 Middleware personalizzati:
 - ApiVersionHeaderMiddleware: aggiunge X-API-Version alle risposte API
 - AdminRequestLoggingMiddleware: logga richieste all'area admin
-- OAuth2ProxyAdminMiddleware: SSO trasparente per /admin/ via oauth2-proxy
+- KeycloakAdminMiddleware: SSO trasparente per /admin/ via APISIX + Keycloak
 """
 
 import logging
@@ -19,17 +19,17 @@ logger = logging.getLogger("admin.requests")
 sso_logger = logging.getLogger("admin.sso")
 
 
-class OAuth2ProxyAdminMiddleware:
+class KeycloakAdminMiddleware:
     """
-    SSO trasparente per Django Admin via oauth2-proxy (Approccio A).
+    SSO trasparente per Django Admin via APISIX + Keycloak.
 
     Flusso:
-      1. nginx verifica l'autenticazione Google tramite auth_request → oauth2-proxy
-      2. oauth2-proxy imposta X-Auth-Request-Email nell'header della richiesta
-      3. nginx forwarda l'header a Django
+      1. APISIX autentica la richiesta via plugin openid-connect → Keycloak
+      2. Keycloak valida la sessione/token e restituisce i claim
+      3. APISIX imposta X-Auth-Request-Email nell'header della richiesta
       4. Questo middleware legge l'email e fa il login automatico
 
-    Attivo solo su /admin/. Le API (/api/, /o/) non sono toccate.
+    Attivo solo su /admin/. Le API (/api/) usano JWT diretto.
     Non crea utenti automaticamente: l'utente Django deve esistere con la stessa email
     e avere is_staff=True. In caso contrario restituisce 403 con istruzioni.
     """
