@@ -46,13 +46,14 @@ up: ## Avvia lo stack di sviluppo (core + gateway + observability + minio)
 	@echo "$(GREEN)Avvio stack dev...$(NC)"
 	$(COMPOSE) up --build -d \
 	    postgres redis docker-api-proxy traefik \
-	    etcd apisix keycloak \
+	    etcd apisix apisix-dashboard keycloak \
 	    backoffice frontend minio \
 	    otel-collector jaeger tempo loki promtail grafana
 	@echo ""
 	@echo "$(CYAN)  https://frontend.$(DOMAIN)/$(NC)         Frontend"
 	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
 	@echo "$(CYAN)  https://gateway.$(DOMAIN)/$(NC)          API Gateway"
+	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC) APISIX Dashboard"
 	@echo "$(CYAN)  https://keycloak.$(DOMAIN)/$(NC)         Keycloak"
 	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
 	@echo "$(CYAN)  https://jaeger.$(DOMAIN)/$(NC)           Jaeger"

@@ -5,12 +5,14 @@ Valida i token Bearer emessi da Keycloak scaricando le chiavi JWKS
 dal realm configurato. Supporta cache delle chiavi con TTL di 5 minuti.
 """
 
+import json
 import logging
 import time
+import urllib.request
+import urllib.error
 from typing import Any
 
 import jwt
-import requests
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from rest_framework.authentication import BaseAuthentication
@@ -177,13 +179,13 @@ class KeycloakJWTAuthentication(BaseAuthentication):
         )
 
         try:
-            response = requests.get(jwks_url, timeout=10)
-            response.raise_for_status()
-            _jwks_cache = response.json()
+            req = urllib.request.Request(jwks_url)
+            with urllib.request.urlopen(req, timeout=10) as response:
+                _jwks_cache = json.loads(response.read())
             _jwks_cache_expiry = now + _JWKS_CACHE_TTL
             logger.info("JWKS scaricato e cachato da %s", jwks_url)
             return _jwks_cache
-        except requests.RequestException as e:
+        except (urllib.error.URLError, OSError) as e:
             # Se abbiamo una cache scaduta, usiamola come fallback
             if _jwks_cache is not None:
                 logger.warning(

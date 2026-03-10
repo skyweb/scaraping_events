@@ -251,7 +251,7 @@
       "implicitFlowEnabled": false,
       "directAccessGrantsEnabled": false,
       "serviceAccountsEnabled": false,
-      "authorizationServicesEnabled": false,
+
       "surrogateAuthRequired": false,
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": true,
@@ -319,7 +319,7 @@
       "implicitFlowEnabled": false,
       "directAccessGrantsEnabled": false,
       "serviceAccountsEnabled": true,
-      "authorizationServicesEnabled": false,
+
       "surrogateAuthRequired": false,
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": false,
@@ -375,7 +375,7 @@
       "implicitFlowEnabled": false,
       "directAccessGrantsEnabled": false,
       "serviceAccountsEnabled": true,
-      "authorizationServicesEnabled": false,
+
       "surrogateAuthRequired": false,
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": false,
@@ -641,8 +641,7 @@
   "internationalizationEnabled": true,
   "supportedLocales": ["it", "en"],
   "defaultLocale": "it",
-  "authorizationServicesEnabled": false,
-  "keycloakVersion": "24.0.0",
+  "keycloakVersion": "26.0.0",
   "userManagedAccessAllowed": false,
   "clientProfiles": {
     "profiles": []

@@ -723,7 +723,7 @@ services:
 
   # etcd — store configurazione per APISIX
   etcd:
-    image: bitnami/etcd:3.5
+    image: quay.io/coreos/etcd:v3.5.17
     container_name: dev-etcd
     restart: unless-stopped
     environment:
@@ -731,7 +731,7 @@ services:
       ETCD_ADVERTISE_CLIENT_URLS: "http://etcd:2379"
       ETCD_LISTEN_CLIENT_URLS: "http://0.0.0.0:2379"
     volumes:
-      - etcd-dev-data:/bitnami/etcd
+      - etcd-dev-data:/etcd-data
     healthcheck:
       test: ["CMD", "etcdctl", "endpoint", "health"]
       interval: 10s
@@ -744,11 +744,11 @@ services:
 
   # APISIX — API Gateway
   apisix:
-    image: apache/apisix:3.11-debian
+    image: apache/apisix:3.11.0-debian
     container_name: dev-apisix
     restart: unless-stopped
     volumes:
-      - ./services/apisix/config.yaml:/usr/local/apisix/conf/config.yaml:ro
+      - ./services/apisix/config.yaml:/usr/local/apisix/conf/config.yaml
     labels:
       - "traefik.enable=true"
       # API Gateway proxy
@@ -767,14 +767,14 @@ services:
 
   # APISIX Dashboard — UI gestione route/plugin
   apisix-dashboard:
-    image: apache/apisix-dashboard:3.0-alpine
+    image: apache/apisix-dashboard:3.0.1-alpine
     container_name: dev-apisix-dashboard
     restart: unless-stopped
     volumes:
       - ./services/apisix/dashboard.yaml:/usr/local/apisix-dashboard/conf/conf.yaml:ro
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.apisix-dashboard.rule=Host(`apisix.${DOMAIN}`)"
+      - "traefik.http.routers.apisix-dashboard.rule=Host(`apisix-dashboard.${DOMAIN}`)"
       - "traefik.http.routers.apisix-dashboard.entrypoints=websecure"
       - "traefik.http.routers.apisix-dashboard.tls=true"
       - "traefik.http.services.apisix-dashboard.loadbalancer.server.port=9000"
@@ -791,7 +791,7 @@ services:
     image: quay.io/keycloak/keycloak:26.0
     container_name: dev-keycloak
     restart: unless-stopped
-    command: start-dev --import-realm
+    command: start-dev --import-realm --features=opentelemetry
     environment:
       KC_DB: postgres
       KC_DB_URL_HOST: postgres
@@ -818,7 +818,7 @@ services:
       - "traefik.http.routers.keycloak.tls=true"
       - "traefik.http.services.keycloak.loadbalancer.server.port=8080"
     healthcheck:
-      test: ["CMD-SHELL", "exec 3<>/dev/tcp/localhost/9000 && echo -e 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3 && cat <&3 | grep -q '\"status\":\"UP\"'"]
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/localhost/9000 && printf 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3 && cat <&3 | grep -q 'status.*UP'"]
       interval: 10s
       timeout: 5s
       retries: 10
