@@ -1,0 +1,130 @@
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: api-external
+  namespace: apps
+spec:
+  http:
+    - name: api-external
+      match:
+        hosts:
+          - api.oci.santocaruso.eu
+        paths:
+          - /api/external/*
+      backends:
+        - serviceName: backoffice
+          servicePort: 8000
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            bearer_only: true
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+        - name: limit-count
+          enable: true
+          config:
+            count: 60
+            time_window: 60
+            rejected_code: 429
+            key: remote_addr
+        - name: cors
+          enable: true
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: api-public
+  namespace: apps
+spec:
+  http:
+    - name: api-public
+      match:
+        hosts:
+          - api.oci.santocaruso.eu
+        paths:
+          - /api/public/*
+      backends:
+        - serviceName: backoffice
+          servicePort: 8000
+      plugins:
+        - name: cors
+          enable: true
+        - name: opentelemetry
+          enable: true
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: gateway-admin
+  namespace: apps
+spec:
+  http:
+    - name: gateway-admin
+      match:
+        hosts:
+          - gateway.oci.santocaruso.eu
+        paths:
+          - /admin/*
+      backends:
+        - serviceName: backoffice
+          servicePort: 8000
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            client_id: backoffice-admin
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            redirect_uri: https://gateway.oci.santocaruso.eu/callback
+            scope: openid profile email
+            unauth_action: redirect
+        - name: opentelemetry
+          enable: true
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: gateway-api
+  namespace: apps
+spec:
+  http:
+    - name: gateway-api
+      match:
+        hosts:
+          - gateway.oci.santocaruso.eu
+        paths:
+          - /api/*
+      backends:
+        - serviceName: backoffice
+          servicePort: 8000
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            client_id: backoffice-admin
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            redirect_uri: https://gateway.oci.santocaruso.eu/callback
+            scope: openid profile email
+            unauth_action: redirect
+        - name: opentelemetry
+          enable: true
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: gateway-static
+  namespace: apps
+spec:
+  http:
+    - name: gateway-static
+      match:
+        hosts:
+          - gateway.oci.santocaruso.eu
+        paths:
+          - /static/*
+      backends:
+        - serviceName: backoffice
+          servicePort: 8000
