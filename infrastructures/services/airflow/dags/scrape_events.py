@@ -59,6 +59,13 @@ def get_scrapy_env():
         'API_BASE_URL': Variable.get('API_BASE_URL', default_var=os.getenv('API_BASE_URL', 'http://backoffice:8000')),
         'API_CLIENT_ID': Variable.get('API_CLIENT_ID', default_var=os.getenv('API_CLIENT_ID', '')),
         'API_CLIENT_SECRET': Variable.get('API_CLIENT_SECRET', default_var=os.getenv('API_CLIENT_SECRET', '')),
+        'KEYCLOAK_TOKEN_URL': Variable.get(
+            'KEYCLOAK_TOKEN_URL',
+            default_var=os.getenv(
+                'KEYCLOAK_TOKEN_URL',
+                'http://keycloak:8080/realms/today-events/protocol/openid-connect/token'
+            )
+        ),
         # OTel configurazione per i container Scrapy
         'OTEL_ENABLED': 'true',
         'OTEL_SERVICE_NAME': 'scraping-service',
