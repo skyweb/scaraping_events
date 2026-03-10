@@ -47,9 +47,6 @@ urlpatterns = [
     # CKEditor 5 (upload immagini/file)
     path('ckeditor5/', include('django_ckeditor_5.urls')),
 
-    # OAuth2 endpoints
-    path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-
     # Prometheus metrics
     path('', include('django_prometheus.urls')),
 
@@ -57,7 +54,7 @@ urlpatterns = [
     re_path(r'^assets/(?P<path>.*)$', serve_frontend_assets),
 
     # Catch-all for React SPA routing (must be last)
-    re_path(r'^(?!admin|api|static|media|oauth|docs|ckeditor5|metrics).*$', serve_frontend),
+    re_path(r'^(?!admin|api|static|media|docs|ckeditor5|metrics).*$', serve_frontend),
 ]
 
 # Serve media in development

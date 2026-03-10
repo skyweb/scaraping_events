@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.forms',
     'django_prometheus',
     'rest_framework',
-    'oauth2_provider',
     'rest_framework_tracking',
     'corsheaders',
     'django_filters',
@@ -148,7 +147,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+        'backoffice.authentication.KeycloakJWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_FILTER_BACKENDS': [
@@ -165,16 +164,10 @@ REST_FRAMEWORK = {
 API_VERSION = 'v1'
 API_ALLOWED_VERSIONS = ['v1']
 
-# OAuth2 Provider
-OAUTH2_PROVIDER = {
-    'SCOPES': {
-        'read': 'Read access to staging events',
-        'write': 'Write access to staging events',
-    },
-    'ACCESS_TOKEN_EXPIRE_SECONDS': 36000,  # 10 hours
-    'REFRESH_TOKEN_EXPIRE_SECONDS': 86400 * 30,  # 30 days
-    'ROTATE_REFRESH_TOKEN': True,
-}
+# Keycloak (Identity Provider)
+KEYCLOAK_URL = os.environ.get('KEYCLOAK_URL', 'http://keycloak:8080')
+KEYCLOAK_REALM = os.environ.get('KEYCLOAK_REALM', 'today-events')
+KEYCLOAK_AUDIENCE = os.environ.get('KEYCLOAK_AUDIENCE', 'account')
 
 # DRF API Tracking
 DRF_TRACKING_ADMIN_LOG_READONLY = True
@@ -203,14 +196,14 @@ API per la gestione degli eventi, monitoraggio ETL e integrazione con servizi es
 ### Autenticazione
 
 - **API interne**: Session authentication (Django admin login)
-- **API esterne** (`/api/external/v1/`): OAuth2 Client Credentials (versionata)
+- **API esterne** (`/api/external/v1/`): OAuth2 Client Credentials via Keycloak (versionata)
 - **CMS** (`/api/cms/`): Pubblico, senza autenticazione
 - **Comuni ISTAT Ingestion** (`/api/comuni-istat/`): Session authentication
 
-#### OAuth2 Flow
+#### OAuth2 Flow (Keycloak)
 
 1. Richiedi le credenziali (Client ID e Client Secret) all'amministratore
-2. Ottieni un access token: `POST /oauth/token/` con `grant_type=client_credentials`
+2. Ottieni un access token: `POST /realms/today-events/protocol/openid-connect/token` con `grant_type=client_credentials`
 3. Usa il token: `Authorization: Bearer <access_token>`
 
 ### Scopes OAuth2
@@ -234,14 +227,14 @@ Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) non sono versionate.
         {'SessionAuth': []},
     ],
     'OAUTH2_FLOWS': ['clientCredentials'],
-    'OAUTH2_TOKEN_URL': '/oauth/token/',
+    'OAUTH2_TOKEN_URL': f'{os.environ.get("KEYCLOAK_URL", "http://keycloak:8080")}/realms/{os.environ.get("KEYCLOAK_REALM", "today-events")}/protocol/openid-connect/token',
     'COMPONENTS': {
         'securitySchemes': {
             'OAuth2': {
                 'type': 'oauth2',
                 'flows': {
                     'clientCredentials': {
-                        'tokenUrl': '/oauth/token/',
+                        'tokenUrl': f'{os.environ.get("KEYCLOAK_URL", "http://keycloak:8080")}/realms/{os.environ.get("KEYCLOAK_REALM", "today-events")}/protocol/openid-connect/token',
                         'scopes': {
                             'read': 'Read access to staging events',
                             'write': 'Write access to staging events',

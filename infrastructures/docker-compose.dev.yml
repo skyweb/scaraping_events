@@ -135,6 +135,9 @@ services:
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
       OTEL_SERVICE_NAME: backoffice-django
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+      KEYCLOAK_URL: http://keycloak:8080
+      KEYCLOAK_REALM: today-events
+      KEYCLOAK_AUDIENCE: account
     volumes:
       - ../microservices/backoffice-service/backend:/app/backend
     labels:
@@ -177,6 +180,9 @@ services:
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
       OTEL_SERVICE_NAME: backoffice-celery-worker
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+      KEYCLOAK_URL: http://keycloak:8080
+      KEYCLOAK_REALM: today-events
+      KEYCLOAK_AUDIENCE: account
     volumes:
       - ../microservices/backoffice-service/backend:/app/backend
     depends_on:
