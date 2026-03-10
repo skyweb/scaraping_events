@@ -1,0 +1,49 @@
+apisix:
+  node_listen: 9080
+  enable_admin: true
+  admin_listen:
+    ip: 0.0.0.0
+    port: 9180
+  admin_key:
+    - name: admin
+      key: apisix-dev-admin-key
+      role: admin
+  ssl:
+    enable: false
+
+deployment:
+  role: traditional
+  role_traditional:
+    config_provider: etcd
+  etcd:
+    host:
+      - "http://etcd:2379"
+    prefix: "/apisix"
+    timeout: 30
+
+plugin_attr:
+  prometheus:
+    export_addr:
+      ip: 0.0.0.0
+      port: 9091
+  opentelemetry:
+    trace_id_source: x-request-id
+    resource:
+      service.name: apisix-gateway
+    collector:
+      address: otel-collector:4317
+      request_timeout: 3
+    batch_span_processor:
+      max_queue_size: 1024
+      batch_timeout: 2
+
+plugins:
+  - openid-connect
+  - jwt-auth
+  - consumer-restriction
+  - limit-count
+  - cors
+  - prometheus
+  - opentelemetry
+  - proxy-rewrite
+  - response-rewrite
