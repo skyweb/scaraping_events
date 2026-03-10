@@ -10,3 +10,13 @@ providers:
     options:
       path: /etc/grafana/provisioning/dashboards/json
       foldersFromFilesStructure: true
+
+  - name: "provisioned"
+    orgId: 1
+    folder: ""
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards
+      foldersFromFilesStructure: false
