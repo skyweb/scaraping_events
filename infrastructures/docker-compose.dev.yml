@@ -124,12 +124,12 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-django-insecure-dev-key}
       DJANGO_DEBUG: "True"
-      DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},backoffice,localhost,127.0.0.1"
+      DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},gateway.${DOMAIN},backoffice,localhost,127.0.0.1"
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
       CORS_ALLOWED_ORIGINS: "https://frontend.${DOMAIN},http://localhost:3000"
-      CSRF_TRUSTED_ORIGINS: "https://frontend.${DOMAIN},https://backoffice.${DOMAIN},http://localhost:3000"
+      CSRF_TRUSTED_ORIGINS: "https://frontend.${DOMAIN},https://backoffice.${DOMAIN},https://gateway.${DOMAIN},http://localhost:3000"
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
       CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:redis_secret_2026@redis:6379/2}
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
@@ -765,6 +765,27 @@ services:
         aliases:
           - apisix
 
+  # APISIX Init — configura route/upstream al primo avvio
+  apisix-init:
+    image: curlimages/curl:8.11.0
+    container_name: dev-apisix-init
+    command: sh /init-routes.sh
+    volumes:
+      - ./services/apisix/init-routes.sh:/init-routes.sh:ro
+    environment:
+      DOMAIN: ${DOMAIN:-127.0.0.1.nip.io}
+      KEYCLOAK_BACKOFFICE_CLIENT_SECRET: ${KEYCLOAK_BACKOFFICE_CLIENT_SECRET:-CHANGE_ME_BACKOFFICE_SECRET}
+    depends_on:
+      apisix:
+        condition: service_started
+      keycloak:
+        condition: service_healthy
+    networks:
+      dev-network:
+        aliases:
+          - apisix-init
+    restart: "no"
+
   # APISIX Dashboard — UI gestione route/plugin
   apisix-dashboard:
     image: apache/apisix-dashboard:3.0.1-alpine
@@ -807,8 +828,11 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN:-admin}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:-admin}
       KC_HTTP_PORT: "8080"
+      KC_HOSTNAME: "https://keycloak.${DOMAIN}"
+      KC_HOSTNAME_ADMIN: "https://keycloak.${DOMAIN}"
       KC_HOSTNAME_STRICT: "false"
       KC_PROXY_HEADERS: "xforwarded"
+      KC_HTTP_ENABLED: "true"
     volumes:
       - ./services/keycloak/realm-today-events.json:/opt/keycloak/data/import/realm-today-events.json:ro
     labels:

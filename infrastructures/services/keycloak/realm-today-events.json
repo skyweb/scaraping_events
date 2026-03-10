@@ -259,6 +259,7 @@
       "secret": "CHANGE_ME_BACKOFFICE_SECRET",
       "redirectUris": [
         "https://gateway.*/*",
+        "https://gateway.127.0.0.1.nip.io/*",
         "http://localhost:9080/*"
       ],
       "webOrigins": [
@@ -303,7 +304,7 @@
         "require.pushed.authorization.requests": "false",
         "saml.allow.ecp.flow": "false",
         "saml.authnstatement": "false",
-        "pkce.code.challenge.method": "S256"
+        "pkce.code.challenge.method": ""
       },
       "authenticationFlowBindingOverrides": {},
       "protocolMappers": []
@@ -611,7 +612,24 @@
     "IDENTITY_PROVIDER_FIRST_LOGIN_ERROR"
   ],
   "groups": [],
-  "users": [],
+  "users": [
+    {
+      "username": "admin",
+      "email": "admin@example.com",
+      "firstName": "Admin",
+      "lastName": "Dev",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin",
+          "temporary": true
+        }
+      ],
+      "realmRoles": ["admin", "default-roles-today-events"]
+    }
+  ],
   "scopeMappings": [],
   "clientScopeMappings": {},
   "components": {

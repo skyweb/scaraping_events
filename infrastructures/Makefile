@@ -46,7 +46,7 @@ up: ## Avvia lo stack di sviluppo (core + gateway + observability + minio)
 	@echo "$(GREEN)Avvio stack dev...$(NC)"
 	$(COMPOSE) up --build -d \
 	    postgres redis docker-api-proxy traefik \
-	    etcd apisix apisix-dashboard keycloak \
+	    etcd apisix apisix-init apisix-dashboard keycloak \
 	    backoffice frontend minio \
 	    otel-collector jaeger tempo loki promtail grafana
 	@echo ""

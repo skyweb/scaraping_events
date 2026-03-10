@@ -6,18 +6,25 @@ from django.shortcuts import redirect, render
 
 def admin_sso_logout(request):
     """
-    Logout unificato SSO: cancella la sessione Django E il cookie oauth2-proxy.
+    Logout unificato SSO: cancella la sessione Django E la sessione Keycloak.
     Sovrascrive /admin/logout/ prima che venga gestito da admin.site.urls.
-    Senza questo, Django cancella la sessione ma il cookie oauth2-proxy rimane
+    Senza questo, Django cancella la sessione ma il cookie APISIX OIDC rimane
     valido → il middleware ri-autentica l'utente al prossimo accesso.
     """
     auth_logout(request)
-    # Redirect all'endpoint sign_out di oauth2-proxy sul suo sottodominio (auth.DOMAIN)
+    # Redirect all'endpoint logout di Keycloak con post_logout_redirect_uri
     scheme = "https" if request.is_secure() else "http"
     host = request.get_host()  # es. backoffice.127.0.0.1.nip.io
     domain = host.split(".", 1)[1] if "." in host else host  # es. 127.0.0.1.nip.io
-    sign_out_url = f"{scheme}://auth.{domain}/oauth2/sign_out?rd={scheme}://frontend.{domain}/"
-    return redirect(sign_out_url)
+    keycloak_url = settings.KEYCLOAK_URL
+    realm = settings.KEYCLOAK_REALM
+    redirect_uri = f"{scheme}://backoffice.{domain}/admin/"
+    logout_url = (
+        f"{keycloak_url}/realms/{realm}/protocol/openid-connect/logout"
+        f"?post_logout_redirect_uri={redirect_uri}"
+        f"&client_id=backoffice-admin"
+    )
+    return redirect(logout_url)
 
 
 def permission_denied_view(request, exception):
