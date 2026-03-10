@@ -9,12 +9,12 @@ Stack Docker con **Traefik v3.3** come reverse proxy HTTPS (certificati mkcert l
 - **Django + Celery** — backoffice, worker, beat, flower
 - **React + Vite** — frontend dev server
 - **Traefik v3.3** — reverse proxy HTTPS, subdomain routing, metriche Prometheus
-- **OAuth2 Proxy** — SSO Google con ForwardAuth e session store Redis
+- **Keycloak** — SSO / Identity Provider (OIDC), ForwardAuth e session store Redis
 - **Grafana · Loki · Prometheus · Jaeger** — observability (log, metriche, tracing)
 - **OpenTelemetry Collector** — raccolta e routing telemetry OTLP
 - **Apache Superset** — BI dashboard eventi
 - **Apache Airflow** — orchestrazione DAG (scraping, import comuni)
-- **Kong 3.9** — API Gateway (DB mode su PostgreSQL)
+- **APISIX 3.x** — API Gateway (DB mode su PostgreSQL)
 - **MinIO** — object storage S3-compatible
 - **n8n** — workflow automation
 - **SonarQube** — code quality e security analysis
@@ -37,9 +37,9 @@ Stack Docker con **Traefik v3.3** come reverse proxy HTTPS (certificati mkcert l
 | Prometheus | `prometheus.${DOMAIN}` | Query metriche time-series |
 | Superset | `superset.${DOMAIN}` | BI dashboard eventi |
 | Airflow | `airflow.${DOMAIN}` | Orchestrazione DAG |
-| Kong Manager | `kong.${DOMAIN}` | Admin UI API Gateway |
-| Kong Admin API | `kong-admin.${DOMAIN}` | API amministrazione Kong |
-| Kong Proxy | `gateway.${DOMAIN}` | API Gateway proxy |
+| Keycloak | `keycloak.${DOMAIN}` | Identity Provider SSO (OIDC/OAuth2) |
+| APISIX Dashboard | `apisix.${DOMAIN}` | Admin UI API Gateway |
+| APISIX Proxy | `gateway.${DOMAIN}` | API Gateway proxy |
 | MinIO Console | `minio.${DOMAIN}` | UI gestione object storage |
 | MinIO S3 API | `s3.${DOMAIN}` | API S3-compatible |
 | n8n | `n8n.${DOMAIN}` | Workflow automation |
@@ -53,10 +53,10 @@ Stack Docker con **Traefik v3.3** come reverse proxy HTTPS (certificati mkcert l
 |----------|-------|-------------|
 | Traefik v3.3 | `:80` `:443` `:8082` | Reverse proxy HTTPS, subdomain routing, metriche Prometheus |
 | docker-api-proxy | — | Nginx proxy per Docker socket (fix API version per Docker Desktop 4.62+) |
-| oauth2-proxy | — | SSO Google OAuth2, ForwardAuth, session store Redis (DB 5) |
+| Keycloak | — | SSO OIDC, ForwardAuth, session store Redis (DB 5) |
 | auth-redirect | — | Pagina statica JS redirect per intercettare 401 Traefik |
-| PostgreSQL + PostGIS | `:5432` | Database principale con estensioni geospaziali |
-| Redis | `:6379` | Cache sessioni (DB 0-2), broker Celery, session OAuth2 (DB 5) |
+| PostgreSQL + PostGIS | `:5432` | Database principale con estensioni geospaziali (include schema Keycloak) |
+| Redis | `:6379` | Cache sessioni (DB 0-2), broker Celery, session Keycloak (DB 5) |
 | Celery Worker | — | Esecuzione task asincroni (es. `process_bulk_events`) |
 | Celery Beat | — | Scheduler task periodici (usa `django_celery_beat`) |
 | Airflow Scheduler | — | Esecuzione DAG (LocalExecutor su PostgreSQL) |
@@ -85,7 +85,7 @@ Stack Docker con **Traefik v3.3** come reverse proxy HTTPS (certificati mkcert l
 | `redis` | `redis-exporter:9121` | 15s |
 | `celery` | `celery-exporter:9808` | 15s |
 | `traefik` | `traefik:8080` | 15s |
-| `kong` | `kong:8100` | 15s |
+| `apisix` | `apisix:9091` | 15s |
 
 #### Grafana datasources (dev)
 
@@ -131,24 +131,25 @@ Django, Celery Worker e Celery Beat inviano telemetry via OTLP al collector. Ins
 
 | Servizio | Porta | Descrizione |
 |----------|-------|-------------|
-| Kong 3.9 | `:8000` proxy · `:8001` admin · `:8002` manager | API Gateway DB mode su PostgreSQL |
+| APISIX 3.x | `:9080` proxy · `:9180` admin API · `:9000` dashboard | API Gateway DB mode su PostgreSQL, autenticazione via plugin OIDC (Keycloak) |
 
 ## Accesso (dev)
 
-Tutti i servizi protetti da ForwardAuth usano Google OAuth2 via `oauth2-proxy`.
+Tutti i servizi protetti da ForwardAuth usano OIDC via Keycloak. I JWT emessi da Keycloak vengono verificati da APISIX tramite il plugin OIDC. Il flusso è: **Traefik → APISIX → Django** con Keycloak come Identity Provider.
 
 | Servizio | URL | Auth |
 |----------|-----|------|
 | Frontend | `https://frontend.${DOMAIN}` | Nessuna |
-| Backoffice API | `https://backoffice.${DOMAIN}/api/` | OAuth2 client credentials |
-| Django Admin | `https://backoffice.${DOMAIN}/admin/` | ForwardAuth (Google OAuth2) |
+| Backoffice API | `https://backoffice.${DOMAIN}/api/` | JWT (client credentials via Keycloak) |
+| Django Admin | `https://backoffice.${DOMAIN}/admin/` | ForwardAuth (Keycloak OIDC) |
 | Flower | `https://flower.${DOMAIN}` | ForwardAuth |
 | Grafana | `https://grafana.${DOMAIN}` | ForwardAuth (anonymous Admin) |
 | Jaeger | `https://jaeger.${DOMAIN}` | ForwardAuth |
 | Prometheus | `https://prometheus.${DOMAIN}` | ForwardAuth |
 | Superset | `https://superset.${DOMAIN}` | ForwardAuth · `admin` / vedi `.env` |
 | Airflow | `https://airflow.${DOMAIN}` | ForwardAuth · `admin` / vedi `.env` |
-| Kong Manager | `https://kong.${DOMAIN}` | ForwardAuth |
+| Keycloak | `https://keycloak.${DOMAIN}` | Nessuna (login interno) |
+| APISIX Dashboard | `https://apisix.${DOMAIN}` | ForwardAuth |
 | MinIO Console | `https://minio.${DOMAIN}` | ForwardAuth · `minioadmin` / vedi `.env` |
 | n8n | `https://n8n.${DOMAIN}` | ForwardAuth |
 | SonarQube | `https://sonarqube.${DOMAIN}` | Nessuna (login interno) |
@@ -156,6 +157,8 @@ Tutti i servizi protetti da ForwardAuth usano Google OAuth2 via `oauth2-proxy`.
 | Traefik | `https://traefik.${DOMAIN}` | ForwardAuth |
 
 `DOMAIN` si imposta in `infrastructures/.env` (default: `127.0.0.1.nip.io`).
+
+In produzione l'endpoint auth è esposto su `https://auth.${DOMAIN}`.
 
 ## Struttura Directory
 
@@ -173,14 +176,15 @@ infrastructures/
 │       └── monitoring/        # Stack monitoring OCI/OKE
 └── services/                  # Configurazioni per servizio
     ├── airflow/               # DAG, plugin, dags/, data/, logs/
+    ├── apisix/                # apisix.yaml, config.yaml (plugin OIDC, route, upstream)
     ├── auth-redirect/         # index.html JS redirect per 401
     ├── docker-proxy/          # nginx.conf proxy Docker socket
     ├── grafana/               # Provisioning datasource + dashboard + alerting
     ├── jaeger/                # jaeger-v2-config.yaml, ui-config.json
+    ├── keycloak/              # realm export, client config, theme
     ├── loki/                  # loki-config.yaml
-    ├── oauth2-proxy/          # Templates custom (auto-redirect 401)
     ├── otel-collector/        # otel-collector-config.yaml
-    ├── postgres/              # init SQL (schema PostGIS)
+    ├── postgres/              # init SQL (schema PostGIS, schema Keycloak)
     ├── prometheus/            # prometheus.yml
     ├── promtail/              # promtail-config.yaml
     ├── superset/              # superset_config.py + init.sh + assets/
@@ -196,7 +200,7 @@ Infrastruttura su Oracle Cloud con Kubernetes (OKE), gestita via Ansible e Helm.
 | Componente | Tipo | Descrizione |
 |------------|------|-------------|
 | Prometheus | Helm `prometheus-community/prometheus` | Metriche, retention 7d, 10Gi PV |
-| Grafana | Helm `grafana/grafana` | UI unificata, proxy auth OAuth2, plugin OCI Logs |
+| Grafana | Helm `grafana/grafana` | UI unificata, proxy auth OIDC, plugin OCI Logs |
 | Loki | Helm `grafana/loki` (SingleBinary) | Log backend, retention 168h |
 | Promtail | Helm `grafana/promtail` (DaemonSet) | Collector log CRI |
 | Tempo | Helm `grafana/tempo` (SingleBinary) | Trace backend, metrics generator, retention 168h |
@@ -213,7 +217,7 @@ Infrastruttura su Oracle Cloud con Kubernetes (OKE), gestita via Ansible e Helm.
 | `django` | `backoffice.apps.svc:8000` | Metriche applicazione Django |
 | `redis-exporter` | `redis-exporter.database.svc:9121` | Metriche Redis |
 | `celery-exporter` | `celery-exporter.database.svc:9808` | Metriche task Celery |
-| `kong` | `kong-kong-status.apps.svc:8100` | Metriche API Gateway |
+| `apisix` | `apisix.apps.svc:9091` | Metriche API Gateway |
 | `postgres-exporter` | `postgres-exporter...monitoring.svc:80` | Metriche PostgreSQL |
 | `kubelet-cadvisor` | Auto-discovery nodi (`role: node`) | Metriche container/pod da kubelet `/metrics/cadvisor` |
 
@@ -260,7 +264,7 @@ Lo stack di produzione usa `docker-compose.prod.yml` con Traefik che gestisce ce
 1. **DNS**: wildcard `*.tuodominio.com` -> IP del server (oppure un A record per ogni sottodominio)
 2. **Firewall**: porte 80 e 443 aperte (80 serve per il challenge ACME anche se tutto il traffico viene rediretto a 443)
 3. **`.env`**: configurare `DOMAIN` con il dominio reale e `ACME_EMAIL` con un'email valida
-4. **Google OAuth2**: aggiornare il redirect URI in Google Cloud Console a `https://auth.DOMAIN/oauth2/callback`
+4. **Keycloak**: aggiornare il redirect URI nel realm Keycloak a `https://auth.DOMAIN/callback`
 
 ### Avvio
 
@@ -288,12 +292,13 @@ make prod-logs
 | Protocollo | HTTPS (mkcert, certificati locali trusted) | HTTPS (Let's Encrypt automatici) |
 | Django | `runserver` + volume mount + DEBUG=True | `gunicorn` + immagine build + DEBUG=False |
 | Frontend | Vite dev server (porta 5173) | Build statico nginx (porta 80) |
-| Cookie OAuth2 | `secure=true` | `secure=true` |
+| Cookie Keycloak | `secure=true` | `secure=true` |
 | Cookie n8n | `secure=false` | `secure=true` |
 | Traefik dashboard | Esposto su porta 8082 (insecure) | Solo via router autenticato HTTPS |
 | Container prefix | `dev-*` | `prod-*` |
 | Volumi | `dev-*` | `prod-*` + volume `acme-data` |
 | Rete | `dev-network` | `prod-network` |
+| Auth endpoint | `keycloak.${DOMAIN}` | `auth.${DOMAIN}` |
 
 ### Primo avvio e certificati
 
