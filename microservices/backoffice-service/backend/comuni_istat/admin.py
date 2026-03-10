@@ -1,9 +1,9 @@
+from urllib.parse import quote
+
 from django.contrib import admin
 from django.db import connection
 from django.utils.safestring import mark_safe
-from unfold.admin import ModelAdmin
-
-from unfold.admin import TabularInline
+from unfold.admin import ModelAdmin, TabularInline
 
 from .models import (
     RipartizioneGeografica,
@@ -12,6 +12,9 @@ from .models import (
     ComuneItaliano,
     ComuneSoppresso,
     DenominazionePrecedente,
+)
+from comuni_istat_ingestion.models import (
+    Comune as ComuneIngestion,
 )
 
 
