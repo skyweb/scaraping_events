@@ -364,7 +364,12 @@ class ApiPipeline:
             logger.error("API_CLIENT_ID e API_CLIENT_SECRET non configurati")
             return None
 
-        token_url = f"{self.base_url}/oauth/token/"
+        # Token endpoint Keycloak — usa env var dedicata o costruisci dall'URL base
+        keycloak_token_url = self.settings.get("KEYCLOAK_TOKEN_URL") or os.environ.get(
+            "KEYCLOAK_TOKEN_URL",
+            "http://keycloak:8080/realms/today-events/protocol/openid-connect/token"
+        )
+        token_url = keycloak_token_url
 
         try:
             response = self.session.post(
@@ -373,7 +378,7 @@ class ApiPipeline:
                     "grant_type": "client_credentials",
                     "client_id": self.client_id,
                     "client_secret": self.client_secret,
-                    "scope": "read write",
+                    "scope": "openid read write",
                 },
                 timeout=self.timeout,
             )
