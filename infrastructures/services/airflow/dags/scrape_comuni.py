@@ -48,16 +48,24 @@ BATCH_SIZE = 500
 # =============================================================================
 
 def get_oauth_token():
-    """Ottiene token OAuth2 per chiamare l'API di ingestion"""
+    """Ottiene token JWT da Keycloak per chiamare l'API di ingestion"""
     client_id = Variable.get('API_CLIENT_ID', default_var=os.getenv('API_CLIENT_ID', ''))
     client_secret = Variable.get('API_CLIENT_SECRET', default_var=os.getenv('API_CLIENT_SECRET', ''))
+    token_url = Variable.get(
+        'KEYCLOAK_TOKEN_URL',
+        default_var=os.getenv(
+            'KEYCLOAK_TOKEN_URL',
+            'http://keycloak:8080/realms/today-events/protocol/openid-connect/token'
+        )
+    )
 
     resp = requests.post(
-        f'{API_BASE_URL}/oauth/token/',
+        token_url,
         data={
             'grant_type': 'client_credentials',
             'client_id': client_id,
             'client_secret': client_secret,
+            'scope': 'openid read write',
         },
         timeout=30,
     )
