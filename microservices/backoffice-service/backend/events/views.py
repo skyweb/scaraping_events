@@ -3,7 +3,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
-from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
+from backoffice.authentication import HasKeycloakScope
 from rest_framework_tracking.mixins import LoggingMixin
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
@@ -415,11 +415,11 @@ class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
     logging_methods = ['POST', 'PUT', 'PATCH', 'DELETE']
 
     def get_permissions(self):
-        if self.action in ['list', 'retrieve', 'bulk_status']:
+        if self.action in ['list', 'retrieve']:
             self.required_scopes = ['read']
         else:
             self.required_scopes = ['write']
-        return [TokenHasScope()]
+        return [HasKeycloakScope()]
 
     def get_serializer_class(self):
         if self.action in ['create', 'update', 'partial_update', 'bulk_create']:
