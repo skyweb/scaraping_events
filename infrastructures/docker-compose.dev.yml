@@ -114,6 +114,7 @@ services:
       dockerfile: Dockerfile.dev
     container_name: dev-backoffice
     restart: unless-stopped
+    entrypoint: ["/app/entrypoint.sh"]
     command: python manage.py runserver 0.0.0.0:8000
     working_dir: /app/backend
     environment:
