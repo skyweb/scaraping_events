@@ -29,7 +29,7 @@ def serve_frontend_assets(request, path):
 
 urlpatterns = [
     # Logout SSO: deve stare PRIMA di admin/ per intercettare /admin/logout/
-    # Django logout cancella la sessione, poi oauth2-proxy cancella il suo cookie
+    # Django logout cancella la sessione, poi APISIX/Keycloak gestisce il logout OIDC
     path('admin/logout/', admin_sso_logout, name='admin-sso-logout'),
     path('admin/', admin.site.urls),
     path('api/version/', api_version_view, name='api-version'),

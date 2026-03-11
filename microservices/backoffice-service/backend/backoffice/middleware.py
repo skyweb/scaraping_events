@@ -44,7 +44,7 @@ class KeycloakAdminMiddleware:
 
         email = request.META.get("HTTP_X_AUTH_REQUEST_EMAIL", "").strip()
         if not email:
-            # Header assente: oauth2-proxy non attivo o accesso diretto (es. :8000)
+            # Header assente: APISIX non attivo o accesso diretto (es. :8000)
             return self.get_response(request)
 
         User = get_user_model()
@@ -53,7 +53,7 @@ class KeycloakAdminMiddleware:
         except User.DoesNotExist:
             return TemplateResponse(
                 request,
-                "admin/oauth2_proxy_denied.html",
+                "admin/sso_access_denied.html",
                 {"email": email, "not_staff": False},
                 status=403,
             ).render()
@@ -61,14 +61,14 @@ class KeycloakAdminMiddleware:
         if not user.is_staff:
             return TemplateResponse(
                 request,
-                "admin/oauth2_proxy_denied.html",
+                "admin/sso_access_denied.html",
                 {"email": email, "not_staff": True},
                 status=403,
             ).render()
 
         login(request, user, backend="django.contrib.auth.backends.ModelBackend")
         sso_logger.info(
-            "SSO login via oauth2-proxy",
+            "SSO login via APISIX/Keycloak",
             extra={"email": email, "user": user.get_username()},
         )
         return self.get_response(request)
