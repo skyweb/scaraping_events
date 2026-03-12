@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none">
+  <!-- Torta -->
+  <ellipse cx="200" cy="280" rx="90" ry="12" fill="rgba(255,255,255,0.15)"/>
+  <rect x="155" y="210" width="90" height="70" rx="6" fill="#fff" fill-opacity="0.9"/>
+  <rect x="165" y="195" width="70" height="20" rx="4" fill="#ff6b8a"/>
+  <rect x="175" y="180" width="50" height="20" rx="4" fill="#ff8fa3"/>
+  <!-- Candele -->
+  <rect x="190" y="158" width="4" height="22" rx="2" fill="#ffd166"/>
+  <rect x="206" y="158" width="4" height="22" rx="2" fill="#ffd166"/>
+  <circle cx="192" cy="153" r="5" fill="#ff6b35" fill-opacity="0.9"/>
+  <circle cx="208" cy="153" r="5" fill="#ff6b35" fill-opacity="0.9"/>
+  <!-- Decorazioni torta -->
+  <circle cx="170" cy="230" r="4" fill="#ff6b8a" fill-opacity="0.6"/>
+  <circle cx="185" cy="245" r="3" fill="#6366f1" fill-opacity="0.6"/>
+  <circle cx="215" cy="225" r="3.5" fill="#ffd166" fill-opacity="0.7"/>
+  <circle cx="230" cy="250" r="3" fill="#ff6b8a" fill-opacity="0.5"/>
+
+  <!-- Persona sinistra (con regalo) -->
+  <circle cx="95" cy="195" r="14" fill="#ffe0e6"/>
+  <path d="M82 215 C82 215 80 275 80 280 L110 280 C110 275 108 215 108 215 Z" fill="#fff" fill-opacity="0.85"/>
+  <!-- Gambe -->
+  <line x1="88" y1="280" x2="85" y2="310" stroke="#ffe0e6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="102" y1="280" x2="105" y2="310" stroke="#ffe0e6" stroke-width="4" stroke-linecap="round"/>
+  <!-- Regalo -->
+  <rect x="60" y="185" width="30" height="25" rx="3" fill="#ffd166"/>
+  <rect x="60" y="180" width="30" height="8" rx="2" fill="#ffb830"/>
+  <line x1="75" y1="180" x2="75" y2="210" stroke="#fff" stroke-width="2"/>
+  <!-- Fiocco -->
+  <circle cx="75" cy="178" r="4" fill="#ff6b8a"/>
+
+  <!-- Persona centro-sinistra -->
+  <circle cx="150" cy="210" r="14" fill="#ffe0e6"/>
+  <path d="M137 230 C137 230 135 280 135 285 L165 285 C165 280 163 230 163 230 Z" fill="#ff8fa3" fill-opacity="0.7"/>
+  <line x1="142" y1="285" x2="138" y2="312" stroke="#ffe0e6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="157" y1="285" x2="160" y2="312" stroke="#ffe0e6" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Persona destra (con palloncini) -->
+  <circle cx="300" cy="200" r="14" fill="#ffe0e6"/>
+  <path d="M287 220 C287 220 285 278 285 283 L315 283 C315 278 313 220 313 220 Z" fill="#ff6b8a" fill-opacity="0.6"/>
+  <line x1="292" y1="283" x2="288" y2="312" stroke="#ffe0e6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="308" y1="283" x2="312" y2="312" stroke="#ffe0e6" stroke-width="4" stroke-linecap="round"/>
+  <!-- Palloncini -->
+  <line x1="310" y1="200" x2="320" y2="130" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="310" y1="200" x2="340" y2="140" stroke="#94a3b8" stroke-width="1"/>
+  <ellipse cx="320" cy="120" rx="16" ry="20" fill="#6366f1" fill-opacity="0.7"/>
+  <ellipse cx="340" cy="130" rx="16" ry="20" fill="#ff6b8a" fill-opacity="0.7"/>
+
+  <!-- Coriandoli -->
+  <circle cx="120" cy="140" r="3" fill="#ffd166" fill-opacity="0.8"/>
+  <circle cx="140" cy="155" r="2" fill="#6366f1" fill-opacity="0.6"/>
+  <circle cx="260" cy="150" r="3" fill="#ff6b8a" fill-opacity="0.7"/>
+  <circle cx="280" cy="135" r="2" fill="#ffd166" fill-opacity="0.6"/>
+  <circle cx="170" cy="130" r="2.5" fill="#22c55e" fill-opacity="0.5"/>
+  <circle cx="230" cy="140" r="2" fill="#6366f1" fill-opacity="0.5"/>
+  <rect x="105" y="160" width="6" height="3" rx="1" fill="#ff6b8a" fill-opacity="0.6" transform="rotate(-20 108 161)"/>
+  <rect x="250" y="160" width="6" height="3" rx="1" fill="#ffd166" fill-opacity="0.6" transform="rotate(15 253 161)"/>
+  <rect x="180" y="120" width="5" height="3" rx="1" fill="#6366f1" fill-opacity="0.5" transform="rotate(-30 182 121)"/>
+
+  <!-- Stelle -->
+  <path d="M130 120 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2z" fill="#ffd166" fill-opacity="0.7"/>
+  <path d="M270 110 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2z" fill="#ff6b8a" fill-opacity="0.6"/>
+  <path d="M200 100 l1.5 4 4 1.5 -4 1.5 -1.5 4 -1.5-4 -4-1.5 4-1.5z" fill="#fff" fill-opacity="0.5"/>
+</svg>

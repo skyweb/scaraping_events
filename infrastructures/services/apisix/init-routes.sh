@@ -281,7 +281,7 @@ oidc_route_grafana() {
             },
             \"serverless-post-function\": {
                 \"phase\": \"rewrite\",
-                \"functions\": [\"return function(conf, ctx) local cjson = require('cjson.safe'); local h = ngx.req.get_headers()['X-Userinfo']; if h then local d = cjson.decode(h); if d and d.email then ngx.req.set_header('X-Auth-Request-Email', d.email) end end end\"]
+                \"functions\": [\"return function(conf, ctx) local cjson = require('cjson.safe'); local h = ngx.req.get_headers()['X-Userinfo']; if h then local decoded = ngx.decode_base64(h); if decoded then local d = cjson.decode(decoded); if d and d.email then ngx.req.set_header('X-Auth-Request-Email', d.email) end end end end\"]
             },
             \"proxy-rewrite\": {
                 \"headers\": {

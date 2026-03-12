@@ -679,6 +679,7 @@ services:
       GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET:-}
     volumes:
       - ./services/keycloak/realm-today-events.json:/opt/keycloak/data/import/realm-today-events.json:ro
+      - ./services/keycloak/themes/today-events:/opt/keycloak/themes/today-events:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.keycloak.rule=Host(`keycloak.${DOMAIN}`)"

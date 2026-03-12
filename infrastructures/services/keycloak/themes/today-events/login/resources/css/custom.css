@@ -1,0 +1,447 @@
+/* ===================================================================
+   Today Events — Keycloak Login Theme (split layout)
+   Ispirato a: design con pannello sinistro colorato + form destro
+   =================================================================== */
+
+:root {
+    --te-primary: #ff6b8a;
+    --te-primary-dark: #e5556f;
+    --te-primary-light: #ff8fa3;
+    --te-gradient-start: #ff6b8a;
+    --te-gradient-end: #ff3d6e;
+    --te-bg-white: #ffffff;
+    --te-text-dark: #2d3436;
+    --te-text-muted: #636e72;
+    --te-text-light: #b2bec3;
+    --te-border: #e0e0e0;
+    --te-input-bg: #ffffff;
+    --te-link: #ff6b8a;
+    --te-social-fb: #3b5998;
+    --te-social-google: #db4437;
+    --te-social-github: #333;
+}
+
+/* === Reset Keycloak/PF defaults === */
+.login-pf {
+    background: none !important;
+}
+
+.login-pf body {
+    background: var(--te-bg-white) !important;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Nascondo header e card default di Keycloak */
+#kc-header,
+.login-pf-page-header,
+.card-pf {
+    display: none !important;
+}
+
+/* === Split Layout === */
+.te-split-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* === Pannello sinistro === */
+.te-left-panel {
+    position: relative;
+    width: 45%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--te-gradient-start) 0%, var(--te-gradient-end) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.te-left-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px;
+}
+
+.te-brand {
+    margin-bottom: 40px;
+}
+
+.te-logo {
+    height: 48px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.te-illustration img {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.te-tagline {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 32px;
+    letter-spacing: 0.2px;
+}
+
+/* Frecce decorative (come nel riferimento) */
+.te-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.te-arrow-1 {
+    top: 15%;
+    right: -20px;
+    border-width: 25px 0 25px 35px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.te-arrow-2 {
+    bottom: 30%;
+    left: -15px;
+    border-width: 20px 30px 20px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.te-arrow-3 {
+    bottom: 10%;
+    right: 10%;
+    border-width: 18px 0 18px 28px;
+    border-color: transparent transparent transparent #fff;
+    opacity: 0.1;
+}
+
+/* === Pannello destro (form) === */
+.te-right-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: var(--te-bg-white);
+}
+
+.te-form-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* === Locale selector === */
+.te-locale {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.te-locale button,
+.te-locale a {
+    color: var(--te-text-muted) !important;
+    font-size: 13px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.te-locale ul {
+    background: var(--te-bg-white);
+    border: 1px solid var(--te-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Titolo === */
+h1#kc-page-title {
+    color: var(--te-text-dark) !important;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* === Labels === */
+.pf-c-form__label-text,
+label.pf-c-form__label {
+    color: var(--te-text-dark) !important;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* === Input fields === */
+.pf-c-form-control,
+input.pf-c-form-control {
+    background-color: var(--te-input-bg) !important;
+    border: 1px solid var(--te-border) !important;
+    border-radius: 8px !important;
+    color: var(--te-text-dark) !important;
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pf-c-form-control::placeholder,
+input.pf-c-form-control::placeholder {
+    color: var(--te-text-light) !important;
+}
+
+.pf-c-form-control:focus,
+input.pf-c-form-control:focus {
+    border-color: var(--te-primary) !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 138, 0.15) !important;
+    outline: none !important;
+}
+
+/* === Form group spacing === */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* === Bottone primario (Login) === */
+.pf-c-button.pf-m-primary,
+input.pf-c-button.pf-m-primary,
+input[type="submit"].pf-c-button {
+    background-color: var(--te-primary) !important;
+    border: none !important;
+    border-radius: 24px !important;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 48px !important;
+    text-transform: none;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 140px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.pf-c-button.pf-m-primary:hover,
+input.pf-c-button.pf-m-primary:hover {
+    background-color: var(--te-primary-dark) !important;
+    box-shadow: 0 4px 16px rgba(255, 107, 138, 0.4) !important;
+    transform: translateY(-1px);
+}
+
+.pf-c-button.pf-m-primary:active,
+input.pf-c-button.pf-m-primary:active {
+    transform: translateY(0);
+}
+
+/* === Password visibility toggle === */
+.pf-c-button.pf-m-control {
+    background-color: transparent !important;
+    border: 1px solid var(--te-border) !important;
+    border-left: none !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: var(--te-text-muted) !important;
+}
+
+.pf-c-button.pf-m-control:hover {
+    color: var(--te-text-dark) !important;
+}
+
+/* === Links === */
+.te-form-wrapper a,
+.te-form-wrapper a:visited,
+#kc-content a,
+#kc-content a:visited {
+    color: var(--te-link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.te-form-wrapper a:hover,
+#kc-content a:hover {
+    color: var(--te-primary-dark);
+    text-decoration: underline;
+}
+
+/* === Remember me / Forgot password row === */
+.login-pf-settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pf-c-check__label,
+.login-pf-settings span {
+    color: var(--te-text-muted) !important;
+    font-size: 13px;
+}
+
+.pf-c-check__input {
+    accent-color: var(--te-primary);
+}
+
+#kc-form-options {
+    margin-top: 0;
+}
+
+/* === Forgot password === */
+#kc-form-options .col-xs-12 {
+    text-align: right;
+}
+
+/* === Register / Signup link === */
+.login-pf-signup,
+#kc-info {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 0;
+}
+
+.login-pf-signup span,
+#kc-info span,
+#kc-info-wrapper {
+    color: var(--te-text-muted);
+    font-size: 14px;
+}
+
+/* === Alerts === */
+.pf-c-alert {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+}
+
+.pf-c-alert.pf-m-danger {
+    background-color: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-left: 3px solid #e53e3e;
+}
+
+.pf-c-alert.pf-m-success {
+    background-color: #f0fff4;
+    border: 1px solid #c6f6d5;
+    border-left: 3px solid #38a169;
+}
+
+.pf-c-alert.pf-m-info {
+    background-color: #ebf8ff;
+    border: 1px solid #bee3f8;
+    border-left: 3px solid #3182ce;
+}
+
+.pf-c-alert__title {
+    color: var(--te-text-dark) !important;
+    font-size: 13px;
+}
+
+/* === Social login === */
+.kc-social-section {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.kc-social-section::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--te-border);
+    margin-bottom: 20px;
+}
+
+/* "Or Login with" testo */
+#kc-social-providers h2,
+.kc-social-section .kc-social-gray {
+    color: var(--te-text-muted);
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+/* Bottoni social come cerchi colorati */
+.kc-social-item,
+.pf-c-button.pf-m-control.pf-m-block {
+    background-color: var(--te-input-bg) !important;
+    border: 1px solid var(--te-border) !important;
+    border-radius: 8px !important;
+    color: var(--te-text-dark) !important;
+    padding: 10px 16px !important;
+    margin-bottom: 8px;
+    transition: border-color 0.2s, background-color 0.2s;
+    font-size: 14px;
+}
+
+.kc-social-item:hover,
+.pf-c-button.pf-m-control.pf-m-block:hover {
+    border-color: var(--te-primary) !important;
+    background-color: #fff5f7 !important;
+}
+
+.kc-social-provider-name {
+    color: var(--te-text-dark);
+    font-weight: 500;
+}
+
+/* === Nascondo elementi non necessari === */
+#kc-header {
+    display: none !important;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+    .te-split-layout {
+        flex-direction: column;
+    }
+
+    .te-left-panel {
+        width: 100%;
+        min-height: 280px;
+        padding: 30px 20px;
+    }
+
+    .te-illustration img {
+        width: 220px;
+    }
+
+    .te-tagline {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .te-right-panel {
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .te-left-panel {
+        min-height: 200px;
+        padding: 20px 16px;
+    }
+
+    .te-illustration img {
+        width: 180px;
+    }
+
+    .te-brand {
+        margin-bottom: 20px;
+    }
+
+    .te-form-wrapper {
+        max-width: 100%;
+    }
+
+    h1#kc-page-title {
+        font-size: 24px;
+    }
+}
