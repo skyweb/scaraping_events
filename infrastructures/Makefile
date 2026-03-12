@@ -28,13 +28,13 @@ NC    := \033[0m
         up up-all down restart ps logs build pull \
         up-core up-app up-celery up-observability up-bi up-airflow up-devtools up-gateway \
         logs-backoffice logs-celery logs-frontend logs-traefik logs-db logs-redis \
-        logs-grafana logs-jaeger logs-loki logs-superset logs-airflow \
-        logs-n8n logs-apisix logs-keycloak logs-tempo \
+        logs-grafana logs-loki logs-airflow \
+        logs-apisix logs-keycloak logs-tempo \
         restart-backoffice restart-frontend restart-traefik restart-celery restart-airflow \
-        restart-n8n restart-apisix restart-keycloak \
+        restart-apisix restart-keycloak \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
-        open-admin open-flower open-grafana open-jaeger open-prometheus \
-        open-superset open-loki open-minio open-airflow open-n8n open-traefik \
+        open-admin open-flower open-grafana open-prometheus \
+        open-loki open-minio open-airflow open-traefik \
         open-apisix open-keycloak open-gateway \
         clean clean-logs
 
@@ -48,7 +48,7 @@ up: ## Avvia lo stack di sviluppo (core + gateway + observability + minio)
 	    postgres redis docker-api-proxy traefik \
 	    etcd apisix apisix-init apisix-dashboard keycloak \
 	    backoffice frontend minio \
-	    otel-collector jaeger tempo loki promtail grafana
+	    otel-collector tempo loki promtail grafana
 	@echo ""
 	@echo "$(CYAN)  https://frontend.$(DOMAIN)/$(NC)         Frontend"
 	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
@@ -56,7 +56,6 @@ up: ## Avvia lo stack di sviluppo (core + gateway + observability + minio)
 	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC) APISIX Dashboard"
 	@echo "$(CYAN)  https://keycloak.$(DOMAIN)/$(NC)         Keycloak"
 	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
-	@echo "$(CYAN)  https://jaeger.$(DOMAIN)/$(NC)           Jaeger"
 	@echo "$(CYAN)  https://minio.$(DOMAIN)/$(NC)            MinIO Console"
 	@echo "$(CYAN)  https://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
 	@echo ""
@@ -95,10 +94,9 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 #     up-app          applicazione (backoffice, frontend, minio)
 #     up-gateway      API gateway + IdP (etcd, apisix, apisix-dashboard, keycloak)
 #     up-celery       task processing (worker, beat, flower)
-#     up-observability monitoring (prometheus, otel, jaeger, tempo, loki, grafana, esportatori)
-#     up-bi           business intelligence (superset)
+#     up-observability monitoring (prometheus, otel, tempo, loki, grafana, esportatori)
 #     up-airflow      orchestrazione DAG (airflow)
-#     up-devtools     strumenti dev (sonarqube, backstage, n8n)
+#     up-devtools     strumenti dev (sonarqube)
 #
 
 up-core: ## Infrastruttura base (postgres, redis, traefik)
@@ -109,19 +107,15 @@ up-app: ## Applicazione (backoffice, frontend, minio)
 	@echo "$(GREEN)Avvio app...$(NC)"
 	$(COMPOSE) up --build -d backoffice frontend minio
 
-up-celery: ## Task processing (celery worker, beat, flower)
+up-celery: ## Task processing (celery worker, flower)
 	@echo "$(GREEN)Avvio Celery stack...$(NC)"
-	$(COMPOSE) up --build -d backoffice-celery-worker backoffice-celery-beat flower
+	$(COMPOSE) up --build -d backoffice-celery-worker flower
 
-up-observability: ## Monitoring (prometheus, otel, jaeger, tempo, loki, promtail, grafana, esportatori)
+up-observability: ## Monitoring (prometheus, otel, tempo, loki, promtail, grafana, esportatori)
 	@echo "$(GREEN)Avvio observability...$(NC)"
-	$(COMPOSE) up -d prometheus otel-collector jaeger tempo \
+	$(COMPOSE) up -d prometheus otel-collector tempo \
 	    loki promtail grafana \
 	    redis-exporter celery-exporter
-
-up-bi: ## Business Intelligence (superset)
-	@echo "$(GREEN)Avvio Superset...$(NC)"
-	$(COMPOSE) up -d superset-init superset
 
 up-airflow: ## Orchestrazione DAG (airflow webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
@@ -136,13 +130,11 @@ up-gateway: ## API Gateway (etcd, apisix, apisix-dashboard, keycloak)
 	@echo "$(CYAN)  https://gateway.$(DOMAIN)/$(NC)          API Gateway (APISIX proxy)"
 	@echo ""
 
-up-devtools: ## Strumenti dev (sonarqube, backstage, n8n)
+up-devtools: ## Strumenti dev (sonarqube)
 	@echo "$(GREEN)Avvio devtools...$(NC)"
-	$(COMPOSE) up -d sonarqube backstage n8n
+	$(COMPOSE) up -d sonarqube
 	@echo ""
 	@echo "$(CYAN)  https://sonarqube.$(DOMAIN)/$(NC)        SonarQube"
-	@echo "$(CYAN)  https://backstage.$(DOMAIN)/$(NC)        Backstage"
-	@echo "$(CYAN)  https://n8n.$(DOMAIN)/$(NC)              n8n"
 	@echo ""
 
 up-all: ## Avvia TUTTI i servizi
@@ -159,8 +151,8 @@ up-all: ## Avvia TUTTI i servizi
 logs-backoffice: ## Logs backoffice Django (follow)
 	$(COMPOSE) logs -f backoffice
 
-logs-celery: ## Logs Celery worker + beat (follow)
-	$(COMPOSE) logs -f backoffice-celery-worker backoffice-celery-beat
+logs-celery: ## Logs Celery worker (follow)
+	$(COMPOSE) logs -f backoffice-celery-worker
 
 logs-frontend: ## Logs frontend React/Vite (follow)
 	$(COMPOSE) logs -f frontend
@@ -177,20 +169,11 @@ logs-redis: ## Logs Redis (follow)
 logs-grafana: ## Logs Grafana (follow)
 	$(COMPOSE) logs -f grafana
 
-logs-jaeger: ## Logs Jaeger (follow)
-	$(COMPOSE) logs -f jaeger
-
 logs-loki: ## Logs Loki + Promtail (follow)
 	$(COMPOSE) logs -f loki promtail
 
-logs-superset: ## Logs Superset (follow)
-	$(COMPOSE) logs -f superset
-
 logs-airflow: ## Logs Airflow webserver + scheduler (follow)
 	$(COMPOSE) logs -f airflow-webserver airflow-scheduler
-
-logs-n8n: ## Logs n8n workflow automation (follow)
-	$(COMPOSE) logs -f n8n
 
 logs-apisix: ## Logs APISIX gateway + dashboard (follow)
 	$(COMPOSE) logs -f apisix apisix-dashboard
@@ -217,17 +200,13 @@ restart-traefik: ## Riavvia solo Traefik
 	@echo "$(GREEN)Riavvio Traefik...$(NC)"
 	$(COMPOSE) restart traefik
 
-restart-celery: ## Riavvia worker + beat Celery
-	@echo "$(GREEN)Riavvio Celery worker e beat...$(NC)"
-	$(COMPOSE) restart backoffice-celery-worker backoffice-celery-beat
+restart-celery: ## Riavvia Celery worker
+	@echo "$(GREEN)Riavvio Celery worker...$(NC)"
+	$(COMPOSE) restart backoffice-celery-worker
 
 restart-airflow: ## Riavvia Airflow webserver + scheduler
 	@echo "$(GREEN)Riavvio Airflow...$(NC)"
 	$(COMPOSE) restart airflow-webserver airflow-scheduler
-
-restart-n8n: ## Riavvia n8n
-	@echo "$(GREEN)Riavvio n8n...$(NC)"
-	$(COMPOSE) restart n8n
 
 restart-apisix: ## Riavvia APISIX gateway + etcd
 	@echo "$(GREEN)Riavvio APISIX...$(NC)"
@@ -277,17 +256,9 @@ open-grafana: ## Apre Grafana  →  https://grafana.${DOMAIN}/
 	@echo "$(CYAN)Apertura Grafana...$(NC)"
 	@$(OPEN) https://grafana.$(DOMAIN)/
 
-open-jaeger: ## Apre Jaeger UI  →  https://jaeger.${DOMAIN}/
-	@echo "$(CYAN)Apertura Jaeger...$(NC)"
-	@$(OPEN) https://jaeger.$(DOMAIN)/
-
 open-prometheus: ## Apre Prometheus  →  https://prometheus.${DOMAIN}/
 	@echo "$(CYAN)Apertura Prometheus...$(NC)"
 	@$(OPEN) https://prometheus.$(DOMAIN)/
-
-open-superset: ## Apre Apache Superset  →  https://superset.${DOMAIN}/
-	@echo "$(CYAN)Apertura Superset...$(NC)"
-	@$(OPEN) https://superset.$(DOMAIN)/
 
 open-loki: ## Apre Loki (API status)  →  https://loki.${DOMAIN}/ready
 	@echo "$(CYAN)Apertura Loki...$(NC)"
@@ -304,10 +275,6 @@ open-redis-exporter: ## Apre Redis Exporter  →  https://redis-exporter.${DOMAI
 open-airflow: ## Apre Apache Airflow  →  https://airflow.${DOMAIN}/
 	@echo "$(CYAN)Apertura Airflow...$(NC)"
 	@$(OPEN) https://airflow.$(DOMAIN)/
-
-open-n8n: ## Apre n8n workflow automation  →  https://n8n.${DOMAIN}/
-	@echo "$(CYAN)Apertura n8n...$(NC)"
-	@$(OPEN) https://n8n.$(DOMAIN)/
 
 open-traefik: ## Apre Traefik dashboard  →  https://traefik.${DOMAIN}/
 	@echo "$(CYAN)Apertura Traefik dashboard...$(NC)"

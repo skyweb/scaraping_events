@@ -61,6 +61,24 @@
         "clientRole": false,
         "containerId": "today-events",
         "attributes": {}
+      },
+      {
+        "id": "d4e5f6a7-b8c9-0123-abcd-567890123456",
+        "name": "web",
+        "description": "Accesso Django Admin backoffice",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "today-events",
+        "attributes": {}
+      },
+      {
+        "id": "e5f6a7b8-c9d0-1234-bcde-678901234567",
+        "name": "monitoring",
+        "description": "Accesso Grafana, Prometheus, Flower, MinIO, SonarQube, Exporters",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "today-events",
+        "attributes": {}
       }
     ],
     "client": {}
@@ -258,12 +276,33 @@
       "protocol": "openid-connect",
       "secret": "CHANGE_ME_BACKOFFICE_SECRET",
       "redirectUris": [
-        "https://gateway.*/*",
+        "https://backoffice.127.0.0.1.nip.io/*",
+        "https://grafana.127.0.0.1.nip.io/*",
+        "https://prometheus.127.0.0.1.nip.io/*",
+        "https://flower.127.0.0.1.nip.io/*",
+        "https://sonarqube.127.0.0.1.nip.io/*",
+        "https://redis-exporter.127.0.0.1.nip.io/*",
+        "https://celery-exporter.127.0.0.1.nip.io/*",
+        "https://airflow.127.0.0.1.nip.io/*",
+        "https://apisix-dashboard.127.0.0.1.nip.io/*",
+        "https://traefik.127.0.0.1.nip.io/*",
         "https://gateway.127.0.0.1.nip.io/*",
+        "https://auth.127.0.0.1.nip.io/*",
+        "https://auth-admin.127.0.0.1.nip.io/*",
         "http://localhost:9080/*"
       ],
       "webOrigins": [
-        "https://gateway.*",
+        "https://backoffice.127.0.0.1.nip.io",
+        "https://grafana.127.0.0.1.nip.io",
+        "https://prometheus.127.0.0.1.nip.io",
+        "https://flower.127.0.0.1.nip.io",
+        "https://sonarqube.127.0.0.1.nip.io",
+        "https://redis-exporter.127.0.0.1.nip.io",
+        "https://celery-exporter.127.0.0.1.nip.io",
+        "https://airflow.127.0.0.1.nip.io",
+        "https://apisix-dashboard.127.0.0.1.nip.io",
+        "https://traefik.127.0.0.1.nip.io",
+        "https://gateway.127.0.0.1.nip.io",
         "http://localhost:9080"
       ],
       "notBefore": 0,
@@ -447,27 +486,37 @@
         "logoutUrl": "https://oauth2.googleapis.com/revoke",
         "userInfoUrl": "https://openidconnect.googleapis.com/v1/userinfo",
         "defaultScope": "openid profile email",
-        "guiOrder": "",
+        "guiOrder": "1",
         "backchannelSupported": "false",
         "disableUserInfoService": "false",
         "hostedDomain": "",
         "loginHint": "false",
         "isAccessTokenJWT": "false"
       }
-    }
-  ],
-  "identityProviderMappers": [
+    },
     {
-      "id": "b0c1d2e3-f4a5-6789-bcde-789012345679",
-      "name": "google-admin-role-mapper",
-      "identityProviderAlias": "google",
-      "identityProviderMapper": "hardcoded-role-idp-mapper",
+      "alias": "github",
+      "displayName": "GitHub",
+      "internalId": "c1d2e3f4-a5b6-7890-bcde-789012345680",
+      "providerId": "github",
+      "enabled": true,
+      "updateProfileFirstLoginMode": "on",
+      "trustEmail": true,
+      "storeToken": false,
+      "addReadTokenRoleOnCreate": false,
+      "authenticateByDefault": false,
+      "linkOnly": false,
+      "firstBrokerLoginFlowAlias": "first broker login",
       "config": {
-        "syncMode": "INHERIT",
-        "role": "admin"
+        "clientId": "${GITHUB_CLIENT_ID}",
+        "clientSecret": "${GITHUB_CLIENT_SECRET}",
+        "syncMode": "IMPORT",
+        "defaultScope": "user:email",
+        "guiOrder": "2"
       }
     }
   ],
+  "identityProviderMappers": [],
   "authenticationFlows": [],
   "authenticatorConfig": [],
   "requiredActions": [
@@ -627,7 +676,7 @@
           "temporary": true
         }
       ],
-      "realmRoles": ["admin", "default-roles-today-events"]
+      "realmRoles": ["admin", "web", "monitoring", "default-roles-today-events"]
     }
   ],
   "scopeMappings": [],

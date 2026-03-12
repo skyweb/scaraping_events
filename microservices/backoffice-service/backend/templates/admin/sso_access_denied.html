@@ -208,9 +208,18 @@
           necessari per accedere al pannello admin.
           Contatta un amministratore per ottenere l'accesso.
         </p>
+      {% elif missing_role %}
+        <p class="description">
+          L'account Keycloak non ha i <strong style="color:#c4b5fd">ruoli</strong> necessari
+          per accedere al pannello admin.
+          Chiedi all'amministratore di assegnare il ruolo
+          <code style="background:#1e1e30;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:.8rem">web</code>
+          o <code style="background:#1e1e30;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:.8rem">admin</code>
+          al tuo utente Keycloak.
+        </p>
       {% else %}
         <p class="description">
-          L'account Google non è registrato nel sistema.
+          L'account non è registrato nel sistema.
           Per ottenere l'accesso chiedi all'amministratore di creare
           il tuo utente Django.
         </p>
@@ -233,7 +242,7 @@
           <div class="step">
             <span class="step-num">3</span>
             <p class="step-text">
-              Riaccedi — il login avverrà automaticamente tramite Google
+              Riaccedi — il login avverrà automaticamente tramite SSO
             </p>
           </div>
         </div>
@@ -242,9 +251,13 @@
     </div>
 
     <div class="footer">
-      <a class="btn btn-primary" id="sign-out-link" href="#">
+      <a class="btn btn-primary" id="retry-link" href="#">
+        <span class="material-symbols-outlined">refresh</span>
+        Riprova
+      </a>
+      <a class="btn btn-ghost" id="sign-out-link" href="#">
         <span class="material-symbols-outlined">logout</span>
-        Cambia account Google
+        Annulla accesso
       </a>
       <a class="btn btn-ghost" href="/">
         <span class="material-symbols-outlined">home</span>
@@ -256,7 +269,36 @@
   <script>
     var domain = window.location.hostname.replace(/^[^.]+\./, '');
     var proto = window.location.protocol;
-    document.getElementById('sign-out-link').href = proto + '//keycloak.' + domain + '/realms/today-events/protocol/openid-connect/logout?post_logout_redirect_uri=' + encodeURIComponent(proto + '//backoffice.' + domain + '/admin/') + '&client_id=backoffice-admin';
+    var adminUrl = proto + '//backoffice.' + domain + '/admin/';
+    // Logout diretto via Keycloak pubblico (non via APISIX sso-logout, per evitare problemi di cache discovery)
+    var logoutUrl = proto + '//keycloak.' + domain + '/realms/today-events/protocol/openid-connect/logout'
+      + '?post_logout_redirect_uri=' + encodeURIComponent(adminUrl)
+      + '&client_id=backoffice-admin';
+
+    // Cancella tutti i cookie locali (sessione APISIX + Django) su tutti i sottodomini
+    function clearAllCookies() {
+      document.cookie.split(';').forEach(function(c) {
+        var name = c.split('=')[0].trim();
+        // Cookie sul path corrente e root
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+        // Cookie sul dominio wildcard (copre tutti i sottodomini *.DOMAIN)
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.' + domain;
+      });
+    }
+
+    // Riprova: cancella cookie locali e ricarica per riavviare il flusso SSO
+    document.getElementById('retry-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      clearAllCookies();
+      window.location.href = adminUrl;
+    });
+
+    // Annulla accesso: cancella cookie locali + logout Keycloak (invalida sessione SSO globale)
+    document.getElementById('sign-out-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      clearAllCookies();
+      window.location.href = logoutUrl;
+    });
   </script>
 </body>
 </html>

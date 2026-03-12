@@ -5,6 +5,8 @@ Middleware personalizzati:
 - KeycloakAdminMiddleware: SSO trasparente per /admin/ via APISIX + Keycloak
 """
 
+import base64
+import json
 import logging
 import time
 
@@ -21,18 +23,22 @@ sso_logger = logging.getLogger("admin.sso")
 
 class KeycloakAdminMiddleware:
     """
-    SSO trasparente per Django Admin via APISIX + Keycloak.
+    SSO trasparente per Django Admin via APISIX openid-connect + Keycloak.
 
     Flusso:
       1. APISIX autentica la richiesta via plugin openid-connect → Keycloak
       2. Keycloak valida la sessione/token e restituisce i claim
-      3. APISIX imposta X-Auth-Request-Email nell'header della richiesta
-      4. Questo middleware legge l'email e fa il login automatico
+      3. APISIX imposta X-Userinfo (JSON) nell'header con i claim OIDC
+      4. Questo middleware legge l'email da X-Userinfo, verifica il ruolo
+         "web" o "admin", e fa il login automatico
 
     Attivo solo su /admin/. Le API (/api/) usano JWT diretto.
-    Non crea utenti automaticamente: l'utente Django deve esistere con la stessa email
-    e avere is_staff=True. In caso contrario restituisce 403 con istruzioni.
+    Ruoli richiesti: "web" o "admin" (configurato in KEYCLOAK_ADMIN_ALLOWED_ROLES).
+    Se l'utente Django non esiste, viene creato automaticamente (auto-provisioning).
     """
+
+    # Ruoli Keycloak che permettono l'accesso al Django Admin
+    ALLOWED_ROLES = {"web", "admin"}
 
     def __init__(self, get_response) -> None:
         self.get_response = get_response
@@ -42,21 +48,44 @@ class KeycloakAdminMiddleware:
         if not request.path.startswith("/admin/") or request.user.is_authenticated:
             return self.get_response(request)
 
-        email = request.META.get("HTTP_X_AUTH_REQUEST_EMAIL", "").strip()
+        userinfo = self._extract_userinfo(request)
+        email = userinfo.get("email", "").strip()
         if not email:
             # Header assente: APISIX non attivo o accesso diretto (es. :8000)
             return self.get_response(request)
 
-        User = get_user_model()
-        try:
-            user = User.objects.get(email=email, is_active=True)
-        except User.DoesNotExist:
+        # Verifica ruolo Keycloak dall'header X-Userinfo (JSON dai claim OIDC)
+        # I ruoli possono essere in "realm_access.roles" (access token) o "groups" (userinfo mapper)
+        roles = userinfo.get("realm_access", {}).get("roles", []) or userinfo.get("groups", [])
+        if not (self.ALLOWED_ROLES & set(roles)):
+            sso_logger.warning(
+                "SSO accesso negato: ruolo mancante",
+                extra={"email": email, "roles": roles, "required": list(self.ALLOWED_ROLES)},
+            )
             return TemplateResponse(
                 request,
                 "admin/sso_access_denied.html",
-                {"email": email, "not_staff": False},
+                {"email": email, "not_staff": False, "missing_role": True},
                 status=403,
             ).render()
+
+        User = get_user_model()
+        user = User.objects.filter(email=email, is_active=True).first()
+
+        if user is None:
+            # Auto-provisioning: crea utente Django da Keycloak
+            user = User.objects.create_user(
+                username=email,
+                email=email,
+                first_name=userinfo.get("given_name", ""),
+                last_name=userinfo.get("family_name", ""),
+                is_staff=True,
+                is_superuser=True,
+            )
+            sso_logger.info(
+                "SSO auto-provisioning utente",
+                extra={"email": email, "roles": roles},
+            )
 
         if not user.is_staff:
             return TemplateResponse(
@@ -69,9 +98,26 @@ class KeycloakAdminMiddleware:
         login(request, user, backend="django.contrib.auth.backends.ModelBackend")
         sso_logger.info(
             "SSO login via APISIX/Keycloak",
-            extra={"email": email, "user": user.get_username()},
+            extra={"email": email, "user": user.get_username(), "roles": roles},
         )
         return self.get_response(request)
+
+    @staticmethod
+    def _extract_userinfo(request: HttpRequest) -> dict:
+        """Decodifica l'header X-Userinfo (JSON plain da APISIX o base64 legacy)."""
+        raw = request.META.get("HTTP_X_USERINFO", "")
+        if not raw:
+            return {}
+        # APISIX invia JSON plain
+        try:
+            return json.loads(raw)
+        except (json.JSONDecodeError, ValueError):
+            pass
+        # Fallback: base64-encoded JSON (oauth2-proxy legacy)
+        try:
+            return json.loads(base64.b64decode(raw))
+        except (json.JSONDecodeError, ValueError, UnicodeDecodeError):
+            return {}
 
 
 class ApiVersionHeaderMiddleware:

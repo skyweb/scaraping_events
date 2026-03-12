@@ -1,20 +1,25 @@
 #!/bin/sh
-# Script di inizializzazione route APISIX per dev
-# Eseguito dal container apisix-init al primo avvio
-# Configurazione dichiarativa: upstream + route via Admin API
-
+# =============================================================================
+# APISIX init-routes.sh — Configurazione dichiarativa route/upstream
+# Eseguito dal container apisix-init (one-shot) al primo avvio.
+#
+# Flusso SSO:
+#   Browser → Traefik (TLS) → APISIX (openid-connect) → Keycloak → upstream
+#
+# Tutti i servizi protetti passano da APISIX per autenticazione OIDC.
+# Il plugin openid-connect gestisce sessione, redirect e header X-Userinfo.
+# =============================================================================
 set -e
 
 ADMIN_URL="http://apisix:9180/apisix/admin"
 API_KEY="apisix-dev-admin-key"
 DOMAIN="${DOMAIN:-127.0.0.1.nip.io}"
 KC_SECRET="${KEYCLOAK_BACKOFFICE_CLIENT_SECRET:-CHANGE_ME_BACKOFFICE_SECRET}"
-
-# Endpoint Keycloak: interni per server-to-server, pubblici per redirect browser
-KC_INTERNAL="http://keycloak:8080/realms/today-events"
 KC_PUBLIC="https://keycloak.${DOMAIN}/realms/today-events"
 
-# Attendi che APISIX sia pronto
+# ---------------------------------------------------------------------------
+# Attendi che APISIX Admin API sia pronto
+# ---------------------------------------------------------------------------
 echo "Attendo APISIX admin API..."
 until curl -sf -o /dev/null -H "X-API-KEY: ${API_KEY}" "${ADMIN_URL}/routes"; do
     sleep 2
@@ -22,146 +27,149 @@ until curl -sf -o /dev/null -H "X-API-KEY: ${API_KEY}" "${ADMIN_URL}/routes"; do
 done
 echo "APISIX pronto."
 
+# ---------------------------------------------------------------------------
+# Helper: PUT su Admin API
+# ---------------------------------------------------------------------------
 put() {
-    local path="$1"
-    local data="$2"
-    local name="$3"
-    echo "Configuro ${name}..."
+    local path="$1" data="$2" name="$3"
+    echo "  Configuro ${name}..."
     curl -sf -X PUT \
         -H "X-API-KEY: ${API_KEY}" \
         -H "Content-Type: application/json" \
         -d "${data}" \
         "${ADMIN_URL}${path}" > /dev/null
-    echo "  OK"
 }
 
-# --- Upstream: backoffice Django ---
+# ======================= UPSTREAMS ==========================================
+echo ""
+echo "=== Upstreams ==="
+
 put "/upstreams/1" '{
-    "name": "backoffice-upstream",
+    "name": "backoffice",
     "type": "roundrobin",
     "nodes": {"backoffice:8000": 1},
     "pass_host": "node"
-}' "upstream backoffice"
+}' "backoffice (Django :8000)"
 
-# --- Upstream: Keycloak interno ---
 put "/upstreams/2" '{
-    "name": "keycloak-upstream",
+    "name": "keycloak",
     "type": "roundrobin",
     "nodes": {"keycloak:8080": 1},
+    "pass_host": "rewrite",
+    "upstream_host": "keycloak:8080"
+}' "keycloak (interno :8080)"
+
+put "/upstreams/3" '{
+    "name": "grafana",
+    "type": "roundrobin",
+    "nodes": {"grafana:3001": 1},
     "pass_host": "node"
-}' "upstream keycloak"
+}' "grafana (:3001)"
 
-# --- Route 100: discovery OIDC interno ---
-# Proxy al discovery di Keycloak con response-rewrite per sostituire
-# gli endpoint server-to-server (token, userinfo, jwks, introspection)
-# con URL interni, mantenendo quelli browser (authorization, end_session, issuer) pubblici.
-# Necessario perché lua-resty-openidc usa SOLO gli endpoint dal discovery,
-# ignorando quelli espliciti nella config del plugin openid-connect.
-KC_PUBLIC_ESCAPED=$(echo "https://keycloak.${DOMAIN}" | sed 's/\./\\\\./g')
-put "/routes/100" "{
-    \"name\": \"internal-oidc-discovery\",
-    \"uri\": \"/_internal/oidc-discovery\",
-    \"upstream_id\": \"2\",
-    \"plugins\": {
-        \"proxy-rewrite\": {
-            \"uri\": \"/realms/today-events/.well-known/openid-configuration\"
-        },
-        \"response-rewrite\": {
-            \"filters\": [
-                {
-                    \"regex\": \"\\\"token_endpoint\\\":\\\\s*\\\"${KC_PUBLIC_ESCAPED}\",
-                    \"replace\": \"\\\"token_endpoint\\\":\\\"http://keycloak:8080\",
-                    \"scope\": \"global\"
-                },
-                {
-                    \"regex\": \"\\\"userinfo_endpoint\\\":\\\\s*\\\"${KC_PUBLIC_ESCAPED}\",
-                    \"replace\": \"\\\"userinfo_endpoint\\\":\\\"http://keycloak:8080\",
-                    \"scope\": \"global\"
-                },
-                {
-                    \"regex\": \"\\\"jwks_uri\\\":\\\\s*\\\"${KC_PUBLIC_ESCAPED}\",
-                    \"replace\": \"\\\"jwks_uri\\\":\\\"http://keycloak:8080\",
-                    \"scope\": \"global\"
-                },
-                {
-                    \"regex\": \"\\\"introspection_endpoint\\\":\\\\s*\\\"${KC_PUBLIC_ESCAPED}\",
-                    \"replace\": \"\\\"introspection_endpoint\\\":\\\"http://keycloak:8080\",
-                    \"scope\": \"global\"
-                }
-            ]
-        }
-    }
-}" "route internal-oidc-discovery"
+put "/upstreams/4" '{
+    "name": "prometheus",
+    "type": "roundrobin",
+    "nodes": {"prometheus:9090": 1},
+    "pass_host": "node"
+}' "prometheus (:9090)"
 
-# URL discovery interno per i plugin openid-connect
+put "/upstreams/5" '{
+    "name": "flower",
+    "type": "roundrobin",
+    "nodes": {"flower:5555": 1},
+    "pass_host": "node"
+}' "flower (:5555)"
+
+put "/upstreams/6" '{
+    "name": "sonarqube",
+    "type": "roundrobin",
+    "nodes": {"sonarqube:9000": 1},
+    "pass_host": "node"
+}' "sonarqube (:9000)"
+
+put "/upstreams/7" '{
+    "name": "redis-exporter",
+    "type": "roundrobin",
+    "nodes": {"redis-exporter:9121": 1},
+    "pass_host": "node"
+}' "redis-exporter (:9121)"
+
+put "/upstreams/8" '{
+    "name": "celery-exporter",
+    "type": "roundrobin",
+    "nodes": {"celery-exporter:9808": 1},
+    "pass_host": "node"
+}' "celery-exporter (:9808)"
+
+put "/upstreams/9" '{
+    "name": "airflow",
+    "type": "roundrobin",
+    "nodes": {"airflow-webserver:8080": 1},
+    "pass_host": "node"
+}' "airflow (:8080)"
+
+put "/upstreams/10" '{
+    "name": "apisix-dashboard",
+    "type": "roundrobin",
+    "nodes": {"apisix-dashboard:9000": 1},
+    "pass_host": "node"
+}' "apisix-dashboard (:9000)"
+
+put "/upstreams/11" '{
+    "name": "traefik",
+    "type": "roundrobin",
+    "nodes": {"traefik:8080": 1},
+    "pass_host": "node"
+}' "traefik (:8080)"
+
+put "/upstreams/12" '{
+    "name": "loki",
+    "type": "roundrobin",
+    "nodes": {"loki:3100": 1},
+    "pass_host": "node"
+}' "loki (:3100)"
+
+# ======================= ROUTE INTERNA: OIDC DISCOVERY ======================
+# KC_HOSTNAME_BACKCHANNEL_DYNAMIC=true → Keycloak restituisce:
+#   - URL pubblici per browser (authorization, end_session) → https://keycloak.DOMAIN
+#   - URL interni per server (token, userinfo, jwks)       → http://keycloak:8080
+# Questo avviene impostando X-Forwarded-Host/Proto/Port interni.
+# ============================================================================
+echo ""
+echo "=== Route interna ==="
+
 DISCOVERY_URL="http://127.0.0.1:9080/_internal/oidc-discovery"
 
-# --- Route 1: gateway-admin — /admin/* con OIDC (browser SSO) ---
-# Il discovery viene servito dalla route interna con URL misti:
-# - authorization/end_session/issuer = pubblici (redirect browser)
-# - token/userinfo/jwks = interni (server-to-server)
-put "/routes/1" "{
-    \"name\": \"gateway-admin\",
-    \"uri\": \"/admin/*\",
-    \"upstream_id\": \"1\",
-    \"plugins\": {
-        \"openid-connect\": {
-            \"client_id\": \"backoffice-admin\",
-            \"client_secret\": \"${KC_SECRET}\",
-            \"discovery\": \"${DISCOVERY_URL}\",
-            \"issuer\": \"${KC_PUBLIC}\",
-            \"scope\": \"openid profile email\",
-            \"bearer_only\": false,
-            \"realm\": \"today-events\",
-            \"redirect_uri\": \"https://gateway.${DOMAIN}/admin/callback\",
-            \"logout_path\": \"/admin/sso-logout\",
-            \"post_logout_redirect_uri\": \"https://gateway.${DOMAIN}/admin/\",
-            \"set_userinfo_header\": true,
-            \"set_id_token_header\": true,
-            \"set_access_token_header\": true,
-            \"access_token_in_authorization_header\": false,
-            \"ssl_verify\": false,
-            \"session\": {
-                \"secret\": \"apisix-session-secret-dev-32char!\"
-            }
-        },
-        \"proxy-rewrite\": {
-            \"headers\": {
-                \"set\": {
-                    \"X-Forwarded-Proto\": \"https\"
+put "/routes/100" '{
+    "name": "internal-oidc-discovery",
+    "uri": "/_internal/oidc-discovery",
+    "upstream_id": "2",
+    "plugins": {
+        "proxy-rewrite": {
+            "uri": "/realms/today-events/.well-known/openid-configuration",
+            "host": "keycloak:8080",
+            "headers": {
+                "set": {
+                    "X-Forwarded-Host": "keycloak:8080",
+                    "X-Forwarded-Proto": "http",
+                    "X-Forwarded-Port": "8080"
                 }
             }
         }
     }
-}" "route gateway-admin"
+}' "oidc-discovery proxy"
 
-# --- Route 2: gateway-static — /static/* senza auth ---
-put "/routes/2" '{
-    "name": "gateway-static",
-    "uri": "/static/*",
-    "upstream_id": "1",
-    "plugins": {}
-}' "route gateway-static"
+# ======================= ROUTE API (backoffice, no auth APISIX) =============
+# Le API pubbliche e external passano per APISIX solo su gateway.DOMAIN.
+# Su backoffice.DOMAIN vanno direttamente via Traefik (priority=1).
+# Serve solo la route /api/external/* con JWT bearer per M2M (scraper/airflow).
+# ============================================================================
+echo ""
+echo "=== Route API ==="
 
-# --- Route 3: api-public — /api/public/* senza auth ---
-put "/routes/3" '{
-    "name": "api-public",
-    "uri": "/api/public/*",
-    "priority": 10,
-    "upstream_id": "1",
-    "plugins": {
-        "cors": {
-            "allow_origins": "*",
-            "allow_methods": "GET,HEAD,OPTIONS",
-            "allow_headers": "Content-Type,Authorization",
-            "max_age": 3600
-        }
-    }
-}' "route api-public"
-
-# --- Route 4: api-external — /api/external/* con JWT bearer (M2M scraper/airflow) ---
-put "/routes/4" "{
-    \"name\": \"api-external\",
+put "/routes/10" "{
+    \"name\": \"api-external-jwt\",
+    \"host\": \"backoffice.${DOMAIN}\",
     \"uri\": \"/api/external/*\",
     \"priority\": 10,
     \"upstream_id\": \"1\",
@@ -183,42 +191,169 @@ put "/routes/4" "{
             }
         }
     }
-}" "route api-external"
+}" "api-external (JWT bearer)"
 
-# --- Route 5: gateway-api — /api/* con OIDC (browser SSO per docs/Scalar) ---
-put "/routes/5" "{
-    \"name\": \"gateway-api\",
-    \"uri\": \"/api/*\",
-    \"upstream_id\": \"1\",
-    \"plugins\": {
-        \"openid-connect\": {
-            \"client_id\": \"backoffice-admin\",
-            \"client_secret\": \"${KC_SECRET}\",
-            \"discovery\": \"${DISCOVERY_URL}\",
-            \"issuer\": \"${KC_PUBLIC}\",
-            \"scope\": \"openid profile email\",
-            \"bearer_only\": false,
-            \"realm\": \"today-events\",
-            \"redirect_uri\": \"https://gateway.${DOMAIN}/api/callback\",
-            \"set_userinfo_header\": true,
-            \"ssl_verify\": false,
-            \"session\": {
-                \"secret\": \"apisix-session-secret-dev-32char!\"
-            }
-        },
-        \"proxy-rewrite\": {
-            \"headers\": {
-                \"set\": {
-                    \"X-Forwarded-Proto\": \"https\"
+# ======================= ROUTE SSO (OIDC via Keycloak) ======================
+# Helper: crea route con plugin openid-connect.
+# Parametri: route_id, name, host, uri, upstream_id, redirect_uri
+# Il logout_path viene derivato dal prefisso URI.
+# ============================================================================
+echo ""
+echo "=== Route SSO ==="
+
+oidc_route() {
+    local id="$1" name="$2" host="$3" uri="$4" upstream_id="$5" redirect_uri="$6"
+    local uri_prefix="${uri%\*}"
+    local logout_path="${uri_prefix}sso-logout"
+    # Per URI tipo /admin/* aggiungi anche /admin (senza slash)
+    local uri_bare="${uri_prefix%/}"
+    local uris_json="\"${uri}\""
+    if [ -n "${uri_bare}" ] && [ "${uri_bare}" != "" ] && [ "${uri}" != "/*" ]; then
+        uris_json="\"${uri_bare}\", \"${uri}\""
+    fi
+
+    put "/routes/${id}" "{
+        \"name\": \"${name}\",
+        \"host\": \"${host}\",
+        \"uris\": [${uris_json}],
+        \"upstream_id\": \"${upstream_id}\",
+        \"plugins\": {
+            \"openid-connect\": {
+                \"client_id\": \"backoffice-admin\",
+                \"client_secret\": \"${KC_SECRET}\",
+                \"discovery\": \"${DISCOVERY_URL}\",
+                \"issuer\": \"${KC_PUBLIC}\",
+                \"scope\": \"openid profile email\",
+                \"bearer_only\": false,
+                \"realm\": \"today-events\",
+                \"redirect_uri\": \"${redirect_uri}\",
+                \"logout_path\": \"${logout_path}\",
+                \"post_logout_redirect_uri\": \"https://${host}/\",
+                \"set_userinfo_header\": true,
+                \"set_id_token_header\": true,
+                \"set_access_token_header\": true,
+                \"access_token_in_authorization_header\": false,
+                \"ssl_verify\": false,
+                \"session\": {
+                    \"secret\": \"apisix-session-secret-dev-32char!\"
+                }
+            },
+            \"proxy-rewrite\": {
+                \"headers\": {
+                    \"set\": {
+                        \"X-Forwarded-Proto\": \"https\"
+                    }
                 }
             }
         }
-    }
-}" "route gateway-api"
+    }" "${name}"
+}
 
+# Variante Grafana: estrae email da X-Userinfo → X-Auth-Request-Email (auth proxy)
+oidc_route_grafana() {
+    local id="$1" name="$2" host="$3" upstream_id="$4" redirect_uri="$5"
+
+    put "/routes/${id}" "{
+        \"name\": \"${name}\",
+        \"host\": \"${host}\",
+        \"uri\": \"/*\",
+        \"upstream_id\": \"${upstream_id}\",
+        \"plugins\": {
+            \"openid-connect\": {
+                \"client_id\": \"backoffice-admin\",
+                \"client_secret\": \"${KC_SECRET}\",
+                \"discovery\": \"${DISCOVERY_URL}\",
+                \"issuer\": \"${KC_PUBLIC}\",
+                \"scope\": \"openid profile email\",
+                \"bearer_only\": false,
+                \"realm\": \"today-events\",
+                \"redirect_uri\": \"${redirect_uri}\",
+                \"logout_path\": \"/sso-logout\",
+                \"post_logout_redirect_uri\": \"https://${host}/\",
+                \"set_userinfo_header\": true,
+                \"set_id_token_header\": true,
+                \"set_access_token_header\": true,
+                \"access_token_in_authorization_header\": false,
+                \"ssl_verify\": false,
+                \"session\": {
+                    \"secret\": \"apisix-session-secret-dev-32char!\"
+                }
+            },
+            \"serverless-post-function\": {
+                \"phase\": \"rewrite\",
+                \"functions\": [\"return function(conf, ctx) local cjson = require('cjson.safe'); local h = ngx.req.get_headers()['X-Userinfo']; if h then local d = cjson.decode(h); if d and d.email then ngx.req.set_header('X-Auth-Request-Email', d.email) end end end\"]
+            },
+            \"proxy-rewrite\": {
+                \"headers\": {
+                    \"set\": {
+                        \"X-Forwarded-Proto\": \"https\"
+                    }
+                }
+            }
+        }
+    }" "${name}"
+}
+
+# --- Backoffice Django Admin (/admin/*) ---
+oidc_route 200 "backoffice-admin-sso" \
+    "backoffice.${DOMAIN}" "/admin/*" 1 \
+    "https://backoffice.${DOMAIN}/admin/callback"
+
+# --- Grafana (auth proxy: X-Auth-Request-Email) ---
+oidc_route_grafana 201 "grafana-sso" \
+    "grafana.${DOMAIN}" 3 \
+    "https://grafana.${DOMAIN}/callback"
+
+# --- Prometheus ---
+oidc_route 202 "prometheus-sso" \
+    "prometheus.${DOMAIN}" "/*" 4 \
+    "https://prometheus.${DOMAIN}/callback"
+
+# --- Flower ---
+oidc_route 203 "flower-sso" \
+    "flower.${DOMAIN}" "/*" 5 \
+    "https://flower.${DOMAIN}/callback"
+
+# --- SonarQube ---
+oidc_route 204 "sonarqube-sso" \
+    "sonarqube.${DOMAIN}" "/*" 6 \
+    "https://sonarqube.${DOMAIN}/callback"
+
+# --- Redis Exporter ---
+oidc_route 205 "redis-exporter-sso" \
+    "redis-exporter.${DOMAIN}" "/*" 7 \
+    "https://redis-exporter.${DOMAIN}/callback"
+
+# --- Celery Exporter ---
+oidc_route 206 "celery-exporter-sso" \
+    "celery-exporter.${DOMAIN}" "/*" 8 \
+    "https://celery-exporter.${DOMAIN}/callback"
+
+# --- Airflow ---
+oidc_route 207 "airflow-sso" \
+    "airflow.${DOMAIN}" "/*" 9 \
+    "https://airflow.${DOMAIN}/callback"
+
+# --- APISIX Dashboard ---
+oidc_route 208 "apisix-dashboard-sso" \
+    "apisix-dashboard.${DOMAIN}" "/*" 10 \
+    "https://apisix-dashboard.${DOMAIN}/callback"
+
+# --- Traefik Dashboard ---
+oidc_route 209 "traefik-sso" \
+    "traefik.${DOMAIN}" "/*" 11 \
+    "https://traefik.${DOMAIN}/callback"
+
+# --- Loki ---
+oidc_route 210 "loki-sso" \
+    "loki.${DOMAIN}" "/*" 12 \
+    "https://loki.${DOMAIN}/callback"
+
+# ======================= RIEPILOGO ==========================================
 echo ""
 echo "=== Route APISIX configurate ==="
 curl -sf -H "X-API-KEY: ${API_KEY}" "${ADMIN_URL}/routes" \
     | sed 's/},/},\n/g' | grep -o '"name":"[^"]*"' | sed 's/"name":"//;s/"//' \
     | while read name; do echo "  - ${name}"; done
+echo ""
 echo "Done."

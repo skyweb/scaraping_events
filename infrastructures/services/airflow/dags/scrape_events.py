@@ -10,7 +10,7 @@ Pipeline:
 Tracing distribuito:
 - Ogni DAG run genera un trace context (TRACEPARENT)
 - Il context viene propagato ai container Scrapy via env var
-- Scrapy lo usa come parent span → trace end-to-end visibile in Jaeger
+- Scrapy lo usa come parent span → trace end-to-end visibile in Grafana Tempo
 """
 
 import os
