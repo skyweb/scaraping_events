@@ -1,7 +1,10 @@
 ---
 # APISIX config per dev — docker-compose
+# Entry point unico: TLS termination + OIDC/JWT + reverse proxy
 apisix:
-  node_listen: 9080
+  node_listen:
+    - port: 9080      # interno (loopback OIDC discovery)
+    - port: 80         # HTTP → redirect HTTPS
   enable_admin: true
   admin_listen:
     ip: 0.0.0.0
@@ -17,7 +20,10 @@ apisix:
   enable_http2: true
   enable_reuseport: true
   ssl:
-    enable: false
+    enable: true
+    listen:
+      - port: 443
+    ssl_protocols: "TLSv1.2 TLSv1.3"
 
 deployment:
   role: traditional
@@ -77,6 +83,7 @@ plugins:
   - opentelemetry
   - proxy-rewrite
   - response-rewrite
+  - redirect  # non usato direttamente, il redirect HTTP→HTTPS usa serverless-pre-function
   - serverless-pre-function
   - serverless-post-function
 

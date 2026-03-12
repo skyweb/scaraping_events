@@ -286,11 +286,9 @@
         "https://celery-exporter.127.0.0.1.nip.io/*",
         "https://airflow.127.0.0.1.nip.io/*",
         "https://apisix-dashboard.127.0.0.1.nip.io/*",
-        "https://traefik.127.0.0.1.nip.io/*",
-        "https://gateway.127.0.0.1.nip.io/*",
+        "https://loki.127.0.0.1.nip.io/*",
         "https://auth.127.0.0.1.nip.io/*",
-        "https://auth-admin.127.0.0.1.nip.io/*",
-        "http://localhost:9080/*"
+        "https://minio.127.0.0.1.nip.io/*"
       ],
       "webOrigins": [
         "https://backoffice.127.0.0.1.nip.io",
@@ -302,9 +300,9 @@
         "https://celery-exporter.127.0.0.1.nip.io",
         "https://airflow.127.0.0.1.nip.io",
         "https://apisix-dashboard.127.0.0.1.nip.io",
-        "https://traefik.127.0.0.1.nip.io",
-        "https://gateway.127.0.0.1.nip.io",
-        "http://localhost:9080"
+        "https://loki.127.0.0.1.nip.io",
+        "https://auth.127.0.0.1.nip.io",
+        "https://minio.127.0.0.1.nip.io"
       ],
       "notBefore": 0,
       "bearerOnly": false,

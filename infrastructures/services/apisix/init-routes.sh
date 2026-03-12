@@ -3,11 +3,11 @@
 # APISIX init-routes.sh — Configurazione dichiarativa route/upstream
 # Eseguito dal container apisix-init (one-shot) al primo avvio.
 #
-# Flusso SSO:
-#   Browser → Traefik (TLS) → APISIX (openid-connect) → Keycloak → upstream
+# Flusso:
+#   Browser → APISIX (TLS + OIDC/JWT) → upstream
 #
-# Tutti i servizi protetti passano da APISIX per autenticazione OIDC.
-# Il plugin openid-connect gestisce sessione, redirect e header X-Userinfo.
+# APISIX è l'unico entry point: gestisce TLS termination, autenticazione
+# OIDC/JWT, e reverse proxy verso tutti i servizi.
 # =============================================================================
 set -e
 
@@ -15,7 +15,7 @@ ADMIN_URL="http://apisix:9180/apisix/admin"
 API_KEY="apisix-dev-admin-key"
 DOMAIN="${DOMAIN:-127.0.0.1.nip.io}"
 KC_SECRET="${KEYCLOAK_BACKOFFICE_CLIENT_SECRET:-CHANGE_ME_BACKOFFICE_SECRET}"
-KC_PUBLIC="https://keycloak.${DOMAIN}/realms/today-events"
+KC_PUBLIC="https://auth.${DOMAIN}/realms/today-events"
 
 # ---------------------------------------------------------------------------
 # Attendi che APISIX Admin API sia pronto
@@ -39,6 +39,32 @@ put() {
         -d "${data}" \
         "${ADMIN_URL}${path}" > /dev/null
 }
+
+# ======================= CERTIFICATO SSL =====================================
+echo ""
+echo "=== Certificato SSL ==="
+
+CERT=$(cat /certs/_wildcard.127.0.0.1.nip.io+1.pem | awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}')
+KEY=$(cat /certs/_wildcard.127.0.0.1.nip.io+1-key.pem | awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}')
+
+put "/ssls/1" "{
+    \"cert\": \"${CERT}\",
+    \"key\": \"${KEY}\",
+    \"snis\": [\"*.${DOMAIN}\", \"${DOMAIN}\"]
+}" "SSL wildcard certificate"
+
+# ======================= HTTP → HTTPS REDIRECT ===============================
+echo ""
+echo "=== Global rules ==="
+
+put "/global_rules/1" '{
+    "plugins": {
+        "serverless-pre-function": {
+            "phase": "rewrite",
+            "functions": ["return function(conf, ctx) if ngx.var.server_port == \"80\" and ngx.var.uri ~= \"/_internal/oidc-discovery\" then ngx.header[\"Location\"] = \"https://\" .. ngx.var.host .. ngx.var.request_uri; return ngx.exit(301) end end"]
+        }
+    }
+}' "HTTP→HTTPS redirect"
 
 # ======================= UPSTREAMS ==========================================
 echo ""
@@ -115,13 +141,6 @@ put "/upstreams/10" '{
     "pass_host": "node"
 }' "apisix-dashboard (:9000)"
 
-put "/upstreams/11" '{
-    "name": "traefik",
-    "type": "roundrobin",
-    "nodes": {"traefik:8080": 1},
-    "pass_host": "node"
-}' "traefik (:8080)"
-
 put "/upstreams/12" '{
     "name": "loki",
     "type": "roundrobin",
@@ -129,9 +148,23 @@ put "/upstreams/12" '{
     "pass_host": "node"
 }' "loki (:3100)"
 
+put "/upstreams/13" '{
+    "name": "minio-console",
+    "type": "roundrobin",
+    "nodes": {"minio:9001": 1},
+    "pass_host": "node"
+}' "minio-console (:9001)"
+
+put "/upstreams/14" '{
+    "name": "minio-s3",
+    "type": "roundrobin",
+    "nodes": {"minio:9000": 1},
+    "pass_host": "node"
+}' "minio-s3 (:9000)"
+
 # ======================= ROUTE INTERNA: OIDC DISCOVERY ======================
 # KC_HOSTNAME_BACKCHANNEL_DYNAMIC=true → Keycloak restituisce:
-#   - URL pubblici per browser (authorization, end_session) → https://keycloak.DOMAIN
+#   - URL pubblici per browser (authorization, end_session) → https://auth.DOMAIN
 #   - URL interni per server (token, userinfo, jwks)       → http://keycloak:8080
 # Questo avviene impostando X-Forwarded-Host/Proto/Port interni.
 # ============================================================================
@@ -159,11 +192,79 @@ put "/routes/100" '{
     }
 }' "oidc-discovery proxy"
 
-# ======================= ROUTE API (backoffice, no auth APISIX) =============
-# Le API pubbliche e external passano per APISIX solo su gateway.DOMAIN.
-# Su backoffice.DOMAIN vanno direttamente via Traefik (priority=1).
-# Serve solo la route /api/external/* con JWT bearer per M2M (scraper/airflow).
-# ============================================================================
+# ======================= ROUTE DIRETTE (no auth) ============================
+echo ""
+echo "=== Route dirette (no auth) ==="
+
+# --- Keycloak (Identity Provider, non protetto da SSO) ---
+put "/routes/300" "{
+    \"name\": \"keycloak-proxy\",
+    \"host\": \"auth.${DOMAIN}\",
+    \"uri\": \"/*\",
+    \"upstream_id\": \"2\",
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "keycloak (no auth)"
+
+# --- MinIO Console ---
+put "/routes/301" "{
+    \"name\": \"minio-console-proxy\",
+    \"host\": \"minio.${DOMAIN}\",
+    \"uri\": \"/*\",
+    \"upstream_id\": \"13\",
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "minio console (no auth)"
+
+# --- MinIO S3 API ---
+put "/routes/302" "{
+    \"name\": \"minio-s3-proxy\",
+    \"host\": \"s3.${DOMAIN}\",
+    \"uri\": \"/*\",
+    \"upstream_id\": \"14\",
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "minio S3 API (no auth)"
+
+# --- Backoffice public (API, static, media, docs, frontend — no SSO) ---
+put "/routes/303" "{
+    \"name\": \"backoffice-public\",
+    \"host\": \"backoffice.${DOMAIN}\",
+    \"uri\": \"/*\",
+    \"upstream_id\": \"1\",
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "backoffice public (no auth)"
+
+# ======================= ROUTE API (JWT bearer) =============================
 echo ""
 echo "=== Route API ==="
 
@@ -258,6 +359,7 @@ oidc_route_grafana() {
         \"host\": \"${host}\",
         \"uri\": \"/*\",
         \"upstream_id\": \"${upstream_id}\",
+        \"enable_websocket\": true,
         \"plugins\": {
             \"openid-connect\": {
                 \"client_id\": \"backoffice-admin\",
@@ -338,11 +440,6 @@ oidc_route 207 "airflow-sso" \
 oidc_route 208 "apisix-dashboard-sso" \
     "apisix-dashboard.${DOMAIN}" "/*" 10 \
     "https://apisix-dashboard.${DOMAIN}/callback"
-
-# --- Traefik Dashboard ---
-oidc_route 209 "traefik-sso" \
-    "traefik.${DOMAIN}" "/*" 11 \
-    "https://traefik.${DOMAIN}/callback"
 
 # --- Loki ---
 oidc_route 210 "loki-sso" \

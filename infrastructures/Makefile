@@ -54,7 +54,7 @@ up: ## Avvia lo stack di sviluppo (core + gateway + observability + minio)
 	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
 	@echo "$(CYAN)  https://gateway.$(DOMAIN)/$(NC)          API Gateway"
 	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC) APISIX Dashboard"
-	@echo "$(CYAN)  https://keycloak.$(DOMAIN)/$(NC)         Keycloak"
+	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)         Keycloak"
 	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
 	@echo "$(CYAN)  https://minio.$(DOMAIN)/$(NC)            MinIO Console"
 	@echo "$(CYAN)  https://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
@@ -126,7 +126,7 @@ up-gateway: ## API Gateway (etcd, apisix, apisix-dashboard, keycloak)
 	$(COMPOSE) up -d etcd apisix apisix-dashboard keycloak
 	@echo ""
 	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC) APISIX Dashboard"
-	@echo "$(CYAN)  https://keycloak.$(DOMAIN)/$(NC)         Keycloak Admin"
+	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)         Keycloak Admin"
 	@echo "$(CYAN)  https://gateway.$(DOMAIN)/$(NC)          API Gateway (APISIX proxy)"
 	@echo ""
 
@@ -284,9 +284,9 @@ open-apisix: ## Apre APISIX Dashboard  →  https://apisix-dashboard.${DOMAIN}/
 	@echo "$(CYAN)Apertura APISIX Dashboard...$(NC)"
 	@$(OPEN) https://apisix-dashboard.$(DOMAIN)/
 
-open-keycloak: ## Apre Keycloak Admin  →  https://keycloak.${DOMAIN}/
+open-keycloak: ## Apre Keycloak Admin  →  https://auth.${DOMAIN}/
 	@echo "$(CYAN)Apertura Keycloak Admin...$(NC)"
-	@$(OPEN) https://keycloak.$(DOMAIN)/
+	@$(OPEN) https://auth.$(DOMAIN)/
 
 open-gateway: ## Apre API Gateway  →  https://gateway.${DOMAIN}/
 	@echo "$(CYAN)Apertura API Gateway...$(NC)"

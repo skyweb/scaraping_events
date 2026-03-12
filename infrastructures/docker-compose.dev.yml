@@ -55,13 +55,6 @@ services:
       - --web.enable-remote-write-receiver
     volumes:
       - ./services/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.prometheus.rule=Host(`prometheus.${DOMAIN}`)"
-      - "traefik.http.routers.prometheus.entrypoints=websecure"
-      - "traefik.http.routers.prometheus.tls=true"
-      - "traefik.http.routers.prometheus.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
     networks:
       dev-network:
         aliases:
@@ -104,12 +97,12 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-django-insecure-dev-key}
       DJANGO_DEBUG: "True"
-      DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},gateway.${DOMAIN},backoffice,localhost,127.0.0.1"
+      DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},backoffice,localhost,127.0.0.1"
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
       CORS_ALLOWED_ORIGINS: "https://frontend.${DOMAIN},http://localhost:3000"
-      CSRF_TRUSTED_ORIGINS: "https://frontend.${DOMAIN},https://backoffice.${DOMAIN},https://gateway.${DOMAIN},http://localhost:3000"
+      CSRF_TRUSTED_ORIGINS: "https://frontend.${DOMAIN},https://backoffice.${DOMAIN},http://localhost:3000"
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
       CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:redis_secret_2026@redis:6379/2}
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
@@ -120,21 +113,6 @@ services:
       KEYCLOAK_AUDIENCE: account
     volumes:
       - ../microservices/backoffice-service/backend:/app/backend
-    labels:
-      - "traefik.enable=true"
-      # Admin: protetto da Keycloak SSO via APISIX openid-connect
-      - "traefik.http.routers.backoffice-admin.rule=Host(`backoffice.${DOMAIN}`) && PathPrefix(`/admin`)"
-      - "traefik.http.routers.backoffice-admin.entrypoints=websecure"
-      - "traefik.http.routers.backoffice-admin.tls=true"
-      - "traefik.http.routers.backoffice-admin.service=apisix-gateway-svc@docker"
-      - "traefik.http.routers.backoffice-admin.priority=2"
-      # API e static: accesso diretto (JWT o pubblico)
-      - "traefik.http.routers.backoffice.rule=Host(`backoffice.${DOMAIN}`)"
-      - "traefik.http.routers.backoffice.entrypoints=websecure"
-      - "traefik.http.routers.backoffice.tls=true"
-      - "traefik.http.routers.backoffice.service=backoffice-svc"
-      - "traefik.http.routers.backoffice.priority=1"
-      - "traefik.http.services.backoffice-svc.loadbalancer.server.port=8000"
     depends_on:
       postgres:
         condition: service_healthy
@@ -194,13 +172,6 @@ services:
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
     volumes:
       - flower-dev-data:/data
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.flower.rule=Host(`flower.${DOMAIN}`)"
-      - "traefik.http.routers.flower.entrypoints=websecure"
-      - "traefik.http.routers.flower.tls=true"
-      - "traefik.http.routers.flower.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.flower.loadbalancer.server.port=5555"
     depends_on:
       redis:
         condition: service_healthy
@@ -218,12 +189,6 @@ services:
     volumes:
       - ./services/loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
       - loki-dev-data:/loki
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.loki.rule=Host(`loki.${DOMAIN}`)"
-      - "traefik.http.routers.loki.entrypoints=websecure"
-      - "traefik.http.routers.loki.tls=true"
-      - "traefik.http.services.loki.loadbalancer.server.port=3100"
     healthcheck:
       test: ["CMD-SHELL", "wget --quiet --tries=1 --output-document=- http://localhost:3100/ready | grep -q ready || exit 1"]
       interval: 10s
@@ -259,7 +224,7 @@ services:
       GF_SERVER_HTTP_PORT: "3001"
       GF_AUTH_ANONYMOUS_ENABLED: "false"
       GF_AUTH_DISABLE_LOGIN_FORM: "true"
-      # Auth proxy: identità dall'header APISIX (via serverless-pre-function Lua)
+      # Auth proxy: identità dall'header APISIX (via serverless-post-function Lua)
       GF_AUTH_PROXY_ENABLED: "true"
       GF_AUTH_PROXY_HEADER_NAME: X-Auth-Request-Email
       GF_AUTH_PROXY_HEADER_PROPERTY: email
@@ -271,13 +236,6 @@ services:
       - ./services/grafana/provisioning:/etc/grafana/provisioning:ro
       - grafana-dev-data:/var/lib/grafana
       - ./services/grafana/dashboards:/var/lib/grafana/dashboards:ro
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.grafana.rule=Host(`grafana.${DOMAIN}`)"
-      - "traefik.http.routers.grafana.entrypoints=websecure"
-      - "traefik.http.routers.grafana.tls=true"
-      - "traefik.http.routers.grafana.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.grafana.loadbalancer.server.port=3001"
     depends_on:
       loki:
         condition: service_healthy
@@ -321,7 +279,7 @@ services:
       - ./services/airflow/dags:/opt/airflow/dags:ro
       - ./services/airflow/plugins:/opt/airflow/plugins:ro
       - ./services/airflow/data:/opt/airflow/data
-      - airflow-logs-dev:/opt/airflow/logs
+      - ./services/airflow/logs:/opt/airflow/logs
     command:
       - bash
       - -c
@@ -355,14 +313,7 @@ services:
       - ./services/airflow/dags:/opt/airflow/dags:ro
       - ./services/airflow/plugins:/opt/airflow/plugins:ro
       - ./services/airflow/data:/opt/airflow/data
-      - airflow-logs-dev:/opt/airflow/logs
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.airflow.rule=Host(`airflow.${DOMAIN}`)"
-      - "traefik.http.routers.airflow.entrypoints=websecure"
-      - "traefik.http.routers.airflow.tls=true"
-      - "traefik.http.routers.airflow.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.airflow.loadbalancer.server.port=8080"
+      - ./services/airflow/logs:/opt/airflow/logs
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 30s
@@ -391,64 +342,7 @@ services:
       - ./services/airflow/dags:/opt/airflow/dags:ro
       - ./services/airflow/plugins:/opt/airflow/plugins:ro
       - ./services/airflow/data:/opt/airflow/data
-      - airflow-logs-dev:/opt/airflow/logs
-    networks:
-      - dev-network
-
-  # docker-api-proxy — nginx che riscrive versioni API Docker obsolete a 1.47
-  # Fix per Docker Desktop 4.62+ che richiede MinAPIVersion=1.44 ma
-  # Traefik SDK usa di default una versione inferiore.
-  docker-api-proxy:
-    image: nginx:alpine
-    container_name: dev-docker-api-proxy
-    restart: unless-stopped
-    volumes:
-      - ./services/docker-proxy/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ${DOCKER_SOCK:-/var/run/docker.sock}:/var/run/docker.sock
-    networks:
-      - dev-network
-
-  # Traefik — reverse proxy e service discovery via Docker labels
-  # HTTPS locale con certificati mkcert (trusted dal browser)
-  traefik:
-    image: traefik:v3.3
-    container_name: dev-traefik
-    restart: unless-stopped
-    depends_on:
-      - docker-api-proxy
-    command:
-      - --providers.docker=true
-      - --providers.docker.exposedbydefault=false
-      - --providers.docker.network=dev-network
-      - --providers.docker.endpoint=tcp://docker-api-proxy:2375
-      # HTTP entrypoint + redirect a HTTPS
-      - --entrypoints.web.address=:80
-      - --entrypoints.web.http.redirections.entrypoint.to=websecure
-      - --entrypoints.web.http.redirections.entrypoint.scheme=https
-      # HTTPS entrypoint (certificati mkcert via dynamic config)
-      - --entrypoints.websecure.address=:443
-      # Configurazione dinamica (certificati TLS)
-      - --providers.file.filename=/etc/traefik/dynamic.yml
-      - --providers.file.watch=true
-      - --api.dashboard=true
-      - --api.insecure=true
-      - --metrics.prometheus=true
-      - --metrics.prometheus.addServicesLabels=true
-      - --metrics.prometheus.addRoutersLabels=true
-      - --log.level=INFO
-    ports:
-      - "80:80"
-      - "443:443"
-      - "8082:8080"
-    volumes:
-      - ./services/traefik/dynamic.yml:/etc/traefik/dynamic.yml:ro
-      - ./services/traefik/certs:/certs:ro
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.${DOMAIN}`)"
-      - "traefik.http.routers.traefik-dashboard.entrypoints=websecure"
-      - "traefik.http.routers.traefik-dashboard.tls=true"
-      - "traefik.http.routers.traefik-dashboard.service=apisix-gateway-svc@docker"
+      - ./services/airflow/logs:/opt/airflow/logs
     networks:
       - dev-network
 
@@ -459,13 +353,6 @@ services:
     environment:
       REDIS_ADDR: redis://redis:6379
       REDIS_PASSWORD: ${REDIS_PASSWORD}
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.redis-exporter.rule=Host(`redis-exporter.${DOMAIN}`)"
-      - "traefik.http.routers.redis-exporter.entrypoints=websecure"
-      - "traefik.http.routers.redis-exporter.tls=true"
-      - "traefik.http.routers.redis-exporter.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.redis-exporter.loadbalancer.server.port=9121"
     depends_on:
       redis:
         condition: service_healthy
@@ -480,13 +367,6 @@ services:
     container_name: dev-celery-exporter
     environment:
       CE_BROKER_URL: ${CELERY_BROKER_URL}
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.celery-exporter.rule=Host(`celery-exporter.${DOMAIN}`)"
-      - "traefik.http.routers.celery-exporter.entrypoints=websecure"
-      - "traefik.http.routers.celery-exporter.tls=true"
-      - "traefik.http.routers.celery-exporter.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.celery-exporter.loadbalancer.server.port=9808"
     depends_on:
       redis:
         condition: service_healthy
@@ -511,20 +391,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    labels:
-      - "traefik.enable=true"
-      # Console UI
-      - "traefik.http.routers.minio-console.rule=Host(`minio.${DOMAIN}`)"
-      - "traefik.http.routers.minio-console.entrypoints=websecure"
-      - "traefik.http.routers.minio-console.tls=true"
-      - "traefik.http.routers.minio-console.service=minio-console-svc"
-      - "traefik.http.services.minio-console-svc.loadbalancer.server.port=9001"
-      # API S3
-      - "traefik.http.routers.minio-api.rule=Host(`s3.${DOMAIN}`)"
-      - "traefik.http.routers.minio-api.entrypoints=websecure"
-      - "traefik.http.routers.minio-api.tls=true"
-      - "traefik.http.routers.minio-api.service=minio-api-svc"
-      - "traefik.http.services.minio-api-svc.loadbalancer.server.port=9000"
     networks:
       dev-network:
         aliases:
@@ -543,13 +409,6 @@ services:
       - sonarqube-dev-data:/opt/sonarqube/data
       - sonarqube-dev-extensions:/opt/sonarqube/extensions
       - sonarqube-dev-logs:/opt/sonarqube/logs
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.sonarqube.rule=Host(`sonarqube.${DOMAIN}`)"
-      - "traefik.http.routers.sonarqube.entrypoints=websecure"
-      - "traefik.http.routers.sonarqube.tls=true"
-      - "traefik.http.routers.sonarqube.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.sonarqube.loadbalancer.server.port=9000"
     depends_on:
       postgres:
         condition: service_healthy
@@ -579,21 +438,17 @@ services:
         aliases:
           - etcd
 
-  # APISIX — API Gateway
+  # APISIX — API Gateway (entry point unico: TLS + OIDC + reverse proxy)
   apisix:
     image: apache/apisix:3.11.0-debian
     container_name: dev-apisix
     restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
       - ./services/apisix/config.yaml:/usr/local/apisix/conf/config.yaml
-    labels:
-      - "traefik.enable=true"
-      # API Gateway proxy
-      - "traefik.http.routers.apisix-gateway.rule=Host(`gateway.${DOMAIN}`)"
-      - "traefik.http.routers.apisix-gateway.entrypoints=websecure"
-      - "traefik.http.routers.apisix-gateway.tls=true"
-      - "traefik.http.routers.apisix-gateway.service=apisix-gateway-svc"
-      - "traefik.http.services.apisix-gateway-svc.loadbalancer.server.port=9080"
+      - ./services/traefik/certs:/certs:ro
     depends_on:
       etcd:
         condition: service_healthy
@@ -602,13 +457,14 @@ services:
         aliases:
           - apisix
 
-  # APISIX Init — configura route/upstream al primo avvio
+  # APISIX Init — configura certificati, route e upstream al primo avvio
   apisix-init:
     image: curlimages/curl:8.11.0
     container_name: dev-apisix-init
     command: sh /init-routes.sh
     volumes:
       - ./services/apisix/init-routes.sh:/init-routes.sh:ro
+      - ./services/traefik/certs:/certs:ro
     environment:
       DOMAIN: ${DOMAIN:-127.0.0.1.nip.io}
       KEYCLOAK_BACKOFFICE_CLIENT_SECRET: ${KEYCLOAK_BACKOFFICE_CLIENT_SECRET:-CHANGE_ME_BACKOFFICE_SECRET}
@@ -630,13 +486,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./services/apisix/dashboard.yaml:/usr/local/apisix-dashboard/conf/conf.yaml:ro
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.apisix-dashboard.rule=Host(`apisix-dashboard.${DOMAIN}`)"
-      - "traefik.http.routers.apisix-dashboard.entrypoints=websecure"
-      - "traefik.http.routers.apisix-dashboard.tls=true"
-      - "traefik.http.routers.apisix-dashboard.service=apisix-gateway-svc@docker"
-      - "traefik.http.services.apisix-dashboard.loadbalancer.server.port=9000"
     depends_on:
       etcd:
         condition: service_healthy
@@ -666,8 +515,8 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN:-admin}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:-admin}
       KC_HTTP_PORT: "8080"
-      KC_HOSTNAME: "https://keycloak.${DOMAIN}"
-      KC_HOSTNAME_ADMIN: "https://keycloak.${DOMAIN}"
+      KC_HOSTNAME: "https://auth.${DOMAIN}"
+      KC_HOSTNAME_ADMIN: "https://auth.${DOMAIN}"
       KC_HOSTNAME_STRICT: "false"
       KC_HOSTNAME_BACKCHANNEL_DYNAMIC: "true"
       KC_PROXY_HEADERS: "xforwarded"
@@ -680,12 +529,6 @@ services:
     volumes:
       - ./services/keycloak/realm-today-events.json:/opt/keycloak/data/import/realm-today-events.json:ro
       - ./services/keycloak/themes/today-events:/opt/keycloak/themes/today-events:ro
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.keycloak.rule=Host(`keycloak.${DOMAIN}`)"
-      - "traefik.http.routers.keycloak.entrypoints=websecure"
-      - "traefik.http.routers.keycloak.tls=true"
-      - "traefik.http.services.keycloak.loadbalancer.server.port=8080"
     healthcheck:
       test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/localhost/9000 && printf 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3 && cat <&3 | grep -q 'status.*UP'"]
       interval: 10s
@@ -713,8 +556,6 @@ volumes:
     name: dev-grafana-data
   flower-dev-data:
     name: dev-flower-data
-  airflow-logs-dev:
-    name: dev-airflow-logs
   minio-dev-data:
     name: dev-minio-data
   sonarqube-dev-data:
