@@ -404,6 +404,65 @@
       "protocolMappers": []
     },
     {
+      "id": "a1b2c3d4-e5f6-7890-minio-console00001",
+      "clientId": "minio-console",
+      "name": "MinIO Console",
+      "description": "Client OIDC per MinIO Console — login SSO via Keycloak",
+      "enabled": true,
+      "publicClient": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "surrogateAuthRequired": false,
+      "alwaysDisplayInConsole": false,
+      "frontchannelLogout": true,
+      "protocol": "openid-connect",
+      "secret": "CHANGE_ME_MINIO_SECRET",
+      "redirectUris": [
+        "https://minio.127.0.0.1.nip.io/*"
+      ],
+      "webOrigins": [
+        "https://minio.127.0.0.1.nip.io"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "fullScopeAllowed": true,
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "openid",
+        "profile",
+        "email",
+        "roles"
+      ],
+      "optionalClientScopes": [],
+      "attributes": {
+        "post.logout.redirect.uris": "https://minio.127.0.0.1.nip.io/*",
+        "backchannel.logout.session.required": "true",
+        "backchannel.logout.revoke.offline.tokens": "false",
+        "display.on.consent.screen": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "protocolMappers": [
+        {
+          "id": "a1b2c3d4-e5f6-minio-policy-mapper1",
+          "name": "minio-policy-mapper",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-hardcoded-claim-mapper",
+          "consentRequired": false,
+          "config": {
+            "claim.name": "policy",
+            "claim.value": "consoleAdmin",
+            "jsonType.label": "String",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "f8a9b0c1-d2e3-4567-fabc-567890123457",
       "clientId": "airflow-service",
       "name": "Airflow Service",

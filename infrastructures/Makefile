@@ -27,14 +27,14 @@ NC    := \033[0m
 .PHONY: help \
         up up-all down restart ps logs build pull \
         up-core up-app up-celery up-observability up-bi up-airflow up-devtools up-gateway \
-        logs-backoffice logs-celery logs-frontend logs-traefik logs-db logs-redis \
+        logs-backoffice logs-celery logs-db logs-redis \
         logs-grafana logs-loki logs-airflow \
         logs-apisix logs-keycloak logs-tempo \
-        restart-backoffice restart-frontend restart-traefik restart-celery restart-airflow \
+        restart-backoffice restart-celery restart-airflow \
         restart-apisix restart-keycloak \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
         open-admin open-flower open-grafana open-prometheus \
-        open-loki open-minio open-airflow open-traefik \
+        open-loki open-minio open-airflow \
         open-apisix open-keycloak open-gateway \
         clean clean-logs
 
@@ -45,19 +45,16 @@ NC    := \033[0m
 up: ## Avvia lo stack di sviluppo (core + gateway + observability + minio)
 	@echo "$(GREEN)Avvio stack dev...$(NC)"
 	$(COMPOSE) up --build -d \
-	    postgres redis docker-api-proxy traefik \
+	    postgres redis \
 	    etcd apisix apisix-init apisix-dashboard keycloak \
-	    backoffice frontend minio \
+	    backoffice minio \
 	    otel-collector tempo loki promtail grafana
 	@echo ""
-	@echo "$(CYAN)  https://frontend.$(DOMAIN)/$(NC)         Frontend"
 	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
-	@echo "$(CYAN)  https://gateway.$(DOMAIN)/$(NC)          API Gateway"
 	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC) APISIX Dashboard"
-	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)         Keycloak"
+	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)             Keycloak"
 	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
 	@echo "$(CYAN)  https://minio.$(DOMAIN)/$(NC)            MinIO Console"
-	@echo "$(CYAN)  https://traefik.$(DOMAIN)/$(NC)          Traefik dashboard"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -74,9 +71,9 @@ ps: ## Stato di tutti i container
 logs: ## Logs di tutti i servizi (follow)
 	$(COMPOSE) logs -f
 
-build: ## Rebuild immagini custom (backoffice, frontend)
+build: ## Rebuild immagini custom (backoffice)
 	@echo "$(GREEN)Rebuild immagini...$(NC)"
-	$(COMPOSE) build backoffice frontend
+	$(COMPOSE) build backoffice
 
 pull: ## Aggiorna tutte le immagini Docker Hub
 	@echo "$(GREEN)Pull immagini...$(NC)"
@@ -90,7 +87,7 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 #   up-all      = tutti i servizi
 #
 #   Gruppi individuali:
-#     up-core         infrastruttura base (postgres, redis, traefik)
+#     up-core         infrastruttura base (postgres, redis, apisix)
 #     up-app          applicazione (backoffice, frontend, minio)
 #     up-gateway      API gateway + IdP (etcd, apisix, apisix-dashboard, keycloak)
 #     up-celery       task processing (worker, beat, flower)
@@ -99,13 +96,13 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 #     up-devtools     strumenti dev (sonarqube)
 #
 
-up-core: ## Infrastruttura base (postgres, redis, traefik)
+up-core: ## Infrastruttura base (postgres, redis, apisix)
 	@echo "$(GREEN)Avvio core...$(NC)"
-	$(COMPOSE) up -d postgres redis docker-api-proxy traefik
+	$(COMPOSE) up -d postgres redis etcd apisix
 
-up-app: ## Applicazione (backoffice, frontend, minio)
+up-app: ## Applicazione (backoffice, minio)
 	@echo "$(GREEN)Avvio app...$(NC)"
-	$(COMPOSE) up --build -d backoffice frontend minio
+	$(COMPOSE) up --build -d backoffice minio
 
 up-celery: ## Task processing (celery worker, flower)
 	@echo "$(GREEN)Avvio Celery stack...$(NC)"
@@ -154,12 +151,6 @@ logs-backoffice: ## Logs backoffice Django (follow)
 logs-celery: ## Logs Celery worker (follow)
 	$(COMPOSE) logs -f backoffice-celery-worker
 
-logs-frontend: ## Logs frontend React/Vite (follow)
-	$(COMPOSE) logs -f frontend
-
-logs-traefik: ## Logs Traefik (follow)
-	$(COMPOSE) logs -f traefik
-
 logs-db: ## Logs PostgreSQL (follow)
 	$(COMPOSE) logs -f postgres
 
@@ -191,14 +182,6 @@ logs-tempo: ## Logs Grafana Tempo (follow)
 restart-backoffice: ## Riavvia solo il backoffice Django
 	@echo "$(GREEN)Riavvio backoffice...$(NC)"
 	$(COMPOSE) restart backoffice
-
-restart-frontend: ## Riavvia solo il frontend
-	@echo "$(GREEN)Riavvio frontend...$(NC)"
-	$(COMPOSE) restart frontend
-
-restart-traefik: ## Riavvia solo Traefik
-	@echo "$(GREEN)Riavvio Traefik...$(NC)"
-	$(COMPOSE) restart traefik
 
 restart-celery: ## Riavvia Celery worker
 	@echo "$(GREEN)Riavvio Celery worker...$(NC)"
@@ -275,10 +258,6 @@ open-redis-exporter: ## Apre Redis Exporter  →  https://redis-exporter.${DOMAI
 open-airflow: ## Apre Apache Airflow  →  https://airflow.${DOMAIN}/
 	@echo "$(CYAN)Apertura Airflow...$(NC)"
 	@$(OPEN) https://airflow.$(DOMAIN)/
-
-open-traefik: ## Apre Traefik dashboard  →  https://traefik.${DOMAIN}/
-	@echo "$(CYAN)Apertura Traefik dashboard...$(NC)"
-	@$(OPEN) https://traefik.$(DOMAIN)/
 
 open-apisix: ## Apre APISIX Dashboard  →  https://apisix-dashboard.${DOMAIN}/
 	@echo "$(CYAN)Apertura APISIX Dashboard...$(NC)"
