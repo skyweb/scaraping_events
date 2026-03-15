@@ -30,7 +30,6 @@ services:
     volumes:
       # Codice sorgente montato live (read-write)
       - ./src:/app/events_scraper
-      # scrapy.cfg nella root /app
       - ./src/scrapy.cfg:/app/scrapy.cfg:ro
       - ./src/scrapyd.conf:/etc/scrapyd/scrapyd.conf:ro
       # Output e logs in cartelle locali
@@ -41,11 +40,6 @@ services:
       timeout: 10s
       retries: 3
       start_period: 10s
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.scrapyd.rule=Host(`scrapyd.${DOMAIN}`)"
-      - "traefik.http.routers.scrapyd.entrypoints=web"
-      - "traefik.http.services.scrapyd.loadbalancer.server.port=6800"
     networks:
       - dev-network
 

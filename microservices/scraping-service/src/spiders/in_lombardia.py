@@ -206,7 +206,6 @@ class InLombardiaSpider(BaseEventSpider):
             website=website,
             slug=slug,
             event_id=slug,
-            raw_data={"jsonld": ld_event, "contatti": contatti},
         )
 
         item["uuid"] = self.generate_uuid(
@@ -220,7 +219,6 @@ class InLombardiaSpider(BaseEventSpider):
             item.get("time_start", ""),
         )
 
-        self.log_stats(item.get("city"))
         yield item
 
     # =========================================================================

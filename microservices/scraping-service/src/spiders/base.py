@@ -32,6 +32,7 @@ class BaseEventSpider(scrapy.Spider, ABC):
 
     Parametri comuni accettati:
     - output: Path file output (opzionale)
+    - max_results: Numero massimo di item da produrre (ha priorità su max_pages)
     """
 
     # Identificativo fonte (da sovrascrivere nelle sottoclassi)
@@ -44,15 +45,24 @@ class BaseEventSpider(scrapy.Spider, ABC):
         "RANDOMIZE_DOWNLOAD_DELAY": True,
     }
 
-    def __init__(self, output: str = None, *args, **kwargs):
+    def __init__(self, output: str = None, max_results: str = None, *args, **kwargs):
         """
         Inizializza lo spider base.
 
         Args:
             output: Path opzionale per il file di output
+            max_results: Numero massimo di risultati (ha priorità su max_pages)
         """
         super().__init__(*args, **kwargs)
         self.output = output
+        self.max_results = int(max_results) if max_results else None
+
+        # max_results imposta CLOSESPIDER_ITEMCOUNT (extension nativa Scrapy)
+        if self.max_results:
+            self.custom_settings = {
+                **self.custom_settings,
+                "CLOSESPIDER_ITEMCOUNT": self.max_results,
+            }
 
     # =========================================================================
     # METODI DI UTILITÀ PER PULIZIA TESTO
@@ -199,15 +209,16 @@ class BaseEventSpider(scrapy.Spider, ABC):
         """
         Crea un EventItem con valori di default.
 
-        Args:
-            **kwargs: Campi dell'item
-
         Returns:
             EventItem inizializzato
         """
         item = EventItem()
-        item["source"] = self.source_name
-        item["scraped_at"] = datetime.now().isoformat()
+
+        # Inietta source e scraped_at in meta
+        meta = kwargs.get("meta") or {}
+        meta.setdefault("source", self.source_name)
+        meta.setdefault("scraped_at", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+        kwargs["meta"] = meta
 
         for key, value in kwargs.items():
             if key in item.fields:
@@ -293,12 +304,3 @@ class BaseEventSpider(scrapy.Spider, ABC):
             Slug (ultima parte del path, senza slash finale)
         """
         return url.rstrip("/").split("/")[-1]
-
-    # =========================================================================
-    # LOGGING
-    # =========================================================================
-
-    def log_stats(self, city: str = None):
-        """Logga statistiche per città."""
-        if city:
-            self.crawler.stats.inc_value(f"items_per_city/{city}")

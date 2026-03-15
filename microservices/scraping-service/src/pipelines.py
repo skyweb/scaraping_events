@@ -4,12 +4,10 @@ Pipeline per l'elaborazione degli eventi.
 
 Pipeline disponibili:
 - ValidationPipeline: Valida e pulisce i dati
-- HashGeneratorPipeline: Genera UUID e content_hash
-- PostgresPipeline: Salva su database PostgreSQL
+- BatchExportPipeline: Esporta batch JSON (senza API, per test/debug)
 - ApiPipeline: Invia eventi all'API del backoffice
 """
 
-import hashlib
 import html
 import json
 import logging
@@ -21,13 +19,105 @@ from typing import Optional, List, Dict, Any
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-import psycopg2
 from itemadapter import ItemAdapter
 from scrapy.exceptions import CloseSpider, DropItem
 
 from otel_setup import tracer, airflow_context
 
 logger = logging.getLogger(__name__)
+
+
+# =============================================================================
+# Storage Backend (filesystem / MinIO S3)
+# =============================================================================
+# Configurabile via setting STORAGE_BACKEND=local|minio
+# Da CLI:  scrapy crawl spider -s STORAGE_BACKEND=minio
+# Da API:  curl .../schedule.json -d setting=STORAGE_BACKEND=minio
+# =============================================================================
+
+class StorageBackend:
+    """Astrazione per il salvataggio file su filesystem locale o MinIO (S3)."""
+
+    def __init__(self, backend: str = "local", output_dir: str = "/data/output"):
+        self.backend = backend
+        self.output_dir = output_dir
+        self._s3_client = None
+        self._bucket = os.environ.get("MINIO_BUCKET", "scraping-output")
+
+    def init(self):
+        """Inizializza il backend."""
+        if self.backend == "minio":
+            self._init_minio()
+        else:
+            os.makedirs(self.output_dir, exist_ok=True)
+
+    def _init_minio(self):
+        """Crea il client S3 per MinIO e assicura che il bucket esista."""
+        try:
+            import boto3
+            from botocore.config import Config
+        except ImportError:
+            raise CloseSpider(
+                "STORAGE_BACKEND=minio richiede boto3: pip install boto3"
+            )
+
+        self._s3_client = boto3.client(
+            "s3",
+            endpoint_url=os.environ.get("MINIO_ENDPOINT", "http://minio:9000"),
+            aws_access_key_id=os.environ.get("MINIO_ACCESS_KEY", "minioadmin"),
+            aws_secret_access_key=os.environ.get("MINIO_SECRET_KEY", "minioadmin_secret_2026"),
+            region_name="us-east-1",
+            config=Config(signature_version="s3v4"),
+        )
+
+        # Crea il bucket se non esiste
+        try:
+            self._s3_client.head_bucket(Bucket=self._bucket)
+        except Exception:
+            try:
+                self._s3_client.create_bucket(Bucket=self._bucket)
+                logger.info(f"Bucket MinIO creato: {self._bucket}")
+            except Exception as e:
+                raise CloseSpider(f"Impossibile creare bucket MinIO '{self._bucket}': {e}")
+
+        logger.info(f"StorageBackend: MinIO ({self._bucket})")
+
+    def save_json(self, filename: str, data: dict, prefix: str = "") -> str:
+        """
+        Salva un dict come file JSON.
+
+        Restituisce il percorso/key del file salvato.
+        """
+        content = json.dumps(data, ensure_ascii=False, indent=2, default=str)
+
+        if self.backend == "minio":
+            key = f"{prefix}/{filename}" if prefix else filename
+            try:
+                self._s3_client.put_object(
+                    Bucket=self._bucket,
+                    Key=key,
+                    Body=content.encode("utf-8"),
+                    ContentType="application/json",
+                )
+                logger.info(f"Salvato su MinIO: s3://{self._bucket}/{key}")
+                return f"s3://{self._bucket}/{key}"
+            except Exception as e:
+                logger.warning(f"Errore upload MinIO: {e}")
+                # Fallback su filesystem
+                return self._save_local(filename, content)
+        else:
+            return self._save_local(filename, content)
+
+    def _save_local(self, filename: str, content: str) -> str:
+        """Salva su filesystem locale."""
+        os.makedirs(self.output_dir, exist_ok=True)
+        filepath = os.path.join(self.output_dir, filename)
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(content)
+        except OSError as e:
+            logger.warning(f"Impossibile salvare file: {e}")
+        return filepath
 
 
 class ValidationPipeline:
@@ -41,43 +131,41 @@ class ValidationPipeline:
     - Converte category in lista se stringa
     """
 
-    REQUIRED_FIELDS = ["source", "url", "title"]
-
     def process_item(self, item, spider):
         adapter = ItemAdapter(item)
+        data = adapter.get("data") or {}
+        meta = adapter.get("meta") or {}
 
         # Verifica campi obbligatori
-        for field in self.REQUIRED_FIELDS:
-            if not adapter.get(field):
-                raise DropItem(f"Campo obbligatorio mancante: {field}")
+        if not adapter.get("title"):
+            raise DropItem("Campo obbligatorio mancante: title")
+        if not meta.get("source"):
+            raise DropItem("Campo obbligatorio mancante: meta.source")
+        if not meta.get("url"):
+            raise DropItem("Campo obbligatorio mancante: meta.url")
 
         # Pulisci titolo
-        if adapter.get("title"):
-            adapter["title"] = self._clean_text(adapter["title"])
-
-        # Preserva descrizione originale (nessuna pulizia o alterazione)
-        # Il campo viene mantenuto esattamente come estratto dallo spider
-        if adapter.get("description"):
-            adapter["description"] = self._preserve_raw_html(adapter["description"])
+        adapter["title"] = self._clean_text(adapter["title"])
 
         # Normalizza category come lista
-        category = adapter.get("category")
+        category = data.get("category")
         if category:
             if isinstance(category, str):
-                adapter["category"] = [c.strip() for c in category.split(",")]
+                data["category"] = [c.strip() for c in category.split(",")]
             elif isinstance(category, list):
-                adapter["category"] = [c.strip() for c in category if c]
+                data["category"] = [c.strip() for c in category if c]
 
-        # Normalizza date
+        # Normalizza date (dentro data.dates)
+        dates = data.get("dates") or {}
         for field in ["date_start", "date_end"]:
-            if adapter.get(field):
-                normalized = self._normalize_date(adapter[field])
+            if dates.get(field):
+                normalized = self._normalize_date(dates[field])
                 if normalized:
-                    adapter[field] = normalized
+                    dates[field] = normalized
+        data["dates"] = dates
 
-        # Aggiungi timestamp scraping se mancante
-        if not adapter.get("scraped_at"):
-            adapter["scraped_at"] = datetime.now().isoformat()
+        # Aggiorna data nell'item
+        adapter["data"] = data
 
         return item
 
@@ -93,19 +181,16 @@ class ValidationPipeline:
         text = " ".join(text.split())
         return text.strip()
 
-    def _preserve_raw_html(self, text: str) -> str:
-        """Mantiene il testo esattamente come fornito, senza alcuna alterazione."""
-        if not text:
-            return text
-        # Nessuna pulizia, neanche lo strip, per garantire l'esatta corrispondenza richiesta
-        return text
-
     def _normalize_date(self, date_str: str) -> Optional[str]:
-        """Converte vari formati data in YYYY-MM-DD."""
+        """Converte vari formati data in YYYY-MM-DD o YYYY-MM-DD HH:MM."""
         if not date_str:
             return None
 
-        # Già nel formato corretto
+        # YYYY-MM-DD HH:MM (già nel formato corretto con orario)
+        if re.match(r"^\d{4}-\d{2}-\d{2} \d{1,2}:\d{2}$", date_str):
+            return date_str
+
+        # YYYY-MM-DD (già nel formato corretto senza orario)
         if re.match(r"^\d{4}-\d{2}-\d{2}$", date_str):
             return date_str
 
@@ -115,7 +200,12 @@ class ValidationPipeline:
             day, month, year = match.groups()
             return f"{year}-{month}-{day}"
 
-        # Formato ISO con timestamp
+        # Formato ISO con timestamp (es: 2026-02-06T20:30:00)
+        match = re.match(r"^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})", date_str)
+        if match:
+            return f"{match.group(1)} {match.group(2)}"
+
+        # Formato ISO solo data
         match = re.match(r"^(\d{4}-\d{2}-\d{2})", date_str)
         if match:
             return match.group(1)
@@ -123,210 +213,126 @@ class ValidationPipeline:
         return date_str
 
 
-class HashGeneratorPipeline:
-    """
-    Pipeline per generazione hash di deduplicazione.
+class BatchExportPipeline:
+    """Pipeline base per esportazione batch JSON."""
 
-    Genera:
-    - uuid: Hash basato su titolo + data_start + location_name
-    - content_hash: Hash basato su descrizione + prezzo
-    """
-
-    def process_item(self, item, spider):
-        adapter = ItemAdapter(item)
-
-        # Genera UUID se mancante
-        if not adapter.get("uuid"):
-            uuid_parts = [
-                str(adapter.get("title") or ""),
-                str(adapter.get("date_start") or ""),
-                str(adapter.get("location_name") or ""),
-            ]
-            uuid_string = "".join(uuid_parts)
-            adapter["uuid"] = hashlib.sha256(uuid_string.encode("utf-8")).hexdigest()[:16]
-
-        # Genera content_hash se mancante
-        if not adapter.get("content_hash"):
-            content_parts = [
-                str(adapter.get("description") or ""),
-                str(adapter.get("price") or ""),
-                str(adapter.get("time_start") or ""),
-            ]
-            content_string = "".join(content_parts)
-            adapter["content_hash"] = hashlib.sha256(content_string.encode("utf-8")).hexdigest()[:16]
-
-        return item
-
-
-class PostgresPipeline:
-    """
-    Pipeline per salvataggio su PostgreSQL.
-
-    Configurazione tramite settings:
-    - POSTGRES_HOST
-    - POSTGRES_PORT
-    - POSTGRES_DB
-    - POSTGRES_USER
-    - POSTGRES_PASSWORD
-
-    La tabella di destinazione è etl.staging_events.
-    """
-
-    def __init__(self, host, port, database, user, password):
-        self.host = host
-        self.port = port
-        self.database = database
-        self.user = user
-        self.password = password
-        self.connection = None
-        self.cursor = None
+    def __init__(self, batch_size: int = 50, storage_backend: str = "local"):
+        self.batch_size = batch_size
+        self.storage = StorageBackend(backend=storage_backend)
+        self.items_buffer: List[Dict[str, Any]] = []
+        self.batch_count = 0
+        self.spider_name = ""
 
     @classmethod
     def from_crawler(cls, crawler):
         return cls(
-            host=crawler.settings.get("POSTGRES_HOST", "localhost"),
-            port=crawler.settings.getint("POSTGRES_PORT", 5432),
-            database=crawler.settings.get("POSTGRES_DB", "events"),
-            user=crawler.settings.get("POSTGRES_USER", "postgres"),
-            password=crawler.settings.get("POSTGRES_PASSWORD", "postgres"),
+            batch_size=crawler.settings.getint("API_BATCH_SIZE", 50),
+            storage_backend=crawler.settings.get("STORAGE_BACKEND", "local"),
         )
 
     def open_spider(self, spider):
-        """Apre connessione al database."""
-        try:
-            self.connection = psycopg2.connect(
-                host=self.host,
-                port=self.port,
-                database=self.database,
-                user=self.user,
-                password=self.password,
-            )
-            self.cursor = self.connection.cursor()
-            logger.info(f"Connesso a PostgreSQL: {self.host}:{self.port}/{self.database}")
-        except psycopg2.Error as e:
-            logger.error(f"Errore connessione PostgreSQL: {e}")
-            raise
+        """Chiamato all'avvio dello spider. Inizializza storage, buffer e contatori."""
+        self.spider_name = spider.name
+        self.items_buffer = []
+        self.batch_count = 0
+        self.storage.init()
+        logger.info(f"{self.__class__.__name__}: attiva (storage={self.storage.backend})")
 
     def close_spider(self, spider):
-        """Chiude connessione al database."""
-        if self.cursor:
-            self.cursor.close()
-        if self.connection:
-            self.connection.close()
-            logger.info("Connessione PostgreSQL chiusa")
+        """Chiamato alla chiusura dello spider. Salva gli item rimasti nel buffer come ultimo batch."""
+        if self.items_buffer:
+            self._flush_batch()
+        logger.info(f"{self.__class__.__name__}: {self.batch_count} batch salvati")
 
     def process_item(self, item, spider):
-        """Salva item su database con UPSERT."""
-        adapter = ItemAdapter(item)
+        """
+        Processa ogni item prodotto dallo spider.
 
-        try:
-            self.cursor.execute(
-                """
-                INSERT INTO etl.staging_events (
-                    uuid, content_hash, source, url, event_id, slug,
-                    title, description, category, image_url,
-                    city, city_id, location_name, location_address, location_coords,
-                    date_start, date_end, date_display, time_start, time_end,
-                    price, website, raw_data, scraped_at
-                ) VALUES (
-                    %(uuid)s, %(content_hash)s, %(source)s, %(url)s, %(event_id)s, %(slug)s,
-                    %(title)s, %(description)s, %(category)s, %(image_url)s,
-                    %(city)s, %(city_id)s, %(location_name)s, %(location_address)s, %(location_coords)s,
-                    %(date_start)s, %(date_end)s, %(date_display)s, %(time_start)s, %(time_end)s,
-                    %(price)s, %(website)s, %(raw_data)s, %(scraped_at)s
-                )
-                ON CONFLICT (uuid) DO UPDATE SET
-                    content_hash = EXCLUDED.content_hash,
-                    title = EXCLUDED.title,
-                    description = EXCLUDED.description,
-                    category = EXCLUDED.category,
-                    image_url = EXCLUDED.image_url,
-                    location_name = EXCLUDED.location_name,
-                    location_address = EXCLUDED.location_address,
-                    date_start = EXCLUDED.date_start,
-                    date_end = EXCLUDED.date_end,
-                    price = EXCLUDED.price,
-                    raw_data = EXCLUDED.raw_data,
-                    scraped_at = EXCLUDED.scraped_at,
-                    updated_at = NOW()
-                """,
-                {
-                    "uuid": adapter.get("uuid"),
-                    "content_hash": adapter.get("content_hash"),
-                    "source": adapter.get("source"),
-                    "url": adapter.get("url"),
-                    "event_id": adapter.get("event_id"),
-                    "slug": adapter.get("slug"),
-                    "title": adapter.get("title"),
-                    "description": adapter.get("description"),
-                    "category": adapter.get("category"),
-                    "image_url": adapter.get("image_url"),
-                    "city": adapter.get("city"),
-                    "city_id": adapter.get("city_id"),
-                    "location_name": adapter.get("location_name"),
-                    "location_address": adapter.get("location_address"),
-                    "location_coords": adapter.get("location_coords"),
-                    "date_start": adapter.get("date_start"),
-                    "date_end": adapter.get("date_end"),
-                    "date_display": adapter.get("date_display"),
-                    "time_start": adapter.get("time_start"),
-                    "time_end": adapter.get("time_end"),
-                    "price": adapter.get("price"),
-                    "website": adapter.get("website"),
-                    "raw_data": adapter.get("raw_data"),
-                    "scraped_at": adapter.get("scraped_at"),
-                },
-            )
-            self.connection.commit()
-        except psycopg2.Error as e:
-            logger.error(f"Errore salvataggio evento {adapter.get('uuid')}: {e}")
-            self.connection.rollback()
+        1. Converte l'EventItem nel formato dict annidato (title, data, meta)
+        2. Lo aggiunge al buffer interno
+        3. Quando il buffer raggiunge batch_size, salva il batch su disco/MinIO
+
+        Args:
+            item: EventItem prodotto dallo spider
+            spider: Istanza dello spider attivo
+
+        Returns:
+            L'item originale (passato alla pipeline successiva)
+        """
+        event_data = self._item_to_dict(item)
+        self.items_buffer.append(event_data)
+
+        if len(self.items_buffer) >= self.batch_size:
+            self._flush_batch()
 
         return item
 
+    def _flush_batch(self):
+        """Salva il buffer corrente come file JSON e svuota il buffer."""
+        self.batch_count += 1
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{self.spider_name}_{timestamp}_batch{self.batch_count:03d}.json"
 
-class ApiPipeline:
+        payload = {
+            "spider": self.spider_name,
+            "batch": self.batch_count,
+            "count": len(self.items_buffer),
+            "sent_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "events": self.items_buffer,
+        }
+
+        self.storage.save_json(filename, payload, prefix=f"batch/{self.spider_name}")
+        self.items_buffer = []
+
+    def _item_to_dict(self, item) -> Dict[str, Any]:
+        """Converte EventItem nel formato dict per il JSON di output."""
+        adapter = ItemAdapter(item)
+        result = {
+            "uuid": adapter.get("uuid"),
+            "title": adapter.get("title"),
+            "meta": adapter.get("meta"),
+        }
+        if adapter.get("data"):
+            result["data"] = adapter.get("data")
+        if adapter.get("schemaOrg"):
+            result["schemaOrg"] = adapter.get("schemaOrg")
+        return result
+
+
+class ApiPipeline(BatchExportPipeline):
     """
     Pipeline per invio eventi all'API del backoffice.
 
-    Configurazione tramite settings:
-    - API_BASE_URL: URL base dell'API (es: http://backoffice:8000)
-    - API_CLIENT_ID: Client ID OAuth2
-    - API_CLIENT_SECRET: Client Secret OAuth2
-    - API_BATCH_SIZE: Numero eventi per batch (default: 50)
+    Eredita da BatchExportPipeline il salvataggio JSON su disco/MinIO,
+    e aggiunge: autenticazione OAuth2 + invio HTTP all'endpoint bulk.
 
-    Flusso:
-    1. Raccoglie eventi in batch
-    2. Ottiene token OAuth2
-    3. Invia batch all'endpoint /api/external/staging/bulk/
-    4. Gestisce retry in caso di errori
+    Flusso per ogni batch:
+    1. Salva JSON su disco/MinIO (ereditato da BatchExportPipeline)
+    2. Ottiene/rinnova token OAuth2
+    3. Invia batch all'endpoint /api/external/v1/staging/bulk/
 
     Utilizzo:
-        Nel settings.py abilitare:
-        ITEM_PIPELINES = {
-            ...
-            "pipelines.ApiPipeline": 400,
-        }
+        ITEM_PIPELINES = {"pipelines.ApiPipeline": 400}
     """
-
-    # Formato di output: templates.json (annidato con city, dates, section, info_extra)
 
     def __init__(
         self,
         base_url: str,
         client_id: str,
         client_secret: str,
+        token_url: str,
         batch_size: int = 50,
         timeout: int = 30,
+        storage_backend: str = "local",
     ):
+        super().__init__(batch_size=batch_size, storage_backend=storage_backend)
         self.base_url = base_url.rstrip("/")
         self.client_id = client_id
         self.client_secret = client_secret
-        self.batch_size = batch_size
+        self.token_url = token_url
         self.timeout = timeout
 
         self.access_token: Optional[str] = None
-        self.items_buffer: List[Dict[str, Any]] = []
 
         # Configura session con retry
         self.session = self._create_session()
@@ -337,8 +343,13 @@ class ApiPipeline:
             base_url=crawler.settings.get("API_BASE_URL", "http://localhost:8000"),
             client_id=crawler.settings.get("API_CLIENT_ID", ""),
             client_secret=crawler.settings.get("API_CLIENT_SECRET", ""),
+            token_url=crawler.settings.get(
+                "KEYCLOAK_TOKEN_URL",
+                "http://keycloak:8080/realms/today-events/protocol/openid-connect/token",
+            ),
             batch_size=crawler.settings.getint("API_BATCH_SIZE", 50),
             timeout=crawler.settings.getint("API_TIMEOUT", 30),
+            storage_backend=crawler.settings.get("STORAGE_BACKEND", "local"),
         )
 
     def _create_session(self) -> requests.Session:
@@ -364,16 +375,9 @@ class ApiPipeline:
             logger.error("API_CLIENT_ID e API_CLIENT_SECRET non configurati")
             return None
 
-        # Token endpoint Keycloak — usa env var dedicata o costruisci dall'URL base
-        keycloak_token_url = self.settings.get("KEYCLOAK_TOKEN_URL") or os.environ.get(
-            "KEYCLOAK_TOKEN_URL",
-            "http://keycloak:8080/realms/today-events/protocol/openid-connect/token"
-        )
-        token_url = keycloak_token_url
-
         try:
             response = self.session.post(
-                token_url,
+                self.token_url,
                 data={
                     "grant_type": "client_credentials",
                     "client_id": self.client_id,
@@ -396,12 +400,62 @@ class ApiPipeline:
             logger.error(f"Errore richiesta token: {e}")
             return None
 
-    def _send_batch(self, events: List[Dict[str, Any]]) -> bool:
-        """Invia batch di eventi all'API e salva il JSON su disco."""
+    def open_spider(self, spider):
+        """Inizializza pipeline: storage + autenticazione OAuth2."""
+        super().open_spider(spider)
+        logger.info(f"ApiPipeline: connessione a {self.base_url}")
+
+        # Pre-fetch del token — se fallisce, lo spider si ferma subito
+        if not self.client_id or not self.client_secret:
+            raise CloseSpider("API_CLIENT_ID o API_CLIENT_SECRET non configurati")
+        if not self._get_access_token():
+            raise CloseSpider("Impossibile ottenere token OAuth2 — controlla credenziali e che il backoffice sia attivo")
+
+    def close_spider(self, spider):
+        """Invia eventi rimanenti e chiude la sessione HTTP."""
+        if self.items_buffer:
+            logger.info(f"Invio batch finale: {len(self.items_buffer)} eventi")
+            if not self._send_api_batch(self.items_buffer):
+                logger.error(f"Batch finale non inviato: {len(self.items_buffer)} eventi persi")
+            self.items_buffer = []
+
+        self.session.close()
+        logger.info("ApiPipeline: connessione chiusa")
+
+    def process_item(self, item, spider):
+        """Processa item: buffer → salva JSON + invia API quando pieno."""
+        event_data = self._item_to_dict(item)
+        self.items_buffer.append(event_data)
+
+        if len(self.items_buffer) >= self.batch_size:
+            logger.info(f"Invio batch: {len(self.items_buffer)} eventi")
+            success = self._send_api_batch(self.items_buffer)
+            if success:
+                self.items_buffer = []
+            else:
+                raise CloseSpider(f"Invio batch fallito — {len(self.items_buffer)} eventi non inviati")
+
+        return item
+
+    def _send_api_batch(self, events: List[Dict[str, Any]]) -> bool:
+        """Salva JSON su disco e invia batch all'API."""
         if not events:
             return True
 
-        # Usa il context di Airflow come parent (se presente) per collegare lo span al DAG
+        # Salva su disco/MinIO (riuso logica della classe base)
+        self.batch_count += 1
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{self.spider_name}_{timestamp}_batch_{self.batch_count:03d}.json"
+        payload = {
+            "spider": self.spider_name,
+            "batch": self.batch_count,
+            "count": len(events),
+            "sent_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "events": events,
+        }
+        self.storage.save_json(filename, payload, prefix=f"batch/{self.spider_name}")
+
+        # Invia all'API con tracing OTel
         ctx = airflow_context if airflow_context else None
         with tracer.start_as_current_span(
             "scraper.send_batch",
@@ -409,15 +463,13 @@ class ApiPipeline:
             attributes={
                 "spider.name": self.spider_name,
                 "batch.size": len(events),
-                "batch.number": self.batch_count + 1,
+                "batch.number": self.batch_count,
             },
         ) as span:
             return self._do_send_batch(events, span)
 
     def _do_send_batch(self, events: List[Dict[str, Any]], span) -> bool:
         """Logica effettiva di invio batch (wrappata dallo span OTel)."""
-        self._save_batch_json(events)
-
         if not self.access_token:
             if not self._get_access_token():
                 logger.error("Impossibile ottenere token, batch non inviato")
@@ -442,7 +494,6 @@ class ApiPipeline:
             if response.status_code == 201:
                 result = response.json()
                 logger.info(f"Batch inviato (sync): {result.get('created_count', 0)} eventi creati")
-                # Span events per singolo evento (ricercabili in Jaeger per UUID)
                 for event in events:
                     span.add_event("event.sent", attributes={
                         "event.uuid": event.get("uuid", ""),
@@ -456,7 +507,6 @@ class ApiPipeline:
                 task_id = result.get('task_id', 'unknown')
                 logger.info(f"Batch accettato (async): task_id={task_id}, {len(events)} eventi")
                 span.set_attribute("celery.task_id", task_id)
-                # Span events per singolo evento (ricercabili in Jaeger per UUID)
                 for event in events:
                     span.add_event("event.sent", attributes={
                         "event.uuid": event.get("uuid", ""),
@@ -466,7 +516,6 @@ class ApiPipeline:
                 return True
 
             elif response.status_code == 401:
-                # Token scaduto, riprova
                 logger.warning("Token scaduto, rinnovo...")
                 self.access_token = None
                 if self._get_access_token():
@@ -482,130 +531,3 @@ class ApiPipeline:
             logger.error(f"Errore richiesta API: {e}")
             span.set_attribute("batch.error", str(e))
             return False
-
-    def _item_to_dict(self, item) -> Dict[str, Any]:
-        """
-        Converte item Scrapy nel formato annidato atteso dall'API (templates.json).
-
-        Struttura output:
-            {uuid, content_hash, source, title, stars, category, section,
-             city: {city_id, city_name, location_name, location_address, location_coordinates},
-             dates: {date_start, time_start, date_end, time_end, time_info},
-             url, description, image_url, price,
-             info_extra: {info_e_costi, info_e_contatti, ...},
-             scraped_at}
-        """
-        adapter = ItemAdapter(item)
-
-        # Coordinate geografiche
-        coords = adapter.get("location_coords") or {}
-        location_coordinates = {
-            "lat": coords.get("lat", "") if isinstance(coords, dict) else "",
-            "lng": coords.get("lng", "") if isinstance(coords, dict) else "",
-        }
-
-        # Blocco city annidato
-        city = {
-            "city_id": adapter.get("city_id"),
-            "city_name": adapter.get("city") or "",
-            "location_name": adapter.get("location_name") or "",
-            "location_address": adapter.get("location_address") or "",
-            "location_coordinates": location_coordinates,
-        }
-
-        # Blocco dates annidato
-        dates = {
-            "date_start": adapter.get("date_start") or "",
-            "time_start": adapter.get("time_start") or "",
-            "date_end": adapter.get("date_end") or "",
-            "time_end": adapter.get("time_end") or "",
-            "time_info": adapter.get("time_info") or "",
-        }
-
-        # Formatta scraped_at come "YYYY-MM-DD HH:MM:SS"
-        scraped_at = adapter.get("scraped_at")
-        if scraped_at and "T" in str(scraped_at):
-            scraped_at = str(scraped_at).replace("T", " ")[:19]
-
-        return {
-            "uuid": adapter.get("uuid"),
-            "content_hash": adapter.get("content_hash"),
-            "source": adapter.get("source"),
-            "title": adapter.get("title"),
-            "stars": adapter.get("stars"),
-            "category": adapter.get("category") or [],
-            "section": adapter.get("section") or {},
-            "city": city,
-            "dates": dates,
-            "url": adapter.get("url"),
-            "description": adapter.get("description"),
-            "image_url": adapter.get("image_url"),
-            "price": adapter.get("price"),
-            "info_extra": adapter.get("info_extra") or {},
-            "scraped_at": scraped_at,
-        }
-
-    def _save_batch_json(self, events: List[Dict[str, Any]]) -> None:
-        """Salva il batch come file JSON nella cartella di output."""
-        self.batch_count += 1
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{self.spider_name}_{timestamp}_batch{self.batch_count:03d}.json"
-        filepath = os.path.join(self.output_dir, filename)
-
-
-        payload = {
-            "spider": self.spider_name,
-            "batch": self.batch_count,
-            "count": len(events),
-            "sent_at": datetime.now().isoformat(),
-            "events": events
-        }
-
-        try:
-            with open(filepath, "w", encoding="utf-8") as f:
-                json.dump(payload, f, ensure_ascii=False, indent=2, default=str)
-            logger.info(f"Batch salvato: {filepath} ({len(events)} eventi)")
-        except OSError as e:
-            logger.warning(f"Impossibile salvare batch JSON: {e}")
-
-    def open_spider(self, spider):
-        """Inizializza pipeline all'avvio dello spider."""
-        logger.info(f"ApiPipeline: connessione a {self.base_url}")
-        self.items_buffer = []
-        self.spider_name = spider.name
-        self.batch_count = 0
-        self.output_dir = "/data/output"
-        os.makedirs(self.output_dir, exist_ok=True)
-
-        # Pre-fetch del token — se fallisce, lo spider si ferma subito
-        if not self.client_id or not self.client_secret:
-            raise CloseSpider("API_CLIENT_ID o API_CLIENT_SECRET non configurati")
-        if not self._get_access_token():
-            raise CloseSpider("Impossibile ottenere token OAuth2 — controlla credenziali e che il backoffice sia attivo")
-
-    def close_spider(self, spider):
-        """Invia eventi rimanenti alla chiusura dello spider."""
-        if self.items_buffer:
-            logger.info(f"Invio batch finale: {len(self.items_buffer)} eventi")
-            if not self._send_batch(self.items_buffer):
-                logger.error(f"Batch finale non inviato: {len(self.items_buffer)} eventi persi")
-            self.items_buffer = []
-
-        self.session.close()
-        logger.info("ApiPipeline: connessione chiusa")
-
-    def process_item(self, item, spider):
-        """Processa item e lo aggiunge al buffer."""
-        event_data = self._item_to_dict(item)
-        self.items_buffer.append(event_data)
-
-        # Invia batch se raggiunta la dimensione
-        if len(self.items_buffer) >= self.batch_size:
-            logger.info(f"Invio batch: {len(self.items_buffer)} eventi")
-            success = self._send_batch(self.items_buffer)
-            if success:
-                self.items_buffer = []
-            else:
-                raise CloseSpider(f"Invio batch fallito — {len(self.items_buffer)} eventi non inviati")
-
-        return item

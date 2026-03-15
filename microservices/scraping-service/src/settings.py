@@ -92,24 +92,9 @@ SPIDER_MIDDLEWARES = {
 ITEM_PIPELINES = {
     # Validazione e pulizia dati
     "pipelines.ValidationPipeline": 100,
-    # Generazione hash per deduplicazione
-    "pipelines.HashGeneratorPipeline": 200,
-    # === SCEGLI UNA DELLE SEGUENTI OPZIONI ===
-    # Opzione 1: Salvataggio diretto su PostgreSQL
-    # "pipelines.PostgresPipeline": 300,
-    # Opzione 2: Invio tramite API al backoffice (raccomandato)
-    "pipelines.ApiPipeline": 300,
+    # Invio tramite API al backoffice
+    "pipelines.ApiPipeline": 200,
 }
-
-# =============================================================================
-# DATABASE POSTGRESQL (per PostgresPipeline)
-# =============================================================================
-
-POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
-POSTGRES_PORT = int(os.getenv("POSTGRES_PORT", "5432"))
-POSTGRES_DB = os.getenv("POSTGRES_DB", "events")
-POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
-POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
 
 # =============================================================================
 # API INGESTION (per ApiPipeline)
@@ -117,6 +102,12 @@ POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
 
 # URL base del backoffice API
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
+
+# Token endpoint Keycloak (OAuth2 client_credentials)
+KEYCLOAK_TOKEN_URL = os.getenv(
+    "KEYCLOAK_TOKEN_URL",
+    "http://keycloak:8080/realms/today-events/protocol/openid-connect/token",
+)
 
 # Credenziali OAuth2 (client_credentials grant)
 API_CLIENT_ID = os.getenv("API_CLIENT_ID", "")

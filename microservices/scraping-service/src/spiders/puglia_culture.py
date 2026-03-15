@@ -114,7 +114,6 @@ class PugliaCultureSpider(BaseEventSpider):
                 callback=self.parse_event_detail,
                 meta={
                     "event_id": str(event.get("id", "")),
-                    "slug": event.get("slug", ""),
                     "image_url_api": image_url,
                     "title_api": self.clean_text(title_rendered),
                 },
@@ -138,14 +137,14 @@ class PugliaCultureSpider(BaseEventSpider):
         """
         # ── Titolo ────────────────────────────────────────────────────────────
         title = (
-            self.clean_text(response.css("h1::text").get())
-            or response.meta.get("title_api")
+                self.clean_text(response.css("h1::text").get())
+                or response.meta.get("title_api")
         )
 
         # ── Immagine ──────────────────────────────────────────────────────────
         image_url = (
-            response.meta.get("image_url_api")
-            or response.xpath('//meta[@property="og:image"]/@content').get()
+                response.meta.get("image_url_api")
+                or response.xpath('//meta[@property="og:image"]/@content').get()
         )
 
         # ── Categoria ─────────────────────────────────────────────────────────
@@ -154,10 +153,8 @@ class PugliaCultureSpider(BaseEventSpider):
         # ── Date e orari ──────────────────────────────────────────────────────
         date_info = self._extract_dates(response)
         date_start = date_info.get("date_start")
-        # Se non c'è una date_end distinta, è uguale a date_start
         date_end = date_info.get("date_end") or date_start
-        date_display = date_info.get("display")
-        time_start = date_info.get("time_start")
+        date_display = response.css("div.event-dates").get()
 
         # ── Luogo (Teatro) ────────────────────────────────────────────────────
         location_name = self._extract_location(response)
@@ -174,71 +171,66 @@ class PugliaCultureSpider(BaseEventSpider):
 
         # ── COSTI E INFO (blocco completo) ────────────────────────────────────
         costi_info = self._extract_costi_info(response)
-        price = self._extract_price_from_costi(costi_info)
         website = self._extract_website_from_costi(response)
 
-        # ── Time info (HTML raw del blocco date) ──────────────────────────────
-        time_info = response.css("div.event-dates").get() or None
-
         # ── Section annidato ────────────────────
-        section = {}
-        if category:
-            section_key = category[0]
-            section_data = {}
-            # Rassegna = seconda categoria (es: "La Scena dei Ragazzi")
-            if len(category) > 1:
-                section_data["rassegna"] = category[1]
-            # Cast = HTML grezzo del blocco cast/regia
-            cast_html = response.css("div.event_cast").get()
-            if cast_html:
-                section_data["cast"] = cast_html
-            elif description:
-                section_data["cast"] = description
-            section[section_key] = section_data
+        section_data = {}
+        events_dati_html = response.css("div.events_dati").get()
+        if events_dati_html:
+            section_data["events_dati"] = events_dati_html
+        cast_html = response.css("div.event_cast").get()
+        if cast_html:
+            section_data["casting"] = cast_html
+        rassegna_html = response.css("div.event-rassegna").get()
+        if rassegna_html:
+            section_data["rassegna"] = rassegna_html
 
         # ── Info extra (costi + contatti) ─────────────────────────────────────
         info_extra = {}
         if costi_info:
             info_extra["info_e_costi"] = costi_info
-        if website:
-            info_extra["info_e_contatti"] = website
+        contatti_html = response.css("div.events_info_e_contatti").get()
+        if contatti_html:
+            info_extra["info_e_contatti"] = contatti_html
 
         slug = response.meta.get("slug") or self.slug_from_url(response.url)
 
+        uuid = self.generate_uuid(title, date_start, location_name)
+        content_hash = self.generate_content_hash(description)
+
         item = self.create_item(
-            url=response.url,
+            uuid=uuid,
             title=title,
-            description=description,
-            date_start=date_start,
-            date_end=date_end,
-            date_display=date_display,
-            time_start=time_start,
-            city=city_name,
-            location_name=location_name,
-            image_url=image_url,
-            category=category,
-            price=price,
-            website=website,
-            section=section or None,
-            info_extra=info_extra or None,
-            time_info=time_info,
-            slug=slug,
-            event_id=response.meta.get("event_id", slug),
-            raw_data={},
+            data={
+                # Contenuto
+                "description": description,
+                "category": category,
+                "image_url": image_url,
+                # Date e orari
+                "dates": {
+                    "date_start": date_start or "",
+                    "date_end": date_end or "",
+                    "date_display": date_display or "",
+                },
+                # Location
+                "city": {
+                    "city_name": city_name or "",
+                    "location_name": location_name or "",
+                },
+                # Dettagli
+                "website": website,
+                "section": section_data or None,
+                "info_extra": info_extra or None,
+            },
+            schemaOrg={},
+            meta={
+                "content_hash": content_hash,
+                "url": response.url,
+                "slug": slug,
+                "event_id": response.meta.get("event_id", slug),
+            },
         )
 
-        item["uuid"] = self.generate_uuid(
-            item.get("title", ""),
-            item.get("date_start", ""),
-            item.get("location_name", ""),
-        )
-        item["content_hash"] = self.generate_content_hash(
-            item.get("description", ""),
-            item.get("price", ""),
-            item.get("time_start", ""),
-        )
-
-        self.log_stats(item.get("city"))
         yield item
 
     # =========================================================================
@@ -258,22 +250,18 @@ class PugliaCultureSpider(BaseEventSpider):
               </div>
             </li>
 
-        Prende la prima data come date_start e l'ultima come date_end.
-
         Returns:
-            Dict con: date_start, date_end (YYYY-MM-DD), time_start (HH:MM), display
+            Dict con: date_start, date_end (YYYY-MM-DD HH:MM).
+            Se date_end non trovata, uguale a date_start.
         """
-        result = {"date_start": None, "date_end": None, "time_start": None, "display": None}
+        result = {"date_start": None, "date_end": None}
 
-        parsed_dates = []
-        first_time = None
+        entries = []  # lista di (date_str "YYYY-MM-DD", time_str "HH:MM" o None)
 
         for li in response.css("li.single_data"):
-            # Testo data: "mercoledì 04 febbraio 2026"
             date_text = self.clean_text(
                 li.css("div.data_event_single::text").get() or ""
             )
-            # Orario: "H: 10:00"
             time_text = self.clean_text(
                 li.css("div.data_event_single strong::text").get() or ""
             )
@@ -286,20 +274,18 @@ class PugliaCultureSpider(BaseEventSpider):
             if not parsed_date:
                 continue
 
-            if parsed_date not in parsed_dates:
-                parsed_dates.append(parsed_date)
-            if first_time is None and parsed_time:
-                first_time = parsed_time
+            entries.append((parsed_date, parsed_time))
 
-        if parsed_dates:
-            result["date_start"] = parsed_dates[0]
-            result["time_start"] = first_time
-            last_date = parsed_dates[-1]
-            result["date_end"] = last_date if last_date != parsed_dates[0] else None
-            result["display"] = (
-                parsed_dates[0] if not result["date_end"]
-                else f"{parsed_dates[0]} - {last_date}"
-            )
+        if entries:
+            first_date, first_time = entries[0]
+            last_date, last_time = entries[-1]
+
+            # Formato "YYYY-MM-DD HH:MM"
+            date_start = f"{first_date} {first_time}" if first_time else first_date
+            date_end = f"{last_date} {last_time or first_time}" if last_date != first_date else date_start
+
+            result["date_start"] = date_start
+            result["date_end"] = date_end
 
         return result
 
@@ -336,45 +322,12 @@ class PugliaCultureSpider(BaseEventSpider):
 
     def _extract_costi_info(self, response) -> Optional[str]:
         """
-        Estrae il blocco completo "COSTI E INFO" da div.event_costi.
+        Estrae il blocco completo "COSTI E INFO" da div.event_costi come HTML grezzo.
 
         Returns:
-            Testo completo del blocco costi/info o None
+            HTML grezzo del blocco costi/info o None
         """
-        block = response.css("div.event_costi")
-        if block:
-            text = self.clean_text(block[0].xpath("string()").get())
-            if text:
-                return text
-        return None
-
-    def _extract_price_from_costi(self, costi_text: Optional[str]) -> Optional[str]:
-        """
-        Estrae un riassunto prezzo dal testo "COSTI E INFO".
-
-        Raccoglie le righe con valori €.
-
-        Returns:
-            Stringhe con prezzi uniti, es: "intero € 15 / ridotto € 10"
-        """
-        if not costi_text:
-            return None
-
-        price_lines = []
-        for line in costi_text.split("\n"):
-            line = line.strip()
-            if re.search(r"€\s*\d", line) and len(line) < 80:
-                price_lines.append(line)
-
-        if price_lines:
-            return " / ".join(price_lines)
-
-        # Fallback: cerca qualsiasi pattern € direttamente nel testo
-        matches = re.findall(r"[^\n]{0,30}€\s*[\d,]+[^\n]{0,20}", costi_text)
-        if matches:
-            return " / ".join(m.strip() for m in matches[:3])
-
-        return None
+        return response.css("div.event_costi").get()
 
     # Domini da escludere nella ricerca del sito web esterno
     _EXCLUDED_DOMAINS = (
@@ -398,8 +351,8 @@ class PugliaCultureSpider(BaseEventSpider):
 
         # Fallback: qualsiasi link esterno nella pagina
         for link in response.xpath(
-            '//a[starts-with(@href, "http") '
-            'and not(contains(@href, "pugliaculture.it"))]/@href'
+                '//a[starts-with(@href, "http") '
+                'and not(contains(@href, "pugliaculture.it"))]/@href'
         ).getall():
             if not self._is_excluded_url(link):
                 return link

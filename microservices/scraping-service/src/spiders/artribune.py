@@ -147,17 +147,9 @@ class ArtribuneSpider(BaseEventSpider):
                 title_obj = event_data.get("title", {})
                 item["title"] = title_obj.get("rendered") if isinstance(title_obj, dict) else title_obj
 
-                # Raw data dall'API
-                item["raw_data"] = {
-                    "id": event_data.get("id"),
-                    "slug": event_data.get("slug"),
-                    "date_published": event_data.get("date"),
-                }
-
                 # Arricchisci con API custom
                 custom_data = self.custom_api_data.get(item["url"], {})
                 if custom_data:
-                    item["raw_data"]["custom_api"] = custom_data
                     self._enrich_from_custom(item, custom_data)
 
                 item["image_urls"] = item.get("image_urls", [])
@@ -273,10 +265,6 @@ class ArtribuneSpider(BaseEventSpider):
 
         # 2. Estrazione da HTML strutturato
         event_info = self._extract_event_info(response)
-        if event_info:
-            if "raw_data" in item and isinstance(item["raw_data"], dict):
-                item["raw_data"]["event_info"] = event_info
-
         # Mappatura da event_info
         if not item.get("location_name"):
             item["location_name"] = event_info.get("Luogo")
@@ -381,7 +369,6 @@ class ArtribuneSpider(BaseEventSpider):
             "",
         )
 
-        self.log_stats(item.get("city"))
         yield item
 
     def _extract_event_info(self, response) -> dict:

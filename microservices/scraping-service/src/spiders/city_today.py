@@ -389,9 +389,6 @@ class CityTodaySpider(BaseEventSpider):
         # Crea item
         item = self.create_item()
 
-        # Raw data per debug
-        item["raw_data"] = {"list": raw_list, "detail": raw_detail}
-
         # Metadati
         item["url"] = response.meta["url"]
 
@@ -439,7 +436,6 @@ class CityTodaySpider(BaseEventSpider):
             "",
         )
 
-        self.log_stats(item.get("city"))
         yield item
 
     def _extract_dove(self, response, info_grid) -> dict:

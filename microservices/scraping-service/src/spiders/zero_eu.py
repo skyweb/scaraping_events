@@ -283,5 +283,4 @@ class ZeroEuSpider(BaseEventSpider):
             item.get("time_start", ""),
         )
 
-        self.log_stats(item.get("city"))
         yield item

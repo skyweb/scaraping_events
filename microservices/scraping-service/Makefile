@@ -128,15 +128,15 @@ crawl: ## Lancia uno spider dal container: make crawl SPIDER=puglia_culture ARGS
 	@echo "$(GREEN)Lancio spider: $(SPIDER)$(NC)"
 	$(DOCKER_EXEC) scrapy crawl $(SPIDER) $(ARGS)
 
-test: ## Test rapido spider (1 pagina, output JSON, no API): make test [SPIDER=puglia_culture]
-	@echo "$(GREEN)Test spider: $(SPIDER) (max_pages=1, no API)$(NC)"
+test: ## Test rapido spider (1 risultato, 1 pagina, no API, formato batch): make test [SPIDER=puglia_culture]
+	@echo "$(GREEN)Test spider: $(SPIDER) (max_results=1, max_pages=1, no API)$(NC)"
 	@mkdir -p data/output
 	$(DOCKER_EXEC) scrapy crawl $(SPIDER) \
 		-a max_pages=1 \
-		-o /data/output/test_$(SPIDER).json \
-		-s 'ITEM_PIPELINES={"pipelines.ValidationPipeline": 100, "pipelines.HashGeneratorPipeline": 200}' \
+		-s CLOSESPIDER_ITEMCOUNT=1 \
+		-s 'ITEM_PIPELINES={"pipelines.ValidationPipeline": 100, "pipelines.BatchExportPipeline": 200}' \
 		$(ARGS)
-	@echo "$(GREEN)Output: data/output/test_$(SPIDER).json$(NC)"
+	@echo "$(GREEN)Output: data/output/batch/$(NC)"
 
 crawl-all: ## Lancia tutti gli spider in sequenza
 	@echo "$(GREEN)Lancio city_today...$(NC)"

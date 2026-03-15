@@ -188,7 +188,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
             website=website,
             slug=slug,
             event_id=slug,
-            raw_data={"jsonld": ld_page, "contatti": contatti},
         )
 
         item["uuid"] = self.generate_uuid(
@@ -202,7 +201,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
             "",
         )
 
-        self.log_stats(item.get("city"))
         yield item
 
     # =========================================================================

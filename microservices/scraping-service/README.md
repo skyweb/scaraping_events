@@ -58,29 +58,12 @@ Dopo l'avvio, la dashboard è disponibile su: http://localhost:6800
 #### Schedulare uno Spider
 
 ```bash
-# Spider city_today - singola città
+# Spider city_today
 curl http://localhost:6800/schedule.json \
   -d project=events_scraper \
   -d spider=city_today \
-  -d cities=milano
-
-# Spider city_today - multiple città
-curl http://localhost:6800/schedule.json \
-  -d project=events_scraper \
-  -d spider=city_today \
-  -d cities=milano,roma,bologna \
-  -d periodo=weekend
-
-# Spider zero_eu
-curl http://localhost:6800/schedule.json \
-  -d project=events_scraper \
-  -d spider=zero_eu \
-  -d city=roma
-
-# Spider artribune
-curl http://localhost:6800/schedule.json \
-  -d project=events_scraper \
-  -d spider=artribune \
+  -d city=roma,roma \
+  -d periodo=weekend \
   -d max_pages=5
 ```
 
