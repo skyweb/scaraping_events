@@ -141,6 +141,13 @@ put "/upstreams/10" '{
     "pass_host": "node"
 }' "apisix-dashboard (:9000)"
 
+put "/upstreams/11" '{
+    "name": "scrapyd",
+    "type": "roundrobin",
+    "nodes": {"dev-scrapyd:6800": 1},
+    "pass_host": "node"
+}' "scrapyd (:6800)"
+
 put "/upstreams/12" '{
     "name": "loki",
     "type": "roundrobin",
@@ -213,12 +220,13 @@ put "/routes/300" "{
     }
 }" "keycloak (no auth)"
 
-# --- MinIO Console ---
+# --- MinIO Console (WebSocket + CSP override per Object Browser) ---
 put "/routes/301" "{
     \"name\": \"minio-console-proxy\",
     \"host\": \"minio.${DOMAIN}\",
     \"uri\": \"/*\",
     \"upstream_id\": \"13\",
+    \"enable_websocket\": true,
     \"plugins\": {
         \"proxy-rewrite\": {
             \"headers\": {
@@ -226,9 +234,43 @@ put "/routes/301" "{
                     \"X-Forwarded-Proto\": \"https\"
                 }
             }
+        },
+        \"response-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"Content-Security-Policy\": \"default-src 'self' 'unsafe-eval' 'unsafe-inline'; script-src 'self' https://unpkg.com; connect-src 'self' https://unpkg.com wss://minio.${DOMAIN}; font-src 'self' data:;\"
+                }
+            }
         }
     }
-}" "minio console (no auth)"
+}" "minio console (no auth, websocket)"
+
+# --- MinIO Console WebSocket (priority alta, rimuove Origin per CheckOrigin) ---
+put "/routes/304" "{
+    \"name\": \"minio-console-ws\",
+    \"host\": \"minio.${DOMAIN}\",
+    \"uri\": \"/ws/*\",
+    \"priority\": 10,
+    \"upstream_id\": \"13\",
+    \"enable_websocket\": true,
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\",
+                    \"Origin\": \"\"
+                }
+            }
+        },
+        \"response-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"Content-Security-Policy\": \"default-src 'self' 'unsafe-eval' 'unsafe-inline'; script-src 'self' https://unpkg.com; connect-src 'self' https://unpkg.com wss://minio.${DOMAIN}; font-src 'self' data:;\"
+                }
+            }
+        }
+    }
+}" "minio console WS"
 
 # --- MinIO S3 API ---
 put "/routes/302" "{
@@ -440,6 +482,11 @@ oidc_route 207 "airflow-sso" \
 oidc_route 208 "apisix-dashboard-sso" \
     "apisix-dashboard.${DOMAIN}" "/*" 10 \
     "https://apisix-dashboard.${DOMAIN}/callback"
+
+# --- Scrapyd ---
+oidc_route 209 "scrapyd-sso" \
+    "scrapyd.${DOMAIN}" "/*" 11 \
+    "https://scrapyd.${DOMAIN}/callback"
 
 # --- Loki ---
 oidc_route 210 "loki-sso" \

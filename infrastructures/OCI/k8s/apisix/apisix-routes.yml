@@ -1,3 +1,12 @@
+# =============================================================================
+# ApisixRoute — route per i servizi nel namespace "apps"
+#
+# I placeholder ${{...}} fanno riferimento a variabili d'ambiente APISIX
+# o secret configurati via Helm/etcd. In alternativa, sostituire con valori
+# concreti o usare APISIX Secret Manager.
+# =============================================================================
+
+# --- API External (JWT bearer auth + rate limit) ---
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
@@ -18,8 +27,12 @@ spec:
         - name: openid-connect
           enable: true
           config:
-            bearer_only: true
+            client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
             discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
+            bearer_only: true
+            ssl_verify: false
         - name: limit-count
           enable: true
           config:
@@ -34,6 +47,7 @@ spec:
         - name: prometheus
           enable: true
 ---
+# --- API Public (no auth) ---
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
@@ -55,18 +69,22 @@ spec:
           enable: true
         - name: opentelemetry
           enable: true
+        - name: prometheus
+          enable: true
 ---
+# --- Backoffice Admin SSO (/admin/*) — priorita alta ---
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
-  name: gateway-admin
+  name: backoffice-admin-sso
   namespace: apps
 spec:
   http:
-    - name: gateway-admin
+    - name: backoffice-admin-sso
+      priority: 10
       match:
         hosts:
-          - gateway.oci.santocaruso.eu
+          - events.oci.santocaruso.eu
         paths:
           - /admin/*
       backends:
@@ -77,54 +95,110 @@ spec:
           enable: true
           config:
             client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
             discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
-            redirect_uri: https://gateway.oci.santocaruso.eu/callback
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
             scope: openid profile email
-            unauth_action: redirect
+            bearer_only: false
+            redirect_uri: https://events.oci.santocaruso.eu/admin/callback
+            logout_path: /admin/sso-logout
+            post_logout_redirect_uri: https://events.oci.santocaruso.eu/
+            set_userinfo_header: true
+            set_id_token_header: true
+            set_access_token_header: true
+            access_token_in_authorization_header: false
+            ssl_verify: false
+            session:
+              secret: "${{APISIX_SESSION_SECRET}}"
         - name: opentelemetry
           enable: true
+        - name: prometheus
+          enable: true
 ---
+# --- Backoffice Public (static, media, api, docs — no SSO) ---
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
-  name: gateway-api
+  name: backoffice-public
   namespace: apps
 spec:
   http:
-    - name: gateway-api
+    - name: backoffice-public
       match:
         hosts:
-          - gateway.oci.santocaruso.eu
+          - events.oci.santocaruso.eu
         paths:
-          - /api/*
+          - /*
       backends:
         - serviceName: backoffice
           servicePort: 8000
+      plugins:
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true
+---
+# --- Keycloak (Identity Provider — no auth) ---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: keycloak-proxy
+  namespace: apps
+spec:
+  http:
+    - name: keycloak-proxy
+      match:
+        hosts:
+          - auth.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: keycloak
+          servicePort: 8080
+      plugins:
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true
+---
+# --- APISIX Dashboard SSO ---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: apisix-dashboard-sso
+  namespace: apps
+spec:
+  http:
+    - name: apisix-dashboard-sso
+      match:
+        hosts:
+          - apisix.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: apisix-dashboard
+          servicePort: 9000
       plugins:
         - name: openid-connect
           enable: true
           config:
             client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
             discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
-            redirect_uri: https://gateway.oci.santocaruso.eu/callback
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
             scope: openid profile email
-            unauth_action: redirect
+            bearer_only: false
+            redirect_uri: https://apisix.oci.santocaruso.eu/callback
+            logout_path: /sso-logout
+            post_logout_redirect_uri: https://apisix.oci.santocaruso.eu/
+            set_userinfo_header: true
+            set_id_token_header: true
+            set_access_token_header: true
+            access_token_in_authorization_header: false
+            ssl_verify: false
+            session:
+              secret: "${{APISIX_SESSION_SECRET}}"
         - name: opentelemetry
           enable: true
----
-apiVersion: apisix.apache.org/v2
-kind: ApisixRoute
-metadata:
-  name: gateway-static
-  namespace: apps
-spec:
-  http:
-    - name: gateway-static
-      match:
-        hosts:
-          - gateway.oci.santocaruso.eu
-        paths:
-          - /static/*
-      backends:
-        - serviceName: backoffice
-          servicePort: 8000
+        - name: prometheus
+          enable: true

@@ -17,7 +17,7 @@ apisix:
     http: radixtree_host_uri
     ssl: radixtree_sni
   enable_control: true
-  enable_http2: true
+  enable_http2: false
   enable_reuseport: true
   ssl:
     enable: true

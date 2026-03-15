@@ -1,0 +1,22 @@
+# ApisixRoute — Tekton Dashboard (namespace: tekton-pipelines, no auth)
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: tekton-dashboard
+  namespace: tekton-pipelines
+spec:
+  http:
+    - name: tekton-dashboard
+      match:
+        hosts:
+          - tekton.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: tekton-dashboard
+          servicePort: 9097
+      plugins:
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true

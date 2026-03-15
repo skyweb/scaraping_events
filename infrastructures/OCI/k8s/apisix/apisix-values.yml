@@ -1,4 +1,4 @@
-# APISIX Helm values
+# APISIX Helm values — unico ingress/gateway (Traefik rimosso)
 apisix:
   image:
     repository: apache/apisix
@@ -14,13 +14,37 @@ apisix:
     limits:
       cpu: 500m
       memory: 512Mi
+  ssl:
+    enabled: true
+  # HTTP → HTTPS redirect globale
+  globalRules:
+    - id: 1
+      plugins:
+        redirect:
+          http_to_https: true
+  plugins:
+    - openid-connect
+    - jwt-auth
+    - cors
+    - prometheus
+    - opentelemetry
+    - proxy-rewrite
+    - redirect
+    - serverless-post-function
+    - limit-count
 
 gateway:
-  type: ClusterIP
+  type: NodePort
   http:
     enabled: true
-    servicePort: 9080
+    servicePort: 80
     containerPort: 9080
+    nodePort: 30080
+  tls:
+    enabled: true
+    servicePort: 443
+    containerPort: 9443
+    nodePort: 30443
 
 admin:
   enabled: true
@@ -50,6 +74,9 @@ ingress-controller:
     apisix:
       serviceNamespace: apps
       adminKey: apisix-admin-key
+  # Cluster-wide: watch ApisixRoute CRD in tutti i namespace
+  scope:
+    enabled: false
 
 pluginAttrs:
   prometheus:

@@ -1,0 +1,171 @@
+# ApisixRoute — servizi monitoring (namespace: monitoring)
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: grafana-sso
+  namespace: monitoring
+spec:
+  http:
+    - name: grafana-sso
+      match:
+        hosts:
+          - grafana.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: grafana
+          servicePort: 80
+      websocket: true
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
+            scope: openid profile email
+            bearer_only: false
+            redirect_uri: https://grafana.oci.santocaruso.eu/callback
+            logout_path: /sso-logout
+            post_logout_redirect_uri: https://grafana.oci.santocaruso.eu/
+            set_userinfo_header: true
+            set_id_token_header: true
+            set_access_token_header: true
+            access_token_in_authorization_header: false
+            ssl_verify: false
+            session:
+              secret: "${{APISIX_SESSION_SECRET}}"
+        - name: serverless-post-function
+          enable: true
+          config:
+            phase: rewrite
+            functions:
+              - "return function(conf, ctx) local cjson = require('cjson.safe'); local h = ngx.req.get_headers()['X-Userinfo']; if h then local decoded = ngx.decode_base64(h); if decoded then local d = cjson.decode(decoded); if d and d.email then ngx.req.set_header('X-Auth-Request-Email', d.email) end end end end"
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: prometheus-sso
+  namespace: monitoring
+spec:
+  http:
+    - name: prometheus-sso
+      match:
+        hosts:
+          - prometheus.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: prometheus-server
+          servicePort: 80
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
+            scope: openid profile email
+            bearer_only: false
+            redirect_uri: https://prometheus.oci.santocaruso.eu/callback
+            logout_path: /sso-logout
+            post_logout_redirect_uri: https://prometheus.oci.santocaruso.eu/
+            set_userinfo_header: true
+            set_id_token_header: true
+            set_access_token_header: true
+            access_token_in_authorization_header: false
+            ssl_verify: false
+            session:
+              secret: "${{APISIX_SESSION_SECRET}}"
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: loki-sso
+  namespace: monitoring
+spec:
+  http:
+    - name: loki-sso
+      match:
+        hosts:
+          - loki.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: loki
+          servicePort: 3100
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
+            scope: openid profile email
+            bearer_only: false
+            redirect_uri: https://loki.oci.santocaruso.eu/callback
+            logout_path: /sso-logout
+            post_logout_redirect_uri: https://loki.oci.santocaruso.eu/
+            set_userinfo_header: true
+            set_id_token_header: true
+            set_access_token_header: true
+            access_token_in_authorization_header: false
+            ssl_verify: false
+            session:
+              secret: "${{APISIX_SESSION_SECRET}}"
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: alertmanager-sso
+  namespace: monitoring
+spec:
+  http:
+    - name: alertmanager-sso
+      match:
+        hosts:
+          - alertmanager.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: prometheus-alertmanager
+          servicePort: 9093
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
+            scope: openid profile email
+            bearer_only: false
+            redirect_uri: https://alertmanager.oci.santocaruso.eu/callback
+            logout_path: /sso-logout
+            post_logout_redirect_uri: https://alertmanager.oci.santocaruso.eu/
+            set_userinfo_header: true
+            set_id_token_header: true
+            set_access_token_header: true
+            access_token_in_authorization_header: false
+            ssl_verify: false
+            session:
+              secret: "${{APISIX_SESSION_SECRET}}"
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true

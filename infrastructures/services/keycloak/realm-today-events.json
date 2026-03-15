@@ -288,7 +288,8 @@
         "https://apisix-dashboard.127.0.0.1.nip.io/*",
         "https://loki.127.0.0.1.nip.io/*",
         "https://auth.127.0.0.1.nip.io/*",
-        "https://minio.127.0.0.1.nip.io/*"
+        "https://minio.127.0.0.1.nip.io/*",
+        "https://scrapyd.127.0.0.1.nip.io/*"
       ],
       "webOrigins": [
         "https://backoffice.127.0.0.1.nip.io",
@@ -302,7 +303,8 @@
         "https://apisix-dashboard.127.0.0.1.nip.io",
         "https://loki.127.0.0.1.nip.io",
         "https://auth.127.0.0.1.nip.io",
-        "https://minio.127.0.0.1.nip.io"
+        "https://minio.127.0.0.1.nip.io",
+        "https://scrapyd.127.0.0.1.nip.io"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -324,7 +326,7 @@
         "saml.force.post.binding": "false",
         "saml.multivalued.roles": "false",
         "saml.encrypt": "false",
-        "post.logout.redirect.uris": "https://backoffice.127.0.0.1.nip.io/*##https://grafana.127.0.0.1.nip.io/*##https://prometheus.127.0.0.1.nip.io/*##https://flower.127.0.0.1.nip.io/*##https://sonarqube.127.0.0.1.nip.io/*##https://redis-exporter.127.0.0.1.nip.io/*##https://celery-exporter.127.0.0.1.nip.io/*##https://airflow.127.0.0.1.nip.io/*##https://apisix-dashboard.127.0.0.1.nip.io/*##https://traefik.127.0.0.1.nip.io/*##https://loki.127.0.0.1.nip.io/*",
+        "post.logout.redirect.uris": "https://backoffice.127.0.0.1.nip.io/*##https://grafana.127.0.0.1.nip.io/*##https://prometheus.127.0.0.1.nip.io/*##https://flower.127.0.0.1.nip.io/*##https://sonarqube.127.0.0.1.nip.io/*##https://redis-exporter.127.0.0.1.nip.io/*##https://celery-exporter.127.0.0.1.nip.io/*##https://airflow.127.0.0.1.nip.io/*##https://apisix-dashboard.127.0.0.1.nip.io/*##https://loki.127.0.0.1.nip.io/*##https://scrapyd.127.0.0.1.nip.io/*",
         "backchannel.logout.session.required": "true",
         "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
@@ -401,7 +403,21 @@
         "saml.authnstatement": "false"
       },
       "authenticationFlowBindingOverrides": {},
-      "protocolMappers": []
+      "protocolMappers": [
+        {
+          "id": "a1b2c3d4-e5f6-7890-scraper-aud0001",
+          "name": "audience-account",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-audience-mapper",
+          "consentRequired": false,
+          "config": {
+            "included.client.audience": "account",
+            "id.token.claim": "false",
+            "access.token.claim": "true",
+            "introspection.token.claim": "true"
+          }
+        }
+      ]
     },
     {
       "id": "a1b2c3d4-e5f6-7890-minio-console00001",

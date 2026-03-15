@@ -7,4 +7,4 @@ resources:
   - velero-ui-configmap.yml
   - velero-ui-deployment.yml
   - velero-ui-service.yml
-  - velero-ui-ingressroute.yml
+  - velero-apisix-route.yml

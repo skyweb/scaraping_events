@@ -5,4 +5,4 @@ resources:
   - minio-pvc.yml
   - minio-deployment.yml
   - minio-service.yml
-  - minio-ingressroute.yml
+  - minio-apisix-routes.yml

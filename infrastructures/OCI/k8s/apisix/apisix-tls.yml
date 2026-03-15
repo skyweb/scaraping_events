@@ -1,0 +1,30 @@
+# =============================================================================
+# TLS per APISIX — cert-manager + ApisixTls
+# Prerequisito: ClusterIssuer "letsencrypt" configurato con DNS-01 challenge
+# (necessario per certificati wildcard).
+# =============================================================================
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: apisix-wildcard-cert
+  namespace: apps
+spec:
+  secretName: apisix-tls-cert
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  dnsNames:
+    - "*.oci.santocaruso.eu"
+    - "oci.santocaruso.eu"
+---
+apiVersion: apisix.apache.org/v2
+kind: ApisixTls
+metadata:
+  name: wildcard-tls
+  namespace: apps
+spec:
+  hosts:
+    - "*.oci.santocaruso.eu"
+  secret:
+    name: apisix-tls-cert
+    namespace: apps

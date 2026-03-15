@@ -1,0 +1,45 @@
+# ApisixRoute — Kubernetes Dashboard (namespace: clusters)
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: k8s-dashboard-sso
+  namespace: clusters
+spec:
+  http:
+    - name: k8s-dashboard-sso
+      match:
+        hosts:
+          - dashboard.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: kubernetes-dashboard-kong-proxy
+          servicePort: 443
+      plugins:
+        - name: openid-connect
+          enable: true
+          config:
+            client_id: backoffice-admin
+            client_secret: "${{KEYCLOAK_BACKOFFICE_CLIENT_SECRET}}"
+            discovery: http://keycloak.apps.svc:8080/realms/today-events/.well-known/openid-configuration
+            issuer: https://auth.oci.santocaruso.eu/realms/today-events
+            scope: openid profile email
+            bearer_only: false
+            redirect_uri: https://dashboard.oci.santocaruso.eu/callback
+            logout_path: /sso-logout
+            post_logout_redirect_uri: https://dashboard.oci.santocaruso.eu/
+            set_userinfo_header: true
+            set_id_token_header: true
+            set_access_token_header: true
+            access_token_in_authorization_header: false
+            ssl_verify: false
+            session:
+              secret: "${{APISIX_SESSION_SECRET}}"
+        - name: proxy-rewrite
+          enable: true
+          config:
+            scheme: https
+        - name: opentelemetry
+          enable: true
+        - name: prometheus
+          enable: true
