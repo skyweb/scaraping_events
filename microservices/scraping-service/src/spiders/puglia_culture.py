@@ -6,8 +6,9 @@ Il sito usa WordPress con Elementor come page builder.
 Il contenuto strutturato (date, luogo, prezzo, cast) è nei blocchi
 
 Strategia:
-- WP REST API (/wp-json/wp/v2/evento) per il listing con paginazione nativa
-- HTML scraping della pagina dettaglio per estrarre:
+- WP REST API per il listing con paginazione nativa su 4 endpoint:
+  /wp-json/wp/v2/evento, spettacolo, teatro, rassegna
+- HTML scraping della pagina dettaglio per estrarre i dati strutturati
 - Immagine da yoast_head_json.og_image nell'API
 
 Utilizzo:
@@ -36,7 +37,8 @@ import scrapy
 from spiders.base import BaseEventSpider
 from spiders.utils import DEFAULT_CRAWL_SETTINGS, MESI_IT, parse_italian_date_time
 
-API_URL = "https://www.pugliaculture.it/wp-json/wp/v2/evento"
+API_BASE = "https://www.pugliaculture.it/wp-json/wp/v2"
+API_ENDPOINTS = ("evento", "spettacolo", "rassegna")
 
 
 class PugliaCultureSpider(BaseEventSpider):
@@ -64,9 +66,12 @@ class PugliaCultureSpider(BaseEventSpider):
         self._seen_urls: set = set()
 
     def start_requests(self):
-        """Prima richiesta all'API WordPress."""
-        url = f"{API_URL}?per_page=100&page=1&_fields=id,slug,link,title,yoast_head_json"
-        yield scrapy.Request(url, callback=self.parse_api, meta={"page": 1})
+        """Prima richiesta all'API WordPress per ogni endpoint (evento, spettacolo, rassegna)."""
+        for cpt in API_ENDPOINTS:
+            url = f"{API_BASE}/{cpt}?per_page=100&page=1&_fields=id,slug,link,title,yoast_head_json"
+            yield scrapy.Request(
+                url, callback=self.parse_api, meta={"page": 1, "cpt": cpt}
+            )
 
     def parse_api(self, response):
         """
@@ -86,14 +91,15 @@ class PugliaCultureSpider(BaseEventSpider):
             return
 
         # Yield richieste per le pagine successive (solo dalla prima pagina)
+        cpt = response.meta.get("cpt", "evento")
         current_page = response.meta.get("page", 1)
         if current_page == 1:
             total_pages = int(response.headers.get("X-WP-TotalPages", 1))
             pages_to_fetch = min(total_pages, self.max_pages)
-            self.logger.info(f"Totale pagine API: {total_pages}, fetching: {pages_to_fetch}")
+            self.logger.info(f"[{cpt}] Totale pagine API: {total_pages}, fetching: {pages_to_fetch}")
             for page in range(2, pages_to_fetch + 1):
-                url = f"{API_URL}?per_page=100&page={page}&_fields=id,slug,link,title,yoast_head_json"
-                yield scrapy.Request(url, callback=self.parse_api, meta={"page": page})
+                url = f"{API_BASE}/{cpt}?per_page=100&page={page}&_fields=id,slug,link,title,yoast_head_json"
+                yield scrapy.Request(url, callback=self.parse_api, meta={"page": page, "cpt": cpt})
 
         # Yield richieste HTML per ogni evento
         for event in events:
@@ -116,6 +122,7 @@ class PugliaCultureSpider(BaseEventSpider):
                     "event_id": str(event.get("id", "")),
                     "image_url_api": image_url,
                     "title_api": self.clean_text(title_rendered),
+                    "cpt": cpt,
                 },
             )
 
@@ -156,22 +163,22 @@ class PugliaCultureSpider(BaseEventSpider):
         date_end = date_info.get("date_end") or date_start
         date_display = response.css("div.event-dates").get()
 
-        # ── Luogo (Teatro) ────────────────────────────────────────────────────
+        # ── Luogo  ────────────────────────────────────────────────────
         location_name = self._extract_location(response)
 
         # ── City name: parte dopo " - " in location_name ──────────────────────
         # es: "Teatro Comunale di Nardò - Nardò" → "Nardò"
         city_name = None
         if location_name and " - " in location_name:
-            city_name = location_name.rsplit(" - ", 1)[-1].strip() or None
-            # cancella city_name da location_name
+            parts = location_name.rsplit(" - ", 1)
+            location_name = parts[0].strip() or location_name
+            city_name = parts[-1].strip() or None
 
         # ── Descrizione (HTML grezzo da div.spettacolo-content) ───────────────
         description = self._extract_description(response)
 
         # ── COSTI E INFO (blocco completo) ────────────────────────────────────
         costi_info = self._extract_costi_info(response)
-        website = self._extract_website_from_costi(response)
 
         # ── Section annidato ────────────────────
         section_data = {}
@@ -218,16 +225,15 @@ class PugliaCultureSpider(BaseEventSpider):
                     "location_name": location_name or "",
                 },
                 # Dettagli
-                "website": website,
                 "section": section_data or None,
                 "info_extra": info_extra or None,
             },
-            schemaOrg={},
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
                 "slug": slug,
                 "event_id": response.meta.get("event_id", slug),
+                "category": response.meta.get("cpt", "evento"),
             },
         )
 
@@ -335,29 +341,6 @@ class PugliaCultureSpider(BaseEventSpider):
         "twitter.com", "x.com", "linkedin.com", "google.com",
         "teatropubblicopugliese.it", "whatsapp.com", "tiktok.com",
     )
-
-    def _extract_website_from_costi(self, response) -> Optional[str]:
-        """
-        Estrae il sito web esterno di prenotazione/info dal blocco COSTI E INFO,
-        escludendo social network e domini di utilità.
-
-        Returns:
-            URL del sito esterno (es: vivaticket.com) o None
-        """
-        # Cerca prima nel blocco event_costi (più probabile contenga link biglietteria)
-        for link in response.css("div.event_costi a[href]::attr(href)").getall():
-            if link.startswith("http") and not self._is_excluded_url(link):
-                return link
-
-        # Fallback: qualsiasi link esterno nella pagina
-        for link in response.xpath(
-                '//a[starts-with(@href, "http") '
-                'and not(contains(@href, "pugliaculture.it"))]/@href'
-        ).getall():
-            if not self._is_excluded_url(link):
-                return link
-
-        return None
 
     def _is_excluded_url(self, url: str) -> bool:
         """Restituisce True se l'URL appartiene a un dominio da escludere."""

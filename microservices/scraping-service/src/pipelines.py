@@ -82,6 +82,14 @@ class StorageBackend:
 
         logger.info(f"StorageBackend: MinIO ({self._bucket})")
 
+    def build_path(self, filename: str, prefix: str = "") -> str:
+        """Restituisce il path/key dove verrà salvato il file (senza salvarlo)."""
+        if self.backend == "minio":
+            key = f"{prefix}/{filename}" if prefix else filename
+            return f"s3://{self._bucket}/{key}"
+        else:
+            return os.path.join(self.output_dir, filename)
+
     def save_json(self, filename: str, data: dict, prefix: str = "") -> str:
         """
         Salva un dict come file JSON.
@@ -214,14 +222,22 @@ class ValidationPipeline:
 
 
 class BatchExportPipeline:
-    """Pipeline base per esportazione batch JSON."""
+    """Pipeline base per esportazione batch JSON.
+
+    Gestisce buffer separati per ogni category (meta.category).
+    Quando cambia category, flusha il buffer precedente e riparte il contatore batch.
+    Nome file: {spider}_{category}_{timestamp}_batch_{N}.json
+    """
 
     def __init__(self, batch_size: int = 50, storage_backend: str = "local"):
         self.batch_size = batch_size
         self.storage = StorageBackend(backend=storage_backend)
-        self.items_buffer: List[Dict[str, Any]] = []
-        self.batch_count = 0
         self.spider_name = ""
+        # Buffer e contatori per category
+        self._current_category: Optional[str] = None
+        self._items_buffer: List[Dict[str, Any]] = []
+        self._batch_counts: Dict[str, int] = {}
+        self._total_batches = 0
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -233,24 +249,25 @@ class BatchExportPipeline:
     def open_spider(self, spider):
         """Chiamato all'avvio dello spider. Inizializza storage, buffer e contatori."""
         self.spider_name = spider.name
-        self.items_buffer = []
-        self.batch_count = 0
+        self._current_category = None
+        self._items_buffer = []
+        self._batch_counts = {}
+        self._total_batches = 0
         self.storage.init()
         logger.info(f"{self.__class__.__name__}: attiva (storage={self.storage.backend})")
 
     def close_spider(self, spider):
         """Chiamato alla chiusura dello spider. Salva gli item rimasti nel buffer come ultimo batch."""
-        if self.items_buffer:
+        if self._items_buffer:
             self._flush_batch()
-        logger.info(f"{self.__class__.__name__}: {self.batch_count} batch salvati")
+        logger.info(f"{self.__class__.__name__}: {self._total_batches} batch salvati ({dict(self._batch_counts)})")
 
     def process_item(self, item, spider):
         """
         Processa ogni item prodotto dallo spider.
 
-        1. Converte l'EventItem nel formato dict annidato (title, data, meta)
-        2. Lo aggiunge al buffer interno
-        3. Quando il buffer raggiunge batch_size, salva il batch su disco/MinIO
+        Se la category cambia rispetto al buffer corrente, flusha prima il batch precedente.
+        Poi aggiunge l'item al buffer e flusha se pieno.
 
         Args:
             item: EventItem prodotto dallo spider
@@ -260,29 +277,45 @@ class BatchExportPipeline:
             L'item originale (passato alla pipeline successiva)
         """
         event_data = self._item_to_dict(item)
-        self.items_buffer.append(event_data)
+        category = (ItemAdapter(item).get("meta") or {}).get("category")
 
-        if len(self.items_buffer) >= self.batch_size:
+        # Cambio category → flush buffer precedente
+        if category != self._current_category and self._items_buffer:
+            self._flush_batch()
+        self._current_category = category
+
+        self._items_buffer.append(event_data)
+
+        if len(self._items_buffer) >= self.batch_size:
             self._flush_batch()
 
         return item
 
     def _flush_batch(self):
         """Salva il buffer corrente come file JSON e svuota il buffer."""
-        self.batch_count += 1
+        category = self._current_category or "default"
+        self._batch_counts[category] = self._batch_counts.get(category, 0) + 1
+        batch_num = self._batch_counts[category]
+        self._total_batches += 1
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{self.spider_name}_{timestamp}_batch{self.batch_count:03d}.json"
+        filename = f"{self.spider_name}_{category}_{timestamp}_batch_{batch_num:03d}.json"
+
+        prefix = f"batch/{self.spider_name}"
+        storage_path = self.storage.build_path(filename, prefix)
 
         payload = {
             "spider": self.spider_name,
-            "batch": self.batch_count,
-            "count": len(self.items_buffer),
+            "category": category,
+            "batch": batch_num,
+            "count": len(self._items_buffer),
             "sent_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "events": self.items_buffer,
+            "storage_path": storage_path,
+            "events": self._items_buffer,
         }
 
-        self.storage.save_json(filename, payload, prefix=f"batch/{self.spider_name}")
-        self.items_buffer = []
+        self.storage.save_json(filename, payload, prefix=prefix)
+        self._items_buffer = []
 
     def _item_to_dict(self, item) -> Dict[str, Any]:
         """Converte EventItem nel formato dict per il JSON di output."""
@@ -303,16 +336,12 @@ class ApiPipeline(BatchExportPipeline):
     """
     Pipeline per invio eventi all'API del backoffice.
 
-    Eredita da BatchExportPipeline il salvataggio JSON su disco/MinIO,
-    e aggiunge: autenticazione OAuth2 + invio HTTP all'endpoint bulk.
+    Eredita da BatchExportPipeline tutto: buffering, category tracking, salvataggio JSON.
+    Aggiunge solo: autenticazione OAuth2 + invio HTTP dopo ogni _flush_batch.
 
     Flusso per ogni batch:
-    1. Salva JSON su disco/MinIO (ereditato da BatchExportPipeline)
-    2. Ottiene/rinnova token OAuth2
-    3. Invia batch all'endpoint /api/external/v1/staging/bulk/
-
-    Utilizzo:
-        ITEM_PIPELINES = {"pipelines.ApiPipeline": 400}
+    1. Salva JSON su disco/MinIO (ereditato da _flush_batch)
+    2. Invia lo stesso batch all'endpoint /api/external/v1/staging/bulk/
     """
 
     def __init__(
@@ -333,8 +362,6 @@ class ApiPipeline(BatchExportPipeline):
         self.timeout = timeout
 
         self.access_token: Optional[str] = None
-
-        # Configura session con retry
         self.session = self._create_session()
 
     @classmethod
@@ -355,18 +382,15 @@ class ApiPipeline(BatchExportPipeline):
     def _create_session(self) -> requests.Session:
         """Crea session HTTP con retry automatici."""
         session = requests.Session()
-
         retry_strategy = Retry(
             total=3,
             backoff_factor=1,
             status_forcelist=[429, 500, 502, 503, 504],
             allowed_methods=["POST", "GET"],
         )
-
         adapter = HTTPAdapter(max_retries=retry_strategy)
         session.mount("http://", adapter)
         session.mount("https://", adapter)
-
         return session
 
     def _get_access_token(self) -> Optional[str]:
@@ -405,57 +429,31 @@ class ApiPipeline(BatchExportPipeline):
         super().open_spider(spider)
         logger.info(f"ApiPipeline: connessione a {self.base_url}")
 
-        # Pre-fetch del token — se fallisce, lo spider si ferma subito
         if not self.client_id or not self.client_secret:
             raise CloseSpider("API_CLIENT_ID o API_CLIENT_SECRET non configurati")
         if not self._get_access_token():
             raise CloseSpider("Impossibile ottenere token OAuth2 — controlla credenziali e che il backoffice sia attivo")
 
     def close_spider(self, spider):
-        """Invia eventi rimanenti e chiude la sessione HTTP."""
-        if self.items_buffer:
-            logger.info(f"Invio batch finale: {len(self.items_buffer)} eventi")
-            if not self._send_api_batch(self.items_buffer):
-                logger.error(f"Batch finale non inviato: {len(self.items_buffer)} eventi persi")
-            self.items_buffer = []
-
+        """Flush finale + chiude la sessione HTTP."""
+        super().close_spider(spider)
         self.session.close()
         logger.info("ApiPipeline: connessione chiusa")
 
-    def process_item(self, item, spider):
-        """Processa item: buffer → salva JSON + invia API quando pieno."""
-        event_data = self._item_to_dict(item)
-        self.items_buffer.append(event_data)
+    def _flush_batch(self):
+        """Salva JSON su disco (super) e invia lo stesso batch all'API."""
+        # Salva una copia degli eventi prima che super() svuoti il buffer
+        events = list(self._items_buffer)
+        category = self._current_category or "default"
+        batch_num = self._batch_counts.get(category, 0) + 1
 
-        if len(self.items_buffer) >= self.batch_size:
-            logger.info(f"Invio batch: {len(self.items_buffer)} eventi")
-            success = self._send_api_batch(self.items_buffer)
-            if success:
-                self.items_buffer = []
-            else:
-                raise CloseSpider(f"Invio batch fallito — {len(self.items_buffer)} eventi non inviati")
-
-        return item
-
-    def _send_api_batch(self, events: List[Dict[str, Any]]) -> bool:
-        """Salva JSON su disco e invia batch all'API."""
-        if not events:
-            return True
-
-        # Salva su disco/MinIO (riuso logica della classe base)
-        self.batch_count += 1
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{self.spider_name}_{timestamp}_batch_{self.batch_count:03d}.json"
-        payload = {
-            "spider": self.spider_name,
-            "batch": self.batch_count,
-            "count": len(events),
-            "sent_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "events": events,
-        }
-        self.storage.save_json(filename, payload, prefix=f"batch/{self.spider_name}")
+        # Salva JSON su disco/MinIO
+        super()._flush_batch()
 
         # Invia all'API con tracing OTel
+        if not events:
+            return
+
         ctx = airflow_context if airflow_context else None
         with tracer.start_as_current_span(
             "scraper.send_batch",
@@ -463,13 +461,16 @@ class ApiPipeline(BatchExportPipeline):
             attributes={
                 "spider.name": self.spider_name,
                 "batch.size": len(events),
-                "batch.number": self.batch_count,
+                "batch.number": batch_num,
+                "batch.category": category,
             },
         ) as span:
-            return self._do_send_batch(events, span)
+            success = self._send_to_api(events, span)
+            if not success:
+                raise CloseSpider(f"Invio batch fallito — {len(events)} eventi non inviati")
 
-    def _do_send_batch(self, events: List[Dict[str, Any]], span) -> bool:
-        """Logica effettiva di invio batch (wrappata dallo span OTel)."""
+    def _send_to_api(self, events: List[Dict[str, Any]], span) -> bool:
+        """Invia batch all'endpoint bulk dell'API."""
         if not self.access_token:
             if not self._get_access_token():
                 logger.error("Impossibile ottenere token, batch non inviato")
@@ -494,12 +495,6 @@ class ApiPipeline(BatchExportPipeline):
             if response.status_code == 201:
                 result = response.json()
                 logger.info(f"Batch inviato (sync): {result.get('created_count', 0)} eventi creati")
-                for event in events:
-                    span.add_event("event.sent", attributes={
-                        "event.uuid": event.get("uuid", ""),
-                        "event.title": event.get("title", "")[:80],
-                        "event.source": event.get("source", ""),
-                    })
                 return True
 
             elif response.status_code == 202:
@@ -507,19 +502,13 @@ class ApiPipeline(BatchExportPipeline):
                 task_id = result.get('task_id', 'unknown')
                 logger.info(f"Batch accettato (async): task_id={task_id}, {len(events)} eventi")
                 span.set_attribute("celery.task_id", task_id)
-                for event in events:
-                    span.add_event("event.sent", attributes={
-                        "event.uuid": event.get("uuid", ""),
-                        "event.title": event.get("title", "")[:80],
-                        "event.source": event.get("source", ""),
-                    })
                 return True
 
             elif response.status_code == 401:
                 logger.warning("Token scaduto, rinnovo...")
                 self.access_token = None
                 if self._get_access_token():
-                    return self._do_send_batch(events, span)
+                    return self._send_to_api(events, span)
                 return False
 
             else:

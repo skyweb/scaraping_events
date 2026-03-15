@@ -91,9 +91,13 @@ SPIDER_MIDDLEWARES = {
 
 ITEM_PIPELINES = {
     # Validazione e pulizia dati
-    "pipelines.ValidationPipeline": 100,
-    # Invio tramite API al backoffice
-    "pipelines.ApiPipeline": 200,
+    #"pipelines.ValidationPipeline": 100,
+
+    # Scegliere UNO tra BatchExportPipeline e ApiPipeline (non entrambi):
+    # - BatchExportPipeline: solo salvataggio batch JSON su disco/MinIO
+    # - ApiPipeline: salvataggio JSON + invio all'API backoffice (eredita da BatchExportPipeline)
+    "pipelines.BatchExportPipeline": 200,
+    #"pipelines.ApiPipeline": 200,
 }
 
 # =============================================================================
