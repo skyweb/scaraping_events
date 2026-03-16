@@ -27,4 +27,4 @@ RUN mkdir -p /data/output /data/logs
 
 EXPOSE 6800
 
-CMD ["scrapyd"]
+CMD ["sh", "-c", "rm -f /app/events_scraper/twistd.pid && exec scrapyd"]

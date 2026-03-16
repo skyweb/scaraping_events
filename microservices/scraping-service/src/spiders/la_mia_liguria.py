@@ -2,16 +2,16 @@
 """
 Spider per lamialiguria.it - Portale turistico eventi della Liguria.
 
-Il sito è un WordPress con plugin eventi personalizzato.
-Il JSON-LD è di tipo WebPage (non Event), quindi i dati strutturati
-vengono integrati con HTML parsing dedicato.
+Approccio ibrido:
+- API WordPress REST per listing, titolo, descrizione, immagine, categoria
+- HTML scraping per date, città, contatti (non esposti dall'API MEC)
 
 Utilizzo:
-    # Scrapy diretto - prime N pagine (default: 5)
-    scrapy crawl la_mia_liguria -o output.json
+    # Scrapy diretto - prime N pagine API (default: 5, 10 eventi/pagina)
+    scrapy crawl la_mia_liguria
 
-    # Con limite pagine
-    scrapy crawl la_mia_liguria -a max_pages=10 -o output.json
+    # Con limite pagine API
+    scrapy crawl la_mia_liguria -a max_pages=10
 
     # Scrapyd
     curl http://localhost:6800/schedule.json \
@@ -20,9 +20,10 @@ Utilizzo:
         -d max_pages=10
 
 Parametri:
-    max_pages: Numero massimo di pagine listing da scansionare (default: 5)
+    max_pages: Numero massimo di pagine API da scansionare (default: 5)
 """
 
+import json
 import re
 from typing import Optional
 
@@ -34,13 +35,12 @@ from spiders.utils import DEFAULT_CRAWL_SETTINGS
 
 class LaMiaLiguriaSpider(BaseEventSpider):
     """
-    Spider per lamialiguria.it.
+    Spider ibrido per lamialiguria.it (WordPress + MEC plugin).
 
     Strategia:
-    1. Scorre le pagine lista eventi (/vivi-la-liguria/liguria-eventi/page/N/)
-    2. Dalla card estrae URL dettaglio e categoria
-    3. Dal dettaglio parsa JSON-LD WebPage (titolo, descrizione, immagine)
-    4. Integra date, città e contatti dall'HTML
+    1. API REST /wp/v2/mec-events per listing paginato (titolo, descrizione, immagine, categoria)
+    2. API REST /wp/v2/media/{id} per URL immagine featured
+    3. HTML scraping pagina dettaglio per date, città, contatti (non esposti dall'API)
     """
 
     name = "la_mia_liguria"
@@ -48,193 +48,241 @@ class LaMiaLiguriaSpider(BaseEventSpider):
     allowed_domains = ["lamialiguria.it"]
 
     BASE_URL = "https://lamialiguria.it"
-    EVENTS_URL = "https://lamialiguria.it/vivi-la-liguria/liguria-eventi/"
+    API_EVENTS = "https://lamialiguria.it/wp-json/wp/v2/mec-events"
+    API_MEDIA = "https://lamialiguria.it/wp-json/wp/v2/media"
+    API_CATEGORY = "https://lamialiguria.it/wp-json/wp/v2/mec_category"
+    API_PER_PAGE = 10
 
     custom_settings = {**DEFAULT_CRAWL_SETTINGS}
 
     def __init__(self, max_pages: str = "5", *args, **kwargs):
-        """
-        Inizializza lo spider.
-
-        Args:
-            max_pages: Numero massimo di pagine listing (default: 5)
-        """
         super().__init__(*args, **kwargs)
         self.max_pages = int(max_pages)
-        self._seen_urls: set = set()
+        self._categories_cache: dict[int, str] = {}
 
     def start_requests(self):
-        """Genera la prima richiesta alla pagina lista eventi."""
+        """Scarica prima le categorie MEC, poi avvia il listing eventi."""
         yield scrapy.Request(
-            self.EVENTS_URL,
-            callback=self.parse,
+            f"{self.API_CATEGORY}?per_page=100",
+            callback=self._parse_categories,
+        )
+
+    def _parse_categories(self, response):
+        """Cacha le categorie MEC (id → name), poi avvia il listing."""
+        try:
+            categories = json.loads(response.text)
+            for cat in categories:
+                self._categories_cache[cat["id"]] = cat.get("name", "")
+            self.logger.info(f"Categorie MEC cachate: {len(self._categories_cache)}")
+        except (json.JSONDecodeError, KeyError):
+            self.logger.warning("Impossibile caricare categorie MEC")
+
+        # Avvia listing eventi dalla pagina 1
+        yield scrapy.Request(
+            f"{self.API_EVENTS}?per_page={self.API_PER_PAGE}&page=1&orderby=date&order=desc",
+            callback=self._parse_api_listing,
             meta={"page": 1},
         )
 
-    def parse(self, response):
+    def _parse_api_listing(self, response):
         """
-        Parsa la pagina lista eventi ed estrae URL dettaglio e categoria.
-        Paginazione WordPress tramite /page/N/.
-
-        Args:
-            response: Risposta HTTP della pagina lista
+        Parsa la risposta API listing eventi.
+        Per ogni evento: estrae dati API, poi segue la pagina HTML per date/location.
         """
-        # Link agli eventi (pattern /eventi/[slug]/)
-        event_links = response.css('a[href*="/eventi/"]')
-
-        new_items = []
-        for link in event_links:
-            href = link.attrib.get("href", "")
-            if not href or href.rstrip("/").endswith("/eventi"):
-                continue
-            full_url = response.urljoin(href)
-            if full_url in self._seen_urls:
-                continue
-            self._seen_urls.add(full_url)
-
-            # Categoria dalla card (span.underline)
-            category_text = self.clean_text(link.css("span.underline::text").get())
-            new_items.append((full_url, category_text))
-
-        if not new_items:
-            self.logger.info(f"Nessun evento trovato a pagina {response.meta.get('page', 1)}, stop.")
+        try:
+            events = json.loads(response.text)
+        except json.JSONDecodeError:
+            self.logger.error(f"Risposta API non valida: {response.url}")
             return
 
-        for url, category_text in new_items:
+        if not events:
+            self.logger.info(f"Nessun evento a pagina {response.meta['page']}, stop.")
+            return
+
+        for event in events:
+            api_data = self._extract_api_data(event)
+
+            # Segui la pagina HTML per date, città, contatti
             yield scrapy.Request(
-                url,
-                callback=self.parse_event_detail,
-                meta={"category_from_list": category_text},
+                api_data["url"],
+                callback=self._parse_event_detail,
+                meta={"api_data": api_data},
             )
 
-        # Paginazione WordPress: /page/N/
-        current_page = response.meta.get("page", 1)
-        if current_page < self.max_pages:
+        # Paginazione API
+        current_page = response.meta["page"]
+        total_pages = int(response.headers.get(b"X-WP-TotalPages", b"1").decode())
+        if current_page < min(self.max_pages, total_pages):
             next_page = current_page + 1
-            next_url = f"{self.EVENTS_URL}page/{next_page}/"
             yield scrapy.Request(
-                next_url,
-                callback=self.parse,
+                f"{self.API_EVENTS}?per_page={self.API_PER_PAGE}&page={next_page}&orderby=date&order=desc",
+                callback=self._parse_api_listing,
                 meta={"page": next_page},
             )
 
-    def parse_event_detail(self, response):
+    def _extract_api_data(self, event: dict) -> dict:
+        """Estrae i dati disponibili dall'API WordPress."""
+        # Titolo
+        title = self.clean_text(event.get("title", {}).get("rendered", ""))
+
+        # Descrizione dal content (pulita da HTML)
+        content_html = event.get("content", {}).get("rendered", "")
+        description = self.clean_html(content_html) if content_html else None
+
+        # Immagine: featured_media è un ID, serve risolverlo
+        featured_media_id = event.get("featured_media", 0)
+
+        # Categorie MEC (risolvi ID → nome)
+        cat_ids = event.get("mec_category", [])
+        categories = [
+            self._categories_cache[cid]
+            for cid in cat_ids
+            if cid in self._categories_cache
+        ]
+
+        # URL pagina evento
+        url = event.get("link", "")
+        slug = event.get("slug", "")
+
+        return {
+            "wp_id": event.get("id"),
+            "title": title,
+            "description": description,
+            "description_html": content_html,
+            "categories": categories,
+            "featured_media_id": featured_media_id,
+            "url": url,
+            "slug": slug,
+        }
+
+    def _parse_event_detail(self, response):
         """
-        Parsa la pagina di dettaglio evento.
-        Fonte primaria: JSON-LD WebPage (titolo, descrizione, immagine).
-        Integrazioni HTML: date, città, contatti.
-
-        Args:
-            response: Risposta HTTP della pagina dettaglio
+        Parsa la pagina HTML dettaglio evento.
+        Combina dati API (titolo, descrizione, categoria) con HTML (date, città, contatti).
         """
-        # ── JSON-LD WebPage ───────────────────────────────────────────────────
-        ld_page = self.extract_jsonld_node(response, "WebPage")
+        api_data = response.meta["api_data"]
 
-        # Titolo: JSON-LD name → h1 → og:title
-        title = (
-            (ld_page.get("name") if ld_page else None)
-            or self.clean_text(response.css("h1::text").get())
-            or response.xpath('//meta[@property="og:title"]/@content').get()
-        )
-        title = self.clean_text(title)
+        # ── Immagine: og:image dal HTML (più semplice che chiamare API media) ──
+        image_url = response.xpath('//meta[@property="og:image"]/@content').get()
 
-        # Descrizione: JSON-LD description → og:description
-        description = (
-            (ld_page.get("description") if ld_page else None)
-            or response.xpath('//meta[@property="og:description"]/@content').get()
-        )
-        description = self.clean_text(description)
-
-        # Immagine: JSON-LD image → og:image
-        image_url = (
-            (ld_page.get("image") if ld_page else None)
-            or response.xpath('//meta[@property="og:image"]/@content').get()
-        )
-
-        # ── Quando (date) ─────────────────────────────────────────────────────
+        # ── Date dall'HTML ─────────────────────────────────────────────────────
         quando = self._extract_quando(response)
         date_start = quando.get("date_start")
         date_end = quando.get("date_end")
         date_display = quando.get("display")
 
-        # ── Dove (città) ─────────────────────────────────────────────────────
+        # ── Città dall'HTML ────────────────────────────────────────────────────
         city = self._extract_city(response)
+        location_name = self._extract_location_name(response)
 
-        # ── Contatti ─────────────────────────────────────────────────────────
+        # ── Contatti dall'HTML ─────────────────────────────────────────────────
         contatti = self._extract_contatti(response)
-        website = contatti.get("website")
 
-        # ── Categoria ────────────────────────────────────────────────────────
-        # Fonte primaria: passata dalla lista; fallback HTML
-        cat_from_list = response.meta.get("category_from_list")
-        category_html = self._extract_category(response)
-        category_value = cat_from_list or (category_html[0] if category_html else None)
-        category = [category_value] if category_value else []
+        # Categoria
+        categories = api_data["categories"]
+        if not categories:
+            categories = self._extract_category(response)
+        category_value = categories[0] if categories else None
 
-        # Slug ed event_id dall'URL
-        slug = self.slug_from_url(response.url)
+        # Hash
+        title = api_data["title"]
+        slug = api_data["slug"]
+        uuid = self.generate_uuid(title or "", date_start or "", city or location_name or "")
+        content_hash = self.generate_content_hash(api_data["description"] or "", "", "")
 
-        # Costruzione item
+        # Costruzione EventItem
         item = self.create_item(
-            url=response.url,
+            uuid=uuid,
             title=title,
-            description=description,
-            date_start=date_start,
-            date_end=date_end,
-            date_display=date_display,
-            city=city,
-            image_url=image_url,
-            category=category,
-            website=website,
-            slug=slug,
-            event_id=slug,
-        )
-
-        item["uuid"] = self.generate_uuid(
-            item.get("title", ""),
-            item.get("date_start", ""),
-            item.get("city", ""),
-        )
-        item["content_hash"] = self.generate_content_hash(
-            item.get("description", ""),
-            "",
-            "",
+            data={
+                "description": api_data["description"],
+                "category": categories,
+                "image_url": image_url,
+                "dates": {
+                    "date_start": date_start or "",
+                    "date_end": date_end or "",
+                    "date_display": date_display or "",
+                },
+                "city": {
+                    "city_name": city,
+                    "location_name": location_name,
+                    "location_address": None,
+                },
+                "section": {
+                    "website": contatti.get("website"),
+                },
+                "info_extra": {
+                    "contatti": contatti.get("raw"),
+                    "phone": contatti.get("phone"),
+                } if contatti.get("raw") else None,
+            },
+            meta={
+                "content_hash": content_hash,
+                "url": api_data["url"],
+                "slug": slug,
+                "event_id": str(api_data["wp_id"]),
+                "category": category_value or "evento",
+                "source": self.source_name,
+            },
         )
 
         yield item
 
     # =========================================================================
-    # METODI ESTRAZIONE HTML
+    # METODI ESTRAZIONE HTML (date, città, contatti - non disponibili via API)
     # =========================================================================
 
     def _extract_quando(self, response) -> dict:
-        """
-        Estrae le date dell'evento dall'HTML.
-
-        Formati gestiti:
-        - .data-inizio / .data-fine: "DD/MM/YYYY"
-        - .event-date p: "DD/MM/YYYY - DD/MM/YYYY"
-        - .evento-meta: contenitore generale
-
-        Returns:
-            Dict con: display, date_start, date_end (YYYY-MM-DD)
-        """
+        """Estrae date dall'HTML. Plugin MEC usa classi mec-*."""
         quando = {"display": None, "date_start": None, "date_end": None}
 
-        # Formato 1: span.data-inizio / span.data-fine (plugin eventi)
-        start_raw = self.clean_text(response.css(".data-inizio::text").get())
-        end_raw = self.clean_text(response.css(".data-fine::text").get())
-        if start_raw:
-            quando["date_start"] = self.parse_date_dmy(start_raw)
-            quando["display"] = start_raw
-        if end_raw:
-            quando["date_end"] = self.parse_date_dmy(end_raw)
-            if quando["display"]:
-                quando["display"] += f" - {end_raw}"
+        # MEC: .mec-start-date-abbr, .mec-end-date-abbr (attributo content ISO)
+        start_abbr = response.css(".mec-start-date-abbr::attr(content)").get()
+        end_abbr = response.css(".mec-end-date-abbr::attr(content)").get()
+        if start_abbr:
+            quando["date_start"] = self.parse_date_iso(start_abbr)
+        if end_abbr:
+            quando["date_end"] = self.parse_date_iso(end_abbr)
 
-        # Formato 2: .event-date p → "DD/MM/YYYY - DD/MM/YYYY"
+        # MEC: testo visuale date
+        date_display = self.clean_text(
+            response.css(".mec-single-event-date .mec-events-abbr-date::text").get()
+            or response.css(".mec-single-event-date").xpath("string()").get()
+        )
+        quando["display"] = date_display
+
+        # MEC: orario dall'HTML
+        time_text = self.clean_text(
+            response.css(".mec-single-event-time .mec-events-abbr-time::text").get()
+            or response.css(".mec-single-event-time").xpath("string()").get()
+        )
+        if time_text and quando["date_start"]:
+            times = re.findall(r"(\d{1,2}:\d{2})", time_text)
+            if times:
+                quando["date_start"] = f"{quando['date_start']} {times[0]}"
+                if quando["date_end"] and len(times) >= 2:
+                    quando["date_end"] = f"{quando['date_end']} {times[1]}"
+
+        # Fallback: span.data-inizio / span.data-fine
         if not quando["date_start"]:
-            date_text = self.clean_text(response.css(".event-date p::text").get())
+            start_raw = self.clean_text(response.css(".data-inizio::text").get())
+            if start_raw:
+                quando["date_start"] = self.parse_date_dmy(start_raw)
+                quando["display"] = start_raw
+
+            end_raw = self.clean_text(response.css(".data-fine::text").get())
+            if end_raw:
+                quando["date_end"] = self.parse_date_dmy(end_raw)
+                if quando["display"]:
+                    quando["display"] += f" - {end_raw}"
+
+        # Fallback: .event-date p, .evento-meta
+        if not quando["date_start"]:
+            date_text = self.clean_text(
+                response.css(".event-date p::text").get()
+                or response.css(".evento-meta").xpath("string()").get()
+                or response.css(".event-info").xpath("string()").get()
+            )
             if date_text:
                 quando["display"] = date_text
                 dates = self.extract_dates_from_text(date_text)
@@ -243,41 +291,20 @@ class LaMiaLiguriaSpider(BaseEventSpider):
                 if len(dates) >= 2:
                     quando["date_end"] = dates[1]
 
-        # Formato 3: qualsiasi testo con pattern DD/MM/YYYY nell'area meta
-        if not quando["date_start"]:
-            meta_text = self.clean_text(
-                response.css(".evento-meta").xpath("string()").get()
-                or response.css(".event-info").xpath("string()").get()
-            )
-            if meta_text:
-                dates = self.extract_dates_from_text(meta_text)
-                if dates:
-                    quando["date_start"] = dates[0]
-                    quando["display"] = meta_text
-                if len(dates) >= 2:
-                    quando["date_end"] = dates[1]
-
-        # Se date_end == date_start non ha senso tenerlo
+        # Se stessa data, non salvare date_end ridondante
         if quando["date_end"] == quando["date_start"]:
             quando["date_end"] = None
 
         return quando
 
     def _extract_city(self, response) -> Optional[str]:
-        """
-        Estrae la città dell'evento dall'HTML.
-
-        Cerca in ordine:
-        1. .event-location h5 (campo dedicato)
-        2. .evento-location, .luogo (classi alternative)
-        3. og:region o altri meta
-
-        Returns:
-            Nome città o None
-        """
-        # Tentativo 1: campo location dedicato
+        """Estrae la città dall'HTML MEC o fallback generico."""
         city = (
-            self.clean_text(response.css(".event-location h5::text").get())
+            # MEC location
+            self.clean_text(response.css(".mec-single-event-location .mec-address::text").get())
+            or self.clean_text(response.css(".mec-single-event-location .mec-location-address::text").get())
+            # Fallback generico
+            or self.clean_text(response.css(".event-location h5::text").get())
             or self.clean_text(response.css(".event-location p::text").get())
             or self.clean_text(response.css(".evento-location::text").get())
             or self.clean_text(response.css(".luogo::text").get())
@@ -285,23 +312,40 @@ class LaMiaLiguriaSpider(BaseEventSpider):
         if city:
             return city.title()
 
-        # Tentativo 2: meta geo.region o article:region
+        # Meta geo.region
         region = response.xpath('//meta[@name="geo.region"]/@content').get()
         if region:
             return self.clean_text(region)
 
         return None
 
-    def _extract_contatti(self, response) -> dict:
-        """
-        Estrae i contatti dell'evento dall'HTML WordPress.
+    def _extract_location_name(self, response) -> Optional[str]:
+        """Estrae il nome della venue dall'HTML MEC."""
+        return (
+            self.clean_text(response.css(".mec-single-event-location .mec-location-title::text").get())
+            or self.clean_text(response.css(".mec-single-event-location h6::text").get())
+        )
 
-        Returns:
-            Dict con: raw, phone, website
-        """
+    def _extract_contatti(self, response) -> dict:
+        """Estrae contatti dall'HTML."""
         contatti = {"raw": None, "phone": None, "website": None}
 
-        # Cerca sezione contatti
+        # MEC organizer
+        organizer_section = response.css(".mec-single-event-organizer")
+        if organizer_section:
+            raw = self.clean_text(organizer_section.xpath("string()").get())
+            contatti["raw"] = raw
+
+            website = organizer_section.css('a[href^="http"]::attr(href)').get()
+            if website and "lamialiguria.it" not in website:
+                contatti["website"] = website
+
+            if raw:
+                contatti["phone"] = self.extract_phone_from_text(raw)
+
+            return contatti
+
+        # Fallback generico
         contatti_section = (
             response.css(".event-contacts")
             or response.css(".contatti")
@@ -322,15 +366,10 @@ class LaMiaLiguriaSpider(BaseEventSpider):
         return contatti
 
     def _extract_category(self, response) -> list:
-        """
-        Estrae la categoria dall'HTML WordPress.
-
-        Returns:
-            Lista di categorie (può essere vuota)
-        """
+        """Estrae la categoria dall'HTML come fallback."""
         cat = (
-            self.clean_text(response.css(".cat-links a::text").get())
+            self.clean_text(response.css(".mec-event-category::text").get())
+            or self.clean_text(response.css(".cat-links a::text").get())
             or self.clean_text(response.css(".entry-category a::text").get())
-            or self.clean_text(response.css(".mec-event-category::text").get())
         )
         return [cat] if cat else []

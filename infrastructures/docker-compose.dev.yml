@@ -111,8 +111,11 @@ services:
       KEYCLOAK_URL: http://keycloak:8080
       KEYCLOAK_REALM: today-events
       KEYCLOAK_AUDIENCE: account
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
     volumes:
       - ../microservices/backoffice-service/backend:/app/backend
+      - ../microservices/scraping-service/data:/data:ro
     depends_on:
       postgres:
         condition: service_healthy

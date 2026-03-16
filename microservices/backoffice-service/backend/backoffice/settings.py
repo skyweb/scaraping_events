@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'scraping',
     'events',
     'cms',
+    'ai_transform',
 ]
 
 MIDDLEWARE = [
@@ -325,6 +326,10 @@ CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
 CKEDITOR_5_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# AI Providers (trasformazione eventi → Schema.org)
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
+GROQ_API_KEY = os.environ.get('GROQ_API_KEY', '')
 
 # Logging JSON strutturato — Promtail/Loki parsano nativamente.
 # Se OTel è attivo, il LoggingInstrumentor inietta otelTraceID/otelSpanID nel record

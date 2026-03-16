@@ -64,6 +64,11 @@ class BaseEventSpider(scrapy.Spider, ABC):
                 "CLOSESPIDER_ITEMCOUNT": self.max_results,
             }
 
+    async def start(self):
+        """Compatibilità Scrapy 2.13+: delega a start_requests()."""
+        for request in self.start_requests():
+            yield request
+
     # =========================================================================
     # METODI DI UTILITÀ PER PULIZIA TESTO
     # =========================================================================

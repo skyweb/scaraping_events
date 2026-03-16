@@ -225,7 +225,7 @@ class BatchExportPipeline:
     """Pipeline base per esportazione batch JSON.
 
     Gestisce buffer separati per ogni category (meta.category).
-    Quando cambia category, flusha il buffer precedente e riparte il contatore batch.
+    Ogni category accumula item indipendentemente e flusha al raggiungimento di batch_size.
     Nome file: {spider}_{category}_{timestamp}_batch_{N}.json
     """
 
@@ -233,9 +233,8 @@ class BatchExportPipeline:
         self.batch_size = batch_size
         self.storage = StorageBackend(backend=storage_backend)
         self.spider_name = ""
-        # Buffer e contatori per category
-        self._current_category: Optional[str] = None
-        self._items_buffer: List[Dict[str, Any]] = []
+        # Buffer separato per ogni category
+        self._buffers: Dict[str, List[Dict[str, Any]]] = {}
         self._batch_counts: Dict[str, int] = {}
         self._total_batches = 0
 
@@ -249,57 +248,69 @@ class BatchExportPipeline:
     def open_spider(self, spider):
         """Chiamato all'avvio dello spider. Inizializza storage, buffer e contatori."""
         self.spider_name = spider.name
-        self._current_category = None
-        self._items_buffer = []
+        self._buffers = {}
         self._batch_counts = {}
         self._total_batches = 0
         self.storage.init()
         logger.info(f"{self.__class__.__name__}: attiva (storage={self.storage.backend})")
 
     def close_spider(self, spider):
-        """Chiamato alla chiusura dello spider. Salva gli item rimasti nel buffer come ultimo batch."""
-        if self._items_buffer:
-            self._flush_batch()
+        """Chiamato alla chiusura dello spider. Salva gli item rimasti nei buffer come ultimi batch."""
+        for category in list(self._buffers):
+            if self._buffers[category]:
+                self._flush_batch(category)
         logger.info(f"{self.__class__.__name__}: {self._total_batches} batch salvati ({dict(self._batch_counts)})")
 
     def process_item(self, item, spider):
         """
         Processa ogni item prodotto dallo spider.
 
-        Se la category cambia rispetto al buffer corrente, flusha prima il batch precedente.
-        Poi aggiunge l'item al buffer e flusha se pieno.
-
-        Args:
-            item: EventItem prodotto dallo spider
-            spider: Istanza dello spider attivo
-
-        Returns:
-            L'item originale (passato alla pipeline successiva)
+        Ogni category ha il proprio buffer indipendente.
+        Il flush avviene solo quando il buffer di quella category raggiunge batch_size.
         """
         event_data = self._item_to_dict(item)
-        category = (ItemAdapter(item).get("meta") or {}).get("category")
+        meta = ItemAdapter(item).get("meta") or {}
+        source = (meta.get("source") or "").lower()
+        category = (meta.get("category") or "default").lower()
+        city_key = (meta.get("city_key") or "").lower()
 
-        # Cambio category → flush buffer precedente
-        if category != self._current_category and self._items_buffer:
-            self._flush_batch()
-        self._current_category = category
+        # Chiave buffer per il filename:
+        # - puglia_culture: usa category (evento, spettacolo, rassegna)
+        # - city_today: usa city_key (milano, roma, ecc.)
+        # - altri spider: "default" (un solo buffer)
+        if city_key:
+            buffer_key = city_key
+        elif source == "puglia_culture":
+            buffer_key = category
+        else:
+            buffer_key = "default"
 
-        self._items_buffer.append(event_data)
+        if buffer_key not in self._buffers:
+            self._buffers[buffer_key] = []
 
-        if len(self._items_buffer) >= self.batch_size:
-            self._flush_batch()
+        self._buffers[buffer_key].append(event_data)
+
+        if len(self._buffers[buffer_key]) >= self.batch_size:
+            self._flush_batch(buffer_key)
 
         return item
 
-    def _flush_batch(self):
-        """Salva il buffer corrente come file JSON e svuota il buffer."""
-        category = self._current_category or "default"
+    def _flush_batch(self, category: str):
+        """Salva il buffer della category come file JSON e svuota il buffer."""
+        items = self._buffers.get(category, [])
+        if not items:
+            return
+
         self._batch_counts[category] = self._batch_counts.get(category, 0) + 1
         batch_num = self._batch_counts[category]
         self._total_batches += 1
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{self.spider_name}_{category}_{timestamp}_batch_{batch_num:03d}.json"
+        # "default" non appare nel filename
+        if category == "default":
+            filename = f"{self.spider_name}_{timestamp}_batch_{batch_num:03d}.json"
+        else:
+            filename = f"{self.spider_name}_{category}_{timestamp}_batch_{batch_num:03d}.json"
 
         prefix = f"batch/{self.spider_name}"
         storage_path = self.storage.build_path(filename, prefix)
@@ -308,14 +319,14 @@ class BatchExportPipeline:
             "spider": self.spider_name,
             "category": category,
             "batch": batch_num,
-            "count": len(self._items_buffer),
+            "count": len(items),
             "sent_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "storage_path": storage_path,
-            "events": self._items_buffer,
+            "storage_path": filename,
+            "events": items,
         }
 
         self.storage.save_json(filename, payload, prefix=prefix)
-        self._items_buffer = []
+        self._buffers[category] = []
 
     def _item_to_dict(self, item) -> Dict[str, Any]:
         """Converte EventItem nel formato dict per il JSON di output."""
@@ -327,8 +338,6 @@ class BatchExportPipeline:
         }
         if adapter.get("data"):
             result["data"] = adapter.get("data")
-        if adapter.get("schemaOrg"):
-            result["schemaOrg"] = adapter.get("schemaOrg")
         return result
 
 
@@ -440,15 +449,14 @@ class ApiPipeline(BatchExportPipeline):
         self.session.close()
         logger.info("ApiPipeline: connessione chiusa")
 
-    def _flush_batch(self):
+    def _flush_batch(self, category: str):
         """Salva JSON su disco (super) e invia lo stesso batch all'API."""
         # Salva una copia degli eventi prima che super() svuoti il buffer
-        events = list(self._items_buffer)
-        category = self._current_category or "default"
+        events = list(self._buffers.get(category, []))
         batch_num = self._batch_counts.get(category, 0) + 1
 
         # Salva JSON su disco/MinIO
-        super()._flush_batch()
+        super()._flush_batch(category)
 
         # Invia all'API con tracing OTel
         if not events:

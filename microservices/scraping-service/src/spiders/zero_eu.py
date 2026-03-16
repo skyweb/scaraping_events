@@ -154,46 +154,51 @@ class ZeroEuSpider(BaseEventSpider):
         """
         Estrae dati evento dall'API e visita la pagina per dettagli.
 
-        Args:
-            data: Dati evento dall'API
-
         Yields:
-            Request per la pagina dettaglio o EventItem
+            Request per la pagina dettaglio
         """
-        item = self.create_item()
+        # Dati base dall'API
+        api_data = {}
 
-        # ID e URL
-        item["event_id"] = str(data.get("id", ""))
-        item["url"] = data.get("link")
-        item["slug"] = data.get("slug")
+        api_data["event_id"] = str(data.get("id", ""))
+        api_data["url"] = data.get("link")
+        api_data["slug"] = data.get("slug")
 
         # Titolo
-        title = data.get("name", {}).get("plain")
-        item["title"] = self.clean_text(title)
+        api_data["title"] = self.clean_text(data.get("name", {}).get("plain"))
 
-        # Descrizione (preserva HTML originale)
-        content = data.get("content", {}).get("rendered")
-        item["description"] = content
+        # Descrizione
+        api_data["description"] = data.get("content", {}).get("rendered")
 
         # Categoria
         cats = data.get("category", [])
-        if cats:
-            item["category"] = [c.strip() for cat in cats for c in cat.split(",")]
+        api_data["category"] = [c.strip() for cat in cats for c in cat.split(",")] if cats else []
 
         # Immagine
+        image_url = None
         featured_media = data.get("featured_image", {})
         if featured_media and "sizes" in featured_media:
             sizes = featured_media["sizes"]
             if "full" in sizes:
-                item["image_url"] = sizes["full"].get("source_url") or sizes["full"].get("file")
+                image_url = sizes["full"].get("source_url") or sizes["full"].get("file")
             elif "large" in sizes:
-                item["image_url"] = sizes["large"].get("source_url") or sizes["large"].get("file")
+                image_url = sizes["large"].get("source_url") or sizes["large"].get("file")
+        api_data["image_url"] = image_url
 
         # Location
-        item["city"] = self.target_city_slug.capitalize()
-        item["location_name"] = data.get("venue_name")
-        item["location_coords"] = data.get("venue_coords")
-        item["location_address"] = data.get("venue_address")
+        api_data["city"] = self.target_city_slug.capitalize()
+        api_data["location_name"] = data.get("venue_name")
+        api_data["location_address"] = data.get("venue_address")
+
+        # Coordinate
+        coords = data.get("venue_coords")
+        api_data["location_coords"] = None
+        if coords and isinstance(coords, dict):
+            if coords.get("lat") and coords.get("lng"):
+                api_data["location_coords"] = {
+                    "lat": float(coords["lat"]),
+                    "lng": float(coords["lng"]),
+                }
 
         # Arricchisci da _embedded
         if "_embedded" in data and "venue" in data["_embedded"]:
@@ -202,25 +207,34 @@ class ZeroEuSpider(BaseEventSpider):
                 venue = venue_list[0]
                 full_addr = venue.get("plain_address") or venue.get("address_full")
                 if full_addr:
-                    item["location_address"] = full_addr
+                    api_data["location_address"] = full_addr
 
         # Prezzo
-        item["price"] = data.get("price")
+        api_data["price"] = data.get("price")
 
-        # Date
-        item["date_start"] = self.parse_date_iso(data.get("start_date"))
-        item["date_end"] = self.parse_date_iso(data.get("end_date"))
-        item["date_display"] = data.get("date_string") or data.get("human_date")
-        item["time_start"] = data.get("start_time")
-        item["time_end"] = data.get("end_time")
-        item["date_scope"] = data.get("date_scope")
+        # Date con orario
+        date_start = self.parse_date_iso(data.get("start_date"))
+        date_end = self.parse_date_iso(data.get("end_date"))
+        time_start = data.get("start_time")
+        time_end = data.get("end_time")
+
+        if date_start and time_start:
+            date_start = f"{date_start} {time_start}"
+        if date_end and time_end:
+            date_end = f"{date_end} {time_end}"
+        if date_end == date_start:
+            date_end = None
+
+        api_data["date_start"] = date_start
+        api_data["date_end"] = date_end
+        api_data["date_display"] = data.get("date_string") or data.get("human_date")
 
         # Visita pagina per dettagli aggiuntivi
-        if item["url"]:
+        if api_data["url"]:
             yield scrapy.Request(
-                url=item["url"],
+                url=api_data["url"],
                 callback=self.parse_event_page,
-                meta={"item": item},
+                meta={"api_data": api_data},
                 headers={
                     "Accept-Language": "it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7",
                     "Cookie": "pll_language=it; wp-wpml_current_language=it",
@@ -228,59 +242,70 @@ class ZeroEuSpider(BaseEventSpider):
                 dont_filter=True,
             )
         else:
-            # Genera hash e yield item
-            item["uuid"] = self.generate_uuid(
-                item.get("title", ""),
-                item.get("date_start", ""),
-                item.get("location_name", ""),
-            )
-            item["content_hash"] = self.generate_content_hash(
-                item.get("description", ""),
-                item.get("price", ""),
-                item.get("time_start", ""),
-            )
-            yield item
+            yield self._build_item(api_data)
 
     def parse_event_page(self, response):
-        """
-        Estrae dettagli aggiuntivi dalla pagina HTML dell'evento.
-
-        Args:
-            response: Risposta HTML della pagina evento
-        """
-        item = response.meta["item"]
+        """Estrae dettagli aggiuntivi dalla pagina HTML e costruisce l'EventItem."""
+        api_data = response.meta["api_data"]
 
         # Indirizzo completo dalla pagina
         address_parts = response.xpath('//p[contains(@class, "venue")]/text()').getall()
         full_address = " ".join([p.strip() for p in address_parts if p.strip()]).strip()
         if full_address:
-            item["location_address"] = full_address.strip(" ,-")
+            api_data["location_address"] = full_address.strip(" ,-")
 
         # Data formattata
         when_text = response.xpath(
-            '''
-            //div[contains(@class, "resume-detail")]
-            /h2[contains(text(), "When") or contains(text(), "Quando")]
-            /following-sibling::p/text()
-            '''
+            '//div[contains(@class, "resume-detail")]'
+            '/h2[contains(text(), "When") or contains(text(), "Quando")]'
+            '/following-sibling::p/text()'
         ).get()
-
         if not when_text:
             when_text = response.css(".single-page-header .date::text").get()
-
         if when_text:
-            item["date_display"] = self.clean_text(when_text)
+            api_data["date_display"] = self.clean_text(when_text)
 
-        # Genera hash finali
-        item["uuid"] = self.generate_uuid(
-            item.get("title", ""),
-            item.get("date_start", ""),
-            item.get("location_name", ""),
-        )
-        item["content_hash"] = self.generate_content_hash(
-            item.get("description", ""),
-            item.get("price", ""),
-            item.get("time_start", ""),
-        )
+        yield self._build_item(api_data)
 
-        yield item
+    def _build_item(self, d: dict):
+        """Costruisce l'EventItem con struttura nested dai dati raccolti."""
+        title = d.get("title")
+        date_start = d.get("date_start")
+        location_name = d.get("location_name")
+        description = d.get("description")
+        price = d.get("price")
+
+        uuid = self.generate_uuid(title or "", date_start or "", location_name or "")
+        content_hash = self.generate_content_hash(description or "", price or "", "")
+
+        return self.create_item(
+            uuid=uuid,
+            title=title,
+            data={
+                "description": description,
+                "category": d.get("category", []),
+                "image_url": d.get("image_url"),
+                "dates": {
+                    "date_start": date_start or "",
+                    "date_end": d.get("date_end") or "",
+                    "date_display": d.get("date_display") or "",
+                },
+                "city": {
+                    "city_name": d.get("city"),
+                    "location_name": location_name,
+                    "location_address": d.get("location_address"),
+                    "location_coords": d.get("location_coords"),
+                },
+                "section": {
+                    "price": price,
+                },
+            },
+            meta={
+                "content_hash": content_hash,
+                "url": d.get("url") or "",
+                "slug": d.get("slug") or "",
+                "event_id": d.get("event_id") or "",
+                "category": d["category"][0] if d.get("category") else "evento",
+                "source": self.source_name,
+            },
+        )

@@ -4,19 +4,11 @@ Spider per Artribune.com - Eventi culturali e mostre d'arte.
 
 Artribune è un magazine online dedicato all'arte e alla cultura.
 Lo spider usa le API WordPress REST per ottenere la lista eventi,
-poi arricchisce i dati visitando le pagine di dettaglio.
+arricchisce i dati con un endpoint custom e visita le pagine dettaglio.
 
 Utilizzo:
-    # Scrapy diretto
-    scrapy crawl artribune -o output.json
-
-    # Con limite pagine
-    scrapy crawl artribune -a max_pages=5 -o output.json
-
-    # Scrapyd
-    curl http://localhost:6800/schedule.json \
-        -d project=events_scraper \
-        -d spider=artribune
+    scrapy crawl artribune
+    scrapy crawl artribune -a max_pages=5
 
 Parametri:
     max_pages: Numero massimo di pagine da scrapare (default: tutte)
@@ -24,8 +16,6 @@ Parametri:
 """
 
 import re
-from datetime import datetime
-from typing import Dict, List, Optional
 
 import scrapy
 
@@ -58,17 +48,10 @@ class ArtribuneSpider(BaseEventSpider):
         *args,
         **kwargs,
     ):
-        """
-        Inizializza lo spider.
-
-        Args:
-            max_pages: Limite pagine (None = tutte)
-            per_page: Eventi per pagina (max 100)
-        """
         super().__init__(*args, **kwargs)
-        self.per_page = min(int(per_page), 100)  # Max API è 100
+        self.per_page = min(int(per_page), 100)
         self.max_pages = int(max_pages) if max_pages else None
-        self.custom_api_data: Dict[str, dict] = {}
+        self.custom_api_data: dict[str, dict] = {}
 
     def start_requests(self):
         """Inizia con l'endpoint custom per dati strutturati."""
@@ -79,19 +62,11 @@ class ArtribuneSpider(BaseEventSpider):
         )
 
     def parse_custom_api(self, response):
-        """
-        Parsa endpoint custom e memorizza dati strutturati.
-
-        Args:
-            response: Risposta JSON dall'endpoint custom
-        """
+        """Parsa endpoint custom e memorizza dati strutturati."""
         try:
             data = response.json()
             events = data.get("events", []) if isinstance(data, dict) else data
 
-            self.logger.info(f"Endpoint custom: {len(events)} eventi con dati strutturati")
-
-            # Memorizza per URL
             for event in events:
                 url = event.get("url")
                 if url:
@@ -102,7 +77,7 @@ class ArtribuneSpider(BaseEventSpider):
                         "excerpt": event.get("excerpt"),
                     }
 
-            self.logger.info(f"Memorizzati {len(self.custom_api_data)} eventi dall'API custom")
+            self.logger.info(f"API custom: {len(self.custom_api_data)} eventi memorizzati")
 
         except Exception as e:
             self.logger.warning(f"Errore parsing API custom: {e}")
@@ -114,71 +89,44 @@ class ArtribuneSpider(BaseEventSpider):
         )
 
     def parse(self, response):
-        """
-        Parsa lista eventi dall'API WP REST.
-
-        Args:
-            response: Risposta JSON con lista eventi
-        """
+        """Parsa lista eventi dall'API WP REST."""
         try:
             events_list = response.json()
-
-            # Paginazione dagli header
-            total_events = int(response.headers.get("X-WP-Total", b"0").decode())
             total_pages = int(response.headers.get("X-WP-TotalPages", b"0").decode())
 
-            # Pagina corrente
             page_match = re.search(r"[?&]page=(\d+)", response.url)
             current_page = int(page_match.group(1)) if page_match else 1
 
-            self.logger.info(f"Pagina {current_page}/{total_pages}. Totale eventi: {total_events}")
+            self.logger.info(f"Pagina {current_page}/{total_pages}")
 
             if not events_list:
-                self.logger.info("Nessun evento trovato")
                 return
 
             for event_data in events_list:
-                item = self.create_item()
-
-                # URL
-                item["url"] = event_data.get("link")
-
-                # Titolo
+                url = event_data.get("link")
                 title_obj = event_data.get("title", {})
-                item["title"] = title_obj.get("rendered") if isinstance(title_obj, dict) else title_obj
+                title = title_obj.get("rendered") if isinstance(title_obj, dict) else title_obj
 
-                # Arricchisci con API custom
-                custom_data = self.custom_api_data.get(item["url"], {})
-                if custom_data:
-                    self._enrich_from_custom(item, custom_data)
+                # Dati dall'API custom
+                custom = self.custom_api_data.get(url, {})
 
-                item["image_urls"] = item.get("image_urls", [])
+                api_data = {
+                    "url": url,
+                    "title": self.clean_text(title),
+                    "custom": custom,
+                }
 
-                # Visita pagina dettaglio
-                if item["url"]:
+                if url:
                     yield response.follow(
-                        item["url"],
+                        url,
                         callback=self.parse_event_detail,
-                        meta={"item": item},
+                        meta={"api_data": api_data},
                     )
-                else:
-                    item["uuid"] = self.generate_uuid(
-                        item.get("title", ""),
-                        item.get("date_start", ""),
-                        item.get("location_name", ""),
-                    )
-                    item["content_hash"] = self.generate_content_hash(
-                        item.get("description", ""),
-                        item.get("price", ""),
-                        "",
-                    )
-                    yield item
 
             # Paginazione
             max_pages = self.max_pages or total_pages
             if current_page < max_pages:
                 next_page = current_page + 1
-                self.logger.info(f"Richiedo pagina {next_page}")
                 yield scrapy.Request(
                     f"https://www.artribune.com/wp-json/wp/v2/event?per_page={self.per_page}&page={next_page}",
                     callback=self.parse,
@@ -187,189 +135,246 @@ class ArtribuneSpider(BaseEventSpider):
         except Exception as e:
             self.logger.error(f"Errore parsing API: {e}")
 
-    def _enrich_from_custom(self, item, custom_data: dict):
-        """Arricchisce item con dati dall'API custom."""
-        # Place
-        place = custom_data.get("place", {})
-        if isinstance(place, dict):
-            item["location_name"] = place.get("title")
+    def parse_event_detail(self, response):
+        """Estrae dettagli dalla pagina evento e costruisce l'EventItem nested."""
+        api_data = response.meta["api_data"]
+        custom = api_data.get("custom", {})
+        url = api_data["url"]
+        title = api_data["title"]
 
+        # ── Location dall'API custom ───────────────────────────────────────────
+        location_name = None
+        location_address = None
+        city = None
+
+        place = custom.get("place", {})
+        if isinstance(place, dict):
+            location_name = place.get("title")
             place_map = place.get("map", {})
             if isinstance(place_map, dict):
-                item["location_address"] = place_map.get("address")
-
+                location_address = place_map.get("address")
             place_city = place.get("city", {})
             if isinstance(place_city, dict):
                 city_title = place_city.get("title", "")
-                # Rimuovi provincia tra parentesi
-                item["city"] = re.sub(r"\s*\([A-Z]{2}\)$", "", city_title).strip()
+                city = re.sub(r"\s*\([A-Z]{2}\)$", "", city_title).strip() or None
 
-        # Date da HTML
-        dates_html = custom_data.get("dates_html", "")
+        # ── Date dall'API custom ───────────────────────────────────────────────
+        date_start = None
+        date_end = None
+        dates_html = custom.get("dates_html", "")
         if dates_html and "<time" in dates_html:
             dt_matches = re.findall(r'datetime=["\'](\d{4}-\d{2}-\d{2})["\']', dates_html)
             if len(dt_matches) >= 1:
-                item["date_start"] = dt_matches[0]
+                date_start = dt_matches[0]
             if len(dt_matches) >= 2:
-                item["date_end"] = dt_matches[1]
-            elif len(dt_matches) == 1:
-                item["date_end"] = dt_matches[0]
+                date_end = dt_matches[1]
 
-        # Immagini
-        image_html = custom_data.get("image_html", "")
-        if "image_urls" not in item:
-            item["image_urls"] = []
+        # ── Immagine dall'API custom ───────────────────────────────────────────
+        image_url = None
+        image_html = custom.get("image_html", "")
         if image_html and "<img" in image_html:
-            urls = re.findall(r'src=["\'](.*?)["\']', image_html)
-            item["image_urls"].extend(urls)
-            if urls and not item.get("image_url"):
-                item["image_url"] = urls[0]
+            img_urls = re.findall(r'src=["\'](.*?)["\']', image_html)
+            if img_urls:
+                image_url = img_urls[0]
 
-    def parse_event_detail(self, response):
-        """
-        Estrae dettagli dalla pagina evento.
-
-        Args:
-            response: Risposta HTML della pagina
-        """
-        item = response.meta["item"]
-        self.logger.debug(f"Scraping dettaglio: {item.get('title')}")
-
-        # 1. Prova JSON-LD
+        # ── JSON-LD Event ──────────────────────────────────────────────────────
+        price = None
         event_obj = self.extract_jsonld_node(response, "Event")
         if event_obj:
-            # Immagini
-            ld_images = event_obj.get("image")
-            if ld_images:
-                if isinstance(ld_images, list):
-                    item["image_urls"].extend(ld_images)
-                else:
-                    item["image_urls"].append(ld_images)
+            # Immagine fallback
+            if not image_url:
+                ld_images = event_obj.get("image")
+                if isinstance(ld_images, list) and ld_images:
+                    image_url = ld_images[0]
+                elif isinstance(ld_images, str):
+                    image_url = ld_images
 
             # Prezzo
             offers = event_obj.get("offers", {})
-            if isinstance(offers, dict):
-                price = offers.get("price")
-                if price:
-                    item["price"] = str(price)
-            elif isinstance(offers, list) and offers:
-                price = offers[0].get("price")
-                if price:
-                    item["price"] = str(price)
+            if isinstance(offers, dict) and offers.get("price"):
+                price = str(offers["price"])
+            elif isinstance(offers, list) and offers and offers[0].get("price"):
+                price = str(offers[0]["price"])
 
-            # Date
-            if not item.get("date_start"):
-                item["date_start"] = self.parse_date_iso(event_obj.get("startDate"))
-            if not item.get("date_end"):
-                item["date_end"] = self.parse_date_iso(event_obj.get("endDate"))
+            # Date fallback
+            if not date_start:
+                date_start = self.parse_date_iso(event_obj.get("startDate"))
+            if not date_end:
+                date_end = self.parse_date_iso(event_obj.get("endDate"))
 
-        # 2. Estrazione da HTML strutturato
-        event_info = self._extract_event_info(response)
-        # Mappatura da event_info
-        if not item.get("location_name"):
-            item["location_name"] = event_info.get("Luogo")
+        # ── Widget HTML (.c-widget_content) ──────────────────────────────────
+        widget = self._extract_widget(response)
 
-        if not item.get("category") and "Generi" in event_info:
-            gens = event_info["Generi"]
-            if isinstance(gens, str):
-                item["category"] = [g.strip() for g in gens.split(",")]
+        # Location dal widget (dd separati: venue e indirizzo)
+        if not location_name:
+            location_name = widget.get("location_name")
+        if not location_address:
+            location_address = widget.get("location_address")
+
+        # Location fallback
+        if not location_name:
+            location_name = self.clean_text(response.xpath(
+                '//header//ul[contains(@class, "-meta")]//a[contains(@href, "/museo-galleria-arte/")]/text()'
+            ).get())
 
         # Città dal breadcrumb
-        if not item.get("city"):
-            city_breadcrumb = response.xpath(
+        if not city:
+            city_breadcrumb = self.clean_text(response.xpath(
                 '//nav[contains(@class, "c-breadcrumb")]/a[contains(@href, "/mostre/")]/text()'
-            ).get()
+            ).get())
             if city_breadcrumb:
-                item["city"] = city_breadcrumb.strip()
+                city = city_breadcrumb
 
-        # Date fallback
-        if not item.get("date_start"):
-            item["date_start"] = response.xpath("//time[1]/@datetime").get()
-        if not item.get("date_end"):
-            item["date_end"] = response.xpath("//time[2]/@datetime").get()
+        # Categoria dal widget
+        category = widget.get("category", [])
 
-        # Location name fallback
-        if not item.get("location_name"):
-            loc_name = response.xpath(
-                '//header//ul[contains(@class, "-meta")]//a[contains(@href, "/museo-galleria-arte/")]/text()'
-            ).get()
-            if loc_name:
-                item["location_name"] = loc_name.strip()
+        # Date dal widget
+        if not date_start and widget.get("date_start"):
+            date_start = widget["date_start"]
+        if not date_end and widget.get("date_end"):
+            date_end = widget["date_end"]
 
-        # Indirizzo
-        if not item.get("location_address"):
-            full_address = response.xpath(
-                '//dl[dt[contains(text(), "Luogo")]]/dd[2]/text()'
-            ).get()
-            if full_address:
-                item["location_address"] = full_address.replace(
-                    "(Clicca qui per la mappa)", ""
-                ).strip()
+        date_display = widget.get("date_display", "")
+        orari = widget.get("orari")
+        artisti = widget.get("artisti", [])
 
-        # Descrizione (estrazione HTML originale per preservare formattazione)
+        if date_end == date_start:
+            date_end = None
+
+        # Descrizione
+        description = None
         content_div = response.css(".c-content.-post")
         if content_div:
-            # Estraiamo tutti i nodi figli (testo e tag) e li uniamo
-            full_html = "".join(content_div.xpath("node()").getall())
-            
-            if full_html and len(full_html) > len(item.get("description", "") or ""):
-                item["description"] = full_html
+            description = "".join(content_div.xpath("node()").getall())
 
-        # Orari
-        if not item.get("schedule"):
-            time_match = response.xpath('//p[contains(text(), "Orari")]/text()').get()
-            if time_match:
-                item["schedule"] = time_match.strip()
+        # Immagine fallback
+        if not image_url:
+            image_url = response.css(".c-featured img::attr(src)").get()
 
-        # Prezzo
-        if not item.get("price"):
+        # Prezzo fallback HTML
+        if not price:
             price_text = response.xpath(
                 '//text()[contains(., "Biglietti") or contains(., "Costo")]/following::text()[1]'
             ).get()
             if price_text:
-                item["price"] = price_text.strip()
+                price = self.clean_text(price_text)
 
-        # Immagini aggiuntive
-        if "image_urls" not in item:
-            item["image_urls"] = []
+        # Slug
+        slug = self.slug_from_url(url or response.url)
 
-        featured_img = response.css(".c-featured img::attr(src)").get()
-        if featured_img:
-            item["image_urls"].append(featured_img)
+        # Hash
+        uuid = self.generate_uuid(title or "", date_start or "", location_name or "")
+        content_hash = self.generate_content_hash(description or "", price or "", "")
 
-        gallery_imgs = response.css(
-            ".swiper-slide img::attr(src), .gallery-item img::attr(src)"
-        ).getall()
-        if gallery_imgs:
-            item["image_urls"].extend(gallery_imgs)
-
-        # Pulizia immagini
-        clean_urls = []
-        seen = set()
-        for u in item.get("image_urls", []):
-            if u and isinstance(u, str):
-                u = u.strip()
-                if u not in seen:
-                    clean_urls.append(u)
-                    seen.add(u)
-
-        item["image_urls"] = clean_urls
-        if not item.get("image_url") and clean_urls:
-            item["image_url"] = clean_urls[0]
-
-        # Hash finali
-        item["uuid"] = self.generate_uuid(
-            item.get("title", ""),
-            item.get("date_start", ""),
-            item.get("location_name", ""),
-        )
-        item["content_hash"] = self.generate_content_hash(
-            item.get("description", ""),
-            item.get("price", ""),
-            "",
+        # Costruzione EventItem con struttura nested
+        item = self.create_item(
+            uuid=uuid,
+            title=title,
+            data={
+                "description": description,
+                "category": category,
+                "image_url": image_url,
+                "dates": {
+                    "date_start": date_start or "",
+                    "date_end": date_end or "",
+                    "date_display": date_display,
+                },
+                "city": {
+                    "city_name": city,
+                    "location_name": location_name,
+                    "location_address": location_address,
+                },
+                "section": {
+                    "price": price,
+                    "orari": orari,
+                    "artisti": artisti,
+                },
+            },
+            meta={
+                "content_hash": content_hash,
+                "url": url or response.url,
+                "slug": slug,
+                "event_id": slug,
+                "category": category[0] if category else "evento",
+                "source": self.source_name,
+            },
         )
 
         yield item
+
+    def _extract_widget(self, response) -> dict:
+        """Estrae dati strutturati dal widget c-widget_content (Luogo, Date, Artisti, Generi)."""
+        result: dict = {
+            "location_name": None,
+            "location_address": None,
+            "date_start": None,
+            "date_end": None,
+            "date_display": "",
+            "orari": None,
+            "artisti": [],
+            "category": [],
+        }
+
+        # Il widget dettagli ha dl diretti (non quello con card correlati che ha u-cq)
+        widget_dls = response.xpath(
+            '//div[contains(@class, "c-widget_content") and not(contains(@class, "u-cq"))]/dl'
+        )
+        if not widget_dls:
+            widget_dls = response.css(".c-widget_content dl")
+        for dl in widget_dls:
+            dt_text = self.clean_text(dl.xpath("string(.//dt)").get())
+            if not dt_text:
+                continue
+            dt_text = dt_text.strip()
+
+            dds = dl.css("dd")
+
+            # ── Luogo ──
+            if "Luogo" in dt_text:
+                if dds:
+                    # Primo dd: nome venue (link museo/galleria)
+                    venue_link = dds[0].css("a::text").get()
+                    result["location_name"] = self.clean_text(venue_link or dds[0].xpath("string()").get())
+                if len(dds) >= 2:
+                    # Secondo dd: indirizzo (link Google Maps)
+                    addr_text = self.clean_text(dds[1].xpath("string()").get())
+                    if addr_text:
+                        result["location_address"] = addr_text.replace("(Clicca qui per la mappa)", "").strip()
+
+            # ── Date ──
+            elif "Date" in dt_text:
+                if dds:
+                    # Primo dd: "Dal <time>12/03/2026</time> al <time>09/05/2026</time>"
+                    date_dd = dds[0]
+                    result["date_display"] = self.clean_text(date_dd.xpath("string()").get())
+
+                    time_tags = date_dd.css("time")
+                    if time_tags:
+                        result["date_start"] = time_tags[0].attrib.get("datetime")
+                    if len(time_tags) >= 2:
+                        result["date_end"] = time_tags[1].attrib.get("datetime")
+
+                if len(dds) >= 2:
+                    # Secondo dd: orari (es. "Open from Tuesday to Saturday, 10.30am - 6.30pm")
+                    orari_text = self.clean_text(dds[1].xpath("string()").get())
+                    if orari_text:
+                        result["orari"] = orari_text
+
+            # ── Artisti ──
+            elif "Artisti" in dt_text:
+                for dd in dds:
+                    name = self.clean_text(dd.css("a::text").get() or dd.xpath("string()").get())
+                    if name:
+                        result["artisti"].append(name)
+
+            # ── Generi ──
+            elif "Generi" in dt_text:
+                for dd in dds:
+                    text = self.clean_text(dd.xpath("string()").get())
+                    if text:
+                        result["category"] = [g.strip() for g in text.split(",")]
+
+        return result
 
     def _extract_event_info(self, response) -> dict:
         """Estrae informazioni evento dal widget HTML."""
@@ -377,7 +382,6 @@ class ArtribuneSpider(BaseEventSpider):
         info_dls = response.xpath('//div[contains(@class, "c-widget_content")]/dl')
 
         for dl in info_dls:
-            # Cerca chiave
             key = dl.xpath(
                 './/dt//span[contains(@class, "sr") or contains(@class, "hidden")]//text()'
             ).get()

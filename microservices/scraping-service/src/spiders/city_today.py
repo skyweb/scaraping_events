@@ -359,8 +359,8 @@ class CityTodaySpider(BaseEventSpider):
         """
         Parsa la pagina dettaglio evento.
 
-        Args:
-            response: Risposta HTTP della pagina dettaglio
+        Produce un EventItem con struttura nested (data, meta)
+        compatibile con puglia_culture e la pipeline BatchExport.
         """
         raw_list = response.meta["raw_list"]
 
@@ -380,60 +380,73 @@ class CityTodaySpider(BaseEventSpider):
         }
 
         # Titolo e categoria dal dettaglio
-        title_detail = self.clean_text(response.css("h1.l-entry__title::text").get())
+        title = self.clean_text(response.css("h1.l-entry__title::text").get()) or raw_list.get("title")
         category_detail = self.clean_text(
             response.css(".c-card__kicker::text").get()
             or response.xpath('//meta[@property="article:section"]/@content').get()
         )
-
-        # Crea item
-        item = self.create_item()
-
-        # Metadati
-        item["url"] = response.meta["url"]
-
-        # Event ID dall'URL
-        url_path = response.meta["url"].rstrip("/")
-        item["event_id"] = url_path.split("/")[-1].replace(".html", "")
-
-        # Contenuto
-        item["title"] = title_detail or raw_list.get("title")
-        item["description"] = raw_detail.get("descrizione")
-
-        # Categoria come array
         category_value = category_detail or raw_list.get("category")
-        item["category"] = [category_value] if category_value else []
-
-        # Immagine
-        item["image_url"] = raw_detail.get("image") or raw_list.get("image")
 
         # Location
         dove = raw_detail.get("dove") or {}
-        item["city"] = response.meta["city"]
-        item["location_name"] = dove.get("name")
-        item["location_address"] = dove.get("address")
-
-        # Dettagli
-        item["price"] = raw_detail.get("prezzo")
-        altre_info = raw_detail.get("altre_informazioni") or {}
-        item["website"] = altre_info.get("website")
+        city_name = response.meta["city"]
+        location_name = dove.get("name")
 
         # Date
         quando = raw_detail.get("quando") or {}
-        item["date_start"] = quando.get("date_start")
-        item["date_end"] = quando.get("date_end")
-        item["date_display"] = raw_list.get("date")
+        date_start = quando.get("date_start")
+        date_end = quando.get("date_end")
+
+        # Prezzo e altre info
+        price = raw_detail.get("prezzo")
+        altre_info = raw_detail.get("altre_informazioni") or {}
 
         # Hash
-        item["uuid"] = self.generate_uuid(
-            item.get("title", ""),
-            item.get("date_start", ""),
-            item.get("location_name", ""),
+        uuid = self.generate_uuid(title or "", date_start or "", location_name or "")
+        content_hash = self.generate_content_hash(
+            raw_detail.get("descrizione") or "", price or "", "",
         )
-        item["content_hash"] = self.generate_content_hash(
-            item.get("description", ""),
-            item.get("price", ""),
-            "",
+
+        # URL e slug
+        url = response.meta["url"]
+        url_path = url.rstrip("/")
+        event_id = url_path.split("/")[-1].replace(".html", "")
+
+        # Costruisci EventItem con struttura nested
+        item = self.create_item(
+            uuid=uuid,
+            title=title,
+            data={
+                "description": raw_detail.get("descrizione"),
+                "category": [category_value] if category_value else [],
+                "image_url": raw_detail.get("image") or raw_list.get("image"),
+                "dates": {
+                    "date_start": date_start or "",
+                    "date_end": date_end or "",
+                    "date_display": raw_list.get("date") or "",
+                },
+                "city": {
+                    "city_name": city_name,
+                    "location_name": location_name,
+                    "location_address": dove.get("address"),
+                },
+                "section": {
+                    "price": price,
+                    "website": altre_info.get("website"),
+                    "quando_raw": quando.get("raw_text"),
+                    "dove_raw": dove.get("raw_text"),
+                    "altre_info_raw": altre_info.get("raw_text"),
+                },
+            },
+            meta={
+                "content_hash": content_hash,
+                "url": url,
+                "slug": self.slug_from_url(url),
+                "event_id": event_id,
+                "category": category_value or "evento",
+                "source": self.source_name,
+                "city_key": response.meta.get("city_key"),
+            },
         )
 
         yield item
@@ -449,7 +462,11 @@ class CityTodaySpider(BaseEventSpider):
             )
 
         if location_section:
-            dove["raw_text"] = self.clean_text(location_section.xpath("string()").get())
+            # Escludi lo span label "Dove" dal testo raw
+            raw_parts = location_section.xpath(".//*[not(self::span[contains(@class,'heading')] or self::span[text()='Dove'])]//text()").getall()
+            if not raw_parts:
+                raw_parts = location_section.xpath(".//p//text()").getall()
+            dove["raw_text"] = self.clean_text(" ".join(raw_parts))
             dove["name"] = self.clean_text(location_section.css("a.o-link-primary::text").get())
 
             address = location_section.xpath('.//p//a[@href="#map"]/text()').get()
@@ -462,7 +479,7 @@ class CityTodaySpider(BaseEventSpider):
         return dove
 
     def _extract_quando(self, response, info_grid) -> dict:
-        """Estrae sezione 'Quando'."""
+        """Estrae sezione 'Quando' con orari."""
         quando = {"raw_text": None, "date_start": None, "date_end": None, "schedule": None}
 
         date_section = info_grid.xpath('.//span[contains(text(), "Quando")]/parent::div')
@@ -473,14 +490,30 @@ class CityTodaySpider(BaseEventSpider):
 
         if date_section:
             date_text = date_section.xpath("string()").get()
-            quando["raw_text"] = self.clean_text(date_text)
+            # Rimuovi label "Quando" dal raw_text
+            raw_text = self.clean_text(date_text)
+            if raw_text and raw_text.startswith("Quando"):
+                raw_text = self.clean_text(raw_text[6:])
+            quando["raw_text"] = raw_text
 
             if date_text:
                 dates = self.extract_dates_from_text(date_text)
+
+                # Estrai orari (es. "10:00 - 19:00", "ore 20:30", "H: 10:00")
+                times = re.findall(r"(\d{1,2}:\d{2})", date_text)
+
                 if len(dates) >= 1:
                     quando["date_start"] = dates[0]
+                    # Appendi orario inizio alla data
+                    if times:
+                        quando["date_start"] = f"{dates[0]} {times[0]}"
                 if len(dates) >= 2:
                     quando["date_end"] = dates[1]
+                    # Appendi orario fine (secondo orario se esiste, altrimenti primo)
+                    if len(times) >= 2:
+                        quando["date_end"] = f"{dates[1]} {times[1]}"
+                    elif times:
+                        quando["date_end"] = f"{dates[1]} {times[0]}"
                 elif quando["date_start"]:
                     quando["date_end"] = quando["date_start"]
 
@@ -527,29 +560,78 @@ class CityTodaySpider(BaseEventSpider):
             )
 
         if other_section:
-            altre_info["raw_text"] = self.clean_text(other_section.xpath("string()").get())
+            raw_text = self.clean_text(other_section.xpath("string()").get())
+            if raw_text and raw_text.startswith("Altre informazioni"):
+                raw_text = self.clean_text(raw_text[18:])
+            altre_info["raw_text"] = raw_text
             website = other_section.css("a::attr(href)").get()
             if website and website.startswith("http"):
                 altre_info["website"] = website
 
         return altre_info
 
+    # Tag HTML da preservare nella descrizione
+    _ALLOWED_TAGS = {"p", "br", "strong", "em", "b", "i", "ul", "ol", "li", "a", "h2", "h3", "h4"}
+
     def _extract_descrizione(self, response) -> Optional[str]:
-        """Estrae la descrizione preservando l'HTML originale."""
+        """Estrae la descrizione pulendo l'HTML e mantenendo solo tag essenziali."""
         content = None
 
         description_div = response.css("div.c-entry[data-content--body]")
         if description_div:
             content = "".join(description_div.xpath("node()").getall())
-        
+
         if not content:
             description_section = response.css("section.c-entry.l-entry__body")
             if description_section:
                 content = "".join(description_section.xpath("node()").getall())
-        
+
         if not content:
             any_content = response.css("[data-content--body]")
             if any_content:
                 content = "".join(any_content.xpath("node()").getall())
 
-        return content
+        if not content:
+            return None
+
+        return self._sanitize_html(content)
+
+    def _sanitize_html(self, html_content: str) -> Optional[str]:
+        """
+        Pulisce HTML mantenendo solo tag essenziali (p, br, strong, em, a, liste, heading).
+
+        Rimuove: div, script, style, commenti, attributi data-*, class, slot pubblicitari.
+        """
+        # Rimuovi commenti HTML
+        text = re.sub(r"<!--.*?-->", "", html_content, flags=re.DOTALL)
+        # Rimuovi tag script e style con contenuto
+        text = re.sub(r"<script[^>]*>.*?</script>", "", text, flags=re.DOTALL | re.IGNORECASE)
+        text = re.sub(r"<style[^>]*>.*?</style>", "", text, flags=re.DOTALL | re.IGNORECASE)
+        # Rimuovi div con attributi data-move, slot, ads
+        text = re.sub(r"<div[^>]*data-move[^>]*>.*?</div>\s*</div>\s*</div>", "", text, flags=re.DOTALL)
+        text = re.sub(r'<div[^>]*class="slot[^"]*"[^>]*>.*?</div>', "", text, flags=re.DOTALL)
+
+        # Rimuovi tag non consentiti ma mantieni il contenuto
+        def _replace_tag(match: re.Match) -> str:
+            tag_name = match.group(1).lower().split()[0]
+            if tag_name.lstrip("/") in self._ALLOWED_TAGS:
+                # Tag consentito: rimuovi tutti gli attributi tranne href (per <a>)
+                if tag_name == "a":
+                    href = re.search(r'href="([^"]*)"', match.group(0))
+                    if href:
+                        return f'<a href="{href.group(1)}">'
+                    return "<a>"
+                # Per tag di chiusura o tag senza attributi
+                if tag_name.startswith("/"):
+                    return f"<{tag_name}>"
+                return f"<{tag_name}>"
+            # Tag non consentito: rimuovi il tag, tieni il contenuto
+            return ""
+
+        text = re.sub(r"<(/?\w[^>]*)>", _replace_tag, text)
+
+        # Pulisci righe vuote multiple
+        text = re.sub(r"\n\s*\n+", "\n", text)
+        text = text.strip()
+
+        return text if text else None

@@ -37,6 +37,7 @@ urlpatterns = [
     path('api/comuni-istat/', include('comuni_istat_ingestion.urls')),
     path('api/cms/', include('cms.urls')),
     path('api/scraping/', include('scraping.urls')),
+    path('api/ai-transform/', include('ai_transform.urls')),
 
     # API Documentation
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

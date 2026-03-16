@@ -6,7 +6,6 @@ Struttura:
     uuid        — Hash univoco per deduplicazione (titolo + data + location)
     title       — Titolo dell'evento
     data        — Dict con contenuto, date, location, dettagli
-    schemaOrg   — Dict Schema.org JSON-LD (None se non definito dallo spider)
     meta        — Dict metadati (url, slug, event_id, ...)
 """
 
@@ -22,5 +21,4 @@ class EventItem(scrapy.Item):
 
     # Blocchi annidati
     data = scrapy.Field()           # contenuto, date, location, dettagli
-    schemaOrg = scrapy.Field()      # Schema.org JSON-LD (None se non definito)
     meta = scrapy.Field()           # url, slug, event_id ...
