@@ -173,7 +173,7 @@
       "gridPos": { "h": 8, "w": 12, "x": 0, "y": 33 },
       "datasource": { "uid": "loki" },
       "targets": [{
-        "expr": "{container=\"dev-backoffice\"} |= `bulk` | json | level = `ERROR` or level = `WARNING`"
+        "expr": "{container_name=\"dev-backoffice\"} | json | level = `ERROR` or level = `WARNING`"
       }]
     },
     {
@@ -182,27 +182,33 @@
       "gridPos": { "h": 8, "w": 12, "x": 12, "y": 33 },
       "datasource": { "uid": "loki" },
       "targets": [{
-        "expr": "{container=~\"dev-backoffice.*\"} | json | level = `ERROR` |= `ai_transform` or line =~ `(?i)celery.*error|task.*fail`"
+        "expr": "{container_name=~\"dev-backoffice.*\"} | json | level = `ERROR`"
       }]
     },
     {
       "title": "Recent Bulk Traces (Tempo)",
       "type": "table",
       "gridPos": { "h": 8, "w": 12, "x": 0, "y": 41 },
-      "datasource": { "type": "tempo" },
+      "datasource": { "type": "tempo", "uid": "tempo" },
       "targets": [{
-        "queryType": "traceql",
-        "query": "{ name =~ \".*staging/bulk.*\" }"
+        "datasource": { "type": "tempo", "uid": "tempo" },
+        "queryType": "nativeSearch",
+        "serviceName": "backoffice-django",
+        "spanName": "POST api/external/v1/staging/bulk/$",
+        "limit": 20
       }]
     },
     {
       "title": "Recent AI Traces (Tempo)",
       "type": "table",
       "gridPos": { "h": 8, "w": 12, "x": 12, "y": 41 },
-      "datasource": { "type": "tempo" },
+      "datasource": { "type": "tempo", "uid": "tempo" },
       "targets": [{
-        "queryType": "traceql",
-        "query": "{ name =~ \".*ai-transform.*\" }"
+        "datasource": { "type": "tempo", "uid": "tempo" },
+        "queryType": "nativeSearch",
+        "serviceName": "backoffice-django",
+        "spanName": "POST api/ai-transform/event/",
+        "limit": 20
       }]
     }
   ],
