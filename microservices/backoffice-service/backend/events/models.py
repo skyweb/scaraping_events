@@ -57,11 +57,8 @@ class StagingEvent(models.Model):
     location_coordinates = models.PointField(geography=True, srid=4326, blank=True, null=True)
 
     # dates
-    date_start = models.DateField(blank=True, null=True)
-    date_end = models.DateField(blank=True, null=True)
-    time_start = models.TimeField(blank=True, null=True)
-    time_end = models.TimeField(blank=True, null=True)
-    time_info = models.TextField(blank=True, null=True)
+    date_start = models.DateTimeField(blank=True, null=True)
+    date_end = models.DateTimeField(blank=True, null=True)
 
     # info
     url = models.TextField(blank=True, null=True)
@@ -70,6 +67,8 @@ class StagingEvent(models.Model):
     info_extra = models.JSONField(blank=True, null=True)
     price = models.TextField(blank=True, null=True)
     raw_data = models.JSONField(blank=True, null=True)
+    schema_org = models.JSONField(blank=True, null=True, db_comment='Schema.org/Event generato da AI')
+    batch_file = models.CharField(max_length=255, blank=True, null=True, db_comment='Nome file batch di provenienza')
     scraped_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

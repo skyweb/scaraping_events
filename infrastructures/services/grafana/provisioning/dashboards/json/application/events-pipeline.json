@@ -1,0 +1,219 @@
+{
+  "annotations": { "list": [] },
+  "description": "Monitoraggio pipeline eventi: scraping → bulk ingest → AI schema.org",
+  "editable": true,
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "title": "Pipeline Overview",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 },
+      "collapsed": false
+    },
+    {
+      "title": "Bulk Requests",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 0, "y": 1 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "thresholds": { "steps": [{ "color": "green", "value": null }] } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum(django_http_responses_total_by_status_view_method_total{view=\"external-staging-bulk\"})",
+        "legendFormat": "Total"
+      }]
+    },
+    {
+      "title": "Bulk 2xx (OK)",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 4, "y": 1 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "thresholds": { "steps": [{ "color": "green", "value": null }] } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum(django_http_responses_total_by_status_view_method_total{view=\"external-staging-bulk\",status=~\"2..\"})",
+        "legendFormat": "Success"
+      }]
+    },
+    {
+      "title": "Bulk Errors (4xx/5xx)",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 8, "y": 1 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "thresholds": { "steps": [{ "color": "green", "value": null }, { "color": "red", "value": 1 }] } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum(django_http_responses_total_by_status_view_method_total{view=\"external-staging-bulk\",status=~\"4..|5..\"}) OR vector(0)",
+        "legendFormat": "Errors"
+      }]
+    },
+    {
+      "title": "AI Transform Calls",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 12, "y": 1 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "thresholds": { "steps": [{ "color": "blue", "value": null }] } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum(django_http_responses_total_by_status_view_method_total{view=~\"ai-transform.*\"}) OR vector(0)",
+        "legendFormat": "AI calls"
+      }]
+    },
+    {
+      "title": "AI Errors",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 16, "y": 1 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "thresholds": { "steps": [{ "color": "green", "value": null }, { "color": "red", "value": 1 }] } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum(django_http_responses_total_by_status_view_method_total{view=~\"ai-transform.*\",status=~\"4..|5..\"}) OR vector(0)",
+        "legendFormat": "AI Errors"
+      }]
+    },
+    {
+      "title": "All HTTP Errors",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 20, "y": 1 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "thresholds": { "steps": [{ "color": "green", "value": null }, { "color": "orange", "value": 1 }, { "color": "red", "value": 10 }] } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum(django_http_responses_total_by_status_view_method_total{status=~\"5..\"}) OR vector(0)",
+        "legendFormat": "5xx Total"
+      }]
+    },
+    {
+      "title": "Bulk Ingest",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 5 },
+      "collapsed": false
+    },
+    {
+      "title": "Bulk - Requests by Status",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 6 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "custom": { "drawStyle": "bars", "fillOpacity": 30, "stacking": { "mode": "normal" } } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum by (status) (increase(django_http_responses_total_by_status_view_method_total{view=\"external-staging-bulk\"}[5m]))",
+        "legendFormat": "{{status}}"
+      }]
+    },
+    {
+      "title": "Bulk - Latency (p95 / p50)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 6 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "unit": "s", "custom": { "drawStyle": "line", "fillOpacity": 10 } }, "overrides": [] },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(django_http_requests_latency_seconds_by_view_method_bucket{view=\"external-staging-bulk\"}[5m])))",
+          "legendFormat": "p95"
+        },
+        {
+          "expr": "histogram_quantile(0.50, sum by (le) (rate(django_http_requests_latency_seconds_by_view_method_bucket{view=\"external-staging-bulk\"}[5m])))",
+          "legendFormat": "p50"
+        }
+      ]
+    },
+    {
+      "title": "AI Transform",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 14 },
+      "collapsed": false
+    },
+    {
+      "title": "AI - Requests by View & Status",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 15 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "custom": { "drawStyle": "bars", "fillOpacity": 30, "stacking": { "mode": "normal" } } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum by (view, status) (increase(django_http_responses_total_by_status_view_method_total{view=~\"ai-transform.*\"}[5m]))",
+        "legendFormat": "{{view}} {{status}}"
+      }]
+    },
+    {
+      "title": "AI - Latency (p95 / p50)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 15 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "unit": "s", "custom": { "drawStyle": "line", "fillOpacity": 10 } }, "overrides": [] },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(django_http_requests_latency_seconds_by_view_method_bucket{view=~\"ai-transform.*\"}[5m])))",
+          "legendFormat": "p95"
+        },
+        {
+          "expr": "histogram_quantile(0.50, sum by (le) (rate(django_http_requests_latency_seconds_by_view_method_bucket{view=~\"ai-transform.*\"}[5m])))",
+          "legendFormat": "p50"
+        }
+      ]
+    },
+    {
+      "title": "All API Views",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 23 },
+      "collapsed": false
+    },
+    {
+      "title": "All Views - Requests by Status",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 24 },
+      "datasource": { "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "custom": { "drawStyle": "bars", "fillOpacity": 20, "stacking": { "mode": "normal" } } }, "overrides": [] },
+      "targets": [{
+        "expr": "sum by (view, status) (increase(django_http_responses_total_by_status_view_method_total{view=~\"external-staging.*|ai-transform.*\"}[5m]))",
+        "legendFormat": "{{view}} [{{status}}]"
+      }]
+    },
+    {
+      "title": "Logs & Traces",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 32 },
+      "collapsed": false
+    },
+    {
+      "title": "Bulk Errors (Loki)",
+      "type": "logs",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 33 },
+      "datasource": { "uid": "loki" },
+      "targets": [{
+        "expr": "{container=\"dev-backoffice\"} |= `bulk` | json | level = `ERROR` or level = `WARNING`"
+      }]
+    },
+    {
+      "title": "Celery & AI Errors (Loki)",
+      "type": "logs",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 33 },
+      "datasource": { "uid": "loki" },
+      "targets": [{
+        "expr": "{container=~\"dev-backoffice.*\"} | json | level = `ERROR` |= `ai_transform` or line =~ `(?i)celery.*error|task.*fail`"
+      }]
+    },
+    {
+      "title": "Recent Bulk Traces (Tempo)",
+      "type": "table",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 41 },
+      "datasource": { "type": "tempo" },
+      "targets": [{
+        "queryType": "traceql",
+        "query": "{ name =~ \".*staging/bulk.*\" }"
+      }]
+    },
+    {
+      "title": "Recent AI Traces (Tempo)",
+      "type": "table",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 41 },
+      "datasource": { "type": "tempo" },
+      "targets": [{
+        "queryType": "traceql",
+        "query": "{ name =~ \".*ai-transform.*\" }"
+      }]
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["events", "pipeline", "scraping", "ai"],
+  "templating": { "list": [] },
+  "time": { "from": "now-1h", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Events Pipeline",
+  "uid": "events-pipeline",
+  "version": 2
+}

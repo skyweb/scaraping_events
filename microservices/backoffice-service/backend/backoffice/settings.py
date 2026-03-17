@@ -169,6 +169,8 @@ API_ALLOWED_VERSIONS = ['v1']
 KEYCLOAK_URL = os.environ.get('KEYCLOAK_URL', 'http://keycloak:8080')
 KEYCLOAK_REALM = os.environ.get('KEYCLOAK_REALM', 'today-events')
 KEYCLOAK_AUDIENCE = os.environ.get('KEYCLOAK_AUDIENCE', 'account')
+# URL pubblico Keycloak (per token emessi via browser/Postman con issuer esterno)
+KEYCLOAK_PUBLIC_URL = os.environ.get('KEYCLOAK_PUBLIC_URL', '')
 
 # DRF API Tracking
 DRF_TRACKING_ADMIN_LOG_READONLY = True

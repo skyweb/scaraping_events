@@ -1,4 +1,5 @@
 import hashlib
+from datetime import datetime
 
 from django.contrib.gis.geos import Point
 from rest_framework import serializers
@@ -35,6 +36,14 @@ class StagingEventSerializer(serializers.ModelSerializer):
         if obj.location_coordinates:
             return {'lat': obj.location_coordinates.y, 'lng': obj.location_coordinates.x}
         return None
+
+
+class StagingEventBulkResponseSerializer(serializers.ModelSerializer):
+    """Serializer compatto per la risposta bulk (solo campi essenziali)."""
+
+    class Meta:
+        model = StagingEvent
+        fields = ['id', 'uuid', 'content_hash', 'source', 'title', 'created_at']
 
 
 def _parse_point(coords: dict) -> Point | None:
@@ -101,11 +110,64 @@ class StagingEventScrapingSerializer(serializers.Serializer):
     scraped_at = serializers.DateTimeField(required=False, allow_null=True)
     raw_data = serializers.JSONField(required=False, allow_null=True)
 
+    @staticmethod
+    def _parse_datetime(value: str | None) -> datetime | None:
+        """Parsa date in formato flessibile: YYYY-MM-DD, YYYY-MM-DD HH:MM, ISO 8601."""
+        if not value or not value.strip():
+            return None
+        value = value.strip()
+        for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M"):
+            try:
+                return datetime.strptime(value, fmt)
+            except ValueError:
+                continue
+        return None
+
+    @staticmethod
+    def _flatten_spider_format(nested: dict) -> dict:
+        """
+        Converte il formato nested degli spider (uuid, title, meta, data)
+        nel formato flat atteso dal serializer.
+        """
+        meta = nested.get("meta") or {}
+        event_data = nested.get("data") or {}
+        section = event_data.get("section") or {}
+
+        flat = {
+            "uuid": nested.get("uuid"),
+            "title": nested.get("title"),
+            "content_hash": meta.get("content_hash"),
+            "source": meta.get("source"),
+            "url": meta.get("url"),
+            "scraped_at": meta.get("scraped_at"),
+            "description": event_data.get("description"),
+            "category": event_data.get("category"),
+            "image_url": event_data.get("image_url"),
+            "city": event_data.get("city"),
+            "dates": event_data.get("dates"),
+            "section": section,
+            "info_extra": event_data.get("info_extra"),
+            "price": section.get("price"),
+            # raw_data = intero blocco "data" originale dello spider
+            "raw_data": event_data,
+        }
+
+        return flat
+
     def to_internal_value(self, data):
         # Salva il JSON originale del POST prima di qualsiasi trasformazione
         raw_data = dict(data) if isinstance(data, dict) else data
 
+        # Estrai batch_file (iniettato dal bulk endpoint)
+        batch_file = data.pop('_batch_file', None)
+
+        # Supporto formato nested spider (uuid, title, meta, data)
+        # Trasforma in formato flat atteso dal serializer
+        if "meta" in data and "data" in data:
+            data = self._flatten_spider_format(data)
+
         validated = super().to_internal_value(data)
+        validated['_batch_file'] = batch_file
 
         city = validated.get('city') or {}
         dates = validated.get('dates') or {}
@@ -135,17 +197,16 @@ class StagingEventScrapingSerializer(serializers.Serializer):
             'location_name': city.get('location_name') or None,
             'location_address': city.get('location_address') or None,
             'location_coordinates': location_coordinates,
-            'date_start': dates.get('date_start') or None,
-            'date_end': dates.get('date_end') or None,
-            'time_start': dates.get('time_start') or None,
-            'time_end': dates.get('time_end') or None,
-            'time_info': dates.get('time_info') or None,
+            'date_start': self._parse_datetime(dates.get('date_start')),
+            'date_end': self._parse_datetime(dates.get('date_end')),
             'info_extra': info_extra or None,
             'raw_data': raw_data,
+            'batch_file': validated.get('_batch_file'),
         }
 
     def create(self, validated_data):
         """Upsert su uuid."""
+        validated_data.pop('_batch_file', None)
         uuid = validated_data.pop('uuid')
         StagingEvent.objects.update_or_create(uuid=uuid, defaults=validated_data)
         return StagingEvent.objects.get(uuid=uuid)

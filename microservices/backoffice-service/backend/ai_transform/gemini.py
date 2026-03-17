@@ -66,10 +66,12 @@ Regole:
    - Telefono → organizer.telephone
    - Email → organizer.email
 10. Estrai orari biglietteria da info_extra.info_e_costi → offers.availabilityStarts o offers.description
-11. Restituisci SOLO il JSON, senza markdown, senza spiegazioni
-12. Se un campo non ha dati sufficienti, omettilo (non inventare)
-13. Le date devono essere in formato ISO 8601
-14. Pulisci l'HTML dalla description, restituisci solo testo pulito
+11. section.website → url (sito ufficiale dell'evento)
+12. location_address → location.address.streetAddress
+13. Restituisci SOLO il JSON, senza markdown, senza spiegazioni
+14. Se un campo non ha dati sufficienti, omettilo (non inventare)
+15. Le date devono essere in formato ISO 8601
+16. Pulisci l'HTML dalla description, restituisci solo testo pulito
 
 Esempio di output atteso:
 {
@@ -112,6 +114,7 @@ Esempio di output atteso:
     "priceCurrency": "EUR",
     "description": "Biglietteria aperta una settimana prima dello spettacolo"
   },
+  "url": "https://www.example.com/evento",
   "superEvent": {
     "@type": "Event",
     "name": "Nome Rassegna"

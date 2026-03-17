@@ -1,0 +1,305 @@
+{
+  "info": {
+    "name": "Today Events - Backoffice API",
+    "description": "API collection per il backoffice Today Events.\n\n## Setup\n1. Configura le variabili nel tab Variables\n2. Esegui \"1. Get OAuth2 Token\" per ottenere il token\n3. Il token viene salvato automaticamente nella variabile `access_token`",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "https://backoffice.127.0.0.1.nip.io", "type": "string" },
+    { "key": "keycloak_url", "value": "https://auth.127.0.0.1.nip.io", "type": "string" },
+    { "key": "realm", "value": "today-events", "type": "string" },
+    { "key": "client_id", "value": "scraper-service", "type": "string" },
+    { "key": "client_secret", "value": "CHANGE_ME_SCRAPER_SECRET", "type": "string" },
+    { "key": "access_token", "value": "", "type": "string" }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      { "key": "token", "value": "{{access_token}}", "type": "string" }
+    ]
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "1. Get OAuth2 Token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    var json = pm.response.json();",
+                  "    pm.collectionVariables.set('access_token', json.access_token);",
+                  "    console.log('Token salvato, scade in ' + json.expires_in + 's');",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                { "key": "grant_type", "value": "client_credentials" },
+                { "key": "client_id", "value": "{{client_id}}" },
+                { "key": "client_secret", "value": "{{client_secret}}" },
+                { "key": "scope", "value": "openid read write" }
+              ]
+            },
+            "url": {
+              "raw": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
+              "host": ["{{keycloak_url}}"],
+              "path": ["realms", "{{realm}}", "protocol", "openid-connect", "token"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Staging Events (External API v1)",
+      "item": [
+        {
+          "name": "List staging events",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/external/v1/staging/?page=1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "external", "v1", "staging", ""],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "city", "value": "", "disabled": true },
+                { "key": "source", "value": "", "disabled": true },
+                { "key": "search", "value": "", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get staging event by ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/external/v1/staging/:id/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "external", "v1", "staging", ":id", ""],
+              "variable": [
+                { "key": "id", "value": "1" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Bulk create (async - Celery)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"spider\": \"city_today\",\n  \"events\": [\n    {\n      \"uuid\": \"a1b2c3d4e5f6\",\n      \"content_hash\": \"f6e5d4c3b2a1\",\n      \"source\": \"city_today\",\n      \"url\": \"https://www.milanotoday.it/eventi/esempio.html\",\n      \"title\": \"Evento di esempio\",\n      \"description\": \"Descrizione evento\",\n      \"category\": [\"musica\"],\n      \"city\": {\n        \"city_name\": \"Milano\",\n        \"location_name\": \"Blue Note\",\n        \"location_address\": \"Via Borsieri 37\"\n      },\n      \"dates\": {\n        \"date_start\": \"2026-03-20\",\n        \"date_end\": \"2026-03-20\",\n        \"time_start\": \"21:00\"\n      },\n      \"section\": {\n        \"price\": \"25 EUR\"\n      }\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/external/v1/staging/bulk/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "external", "v1", "staging", "bulk", ""]
+            }
+          }
+        },
+        {
+          "name": "Bulk create (sync)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"spider\": \"city_today\",\n  \"events\": [\n    {\n      \"uuid\": \"a1b2c3d4e5f6\",\n      \"content_hash\": \"f6e5d4c3b2a1\",\n      \"source\": \"city_today\",\n      \"url\": \"https://www.milanotoday.it/eventi/esempio.html\",\n      \"title\": \"Evento di esempio\",\n      \"description\": \"Descrizione evento\",\n      \"category\": [\"musica\"],\n      \"city\": {\n        \"city_name\": \"Milano\",\n        \"location_name\": \"Blue Note\",\n        \"location_address\": \"Via Borsieri 37\"\n      },\n      \"dates\": {\n        \"date_start\": \"2026-03-20\",\n        \"date_end\": \"2026-03-20\",\n        \"time_start\": \"21:00\"\n      },\n      \"section\": {\n        \"price\": \"25 EUR\"\n      }\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/external/v1/staging/bulk/?sync=true",
+              "host": ["{{base_url}}"],
+              "path": ["api", "external", "v1", "staging", "bulk", ""],
+              "query": [
+                { "key": "sync", "value": "true" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Bulk status (check async task)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/external/v1/staging/bulk-status/:task_id/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "external", "v1", "staging", "bulk-status", ":task_id", ""],
+              "variable": [
+                { "key": "task_id", "value": "TASK_ID_HERE" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI Transform",
+      "item": [
+        {
+          "name": "Models & quota (no model param)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/ai-transform/models/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ai-transform", "models", ""]
+            }
+          }
+        },
+        {
+          "name": "Transform file (batch)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"file_path\": \"/data/output/city_today_milano_evento_20260316_batch_001.json\",\n  \"model\": \"gemini-2.5-flash-lite\",\n  \"thinking\": false,\n  \"limit\": 3\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai-transform/file/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ai-transform", "file", ""]
+            }
+          }
+        },
+        {
+          "name": "Transform file (Groq)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"file_path\": \"/data/output/city_today_milano_evento_20260316_batch_001.json\",\n  \"model\": \"llama-3.3-70b-versatile\",\n  \"limit\": 3\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai-transform/file/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ai-transform", "file", ""]
+            }
+          }
+        },
+        {
+          "name": "Transform single event",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"gemini-2.5-flash-lite\",\n  \"thinking\": false,\n  \"event\": {\n    \"uuid\": \"test123\",\n    \"title\": \"Concerto Jazz\",\n    \"data\": {\n      \"description\": \"Una serata di musica jazz\",\n      \"category\": [\"musica\"],\n      \"dates\": {\n        \"date_start\": \"2026-03-20 21:00\",\n        \"date_end\": \"\"\n      },\n      \"city\": {\n        \"city_name\": \"Milano\",\n        \"location_name\": \"Blue Note\"\n      },\n      \"section\": {\n        \"price\": \"25 EUR\"\n      }\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai-transform/event/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ai-transform", "event", ""]
+            }
+          }
+        },
+        {
+          "name": "Transform (no model → info)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai-transform/event/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ai-transform", "event", ""]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal API",
+      "item": [
+        {
+          "name": "Dashboard stats",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/dashboard/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "dashboard", ""]
+            }
+          }
+        },
+        {
+          "name": "Production events",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/events/?page=1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "events", ""],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "city", "value": "", "disabled": true },
+                { "key": "source", "value": "", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Staging events (internal)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/staging/?page=1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "staging", ""],
+              "query": [
+                { "key": "page", "value": "1" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "API Version",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/version/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "version", ""]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

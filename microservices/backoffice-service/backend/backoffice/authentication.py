@@ -54,6 +54,9 @@ class KeycloakUser:
     def is_anonymous(self) -> bool:
         return False
 
+    def get_username(self) -> str:
+        return self.username
+
     def __str__(self) -> str:
         return f"KeycloakUser(sub={self.sub})"
 
@@ -91,8 +94,13 @@ class KeycloakJWTAuthentication(BaseAuthentication):
     def _authenticate_token(self, token: str) -> tuple[Any, dict[str, Any]]:
         """Valida il token JWT e restituisce (user, auth_info)."""
         jwks = self._get_jwks()
-        issuer = f"{settings.KEYCLOAK_URL}/realms/{settings.KEYCLOAK_REALM}"
         audience = settings.KEYCLOAK_AUDIENCE
+
+        # Issuer accettati: URL interno (Docker) e URL pubblico (APISIX)
+        issuers = [f"{settings.KEYCLOAK_URL}/realms/{settings.KEYCLOAK_REALM}"]
+        public_url = getattr(settings, "KEYCLOAK_PUBLIC_URL", "")
+        if public_url:
+            issuers.append(f"{public_url}/realms/{settings.KEYCLOAK_REALM}")
 
         try:
             # Decodifica l'header per trovare il kid
@@ -109,15 +117,22 @@ class KeycloakJWTAuthentication(BaseAuthentication):
             if public_key is None:
                 raise AuthenticationFailed("Chiave pubblica non trovata nel JWKS per il kid specificato.")
 
-            # Valida firma, issuer, audience e scadenza
+            # Valida firma, audience e scadenza (issuer validato manualmente)
             payload = jwt.decode(
                 token,
                 public_key,
                 algorithms=["RS256"],
-                issuer=issuer,
                 audience=audience,
-                options={"require": ["exp", "iss", "aud"]},
+                options={"require": ["exp", "iss", "aud"], "verify_iss": False},
             )
+
+            # Valida issuer manualmente (accetta interno o pubblico)
+            token_issuer = payload.get("iss", "")
+            if token_issuer not in issuers:
+                raise AuthenticationFailed(
+                    f"Issuer del token non valido: {token_issuer}. "
+                    f"Attesi: {', '.join(issuers)}"
+                )
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Token scaduto.")
         except jwt.InvalidIssuerError:

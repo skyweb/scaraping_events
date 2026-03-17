@@ -20,6 +20,7 @@ from .serializers import (
     ProductionEventSerializer,
     ProductionEventListSerializer,
     StagingEventSerializer,
+    StagingEventBulkResponseSerializer,
     StagingEventScrapingSerializer,
     StagingEventLegacySerializer,
     EtlRunSerializer,
@@ -573,6 +574,7 @@ Crea multipli staging events in una sola richiesta.
             )
 
         spider_name = request.data.get('spider', 'unknown')
+        batch_file = request.data.get('storage_path', None)
         span = trace.get_current_span()
         span.set_attribute("bulk.events_count", len(events_data))
         span.set_attribute("bulk.spider", spider_name)
@@ -585,6 +587,11 @@ Crea multipli staging events in una sola richiesta.
             f'Ricevuti {len(events_data)} eventi da {spider_name}',
             metadata={'spider': spider_name, 'events_count': len(events_data), 'mode': 'sync' if sync_mode else 'async'},
         )
+
+        # Inietta batch_file in ogni evento
+        if batch_file:
+            for event in events_data:
+                event['_batch_file'] = batch_file
 
         if sync_mode:
             return self._bulk_sync(events_data, span)
@@ -709,7 +716,7 @@ Crea multipli staging events in una sola richiesta.
             status_code = status.HTTP_200_OK
 
         return Response({
-            'successful_events': StagingEventSerializer(successful_events, many=True).data,
+            'successful_events': StagingEventBulkResponseSerializer(successful_events, many=True).data,
             'failed_events': failed_events,
             'created_count': len(successful_events),
             'failed_count': len(failed_events),

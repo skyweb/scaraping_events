@@ -109,6 +109,7 @@ services:
       OTEL_SERVICE_NAME: backoffice-django
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
       KEYCLOAK_URL: http://keycloak:8080
+      KEYCLOAK_PUBLIC_URL: https://auth.${DOMAIN}
       KEYCLOAK_REALM: today-events
       KEYCLOAK_AUDIENCE: account
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
