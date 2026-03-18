@@ -13,6 +13,11 @@ data:
   POSTGRES_PORT: "5432"
   POSTGRES_DB: "events"
   POSTGRES_USER: "events"
+  # Keycloak (validazione token OAuth2 nei task Celery)
+  KEYCLOAK_URL: "http://keycloak.apps.svc:8080"
+  KEYCLOAK_REALM: "today-events"
+  KEYCLOAK_AUDIENCE: "backoffice"
+  # OpenTelemetry
   OTEL_ENABLED: "false"
   OTEL_SERVICE_NAME: "backoffice-celery"
   OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector-opentelemetry-collector.monitoring.svc:4317"

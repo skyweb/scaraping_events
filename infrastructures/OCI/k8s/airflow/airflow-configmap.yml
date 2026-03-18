@@ -17,3 +17,10 @@ data:
   AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: "30"
   AIRFLOW__CORE__PARALLELISM: "4"
   AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: "2"
+  # API auth (per trigger DAG da backoffice admin)
+  AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
+  # Scraping — KubernetesPodOperator config
+  SCRAPER_EXECUTOR: "k8s"
+  K8S_SCRAPER_NAMESPACE: "scraping"
+  K8S_SCRAPER_SA: "airflow-scraper-sa"
+  SCRAPY_IMAGE: "eu-milan-1.ocir.io/axbuakdjv1li/events/scraping:latest"

@@ -1,0 +1,116 @@
+---
+# Scraping — Namespace dedicato per pod spider effimeri (KubernetesPodOperator)
+# Crea namespace, RBAC, imagePullSecret e Secret per OAuth2 client credentials
+#
+# Prerequisiti:
+#   - install_scraping: true in oke.yml
+#   - scraping_api_client_id, scraping_api_client_secret in oke-vault.yml
+#   - Airflow già installato (airflow-setup.yml)
+#   - kubectl configurato
+#
+# Uso: ansible-playbook ansible/playbooks/scraping-setup.yml --ask-vault-pass
+- name: Scraping Service Setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    scraping_k8s_dir: "{{ playbook_dir }}/../../k8s/scraping-service"
+
+  tasks:
+    # =========================================================================
+    # Verifica prerequisiti
+    # =========================================================================
+    - name: Verifica che install_scraping sia abilitato
+      ansible.builtin.assert:
+        that: install_scraping | default(false)
+        fail_msg: "install_scraping non abilitato in oke.yml."
+
+    - name: Verifica kubectl disponibile
+      ansible.builtin.command: kubectl cluster-info
+      register: cluster_info
+      changed_when: false
+
+    # =========================================================================
+    # Namespace
+    # =========================================================================
+    - name: Crea namespace scraping
+      ansible.builtin.command: kubectl create namespace scraping
+      register: ns_result
+      changed_when: "'created' in ns_result.stdout"
+      failed_when:
+        - ns_result.rc != 0
+        - "'already exists' not in ns_result.stderr"
+
+    # =========================================================================
+    # OCIR imagePullSecret (per pull immagine scraping da registry privato)
+    # =========================================================================
+    - name: Crea OCIR imagePullSecret in namespace scraping
+      ansible.builtin.command:
+        cmd: >
+          kubectl create secret docker-registry ocir-secret
+          --namespace scraping
+          --docker-server={{ ocir_endpoint }}
+          --docker-username={{ ocir_username }}
+          --docker-password={{ ocir_auth_token }}
+          --dry-run=client -o yaml | kubectl apply -f -
+      register: ocir_result
+      changed_when: "'created' in ocir_result.stdout or 'configured' in ocir_result.stdout"
+
+    # =========================================================================
+    # Secret — credenziali OAuth2 per spider → backoffice API
+    # =========================================================================
+    - name: Crea Secret scraping-secret
+      ansible.builtin.command:
+        cmd: kubectl apply -f -
+        stdin: |
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            name: scraping-secret
+            namespace: scraping
+          type: Opaque
+          stringData:
+            API_CLIENT_ID: "{{ scraping_api_client_id }}"
+            API_CLIENT_SECRET: "{{ scraping_api_client_secret }}"
+      register: secret_result
+      changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
+
+    # =========================================================================
+    # Manifest K8s (Kustomize)
+    # =========================================================================
+    - name: Applica manifest Kustomize (ConfigMap, RBAC)
+      ansible.builtin.command: kubectl apply -k {{ scraping_k8s_dir }}
+      register: kustomize_result
+      changed_when: "'created' in kustomize_result.stdout or 'configured' in kustomize_result.stdout"
+
+    # =========================================================================
+    # Verifica RBAC
+    # =========================================================================
+    - name: Verifica RBAC — Airflow Scheduler puo creare pod in ns scraping
+      ansible.builtin.command: >
+        kubectl auth can-i create pods
+        --as=system:serviceaccount:airflow:airflow-scheduler
+        -n scraping
+      register: rbac_result
+      changed_when: false
+      failed_when: "'yes' not in rbac_result.stdout"
+
+    # =========================================================================
+    # Riepilogo
+    # =========================================================================
+    - name: Riepilogo Scraping Setup
+      ansible.builtin.debug:
+        msg:
+          - "=== Scraping Service Setup Completato ==="
+          - ""
+          - "Namespace:      scraping"
+          - "Pod effimeri:   lanciati da Airflow DAG via KubernetesPodOperator"
+          - "Immagine:       {{ scraping_image | default('eu-milan-1.ocir.io/.../scraping:latest') }}"
+          - "RBAC:           airflow-scheduler SA -> scraper-pod-manager Role"
+          - ""
+          - "RBAC check:     {{ rbac_result.stdout }}"

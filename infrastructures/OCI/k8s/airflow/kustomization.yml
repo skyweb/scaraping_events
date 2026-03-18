@@ -5,6 +5,7 @@ resources:
   - airflow-configmap.yml
   - airflow-pvc.yml
   - airflow-init-job.yml
+  - airflow-scheduler-sa.yml
   - airflow-webserver-deployment.yml
   - airflow-scheduler-deployment.yml
   - airflow-service.yml

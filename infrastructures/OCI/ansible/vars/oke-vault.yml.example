@@ -38,6 +38,8 @@ backstage_postgres_password: "CHANGE_ME"
 airflow_postgres_password: "CHANGE_ME"
 airflow_admin_password: "CHANGE_ME"
 airflow_secret_key: "CHANGE_ME"
+airflow_api_user: "admin"               # utente per trigger DAG da backoffice
+airflow_api_password: "CHANGE_ME"       # password per trigger DAG da backoffice
 
 # Keycloak
 keycloak_admin_password: "CHANGE_ME"
@@ -46,6 +48,17 @@ keycloak_backoffice_client_secret: "CHANGE_ME"
 keycloak_scraper_client_secret: "CHANGE_ME"
 keycloak_airflow_client_secret: "CHANGE_ME"
 keycloak_google_client_secret: "CHANGE_ME"
+
+# Scraping Service (OAuth2 client credentials per spider → backoffice API)
+scraping_api_client_id: "CHANGE_ME"
+scraping_api_client_secret: "CHANGE_ME"
+
+# Backoffice (credenziali sensibili Django)
+backoffice_django_secret_key: "CHANGE_ME"
+backoffice_gemini_api_key: "CHANGE_ME"
+backoffice_groq_api_key: "CHANGE_ME"
+backoffice_celery_broker_url: "redis://redis.database.svc:6379/1"
+backoffice_cache_redis_url: "redis://redis.database.svc:6379/2"
 
 # MinIO (Object Storage)
 minio_root_user: "minioadmin"

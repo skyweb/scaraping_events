@@ -15,6 +15,17 @@ data:
   POSTGRES_USER: "events"
   CORS_ALLOWED_ORIGINS: "https://events.oci.santocaruso.eu"
   CSRF_TRUSTED_ORIGINS: "https://events.oci.santocaruso.eu"
-  OTEL_ENABLED: "false"
+  # Keycloak (autenticazione OAuth2)
+  KEYCLOAK_URL: "http://keycloak.apps.svc:8080"
+  KEYCLOAK_PUBLIC_URL: "https://auth.oci.santocaruso.eu"
+  KEYCLOAK_REALM: "today-events"
+  KEYCLOAK_AUDIENCE: "backoffice"
+  # Airflow (trigger DAG da admin)
+  AIRFLOW_API_URL: "http://airflow-webserver.airflow.svc:8080/api/v1"
+  # Note: AIRFLOW_API_USER, AIRFLOW_API_PASSWORD -> in backoffice-secret
+  # Note: GEMINI_API_KEY, GROQ_API_KEY -> in backoffice-secret
+  # Note: CELERY_BROKER_URL, CACHE_REDIS_URL -> in backoffice-secret
+  # OpenTelemetry
+  OTEL_ENABLED: "true"
   OTEL_SERVICE_NAME: "backoffice-django"
   OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector-opentelemetry-collector.monitoring.svc:4317"

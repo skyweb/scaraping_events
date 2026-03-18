@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: scraping-config
+  namespace: scraping
+  labels:
+    app: scraping
+    component: spider
+data:
+  API_BASE_URL: "http://backoffice.apps.svc:8000"
+  KEYCLOAK_TOKEN_URL: "http://keycloak.apps.svc:8080/realms/today-events/protocol/openid-connect/token"
+  OTEL_ENABLED: "true"
+  OTEL_SERVICE_NAME: "scraping-service"
+  OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector-opentelemetry-collector.monitoring.svc:4317"

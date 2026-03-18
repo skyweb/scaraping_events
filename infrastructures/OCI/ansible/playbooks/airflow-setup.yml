@@ -92,6 +92,8 @@
             AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: "postgresql+psycopg2://airflow:{{ airflow_postgres_password }}@postgres.database.svc:5432/airflow"
             AIRFLOW__WEBSERVER__SECRET_KEY: "{{ airflow_secret_key }}"
             AIRFLOW_ADMIN_PASSWORD: "{{ airflow_admin_password }}"
+            AIRFLOW_API_USER: "{{ airflow_api_user }}"
+            AIRFLOW_API_PASSWORD: "{{ airflow_api_password }}"
       register: secret_result
       changed_when: "'created' in secret_result.stdout or 'configured' in secret_result.stdout"
 

@@ -102,9 +102,11 @@ Piattaforma di aggregazione eventi che raccoglie dati da 50+ fonti italiane (Zer
 |  | Redis        |   | Kong       |   | Scheduler  |  | SonarQube| |
 |  | MinIO        |   | Konga      |   +------------+  +----------+ |
 |  | Celery W/B   |   +------------+                                 |
-|  | redis-export |                                                  |
-|  | celery-export|                                                  |
-|  +--------------+                                                  |
+|  | redis-export |   scraping                                       |
+|  | celery-export|   +------------+                                 |
+|  +--------------+   | (pod       |  Pod effimeri Scrapy            |
+|                     |  effimeri) |  via KubernetesPodOperator      |
+|                     +------------+  RBAC: airflow-scheduler SA     |
 |                                                                    |
 |  monitoring          clusters         traefik         infra        |
 |  +--------------+   +------------+   +------------+  +----------+ |
