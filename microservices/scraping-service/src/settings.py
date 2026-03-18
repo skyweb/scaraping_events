@@ -96,8 +96,8 @@ ITEM_PIPELINES = {
     # Scegliere UNO tra BatchExportPipeline e ApiPipeline (non entrambi):
     # - BatchExportPipeline: solo salvataggio batch JSON su disco/MinIO
     # - ApiPipeline: salvataggio JSON + invio all'API backoffice (eredita da BatchExportPipeline)
-    "pipelines.BatchExportPipeline": 200,
-    #"pipelines.ApiPipeline": 200,
+    #"pipelines.BatchExportPipeline": 200,
+    "pipelines.ApiPipeline": 200,
 }
 
 # =============================================================================

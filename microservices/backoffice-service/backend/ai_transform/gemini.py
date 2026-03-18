@@ -422,6 +422,63 @@ def transform_event(
     return _call_gemini(event, api_key, model, thinking)
 
 
+def transform_text(
+    prompt: str,
+    text: str,
+    model: str = DEFAULT_MODEL,
+    thinking: bool = DEFAULT_THINKING,
+) -> str:
+    """
+    Chiamata AI generica: invia prompt + testo e restituisce la risposta testuale.
+
+    Utile per estrazioni, riassunti, riformattazioni di testo libero.
+    """
+    provider = get_provider(model)
+
+    if provider == "groq":
+        api_key = getattr(settings, "GROQ_API_KEY", "")
+        if not api_key:
+            raise ValueError("GROQ_API_KEY non configurata in settings")
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": prompt},
+                {"role": "user", "content": text},
+            ],
+            "temperature": 0.1,
+        }
+        response = requests.post(
+            GROQ_API_URL,
+            json=payload,
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            timeout=30,
+        )
+        if response.status_code == 429:
+            raise RateLimitError("Groq", model, response.headers.get("Retry-After", "qualche minuto"))
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"]
+
+    # Default: Gemini
+    api_key = getattr(settings, "GEMINI_API_KEY", "")
+    if not api_key:
+        raise ValueError("GEMINI_API_KEY non configurata in settings")
+    url = f"{GEMINI_API_URL}/{model}:generateContent?key={api_key}"
+    payload = {
+        "contents": [{"parts": [{"text": prompt}, {"text": text}]}],
+        "generationConfig": {
+            "temperature": 0.1,
+            "thinkingConfig": {"thinkingBudget": -1 if thinking else 0},
+        },
+    }
+    response = requests.post(url, json=payload, timeout=30)
+    if response.status_code == 429:
+        raise RateLimitError("Gemini", model, response.headers.get("Retry-After", "qualche minuto"))
+    response.raise_for_status()
+    result = response.json()
+    parts = result["candidates"][0]["content"]["parts"]
+    return parts[-1]["text"]
+
+
 def transform_batch(
     events: list[dict],
     model: str = DEFAULT_MODEL,

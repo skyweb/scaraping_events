@@ -312,12 +312,14 @@ services:
     environment:
       AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
+      AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
     command: webserver
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
       - ./services/airflow/plugins:/opt/airflow/plugins:ro
       - ./services/airflow/data:/opt/airflow/data
       - ./services/airflow/logs:/opt/airflow/logs
+      - ./services/airflow/webserver_config.py:/opt/airflow/webserver_config.py:ro
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 30s
@@ -330,6 +332,7 @@ services:
           - airflow-webserver
 
   # Apache Airflow Scheduler
+  # Docker socket montato per permettere DockerOperator di lanciare container Scrapy
   airflow-scheduler:
     image: apache/airflow:2.9.2
     container_name: dev-airflow-scheduler
@@ -341,12 +344,15 @@ services:
       - .env
     environment:
       AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
+      SCRAPY_SRC_PATH: ${SCRAPY_SRC_PATH:-}
+      SCRAPY_DATA_PATH: ${SCRAPY_DATA_PATH:-}
     command: scheduler
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
       - ./services/airflow/plugins:/opt/airflow/plugins:ro
       - ./services/airflow/data:/opt/airflow/data
       - ./services/airflow/logs:/opt/airflow/logs
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - dev-network
 

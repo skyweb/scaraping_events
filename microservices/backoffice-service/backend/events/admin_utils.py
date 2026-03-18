@@ -42,6 +42,11 @@ def render_event_status_chip(date_start, date_end):
         return "-"
 
     today = timezone.now().date()
+    # Normalizza a date se sono datetime
+    if hasattr(date_start, 'date'):
+        date_start = date_start.date()
+    if date_end and hasattr(date_end, 'date'):
+        date_end = date_end.date()
     end = date_end if date_end else date_start
 
     if end < today:

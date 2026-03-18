@@ -473,9 +473,27 @@ oidc_route 206 "celery-exporter-sso" \
     "celery-exporter.${DOMAIN}" "/*" 8 \
     "https://celery-exporter.${DOMAIN}/callback"
 
-# --- Airflow ---
-oidc_route 207 "airflow-sso" \
-    "airflow.${DOMAIN}" "/*" 9 \
+# --- Airflow static assets (no OIDC, evita race condition redirect) ---
+put "/routes/305" "{
+    \"name\": \"airflow-static\",
+    \"host\": \"airflow.${DOMAIN}\",
+    \"uri\": \"/static/*\",
+    \"priority\": 10,
+    \"upstream_id\": \"9\",
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "airflow static (no auth)"
+
+# --- Airflow (auth proxy: X-Auth-Request-Email per AUTH_REMOTE_USER) ---
+oidc_route_grafana 207 "airflow-sso" \
+    "airflow.${DOMAIN}" 9 \
     "https://airflow.${DOMAIN}/callback"
 
 # --- APISIX Dashboard ---

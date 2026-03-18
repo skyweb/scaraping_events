@@ -598,3 +598,10 @@ UNFOLD = {
         ],
     },
 }
+
+# =============================================================================
+# Airflow API (per trigger DAG da admin)
+# =============================================================================
+AIRFLOW_API_URL = os.getenv('AIRFLOW_API_URL', 'http://airflow-webserver:8080/api/v1')
+AIRFLOW_API_USER = os.getenv('AIRFLOW_API_USER', 'admin')
+AIRFLOW_API_PASSWORD = os.getenv('AIRFLOW_API_PASSWORD', 'admin_secret_2026')

@@ -23,7 +23,7 @@ from rest_framework_tracking.models import APIRequestLog
 
 from .models import ProductionEvent, StagingEvent
 from .admin_mixins import EventDisplayMixin
-from .admin_utils import format_datetime_italian, render_chip
+from .admin_utils import format_datetime_italian, render_chip, render_json_preview
 from comuni_istat.models import ComuneItaliano
 from comuni_istat.admin import ProvinciaFilter, RegioneFilter
 from scraping.admin import CategoryFilter
@@ -130,6 +130,10 @@ class StagingEventForm(forms.ModelForm):
         model = StagingEvent
         fields = '__all__'
         widgets = EVENT_FORM_WIDGETS
+        labels = {
+            'date_start': 'Data inizio',
+            'date_end': 'Data fine',
+        }
 
 
 class ProductionEventForm(forms.ModelForm):
@@ -161,8 +165,10 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
     readonly_fields = [
         'created_at', 'image_preview', 'image_thumbnail', 'description_preview',
         'json_preview', 'clickable_url', 'clickable_image_url', 'source', 'uuid',
-        'content_hash', 'category_list', 'date_start_display', 'date_start_ro', 'date_end_ro',
-        'event_status_chip', 'creation_date_display', 'info_extra_details', 'time_info_html',
+        'content_hash', 'category_list', 'date_start_display',
+        'event_status_chip', 'creation_date_display', 'info_extra_details',
+        'location_map_preview', 'section_preview', 'schema_org_preview', 'raw_data_preview',
+        'batch_file', 'scraped_at', 'ai_transform_button', 'ai_description_button',
     ]
     list_per_page = 50
 
@@ -170,11 +176,10 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">info</span> Informazioni Evento</span>'), {
             'fields': (
                 ('source', 'uuid', 'creation_date_display'),
-                ('date_start_ro', 'date_end_ro', 'event_status_chip'),
+                ('date_start', 'date_end', 'event_status_chip'),
                 'title',
-                'section',
                 ('city_name', 'location_name', 'location_address'),
-                'location_coordinates',
+                'location_map_preview',
                 'category_list',
                 'clickable_url',
             ),
@@ -182,6 +187,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         }),
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">description</span> Contenuto</span>'), {
             'fields': (
+                'ai_description_button',
                 'description',
                 'category',
                 ('image_preview', 'clickable_image_url'),
@@ -191,19 +197,13 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             ),
             'classes': ['tab'],
         }),
-        (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">calendar_month</span> Date e Orari</span>'), {
-            'fields': (
-                'date_start_display',
-                ('date_start', 'date_end'),
-                ('time_start', 'time_end'),
-                'time_info_html',
-            ),
-            'classes': ['tab'],
-        }),
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">code</span> Dati Tecnici</span>'), {
             'fields': (
-                'content_hash',
-                'scraped_at',
+                ('content_hash', 'scraped_at', 'batch_file'),
+                'section_preview',
+                'ai_transform_button',
+                'schema_org_preview',
+                'raw_data_preview',
             ),
             'classes': ['tab'],
         }),
@@ -213,6 +213,283 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         """Data di creazione (created_at) formattata dd/mm/yyyy HH:MM."""
         return format_datetime_italian(obj.created_at)
     creation_date_display.short_description = "Data creazione"
+
+    def location_map_preview(self, obj):
+        """Mappa Leaflet read-only per le coordinate dell'evento."""
+        if not obj.location_coordinates:
+            return "-"
+        lat = obj.location_coordinates.y
+        lng = obj.location_coordinates.x
+        map_id = f"map-staging-{obj.pk}"
+        return mark_safe(
+            f'<div id="{map_id}" style="height:300px;width:100%;border-radius:0.5rem;margin-top:0.5rem;"></div>'
+            f'<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />'
+            f'<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>'
+            f'<script>'
+            f'(function() {{'
+            f'  function initMap() {{'
+            f'    if (typeof L === "undefined") {{ setTimeout(initMap, 100); return; }}'
+            f'    var map = L.map("{map_id}").setView([{lat}, {lng}], 15);'
+            f'    L.tileLayer("https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png", {{'
+            f'      attribution: "&copy; OpenStreetMap"'
+            f'    }}).addTo(map);'
+            f'    L.marker([{lat}, {lng}]).addTo(map);'
+            f'    setTimeout(function() {{ map.invalidateSize(); }}, 200);'
+            f'  }}'
+            f'  initMap();'
+            f'}})();'
+            f'</script>'
+        )
+    location_map_preview.short_description = "Mappa"
+
+    def section_preview(self, obj):
+        """Renderizza il campo section come JSON con sintassi colorata."""
+        return render_json_preview(obj.section, f"section-{obj.pk}-staging")
+    section_preview.short_description = "Section"
+
+    def schema_org_preview(self, obj):
+        """Renderizza il campo schema_org come JSON con sintassi colorata."""
+        return render_json_preview(obj.schema_org, f"schema-org-{obj.pk}-staging")
+    schema_org_preview.short_description = "Schema.org"
+
+    def raw_data_preview(self, obj):
+        """Renderizza il campo raw_data come JSON con sintassi colorata."""
+        return render_json_preview(obj.raw_data, f"raw-data-{obj.pk}-staging")
+    raw_data_preview.short_description = "Raw Data"
+
+    def ai_transform_button(self, obj):
+        """Pulsante per trasformare raw_data in schema_org tramite AI."""
+        if not obj.raw_data:
+            return mark_safe('<span style="color:#6b7280;font-size:0.85rem;">Nessun raw_data disponibile</span>')
+
+        models_options = ''.join(
+            f'<option value="{m}"{" selected" if m == "gemini-2.5-flash" else ""}>{m}</option>'
+            for m in [
+                "gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro",
+                "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "qwen/qwen3-32b",
+            ]
+        )
+        return mark_safe(f'''
+            <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+                <select id="ai-model-select" style="padding:0.4rem 0.6rem;border:1px solid #d1d5db;
+                    border-radius:0.375rem;font-size:0.85rem;background:#fff;">
+                    {models_options}
+                </select>
+                <button type="button" id="ai-transform-btn" onclick="aiTransform({obj.pk})"
+                    style="padding:0.5rem 1.25rem;background:#7c3aed;color:#fff;border:none;
+                    border-radius:0.375rem;cursor:pointer;font-size:0.85rem;font-weight:600;
+                    display:inline-flex;align-items:center;gap:0.4rem;"
+                    onmouseover="this.style.background='#6d28d9'"
+                    onmouseout="this.style.background='#7c3aed'">
+                    <span class="material-symbols-outlined" style="font-size:1.1rem;">auto_awesome</span>
+                    Genera Schema.org
+                </button>
+                <span id="ai-transform-status" style="font-size:0.85rem;color:#6b7280;"></span>
+            </div>
+            <script>
+            function aiTransform(eventId) {{
+                var btn = document.getElementById("ai-transform-btn");
+                var status = document.getElementById("ai-transform-status");
+                var model = document.getElementById("ai-model-select").value;
+                btn.disabled = true;
+                btn.style.opacity = "0.6";
+                btn.style.cursor = "wait";
+                status.textContent = "Trasformazione in corso...";
+                status.style.color = "#7c3aed";
+
+                fetch("/admin/events/stagingevent/" + eventId + "/ai-transform/", {{
+                    method: "POST",
+                    headers: {{
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
+                    }},
+                    body: JSON.stringify({{model: model}}),
+                }})
+                .then(function(r) {{ return r.json().then(function(d) {{ return {{ok: r.ok, data: d}}; }}); }})
+                .then(function(res) {{
+                    if (res.ok) {{
+                        status.textContent = "Schema.org generato con " + res.data.model;
+                        status.style.color = "#16a34a";
+                        setTimeout(function() {{ location.reload(); }}, 1200);
+                    }} else {{
+                        status.textContent = "Errore: " + (res.data.error || "sconosciuto");
+                        status.style.color = "#dc2626";
+                        btn.disabled = false;
+                        btn.style.opacity = "1";
+                        btn.style.cursor = "pointer";
+                    }}
+                }})
+                .catch(function(e) {{
+                    status.textContent = "Errore di rete: " + e.message;
+                    status.style.color = "#dc2626";
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                    btn.style.cursor = "pointer";
+                }});
+            }}
+            </script>
+        ''')
+    ai_transform_button.short_description = "AI Transform"
+
+    def ai_description_button(self, obj):
+        """Pulsante per estrarre info strutturate dalla description in raw_data tramite AI."""
+        raw = obj.raw_data or {}
+        description = (raw.get('data') or {}).get('description', '') if isinstance(raw.get('data'), dict) else raw.get('description', '')
+        if not description:
+            return mark_safe('<span style="color:#6b7280;font-size:0.85rem;">Nessuna description in raw_data</span>')
+
+        models_options = ''.join(
+            f'<option value="{m}"{" selected" if m == "gemini-2.5-flash" else ""}>{m}</option>'
+            for m in [
+                "gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro",
+                "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "qwen/qwen3-32b",
+            ]
+        )
+        return mark_safe(f'''
+            <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+                <select id="ai-desc-model-select" style="padding:0.4rem 0.6rem;border:1px solid #d1d5db;
+                    border-radius:0.375rem;font-size:0.85rem;background:#fff;">
+                    {models_options}
+                </select>
+                <button type="button" id="ai-desc-btn" onclick="aiDescriptionTransform({obj.pk})"
+                    style="padding:0.5rem 1.25rem;background:#0891b2;color:#fff;border:none;
+                    border-radius:0.375rem;cursor:pointer;font-size:0.85rem;font-weight:600;
+                    display:inline-flex;align-items:center;gap:0.4rem;"
+                    onmouseover="this.style.background='#0e7490'"
+                    onmouseout="this.style.background='#0891b2'">
+                    <span class="material-symbols-outlined" style="font-size:1.1rem;">auto_awesome</span>
+                    Estrai descrizione strutturata
+                </button>
+                <span id="ai-desc-status" style="font-size:0.85rem;color:#6b7280;"></span>
+            </div>
+            <script>
+            function aiDescriptionTransform(eventId) {{
+                var btn = document.getElementById("ai-desc-btn");
+                var status = document.getElementById("ai-desc-status");
+                var model = document.getElementById("ai-desc-model-select").value;
+                btn.disabled = true;
+                btn.style.opacity = "0.6";
+                btn.style.cursor = "wait";
+                status.textContent = "Estrazione in corso...";
+                status.style.color = "#0891b2";
+
+                fetch("/admin/events/stagingevent/" + eventId + "/ai-description/", {{
+                    method: "POST",
+                    headers: {{
+                        "Content-Type": "application/json",
+                        "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
+                    }},
+                    body: JSON.stringify({{model: model}}),
+                }})
+                .then(function(r) {{ return r.json().then(function(d) {{ return {{ok: r.ok, data: d}}; }}); }})
+                .then(function(res) {{
+                    if (res.ok) {{
+                        status.textContent = "Descrizione aggiornata con " + res.data.model;
+                        status.style.color = "#16a34a";
+                        setTimeout(function() {{ location.reload(); }}, 1200);
+                    }} else {{
+                        status.textContent = "Errore: " + (res.data.error || "sconosciuto");
+                        status.style.color = "#dc2626";
+                        btn.disabled = false;
+                        btn.style.opacity = "1";
+                        btn.style.cursor = "pointer";
+                    }}
+                }})
+                .catch(function(e) {{
+                    status.textContent = "Errore di rete: " + e.message;
+                    status.style.color = "#dc2626";
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                    btn.style.cursor = "pointer";
+                }});
+            }}
+            </script>
+        ''')
+    ai_description_button.short_description = "AI Descrizione"
+
+    def get_urls(self):
+        """Aggiunge URL custom per le trasformazioni AI."""
+        from django.urls import path
+        urls = super().get_urls()
+        custom = [
+            path(
+                '<int:pk>/ai-transform/',
+                self.admin_site.admin_view(self.ai_transform_view),
+                name='stagingevent-ai-transform',
+            ),
+            path(
+                '<int:pk>/ai-description/',
+                self.admin_site.admin_view(self.ai_description_view),
+                name='stagingevent-ai-description',
+            ),
+        ]
+        return custom + urls
+
+    def ai_transform_view(self, request, pk):
+        """Endpoint admin per trasformare raw_data → schema_org via AI."""
+        from django.http import JsonResponse
+        from ai_transform.gemini import transform_event
+
+        if request.method != 'POST':
+            return JsonResponse({'error': 'Metodo non consentito'}, status=405)
+
+        try:
+            obj = StagingEvent.objects.get(pk=pk)
+        except StagingEvent.DoesNotExist:
+            return JsonResponse({'error': 'Evento non trovato'}, status=404)
+
+        if not obj.raw_data:
+            return JsonResponse({'error': 'Nessun raw_data disponibile'}, status=400)
+
+        body = json.loads(request.body)
+        model = body.get('model', 'gemini-2.5-flash')
+
+        try:
+            result = transform_event(obj.raw_data, model, thinking=False)
+            obj.schema_org = result
+            obj.save(update_fields=['schema_org'])
+            return JsonResponse({'ok': True, 'model': model})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+
+    def ai_description_view(self, request, pk):
+        """Endpoint admin per estrarre descrizione strutturata da raw_data.description via AI."""
+        from django.http import JsonResponse
+        from ai_transform.gemini import transform_text
+
+        if request.method != 'POST':
+            return JsonResponse({'error': 'Metodo non consentito'}, status=405)
+
+        try:
+            obj = StagingEvent.objects.get(pk=pk)
+        except StagingEvent.DoesNotExist:
+            return JsonResponse({'error': 'Evento non trovato'}, status=404)
+
+        raw = obj.raw_data or {}
+        description = (raw.get('data') or {}).get('description', '') if isinstance(raw.get('data'), dict) else raw.get('description', '')
+        if not description:
+            return JsonResponse({'error': 'Nessuna description in raw_data'}, status=400)
+
+        body = json.loads(request.body)
+        model = body.get('model', 'gemini-2.5-flash')
+
+        prompt = (
+            "Estraimi in modo strutturato le informazioni da questo testo di un evento. "
+            "Restituisci SOLO un frammento HTML (NO tag html, head, body, doctype). "
+            "Usa questi tag: <p> per paragrafi, <h3> per sezioni principali, <h4> per sottosezioni, "
+            "<ul>/<li> per elenchi, <strong> per etichette/enfasi, <a href=\"...\"> per link e email (mailto:). "
+            "Struttura il contenuto in sezioni logiche (es. Descrizione evento, Organizzatore, "
+            "Dettagli, Orari, Contatti). Usa liste annidate <ul> dentro <li> per sotto-dettagli. "
+            "Mantieni la lingua originale del testo. Non aggiungere informazioni non presenti nel testo."
+        )
+
+        try:
+            result = transform_text(prompt, description, model, thinking=False)
+            obj.description = result
+            obj.save(update_fields=['description'])
+            return JsonResponse({'ok': True, 'model': model})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
 
     def info_extra_details(self, obj):
         """Mostra info_e_costi, info_e_contatti da info_extra e cast dalla section."""

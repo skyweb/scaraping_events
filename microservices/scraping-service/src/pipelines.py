@@ -112,14 +112,15 @@ class StorageBackend:
             except Exception as e:
                 logger.warning(f"Errore upload MinIO: {e}")
                 # Fallback su filesystem
-                return self._save_local(filename, content)
+                return self._save_local(filename, content, prefix)
         else:
-            return self._save_local(filename, content)
+            return self._save_local(filename, content, prefix)
 
-    def _save_local(self, filename: str, content: str) -> str:
-        """Salva su filesystem locale."""
-        os.makedirs(self.output_dir, exist_ok=True)
-        filepath = os.path.join(self.output_dir, filename)
+    def _save_local(self, filename: str, content: str, prefix: str = "") -> str:
+        """Salva su filesystem locale, creando sottocartelle se prefix è specificato."""
+        target_dir = os.path.join(self.output_dir, prefix) if prefix else self.output_dir
+        os.makedirs(target_dir, exist_ok=True)
+        filepath = os.path.join(target_dir, filename)
         try:
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(content)
@@ -295,6 +296,13 @@ class BatchExportPipeline:
 
         return item
 
+    def _build_batch_filename(self, category: str, batch_num: int) -> str:
+        """Genera il nome file per il batch."""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        if category == "default":
+            return f"{self.spider_name}_{timestamp}_batch_{batch_num:03d}.json"
+        return f"{self.spider_name}_{category}_{timestamp}_batch_{batch_num:03d}.json"
+
     def _flush_batch(self, category: str):
         """Salva il buffer della category come file JSON e svuota il buffer."""
         items = self._buffers.get(category, [])
@@ -305,15 +313,20 @@ class BatchExportPipeline:
         batch_num = self._batch_counts[category]
         self._total_batches += 1
 
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        # "default" non appare nel filename
-        if category == "default":
-            filename = f"{self.spider_name}_{timestamp}_batch_{batch_num:03d}.json"
-        else:
-            filename = f"{self.spider_name}_{category}_{timestamp}_batch_{batch_num:03d}.json"
+        filename = self._build_batch_filename(category, batch_num)
 
-        prefix = f"batch/{self.spider_name}"
-        storage_path = self.storage.build_path(filename, prefix)
+        # Prefix: {dag_id}_{run_id_short} se disponibile, altrimenti batch/{spider}
+        dag_id = os.environ.get('DAG_ID', '')
+        dag_run_id = os.environ.get('DAG_RUN_ID', '')
+        if dag_id and dag_run_id:
+            # Abbrevia run_id: "manual__2026-03-18T22:33:49.355945+00:00" → "manual__2026-03-18T22:33"
+            short_run_id = dag_run_id[:dag_run_id.find(':', 11) + 3] if ':' in dag_run_id else dag_run_id
+            prefix = f"{dag_id}_{short_run_id}"
+        else:
+            prefix = f"batch/{self.spider_name}"
+
+        # batch_file con path relativo: {prefix}/{filename}
+        self._last_batch_file = f"{prefix}/{filename}"
 
         payload = {
             "spider": self.spider_name,
@@ -321,7 +334,7 @@ class BatchExportPipeline:
             "batch": batch_num,
             "count": len(items),
             "sent_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "storage_path": filename,
+            "storage_path": self._last_batch_file,
             "events": items,
         }
 
@@ -439,8 +452,18 @@ class ApiPipeline(BatchExportPipeline):
         logger.info(f"ApiPipeline: connessione a {self.base_url}")
 
         if not self.client_id or not self.client_secret:
+            with tracer.start_as_current_span("scraper.pipeline_error", context=airflow_context) as span:
+                span.set_attribute("error.type", "config")
+                span.set_attribute("error.message", "API_CLIENT_ID o API_CLIENT_SECRET non configurati")
+                from opentelemetry.trace import StatusCode
+                span.set_status(StatusCode.ERROR, "Credenziali OAuth2 mancanti")
             raise CloseSpider("API_CLIENT_ID o API_CLIENT_SECRET non configurati")
         if not self._get_access_token():
+            with tracer.start_as_current_span("scraper.pipeline_error", context=airflow_context) as span:
+                span.set_attribute("error.type", "auth")
+                span.set_attribute("error.message", "Impossibile ottenere token OAuth2")
+                from opentelemetry.trace import StatusCode
+                span.set_status(StatusCode.ERROR, "Token OAuth2 non ottenuto")
             raise CloseSpider("Impossibile ottenere token OAuth2 — controlla credenziali e che il backoffice sia attivo")
 
     def close_spider(self, spider):
@@ -455,13 +478,14 @@ class ApiPipeline(BatchExportPipeline):
         events = list(self._buffers.get(category, []))
         batch_num = self._batch_counts.get(category, 0) + 1
 
-        # Salva JSON su disco/MinIO
+        # Salva JSON su disco/MinIO (imposta anche self._last_batch_file)
         super()._flush_batch(category)
 
         # Invia all'API con tracing OTel
         if not events:
             return
 
+        batch_file = getattr(self, '_last_batch_file', '')
         ctx = airflow_context if airflow_context else None
         with tracer.start_as_current_span(
             "scraper.send_batch",
@@ -471,13 +495,14 @@ class ApiPipeline(BatchExportPipeline):
                 "batch.size": len(events),
                 "batch.number": batch_num,
                 "batch.category": category,
+                "batch.file": batch_file,
             },
         ) as span:
-            success = self._send_to_api(events, span)
+            success = self._send_to_api(events, span, batch_file)
             if not success:
                 raise CloseSpider(f"Invio batch fallito — {len(events)} eventi non inviati")
 
-    def _send_to_api(self, events: List[Dict[str, Any]], span) -> bool:
+    def _send_to_api(self, events: List[Dict[str, Any]], span, batch_file: str = "") -> bool:
         """Invia batch all'endpoint bulk dell'API."""
         if not self.access_token:
             if not self._get_access_token():
@@ -488,9 +513,13 @@ class ApiPipeline(BatchExportPipeline):
         bulk_url = f"{self.base_url}/api/external/v1/staging/bulk/"
 
         try:
+            payload = {"events": events, "spider": self.spider_name}
+            if batch_file:
+                payload["batch_file"] = batch_file
+
             response = self.session.post(
                 bulk_url,
-                json={"events": events, "spider": self.spider_name},
+                json=payload,
                 headers={
                     "Authorization": f"Bearer {self.access_token}",
                     "Content-Type": "application/json",
@@ -516,7 +545,7 @@ class ApiPipeline(BatchExportPipeline):
                 logger.warning("Token scaduto, rinnovo...")
                 self.access_token = None
                 if self._get_access_token():
-                    return self._send_to_api(events, span)
+                    return self._send_to_api(events, span, batch_file)
                 return False
 
             else:

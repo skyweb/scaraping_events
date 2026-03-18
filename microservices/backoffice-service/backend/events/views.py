@@ -574,7 +574,7 @@ Crea multipli staging events in una sola richiesta.
             )
 
         spider_name = request.data.get('spider', 'unknown')
-        batch_file = request.data.get('storage_path', None)
+        batch_file = request.data.get('batch_file') or request.data.get('storage_path')
         span = trace.get_current_span()
         span.set_attribute("bulk.events_count", len(events_data))
         span.set_attribute("bulk.spider", spider_name)

@@ -2,10 +2,12 @@
 DAG per lo scraping degli eventi - Strategia ETL con ApiPipeline
 
 Pipeline:
-1. Truncate staging
-2. Scraping (DockerOperator) → ApiPipeline → Django API → staging_events
-3. Upsert staging → production_events (con confronto hash)
-4. Log ETL run
+1. Scraping (DockerOperator/KubernetesPodOperator) → ApiPipeline → Django API → staging_events
+2. Log ETL run
+
+Ambienti:
+- SCRAPER_EXECUTOR=docker  → DockerOperator (dev locale)
+- SCRAPER_EXECUTOR=k8s     → KubernetesPodOperator (produzione K8s)
 
 Tracing distribuito:
 - Ogni DAG run genera un trace context (TRACEPARENT)
@@ -19,7 +21,6 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.providers.docker.operators.docker import DockerOperator
-from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.utils.task_group import TaskGroup
 from airflow.utils.trigger_rule import TriggerRule
@@ -36,8 +37,24 @@ default_args = {
 }
 
 # Configurazione
-SCRAPY_IMAGE = 'events-scrapy:latest'
+SCRAPY_IMAGE = os.getenv('SCRAPY_IMAGE', 'today-events/scrapyd-dev:latest')
 POSTGRES_CONN_ID = 'events_postgres'
+
+# Ambiente: 'docker' (dev locale) o 'k8s' (produzione Kubernetes)
+SCRAPER_EXECUTOR = os.getenv('SCRAPER_EXECUTOR', 'docker')
+
+# K8s config (usato solo se SCRAPER_EXECUTOR=k8s)
+K8S_NAMESPACE = os.getenv('K8S_SCRAPER_NAMESPACE', 'scraping')
+K8S_SERVICE_ACCOUNT = os.getenv('K8S_SCRAPER_SA', 'default')
+K8S_IMAGE_PULL_POLICY = os.getenv('K8S_IMAGE_PULL_POLICY', 'Always')
+
+# Docker config (usato solo se SCRAPER_EXECUTOR=docker)
+DOCKER_NETWORK = os.getenv('DOCKER_NETWORK', 'dev-network')
+DOCKER_URL = os.getenv('DOCKER_URL', 'unix://var/run/docker.sock')
+# Volume mount per codice sorgente Scrapy (dev: codice montato, prod: incluso nell'immagine)
+SCRAPY_SRC_PATH = os.getenv('SCRAPY_SRC_PATH', '')  # es. /Users/.../scraping-service/src
+# Volume mount per output dati (batch JSON, log)
+SCRAPY_DATA_PATH = os.getenv('SCRAPY_DATA_PATH', '')  # es. /Users/.../scraping-service/data
 
 CITIES_TODAY = [
     'milano', 'torino', 'genova', 'venezia', 'bologna', 'verona', 'treviso', 'trento', 'udine', 'pordenone',
@@ -51,8 +68,11 @@ CITIES_ZERO = ['milano', 'roma', 'bologna', 'napoli', 'firenze', 'venezia', 'tor
 
 ALL_CITIES = sorted(list(set(CITIES_TODAY + CITIES_ZERO)))
 
-# Env vars passate ai container Scrapy per ApiPipeline
-# Usa Airflow Variables (modificabili da UI: Admin > Variables) con fallback su env vars
+
+# =============================================================================
+# Env vars per container Scrapy
+# =============================================================================
+
 def get_scrapy_env():
     """Ottiene le credenziali API da Airflow Variables o env vars"""
     return {
@@ -66,7 +86,6 @@ def get_scrapy_env():
                 'http://keycloak:8080/realms/today-events/protocol/openid-connect/token'
             )
         ),
-        # OTel configurazione per i container Scrapy
         'OTEL_ENABLED': 'true',
         'OTEL_SERVICE_NAME': 'scraping-service',
         'OTEL_EXPORTER_OTLP_ENDPOINT': Variable.get(
@@ -76,25 +95,28 @@ def get_scrapy_env():
     }
 
 
-def generate_traceparent(dag_id, run_id):
-    """Genera un traceparent W3C deterministico per DAG run.
+# =============================================================================
+# Tracing distribuito
+# =============================================================================
 
-    Il trace_id è derivato da dag_id + run_id → stesso trace per tutti i container della stessa run.
-    Lo span_id è random per ogni container (generato nel template).
-    """
+def generate_traceparent(dag_id, run_id):
+    """Genera un traceparent W3C deterministico per DAG run."""
     import hashlib
     trace_id = hashlib.md5(f"{dag_id}:{run_id}".encode()).hexdigest()
     span_id = '%016x' % random.getrandbits(64)
     return f"00-{trace_id}-{span_id}-01"
 
 
+# =============================================================================
+# Operator factory: Docker locale / K8s produzione
+# =============================================================================
+
 class FilterableDockerOperator(DockerOperator):
     """
-    DockerOperator that skips execution if the city is not in the configuration.
-    Expects 'filter_key' (e.g., 'cities_today', 'cities_zero') and 'city_name' in kwargs.
+    DockerOperator con filtro città e iniezione TRACEPARENT.
 
-    Inietta TRACEPARENT nell'env del container per propagare il trace context
-    della DAG run ai container Scrapy (tracing distribuito Airflow → Scrapy).
+    Skippa il task se la città non è nella conf della DAG run.
+    Conf supportate: {"city": "milano"} o {"cities_today": "milano,roma"}.
     """
     def __init__(self, filter_key, city_name, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -113,7 +135,6 @@ class FilterableDockerOperator(DockerOperator):
             if self.city_name.lower() != target_city:
                 should_run = False
                 skip_reason = f"Global 'city' filter set to {target_city}"
-
         elif self.filter_key in conf:
             allowed_cities = conf.get(self.filter_key)
             if isinstance(allowed_cities, str):
@@ -127,106 +148,132 @@ class FilterableDockerOperator(DockerOperator):
             print(f"Skipping {self.city_name}. Reason: {skip_reason}")
             raise AirflowSkipException(f"Skipped: {skip_reason}")
 
-        # Inietta TRACEPARENT deterministico (stesso trace_id per tutta la DAG run)
+        # Inietta TRACEPARENT + DAG context per organizzare output per run
         traceparent = generate_traceparent(dag_run.dag_id, dag_run.run_id)
-        self.environment = {**(self.environment or {}), 'TRACEPARENT': traceparent}
+        self.environment = {
+            **(self.environment or {}),
+            'TRACEPARENT': traceparent,
+            'DAG_ID': dag_run.dag_id,
+            'DAG_RUN_ID': dag_run.run_id,
+        }
 
         return super().execute(context)
 
 
+def _create_k8s_operator(task_id, filter_key, city_name, command, env, dag_obj):
+    """Crea KubernetesPodOperator con filtro città (lazy import)."""
+    from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperator
+    from kubernetes.client import models as k8s
+
+    # Aggiungi DAG context per organizzare output per run
+    env_with_dag = {
+        **env,
+        'DAG_ID': '{{ dag.dag_id }}',
+        'DAG_RUN_ID': '{{ run_id }}',
+    }
+    env_vars = [k8s.V1EnvVar(name=k, value=v) for k, v in env_with_dag.items()]
+
+    return KubernetesPodOperator(
+        task_id=task_id,
+        name=f'scrapy-{city_name}-{task_id}',
+        namespace=K8S_NAMESPACE,
+        image=SCRAPY_IMAGE,
+        cmds=['scrapy', 'crawl'],
+        arguments=command,
+        env_vars=env_vars,
+        service_account_name=K8S_SERVICE_ACCOUNT,
+        image_pull_policy=K8S_IMAGE_PULL_POLICY,
+        is_delete_operator_pod=True,
+        get_logs=True,
+        dag=dag_obj,
+    )
+
+
+def create_scraper_operator(task_id, filter_key, city_name, spider, spider_args, env, dag_obj):
+    """Factory: crea DockerOperator (dev) o KubernetesPodOperator (k8s)."""
+    command = ['scrapy', 'crawl', spider] + spider_args
+
+    if SCRAPER_EXECUTOR == 'k8s':
+        return _create_k8s_operator(task_id, filter_key, city_name, command, env, dag_obj)
+
+    # Docker: volume mount per codice sorgente e output dati in dev
+    from docker.types import Mount
+    mounts = []
+    if SCRAPY_SRC_PATH:
+        mounts.append(Mount(target='/app/events_scraper', source=SCRAPY_SRC_PATH, type='bind'))
+    if SCRAPY_DATA_PATH:
+        mounts.append(Mount(target='/data', source=SCRAPY_DATA_PATH, type='bind'))
+
+    return FilterableDockerOperator(
+        task_id=task_id,
+        filter_key=filter_key,
+        city_name=city_name,
+        image=SCRAPY_IMAGE,
+        command=command,
+        environment=env,
+        working_dir='/app/events_scraper',
+        network_mode=DOCKER_NETWORK,
+        mounts=mounts or None,
+        auto_remove=True,
+        force_pull=False,
+        docker_url=DOCKER_URL,
+        dag=dag_obj,
+    )
+
+
 # =============================================================================
-# FUNZIONI ETL
+# ETL: Log run
 # =============================================================================
-
-def upsert_to_production(**context):
-    """Upsert da staging a production usando la funzione SQL"""
-    dag_run = context['dag_run']
-    traceparent = generate_traceparent(dag_run.dag_id, dag_run.run_id)
-    print(f"[OTEL] traceparent={traceparent} (upsert_to_production)")
-
-    hook = PostgresHook(postgres_conn_id=POSTGRES_CONN_ID)
-    conn = hook.get_conn()
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT * FROM events_data.upsert_from_staging()")
-    result = cursor.fetchone()
-
-    inserted, updated, unchanged = result if result else (0, 0, 0)
-
-    conn.commit()
-    cursor.close()
-    conn.close()
-
-    context['ti'].xcom_push(key='inserted_count', value=inserted)
-    context['ti'].xcom_push(key='updated_count', value=updated)
-    context['ti'].xcom_push(key='unchanged_count', value=unchanged)
-
-    print(f"Upsert completed: {inserted} inserted, {updated} updated, {unchanged} unchanged")
-    return {'inserted': inserted, 'updated': updated, 'unchanged': unchanged}
-
 
 def log_etl_run(**context):
     """Registra l'esecuzione ETL (staging_count letto direttamente dal DB)"""
-    ti = context['ti']
     dag_run = context['dag_run']
-
-    inserted = ti.xcom_pull(key='inserted_count', task_ids='upsert_to_production') or 0
-    updated = ti.xcom_pull(key='updated_count', task_ids='upsert_to_production') or 0
-    unchanged = ti.xcom_pull(key='unchanged_count', task_ids='upsert_to_production') or 0
 
     hook = PostgresHook(postgres_conn_id=POSTGRES_CONN_ID)
     conn = hook.get_conn()
     cursor = conn.cursor()
 
-    # Staging count dal DB (popolato da ApiPipeline via Django API)
-    cursor.execute("SELECT COUNT(*) FROM events_data.staging_events")
+    cursor.execute('SELECT COUNT(*) FROM events_data."staging_events"')
     staging_count = cursor.fetchone()[0]
 
     cursor.execute("""
-        INSERT INTO events_data.etl_runs (
+        INSERT INTO public.etl_runs (
             run_type, staging_count, inserted_count, updated_count,
-            unchanged_count, status, upsert_completed_at
+            status, started_at, staging_completed_at
         ) VALUES (%s, %s, %s, %s, %s, %s, CURRENT_TIMESTAMP)
     """, (
         dag_run.dag_id,
         staging_count,
-        inserted,
-        updated,
-        unchanged,
-        'completed'
+        0, 0,
+        'completed',
+        dag_run.start_date,
     ))
 
     conn.commit()
     cursor.close()
     conn.close()
 
-    print(f"ETL Run logged: staging={staging_count}, inserted={inserted}, updated={updated}, unchanged={unchanged}")
+    print(f"ETL Run logged: staging={staging_count}")
 
 
-# =============================================================================
-# Helper Functions
-# =============================================================================
-
-def create_common_tasks(dag_obj):
-    """Creates upsert + log tasks for all DAGs"""
-    upsert = PythonOperator(
-        task_id='upsert_to_production',
-        python_callable=upsert_to_production,
-        trigger_rule=TriggerRule.NONE_FAILED,
-        dag=dag_obj,
-    )
-    log = PythonOperator(
+def create_log_task(dag_obj):
+    """Crea il task di log ETL per il DAG"""
+    return PythonOperator(
         task_id='log_etl_run',
         python_callable=log_etl_run,
         trigger_rule=TriggerRule.NONE_FAILED,
         dag=dag_obj,
     )
-    return upsert, log
 
+
+# =============================================================================
+# Generazione task per città
+# =============================================================================
 
 def generate_city_tasks(dag_obj, periodo, include_zero=False):
-    """Generates TaskGroups for each city with ApiPipeline env vars."""
+    """Genera TaskGroup per ogni città con operator adatto all'ambiente."""
     city_groups = []
+    env = get_scrapy_env()
 
     for city in ALL_CITIES:
         has_today = city in CITIES_TODAY
@@ -238,38 +285,68 @@ def generate_city_tasks(dag_obj, periodo, include_zero=False):
         with TaskGroup(group_id=f'process_{city}', dag=dag_obj) as city_group:
 
             if has_today:
-                FilterableDockerOperator(
+                create_scraper_operator(
                     task_id='scrape_city_today',
                     filter_key='cities_today',
                     city_name=city,
-                    image=SCRAPY_IMAGE,
-                    command=['city_today', city, f'--periodo={periodo}'],
-                    environment=get_scrapy_env(),
-                    network_mode='events-network',
-                    auto_remove=True,
-                    force_pull=False,
-                    docker_url='unix://var/run/docker.sock',
-                    dag=dag_obj,
+                    spider='city_today',
+                    spider_args=['-a', f'cities={city}', '-a', f'periodo={periodo}'],
+                    env=env,
+                    dag_obj=dag_obj,
                 )
 
             if has_zero:
-                FilterableDockerOperator(
+                create_scraper_operator(
                     task_id='scrape_zero_eu',
                     filter_key='cities_zero',
                     city_name=city,
-                    image=SCRAPY_IMAGE,
-                    command=['zero_eu', city],
-                    environment=get_scrapy_env(),
-                    network_mode='events-network',
-                    auto_remove=True,
-                    force_pull=False,
-                    docker_url='unix://var/run/docker.sock',
-                    dag=dag_obj,
+                    spider='zero_eu',
+                    spider_args=['-a', f'city={city}'],
+                    env=env,
+                    dag_obj=dag_obj,
                 )
 
         city_groups.append(city_group)
 
     return city_groups
+
+
+# =============================================================================
+# Spider regionali (non legati a città specifiche)
+# =============================================================================
+
+REGIONAL_SPIDERS = {
+    'lombardia': [
+        {'spider': 'in_lombardia', 'args': ['-a', 'max_pages=10']},
+    ],
+    'liguria': [
+        {'spider': 'la_mia_liguria', 'args': ['-a', 'max_pages=10']},
+    ],
+    'puglia': [
+        {'spider': 'puglia_culture', 'args': ['-a', 'max_pages=10']},
+    ],
+}
+
+
+def generate_regional_tasks(dag_obj):
+    """Genera TaskGroup 'regionali' con sotto-gruppi per regione."""
+    env = get_scrapy_env()
+
+    with TaskGroup(group_id='regionali', dag=dag_obj) as regional_group:
+        for regione, spiders in REGIONAL_SPIDERS.items():
+            with TaskGroup(group_id=regione, dag=dag_obj):
+                for spider_conf in spiders:
+                    create_scraper_operator(
+                        task_id=f'scrape_{spider_conf["spider"]}',
+                        filter_key=spider_conf['spider'],
+                        city_name=spider_conf['spider'],
+                        spider=spider_conf['spider'],
+                        spider_args=spider_conf['args'],
+                        env=env,
+                        dag_obj=dag_obj,
+                    )
+
+    return regional_group
 
 
 # =============================================================================
@@ -285,17 +362,11 @@ with DAG(
     tags=['events', 'etl', 'daily'],
 ) as dag_daily:
 
-    truncate_staging = PostgresOperator(
-        task_id='truncate_staging',
-        postgres_conn_id=POSTGRES_CONN_ID,
-        sql="SELECT events_data.truncate_staging();",
-    )
-
-    upsert, log = create_common_tasks(dag_daily)
-
+    log = create_log_task(dag_daily)
     city_groups = generate_city_tasks(dag_daily, 'questa-settimana', include_zero=True)
-
-    truncate_staging >> city_groups >> upsert >> log
+    regional = generate_regional_tasks(dag_daily)
+    city_groups >> log
+    regional >> log
 
 
 # =============================================================================
@@ -311,17 +382,11 @@ with DAG(
     tags=['events', 'etl', 'weekly'],
 ) as dag_weekly:
 
-    truncate_staging_w = PostgresOperator(
-        task_id='truncate_staging',
-        postgres_conn_id=POSTGRES_CONN_ID,
-        sql="SELECT events_data.truncate_staging();",
-    )
-
-    upsert_w, log_w = create_common_tasks(dag_weekly)
-
+    log_w = create_log_task(dag_weekly)
     city_groups_w = generate_city_tasks(dag_weekly, 'prossima-settimana', include_zero=False)
-
-    truncate_staging_w >> city_groups_w >> upsert_w >> log_w
+    regional_w = generate_regional_tasks(dag_weekly)
+    city_groups_w >> log_w
+    regional_w >> log_w
 
 
 # =============================================================================
@@ -337,14 +402,8 @@ with DAG(
     tags=['events', 'etl', 'monthly'],
 ) as dag_monthly:
 
-    truncate_staging_m = PostgresOperator(
-        task_id='truncate_staging',
-        postgres_conn_id=POSTGRES_CONN_ID,
-        sql="SELECT events_data.truncate_staging();",
-    )
-
-    upsert_m, log_m = create_common_tasks(dag_monthly)
-
+    log_m = create_log_task(dag_monthly)
     city_groups_m = generate_city_tasks(dag_monthly, 'questo-mese', include_zero=False)
-
-    truncate_staging_m >> city_groups_m >> upsert_m >> log_m
+    regional_m = generate_regional_tasks(dag_monthly)
+    city_groups_m >> log_m
+    regional_m >> log_m
