@@ -2,8 +2,12 @@
 DAG per ETL comuni ISTAT
 
 Pipeline:
-1. Scraping via DockerOperator → genera JSON su disco (regioni, province, comuni)
+1. Scraping via DockerOperator → genera JSON su disco locale o MinIO
 2. Ingestion via PythonOperator → POST bulk all'API backoffice
+
+Storage backend (Variable STORAGE_BACKEND o env):
+- "local" (default): JSON su disco, montato via Docker volume
+- "minio": JSON su MinIO bucket "comuni-italiani"
 
 Schedule: None (trigger manuale)
 """
@@ -41,6 +45,19 @@ API_BASE_URL = Variable.get(
 )
 BULK_ENDPOINT = f'{API_BASE_URL}/api/comuni-istat/ingestion/bulk/'
 BATCH_SIZE = 500
+
+# Storage backend: "local" o "minio"
+STORAGE_BACKEND = Variable.get(
+    'STORAGE_BACKEND',
+    default_var=os.getenv('STORAGE_BACKEND', 'local'),
+)
+
+# MinIO config
+MINIO_ENDPOINT = Variable.get('MINIO_ENDPOINT', default_var=os.getenv('MINIO_ENDPOINT', 'minio:9000'))
+MINIO_ACCESS_KEY = Variable.get('MINIO_ACCESS_KEY', default_var=os.getenv('MINIO_ACCESS_KEY', 'minioadmin'))
+MINIO_SECRET_KEY = Variable.get('MINIO_SECRET_KEY', default_var=os.getenv('MINIO_SECRET_KEY', ''))
+MINIO_BUCKET = Variable.get('MINIO_BUCKET', default_var=os.getenv('MINIO_BUCKET', 'comuni-italiani'))
+MINIO_USE_SSL = Variable.get('MINIO_USE_SSL', default_var=os.getenv('MINIO_USE_SSL', 'false'))
 
 
 # =============================================================================
@@ -83,7 +100,23 @@ def _get_auth_headers():
 
 
 # =============================================================================
-# Helper: Lettura file JSON da disco
+# Helper: Client S3/MinIO (lazy)
+# =============================================================================
+
+def _get_s3_client():
+    """Crea un client boto3 S3 per MinIO."""
+    import boto3
+    scheme = "https" if MINIO_USE_SSL.lower() == "true" else "http"
+    return boto3.client(
+        "s3",
+        endpoint_url=f"{scheme}://{MINIO_ENDPOINT}",
+        aws_access_key_id=MINIO_ACCESS_KEY,
+        aws_secret_access_key=MINIO_SECRET_KEY,
+    )
+
+
+# =============================================================================
+# Helper: Lettura file JSON da disco locale
 # =============================================================================
 
 def _find_json_files(data_path, tipo):
@@ -101,17 +134,13 @@ def _find_json_files(data_path, tipo):
     files = []
 
     if tipo == 'regione':
-        # File JSON al primo livello dentro ogni cartella regione
         for reg_dir in sorted(root.iterdir()):
             if not reg_dir.is_dir():
                 continue
             for f in reg_dir.iterdir():
                 if f.is_file() and f.suffix == '.json' and '_comuni' not in f.name:
-                    # Verifica che non sia dentro una sotto-cartella provincia
-                    # (i file regione sono direttamente nella cartella regione)
                     files.append(f)
     elif tipo == 'provincia':
-        # File JSON al secondo livello (dentro cartelle provincia)
         for reg_dir in sorted(root.iterdir()):
             if not reg_dir.is_dir():
                 continue
@@ -122,7 +151,6 @@ def _find_json_files(data_path, tipo):
                     if f.is_file() and f.suffix == '.json' and '_comuni' not in f.name:
                         files.append(f)
     elif tipo == 'comune':
-        # File che finiscono con _comuni.json
         for f in sorted(root.rglob('*_comuni.json')):
             files.append(f)
 
@@ -130,7 +158,7 @@ def _find_json_files(data_path, tipo):
 
 
 def _load_items_from_files(files, tipo):
-    """Carica gli item dai file JSON.
+    """Carica gli item dai file JSON locali.
 
     Per regioni e province: ogni file è un singolo oggetto JSON.
     Per comuni: ogni file è una lista di oggetti JSON.
@@ -140,7 +168,59 @@ def _load_items_from_files(files, tipo):
         with open(f, 'r', encoding='utf-8') as fh:
             data = json.load(fh)
         if tipo == 'comune':
-            # Il file _comuni.json contiene una lista
+            if isinstance(data, list):
+                items.extend(data)
+            else:
+                items.append(data)
+        else:
+            items.append(data)
+    return items
+
+
+# =============================================================================
+# Helper: Lettura file JSON da MinIO
+# =============================================================================
+
+def _find_minio_keys(s3, tipo):
+    """Trova le chiavi S3 per tipo nel bucket MinIO.
+
+    Stessa struttura gerarchica del disco locale:
+        01_piemonte/piemonte.json                        ← regione (livello 1, no _comuni)
+        01_piemonte/001_torino/torino.json               ← provincia (livello 2, no _comuni)
+        01_piemonte/001_torino/torino_comuni.json        ← comuni (_comuni.json)
+    """
+    paginator = s3.get_paginator('list_objects_v2')
+    keys = []
+
+    for page in paginator.paginate(Bucket=MINIO_BUCKET):
+        for obj in page.get('Contents', []):
+            key = obj['Key']
+            if not key.endswith('.json'):
+                continue
+            parts = key.split('/')
+            if tipo == 'regione':
+                # livello 1: regione/regione.json (2 parti, no _comuni)
+                if len(parts) == 2 and '_comuni' not in key:
+                    keys.append(key)
+            elif tipo == 'provincia':
+                # livello 2: regione/provincia/provincia.json (3 parti, no _comuni)
+                if len(parts) == 3 and '_comuni' not in key:
+                    keys.append(key)
+            elif tipo == 'comune':
+                # _comuni.json a qualsiasi livello
+                if key.endswith('_comuni.json'):
+                    keys.append(key)
+
+    return sorted(keys)
+
+
+def _load_items_from_minio(s3, keys, tipo):
+    """Carica gli item JSON da MinIO."""
+    items = []
+    for key in keys:
+        resp = s3.get_object(Bucket=MINIO_BUCKET, Key=key)
+        data = json.loads(resp['Body'].read().decode('utf-8'))
+        if tipo == 'comune':
             if isinstance(data, list):
                 items.extend(data)
             else:
@@ -155,16 +235,27 @@ def _load_items_from_files(files, tipo):
 # =============================================================================
 
 def _ingest(tipo, **context):
-    """Ingestisce i dati di un tipo (regione/provincia/comune) via API bulk."""
-    data_path = COMUNI_DATA_PATH
-    files = _find_json_files(data_path, tipo)
-    print(f"[{tipo}] Trovati {len(files)} file JSON in {data_path}")
+    """Ingestisce i dati di un tipo (regione/provincia/comune) via API bulk.
 
-    if not files:
-        print(f"[{tipo}] Nessun file trovato, skip")
-        return {'tipo': tipo, 'created': 0}
+    Legge da disco locale o da MinIO in base a STORAGE_BACKEND.
+    """
+    if STORAGE_BACKEND == 'minio':
+        s3 = _get_s3_client()
+        keys = _find_minio_keys(s3, tipo)
+        print(f"[{tipo}] Trovati {len(keys)} file JSON su MinIO ({MINIO_BUCKET})")
+        if not keys:
+            print(f"[{tipo}] Nessun file trovato, skip")
+            return {'tipo': tipo, 'created': 0}
+        items = _load_items_from_minio(s3, keys, tipo)
+    else:
+        data_path = COMUNI_DATA_PATH
+        files = _find_json_files(data_path, tipo)
+        print(f"[{tipo}] Trovati {len(files)} file JSON in {data_path}")
+        if not files:
+            print(f"[{tipo}] Nessun file trovato, skip")
+            return {'tipo': tipo, 'created': 0}
+        items = _load_items_from_files(files, tipo)
 
-    items = _load_items_from_files(files, tipo)
     print(f"[{tipo}] Totale item da ingestire: {len(items)}")
 
     if not items:
@@ -216,20 +307,32 @@ with DAG(
     tags=['comuni', 'etl', 'one-shot'],
 ) as dag:
 
+    # Env vars per lo spider: storage backend + credenziali MinIO
+    scraper_env = {'STORAGE_BACKEND': STORAGE_BACKEND}
+    scraper_mounts = []
+
+    if STORAGE_BACKEND == 'minio':
+        scraper_env.update({
+            'MINIO_ENDPOINT': MINIO_ENDPOINT,
+            'MINIO_ACCESS_KEY': MINIO_ACCESS_KEY,
+            'MINIO_SECRET_KEY': MINIO_SECRET_KEY,
+            'MINIO_BUCKET': MINIO_BUCKET,
+            'MINIO_USE_SSL': MINIO_USE_SSL,
+        })
+    else:
+        scraper_mounts.append(
+            Mount(source=COMUNI_DATA_PATH, target='/data/output', type='bind'),
+        )
+
     scrape_comuni = DockerOperator(
         task_id='scrape_comuni',
         image=SCRAPY_IMAGE,
-        network_mode='events-network',
+        environment=scraper_env,
+        network_mode='dev-network',
         auto_remove=True,
         force_pull=False,
         docker_url='unix://var/run/docker.sock',
-        mounts=[
-            Mount(
-                source=COMUNI_DATA_PATH,
-                target='/data/output',
-                type='bind',
-            ),
-        ],
+        mounts=scraper_mounts or None,
     )
 
     ingest_regioni_task = PythonOperator(

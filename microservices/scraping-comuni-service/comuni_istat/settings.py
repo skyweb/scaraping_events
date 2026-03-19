@@ -14,7 +14,13 @@ AUTOTHROTTLE_MAX_DELAY = 10
 
 ROBOTSTXT_OBEY = True
 
+# STORAGE_BACKEND: "local" (default) o "minio"
+import os
+_STORAGE = os.environ.get("STORAGE_BACKEND", "local")
+
 ITEM_PIPELINES = {
+    "comuni_istat.pipelines.MinioExportPipeline": 300,
+} if _STORAGE == "minio" else {
     "comuni_istat.pipelines.JsonExportPipeline": 300,
 }
 
