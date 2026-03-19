@@ -114,7 +114,6 @@ class VisitTuscanySpider(BaseEventSpider):
                 else:
                     section.setdefault("extra", []).append(text)
 
-        slug = self.slug_from_url(url)
         uuid = self.generate_uuid(title, when or "", city or "")
         content_hash = self.generate_content_hash("", "", "")
 
@@ -126,5 +125,4 @@ class VisitTuscanySpider(BaseEventSpider):
                 "city": {"city_name": city, "location_name": None, "location_address": None},
                 "section": section,
             },
-            meta={"content_hash": content_hash, "url": url, "slug": slug, "event_id": str(asset.get("id", slug)), "category": "evento", "source": self.source_name},
         )

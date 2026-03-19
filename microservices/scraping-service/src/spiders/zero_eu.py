@@ -303,7 +303,6 @@ class ZeroEuSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": d.get("url") or "",
-                "slug": d.get("slug") or "",
                 "event_id": d.get("event_id") or "",
                 "category": d["category"][0] if d.get("category") else "evento",
                 "source": self.source_name,

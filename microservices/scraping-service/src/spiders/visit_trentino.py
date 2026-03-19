@@ -107,7 +107,6 @@ class VisitTrentinoSpider(BaseEventSpider):
         if date_end == date_start:
             date_end = None
 
-        slug = self.slug_from_url(response.url)
         uuid = self.generate_uuid(title, date_start or "", location_name or city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
@@ -119,5 +118,4 @@ class VisitTrentinoSpider(BaseEventSpider):
                 "city": {"city_name": city, "location_name": location_name, "location_address": None},
                 "section": {},
             },
-            meta={"content_hash": content_hash, "url": response.url, "slug": slug, "event_id": slug, "category": "evento", "source": self.source_name},
         )

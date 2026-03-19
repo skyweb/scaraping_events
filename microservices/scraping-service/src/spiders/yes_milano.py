@@ -152,7 +152,6 @@ class YesMilanoSpider(BaseEventSpider):
         buy_url = response.css(".field--name-field-acquista-online a::attr(href)").get()
 
         # Slug
-        slug = self.slug_from_url(response.url)
 
         # Hash
         uuid = self.generate_uuid(title, date_start or "", location_name or "Milano")
@@ -186,7 +185,6 @@ class YesMilanoSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "slug": slug,
                 "event_id": slug,
                 "category": "evento",
                 "source": self.source_name,

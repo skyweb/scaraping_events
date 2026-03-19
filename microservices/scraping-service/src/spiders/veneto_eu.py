@@ -95,5 +95,4 @@ class VenetoEuSpider(BaseEventSpider):
                 "city": {"city_name": city, "location_name": event.get("site"), "location_address": address, "location_coords": location_coords},
                 "section": {"website": website, "phone": phone, "email": email},
             },
-            meta={"content_hash": content_hash, "url": f"https://www.veneto.eu/it/eventi/{event_id}", "slug": event_id, "event_id": event_id, "category": categories[0] if categories else "evento", "source": self.source_name},
         )

@@ -92,7 +92,6 @@ class VisitModenaSpider(BaseEventSpider):
         if date_end == date_start:
             date_end = None
 
-        slug = self.slug_from_url(url)
         uuid = self.generate_uuid(title, date_start or "", location or "Modena")
         content_hash = self.generate_content_hash(description or "", "", "")
 
@@ -104,5 +103,4 @@ class VisitModenaSpider(BaseEventSpider):
                 "city": {"city_name": "Modena", "location_name": location, "location_address": address},
                 "section": {},
             },
-            meta={"content_hash": content_hash, "url": url, "slug": slug, "event_id": event.get("UID", slug), "category": "evento", "source": self.source_name},
         )

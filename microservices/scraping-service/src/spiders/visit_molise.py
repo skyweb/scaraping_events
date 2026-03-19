@@ -156,7 +156,6 @@ class VisitMoliseSpider(BaseEventSpider):
         if date_end == date_start:
             date_end = None
 
-        slug = self.slug_from_url(url) if url else doc.get("urlTitle", "")
         uuid = self.generate_uuid(title, date_start or "", city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
@@ -168,5 +167,4 @@ class VisitMoliseSpider(BaseEventSpider):
                 "city": {"city_name": city, "location_name": None, "location_address": None, "location_coords": location_coords},
                 "section": section or None,
             },
-            meta={"content_hash": content_hash, "url": url, "slug": slug, "event_id": slug, "category": categories[0] if categories else "evento", "source": self.source_name},
         )

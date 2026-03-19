@@ -45,8 +45,6 @@ class VisitNaplesSpider(BaseEventSpider):
 
     # Categorie con contenuti eventi
     CATEGORIES = [
-        {"id": "60", "slug": "scopri-napoli", "madre": "napoletanita"},
-        {"id": "92", "slug": "eventi", "madre": "eventi"},
     ]
 
     custom_settings = {**DEFAULT_CRAWL_SETTINGS}
@@ -204,7 +202,6 @@ class VisitNaplesSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": url,
-                "slug": event_slug,
                 "event_id": article.get("id_articolo", event_slug),
                 "category": cat["slug"],
                 "source": self.source_name,

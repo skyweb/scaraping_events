@@ -71,7 +71,6 @@ class BasilicataTuristicaSpider(BaseEventSpider):
         # Location
         location_name = self.clean_text(response.css(".em-event-location::text").get())
 
-        slug = self.slug_from_url(response.url)
         uuid = self.generate_uuid(title, date_start or "", location_name or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
@@ -83,5 +82,4 @@ class BasilicataTuristicaSpider(BaseEventSpider):
                 "city": {"city_name": None, "location_name": location_name, "location_address": None},
                 "section": {"orari": time_text},
             },
-            meta={"content_hash": content_hash, "url": response.url, "slug": slug, "event_id": slug, "category": "evento", "source": self.source_name},
         )

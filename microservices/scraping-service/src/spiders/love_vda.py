@@ -63,34 +63,57 @@ class LoveVdaSpider(BaseEventSpider):
         if not title:
             return
 
-        # Descrizione
+        # Descrizione dal container principale della scheda
         description = self.clean_text(
-            response.css(".text-truncate-3").xpath("string()").get()
-            or response.css(".collapse-body").xpath("string()").get()
+            response.css("div.scheda-vit.container .row .col-12").xpath("string()").get()
         )
+        if not description:
+            description = self.clean_text(
+                response.css(".text-truncate-3").xpath("string()").get()
+            )
 
-        # Immagine
+        # Immagine principale da og:image
         image_url = response.xpath('//meta[@property="og:image"]/@content').get()
 
-        # Date (formato italiano: "06 marzo 2026 - 06 aprile 2026")
-        date_text = self.clean_text(response.css("p.left.grey div::text").get())
+        # Gallery: tutte le immagini del carousel → section.gallery
+        gallery = []
+        for img in response.css("div.scheda-vit-gallery .img-wrapper img"):
+            src = img.attrib.get("src", "")
+            if src:
+                full_src = f"{self.BASE_URL}{src}" if src.startswith("/") else src
+                gallery.append(full_src)
+
+        # Location: nome luogo dal p.heading
+        location_name = self.clean_text(
+            response.css("p.heading.left.grey.margin-bottom-null::text").get()
+        )
+
+        # Date: div dentro p.left.grey (es. "13 marzo 2026 - 22 marzo 2026")
+        date_text = self.clean_text(
+            response.css("p.left.grey.margin-bottom-null div::text").get()
+        )
         date_start = None
         date_end = None
         if date_text:
-            parts = re.split(r'\s*-\s*', date_text)
+            parts = re.split(r'\s*-\s+', date_text)
             if parts:
-                date_start, _ = parse_italian_date_time(parts[0])
+                date_start, _ = parse_italian_date_time(parts[0].strip())
             if len(parts) >= 2:
-                date_end, _ = parse_italian_date_time(parts[-1])
+                date_end, _ = parse_italian_date_time(parts[-1].strip())
 
         if date_end == date_start:
             date_end = None
 
-        # Location
+        # Città dalla lista risultati o dal breadcrumb
         city = self.clean_text(response.css("a.link-localita::text").get())
 
-        slug = self.slug_from_url(response.url)
-        uuid = self.generate_uuid(title, date_start or "", city or "")
+        # Orari e costi dall'accordion
+        orari = self._extract_orari(response)
+
+        # Contatti
+        contatti = self._extract_contatti(response)
+
+        uuid = self.generate_uuid(title, date_start or "", location_name or city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
         yield self.create_item(
@@ -99,9 +122,81 @@ class LoveVdaSpider(BaseEventSpider):
                 "description": description,
                 "category": [],
                 "image_url": image_url,
-                "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": date_text or ""},
-                "city": {"city_name": city, "location_name": None, "location_address": None},
-                "section": {},
+                "dates": {
+                    "date_start": date_start or "",
+                    "date_end": date_end or "",
+                    "date_display": date_text or "",
+                },
+                "city": {
+                    "city_name": city,
+                    "location_name": location_name,
+                    "location_address": None,
+                },
+                "section": {
+                    "orari": orari.get("orari"),
+                    "orari_costi_raw": orari.get("raw"),
+                    "contatti_nome": contatti.get("nome"),
+                    "contatti_indirizzo": contatti.get("indirizzo"),
+                    "website": contatti.get("website"),
+                    "gallery": gallery or None,
+                },
             },
-            meta={"content_hash": content_hash, "url": response.url, "slug": slug, "event_id": slug, "category": "evento", "source": self.source_name},
+            meta={
+                "content_hash": content_hash,
+                "url": response.url,
+                "event_id": slug,
+                "category": "evento",
+                "source": self.source_name,
+            },
         )
+
+    def _extract_orari(self, response) -> dict:
+        """Estrae orari e costi dall'accordion 'Orari e costi'."""
+        result = {"orari": None, "raw": None}
+
+        # Cerca l'accordion "Orari e costi"
+        accordion = response.css("#accordionScheda .collapse-body .category-box.times")
+        if accordion:
+            # Orari come lista (es. "10:00 - 12:00", "14:00 - 18:00")
+            orari_divs = accordion.css("div::text").getall()
+            orari_list = [self.clean_text(o) for o in orari_divs if self.clean_text(o)]
+            if orari_list:
+                result["orari"] = " | ".join(orari_list)
+
+        # Testo completo dell'accordion come fallback
+        collapse_body = response.css("#accordionScheda .collapse-body")
+        if collapse_body:
+            result["raw"] = self.clean_text(collapse_body.xpath("string()").get())
+
+        return result
+
+    def _extract_contatti(self, response) -> dict:
+        """Estrae contatti dalla sezione gallery-meta."""
+        contatti = {"nome": None, "indirizzo": None, "website": None}
+
+        # Sezione contatti: div.gallery-meta
+        meta_section = response.css("div.gallery-meta")
+        if not meta_section:
+            return contatti
+
+        # Nome organizzatore: primo div.emphasis
+        nome = self.clean_text(meta_section.css("div.emphasis::text").get())
+        if nome:
+            contatti["nome"] = nome
+
+        # Indirizzo: secondo row con indirizzo
+        for row in meta_section.css("div.row.info"):
+            emphasis = self.clean_text(row.css("div.emphasis::text").get())
+            value = self.clean_text(row.css("div.col-md-8::text").get())
+            if value and not emphasis:
+                contatti["indirizzo"] = value
+                break
+
+        # Website: primo link esterno (non pdf, non /it/contatti/)
+        for link in meta_section.css("div.info--icons a[href]"):
+            href = link.attrib.get("href", "")
+            if href.startswith("http") and "lovevda.it" not in href:
+                contatti["website"] = href
+                break
+
+        return contatti

@@ -229,7 +229,6 @@ class PugliaCultureSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "slug": slug,
                 "event_id": response.meta.get("event_id", slug),
                 "category": response.meta.get("cpt", "evento"),
             },

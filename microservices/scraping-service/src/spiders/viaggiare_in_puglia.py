@@ -66,7 +66,6 @@ class ViaggiareInPugliaSpider(BaseEventSpider):
         description = self.clean_text(response.xpath('//meta[@property="og:description"]/@content').get())
         image_url = response.xpath('//meta[@property="og:image"]/@content').get()
 
-        slug = self.slug_from_url(response.url)
         uuid = self.generate_uuid(title, "", "Puglia")
         content_hash = self.generate_content_hash(description or "", "", "")
 
@@ -78,5 +77,4 @@ class ViaggiareInPugliaSpider(BaseEventSpider):
                 "city": {"city_name": None, "location_name": None, "location_address": None},
                 "section": {},
             },
-            meta={"content_hash": content_hash, "url": response.url, "slug": slug, "event_id": slug, "category": "evento", "source": self.source_name},
         )

@@ -441,7 +441,6 @@ class CityTodaySpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": url,
-                "slug": self.slug_from_url(url),
                 "event_id": event_id,
                 "category": category_value or "evento",
                 "source": self.source_name,

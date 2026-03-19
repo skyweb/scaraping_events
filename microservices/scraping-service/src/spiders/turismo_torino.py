@@ -163,7 +163,6 @@ class TurismoTorinoSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": f"https://turismotorino.org{link}" if link else "",
-                "slug": slug,
                 "event_id": hit.get("id", slug),
                 "category": categories[0] if isinstance(categories, list) and categories else "evento",
                 "source": self.source_name,

@@ -268,7 +268,6 @@ class InLombardiaSpider(BaseEventSpider):
             image_url = response.xpath('//meta[@property="og:image"]/@content').get()
 
         # ── Integrazioni HTML ──────────────────────────────────────────────────
-        slug = self.slug_from_url(response.url)
         category = self._extract_category(response)
         price = self._extract_price(response)
         contatti = self._extract_contatti(response)
@@ -317,7 +316,6 @@ class InLombardiaSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "slug": slug,
                 "event_id": slug,
                 "category": category[0] if category else "evento",
                 "source": self.source_name,

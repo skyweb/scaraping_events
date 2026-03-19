@@ -80,7 +80,6 @@ class VisitVeronaSpider(BaseEventSpider):
             elif span.css("i.fa-map-marker-alt"):
                 location = self.clean_text(span.xpath("string()").get())
 
-        slug = self.slug_from_url(response.url)
         uuid = self.generate_uuid(title, date_text or "", location or "Verona")
         content_hash = self.generate_content_hash(description or "", "", "")
 
@@ -92,5 +91,4 @@ class VisitVeronaSpider(BaseEventSpider):
                 "city": {"city_name": "Verona", "location_name": location, "location_address": None},
                 "section": {},
             },
-            meta={"content_hash": content_hash, "url": response.url, "slug": slug, "event_id": slug, "category": "evento", "source": self.source_name},
         )

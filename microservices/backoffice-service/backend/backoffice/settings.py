@@ -543,19 +543,9 @@ UNFOLD = {
                 ],
             },
             {
-                "title": "OAuth2 / API",
+                "title": "API",
                 "separator": True,
                 "items": [
-                    {
-                        "title": "Applications",
-                        "icon": "key",
-                        "link": "/admin/oauth2_provider/application/",
-                    },
-                    {
-                        "title": "Access Tokens",
-                        "icon": "token",
-                        "link": "/admin/oauth2_provider/accesstoken/",
-                    },
                     {
                         "title": "API Requests Log",
                         "icon": "analytics",

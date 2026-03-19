@@ -152,7 +152,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
             "categories": categories,
             "featured_media_id": featured_media_id,
             "url": url,
-            "slug": slug,
         }
 
     def _parse_event_detail(self, response):
@@ -217,7 +216,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": api_data["url"],
-                "slug": slug,
                 "event_id": str(api_data["wp_id"]),
                 "category": category_value or "evento",
                 "source": self.source_name,

@@ -172,7 +172,6 @@ class VeneziaUnicaSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": f"https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/{slug}",
-                "slug": slug,
                 "event_id": str(event_data.get("id", "")),
                 "category": categories[0] if categories else "evento",
                 "source": self.source_name,

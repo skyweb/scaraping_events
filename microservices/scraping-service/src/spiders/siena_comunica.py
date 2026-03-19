@@ -104,5 +104,4 @@ class SienaComunicaSpider(BaseEventSpider):
                 "city": {"city_name": "Siena", "location_name": None, "location_address": None},
                 "section": {},
             },
-            meta={"content_hash": content_hash, "url": url, "slug": slug, "event_id": str(event.get("id", slug)), "category": "evento", "source": self.source_name},
         )
