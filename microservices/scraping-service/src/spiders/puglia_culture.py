@@ -192,13 +192,12 @@ class PugliaCultureSpider(BaseEventSpider):
         if rassegna_html:
             section_data["rassegna"] = rassegna_html
 
-        # ── Info extra (costi + contatti) ─────────────────────────────────────
-        info_extra = {}
+        # ── Costi e contatti → section ────────────────────────────────────────
         if costi_info:
-            info_extra["info_e_costi"] = costi_info
+            section_data["info_e_costi"] = costi_info
         contatti_html = response.css("div.events_info_e_contatti").get()
         if contatti_html:
-            info_extra["info_e_contatti"] = contatti_html
+            section_data["info_e_contatti"] = contatti_html
 
         slug = response.meta.get("slug") or self.slug_from_url(response.url)
 
@@ -226,7 +225,6 @@ class PugliaCultureSpider(BaseEventSpider):
                 },
                 # Dettagli
                 "section": section_data or None,
-                "info_extra": info_extra or None,
             },
             meta={
                 "content_hash": content_hash,

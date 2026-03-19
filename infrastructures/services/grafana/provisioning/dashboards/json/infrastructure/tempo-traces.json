@@ -1,0 +1,150 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "title": "Trace Search",
+      "type": "traces",
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 0 },
+      "datasource": { "type": "tempo", "uid": "tempo" },
+      "targets": [
+        {
+          "datasource": { "type": "tempo", "uid": "tempo" },
+          "queryType": "nativeSearch",
+          "serviceName": "${service}",
+          "limit": 20,
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "title": "Service Graph",
+      "type": "nodeGraph",
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 10 },
+      "datasource": { "type": "tempo", "uid": "tempo" },
+      "targets": [
+        {
+          "datasource": { "type": "tempo", "uid": "tempo" },
+          "queryType": "serviceMap",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "title": "Request Duration (p95)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 20 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "expr": "histogram_quantile(0.95, sum(rate(traces_spanmetrics_latency_bucket{service_name=~\"$service\"}[5m])) by (le, service_name))",
+          "legendFormat": "{{service_name}} p95",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": { "drawStyle": "line", "fillOpacity": 10 }
+        }
+      }
+    },
+    {
+      "title": "Request Rate",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 20 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "expr": "sum(rate(traces_spanmetrics_calls_total{service_name=~\"$service\"}[5m])) by (service_name, span_name)",
+          "legendFormat": "{{service_name}} / {{span_name}}",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps",
+          "custom": { "drawStyle": "bars", "fillOpacity": 50 }
+        }
+      }
+    },
+    {
+      "title": "Error Rate",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 28 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "expr": "sum(rate(traces_spanmetrics_calls_total{service_name=~\"$service\", status_code=\"STATUS_CODE_ERROR\"}[5m])) by (service_name)",
+          "legendFormat": "{{service_name}} errors",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps",
+          "custom": { "drawStyle": "line", "fillOpacity": 20 },
+          "color": { "mode": "fixed", "fixedColor": "red" }
+        }
+      }
+    },
+    {
+      "title": "AI Transform Traces",
+      "type": "traces",
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 36 },
+      "datasource": { "type": "tempo", "uid": "tempo" },
+      "targets": [
+        {
+          "datasource": { "type": "tempo", "uid": "tempo" },
+          "queryType": "nativeSearch",
+          "spanName": "ai.transform_event",
+          "limit": 20,
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "title": "Scraping Pipeline Traces",
+      "type": "traces",
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 46 },
+      "datasource": { "type": "tempo", "uid": "tempo" },
+      "targets": [
+        {
+          "datasource": { "type": "tempo", "uid": "tempo" },
+          "queryType": "nativeSearch",
+          "spanName": "scraper.send_batch",
+          "limit": 20,
+          "refId": "A"
+        }
+      ]
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["tempo", "traces", "opentelemetry"],
+  "templating": {
+    "list": [
+      {
+        "current": { "selected": false, "text": "All", "value": "$__all" },
+        "datasource": { "type": "prometheus", "uid": "prometheus" },
+        "definition": "label_values(traces_spanmetrics_calls_total, service_name)",
+        "includeAll": true,
+        "multi": true,
+        "name": "service",
+        "query": { "query": "label_values(traces_spanmetrics_calls_total, service_name)" },
+        "refresh": 2,
+        "type": "query"
+      }
+    ]
+  },
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "Tempo - Distributed Traces",
+  "uid": "tempo-traces"
+}

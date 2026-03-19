@@ -210,11 +210,9 @@ class LaMiaLiguriaSpider(BaseEventSpider):
                 },
                 "section": {
                     "website": contatti.get("website"),
-                },
-                "info_extra": {
                     "contatti": contatti.get("raw"),
                     "phone": contatti.get("phone"),
-                } if contatti.get("raw") else None,
+                },
             },
             meta={
                 "content_hash": content_hash,

@@ -66,7 +66,22 @@ CITIES_TODAY = [
 ]
 CITIES_ZERO = ['milano', 'roma', 'bologna', 'napoli', 'firenze', 'venezia', 'torino']
 
-ALL_CITIES = sorted(list(set(CITIES_TODAY + CITIES_ZERO)))
+# Spider portali turistici istituzionali per città
+CITIES_TOURISM = {
+    'torino': {'spider': 'turismo_torino', 'args': ['-a', 'max_pages=10']},
+    'milano': {'spider': 'yes_milano', 'args': ['-a', 'max_pages=10']},
+    'verona': {'spider': 'visit_verona', 'args': ['-a', 'max_pages=10']},
+    'venezia': {'spider': 'venezia_unica', 'args': ['-a', 'max_pages=10']},
+    'modena': {'spider': 'visit_modena', 'args': ['-a', 'max_pages=5']},
+    'pisa': {'spider': 'turismo_pisa', 'args': ['-a', 'max_pages=10']},
+    'siena': {'spider': 'siena_comunica', 'args': ['-a', 'max_pages=5']},
+    'lucca': {'spider': 'comune_lucca', 'args': ['-a', 'max_pages=10']},
+    'firenze': {'spider': 'feel_florence', 'args': ['-a', 'max_pages=10']},
+    'roma': {'spider': 'turismo_roma', 'args': ['-a', 'max_pages=5']},
+    'napoli': {'spider': 'visit_naples', 'args': ['-a', 'max_pages=5']},
+}
+
+ALL_CITIES = sorted(list(set(CITIES_TODAY + CITIES_ZERO + list(CITIES_TOURISM.keys()))))
 
 
 # =============================================================================
@@ -278,8 +293,9 @@ def generate_city_tasks(dag_obj, periodo, include_zero=False):
     for city in ALL_CITIES:
         has_today = city in CITIES_TODAY
         has_zero = include_zero and (city in CITIES_ZERO)
+        has_tourism = city in CITIES_TOURISM
 
-        if not has_today and not has_zero:
+        if not has_today and not has_zero and not has_tourism:
             continue
 
         with TaskGroup(group_id=f'process_{city}', dag=dag_obj) as city_group:
@@ -306,6 +322,18 @@ def generate_city_tasks(dag_obj, periodo, include_zero=False):
                     dag_obj=dag_obj,
                 )
 
+            if has_tourism:
+                tourism = CITIES_TOURISM[city]
+                create_scraper_operator(
+                    task_id=f'scrape_{tourism["spider"]}',
+                    filter_key='cities_tourism',
+                    city_name=city,
+                    spider=tourism['spider'],
+                    spider_args=tourism['args'],
+                    env=env,
+                    dag_obj=dag_obj,
+                )
+
         city_groups.append(city_group)
 
     return city_groups
@@ -316,14 +344,68 @@ def generate_city_tasks(dag_obj, periodo, include_zero=False):
 # =============================================================================
 
 REGIONAL_SPIDERS = {
+    # Nazionale
+    'nazionale': [
+        {'spider': 'artribune', 'args': ['-a', 'max_pages=10']},
+    ],
+    # Nord
+    'valle_d_aosta': [
+        {'spider': 'love_vda', 'args': ['-a', 'max_pages=5']},
+    ],
     'lombardia': [
         {'spider': 'in_lombardia', 'args': ['-a', 'max_pages=10']},
+    ],
+    'trentino': [
+        {'spider': 'visit_trentino', 'args': ['-a', 'max_pages=10']},
+    ],
+    'alto_adige': [
+        {'spider': 'suedtirol', 'args': ['-a', 'max_pages=5']},
+    ],
+    'veneto': [
+        {'spider': 'veneto_eu', 'args': ['-a', 'max_pages=10']},
+    ],
+    'friuli_venezia_giulia': [
+        {'spider': 'turismo_fvg', 'args': ['-a', 'max_pages=10']},
     ],
     'liguria': [
         {'spider': 'la_mia_liguria', 'args': ['-a', 'max_pages=10']},
     ],
+    # Centro
+    'toscana': [
+        {'spider': 'visit_tuscany', 'args': ['-a', 'max_pages=15']},
+    ],
+    'umbria': [
+        {'spider': 'umbria_tourism', 'args': ['-a', 'max_pages=5']},
+    ],
+    'marche': [
+        {'spider': 'lets_marche', 'args': ['-a', 'max_pages=10']},
+    ],
+    'lazio': [
+        {'spider': 'visit_lazio', 'args': ['-a', 'max_pages=5']},
+    ],
+    # Sud
+    'abruzzo': [
+        {'spider': 'abruzzo_turismo', 'args': ['-a', 'max_pages=10']},
+    ],
+    # 'molise': [  # Disattivato: Liferay incompatibile con Scrapy Twisted (body vuoto)
+    #     {'spider': 'visit_molise', 'args': ['-a', 'max_pages=3']},
+    # ],
+    'campania': [
+        {'spider': 'in_campania', 'args': ['-a', 'max_pages=10']},
+    ],
     'puglia': [
         {'spider': 'puglia_culture', 'args': ['-a', 'max_pages=10']},
+        {'spider': 'viaggiare_in_puglia', 'args': ['-a', 'max_pages=5']},
+    ],
+    'basilicata': [
+        {'spider': 'basilicata_turistica', 'args': ['-a', 'max_pages=5']},
+    ],
+    # Isole
+    'sicilia': [
+        {'spider': 'visit_sicily', 'args': ['-a', 'max_pages=5']},
+    ],
+    'sardegna': [
+        {'spider': 'sardegna_turismo', 'args': ['-a', 'max_pages=5']},
     ],
 }
 

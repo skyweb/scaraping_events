@@ -151,12 +151,13 @@ def transform_single_view(request):
     thinking: bool = request.data.get("thinking", DEFAULT_THINKING)
 
     try:
-        result = transform_event(event, model, thinking)
+        result, quota_info = transform_event(event, model, thinking)
         return Response({
             "model": model,
             "provider": get_provider(model),
             "thinking": thinking,
             "event": result,
+            "quota": quota_info,
         })
     except RateLimitError as e:
         return Response({"error": str(e)}, status=429)

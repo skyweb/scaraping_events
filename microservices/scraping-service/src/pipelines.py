@@ -319,8 +319,8 @@ class BatchExportPipeline:
         dag_id = os.environ.get('DAG_ID', '')
         dag_run_id = os.environ.get('DAG_RUN_ID', '')
         if dag_id and dag_run_id:
-            # Abbrevia run_id: "manual__2026-03-18T22:33:49.355945+00:00" → "manual__2026-03-18T22:33"
-            short_run_id = dag_run_id[:dag_run_id.find(':', 11) + 3] if ':' in dag_run_id else dag_run_id
+            # Abbrevia run_id: "scheduled__2026-03-18T06:00:00+00:00" → "scheduled__2026-03-18"
+            short_run_id = dag_run_id.split('T')[0] if 'T' in dag_run_id else dag_run_id
             prefix = f"{dag_id}_{short_run_id}"
         else:
             prefix = f"batch/{self.spider_name}"
@@ -342,15 +342,18 @@ class BatchExportPipeline:
         self._buffers[category] = []
 
     def _item_to_dict(self, item) -> Dict[str, Any]:
-        """Converte EventItem nel formato dict per il JSON di output."""
+        """Converte EventItem nel formato dict per il JSON di output.
+
+        Struttura: uuid, title, data, meta (in quest'ordine).
+        """
         adapter = ItemAdapter(item)
         result = {
             "uuid": adapter.get("uuid"),
             "title": adapter.get("title"),
-            "meta": adapter.get("meta"),
         }
         if adapter.get("data"):
             result["data"] = adapter.get("data")
+        result["meta"] = adapter.get("meta") or {}
         return result
 
 
@@ -486,6 +489,14 @@ class ApiPipeline(BatchExportPipeline):
             return
 
         batch_file = getattr(self, '_last_batch_file', '')
+
+        # Inietta batch_file dentro meta di ogni evento
+        if batch_file:
+            for ev in events:
+                meta = ev.get("meta") or {}
+                meta["batch_file"] = batch_file
+                ev["meta"] = meta
+
         ctx = airflow_context if airflow_context else None
         with tracer.start_as_current_span(
             "scraper.send_batch",
@@ -514,8 +525,6 @@ class ApiPipeline(BatchExportPipeline):
 
         try:
             payload = {"events": events, "spider": self.spider_name}
-            if batch_file:
-                payload["batch_file"] = batch_file
 
             response = self.session.post(
                 bulk_url,

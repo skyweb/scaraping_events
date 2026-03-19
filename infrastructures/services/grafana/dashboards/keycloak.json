@@ -1,283 +1,167 @@
 {
-  "__inputs": [],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "10.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "timeseries",
-      "name": "Time series",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "stat",
-      "name": "Stat",
-      "version": ""
-    }
-  ],
-  "annotations": {
-    "list": [
-      {
-        "builtIn": 1,
-        "datasource": { "type": "grafana", "uid": "-- Grafana --" },
-        "enable": true,
-        "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
-        "type": "dashboard"
-      }
-    ]
-  },
-  "description": "Dashboard per il monitoraggio di Keycloak Identity Provider",
+  "annotations": { "list": [] },
+  "description": "Dashboard Keycloak - Auth events, latenza, JVM, cache, DB",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "id": null,
   "links": [],
   "panels": [
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "palette-classic" },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": { "type": "linear" },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": { "group": "A", "mode": "none" },
-            "thresholdsStyle": { "mode": "off" }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "red", "value": 80 }
-            ]
-          }
-        },
-        "overrides": []
-      },
+      "title": "Login Rate",
+      "type": "timeseries",
       "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
-      "id": 1,
-      "options": {
-        "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true },
-        "tooltip": { "mode": "single", "sort": "none" }
-      },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "sum(rate(keycloak_login_total[5m])) by (realm, provider)",
-          "instant": false,
-          "legendFormat": "{{realm}} / {{provider}}",
-          "range": true,
-          "refId": "A"
-        }
+        { "expr": "sum(rate(keycloak_user_event_LOGIN_total{job=\"keycloak-metrics-spi\"}[5m])) by (realm)", "legendFormat": "Login {{realm}}", "refId": "A" },
+        { "expr": "sum(rate(keycloak_client_logins_total{job=\"keycloak-metrics-spi\"}[5m])) by (client_id)", "legendFormat": "Client {{client_id}}", "refId": "B" }
       ],
-      "title": "Login Events",
-      "type": "timeseries"
+      "fieldConfig": { "defaults": { "unit": "ops", "custom": { "drawStyle": "line", "fillOpacity": 20 } } }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "palette-classic" },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": { "type": "linear" },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": { "group": "A", "mode": "none" },
-            "thresholdsStyle": { "mode": "off" }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "red", "value": 80 }
-            ]
-          }
-        },
-        "overrides": []
-      },
+      "title": "Token Events Rate",
+      "type": "timeseries",
       "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
-      "id": 2,
-      "options": {
-        "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true },
-        "tooltip": { "mode": "single", "sort": "none" }
-      },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "sum(rate(keycloak_token_total[5m])) by (client_id)",
-          "instant": false,
-          "legendFormat": "{{client_id}}",
-          "range": true,
-          "refId": "A"
-        }
+        { "expr": "sum(rate(keycloak_user_event_CODE_TO_TOKEN_total{job=\"keycloak-metrics-spi\"}[5m])) by (realm)", "legendFormat": "Code→Token {{realm}}", "refId": "A" },
+        { "expr": "sum(rate(keycloak_user_event_REFRESH_TOKEN_total{job=\"keycloak-metrics-spi\"}[5m])) by (realm)", "legendFormat": "Refresh {{realm}}", "refId": "B" },
+        { "expr": "sum(rate(keycloak_user_event_REFRESH_TOKEN_ERROR_total{job=\"keycloak-metrics-spi\"}[5m])) by (realm)", "legendFormat": "Refresh Error {{realm}}", "refId": "C" }
       ],
-      "title": "Token Issued",
-      "type": "timeseries"
+      "fieldConfig": { "defaults": { "unit": "ops", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "yellow", "value": 1 },
-              { "color": "red", "value": 10 }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": { "h": 8, "w": 6, "x": 0, "y": 8 },
-      "id": 3,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": ["lastNotNull"],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "10.4.0",
+      "title": "HTTP Responses by Status",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "sum(rate(keycloak_failed_login_total[5m]))",
-          "instant": true,
-          "legendFormat": "Login falliti",
-          "range": false,
-          "refId": "A"
-        }
+        { "expr": "sum(rate(keycloak_response_total{job=\"keycloak-metrics-spi\"}[5m])) by (code)", "legendFormat": "HTTP {{code}}", "refId": "A" }
       ],
-      "title": "Failed Logins",
-      "type": "stat"
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "bars", "fillOpacity": 50 } } }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "yellow", "value": 1000 },
-              { "color": "red", "value": 5000 }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": { "h": 8, "w": 6, "x": 6, "y": 8 },
-      "id": 4,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": ["lastNotNull"],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "10.4.0",
+      "title": "Request Latency (p95 / p50)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "keycloak_sessions_count",
-          "instant": true,
-          "legendFormat": "Sessioni attive",
-          "range": false,
-          "refId": "A"
-        }
+        { "expr": "histogram_quantile(0.95, sum(rate(keycloak_request_duration_bucket{job=\"keycloak-metrics-spi\"}[5m])) by (le))", "legendFormat": "p95", "refId": "A" },
+        { "expr": "histogram_quantile(0.50, sum(rate(keycloak_request_duration_bucket{job=\"keycloak-metrics-spi\"}[5m])) by (le))", "legendFormat": "p50", "refId": "B" }
       ],
-      "title": "Active Sessions",
-      "type": "stat"
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Logins Totali",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 0, "y": 16 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(keycloak_user_event_LOGIN_total{job=\"keycloak-metrics-spi\"}) or vector(0)", "legendFormat": "Login", "refId": "A", "instant": true }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] } } }
+    },
+    {
+      "title": "Token Refresh Totali",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 4, "y": 16 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(keycloak_user_event_REFRESH_TOKEN_total{job=\"keycloak-metrics-spi\"}) or vector(0)", "legendFormat": "Refresh", "refId": "A", "instant": true }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "thresholds": { "mode": "absolute", "steps": [{ "color": "blue", "value": null }] } } }
+    },
+    {
+      "title": "Refresh Errors",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 8, "y": 16 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(keycloak_user_event_REFRESH_TOKEN_ERROR_total{job=\"keycloak-metrics-spi\"}) or vector(0)", "legendFormat": "Errors", "refId": "A", "instant": true }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }, { "color": "yellow", "value": 5 }, { "color": "red", "value": 20 }] } } }
+    },
+    {
+      "title": "Sessioni Cache (proxy)",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 12, "y": 16 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "vendor_statistics_approximate_entries{job=\"keycloak\", cache=\"sessions\"}", "legendFormat": "Sessions", "refId": "A", "instant": true }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }, { "color": "yellow", "value": 100 }, { "color": "red", "value": 500 }] } } }
+    },
+    {
+      "title": "Latency per Endpoint",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 20 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "histogram_quantile(0.95, sum(rate(keycloak_request_duration_bucket{job=\"keycloak-metrics-spi\"}[5m])) by (le, resource))", "legendFormat": "{{resource}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Request Rate per Endpoint",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 20 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(rate(keycloak_response_total{job=\"keycloak-metrics-spi\"}[5m])) by (resource, method)", "legendFormat": "{{method}} {{resource}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "bars", "fillOpacity": 30 } } }
+    },
+    {
+      "title": "JVM Heap Memory",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 28 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "base_memory_usedHeap_bytes{job=\"keycloak\"}", "legendFormat": "Used Heap", "refId": "A" },
+        { "expr": "base_memory_committedHeap_bytes{job=\"keycloak\"}", "legendFormat": "Committed Heap", "refId": "B" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "bytes", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Cache Hit Ratio",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 28 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "vendor_statistics_hit_ratio{job=\"keycloak\", cache=~\"realms|users|sessions|authenticationSessions\"}", "legendFormat": "{{cache}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "percentunit", "min": 0, "max": 1, "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "DB Connection Pool",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 36 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "agroal_active_count{job=\"keycloak\"}", "legendFormat": "Active", "refId": "A" },
+        { "expr": "agroal_available_count{job=\"keycloak\"}", "legendFormat": "Available", "refId": "B" },
+        { "expr": "agroal_awaiting_count{job=\"keycloak\"}", "legendFormat": "Awaiting", "refId": "C" }
+      ]
+    },
+    {
+      "title": "CPU & Uptime",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 8, "x": 16, "y": 16 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "base_cpu_processCpuLoad{job=\"keycloak\"}", "legendFormat": "CPU", "refId": "A", "instant": true },
+        { "expr": "base_jvm_uptime{job=\"keycloak\"}", "legendFormat": "Uptime", "refId": "B", "instant": true }
+      ],
+      "fieldConfig": { "defaults": { "unit": "percentunit" },
+        "overrides": [{ "matcher": { "id": "byName", "options": "Uptime" }, "properties": [{ "id": "unit", "value": "s" }] }]
+      }
     }
   ],
   "refresh": "30s",
   "schemaVersion": 39,
-  "tags": ["keycloak", "identity", "auth", "oauth2"],
+  "tags": ["keycloak", "identity", "auth"],
   "templating": { "list": [] },
   "time": { "from": "now-1h", "to": "now" },
-  "timepicker": {},
-  "timezone": "browser",
   "title": "Keycloak Identity Provider",
-  "uid": "keycloak-idp",
-  "version": 1,
-  "weekStart": ""
+  "uid": "keycloak-idp"
 }

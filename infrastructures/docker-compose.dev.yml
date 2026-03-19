@@ -551,6 +551,7 @@ services:
     volumes:
       - ./services/keycloak/realm-today-events.json:/opt/keycloak/data/import/realm-today-events.json:ro
       - ./services/keycloak/themes/today-events:/opt/keycloak/themes/today-events:ro
+      - ./services/keycloak/providers/keycloak-metrics-spi-6.0.0.jar:/opt/keycloak/providers/keycloak-metrics-spi-6.0.0.jar:ro
     healthcheck:
       test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/localhost/9000 && printf 'GET /health/ready HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3 && cat <&3 | grep -q 'status.*UP'"]
       interval: 10s

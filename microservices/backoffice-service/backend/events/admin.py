@@ -73,7 +73,6 @@ class CategoryChipsWidget(forms.TextInput):
 EVENT_FORM_WIDGETS = {
     'title': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'description': CKEditor5Widget(config_name='default'),
-    'info_extra': forms.Textarea(attrs={'rows': 8, 'style': 'font-family: monospace; width: 100%;'}),
     'city': CityAutocompleteWidget(),
     'city_name': CityAutocompleteWidget(),
     'category': CategoryChipsWidget(),
@@ -157,6 +156,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         css = {
             'all': ('events/css/admin_custom.css',)
         }
+        js = ('events/js/tab_persist.js',)
 
     list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city_name', 'source', 'created_at']
     list_display_links = ['title']
@@ -166,10 +166,31 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         'created_at', 'image_preview', 'image_thumbnail', 'description_preview',
         'json_preview', 'clickable_url', 'clickable_image_url', 'source', 'uuid',
         'content_hash', 'category_list', 'date_start_display',
-        'event_status_chip', 'creation_date_display', 'info_extra_details',
-        'location_map_preview', 'section_preview', 'schema_org_preview', 'raw_data_preview',
+        'event_status_chip', 'creation_date_display',
+        'location_map_preview', 'schema_org_preview', 'raw_data_preview',
         'batch_file', 'scraped_at', 'ai_transform_button', 'ai_description_button',
     ]
+
+    def get_search_results(self, request, queryset, search_term):
+        """Ricerca con priorità: prima match nel titolo, poi nel contenuto."""
+        if not search_term:
+            return queryset, False
+
+        from django.db.models import Case, When, Value, IntegerField, Q
+
+        q_title = Q(title__icontains=search_term)
+        q_desc = Q(description__icontains=search_term)
+        q_uuid = Q(uuid__icontains=search_term)
+
+        queryset = queryset.filter(q_title | q_desc | q_uuid).annotate(
+            _search_rank=Case(
+                When(q_title, then=Value(0)),
+                default=Value(1),
+                output_field=IntegerField(),
+            )
+        ).order_by('_search_rank', '-created_at')
+
+        return queryset, False
     list_per_page = 50
 
     fieldsets = (
@@ -192,15 +213,12 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 'category',
                 ('image_preview', 'clickable_image_url'),
                 'price',
-                'info_extra',
-                'info_extra_details',
             ),
             'classes': ['tab'],
         }),
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">code</span> Dati Tecnici</span>'), {
             'fields': (
                 ('content_hash', 'scraped_at', 'batch_file'),
-                'section_preview',
                 'ai_transform_button',
                 'schema_org_preview',
                 'raw_data_preview',
@@ -241,11 +259,6 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             f'</script>'
         )
     location_map_preview.short_description = "Mappa"
-
-    def section_preview(self, obj):
-        """Renderizza il campo section come JSON con sintassi colorata."""
-        return render_json_preview(obj.section, f"section-{obj.pk}-staging")
-    section_preview.short_description = "Section"
 
     def schema_org_preview(self, obj):
         """Renderizza il campo schema_org come JSON con sintassi colorata."""
@@ -308,9 +321,11 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 .then(function(r) {{ return r.json().then(function(d) {{ return {{ok: r.ok, data: d}}; }}); }})
                 .then(function(res) {{
                     if (res.ok) {{
-                        status.textContent = "Schema.org generato con " + res.data.model;
+                        var msg = "Schema.org generato con " + res.data.model;
+                        msg += formatQuota(res.data.quota);
+                        status.innerHTML = msg;
                         status.style.color = "#16a34a";
-                        setTimeout(function() {{ location.reload(); }}, 1200);
+                        setTimeout(function() {{ location.reload(); }}, 2500);
                     }} else {{
                         status.textContent = "Errore: " + (res.data.error || "sconosciuto");
                         status.style.color = "#dc2626";
@@ -326,6 +341,24 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                     btn.style.opacity = "1";
                     btn.style.cursor = "pointer";
                 }});
+            }}
+            function formatQuota(q) {{
+                if (!q) return "";
+                if (q.provider === "groq" && q.remaining_requests != null) {{
+                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
+                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req"
+                        + (q.remaining_tokens ? ", " + Number(q.remaining_tokens).toLocaleString() + " token" : "")
+                        + (q.reset_requests ? " (reset " + q.reset_requests + ")" : "")
+                        + "</span>";
+                }}
+                if (q.provider === "gemini" && q.remaining_requests != null) {{
+                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
+                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req/giorno"
+                        + " (usate oggi: " + (q.used_today || 0) + ")"
+                        + (q.rpm ? ", max " + q.rpm + " req/min" : "")
+                        + "</span>";
+                }}
+                return "";
             }}
             </script>
         ''')
@@ -384,9 +417,11 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 .then(function(r) {{ return r.json().then(function(d) {{ return {{ok: r.ok, data: d}}; }}); }})
                 .then(function(res) {{
                     if (res.ok) {{
-                        status.textContent = "Descrizione aggiornata con " + res.data.model;
+                        var msg = "Descrizione aggiornata con " + res.data.model;
+                        msg += formatQuotaDesc(res.data.quota);
+                        status.innerHTML = msg;
                         status.style.color = "#16a34a";
-                        setTimeout(function() {{ location.reload(); }}, 1200);
+                        setTimeout(function() {{ location.reload(); }}, 2500);
                     }} else {{
                         status.textContent = "Errore: " + (res.data.error || "sconosciuto");
                         status.style.color = "#dc2626";
@@ -402,6 +437,24 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                     btn.style.opacity = "1";
                     btn.style.cursor = "pointer";
                 }});
+            }}
+            function formatQuotaDesc(q) {{
+                if (!q) return "";
+                if (q.provider === "groq" && q.remaining_requests != null) {{
+                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
+                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req"
+                        + (q.remaining_tokens ? ", " + Number(q.remaining_tokens).toLocaleString() + " token" : "")
+                        + (q.reset_requests ? " (reset " + q.reset_requests + ")" : "")
+                        + "</span>";
+                }}
+                if (q.provider === "gemini" && q.remaining_requests != null) {{
+                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
+                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req/giorno"
+                        + " (usate oggi: " + (q.used_today || 0) + ")"
+                        + (q.rpm ? ", max " + q.rpm + " req/min" : "")
+                        + "</span>";
+                }}
+                return "";
             }}
             </script>
         ''')
@@ -445,10 +498,10 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         model = body.get('model', 'gemini-2.5-flash')
 
         try:
-            result = transform_event(obj.raw_data, model, thinking=False)
+            result, quota_info = transform_event(obj.raw_data, model, thinking=False)
             obj.schema_org = result
             obj.save(update_fields=['schema_org'])
-            return JsonResponse({'ok': True, 'model': model})
+            return JsonResponse({'ok': True, 'model': model, 'quota': quota_info})
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
 
@@ -484,48 +537,12 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         )
 
         try:
-            result = transform_text(prompt, description, model, thinking=False)
+            result, quota_info = transform_text(prompt, description, model, thinking=False)
             obj.description = result
             obj.save(update_fields=['description'])
-            return JsonResponse({'ok': True, 'model': model})
+            return JsonResponse({'ok': True, 'model': model, 'quota': quota_info})
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
-
-    def info_extra_details(self, obj):
-        """Mostra info_e_costi, info_e_contatti da info_extra e cast dalla section."""
-        style_label = (
-            "display:block;font-size:0.75rem;font-weight:600;"
-            "color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem;"
-        )
-        style_value = (
-            "display:block;white-space:pre-wrap;word-break:break-word;"
-            "background:#f9fafb;border:1px solid #e5e7eb;border-radius:0.375rem;"
-            "padding:0.5rem 0.75rem;font-size:0.875rem;color:#111827;margin-bottom:1rem;"
-        )
-        parts = []
-
-        # Cast: primo valore trovato nella section (struttura: {chiave: {cast: "..."}})
-        if obj.section:
-            for section_data in obj.section.values():
-                if isinstance(section_data, dict) and section_data.get("cast"):
-                    parts.append(
-                        f'<div><span style="{style_label}">Cast</span>'
-                        f'<span style="{style_value}">{section_data["cast"]}</span></div>'
-                    )
-                    break
-
-        # Info extra: info_e_costi e info_e_contatti
-        if obj.info_extra:
-            for key, label in [("info_e_costi", "Info e Costi"), ("info_e_contatti", "Info e Contatti")]:
-                value = obj.info_extra.get(key)
-                if value:
-                    parts.append(
-                        f'<div><span style="{style_label}">{label}</span>'
-                        f'<span style="{style_value}">{value}</span></div>'
-                    )
-
-        return mark_safe("".join(parts)) if parts else "-"
-    info_extra_details.short_description = "Dettagli Info Extra"
 
     def time_info_html(self, obj):
         """Visualizza time_info con rendering HTML."""

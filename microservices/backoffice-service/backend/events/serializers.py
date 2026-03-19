@@ -89,7 +89,6 @@ class StagingEventScrapingSerializer(serializers.Serializer):
           "description": "...",
           "image_url": "...",
           "price": "...",
-          "info_extra": { "info_e_costi": "...", "info_e_contatti": "..." },
           "scraped_at": "YYYY-MM-DD HH:MM:SS"
         }
     """
@@ -99,14 +98,12 @@ class StagingEventScrapingSerializer(serializers.Serializer):
     title = serializers.CharField()
     stars = serializers.IntegerField(required=False, allow_null=True)
     category = serializers.ListField(child=serializers.CharField(), required=False, allow_null=True)
-    section = serializers.DictField(required=False, allow_null=True)
     city = serializers.DictField(required=False, allow_null=True)
     dates = serializers.DictField(required=False, allow_null=True)
     url = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     description = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     image_url = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     price = serializers.CharField(required=False, allow_null=True, allow_blank=True)
-    info_extra = serializers.DictField(required=False, allow_null=True)
     scraped_at = serializers.DateTimeField(required=False, allow_null=True)
     raw_data = serializers.JSONField(required=False, allow_null=True)
 
@@ -145,8 +142,6 @@ class StagingEventScrapingSerializer(serializers.Serializer):
             "image_url": event_data.get("image_url"),
             "city": event_data.get("city"),
             "dates": event_data.get("dates"),
-            "section": section,
-            "info_extra": event_data.get("info_extra"),
             "price": section.get("price"),
             # raw_data = intero blocco "data" originale dello spider
             "raw_data": event_data,
@@ -158,8 +153,8 @@ class StagingEventScrapingSerializer(serializers.Serializer):
         # Salva il JSON originale del POST prima di qualsiasi trasformazione
         raw_data = dict(data) if isinstance(data, dict) else data
 
-        # Estrai batch_file (iniettato dal bulk endpoint)
-        batch_file = data.pop('_batch_file', None)
+        # Estrai batch_file: prima da meta (nuovo formato), poi da _batch_file (legacy)
+        batch_file = (data.get('meta') or {}).get('batch_file') or data.pop('_batch_file', None)
 
         # Supporto formato nested spider (uuid, title, meta, data)
         # Trasforma in formato flat atteso dal serializer
@@ -171,12 +166,6 @@ class StagingEventScrapingSerializer(serializers.Serializer):
 
         city = validated.get('city') or {}
         dates = validated.get('dates') or {}
-        section_raw = validated.get('section') or {}
-        stars = validated.get('stars')
-        info_extra = dict(validated.get('info_extra') or {})
-
-        if stars is not None:
-            info_extra['stars'] = stars
 
         # Coordinate
         location_coordinates = _parse_point(city.get('location_coordinates') or {})
@@ -192,14 +181,12 @@ class StagingEventScrapingSerializer(serializers.Serializer):
             'price': validated.get('price') or None,
             'scraped_at': validated.get('scraped_at'),
             'category': [c for c in (validated.get('category') or []) if c] or None,
-            'section': section_raw or None,
             'city_name': city.get('city_name') or None,
             'location_name': city.get('location_name') or None,
             'location_address': city.get('location_address') or None,
             'location_coordinates': location_coordinates,
             'date_start': self._parse_datetime(dates.get('date_start')),
             'date_end': self._parse_datetime(dates.get('date_end')),
-            'info_extra': info_extra or None,
             'raw_data': raw_data,
             'batch_file': validated.get('_batch_file'),
         }
@@ -267,12 +254,6 @@ class StagingEventLegacySerializer(serializers.Serializer):
             category = [c.strip() for c in category.split(',') if c.strip()]
         category = [c for c in category if c] or None
 
-        info_extra = {}
-        if informations:
-            info_extra.update(informations)
-        if where.get('raw_text'):
-            info_extra['where_raw'] = where['raw_text']
-
         flat = {
             'title': validated['title'],
             'source': validated['source'],
@@ -283,14 +264,12 @@ class StagingEventLegacySerializer(serializers.Serializer):
             'price': details.get('price') or None,
             'image_url': image_url,
             'category': category,
-            'section': list_data.get('typology') or None,
             'location_name': location_name,
             'location_address': where.get('location_address') or None,
             'location_coordinates': location_coordinates,
             'date_start': when.get('date_start') or None,
             'date_end': when.get('date_end') or None,
             'time_info': when.get('raw_text') or None,
-            'info_extra': info_extra or None,
         }
 
         # Genera uuid: title + date_start + location_name

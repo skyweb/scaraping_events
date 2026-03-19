@@ -44,7 +44,6 @@ def _evento_scraping(**overrides):
         'source': 'test_spider',
         'title': 'Concerto Jazz',
         'category': ['musica', 'jazz'],
-        'section': {'musica': {'genere': 'jazz'}},
         'city': {
             'city_name': 'Milano',
             'location_name': 'Blue Note',
@@ -62,7 +61,6 @@ def _evento_scraping(**overrides):
         'description': 'Serata jazz dal vivo.',
         'image_url': 'https://example.com/img.jpg',
         'price': '25 EUR',
-        'info_extra': {'note': 'posti limitati'},
         'scraped_at': '2026-06-01T10:00:00Z',
     }
     data.update(overrides)
@@ -206,13 +204,6 @@ class StagingEventScrapingSerializerTest(TestCase):
         ser = StagingEventScrapingSerializer(data=data)
         ser.is_valid(raise_exception=True)
         self.assertEqual(ser.validated_data['category'], ['musica', 'jazz'])
-
-    def test_stars_in_info_extra(self):
-        """Il campo 'stars' viene spostato dentro info_extra."""
-        data = _evento_minimo(stars=4)
-        ser = StagingEventScrapingSerializer(data=data)
-        ser.is_valid(raise_exception=True)
-        self.assertEqual(ser.validated_data['info_extra']['stars'], 4)
 
     def test_raw_data_contiene_payload_originale(self):
         """raw_data contiene una copia del JSON originale inviato."""

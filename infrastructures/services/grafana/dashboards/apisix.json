@@ -1,294 +1,151 @@
 {
-  "__inputs": [],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "10.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "timeseries",
-      "name": "Time series",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "stat",
-      "name": "Stat",
-      "version": ""
-    }
-  ],
-  "annotations": {
-    "list": [
-      {
-        "builtIn": 1,
-        "datasource": { "type": "grafana", "uid": "-- Grafana --" },
-        "enable": true,
-        "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
-        "type": "dashboard"
-      }
-    ]
-  },
-  "description": "Dashboard per il monitoraggio del gateway APISIX",
+  "annotations": { "list": [] },
+  "description": "Dashboard APISIX API Gateway - Traffico, connessioni, stato",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
+  "graphTooltip": 1,
   "id": null,
   "links": [],
   "panels": [
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "palette-classic" },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": { "type": "linear" },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": { "group": "A", "mode": "none" },
-            "thresholdsStyle": { "mode": "off" }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "red", "value": 80 }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
-      "id": 1,
-      "options": {
-        "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true },
-        "tooltip": { "mode": "single", "sort": "none" }
-      },
+      "title": "etcd Reachable",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 0, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "sum(rate(apisix_http_status[5m])) by (code)",
-          "instant": false,
-          "legendFormat": "HTTP {{code}}",
-          "range": true,
-          "refId": "A"
-        }
+        { "expr": "apisix_etcd_reachable{job=\"apisix\"}", "legendFormat": "etcd", "refId": "A", "instant": true }
       ],
-      "title": "Request Rate",
-      "type": "timeseries"
+      "fieldConfig": { "defaults": { "mappings": [{ "options": { "0": { "text": "DOWN", "color": "red" }, "1": { "text": "UP", "color": "green" } }, "type": "value" }] } }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "palette-classic" },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": { "type": "linear" },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": { "group": "A", "mode": "none" },
-            "thresholdsStyle": { "mode": "off" }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "red", "value": 80 }
-            ]
-          },
-          "unit": "ms"
-        },
-        "overrides": []
-      },
-      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
-      "id": 2,
-      "options": {
-        "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true },
-        "tooltip": { "mode": "single", "sort": "none" }
-      },
+      "title": "Total Requests",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 4, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "histogram_quantile(0.95, sum(rate(apisix_http_latency_bucket[5m])) by (le, route))",
-          "instant": false,
-          "legendFormat": "{{route}}",
-          "range": true,
-          "refId": "A"
-        }
+        { "expr": "apisix_http_requests_total{job=\"apisix\"}", "legendFormat": "Requests", "refId": "A", "instant": true }
       ],
-      "title": "Latency P95",
-      "type": "timeseries"
+      "fieldConfig": { "defaults": { "unit": "short" } }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "yellow", "value": 100 },
-              { "color": "red", "value": 500 }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": { "h": 8, "w": 6, "x": 0, "y": 8 },
-      "id": 3,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": ["lastNotNull"],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "10.4.0",
-      "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "apisix_nginx_http_current_connections{state=\"active\"}",
-          "instant": true,
-          "legendFormat": "Connessioni attive",
-          "range": false,
-          "refId": "A"
-        }
-      ],
       "title": "Active Connections",
-      "type": "stat"
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 8, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "apisix_nginx_http_current_connections{job=\"apisix\", state=\"active\"}", "legendFormat": "Active", "refId": "A", "instant": true }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }, { "color": "yellow", "value": 50 }, { "color": "red", "value": 200 }] } } }
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "prometheus"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "palette-classic" },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "gradientMode": "none",
-            "hideFrom": { "legend": false, "tooltip": false, "viz": false },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": { "type": "linear" },
-            "showPoints": "auto",
-            "spanNulls": false,
-            "stacking": { "group": "A", "mode": "none" },
-            "thresholdsStyle": { "mode": "off" }
-          },
-          "color": { "mode": "fixed", "fixedColor": "red" },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "green", "value": null },
-              { "color": "red", "value": 80 }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": { "h": 8, "w": 18, "x": 6, "y": 8 },
-      "id": 4,
-      "options": {
-        "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": true },
-        "tooltip": { "mode": "single", "sort": "none" }
-      },
+      "title": "Routes",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 12, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
-        {
-          "datasource": { "type": "prometheus", "uid": "prometheus" },
-          "editorMode": "code",
-          "expr": "sum(rate(apisix_http_status{code=~\"5..\"}[5m]))",
-          "instant": false,
-          "legendFormat": "Errori 5xx",
-          "range": true,
-          "refId": "A"
-        }
+        { "expr": "apisix_etcd_modify_indexes{job=\"apisix\", key=\"routes\"}", "legendFormat": "Routes", "refId": "A", "instant": true }
+      ]
+    },
+    {
+      "title": "Upstreams",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 16, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "apisix_etcd_modify_indexes{job=\"apisix\", key=\"upstreams\"}", "legendFormat": "Upstreams", "refId": "A", "instant": true }
+      ]
+    },
+    {
+      "title": "SSL Certs",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 20, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "apisix_etcd_modify_indexes{job=\"apisix\", key=\"ssls\"}", "legendFormat": "SSLs", "refId": "A", "instant": true }
+      ]
+    },
+    {
+      "title": "HTTP Request Rate",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "rate(apisix_http_requests_total{job=\"apisix\"}[5m])", "legendFormat": "req/s", "refId": "A" }
       ],
-      "title": "Error Rate",
-      "type": "timeseries"
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "line", "fillOpacity": 20 } } }
+    },
+    {
+      "title": "Connections by State",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "apisix_nginx_http_current_connections{job=\"apisix\"}", "legendFormat": "{{state}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "custom": { "drawStyle": "line", "fillOpacity": 15 } } }
+    },
+    {
+      "title": "HTTP Status Codes (per-route)",
+      "description": "Visibile solo con traffico che transita dalle route APISIX",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 12 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(rate(apisix_http_status{job=\"apisix\"}[5m])) by (code)", "legendFormat": "HTTP {{code}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "bars", "fillOpacity": 50 } } }
+    },
+    {
+      "title": "Request Latency p95 (per-route)",
+      "description": "Visibile solo con traffico che transita dalle route APISIX",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 12 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "histogram_quantile(0.95, sum(rate(apisix_http_latency_bucket{job=\"apisix\", type=\"request\"}[5m])) by (le))", "legendFormat": "p95 total", "refId": "A" },
+        { "expr": "histogram_quantile(0.95, sum(rate(apisix_http_latency_bucket{job=\"apisix\", type=\"upstream\"}[5m])) by (le))", "legendFormat": "p95 upstream", "refId": "B" },
+        { "expr": "histogram_quantile(0.95, sum(rate(apisix_http_latency_bucket{job=\"apisix\", type=\"apisix\"}[5m])) by (le))", "legendFormat": "p95 apisix only", "refId": "C" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Bandwidth (per-route)",
+      "description": "Visibile solo con traffico che transita dalle route APISIX",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 20 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(rate(apisix_bandwidth{job=\"apisix\", type=\"ingress\"}[5m]))", "legendFormat": "Ingress", "refId": "A" },
+        { "expr": "sum(rate(apisix_bandwidth{job=\"apisix\", type=\"egress\"}[5m]))", "legendFormat": "Egress", "refId": "B" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "Bps", "custom": { "drawStyle": "line", "fillOpacity": 15 } } }
+    },
+    {
+      "title": "Shared Dict Usage",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 20 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "(apisix_shared_dict_capacity_bytes{job=\"apisix\"} - apisix_shared_dict_free_space_bytes{job=\"apisix\"}) / apisix_shared_dict_capacity_bytes{job=\"apisix\"}", "legendFormat": "{{name}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "percentunit", "min": 0, "max": 1, "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "etcd Configuration Indexes",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 28 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "apisix_etcd_modify_indexes{job=\"apisix\", key!~\"max_modify_index|prev_index|x_etcd_index\"}", "legendFormat": "{{key}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "custom": { "drawStyle": "line", "fillOpacity": 0 } } }
     }
   ],
   "refresh": "30s",
   "schemaVersion": 39,
-  "tags": ["apisix", "gateway", "api"],
+  "tags": ["apisix", "gateway", "nginx"],
   "templating": { "list": [] },
   "time": { "from": "now-1h", "to": "now" },
-  "timepicker": {},
-  "timezone": "browser",
   "title": "APISIX Gateway",
-  "uid": "apisix-gateway",
-  "version": 1,
-  "weekStart": ""
+  "uid": "apisix-gateway"
 }

@@ -588,10 +588,13 @@ Crea multipli staging events in una sola richiesta.
             metadata={'spider': spider_name, 'events_count': len(events_data), 'mode': 'sync' if sync_mode else 'async'},
         )
 
-        # Inietta batch_file in ogni evento
+        # Inietta batch_file in meta di ogni evento (se non già presente)
         if batch_file:
             for event in events_data:
-                event['_batch_file'] = batch_file
+                meta = event.get('meta') or {}
+                if not meta.get('batch_file'):
+                    meta['batch_file'] = batch_file
+                    event['meta'] = meta
 
         if sync_mode:
             return self._bulk_sync(events_data, span)

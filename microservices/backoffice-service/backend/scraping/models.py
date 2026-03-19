@@ -52,6 +52,14 @@ class ScrapingWebsite(models.Model):
         WORDPRESS = 'wordpress', 'WordPress'
         CUSTOM = 'custom', 'Custom'
         API_REST = 'api_rest', 'API REST'
+        API_GRAPHQL = 'api_graphql', 'API GraphQL'
+        LIFERAY = 'liferay', 'Liferay'
+        STRAPI = 'strapi', 'Strapi'
+        DIRECTUS = 'directus', 'Directus'
+        ANGULAR_SPA = 'angular_spa', 'Angular SPA'
+        AEM = 'aem', 'Adobe AEM'
+        ORCHARD = 'orchard', 'Orchard CMS'
+        PIMCORE = 'pimcore', 'Pimcore'
 
     name = models.CharField(max_length=255, verbose_name='Nome portale')
     source_url = models.URLField(max_length=500, verbose_name='URL base')

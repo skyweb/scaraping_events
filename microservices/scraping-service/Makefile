@@ -28,7 +28,7 @@ NC := \033[0m
 # =============================================================================
 
 .PHONY: help spiders dev dev-build dev-up dev-down dev-restart dev-logs dev-shell dev-ps \
-        crawl crawl-all test infra-up infra-down infra-ps \
+        crawl test infra-up infra-down infra-ps \
         clean
 
 # =============================================================================
@@ -111,6 +111,52 @@ spiders: ## Mostra elenco spider disponibili con esempi di utilizzo
 	@echo "     make crawl SPIDER=artribune"
 	@echo "     make crawl SPIDER=artribune ARGS=\"-a max_pages=5\""
 	@echo ""
+	@echo "$(GREEN)========== PORTALI TURISTICI CITTA ==========$(NC)"
+	@echo ""
+	@echo "$(GREEN)4. turismo_torino$(NC) — turismotorino.org (API MeiliSearch + Directus)"
+	@echo "   Parametri: max_pages (default: 5, 10 eventi/pagina)"
+	@echo ""
+	@echo "   Esempi:"
+	@echo "     make crawl SPIDER=turismo_torino"
+	@echo "     make crawl SPIDER=turismo_torino ARGS=\"-a max_pages=10\""
+	@echo ""
+	@echo "$(GREEN)5. yes_milano$(NC) — yesmilano.it (Drupal, HTML scraping)"
+	@echo "   Parametri: max_pages (default: 5, ~12 eventi/pagina)"
+	@echo ""
+	@echo "   Esempi:"
+	@echo "     make crawl SPIDER=yes_milano"
+	@echo "     make crawl SPIDER=yes_milano ARGS=\"-a max_pages=10\""
+	@echo ""
+	@echo "$(GREEN)6. venezia_unica$(NC) — veneziaunica.it (API Strapi REST)"
+	@echo "   Parametri: max_pages (default: 5, 25 eventi/pagina)"
+	@echo ""
+	@echo "   Esempi:"
+	@echo "     make crawl SPIDER=venezia_unica"
+	@echo "     make crawl SPIDER=venezia_unica ARGS=\"-a max_pages=10\""
+	@echo ""
+	@echo "$(GREEN)7. feel_florence$(NC) — feelflorence.it (Drupal, HTML scraping)"
+	@echo "   Parametri: max_pages (default: 5, ~10 eventi/pagina)"
+	@echo ""
+	@echo "   Esempi:"
+	@echo "     make crawl SPIDER=feel_florence"
+	@echo "     make crawl SPIDER=feel_florence ARGS=\"-a max_pages=10\""
+	@echo ""
+	@echo "$(GREEN)8. turismo_roma$(NC) — turismoroma.it (Drupal 7, HTML scraping)"
+	@echo "   Naviga 6 categorie: manifestazioni, mostre, musica, teatro, danza, sport"
+	@echo "   Parametri: max_pages per categoria (default: 3, 23 eventi/pagina)"
+	@echo ""
+	@echo "   Esempi:"
+	@echo "     make crawl SPIDER=turismo_roma"
+	@echo "     make crawl SPIDER=turismo_roma ARGS=\"-a max_pages=5\""
+	@echo ""
+	@echo "$(GREEN)9. visit_naples$(NC) — visitnaples.eu (API JSON proprietaria)"
+	@echo "   Contenuti editoriali su eventi napoletani"
+	@echo "   Parametri: max_pages (default: 5, 12 articoli/pagina)"
+	@echo ""
+	@echo "   Esempi:"
+	@echo "     make crawl SPIDER=visit_naples"
+	@echo "     make crawl SPIDER=visit_naples ARGS=\"-a max_pages=10\""
+	@echo ""
 	@echo "$(GREEN)========== COMANDI RAPIDI ==========$(NC)"
 	@echo ""
 	@echo "  make crawl SPIDER=<nome> [ARGS=\"...\"]   Lancia uno spider"
@@ -138,15 +184,6 @@ test: ## Test rapido spider (1 risultato, 1 pagina, no API, formato batch): make
 		$(ARGS)
 	@echo "$(GREEN)Output: data/output/batch/$(NC)"
 
-crawl-all: ## Lancia tutti gli spider in sequenza
-	@echo "$(GREEN)Lancio city_today...$(NC)"
-	$(DOCKER_EXEC) scrapy crawl city_today || true
-	@echo "$(GREEN)Lancio zero_eu...$(NC)"
-	$(DOCKER_EXEC) scrapy crawl zero_eu || true
-	@echo "$(GREEN)Lancio artribune...$(NC)"
-	$(DOCKER_EXEC) scrapy crawl artribune || true
-	@echo "$(GREEN)Lancio puglia_culture...$(NC)"
-	$(DOCKER_EXEC) scrapy crawl puglia_culture || true
 
 # =============================================================================
 # Infra stack shortcuts

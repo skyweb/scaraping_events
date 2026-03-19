@@ -129,7 +129,7 @@ class ScrapingWebsiteAdmin(ModelAdmin):
     list_filter = ['cms', 'is_active']
     search_fields = ['name', 'spider_name', 'source_url']
     ordering = ['name']
-    readonly_fields = ['trigger_dag_button']
+    readonly_fields = ['trigger_dag_button', 'cities_detail']
     actions = ['trigger_scraping']
 
     fieldsets = (
@@ -139,11 +139,103 @@ class ScrapingWebsiteAdmin(ModelAdmin):
         ('Spider', {
             'fields': ('spider_name', 'cms', 'trigger_dag_button'),
         }),
+        ('Città coperte', {
+            'fields': ('cities_detail',),
+            'classes': ['wide', 'collapse'],
+        }),
         ('Note', {
             'fields': ('notes',),
             'classes': ['wide'],
         }),
     )
+
+    # Mappa città → dominio per city_today (importata dallo spider)
+    CITY_TODAY_CITIES = {
+        "milano": {"domain": "www.milanotoday.it", "name": "Milano"},
+        "torino": {"domain": "www.torinotoday.it", "name": "Torino"},
+        "genova": {"domain": "www.genovatoday.it", "name": "Genova"},
+        "venezia": {"domain": "www.veneziatoday.it", "name": "Venezia"},
+        "bologna": {"domain": "www.bolognatoday.it", "name": "Bologna"},
+        "verona": {"domain": "www.veronasera.it", "name": "Verona"},
+        "treviso": {"domain": "www.trevisotoday.it", "name": "Treviso"},
+        "trento": {"domain": "www.trentotoday.it", "name": "Trento"},
+        "udine": {"domain": "www.udinetoday.it", "name": "Udine"},
+        "pordenone": {"domain": "www.pordenonetoday.it", "name": "Pordenone"},
+        "vicenza": {"domain": "www.vicenzatoday.it", "name": "Vicenza"},
+        "padova": {"domain": "www.padovatoday.it", "name": "Padova"},
+        "monza": {"domain": "www.monzatoday.it", "name": "Monza"},
+        "lecco": {"domain": "www.leccotoday.it", "name": "Lecco"},
+        "sondrio": {"domain": "www.sondriotoday.it", "name": "Sondrio"},
+        "novara": {"domain": "www.novaratoday.it", "name": "Novara"},
+        "brescia": {"domain": "www.bresciatoday.it", "name": "Brescia"},
+        "parma": {"domain": "www.parmatoday.it", "name": "Parma"},
+        "rimini": {"domain": "www.riminitoday.it", "name": "Rimini"},
+        "ravenna": {"domain": "www.ravennatoday.it", "name": "Ravenna"},
+        "forli": {"domain": "www.forlitoday.it", "name": "Forlì"},
+        "cesena": {"domain": "www.cesenatoday.it", "name": "Cesena"},
+        "como": {"domain": "www.quicomo.it", "name": "Como"},
+        "piacenza": {"domain": "www.ilpiacenza.it", "name": "Piacenza"},
+        "trieste": {"domain": "www.triesteprima.it", "name": "Trieste"},
+        "roma": {"domain": "www.romatoday.it", "name": "Roma"},
+        "firenze": {"domain": "www.firenzetoday.it", "name": "Firenze"},
+        "pisa": {"domain": "www.pisatoday.it", "name": "Pisa"},
+        "livorno": {"domain": "www.livornotoday.it", "name": "Livorno"},
+        "perugia": {"domain": "www.perugiatoday.it", "name": "Perugia"},
+        "terni": {"domain": "www.ternitoday.it", "name": "Terni"},
+        "ancona": {"domain": "www.anconatoday.it", "name": "Ancona"},
+        "latina": {"domain": "www.latinatoday.it", "name": "Latina"},
+        "frosinone": {"domain": "www.frosinonetoday.it", "name": "Frosinone"},
+        "viterbo": {"domain": "www.viterbotoday.it", "name": "Viterbo"},
+        "arezzo": {"domain": "www.arezzonotizie.it", "name": "Arezzo"},
+        "pescara": {"domain": "www.ilpescara.it", "name": "Pescara"},
+        "napoli": {"domain": "www.napolitoday.it", "name": "Napoli"},
+        "palermo": {"domain": "www.palermotoday.it", "name": "Palermo"},
+        "catania": {"domain": "www.cataniatoday.it", "name": "Catania"},
+        "messina": {"domain": "www.messinatoday.it", "name": "Messina"},
+        "bari": {"domain": "www.baritoday.it", "name": "Bari"},
+        "foggia": {"domain": "www.foggiatoday.it", "name": "Foggia"},
+        "salerno": {"domain": "www.salernotoday.it", "name": "Salerno"},
+        "avellino": {"domain": "www.avellinotoday.it", "name": "Avellino"},
+        "reggio-calabria": {"domain": "www.reggiotoday.it", "name": "Reggio Calabria"},
+        "lecce": {"domain": "www.lecceprima.it", "name": "Lecce"},
+        "brindisi": {"domain": "www.brindisireport.it", "name": "Brindisi"},
+        "agrigento": {"domain": "www.agrigentonotizie.it", "name": "Agrigento"},
+        "caserta": {"domain": "www.casertanews.it", "name": "Caserta"},
+    }
+
+    def cities_detail(self, obj):
+        """Tabella delle città coperte dallo spider (solo per city_today)."""
+        if obj.spider_name != 'city_today':
+            return mark_safe('<span style="color:#6b7280;font-size:0.85rem;">Questo spider non ha sotto-città.</span>')
+
+        rows = []
+        for slug, info in self.CITY_TODAY_CITIES.items():
+            domain = info["domain"]
+            url = f"https://{domain}/eventi/"
+            rows.append(format_html(
+                '<tr>'
+                '<td style="padding:0.35rem 0.75rem;border-bottom:1px solid #e5e7eb;">{}</td>'
+                '<td style="padding:0.35rem 0.75rem;border-bottom:1px solid #e5e7eb;font-family:monospace;font-size:0.8rem;">{}</td>'
+                '<td style="padding:0.35rem 0.75rem;border-bottom:1px solid #e5e7eb;">'
+                '<a href="{}" target="_blank" rel="noopener" style="color:#7c3aed;">{}</a></td>'
+                '</tr>',
+                info["name"], slug, url, domain,
+            ))
+
+        header = (
+            '<table style="width:100%;border-collapse:collapse;font-size:0.875rem;">'
+            '<thead><tr style="background:#f9fafb;">'
+            '<th style="padding:0.4rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Città</th>'
+            '<th style="padding:0.4rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Slug</th>'
+            '<th style="padding:0.4rem 0.75rem;text-align:left;font-weight:600;color:#374151;border-bottom:2px solid #e5e7eb;">Dominio</th>'
+            '</tr></thead><tbody>'
+        )
+        count = len(self.CITY_TODAY_CITIES)
+        return mark_safe(
+            f'<p style="margin-bottom:0.5rem;color:#374151;font-weight:600;">{count} città coperte</p>'
+            + header + ''.join([str(r) for r in rows]) + '</tbody></table>'
+        )
+    cities_detail.short_description = "Città coperte"
 
     DAG_ID = 'etl_events_daily'
 
@@ -286,6 +378,14 @@ class ScrapingWebsiteAdmin(ModelAdmin):
             'drupal': ('#0678be', '#fff'),
             'wordpress': ('#21759b', '#fff'),
             'api_rest': ('#16a34a', '#fff'),
+            'api_graphql': ('#e535ab', '#fff'),
+            'strapi': ('#4945ff', '#fff'),
+            'directus': ('#6644ff', '#fff'),
+            'liferay': ('#0b5fff', '#fff'),
+            'angular_spa': ('#dd0031', '#fff'),
+            'aem': ('#eb1000', '#fff'),
+            'orchard': ('#3f6833', '#fff'),
+            'pimcore': ('#6428b4', '#fff'),
             'custom': ('#6b7280', '#fff'),
         }
         bg, fg = colors.get(obj.cms, ('#6b7280', '#fff'))
