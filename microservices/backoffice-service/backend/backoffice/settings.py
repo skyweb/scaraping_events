@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'events',
     'cms',
     'ai_transform',
+    'nlp',
 ]
 
 MIDDLEWARE = [

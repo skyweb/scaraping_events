@@ -130,8 +130,17 @@ class StagingEventForm(forms.ModelForm):
         fields = '__all__'
         widgets = EVENT_FORM_WIDGETS
         labels = {
+            'title': 'Titolo',
             'date_start': 'Data inizio',
             'date_end': 'Data fine',
+            'city_name': 'Città',
+            'location_name': 'Luogo',
+            'location_address': 'Indirizzo',
+            'category': 'Categoria',
+            'description': 'Descrizione',
+            'image_url': 'URL Immagine',
+            'price': 'Prezzo',
+            'url': 'URL Evento',
         }
 
 
@@ -191,7 +200,38 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         ).order_by('_search_rank', '-created_at')
 
         return queryset, False
+
+    actions = ['run_nlp_analysis']
     list_per_page = 50
+
+    @admin.action(description="Analisi NLP (estrai entità da description)")
+    def run_nlp_analysis(self, request, queryset):
+        """Lancia analisi NLP sugli eventi selezionati via Celery."""
+        from nlp.tasks import nlp_analyze_events
+
+        uuids = list(queryset.values_list('uuid', flat=True))
+        count = len(uuids)
+
+        if count > 50:
+            # Per molti eventi, lancia task Celery async
+            source = queryset.values_list('source', flat=True).first()
+            task = nlp_analyze_events.delay(source=source, limit=count)
+            self.message_user(request, f"Analisi NLP avviata in background per {count} eventi (task: {task.id})")
+        else:
+            # Per pochi eventi, esegui sincrono
+            try:
+                from nlp.extractor import analyze_staging_event
+                enriched = 0
+                for event in queryset.filter(description__isnull=False).exclude(description=""):
+                    entities = analyze_staging_event(event)
+                    if entities:
+                        raw = event.raw_data or {}
+                        raw["nlp"] = entities
+                        StagingEvent.objects.filter(pk=event.pk).update(raw_data=raw)
+                        enriched += 1
+                self.message_user(request, f"Analisi NLP completata: {enriched}/{count} eventi arricchiti")
+            except Exception as e:
+                self.message_user(request, f"Errore NLP: {e}", level='error')
 
     fieldsets = (
         (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">info</span> Informazioni Evento</span>'), {

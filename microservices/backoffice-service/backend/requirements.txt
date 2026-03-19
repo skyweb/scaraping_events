@@ -21,6 +21,9 @@ django-prometheus==2.4.1
 Pillow>=10.0.0
 python-json-logger==2.0.7
 
+# NLP
+spacy>=3.7
+
 # OpenTelemetry
 opentelemetry-api==1.25.0
 opentelemetry-sdk==1.25.0
