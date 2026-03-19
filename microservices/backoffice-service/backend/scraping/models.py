@@ -26,9 +26,8 @@ class ScrapingCategory(models.Model):
 
 class ScrapingLocation(models.Model):
     """Location uniche estratte dagli eventi — vista aggregata su v_locations."""
-    id = models.CharField(max_length=32, primary_key=True)
-    location_name = models.CharField(max_length=255, blank=True, null=True)
-    city = models.CharField(max_length=100, blank=True, null=True)
+    location_name = models.CharField(max_length=255, primary_key=True)
+    city_name = models.CharField(max_length=100, blank=True, null=True, db_column='city_name')
     count = models.IntegerField(default=0)
 
     class Meta:
@@ -39,8 +38,8 @@ class ScrapingLocation(models.Model):
         verbose_name_plural = 'Locations'
 
     def __str__(self):
-        if self.city:
-            return f"{self.location_name} ({self.city})"
+        if self.city_name:
+            return f"{self.location_name} ({self.city_name})"
         return self.location_name or ''
 
 

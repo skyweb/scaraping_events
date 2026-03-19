@@ -46,9 +46,9 @@ class ScrapingCategoryAdmin(ModelAdmin):
 @admin.register(ScrapingLocation)
 class ScrapingLocationAdmin(ModelAdmin):
     """Admin per le location aggregate con dettaglio eventi correlati."""
-    list_display = ['location_name', 'city', 'total_count']
+    list_display = ['location_name', 'city_name', 'total_count']
     list_display_links = ['location_name']
-    search_fields = ['location_name', 'city']
+    search_fields = ['location_name', 'city_name']
     ordering = ['-count']
 
     class Media:
@@ -56,7 +56,7 @@ class ScrapingLocationAdmin(ModelAdmin):
             'all': ('events/css/admin_custom.css',)
         }
 
-    readonly_fields = ['location_name', 'city', 'count', 'total_count', 'related_events']
+    readonly_fields = ['location_name', 'city_name', 'count', 'total_count', 'related_events']
 
     def total_count(self, obj):
         """Conteggio totale degli eventi per questa location."""
@@ -66,7 +66,7 @@ class ScrapingLocationAdmin(ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('location_name', ('city', 'total_count')),
+            'fields': ('location_name', ('city_name', 'total_count')),
         }),
         ('Eventi in questa location', {
             'fields': ('related_events',),
@@ -79,8 +79,8 @@ class ScrapingLocationAdmin(ModelAdmin):
         from events.models import StagingEvent
 
         events = StagingEvent.objects.filter(location_name=obj.location_name)
-        if obj.city:
-            events = events.filter(city=obj.city)
+        if obj.city_name:
+            events = events.filter(city_name=obj.city_name)
         events = events.order_by('-date_start')[:50]
 
         if not events:
