@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
 
 from .models import PaginaCitta, TabNavigazione, SezionePagina, ArticoloSezione, SezioneEventi
 
@@ -58,12 +59,45 @@ class SezionePaginaSerializer(serializers.ModelSerializer):
         fields = ['titolo', 'colore', 'link_vedi_tutti', 'articoli']
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Lista citta",
+            value={"nome": "Milano", "slug": "milano"},
+            response_only=True,
+        ),
+    ]
+)
 class PaginaCittaListSerializer(serializers.ModelSerializer):
     class Meta:
         model = PaginaCitta
         fields = ['nome', 'slug']
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Dettaglio citta",
+            value={
+                "nome": "Milano",
+                "slug": "milano",
+                "navigazione": [{"label": "Eventi", "url": "/eventi"}],
+                "sezioni": [
+                    {
+                        "titolo": "In evidenza",
+                        "colore": "#ff6b8a",
+                        "link_vedi_tutti": "/eventi/milano",
+                        "articoli": [
+                            {"titolo": "Jazz al Blue Note", "immagine": "https://...",
+                             "categoria": "Musica", "colore_categoria": "red", "url": "/eventi/jazz"}
+                        ]
+                    }
+                ]
+            },
+            response_only=True,
+        ),
+    ]
+)
 class PaginaCittaDetailSerializer(serializers.ModelSerializer):
     navigazione = TabNavigazioneSerializer(many=True, read_only=True)
     sezioni = serializers.SerializerMethodField()

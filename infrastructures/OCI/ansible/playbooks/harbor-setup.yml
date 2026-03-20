@@ -1,0 +1,218 @@
+---
+# Harbor — Docker Registry con Trivy, OIDC, Image Signing
+# Installa Harbor via Helm e applica i manifest K8s dalla directory k8s/harbor/
+#
+# Prerequisiti:
+#   - install_harbor: true in oke.yml
+#   - harbor_admin_password, harbor_postgres_password, harbor_oidc_client_secret in oke-vault.yml
+#   - PostgreSQL condiviso (database-setup.yml completato)
+#   - Keycloak con client "harbor" (apisix-keycloak-setup.yml completato)
+#
+# Uso: ansible-playbook ansible/playbooks/harbor-setup.yml
+- name: Harbor Setup
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - ../vars/oke.yml
+    - ../vars/oke-vault.yml
+
+  vars:
+    harbor_k8s_dir: "{{ playbook_dir }}/../../k8s/harbor"
+
+  tasks:
+
+    # Gate
+    - name: Verifica che install_harbor sia abilitato
+      ansible.builtin.assert:
+        that: install_harbor | default(false)
+        fail_msg: "install_harbor non abilitato in oke.yml."
+
+    # Namespace
+    - name: Assicura namespace devs
+      ansible.builtin.command: kubectl create namespace devs --dry-run=client -o yaml | kubectl apply -f -
+      changed_when: false
+
+    # Database — Crea database harbor sul PostgreSQL esistente
+    - name: Crea database harbor su PostgreSQL esistente
+      ansible.builtin.shell: |
+        kubectl exec -n database deploy/postgres -- psql -U postgres -tc \
+          "SELECT 'exists' FROM pg_database WHERE datname = 'harbor'" \
+          | grep -q exists || \
+          kubectl exec -n database deploy/postgres -- \
+          psql -U postgres -d postgres -c "CREATE DATABASE harbor"
+      changed_when: false
+
+    - name: Crea utente harbor su PostgreSQL esistente
+      ansible.builtin.shell: |
+        kubectl exec -n database deploy/postgres -- psql -U postgres -tc \
+          "SELECT 'exists' FROM pg_roles WHERE rolname = 'harbor'" \
+          | grep -q exists || \
+          kubectl exec -n database deploy/postgres -- psql -U postgres -d postgres -c \
+          "CREATE USER harbor WITH PASSWORD '{{ harbor_postgres_password }}'; GRANT ALL PRIVILEGES ON DATABASE harbor TO harbor"
+      changed_when: false
+
+    # Secret
+    - name: Crea Secret harbor-secret
+      ansible.builtin.shell: |
+        kubectl apply -f - <<EOF
+        apiVersion: v1
+        kind: Secret
+        metadata:
+          name: harbor-secret
+          namespace: devs
+        type: Opaque
+        stringData:
+          admin-password: "{{ harbor_admin_password }}"
+          postgres-password: "{{ harbor_postgres_password }}"
+          oidc-client-secret: "{{ harbor_oidc_client_secret }}"
+        EOF
+      changed_when: false
+
+    # Helm — Harbor
+    - name: Aggiungi Helm repo harbor
+      ansible.builtin.command: helm repo add harbor https://helm.goharbor.io
+      changed_when: false
+      ignore_errors: true
+
+    - name: Aggiorna Helm repos
+      ansible.builtin.command: helm repo update
+      changed_when: false
+
+    - name: Installa Harbor via Helm
+      ansible.builtin.command: >
+        helm upgrade --install harbor harbor/harbor
+        -n devs
+        -f {{ harbor_k8s_dir }}/harbor-values.yml
+        --set harborAdminPassword={{ harbor_admin_password }}
+        --set database.external.password={{ harbor_postgres_password }}
+      register: harbor_result
+      changed_when: "'STATUS: deployed' in harbor_result.stdout"
+
+    - name: Attendi Harbor ready
+      ansible.builtin.command: >
+        kubectl rollout status deployment harbor-core
+        --namespace devs --timeout=300s
+      changed_when: false
+
+    # Route APISIX
+    - name: Applica manifest Kustomize (ApisixRoute)
+      ansible.builtin.command: kubectl apply -k {{ harbor_k8s_dir }}
+      changed_when: false
+
+    # OIDC Configuration (post-deploy)
+    - name: Attendi Harbor API pronta
+      ansible.builtin.uri:
+        url: "http://harbor.devs.svc:80/api/v2.0/systeminfo"
+        method: GET
+        user: admin
+        password: "{{ harbor_admin_password }}"
+        force_basic_auth: true
+        status_code: 200
+      retries: 10
+      delay: 10
+      register: harbor_api_check
+      until: harbor_api_check.status == 200
+
+    - name: Configura OIDC Keycloak
+      ansible.builtin.uri:
+        url: "http://harbor.devs.svc:80/api/v2.0/configurations"
+        method: PUT
+        user: admin
+        password: "{{ harbor_admin_password }}"
+        force_basic_auth: true
+        body_format: json
+        body:
+          auth_mode: oidc_auth
+          oidc_name: Keycloak
+          oidc_endpoint: "{{ harbor_oidc_endpoint }}"
+          oidc_client_id: "{{ harbor_oidc_client_id }}"
+          oidc_client_secret: "{{ harbor_oidc_client_secret }}"
+          oidc_scope: "openid,profile,email"
+          oidc_verify_cert: true
+          oidc_auto_onboard: true
+          oidc_user_claim: email
+          oidc_groups_claim: groups
+          oidc_admin_group: harbor-admins
+        status_code: 200
+
+    - name: Crea progetto today-events
+      ansible.builtin.uri:
+        url: "http://harbor.devs.svc:80/api/v2.0/projects"
+        method: POST
+        user: admin
+        password: "{{ harbor_admin_password }}"
+        force_basic_auth: true
+        body_format: json
+        body:
+          project_name: today-events
+          public: false
+        status_code: [201, 409]
+
+    # Robot Account
+    - name: Crea robot account ci-push
+      ansible.builtin.uri:
+        url: "http://harbor.devs.svc:80/api/v2.0/robots"
+        method: POST
+        user: admin
+        password: "{{ harbor_admin_password }}"
+        force_basic_auth: true
+        body_format: json
+        body:
+          name: ci-push
+          description: "CI/CD push + Airflow pull"
+          duration: -1
+          level: system
+          permissions:
+            - namespace: today-events
+              kind: project
+              access:
+                - resource: repository
+                  action: pull
+                - resource: repository
+                  action: push
+                - resource: tag
+                  action: list
+                - resource: artifact
+                  action: read
+        status_code: [201, 409]
+      register: robot_result
+
+    - name: Mostra credenziali robot account
+      ansible.builtin.debug:
+        msg:
+          - "Robot account: {{ robot_result.json.name | default('gia esistente') }}"
+          - "Secret: {{ robot_result.json.secret | default('non disponibile — gia creato in precedenza') }}"
+      when: robot_result.status == 201
+
+    # imagePullSecret per namespace scraping
+    - name: Crea imagePullSecret harbor-robot nel namespace scraping
+      ansible.builtin.shell: |
+        kubectl create secret docker-registry harbor-robot --namespace scraping \
+          --docker-server=registry.{{ base_domain }} \
+          --docker-username={{ robot_result.json.name | default('robot$ci-push') }} \
+          --docker-password={{ robot_result.json.secret | default(harbor_robot_secret) }} \
+          --dry-run=client -o yaml | kubectl apply -f -
+      changed_when: false
+
+    # Verifica
+    - name: Verifica pods Harbor
+      ansible.builtin.command: kubectl get pods -n devs -l app=harbor --no-headers
+      register: harbor_pods
+      changed_when: false
+
+    - name: Riepilogo Harbor
+      ansible.builtin.debug:
+        msg:
+          - "=== Harbor Setup Completato ==="
+          - ""
+          - "URL:        https://registry.{{ base_domain }}"
+          - "Admin:      admin"
+          - "Password:   (valore in harbor-secret)"
+          - "OIDC:       Keycloak SSO (harbor-admins group = admin)"
+          - "PostgreSQL: postgres.database.svc:5432 (database: harbor)"
+          - "Registry:   Harbor (self-hosted) o OCIR (Oracle managed)"
+          - ""
+          - "Pods:"
+          - "{{ harbor_pods.stdout }}"

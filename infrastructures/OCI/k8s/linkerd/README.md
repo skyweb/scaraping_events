@@ -90,7 +90,7 @@ kubectl rollout restart deployment -n apps
 kubectl annotate namespace airflow linkerd.io/inject=enabled
 kubectl rollout restart deployment -n airflow
 
-# 4. Poi devs (backstage, sonarqube)
+# 4. Poi devs (backstage, harbor)
 kubectl annotate namespace devs linkerd.io/inject=enabled
 kubectl rollout restart deployment -n devs
 kubectl rollout restart statefulset -n devs

@@ -90,7 +90,7 @@ PLAYBOOKS=(
     "minio-setup.yml|7. MinIO Object Storage"
     "backstage-setup.yml|8. Backstage Developer Portal"
     "airflow-setup.yml|9. Apache Airflow"
-    "sonarqube-setup.yml|10. SonarQube Code Quality"
+    "harbor-setup.yml|10. Harbor Docker Registry"
     # --- Fase 5: Security & CI/CD ---
     #"security-setup.yml|11. Security (Kyverno)"
     "ci-setup.yml|12. CI/CD (ArgoCD, Tekton)"

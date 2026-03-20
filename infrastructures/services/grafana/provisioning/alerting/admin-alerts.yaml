@@ -1,45 +1,429 @@
-# Grafana provisioning — Alert rule per errori nell'area admin Django
+# Grafana provisioning — Alert rules + Contact point + Notification policy
 apiVersion: 1
 
-groups:
+# =====================================================================
+# Contact point: Mailpit (SMTP dev)
+# =====================================================================
+contactPoints:
   - orgId: 1
-    name: django-admin
+    name: mailpit
+    receivers:
+      - uid: mailpit-email
+        type: email
+        settings:
+          addresses: alert@santocaruso.eu
+          singleEmail: true
+
+# =====================================================================
+# Notification policy: tutti gli alert → mailpit
+# =====================================================================
+policies:
+  - orgId: 1
+    receiver: mailpit
+    group_by: ['grafana_folder', 'alertname']
+    group_wait: 30s
+    group_interval: 5m
+    repeat_interval: 4h
+
+# =====================================================================
+# Alert rules
+# =====================================================================
+groups:
+  # -----------------------------------------------------------------
+  # Disponibilità servizi
+  # -----------------------------------------------------------------
+  - orgId: 1
+    name: service-health
+    folder: Infrastruttura
+    interval: 1m
+    rules:
+      - uid: service-down
+        title: "Servizio non raggiungibile"
+        condition: threshold
+        for: 2m
+        noDataState: Alerting
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'up == 0'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [0] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: critical
+        annotations:
+          summary: "Servizio non raggiungibile da 2 minuti"
+          description: "Uno o più target Prometheus sono down. Controlla https://prometheus.127.0.0.1.nip.io/targets per i dettagli."
+
+  # -----------------------------------------------------------------
+  # Django Backoffice
+  # -----------------------------------------------------------------
+  - orgId: 1
+    name: django
     folder: Django
     interval: 1m
     rules:
       - uid: admin-errors
         title: "Admin area errors (5xx)"
         condition: threshold
+        for: 0s
+        noDataState: OK
+        execErrState: Alerting
         data:
           - refId: logs
-            relativeTimeRange:
-              from: 300  # ultimi 5 minuti
-              to: 0
+            relativeTimeRange: { from: 300, to: 0 }
             datasourceUid: loki
             model:
               expr: 'count_over_time({container_name=~"dev-backoffice.*", level="ERROR", logger="admin.requests"}[5m])'
               refId: logs
           - refId: threshold
-            relativeTimeRange:
-              from: 0
-              to: 0
+            relativeTimeRange: { from: 0, to: 0 }
             datasourceUid: __expr__
             model:
               type: threshold
               expression: logs
               conditions:
-                - evaluator:
-                    type: gt
-                    params:
-                      - 0
-                  operator:
-                    type: and
-                  reducer:
-                    type: last
+                - evaluator: { type: gt, params: [0] }
+                  operator: { type: and }
+                  reducer: { type: last }
               refId: threshold
-        for: 0s
+        annotations:
+          summary: "Errori 5xx nell'area admin Django"
+          description: "Log ERROR dal middleware admin.requests negli ultimi 5 minuti."
+
+      - uid: django-high-error-rate
+        title: "Django error rate > 5%"
+        condition: threshold
+        for: 5m
         noDataState: OK
         execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'rate(django_http_responses_total_by_status_total{status=~"5.."}[5m]) / rate(django_http_responses_total_by_status_total[5m]) * 100'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [5] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: critical
         annotations:
-          summary: "Errori 5xx rilevati nell'area admin Django"
-          description: "Ci sono log ERROR dal middleware admin.requests nel container backoffice negli ultimi 5 minuti. Controlla Loki per i dettagli."
+          summary: "Tasso errori Django superiore al 5%"
+          description: "Più del 5% delle risposte Django ha status 5xx negli ultimi 5 minuti."
+
+      - uid: django-high-latency
+        title: "Django latenza P95 > 2s"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'histogram_quantile(0.95, rate(django_http_requests_latency_seconds_by_view_method_bucket[5m]))'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [2] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latenza Django P95 superiore a 2 secondi"
+
+  # -----------------------------------------------------------------
+  # Redis
+  # -----------------------------------------------------------------
+  - orgId: 1
+    name: redis
+    folder: Infrastruttura
+    interval: 1m
+    rules:
+      - uid: redis-high-memory
+        title: "Redis memoria > 85%"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'redis_memory_used_bytes / redis_memory_max_bytes * 100'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [85] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis utilizza più dell'85% della memoria"
+
+      - uid: redis-high-connections
+        title: "Redis > 100 connessioni"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'redis_connected_clients'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [100] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis ha più di 100 connessioni attive"
+
+  # -----------------------------------------------------------------
+  # Celery
+  # -----------------------------------------------------------------
+  - orgId: 1
+    name: celery
+    folder: Django
+    interval: 1m
+    rules:
+      - uid: celery-task-failures
+        title: "Task Celery in errore"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'rate(celery_task_failed_total[5m])'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [0] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Task Celery stanno fallendo"
+          description: "Uno o più task Celery sono in errore negli ultimi 5 minuti."
+
+      - uid: celery-queue-backlog
+        title: "Coda Celery > 50 task attivi"
+        condition: threshold
+        for: 10m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 600, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'celery_active_count'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [50] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Coda Celery con più di 50 task attivi"
+
+  # -----------------------------------------------------------------
+  # APISIX Gateway
+  # -----------------------------------------------------------------
+  - orgId: 1
+    name: apisix
+    folder: Infrastruttura
+    interval: 1m
+    rules:
+      - uid: apisix-high-error-rate
+        title: "APISIX error rate > 5%"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'rate(apisix_http_status{code=~"5.."}[5m]) / rate(apisix_http_status[5m]) * 100'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [5] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: critical
+        annotations:
+          summary: "Tasso errori APISIX superiore al 5%"
+
+      - uid: apisix-high-latency
+        title: "APISIX latenza P95 > 3s"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'histogram_quantile(0.95, rate(apisix_http_latency_bucket[5m]))'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [3000] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latenza APISIX P95 superiore a 3 secondi"
+
+  # -----------------------------------------------------------------
+  # Keycloak
+  # -----------------------------------------------------------------
+  - orgId: 1
+    name: keycloak
+    folder: Infrastruttura
+    interval: 1m
+    rules:
+      - uid: keycloak-login-failures
+        title: "Login Keycloak falliti > 0.5/s"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'rate(keycloak_login_error_total[5m])'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [0.5] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Troppi login Keycloak falliti"
+          description: "Possibile brute force o problemi di configurazione."
+
+      - uid: keycloak-jvm-memory
+        title: "Keycloak JVM heap > 85%"
+        condition: threshold
+        for: 10m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 600, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'jvm_memory_used_bytes{area="heap"} / jvm_memory_max_bytes{area="heap"} * 100'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [85] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Keycloak JVM heap superiore all'85%"

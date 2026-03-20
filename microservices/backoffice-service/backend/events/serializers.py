@@ -2,18 +2,67 @@ import hashlib
 from datetime import datetime
 
 from django.contrib.gis.geos import Point
+from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
 from rest_framework import serializers
 
 from .models import ProductionEvent, StagingEvent
 from etl.models import EtlRun, EtlError
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Evento produzione",
+            value={
+                "id": 1,
+                "uuid": "a1b2c3d4e5f6g7h8",
+                "title": "Concerto Jazz al Blue Note",
+                "city": "Milano",
+                "source": "city_today",
+                "url": "https://www.milanotoday.it/eventi/concerto-jazz.html",
+                "description": "Serata jazz con artisti internazionali",
+                "category": ["Musica", "Concerti"],
+                "image_url": "https://example.com/jazz.jpg",
+                "location_name": "Blue Note Milano",
+                "location_address": "Via Borsieri 37, Milano",
+                "price": "25.00",
+                "date_start": "2026-04-15",
+                "date_end": "2026-04-15",
+                "time_start": "21:00",
+                "time_end": "23:30",
+                "is_active": True,
+                "created_at": "2026-03-20T10:00:00Z",
+                "updated_at": "2026-03-20T10:00:00Z",
+            },
+            response_only=True,
+        ),
+    ]
+)
 class ProductionEventSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductionEvent
         fields = '__all__'
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Lista eventi",
+            value={
+                "id": 1,
+                "uuid": "a1b2c3d4e5f6g7h8",
+                "title": "Concerto Jazz al Blue Note",
+                "city": "Milano",
+                "source": "city_today",
+                "date_start": "2026-04-15",
+                "date_end": "2026-04-15",
+                "is_active": True,
+                "category": ["Musica", "Concerti"],
+            },
+            response_only=True,
+        ),
+    ]
+)
 class ProductionEventListSerializer(serializers.ModelSerializer):
     """Serializer leggero per liste"""
     class Meta:
@@ -24,6 +73,35 @@ class ProductionEventListSerializer(serializers.ModelSerializer):
         ]
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Staging event",
+            value={
+                "id": 42,
+                "uuid": "b2c3d4e5f6a7b8c9",
+                "content_hash": "f1e2d3c4b5a6f7e8",
+                "source": "puglia_culture",
+                "title": "Festival della Taranta",
+                "city_name": "Lecce",
+                "location_name": "Piazza Duomo",
+                "location_address": "Piazza del Duomo, Lecce",
+                "location_coordinates": {"lat": 40.3516, "lng": 18.1718},
+                "date_start": "2026-08-20T21:00:00Z",
+                "date_end": "2026-08-20T23:59:00Z",
+                "url": "https://pugliaculture.it/eventi/taranta",
+                "description": "La notte della Taranta edizione 2026",
+                "image_url": "https://example.com/taranta.jpg",
+                "price": "Gratuito",
+                "category": ["Musica", "Festival"],
+                "scraped_at": "2026-03-20T10:30:00Z",
+                "loaded_at": "2026-03-20T10:31:00Z",
+                "created_at": "2026-03-20T10:31:00Z",
+            },
+            response_only=True,
+        ),
+    ]
+)
 class StagingEventSerializer(serializers.ModelSerializer):
     # PointField non è supportato nativamente da DRF — rappresentato come {lat, lng}
     location_coordinates = serializers.SerializerMethodField()
@@ -58,6 +136,40 @@ def _parse_point(coords: dict) -> Point | None:
     return None
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Formato scraping (flat)",
+            value={
+                "uuid": "b2c3d4e5f6a7b8c9",
+                "content_hash": "f1e2d3c4b5a6f7e8",
+                "source": "puglia_culture",
+                "title": "Festival della Taranta",
+                "stars": 4,
+                "category": ["Musica", "Festival"],
+                "city": {
+                    "city_name": "Lecce",
+                    "location_name": "Piazza Duomo",
+                    "location_address": "Piazza del Duomo, Lecce",
+                    "location_coordinates": {"lat": "40.3516", "lng": "18.1718"}
+                },
+                "dates": {
+                    "date_start": "2026-08-20",
+                    "time_start": "21:00",
+                    "date_end": "2026-08-20",
+                    "time_end": "23:59",
+                    "time_info": "Dalle 21:00 a mezzanotte"
+                },
+                "url": "https://pugliaculture.it/eventi/taranta",
+                "description": "La notte della Taranta edizione 2026",
+                "image_url": "https://example.com/taranta.jpg",
+                "price": "Gratuito",
+                "scraped_at": "2026-03-20 10:30:00"
+            },
+            request_only=True,
+        ),
+    ]
+)
 class StagingEventScrapingSerializer(serializers.Serializer):
     """
     Formato event scraping — struttura definita in templates.json.
@@ -289,6 +401,26 @@ class StagingEventLegacySerializer(serializers.Serializer):
         return StagingEvent.objects.get(uuid=uuid)
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "ETL run completata",
+            value={
+                "id": 1,
+                "run_type": "etl_events_daily",
+                "staging_count": 350,
+                "inserted_count": 280,
+                "updated_count": 70,
+                "status": "completed",
+                "started_at": "2026-03-20T06:00:00Z",
+                "staging_completed_at": "2026-03-20T06:15:00Z",
+                "upsert_completed_at": "2026-03-20T06:20:00Z",
+                "duration_seconds": 1200.0,
+            },
+            response_only=True,
+        ),
+    ]
+)
 class EtlRunSerializer(serializers.ModelSerializer):
     duration_seconds = serializers.SerializerMethodField()
 
@@ -302,12 +434,48 @@ class EtlRunSerializer(serializers.ModelSerializer):
         return None
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Errore ETL",
+            value={
+                "id": 1,
+                "etl_run": 1,
+                "event_uuid": "a1b2c3d4e5f6g7h8",
+                "error_type": "ValidationError",
+                "error_message": "Campo 'title' obbligatorio mancante",
+                "raw_data": {"source": "city_today", "url": "https://..."},
+                "created_at": "2026-03-20T06:15:30Z",
+            },
+            response_only=True,
+        ),
+    ]
+)
 class EtlErrorSerializer(serializers.ModelSerializer):
     class Meta:
         model = EtlError
         fields = '__all__'
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Dashboard statistiche",
+            value={
+                "total_events": 12450,
+                "active_events": 8320,
+                "events_by_city": {"Milano": 2100, "Roma": 1850, "Torino": 980, "Bologna": 750},
+                "events_by_source": {"city_today": 6500, "artribune": 1200, "zero_eu": 800},
+                "recent_etl_runs": [
+                    {"id": 10, "run_type": "etl_events_daily", "status": "completed",
+                     "staging_count": 350, "started_at": "2026-03-20T06:00:00Z", "duration_seconds": 1200.0}
+                ],
+                "staging_count": 420,
+            },
+            response_only=True,
+        ),
+    ]
+)
 class DashboardStatsSerializer(serializers.Serializer):
     """Statistiche per la dashboard"""
     total_events = serializers.IntegerField()
@@ -324,6 +492,26 @@ class FailedEventSerializer(serializers.Serializer):
     index = serializers.IntegerField(help_text="Index of the event in the original request list.")
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Bulk response (successo parziale)",
+            value={
+                "created_count": 48,
+                "failed_count": 2,
+                "successful_events": [
+                    {"id": 42, "uuid": "b2c3d4e5f6a7b8c9", "source": "puglia_culture",
+                     "title": "Festival della Taranta", "created_at": "2026-03-20T10:31:00Z"}
+                ],
+                "failed_events": [
+                    {"index": 5, "original_data": {"source": "city_today"},
+                     "errors": {"title": ["Questo campo e' obbligatorio."]}}
+                ],
+            },
+            response_only=True,
+        ),
+    ]
+)
 class BulkProcessResponseSerializer(serializers.Serializer):
     successful_events = StagingEventSerializer(many=True, help_text="List of events that were successfully created/updated.")
     failed_events = FailedEventSerializer(many=True, help_text="List of events that failed to save, with their errors.")

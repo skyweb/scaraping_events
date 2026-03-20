@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today Events — Servizi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <style>
+    :root {
+      --te-primary: #ff6b8a;
+      --te-primary-dark: #e5556f;
+      --te-gradient-start: #ff6b8a;
+      --te-gradient-end: #ff3d6e;
+      --te-bg: #ffffff;
+      --te-text-dark: #2d3436;
+      --te-text-muted: #636e72;
+      --te-border: #e0e0e0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--te-bg);
+      color: var(--te-text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, var(--te-gradient-start) 0%, var(--te-gradient-end) 100%);
+      padding: 32px 40px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .header p {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+    .header-badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 40px;
+      width: 100%;
+    }
+
+    /* Section */
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--te-text-muted);
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+    .section-title:first-child { margin-top: 0; }
+
+    /* Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    /* Card */
+    .service-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid var(--te-border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+    }
+    .service-card:hover {
+      border-color: var(--te-primary);
+      box-shadow: 0 4px 16px rgba(255,107,138,0.12);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .service-info h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--te-text-dark);
+      margin-bottom: 2px;
+    }
+    .service-info p {
+      font-size: 12px;
+      color: var(--te-text-muted);
+      line-height: 1.4;
+    }
+
+    /* Icon colors */
+    .bg-pink    { background: linear-gradient(135deg, #ff6b8a, #ff3d6e); }
+    .bg-blue    { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+    .bg-green   { background: linear-gradient(135deg, #22c55e, #16a34a); }
+    .bg-orange  { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .bg-purple  { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+    .bg-teal    { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+    .bg-red     { background: linear-gradient(135deg, #ef4444, #dc2626); }
+    .bg-gray    { background: linear-gradient(135deg, #6b7280, #4b5563); }
+    .bg-indigo  { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+    .bg-cyan    { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--te-text-muted);
+      border-top: 1px solid var(--te-border);
+    }
+
+    @media (max-width: 600px) {
+      .header { padding: 24px 20px; }
+      .content { padding: 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .header-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-content">
+      <div>
+        <h1>Today Events</h1>
+        <p>Piattaforma servizi — ambiente di sviluppo</p>
+      </div>
+      <span class="header-badge">dev</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <h2 class="section-title">Applicazione</h2>
+    <div class="services-grid">
+      <a class="service-card" href="/admin/" id="link-admin">
+        <div class="service-icon bg-pink">
+          <span class="material-symbols-outlined">admin_panel_settings</span>
+        </div>
+        <div class="service-info">
+          <h3>Django Admin</h3>
+          <p>Pannello amministrativo Unfold</p>
+        </div>
+      </a>
+      <a class="service-card" href="/report/" id="link-report">
+        <div class="service-icon bg-blue">
+          <span class="material-symbols-outlined">analytics</span>
+        </div>
+        <div class="service-info">
+          <h3>Report</h3>
+          <p>Dashboard eventi frontend</p>
+        </div>
+      </a>
+      <a class="service-card" href="/docs/" id="link-docs">
+        <div class="service-icon bg-purple">
+          <span class="material-symbols-outlined">api</span>
+        </div>
+        <div class="service-info">
+          <h3>API Docs</h3>
+          <p>Scalar API Reference (OpenAPI)</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-postman">
+        <div class="service-icon bg-orange">
+          <span class="material-symbols-outlined">send</span>
+        </div>
+        <div class="service-info">
+          <h3>Postman / OpenAPI</h3>
+          <p>Scarica schema OpenAPI (importa in Postman)</p>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">Autenticazione</h2>
+    <div class="services-grid">
+      <a class="service-card" href="#" id="link-keycloak">
+        <div class="service-icon bg-red">
+          <span class="material-symbols-outlined">shield_person</span>
+        </div>
+        <div class="service-info">
+          <h3>Keycloak</h3>
+          <p>Identity Provider — SSO, OIDC, OAuth2</p>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">DevOps</h2>
+    <div class="services-grid">
+      <a class="service-card" href="#" id="link-registry">
+        <div class="service-icon bg-teal">
+          <span class="material-symbols-outlined">inventory_2</span>
+        </div>
+        <div class="service-info">
+          <h3>Harbor Registry</h3>
+          <p>Docker registry, Trivy scan, Cosign</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-airflow">
+        <div class="service-icon bg-green">
+          <span class="material-symbols-outlined">airplay</span>
+        </div>
+        <div class="service-info">
+          <h3>Airflow</h3>
+          <p>Orchestrazione DAG scraping</p>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="services-grid">
+      <a class="service-card" href="#" id="link-minio">
+        <div class="service-icon bg-orange">
+          <span class="material-symbols-outlined">cloud_upload</span>
+        </div>
+        <div class="service-info">
+          <h3>MinIO</h3>
+          <p>Object storage S3-compatible</p>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">Observability</h2>
+    <div class="services-grid">
+      <a class="service-card" href="#" id="link-grafana">
+        <div class="service-icon bg-orange">
+          <span class="material-symbols-outlined">monitoring</span>
+        </div>
+        <div class="service-info">
+          <h3>Grafana</h3>
+          <p>Dashboard log, metriche, traces</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-prometheus">
+        <div class="service-icon bg-red">
+          <span class="material-symbols-outlined">speed</span>
+        </div>
+        <div class="service-info">
+          <h3>Prometheus</h3>
+          <p>Metriche time-series</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-flower">
+        <div class="service-icon bg-green">
+          <span class="material-symbols-outlined">task_alt</span>
+        </div>
+        <div class="service-info">
+          <h3>Flower</h3>
+          <p>Monitoraggio task Celery</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-loki">
+        <div class="service-icon bg-indigo">
+          <span class="material-symbols-outlined">receipt_long</span>
+        </div>
+        <div class="service-info">
+          <h3>Loki</h3>
+          <p>Log aggregation</p>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">Infrastruttura</h2>
+    <div class="services-grid">
+      <a class="service-card" href="#" id="link-apisix">
+        <div class="service-icon bg-indigo">
+          <span class="material-symbols-outlined">router</span>
+        </div>
+        <div class="service-info">
+          <h3>APISIX Dashboard</h3>
+          <p>API Gateway gestione route</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-mail">
+        <div class="service-icon bg-cyan">
+          <span class="material-symbols-outlined">mail</span>
+        </div>
+        <div class="service-info">
+          <h3>Mailpit</h3>
+          <p>SMTP proxy — cattura email dev</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-redis-exporter">
+        <div class="service-icon bg-gray">
+          <span class="material-symbols-outlined">storage</span>
+        </div>
+        <div class="service-info">
+          <h3>Redis Exporter</h3>
+          <p>Metriche Redis Prometheus</p>
+        </div>
+      </a>
+      <a class="service-card" href="#" id="link-celery-exporter">
+        <div class="service-icon bg-gray">
+          <span class="material-symbols-outlined">schedule</span>
+        </div>
+        <div class="service-info">
+          <h3>Celery Exporter</h3>
+          <p>Metriche Celery Prometheus</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Today Events &mdash; Piattaforma gestione eventi
+  </div>
+
+  <script>
+    // Costruisci URL dinamici basati sul dominio corrente
+    var domain = window.location.hostname.replace(/^[^.]+\./, '');
+    var proto = window.location.protocol + '//';
+
+    var schemaUrl = proto + 'backoffice.' + domain + '/docs/schema/?format=openapi-json';
+
+    var links = {
+      'link-keycloak':        proto + 'auth.' + domain + '/',
+      'link-registry':        proto + 'registry.' + domain + '/',
+      'link-grafana':         proto + 'grafana.' + domain + '/',
+      'link-prometheus':      proto + 'prometheus.' + domain + '/',
+      'link-flower':          proto + 'flower.' + domain + '/',
+      'link-airflow':         proto + 'airflow.' + domain + '/',
+      'link-apisix':          proto + 'apisix-dashboard.' + domain + '/',
+      'link-minio':           proto + 'minio.' + domain + '/',
+      'link-mail':            proto + 'mail.' + domain + '/',
+      'link-loki':            proto + 'loki.' + domain + '/ready',
+      'link-redis-exporter':  proto + 'redis-exporter.' + domain + '/',
+      'link-celery-exporter': proto + 'celery-exporter.' + domain + '/',
+      'link-postman':         'postman://app/import?type=url&url=' + encodeURIComponent(proto + 'backoffice.' + domain + '/docs/postman/'),
+    };
+
+    Object.keys(links).forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.href = links[id];
+    });
+  </script>
+
+</body>
+</html>

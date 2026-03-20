@@ -1,0 +1,17 @@
+# ApisixRoute — Harbor Registry (namespace: devs)
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: harbor-proxy
+  namespace: devs
+spec:
+  http:
+    - name: harbor-proxy
+      match:
+        hosts:
+          - registry.oci.santocaruso.eu
+        paths:
+          - /*
+      backends:
+        - serviceName: harbor
+          servicePort: 80

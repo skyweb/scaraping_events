@@ -47,6 +47,13 @@ deployment:
     timeout: 30
 
 nginx_config:
+  http_server_configuration_snippet: |
+    error_page 502 503 504 /50x.html;
+    error_page 404 /50x.html;
+    location = /50x.html {
+      root /usr/local/apisix/error-pages;
+      internal;
+    }
   http:
     charset: utf-8
     underscores_in_headers: "on"
@@ -78,14 +85,25 @@ plugins:
   - jwt-auth
   - consumer-restriction
   - limit-count
+  - limit-req
+  - ip-restriction
   - cors
+  - csrf
   - prometheus
   - opentelemetry
   - proxy-rewrite
   - response-rewrite
-  - redirect  # non usato direttamente, il redirect HTTP→HTTPS usa serverless-pre-function
+  - redirect
   - serverless-pre-function
   - serverless-post-function
+
+# WASM plugins (Coraza WAF)
+wasm:
+  plugins:
+    - name: coraza-filter
+      priority: 7999
+      file: /usr/local/apisix/wasm/coraza-proxy-wasm.wasm
+      http_request_phase: access
 
 plugin_attr:
   prometheus:

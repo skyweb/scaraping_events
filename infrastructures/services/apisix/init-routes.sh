@@ -62,9 +62,30 @@ put "/global_rules/1" '{
         "serverless-pre-function": {
             "phase": "rewrite",
             "functions": ["return function(conf, ctx) if ngx.var.server_port == \"80\" and ngx.var.uri ~= \"/_internal/oidc-discovery\" then ngx.header[\"Location\"] = \"https://\" .. ngx.var.host .. ngx.var.request_uri; return ngx.exit(301) end end"]
+        },
+        "limit-req": {
+            "rate": 100,
+            "burst": 50,
+            "key_type": "var",
+            "key": "remote_addr",
+            "rejected_code": 429,
+            "rejected_msg": "Troppe richieste. Riprova tra qualche secondo."
+        },
+        "ip-restriction": {
+            "_meta": { "disable": true },
+            "message": "Accesso non consentito da questo indirizzo IP.",
+            "blacklist": []
+        },
+        "cors": {
+            "allow_origins": "**",
+            "allow_methods": "GET,POST,PUT,PATCH,DELETE,OPTIONS",
+            "allow_headers": "Authorization,Content-Type,X-Requested-With,X-API-KEY",
+            "expose_headers": "X-API-Version",
+            "max_age": 3600,
+            "allow_credential": true
         }
     }
-}' "HTTP→HTTPS redirect"
+}' "HTTP→HTTPS redirect + rate limit + CORS"
 
 # ======================= UPSTREAMS ==========================================
 echo ""
@@ -107,11 +128,11 @@ put "/upstreams/5" '{
 }' "flower (:5555)"
 
 put "/upstreams/6" '{
-    "name": "sonarqube",
+    "name": "harbor",
     "type": "roundrobin",
-    "nodes": {"sonarqube:9000": 1},
+    "nodes": {"harbor-nginx:8080": 1},
     "pass_host": "node"
-}' "sonarqube (:9000)"
+}' "harbor-nginx (:8080)"
 
 put "/upstreams/7" '{
     "name": "redis-exporter",
@@ -168,6 +189,20 @@ put "/upstreams/14" '{
     "nodes": {"minio:9000": 1},
     "pass_host": "node"
 }' "minio-s3 (:9000)"
+
+put "/upstreams/15" '{
+    "name": "harbor-v2",
+    "type": "roundrobin",
+    "nodes": {"harbor-nginx:8080": 1},
+    "pass_host": "node"
+}' "harbor-v2 (:8080)"
+
+put "/upstreams/16" '{
+    "name": "mailpit",
+    "type": "roundrobin",
+    "nodes": {"mailpit:8025": 1},
+    "pass_host": "node"
+}' "mailpit (:8025)"
 
 # ======================= ROUTE INTERNA: OIDC DISCOVERY ======================
 # KC_HOSTNAME_BACKCHANNEL_DYNAMIC=true → Keycloak restituisce:
@@ -299,7 +334,8 @@ put "/routes/303" "{
         \"proxy-rewrite\": {
             \"headers\": {
                 \"set\": {
-                    \"X-Forwarded-Proto\": \"https\"
+                    \"X-Forwarded-Proto\": \"https\",
+                    \"X-Forwarded-Host\": \"backoffice.${DOMAIN}\"
                 }
             }
         }
@@ -458,10 +494,22 @@ oidc_route 203 "flower-sso" \
     "flower.${DOMAIN}" "/*" 5 \
     "https://flower.${DOMAIN}/callback"
 
-# --- SonarQube ---
-oidc_route 204 "sonarqube-sso" \
-    "sonarqube.${DOMAIN}" "/*" 6 \
-    "https://sonarqube.${DOMAIN}/callback"
+# --- Harbor Registry (auth gestita da Harbor) ---
+put "/routes/204" "{
+    \"name\": \"harbor-proxy\",
+    \"host\": \"registry.${DOMAIN}\",
+    \"uri\": \"/*\",
+    \"upstream_id\": \"6\",
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "harbor (no OIDC, auth interna)"
 
 # --- Redis Exporter ---
 oidc_route 205 "redis-exporter-sso" \
@@ -510,6 +558,24 @@ oidc_route 209 "scrapyd-sso" \
 oidc_route 210 "loki-sso" \
     "loki.${DOMAIN}" "/*" 12 \
     "https://loki.${DOMAIN}/callback"
+
+# --- Mailpit (no auth, solo dev) ---
+put "/routes/211" "{
+    \"name\": \"mailpit-proxy\",
+    \"host\": \"mail.${DOMAIN}\",
+    \"uri\": \"/*\",
+    \"upstream_id\": \"16\",
+    \"enable_websocket\": true,
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "mailpit (no auth, websocket)"
 
 # ======================= RIEPILOGO ==========================================
 echo ""

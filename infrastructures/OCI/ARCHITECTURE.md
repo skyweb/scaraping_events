@@ -43,7 +43,7 @@ Piattaforma di aggregazione eventi che raccoglie dati da 50+ fonti italiane (Zer
               |  | WireGuard       |  | Prometheus       |   |
               |  | Velero + UI     |  | Grafana          |   |
               |  | Linkerd CP      |  | OTEL Collector   |   |
-              |  | Linkerd Viz     |  | SonarQube        |   |
+              |  | Linkerd Viz     |  | Harbor        |   |
               |  | Konga           |  | Airflow          |   |
               |  | Backstage       |  +------------------+   |
               |  | Loki            |                          |
@@ -99,7 +99,7 @@ Piattaforma di aggregazione eventi che raccoglie dati da 50+ fonti italiane (Zer
 |  database            apps             airflow          devs        |
 |  +--------------+   +------------+   +------------+  +----------+ |
 |  | PostgreSQL   |   | Backoffice |   | Webserver  |  | Backstage| |
-|  | Redis        |   | Kong       |   | Scheduler  |  | SonarQube| |
+|  | Redis        |   | Kong       |   | Scheduler  |  | Harbor| |
 |  | MinIO        |   | Konga      |   +------------+  +----------+ |
 |  | Celery W/B   |   +------------+                                 |
 |  | redis-export |   scraping                                       |
@@ -240,7 +240,7 @@ Traefik (NodePort 30443, namespace: traefik)
     +-- grafana.oci.santocaruso.eu ---> Grafana (monitoring:3000)
     +-- konga.oci.santocaruso.eu -----> Konga (apps:1337) [+ google-auth]
     +-- backstage.oci.santocaruso.eu -> Backstage (devs:7007) [+ google-auth]
-    +-- sonarqube.oci.santocaruso.eu -> SonarQube (devs:9000)
+    +-- registry.oci.santocaruso.eu -> Harbor (devs:80)
     +-- minio.oci.santocaruso.eu -----> MinIO Console (database:9001) [+ google-auth]
     +-- s3.oci.santocaruso.eu --------> MinIO API (database:9000)
     +-- argocd.oci.santocaruso.eu ----> ArgoCD (clusters:443)
@@ -370,7 +370,7 @@ New Pod Running
 | Tekton Pipelines | tekton-pipelines | Build + push immagini |
 | Kaniko | (Tekton task) | Build container senza Docker daemon |
 | ArgoCD | clusters | GitOps delivery, sync Git -> cluster |
-| SonarQube | devs | Code quality e security analysis |
+| Harbor | devs | Docker Registry con Trivy, OIDC, Cosign |
 
 ---
 
@@ -439,7 +439,7 @@ PostgreSQL 16 + PostGIS 3.4 (database namespace, heavy node)
     +-- DB: kong          | User: kong      | -> Kong API Gateway
     +-- DB: konga         | User: konga     | -> Konga Admin UI
     +-- DB: airflow       | User: airflow   | -> Apache Airflow
-    +-- DB: sonarqube     | User: sonarqube | -> SonarQube
+    +-- DB: harbor     | User: harbor | -> Harbor
     +-- DB: backstage     | User: backstage | -> Backstage
 ```
 
@@ -530,7 +530,7 @@ Konga Admin UI: https://konga.oci.santocaruso.eu (Google SSO)
 | Prometheus | monitoring | 50m / 500m | 128Mi / 512Mi |
 | Grafana | monitoring | 50m / 250m | 128Mi / 256Mi |
 | OTEL Collector | monitoring | 50m / 200m | 64Mi / 128Mi |
-| SonarQube | devs | 100m / 500m | 768Mi / 1536Mi |
+| Harbor | devs | 100m / 500m | 768Mi / 1536Mi |
 | Airflow Webserver | airflow | 200m / 1000m | 512Mi / 768Mi |
 | Airflow git-sync | airflow | 50m / 100m | 64Mi / 128Mi |
 | Airflow Scheduler | airflow | 100m / 500m | 256Mi / 512Mi |
@@ -597,7 +597,7 @@ ansible-playbook ansible/playbooks/minio-setup.yml --ask-vault-pass
 # 6. Servizi applicativi
 ansible-playbook ansible/playbooks/kong-setup.yml --ask-vault-pass
 ansible-playbook ansible/playbooks/backstage-setup.yml --ask-vault-pass
-ansible-playbook ansible/playbooks/sonarqube-setup.yml --ask-vault-pass
+ansible-playbook ansible/playbooks/harbor-setup.yml --ask-vault-pass
 ansible-playbook ansible/playbooks/airflow-setup.yml --ask-vault-pass
 
 # 7. Monitoring

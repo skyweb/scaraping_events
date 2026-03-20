@@ -27,9 +27,11 @@ grafana_admin_password: "CHANGE_ME"
 # PostgreSQL (database condiviso)
 postgres_password: "CHANGE_ME"
 
-# SonarQube
-sonarqube_admin_password: "CHANGE_ME"
-sonarqube_postgres_password: "CHANGE_ME"
+# Harbor (Docker Registry)
+harbor_admin_password: "CHANGE_ME"
+harbor_postgres_password: "CHANGE_ME"
+harbor_oidc_client_secret: "CHANGE_ME"
+harbor_robot_secret: "CHANGE_ME"
 
 # Backstage (Developer Portal)
 backstage_postgres_password: "CHANGE_ME"

@@ -7,9 +7,9 @@
 SELECT 'CREATE DATABASE n8n OWNER ' || current_user
 WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'n8n') \gexec
 
--- SonarQube (code quality)
-SELECT 'CREATE DATABASE sonarqube OWNER ' || current_user
-WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'sonarqube') \gexec
+-- Harbor (Docker Registry)
+SELECT 'CREATE DATABASE harbor OWNER ' || current_user
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'harbor') \gexec
 
 -- Keycloak (identity provider)
 SELECT 'CREATE DATABASE keycloak OWNER ' || current_user

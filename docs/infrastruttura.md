@@ -303,7 +303,7 @@ Tutti i servizi condividono lo stesso container PostgreSQL ma su database separa
 | `today_events` | events | Django Backoffice, Airflow (metadata) |
 | `keycloak` | events | Keycloak (sessioni, realm, client) |
 | `n8n` | events | n8n workflow automation |
-| `sonarqube` | events | SonarQube code quality |
+| `harbor` | events | Harbor Docker Registry |
 | `backstage` | events | Backstage developer portal |
 
 ---
@@ -334,7 +334,7 @@ cd infrastructures
 make up
 ```
 
-Al primo avvio su volume Postgres vuoto, lo script `services/postgres/init.d/02-databases.sql` crea automaticamente i database `keycloak`, `n8n`, `sonarqube`, `backstage`.
+Al primo avvio su volume Postgres vuoto, lo script `services/postgres/init.d/02-databases.sql` crea automaticamente i database `keycloak`, `n8n`, `harbor`, `backstage`.
 
 Se il volume esiste già (upgrade), crearli manualmente:
 ```bash

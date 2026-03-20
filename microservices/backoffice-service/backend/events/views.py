@@ -188,7 +188,7 @@ class StagingEventViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = StagingEvent.objects.all()
     serializer_class = StagingEventSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['city', 'source']
+    filterset_fields = ['city_name', 'source']
     search_fields = ['title', 'description']
 
 
@@ -407,9 +407,9 @@ class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
     
     queryset = StagingEvent.objects.all()
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['city', 'source', 'uuid']
+    filterset_fields = ['city_name', 'source', 'uuid']
     search_fields = ['title', 'description', 'location_name']
-    ordering_fields = ['loaded_at', 'date_start', 'city']
+    ordering_fields = ['loaded_at', 'date_start', 'city_name']
     ordering = ['-loaded_at']
 
     # Logging settings

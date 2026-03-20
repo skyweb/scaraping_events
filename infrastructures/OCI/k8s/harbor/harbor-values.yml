@@ -1,0 +1,110 @@
+# Harbor Helm Values — Today Events (K8s produzione)
+# Helm chart: https://github.com/goharbor/harbor-helm
+
+expose:
+  type: clusterIP
+  tls:
+    enabled: false  # TLS gestito da APISIX/Traefik
+  clusterIP:
+    name: harbor
+
+externalURL: https://registry.oci.santocaruso.eu
+
+harborAdminPassword: ""  # Da Secret harbor-secret
+
+# Database esterno (PostgreSQL condiviso)
+database:
+  type: external
+  external:
+    host: postgres.database.svc
+    port: "5432"
+    username: harbor
+    password: ""  # Da Secret harbor-secret
+    sslmode: disable
+    coreDatabase: harbor
+
+# Redis esterno (condiviso)
+redis:
+  type: external
+  external:
+    addr: redis.database.svc:6379
+    password: ""  # Da Secret harbor-secret
+    coreDatabaseIndex: "5"
+    jobserviceDatabaseIndex: "6"
+    registryDatabaseIndex: "7"
+    trivyAdapterIndex: "8"
+
+# Persistence
+persistence:
+  enabled: true
+  persistentVolumeClaim:
+    registry:
+      size: 50Gi
+    jobservice:
+      jobLog:
+        size: 5Gi
+    trivy:
+      size: 5Gi
+
+# Trivy vulnerability scanner
+trivy:
+  enabled: true
+
+# Risorse per ambiente produzione
+core:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+portal:
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 200m
+      memory: 128Mi
+
+registry:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+jobservice:
+  resources:
+    requests:
+      cpu: 50m
+      memory: 128Mi
+    limits:
+      cpu: 300m
+      memory: 256Mi
+  maxJobWorkers: 5
+
+trivy:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+# No internal DB/Redis (usiamo quelli condivisi)
+postgresql:
+  enabled: false
+redis:
+  enabled: false
+
+# Metriche Prometheus
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: false

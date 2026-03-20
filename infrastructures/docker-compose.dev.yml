@@ -55,6 +55,7 @@ services:
       - --web.enable-remote-write-receiver
     volumes:
       - ./services/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./services/prometheus/alert-rules.yml:/etc/prometheus/alert-rules.yml:ro
     networks:
       dev-network:
         aliases:
@@ -97,6 +98,10 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-django-insecure-dev-key}
       DJANGO_DEBUG: "True"
+      GIT_COMMIT: ${GIT_COMMIT:-}
+      DOMAIN: ${DOMAIN:-127.0.0.1.nip.io}
+      EMAIL_HOST: smtp
+      EMAIL_PORT: "1025"
       DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},backoffice,localhost,127.0.0.1"
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
@@ -146,6 +151,8 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-django-insecure-dev-key}
       DJANGO_DEBUG: "True"
+      EMAIL_HOST: smtp
+      EMAIL_PORT: "1025"
       CELERY_BROKER_URL: ${CELERY_BROKER_URL}
       CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:redis_secret_2026@redis:6379/2}
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
@@ -236,8 +243,15 @@ services:
       GF_USERS_AUTO_ASSIGN_ORG_ROLE: Admin
       GF_SERVER_SERVE_FROM_SUB_PATH: "false"
       GF_SERVER_ROOT_URL: "https://grafana.${DOMAIN}/"
+      # SMTP via Mailpit (alerting email)
+      GF_SMTP_ENABLED: "true"
+      GF_SMTP_HOST: "smtp:1025"
+      GF_SMTP_SKIP_VERIFY: "true"
+      GF_SMTP_FROM_ADDRESS: "grafana@${DOMAIN}"
+      GF_SMTP_FROM_NAME: "Grafana Dev"
     volumes:
       - ./services/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./services/grafana/templates:/usr/share/grafana/public/emails:ro
       - grafana-dev-data:/var/lib/grafana
       - ./services/grafana/dashboards:/var/lib/grafana/dashboards:ro
     depends_on:
@@ -313,6 +327,12 @@ services:
       AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
       AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
+      # SMTP via Mailpit
+      AIRFLOW__SMTP__SMTP_HOST: smtp
+      AIRFLOW__SMTP__SMTP_PORT: "1025"
+      AIRFLOW__SMTP__SMTP_STARTTLS: "False"
+      AIRFLOW__SMTP__SMTP_SSL: "False"
+      AIRFLOW__SMTP__SMTP_MAIL_FROM: "airflow@${DOMAIN}"
     command: webserver
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
@@ -344,8 +364,17 @@ services:
       - .env
     environment:
       AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
+      # SMTP via Mailpit
+      AIRFLOW__SMTP__SMTP_HOST: smtp
+      AIRFLOW__SMTP__SMTP_PORT: "1025"
+      AIRFLOW__SMTP__SMTP_STARTTLS: "False"
+      AIRFLOW__SMTP__SMTP_SSL: "False"
+      AIRFLOW__SMTP__SMTP_MAIL_FROM: "airflow@${DOMAIN}"
+      SCRAPY_IMAGE: ${SCRAPY_IMAGE:-registry.${DOMAIN}/today-events/scraping-service:latest}
       SCRAPY_SRC_PATH: ${SCRAPY_SRC_PATH:-}
       SCRAPY_DATA_PATH: ${SCRAPY_DATA_PATH:-}
+      # Airflow Connection per Harbor registry (docker pull autenticato)
+      AIRFLOW_CONN_HARBOR_REGISTRY: docker://${HARBOR_ROBOT_USER}:${HARBOR_ROBOT_SECRET}@registry.${DOMAIN}
     command: scheduler
     volumes:
       - ./services/airflow/dags:/opt/airflow/dags:ro
@@ -418,26 +447,19 @@ services:
         aliases:
           - minio
 
-  # SonarQube — code quality and security analysis
-  sonarqube:
-    image: sonarqube:community
-    container_name: dev-sonarqube
+  # Mailpit — SMTP proxy per dev (cattura tutte le email)
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: dev-mailpit
     restart: unless-stopped
     environment:
-      SONAR_JDBC_URL: jdbc:postgresql://postgres:5432/sonarqube
-      SONAR_JDBC_USERNAME: ${POSTGRES_USER}
-      SONAR_JDBC_PASSWORD: ${SONARQUBE_JDBC_PASSWORD:-${POSTGRES_PASSWORD}}
-    volumes:
-      - sonarqube-dev-data:/opt/sonarqube/data
-      - sonarqube-dev-extensions:/opt/sonarqube/extensions
-      - sonarqube-dev-logs:/opt/sonarqube/logs
-    depends_on:
-      postgres:
-        condition: service_healthy
+      MP_SMTP_AUTH_ACCEPT_ANY: "true"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "true"
     networks:
       dev-network:
         aliases:
-          - sonarqube
+          - mailpit
+          - smtp
 
   # etcd — store configurazione per APISIX
   etcd:
@@ -462,7 +484,7 @@ services:
 
   # APISIX — API Gateway (entry point unico: TLS + OIDC + reverse proxy)
   apisix:
-    image: apache/apisix:3.11.0-debian
+    image: apache/apisix:3.15.0-debian
     container_name: dev-apisix
     restart: unless-stopped
     ports:
@@ -470,6 +492,8 @@ services:
       - "443:443"
     volumes:
       - ./services/apisix/config.yaml:/usr/local/apisix/conf/config.yaml
+      - ./services/apisix/error-pages:/usr/local/apisix/error-pages:ro
+      - ./services/apisix/wasm:/usr/local/apisix/wasm:ro
       - ./services/traefik/certs:/certs:ro
     depends_on:
       etcd:
@@ -581,12 +605,6 @@ volumes:
     name: dev-flower-data
   minio-dev-data:
     name: dev-minio-data
-  sonarqube-dev-data:
-    name: dev-sonarqube-data
-  sonarqube-dev-extensions:
-    name: dev-sonarqube-extensions
-  sonarqube-dev-logs:
-    name: dev-sonarqube-logs
   etcd-dev-data:
     name: dev-etcd-data
   tempo-dev-data:

@@ -77,9 +77,26 @@ RETRY_HTTP_CODES = [500, 502, 503, 504, 408, 429]
 # =============================================================================
 
 DOWNLOADER_MIDDLEWARES = {
-    # Middleware personalizzati (se necessari)
-    # "events_scraper.middlewares.CustomMiddleware": 543,
+    # Disabilita lo UserAgent di default e usa quello random
+    "scrapy.downloadermiddlewares.useragent.UserAgentMiddleware": None,
+    "middlewares.RandomUserAgentMiddleware": 400,
+    # Proxy rotation (attivo solo se PROXY_ENABLED=true)
+    "middlewares.RotatingProxyMiddleware": 350,
 }
+
+# =============================================================================
+# PROXY ROTATION
+# =============================================================================
+
+# Abilitazione proxy (default: disabilitato)
+PROXY_ENABLED = os.getenv("PROXY_ENABLED", "false").lower() == "true"
+
+# Lista proxy separati da virgola (http, socks5)
+# Es: http://proxy1:8080,socks5://user:pass@proxy2:1080
+PROXY_LIST = os.getenv("PROXY_LIST", "")
+
+# Oppure file con un proxy per riga
+PROXY_LIST_FILE = os.getenv("PROXY_LIST_FILE", "")
 
 SPIDER_MIDDLEWARES = {
     # Middleware spider personalizzati

@@ -12,7 +12,7 @@
 #   docker run --rm events-scraper scrapy crawl city_today -a cities=milano -o /data/output.json
 #
 
-FROM python:3.11-slim
+FROM python:3.13-alpine
 
 LABEL maintainer="Events Scraping Team"
 LABEL description="Scrapy spiders for events scraping with Scrapyd"
@@ -28,15 +28,14 @@ ENV PYTHONUNBUFFERED=1 \
 WORKDIR /app
 
 # Installa dipendenze di sistema
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apk add --no-cache \
     gcc \
+    musl-dev \
     libxml2-dev \
-    libxslt1-dev \
+    libxslt-dev \
     libffi-dev \
-    libssl-dev \
-    curl \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
+    openssl-dev \
+    curl
 
 # Copia requirements e installa dipendenze Python
 # NB: paths relativi al build context (services/service-scraping/)

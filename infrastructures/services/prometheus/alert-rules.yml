@@ -1,0 +1,143 @@
+groups:
+  # =====================================================================
+  # Servizi — disponibilità
+  # =====================================================================
+  - name: service-health
+    rules:
+      - alert: ServiceDown
+        expr: up == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Servizio {{ $labels.job }} non raggiungibile"
+          description: "Il target {{ $labels.instance }} del job {{ $labels.job }} è down da più di 2 minuti."
+
+  # =====================================================================
+  # Django Backoffice
+  # =====================================================================
+  - name: django
+    rules:
+      - alert: DjangoHighErrorRate
+        expr: rate(django_http_responses_total_by_status_total{status=~"5.."}[5m]) / rate(django_http_responses_total_by_status_total[5m]) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Tasso errori Django > 5%"
+          description: "Il {{ $value | humanizePercentage }} delle risposte Django ha status 5xx negli ultimi 5 minuti."
+
+      - alert: DjangoHighLatency
+        expr: histogram_quantile(0.95, rate(django_http_requests_latency_seconds_by_view_method_bucket[5m])) > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latenza Django P95 > 2s"
+          description: "Il 95° percentile della latenza Django è {{ $value | humanizeDuration }}."
+
+      - alert: DjangoHighRequestRate
+        expr: rate(django_http_requests_total_by_method_total[5m]) > 100
+        for: 5m
+        labels:
+          severity: info
+        annotations:
+          summary: "Traffico Django elevato (> 100 req/s)"
+
+  # =====================================================================
+  # Redis
+  # =====================================================================
+  - name: redis
+    rules:
+      - alert: RedisHighMemoryUsage
+        expr: redis_memory_used_bytes / redis_memory_max_bytes > 0.85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis usa > 85% della memoria"
+          description: "Utilizzo memoria Redis: {{ $value | humanizePercentage }}."
+
+      - alert: RedisHighConnections
+        expr: redis_connected_clients > 100
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis ha > 100 connessioni attive"
+
+      - alert: RedisTooManyKeys
+        expr: redis_db_keys > 100000
+        for: 10m
+        labels:
+          severity: info
+        annotations:
+          summary: "Redis ha > 100k chiavi nel DB {{ $labels.db }}"
+
+  # =====================================================================
+  # Celery
+  # =====================================================================
+  - name: celery
+    rules:
+      - alert: CeleryTaskFailures
+        expr: rate(celery_task_failed_total[5m]) > 0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Task Celery in errore"
+          description: "Il task {{ $labels.name }} sta fallendo ({{ $value | humanize }}/s)."
+
+      - alert: CeleryQueueBacklog
+        expr: celery_active_count > 50
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Coda Celery con > 50 task attivi"
+          description: "Ci sono {{ $value }} task Celery attivi. Possibile backlog."
+
+  # =====================================================================
+  # APISIX Gateway
+  # =====================================================================
+  - name: apisix
+    rules:
+      - alert: ApisixHighErrorRate
+        expr: rate(apisix_http_status{code=~"5.."}[5m]) / rate(apisix_http_status[5m]) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Tasso errori APISIX > 5%"
+          description: "Il {{ $value | humanizePercentage }} delle risposte APISIX ha status 5xx."
+
+      - alert: ApisixHighLatency
+        expr: histogram_quantile(0.95, rate(apisix_http_latency_bucket[5m])) > 3000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latenza APISIX P95 > 3s"
+          description: "La route {{ $labels.route }} ha latenza P95 di {{ $value }}ms."
+
+  # =====================================================================
+  # Keycloak
+  # =====================================================================
+  - name: keycloak
+    rules:
+      - alert: KeycloakLoginFailures
+        expr: rate(keycloak_login_error_total[5m]) > 0.5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Login Keycloak falliti > 0.5/s"
+          description: "Possibile brute force o problemi di configurazione. Realm: {{ $labels.realm }}."
+
+      - alert: KeycloakHighJvmMemory
+        expr: jvm_memory_used_bytes{area="heap"} / jvm_memory_max_bytes{area="heap"} > 0.85
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Keycloak JVM heap > 85%"

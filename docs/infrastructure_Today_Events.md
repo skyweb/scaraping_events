@@ -17,7 +17,7 @@ Stack Docker con **Traefik v3.3** come reverse proxy HTTPS (certificati mkcert l
 - **APISIX 3.x** — API Gateway (DB mode su PostgreSQL)
 - **MinIO** — object storage S3-compatible
 - **n8n** — workflow automation
-- **SonarQube** — code quality e security analysis
+- **Harbor** — Docker registry
 - **Backstage** — developer portal
 - **Scrapyd** — daemon spider (compose separato in `microservices/scraping-service/`)
 
@@ -43,7 +43,7 @@ Stack Docker con **Traefik v3.3** come reverse proxy HTTPS (certificati mkcert l
 | MinIO Console | `minio.${DOMAIN}` | UI gestione object storage |
 | MinIO S3 API | `s3.${DOMAIN}` | API S3-compatible |
 | n8n | `n8n.${DOMAIN}` | Workflow automation |
-| SonarQube | `sonarqube.${DOMAIN}` | Code quality analysis |
+| Harbor Registry | `registry.${DOMAIN}` | Docker registry |
 | Backstage | `backstage.${DOMAIN}` | Developer portal |
 | Traefik Dashboard | `traefik.${DOMAIN}` | Dashboard reverse proxy |
 
@@ -152,7 +152,7 @@ Tutti i servizi protetti da ForwardAuth usano OIDC via Keycloak. I JWT emessi da
 | APISIX Dashboard | `https://apisix.${DOMAIN}` | ForwardAuth |
 | MinIO Console | `https://minio.${DOMAIN}` | ForwardAuth · `minioadmin` / vedi `.env` |
 | n8n | `https://n8n.${DOMAIN}` | ForwardAuth |
-| SonarQube | `https://sonarqube.${DOMAIN}` | Nessuna (login interno) |
+| Harbor Registry | `https://registry.${DOMAIN}` | OIDC SSO |
 | Backstage | `https://backstage.${DOMAIN}` | ForwardAuth (guest auth abilitata) |
 | Traefik | `https://traefik.${DOMAIN}` | ForwardAuth |
 

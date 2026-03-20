@@ -34,7 +34,8 @@ default_args = {
 }
 
 # Configurazione
-SCRAPY_IMAGE = 'today-events/scraping-comuni:latest'
+SCRAPY_IMAGE = os.getenv('SCRAPY_IMAGE_COMUNI', 'registry.127.0.0.1.nip.io/today-events/scraping-comuni:latest')
+REGISTRY_CONN_ID = os.getenv('REGISTRY_CONN_ID', 'harbor_registry')
 COMUNI_DATA_PATH = Variable.get(
     'COMUNI_DATA_PATH',
     default_var=os.getenv('COMUNI_DATA_PATH', '/opt/today_events/data/comuni-istat'),
@@ -330,8 +331,9 @@ with DAG(
         environment=scraper_env,
         network_mode='dev-network',
         auto_remove=True,
-        force_pull=False,
+        force_pull=True,
         docker_url='unix://var/run/docker.sock',
+        docker_conn_id=REGISTRY_CONN_ID,
         mounts=scraper_mounts or None,
     )
 

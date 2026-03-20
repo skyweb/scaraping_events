@@ -11,6 +11,9 @@ COMPOSE := docker compose -f docker-compose.dev.yml --env-file .env
 # Legge DOMAIN dal .env (default: 127.0.0.1.nip.io)
 DOMAIN := $(shell grep '^DOMAIN=' .env 2>/dev/null | cut -d= -f2 | tr -d '[:space:]' || echo "127.0.0.1.nip.io")
 
+# Harbor registry URL (per docker tag/push)
+REGISTRY := registry.$(DOMAIN)
+
 # Comando per aprire URL nel browser (macOS + Linux)
 OPEN := $(shell which open 2>/dev/null || which xdg-open 2>/dev/null)
 
@@ -26,16 +29,18 @@ NC    := \033[0m
 
 .PHONY: help \
         up up-all down restart ps logs build pull \
-        up-core up-app up-celery up-observability up-bi up-airflow up-devtools up-gateway \
+        up-core up-observability up-airflow \
         logs-backoffice logs-celery logs-db logs-redis \
         logs-grafana logs-loki logs-airflow \
         logs-apisix logs-keycloak logs-tempo \
         restart-backoffice restart-celery restart-airflow \
-        restart-apisix restart-keycloak \
+        restart-apisix restart-keycloak restart-grafana \
         migrate makemigrations shell-django shell-db shell-redis shell-backoffice \
+        create-user \
         open-admin open-flower open-grafana open-prometheus \
         open-loki open-minio open-airflow \
-        open-apisix open-keycloak open-gateway \
+        open-apisix open-keycloak open-gateway open-registry \
+        registry-build registry-push registry-sign registry-verify registry-ship \
         clean clean-logs
 
 # =============================================================================
@@ -83,30 +88,27 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 # Avvio per gruppo
 # =============================================================================
 #
-#   up          = core + app + observability (stack sviluppo quotidiano)
+#   up          = core + gateway + observability + app (stack sviluppo quotidiano)
 #   up-all      = tutti i servizi
 #
 #   Gruppi individuali:
-#     up-core         infrastruttura base (postgres, redis, apisix)
-#     up-app          applicazione (backoffice, frontend, minio)
-#     up-gateway      API gateway + IdP (etcd, apisix, apisix-dashboard, keycloak)
-#     up-celery       task processing (worker, beat, flower)
+#     up-core         stack base (postgres, redis, gateway, app, celery, harbor)
 #     up-observability monitoring (prometheus, otel, tempo, loki, grafana, esportatori)
 #     up-airflow      orchestrazione DAG (airflow)
-#     up-devtools     strumenti dev (sonarqube)
 #
 
-up-core: ## Infrastruttura base (postgres, redis, apisix)
+up-core: up-harbor ## Stack base (postgres, redis, gateway, app, celery, harbor)
 	@echo "$(GREEN)Avvio core...$(NC)"
-	$(COMPOSE) up -d postgres redis etcd apisix
+	$(COMPOSE) up --build -d \
+	    postgres redis \
+	    etcd apisix apisix-init apisix-dashboard keycloak \
+	    backoffice minio \
+	    backoffice-celery-worker flower \
+	    mailpit
 
-up-app: ## Applicazione (backoffice, minio)
-	@echo "$(GREEN)Avvio app...$(NC)"
-	$(COMPOSE) up --build -d backoffice minio
-
-up-celery: ## Task processing (celery worker, flower)
-	@echo "$(GREEN)Avvio Celery stack...$(NC)"
-	$(COMPOSE) up --build -d backoffice-celery-worker flower
+up-harbor: ## Avvia Harbor Registry (compose separato)
+	@echo "$(GREEN)Avvio Harbor Registry...$(NC)"
+	docker compose -f services/harbor/docker-compose.yml up -d
 
 up-observability: ## Monitoring (prometheus, otel, tempo, loki, promtail, grafana, esportatori)
 	@echo "$(GREEN)Avvio observability...$(NC)"
@@ -118,23 +120,7 @@ up-airflow: ## Orchestrazione DAG (airflow webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
-up-gateway: ## API Gateway (etcd, apisix, apisix-dashboard, keycloak)
-	@echo "$(GREEN)Avvio API Gateway + IdP...$(NC)"
-	$(COMPOSE) up -d etcd apisix apisix-dashboard keycloak
-	@echo ""
-	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC) APISIX Dashboard"
-	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)         Keycloak Admin"
-	@echo "$(CYAN)  https://gateway.$(DOMAIN)/$(NC)          API Gateway (APISIX proxy)"
-	@echo ""
-
-up-devtools: ## Strumenti dev (sonarqube)
-	@echo "$(GREEN)Avvio devtools...$(NC)"
-	$(COMPOSE) up -d sonarqube
-	@echo ""
-	@echo "$(CYAN)  https://sonarqube.$(DOMAIN)/$(NC)        SonarQube"
-	@echo ""
-
-up-all: ## Avvia TUTTI i servizi
+up-all: up-harbor ## Avvia TUTTI i servizi (incluso Harbor)
 	@echo "$(GREEN)Avvio stack completo...$(NC)"
 	$(COMPOSE) up --build -d
 	@echo ""
@@ -199,6 +185,10 @@ restart-keycloak: ## Riavvia Keycloak IdP
 	@echo "$(GREEN)Riavvio Keycloak...$(NC)"
 	$(COMPOSE) restart keycloak
 
+restart-grafana: ## Riavvia Grafana (ricarica dashboard e alert)
+	@echo "$(GREEN)Riavvio Grafana...$(NC)"
+	$(COMPOSE) restart grafana
+
 # =============================================================================
 # Database / Django
 # =============================================================================
@@ -222,6 +212,22 @@ shell-redis: ## Redis CLI
 
 shell-backoffice: ## Bash nel container backoffice
 	$(COMPOSE) exec backoffice /bin/bash
+
+# =============================================================================
+# Gestione utenti Keycloak
+# =============================================================================
+
+create-user: ## Crea utente Keycloak con email di attivazione (EMAIL=x FIRST=x LAST=x ROLES="web admin")
+	@if [ -z "$(EMAIL)" ] || [ -z "$(FIRST)" ] || [ -z "$(LAST)" ]; then \
+	    echo "$(YELLOW)Uso: make create-user EMAIL=mario@example.com FIRST=Mario LAST=Rossi [ROLES=\"web admin\"]$(NC)"; \
+	    exit 1; \
+	fi
+	@docker run --rm --network dev-network \
+	    -e KEYCLOAK_ADMIN=$(shell grep '^KEYCLOAK_ADMIN=' .env | cut -d= -f2) \
+	    -e KEYCLOAK_ADMIN_PASSWORD=$(shell grep '^KEYCLOAK_ADMIN_PASSWORD=' .env | cut -d= -f2) \
+	    -v $(PWD)/scripts/kc-create-user.sh:/kc-create-user.sh:ro \
+	    curlimages/curl:8.11.0 sh /kc-create-user.sh \
+	    "$(EMAIL)" "$(FIRST)" "$(LAST)" $(ROLES)
 
 # =============================================================================
 # Apri nel browser
@@ -271,6 +277,51 @@ open-gateway: ## Apre API Gateway  →  https://gateway.${DOMAIN}/
 	@echo "$(CYAN)Apertura API Gateway...$(NC)"
 	@$(OPEN) https://gateway.$(DOMAIN)/
 
+open-registry: ## Apre Harbor Registry  →  https://registry.${DOMAIN}/
+	@echo "$(CYAN)Apertura Harbor Registry...$(NC)"
+	@$(OPEN) https://registry.$(DOMAIN)/
+
+open-mail: ## Apre Mailpit  →  https://mail.${DOMAIN}/
+	@echo "$(CYAN)Apertura Mailpit...$(NC)"
+	@$(OPEN) https://mail.$(DOMAIN)/
+
+# =============================================================================
+# Docker Registry — build e push immagini
+# =============================================================================
+
+SCRAPING_IMAGE := $(REGISTRY)/today-events/scraping-service
+COSIGN_KEY := services/harbor/cosign.key
+COSIGN_PUB := services/harbor/cosign.pub
+
+registry-build: ## Build immagine scraping-service
+	@echo "$(GREEN)Build $(SCRAPING_IMAGE):latest...$(NC)"
+	docker build -t $(SCRAPING_IMAGE):latest \
+	    -f ../microservices/scraping-service/src/Dockerfile \
+	    ../microservices/scraping-service
+
+registry-push: ## Push immagine scraping-service sul registry
+	@echo "$(GREEN)Push $(SCRAPING_IMAGE):latest...$(NC)"
+	docker push $(SCRAPING_IMAGE):latest
+
+COSIGN_SIGNING_CONFIG := services/harbor/cosign-signing-config.json
+
+registry-sign: ## Firma l'immagine scraping-service con Cosign
+	@echo "$(GREEN)Firma $(SCRAPING_IMAGE):latest...$(NC)"
+	COSIGN_PASSWORD="" cosign sign --key $(COSIGN_KEY) \
+	    --signing-config $(COSIGN_SIGNING_CONFIG) \
+	    --allow-insecure-registry \
+	    $(SCRAPING_IMAGE):latest
+	@echo "$(GREEN)Immagine firmata.$(NC)"
+
+registry-verify: ## Verifica la firma dell'immagine scraping-service
+	@echo "$(GREEN)Verifica $(SCRAPING_IMAGE):latest...$(NC)"
+	cosign verify --key $(COSIGN_PUB) \
+	    --insecure-ignore-tlog=true \
+	    --allow-insecure-registry \
+	    $(SCRAPING_IMAGE):latest
+
+registry-ship: registry-build registry-push registry-sign ## Build + push + sign in un comando
+	@echo "$(GREEN)Immagine buildata, pushata e firmata.$(NC)"
 
 # =============================================================================
 # Pulizia
@@ -316,6 +367,10 @@ help: ## Mostra questo messaggio di aiuto
 	@echo ""
 	@echo "$(CYAN)Apri nel browser:$(NC)"
 	@grep -E '^open-[a-z]+:.*?## .*$$' $(MAKEFILE_LIST) \
+	    | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-28s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+	@echo "$(CYAN)Harbor Registry:$(NC)"
+	@grep -E '^registry-[a-z]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	    | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-28s\033[0m %s\n", $$1, $$2}'
 	@echo ""
 	@echo "$(CYAN)Pulizia:$(NC)"

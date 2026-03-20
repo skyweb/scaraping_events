@@ -271,7 +271,7 @@
     var proto = window.location.protocol;
     var adminUrl = proto + '//backoffice.' + domain + '/admin/';
     // Logout diretto via Keycloak pubblico (non via APISIX sso-logout, per evitare problemi di cache discovery)
-    var logoutUrl = proto + '//keycloak.' + domain + '/realms/today-events/protocol/openid-connect/logout'
+    var logoutUrl = proto + '//auth.' + domain + '/realms/today-events/protocol/openid-connect/logout'
       + '?post_logout_redirect_uri=' + encodeURIComponent(adminUrl)
       + '&client_id=backoffice-admin';
 

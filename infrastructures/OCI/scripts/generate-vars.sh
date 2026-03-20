@@ -189,8 +189,11 @@ install_backstage: true
 # Apache Airflow
 install_airflow: true
 
-# SonarQube Code Quality
-install_sonarqube: true
+# Harbor Docker Registry
+install_harbor: true
+harbor_storage_size: "50Gi"
+harbor_oidc_endpoint: "https://auth.\${BASE_DOMAIN}/realms/today-events"
+harbor_oidc_client_id: "harbor"
 
 # IP privato di un nodo K8s (usato da reverse-proxy-setup per DNAT -> Traefik)
 k8s_node_ip: "${K8S_NODE_IP}"

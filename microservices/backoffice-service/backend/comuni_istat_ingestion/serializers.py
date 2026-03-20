@@ -3,6 +3,23 @@ from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
 from .models import ComuniIstatRawData
 
 
+@extend_schema_serializer(
+    examples=[
+        OpenApiExample(
+            "Record ISTAT",
+            value={
+                "id": 1,
+                "tipo": "comune",
+                "codice_istat": "015146",
+                "regione": "Lombardia",
+                "provincia": "Milano",
+                "comune": "Milano",
+                "created_at": "2026-03-20T10:00:00Z",
+            },
+            response_only=True,
+        ),
+    ]
+)
 class ComuniIstatRawDataSerializer(serializers.ModelSerializer):
     """Serializer per la risposta (output)"""
 

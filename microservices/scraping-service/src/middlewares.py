@@ -4,15 +4,17 @@ Middleware per Events Scraper.
 
 Middleware disponibili:
 - RandomUserAgentMiddleware: Ruota User-Agent casuali
-- RetryMiddleware: Gestione retry personalizzata
+- RotatingProxyMiddleware: Ruota proxy HTTP/SOCKS (abilitabile via settings/env)
+- CustomRetryMiddleware: Gestione retry personalizzata
 """
 
 import logging
 import random
-from typing import List
+from typing import List, Optional
 
 from scrapy import signals
 from scrapy.downloadermiddlewares.retry import RetryMiddleware as ScrapyRetryMiddleware
+from scrapy.exceptions import NotConfigured
 from scrapy.utils.response import response_status_message
 
 logger = logging.getLogger(__name__)
@@ -62,6 +64,107 @@ class RandomUserAgentMiddleware:
         user_agent = random.choice(self.user_agents)
         request.headers["User-Agent"] = user_agent
         return None
+
+
+class RotatingProxyMiddleware:
+    """
+    Middleware per ruotare proxy ad ogni richiesta.
+
+    Attivazione (disabilitato di default):
+        PROXY_ENABLED=true  (env var o settings.py)
+
+    Configurazione proxy:
+        # Singolo proxy (es. servizio rotating come ScraperAPI, Bright Data)
+        PROXY_LIST=http://user:pass@proxy.example.com:8080
+
+        # Multipli proxy in rotazione (separati da virgola)
+        PROXY_LIST=http://proxy1:8080,http://proxy2:8080,socks5://proxy3:1080
+
+        # File con un proxy per riga
+        PROXY_LIST_FILE=/path/to/proxies.txt
+
+    Formati supportati:
+        http://host:port
+        http://user:pass@host:port
+        socks5://host:port
+        socks5://user:pass@host:port
+
+    Per-spider override:
+        class MySpider(scrapy.Spider):
+            custom_settings = {'PROXY_ENABLED': True}
+
+    Per-request skip:
+        yield Request(url, meta={'no_proxy': True})
+    """
+
+    def __init__(self, proxy_list: list[str]):
+        self.proxies = proxy_list
+        self.failed_proxies: dict[str, int] = {}
+        # Soglia massima di errori consecutivi prima di rimuovere un proxy
+        self.max_failures = 5
+
+    @classmethod
+    def from_crawler(cls, crawler) -> "RotatingProxyMiddleware":
+        enabled = crawler.settings.getbool("PROXY_ENABLED", False)
+        if not enabled:
+            raise NotConfigured("PROXY_ENABLED non attivo")
+
+        proxies: list[str] = []
+
+        # 1. Da settings/env: lista separata da virgola
+        proxy_list = crawler.settings.get("PROXY_LIST", "")
+        if proxy_list:
+            proxies = [p.strip() for p in proxy_list.split(",") if p.strip()]
+
+        # 2. Da file (un proxy per riga)
+        proxy_file = crawler.settings.get("PROXY_LIST_FILE", "")
+        if proxy_file:
+            try:
+                with open(proxy_file, "r") as f:
+                    file_proxies = [
+                        line.strip() for line in f if line.strip() and not line.startswith("#")
+                    ]
+                    proxies.extend(file_proxies)
+            except FileNotFoundError:
+                logger.warning(f"File proxy non trovato: {proxy_file}")
+
+        if not proxies:
+            raise NotConfigured("PROXY_ENABLED=true ma nessun proxy configurato (PROXY_LIST / PROXY_LIST_FILE)")
+
+        logger.info(f"Proxy rotation attiva: {len(proxies)} proxy configurati")
+        return cls(proxy_list=proxies)
+
+    def _get_proxy(self) -> Optional[str]:
+        """Seleziona un proxy random, escludendo quelli con troppi errori."""
+        available = [p for p in self.proxies if self.failed_proxies.get(p, 0) < self.max_failures]
+        if not available:
+            # Reset contatori e riprova con tutti
+            logger.warning("Tutti i proxy hanno superato la soglia errori, reset contatori")
+            self.failed_proxies.clear()
+            available = self.proxies
+        return random.choice(available)
+
+    def process_request(self, request, spider):
+        """Imposta proxy casuale per ogni richiesta."""
+        if request.meta.get("no_proxy", False):
+            return None
+
+        proxy = self._get_proxy()
+        request.meta["proxy"] = proxy
+        # Log solo a livello DEBUG per non riempire i log
+        logger.debug(f"Proxy: {proxy.split('@')[-1] if '@' in proxy else proxy}")
+        return None
+
+    def process_exception(self, request, exception, spider):
+        """Segna il proxy come fallito in caso di errore di connessione."""
+        proxy = request.meta.get("proxy", "")
+        if proxy:
+            self.failed_proxies[proxy] = self.failed_proxies.get(proxy, 0) + 1
+            failures = self.failed_proxies[proxy]
+            logger.warning(
+                f"Proxy {proxy.split('@')[-1] if '@' in proxy else proxy} "
+                f"errore ({failures}/{self.max_failures}): {exception.__class__.__name__}"
+            )
 
 
 class CustomRetryMiddleware(ScrapyRetryMiddleware):

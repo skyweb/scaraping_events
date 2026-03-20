@@ -19,6 +19,10 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
+# Proxy headers (APISIX reverse proxy)
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # Limite upload per richieste bulk (default Django: 2.5MB, insufficiente per batch con raw_data)
 DATA_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024  # 20MB
 
@@ -225,6 +229,10 @@ Le API esterne (`/api/external/`) sono versionate tramite URL path:
 Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) non sono versionate.
     ''',
     'VERSION': '1.0.0',
+    'SERVERS': [
+        {'url': f'https://backoffice.{os.environ.get("DOMAIN", "127.0.0.1.nip.io")}', 'description': 'Dev (APISIX)'},
+        {'url': 'http://localhost:8000', 'description': 'Local (Django diretto)'},
+    ],
     'SERVE_INCLUDE_SCHEMA': False,
     'SECURITY': [
         {'OAuth2': ['read', 'write']},

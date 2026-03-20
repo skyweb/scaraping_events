@@ -61,8 +61,11 @@ oci_api_key_path: "{{ playbook_dir }}/../oci-key/skywebsys@gmail.com-2026-01-09T
 # Grafana Tempo (distributed tracing, sostituisce Jaeger)
 install_tempo: true
 
-# SonarQube (Code Quality & Security)
-install_sonarqube: true
+# Harbor (Docker Registry)
+install_harbor: true
+harbor_storage_size: "50Gi"
+harbor_oidc_endpoint: "https://auth.oci.santocaruso.eu/realms/today-events"
+harbor_oidc_client_id: "harbor"
 
 # Backstage (Spotify Developer Portal)
 install_backstage: true
@@ -72,7 +75,7 @@ install_airflow: true
 
 # Scraping Service (pod effimeri via KubernetesPodOperator)
 install_scraping: true
-scraping_image: "eu-milan-1.ocir.io/axbuakdjv1li/events/scraping:latest"
+scraping_image: "registry.oci.santocaruso.eu/today-events/scraping-service:latest"
 
 # MinIO (Object Storage S3-compatible)
 install_minio: true

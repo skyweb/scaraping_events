@@ -37,7 +37,7 @@ default_args = {
 }
 
 # Configurazione
-SCRAPY_IMAGE = os.getenv('SCRAPY_IMAGE', 'today-events/scrapyd-dev:latest')
+SCRAPY_IMAGE = os.getenv('SCRAPY_IMAGE', 'registry.127.0.0.1.nip.io/today-events/scraping-service:latest')
 POSTGRES_CONN_ID = 'events_postgres'
 
 # Ambiente: 'docker' (dev locale) o 'k8s' (produzione Kubernetes)
@@ -51,6 +51,8 @@ K8S_IMAGE_PULL_POLICY = os.getenv('K8S_IMAGE_PULL_POLICY', 'Always')
 # Docker config (usato solo se SCRAPER_EXECUTOR=docker)
 DOCKER_NETWORK = os.getenv('DOCKER_NETWORK', 'dev-network')
 DOCKER_URL = os.getenv('DOCKER_URL', 'unix://var/run/docker.sock')
+# Airflow Connection per registry privato (Harbor)
+REGISTRY_CONN_ID = os.getenv('REGISTRY_CONN_ID', 'harbor_registry')
 # Volume mount per codice sorgente Scrapy (dev: codice montato, prod: incluso nell'immagine)
 SCRAPY_SRC_PATH = os.getenv('SCRAPY_SRC_PATH', '')  # es. /Users/.../scraping-service/src
 # Volume mount per output dati (batch JSON, log)
@@ -230,8 +232,9 @@ def create_scraper_operator(task_id, filter_key, city_name, spider, spider_args,
         network_mode=DOCKER_NETWORK,
         mounts=mounts or None,
         auto_remove=True,
-        force_pull=False,
+        force_pull=True,
         docker_url=DOCKER_URL,
+        docker_conn_id=REGISTRY_CONN_ID,
         dag=dag_obj,
     )
 

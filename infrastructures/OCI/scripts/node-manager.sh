@@ -3,8 +3,8 @@
 # Uso: ./node-manager.sh [status|stop|start|toggle|list] [servizio]
 # Esempi:
 #   ./node-manager.sh                      → report completo nodi + servizi
-#   ./node-manager.sh stop sonarqube       → ferma sonarqube (scale 0)
-#   ./node-manager.sh start sonarqube      → riavvia sonarqube (scale 1)
+#   ./node-manager.sh stop harbor           → ferma harbor (scale 0)
+#   ./node-manager.sh start harbor         → riavvia harbor (scale 1)
 #   ./node-manager.sh toggle argocd-server → inverti lo stato
 #   ./node-manager.sh stop-all-optional    → ferma tutti i tool dev/devops
 #   ./node-manager.sh start-all-optional   → riavviali tutti
@@ -33,7 +33,7 @@ airflow-scheduler   airflow     deployment  airflow-scheduler
 airflow-webserver   airflow     deployment  airflow-webserver
 kong                apps        deployment  kong-kong
 backstage           devs        deployment  backstage
-sonarqube           devs        statefulset sonarqube-sonarqube
+harbor              devs        deployment  harbor-core
 argocd-controller   argocd      statefulset argocd-application-controller
 argocd-server       argocd      deployment  argocd-server
 argocd-repo-server  argocd      deployment  argocd-repo-server
@@ -54,7 +54,7 @@ velero              clusters    deployment  velero
 "
 
 # Servizi opzionali (non critici) — stop/start in blocco
-OPTIONAL_SERVICES="sonarqube backstage argocd-controller argocd-server argocd-repo-server argocd-redis argocd-dex argocd-appset airflow-scheduler airflow-webserver loki tempo alertmanager k8s-dashboard velero"
+OPTIONAL_SERVICES="harbor backstage argocd-controller argocd-server argocd-repo-server argocd-redis argocd-dex argocd-appset airflow-scheduler airflow-webserver loki tempo alertmanager k8s-dashboard velero"
 
 # ─── barra grafica ───────────────────────────────────────────────────────────
 # _bar <percentuale> <larghezza=14>
@@ -216,7 +216,7 @@ for p in json.load(sys.stdin)['items']:
 
   echo ""
   printf "%b\n" "  ${DIM}Scorciatoie:${RESET}"
-  printf "%b\n" "  ${DIM}  stop-all-optional   → ferma: sonarqube, backstage, argocd, airflow, loki, tempo, k8s-dashboard, velero${RESET}"
+  printf "%b\n" "  ${DIM}  stop-all-optional   → ferma: harbor, backstage, argocd, airflow, loki, tempo, k8s-dashboard, velero${RESET}"
   printf "%b\n" "  ${DIM}  start-all-optional  → riavviali tutti${RESET}"
   echo ""
 }

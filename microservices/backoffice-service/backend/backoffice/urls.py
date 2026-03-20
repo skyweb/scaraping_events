@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.views.static import serve
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView
 
-from backoffice.views import admin_sso_logout, permission_denied_view, api_version_view, scalar_view
+from backoffice.views import admin_sso_logout, permission_denied_view, api_version_view, api_version_drf_view, scalar_view, services_dashboard, openapi_download_view
 
 # ... (rest of the file) ...
 
@@ -32,7 +32,8 @@ urlpatterns = [
     # Django logout cancella la sessione, poi APISIX/Keycloak gestisce il logout OIDC
     path('admin/logout/', admin_sso_logout, name='admin-sso-logout'),
     path('admin/', admin.site.urls),
-    path('api/version/', api_version_view, name='api-version'),
+    path('version/', api_version_drf_view, name='version'),
+    path('api/version/', api_version_drf_view, name='api-version'),
     path('api/', include('events.urls')),
     path('api/comuni-istat/', include('comuni_istat_ingestion.urls')),
     path('api/cms/', include('cms.urls')),
@@ -44,18 +45,20 @@ urlpatterns = [
     path('docs/', scalar_view, name='scalar-docs'),
     path('docs/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     path('docs/schema/', SpectacularAPIView.as_view(), name='public-schema'),
+    path('docs/postman/', openapi_download_view, name='openapi-download'),
 
     # CKEditor 5 (upload immagini/file)
     path('ckeditor5/', include('django_ckeditor_5.urls')),
 
-    # Prometheus metrics
+    # Prometheus metrics (espone /metrics)
     path('', include('django_prometheus.urls')),
 
-    # Frontend assets
-    re_path(r'^assets/(?P<path>.*)$', serve_frontend_assets),
+    # Frontend React su /report
+    re_path(r'^report/assets/(?P<path>.*)$', serve_frontend_assets),
+    re_path(r'^report(?:/.*)?$', serve_frontend, name='frontend-report'),
 
-    # Catch-all for React SPA routing (must be last)
-    re_path(r'^(?!admin|api|static|media|docs|ckeditor5|metrics).*$', serve_frontend),
+    # Dashboard servizi (home — deve essere ultimo)
+    path('', services_dashboard, name='services-dashboard'),
 ]
 
 # Serve media in development

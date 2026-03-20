@@ -6,6 +6,7 @@
   "enabled": true,
   "sslRequired": "external",
   "loginTheme": "today-events",
+  "emailTheme": "today-events",
   "registrationAllowed": false,
   "loginWithEmailAllowed": true,
   "duplicateEmailsAllowed": false,
@@ -75,7 +76,7 @@
       {
         "id": "e5f6a7b8-c9d0-1234-bcde-678901234567",
         "name": "monitoring",
-        "description": "Accesso Grafana, Prometheus, Flower, MinIO, SonarQube, Exporters",
+        "description": "Accesso Grafana, Prometheus, Flower, MinIO, Harbor, Exporters",
         "composite": false,
         "clientRole": false,
         "containerId": "today-events",
@@ -281,7 +282,7 @@
         "https://grafana.127.0.0.1.nip.io/*",
         "https://prometheus.127.0.0.1.nip.io/*",
         "https://flower.127.0.0.1.nip.io/*",
-        "https://sonarqube.127.0.0.1.nip.io/*",
+        "https://registry.127.0.0.1.nip.io/*",
         "https://redis-exporter.127.0.0.1.nip.io/*",
         "https://celery-exporter.127.0.0.1.nip.io/*",
         "https://airflow.127.0.0.1.nip.io/*",
@@ -289,14 +290,15 @@
         "https://loki.127.0.0.1.nip.io/*",
         "https://auth.127.0.0.1.nip.io/*",
         "https://minio.127.0.0.1.nip.io/*",
-        "https://scrapyd.127.0.0.1.nip.io/*"
+        "https://scrapyd.127.0.0.1.nip.io/*",
+        "https://mail.127.0.0.1.nip.io/*"
       ],
       "webOrigins": [
         "https://backoffice.127.0.0.1.nip.io",
         "https://grafana.127.0.0.1.nip.io",
         "https://prometheus.127.0.0.1.nip.io",
         "https://flower.127.0.0.1.nip.io",
-        "https://sonarqube.127.0.0.1.nip.io",
+        "https://registry.127.0.0.1.nip.io",
         "https://redis-exporter.127.0.0.1.nip.io",
         "https://celery-exporter.127.0.0.1.nip.io",
         "https://airflow.127.0.0.1.nip.io",
@@ -304,7 +306,8 @@
         "https://loki.127.0.0.1.nip.io",
         "https://auth.127.0.0.1.nip.io",
         "https://minio.127.0.0.1.nip.io",
-        "https://scrapyd.127.0.0.1.nip.io"
+        "https://scrapyd.127.0.0.1.nip.io",
+        "https://mail.127.0.0.1.nip.io"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -326,7 +329,7 @@
         "saml.force.post.binding": "false",
         "saml.multivalued.roles": "false",
         "saml.encrypt": "false",
-        "post.logout.redirect.uris": "https://backoffice.127.0.0.1.nip.io/*##https://grafana.127.0.0.1.nip.io/*##https://prometheus.127.0.0.1.nip.io/*##https://flower.127.0.0.1.nip.io/*##https://sonarqube.127.0.0.1.nip.io/*##https://redis-exporter.127.0.0.1.nip.io/*##https://celery-exporter.127.0.0.1.nip.io/*##https://airflow.127.0.0.1.nip.io/*##https://apisix-dashboard.127.0.0.1.nip.io/*##https://loki.127.0.0.1.nip.io/*##https://scrapyd.127.0.0.1.nip.io/*",
+        "post.logout.redirect.uris": "https://backoffice.127.0.0.1.nip.io/*##https://grafana.127.0.0.1.nip.io/*##https://prometheus.127.0.0.1.nip.io/*##https://flower.127.0.0.1.nip.io/*##https://registry.127.0.0.1.nip.io/*##https://redis-exporter.127.0.0.1.nip.io/*##https://celery-exporter.127.0.0.1.nip.io/*##https://airflow.127.0.0.1.nip.io/*##https://apisix-dashboard.127.0.0.1.nip.io/*##https://loki.127.0.0.1.nip.io/*##https://scrapyd.127.0.0.1.nip.io/*##https://mail.127.0.0.1.nip.io/*",
         "backchannel.logout.session.required": "true",
         "backchannel.logout.revoke.offline.tokens": "false",
         "saml.server.signature": "false",
@@ -347,7 +350,23 @@
         "pkce.code.challenge.method": ""
       },
       "authenticationFlowBindingOverrides": {},
-      "protocolMappers": []
+      "protocolMappers": [
+        {
+          "id": "a1b2c3d4-e5f6-7890-abcd-rea1macce551",
+          "name": "realm roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "realm_access.roles",
+            "jsonType.label": "String"
+          }
+        }
+      ]
     },
     {
       "id": "e7f8a9b0-c1d2-3456-efab-456789012346",
@@ -420,7 +439,7 @@
       ]
     },
     {
-      "id": "a1b2c3d4-e5f6-7890-minio-console00001",
+      "id": "a1b2c3d4-e5f6-7890-abcd-min1c0ns0001",
       "clientId": "minio-console",
       "name": "MinIO Console",
       "description": "Client OIDC per MinIO Console — login SSO via Keycloak",
@@ -474,6 +493,62 @@
             "id.token.claim": "true",
             "access.token.claim": "true",
             "userinfo.token.claim": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-harb0rc1i001",
+      "clientId": "harbor",
+      "name": "Harbor Registry",
+      "description": "Client OIDC per Harbor Registry — login SSO via Keycloak",
+      "enabled": true,
+      "publicClient": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "surrogateAuthRequired": false,
+      "alwaysDisplayInConsole": false,
+      "frontchannelLogout": true,
+      "protocol": "openid-connect",
+      "secret": "CHANGE_ME_HARBOR_SECRET",
+      "redirectUris": [
+        "https://registry.127.0.0.1.nip.io/*"
+      ],
+      "webOrigins": [
+        "https://registry.127.0.0.1.nip.io"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "fullScopeAllowed": true,
+      "nodeReRegistrationTimeout": -1,
+      "defaultClientScopes": [
+        "openid",
+        "profile",
+        "email",
+        "roles"
+      ],
+      "optionalClientScopes": [],
+      "attributes": {
+        "post.logout.redirect.uris": "https://registry.127.0.0.1.nip.io/*"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "protocolMappers": [
+        {
+          "id": "a1b2c3d4-e5f6-7890-abcd-harb0rgrp001",
+          "name": "groups",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-group-membership-mapper",
+          "consentRequired": false,
+          "config": {
+            "full.path": "false",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "groups",
+            "jsonType.label": "String"
           }
         }
       ]
@@ -658,7 +733,15 @@
     "xXSSProtection": "1; mode=block",
     "strictTransportSecurity": "max-age=31536000; includeSubDomains"
   },
-  "smtpServer": {},
+  "smtpServer": {
+    "host": "smtp",
+    "port": "1025",
+    "from": "keycloak@127.0.0.1.nip.io",
+    "fromDisplayName": "Today Events Auth",
+    "ssl": "false",
+    "starttls": "false",
+    "auth": "false"
+  },
   "eventsListeners": [
     "jboss-logging",
     "metrics-listener"
@@ -735,7 +818,12 @@
     "OAUTH2_DEVICE_CODE_TO_TOKEN",
     "IDENTITY_PROVIDER_FIRST_LOGIN_ERROR"
   ],
-  "groups": [],
+  "groups": [
+    {
+      "name": "harbor-admins",
+      "subGroups": []
+    }
+  ],
   "users": [
     {
       "username": "admin",
@@ -747,11 +835,12 @@
       "credentials": [
         {
           "type": "password",
-          "value": "admin",
-          "temporary": true
+          "value": "admin_secret_2026",
+          "temporary": false
         }
       ],
-      "realmRoles": ["admin", "web", "monitoring", "default-roles-today-events"]
+      "realmRoles": ["admin", "web", "monitoring", "default-roles-today-events"],
+      "groups": ["harbor-admins"]
     }
   ],
   "scopeMappings": [],
