@@ -87,6 +87,16 @@ put "/global_rules/1" '{
     }
 }' "HTTP→HTTPS redirect + rate limit + CORS"
 
+# Coraza WAF (OWASP rules) — config JSON da file coraza.conf
+CORAZA_CONF=$(cat /usr/local/apisix/wasm/coraza.conf | tr -d '\n' | sed 's/"/\\"/g')
+put "/global_rules/2" "{
+    \"plugins\": {
+        \"coraza-filter\": {
+            \"conf\": \"${CORAZA_CONF}\"
+        }
+    }
+}" "Coraza WAF (OWASP rules)"
+
 # ======================= UPSTREAMS ==========================================
 echo ""
 echo "=== Upstreams ==="
@@ -213,7 +223,7 @@ put "/upstreams/16" '{
 echo ""
 echo "=== Route interna ==="
 
-DISCOVERY_URL="http://127.0.0.1:9080/_internal/oidc-discovery"
+DISCOVERY_URL="http://keycloak:8080/realms/today-events/.well-known/openid-configuration"
 
 put "/routes/100" '{
     "name": "internal-oidc-discovery",

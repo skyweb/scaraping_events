@@ -1,0 +1,85 @@
+# Harbor Configuration — Today Events Dev
+# APISIX gestisce TLS, Harbor ascolta solo HTTP internamente.
+
+hostname: registry.127.0.0.1.nip.io
+
+http:
+  port: 8880
+
+# HTTPS gestito da APISIX, non da Harbor
+# https:
+#   port: 443
+
+external_url: https://registry.127.0.0.1.nip.io
+
+harbor_admin_password: Harbor12345
+
+# Usa il PostgreSQL esistente dello stack dev
+external_database:
+  harbor:
+    host: postgres
+    port: 5432
+    db_name: harbor
+    username: events
+    password: events_secret_2026
+    ssl_mode: disable
+    max_idle_conns: 5
+    max_open_conns: 10
+
+# Usa il Redis esistente dello stack dev
+external_redis:
+  host: redis:6379
+  password: redis_secret_2026
+  registry_db_index: 5
+  jobservice_db_index: 6
+  trivy_db_index: 7
+  idle_timeout_seconds: 30
+
+data_volume: /data
+
+trivy:
+  ignore_unfixed: false
+  skip_update: false
+  skip_java_db_update: false
+  offline_scan: false
+  security_check: vuln
+  insecure: false
+  timeout: 5m0s
+
+jobservice:
+  max_job_workers: 5
+  job_loggers:
+    - STD_OUTPUT
+  logger_sweeper_duration: 1
+
+notification:
+  webhook_job_max_retry: 3
+  webhook_job_http_client_timeout: 3
+
+log:
+  level: info
+  local:
+    rotate_count: 10
+    rotate_size: 50M
+    location: /var/log/harbor
+
+_version: 2.12.0
+
+proxy:
+  http_proxy:
+  https_proxy:
+  no_proxy:
+  components:
+    - core
+    - jobservice
+    - trivy
+
+upload_purging:
+  enabled: true
+  age: 168h
+  interval: 24h
+  dryrun: false
+
+cache:
+  enabled: false
+  expire_hours: 24

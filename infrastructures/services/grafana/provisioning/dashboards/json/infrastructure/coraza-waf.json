@@ -1,0 +1,207 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "title": "Panoramica WAF",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 },
+      "collapsed": false
+    },
+    {
+      "title": "Attacchi bloccati (ultimi 5m)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        {
+          "expr": "count_over_time({container_name=\"dev-apisix\"} |= \"Coraza: Access denied\" [5m])",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "red" } }
+      },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Request normali (ultimi 5m)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "sum(increase(apisix_http_status{code=~\"2..\"}[5m]))",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "green" } }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Attacchi per tipo",
+      "type": "piechart",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        {
+          "expr": "sum by (msg) (count_over_time({container_name=\"dev-apisix\"} |= \"Coraza: Access denied\" | regexp \"msg \\\"(?P<msg>[^\\\"]+)\\\"\" [1h]))",
+          "legendFormat": "{{msg}}",
+          "refId": "A"
+        }
+      ],
+      "options": { "pieType": "donut", "legend": { "displayMode": "table", "placement": "right" } }
+    },
+    {
+      "title": "Rate limit (429)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 6 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "sum(increase(apisix_http_status{code=\"429\"}[5m]))",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "orange" } }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "WAF blocks (403)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 6 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "sum(increase(apisix_http_status{code=\"403\"}[5m]))",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "red" } }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Andamento attacchi",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 11 },
+      "collapsed": false
+    },
+    {
+      "title": "Attacchi bloccati nel tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 12 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        {
+          "expr": "sum(count_over_time({container_name=\"dev-apisix\"} |= \"SQL Injection\" [1m]))",
+          "legendFormat": "SQL Injection",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(count_over_time({container_name=\"dev-apisix\"} |= \"XSS detected\" [1m]))",
+          "legendFormat": "XSS",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(count_over_time({container_name=\"dev-apisix\"} |= \"Path traversal\" [1m]))",
+          "legendFormat": "Path Traversal",
+          "refId": "C"
+        },
+        {
+          "expr": "sum(count_over_time({container_name=\"dev-apisix\"} |= \"Remote code execution\" [1m]))",
+          "legendFormat": "RCE",
+          "refId": "D"
+        },
+        {
+          "expr": "sum(count_over_time({container_name=\"dev-apisix\"} |= \"Sensitive file\" [1m]))",
+          "legendFormat": "Sensitive File",
+          "refId": "E"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "custom": { "drawStyle": "bars", "fillOpacity": 60, "stacking": { "mode": "normal" } }
+        }
+      }
+    },
+    {
+      "title": "Rate limit nel tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 20 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        {
+          "expr": "sum(rate(apisix_http_status{code=\"429\"}[1m]))",
+          "legendFormat": "429 Rate Limited",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps",
+          "custom": { "drawStyle": "line", "fillOpacity": 20 },
+          "color": { "mode": "fixed", "fixedColor": "orange" }
+        }
+      }
+    },
+    {
+      "title": "IP bloccati (top 10)",
+      "type": "table",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 20 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        {
+          "expr": "topk(10, sum by (client) (count_over_time({container_name=\"dev-apisix\"} |= \"Coraza: Access denied\" | regexp \"client: (?P<client>[\\d.]+)\" [1h])))",
+          "legendFormat": "{{client}}",
+          "refId": "A"
+        }
+      ],
+      "transformations": [
+        { "id": "sortBy", "options": { "sort": [{ "field": "Value", "desc": true }] } }
+      ]
+    },
+    {
+      "title": "Log WAF",
+      "type": "row",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 28 },
+      "collapsed": false
+    },
+    {
+      "title": "Log attacchi bloccati",
+      "type": "logs",
+      "gridPos": { "h": 12, "w": 24, "x": 0, "y": 29 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        {
+          "expr": "{container_name=\"dev-apisix\"} |= \"Coraza: Access denied\"",
+          "refId": "A"
+        }
+      ],
+      "options": {
+        "showTime": true,
+        "showLabels": false,
+        "showCommonLabels": false,
+        "wrapLogMessage": true,
+        "prettifyLogMessage": false,
+        "enableLogDetails": true,
+        "sortOrder": "Descending"
+      }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["waf", "coraza", "security", "owasp"],
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "Coraza WAF — Security",
+  "uid": "coraza-waf"
+}
