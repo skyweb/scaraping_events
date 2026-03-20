@@ -223,7 +223,7 @@ put "/upstreams/16" '{
 echo ""
 echo "=== Route interna ==="
 
-DISCOVERY_URL="http://keycloak:8080/realms/today-events/.well-known/openid-configuration"
+DISCOVERY_URL="http://127.0.0.1:9080/_internal/oidc-discovery"
 
 put "/routes/100" '{
     "name": "internal-oidc-discovery",
@@ -243,6 +243,18 @@ put "/routes/100" '{
         }
     }
 }' "oidc-discovery proxy"
+
+# Route interna: proxy /realms/* verso Keycloak (usata da openid-connect per token exchange)
+put "/routes/101" '{
+    "name": "internal-keycloak-proxy",
+    "uri": "/realms/*",
+    "upstream_id": "2",
+    "plugins": {
+        "proxy-rewrite": {
+            "host": "keycloak:8080"
+        }
+    }
+}' "internal keycloak proxy (/realms/*)"
 
 # ======================= ROUTE DIRETTE (no auth) ============================
 echo ""
@@ -412,7 +424,6 @@ oidc_route() {
                 \"client_secret\": \"${KC_SECRET}\",
                 \"discovery\": \"${DISCOVERY_URL}\",
                 \"issuer\": \"${KC_PUBLIC}\",
-                \"token_endpoint\": \"http://keycloak:8080/realms/today-events/protocol/openid-connect/token\",
                 \"scope\": \"openid profile email\",
                 \"bearer_only\": false,
                 \"realm\": \"today-events\",
@@ -455,7 +466,6 @@ oidc_route_grafana() {
                 \"client_secret\": \"${KC_SECRET}\",
                 \"discovery\": \"${DISCOVERY_URL}\",
                 \"issuer\": \"${KC_PUBLIC}\",
-                \"token_endpoint\": \"http://keycloak:8080/realms/today-events/protocol/openid-connect/token\",
                 \"scope\": \"openid profile email\",
                 \"bearer_only\": false,
                 \"realm\": \"today-events\",
