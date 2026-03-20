@@ -79,10 +79,10 @@ put "/global_rules/1" '{
         "cors": {
             "allow_origins": "**",
             "allow_methods": "GET,POST,PUT,PATCH,DELETE,OPTIONS",
-            "allow_headers": "Authorization,Content-Type,X-Requested-With,X-API-KEY",
+            "allow_headers": "Authorization,Content-Type,X-Requested-With,X-API-KEY,Accept",
             "expose_headers": "X-API-Version",
             "max_age": 3600,
-            "allow_credential": true
+            "allow_credential": false
         }
     }
 }' "HTTP→HTTPS redirect + rate limit + CORS"

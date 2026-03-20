@@ -31,6 +31,7 @@ deployment:
     config_provider: etcd
   admin:
     admin_key_required: true
+    enable_admin_ui: true
     admin_listen:
       port: 9180
       ip: 0.0.0.0
