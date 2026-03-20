@@ -6,6 +6,7 @@ from django.views.static import serve
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView
 
 from backoffice.views import admin_sso_logout, permission_denied_view, api_version_view, api_version_drf_view, scalar_view, services_dashboard, openapi_download_view
+from backoffice.waf_views import waf_rules_list, waf_rules_add, waf_rules_delete, waf_rules_test, waf_toggle
 
 # ... (rest of the file) ...
 
@@ -46,6 +47,13 @@ urlpatterns = [
     path('docs/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     path('docs/schema/', SpectacularAPIView.as_view(), name='public-schema'),
     path('docs/postman/', openapi_download_view, name='openapi-download'),
+
+    # WAF management API
+    path('api/waf/rules/', waf_rules_list, name='waf-rules-list'),
+    path('api/waf/rules/add/', waf_rules_add, name='waf-rules-add'),
+    path('api/waf/rules/<str:rule_id>/delete/', waf_rules_delete, name='waf-rules-delete'),
+    path('api/waf/rules/test/', waf_rules_test, name='waf-rules-test'),
+    path('api/waf/toggle/', waf_toggle, name='waf-toggle'),
 
     # CKEditor 5 (upload immagini/file)
     path('ckeditor5/', include('django_ckeditor_5.urls')),
