@@ -1,0 +1,103 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    { "title": "API Usage Overview", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 }, "collapsed": false },
+    {
+      "title": "Request totali (ultimo 1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(apisix_http_status{route=~\".*backoffice.*|.*api.*\"}[1h]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "blue" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Errori 4xx/5xx (ultimo 1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(apisix_http_status{code=~\"4..|5..\",route=~\".*backoffice.*\"}[1h]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "red" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Latenza media API (P50)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 12, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "histogram_quantile(0.50, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket[5m])) by (le))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "s", "color": { "mode": "fixed", "fixedColor": "green" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "WAF bloccati (ultimo 1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 18, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(apisix_http_status{code=\"403\"}[1h]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "orange" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    { "title": "Dettaglio per route", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 6 }, "collapsed": false },
+    {
+      "title": "Request/s per route",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 7 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(rate(apisix_http_status[5m])) by (route)", "legendFormat": "{{route}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Latenza P95 per route",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 7 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "histogram_quantile(0.95, sum(rate(apisix_http_latency_bucket[5m])) by (le, route))", "legendFormat": "{{route}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Status code distribution per route",
+      "type": "table",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 15 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(apisix_http_status[1h])) by (route, code)", "legendFormat": "{{route}} {{code}}", "refId": "A", "format": "table", "instant": true }]
+    },
+    {
+      "title": "Top endpoint Django per volume",
+      "type": "bargauge",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 15 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "topk(10, sum(rate(django_http_requests_total_by_view_method_total[5m])) by (view))", "legendFormat": "{{view}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps" } },
+      "options": { "orientation": "horizontal", "displayMode": "gradient" }
+    },
+    { "title": "Consumer OAuth2", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 23 }, "collapsed": false },
+    {
+      "title": "Request per consumer (ultimo 1h)",
+      "type": "bargauge",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 24 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "topk(10, sum(increase(apisix_http_status{consumer!=\"\"}[1h])) by (consumer))", "legendFormat": "{{consumer}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short" } },
+      "options": { "orientation": "horizontal", "displayMode": "gradient" }
+    },
+    {
+      "title": "Bandwidth per consumer",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 24 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(rate(apisix_bandwidth{type=\"egress\"}[5m])) by (route)", "legendFormat": "{{route}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "Bps", "custom": { "drawStyle": "line", "fillOpacity": 15 } } }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["api", "usage", "billing", "consumer"],
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "API Usage & Billing",
+  "uid": "api-usage"
+}

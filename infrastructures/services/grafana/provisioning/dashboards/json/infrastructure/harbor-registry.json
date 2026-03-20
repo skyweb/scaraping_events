@@ -1,0 +1,72 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    { "title": "Registry", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 }, "collapsed": false },
+    {
+      "title": "Immagini pushate (ultimo 1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=\"harbor-core\"} |= \"push\" |= \"artifact\" [1h])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "blue" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Immagini pullate (ultimo 1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=\"harbor-core\"} |= \"pull\" |= \"artifact\" [1h])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "green" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Scan vulnerability (ultimo 1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 12, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=\"harbor-jobservice\"} |= \"IMAGE_SCAN\" |= \"success\" [1h])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "purple" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Errori registry (ultimo 1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 18, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=~\"harbor-.*\"} |= \"error\" [1h])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "red" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Attività nel tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 6 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        { "expr": "sum(count_over_time({container_name=\"harbor-core\"} |= \"push\" [5m]))", "legendFormat": "Push", "refId": "A" },
+        { "expr": "sum(count_over_time({container_name=\"harbor-core\"} |= \"pull\" [5m]))", "legendFormat": "Pull", "refId": "B" },
+        { "expr": "sum(count_over_time({container_name=\"harbor-jobservice\"} |= \"IMAGE_SCAN\" [5m]))", "legendFormat": "Scan", "refId": "C" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "custom": { "drawStyle": "bars", "fillOpacity": 60, "stacking": { "mode": "normal" } } } }
+    },
+    {
+      "title": "Log Harbor",
+      "type": "logs",
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 14 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "{container_name=~\"harbor-.*\"}", "refId": "A" }],
+      "options": { "showTime": true, "sortOrder": "Descending", "enableLogDetails": true }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["harbor", "registry", "docker"],
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "Harbor Registry",
+  "uid": "harbor-registry"
+}

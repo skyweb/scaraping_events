@@ -1,0 +1,71 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    { "title": "DAG Overview", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 }, "collapsed": false },
+    {
+      "title": "DAG runs successo (ultimo 24h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=\"dev-airflow-scheduler\"} |= \"success\" |= \"DagRun\" [24h])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "green" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "DAG runs falliti (ultimo 24h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=\"dev-airflow-scheduler\"} |= \"failed\" |= \"DagRun\" [24h])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "red" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Task in esecuzione",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 12, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=\"dev-airflow-scheduler\"} |= \"running\" |= \"TaskInstance\" [5m])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "blue" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Scraping container lanciati (ultimo 24h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 18, "y": 1 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "count_over_time({container_name=\"dev-airflow-scheduler\"} |= \"DockerOperator\" |= \"Starting\" [24h])", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "orange" } } },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
+    },
+    {
+      "title": "DAG runs nel tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 6 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        { "expr": "sum(count_over_time({container_name=\"dev-airflow-scheduler\"} |= \"success\" |= \"DagRun\" [1h]))", "legendFormat": "Successo", "refId": "A" },
+        { "expr": "sum(count_over_time({container_name=\"dev-airflow-scheduler\"} |= \"failed\" |= \"DagRun\" [1h]))", "legendFormat": "Falliti", "refId": "B" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "custom": { "drawStyle": "bars", "fillOpacity": 60 } } }
+    },
+    {
+      "title": "Log Airflow Scheduler",
+      "type": "logs",
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 14 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{ "expr": "{container_name=~\"dev-airflow-.*\"}", "refId": "A" }],
+      "options": { "showTime": true, "sortOrder": "Descending", "enableLogDetails": true }
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 39,
+  "tags": ["airflow", "etl", "scraping"],
+  "time": { "from": "now-24h", "to": "now" },
+  "title": "Airflow DAGs",
+  "uid": "airflow-dags"
+}

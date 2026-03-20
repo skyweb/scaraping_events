@@ -1,0 +1,90 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    { "title": "KPI Eventi", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 }, "collapsed": false },
+    {
+      "title": "Eventi totali produzione",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "django_db_query_count_total{view=\"events_productionEvent\"} or vector(0)", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "blue" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Eventi staging (da processare)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "django_db_query_count_total{view=\"events_stagingEvent\"} or vector(0)", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "orange" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "API eventi chiamate/s",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 12, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(rate(django_http_requests_total_by_view_method_total{view=~\".*event.*\"}[5m]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps", "color": { "mode": "fixed", "fixedColor": "green" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Scraping spider attivi",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 18, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "celery_active_count or vector(0)", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "purple" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    { "title": "Trend", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 6 }, "collapsed": false },
+    {
+      "title": "Request API eventi nel tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 7 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(rate(django_http_requests_total_by_view_method_total{view=~\".*Event.*\"}[5m])) by (view)", "legendFormat": "{{view}}", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "line", "fillOpacity": 15 } } }
+    },
+    {
+      "title": "Distribuzione status code API",
+      "type": "piechart",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 7 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(django_http_responses_total_by_status_total[1h])) by (status)", "legendFormat": "{{status}}", "refId": "A" }],
+      "options": { "pieType": "donut", "legend": { "displayMode": "table", "placement": "right" } }
+    },
+    {
+      "title": "Ingestion staging (bulk POST)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 15 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(rate(django_http_requests_total_by_view_method_total{view=~\".*Staging.*|.*bulk.*\",method=\"POST\"}[5m]))", "legendFormat": "Ingestion rate", "refId": "A" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "line", "fillOpacity": 20 }, "color": { "mode": "fixed", "fixedColor": "orange" } } }
+    },
+    {
+      "title": "Top 10 view per traffico",
+      "type": "bargauge",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 15 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "topk(10, sum(rate(django_http_requests_total_by_view_method_total[5m])) by (view))", "legendFormat": "{{view}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps" } },
+      "options": { "orientation": "horizontal", "displayMode": "gradient" }
+    }
+  ],
+  "refresh": "1m",
+  "schemaVersion": 39,
+  "tags": ["business", "kpi", "events"],
+  "time": { "from": "now-24h", "to": "now" },
+  "title": "Business KPI — Eventi",
+  "uid": "business-kpi"
+}
