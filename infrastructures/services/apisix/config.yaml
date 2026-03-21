@@ -84,6 +84,7 @@ nginx_config:
 plugins:
   - openid-connect
   - jwt-auth
+  - key-auth
   - consumer-restriction
   - limit-count
   - limit-req

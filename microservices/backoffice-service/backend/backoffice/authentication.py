@@ -61,6 +61,76 @@ class KeycloakUser:
         return f"KeycloakUser(sub={self.sub})"
 
 
+from api_consumers.metrics import api_consumer_auth_total, api_consumer_expired_total
+
+VALID_PLANS = {"free", "enterprise", "flat"}
+
+
+class ApisixConsumerAuthentication(BaseAuthentication):
+    """
+    Autenticazione via header X-Consumer-Plan iniettato da APISIX (key-auth consumer).
+
+    Se presente l'header X-Consumer-Plan e non c'è un Bearer token,
+    crea un KeycloakUser con scopes read+write (i permessi effettivi
+    sono gestiti dal piano nella view).
+    Se c'è un Bearer token, ritorna None per delegare a KeycloakJWTAuthentication.
+    """
+
+    def authenticate(self, request: Request) -> tuple[KeycloakUser, dict[str, list[str] | str]] | None:
+        # Se c'è un Bearer token, delega all'auth JWT
+        auth_header = request.META.get("HTTP_AUTHORIZATION", "")
+        if auth_header and auth_header.lower().startswith("bearer "):
+            return None
+
+        plan = request.META.get("HTTP_X_CONSUMER_PLAN", "")
+        if not plan or plan not in VALID_PLANS:
+            return None
+
+        username = request.META.get("HTTP_X_CONSUMER_USERNAME", f"api-key-{plan}")
+
+        # Verifica scadenza consumer
+        from api_consumers.models import ApiConsumer
+        try:
+            consumer = ApiConsumer.objects.get(username=username)
+            if consumer.is_expired:
+                api_consumer_expired_total.labels(
+                    consumer=username, plan=plan, auth_type="api_key",
+                ).inc()
+                logger.warning(
+                    "Accesso negato: consumer API key scaduto",
+                    extra={"consumer": username, "plan": plan,
+                           "expires_at": str(consumer.expires_at)},
+                )
+                raise AuthenticationFailed(
+                    f"API consumer '{username}' scaduto il "
+                    f"{consumer.expires_at.strftime('%d/%m/%Y %H:%M')}. "
+                    f"Contattare l'amministratore per il rinnovo."
+                )
+        except ApiConsumer.DoesNotExist:
+            pass  # Consumer non gestito da Django (es. test key da init-routes.sh)
+
+        api_consumer_auth_total.labels(
+            consumer=username, plan=plan, auth_type="api_key", status="success",
+        ).inc()
+
+        user = KeycloakUser(sub=username, roles=[])
+        auth_info: dict[str, list[str] | str] = {
+            "roles": [],
+            "scope": ["read", "write"],
+            "azp": f"{plan}-consumer",
+            "sub": username,
+            "plan": plan,
+            "consumer_username": username,
+        }
+
+        logger.info(
+            "Autenticazione API key (APISIX consumer)",
+            extra={"plan": plan, "consumer": username},
+        )
+
+        return user, auth_info
+
+
 class KeycloakJWTAuthentication(BaseAuthentication):
     """
     Backend di autenticazione DRF che valida token JWT Bearer emessi da Keycloak.
@@ -150,6 +220,35 @@ class KeycloakJWTAuthentication(BaseAuthentication):
         scope = scope_str.split() if scope_str else []
         azp = payload.get("azp", "")
         sub = payload.get("sub", "")
+        plan = payload.get("plan", "")
+
+        # Verifica scadenza consumer (se gestito da Django)
+        from api_consumers.models import ApiConsumer
+        consumer_username = azp  # Per JWT, azp è il client_id Keycloak
+        try:
+            consumer = ApiConsumer.objects.get(keycloak_client_id=azp)
+            consumer_username = consumer.username
+            if consumer.is_expired:
+                api_consumer_expired_total.labels(
+                    consumer=consumer.username, plan=plan or consumer.plan,
+                    auth_type="jwt",
+                ).inc()
+                logger.warning(
+                    "Accesso negato: consumer JWT scaduto",
+                    extra={"consumer": consumer.username, "azp": azp,
+                           "expires_at": str(consumer.expires_at)},
+                )
+                raise AuthenticationFailed(
+                    f"API consumer '{consumer.username}' scaduto il "
+                    f"{consumer.expires_at.strftime('%d/%m/%Y %H:%M')}. "
+                    f"Contattare l'amministratore per il rinnovo."
+                )
+        except ApiConsumer.DoesNotExist:
+            pass
+
+        api_consumer_auth_total.labels(
+            consumer=consumer_username, plan=plan, auth_type="jwt", status="success",
+        ).inc()
 
         # Cerca un utente Django corrispondente, altrimenti crea un KeycloakUser
         user = self._get_or_create_keycloak_user(sub, roles)
@@ -159,11 +258,13 @@ class KeycloakJWTAuthentication(BaseAuthentication):
             "scope": scope,
             "azp": azp,
             "sub": sub,
+            "plan": plan,
+            "consumer_username": consumer_username,
         }
 
         logger.info(
             "Autenticazione JWT riuscita",
-            extra={"sub": sub, "azp": azp, "roles": roles},
+            extra={"sub": sub, "azp": azp, "roles": roles, "plan": plan},
         )
 
         return user, auth_info

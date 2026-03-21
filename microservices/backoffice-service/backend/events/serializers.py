@@ -9,6 +9,35 @@ from .models import ProductionEvent, StagingEvent
 from etl.models import EtlRun, EtlError
 
 
+# Campi response filtrati per piano API
+PLAN_FIELDS: dict[str, list[str]] = {
+    "free": [
+        "id", "uuid", "title", "city_name", "date_start", "date_end",
+        "category", "source",
+    ],
+    # Enterprise e Flat: tutti i campi → non presenti in dict → StagingEventSerializer
+}
+
+
+def get_plan_serializer_class(plan: str) -> type[serializers.ModelSerializer]:
+    """Genera dinamicamente un ModelSerializer con i campi filtrati per piano."""
+    fields = PLAN_FIELDS.get(plan)
+    if fields is None:
+        # Enterprise/Flat: tutti i campi
+        return StagingEventSerializer
+
+    # Costruisce un serializer con location_coordinates come SerializerMethodField
+    attrs: dict[str, object] = {}
+    if "location_coordinates" in fields:
+        attrs["location_coordinates"] = serializers.SerializerMethodField()
+        attrs["get_location_coordinates"] = StagingEventSerializer.get_location_coordinates
+
+    meta_attrs = {"model": StagingEvent, "fields": list(fields)}
+    attrs["Meta"] = type("Meta", (), meta_attrs)
+
+    return type(f"StagingEvent{plan.capitalize()}PlanSerializer", (serializers.ModelSerializer,), attrs)
+
+
 @extend_schema_serializer(
     examples=[
         OpenApiExample(

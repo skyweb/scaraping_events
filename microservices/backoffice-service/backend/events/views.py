@@ -28,6 +28,7 @@ from .serializers import (
     DashboardStatsSerializer,
     FailedEventSerializer,
     BulkProcessResponseSerializer,
+    get_plan_serializer_class,
 )
 
 
@@ -281,6 +282,25 @@ class DashboardView(APIView):
 # API ESTERNE (OAuth2 + Tracking)
 # =============================================================================
 
+class PlanFieldFilterMixin:
+    """Mixin che filtra i campi della response in base al piano API del consumer."""
+
+    def _get_consumer_plan(self) -> str | None:
+        """Legge il piano dal header X-Consumer-Plan (iniettato da APISIX)."""
+        auth_info = getattr(self.request, "auth", None)
+        if isinstance(auth_info, dict):
+            return auth_info.get("plan")
+        return self.request.META.get("HTTP_X_CONSUMER_PLAN")
+
+    def get_serializer_class(self):
+        # Per azioni di lettura (list/retrieve), filtra i campi in base al piano
+        if self.action in ("list", "retrieve"):
+            plan = self._get_consumer_plan()
+            if plan:
+                return get_plan_serializer_class(plan)
+        return super().get_serializer_class()
+
+
 @extend_schema_view(
     list=extend_schema(
         summary="Lista staging events",
@@ -368,7 +388,7 @@ per sorgente (tipicamente un hash di title + date_start + location_name).
         tags=["Staging Events"],
     ),
 )
-class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
+class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.ModelViewSet):
     """
     API per servizi esterni - richiede OAuth2 token.
 
@@ -396,13 +416,13 @@ class ExternalStagingEventViewSet(LoggingMixin, viewsets.ModelViewSet):
         return None
 
     def handle_log(self):
-        """Salva il nome dell'applicazione OAuth2 in username_persistent prima del salvataggio."""
+        """Salva il consumer username in username_persistent prima del salvataggio."""
         if self.log.get('username_persistent') in (None, 'Anonymous', ''):
             auth = getattr(self.request, 'auth', None)
-            if auth:
-                app = getattr(auth, 'application', None)
-                if app:
-                    self.log['username_persistent'] = app.name
+            if isinstance(auth, dict):
+                self.log['username_persistent'] = (
+                    auth.get('consumer_username') or auth.get('azp') or ''
+                )
         super().handle_log()
     
     queryset = StagingEvent.objects.all()

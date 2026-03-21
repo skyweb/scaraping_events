@@ -1,0 +1,260 @@
+"""
+Servizi di sincronizzazione API consumers verso APISIX e Keycloak.
+
+APISIX Admin API: crea/aggiorna/elimina consumers con key-auth + proxy-rewrite.
+Keycloak Admin REST API: crea client con custom claim 'plan' nel token.
+"""
+
+import json
+import logging
+import secrets
+import urllib.error
+import urllib.request
+from typing import TYPE_CHECKING
+
+from django.conf import settings
+
+if TYPE_CHECKING:
+    from api_consumers.models import ApiConsumer
+
+logger = logging.getLogger(__name__)
+
+
+# =============================================================================
+# Helpers HTTP
+# =============================================================================
+
+def _http_request(method: str, url: str, data: dict | None = None,
+                  headers: dict[str, str] | None = None, timeout: int = 10) -> dict:
+    """Esegue una richiesta HTTP e restituisce il JSON di risposta."""
+    body = json.dumps(data).encode() if data else None
+    req = urllib.request.Request(url, data=body, method=method)
+    req.add_header("Content-Type", "application/json")
+    for k, v in (headers or {}).items():
+        req.add_header(k, v)
+
+    with urllib.request.urlopen(req, timeout=timeout) as response:
+        raw = response.read()
+        return json.loads(raw) if raw else {}
+
+
+def _apisix_request(method: str, path: str, data: dict | None = None) -> dict:
+    """Richiesta all'Admin API di APISIX."""
+    url = f"{settings.APISIX_ADMIN_URL}{path}"
+    return _http_request(method, url, data, {"X-API-KEY": settings.APISIX_ADMIN_KEY})
+
+
+# =============================================================================
+# APISIX — Consumer CRUD
+# =============================================================================
+
+def sync_consumer_to_apisix(consumer: "ApiConsumer") -> None:
+    """Crea o aggiorna un consumer APISIX con key-auth e proxy-rewrite."""
+    # Consumer disattivato o scaduto → rimuovi da APISIX
+    if not consumer.is_active or consumer.is_expired:
+        try:
+            delete_consumer_from_apisix(consumer.username)
+            logger.info(
+                "Consumer APISIX rimosso (%s): %s",
+                "scaduto" if consumer.is_expired else "disattivato",
+                consumer.username,
+            )
+        except Exception:
+            pass
+        return
+
+    data: dict = {
+        "username": consumer.username,
+        "plugins": {
+            "key-auth": {
+                "key": consumer.api_key,
+            },
+            "proxy-rewrite": {
+                "headers": {
+                    "set": {
+                        "X-Consumer-Plan": consumer.plan,
+                        "X-Consumer-Username": consumer.username,
+                        "X-Forwarded-Proto": "https",
+                    }
+                }
+            },
+        },
+    }
+
+    # Solo il piano free ha un consumer group con rate limiting
+    if consumer.plan == "free":
+        data["group_id"] = "free"
+
+    _apisix_request("PUT", f"/consumers/{consumer.username}", data)
+    logger.info("Consumer APISIX sincronizzato: %s (piano %s)", consumer.username, consumer.plan)
+
+
+def delete_consumer_from_apisix(username: str) -> None:
+    """Rimuove un consumer da APISIX."""
+    _apisix_request("DELETE", f"/consumers/{username}")
+    logger.info("Consumer APISIX eliminato: %s", username)
+
+
+def get_consumer_from_apisix(username: str) -> dict:
+    """Recupera un consumer da APISIX."""
+    return _apisix_request("GET", f"/consumers/{username}")
+
+
+# =============================================================================
+# Keycloak Admin REST API
+# =============================================================================
+
+def _get_keycloak_admin_token() -> str:
+    """Ottiene un access token per l'Admin REST API di Keycloak via client credentials."""
+    token_url = (
+        f"{settings.KEYCLOAK_URL}/realms/{settings.KEYCLOAK_REALM}"
+        f"/protocol/openid-connect/token"
+    )
+    form_data = (
+        f"grant_type=client_credentials"
+        f"&client_id={settings.APISIX_KC_CLIENT_ID}"
+        f"&client_secret={settings.APISIX_KC_CLIENT_SECRET}"
+    ).encode()
+
+    req = urllib.request.Request(token_url, data=form_data, method="POST")
+    req.add_header("Content-Type", "application/x-www-form-urlencoded")
+
+    with urllib.request.urlopen(req, timeout=10) as response:
+        return json.loads(response.read())["access_token"]
+
+
+def sync_consumer_to_keycloak(consumer: "ApiConsumer") -> None:
+    """
+    Crea un client Keycloak con client_credentials grant e custom claim 'plan'.
+
+    Se il client esiste già (stesso client_id), aggiorna il mapper del piano.
+    """
+    token = _get_keycloak_admin_token()
+    base_url = f"{settings.KEYCLOAK_URL}/admin/realms/{settings.KEYCLOAK_REALM}"
+    auth_headers = {"Authorization": f"Bearer {token}"}
+
+    client_id = consumer.keycloak_client_id or f"api-{consumer.username}"
+
+    # Cerca client esistente
+    existing = _http_request(
+        "GET",
+        f"{base_url}/clients?clientId={client_id}",
+        headers=auth_headers,
+    )
+
+    # Il client Keycloak è abilitato solo se il consumer è attivo e non scaduto
+    should_be_enabled = consumer.is_active and not consumer.is_expired
+
+    if existing:
+        # Client esiste → aggiorna enabled + mapper
+        kc_id = existing[0]["id"]
+        if existing[0].get("enabled") != should_be_enabled:
+            existing[0]["enabled"] = should_be_enabled
+            _http_request("PUT", f"{base_url}/clients/{kc_id}", existing[0], auth_headers)
+            logger.info(
+                "Client Keycloak %s: %s",
+                "abilitato" if should_be_enabled else "disabilitato",
+                client_id,
+            )
+    else:
+        # Genera secret e crea client
+        client_secret = consumer.keycloak_client_secret or secrets.token_urlsafe(32)
+
+        client_data = {
+            "clientId": client_id,
+            "name": f"API Consumer: {consumer.username}",
+            "enabled": should_be_enabled,
+            "protocol": "openid-connect",
+            "publicClient": False,
+            "serviceAccountsEnabled": True,
+            "standardFlowEnabled": False,
+            "directAccessGrantsEnabled": False,
+            "clientAuthenticatorType": "client-secret",
+            "secret": client_secret,
+            "defaultClientScopes": ["email", "profile"],
+            "attributes": {
+                "oauth2.device.authorization.grant.enabled": "false",
+                "backchannel.logout.session.required": "true",
+            },
+        }
+
+        _http_request("POST", f"{base_url}/clients", client_data, auth_headers)
+
+        # Recupera l'ID interno del client appena creato
+        created = _http_request(
+            "GET",
+            f"{base_url}/clients?clientId={client_id}",
+            headers=auth_headers,
+        )
+        kc_id = created[0]["id"]
+
+        # Recupera il secret effettivo
+        secret_resp = _http_request(
+            "GET",
+            f"{base_url}/clients/{kc_id}/client-secret",
+            headers=auth_headers,
+        )
+        consumer.keycloak_client_id = client_id
+        consumer.keycloak_client_secret = secret_resp.get("value", client_secret)
+
+    # Aggiungi/aggiorna mapper "plan" (hardcoded claim)
+    mappers = _http_request(
+        "GET",
+        f"{base_url}/clients/{kc_id}/protocol-mappers/models",
+        headers=auth_headers,
+    )
+
+    plan_mapper = next((m for m in mappers if m.get("name") == "plan"), None)
+
+    mapper_data = {
+        "name": "plan",
+        "protocol": "openid-connect",
+        "protocolMapper": "oidc-hardcoded-claim-mapper",
+        "config": {
+            "claim.name": "plan",
+            "claim.value": consumer.plan,
+            "jsonType.label": "String",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "userinfo.token.claim": "true",
+        },
+    }
+
+    if plan_mapper:
+        mapper_data["id"] = plan_mapper["id"]
+        _http_request(
+            "PUT",
+            f"{base_url}/clients/{kc_id}/protocol-mappers/models/{plan_mapper['id']}",
+            mapper_data,
+            auth_headers,
+        )
+    else:
+        _http_request(
+            "POST",
+            f"{base_url}/clients/{kc_id}/protocol-mappers/models",
+            mapper_data,
+            auth_headers,
+        )
+
+    logger.info(
+        "Client Keycloak sincronizzato: %s (client_id=%s, piano=%s)",
+        consumer.username, client_id, consumer.plan,
+    )
+
+
+def delete_client_from_keycloak(client_id: str) -> None:
+    """Rimuove un client da Keycloak."""
+    token = _get_keycloak_admin_token()
+    base_url = f"{settings.KEYCLOAK_URL}/admin/realms/{settings.KEYCLOAK_REALM}"
+    auth_headers = {"Authorization": f"Bearer {token}"}
+
+    # Trova l'ID interno
+    clients = _http_request(
+        "GET",
+        f"{base_url}/clients?clientId={client_id}",
+        headers=auth_headers,
+    )
+    if clients:
+        kc_id = clients[0]["id"]
+        _http_request("DELETE", f"{base_url}/clients/{kc_id}", headers=auth_headers)
+        logger.info("Client Keycloak eliminato: %s", client_id)

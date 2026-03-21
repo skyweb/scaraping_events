@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'cms',
     'ai_transform',
     'nlp',
+    'api_consumers',
 ]
 
 MIDDLEWARE = [
@@ -153,6 +154,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'backoffice.authentication.ApisixConsumerAuthentication',
         'backoffice.authentication.KeycloakJWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
@@ -337,6 +339,17 @@ CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
 CKEDITOR_5_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# APISIX Admin API (per sincronizzazione API consumers)
+APISIX_ADMIN_URL = os.environ.get('APISIX_ADMIN_URL', 'http://apisix:9180/apisix/admin')
+APISIX_ADMIN_KEY = os.environ.get('APISIX_ADMIN_KEY', 'apisix-dev-admin-key')
+
+# Keycloak Admin API (client credentials per creare client API consumers)
+APISIX_KC_CLIENT_ID = os.environ.get('APISIX_KC_CLIENT_ID', 'backoffice-admin')
+APISIX_KC_CLIENT_SECRET = os.environ.get(
+    'APISIX_KC_CLIENT_SECRET',
+    os.environ.get('KEYCLOAK_BACKOFFICE_CLIENT_SECRET', 'CHANGE_ME_BACKOFFICE_SECRET'),
+)
 
 # AI Providers (trasformazione eventi → Schema.org)
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
@@ -555,6 +568,11 @@ UNFOLD = {
                 "title": "API",
                 "separator": True,
                 "items": [
+                    {
+                        "title": "API Consumers",
+                        "icon": "key",
+                        "link": "/admin/api_consumers/apiconsumer/",
+                    },
                     {
                         "title": "API Requests Log",
                         "icon": "analytics",

@@ -364,10 +364,116 @@ put "/routes/303" "{
     }
 }" "backoffice public (no auth)"
 
-# ======================= ROUTE API (JWT bearer) =============================
+# ======================= CONSUMER GROUPS (piani API) ========================
+echo ""
+echo "=== Consumer Groups (piani API) ==="
+
+# Solo il piano Free ha rate limiting (consumer group)
+put "/consumer_groups/free" '{
+    "plugins": {
+        "limit-count": {
+            "count": 100,
+            "time_window": 86400,
+            "key_type": "var",
+            "key": "consumer_name",
+            "rejected_code": 429,
+            "rejected_msg": "Limite giornaliero raggiunto (piano Free: 100 req/giorno). Passa a Enterprise per richieste illimitate."
+        },
+        "limit-req": {
+            "rate": 10,
+            "burst": 5,
+            "key_type": "var",
+            "key": "consumer_name",
+            "rejected_code": 429,
+            "rejected_msg": "Troppe richieste al secondo (piano Free: 10 req/s)."
+        }
+    }
+}' "consumer group free"
+
+# ======================= CONSUMERS (test API keys) ==========================
+echo ""
+echo "=== Consumers (test API keys) ==="
+
+put "/consumers/free-test" '{
+    "username": "free-test",
+    "group_id": "free",
+    "plugins": {
+        "key-auth": {
+            "key": "free-test-key-2026"
+        },
+        "proxy-rewrite": {
+            "headers": {
+                "set": {
+                    "X-Consumer-Plan": "free",
+                    "X-Consumer-Username": "free-test",
+                    "X-Forwarded-Proto": "https"
+                }
+            }
+        }
+    }
+}' "consumer free-test"
+
+put "/consumers/enterprise-test" '{
+    "username": "enterprise-test",
+    "plugins": {
+        "key-auth": {
+            "key": "enterprise-test-key-2026"
+        },
+        "proxy-rewrite": {
+            "headers": {
+                "set": {
+                    "X-Consumer-Plan": "enterprise",
+                    "X-Consumer-Username": "enterprise-test",
+                    "X-Forwarded-Proto": "https"
+                }
+            }
+        }
+    }
+}' "consumer enterprise-test"
+
+put "/consumers/flat-test" '{
+    "username": "flat-test",
+    "plugins": {
+        "key-auth": {
+            "key": "flat-test-key-2026"
+        },
+        "proxy-rewrite": {
+            "headers": {
+                "set": {
+                    "X-Consumer-Plan": "flat",
+                    "X-Consumer-Username": "flat-test",
+                    "X-Forwarded-Proto": "https"
+                }
+            }
+        }
+    }
+}' "consumer flat-test"
+
+# ======================= ROUTE API (key-auth + JWT bearer) ==================
 echo ""
 echo "=== Route API ==="
 
+# Route 11: API key authentication (priority alta, match se header apikey presente)
+put "/routes/11" "{
+    \"name\": \"api-external-key-auth\",
+    \"host\": \"backoffice.${DOMAIN}\",
+    \"uri\": \"/api/external/*\",
+    \"priority\": 15,
+    \"upstream_id\": \"1\",
+    \"vars\": [[\"http_apikey\", \"!\", \"~=\", \"\"]],
+    \"plugins\": {
+        \"key-auth\": {},
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "api-external (key-auth, priority 15)"
+
+# Route 10: JWT bearer (fallback se no apikey header)
 put "/routes/10" "{
     \"name\": \"api-external-jwt\",
     \"host\": \"backoffice.${DOMAIN}\",
@@ -382,7 +488,12 @@ put "/routes/10" "{
             \"issuer\": \"${KC_PUBLIC}\",
             \"bearer_only\": true,
             \"realm\": \"today-events\",
-            \"ssl_verify\": false
+            \"ssl_verify\": false,
+            \"set_userinfo_header\": true
+        },
+        \"serverless-post-function\": {
+            \"phase\": \"rewrite\",
+            \"functions\": [\"return function(conf, ctx) local cjson = require('cjson.safe'); local h = ngx.req.get_headers()['X-Userinfo']; if h then local decoded = ngx.decode_base64(h); if decoded then local d = cjson.decode(decoded); if d then ngx.req.set_header('X-Consumer-Plan', d.plan or 'free'); ngx.req.set_header('X-Consumer-Username', d.azp or '') end end end end\"]
         },
         \"proxy-rewrite\": {
             \"headers\": {
@@ -392,7 +503,7 @@ put "/routes/10" "{
             }
         }
     }
-}" "api-external (JWT bearer)"
+}" "api-external (JWT bearer, priority 10)"
 
 # ======================= ROUTE SSO (OIDC via Keycloak) ======================
 # Helper: crea route con plugin openid-connect.

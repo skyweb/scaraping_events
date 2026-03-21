@@ -1,0 +1,221 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "panels": [
+    { "title": "Overview", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 }, "collapsed": false },
+    {
+      "title": "Autenticazioni totali (1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 0, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(api_consumer_auth_total[1h]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "blue" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Consumer scaduti bloccati (1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 6, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(api_consumer_expired_total[1h]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "red" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Rate limit 429 APISIX (1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 12, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(apisix_http_status{code=\"429\",route=~\".*api-external.*\"}[1h]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "orange" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+    {
+      "title": "Auth errors 401 API (1h)",
+      "type": "stat",
+      "gridPos": { "h": 5, "w": 6, "x": 18, "y": 1 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(apisix_http_status{code=\"401\",route=~\".*api-external.*\"}[1h]))", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "mode": "fixed", "fixedColor": "purple" } } },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
+    },
+
+    { "title": "Traffico per consumer", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 6 }, "collapsed": false },
+    {
+      "title": "Request/s per consumer",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 7 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(rate(api_consumer_auth_total[5m])) by (consumer)", "legendFormat": "{{consumer}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Request/s per piano",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 7 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(rate(api_consumer_auth_total[5m])) by (plan)", "legendFormat": "{{plan}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "line", "fillOpacity": 15 } } }
+    },
+    {
+      "title": "Top 10 consumer per volume (1h)",
+      "type": "bargauge",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 15 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "topk(10, sum(increase(api_consumer_auth_total[1h])) by (consumer))", "legendFormat": "{{consumer}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short" } },
+      "options": { "orientation": "horizontal", "displayMode": "gradient" }
+    },
+    {
+      "title": "Distribuzione per tipo auth",
+      "type": "piechart",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 15 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(increase(api_consumer_auth_total[1h])) by (auth_type)", "legendFormat": "{{auth_type}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+
+    { "title": "Errori e scadenze", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 23 }, "collapsed": false },
+    {
+      "title": "Consumer scaduti nel tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 24 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(rate(api_consumer_expired_total[5m])) by (consumer)", "legendFormat": "{{consumer}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "bars", "fillOpacity": 50 } } }
+    },
+    {
+      "title": "Rate limit hits per consumer (APISIX 429)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 24 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "expr": "sum(rate(apisix_http_status{code=\"429\",route=~\".*api-external.*\"}[5m])) by (consumer)", "legendFormat": "{{consumer}}", "refId": "A" }],
+      "fieldConfig": { "defaults": { "unit": "reqps", "custom": { "drawStyle": "bars", "fillOpacity": 50 } } }
+    },
+
+    { "title": "Correlazione: latenza API vs risorse sistema", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 32 }, "collapsed": false },
+    {
+      "title": "Latenza API External P50 / P95 / P99",
+      "description": "Se la latenza sale insieme a CPU/memoria → collo di bottiglia infrastrutturale. Se sale da sola → problema nel codice Django.",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 33 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "histogram_quantile(0.50, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket{view=~\".*External.*\"}[5m])) by (le))", "legendFormat": "P50", "refId": "A" },
+        { "expr": "histogram_quantile(0.95, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket{view=~\".*External.*\"}[5m])) by (le))", "legendFormat": "P95", "refId": "B" },
+        { "expr": "histogram_quantile(0.99, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket{view=~\".*External.*\"}[5m])) by (le))", "legendFormat": "P99", "refId": "C" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "s", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "Latenza APISIX → Django (gateway overhead)",
+      "description": "Differenza tra latenza misurata da APISIX e latenza Django. Se alta → rete o proxy lento.",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 33 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "histogram_quantile(0.95, sum(rate(apisix_http_latency_bucket{type=\"request\",route=~\".*api-external.*\"}[5m])) by (le))", "legendFormat": "APISIX P95 (totale)", "refId": "A" },
+        { "expr": "histogram_quantile(0.95, sum(rate(apisix_http_latency_bucket{type=\"upstream\",route=~\".*api-external.*\"}[5m])) by (le))", "legendFormat": "APISIX P95 (upstream/Django)", "refId": "B" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "drawStyle": "line", "fillOpacity": 10 } } }
+    },
+    {
+      "title": "CPU container backoffice vs latenza API",
+      "description": "Sovrappone CPU del container backoffice con latenza P95 delle API. Correlazione → carico sistema.",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 41 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "rate(container_cpu_usage_seconds_total{name=~\".*backoffice.*\"}[5m]) * 100", "legendFormat": "CPU % backoffice", "refId": "A" },
+        { "expr": "histogram_quantile(0.95, sum(rate(django_http_requests_latency_seconds_by_view_method_bucket{view=~\".*External.*\"}[5m])) by (le)) * 100", "legendFormat": "Latenza P95 (×100 per scala)", "refId": "B" }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "percent", "custom": { "drawStyle": "line", "fillOpacity": 10 } },
+        "overrides": [
+          { "matcher": { "id": "byName", "options": "Latenza P95 (×100 per scala)" }, "properties": [{ "id": "custom.axisPlacement", "value": "right" }, { "id": "unit", "value": "short" }] }
+        ]
+      }
+    },
+    {
+      "title": "Memoria container backoffice vs latenza API",
+      "description": "RSS del container backoffice sovrapposto a latenza P95. Picchi di memoria + latenza → memory pressure / swap.",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 41 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "container_memory_rss{name=~\".*backoffice.*\"}", "legendFormat": "RSS backoffice", "refId": "A" },
+        { "expr": "container_memory_cache{name=~\".*backoffice.*\"}", "legendFormat": "Cache backoffice", "refId": "B" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "bytes", "custom": { "drawStyle": "line", "fillOpacity": 15 } } }
+    },
+    {
+      "title": "CPU + Memoria PostgreSQL vs latenza API",
+      "description": "Se il DB è sotto carico, le query Django rallentano. Correlazione CPU postgres + latenza API → ottimizzare query.",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 49 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "rate(container_cpu_usage_seconds_total{name=~\".*postgres.*\"}[5m]) * 100", "legendFormat": "CPU % postgres", "refId": "A" },
+        { "expr": "container_memory_rss{name=~\".*postgres.*\"}", "legendFormat": "RSS postgres", "refId": "B" }
+      ],
+      "fieldConfig": {
+        "defaults": { "custom": { "drawStyle": "line", "fillOpacity": 10 } },
+        "overrides": [
+          { "matcher": { "id": "byName", "options": "CPU % postgres" }, "properties": [{ "id": "unit", "value": "percent" }] },
+          { "matcher": { "id": "byName", "options": "RSS postgres" }, "properties": [{ "id": "unit", "value": "bytes" }, { "id": "custom.axisPlacement", "value": "right" }] }
+        ]
+      }
+    },
+    {
+      "title": "Error rate vs carico sistema",
+      "description": "Errori 5xx Django sovrapposti a CPU backoffice. Correlazione → il sistema non regge il carico.",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 49 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "sum(rate(django_http_responses_total_by_status_view_method_total{status=~\"5..\",view=~\".*External.*\"}[5m]))", "legendFormat": "5xx/s API External", "refId": "A" },
+        { "expr": "sum(rate(django_http_responses_total_by_status_view_method_total{status=\"429\",view=~\".*External.*\"}[5m]))", "legendFormat": "429/s API External", "refId": "B" },
+        { "expr": "rate(container_cpu_usage_seconds_total{name=~\".*backoffice.*\"}[5m]) * 100", "legendFormat": "CPU % backoffice", "refId": "C" }
+      ],
+      "fieldConfig": {
+        "defaults": { "custom": { "drawStyle": "line", "fillOpacity": 10 } },
+        "overrides": [
+          { "matcher": { "id": "byName", "options": "CPU % backoffice" }, "properties": [{ "id": "custom.axisPlacement", "value": "right" }, { "id": "unit", "value": "percent" }] }
+        ]
+      }
+    },
+
+    { "title": "Logs (Loki)", "type": "row", "gridPos": { "h": 1, "w": 24, "x": 0, "y": 57 }, "collapsed": false },
+    {
+      "title": "Log consumer scaduti",
+      "type": "logs",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 58 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{
+        "expr": "{service_name=\"backoffice-django\"} |= `consumer` |= `scaduto`",
+        "refId": "A"
+      }],
+      "options": { "showTime": true, "sortOrder": "Descending", "enableLogDetails": true }
+    },
+    {
+      "title": "Log autenticazione consumer (warning + error)",
+      "type": "logs",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 66 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [{
+        "expr": "{service_name=\"backoffice-django\"} | json | level=~\"WARNING|ERROR\" |= `consumer`",
+        "refId": "A"
+      }],
+      "options": { "showTime": true, "sortOrder": "Descending", "enableLogDetails": true }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["api", "consumers", "monetization", "auth"],
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "API Consumers",
+  "uid": "api-consumers"
+}
