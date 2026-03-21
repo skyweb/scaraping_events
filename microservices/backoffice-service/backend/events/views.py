@@ -485,8 +485,8 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.M
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['city_name', 'source', 'uuid']
     search_fields = ['title', 'description', 'location_name']
-    ordering_fields = ['loaded_at', 'date_start', 'city_name']
-    ordering = ['-loaded_at']
+    ordering_fields = ['created_at', 'date_start', 'city_name']
+    ordering = ['-created_at']
 
     # Logging settings
     logging_methods = ['POST', 'PUT', 'PATCH', 'DELETE']

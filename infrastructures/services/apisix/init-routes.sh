@@ -460,9 +460,13 @@ put "/routes/11" "{
     \"uri\": \"/api/external/*\",
     \"priority\": 15,
     \"upstream_id\": \"1\",
-    \"vars\": [[\"http_apikey\", \"!\", \"~=\", \"\"]],
+    \"vars\": [[\"http_apikey\", \"~=\", \"^.+$\"]],
     \"plugins\": {
         \"key-auth\": {},
+        \"serverless-post-function\": {
+            \"phase\": \"access\",
+            \"functions\": [\"return function(conf, ctx) local consumer = ngx.ctx.api_ctx and ngx.ctx.api_ctx.consumer; if consumer then local plugins = consumer.plugins or {}; local pr = plugins['proxy-rewrite']; if pr and pr.headers and pr.headers.set then for k, v in pairs(pr.headers.set) do ngx.req.set_header(k, v) end end end end\"]
+        },
         \"proxy-rewrite\": {
             \"headers\": {
                 \"set\": {
