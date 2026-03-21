@@ -366,7 +366,7 @@ class ApiPipeline(BatchExportPipeline):
 
     Flusso per ogni batch:
     1. Salva JSON su disco/MinIO (ereditato da _flush_batch)
-    2. Invia lo stesso batch all'endpoint /api/external/v1/staging/bulk/
+    2. Invia lo stesso batch all'endpoint /api/v1/events/staging/bulk/
     """
 
     def __init__(
@@ -521,7 +521,7 @@ class ApiPipeline(BatchExportPipeline):
                 span.set_attribute("batch.error", "token_failure")
                 return False
 
-        bulk_url = f"{self.base_url}/api/external/v1/staging/bulk/"
+        bulk_url = f"{self.base_url}/api/v1/events/staging/bulk/"
 
         try:
             payload = {"events": events, "spider": self.spider_name}

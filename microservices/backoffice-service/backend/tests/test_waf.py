@@ -24,9 +24,9 @@ logger = logging.getLogger(__name__)
 
 BASE_URL = os.environ.get("WAF_TEST_BASE_URL", "https://backoffice.127.0.0.1.nip.io")
 # Il WAF va testato su una route senza auth per isolarlo (route 303: backoffice-public)
-# Usiamo /api/external/v1/staging/ per i test con API key (rate limit)
+# Usiamo /api/v1/events/staging/ per i test con API key (rate limit)
 WAF_PATH = "/api/docs/"  # Route pubblica, no auth, WAF attivo
-API_PATH = "/api/external/v1/staging/"
+API_PATH = "/api/v1/events/staging/"
 
 # Disabilita verifica SSL per certificati self-signed dev
 import ssl

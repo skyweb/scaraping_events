@@ -6,25 +6,11 @@ from django.utils.safestring import mark_safe
 from unfold.admin import ModelAdmin, TabularInline
 
 from .models import (
-    ComuniIstatRawData,
     Regione, Provincia, Comune,
-    ComuneFrazione, ComuneConfinante, ComuneAppartenenza,
+    Appartenenza, ComuneFrazione, ComuneConfinante, ComuneAppartenenza,
     ComunePuntoInteresse, ComuneEvento, ComuneGemellaggio,
     ComuneCittadinoIllustre,
 )
-
-
-# =============================================================================
-# Raw Data
-# =============================================================================
-
-@admin.register(ComuniIstatRawData)
-class ComuniIstatRawDataAdmin(ModelAdmin):
-    list_display = ['tipo', 'codice_istat', 'regione', 'provincia', 'comune', 'created_at']
-    list_filter = ['tipo']
-    search_fields = ['codice_istat', 'regione', 'provincia', 'comune']
-    readonly_fields = ['created_at', 'raw_json']
-    list_per_page = 50
 
 
 # =============================================================================
@@ -50,15 +36,15 @@ class AppartenenzaInline(TabularInline):
     readonly_fields = ['cerca_comuni']
 
     def cerca_comuni(self, obj):
-        """Link per cercare tutti i comuni con la stessa appartenenza."""
-        if not obj.pk:
+        """Link al dettaglio dell'appartenenza normalizzata con elenco comuni."""
+        if not obj.pk or not obj.appartenenza_id:
             return '-'
-        url = f'/admin/comuni_istat_ingestion/comuneappartenenza/?q={quote(obj.nome)}'
+        url = f'/admin/comuni_istat_ingestion/appartenenza/{obj.appartenenza_id}/change/'
         return mark_safe(
-            f'<a href="{url}" style="white-space:nowrap;" title="Cerca tutti i comuni con questa appartenenza">'
-            f'Cerca comuni &rarr;</a>'
+            f'<a href="{url}" style="white-space:nowrap;" title="Vedi tutti i comuni con questa appartenenza">'
+            f'Vedi comuni &rarr;</a>'
         )
-    cerca_comuni.short_description = 'Filtra'
+    cerca_comuni.short_description = 'Dettaglio'
 
 
 class PuntoInteresseInline(TabularInline):
@@ -135,8 +121,88 @@ class ComuneAdmin(ModelAdmin):
 
 
 # =============================================================================
-# Appartenenze (admin dedicato con ricerca)
+# Appartenenze normalizzate
 # =============================================================================
+
+class AppartenenzaComuneInline(TabularInline):
+    """Inline readonly: mostra i comuni che appartengono a questa entità."""
+    model = ComuneAppartenenza
+    fk_name = 'appartenenza'
+    fields = ['comune_link', 'codice_istat_link', 'provincia_display', 'regione_display']
+    readonly_fields = fields
+    extra = 0
+    can_delete = False
+    verbose_name_plural = mark_safe('Appartenenze')
+
+    def get_formset(self, request, obj=None, **kwargs):
+        """Aggiunge chip con conteggio comuni nel titolo dell'inline."""
+        formset = super().get_formset(request, obj, **kwargs)
+        if obj:
+            count = ComuneAppartenenza.objects.filter(appartenenza=obj).count()
+            chip = (
+                f'<span style="background:#f59e0b;color:#fff;font-size:12px;font-weight:700;'
+                f'padding:2px 9px;border-radius:12px;margin-left:8px;vertical-align:middle;">'
+                f'{count}</span>'
+            )
+            self.verbose_name_plural = mark_safe(f'Appartenenze {chip}')
+        return formset
+
+    def has_add_permission(self, request, obj=None):
+        """Disabilita l'aggiunta manuale: le appartenenze sono importate dallo scraping."""
+        return False
+
+    def comune_link(self, obj):
+        """Mostra il nome del comune come link alla scheda di dettaglio."""
+        url = f'/admin/comuni_istat_ingestion/comune/{obj.comune_id}/change/'
+        return mark_safe(f'<a href="{url}">{obj.comune.nome}</a>')
+    comune_link.short_description = 'Comune'
+
+    def codice_istat_link(self, obj):
+        """Mostra il codice ISTAT con link alla scheda ISTAT del comune, se collegato."""
+        codice = obj.comune.codice_istat or obj.comune.codice_catastale or '-'
+        comune_istat = getattr(obj.comune, 'comune_istat', None)
+        if not comune_istat:
+            return codice
+        url = f'/admin/comuni_istat/comuneitaliano/{comune_istat.pk}/change/'
+        return mark_safe(
+            f'<a href="{url}" style="color:#7c3aed;font-weight:600;text-decoration:none;">'
+            f'{codice} '
+            f'<span class="material-symbols-outlined" style="font-size:.9rem;vertical-align:middle;">open_in_new</span></a>'
+        )
+    codice_istat_link.short_description = 'Cod. ISTAT'
+
+    def provincia_display(self, obj):
+        """Mostra il nome della provincia del comune."""
+        return obj.comune.provincia.nome
+    provincia_display.short_description = 'Provincia'
+
+    def regione_display(self, obj):
+        """Mostra il nome della regione del comune."""
+        return obj.comune.provincia.regione.nome
+    regione_display.short_description = 'Regione'
+
+    def get_queryset(self, request):
+        """Ottimizza il queryset con select_related su provincia, regione e comune ISTAT."""
+        return super().get_queryset(request).select_related('comune__provincia__regione', 'comune__comune_istat')
+
+
+@admin.register(Appartenenza)
+class AppartenenzaAdmin(ModelAdmin):
+    """Entità di appartenenza normalizzata con elenco comuni membri."""
+    list_display = ['nome', 'num_comuni']
+    search_fields = ['nome']
+    list_per_page = 50
+    inlines = [AppartenenzaComuneInline]
+
+    def get_queryset(self, request):
+        """Aggiunge l'annotazione con il conteggio dei comuni appartenenti."""
+        return super().get_queryset(request).annotate(_num_comuni=Count('comuni_appartenenza'))
+
+    @admin.display(description='Comuni', ordering='_num_comuni')
+    def num_comuni(self, obj) -> int:
+        """Mostra il numero di comuni associati a questa appartenenza."""
+        return obj._num_comuni
+
 
 @admin.register(ComuneAppartenenza)
 class ComuneAppartenenzaAdmin(ModelAdmin):
@@ -148,17 +214,20 @@ class ComuneAppartenenzaAdmin(ModelAdmin):
     list_select_related = ['comune__provincia__regione']
 
     def comune_link(self, obj):
+        """Mostra il nome del comune come link alla scheda di dettaglio."""
         url = f'/admin/comuni_istat_ingestion/comune/{obj.comune_id}/change/'
         return mark_safe(f'<a href="{url}">{obj.comune.nome}</a>')
     comune_link.short_description = 'Comune'
     comune_link.admin_order_field = 'comune__nome'
 
     def provincia_display(self, obj):
+        """Mostra il nome della provincia del comune."""
         return obj.comune.provincia.nome
     provincia_display.short_description = 'Provincia'
     provincia_display.admin_order_field = 'comune__provincia__nome'
 
     def regione_display(self, obj):
+        """Mostra il nome della regione del comune."""
         return obj.comune.provincia.regione.nome
     regione_display.short_description = 'Regione'
     regione_display.admin_order_field = 'comune__provincia__regione__nome'

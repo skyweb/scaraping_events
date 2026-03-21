@@ -71,9 +71,9 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{base_url}}/api/external/v1/staging/?page=1",
+              "raw": "{{base_url}}/api/v1/events/staging/?page=1",
               "host": ["{{base_url}}"],
-              "path": ["api", "external", "v1", "staging", ""],
+              "path": ["api", "v1", "events", "staging", ""],
               "query": [
                 { "key": "page", "value": "1" },
                 { "key": "city", "value": "", "disabled": true },
@@ -88,9 +88,9 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{base_url}}/api/external/v1/staging/:id/",
+              "raw": "{{base_url}}/api/v1/events/staging/:id/",
               "host": ["{{base_url}}"],
-              "path": ["api", "external", "v1", "staging", ":id", ""],
+              "path": ["api", "v1", "events", "staging", ":id", ""],
               "variable": [
                 { "key": "id", "value": "1" }
               ]
@@ -109,9 +109,9 @@
               "raw": "{\n  \"spider\": \"city_today\",\n  \"events\": [\n    {\n      \"uuid\": \"a1b2c3d4e5f6\",\n      \"content_hash\": \"f6e5d4c3b2a1\",\n      \"source\": \"city_today\",\n      \"url\": \"https://www.milanotoday.it/eventi/esempio.html\",\n      \"title\": \"Evento di esempio\",\n      \"description\": \"Descrizione evento\",\n      \"category\": [\"musica\"],\n      \"city\": {\n        \"city_name\": \"Milano\",\n        \"location_name\": \"Blue Note\",\n        \"location_address\": \"Via Borsieri 37\"\n      },\n      \"dates\": {\n        \"date_start\": \"2026-03-20\",\n        \"date_end\": \"2026-03-20\",\n        \"time_start\": \"21:00\"\n      },\n      \"section\": {\n        \"price\": \"25 EUR\"\n      }\n    }\n  ]\n}"
             },
             "url": {
-              "raw": "{{base_url}}/api/external/v1/staging/bulk/",
+              "raw": "{{base_url}}/api/v1/events/staging/bulk/",
               "host": ["{{base_url}}"],
-              "path": ["api", "external", "v1", "staging", "bulk", ""]
+              "path": ["api", "v1", "events", "staging", "bulk", ""]
             }
           }
         },
@@ -127,9 +127,9 @@
               "raw": "{\n  \"spider\": \"city_today\",\n  \"events\": [\n    {\n      \"uuid\": \"a1b2c3d4e5f6\",\n      \"content_hash\": \"f6e5d4c3b2a1\",\n      \"source\": \"city_today\",\n      \"url\": \"https://www.milanotoday.it/eventi/esempio.html\",\n      \"title\": \"Evento di esempio\",\n      \"description\": \"Descrizione evento\",\n      \"category\": [\"musica\"],\n      \"city\": {\n        \"city_name\": \"Milano\",\n        \"location_name\": \"Blue Note\",\n        \"location_address\": \"Via Borsieri 37\"\n      },\n      \"dates\": {\n        \"date_start\": \"2026-03-20\",\n        \"date_end\": \"2026-03-20\",\n        \"time_start\": \"21:00\"\n      },\n      \"section\": {\n        \"price\": \"25 EUR\"\n      }\n    }\n  ]\n}"
             },
             "url": {
-              "raw": "{{base_url}}/api/external/v1/staging/bulk/?sync=true",
+              "raw": "{{base_url}}/api/v1/events/staging/bulk/?sync=true",
               "host": ["{{base_url}}"],
-              "path": ["api", "external", "v1", "staging", "bulk", ""],
+              "path": ["api", "v1", "events", "staging", "bulk", ""],
               "query": [
                 { "key": "sync", "value": "true" }
               ]
@@ -141,9 +141,9 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{base_url}}/api/external/v1/staging/bulk-status/:task_id/",
+              "raw": "{{base_url}}/api/v1/events/staging/bulk-status/:task_id/",
               "host": ["{{base_url}}"],
-              "path": ["api", "external", "v1", "staging", "bulk-status", ":task_id", ""],
+              "path": ["api", "v1", "events", "staging", "bulk-status", ":task_id", ""],
               "variable": [
                 { "key": "task_id", "value": "TASK_ID_HERE" }
               ]

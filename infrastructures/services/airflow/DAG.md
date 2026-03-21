@@ -124,31 +124,41 @@ Il DAG eventi usa le **Airflow Variables** per le credenziali API (con fallback 
 
 ### Da UI
 
-1. Accedi a Airflow: `https://airflow.DOMAIN`
+1. Accedi a Airflow: `https://airflow.127.0.0.1.nip.io`
 2. Vai su `Admin` → `Variables`
 3. Aggiungi:
 
 | Key | Valore | Descrizione |
 |-----|--------|-------------|
-| `API_BASE_URL` | `http://backoffice:8000` | URL del servizio backoffice |
-| `API_CLIENT_ID` | `airflow-client` | Client ID per autenticazione API |
-| `API_CLIENT_SECRET` | `your-secret` | Client Secret per autenticazione API |
+| `API_BASE_URL` | `http://backoffice:8000` | URL interno backoffice (rete Docker) |
+| `API_CLIENT_ID` | `scraper-service` | Username API consumer (da Django admin API Consumers) |
+| `API_CLIENT_SECRET` | `<secret da Django admin>` | API key del consumer |
+| `KEYCLOAK_TOKEN_URL` | `http://keycloak:8080/realms/today-events/protocol/openid-connect/token` | Token endpoint Keycloak (rete Docker) |
 
 ### Da CLI
 
 ```bash
 docker exec dev-airflow-webserver airflow variables set API_BASE_URL "http://backoffice:8000"
-docker exec dev-airflow-webserver airflow variables set API_CLIENT_ID "airflow-client"
-docker exec dev-airflow-webserver airflow variables set API_CLIENT_SECRET "your-secret"
+docker exec dev-airflow-webserver airflow variables set API_CLIENT_ID "scraper-service"
+docker exec dev-airflow-webserver airflow variables set API_CLIENT_SECRET "<secret da Django admin API Consumers>"
+docker exec dev-airflow-webserver airflow variables set KEYCLOAK_TOKEN_URL "http://keycloak:8080/realms/today-events/protocol/openid-connect/token"
 
 # Verifica
 docker exec dev-airflow-webserver airflow variables list
 ```
 
+### Creare/rigenerare le credenziali
+
+Le credenziali si gestiscono dal Django admin:
+
+1. Vai su `https://backoffice.127.0.0.1.nip.io/admin/api_consumers/apiconsumer/`
+2. Crea o modifica il consumer `scraper-service`
+3. Copia l'API key generata in `API_CLIENT_SECRET`
+
 ### Fallback
 
 Se le Variables non sono configurate, il DAG usa le variabili d'ambiente dal `.env`:
-- `API_BASE_URL` → default: `http://backoffice:8000`
+- `API_BASE_URL` → default: vuoto
 - `API_CLIENT_ID` → default: vuoto
 - `API_CLIENT_SECRET` → default: vuoto
 

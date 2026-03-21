@@ -19,7 +19,7 @@ from .services import (
 )
 
 DOMAIN = os.environ.get("DOMAIN", "127.0.0.1.nip.io")
-API_BASE = f"https://webservice.{DOMAIN}/api/external/v1/staging/"
+API_BASE = f"https://webservice.{DOMAIN}/api/v1/events/staging/"
 TOKEN_URL = f"https://webservice.{DOMAIN}/auth/token"
 
 # Stile condiviso per i blocchi curl
@@ -73,7 +73,7 @@ class ApiConsumerAdmin(ModelAdmin):
         ("Configurazione", {
             "classes": ["tab"],
             "fields": [
-                "username", "plan", "auth_type", "is_active",
+                "username", "django_user", "plan", "auth_type", "is_active",
                 "expires_at", "contact_email", "description",
             ],
         }),
@@ -111,6 +111,7 @@ class ApiConsumerAdmin(ModelAdmin):
     ]
 
     def get_readonly_fields(self, request, obj=None):
+        """Restituisce i campi di sola lettura, aggiungendo username e credenziali in modifica."""
         base = [
             "sync_error", "last_synced_at",
             "show_usage_today", "show_usage_month", "show_last_request",
@@ -126,12 +127,14 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.display(description="Stato")
     def show_active_chip(self, obj: ApiConsumer) -> str:
+        """Mostra un chip colorato verde/rosso per lo stato attivo/disattivo del consumer."""
         if obj.is_active:
             return mark_safe(_chip("Attivo", True))
         return mark_safe(_chip("Disattivo", False))
 
     @admin.display(description="Sync")
     def show_sync_chip(self, obj: ApiConsumer) -> str:
+        """Mostra un chip colorato per lo stato di sincronizzazione con il gateway."""
         synced = obj.apisix_synced if obj.auth_type == "api_key" else obj.keycloak_synced
         if synced:
             return mark_safe(_chip("Sincronizzato", True))
@@ -139,18 +142,21 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.display(description="APISIX synced")
     def show_apisix_chip(self, obj: ApiConsumer) -> str:
+        """Mostra un chip colorato per lo stato di sincronizzazione con APISIX."""
         if obj.apisix_synced:
             return mark_safe(_chip("Sincronizzato", True))
         return mark_safe(_chip("Non sincronizzato", False))
 
     @admin.display(description="Keycloak synced")
     def show_keycloak_chip(self, obj: ApiConsumer) -> str:
+        """Mostra un chip colorato per lo stato di sincronizzazione con Keycloak."""
         if obj.keycloak_synced:
             return mark_safe(_chip("Sincronizzato", True))
         return mark_safe(_chip("Non sincronizzato", False))
 
     @admin.display(description="Scadenza")
     def show_expiry_status(self, obj: ApiConsumer) -> str:
+        """Mostra la data di scadenza del consumer o 'Mai' se illimitato."""
         if obj.expires_at is None:
             return "Mai"
         if obj.is_expired:
@@ -162,6 +168,7 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.display(description="Req oggi")
     def show_requests_today(self, obj: ApiConsumer) -> str:
+        """Mostra il numero di richieste odierne con eventuale limite giornaliero."""
         count = obj.get_requests_today()
         limit = obj.get_daily_limit()
         if limit:
@@ -170,6 +177,7 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.display(description="Utilizzo oggi")
     def show_usage_today(self, obj: ApiConsumer) -> str:
+        """Mostra il dettaglio dell'utilizzo giornaliero con percentuale rispetto al limite."""
         count = obj.get_requests_today()
         limit = obj.get_daily_limit()
         if limit:
@@ -179,10 +187,12 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.display(description="Utilizzo mese")
     def show_usage_month(self, obj: ApiConsumer) -> str:
+        """Mostra il numero totale di richieste API nel mese corrente."""
         return f"{obj.get_requests_this_month()} richieste"
 
     @admin.display(description="Ultima richiesta")
     def show_last_request(self, obj: ApiConsumer) -> str:
+        """Mostra data e ora dell'ultima richiesta API ricevuta dal consumer."""
         last = obj.get_last_request_at()
         if last:
             return last.strftime("%d/%m/%Y %H:%M:%S")
@@ -190,6 +200,7 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.display(description="Permessi API")
     def show_permissions_matrix(self, obj: ApiConsumer) -> str:
+        """Mostra la matrice permessi risorse/azioni con checkbox interattive."""
         if not obj.pk:
             return "Salva il consumer per configurare i permessi."
 
@@ -236,6 +247,7 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.display(description="Esempio chiamata cURL")
     def show_curl_example(self, obj: ApiConsumer) -> str:
+        """Mostra un esempio cURL syntax-highlighted per testare le API con le credenziali del consumer."""
         if not obj.pk:
             return "Salva il consumer per generare l'esempio."
 
@@ -351,6 +363,7 @@ class ApiConsumerAdmin(ModelAdmin):
     # ── Save / Delete ────────────────────────────────────────────────────
 
     def save_model(self, request, obj: ApiConsumer, form, change):
+        """Salva il consumer, genera API key se mancante e sincronizza con il gateway."""
         if obj.auth_type == "api_key" and not obj.api_key:
             obj.api_key = secrets.token_urlsafe(32)
         elif obj.auth_type == "jwt":
@@ -370,10 +383,12 @@ class ApiConsumerAdmin(ModelAdmin):
         self._sync_consumer(request, obj)
 
     def delete_model(self, request, obj: ApiConsumer):
+        """Elimina il consumer rimuovendolo prima dal gateway."""
         self._delete_from_gateway(obj)
         super().delete_model(request, obj)
 
     def delete_queryset(self, request, queryset):
+        """Elimina in blocco i consumer selezionati, rimuovendoli prima dal gateway."""
         for consumer in queryset:
             self._delete_from_gateway(consumer)
         super().delete_queryset(request, queryset)
@@ -382,11 +397,13 @@ class ApiConsumerAdmin(ModelAdmin):
 
     @admin.action(description="Sincronizza con gateway (APISIX/Keycloak)")
     def sync_selected_to_gateway(self, request, queryset):
+        """Azione admin: sincronizza i consumer selezionati con APISIX o Keycloak."""
         for consumer in queryset:
             self._sync_consumer(request, consumer)
 
     @admin.action(description="Rigenera API key e sincronizza")
     def regenerate_api_keys(self, request, queryset):
+        """Azione admin: rigenera le API key dei consumer selezionati e risincronizza con APISIX."""
         for consumer in queryset.filter(auth_type="api_key"):
             consumer.api_key = secrets.token_urlsafe(32)
             consumer.save(update_fields=["api_key"])

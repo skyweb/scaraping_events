@@ -3,7 +3,6 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from backoffice.authentication import HasKeycloakScope
-from rest_framework_tracking.mixins import LoggingMixin
 from django.db.models import Count, Q
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -73,6 +72,7 @@ from .serializers import (
     ),
 )
 class ProductionEventViewSet(viewsets.ModelViewSet):
+    """ViewSet CRUD per gli eventi in produzione con filtri, ricerca e ordinamento."""
     queryset = ProductionEvent.objects.all()
     serializer_class = ProductionEventSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
@@ -82,6 +82,7 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
     ordering = ['-date_start']
 
     def get_serializer_class(self):
+        """Restituisce il serializer leggero per la lista, completo per il dettaglio."""
         if self.action == 'list':
             return ProductionEventListSerializer
         return ProductionEventSerializer
@@ -149,6 +150,7 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
     ),
 )
 class StagingEventViewSet(viewsets.ReadOnlyModelViewSet):
+    """ViewSet in sola lettura per gli staging events (API interne admin)."""
     queryset = StagingEvent.objects.all()
     serializer_class = StagingEventSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
@@ -169,6 +171,7 @@ class StagingEventViewSet(viewsets.ReadOnlyModelViewSet):
     ),
 )
 class EtlRunViewSet(viewsets.ReadOnlyModelViewSet):
+    """ViewSet in sola lettura per lo storico delle esecuzioni ETL."""
     queryset = EtlRun.objects.all()
     serializer_class = EtlRunSerializer
     filter_backends = [DjangoFilterBackend, OrderingFilter]
@@ -190,6 +193,7 @@ class EtlRunViewSet(viewsets.ReadOnlyModelViewSet):
     ),
 )
 class EtlErrorViewSet(viewsets.ReadOnlyModelViewSet):
+    """ViewSet in sola lettura per lo storico degli errori ETL."""
     queryset = EtlError.objects.all()
     serializer_class = EtlErrorSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
@@ -208,6 +212,7 @@ class DashboardView(APIView):
         responses={200: DashboardStatsSerializer},
     )
     def get(self, request, **kwargs):
+        """Restituisce statistiche aggregate per la dashboard: totali, distribuzione e staging."""
         # Aggregazione in una singola query per total + active
         counts = ProductionEvent.objects.aggregate(
             total_events=Count('id'),
@@ -245,7 +250,7 @@ class DashboardView(APIView):
 
 
 # =============================================================================
-# API ESTERNE (OAuth2 + Tracking)
+# API ESTERNE
 # =============================================================================
 
 from django.conf import settings as django_settings
@@ -285,6 +290,7 @@ class PlanFieldFilterMixin:
         return self.request.META.get("HTTP_X_CONSUMER_PLAN")
 
     def get_serializer_class(self):
+        """Seleziona il serializer filtrato in base al piano API del consumer."""
         # Per azioni di lettura (list/retrieve), filtra i campi in base al piano
         if self.action in ("list", "retrieve"):
             plan = self._get_consumer_plan()
@@ -299,6 +305,7 @@ class PlanFieldFilterMixin:
         return f"api_ext_v{version}_{plan}"
 
     def list(self, request, *args, **kwargs):
+        """Lista con cache Redis, variata per piano API e versione."""
         from django.views.decorators.cache import cache_page
         key_prefix = self._cached_key_prefix()
         decorator = cache_page(CACHE_TTL, key_prefix=key_prefix)
@@ -306,6 +313,7 @@ class PlanFieldFilterMixin:
         return response_fn(request, *args, **kwargs)
 
     def retrieve(self, request, *args, **kwargs):
+        """Dettaglio con cache Redis, variata per piano API e versione."""
         from django.views.decorators.cache import cache_page
         key_prefix = self._cached_key_prefix()
         decorator = cache_page(CACHE_TTL, key_prefix=key_prefix)
@@ -313,14 +321,17 @@ class PlanFieldFilterMixin:
         return response_fn(request, *args, **kwargs)
 
     def perform_create(self, serializer):
+        """Salva il nuovo oggetto e invalida la cache API external."""
         super().perform_create(serializer)
         _invalidate_external_cache()
 
     def perform_update(self, serializer):
+        """Aggiorna l'oggetto e invalida la cache API external."""
         super().perform_update(serializer)
         _invalidate_external_cache()
 
     def perform_destroy(self, instance):
+        """Elimina l'oggetto e invalida la cache API external."""
         super().perform_destroy(instance)
         _invalidate_external_cache()
 
@@ -328,18 +339,18 @@ class PlanFieldFilterMixin:
 @extend_schema_view(
     list=extend_schema(
         summary="Lista staging events",
-        description="Recupera la lista di tutti gli staging events. Richiede scope `read`.",
+        description="Recupera la lista di tutti gli staging events. Richiede permesso `events:read`.",
         tags=["Staging Events"],
     ),
     retrieve=extend_schema(
         summary="Dettaglio staging event",
-        description="Recupera i dettagli di un singolo staging event. Richiede scope `read`.",
+        description="Recupera i dettagli di un singolo staging event. Richiede permesso `events:read`.",
         tags=["Staging Events"],
     ),
     create=extend_schema(
         summary="Crea staging event",
         description="""
-Crea un nuovo staging event. Richiede scope `write`.
+Crea un nuovo staging event. Richiede permesso `events:create`.
 
 **Campi obbligatori:** `uuid`, `source`, `title`
 
@@ -398,57 +409,40 @@ per sorgente (tipicamente un hash di title + date_start + location_name).
     ),
     destroy=extend_schema(
         summary="Elimina staging event",
-        description="Elimina uno staging event specifico. Richiede scope `write`.",
+        description="Elimina uno staging event specifico. Richiede permesso `events:delete`.",
         tags=["Staging Events"],
     ),
     update=extend_schema(
         summary="Aggiorna staging event",
-        description="Aggiorna completamente uno staging event. Richiede scope `write`.",
+        description="Aggiorna completamente uno staging event. Richiede permesso `events:update`.",
         tags=["Staging Events"],
     ),
     partial_update=extend_schema(
         summary="Aggiorna parzialmente staging event",
-        description="Aggiorna parzialmente uno staging event. Richiede scope `write`.",
+        description="Aggiorna parzialmente uno staging event. Richiede permesso `events:update`.",
         tags=["Staging Events"],
     ),
 )
-class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.ModelViewSet):
+class ExternalStagingEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     """
-    API per servizi esterni - richiede OAuth2 token.
+    API esterne per la gestione degli staging events.
 
     ## Autenticazione
 
-    Tutte le richieste richiedono un token OAuth2 valido nell'header:
+    Tutte le richieste richiedono un token Bearer o API key:
     ```
     Authorization: Bearer <access_token>
     ```
 
-    ## Scopes richiesti
+    ## Permessi
 
-    - `read` - Per operazioni di lettura (GET)
-    - `write` - Per operazioni di scrittura (POST, PUT, PATCH, DELETE)
+    I permessi sono gestiti dalla matrice API Consumers:
+    - `events:read` - Lettura (GET)
+    - `events:create` - Creazione singola e bulk (POST)
+    - `events:update` - Aggiornamento (PUT, PATCH)
+    - `events:delete` - Eliminazione (DELETE)
     """
 
-    def _get_user(self, request):
-        """
-        Get the user from the request if it exists, handling anonymous users.
-        This overrides the faulty method in LoggingMixin.
-        """
-        user = getattr(request, "user", None)
-        if user and not user.is_anonymous:
-            return user
-        return None
-
-    def handle_log(self):
-        """Salva il consumer username in username_persistent prima del salvataggio."""
-        if self.log.get('username_persistent') in (None, 'Anonymous', ''):
-            auth = getattr(self.request, 'auth', None)
-            if isinstance(auth, dict):
-                self.log['username_persistent'] = (
-                    auth.get('consumer_username') or auth.get('azp') or ''
-                )
-        super().handle_log()
-    
     queryset = StagingEvent.objects.all()
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['city_name', 'source', 'uuid']
@@ -456,10 +450,8 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.M
     ordering_fields = ['created_at', 'date_start', 'city_name']
     ordering = ['-created_at']
 
-    # Logging settings
-    logging_methods = ['POST', 'PUT', 'PATCH', 'DELETE']
-
     def get_permissions(self):
+        """Associa ogni azione al permesso richiesto (es. events:read, events:create)."""
         action_map = {
             'list': 'read',
             'retrieve': 'read',
@@ -467,7 +459,7 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.M
             'update': 'update',
             'partial_update': 'update',
             'destroy': 'delete',
-            'bulk': 'bulk',
+            'bulk': 'create',
             'bulk_status': 'read',
             'clear_source': 'delete',
         }
@@ -476,6 +468,7 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.M
         return [HasKeycloakScope()]
 
     def get_serializer_class(self):
+        """Restituisce il serializer scraping per le scritture, quello standard per le letture."""
         if self.action in ['create', 'update', 'partial_update', 'bulk_create']:
             return StagingEventScrapingSerializer
         return StagingEventSerializer
@@ -485,7 +478,7 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.M
         description="""
 Crea multipli staging events in una sola richiesta.
 
-**Richiede scope `write`.**
+**Richiede permesso `events:create`.**
 
 **Modalita':**
 - **Async (default):** Il batch viene processato in background tramite Celery.
@@ -785,7 +778,7 @@ Crea multipli staging events in una sola richiesta.
         description="""
 Controlla lo stato di un task di bulk create asincrono.
 
-**Richiede scope `read`.**
+**Richiede permesso `events:read`.**
 
 **Stati possibili:** PENDING, STARTED, SUCCESS, FAILURE
         """,
@@ -828,7 +821,7 @@ Controlla lo stato di un task di bulk create asincrono.
         description="""
 Elimina tutti gli staging events di una specifica sorgente.
 
-**Richiede scope `write`.**
+**Richiede permesso `events:delete`.**
 
 Utile per pulire i dati prima di un nuovo import.
         """,

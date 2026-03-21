@@ -21,7 +21,7 @@ PLAN_LIMITS: dict[str, dict[str, int | None]] = {
 
 # Risorse e azioni disponibili per la matrice permessi
 API_RESOURCES = ["events", "comuni"]
-API_ACTIONS = ["read", "create", "update", "delete", "bulk"]
+API_ACTIONS = ["read", "create", "update", "delete"]
 
 def default_api_permissions() -> dict[str, list[str]]:
     """Permessi di default: tutte le azioni su tutte le risorse."""
@@ -34,6 +34,12 @@ class ApiConsumer(models.Model):
     username = models.CharField(
         max_length=100, unique=True,
         help_text="Identificativo univoco del consumer",
+    )
+    django_user = models.ForeignKey(
+        'auth.User', on_delete=models.SET_NULL,
+        null=True, blank=True, related_name='api_consumers',
+        verbose_name="Utente Django",
+        help_text="Utente Django proprietario di questo consumer (opzionale)",
     )
     plan = models.CharField(max_length=20, choices=PLAN_CHOICES, default="free")
     auth_type = models.CharField(
@@ -82,10 +88,12 @@ class ApiConsumer(models.Model):
         verbose_name_plural = "API Consumers"
 
     def __str__(self) -> str:
+        """Restituisce username e piano del consumer."""
         return f"{self.username} ({self.get_plan_display()})"
 
     @property
     def is_expired(self) -> bool:
+        """Verifica se il consumer ha superato la data di scadenza."""
         if self.expires_at is None:
             return False
         return timezone.now() >= self.expires_at
@@ -104,9 +112,11 @@ class ApiConsumer(models.Model):
         return scopes
 
     def get_daily_limit(self) -> int | None:
+        """Restituisce il limite giornaliero di richieste per il piano corrente."""
         return PLAN_LIMITS.get(self.plan, {}).get("daily")
 
     def get_requests_today(self) -> int:
+        """Conta le richieste API effettuate dal consumer nella giornata odierna."""
         from rest_framework_tracking.models import APIRequestLog
 
         today = timezone.now().date()
@@ -116,6 +126,7 @@ class ApiConsumer(models.Model):
         ).count()
 
     def get_requests_this_month(self) -> int:
+        """Conta le richieste API effettuate dal consumer nel mese corrente."""
         from rest_framework_tracking.models import APIRequestLog
 
         now = timezone.now()
@@ -126,6 +137,7 @@ class ApiConsumer(models.Model):
         ).count()
 
     def get_last_request_at(self):
+        """Restituisce il timestamp dell'ultima richiesta API del consumer."""
         from rest_framework_tracking.models import APIRequestLog
 
         return (

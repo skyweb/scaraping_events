@@ -33,7 +33,7 @@ def init_otel():
         provider.add_span_processor(BatchSpanProcessor(exporter))
         trace.set_tracer_provider(provider)
 
-        # Auto-instrumentazione Django — solo richieste api/external
+        # Auto-instrumentazione Django — solo richieste api/v1
         from opentelemetry.instrumentation.django import DjangoInstrumentor
         DjangoInstrumentor().instrument(
             excluded_urls="admin,docs,ckeditor5,assets,static,media,api/schema,api/internal,favicon,health,metrics",

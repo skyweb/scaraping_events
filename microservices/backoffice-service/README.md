@@ -153,22 +153,22 @@ docker exec dev-backoffice rm -rf /tmp/scraping_output
 
 ## Bulk Ingestion Asincrono
 
-L'endpoint `POST /api/external/staging/bulk/` supporta due modalita':
+L'endpoint `POST /api/v1/events/staging/bulk/` supporta due modalita':
 
 ### Async (default)
 ```
-POST /api/external/staging/bulk/
+POST /api/v1/events/staging/bulk/
 → 202 Accepted + { task_id, status: "PENDING", message }
 ```
 Il batch viene processato in background dal Celery worker. Per verificare lo stato:
 ```
-GET /api/external/staging/bulk-status/{task_id}/
+GET /api/v1/events/staging/bulk-status/{task_id}/
 → { task_id, status: "SUCCESS|PENDING|STARTED|FAILURE", result }
 ```
 
 ### Sync (backward compatible)
 ```
-POST /api/external/staging/bulk/?sync=true
+POST /api/v1/events/staging/bulk/?sync=true
 → 201/200/400 + { created_count, failed_count, successful_events, failed_events }
 ```
 Comportamento sincrono originale.
@@ -177,7 +177,7 @@ Comportamento sincrono originale.
 
 ```
 Scrapy ApiPipeline
-    │ POST /api/external/staging/bulk/
+    │ POST /api/v1/events/staging/bulk/
     ▼
 ┌──────────────────────────┐
 │ bulk() view              │

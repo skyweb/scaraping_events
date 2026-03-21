@@ -19,7 +19,7 @@ Panoramica dei microservizi che compongono la piattaforma Today Events.
 │Django + DRF     │  │Scrapy+Scrapyd  │  │Scrapy (batch)       │
 │Port: 8000       │  │Port: 6800      │  │(no porta esposta)   │
 └─────────────────┘  └────────────────┘  └─────────────────────┘
-         ↑                   │ OAuth2 POST /api/external/staging/bulk/
+         ↑                   │ OAuth2 POST /api/v1/events/staging/bulk/
          └───────────────────┘
          ↑
 ┌─────────────────┐
@@ -61,7 +61,7 @@ Panoramica dei microservizi che compongono la piattaforma Today Events.
 **API principali:**
 | Endpoint | Descrizione |
 |----------|-------------|
-| `POST /api/external/staging/bulk/` | Ricezione eventi da scraper (OAuth2) |
+| `POST /api/v1/events/staging/bulk/` | Ricezione eventi da scraper (OAuth2) |
 | `GET /api/events/` | CRUD eventi in produzione |
 | `GET /api/staging/` | Visualizzazione eventi in staging |
 | `GET /api/cms/citta/{slug}/` | Pagine città con sezioni e articoli |
@@ -122,7 +122,7 @@ Panoramica dei microservizi che compongono la piattaforma Today Events.
 1. `ValidationPipeline` — Validazione struttura item
 2. `HashGeneratorPipeline` — Generazione UUID univoco per deduplicazione
 3. `PostgresPipeline` — Salvataggio su DB (opzionale)
-4. `APIBackofficePostPipeline` — Push verso backoffice via `POST /api/external/staging/bulk/` (OAuth2 Client Credentials)
+4. `APIBackofficePostPipeline` — Push verso backoffice via `POST /api/v1/events/staging/bulk/` (OAuth2 Client Credentials)
 
 **Dipende da:** backoffice-service (push OAuth2), PostgreSQL (opzionale)
 **Orchestrato da:** Airflow (via Scrapyd HTTP API)

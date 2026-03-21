@@ -1,5 +1,5 @@
 """
-Test suite per l'endpoint bulk (/api/external/v1/staging/bulk/).
+Test suite per l'endpoint bulk (/api/v1/events/staging/bulk/).
 
 Organizzata in tre livelli:
   1. Unit test — serializer e validazione (nessuna richiesta HTTP)
@@ -139,10 +139,12 @@ class StagingEventScrapingSerializerTest(TestCase):
             self.assertIn(campo, ser.errors)
 
     def test_evento_minimo_valido(self):
+        """Evento con solo i campi obbligatori e' valido."""
         ser = StagingEventScrapingSerializer(data=_evento_minimo())
         self.assertTrue(ser.is_valid(), ser.errors)
 
     def test_evento_completo_valido(self):
+        """Evento con tutti i campi compilati e' valido."""
         ser = StagingEventScrapingSerializer(data=_evento_scraping())
         self.assertTrue(ser.is_valid(), ser.errors)
 
@@ -185,6 +187,7 @@ class StagingEventScrapingSerializerTest(TestCase):
         self.assertIsNone(ser.validated_data['location_coordinates'])
 
     def test_coordinate_assenti_restituiscono_none(self):
+        """Coordinate assenti nel payload restituiscono None nel validated_data."""
         data = _evento_scraping()
         del data['city']['location_coordinates']
         ser = StagingEventScrapingSerializer(data=data)
@@ -262,6 +265,7 @@ class StagingEventLegacySerializerTest(TestCase):
     """Test di validazione e trasformazione del StagingEventLegacySerializer."""
 
     def test_evento_legacy_valido(self):
+        """Evento nel formato legacy con tutti i campi e' valido."""
         ser = StagingEventLegacySerializer(data=_evento_legacy())
         self.assertTrue(ser.is_valid(), ser.errors)
 
@@ -305,6 +309,7 @@ class StagingEventLegacySerializerTest(TestCase):
         self.assertEqual(str(vd['date_end']), '2026-08-31')
 
     def test_coordinate_legacy_parsate(self):
+        """Le coordinate nel formato legacy vengono convertite in Point GeoDjango."""
         ser = StagingEventLegacySerializer(data=_evento_legacy())
         ser.is_valid(raise_exception=True)
         point = ser.validated_data['location_coordinates']
@@ -460,11 +465,12 @@ class ProcessBulkEventsTaskTest(TestCase):
 class BulkEndpointBaseTestCase(TestCase):
     """Base con setup OAuth2 per i test funzionali del bulk endpoint."""
 
-    BULK_URL = '/api/external/v1/staging/bulk/'
-    BULK_STATUS_URL = '/api/external/v1/staging/bulk-status/'
+    BULK_URL = '/api/v1/events/staging/bulk/'
+    BULK_STATUS_URL = '/api/v1/events/staging/bulk-status/'
 
     @classmethod
     def setUpTestData(cls):
+        """Crea utente, app OAuth2 e token read/write per i test funzionali."""
         cls.user = User.objects.create_user(
             username='bulktest', password='testpass123',
         )
@@ -490,22 +496,27 @@ class BulkEndpointBaseTestCase(TestCase):
         )
 
     def setUp(self):
+        """Inizializza il client API per i test funzionali."""
         self.client = APIClient()
 
     def auth_read(self):
+        """Imposta il token con scope 'read'."""
         self.client.credentials(HTTP_AUTHORIZATION='Bearer bulk-read-token')
 
     def auth_write(self):
+        """Imposta il token con scope 'read write'."""
         self.client.credentials(HTTP_AUTHORIZATION='Bearer bulk-write-token')
 
     def auth_none(self):
+        """Rimuove le credenziali di autenticazione."""
         self.client.credentials()
 
 
 class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
-    """Test funzionali: POST /api/external/v1/staging/bulk/?sync=true"""
+    """Test funzionali: POST /api/v1/events/staging/bulk/?sync=true"""
 
     def _post_bulk_sync(self, payload, **kwargs):
+        """Shortcut per POST al bulk endpoint in modalita' sincrona."""
         return self.client.post(
             f'{self.BULK_URL}?sync=true',
             data=payload,
@@ -516,11 +527,13 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
     # --- Autenticazione ---
 
     def test_no_token_returns_401(self):
+        """Richiesta senza token -> 401 Unauthorized."""
         self.auth_none()
         resp = self._post_bulk_sync({'events': [_evento_minimo()]})
         self.assertEqual(resp.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_read_token_returns_403(self):
+        """Token con solo scope 'read' non puo' fare bulk create -> 403."""
         self.auth_read()
         resp = self._post_bulk_sync({'events': [_evento_minimo()]})
         self.assertEqual(resp.status_code, status.HTTP_403_FORBIDDEN)
@@ -528,17 +541,20 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
     # --- Validazione input ---
 
     def test_payload_senza_chiave_events(self):
+        """Payload senza la chiave 'events' -> 400."""
         self.auth_write()
         resp = self._post_bulk_sync({'data': []})
         self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn('error', resp.data)
 
     def test_events_lista_vuota(self):
+        """Lista eventi vuota -> 400."""
         self.auth_write()
         resp = self._post_bulk_sync({'events': []})
         self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_payload_vuoto(self):
+        """Payload completamente vuoto -> 400."""
         self.auth_write()
         resp = self._post_bulk_sync({})
         self.assertEqual(resp.status_code, status.HTTP_400_BAD_REQUEST)
@@ -546,6 +562,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
     # --- Creazione eventi ---
 
     def test_singolo_evento_valido(self):
+        """Un singolo evento valido viene creato con successo -> 201."""
         self.auth_write()
         resp = self._post_bulk_sync({
             'events': [_evento_minimo(uuid='func-single-001')],
@@ -556,6 +573,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
         self.assertTrue(StagingEvent.objects.filter(uuid='func-single-001').exists())
 
     def test_multipli_eventi_validi(self):
+        """Multipli eventi validi vengono tutti creati con successo -> 201."""
         self.auth_write()
         events = [
             _evento_minimo(uuid=f'func-multi-{i}', title=f'Evento {i}')
@@ -596,6 +614,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
         self.assertEqual(resp.data['failed_count'], 1)
 
     def test_tutti_invalidi_returns_400(self):
+        """Tutti gli eventi invalidi -> 400 con created_count=0."""
         self.auth_write()
         resp = self._post_bulk_sync({
             'events': [
@@ -666,6 +685,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
     # --- Struttura risposta ---
 
     def test_risposta_contiene_tutti_i_campi(self):
+        """La risposta bulk contiene successful_events, failed_events e conteggi."""
         self.auth_write()
         resp = self._post_bulk_sync({
             'events': [_evento_minimo(uuid='resp-001')],
@@ -691,7 +711,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
 
 
 class BulkAsyncEndpointTest(BulkEndpointBaseTestCase):
-    """Test funzionali: POST /api/external/v1/staging/bulk/ (async, default)."""
+    """Test funzionali: POST /api/v1/events/staging/bulk/ (async, default)."""
 
     def test_async_returns_202(self):
         """POST bulk senza ?sync=true -> 202 Accepted."""
@@ -772,9 +792,10 @@ class BulkAsyncEndpointTest(BulkEndpointBaseTestCase):
 
 
 class BulkStatusEndpointTest(BulkEndpointBaseTestCase):
-    """Test funzionali: GET /api/external/v1/staging/bulk-status/{task_id}/"""
+    """Test funzionali: GET /api/v1/events/staging/bulk-status/{task_id}/"""
 
     def test_status_pending(self):
+        """GET bulk-status con task in attesa -> status PENDING, result None."""
         mock_result = MagicMock()
         mock_result.status = 'PENDING'
         mock_result.ready.return_value = False
@@ -788,6 +809,7 @@ class BulkStatusEndpointTest(BulkEndpointBaseTestCase):
         self.assertIsNone(resp.data['result'])
 
     def test_status_success(self):
+        """GET bulk-status con task completato -> status SUCCESS con risultato."""
         mock_result = MagicMock()
         mock_result.status = 'SUCCESS'
         mock_result.ready.return_value = True
@@ -805,6 +827,7 @@ class BulkStatusEndpointTest(BulkEndpointBaseTestCase):
         self.assertEqual(resp.data['result']['created_count'], 10)
 
     def test_status_failure(self):
+        """GET bulk-status con task fallito -> status FAILURE con messaggio errore."""
         mock_result = MagicMock()
         mock_result.status = 'FAILURE'
         mock_result.ready.return_value = True
@@ -818,6 +841,7 @@ class BulkStatusEndpointTest(BulkEndpointBaseTestCase):
         self.assertIn('DB down', resp.data['result'])
 
     def test_status_richiede_autenticazione(self):
+        """GET bulk-status senza token -> 401 Unauthorized."""
         self.auth_none()
         resp = self.client.get(f'{self.BULK_STATUS_URL}task-xyz/')
         self.assertEqual(resp.status_code, status.HTTP_401_UNAUTHORIZED)

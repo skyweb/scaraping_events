@@ -182,9 +182,14 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 25,
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    # Header versioning: Accept: application/vnd.todayevents.v1+json
+    'DEFAULT_VERSIONING_CLASS': 'backoffice.versioning.VendorHeaderVersioning',
+    'DEFAULT_VERSION': 'v1',
+    'ALLOWED_VERSIONS': ['v1'],
+    'VERSION_PARAM': 'version',
 }
 
-# Versioning API — applicato solo alle view esterne (ExternalStagingEventViewSet)
+# Versioning API esterne (URL path: /api/v1/events/)
 API_VERSION = 'v1'
 API_ALLOWED_VERSIONS = ['v1']
 
@@ -222,61 +227,66 @@ API per la gestione degli eventi, monitoraggio ETL e integrazione con servizi es
 ### Autenticazione
 
 - **API interne**: Session authentication (Django admin login)
-- **API esterne** (`/api/external/v1/`): OAuth2 Client Credentials via Keycloak (versionata)
+- **API esterne** (`/api/v1/events/`): OAuth2 Client Credentials via Keycloak (versionata)
 - **CMS** (`/api/cms/`): Pubblico, senza autenticazione
 - **Comuni ISTAT Ingestion** (`/api/comuni-istat/`): Session authentication
 
-#### OAuth2 Flow (Keycloak)
+#### OAuth2 Flow
 
-1. Richiedi le credenziali (Client ID e Client Secret) all'amministratore
-2. Ottieni un access token: `POST /realms/today-events/protocol/openid-connect/token` con `grant_type=client_credentials`
+1. Crea un API Consumer dal Django admin (`/admin/api_consumers/apiconsumer/`)
+2. Ottieni un access token: `POST https://webservice.127.0.0.1.nip.io/auth/token` con `grant_type=client_credentials`
 3. Usa il token: `Authorization: Bearer <access_token>`
 
-### Scopes OAuth2
+### Permessi
 
-- `read` - Lettura staging events
-- `write` - Scrittura staging events
+I permessi sono gestiti per risorsa e azione dalla matrice API Consumers:
+- `events:read` - Lettura staging events
+- `events:create` - Creazione staging events (singola e bulk)
+- `events:update` - Aggiornamento staging events
+- `events:delete` - Eliminazione staging events
 
 ### Versioning
 
-Le API esterne (`/api/external/`) sono versionate tramite URL path:
-- Versione corrente: **v1** → `/api/external/v1/staging/`
+Le API esterne sono versionate tramite URL path:
+- Versione corrente: **v1** → `/api/v1/events/staging/`
 - Endpoint info versione: `GET /api/version/` (senza autenticazione)
 - Header `X-API-Version` presente in ogni risposta API
 
-Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) non sono versionate.
+Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) usano header versioning:
+- Header: `Accept: application/vnd.todayevents.v1+json`
+- Default: v1 (se header assente)
     ''',
     'VERSION': '1.0.0',
     'SERVERS': [
-        {'url': f'https://backoffice.{os.environ.get("DOMAIN", "127.0.0.1.nip.io")}', 'description': 'Dev (APISIX)'},
+        {'url': f'https://webservice.{os.environ.get("DOMAIN", "127.0.0.1.nip.io")}', 'description': 'API pubblica (APISIX)'},
+        {'url': f'https://backoffice.{os.environ.get("DOMAIN", "127.0.0.1.nip.io")}', 'description': 'Backoffice (APISIX)'},
         {'url': 'http://localhost:8000', 'description': 'Local (Django diretto)'},
     ],
     'SERVE_INCLUDE_SCHEMA': False,
     'SECURITY': [
-        {'OAuth2': ['read', 'write']},
+        {'BearerAuth': []},
+        {'ApiKeyAuth': []},
         {'SessionAuth': []},
     ],
-    'OAUTH2_FLOWS': ['clientCredentials'],
-    'OAUTH2_TOKEN_URL': f'{os.environ.get("KEYCLOAK_URL", "http://keycloak:8080")}/realms/{os.environ.get("KEYCLOAK_REALM", "today-events")}/protocol/openid-connect/token',
     'COMPONENTS': {
         'securitySchemes': {
-            'OAuth2': {
-                'type': 'oauth2',
-                'flows': {
-                    'clientCredentials': {
-                        'tokenUrl': f'{os.environ.get("KEYCLOAK_URL", "http://keycloak:8080")}/realms/{os.environ.get("KEYCLOAK_REALM", "today-events")}/protocol/openid-connect/token',
-                        'scopes': {
-                            'read': 'Read access to staging events',
-                            'write': 'Write access to staging events',
-                        }
-                    }
-                }
+            'BearerAuth': {
+                'type': 'http',
+                'scheme': 'bearer',
+                'bearerFormat': 'JWT',
+                'description': 'Token OAuth2 ottenuto da POST https://webservice.127.0.0.1.nip.io/auth/token',
+            },
+            'ApiKeyAuth': {
+                'type': 'apiKey',
+                'in': 'header',
+                'name': 'X-Consumer-Plan',
+                'description': 'API key consumer (iniettata da APISIX)',
             },
             'SessionAuth': {
                 'type': 'apiKey',
                 'in': 'cookie',
                 'name': 'sessionid',
-            }
+            },
         }
     },
     'TAGS': [
@@ -284,7 +294,7 @@ Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) non sono versionate.
         {'name': 'Production Events', 'description': 'Eventi validati in produzione'},
         {'name': 'Staging Events (Internal)', 'description': 'Eventi in staging (sola lettura interna)'},
         {'name': 'ETL', 'description': 'Monitoraggio esecuzioni e errori ETL'},
-        {'name': 'Staging Events', 'description': 'API esterna OAuth2 v1 - gestione staging events'},
+        {'name': 'Staging Events', 'description': 'API esterna v1 - gestione staging events'},
         {'name': 'Bulk Operations', 'description': 'Operazioni massive (bulk create, clear source)'},
         {'name': 'CMS', 'description': 'Pagine città CMS: sezioni, articoli, eventi'},
         {'name': 'Comuni ISTAT Ingestion', 'description': 'Ingestione dati scraping comuni-italiani.it (raw JSON)'},
@@ -488,46 +498,25 @@ UNFOLD = {
                 "separator": True,
                 "items": [
                     {
-                        "title": "Comuni (geo)",
+                        "title": "Comuni",
                         "icon": "location_city",
                         "link": "/admin/comuni_istat/comuneitaliano/",
                     },
                     {
-                        "title": "Province (geo)",
+                        "title": "Province",
                         "icon": "map",
                         "link": "/admin/comuni_istat/provinciaitaliana/",
                     },
-                ],
-            },
-            {
-                "title": "Comuni Ingestion",
-                "separator": True,
-                "items": [
                     {
                         "title": "Regioni",
                         "icon": "public",
                         "link": "/admin/comuni_istat_ingestion/regione/",
                     },
                     {
-                        "title": "Province",
-                        "icon": "map",
-                        "link": "/admin/comuni_istat_ingestion/provincia/",
-                    },
-                    {
-                        "title": "Comuni",
-                        "icon": "location_city",
-                        "link": "/admin/comuni_istat_ingestion/comune/",
-                    },
-                    {
                         "title": "Appartenenze",
                         "icon": "groups",
-                        "link": "/admin/comuni_istat_ingestion/comuneappartenenza/",
-                    },
-                    {
-                        "title": "Raw Data",
-                        "icon": "database",
-                        "link": "/admin/comuni_istat_ingestion/comuniistatrawdata/",
-                    },
+                        "link": "/admin/comuni_istat_ingestion/appartenenza/",
+                    }
                 ],
             },
             {
@@ -568,22 +557,6 @@ UNFOLD = {
                 ],
             },
             {
-                "title": "ETL",
-                "separator": True,
-                "items": [
-                    {
-                        "title": "ETL Runs",
-                        "icon": "sync",
-                        "link": "/admin/etl/etlrun/",
-                    },
-                    {
-                        "title": "ETL Errors",
-                        "icon": "error",
-                        "link": "/admin/etl/etlerror/",
-                    },
-                ],
-            },
-            {
                 "title": "API",
                 "separator": True,
                 "items": [
@@ -596,6 +569,27 @@ UNFOLD = {
                         "title": "API Requests Log",
                         "icon": "analytics",
                         "link": "/admin/rest_framework_tracking/apirequestlog/",
+                    },
+                    {
+                        "title": "Trace Logs",
+                        "icon": "timeline",
+                        "link": "/admin/etl/tracelog/",
+                    },
+                ],
+            },
+            {
+                "title": "ETL",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "ETL Runs",
+                        "icon": "sync",
+                        "link": "/admin/etl/etlrun/",
+                    },
+                    {
+                        "title": "ETL Errors",
+                        "icon": "error",
+                        "link": "/admin/etl/etlerror/",
                     },
                 ],
             },
