@@ -158,6 +158,11 @@ def process_bulk_events(self, events_data, spider_name='unknown'):
             metadata={'spider': spider_name, 'task_id': self.request.id, 'created_count': created_count},
         )
 
+    # Invalida cache API external dopo inserimento
+    if created_count > 0:
+        from .views import _invalidate_external_cache
+        _invalidate_external_cache()
+
     return {
         'spider_name': spider_name,
         'created_count': created_count,

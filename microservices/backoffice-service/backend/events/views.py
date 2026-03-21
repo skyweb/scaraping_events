@@ -282,8 +282,32 @@ class DashboardView(APIView):
 # API ESTERNE (OAuth2 + Tracking)
 # =============================================================================
 
+CACHE_TTL = 60 * 60  # 1 ora
+CACHE_VERSION_KEY = "api_external_cache_version"
+
+
+def _get_cache_version() -> int:
+    """Ritorna la versione corrente della cache API external."""
+    from django.core.cache import cache
+    version = cache.get(CACHE_VERSION_KEY)
+    if version is None:
+        cache.set(CACHE_VERSION_KEY, 1, timeout=None)
+        return 1
+    return version
+
+
+def _invalidate_external_cache():
+    """Invalida la cache incrementando il version counter."""
+    from django.core.cache import cache
+    try:
+        cache.incr(CACHE_VERSION_KEY)
+    except ValueError:
+        cache.set(CACHE_VERSION_KEY, 1, timeout=None)
+
+
 class PlanFieldFilterMixin:
-    """Mixin che filtra i campi della response in base al piano API del consumer."""
+    """Mixin che filtra i campi della response in base al piano API del consumer
+    e aggiunge cache Redis con Vary sul piano."""
 
     def _get_consumer_plan(self) -> str | None:
         """Legge il piano dal header X-Consumer-Plan (iniettato da APISIX)."""
@@ -299,6 +323,38 @@ class PlanFieldFilterMixin:
             if plan:
                 return get_plan_serializer_class(plan)
         return super().get_serializer_class()
+
+    def _cached_key_prefix(self) -> str:
+        """Genera un key_prefix che include la versione cache e il piano."""
+        plan = self._get_consumer_plan() or "noplan"
+        version = _get_cache_version()
+        return f"api_ext_v{version}_{plan}"
+
+    def list(self, request, *args, **kwargs):
+        from django.views.decorators.cache import cache_page
+        key_prefix = self._cached_key_prefix()
+        decorator = cache_page(CACHE_TTL, key_prefix=key_prefix)
+        response_fn = decorator(lambda r, *a, **k: super(PlanFieldFilterMixin, self).list(r, *a, **k))
+        return response_fn(request, *args, **kwargs)
+
+    def retrieve(self, request, *args, **kwargs):
+        from django.views.decorators.cache import cache_page
+        key_prefix = self._cached_key_prefix()
+        decorator = cache_page(CACHE_TTL, key_prefix=key_prefix)
+        response_fn = decorator(lambda r, *a, **k: super(PlanFieldFilterMixin, self).retrieve(r, *a, **k))
+        return response_fn(request, *args, **kwargs)
+
+    def perform_create(self, serializer):
+        super().perform_create(serializer)
+        _invalidate_external_cache()
+
+    def perform_update(self, serializer):
+        super().perform_update(serializer)
+        _invalidate_external_cache()
+
+    def perform_destroy(self, instance):
+        super().perform_destroy(instance)
+        _invalidate_external_cache()
 
 
 @extend_schema_view(
@@ -617,7 +673,9 @@ Crea multipli staging events in una sola richiesta.
                     event['meta'] = meta
 
         if sync_mode:
-            return self._bulk_sync(events_data, span)
+            response = self._bulk_sync(events_data, span)
+            _invalidate_external_cache()
+            return response
 
         # Async mode: dispatch to Celery
         from .tasks import process_bulk_events
