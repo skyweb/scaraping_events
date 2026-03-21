@@ -74,18 +74,21 @@ put "/global_rules/1" '{
         "ip-restriction": {
             "_meta": { "disable": true },
             "message": "Accesso non consentito da questo indirizzo IP.",
-            "blacklist": []
+            "blacklist": ["192.0.2.1"]
         },
         "cors": {
             "allow_origins": "**",
             "allow_methods": "GET,POST,PUT,PATCH,DELETE,OPTIONS",
-            "allow_headers": "Authorization,Content-Type,X-Requested-With,X-API-KEY,Accept",
+            "allow_headers": "Authorization,Content-Type,X-Requested-With,X-API-KEY,Accept,apikey",
             "expose_headers": "X-API-Version",
             "max_age": 3600,
             "allow_credential": false
+        },
+        "prometheus": {
+            "prefer_name": true
         }
     }
-}' "HTTP→HTTPS redirect + rate limit + CORS"
+}' "HTTP→HTTPS redirect + rate limit + CORS + Prometheus metrics"
 
 # Coraza WAF (OWASP rules) — config JSON da file coraza.conf
 CORAZA_CONF=$(cat /usr/local/apisix/wasm/coraza.conf | tr -d '\n' | sed 's/"/\\"/g')
