@@ -109,14 +109,24 @@ class ApisixConsumerAuthentication(BaseAuthentication):
             consumer=username, plan=plan, auth_type="api_key", status="success",
         ).inc()
 
+        # Leggi permessi dal DB del consumer (fallback: read+write per retrocompatibilità)
+        scopes: list[str] = ["read", "write"]
+        api_permissions: dict = {}
+        try:
+            api_permissions = consumer.api_permissions or {}
+            scopes = consumer.get_scopes()
+        except Exception:
+            pass  # consumer non trovato nel DB, usa default
+
         user = KeycloakUser(sub=username, roles=[])
         auth_info: dict[str, list[str] | str] = {
             "roles": [],
-            "scope": ["read", "write"],
+            "scope": scopes,
             "azp": f"{plan}-consumer",
             "sub": username,
             "plan": plan,
             "consumer_username": username,
+            "api_permissions": api_permissions,
         }
 
         logger.info(
@@ -221,6 +231,7 @@ class KeycloakJWTAuthentication(BaseAuthentication):
         # Verifica scadenza consumer (se gestito da Django)
         from api_consumers.models import ApiConsumer
         consumer_username = azp  # Per JWT, azp è il client_id Keycloak
+        consumer = None
         try:
             consumer = ApiConsumer.objects.get(keycloak_client_id=azp)
             consumer_username = consumer.username
@@ -246,6 +257,15 @@ class KeycloakJWTAuthentication(BaseAuthentication):
             consumer=consumer_username, plan=plan, auth_type="jwt", status="success",
         ).inc()
 
+        # Leggi permessi dal DB del consumer (se esiste)
+        api_permissions: dict = {}
+        try:
+            if consumer:
+                api_permissions = consumer.api_permissions or {}
+                scope = consumer.get_scopes()
+        except Exception:
+            pass
+
         # Cerca un utente Django corrispondente, altrimenti crea un KeycloakUser
         user = self._get_or_create_keycloak_user(sub, roles)
 
@@ -256,6 +276,7 @@ class KeycloakJWTAuthentication(BaseAuthentication):
             "sub": sub,
             "plan": plan,
             "consumer_username": consumer_username,
+            "api_permissions": api_permissions,
         }
 
         logger.info(
@@ -328,10 +349,12 @@ class HasKeycloakScope(BasePermission):
     """
     Permesso DRF che verifica che l'utente abbia tutti gli scope richiesti.
 
-    Configurare nella view:
-        required_scopes = ["read", "write"]
+    Supporta due formati:
+        - Semplice: required_scopes = ["read"] → verifica nella lista scope
+        - Risorsa:azione: required_scopes = ["events:read"] → verifica nella matrice api_permissions
 
-    L'utente deve avere TUTTI gli scope elencati (logica AND).
+    Configurare nella view:
+        required_scopes = ["events:read"]
     """
 
     def has_permission(self, request: Request, view: Any) -> bool:
@@ -344,5 +367,18 @@ class HasKeycloakScope(BasePermission):
             return False
 
         user_scopes: list[str] = auth_info.get("scope", [])
-        # Tutti gli scope richiesti devono essere presenti
+
+        # Supporto formato risorsa:azione tramite api_permissions
+        api_permissions: dict = auth_info.get("api_permissions", {})
+        if api_permissions:
+            for scope in required_scopes:
+                if ":" in scope:
+                    resource, action = scope.split(":", 1)
+                    if action not in api_permissions.get(resource, []):
+                        return False
+                elif scope not in user_scopes:
+                    return False
+            return True
+
+        # Fallback: verifica classica nella lista scope
         return set(required_scopes).issubset(set(user_scopes))

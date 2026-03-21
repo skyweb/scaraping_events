@@ -158,6 +158,15 @@ def sync_consumer_to_keycloak(consumer: "ApiConsumer") -> None:
                 "abilitato" if should_be_enabled else "disabilitato",
                 client_id,
             )
+        # Recupera credenziali se mancanti localmente (es. sync precedente fallita)
+        if not consumer.keycloak_client_id or not consumer.keycloak_client_secret:
+            secret_resp = _http_request(
+                "GET",
+                f"{base_url}/clients/{kc_id}/client-secret",
+                headers=auth_headers,
+            )
+            consumer.keycloak_client_id = client_id
+            consumer.keycloak_client_secret = secret_resp.get("value", "")
     else:
         # Genera secret e crea client
         client_secret = consumer.keycloak_client_secret or secrets.token_urlsafe(32)
@@ -185,8 +194,9 @@ def sync_consumer_to_keycloak(consumer: "ApiConsumer") -> None:
         # Recupera l'ID interno del client appena creato
         created = _http_request(
             "GET",
-            f"{base_url}/clients?{urllib.parse.urlencode({'clientId': client_id})}",
+            f"{base_url}/clients",
             headers=auth_headers,
+            params={"clientId": client_id},
         )
         kc_id = created[0]["id"]
 

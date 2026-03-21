@@ -19,6 +19,14 @@ PLAN_LIMITS: dict[str, dict[str, int | None]] = {
     "flat": {"daily": None, "per_second": None},
 }
 
+# Risorse e azioni disponibili per la matrice permessi
+API_RESOURCES = ["events", "comuni"]
+API_ACTIONS = ["read", "create", "update", "delete", "bulk"]
+
+def default_api_permissions() -> dict[str, list[str]]:
+    """Permessi di default: tutte le azioni su tutte le risorse."""
+    return {res: list(API_ACTIONS) for res in API_RESOURCES}
+
 
 class ApiConsumer(models.Model):
     """Consumer API esterno con piano e credenziali sincronizzate su APISIX/Keycloak."""
@@ -42,6 +50,13 @@ class ApiConsumer(models.Model):
     # Campi JWT/Keycloak (auth_type=jwt)
     keycloak_client_id = models.CharField(max_length=255, blank=True)
     keycloak_client_secret = models.CharField(max_length=255, blank=True)
+
+    # Matrice permessi per risorsa: {"events": ["read", "create"], "comuni": ["read"]}
+    api_permissions = models.JSONField(
+        default=default_api_permissions,
+        help_text="Permessi per risorsa e azione. Formato: {risorsa: [azioni]}",
+        verbose_name="Permessi API",
+    )
 
     contact_email = models.EmailField(blank=True, help_text="Email di contatto")
     description = models.TextField(blank=True, help_text="Note interne")
@@ -74,6 +89,19 @@ class ApiConsumer(models.Model):
         if self.expires_at is None:
             return False
         return timezone.now() >= self.expires_at
+
+    def has_api_permission(self, resource: str, action: str) -> bool:
+        """Verifica se il consumer ha il permesso per risorsa:azione."""
+        perms = self.api_permissions or {}
+        return action in perms.get(resource, [])
+
+    def get_scopes(self) -> list[str]:
+        """Restituisce la lista di scope nel formato risorsa:azione."""
+        scopes: list[str] = []
+        for resource, actions in (self.api_permissions or {}).items():
+            for action in actions:
+                scopes.append(f"{resource}:{action}")
+        return scopes
 
     def get_daily_limit(self) -> int | None:
         return PLAN_LIMITS.get(self.plan, {}).get("daily")

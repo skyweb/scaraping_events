@@ -460,10 +460,19 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, LoggingMixin, viewsets.M
     logging_methods = ['POST', 'PUT', 'PATCH', 'DELETE']
 
     def get_permissions(self):
-        if self.action in ['list', 'retrieve']:
-            self.required_scopes = ['read']
-        else:
-            self.required_scopes = ['write']
+        action_map = {
+            'list': 'read',
+            'retrieve': 'read',
+            'create': 'create',
+            'update': 'update',
+            'partial_update': 'update',
+            'destroy': 'delete',
+            'bulk': 'bulk',
+            'bulk_status': 'read',
+            'clear_source': 'delete',
+        }
+        action = action_map.get(self.action, 'read')
+        self.required_scopes = [f'events:{action}']
         return [HasKeycloakScope()]
 
     def get_serializer_class(self):

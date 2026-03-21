@@ -7,9 +7,10 @@ from django.contrib import admin, messages
 logger = logging.getLogger(__name__)
 from django.utils import timezone
 from django.utils.html import format_html
+from django.utils.safestring import mark_safe
 from unfold.admin import ModelAdmin
 
-from .models import ApiConsumer
+from .models import API_ACTIONS, API_RESOURCES, ApiConsumer
 from .services import (
     delete_client_from_keycloak,
     delete_consumer_from_apisix,
@@ -18,8 +19,8 @@ from .services import (
 )
 
 DOMAIN = os.environ.get("DOMAIN", "127.0.0.1.nip.io")
-API_BASE = f"https://backoffice.{DOMAIN}/api/external/v1/staging/"
-TOKEN_URL = f"https://auth.{DOMAIN}/realms/today-events/protocol/openid-connect/token"
+API_BASE = f"https://webservice.{DOMAIN}/api/external/v1/staging/"
+TOKEN_URL = f"https://webservice.{DOMAIN}/auth/token"
 
 # Stile condiviso per i blocchi curl
 _CODE_STYLE = (
@@ -37,6 +38,18 @@ _LABEL_STYLE = (
 )
 
 
+_CHIP_STYLE = (
+    "display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px;"
+    " font-weight:600; letter-spacing:0.3px;"
+)
+
+
+def _chip(label: str, active: bool) -> str:
+    """Genera un chip colorato verde (attivo) o rosso (disattivo)."""
+    bg = "#40a02b" if active else "#e64553"
+    return f'<span style="{_CHIP_STYLE} background:{bg}; color:#fff;">{label}</span>'
+
+
 def _curl_box(label: str, label_bg: str, curl: str) -> str:
     """Genera un blocco HTML con label + curl syntax-highlighted."""
     return (
@@ -49,8 +62,8 @@ def _curl_box(label: str, label_bg: str, curl: str) -> str:
 @admin.register(ApiConsumer)
 class ApiConsumerAdmin(ModelAdmin):
     list_display = [
-        "username", "plan", "auth_type", "is_active",
-        "show_expiry_status", "show_sync_status", "show_requests_today", "created_at",
+        "username", "plan", "auth_type", "show_active_chip",
+        "show_expiry_status", "show_sync_chip", "show_requests_today", "created_at",
     ]
     list_filter = ["plan", "auth_type", "is_active", "apisix_synced", "keycloak_synced"]
     search_fields = ["username", "contact_email", "description"]
@@ -74,9 +87,17 @@ class ApiConsumerAdmin(ModelAdmin):
             "description": "Per auth_type = JWT. Il client Keycloak viene creato automaticamente.",
             "fields": ["keycloak_client_id", "keycloak_client_secret"],
         }),
+        ("Permessi API", {
+            "classes": ["tab"],
+            "description": "Matrice permessi per risorsa e azione.",
+            "fields": ["show_permissions_matrix"],
+        }),
         ("Stato sincronizzazione", {
             "classes": ["tab"],
-            "fields": ["apisix_synced", "keycloak_synced", "sync_error", "last_synced_at"],
+            "fields": [
+                "show_active_chip", "show_sync_chip",
+                "apisix_synced", "keycloak_synced", "sync_error", "last_synced_at",
+            ],
         }),
         ("Utilizzo", {
             "classes": ["tab"],
@@ -94,13 +115,27 @@ class ApiConsumerAdmin(ModelAdmin):
         base = [
             "apisix_synced", "keycloak_synced", "sync_error", "last_synced_at",
             "show_usage_today", "show_usage_month", "show_last_request",
-            "show_curl_example",
+            "show_curl_example", "show_permissions_matrix",
+            "show_active_chip", "show_sync_chip",
         ]
         if obj:
             return [*base, "username", "api_key", "keycloak_client_id", "keycloak_client_secret"]
         return [*base, "api_key", "keycloak_client_secret"]
 
     # ── Display methods ──────────────────────────────────────────────────
+
+    @admin.display(description="Stato")
+    def show_active_chip(self, obj: ApiConsumer) -> str:
+        if obj.is_active:
+            return mark_safe(_chip("Attivo", True))
+        return mark_safe(_chip("Disattivo", False))
+
+    @admin.display(description="Sync")
+    def show_sync_chip(self, obj: ApiConsumer) -> str:
+        synced = obj.apisix_synced if obj.auth_type == "api_key" else obj.keycloak_synced
+        if synced:
+            return mark_safe(_chip("Sincronizzato", True))
+        return mark_safe(_chip("Non sincronizzato", False))
 
     @admin.display(description="Scadenza")
     def show_expiry_status(self, obj: ApiConsumer) -> str:
@@ -112,12 +147,6 @@ class ApiConsumerAdmin(ModelAdmin):
                 obj.expires_at.strftime("%d/%m/%Y"),
             )
         return obj.expires_at.strftime("%d/%m/%Y %H:%M")
-
-    @admin.display(description="Sync", boolean=True)
-    def show_sync_status(self, obj: ApiConsumer) -> bool:
-        if obj.auth_type == "api_key":
-            return obj.apisix_synced
-        return obj.keycloak_synced
 
     @admin.display(description="Req oggi")
     def show_requests_today(self, obj: ApiConsumer) -> str:
@@ -147,6 +176,52 @@ class ApiConsumerAdmin(ModelAdmin):
             return last.strftime("%d/%m/%Y %H:%M:%S")
         return "Nessuna richiesta"
 
+    @admin.display(description="Permessi API")
+    def show_permissions_matrix(self, obj: ApiConsumer) -> str:
+        if not obj.pk:
+            return "Salva il consumer per configurare i permessi."
+
+        perms = obj.api_permissions or {}
+        # Stili tabella
+        th_style = (
+            "padding:8px 12px; text-align:center; font-weight:600; font-size:12px;"
+            " text-transform:uppercase; letter-spacing:0.5px;"
+            " border-bottom:2px solid #45475a; color:#cdd6f4;"
+        )
+        td_style = "padding:6px 12px; text-align:center; border-bottom:1px solid #313244;"
+        res_style = (
+            "padding:8px 12px; font-weight:600; text-transform:capitalize;"
+            " border-bottom:1px solid #313244; color:#cdd6f4;"
+        )
+        table_style = (
+            "border-collapse:collapse; background:#1e1e2e; border-radius:8px;"
+            " overflow:hidden; border:1px solid #45475a; margin:8px 0;"
+        )
+
+        # Intestazione
+        headers = f"<th style='{th_style}'>Risorsa</th>"
+        for action in API_ACTIONS:
+            headers += f"<th style='{th_style}'>{action}</th>"
+
+        # Righe
+        rows = ""
+        for resource in API_RESOURCES:
+            resource_actions = perms.get(resource, [])
+            row = f"<td style='{res_style}'>{resource}</td>"
+            for action in API_ACTIONS:
+                checked = "checked" if action in resource_actions else ""
+                cb_name = f"perm_{resource}_{action}"
+                row += (
+                    f"<td style='{td_style}'>"
+                    f"<input type='checkbox' name='{cb_name}' {checked}"
+                    f" style='width:18px; height:18px; cursor:pointer;'>"
+                    f"</td>"
+                )
+            rows += f"<tr>{row}</tr>"
+
+        html = f"<table style='{table_style}'><tr>{headers}</tr>{rows}</table>"
+        return mark_safe(html)
+
     @admin.display(description="Esempio chiamata cURL")
     def show_curl_example(self, obj: ApiConsumer) -> str:
         if not obj.pk:
@@ -170,13 +245,7 @@ class ApiConsumerAdmin(ModelAdmin):
 
         # JWT flow: token exchange + API call
         client_id = obj.keycloak_client_id or f"api-{obj.username}"
-        raw_secret = obj.keycloak_client_secret
-        if raw_secret and len(raw_secret) > 8:
-            client_secret = f"{raw_secret[:4]}...{raw_secret[-4:]}"
-        elif raw_secret:
-            client_secret = "****"
-        else:
-            client_secret = "&lt;in attesa di sync Keycloak&gt;"
+        client_secret = obj.keycloak_client_secret or "&lt;in attesa di sync Keycloak&gt;"
 
         curl_token = (
             f'{c}# 1. Ottieni access token{e}\n'
@@ -192,26 +261,80 @@ class ApiConsumerAdmin(ModelAdmin):
             f"     {s}{API_BASE}{e}"
         )
 
-        # One-liner combinato
-        curl_oneliner = (
-            f'{c}# Oppure in un unico comando:{e}\n'
-            f"TOKEN=$(curl {f}-s{e} {f}-X POST{e} {s}{TOKEN_URL}{e} \\\n"
-            f'  {f}-d{e} {s}"grant_type=client_credentials"{e} \\\n'
-            f'  {f}-d{e} {s}"client_id={client_id}"{e} \\\n'
-            f'  {f}-d{e} {s}"client_secret={client_secret}"{e} \\\n'
-            f"  | python3 {f}-c{e} {s}\"import sys,json; print(json.load(sys.stdin)['access_token'])\"{e})\n"
-            f"\n"
-            f'curl {f}-H{e} {s}"Authorization: Bearer $TOKEN"{e} {s}{API_BASE}{e}'
+        # Pulsante "Invia richiesta" + area risposta per STEP 1
+        btn_id = f"btn-token-{obj.pk}"
+        resp_id = f"resp-token-{obj.pk}"
+        client_secret_val = obj.keycloak_client_secret or ""
+        body_param = f"grant_type=client_credentials&client_id={client_id}&client_secret={client_secret_val}"
+
+        test_btn = mark_safe(
+            f'<button type="button" id="{btn_id}" style="'
+            f"margin-top:8px; padding:8px 18px; border:none; border-radius:6px;"
+            f" background:#1e66f5; color:#fff; font-weight:600; font-size:13px;"
+            f' cursor:pointer; font-family:inherit;"'
+            f">▶ Invia richiesta</button>"
+            f'<div id="{resp_id}" style="'
+            f"display:none; margin-top:8px; background:#1e1e2e;"
+            f" padding:14px 18px; border-radius:8px; font-family:'JetBrains Mono',monospace;"
+            f" font-size:12px; line-height:1.6; white-space:pre-wrap; word-break:break-all;"
+            f' border:1px solid #45475a; max-height:300px; overflow:auto;"'
+            f"></div>"
+            f"<script>"
+            f"function colorizeJson(obj, indent) {{"
+            f"  indent = indent || 0;"
+            f"  var pad = '  '.repeat(indent);"
+            f"  var pad1 = '  '.repeat(indent + 1);"
+            f"  if (obj === null) return '<span style=\"color:#fab387\">null</span>';"
+            f"  if (typeof obj === 'boolean') return '<span style=\"color:#fab387\">' + obj + '</span>';"
+            f"  if (typeof obj === 'number') return '<span style=\"color:#fab387\">' + obj + '</span>';"
+            f"  if (typeof obj === 'string') {{"
+            f"    var s = obj.length > 80 ? obj.substring(0, 77) + '...' : obj;"
+            f"    s = s.replace(/</g, '&lt;').replace(/>/g, '&gt;');"
+            f"    return '<span style=\"color:{_STRING_COLOR}\">\"' + s + '\"</span>';"
+            f"  }}"
+            f"  if (Array.isArray(obj)) {{"
+            f"    if (obj.length === 0) return '[]';"
+            f"    var items = obj.map(function(v) {{ return pad1 + colorizeJson(v, indent + 1); }});"
+            f"    return '[\\n' + items.join(',\\n') + '\\n' + pad + ']';"
+            f"  }}"
+            f"  var keys = Object.keys(obj);"
+            f"  if (keys.length === 0) return '{{}}';"
+            f"  var entries = keys.map(function(k) {{"
+            f"    return pad1 + '<span style=\"color:{_FLAG_COLOR}\">\"' + k + '\"</span>: ' + colorizeJson(obj[k], indent + 1);"
+            f"  }});"
+            f"  return '{{\\n' + entries.join(',\\n') + '\\n' + pad + '}}';"
+            f"}}"
+            f'document.getElementById("{btn_id}").addEventListener("click", function() {{'
+            f'  var btn = this;'
+            f'  var resp = document.getElementById("{resp_id}");'
+            f'  btn.disabled = true; btn.textContent = "⏳ Invio...";'
+            f'  resp.style.display = "block";'
+            f'  resp.innerHTML = "<span style=\\"color:#cdd6f4\\">Richiesta in corso...</span>";'
+            f'  fetch("{TOKEN_URL}", {{'
+            f'    method: "POST",'
+            f'    headers: {{"Content-Type": "application/x-www-form-urlencoded"}},'
+            f'    body: "{body_param}"'
+            f"  }})"
+            f"  .then(function(r) {{ return r.json(); }})"
+            f"  .then(function(data) {{"
+            f"    resp.innerHTML = colorizeJson(data);"
+            f'    btn.textContent = "▶ Invia richiesta"; btn.disabled = false;'
+            f"  }})"
+            f"  .catch(function(err) {{"
+            f'    resp.innerHTML = "<span style=\\"color:#e64553\\">Errore: " + err.message + "</span>";'
+            f'    btn.textContent = "▶ Invia richiesta"; btn.disabled = false;'
+            f"  }});"
+            f"}});"
+            f"</script>"
         )
 
         html = (
             _curl_box("STEP 1 — TOKEN", "#1e66f5", curl_token)
+            + str(test_btn)
             + "<div style='height:12px'></div>"
             + _curl_box("STEP 2 — API CALL", "#40a02b", curl_api)
-            + "<div style='height:12px'></div>"
-            + _curl_box("ONE-LINER", "#8839ef", curl_oneliner)
         )
-        return format_html(html)
+        return mark_safe(html)
 
     # ── Save / Delete ────────────────────────────────────────────────────
 
@@ -220,6 +343,16 @@ class ApiConsumerAdmin(ModelAdmin):
             obj.api_key = secrets.token_urlsafe(32)
         elif obj.auth_type == "jwt":
             obj.api_key = None  # Evita violazione unique su stringa vuota
+
+        # Leggi matrice permessi dai checkbox del POST
+        api_permissions: dict[str, list[str]] = {}
+        for resource in API_RESOURCES:
+            actions = []
+            for action in API_ACTIONS:
+                if request.POST.get(f"perm_{resource}_{action}"):
+                    actions.append(action)
+            api_permissions[resource] = actions
+        obj.api_permissions = api_permissions
 
         super().save_model(request, obj, form, change)
         self._sync_consumer(request, obj)

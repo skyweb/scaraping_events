@@ -90,15 +90,22 @@ put "/global_rules/1" '{
     }
 }' "HTTP→HTTPS redirect + rate limit + CORS + Prometheus metrics"
 
-# Coraza WAF (OWASP rules) — config JSON da file coraza.conf
-CORAZA_CONF=$(cat /usr/local/apisix/wasm/coraza.conf | tr -d '\n' | sed 's/"/\\"/g')
-put "/global_rules/2" "{
-    \"plugins\": {
-        \"coraza-filter\": {
-            \"conf\": \"${CORAZA_CONF}\"
+# Coraza WAF (OWASP rules) — config JSON da file coraza.conf (opzionale)
+# Coraza WAF — best effort (il plugin WASM potrebbe non essere caricato)
+if [ -f /usr/local/apisix/wasm/coraza.conf ]; then
+    CORAZA_CONF=$(cat /usr/local/apisix/wasm/coraza.conf | tr -d '\n' | sed 's/"/\\"/g')
+    if ! put "/global_rules/2" "{
+        \"plugins\": {
+            \"coraza-filter\": {
+                \"conf\": \"${CORAZA_CONF}\"
+            }
         }
-    }
-}" "Coraza WAF (OWASP rules)"
+    }" "Coraza WAF (OWASP rules)" 2>/dev/null; then
+        echo "  ⚠ WAF plugin non disponibile, skip"
+    fi
+else
+    echo "  ⚠ coraza.conf non trovato, WAF non configurato"
+fi
 
 # ======================= UPSTREAMS ==========================================
 echo ""
@@ -452,14 +459,42 @@ put "/consumers/flat-test" '{
     }
 }' "consumer flat-test"
 
-# ======================= ROUTE API (key-auth + JWT bearer) ==================
+# ======================= ROUTE WEBSERVICE (webservice.DOMAIN) ================
 echo ""
-echo "=== Route API ==="
+echo "=== Route Webservice ==="
+
+# Route 12: /auth/token — proxy verso Keycloak token endpoint
+put "/routes/12" "{
+    \"name\": \"webservice-auth-token\",
+    \"host\": \"webservice.${DOMAIN}\",
+    \"uri\": \"/auth/token\",
+    \"methods\": [\"POST\", \"OPTIONS\"],
+    \"upstream_id\": \"2\",
+    \"plugins\": {
+        \"proxy-rewrite\": {
+            \"uri\": \"/realms/today-events/protocol/openid-connect/token\",
+            \"host\": \"keycloak:8080\",
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        },
+        \"limit-req\": {
+            \"rate\": 5,
+            \"burst\": 2,
+            \"key_type\": \"var\",
+            \"key\": \"remote_addr\",
+            \"rejected_code\": 429,
+            \"rejected_msg\": \"Troppe richieste di token. Riprova tra qualche secondo.\"
+        }
+    }
+}" "webservice auth token (proxy Keycloak)"
 
 # Route 11: API key authentication (priority alta, match se header apikey presente)
 put "/routes/11" "{
-    \"name\": \"api-external-key-auth\",
-    \"host\": \"backoffice.${DOMAIN}\",
+    \"name\": \"webservice-api-key-auth\",
+    \"host\": \"webservice.${DOMAIN}\",
     \"uri\": \"/api/external/*\",
     \"priority\": 15,
     \"upstream_id\": \"1\",
@@ -478,12 +513,12 @@ put "/routes/11" "{
             }
         }
     }
-}" "api-external (key-auth, priority 15)"
+}" "webservice api-external (key-auth, priority 15)"
 
 # Route 10: JWT bearer (fallback se no apikey header)
 put "/routes/10" "{
-    \"name\": \"api-external-jwt\",
-    \"host\": \"backoffice.${DOMAIN}\",
+    \"name\": \"webservice-api-jwt\",
+    \"host\": \"webservice.${DOMAIN}\",
     \"uri\": \"/api/external/*\",
     \"priority\": 10,
     \"upstream_id\": \"1\",
@@ -510,7 +545,7 @@ put "/routes/10" "{
             }
         }
     }
-}" "api-external (JWT bearer, priority 10)"
+}" "webservice api-external (JWT bearer, priority 10)"
 
 # ======================= ROUTE SSO (OIDC via Keycloak) ======================
 # Helper: crea route con plugin openid-connect.

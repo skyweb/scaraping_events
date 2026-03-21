@@ -102,7 +102,7 @@ services:
       DOMAIN: ${DOMAIN:-127.0.0.1.nip.io}
       EMAIL_HOST: smtp
       EMAIL_PORT: "1025"
-      DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},backoffice,localhost,127.0.0.1"
+      DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},webservice.${DOMAIN},backoffice,localhost,127.0.0.1"
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
@@ -200,6 +200,8 @@ services:
     volumes:
       - ./services/loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
       - loki-dev-data:/loki
+    ports:
+      - "3100:3100"
     healthcheck:
       test: ["CMD-SHELL", "wget --quiet --tries=1 --output-document=- http://localhost:3100/ready | grep -q ready || exit 1"]
       interval: 10s
@@ -513,6 +515,7 @@ services:
     volumes:
       - ./services/apisix/init-routes.sh:/init-routes.sh:ro
       - ./services/apisix/certs:/certs:ro
+      - ./services/apisix/wasm:/usr/local/apisix/wasm:ro
     environment:
       DOMAIN: ${DOMAIN:-127.0.0.1.nip.io}
       KEYCLOAK_BACKOFFICE_CLIENT_SECRET: ${KEYCLOAK_BACKOFFICE_CLIENT_SECRET:-CHANGE_ME_BACKOFFICE_SECRET}
