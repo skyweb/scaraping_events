@@ -11,9 +11,11 @@ Funzionalità:
 Modello: it_core_news_lg (italiano, 500MB)
 """
 
+import json
 import logging
 import re
 import unicodedata
+from pathlib import Path
 from typing import Optional
 
 logger = logging.getLogger(__name__)
@@ -50,59 +52,8 @@ ENTITY_RULER_PATTERNS = [
 # Classificazione categorie — keyword matching
 # =============================================================================
 
-CATEGORY_KEYWORDS: dict[str, list[str]] = {
-    "musica": [
-        "concerto", "concerti", "orchestra", "musicale", "musicista", "jazz", "rock",
-        "classica", "sinfonica", "coro", "band", "live music", "dj set", "opera lirica",
-        "festival musicale", "recital", "soprano", "tenore", "pianoforte", "violino",
-        "chitarra", "cantante", "cantautore", "rapper",
-    ],
-    "teatro": [
-        "teatro", "teatrale", "commedia", "dramma", "spettacolo", "palcoscenico",
-        "attore", "attrice", "regista", "regia", "messa in scena", "sipario",
-        "compagnia teatrale", "monologo", "prosa", "tragedia", "musical",
-    ],
-    "danza": [
-        "danza", "balletto", "coreografia", "ballerino", "ballerina", "danzatore",
-        "contemporanea", "classico", "hip hop", "tango", "flamenco",
-    ],
-    "mostre": [
-        "mostra", "esposizione", "galleria", "museo", "opere d'arte", "pittura",
-        "scultura", "fotografia", "installazione", "retrospettiva", "collezione",
-        "vernissage", "artista", "quadri",
-    ],
-    "cinema": [
-        "cinema", "film", "proiezione", "cortometraggio", "documentario",
-        "rassegna cinematografica", "regista", "pellicola", "sala cinematografica",
-    ],
-    "sagre_feste": [
-        "sagra", "festa", "fiera", "mercato", "mercatino", "tradizione", "folklore",
-        "processione", "patronale", "carnevale", "palio", "rievocazione",
-        "enogastronomia", "prodotti tipici", "street food",
-    ],
-    "sport": [
-        "sport", "sportivo", "gara", "corsa", "maratona", "ciclismo", "calcio",
-        "torneo", "campionato", "pallavolo", "basket", "nuoto", "sci", "trekking",
-        "escursione", "arrampicata", "running",
-    ],
-    "conferenze": [
-        "conferenza", "convegno", "seminario", "workshop", "incontro", "dibattito",
-        "presentazione", "lectio", "tavola rotonda", "simposio", "congresso",
-        "lezione", "formazione",
-    ],
-    "bambini": [
-        "bambini", "famiglie", "ragazzi", "kids", "laboratorio didattico",
-        "animazione", "gioco", "burattini", "marionette", "fiabe", "ludoteca",
-    ],
-    "enogastronomia": [
-        "vino", "degustazione", "gastronomia", "cucina", "chef", "ristorante",
-        "cantina", "cibo", "ricetta", "pizza", "birra", "olio",
-    ],
-    "natura": [
-        "natura", "escursione", "passeggiata", "parco", "giardino", "botanico",
-        "birdwatching", "flora", "fauna", "montagna", "lago", "mare", "bosco",
-    ],
-}
+_KEYWORDS_PATH = Path(__file__).parent / "data" / "category_keywords.json"
+CATEGORY_KEYWORDS: dict[str, list[str]] = json.loads(_KEYWORDS_PATH.read_text(encoding="utf-8"))
 
 # =============================================================================
 # Normalizzazione nomi

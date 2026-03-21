@@ -5,13 +5,11 @@ APISIX Admin API: crea/aggiorna/elimina consumers con key-auth + proxy-rewrite.
 Keycloak Admin REST API: crea client con custom claim 'plan' nel token.
 """
 
-import json
 import logging
 import secrets
-import urllib.error
-import urllib.request
 from typing import TYPE_CHECKING
 
+import requests as http_client
 from django.conf import settings
 
 if TYPE_CHECKING:
@@ -24,18 +22,20 @@ logger = logging.getLogger(__name__)
 # Helpers HTTP
 # =============================================================================
 
-def _http_request(method: str, url: str, data: dict | None = None,
-                  headers: dict[str, str] | None = None, timeout: int = 10) -> dict:
+def _http_request(
+    method: str,
+    url: str,
+    data: dict | None = None,
+    headers: dict[str, str] | None = None,
+    timeout: int = 10,
+    params: dict[str, str] | None = None,
+) -> dict:
     """Esegue una richiesta HTTP e restituisce il JSON di risposta."""
-    body = json.dumps(data).encode() if data else None
-    req = urllib.request.Request(url, data=body, method=method)
-    req.add_header("Content-Type", "application/json")
-    for k, v in (headers or {}).items():
-        req.add_header(k, v)
-
-    with urllib.request.urlopen(req, timeout=timeout) as response:
-        raw = response.read()
-        return json.loads(raw) if raw else {}
+    response = http_client.request(
+        method, url, json=data, headers=headers, timeout=timeout, params=params,
+    )
+    response.raise_for_status()
+    return response.json() if response.content else {}
 
 
 def _apisix_request(method: str, path: str, data: dict | None = None) -> dict:
@@ -60,7 +60,7 @@ def sync_consumer_to_apisix(consumer: "ApiConsumer") -> None:
                 consumer.username,
             )
         except Exception:
-            pass
+            logger.warning("Errore rimozione consumer APISIX %s", consumer.username, exc_info=True)
         return
 
     data: dict = {
@@ -110,17 +110,18 @@ def _get_keycloak_admin_token() -> str:
         f"{settings.KEYCLOAK_URL}/realms/{settings.KEYCLOAK_REALM}"
         f"/protocol/openid-connect/token"
     )
-    form_data = (
-        f"grant_type=client_credentials"
-        f"&client_id={settings.APISIX_KC_CLIENT_ID}"
-        f"&client_secret={settings.APISIX_KC_CLIENT_SECRET}"
-    ).encode()
-
-    req = urllib.request.Request(token_url, data=form_data, method="POST")
-    req.add_header("Content-Type", "application/x-www-form-urlencoded")
-
-    with urllib.request.urlopen(req, timeout=10) as response:
-        return json.loads(response.read())["access_token"]
+    response = http_client.post(
+        token_url,
+        data={
+            "grant_type": "client_credentials",
+            "client_id": settings.APISIX_KC_CLIENT_ID,
+            "client_secret": settings.APISIX_KC_CLIENT_SECRET,
+        },
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+        timeout=10,
+    )
+    response.raise_for_status()
+    return response.json()["access_token"]
 
 
 def sync_consumer_to_keycloak(consumer: "ApiConsumer") -> None:
@@ -138,8 +139,9 @@ def sync_consumer_to_keycloak(consumer: "ApiConsumer") -> None:
     # Cerca client esistente
     existing = _http_request(
         "GET",
-        f"{base_url}/clients?clientId={client_id}",
+        f"{base_url}/clients",
         headers=auth_headers,
+        params={"clientId": client_id},
     )
 
     # Il client Keycloak è abilitato solo se il consumer è attivo e non scaduto
@@ -183,7 +185,7 @@ def sync_consumer_to_keycloak(consumer: "ApiConsumer") -> None:
         # Recupera l'ID interno del client appena creato
         created = _http_request(
             "GET",
-            f"{base_url}/clients?clientId={client_id}",
+            f"{base_url}/clients?{urllib.parse.urlencode({'clientId': client_id})}",
             headers=auth_headers,
         )
         kc_id = created[0]["id"]
@@ -251,8 +253,9 @@ def delete_client_from_keycloak(client_id: str) -> None:
     # Trova l'ID interno
     clients = _http_request(
         "GET",
-        f"{base_url}/clients?clientId={client_id}",
+        f"{base_url}/clients",
         headers=auth_headers,
+        params={"clientId": client_id},
     )
     if clients:
         kc_id = clients[0]["id"]

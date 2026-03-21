@@ -11,7 +11,7 @@ from opentelemetry import trace
 logger = logging.getLogger(__name__)
 
 
-def get_trace_context():
+def get_trace_context() -> tuple[str | None, str | None, str | None]:
     """Estrae trace_id e span_id dallo span OTel corrente."""
     span = trace.get_current_span()
     ctx = span.get_span_context()
@@ -30,7 +30,13 @@ def get_trace_context():
     return trace_id, span_id, parent_span_id
 
 
-def log_trace_event(operation, message=None, level='info', metadata=None, service=None):
+def log_trace_event(
+    operation: str,
+    message: str | None = None,
+    level: str = 'info',
+    metadata: dict | None = None,
+    service: str | None = None,
+) -> object | None:
     """Registra un evento di trace nel DB.
 
     Args:

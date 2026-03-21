@@ -2,7 +2,23 @@ import os
 import platform
 from pathlib import Path
 
+from django.core.exceptions import ImproperlyConfigured
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+def _require_env(key: str, default: str = "") -> str:
+    """Restituisce la variabile d'ambiente o il default.
+
+    In produzione (DEBUG=False), solleva ImproperlyConfigured se la variabile
+    non è impostata e il default è un placeholder ovviamente finto.
+    """
+    value = os.environ.get(key, default)
+    if not value and not os.environ.get("DJANGO_DEBUG", "False").lower() == "true":
+        raise ImproperlyConfigured(
+            f"Variabile d'ambiente '{key}' obbligatoria in produzione."
+        )
+    return value
 
 # GDAL/GEOS per macOS (development locale)
 if platform.system() == 'Darwin':
@@ -99,7 +115,7 @@ DATABASES = {
         'ENGINE': 'django_prometheus.db.backends.postgis',
         'NAME': os.environ.get('POSTGRES_DB', 'today_events'),
         'USER': os.environ.get('POSTGRES_USER', 'events'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'events_secret_2026'),
+        'PASSWORD': _require_env('POSTGRES_PASSWORD'),
         'HOST': os.environ.get('POSTGRES_HOST', 'postgres'),
         'PORT': os.environ.get('POSTGRES_PORT', '5432'),
     }
@@ -109,7 +125,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'django_prometheus.cache.backends.redis.RedisCache',
-        'LOCATION': os.environ.get('CACHE_REDIS_URL', 'redis://:redis_secret_2026@redis:6379/2'),
+        'LOCATION': _require_env('CACHE_REDIS_URL', 'redis://redis:6379/2'),
     }
 }
 
@@ -276,7 +292,7 @@ Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) non sono versionate.
 }
 
 # Celery
-CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL', 'redis://:redis_secret_2026@redis:6379/1')
+CELERY_BROKER_URL = _require_env('CELERY_BROKER_URL', 'redis://redis:6379/1')
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_RESULT_EXTENDED = True
 CELERY_ACCEPT_CONTENT = ['json']
@@ -339,6 +355,9 @@ CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
 CKEDITOR_5_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# Cache TTL per API esterne (secondi)
+API_CACHE_TTL = int(os.environ.get('API_CACHE_TTL', 60 * 60))  # default 1 ora
 
 # APISIX Admin API (per sincronizzazione API consumers)
 APISIX_ADMIN_URL = os.environ.get('APISIX_ADMIN_URL', 'http://apisix:9180/apisix/admin')
@@ -621,4 +640,4 @@ UNFOLD = {
 # =============================================================================
 AIRFLOW_API_URL = os.getenv('AIRFLOW_API_URL', 'http://airflow-webserver:8080/api/v1')
 AIRFLOW_API_USER = os.getenv('AIRFLOW_API_USER', 'admin')
-AIRFLOW_API_PASSWORD = os.getenv('AIRFLOW_API_PASSWORD', 'admin_secret_2026')
+AIRFLOW_API_PASSWORD = _require_env('AIRFLOW_API_PASSWORD')

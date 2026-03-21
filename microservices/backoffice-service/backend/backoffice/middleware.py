@@ -74,17 +74,19 @@ class KeycloakAdminMiddleware:
 
         if user is None:
             # Auto-provisioning: crea utente Django da Keycloak
+            # Solo il ruolo "admin" ottiene is_superuser (OWASP A01:2021 — Privilege Escalation)
+            is_superuser = "admin" in set(roles)
             user = User.objects.create_user(
                 username=email,
                 email=email,
                 first_name=userinfo.get("given_name", ""),
                 last_name=userinfo.get("family_name", ""),
                 is_staff=True,
-                is_superuser=True,
+                is_superuser=is_superuser,
             )
             sso_logger.info(
                 "SSO auto-provisioning utente",
-                extra={"email": email, "roles": roles},
+                extra={"email": email, "roles": roles, "is_superuser": is_superuser},
             )
 
         if not user.is_staff:

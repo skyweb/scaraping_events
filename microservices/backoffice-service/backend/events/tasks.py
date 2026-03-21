@@ -11,21 +11,18 @@ logger = logging.getLogger(__name__)
 
 
 @shared_task(bind=True, max_retries=3, default_retry_delay=10, acks_late=True)
-def process_bulk_events(self, events_data, spider_name='unknown'):
+def process_bulk_events(
+    self,
+    events_data: list[dict],
+    spider_name: str = 'unknown',
+) -> dict[str, object]:
     """
     Processa un batch di staging events in modo asincrono.
 
-    1. Valida ogni item con StagingEventCreateSerializer
+    1. Valida ogni item con StagingEventScrapingSerializer
     2. Usa bulk_create per inserire tutti gli item validi (1 query DB)
     3. Retry automatico su OperationalError (max 3 tentativi)
     4. Fallback a save singoli se bulk_create fallisce
-
-    Args:
-        events_data: lista di dict con i dati degli eventi
-        spider_name: nome dello spider che ha generato il batch
-
-    Returns:
-        dict con spider_name, created_count, failed_count, failed_events
     """
     from .serializers import StagingEventScrapingSerializer
     from .models import StagingEvent

@@ -108,7 +108,7 @@ up-core: up-harbor ## Stack base (postgres, redis, gateway, app, celery, harbor)
 
 up-harbor: ## Avvia Harbor Registry (compose separato)
 	@echo "$(GREEN)Avvio Harbor Registry...$(NC)"
-	docker compose -f services/harbor/docker-compose.yml up -d
+	docker compose -p infrastructures -f services/harbor/docker-compose.yml up -d
 
 up-observability: ## Monitoring (prometheus, otel, tempo, loki, promtail, grafana, esportatori)
 	@echo "$(GREEN)Avvio observability...$(NC)"

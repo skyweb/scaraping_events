@@ -1,11 +1,10 @@
-from rest_framework import viewsets, status, serializers as drf_serializers
+from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.permissions import IsAuthenticated
 from backoffice.authentication import HasKeycloakScope
 from rest_framework_tracking.mixins import LoggingMixin
-from django.db.models import Count
+from django.db.models import Count, Q
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter, OpenApiExample
@@ -28,53 +27,17 @@ from .serializers import (
     DashboardStatsSerializer,
     FailedEventSerializer,
     BulkProcessResponseSerializer,
+    BulkCreateResponseSerializer,
+    BulkCreateRequestSerializer,
+    ClearSourceResponseSerializer,
+    BulkAcceptedResponseSerializer,
+    BulkTaskStatusResponseSerializer,
+    ErrorResponseSerializer,
+    CityCountSerializer,
+    SourceCountSerializer,
+    ToggleActiveResponseSerializer,
     get_plan_serializer_class,
 )
-
-
-# Serializers per risposte Swagger
-class BulkCreateResponseSerializer(drf_serializers.Serializer):
-    created = drf_serializers.IntegerField()
-    events = StagingEventSerializer(many=True)
-
-
-class BulkCreateRequestSerializer(drf_serializers.Serializer):
-    events = StagingEventScrapingSerializer(many=True)
-
-
-class ClearSourceResponseSerializer(drf_serializers.Serializer):
-    deleted = drf_serializers.IntegerField()
-    source = drf_serializers.CharField()
-
-
-class BulkAcceptedResponseSerializer(drf_serializers.Serializer):
-    task_id = drf_serializers.CharField()
-    status = drf_serializers.CharField()
-    message = drf_serializers.CharField()
-
-
-class BulkTaskStatusResponseSerializer(drf_serializers.Serializer):
-    task_id = drf_serializers.CharField()
-    status = drf_serializers.CharField()
-    result = drf_serializers.JSONField(required=False, allow_null=True)
-
-
-class ErrorResponseSerializer(drf_serializers.Serializer):
-    error = drf_serializers.CharField()
-
-
-class CityCountSerializer(drf_serializers.Serializer):
-    city = drf_serializers.CharField()
-    count = drf_serializers.IntegerField()
-
-
-class SourceCountSerializer(drf_serializers.Serializer):
-    source = drf_serializers.CharField()
-    count = drf_serializers.IntegerField()
-
-
-class ToggleActiveResponseSerializer(drf_serializers.Serializer):
-    is_active = drf_serializers.BooleanField()
 
 
 @extend_schema_view(
@@ -245,8 +208,11 @@ class DashboardView(APIView):
         responses={200: DashboardStatsSerializer},
     )
     def get(self, request, **kwargs):
-        total_events = ProductionEvent.objects.count()
-        active_events = ProductionEvent.objects.filter(is_active=True).count()
+        # Aggregazione in una singola query per total + active
+        counts = ProductionEvent.objects.aggregate(
+            total_events=Count('id'),
+            active_events=Count('id', filter=Q(is_active=True)),
+        )
 
         events_by_city = dict(
             ProductionEvent.objects
@@ -267,8 +233,8 @@ class DashboardView(APIView):
         staging_count = StagingEvent.objects.count()
 
         data = {
-            'total_events': total_events,
-            'active_events': active_events,
+            'total_events': counts['total_events'],
+            'active_events': counts['active_events'],
             'events_by_city': events_by_city,
             'events_by_source': events_by_source,
             'recent_etl_runs': EtlRunSerializer(recent_etl_runs, many=True).data,
@@ -282,7 +248,9 @@ class DashboardView(APIView):
 # API ESTERNE (OAuth2 + Tracking)
 # =============================================================================
 
-CACHE_TTL = 60 * 60  # 1 ora
+from django.conf import settings as django_settings
+
+CACHE_TTL = getattr(django_settings, 'API_CACHE_TTL', 60 * 60)
 CACHE_VERSION_KEY = "api_external_cache_version"
 
 

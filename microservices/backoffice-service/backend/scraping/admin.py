@@ -3,6 +3,8 @@ Configurazione admin per i modelli di scraping (categorie e location aggregate).
 """
 import json
 import logging
+import os
+from pathlib import Path
 
 from django.contrib import admin
 from django.db import connection
@@ -149,59 +151,9 @@ class ScrapingWebsiteAdmin(ModelAdmin):
         }),
     )
 
-    # Mappa città → dominio per city_today (importata dallo spider)
-    CITY_TODAY_CITIES = {
-        "milano": {"domain": "www.milanotoday.it", "name": "Milano"},
-        "torino": {"domain": "www.torinotoday.it", "name": "Torino"},
-        "genova": {"domain": "www.genovatoday.it", "name": "Genova"},
-        "venezia": {"domain": "www.veneziatoday.it", "name": "Venezia"},
-        "bologna": {"domain": "www.bolognatoday.it", "name": "Bologna"},
-        "verona": {"domain": "www.veronasera.it", "name": "Verona"},
-        "treviso": {"domain": "www.trevisotoday.it", "name": "Treviso"},
-        "trento": {"domain": "www.trentotoday.it", "name": "Trento"},
-        "udine": {"domain": "www.udinetoday.it", "name": "Udine"},
-        "pordenone": {"domain": "www.pordenonetoday.it", "name": "Pordenone"},
-        "vicenza": {"domain": "www.vicenzatoday.it", "name": "Vicenza"},
-        "padova": {"domain": "www.padovatoday.it", "name": "Padova"},
-        "monza": {"domain": "www.monzatoday.it", "name": "Monza"},
-        "lecco": {"domain": "www.leccotoday.it", "name": "Lecco"},
-        "sondrio": {"domain": "www.sondriotoday.it", "name": "Sondrio"},
-        "novara": {"domain": "www.novaratoday.it", "name": "Novara"},
-        "brescia": {"domain": "www.bresciatoday.it", "name": "Brescia"},
-        "parma": {"domain": "www.parmatoday.it", "name": "Parma"},
-        "rimini": {"domain": "www.riminitoday.it", "name": "Rimini"},
-        "ravenna": {"domain": "www.ravennatoday.it", "name": "Ravenna"},
-        "forli": {"domain": "www.forlitoday.it", "name": "Forlì"},
-        "cesena": {"domain": "www.cesenatoday.it", "name": "Cesena"},
-        "como": {"domain": "www.quicomo.it", "name": "Como"},
-        "piacenza": {"domain": "www.ilpiacenza.it", "name": "Piacenza"},
-        "trieste": {"domain": "www.triesteprima.it", "name": "Trieste"},
-        "roma": {"domain": "www.romatoday.it", "name": "Roma"},
-        "firenze": {"domain": "www.firenzetoday.it", "name": "Firenze"},
-        "pisa": {"domain": "www.pisatoday.it", "name": "Pisa"},
-        "livorno": {"domain": "www.livornotoday.it", "name": "Livorno"},
-        "perugia": {"domain": "www.perugiatoday.it", "name": "Perugia"},
-        "terni": {"domain": "www.ternitoday.it", "name": "Terni"},
-        "ancona": {"domain": "www.anconatoday.it", "name": "Ancona"},
-        "latina": {"domain": "www.latinatoday.it", "name": "Latina"},
-        "frosinone": {"domain": "www.frosinonetoday.it", "name": "Frosinone"},
-        "viterbo": {"domain": "www.viterbotoday.it", "name": "Viterbo"},
-        "arezzo": {"domain": "www.arezzonotizie.it", "name": "Arezzo"},
-        "pescara": {"domain": "www.ilpescara.it", "name": "Pescara"},
-        "napoli": {"domain": "www.napolitoday.it", "name": "Napoli"},
-        "palermo": {"domain": "www.palermotoday.it", "name": "Palermo"},
-        "catania": {"domain": "www.cataniatoday.it", "name": "Catania"},
-        "messina": {"domain": "www.messinatoday.it", "name": "Messina"},
-        "bari": {"domain": "www.baritoday.it", "name": "Bari"},
-        "foggia": {"domain": "www.foggiatoday.it", "name": "Foggia"},
-        "salerno": {"domain": "www.salernotoday.it", "name": "Salerno"},
-        "avellino": {"domain": "www.avellinotoday.it", "name": "Avellino"},
-        "reggio-calabria": {"domain": "www.reggiotoday.it", "name": "Reggio Calabria"},
-        "lecce": {"domain": "www.lecceprima.it", "name": "Lecce"},
-        "brindisi": {"domain": "www.brindisireport.it", "name": "Brindisi"},
-        "agrigento": {"domain": "www.agrigentonotizie.it", "name": "Agrigento"},
-        "caserta": {"domain": "www.casertanews.it", "name": "Caserta"},
-    }
+    # Mappa città → dominio per city_today (caricata da file JSON)
+    _CITIES_PATH = Path(__file__).parent / "data" / "city_today_cities.json"
+    CITY_TODAY_CITIES: dict[str, dict[str, str]] = json.loads(_CITIES_PATH.read_text(encoding="utf-8"))
 
     def cities_detail(self, obj):
         """Tabella delle città coperte dallo spider (solo per city_today)."""
@@ -259,59 +211,13 @@ class ScrapingWebsiteAdmin(ModelAdmin):
         """Pulsante per avviare il DAG Airflow collegato allo spider."""
         if not obj.pk:
             return "-"
-        return mark_safe(f'''
-            <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
-                <button type="button" id="trigger-dag-btn" onclick="triggerDag({obj.pk})"
-                    style="padding:0.5rem 1.25rem;background:#16a34a;color:#fff;border:none;
-                    border-radius:0.375rem;cursor:pointer;font-size:0.85rem;font-weight:600;
-                    display:inline-flex;align-items:center;gap:0.4rem;"
-                    onmouseover="this.style.background='#15803d'"
-                    onmouseout="this.style.background='#16a34a'">
-                    <span class="material-symbols-outlined" style="font-size:1.1rem;">play_arrow</span>
-                    Avvia Scraping
-                </button>
-                <span id="trigger-dag-status" style="font-size:0.85rem;color:#6b7280;"></span>
-            </div>
-            <script>
-            function triggerDag(websiteId) {{
-                var btn = document.getElementById("trigger-dag-btn");
-                var status = document.getElementById("trigger-dag-status");
-                btn.disabled = true;
-                btn.style.opacity = "0.6";
-                btn.style.cursor = "wait";
-                status.textContent = "Avvio in corso...";
-                status.style.color = "#16a34a";
-
-                fetch("/admin/scraping/scrapingwebsite/" + websiteId + "/trigger-dag/", {{
-                    method: "POST",
-                    headers: {{
-                        "Content-Type": "application/json",
-                        "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
-                    }},
-                }})
-                .then(function(r) {{ return r.json().then(function(d) {{ return {{ok: r.ok, data: d}}; }}); }})
-                .then(function(res) {{
-                    if (res.ok) {{
-                        status.innerHTML = 'DAG avviato: <a href="https://airflow.127.0.0.1.nip.io/dags/etl_events_daily/grid" target="_blank" style="color:#16a34a;text-decoration:underline;">' + res.data.dag_run_id + '</a>';
-                        status.style.color = "#16a34a";
-                    }} else {{
-                        status.textContent = "Errore: " + (res.data.error || "sconosciuto");
-                        status.style.color = "#dc2626";
-                    }}
-                    btn.disabled = false;
-                    btn.style.opacity = "1";
-                    btn.style.cursor = "pointer";
-                }})
-                .catch(function(e) {{
-                    status.textContent = "Errore: " + e.message;
-                    status.style.color = "#dc2626";
-                    btn.disabled = false;
-                    btn.style.opacity = "1";
-                    btn.style.cursor = "pointer";
-                }});
-            }}
-            </script>
-        ''')
+        from django.template.loader import render_to_string
+        domain = os.environ.get("DOMAIN", "127.0.0.1.nip.io")
+        html = render_to_string('admin/scraping/trigger_dag_button.html', {
+            'pk': obj.pk,
+            'airflow_grid_url': f"https://airflow.{domain}/dags/{self.DAG_ID}/grid",
+        })
+        return mark_safe(html)
     trigger_dag_button.short_description = "Avvia Scraping"
 
     def get_urls(self):

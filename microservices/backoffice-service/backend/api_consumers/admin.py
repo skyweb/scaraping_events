@@ -1,7 +1,10 @@
+import logging
 import os
 import secrets
 
 from django.contrib import admin, messages
+
+logger = logging.getLogger(__name__)
 from django.utils import timezone
 from django.utils.html import format_html
 from unfold.admin import ModelAdmin
@@ -167,7 +170,13 @@ class ApiConsumerAdmin(ModelAdmin):
 
         # JWT flow: token exchange + API call
         client_id = obj.keycloak_client_id or f"api-{obj.username}"
-        client_secret = obj.keycloak_client_secret or "&lt;in attesa di sync Keycloak&gt;"
+        raw_secret = obj.keycloak_client_secret
+        if raw_secret and len(raw_secret) > 8:
+            client_secret = f"{raw_secret[:4]}...{raw_secret[-4:]}"
+        elif raw_secret:
+            client_secret = "****"
+        else:
+            client_secret = "&lt;in attesa di sync Keycloak&gt;"
 
         curl_token = (
             f'{c}# 1. Ottieni access token{e}\n'
@@ -272,4 +281,4 @@ class ApiConsumerAdmin(ModelAdmin):
             elif consumer.keycloak_client_id:
                 delete_client_from_keycloak(consumer.keycloak_client_id)
         except Exception:
-            pass
+            logger.warning("Errore rimozione gateway per %s", consumer.username, exc_info=True)

@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib import admin
+from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 from unfold.admin import ModelAdmin, TabularInline, StackedInline
 
@@ -8,6 +9,21 @@ from .models import (
     EventoInSezione, SezioneEventi, EventoSelezionato,
 )
 from .widgets import ImagePopupWidget
+
+
+def _render_evento_preview(ev) -> str:
+    """Anteprima evento con escaping (thumbnail + categoria + titolo troncato)."""
+    img = format_html(
+        '<img src="{}" style="width:60px;height:40px;object-fit:cover;border-radius:4px;'
+        'vertical-align:middle;margin-right:8px;">',
+        ev.image_url,
+    ) if ev.image_url else ''
+    cat = ev.category[0] if ev.category else ''
+    title = ev.title[:50] + ('...' if len(ev.title) > 50 else '')
+    return format_html(
+        '{}<span style="color:#6b7280;font-size:.75rem;">{}</span> <strong>{}</strong>',
+        img, cat, title,
+    )
 
 
 # =============================================================================
@@ -32,7 +48,7 @@ class SezionePaginaInline(TabularInline):
         if not obj.pk:
             return '-'
         url = f'/admin/cms/sezionepagina/{obj.pk}/change/'
-        return mark_safe(f'<a href="{url}" style="font-weight:600;">{obj.titolo}</a>')
+        return format_html('<a href="{}" style="font-weight:600;">{}</a>', url, obj.titolo)
     titolo_link.short_description = 'Titolo'
 
     def stato_chip(self, obj):
@@ -42,10 +58,11 @@ class SezionePaginaInline(TabularInline):
             color, bg, label = '#065f46', '#d1fae5', 'Attivo'
         else:
             color, bg, label = '#991b1b', '#fee2e2', 'Disattivo'
-        return mark_safe(
-            f'<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
-            f'font-size:.75rem;font-weight:600;color:{color};background:{bg};">'
-            f'{label}</span>'
+        return format_html(
+            '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+            'font-size:.75rem;font-weight:600;color:{};background:{};">'
+            '{}</span>',
+            color, bg, label,
         )
     stato_chip.short_description = 'Stato'
 
@@ -70,8 +87,9 @@ class ArticoloSezioneInline(StackedInline):
         url = obj.immagine_finale if obj.pk else ''
         if not url:
             return '-'
-        return mark_safe(
-            f'<img src="{url}" style="height:50px;border-radius:4px;object-fit:cover;">'
+        return format_html(
+            '<img src="{}" style="height:50px;border-radius:4px;object-fit:cover;">',
+            url,
         )
     immagine_preview.short_description = 'Anteprima'
 
@@ -87,20 +105,7 @@ class EventoInSezioneInline(TabularInline):
     def evento_preview(self, obj):
         if not obj.pk or not obj.evento_id:
             return '-'
-        ev = obj.evento
-        img = ''
-        if ev.image_url:
-            img = (
-                f'<img src="{ev.image_url}" '
-                f'style="width:60px;height:40px;object-fit:cover;border-radius:4px;vertical-align:middle;margin-right:8px;">'
-            )
-        cat = ev.category[0] if ev.category else ''
-        title = ev.title[:50] + ('...' if len(ev.title) > 50 else '')
-        return mark_safe(
-            f'{img}'
-            f'<span style="color:#6b7280;font-size:.75rem;">{cat}</span> '
-            f'<strong>{title}</strong>'
-        )
+        return _render_evento_preview(obj.evento)
     evento_preview.short_description = 'Anteprima'
 
 
@@ -115,20 +120,7 @@ class EventoSelezionatoInline(TabularInline):
         """Anteprima: thumbnail + categoria + titolo troncato."""
         if not obj.pk or not obj.evento_id:
             return '-'
-        ev = obj.evento
-        img = ''
-        if ev.image_url:
-            img = (
-                f'<img src="{ev.image_url}" '
-                f'style="width:60px;height:40px;object-fit:cover;border-radius:4px;vertical-align:middle;margin-right:8px;">'
-            )
-        cat = ev.category[0] if ev.category else ''
-        title = ev.title[:50] + ('...' if len(ev.title) > 50 else '')
-        return mark_safe(
-            f'{img}'
-            f'<span style="color:#6b7280;font-size:.75rem;">{cat}</span> '
-            f'<strong>{title}</strong>'
-        )
+        return _render_evento_preview(obj.evento)
     evento_preview.short_description = 'Anteprima'
 
 
@@ -204,10 +196,11 @@ class SezionePaginaAdmin(ModelAdmin):
     def colore_chip(self, obj):
         """Chip colorato per il colore della sezione."""
         color, bg = self.COLORE_MAP.get(obj.colore, ('#6b7280', '#f3f4f6'))
-        return mark_safe(
-            f'<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
-            f'font-size:.75rem;font-weight:600;color:{color};background:{bg};">'
-            f'{obj.get_colore_display()}</span>'
+        return format_html(
+            '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+            'font-size:.75rem;font-weight:600;color:{};background:{};">'
+            '{}</span>',
+            color, bg, obj.get_colore_display(),
         )
     colore_chip.short_description = 'Colore'
 
@@ -216,10 +209,11 @@ class SezionePaginaAdmin(ModelAdmin):
             color, bg, label = '#065f46', '#d1fae5', 'Attivo'
         else:
             color, bg, label = '#991b1b', '#fee2e2', 'Disattivo'
-        return mark_safe(
-            f'<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
-            f'font-size:.75rem;font-weight:600;color:{color};background:{bg};">'
-            f'{label}</span>'
+        return format_html(
+            '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+            'font-size:.75rem;font-weight:600;color:{};background:{};">'
+            '{}</span>',
+            color, bg, label,
         )
     stato_chip.short_description = 'Stato'
 
@@ -258,10 +252,11 @@ class SezioneEventiAdmin(ModelAdmin):
 
     def colore_chip(self, obj):
         color, bg = self.COLORE_MAP.get(obj.colore, ('#6b7280', '#f3f4f6'))
-        return mark_safe(
-            f'<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
-            f'font-size:.75rem;font-weight:600;color:{color};background:{bg};">'
-            f'{obj.get_colore_display()}</span>'
+        return format_html(
+            '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+            'font-size:.75rem;font-weight:600;color:{};background:{};">'
+            '{}</span>',
+            color, bg, obj.get_colore_display(),
         )
     colore_chip.short_description = 'Colore'
 

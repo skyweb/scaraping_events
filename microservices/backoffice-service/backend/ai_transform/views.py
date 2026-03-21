@@ -89,10 +89,14 @@ def transform_file_view(request):
     thinking: bool = request.data.get("thinking", DEFAULT_THINKING)
     limit: int = request.data.get("limit", 0)
 
-    # Leggi il file
-    path = Path(file_path)
+    # Validazione path traversal (OWASP A01:2021)
+    from django.conf import settings as django_settings
+    allowed_dir = Path(getattr(django_settings, 'AI_TRANSFORM_DATA_DIR', django_settings.BASE_DIR)).resolve()
+    path = (allowed_dir / file_path).resolve()
+    if not str(path).startswith(str(allowed_dir)):
+        return Response({"error": "Percorso non consentito"}, status=403)
     if not path.is_file():
-        return Response({"error": f"File non trovato: {file_path}"}, status=404)
+        return Response({"error": "File non trovato"}, status=404)
 
     try:
         with open(path, encoding="utf-8") as f:

@@ -158,11 +158,28 @@ def _parse_point(coords: dict) -> Point | None:
     try:
         lat = float(coords.get('lat') or 0)
         lng = float(coords.get('lng') or 0)
-        if lat and lng:
+        if lat is not None and lng is not None:
             return Point(lng, lat, srid=4326)  # Point(x=lng, y=lat)
     except (ValueError, TypeError):
         pass
     return None
+
+
+class CityNestedSerializer(serializers.Serializer):
+    """Dati città annidati nel formato scraping."""
+    city_name = serializers.CharField(max_length=100, required=False, allow_blank=True, allow_null=True)
+    location_name = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
+    location_address = serializers.CharField(max_length=500, required=False, allow_blank=True, allow_null=True)
+    location_coordinates = serializers.DictField(required=False, allow_null=True)
+
+
+class DatesNestedSerializer(serializers.Serializer):
+    """Dati date annidati nel formato scraping."""
+    date_start = serializers.CharField(max_length=30, required=False, allow_blank=True, allow_null=True)
+    date_end = serializers.CharField(max_length=30, required=False, allow_blank=True, allow_null=True)
+    time_start = serializers.CharField(max_length=10, required=False, allow_blank=True, allow_null=True)
+    time_end = serializers.CharField(max_length=10, required=False, allow_blank=True, allow_null=True)
+    time_info = serializers.CharField(max_length=500, required=False, allow_blank=True, allow_null=True)
 
 
 @extend_schema_serializer(
@@ -233,14 +250,14 @@ class StagingEventScrapingSerializer(serializers.Serializer):
           "scraped_at": "YYYY-MM-DD HH:MM:SS"
         }
     """
-    uuid = serializers.CharField()
-    content_hash = serializers.CharField(required=False, allow_null=True, allow_blank=True)
-    source = serializers.CharField()
-    title = serializers.CharField()
+    uuid = serializers.CharField(max_length=64)
+    content_hash = serializers.CharField(max_length=64, required=False, allow_null=True, allow_blank=True)
+    source = serializers.CharField(max_length=50)
+    title = serializers.CharField(max_length=1000)
     stars = serializers.IntegerField(required=False, allow_null=True)
     category = serializers.ListField(child=serializers.CharField(), required=False, allow_null=True)
-    city = serializers.DictField(required=False, allow_null=True)
-    dates = serializers.DictField(required=False, allow_null=True)
+    city = CityNestedSerializer(required=False, allow_null=True)
+    dates = DatesNestedSerializer(required=False, allow_null=True)
     url = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     description = serializers.CharField(required=False, allow_null=True, allow_blank=True)
     image_url = serializers.CharField(required=False, allow_null=True, allow_blank=True)
@@ -415,11 +432,11 @@ class StagingEventLegacySerializer(serializers.Serializer):
 
         # Genera uuid: title + date_start + location_name
         uuid_input = "".join([str(flat.get(k) or '') for k in ('title', 'date_start', 'location_name')])
-        flat['uuid'] = hashlib.sha256(uuid_input.encode()).hexdigest()[:16]
+        flat['uuid'] = hashlib.sha256(uuid_input.encode()).hexdigest()[:32]
 
         # Genera content_hash: description + price
         hash_input = "".join([str(flat.get(k) or '') for k in ('description', 'price')])
-        flat['content_hash'] = hashlib.sha256(hash_input.encode()).hexdigest()[:16]
+        flat['content_hash'] = hashlib.sha256(hash_input.encode()).hexdigest()[:32]
 
         return flat
 
@@ -546,3 +563,51 @@ class BulkProcessResponseSerializer(serializers.Serializer):
     failed_events = FailedEventSerializer(many=True, help_text="List of events that failed to save, with their errors.")
     created_count = serializers.IntegerField(help_text="Number of events successfully created.")
     failed_count = serializers.IntegerField(help_text="Number of events that failed to save.")
+
+
+# =============================================================================
+# Serializer per risposte Swagger (spostati da views.py)
+# =============================================================================
+
+class BulkCreateResponseSerializer(serializers.Serializer):
+    created = serializers.IntegerField()
+    events = StagingEventSerializer(many=True)
+
+
+class BulkCreateRequestSerializer(serializers.Serializer):
+    events = StagingEventScrapingSerializer(many=True)
+
+
+class ClearSourceResponseSerializer(serializers.Serializer):
+    deleted = serializers.IntegerField()
+    source = serializers.CharField()
+
+
+class BulkAcceptedResponseSerializer(serializers.Serializer):
+    task_id = serializers.CharField()
+    status = serializers.CharField()
+    message = serializers.CharField()
+
+
+class BulkTaskStatusResponseSerializer(serializers.Serializer):
+    task_id = serializers.CharField()
+    status = serializers.CharField()
+    result = serializers.JSONField(required=False, allow_null=True)
+
+
+class ErrorResponseSerializer(serializers.Serializer):
+    error = serializers.CharField()
+
+
+class CityCountSerializer(serializers.Serializer):
+    city = serializers.CharField()
+    count = serializers.IntegerField()
+
+
+class SourceCountSerializer(serializers.Serializer):
+    source = serializers.CharField()
+    count = serializers.IntegerField()
+
+
+class ToggleActiveResponseSerializer(serializers.Serializer):
+    is_active = serializers.BooleanField()

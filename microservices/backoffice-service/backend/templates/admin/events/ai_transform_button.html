@@ -1,0 +1,64 @@
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+    <select id="ai-model-select" style="padding:0.4rem 0.6rem;border:1px solid #d1d5db;
+        border-radius:0.375rem;font-size:0.85rem;background:#fff;">
+        {% for model in models %}
+        <option value="{{ model }}"{% if model == default_model %} selected{% endif %}>{{ model }}</option>
+        {% endfor %}
+    </select>
+    <button type="button" id="ai-transform-btn"
+        style="padding:0.5rem 1.25rem;background:#7c3aed;color:#fff;border:none;
+        border-radius:0.375rem;cursor:pointer;font-size:0.85rem;font-weight:600;
+        display:inline-flex;align-items:center;gap:0.4rem;"
+        onmouseover="this.style.background='#6d28d9'"
+        onmouseout="this.style.background='#7c3aed'">
+        <span class="material-symbols-outlined" style="font-size:1.1rem;">auto_awesome</span>
+        Genera Schema.org
+    </button>
+    <span id="ai-transform-status" style="font-size:0.85rem;color:#6b7280;"></span>
+</div>
+<script>
+(function() {
+    var eventId = {{ pk }};
+    var btn = document.getElementById("ai-transform-btn");
+    var status = document.getElementById("ai-transform-status");
+
+    btn.addEventListener("click", function() {
+        var model = document.getElementById("ai-model-select").value;
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+        btn.style.cursor = "wait";
+        status.textContent = "Trasformazione in corso...";
+        status.style.color = "#7c3aed";
+
+        fetch("/admin/events/stagingevent/" + eventId + "/ai-transform/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
+            },
+            body: JSON.stringify({model: model}),
+        })
+        .then(function(r) { return r.json().then(function(d) { return {ok: r.ok, data: d}; }); })
+        .then(function(res) {
+            if (res.ok) {
+                status.textContent = "Schema.org generato con " + res.data.model;
+                status.style.color = "#16a34a";
+                setTimeout(function() { location.reload(); }, 2500);
+            } else {
+                status.textContent = "Errore: " + (res.data.error || "sconosciuto");
+                status.style.color = "#dc2626";
+                btn.disabled = false;
+                btn.style.opacity = "1";
+                btn.style.cursor = "pointer";
+            }
+        })
+        .catch(function(e) {
+            status.textContent = "Errore di rete: " + e.message;
+            status.style.color = "#dc2626";
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            btn.style.cursor = "pointer";
+        });
+    });
+})();
+</script>

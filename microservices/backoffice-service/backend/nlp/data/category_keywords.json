@@ -1,0 +1,53 @@
+{
+  "musica": [
+    "concerto", "concerti", "orchestra", "musicale", "musicista", "jazz", "rock",
+    "classica", "sinfonica", "coro", "band", "live music", "dj set", "opera lirica",
+    "festival musicale", "recital", "soprano", "tenore", "pianoforte", "violino",
+    "chitarra", "cantante", "cantautore", "rapper"
+  ],
+  "teatro": [
+    "teatro", "teatrale", "commedia", "dramma", "spettacolo", "palcoscenico",
+    "attore", "attrice", "regista", "regia", "messa in scena", "sipario",
+    "compagnia teatrale", "monologo", "prosa", "tragedia", "musical"
+  ],
+  "danza": [
+    "danza", "balletto", "coreografia", "ballerino", "ballerina", "danzatore",
+    "contemporanea", "classico", "hip hop", "tango", "flamenco"
+  ],
+  "mostre": [
+    "mostra", "esposizione", "galleria", "museo", "opere d'arte", "pittura",
+    "scultura", "fotografia", "installazione", "retrospettiva", "collezione",
+    "vernissage", "artista", "quadri"
+  ],
+  "cinema": [
+    "cinema", "film", "proiezione", "cortometraggio", "documentario",
+    "rassegna cinematografica", "regista", "pellicola", "sala cinematografica"
+  ],
+  "sagre_feste": [
+    "sagra", "festa", "fiera", "mercato", "mercatino", "tradizione", "folklore",
+    "processione", "patronale", "carnevale", "palio", "rievocazione",
+    "enogastronomia", "prodotti tipici", "street food"
+  ],
+  "sport": [
+    "sport", "sportivo", "gara", "corsa", "maratona", "ciclismo", "calcio",
+    "torneo", "campionato", "pallavolo", "basket", "nuoto", "sci", "trekking",
+    "escursione", "arrampicata", "running"
+  ],
+  "conferenze": [
+    "conferenza", "convegno", "seminario", "workshop", "incontro", "dibattito",
+    "presentazione", "lectio", "tavola rotonda", "simposio", "congresso",
+    "lezione", "formazione"
+  ],
+  "bambini": [
+    "bambini", "famiglie", "ragazzi", "kids", "laboratorio didattico",
+    "animazione", "gioco", "burattini", "marionette", "fiabe", "ludoteca"
+  ],
+  "enogastronomia": [
+    "vino", "degustazione", "gastronomia", "cucina", "chef", "ristorante",
+    "cantina", "cibo", "ricetta", "pizza", "birra", "olio"
+  ],
+  "natura": [
+    "natura", "escursione", "passeggiata", "parco", "giardino", "botanico",
+    "birdwatching", "flora", "fauna", "montagna", "lago", "mare", "bosco"
+  ]
+}

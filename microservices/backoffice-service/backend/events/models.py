@@ -4,8 +4,8 @@ from django.contrib.postgres.fields import ArrayField
 
 class ProductionEvent(models.Model):
     """Eventi finali validati - tabella esistente"""
-    uuid = models.CharField(max_length=16, unique=True)
-    content_hash = models.CharField(max_length=16, blank=True, null=True)
+    uuid = models.CharField(max_length=32, unique=True)
+    content_hash = models.CharField(max_length=32, blank=True, null=True)
     source = models.CharField(max_length=50)
     url = models.TextField(blank=True, null=True)
     title = models.TextField()
@@ -43,13 +43,13 @@ class ProductionEvent(models.Model):
 
 class StagingEvent(models.Model):
     """Eventi temporanei dallo scraping"""
-    uuid = models.CharField(max_length=16, unique=True)
-    content_hash = models.CharField(max_length=16, blank=True, null=True)
-    source = models.CharField(max_length=50,db_comment='sorgente dati')
+    uuid = models.CharField(max_length=32, unique=True)
+    content_hash = models.CharField(max_length=32, blank=True, null=True)
+    source = models.CharField(max_length=50, db_index=True, db_comment='sorgente dati')
     title = models.TextField()
     category = ArrayField(models.TextField(), blank=True, null=True)
     # locations
-    city_name = models.CharField(max_length=100, blank=True, null=True)
+    city_name = models.CharField(max_length=100, blank=True, null=True, db_index=True)
     location_name = models.CharField(max_length=255, blank=True, null=True)
     location_address = models.TextField(blank=True, null=True)
     location_coordinates = models.PointField(geography=True, srid=4326, blank=True, null=True)

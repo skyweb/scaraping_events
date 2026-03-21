@@ -11,7 +11,7 @@ from datetime import timedelta
 from django import forms
 from django.contrib import admin
 from django.db.models import Avg, Max, Min, Count
-from django.db.models.functions import TruncDate
+from django.db.models.functions import Coalesce, TruncDate
 from django.utils import timezone
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
@@ -29,6 +29,13 @@ from comuni_istat.admin import ProvinciaFilter, RegioneFilter
 from scraping.admin import CategoryFilter
 
 logger = logging.getLogger(__name__)
+
+# Modelli AI disponibili per i pulsanti di trasformazione admin
+AI_AVAILABLE_MODELS = [
+    "gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro",
+    "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "qwen/qwen3-32b",
+]
+AI_DEFAULT_MODEL = "gemini-2.5-flash"
 
 
 # =============================================================================
@@ -103,19 +110,18 @@ class TemporalStatusFilter(admin.SimpleListFilter):
 
     def queryset(self, request, queryset):
         """Filtra il queryset in base allo stato temporale selezionato."""
+        if not self.value():
+            return queryset
         today = timezone.now().date()
+        qs = queryset.annotate(
+            _effective_end=Coalesce('date_end', 'date_start'),
+        )
         if self.value() == 'passato':
-            return queryset.filter(date_start__isnull=False).extra(
-                where=["COALESCE(date_end, date_start) < %s"], params=[today]
-            )
+            return qs.filter(date_start__isnull=False, _effective_end__lt=today)
         if self.value() == 'in_corso':
-            return queryset.filter(
-                date_start__lte=today,
-            ).extra(
-                where=["COALESCE(date_end, date_start) >= %s"], params=[today]
-            )
+            return qs.filter(date_start__lte=today, _effective_end__gte=today)
         if self.value() == 'futuro':
-            return queryset.filter(date_start__gt=today)
+            return qs.filter(date_start__gt=today)
         return queryset
 
 
@@ -221,15 +227,17 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             # Per pochi eventi, esegui sincrono
             try:
                 from nlp.extractor import analyze_staging_event
-                enriched = 0
+                to_update: list[StagingEvent] = []
                 for event in queryset.filter(description__isnull=False).exclude(description=""):
                     entities = analyze_staging_event(event)
                     if entities:
                         raw = event.raw_data or {}
                         raw["nlp"] = entities
-                        StagingEvent.objects.filter(pk=event.pk).update(raw_data=raw)
-                        enriched += 1
-                self.message_user(request, f"Analisi NLP completata: {enriched}/{count} eventi arricchiti")
+                        event.raw_data = raw
+                        to_update.append(event)
+                if to_update:
+                    StagingEvent.objects.bulk_update(to_update, ['raw_data'], batch_size=100)
+                self.message_user(request, f"Analisi NLP completata: {len(to_update)}/{count} eventi arricchiti")
             except Exception as e:
                 self.message_user(request, f"Errore NLP: {e}", level='error')
 
@@ -315,93 +323,13 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         if not obj.raw_data:
             return mark_safe('<span style="color:#6b7280;font-size:0.85rem;">Nessun raw_data disponibile</span>')
 
-        models_options = ''.join(
-            f'<option value="{m}"{" selected" if m == "gemini-2.5-flash" else ""}>{m}</option>'
-            for m in [
-                "gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro",
-                "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "qwen/qwen3-32b",
-            ]
-        )
-        return mark_safe(f'''
-            <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
-                <select id="ai-model-select" style="padding:0.4rem 0.6rem;border:1px solid #d1d5db;
-                    border-radius:0.375rem;font-size:0.85rem;background:#fff;">
-                    {models_options}
-                </select>
-                <button type="button" id="ai-transform-btn" onclick="aiTransform({obj.pk})"
-                    style="padding:0.5rem 1.25rem;background:#7c3aed;color:#fff;border:none;
-                    border-radius:0.375rem;cursor:pointer;font-size:0.85rem;font-weight:600;
-                    display:inline-flex;align-items:center;gap:0.4rem;"
-                    onmouseover="this.style.background='#6d28d9'"
-                    onmouseout="this.style.background='#7c3aed'">
-                    <span class="material-symbols-outlined" style="font-size:1.1rem;">auto_awesome</span>
-                    Genera Schema.org
-                </button>
-                <span id="ai-transform-status" style="font-size:0.85rem;color:#6b7280;"></span>
-            </div>
-            <script>
-            function aiTransform(eventId) {{
-                var btn = document.getElementById("ai-transform-btn");
-                var status = document.getElementById("ai-transform-status");
-                var model = document.getElementById("ai-model-select").value;
-                btn.disabled = true;
-                btn.style.opacity = "0.6";
-                btn.style.cursor = "wait";
-                status.textContent = "Trasformazione in corso...";
-                status.style.color = "#7c3aed";
-
-                fetch("/admin/events/stagingevent/" + eventId + "/ai-transform/", {{
-                    method: "POST",
-                    headers: {{
-                        "Content-Type": "application/json",
-                        "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
-                    }},
-                    body: JSON.stringify({{model: model}}),
-                }})
-                .then(function(r) {{ return r.json().then(function(d) {{ return {{ok: r.ok, data: d}}; }}); }})
-                .then(function(res) {{
-                    if (res.ok) {{
-                        var msg = "Schema.org generato con " + res.data.model;
-                        msg += formatQuota(res.data.quota);
-                        status.innerHTML = msg;
-                        status.style.color = "#16a34a";
-                        setTimeout(function() {{ location.reload(); }}, 2500);
-                    }} else {{
-                        status.textContent = "Errore: " + (res.data.error || "sconosciuto");
-                        status.style.color = "#dc2626";
-                        btn.disabled = false;
-                        btn.style.opacity = "1";
-                        btn.style.cursor = "pointer";
-                    }}
-                }})
-                .catch(function(e) {{
-                    status.textContent = "Errore di rete: " + e.message;
-                    status.style.color = "#dc2626";
-                    btn.disabled = false;
-                    btn.style.opacity = "1";
-                    btn.style.cursor = "pointer";
-                }});
-            }}
-            function formatQuota(q) {{
-                if (!q) return "";
-                if (q.provider === "groq" && q.remaining_requests != null) {{
-                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
-                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req"
-                        + (q.remaining_tokens ? ", " + Number(q.remaining_tokens).toLocaleString() + " token" : "")
-                        + (q.reset_requests ? " (reset " + q.reset_requests + ")" : "")
-                        + "</span>";
-                }}
-                if (q.provider === "gemini" && q.remaining_requests != null) {{
-                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
-                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req/giorno"
-                        + " (usate oggi: " + (q.used_today || 0) + ")"
-                        + (q.rpm ? ", max " + q.rpm + " req/min" : "")
-                        + "</span>";
-                }}
-                return "";
-            }}
-            </script>
-        ''')
+        from django.template.loader import render_to_string
+        html = render_to_string('admin/events/ai_transform_button.html', {
+            'pk': obj.pk,
+            'models': AI_AVAILABLE_MODELS,
+            'default_model': AI_DEFAULT_MODEL,
+        })
+        return mark_safe(html)
     ai_transform_button.short_description = "AI Transform"
 
     def ai_description_button(self, obj):
@@ -411,93 +339,13 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         if not description:
             return mark_safe('<span style="color:#6b7280;font-size:0.85rem;">Nessuna description in raw_data</span>')
 
-        models_options = ''.join(
-            f'<option value="{m}"{" selected" if m == "gemini-2.5-flash" else ""}>{m}</option>'
-            for m in [
-                "gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro",
-                "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "qwen/qwen3-32b",
-            ]
-        )
-        return mark_safe(f'''
-            <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
-                <select id="ai-desc-model-select" style="padding:0.4rem 0.6rem;border:1px solid #d1d5db;
-                    border-radius:0.375rem;font-size:0.85rem;background:#fff;">
-                    {models_options}
-                </select>
-                <button type="button" id="ai-desc-btn" onclick="aiDescriptionTransform({obj.pk})"
-                    style="padding:0.5rem 1.25rem;background:#0891b2;color:#fff;border:none;
-                    border-radius:0.375rem;cursor:pointer;font-size:0.85rem;font-weight:600;
-                    display:inline-flex;align-items:center;gap:0.4rem;"
-                    onmouseover="this.style.background='#0e7490'"
-                    onmouseout="this.style.background='#0891b2'">
-                    <span class="material-symbols-outlined" style="font-size:1.1rem;">auto_awesome</span>
-                    Estrai descrizione strutturata
-                </button>
-                <span id="ai-desc-status" style="font-size:0.85rem;color:#6b7280;"></span>
-            </div>
-            <script>
-            function aiDescriptionTransform(eventId) {{
-                var btn = document.getElementById("ai-desc-btn");
-                var status = document.getElementById("ai-desc-status");
-                var model = document.getElementById("ai-desc-model-select").value;
-                btn.disabled = true;
-                btn.style.opacity = "0.6";
-                btn.style.cursor = "wait";
-                status.textContent = "Estrazione in corso...";
-                status.style.color = "#0891b2";
-
-                fetch("/admin/events/stagingevent/" + eventId + "/ai-description/", {{
-                    method: "POST",
-                    headers: {{
-                        "Content-Type": "application/json",
-                        "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
-                    }},
-                    body: JSON.stringify({{model: model}}),
-                }})
-                .then(function(r) {{ return r.json().then(function(d) {{ return {{ok: r.ok, data: d}}; }}); }})
-                .then(function(res) {{
-                    if (res.ok) {{
-                        var msg = "Descrizione aggiornata con " + res.data.model;
-                        msg += formatQuotaDesc(res.data.quota);
-                        status.innerHTML = msg;
-                        status.style.color = "#16a34a";
-                        setTimeout(function() {{ location.reload(); }}, 2500);
-                    }} else {{
-                        status.textContent = "Errore: " + (res.data.error || "sconosciuto");
-                        status.style.color = "#dc2626";
-                        btn.disabled = false;
-                        btn.style.opacity = "1";
-                        btn.style.cursor = "pointer";
-                    }}
-                }})
-                .catch(function(e) {{
-                    status.textContent = "Errore di rete: " + e.message;
-                    status.style.color = "#dc2626";
-                    btn.disabled = false;
-                    btn.style.opacity = "1";
-                    btn.style.cursor = "pointer";
-                }});
-            }}
-            function formatQuotaDesc(q) {{
-                if (!q) return "";
-                if (q.provider === "groq" && q.remaining_requests != null) {{
-                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
-                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req"
-                        + (q.remaining_tokens ? ", " + Number(q.remaining_tokens).toLocaleString() + " token" : "")
-                        + (q.reset_requests ? " (reset " + q.reset_requests + ")" : "")
-                        + "</span>";
-                }}
-                if (q.provider === "gemini" && q.remaining_requests != null) {{
-                    return " — <span style='color:#6b7280;font-size:0.8rem;'>"
-                        + "Residuo: " + q.remaining_requests + "/" + (q.limit_requests || "?") + " req/giorno"
-                        + " (usate oggi: " + (q.used_today || 0) + ")"
-                        + (q.rpm ? ", max " + q.rpm + " req/min" : "")
-                        + "</span>";
-                }}
-                return "";
-            }}
-            </script>
-        ''')
+        from django.template.loader import render_to_string
+        html = render_to_string('admin/events/ai_description_button.html', {
+            'pk': obj.pk,
+            'models': AI_AVAILABLE_MODELS,
+            'default_model': AI_DEFAULT_MODEL,
+        })
+        return mark_safe(html)
     ai_description_button.short_description = "AI Descrizione"
 
     def get_urls(self):
@@ -534,7 +382,10 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         if not obj.raw_data:
             return JsonResponse({'error': 'Nessun raw_data disponibile'}, status=400)
 
-        body = json.loads(request.body)
+        try:
+            body = json.loads(request.body)
+        except (json.JSONDecodeError, ValueError):
+            return JsonResponse({'error': 'JSON non valido'}, status=400)
         model = body.get('model', 'gemini-2.5-flash')
 
         try:
@@ -563,7 +414,10 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         if not description:
             return JsonResponse({'error': 'Nessuna description in raw_data'}, status=400)
 
-        body = json.loads(request.body)
+        try:
+            body = json.loads(request.body)
+        except (json.JSONDecodeError, ValueError):
+            return JsonResponse({'error': 'JSON non valido'}, status=400)
         model = body.get('model', 'gemini-2.5-flash')
 
         prompt = (
@@ -583,13 +437,6 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             return JsonResponse({'ok': True, 'model': model, 'quota': quota_info})
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
-
-    def time_info_html(self, obj):
-        """Visualizza time_info con rendering HTML."""
-        if not obj.time_info:
-            return "-"
-        return mark_safe(obj.time_info)
-    time_info_html.short_description = "Orario info"
 
 
 # =============================================================================

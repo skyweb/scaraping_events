@@ -5,16 +5,14 @@ Valida i token Bearer emessi da Keycloak scaricando le chiavi JWKS
 dal realm configurato. Supporta cache delle chiavi con TTL di 5 minuti.
 """
 
-import json
 import logging
-import time
-import urllib.request
-import urllib.error
 from typing import Any
 
 import jwt
+import requests as http_client
 from django.conf import settings
 from django.contrib.auth import get_user_model
+from django.core.cache import cache
 from rest_framework.authentication import BaseAuthentication
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.permissions import BasePermission
@@ -24,9 +22,7 @@ logger = logging.getLogger(__name__)
 
 User = get_user_model()
 
-# --- Cache globale JWKS con TTL ---
-_jwks_cache: dict[str, Any] | None = None
-_jwks_cache_expiry: float = 0.0
+_JWKS_CACHE_KEY = "keycloak_jwks"
 _JWKS_CACHE_TTL: int = 300  # 5 minuti
 
 
@@ -281,13 +277,12 @@ class KeycloakJWTAuthentication(BaseAuthentication):
 
     def _get_jwks(self) -> dict[str, Any]:
         """
-        Scarica le chiavi JWKS dal Keycloak realm con cache TTL di 5 minuti.
+        Scarica le chiavi JWKS dal Keycloak realm.
+        Thread-safe tramite django.core.cache (Redis).
         """
-        global _jwks_cache, _jwks_cache_expiry
-
-        now = time.time()
-        if _jwks_cache is not None and now < _jwks_cache_expiry:
-            return _jwks_cache
+        cached = cache.get(_JWKS_CACHE_KEY)
+        if cached is not None:
+            return cached
 
         jwks_url = (
             f"{settings.KEYCLOAK_URL}/realms/{settings.KEYCLOAK_REALM}"
@@ -295,19 +290,13 @@ class KeycloakJWTAuthentication(BaseAuthentication):
         )
 
         try:
-            req = urllib.request.Request(jwks_url)
-            with urllib.request.urlopen(req, timeout=10) as response:
-                _jwks_cache = json.loads(response.read())
-            _jwks_cache_expiry = now + _JWKS_CACHE_TTL
+            response = http_client.get(jwks_url, timeout=10)
+            response.raise_for_status()
+            jwks_data = response.json()
+            cache.set(_JWKS_CACHE_KEY, jwks_data, timeout=_JWKS_CACHE_TTL)
             logger.info("JWKS scaricato e cachato da %s", jwks_url)
-            return _jwks_cache
-        except (urllib.error.URLError, OSError) as e:
-            # Se abbiamo una cache scaduta, usiamola come fallback
-            if _jwks_cache is not None:
-                logger.warning(
-                    "Impossibile aggiornare JWKS, uso cache scaduta: %s", e
-                )
-                return _jwks_cache
+            return jwks_data
+        except (http_client.RequestException, OSError) as e:
             raise AuthenticationFailed(f"Impossibile scaricare le chiavi JWKS: {e}")
 
 
