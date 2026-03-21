@@ -95,8 +95,7 @@ class ApiConsumerAdmin(ModelAdmin):
         ("Stato sincronizzazione", {
             "classes": ["tab"],
             "fields": [
-                "show_active_chip", "show_sync_chip",
-                "apisix_synced", "keycloak_synced", "sync_error", "last_synced_at",
+                "show_apisix_chip", "show_keycloak_chip", "sync_error", "last_synced_at",
             ],
         }),
         ("Utilizzo", {
@@ -113,10 +112,11 @@ class ApiConsumerAdmin(ModelAdmin):
 
     def get_readonly_fields(self, request, obj=None):
         base = [
-            "apisix_synced", "keycloak_synced", "sync_error", "last_synced_at",
+            "sync_error", "last_synced_at",
             "show_usage_today", "show_usage_month", "show_last_request",
             "show_curl_example", "show_permissions_matrix",
             "show_active_chip", "show_sync_chip",
+            "show_apisix_chip", "show_keycloak_chip",
         ]
         if obj:
             return [*base, "username", "api_key", "keycloak_client_id", "keycloak_client_secret"]
@@ -134,6 +134,18 @@ class ApiConsumerAdmin(ModelAdmin):
     def show_sync_chip(self, obj: ApiConsumer) -> str:
         synced = obj.apisix_synced if obj.auth_type == "api_key" else obj.keycloak_synced
         if synced:
+            return mark_safe(_chip("Sincronizzato", True))
+        return mark_safe(_chip("Non sincronizzato", False))
+
+    @admin.display(description="APISIX synced")
+    def show_apisix_chip(self, obj: ApiConsumer) -> str:
+        if obj.apisix_synced:
+            return mark_safe(_chip("Sincronizzato", True))
+        return mark_safe(_chip("Non sincronizzato", False))
+
+    @admin.display(description="Keycloak synced")
+    def show_keycloak_chip(self, obj: ApiConsumer) -> str:
+        if obj.keycloak_synced:
             return mark_safe(_chip("Sincronizzato", True))
         return mark_safe(_chip("Non sincronizzato", False))
 
