@@ -1,5 +1,6 @@
 from django.contrib.gis.db import models
 from django.contrib.postgres.fields import ArrayField
+from django.utils import timezone
 
 
 class Event(models.Model):
@@ -30,22 +31,18 @@ class Event(models.Model):
     date_start = models.DateTimeField(blank=True, null=True)
     date_end = models.DateTimeField(blank=True, null=True)
 
-    # Orari (da ProductionEvent)
-    time_start = models.TimeField(blank=True, null=True)
-    time_end = models.TimeField(blank=True, null=True)
-    time_info = models.TextField(blank=True, null=True)
-    schedule = models.TextField(blank=True, null=True)
-    weekdays = models.TextField(blank=True, null=True)
-
     # Info
     url = models.TextField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     image_url = models.TextField(blank=True, null=True)
     price = models.TextField(blank=True, null=True)
-    website = models.TextField(blank=True, null=True)
     raw_data = models.JSONField(blank=True, null=True)
     schema_org = models.JSONField(blank=True, null=True, db_comment='Schema.org/Event generato da AI')
     batch_file = models.CharField(max_length=255, blank=True, null=True, db_comment='Nome file batch di provenienza')
+
+    # Ranking
+    rank_score = models.FloatField(default=0.0, db_index=True, help_text='Score calcolato automaticamente')
+    boost = models.SmallIntegerField(default=0, help_text='Override manuale redazione (-10..+10)')
 
     # Tracciabilità
     created_by = models.CharField(
@@ -76,6 +73,70 @@ class Event(models.Model):
 
     def __str__(self) -> str:
         return f"[{self.get_status_display()}] {self.title} - {self.city}"
+
+    def compute_rank_score(self) -> float:
+        """
+        Calcola il rank_score basato su:
+        - Completezza dati (0-30 punti)
+        - Stato temporale (0-30 punti)
+        - Freschezza scraping (0-20 punti)
+        - Qualità fonte (0-10 punti)
+        - Schema.org presente (0-10 punti)
+        """
+        score = 0.0
+        now = timezone.now()
+
+        # ── Completezza (max 30) ──
+        completeness_fields = [
+            self.description, self.image_url, self.location_coordinates,
+            self.price, self.category, self.location_address, self.url,
+        ]
+        filled = sum(1 for f in completeness_fields if f)
+        score += (filled / len(completeness_fields)) * 30
+
+        # ── Stato temporale (max 30) ──
+        if self.date_start:
+            if self.date_end and self.date_start <= now <= self.date_end:
+                score += 30  # In corso
+            elif self.date_start > now:
+                # Futuro: più è vicino, più alto
+                days_ahead = (self.date_start - now).days
+                if days_ahead <= 7:
+                    score += 25
+                elif days_ahead <= 30:
+                    score += 20
+                elif days_ahead <= 90:
+                    score += 15
+                else:
+                    score += 5
+            else:
+                score += 0  # Passato
+
+        # ── Freschezza scraping (max 20) ──
+        ref_date = self.scraped_at or self.created_at
+        if ref_date:
+            days_old = (now - ref_date).days
+            if days_old <= 1:
+                score += 20
+            elif days_old <= 7:
+                score += 15
+            elif days_old <= 30:
+                score += 10
+            elif days_old <= 90:
+                score += 5
+
+        # ── Schema.org (max 10) ──
+        if self.schema_org:
+            score += 10
+
+        # ── Qualità fonte (max 10) ──
+        premium_sources = {'borghi_italia', 'artribune', 'turismo_torino', 'visit_tuscany'}
+        if self.source in premium_sources:
+            score += 10
+        elif self.source:
+            score += 5
+
+        return round(score, 2)
 
 
 # Alias per retrocompatibilità temporanea

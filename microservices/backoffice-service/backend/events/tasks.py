@@ -10,6 +10,51 @@ from etl.tracing import log_trace_event
 logger = logging.getLogger(__name__)
 
 
+@shared_task(bind=True, max_retries=1, acks_late=True)
+def recompute_rank_scores(self) -> dict:
+    """
+    Ricalcola rank_score per tutti gli eventi attivi e disattiva gli scaduti.
+    Da schedulare periodicamente via Celery Beat (es. ogni ora).
+    """
+    from django.utils import timezone
+    from .models import Event
+
+    now = timezone.now()
+
+    # Disattiva eventi scaduti (date_end passata)
+    expired = Event.objects.filter(
+        is_active=True,
+        date_end__isnull=False,
+        date_end__lt=now,
+    ).update(is_active=False, deleted_by='system', deleted_at=now)
+    if expired:
+        logger.info("Eventi scaduti disattivati: %d", expired)
+
+    # Ricalcola rank_score per gli eventi ancora attivi
+    events = Event.objects.filter(is_active=True)
+    total = events.count()
+    updated = 0
+    batch = []
+
+    for event in events.iterator(chunk_size=500):
+        new_score = event.compute_rank_score()
+        if new_score != event.rank_score:
+            event.rank_score = new_score
+            batch.append(event)
+
+        if len(batch) >= 500:
+            Event.objects.bulk_update(batch, ['rank_score'], batch_size=500)
+            updated += len(batch)
+            batch = []
+
+    if batch:
+        Event.objects.bulk_update(batch, ['rank_score'], batch_size=500)
+        updated += len(batch)
+
+    logger.info("Rank scores ricalcolati: %d/%d aggiornati", updated, total)
+    return {'total': total, 'updated': updated}
+
+
 @shared_task(bind=True, max_retries=3, default_retry_delay=10, acks_late=True)
 def process_bulk_events(
     self,

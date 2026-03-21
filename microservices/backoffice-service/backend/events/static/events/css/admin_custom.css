@@ -67,3 +67,11 @@
 .ck-content {
     min-height: 300px;
 }
+
+/* Sfondo rosso leggero per eventi inattivi nella lista */
+tr.row-inactive > td {
+    background-color: #fef2f2 !important;
+}
+.dark tr.row-inactive > td {
+    background-color: #1c1117 !important;
+}

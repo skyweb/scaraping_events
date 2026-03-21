@@ -69,6 +69,20 @@ Panoramica dei microservizi che compongono la piattaforma Today Events.
 | `GET /api/dashboard/` | Statistiche aggregate |
 | `/api/docs/` | Swagger UI |
 
+**Ranking eventi:**
+
+Ogni evento ha un `rank_score` (0-100) calcolato automaticamente e un `boost` (-10..+10) impostabile dalla redazione. L'ordinamento API di default è `-boost, -rank_score, -created_at`.
+
+| Fattore | Punti | Logica |
+|---------|-------|--------|
+| Completezza dati | 0-30 | % campi compilati (description, image, coordinate, price, category, address, url) |
+| Stato temporale | 0-30 | In corso=30, entro 7gg=25, entro 30gg=20, entro 90gg=15, futuro=5, passato=0 |
+| Freschezza | 0-20 | Scraping <1gg=20, <7gg=15, <30gg=10, <90gg=5 |
+| Schema.org | 0-10 | Presente=10 |
+| Fonte premium | 0-10 | borghi_italia/artribune/etc=10, altre=5 |
+
+Il task Celery `recompute_rank_scores` ricalcola gli score periodicamente (schedulabile via Beat).
+
 **Dipende da:** PostgreSQL, Redis
 **Riceve dati da:** scraping-service, scraping-comuni-service
 **Serve:** frontend-service

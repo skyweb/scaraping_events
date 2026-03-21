@@ -375,14 +375,8 @@ per sorgente (tipicamente un hash di title + date_start + location_name).
                     "location_name": "Blue Note Milano",
                     "location_address": "Via Borsieri 37, 20159 Milano MI",
                     "price": "25,00 EUR + prevendita",
-                    "website": "https://www.bluenotemilano.com",
                     "date_start": "2026-02-15",
                     "date_end": "2026-02-15",
-                    "time_start": "21:00:00",
-                    "time_end": "23:30:00",
-                    "time_info": "Apertura porte ore 19:30",
-                    "schedule": "Venerdi e Sabato",
-                    "weekdays": "fri,sat",
                     "raw_data": {
                         "original_id": "12345",
                         "scraped_from": "city_today",
@@ -447,8 +441,8 @@ class ExternalEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['city', 'source', 'uuid']
     search_fields = ['title', 'description', 'location_name']
-    ordering_fields = ['created_at', 'date_start', 'city']
-    ordering = ['-created_at']
+    ordering_fields = ['created_at', 'date_start', 'city', 'rank_score', 'boost']
+    ordering = ['-boost', '-rank_score', '-created_at']
 
     def get_permissions(self):
         """Associa ogni azione al permesso richiesto (es. events:read, events:create)."""
@@ -547,14 +541,8 @@ Crea multipli staging events in una sola richiesta.
                             "location_name": "Blue Note Milano",
                             "location_address": "Via Borsieri 37, 20159 Milano MI",
                             "price": "25,00 EUR",
-                            "website": "https://www.bluenotemilano.com",
                             "date_start": "2026-02-15",
                             "date_end": "2026-02-15",
-                            "time_start": "21:00:00",
-                            "time_end": "23:30:00",
-                            "time_info": "Apertura porte ore 19:30",
-                            "schedule": "Venerdi e Sabato",
-                            "weekdays": "fri,sat",
                             "raw_data": {"original_id": "12345"},
                             "scraped_at": "2026-02-05T14:30:00Z"
                         },
@@ -571,14 +559,8 @@ Crea multipli staging events in una sola richiesta.
                             "location_name": "Palazzo delle Esposizioni",
                             "location_address": "Via Nazionale 194, 00184 Roma RM",
                             "price": "15,00 EUR",
-                            "website": "https://www.palazzoesposizioni.it",
                             "date_start": "2026-02-01",
                             "date_end": "2026-04-30",
-                            "time_start": "10:00:00",
-                            "time_end": "20:00:00",
-                            "time_info": "Ultimo ingresso ore 19:00",
-                            "schedule": "Da martedi a domenica",
-                            "weekdays": "tue,wed,thu,fri,sat,sun",
                             "raw_data": {"original_id": "67890"},
                             "scraped_at": "2026-02-05T14:30:00Z"
                         }

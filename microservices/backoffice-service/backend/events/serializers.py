@@ -57,8 +57,6 @@ def get_plan_serializer_class(plan: str) -> type[serializers.ModelSerializer]:
                 "price": "25.00",
                 "date_start": "2026-04-15",
                 "date_end": "2026-04-15",
-                "time_start": "21:00",
-                "time_end": "23:30",
                 "is_active": True,
                 "created_at": "2026-03-20T10:00:00Z",
                 "updated_at": "2026-03-20T10:00:00Z",
@@ -172,9 +170,6 @@ class DatesNestedSerializer(serializers.Serializer):
     """Dati date annidati nel formato scraping."""
     date_start = serializers.CharField(max_length=30, required=False, allow_blank=True, allow_null=True)
     date_end = serializers.CharField(max_length=30, required=False, allow_blank=True, allow_null=True)
-    time_start = serializers.CharField(max_length=10, required=False, allow_blank=True, allow_null=True)
-    time_end = serializers.CharField(max_length=10, required=False, allow_blank=True, allow_null=True)
-    time_info = serializers.CharField(max_length=500, required=False, allow_blank=True, allow_null=True)
 
 
 @extend_schema_serializer(
@@ -196,10 +191,7 @@ class DatesNestedSerializer(serializers.Serializer):
                 },
                 "dates": {
                     "date_start": "2026-08-20",
-                    "time_start": "21:00",
                     "date_end": "2026-08-20",
-                    "time_end": "23:59",
-                    "time_info": "Dalle 21:00 a mezzanotte"
                 },
                 "url": "https://pugliaculture.it/eventi/taranta",
                 "description": "La notte della Taranta edizione 2026",
@@ -233,10 +225,7 @@ class EventScrapingSerializer(serializers.Serializer):
           },
           "dates": {
             "date_start": "YYYY-MM-DD",
-            "time_start": "HH:MM",
             "date_end": "YYYY-MM-DD",
-            "time_end": "HH:MM",
-            "time_info": "..."
           },
           "url": "...",
           "description": "...",
@@ -370,7 +359,7 @@ class EventLegacySerializer(serializers.Serializer):
             "price": "",
             "when": { "date_start": "", "date_end": "", "raw_text": "" },
             "description": "",
-            "informations": { "website": "", "raw_text": "" }
+            "informations": { "raw_text": "" }
           },
           "scraped_at": "",
           "raw_data": null
@@ -424,7 +413,6 @@ class EventLegacySerializer(serializers.Serializer):
             'location_coordinates': location_coordinates,
             'date_start': when.get('date_start') or None,
             'date_end': when.get('date_end') or None,
-            'time_info': when.get('raw_text') or None,
         }
 
         # Genera uuid: title + date_start + location_name

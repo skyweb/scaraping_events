@@ -86,7 +86,6 @@ EVENT_FORM_WIDGETS = {
     'location_address': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'price': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'image_url': forms.TextInput(attrs={'style': 'width: 100%;'}),
-    'website': forms.URLInput(attrs={'style': 'width: 100%;'}),
 }
 
 
@@ -162,9 +161,9 @@ class EventAdmin(EventDisplayMixin, ModelAdmin):
         css = {
             'all': ('events/css/admin_custom.css',)
         }
-        js = ('events/js/tab_persist.js',)
+        js = ('events/js/tab_persist.js', 'events/js/row_inactive.js')
 
-    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'status', 'category_list', 'city', 'source', 'is_active', 'created_at']
+    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'status_chip', 'category_list', 'city', 'source', 'is_active_chip', 'created_at']
     list_display_links = ['title']
     list_filter = ['status', TemporalStatusFilter, 'city', 'source', 'is_active', CategoryFilter]
     search_fields = ['title', 'description', 'uuid']
@@ -175,28 +174,58 @@ class EventAdmin(EventDisplayMixin, ModelAdmin):
         'event_status_chip', 'creation_date_display',
         'location_map_preview', 'schema_org_preview', 'raw_data_preview',
         'batch_file', 'scraped_at', 'ai_transform_button', 'ai_description_button',
+        'rank_score',
     ]
 
     def get_search_results(self, request, queryset, search_term):
-        """Ricerca con priorità: prima match nel titolo, poi nel contenuto."""
+        """Ricerca pesata: title(A) > city(B) > location_name(C) > description(D)."""
         if not search_term:
             return queryset, False
 
-        from django.db.models import Case, When, Value, IntegerField, Q
+        from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
 
-        q_title = Q(title__icontains=search_term)
-        q_desc = Q(description__icontains=search_term)
-        q_uuid = Q(uuid__icontains=search_term)
+        vector = (
+            SearchVector('title', weight='A', config='italian')
+            + SearchVector('city', weight='B', config='italian')
+            + SearchVector('location_name', weight='C', config='italian')
+            + SearchVector('description', weight='D', config='italian')
+        )
+        query = SearchQuery(search_term, config='italian')
 
-        queryset = queryset.filter(q_title | q_desc | q_uuid).annotate(
-            _search_rank=Case(
-                When(q_title, then=Value(0)),
-                default=Value(1),
-                output_field=IntegerField(),
-            )
-        ).order_by('_search_rank', '-created_at')
+        queryset = (
+            queryset
+            .annotate(rank=SearchRank(vector, query, weights=[0.1, 0.2, 0.4, 1.0]))
+            .filter(rank__gt=0)
+            .order_by('-rank')
+        )
 
         return queryset, False
+
+    @admin.display(description='Status', ordering='status')
+    def status_chip(self, obj):
+        """Chip verde per Pubblicato, arancio per Staging."""
+        if obj.status == Event.Status.PUBLISHED:
+            return format_html(
+                '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+                'font-size:.75rem;font-weight:600;color:#065f46;background:#d1fae5;">Pubblicato</span>'
+            )
+        return format_html(
+            '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+            'font-size:.75rem;font-weight:600;color:#92400e;background:#fef3c7;">Staging</span>'
+        )
+
+    @admin.display(description='Attivo', boolean=False, ordering='is_active')
+    def is_active_chip(self, obj):
+        """Chip verde/rosso per stato attivo."""
+        if obj.is_active:
+            return format_html(
+                '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+                'font-size:.75rem;font-weight:600;color:#065f46;background:#d1fae5;">Attivo</span>'
+            )
+        return format_html(
+            '<span style="display:inline-block;padding:2px 10px;border-radius:9999px;'
+            'font-size:.75rem;font-weight:600;color:#991b1b;background:#fee2e2;">Inattivo</span>'
+        )
 
     actions = ['run_nlp_analysis']
     list_per_page = 50
@@ -246,7 +275,7 @@ class EventAdmin(EventDisplayMixin, ModelAdmin):
             'fields': (
                 ('source', 'uuid', 'creation_date_display'),
                 ('date_start', 'date_end', 'event_status_chip'),
-                ('status', 'is_active'),
+                ('status', 'is_active', 'boost', 'rank_score'),
                 'title',
                 ('city', 'location_name', 'location_address'),
                 'location_map_preview',
@@ -261,15 +290,7 @@ class EventAdmin(EventDisplayMixin, ModelAdmin):
                 'description',
                 'category',
                 ('image_preview', 'clickable_image_url'),
-                ('price', 'website'),
-            ),
-            'classes': ['tab'],
-        }),
-        (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">schedule</span> Orari</span>'), {
-            'fields': (
-                ('time_start', 'time_end'),
-                'time_info',
-                ('schedule', 'weekdays'),
+                'price',
             ),
             'classes': ['tab'],
         }),

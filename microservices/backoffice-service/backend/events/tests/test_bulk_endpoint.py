@@ -53,9 +53,6 @@ def _evento_scraping(**overrides):
         'dates': {
             'date_start': '2026-06-15',
             'date_end': '2026-06-15',
-            'time_start': '21:00',
-            'time_end': '23:30',
-            'time_info': 'Apertura porte ore 19:30',
         },
         'url': 'https://example.com/concerto',
         'description': 'Serata jazz dal vivo.',
@@ -94,7 +91,6 @@ def _evento_legacy(**overrides):
             },
             'description': 'Esposizione delle opere di Caravaggio.',
             'informations': {
-                'website': 'https://palazzoreale.it',
                 'raw_text': 'Info: 02-12345678',
             },
         },
@@ -158,16 +154,12 @@ class EventScrapingSerializerTest(TestCase):
         self.assertEqual(vd['location_address'], 'Via Borsieri 37')
 
     def test_flatten_dates_nested(self):
-        """Il campo nested 'dates' viene appiattito in date_start, time_start, ecc."""
+        """Il campo nested 'dates' viene appiattito in date_start, date_end."""
         ser = EventScrapingSerializer(data=_evento_scraping())
         ser.is_valid(raise_exception=True)
         vd = ser.validated_data
         self.assertEqual(str(vd['date_start']), '2026-06-15')
         self.assertEqual(str(vd['date_end']), '2026-06-15')
-        # Il serializer passa le stringhe come ricevute (senza secondi se non forniti)
-        self.assertIn('21:00', str(vd['time_start']))
-        self.assertIn('23:30', str(vd['time_end']))
-        self.assertEqual(vd['time_info'], 'Apertura porte ore 19:30')
 
     def test_coordinate_parsate_correttamente(self):
         """Le coordinate vengono convertite in Point GeoDjango."""

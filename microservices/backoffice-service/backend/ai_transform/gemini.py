@@ -68,8 +68,7 @@ Regole:
    - Telefono → organizer.telephone
    - Email → organizer.email
 10. Estrai orari biglietteria da section.info_e_costi → offers.availabilityStarts o offers.description
-11. section.website → url (sito ufficiale dell'evento)
-12. location_address → location.address.streetAddress
+11. location_address → location.address.streetAddress
 13. Restituisci SOLO il JSON, senza markdown, senza spiegazioni
 14. Se un campo non ha dati sufficienti, omettilo (non inventare)
 15. Le date devono essere in formato ISO 8601
