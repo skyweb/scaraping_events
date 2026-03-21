@@ -1,5 +1,9 @@
-# Auto-provisioning datasource Grafana: Prometheus, Loki, Jaeger
+# Auto-provisioning datasource Grafana: Prometheus, Loki, Tempo
 apiVersion: 1
+
+deleteDatasources:
+  - name: Jaeger
+    orgId: 1
 
 datasources:
   # Metriche
@@ -11,7 +15,7 @@ datasources:
     isDefault: true
     editable: false
 
-  # Log — con link derivato ai traces via Jaeger
+  # Log — con link derivato ai traces via Tempo
   - name: Loki
     type: loki
     uid: loki
@@ -20,19 +24,12 @@ datasources:
     editable: false
     jsonData:
       derivedFields:
-        - datasourceUid: jaeger
-          matcherRegex: '"otelTraceID":\\s*"(\\w+)"'
+        - datasourceUid: P214B5B846CF3925F
+          matcherRegex: '"otelTraceID":\s*"(\w+)"'
           name: TraceID
           url: '$${__value.raw}'
 
   # Traces
-  - name: Jaeger
-    type: jaeger
-    uid: jaeger
-    access: proxy
-    url: http://jaeger:16686
-    editable: false
-
   - name: Tempo
     type: tempo
     access: proxy

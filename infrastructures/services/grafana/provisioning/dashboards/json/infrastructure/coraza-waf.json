@@ -28,13 +28,13 @@
       "options": { "reduceOptions": { "calcs": ["sum"] }, "colorMode": "background" }
     },
     {
-      "title": "Request normali (ultimi 5m)",
+      "title": "Request normali",
       "type": "stat",
       "gridPos": { "h": 5, "w": 6, "x": 6, "y": 1 },
       "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
         {
-          "expr": "sum(increase(apisix_http_status{code=~\"2..\"}[5m]))",
+          "expr": "sum(apisix_http_status{code=~\"2..\"})",
           "refId": "A"
         }
       ],
@@ -58,13 +58,13 @@
       "options": { "pieType": "donut", "legend": { "displayMode": "table", "placement": "right" } }
     },
     {
-      "title": "Rate limit (429)",
+      "title": "Rate limit (429) totale",
       "type": "stat",
       "gridPos": { "h": 5, "w": 6, "x": 0, "y": 6 },
       "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
         {
-          "expr": "sum(increase(apisix_http_status{code=\"429\"}[5m]))",
+          "expr": "sum(apisix_http_status{code=\"429\"})",
           "refId": "A"
         }
       ],
@@ -74,13 +74,13 @@
       "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" }
     },
     {
-      "title": "WAF blocks (403)",
+      "title": "WAF blocks (403) totale",
       "type": "stat",
       "gridPos": { "h": 5, "w": 6, "x": 6, "y": 6 },
       "datasource": { "type": "prometheus", "uid": "prometheus" },
       "targets": [
         {
-          "expr": "sum(increase(apisix_http_status{code=\"403\"}[5m]))",
+          "expr": "sum(apisix_http_status{code=\"403\"})",
           "refId": "A"
         }
       ],
