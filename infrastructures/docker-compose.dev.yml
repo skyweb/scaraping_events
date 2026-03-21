@@ -252,6 +252,7 @@ services:
     volumes:
       - ./services/grafana/provisioning:/etc/grafana/provisioning:ro
       - ./services/grafana/templates:/usr/share/grafana/public/emails:ro
+      - ./services/grafana/init-playlists.sh:/etc/grafana/init-playlists.sh:ro
       - grafana-dev-data:/var/lib/grafana
       - ./services/grafana/dashboards:/var/lib/grafana/dashboards:ro
     depends_on:
