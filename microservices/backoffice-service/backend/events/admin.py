@@ -21,10 +21,10 @@ from django_celery_results.models import TaskResult
 from django_celery_results.admin import TaskResultAdmin as BaseTaskResultAdmin
 from rest_framework_tracking.models import APIRequestLog
 
-from .models import ProductionEvent, StagingEvent
+from .models import Event
 from .admin_mixins import EventDisplayMixin
 from .admin_utils import format_datetime_italian, render_chip, render_json_preview
-from comuni_istat.models import ComuneItaliano
+from comuni_istat.models import Comune
 from comuni_istat.admin import ProvinciaFilter, RegioneFilter
 from scraping.admin import CategoryFilter
 
@@ -49,7 +49,7 @@ class CityAutocompleteWidget(forms.TextInput):
     def get_context(self, name, value, attrs):
         """Aggiunge la lista dei comuni al contesto del template."""
         context = super().get_context(name, value, attrs)
-        context['comuni'] = ComuneItaliano.objects.values_list('comune', flat=True)
+        context['comuni'] = Comune.objects.values_list('comune', flat=True)
         return context
 
 
@@ -74,14 +74,13 @@ class CategoryChipsWidget(forms.TextInput):
 
 
 # =============================================================================
-# Widget condivisi tra StagingEventForm e ProductionEventForm
+# Widget condivisi per EventForm
 # =============================================================================
 
 EVENT_FORM_WIDGETS = {
     'title': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'description': CKEditor5Widget(config_name='default'),
     'city': CityAutocompleteWidget(),
-    'city_name': CityAutocompleteWidget(),
     'category': CategoryChipsWidget(),
     'location_name': forms.TextInput(attrs={'style': 'width: 100%;'}),
     'location_address': forms.TextInput(attrs={'style': 'width: 100%;'}),
@@ -126,20 +125,20 @@ class TemporalStatusFilter(admin.SimpleListFilter):
 
 
 # =============================================================================
-# Form per StagingEvent e ProductionEvent
+# Form per Event e Event
 # =============================================================================
 
-class StagingEventForm(forms.ModelForm):
-    """Form per StagingEvent con widget personalizzati (CKEditor, autocomplete città, chip categorie)."""
+class EventForm(forms.ModelForm):
+    """Form per Event con widget personalizzati (CKEditor, autocomplete città, chip categorie)."""
     class Meta:
-        model = StagingEvent
+        model = Event
         fields = '__all__'
         widgets = EVENT_FORM_WIDGETS
         labels = {
             'title': 'Titolo',
             'date_start': 'Data inizio',
             'date_end': 'Data fine',
-            'city_name': 'Città',
+            'city': 'Città',
             'location_name': 'Luogo',
             'location_address': 'Indirizzo',
             'category': 'Categoria',
@@ -150,22 +149,14 @@ class StagingEventForm(forms.ModelForm):
         }
 
 
-class ProductionEventForm(forms.ModelForm):
-    """Form per ProductionEvent con widget personalizzati (CKEditor, autocomplete città, chip categorie)."""
-    class Meta:
-        model = ProductionEvent
-        fields = '__all__'
-        widgets = EVENT_FORM_WIDGETS
-
-
 # =============================================================================
-# Admin per StagingEvent — interfaccia a tab con Unfold
+# Admin per Event — interfaccia a tab con Unfold
 # =============================================================================
 
-@admin.register(StagingEvent)
-class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
-    """Admin StagingEvent con layout a tab Unfold, chip stato, anteprima immagini e JSON colorato."""
-    form = StagingEventForm
+@admin.register(Event)
+class EventAdmin(EventDisplayMixin, ModelAdmin):
+    """Admin Event con layout a tab Unfold, chip stato, anteprima immagini e JSON colorato."""
+    form = EventForm
 
     class Media:
         css = {
@@ -173,9 +164,9 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
         }
         js = ('events/js/tab_persist.js',)
 
-    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city_name', 'source', 'created_at']
+    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'status', 'category_list', 'city', 'source', 'is_active', 'created_at']
     list_display_links = ['title']
-    list_filter = [TemporalStatusFilter, 'city_name', 'source', CategoryFilter]
+    list_filter = ['status', TemporalStatusFilter, 'city', 'source', 'is_active', CategoryFilter]
     search_fields = ['title', 'description', 'uuid']
     readonly_fields = [
         'created_at', 'image_preview', 'image_thumbnail', 'description_preview',
@@ -210,6 +201,15 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
     actions = ['run_nlp_analysis']
     list_per_page = 50
 
+    def save_model(self, request, obj, form, change):
+        """Popola created_by/updated_by con lo username dell'utente admin."""
+        username = request.user.get_username()
+        if change:
+            obj.updated_by = username
+        else:
+            obj.created_by = username
+        super().save_model(request, obj, form, change)
+
     @admin.action(description="Analisi NLP (estrai entità da description)")
     def run_nlp_analysis(self, request, queryset):
         """Lancia analisi NLP sugli eventi selezionati via Celery."""
@@ -227,7 +227,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             # Per pochi eventi, esegui sincrono
             try:
                 from nlp.extractor import analyze_staging_event
-                to_update: list[StagingEvent] = []
+                to_update: list[Event] = []
                 for event in queryset.filter(description__isnull=False).exclude(description=""):
                     entities = analyze_staging_event(event)
                     if entities:
@@ -236,7 +236,7 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                         event.raw_data = raw
                         to_update.append(event)
                 if to_update:
-                    StagingEvent.objects.bulk_update(to_update, ['raw_data'], batch_size=100)
+                    Event.objects.bulk_update(to_update, ['raw_data'], batch_size=100)
                 self.message_user(request, f"Analisi NLP completata: {len(to_update)}/{count} eventi arricchiti")
             except Exception as e:
                 self.message_user(request, f"Errore NLP: {e}", level='error')
@@ -246,8 +246,9 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             'fields': (
                 ('source', 'uuid', 'creation_date_display'),
                 ('date_start', 'date_end', 'event_status_chip'),
+                ('status', 'is_active'),
                 'title',
-                ('city_name', 'location_name', 'location_address'),
+                ('city', 'location_name', 'location_address'),
                 'location_map_preview',
                 'category_list',
                 'clickable_url',
@@ -260,7 +261,15 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
                 'description',
                 'category',
                 ('image_preview', 'clickable_image_url'),
-                'price',
+                ('price', 'website'),
+            ),
+            'classes': ['tab'],
+        }),
+        (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">schedule</span> Orari</span>'), {
+            'fields': (
+                ('time_start', 'time_end'),
+                'time_info',
+                ('schedule', 'weekdays'),
             ),
             'classes': ['tab'],
         }),
@@ -375,8 +384,8 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             return JsonResponse({'error': 'Metodo non consentito'}, status=405)
 
         try:
-            obj = StagingEvent.objects.get(pk=pk)
-        except StagingEvent.DoesNotExist:
+            obj = Event.objects.get(pk=pk)
+        except Event.DoesNotExist:
             return JsonResponse({'error': 'Evento non trovato'}, status=404)
 
         if not obj.raw_data:
@@ -405,8 +414,8 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             return JsonResponse({'error': 'Metodo non consentito'}, status=405)
 
         try:
-            obj = StagingEvent.objects.get(pk=pk)
-        except StagingEvent.DoesNotExist:
+            obj = Event.objects.get(pk=pk)
+        except Event.DoesNotExist:
             return JsonResponse({'error': 'Evento non trovato'}, status=404)
 
         raw = obj.raw_data or {}
@@ -437,71 +446,6 @@ class StagingEventAdmin(EventDisplayMixin, ModelAdmin):
             return JsonResponse({'ok': True, 'model': model, 'quota': quota_info})
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
-
-
-# =============================================================================
-# Admin per ProductionEvent — interfaccia a tab con Unfold
-# =============================================================================
-
-@admin.register(ProductionEvent)
-class ProductionEventAdmin(EventDisplayMixin, ModelAdmin):
-    """Admin ProductionEvent con layout a tab Unfold, chip stato, anteprima immagini e JSON colorato."""
-    form = ProductionEventForm
-
-    class Media:
-        css = {
-            'all': ('events/css/admin_custom.css',)
-        }
-
-    list_display = ['image_thumbnail', 'title', 'event_status_chip', 'category_list', 'city', 'source', 'date_start', 'is_active']
-    list_display_links = ['title']
-    list_filter = ['is_active', 'city', 'source', CategoryFilter]
-    search_fields = ['title', 'description', 'uuid']
-    readonly_fields = [
-        'created_at', 'updated_at', 'image_preview', 'image_thumbnail', 'description_preview',
-        'json_preview', 'clickable_url', 'clickable_image_url', 'source', 'uuid',
-        'content_hash', 'category_list', 'date_start_display', 'date_start_ro', 'date_end_ro',
-    ]
-    list_per_page = 50
-
-    fieldsets = (
-        (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">info</span> Informazioni Evento</span>'), {
-            'fields': (
-                ('source', 'uuid', 'date_start_ro', 'date_end_ro'),
-                'title',
-                ('city', 'location_address'),
-                'location_name',
-                'clickable_url',
-                'is_active',
-            ),
-            'classes': ['tab'],
-        }),
-        (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">description</span> Contenuto</span>'), {
-            'fields': (
-                'description',
-                'category',
-                ('image_preview', 'clickable_image_url'),
-                ('price', 'website'),
-            ),
-            'classes': ['tab'],
-        }),
-        (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">calendar_month</span> Date e Orari</span>'), {
-            'fields': (
-                'date_start_display',
-                ('date_start', 'date_end'),
-                ('time_start', 'time_end'),
-                ('time_info', 'schedule', 'weekdays'),
-            ),
-            'classes': ['tab'],
-        }),
-        (mark_safe('<span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined">code</span> Dati Tecnici</span>'), {
-            'fields': (
-                'content_hash',
-                ('scraped_at', 'created_at', 'updated_at'),
-            ),
-            'classes': ['tab'],
-        }),
-    )
 
 
 # =============================================================================

@@ -19,13 +19,13 @@ def process_bulk_events(
     """
     Processa un batch di staging events in modo asincrono.
 
-    1. Valida ogni item con StagingEventScrapingSerializer
+    1. Valida ogni item con EventScrapingSerializer
     2. Usa bulk_create per inserire tutti gli item validi (1 query DB)
     3. Retry automatico su OperationalError (max 3 tentativi)
     4. Fallback a save singoli se bulk_create fallisce
     """
-    from .serializers import StagingEventScrapingSerializer
-    from .models import StagingEvent
+    from .serializers import EventScrapingSerializer
+    from .models import Event
 
     logger.info(f"Processing bulk events from spider: {spider_name} ({len(events_data)} events)")
 
@@ -45,9 +45,9 @@ def process_bulk_events(
 
     # 1. Validate each item
     for idx, data in enumerate(events_data):
-        serializer = StagingEventScrapingSerializer(data=data)
+        serializer = EventScrapingSerializer(data=data)
         if serializer.is_valid():
-            valid_instances.append(StagingEvent(**serializer.validated_data))
+            valid_instances.append(Event(**serializer.validated_data))
             span.add_event("event.validated", attributes={
                 "event.uuid": data.get("uuid", ""),
                 "event.title": str(data.get("title", ""))[:80],
@@ -82,7 +82,7 @@ def process_bulk_events(
 
     # 2. Bulk create (1 query DB)
     try:
-        created = StagingEvent.objects.bulk_create(valid_instances)
+        created = Event.objects.bulk_create(valid_instances)
         created_count = len(created)
         # Span events + log per ogni evento creato (cercabili in Jaeger/Loki per UUID)
         for instance in created:

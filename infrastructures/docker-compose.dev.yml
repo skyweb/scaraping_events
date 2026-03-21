@@ -104,7 +104,7 @@ services:
       EMAIL_PORT: "1025"
       DJANGO_ALLOWED_HOSTS: "backoffice.${DOMAIN},webservice.${DOMAIN},backoffice,localhost,127.0.0.1"
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
-      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@django}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
       CORS_ALLOWED_ORIGINS: "https://frontend.${DOMAIN},http://localhost:3000"
       CSRF_TRUSTED_ORIGINS: "https://frontend.${DOMAIN},https://backoffice.${DOMAIN},http://localhost:3000"
@@ -312,7 +312,7 @@ services:
         --firstname Admin
         --lastname User
         --role Admin
-        --email "${AIRFLOW_ADMIN_EMAIL:-admin@example.com}"
+        --email "${AIRFLOW_ADMIN_EMAIL:-admin@airflow}"
     networks:
       - dev-network
 

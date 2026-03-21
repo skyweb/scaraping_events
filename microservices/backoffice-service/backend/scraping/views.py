@@ -31,6 +31,7 @@ class ScrapingWebsiteViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, v
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
+        """Filtra i website per stato attivo e tipo CMS (parametri query opzionali)."""
         qs = super().get_queryset()
         if is_active := self.request.query_params.get('is_active'):
             qs = qs.filter(is_active=is_active.lower() == 'true')
@@ -72,6 +73,7 @@ class ScrapingLocationViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, 
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
+        """Filtra le location per città (parametro query opzionale, case-insensitive)."""
         qs = super().get_queryset()
         if city := self.request.query_params.get('city'):
             qs = qs.filter(city__icontains=city)

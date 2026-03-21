@@ -19,7 +19,7 @@ from .services import (
 )
 
 DOMAIN = os.environ.get("DOMAIN", "127.0.0.1.nip.io")
-API_BASE = f"https://webservice.{DOMAIN}/api/v1/events/staging/"
+API_BASE = f"https://webservice.{DOMAIN}/api/v1/events/"
 TOKEN_URL = f"https://webservice.{DOMAIN}/auth/token"
 
 # Stile condiviso per i blocchi curl

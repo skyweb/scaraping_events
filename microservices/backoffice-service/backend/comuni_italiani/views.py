@@ -23,6 +23,7 @@ class IngestionView(APIView):
         tags=["Comuni ISTAT Ingestion"],
     )
     def post(self, request):
+        """Riceve e salva un singolo record di scraping (regione/provincia/comune)."""
         serializer = IngestionSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         instance = serializer.save()
@@ -43,6 +44,7 @@ class BulkIngestionView(APIView):
         tags=["Comuni ISTAT Ingestion"],
     )
     def post(self, request):
+        """Riceve e salva in batch una lista di record dello stesso tipo."""
         serializer = BulkIngestionSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 

@@ -21,10 +21,12 @@ class TableTestResult(unittest.TextTestResult):
     """Raccoglie i risultati dei test con i dettagli delle chiamate API."""
 
     def __init__(self, *args, **kwargs):
+        """Inizializza il result con la lista righe per la tabella."""
         super().__init__(*args, **kwargs)
         self.table_rows = []
 
     def _record(self, test, result, error_msg=''):
+        """Registra il risultato di un test con le relative chiamate API."""
         api_calls = getattr(test, '_api_calls', [])
         test_name = str(test).split(' ')[0]
         if api_calls:
@@ -48,24 +50,29 @@ class TableTestResult(unittest.TextTestResult):
             })
 
     def addSuccess(self, test):
+        """Registra un test superato."""
         super().addSuccess(test)
         self._record(test, 'PASS')
 
     def addFailure(self, test, err):
+        """Registra un test fallito con il messaggio di errore."""
         super().addFailure(test, err)
         msg = str(err[1]).split('\n')[0][:100]
         self._record(test, 'FAIL', msg)
 
     def addError(self, test, err):
+        """Registra un test con errore imprevisto."""
         super().addError(test, err)
         msg = str(err[1]).split('\n')[0][:100]
         self._record(test, 'ERROR', msg)
 
     def addSkip(self, test, reason):
+        """Registra un test saltato con la motivazione."""
         super().addSkip(test, reason)
         self._record(test, 'SKIP', reason[:100])
 
     def print_table(self):
+        """Stampa la tabella riassuntiva dei test con colori ANSI e riepilogo finale."""
         stream = self.stream
         rows = self.table_rows
         if not rows:
@@ -85,9 +92,11 @@ class TableTestResult(unittest.TextTestResult):
         col_widths = [min(cw, mx) for cw, mx in zip(col_widths, MAX_WIDTHS)]
 
         def pad(val, width):
+            """Tronca e allinea a sinistra il valore alla larghezza specificata."""
             return val[:width].ljust(width)
 
         def fmt_row(vals):
+            """Formatta una riga della tabella con separatori '|'."""
             return ' | '.join(pad(v, col_widths[i]) for i, v in enumerate(vals))
 
         sep = '-+-'.join('-' * w for w in col_widths)
@@ -164,6 +173,7 @@ class TableTestRunner(DiscoverRunner):
     """Test runner Django che stampa una tabella riassuntiva a fine esecuzione."""
 
     def run_suite(self, suite, **kwargs):
+        """Esegue la suite di test usando TableTestResult e stampa la tabella finale."""
         runner_kwargs = self.get_test_runner_kwargs()
         runner_kwargs['resultclass'] = TableTestResult
         runner = unittest.TextTestRunner(**runner_kwargs)

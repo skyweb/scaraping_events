@@ -53,6 +53,9 @@ COPY src/ /app/events_scraper/
 COPY src/scrapy.cfg /app/scrapy.cfg
 COPY src/scrapyd.conf /etc/scrapyd/scrapyd.conf
 
+# PYTHONPATH include events_scraper/ per gli import relativi (spiders, pipelines, ecc.)
+ENV PYTHONPATH="/app/events_scraper:${PYTHONPATH}"
+
 # Copia script di avvio
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh

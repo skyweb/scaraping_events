@@ -228,9 +228,11 @@ class KeycloakJWTAuthentication(BaseAuthentication):
         sub = payload.get("sub", "")
         plan = payload.get("plan", "")
 
+        # Username dal claim custom (iniettato dal mapper Keycloak), fallback ad azp
+        consumer_username = payload.get("consumer_username", "") or azp
+
         # Verifica scadenza consumer (se gestito da Django)
         from api_consumers.models import ApiConsumer
-        consumer_username = azp  # Per JWT, azp è il client_id Keycloak
         consumer = None
         try:
             consumer = ApiConsumer.objects.get(keycloak_client_id=azp)
@@ -268,6 +270,7 @@ class KeycloakJWTAuthentication(BaseAuthentication):
 
         # Cerca un utente Django corrispondente, altrimenti crea un KeycloakUser
         user = self._get_or_create_keycloak_user(sub, roles)
+        user.username = consumer_username
 
         auth_info: dict[str, Any] = {
             "roles": roles,

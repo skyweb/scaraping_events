@@ -1,5 +1,5 @@
 """
-Test suite per le API Staging Events (/api/v1/events/staging/).
+Test suite per le API Staging Events (/api/v1/events/).
 
 Legge gli esempi JSON dallo schema OpenAPI generato da drf-spectacular
 e li usa per testare tutti gli endpoint.
@@ -26,7 +26,7 @@ from rest_framework.test import APIClient
 from oauth2_provider.models import Application, AccessToken
 from drf_spectacular.generators import SchemaGenerator
 
-from events.models import StagingEvent
+from events.models import Event
 
 
 # ---------------------------------------------------------------------------
@@ -137,14 +137,14 @@ class StagingAPIBaseTestCase(TestCase):
 
     # -- helper per creare un evento in DB --
     def create_event(self, **overrides):
-        """Crea un StagingEvent nel DB con valori di default sovrascrivibili."""
+        """Crea un Event nel DB con valori di default sovrascrivibili."""
         defaults = {
             'uuid': 'test-uuid-001',
             'source': 'test_source',
             'title': 'Evento di test',
         }
         defaults.update(overrides)
-        return StagingEvent.objects.create(**defaults)
+        return Event.objects.create(**defaults)
 
 
 # ===========================================================================
@@ -162,15 +162,15 @@ class OpenAPISchemaTest(TestCase):
     def test_schema_has_staging_paths(self):
         """Lo schema OpenAPI contiene tutti i path degli staging events."""
         paths = self.schema.get('paths', {})
-        self.assertIn('/api/v1/events/staging/', paths)
-        self.assertIn('/api/v1/events/staging/{id}/', paths)
-        self.assertIn('/api/v1/events/staging/bulk/', paths)
-        self.assertIn('/api/v1/events/staging/clear_source/', paths)
+        self.assertIn('/api/v1/events/', paths)
+        self.assertIn('/api/v1/events/{id}/', paths)
+        self.assertIn('/api/v1/events/bulk/', paths)
+        self.assertIn('/api/v1/events/clear_source/', paths)
 
     def test_create_endpoint_has_examples(self):
         """POST /staging/ ha almeno un esempio con EventoCompleto e EventoMinimo."""
         examples = extract_examples(
-            self.schema, '/api/v1/events/staging/', 'post',
+            self.schema, '/api/v1/events/', 'post',
         )
         self.assertGreaterEqual(len(examples), 1, 'POST /staging/ deve avere almeno 1 esempio')
         names = [e['name'] for e in examples]
@@ -180,14 +180,14 @@ class OpenAPISchemaTest(TestCase):
     def test_bulk_endpoint_has_examples(self):
         """POST /staging/bulk/ ha almeno un esempio nello schema."""
         examples = extract_examples(
-            self.schema, '/api/v1/events/staging/bulk/', 'post',
+            self.schema, '/api/v1/events/bulk/', 'post',
         )
         self.assertGreaterEqual(len(examples), 1, 'POST /staging/bulk/ deve avere almeno 1 esempio')
 
     def test_create_example_has_required_fields(self):
         """Ogni esempio di POST /staging/ contiene uuid, source e title."""
         examples = extract_examples(
-            self.schema, '/api/v1/events/staging/', 'post',
+            self.schema, '/api/v1/events/', 'post',
         )
         required = {'uuid', 'source', 'title'}
         for ex in examples:
@@ -209,9 +209,9 @@ class OpenAPISchemaTest(TestCase):
 # 2. Test CREATE singolo con esempi dallo schema
 # ===========================================================================
 
-class StagingEventCreateFromSchemaTest(StagingAPIBaseTestCase):
+class EventCreateFromSchemaTest(StagingAPIBaseTestCase):
     """
-    POST /api/v1/events/staging/ con ogni esempio trovato nello schema.
+    POST /api/v1/events/ con ogni esempio trovato nello schema.
     """
 
     @classmethod
@@ -220,14 +220,14 @@ class StagingEventCreateFromSchemaTest(StagingAPIBaseTestCase):
         super().setUpTestData()
         cls.schema = get_openapi_schema()
         cls.examples = extract_examples(
-            cls.schema, '/api/v1/events/staging/', 'post',
+            cls.schema, '/api/v1/events/', 'post',
         )
 
     def test_examples_found(self):
         """Verifica che ci sia almeno un esempio nello schema per il create."""
         self.assertGreaterEqual(
             len(self.examples), 1,
-            'Nessun esempio trovato nello schema per POST /api/v1/events/staging/',
+            'Nessun esempio trovato nello schema per POST /api/v1/events/',
         )
 
     def test_create_with_each_schema_example(self):
@@ -241,7 +241,7 @@ class StagingEventCreateFromSchemaTest(StagingAPIBaseTestCase):
                 payload['uuid'] = f"schema-test-{idx:03d}"
 
                 response = self.client.post(
-                    '/api/v1/events/staging/',
+                    '/api/v1/events/',
                     data=payload,
                     format='json',
                 )
@@ -268,7 +268,7 @@ class StagingEventCreateFromSchemaTest(StagingAPIBaseTestCase):
         payload['uuid'] = 'vfy-fld-001'
 
         response = self.client.post(
-            '/api/v1/events/staging/',
+            '/api/v1/events/',
             data=payload,
             format='json',
         )
@@ -305,9 +305,9 @@ class StagingEventCreateFromSchemaTest(StagingAPIBaseTestCase):
 # 3. Test BULK CREATE con esempi dallo schema
 # ===========================================================================
 
-class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
+class EventBulkFromSchemaTest(StagingAPIBaseTestCase):
     """
-    POST /api/v1/events/staging/bulk/ con ogni esempio trovato nello schema.
+    POST /api/v1/events/bulk/ con ogni esempio trovato nello schema.
     """
 
     @classmethod
@@ -316,14 +316,14 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
         super().setUpTestData()
         cls.schema = get_openapi_schema()
         cls.examples = extract_examples(
-            cls.schema, '/api/v1/events/staging/bulk/', 'post',
+            cls.schema, '/api/v1/events/bulk/', 'post',
         )
 
     def test_examples_found(self):
         """Verifica che ci sia almeno un esempio nello schema per il bulk create."""
         self.assertGreaterEqual(
             len(self.examples), 1,
-            'Nessun esempio trovato nello schema per POST /api/v1/events/staging/bulk/',
+            'Nessun esempio trovato nello schema per POST /api/v1/events/bulk/',
         )
 
     def test_bulk_create_all_valid(self):
@@ -346,7 +346,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
             ev['uuid'] = f"bulk-valid-{i:03d}"
 
         response = self.client.post(
-            '/api/v1/events/staging/bulk/?sync=true',
+            '/api/v1/events/bulk/?sync=true',
             data=payload,
             format='json',
         )
@@ -379,7 +379,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
             ev['uuid'] = f"bulk-partial-{i:03d}"
 
         response = self.client.post(
-            '/api/v1/events/staging/bulk/?sync=true',
+            '/api/v1/events/bulk/?sync=true',
             data=payload,
             format='json',
         )
@@ -405,7 +405,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
                     ev['uuid'] = f"bulk-all-{idx}-{i:03d}"
 
                 response = self.client.post(
-                    '/api/v1/events/staging/bulk/?sync=true',
+                    '/api/v1/events/bulk/?sync=true',
                     data=payload,
                     format='json',
                 )
@@ -424,7 +424,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
         """POST bulk con lista eventi vuota -> 400."""
         self.auth_write()
         response = self.client.post(
-            '/api/v1/events/staging/bulk/?sync=true',
+            '/api/v1/events/bulk/?sync=true',
             data={'events': []},
             format='json',
         )
@@ -434,7 +434,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
         """POST bulk senza chiave 'events' -> 400."""
         self.auth_write()
         response = self.client.post(
-            '/api/v1/events/staging/bulk/?sync=true',
+            '/api/v1/events/bulk/?sync=true',
             data={'data': []},
             format='json',
         )
@@ -445,7 +445,7 @@ class StagingEventBulkFromSchemaTest(StagingAPIBaseTestCase):
 # 4. Test CRUD completo
 # ===========================================================================
 
-class StagingEventCRUDTest(StagingAPIBaseTestCase):
+class EventCRUDTest(StagingAPIBaseTestCase):
     """Test ciclo completo: create, list, retrieve, update, partial_update, delete."""
 
     def test_list_events(self):
@@ -454,7 +454,7 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
         self.create_event(uuid='list-002', title='Evento 2')
         self.auth_read()
 
-        response = self.client.get('/api/v1/events/staging/')
+        response = self.client.get('/api/v1/events/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertGreaterEqual(response.data['count'], 2)
 
@@ -463,7 +463,7 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
         event = self.create_event(uuid='retrieve-001')
         self.auth_read()
 
-        response = self.client.get(f'/api/v1/events/staging/{event.pk}/')
+        response = self.client.get(f'/api/v1/events/{event.pk}/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['uuid'], 'retrieve-001')
 
@@ -478,10 +478,10 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
             'date_start': '2026-03-15',
         }
         response = self.client.post(
-            '/api/v1/events/staging/', data=payload, format='json',
+            '/api/v1/events/', data=payload, format='json',
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertTrue(StagingEvent.objects.filter(uuid='crud-create-001').exists())
+        self.assertTrue(Event.objects.filter(uuid='crud-create-001').exists())
 
     def test_update_event(self):
         """PUT /staging/{id}/ aggiorna completamente l'evento."""
@@ -494,7 +494,7 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
             'title': 'Titolo aggiornato',
         }
         response = self.client.put(
-            f'/api/v1/events/staging/{event.pk}/',
+            f'/api/v1/events/{event.pk}/',
             data=payload,
             format='json',
         )
@@ -508,7 +508,7 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
         self.auth_write()
 
         response = self.client.patch(
-            f'/api/v1/events/staging/{event.pk}/',
+            f'/api/v1/events/{event.pk}/',
             data={'city': 'napoli'},
             format='json',
         )
@@ -521,15 +521,15 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
         event = self.create_event(uuid='crud-delete-001')
         self.auth_write()
 
-        response = self.client.delete(f'/api/v1/events/staging/{event.pk}/')
+        response = self.client.delete(f'/api/v1/events/{event.pk}/')
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-        self.assertFalse(StagingEvent.objects.filter(pk=event.pk).exists())
+        self.assertFalse(Event.objects.filter(pk=event.pk).exists())
 
     def test_create_missing_required_fields(self):
         """POST senza campi obbligatori -> 400."""
         self.auth_write()
         response = self.client.post(
-            '/api/v1/events/staging/',
+            '/api/v1/events/',
             data={'city': 'roma'},
             format='json',
         )
@@ -544,7 +544,7 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
         self.create_event(uuid='filter-002', source='source_b')
         self.auth_read()
 
-        response = self.client.get('/api/v1/events/staging/?source=source_a')
+        response = self.client.get('/api/v1/events/?source=source_a')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         for event in response.data['results']:
             self.assertEqual(event['source'], 'source_a')
@@ -555,7 +555,7 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
         self.create_event(uuid='search-002', title='Mostra Caravaggio')
         self.auth_read()
 
-        response = self.client.get('/api/v1/events/staging/?search=Jazz')
+        response = self.client.get('/api/v1/events/?search=Jazz')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['count'], 1)
         self.assertEqual(response.data['results'][0]['title'], 'Concerto Jazz')
@@ -565,8 +565,8 @@ class StagingEventCRUDTest(StagingAPIBaseTestCase):
 # 5. Test CLEAR SOURCE
 # ===========================================================================
 
-class StagingEventClearSourceTest(StagingAPIBaseTestCase):
-    """DELETE /api/v1/events/staging/clear_source/?source=xxx"""
+class EventClearSourceTest(StagingAPIBaseTestCase):
+    """DELETE /api/v1/events/clear_source/?source=xxx"""
 
     def test_clear_source_deletes_matching(self):
         """DELETE clear_source elimina solo gli eventi della sorgente specificata."""
@@ -576,18 +576,18 @@ class StagingEventClearSourceTest(StagingAPIBaseTestCase):
         self.auth_write()
 
         response = self.client.delete(
-            '/api/v1/events/staging/clear_source/?source=to_delete',
+            '/api/v1/events/clear_source/?source=to_delete',
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['deleted'], 2)
         self.assertEqual(response.data['source'], 'to_delete')
         # L'evento dell'altra sorgente non deve essere toccato
-        self.assertTrue(StagingEvent.objects.filter(source='keep_this').exists())
+        self.assertTrue(Event.objects.filter(source='keep_this').exists())
 
     def test_clear_source_without_param(self):
         """DELETE clear_source senza parametro -> 400."""
         self.auth_write()
-        response = self.client.delete('/api/v1/events/staging/clear_source/')
+        response = self.client.delete('/api/v1/events/clear_source/')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn('error', response.data)
 
@@ -595,7 +595,7 @@ class StagingEventClearSourceTest(StagingAPIBaseTestCase):
         """DELETE clear_source con sorgente inesistente -> 200, deleted=0."""
         self.auth_write()
         response = self.client.delete(
-            '/api/v1/events/staging/clear_source/?source=nonexistent',
+            '/api/v1/events/clear_source/?source=nonexistent',
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['deleted'], 0)
@@ -605,19 +605,19 @@ class StagingEventClearSourceTest(StagingAPIBaseTestCase):
 # 6. Test AUTENTICAZIONE e PERMESSI
 # ===========================================================================
 
-class StagingEventAuthTest(StagingAPIBaseTestCase):
+class EventAuthTest(StagingAPIBaseTestCase):
     """Verifica che autenticazione e scopes siano rispettati."""
 
     def test_no_token_returns_401(self):
         """Richiesta senza token -> 401."""
         self.auth_none()
-        response = self.client.get('/api/v1/events/staging/')
+        response = self.client.get('/api/v1/events/')
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_invalid_token_returns_401(self):
         """Token non valido -> 401."""
         self.client.credentials(HTTP_AUTHORIZATION='Bearer invalid-token-xyz')
-        response = self.client.get('/api/v1/events/staging/')
+        response = self.client.get('/api/v1/events/')
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_expired_token_returns_401(self):
@@ -630,14 +630,14 @@ class StagingEventAuthTest(StagingAPIBaseTestCase):
             scope='read write',
         )
         self.client.credentials(HTTP_AUTHORIZATION='Bearer expired-token')
-        response = self.client.get('/api/v1/events/staging/')
+        response = self.client.get('/api/v1/events/')
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_read_token_cannot_create(self):
         """Token con solo scope 'read' non puo' creare -> 403."""
         self.auth_read()
         response = self.client.post(
-            '/api/v1/events/staging/',
+            '/api/v1/events/',
             data={'uuid': 'x', 'source': 'x', 'title': 'x'},
             format='json',
         )
@@ -647,20 +647,20 @@ class StagingEventAuthTest(StagingAPIBaseTestCase):
         """Token con solo scope 'read' non puo' eliminare -> 403."""
         event = self.create_event(uuid='auth-del-001')
         self.auth_read()
-        response = self.client.delete(f'/api/v1/events/staging/{event.pk}/')
+        response = self.client.delete(f'/api/v1/events/{event.pk}/')
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
     def test_read_token_can_list(self):
         """Token con scope 'read' puo' listare -> 200."""
         self.auth_read()
-        response = self.client.get('/api/v1/events/staging/')
+        response = self.client.get('/api/v1/events/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_write_token_can_read(self):
         """Token con scope 'read write' puo' anche leggere -> 200."""
         self.create_event(uuid='auth-rw-001')
         self.auth_write()
-        response = self.client.get('/api/v1/events/staging/')
+        response = self.client.get('/api/v1/events/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
@@ -668,7 +668,7 @@ class StagingEventAuthTest(StagingAPIBaseTestCase):
 # 7. Test BULK ASYNC
 # ===========================================================================
 
-class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
+class EventBulkAsyncTest(StagingAPIBaseTestCase):
     """Test per il bulk create asincrono via Celery."""
 
     def test_async_bulk_returns_202_with_task_id(self):
@@ -698,7 +698,7 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
         with patch('events.tasks.process_bulk_events') as mock_task:
             mock_task.delay.return_value = mock_result
             response = self.client.post(
-                '/api/v1/events/staging/bulk/',
+                '/api/v1/events/bulk/',
                 data=payload,
                 format='json',
             )
@@ -720,7 +720,7 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
         self.auth_read()
         with patch('events.views.AsyncResult', return_value=mock_async_result):
             response = self.client.get(
-                '/api/v1/events/staging/bulk-status/fake-task-id-001/',
+                '/api/v1/events/bulk-status/fake-task-id-001/',
             )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['task_id'], 'fake-task-id-001')
@@ -738,7 +738,7 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
         self.auth_read()
         with patch('events.views.AsyncResult', return_value=mock_async_result):
             response = self.client.get(
-                '/api/v1/events/staging/bulk-status/fake-task-id-002/',
+                '/api/v1/events/bulk-status/fake-task-id-002/',
             )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['status'], 'PENDING')
@@ -757,7 +757,7 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
         self.auth_read()
         with patch('events.views.AsyncResult', return_value=mock_async_result):
             response = self.client.get(
-                '/api/v1/events/staging/bulk-status/fake-task-id-003/',
+                '/api/v1/events/bulk-status/fake-task-id-003/',
             )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['status'], 'FAILURE')
@@ -774,7 +774,7 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
         self.auth_read()
         with patch('events.views.AsyncResult', return_value=mock_async_result):
             response = self.client.get(
-                '/api/v1/events/staging/bulk-status/nonexistent-task-id/',
+                '/api/v1/events/bulk-status/nonexistent-task-id/',
             )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['status'], 'PENDING')
@@ -793,7 +793,7 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
             ]
         }
         response = self.client.post(
-            '/api/v1/events/staging/bulk/?sync=true',
+            '/api/v1/events/bulk/?sync=true',
             data=payload,
             format='json',
         )
@@ -801,13 +801,13 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
         self.assertIn('created_count', response.data)
         self.assertEqual(response.data['created_count'], 1)
         # Verifica che l'evento e' stato effettivamente creato nel DB
-        self.assertTrue(StagingEvent.objects.filter(uuid='sync-compat-001').exists())
+        self.assertTrue(Event.objects.filter(uuid='sync-compat-001').exists())
 
     def test_async_empty_events_returns_400(self):
         """POST bulk async con lista vuota -> 400 (validato prima del dispatch)."""
         self.auth_write()
         response = self.client.post(
-            '/api/v1/events/staging/bulk/',
+            '/api/v1/events/bulk/',
             data={'events': []},
             format='json',
         )
@@ -842,6 +842,6 @@ class StagingEventBulkAsyncTest(StagingAPIBaseTestCase):
         self.assertEqual(len(result['failed_events']), 1)
         self.assertEqual(result['failed_events'][0]['index'], 2)
         # Verify in DB
-        self.assertTrue(StagingEvent.objects.filter(uuid='task-direct-001').exists())
-        self.assertTrue(StagingEvent.objects.filter(uuid='task-direct-002').exists())
-        self.assertFalse(StagingEvent.objects.filter(uuid='task-direct-003').exists())
+        self.assertTrue(Event.objects.filter(uuid='task-direct-001').exists())
+        self.assertTrue(Event.objects.filter(uuid='task-direct-002').exists())
+        self.assertFalse(Event.objects.filter(uuid='task-direct-003').exists())

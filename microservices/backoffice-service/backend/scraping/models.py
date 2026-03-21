@@ -20,14 +20,15 @@ class ScrapingCategory(models.Model):
         verbose_name = 'Categoria'
         verbose_name_plural = 'Categorie'
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Rappresentazione testuale: nome della categoria."""
         return self.categoria
 
 
 class ScrapingLocation(models.Model):
     """Location uniche estratte dagli eventi — vista aggregata su v_locations."""
     location_name = models.CharField(max_length=255, primary_key=True)
-    city_name = models.CharField(max_length=100, blank=True, null=True, db_column='city_name')
+    city = models.CharField(max_length=100, blank=True, null=True, db_column='city')
     count = models.IntegerField(default=0)
 
     class Meta:
@@ -37,7 +38,8 @@ class ScrapingLocation(models.Model):
         verbose_name = 'Location'
         verbose_name_plural = 'Locations'
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Rappresentazione testuale: nome location con eventuale città tra parentesi."""
         if self.city_name:
             return f"{self.location_name} ({self.city_name})"
         return self.location_name or ''
@@ -83,5 +85,6 @@ class ScrapingWebsite(models.Model):
         verbose_name = 'Website'
         verbose_name_plural = 'Websites'
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Rappresentazione testuale: nome portale e nome spider."""
         return f"{self.name} ({self.spider_name})"

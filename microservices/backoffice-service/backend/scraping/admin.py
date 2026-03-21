@@ -48,9 +48,9 @@ class ScrapingCategoryAdmin(ModelAdmin):
 @admin.register(ScrapingLocation)
 class ScrapingLocationAdmin(ModelAdmin):
     """Admin per le location aggregate con dettaglio eventi correlati."""
-    list_display = ['location_name', 'city_name', 'total_count']
+    list_display = ['location_name', 'city', 'total_count']
     list_display_links = ['location_name']
-    search_fields = ['location_name', 'city_name']
+    search_fields = ['location_name', 'city']
     ordering = ['-count']
 
     class Media:
@@ -58,7 +58,7 @@ class ScrapingLocationAdmin(ModelAdmin):
             'all': ('events/css/admin_custom.css',)
         }
 
-    readonly_fields = ['location_name', 'city_name', 'count', 'total_count', 'related_events']
+    readonly_fields = ['location_name', 'city', 'count', 'total_count', 'related_events']
 
     def total_count(self, obj):
         """Conteggio totale degli eventi per questa location."""
@@ -68,7 +68,7 @@ class ScrapingLocationAdmin(ModelAdmin):
 
     fieldsets = (
         (None, {
-            'fields': ('location_name', ('city_name', 'total_count')),
+            'fields': ('location_name', ('city', 'total_count')),
         }),
         ('Eventi in questa location', {
             'fields': ('related_events',),
@@ -78,11 +78,11 @@ class ScrapingLocationAdmin(ModelAdmin):
 
     def related_events(self, obj):
         """Tabella degli eventi staging associati a questa location con chip stato e date italiane."""
-        from events.models import StagingEvent
+        from events.models import Event
 
-        events = StagingEvent.objects.filter(location_name=obj.location_name)
-        if obj.city_name:
-            events = events.filter(city_name=obj.city_name)
+        events = Event.objects.filter(location_name=obj.location_name)
+        if obj.city:
+            events = events.filter(city=obj.city)
         events = events.order_by('-date_start')[:50]
 
         if not events:
@@ -90,7 +90,7 @@ class ScrapingLocationAdmin(ModelAdmin):
 
         rows = []
         for e in events:
-            url = f'/admin/events/stagingevent/{e.pk}/change/'
+            url = f'/admin/events/event/{e.pk}/change/'
             link = format_html(
                 '<a href="{}" style="color:#7c3aed;font-weight:500;">{}</a>', url, e.title
             )

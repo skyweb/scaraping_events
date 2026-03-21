@@ -5,17 +5,17 @@ from django.contrib.gis.geos import Point
 from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
 from rest_framework import serializers
 
-from .models import ProductionEvent, StagingEvent
+from .models import Event
 from etl.models import EtlRun, EtlError
 
 
 # Campi response filtrati per piano API
 PLAN_FIELDS: dict[str, list[str]] = {
     "free": [
-        "id", "uuid", "title", "city_name", "date_start", "date_end",
+        "id", "uuid", "title", "city", "date_start", "date_end",
         "category", "source",
     ],
-    # Enterprise e Flat: tutti i campi → non presenti in dict → StagingEventSerializer
+    # Enterprise e Flat: tutti i campi → non presenti in dict → EventSerializer
 }
 
 
@@ -24,18 +24,18 @@ def get_plan_serializer_class(plan: str) -> type[serializers.ModelSerializer]:
     fields = PLAN_FIELDS.get(plan)
     if fields is None:
         # Enterprise/Flat: tutti i campi
-        return StagingEventSerializer
+        return EventSerializer
 
     # Costruisce un serializer con location_coordinates come SerializerMethodField
     attrs: dict[str, object] = {}
     if "location_coordinates" in fields:
         attrs["location_coordinates"] = serializers.SerializerMethodField()
-        attrs["get_location_coordinates"] = StagingEventSerializer.get_location_coordinates
+        attrs["get_location_coordinates"] = EventSerializer.get_location_coordinates
 
-    meta_attrs = {"model": StagingEvent, "fields": list(fields)}
+    meta_attrs = {"model": Event, "fields": list(fields)}
     attrs["Meta"] = type("Meta", (), meta_attrs)
 
-    return type(f"StagingEvent{plan.capitalize()}PlanSerializer", (serializers.ModelSerializer,), attrs)
+    return type(f"Event{plan.capitalize()}PlanSerializer", (serializers.ModelSerializer,), attrs)
 
 
 @extend_schema_serializer(
@@ -67,10 +67,19 @@ def get_plan_serializer_class(plan: str) -> type[serializers.ModelSerializer]:
         ),
     ]
 )
-class ProductionEventSerializer(serializers.ModelSerializer):
+class EventSerializer(serializers.ModelSerializer):
+    """Serializer completo per gli eventi (tutti i campi)."""
+    location_coordinates = serializers.SerializerMethodField()
+
     class Meta:
-        model = ProductionEvent
+        model = Event
         fields = '__all__'
+
+    def get_location_coordinates(self, obj):
+        """Converte il PointField GeoDjango in dizionario {lat, lng}."""
+        if obj.location_coordinates:
+            return {'lat': obj.location_coordinates.y, 'lng': obj.location_coordinates.x}
+        return None
 
 
 @extend_schema_serializer(
@@ -92,10 +101,10 @@ class ProductionEventSerializer(serializers.ModelSerializer):
         ),
     ]
 )
-class ProductionEventListSerializer(serializers.ModelSerializer):
+class EventListSerializer(serializers.ModelSerializer):
     """Serializer leggero per liste"""
     class Meta:
-        model = ProductionEvent
+        model = Event
         fields = [
             'id', 'uuid', 'title', 'city', 'source',
             'date_start', 'date_end', 'is_active', 'category'
@@ -112,7 +121,7 @@ class ProductionEventListSerializer(serializers.ModelSerializer):
                 "content_hash": "f1e2d3c4b5a6f7e8",
                 "source": "puglia_culture",
                 "title": "Festival della Taranta",
-                "city_name": "Lecce",
+                "city": "Lecce",
                 "location_name": "Piazza Duomo",
                 "location_address": "Piazza del Duomo, Lecce",
                 "location_coordinates": {"lat": 40.3516, "lng": 18.1718},
@@ -131,25 +140,11 @@ class ProductionEventListSerializer(serializers.ModelSerializer):
         ),
     ]
 )
-class StagingEventSerializer(serializers.ModelSerializer):
-    # PointField non è supportato nativamente da DRF — rappresentato come {lat, lng}
-    location_coordinates = serializers.SerializerMethodField()
-
-    class Meta:
-        model = StagingEvent
-        fields = '__all__'
-
-    def get_location_coordinates(self, obj):
-        if obj.location_coordinates:
-            return {'lat': obj.location_coordinates.y, 'lng': obj.location_coordinates.x}
-        return None
-
-
-class StagingEventBulkResponseSerializer(serializers.ModelSerializer):
+class EventBulkResponseSerializer(serializers.ModelSerializer):
     """Serializer compatto per la risposta bulk (solo campi essenziali)."""
 
     class Meta:
-        model = StagingEvent
+        model = Event
         fields = ['id', 'uuid', 'content_hash', 'source', 'title', 'created_at']
 
 
@@ -194,7 +189,7 @@ class DatesNestedSerializer(serializers.Serializer):
                 "stars": 4,
                 "category": ["Musica", "Festival"],
                 "city": {
-                    "city_name": "Lecce",
+                    "city": "Lecce",
                     "location_name": "Piazza Duomo",
                     "location_address": "Piazza del Duomo, Lecce",
                     "location_coordinates": {"lat": "40.3516", "lng": "18.1718"}
@@ -216,7 +211,7 @@ class DatesNestedSerializer(serializers.Serializer):
         ),
     ]
 )
-class StagingEventScrapingSerializer(serializers.Serializer):
+class EventScrapingSerializer(serializers.Serializer):
     """
     Formato event scraping — struttura definita in templates.json.
 
@@ -308,6 +303,7 @@ class StagingEventScrapingSerializer(serializers.Serializer):
         return flat
 
     def to_internal_value(self, data):
+        """Converte il formato nested dello spider in flat e normalizza campi (coordinate, date, batch_file)."""
         # Salva il JSON originale del POST prima di qualsiasi trasformazione
         raw_data = dict(data) if isinstance(data, dict) else data
 
@@ -339,7 +335,7 @@ class StagingEventScrapingSerializer(serializers.Serializer):
             'price': validated.get('price') or None,
             'scraped_at': validated.get('scraped_at'),
             'category': [c for c in (validated.get('category') or []) if c] or None,
-            'city_name': city.get('city_name') or None,
+            'city': city.get('city_name') or None,
             'location_name': city.get('location_name') or None,
             'location_address': city.get('location_address') or None,
             'location_coordinates': location_coordinates,
@@ -353,11 +349,11 @@ class StagingEventScrapingSerializer(serializers.Serializer):
         """Upsert su uuid."""
         validated_data.pop('_batch_file', None)
         uuid = validated_data.pop('uuid')
-        StagingEvent.objects.update_or_create(uuid=uuid, defaults=validated_data)
-        return StagingEvent.objects.get(uuid=uuid)
+        Event.objects.update_or_create(uuid=uuid, defaults=validated_data)
+        return Event.objects.get(uuid=uuid)
 
 
-class StagingEventLegacySerializer(serializers.Serializer):
+class EventLegacySerializer(serializers.Serializer):
     """
     Formato legacy — struttura nested con 'details' e 'list'.
     Mantenuto per backward compatibility con spider precedenti.
@@ -389,6 +385,7 @@ class StagingEventLegacySerializer(serializers.Serializer):
     details = serializers.DictField(required=False, default=dict)
 
     def to_internal_value(self, data):
+        """Converte il formato legacy nested (details, list) in flat e genera uuid/content_hash."""
         validated = super().to_internal_value(data)
 
         list_data = validated.get('list') or {}
@@ -443,8 +440,8 @@ class StagingEventLegacySerializer(serializers.Serializer):
     def create(self, validated_data):
         """Upsert su uuid."""
         uuid = validated_data.pop('uuid')
-        StagingEvent.objects.update_or_create(uuid=uuid, defaults=validated_data)
-        return StagingEvent.objects.get(uuid=uuid)
+        Event.objects.update_or_create(uuid=uuid, defaults=validated_data)
+        return Event.objects.get(uuid=uuid)
 
 
 @extend_schema_serializer(
@@ -468,6 +465,7 @@ class StagingEventLegacySerializer(serializers.Serializer):
     ]
 )
 class EtlRunSerializer(serializers.ModelSerializer):
+    """Serializer per le esecuzioni ETL con durata calcolata in secondi."""
     duration_seconds = serializers.SerializerMethodField()
 
     class Meta:
@@ -475,6 +473,7 @@ class EtlRunSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def get_duration_seconds(self, obj):
+        """Calcola la durata totale dell'ETL in secondi (da started_at a upsert_completed_at)."""
         if obj.upsert_completed_at and obj.started_at:
             return (obj.upsert_completed_at - obj.started_at).total_seconds()
         return None
@@ -498,6 +497,7 @@ class EtlRunSerializer(serializers.ModelSerializer):
     ]
 )
 class EtlErrorSerializer(serializers.ModelSerializer):
+    """Serializer per gli errori ETL con tipo, sorgente e messaggio."""
     class Meta:
         model = EtlError
         fields = '__all__'
@@ -533,6 +533,7 @@ class DashboardStatsSerializer(serializers.Serializer):
 
 
 class FailedEventSerializer(serializers.Serializer):
+    """Serializer per un evento fallito nella risposta bulk (dati originali, errori e indice)."""
     original_data = serializers.JSONField(help_text="The original event data that failed to save.")
     errors = serializers.JSONField(help_text="Detailed validation errors for the event.")
     index = serializers.IntegerField(help_text="Index of the event in the original request list.")
@@ -559,7 +560,8 @@ class FailedEventSerializer(serializers.Serializer):
     ]
 )
 class BulkProcessResponseSerializer(serializers.Serializer):
-    successful_events = StagingEventSerializer(many=True, help_text="List of events that were successfully created/updated.")
+    """Serializer per la risposta bulk: eventi creati, falliti e conteggi."""
+    successful_events = EventSerializer(many=True, help_text="List of events that were successfully created/updated.")
     failed_events = FailedEventSerializer(many=True, help_text="List of events that failed to save, with their errors.")
     created_count = serializers.IntegerField(help_text="Number of events successfully created.")
     failed_count = serializers.IntegerField(help_text="Number of events that failed to save.")
@@ -570,44 +572,62 @@ class BulkProcessResponseSerializer(serializers.Serializer):
 # =============================================================================
 
 class BulkCreateResponseSerializer(serializers.Serializer):
+    """Serializer di risposta per il bulk create (conteggio e lista eventi creati)."""
     created = serializers.IntegerField()
-    events = StagingEventSerializer(many=True)
+    events = EventSerializer(many=True)
 
 
 class BulkCreateRequestSerializer(serializers.Serializer):
-    events = StagingEventScrapingSerializer(many=True)
+    """Serializer di richiesta per il bulk create (lista di eventi)."""
+    events = EventScrapingSerializer(many=True)
 
 
 class ClearSourceResponseSerializer(serializers.Serializer):
+    """Serializer di risposta per la cancellazione per sorgente (conteggio e nome sorgente)."""
     deleted = serializers.IntegerField()
     source = serializers.CharField()
 
 
 class BulkAcceptedResponseSerializer(serializers.Serializer):
+    """Serializer di risposta per il bulk async accettato (task_id, stato e messaggio)."""
     task_id = serializers.CharField()
     status = serializers.CharField()
     message = serializers.CharField()
 
 
 class BulkTaskStatusResponseSerializer(serializers.Serializer):
+    """Serializer di risposta per lo stato di un task bulk asincrono."""
     task_id = serializers.CharField()
     status = serializers.CharField()
     result = serializers.JSONField(required=False, allow_null=True)
 
 
 class ErrorResponseSerializer(serializers.Serializer):
+    """Serializer generico per le risposte di errore con campo 'error'."""
     error = serializers.CharField()
 
 
 class CityCountSerializer(serializers.Serializer):
+    """Serializer per il conteggio eventi per città."""
     city = serializers.CharField()
     count = serializers.IntegerField()
 
 
 class SourceCountSerializer(serializers.Serializer):
+    """Serializer per il conteggio eventi per sorgente."""
     source = serializers.CharField()
     count = serializers.IntegerField()
 
 
 class ToggleActiveResponseSerializer(serializers.Serializer):
+    """Serializer di risposta per il toggle attivo/inattivo di un evento."""
     is_active = serializers.BooleanField()
+
+
+# Alias per retrocompatibilità temporanea
+StagingEventSerializer = EventSerializer
+StagingEventBulkResponseSerializer = EventBulkResponseSerializer
+StagingEventScrapingSerializer = EventScrapingSerializer
+StagingEventLegacySerializer = EventLegacySerializer
+ProductionEventSerializer = EventSerializer
+ProductionEventListSerializer = EventListSerializer

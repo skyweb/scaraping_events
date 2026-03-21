@@ -12,15 +12,14 @@ from celery.result import AsyncResult
 from opentelemetry import trace
 from etl.tracing import log_trace_event
 
-from .models import ProductionEvent, StagingEvent
+from .models import Event
 from etl.models import EtlRun, EtlError
 from .serializers import (
-    ProductionEventSerializer,
-    ProductionEventListSerializer,
-    StagingEventSerializer,
-    StagingEventBulkResponseSerializer,
-    StagingEventScrapingSerializer,
-    StagingEventLegacySerializer,
+    EventSerializer,
+    EventListSerializer,
+    EventBulkResponseSerializer,
+    EventScrapingSerializer,
+    EventLegacySerializer,
     EtlRunSerializer,
     EtlErrorSerializer,
     DashboardStatsSerializer,
@@ -72,11 +71,11 @@ from .serializers import (
     ),
 )
 class ProductionEventViewSet(viewsets.ModelViewSet):
-    """ViewSet CRUD per gli eventi in produzione con filtri, ricerca e ordinamento."""
-    queryset = ProductionEvent.objects.all()
-    serializer_class = ProductionEventSerializer
+    """ViewSet CRUD per gli eventi pubblicati con filtri, ricerca e ordinamento."""
+    queryset = Event.objects.filter(status=Event.Status.PUBLISHED)
+    serializer_class = EventSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['city', 'source', 'is_active', 'date_start', 'date_end']
+    filterset_fields = ['city', 'source', 'is_active', 'status', 'date_start', 'date_end']
     search_fields = ['title', 'description', 'location_name', 'location_address']
     ordering_fields = ['date_start', 'date_end', 'created_at', 'title', 'city']
     ordering = ['-date_start']
@@ -84,8 +83,8 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         """Restituisce il serializer leggero per la lista, completo per il dettaglio."""
         if self.action == 'list':
-            return ProductionEventListSerializer
-        return ProductionEventSerializer
+            return EventListSerializer
+        return EventSerializer
 
     @extend_schema(
         summary="Citta' disponibili",
@@ -97,7 +96,7 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
     def cities(self, request, **kwargs):
         """Lista delle città disponibili"""
         cities = (
-            ProductionEvent.objects
+            Event.objects
             .values('city')
             .annotate(count=Count('id'))
             .order_by('-count')
@@ -114,7 +113,7 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
     def sources(self, request, **kwargs):
         """Lista delle sorgenti disponibili"""
         sources = (
-            ProductionEvent.objects
+            Event.objects
             .values('source')
             .annotate(count=Count('id'))
             .order_by('-count')
@@ -150,11 +149,11 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
     ),
 )
 class StagingEventViewSet(viewsets.ReadOnlyModelViewSet):
-    """ViewSet in sola lettura per gli staging events (API interne admin)."""
-    queryset = StagingEvent.objects.all()
-    serializer_class = StagingEventSerializer
+    """ViewSet in sola lettura per gli eventi in staging (API interne admin)."""
+    queryset = Event.objects.filter(status=Event.Status.STAGING)
+    serializer_class = EventSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['city_name', 'source']
+    filterset_fields = ['city', 'source']
     search_fields = ['title', 'description']
 
 
@@ -213,14 +212,15 @@ class DashboardView(APIView):
     )
     def get(self, request, **kwargs):
         """Restituisce statistiche aggregate per la dashboard: totali, distribuzione e staging."""
-        # Aggregazione in una singola query per total + active
-        counts = ProductionEvent.objects.aggregate(
+        # Aggregazione sugli eventi pubblicati
+        published = Event.objects.filter(status=Event.Status.PUBLISHED)
+        counts = published.aggregate(
             total_events=Count('id'),
             active_events=Count('id', filter=Q(is_active=True)),
         )
 
         events_by_city = dict(
-            ProductionEvent.objects
+            published
             .values('city')
             .annotate(count=Count('id'))
             .order_by('-count')
@@ -228,14 +228,14 @@ class DashboardView(APIView):
         )
 
         events_by_source = dict(
-            ProductionEvent.objects
+            published
             .values('source')
             .annotate(count=Count('id'))
             .values_list('source', 'count')
         )
 
         recent_etl_runs = EtlRun.objects.all()[:5]
-        staging_count = StagingEvent.objects.count()
+        staging_count = Event.objects.filter(status=Event.Status.STAGING).count()
 
         data = {
             'total_events': counts['total_events'],
@@ -338,26 +338,26 @@ class PlanFieldFilterMixin:
 
 @extend_schema_view(
     list=extend_schema(
-        summary="Lista staging events",
-        description="Recupera la lista di tutti gli staging events. Richiede permesso `events:read`.",
-        tags=["Staging Events"],
+        summary="Lista eventi",
+        description="Recupera la lista di tutti gli eventi. Richiede permesso `events:read`.",
+        tags=["Events"],
     ),
     retrieve=extend_schema(
-        summary="Dettaglio staging event",
-        description="Recupera i dettagli di un singolo staging event. Richiede permesso `events:read`.",
-        tags=["Staging Events"],
+        summary="Dettaglio evento",
+        description="Recupera i dettagli di un singolo evento. Richiede permesso `events:read`.",
+        tags=["Events"],
     ),
     create=extend_schema(
-        summary="Crea staging event",
+        summary="Crea evento",
         description="""
-Crea un nuovo staging event. Richiede permesso `events:create`.
+Crea un nuovo evento. Richiede permesso `events:create`.
 
 **Campi obbligatori:** `uuid`, `source`, `title`
 
 Tutti gli altri campi sono opzionali. Il campo `uuid` deve essere univoco
 per sorgente (tipicamente un hash di title + date_start + location_name).
         """,
-        tags=["Staging Events"],
+        tags=["Events"],
         examples=[
             OpenApiExample(
                 "Evento completo",
@@ -408,24 +408,24 @@ per sorgente (tipicamente un hash di title + date_start + location_name).
         ],
     ),
     destroy=extend_schema(
-        summary="Elimina staging event",
-        description="Elimina uno staging event specifico. Richiede permesso `events:delete`.",
-        tags=["Staging Events"],
+        summary="Elimina evento",
+        description="Elimina un evento specifico. Richiede permesso `events:delete`.",
+        tags=["Events"],
     ),
     update=extend_schema(
-        summary="Aggiorna staging event",
-        description="Aggiorna completamente uno staging event. Richiede permesso `events:update`.",
-        tags=["Staging Events"],
+        summary="Aggiorna evento",
+        description="Aggiorna completamente un evento. Richiede permesso `events:update`.",
+        tags=["Events"],
     ),
     partial_update=extend_schema(
-        summary="Aggiorna parzialmente staging event",
-        description="Aggiorna parzialmente uno staging event. Richiede permesso `events:update`.",
-        tags=["Staging Events"],
+        summary="Aggiorna parzialmente evento",
+        description="Aggiorna parzialmente un evento. Richiede permesso `events:update`.",
+        tags=["Events"],
     ),
 )
-class ExternalStagingEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
+class ExternalEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     """
-    API esterne per la gestione degli staging events.
+    API esterne per la gestione degli eventi.
 
     ## Autenticazione
 
@@ -443,11 +443,11 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     - `events:delete` - Eliminazione (DELETE)
     """
 
-    queryset = StagingEvent.objects.all()
+    queryset = Event.objects.all()
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['city_name', 'source', 'uuid']
+    filterset_fields = ['city', 'source', 'uuid']
     search_fields = ['title', 'description', 'location_name']
-    ordering_fields = ['created_at', 'date_start', 'city_name']
+    ordering_fields = ['created_at', 'date_start', 'city']
     ordering = ['-created_at']
 
     def get_permissions(self):
@@ -470,8 +470,34 @@ class ExternalStagingEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     def get_serializer_class(self):
         """Restituisce il serializer scraping per le scritture, quello standard per le letture."""
         if self.action in ['create', 'update', 'partial_update', 'bulk_create']:
-            return StagingEventScrapingSerializer
-        return StagingEventSerializer
+            return EventScrapingSerializer
+        return EventSerializer
+
+    def perform_create(self, serializer):
+        """Salva l'evento con il username di chi lo ha creato."""
+        serializer.save(created_by=self._get_caller_username())
+
+    def perform_update(self, serializer):
+        """Salva l'evento con il username di chi lo ha modificato."""
+        serializer.save(updated_by=self._get_caller_username())
+
+    def perform_destroy(self, instance):
+        """Soft delete: disattiva l'evento e registra chi lo ha eliminato."""
+        from django.utils import timezone
+        instance.is_active = False
+        instance.deleted_by = self._get_caller_username()
+        instance.deleted_at = timezone.now()
+        instance.save(update_fields=['is_active', 'deleted_by', 'deleted_at', 'updated_at'])
+
+    def _get_caller_username(self) -> str:
+        """Restituisce lo username del chiamante (API key, JWT, admin)."""
+        auth = getattr(self.request, 'auth', None)
+        if isinstance(auth, dict):
+            return auth.get('consumer_username', '') or auth.get('sub', '')
+        user = self.request.user
+        if user and user.is_authenticated:
+            return user.get_username()
+        return ''
 
     @extend_schema(
         summary="Bulk create staging events",
@@ -678,8 +704,8 @@ Crea multipli staging events in una sola richiesta.
         """Logica sincrona per il bulk create.
 
         Rileva il formato automaticamente:
-        - Formato event scraping (con 'uuid', 'city', 'dates'): usa StagingEventScrapingSerializer
-        - Formato legacy (nested con 'details'): usa StagingEventLegacySerializer
+        - Formato event scraping (con 'uuid', 'city', 'dates'): usa EventScrapingSerializer
+        - Formato legacy (nested con 'details'): usa EventLegacySerializer
         """
         from opentelemetry.trace import StatusCode
 
@@ -694,9 +720,9 @@ Crea multipli staging events in una sola richiesta.
 
             # Rileva formato in base alla struttura delle chiavi
             if 'details' in item_data:
-                serializer = StagingEventLegacySerializer(data=item_data)
+                serializer = EventLegacySerializer(data=item_data)
             else:
-                serializer = StagingEventScrapingSerializer(data=item_data)
+                serializer = EventScrapingSerializer(data=item_data)
 
             if serializer.is_valid():
                 try:
@@ -767,7 +793,7 @@ Crea multipli staging events in una sola richiesta.
             status_code = status.HTTP_200_OK
 
         return Response({
-            'successful_events': StagingEventBulkResponseSerializer(successful_events, many=True).data,
+            'successful_events': EventBulkResponseSerializer(successful_events, many=True).data,
             'failed_events': failed_events,
             'created_count': len(successful_events),
             'failed_count': len(failed_events),
@@ -853,7 +879,7 @@ Utile per pulire i dati prima di un nuovo import.
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        deleted_count, _ = StagingEvent.objects.filter(source=source).delete()
+        deleted_count, _ = Event.objects.filter(source=source).delete()
         return Response({
             'deleted': deleted_count,
             'source': source

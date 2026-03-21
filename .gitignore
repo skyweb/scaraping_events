@@ -40,6 +40,12 @@ env/
 .pytest_cache/
 staticfiles/
 
+# Fixtures dati (shapefile, JSON grandi) — solo .gitkeep tracciato
+/microservices/backoffice-service/backend/comuni_istat/fixtures/*
+!/microservices/backoffice-service/backend/comuni_istat/fixtures/.gitkeep
+/microservices/backoffice-service/backend/comuni_italiani/fixtures/*
+!/microservices/backoffice-service/backend/comuni_italiani/fixtures/.gitkeep
+
 # Database
 /infrastructures/services/postgres/data/
 /infrastructures/OCI/oci_ssh/*

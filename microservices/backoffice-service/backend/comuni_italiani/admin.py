@@ -39,7 +39,7 @@ class AppartenenzaInline(TabularInline):
         """Link al dettaglio dell'appartenenza normalizzata con elenco comuni."""
         if not obj.pk or not obj.appartenenza_id:
             return '-'
-        url = f'/admin/comuni_istat_ingestion/appartenenza/{obj.appartenenza_id}/change/'
+        url = f'/admin/comuni_italiani/appartenenza/{obj.appartenenza_id}/change/'
         return mark_safe(
             f'<a href="{url}" style="white-space:nowrap;" title="Vedi tutti i comuni con questa appartenenza">'
             f'Vedi comuni &rarr;</a>'
@@ -153,7 +153,7 @@ class AppartenenzaComuneInline(TabularInline):
 
     def comune_link(self, obj):
         """Mostra il nome del comune come link alla scheda di dettaglio."""
-        url = f'/admin/comuni_istat_ingestion/comune/{obj.comune_id}/change/'
+        url = f'/admin/comuni_italiani/comune/{obj.comune_id}/change/'
         return mark_safe(f'<a href="{url}">{obj.comune.nome}</a>')
     comune_link.short_description = 'Comune'
 
@@ -163,7 +163,7 @@ class AppartenenzaComuneInline(TabularInline):
         comune_istat = getattr(obj.comune, 'comune_istat', None)
         if not comune_istat:
             return codice
-        url = f'/admin/comuni_istat/comuneitaliano/{comune_istat.pk}/change/'
+        url = f'/admin/comuni_istat/comune/{comune_istat.pk}/change/'
         return mark_safe(
             f'<a href="{url}" style="color:#7c3aed;font-weight:600;text-decoration:none;">'
             f'{codice} '
@@ -215,7 +215,7 @@ class ComuneAppartenenzaAdmin(ModelAdmin):
 
     def comune_link(self, obj):
         """Mostra il nome del comune come link alla scheda di dettaglio."""
-        url = f'/admin/comuni_istat_ingestion/comune/{obj.comune_id}/change/'
+        url = f'/admin/comuni_italiani/comune/{obj.comune_id}/change/'
         return mark_safe(f'<a href="{url}">{obj.comune.nome}</a>')
     comune_link.short_description = 'Comune'
     comune_link.admin_order_field = 'comune__nome'

@@ -17,10 +17,11 @@ class RipartizioneGeografica(models.Model):
         verbose_name_plural = 'Ripartizioni Geografiche'
 
     def __str__(self):
+        """Restituisce la denominazione della ripartizione geografica."""
         return self.den_rip
 
 
-class RegioneItaliana(models.Model):
+class Regione(models.Model):
     """Regioni italiane - tabella di lookup"""
     cod_rip = models.ForeignKey(
         RipartizioneGeografica,
@@ -41,14 +42,24 @@ class RegioneItaliana(models.Model):
         verbose_name_plural = 'Regioni'
 
     def __str__(self):
+        """Restituisce la denominazione della regione."""
         return self.den_reg
 
 
-class ProvinciaItaliana(models.Model):
+class Provincia(models.Model):
     """Province italiane - tabella di lookup"""
+    provincia_ingestion = models.OneToOneField(
+        'comuni_italiani.Provincia',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='provincia_istat',
+        db_column='provincia_ingestion_id',
+        help_text='Collegamento alla provincia in comuni_italiani (match per sigla)',
+    )
     cod_rip = models.IntegerField()
     cod_reg = models.ForeignKey(
-        RegioneItaliana,
+        Regione,
         on_delete=models.CASCADE,
         to_field='cod_reg',
         db_column='cod_reg'
@@ -76,17 +87,27 @@ class ProvinciaItaliana(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce la denominazione dell'unità territoriale sovracomunale."""
         return self.den_uts
 
 
-class ComuneItaliano(models.Model):
+class Comune(models.Model):
     """Comuni italiani - tabella di lookup"""
     cod_rip = models.IntegerField()
     cod_reg = models.IntegerField()
     cod_prov = models.IntegerField()
     cod_cm = models.IntegerField(blank=True, null=True)
+    comune_ingestion = models.OneToOneField(
+        'comuni_italiani.Comune',
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        related_name='comune_istat',
+        db_column='comune_ingestion_id',
+        help_text='Collegamento al comune in comuni_italiani (match per codice catastale)',
+    )
     cod_uts = models.ForeignKey(
-        ProvinciaItaliana,
+        Provincia,
         on_delete=models.CASCADE,
         to_field='cod_uts',
         db_column='cod_uts'
@@ -132,6 +153,7 @@ class ComuneItaliano(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce il nome del comune."""
         return self.comune
 
 
@@ -144,7 +166,7 @@ class ComuneSoppresso(models.Model):
     ]
 
     comune_attuale = models.ForeignKey(
-        ComuneItaliano,
+        Comune,
         on_delete=models.CASCADE,
         related_name='comuni_soppressi',
         blank=True,
@@ -172,6 +194,7 @@ class ComuneSoppresso(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce il nome del comune soppresso con provincia, comune attuale e anno."""
         return f"{self.comune} ({self.sigla_uts}) → {self.comune_rel} [{self.anno}]"
 
 
@@ -179,7 +202,7 @@ class DenominazionePrecedente(models.Model):
     """Denominazioni storiche dei comuni — stesso comune, nome diverso nel tempo."""
 
     comune_attuale = models.ForeignKey(
-        ComuneItaliano,
+        Comune,
         on_delete=models.CASCADE,
         related_name='denominazioni_precedenti',
         blank=True,
@@ -204,6 +227,7 @@ class DenominazionePrecedente(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce la denominazione precedente e quella corrente del comune."""
         return f"{self.comune} → {self.comune_corrente}"
 
 
@@ -221,4 +245,5 @@ class ComuneJsonStaging(models.Model):
         verbose_name_plural = 'Comuni JSON Staging'
 
     def __str__(self):
+        """Restituisce codice ISTAT e nome del comune in staging."""
         return f"{self.codice} - {self.nome}"

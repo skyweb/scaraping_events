@@ -5,14 +5,29 @@ document.addEventListener("DOMContentLoaded", function () {
   var geojson = JSON.parse(el.dataset.geojson);
   var lat = parseFloat(el.dataset.lat);
   var lng = parseFloat(el.dataset.lng);
+  var map = null;
+  var layer = null;
+
+  function expandContainer() {
+    // Rimuove max-w-2xl dal container readonly di Unfold
+    var parent = el.parentElement;
+    if (parent) {
+      parent.style.maxWidth = "none";
+      parent.style.width = "100%";
+      parent.style.padding = "0";
+    }
+  }
 
   function initMap() {
-    var map = L.map("map-comune").setView([lat, lng], 12);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "\u00a9 OpenStreetMap contributors",
-      maxZoom: 18,
+    if (map) return;
+    expandContainer();
+    map = L.map("map-comune").setView([lat, lng], 12);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+      attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> \u00a9 <a href="https://carto.com/">CARTO</a>',
+      maxZoom: 19,
+      subdomains: "abcd",
     }).addTo(map);
-    var layer = L.geoJSON(geojson, {
+    layer = L.geoJSON(geojson, {
       style: {
         color: "#7c3aed",
         weight: 2,
@@ -27,7 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
       weight: 2,
       fillOpacity: 0.9,
     }).addTo(map);
-    map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+    setTimeout(function () {
+      map.invalidateSize();
+      map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+    }, 150);
+  }
+
+  function tryInit() {
+    if (el.offsetParent !== null && el.offsetWidth > 0) {
+      if (!map) {
+        initMap();
+      } else {
+        // Tab già inizializzato, reinvalida
+        map.invalidateSize();
+        map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+      }
+    }
   }
 
   // Carica Leaflet CSS
@@ -38,13 +68,19 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(css);
   }
 
-  // Carica Leaflet JS e inizializza
+  function setupListeners() {
+    tryInit();
+    document.addEventListener("click", function () {
+      setTimeout(tryInit, 250);
+    });
+  }
+
   if (typeof L !== "undefined") {
-    initMap();
+    setupListeners();
   } else {
     var s = document.createElement("script");
     s.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-    s.onload = initMap;
+    s.onload = setupListeners;
     document.head.appendChild(s);
   }
 });

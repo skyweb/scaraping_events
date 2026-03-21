@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # =============================================================================
 # Entrypoint per il container Events Scraper
 # =============================================================================
@@ -24,15 +24,15 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 log_info() {
-    echo -e "${GREEN}[INFO]${NC} $1"
+    printf "${GREEN}[INFO]${NC} %s\n" "$1"
 }
 
 log_warn() {
-    echo -e "${YELLOW}[WARN]${NC} $1"
+    printf "${YELLOW}[WARN]${NC} %s\n" "$1"
 }
 
 log_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
+    printf "${RED}[ERROR]${NC} %s\n" "$1"
 }
 
 # Deploy progetto su Scrapyd se non già presente
@@ -41,7 +41,7 @@ deploy_project() {
         log_info "Verifico deploy progetto su Scrapyd..."
 
         # Attendi che Scrapyd sia pronto
-        for i in {1..10}; do
+        i=0; while [ $i -lt 10 ]; do i=$((i+1))
             if curl -s http://localhost:6800/daemonstatus.json > /dev/null 2>&1; then
                 break
             fi
@@ -134,7 +134,7 @@ case "${1:-scrapyd}" in
         ;;
 
     bash|sh)
-        exec /bin/bash
+        exec /bin/sh
         ;;
 
     *)

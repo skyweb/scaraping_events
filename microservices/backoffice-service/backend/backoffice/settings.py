@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'django_celery_results',
     'django_ckeditor_5',
     'comuni_istat',
-    'comuni_istat_ingestion',
+    'comuni_italiani',
     'etl',
     'scraping',
     'events',
@@ -248,7 +248,7 @@ I permessi sono gestiti per risorsa e azione dalla matrice API Consumers:
 ### Versioning
 
 Le API esterne sono versionate tramite URL path:
-- Versione corrente: **v1** → `/api/v1/events/staging/`
+- Versione corrente: **v1** → `/api/v1/events/`
 - Endpoint info versione: `GET /api/version/` (senza autenticazione)
 - Header `X-API-Version` presente in ogni risposta API
 
@@ -291,8 +291,7 @@ Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) usano header versioning
     },
     'TAGS': [
         {'name': 'Dashboard', 'description': 'Statistiche aggregate e panoramica'},
-        {'name': 'Production Events', 'description': 'Eventi validati in produzione'},
-        {'name': 'Staging Events (Internal)', 'description': 'Eventi in staging (sola lettura interna)'},
+        {'name': 'Events', 'description': 'Eventi (pubblicati e staging)'},
         {'name': 'ETL', 'description': 'Monitoraggio esecuzioni e errori ETL'},
         {'name': 'Staging Events', 'description': 'API esterna v1 - gestione staging events'},
         {'name': 'Bulk Operations', 'description': 'Operazioni massive (bulk create, clear source)'},
@@ -482,14 +481,19 @@ UNFOLD = {
                 "separator": True,
                 "items": [
                     {
-                        "title": "Production Events",
+                        "title": "Eventi",
                         "icon": "event",
-                        "link": "/admin/events/productionevent/",
+                        "link": "/admin/events/event/",
                     },
                     {
-                        "title": "Staging Events",
-                        "icon": "schedule",
-                        "link": "/admin/events/stagingevent/",
+                        "title": "Categorie",
+                        "icon": "event",
+                        "link": "/admin/events/category/",
+                    },
+                    {
+                        "title": "Luoghi",
+                        "icon": "event",
+                        "link": "/admin/events/location/",
                     },
                 ],
             },
@@ -500,22 +504,22 @@ UNFOLD = {
                     {
                         "title": "Comuni",
                         "icon": "location_city",
-                        "link": "/admin/comuni_istat/comuneitaliano/",
+                        "link": "/admin/comuni_istat/comune/",
                     },
                     {
                         "title": "Province",
                         "icon": "map",
-                        "link": "/admin/comuni_istat/provinciaitaliana/",
+                        "link": "/admin/comuni_istat/provincia/",
                     },
                     {
                         "title": "Regioni",
                         "icon": "public",
-                        "link": "/admin/comuni_istat_ingestion/regione/",
+                        "link": "/admin/comuni_italiani/regione/",
                     },
                     {
                         "title": "Appartenenze",
                         "icon": "groups",
-                        "link": "/admin/comuni_istat_ingestion/appartenenza/",
+                        "link": "/admin/comuni_italiani/appartenenza/",
                     }
                 ],
             },

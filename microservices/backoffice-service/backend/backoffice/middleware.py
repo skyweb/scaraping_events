@@ -12,6 +12,7 @@ import time
 
 from django.conf import settings
 from django.contrib.auth import get_user_model, login
+from django.contrib.auth.models import Group, Permission
 from django.http import HttpRequest, HttpResponse
 from django.template.response import TemplateResponse
 
@@ -39,6 +40,12 @@ class KeycloakAdminMiddleware:
 
     # Ruoli Keycloak che permettono l'accesso al Django Admin
     ALLOWED_ROLES = {"web", "admin"}
+
+    # Permessi Django assegnati al gruppo "Redazione" (ruolo "web")
+    # Formato: (app_label, codename)
+    REDAZIONE_PERMISSIONS = [
+        ("events", "view_event"),
+    ]
 
     def __init__(self, get_response) -> None:
         self.get_response = get_response
@@ -89,6 +96,11 @@ class KeycloakAdminMiddleware:
                 extra={"email": email, "roles": roles, "is_superuser": is_superuser},
             )
 
+            # Ruolo "web" → gruppo "Redazione" con permessi limitati
+            if not is_superuser:
+                group = self._get_or_create_redazione_group()
+                user.groups.add(group)
+
         if not user.is_staff:
             return TemplateResponse(
                 request,
@@ -103,6 +115,19 @@ class KeycloakAdminMiddleware:
             extra={"email": email, "user": user.get_username(), "roles": roles},
         )
         return self.get_response(request)
+
+    @classmethod
+    def _get_or_create_redazione_group(cls) -> Group:
+        """Crea il gruppo Redazione con i permessi definiti in REDAZIONE_PERMISSIONS."""
+        group, created = Group.objects.get_or_create(name="Redazione")
+        if created:
+            perms = Permission.objects.filter(
+                content_type__app_label__in=[p[0] for p in cls.REDAZIONE_PERMISSIONS],
+                codename__in=[p[1] for p in cls.REDAZIONE_PERMISSIONS],
+            )
+            group.permissions.set(perms)
+            sso_logger.info("Gruppo Redazione creato con %d permessi", perms.count())
+        return group
 
     @staticmethod
     def _extract_userinfo(request: HttpRequest) -> dict:

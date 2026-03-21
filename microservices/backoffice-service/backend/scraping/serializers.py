@@ -21,6 +21,7 @@ from .models import ScrapingWebsite, ScrapingCategory, ScrapingLocation
     ]
 )
 class ScrapingWebsiteSerializer(serializers.ModelSerializer):
+    """Serializer per i portali web scrapati con label CMS leggibile."""
     cms_display = serializers.CharField(source='get_cms_display', read_only=True)
 
     class Meta:
@@ -32,12 +33,14 @@ class ScrapingWebsiteSerializer(serializers.ModelSerializer):
 
 
 class ScrapingCategorySerializer(serializers.ModelSerializer):
+    """Serializer per le categorie aggregate (nome e conteggio eventi)."""
     class Meta:
         model = ScrapingCategory
         fields = ['categoria', 'count']
 
 
 class ScrapingLocationSerializer(serializers.ModelSerializer):
+    """Serializer per le location aggregate (nome, città e conteggio eventi)."""
     class Meta:
         model = ScrapingLocation
         fields = ['location_name', 'city_name', 'count']

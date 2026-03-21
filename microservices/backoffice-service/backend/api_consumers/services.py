@@ -209,44 +209,50 @@ def sync_consumer_to_keycloak(consumer: "ApiConsumer") -> None:
         consumer.keycloak_client_id = client_id
         consumer.keycloak_client_secret = secret_resp.get("value", client_secret)
 
-    # Aggiungi/aggiorna mapper "plan" (hardcoded claim)
+    # Aggiungi/aggiorna mapper hardcoded claims (plan, username)
     mappers = _http_request(
         "GET",
         f"{base_url}/clients/{kc_id}/protocol-mappers/models",
         headers=auth_headers,
     )
 
-    plan_mapper = next((m for m in mappers if m.get("name") == "plan"), None)
-
-    mapper_data = {
-        "name": "plan",
-        "protocol": "openid-connect",
-        "protocolMapper": "oidc-hardcoded-claim-mapper",
-        "config": {
-            "claim.name": "plan",
-            "claim.value": consumer.plan,
-            "jsonType.label": "String",
-            "id.token.claim": "true",
-            "access.token.claim": "true",
-            "userinfo.token.claim": "true",
-        },
+    hardcoded_claims = {
+        "plan": consumer.plan,
+        "consumer_username": consumer.username,
     }
 
-    if plan_mapper:
-        mapper_data["id"] = plan_mapper["id"]
-        _http_request(
-            "PUT",
-            f"{base_url}/clients/{kc_id}/protocol-mappers/models/{plan_mapper['id']}",
-            mapper_data,
-            auth_headers,
-        )
-    else:
-        _http_request(
-            "POST",
-            f"{base_url}/clients/{kc_id}/protocol-mappers/models",
-            mapper_data,
-            auth_headers,
-        )
+    for claim_name, claim_value in hardcoded_claims.items():
+        existing_mapper = next((m for m in mappers if m.get("name") == claim_name), None)
+
+        mapper_data = {
+            "name": claim_name,
+            "protocol": "openid-connect",
+            "protocolMapper": "oidc-hardcoded-claim-mapper",
+            "config": {
+                "claim.name": claim_name,
+                "claim.value": claim_value,
+                "jsonType.label": "String",
+                "id.token.claim": "true",
+                "access.token.claim": "true",
+                "userinfo.token.claim": "true",
+            },
+        }
+
+        if existing_mapper:
+            mapper_data["id"] = existing_mapper["id"]
+            _http_request(
+                "PUT",
+                f"{base_url}/clients/{kc_id}/protocol-mappers/models/{existing_mapper['id']}",
+                mapper_data,
+                auth_headers,
+            )
+        else:
+            _http_request(
+                "POST",
+                f"{base_url}/clients/{kc_id}/protocol-mappers/models",
+                mapper_data,
+                auth_headers,
+            )
 
     logger.info(
         "Client Keycloak sincronizzato: %s (client_id=%s, piano=%s)",

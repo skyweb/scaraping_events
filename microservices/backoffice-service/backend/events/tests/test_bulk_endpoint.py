@@ -1,5 +1,5 @@
 """
-Test suite per l'endpoint bulk (/api/v1/events/staging/bulk/).
+Test suite per l'endpoint bulk (/api/v1/events/bulk/).
 
 Organizzata in tre livelli:
   1. Unit test — serializer e validazione (nessuna richiesta HTTP)
@@ -25,10 +25,10 @@ from rest_framework import status
 from rest_framework.test import APIClient
 from oauth2_provider.models import Application, AccessToken
 
-from events.models import StagingEvent
+from events.models import Event
 from events.serializers import (
-    StagingEventScrapingSerializer,
-    StagingEventLegacySerializer,
+    EventScrapingSerializer,
+    EventLegacySerializer,
 )
 
 
@@ -118,12 +118,12 @@ def _evento_minimo(**overrides):
 # 1. UNIT TEST — Serializer
 # ===========================================================================
 
-class StagingEventScrapingSerializerTest(TestCase):
-    """Test di validazione e trasformazione del StagingEventScrapingSerializer."""
+class EventScrapingSerializerTest(TestCase):
+    """Test di validazione e trasformazione del EventScrapingSerializer."""
 
     def test_campi_obbligatori_presenti(self):
         """uuid, source, title sono obbligatori."""
-        ser = StagingEventScrapingSerializer(data={})
+        ser = EventScrapingSerializer(data={})
         self.assertFalse(ser.is_valid())
         self.assertIn('uuid', ser.errors)
         self.assertIn('source', ser.errors)
@@ -134,23 +134,23 @@ class StagingEventScrapingSerializerTest(TestCase):
         for campo in ('uuid', 'source', 'title'):
             data = _evento_minimo()
             del data[campo]
-            ser = StagingEventScrapingSerializer(data=data)
+            ser = EventScrapingSerializer(data=data)
             self.assertFalse(ser.is_valid(), f"Dovrebbe fallire senza '{campo}'")
             self.assertIn(campo, ser.errors)
 
     def test_evento_minimo_valido(self):
         """Evento con solo i campi obbligatori e' valido."""
-        ser = StagingEventScrapingSerializer(data=_evento_minimo())
+        ser = EventScrapingSerializer(data=_evento_minimo())
         self.assertTrue(ser.is_valid(), ser.errors)
 
     def test_evento_completo_valido(self):
         """Evento con tutti i campi compilati e' valido."""
-        ser = StagingEventScrapingSerializer(data=_evento_scraping())
+        ser = EventScrapingSerializer(data=_evento_scraping())
         self.assertTrue(ser.is_valid(), ser.errors)
 
     def test_flatten_city_nested(self):
         """Il campo nested 'city' viene appiattito in city_name, location_name, ecc."""
-        ser = StagingEventScrapingSerializer(data=_evento_scraping())
+        ser = EventScrapingSerializer(data=_evento_scraping())
         ser.is_valid(raise_exception=True)
         vd = ser.validated_data
         self.assertEqual(vd['city_name'], 'Milano')
@@ -159,7 +159,7 @@ class StagingEventScrapingSerializerTest(TestCase):
 
     def test_flatten_dates_nested(self):
         """Il campo nested 'dates' viene appiattito in date_start, time_start, ecc."""
-        ser = StagingEventScrapingSerializer(data=_evento_scraping())
+        ser = EventScrapingSerializer(data=_evento_scraping())
         ser.is_valid(raise_exception=True)
         vd = ser.validated_data
         self.assertEqual(str(vd['date_start']), '2026-06-15')
@@ -171,7 +171,7 @@ class StagingEventScrapingSerializerTest(TestCase):
 
     def test_coordinate_parsate_correttamente(self):
         """Le coordinate vengono convertite in Point GeoDjango."""
-        ser = StagingEventScrapingSerializer(data=_evento_scraping())
+        ser = EventScrapingSerializer(data=_evento_scraping())
         ser.is_valid(raise_exception=True)
         point = ser.validated_data['location_coordinates']
         self.assertIsNotNone(point)
@@ -182,7 +182,7 @@ class StagingEventScrapingSerializerTest(TestCase):
         """Coordinate non valide non bloccano la validazione."""
         data = _evento_scraping()
         data['city']['location_coordinates'] = {'lat': 'invalid', 'lng': 'abc'}
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         self.assertTrue(ser.is_valid(), ser.errors)
         self.assertIsNone(ser.validated_data['location_coordinates'])
 
@@ -190,28 +190,28 @@ class StagingEventScrapingSerializerTest(TestCase):
         """Coordinate assenti nel payload restituiscono None nel validated_data."""
         data = _evento_scraping()
         del data['city']['location_coordinates']
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         self.assertTrue(ser.is_valid(), ser.errors)
         self.assertIsNone(ser.validated_data['location_coordinates'])
 
     def test_category_none_accettata(self):
         """category=None e' accettata e resta None."""
         data = _evento_minimo(category=None)
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         self.assertTrue(ser.is_valid(), ser.errors)
         self.assertIsNone(ser.validated_data['category'])
 
     def test_category_lista_valida(self):
         """Lista di category valide viene mantenuta."""
         data = _evento_minimo(category=['musica', 'jazz'])
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         ser.is_valid(raise_exception=True)
         self.assertEqual(ser.validated_data['category'], ['musica', 'jazz'])
 
     def test_raw_data_contiene_payload_originale(self):
         """raw_data contiene una copia del JSON originale inviato."""
         data = _evento_scraping()
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         ser.is_valid(raise_exception=True)
         raw = ser.validated_data['raw_data']
         self.assertEqual(raw['uuid'], data['uuid'])
@@ -220,7 +220,7 @@ class StagingEventScrapingSerializerTest(TestCase):
     def test_campi_opzionali_vuoti_diventano_none(self):
         """Campi opzionali con stringa vuota diventano None."""
         data = _evento_minimo(url='', description='', image_url='', price='')
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         ser.is_valid(raise_exception=True)
         vd = ser.validated_data
         self.assertIsNone(vd['url'])
@@ -231,54 +231,54 @@ class StagingEventScrapingSerializerTest(TestCase):
     def test_city_none_non_blocca(self):
         """city=None non causa errore."""
         data = _evento_minimo(city=None)
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         self.assertTrue(ser.is_valid(), ser.errors)
         self.assertIsNone(ser.validated_data['city_name'])
 
     def test_dates_none_non_blocca(self):
         """dates=None non causa errore."""
         data = _evento_minimo(dates=None)
-        ser = StagingEventScrapingSerializer(data=data)
+        ser = EventScrapingSerializer(data=data)
         self.assertTrue(ser.is_valid(), ser.errors)
         self.assertIsNone(ser.validated_data['date_start'])
 
     def test_create_upsert(self):
         """Il serializer fa upsert: se uuid esiste, aggiorna invece di duplicare."""
         data = _evento_minimo(uuid='upsert-001', title='Versione 1')
-        ser1 = StagingEventScrapingSerializer(data=data)
+        ser1 = EventScrapingSerializer(data=data)
         ser1.is_valid(raise_exception=True)
         ser1.save()
-        self.assertEqual(StagingEvent.objects.filter(uuid='upsert-001').count(), 1)
+        self.assertEqual(Event.objects.filter(uuid='upsert-001').count(), 1)
 
         data['title'] = 'Versione 2'
-        ser2 = StagingEventScrapingSerializer(data=data)
+        ser2 = EventScrapingSerializer(data=data)
         ser2.is_valid(raise_exception=True)
         ser2.save()
-        self.assertEqual(StagingEvent.objects.filter(uuid='upsert-001').count(), 1)
+        self.assertEqual(Event.objects.filter(uuid='upsert-001').count(), 1)
         self.assertEqual(
-            StagingEvent.objects.get(uuid='upsert-001').title,
+            Event.objects.get(uuid='upsert-001').title,
             'Versione 2',
         )
 
 
-class StagingEventLegacySerializerTest(TestCase):
-    """Test di validazione e trasformazione del StagingEventLegacySerializer."""
+class EventLegacySerializerTest(TestCase):
+    """Test di validazione e trasformazione del EventLegacySerializer."""
 
     def test_evento_legacy_valido(self):
         """Evento nel formato legacy con tutti i campi e' valido."""
-        ser = StagingEventLegacySerializer(data=_evento_legacy())
+        ser = EventLegacySerializer(data=_evento_legacy())
         self.assertTrue(ser.is_valid(), ser.errors)
 
     def test_uuid_generato_automaticamente(self):
         """Il formato legacy genera uuid da hash(title + date_start + location_name)."""
-        ser = StagingEventLegacySerializer(data=_evento_legacy())
+        ser = EventLegacySerializer(data=_evento_legacy())
         ser.is_valid(raise_exception=True)
         self.assertIsNotNone(ser.validated_data['uuid'])
         self.assertEqual(len(ser.validated_data['uuid']), 16)
 
     def test_content_hash_generato(self):
         """content_hash viene generato da hash(description + price)."""
-        ser = StagingEventLegacySerializer(data=_evento_legacy())
+        ser = EventLegacySerializer(data=_evento_legacy())
         ser.is_valid(raise_exception=True)
         self.assertIsNotNone(ser.validated_data['content_hash'])
         self.assertEqual(len(ser.validated_data['content_hash']), 16)
@@ -286,15 +286,15 @@ class StagingEventLegacySerializerTest(TestCase):
     def test_uuid_deterministico(self):
         """Lo stesso input produce sempre lo stesso uuid."""
         data = _evento_legacy()
-        ser1 = StagingEventLegacySerializer(data=data)
+        ser1 = EventLegacySerializer(data=data)
         ser1.is_valid(raise_exception=True)
-        ser2 = StagingEventLegacySerializer(data=data)
+        ser2 = EventLegacySerializer(data=data)
         ser2.is_valid(raise_exception=True)
         self.assertEqual(ser1.validated_data['uuid'], ser2.validated_data['uuid'])
 
     def test_flatten_details_where(self):
         """I dati nested di details.where vengono appiattiti."""
-        ser = StagingEventLegacySerializer(data=_evento_legacy())
+        ser = EventLegacySerializer(data=_evento_legacy())
         ser.is_valid(raise_exception=True)
         vd = ser.validated_data
         self.assertEqual(vd['location_name'], 'Palazzo Reale')
@@ -302,7 +302,7 @@ class StagingEventLegacySerializerTest(TestCase):
 
     def test_flatten_details_when(self):
         """I dati nested di details.when vengono appiattiti."""
-        ser = StagingEventLegacySerializer(data=_evento_legacy())
+        ser = EventLegacySerializer(data=_evento_legacy())
         ser.is_valid(raise_exception=True)
         vd = ser.validated_data
         self.assertEqual(str(vd['date_start']), '2026-06-01')
@@ -310,7 +310,7 @@ class StagingEventLegacySerializerTest(TestCase):
 
     def test_coordinate_legacy_parsate(self):
         """Le coordinate nel formato legacy vengono convertite in Point GeoDjango."""
-        ser = StagingEventLegacySerializer(data=_evento_legacy())
+        ser = EventLegacySerializer(data=_evento_legacy())
         ser.is_valid(raise_exception=True)
         point = ser.validated_data['location_coordinates']
         self.assertIsNotNone(point)
@@ -320,7 +320,7 @@ class StagingEventLegacySerializerTest(TestCase):
         """Category come stringa CSV viene convertita in lista."""
         data = _evento_legacy()
         data['list']['category'] = 'arte, mostre, cultura'
-        ser = StagingEventLegacySerializer(data=data)
+        ser = EventLegacySerializer(data=data)
         ser.is_valid(raise_exception=True)
         self.assertEqual(ser.validated_data['category'], ['arte', 'mostre', 'cultura'])
 
@@ -329,13 +329,13 @@ class StagingEventLegacySerializerTest(TestCase):
         data = _evento_legacy()
         data['details']['image'] = ''
         data['list']['image'] = 'https://example.com/fallback.jpg'
-        ser = StagingEventLegacySerializer(data=data)
+        ser = EventLegacySerializer(data=data)
         ser.is_valid(raise_exception=True)
         self.assertEqual(ser.validated_data['image_url'], 'https://example.com/fallback.jpg')
 
     def test_campi_obbligatori_legacy(self):
         """title e source sono obbligatori nel formato legacy."""
-        ser = StagingEventLegacySerializer(data={})
+        ser = EventLegacySerializer(data={})
         self.assertFalse(ser.is_valid())
         self.assertIn('title', ser.errors)
         self.assertIn('source', ser.errors)
@@ -359,7 +359,7 @@ class ProcessBulkEventsTaskTest(TestCase):
         self.assertEqual(result['created_count'], 5)
         self.assertEqual(result['failed_count'], 0)
         self.assertEqual(result['spider_name'], 'test_spider')
-        self.assertEqual(StagingEvent.objects.filter(source='test_spider').count(), 5)
+        self.assertEqual(Event.objects.filter(source='test_spider').count(), 5)
 
     def test_batch_tutti_invalidi(self):
         """Nessun evento valido: created_count=0."""
@@ -412,7 +412,7 @@ class ProcessBulkEventsTaskTest(TestCase):
         events = [_evento_scraping(uuid='task-nested-001')]
         result = process_bulk_events(events)
         self.assertEqual(result['created_count'], 1)
-        ev = StagingEvent.objects.get(uuid='task-nested-001')
+        ev = Event.objects.get(uuid='task-nested-001')
         self.assertEqual(ev.city_name, 'Milano')
         self.assertEqual(ev.location_name, 'Blue Note')
         self.assertEqual(str(ev.date_start), '2026-06-15')
@@ -427,20 +427,20 @@ class ProcessBulkEventsTaskTest(TestCase):
         result = process_bulk_events(events)
         self.assertEqual(result['created_count'], 100)
         self.assertEqual(result['failed_count'], 0)
-        self.assertEqual(StagingEvent.objects.filter(uuid__startswith='big-').count(), 100)
+        self.assertEqual(Event.objects.filter(uuid__startswith='big-').count(), 100)
 
     def test_fallback_su_errore_bulk_create(self):
         """Se bulk_create fallisce con errore generico, il task usa il fallback save singoli."""
         from events.tasks import process_bulk_events
         events = [_evento_minimo(uuid='fallback-001', title='Fallback Test')]
         with patch.object(
-            StagingEvent.objects, 'bulk_create',
+            Event.objects, 'bulk_create',
             side_effect=Exception('Simulated bulk failure'),
         ):
             result = process_bulk_events(events)
         # Il fallback dovrebbe comunque creare l'evento
         self.assertEqual(result['created_count'], 1)
-        self.assertTrue(StagingEvent.objects.filter(uuid='fallback-001').exists())
+        self.assertTrue(Event.objects.filter(uuid='fallback-001').exists())
 
     def test_retry_su_operational_error(self):
         """OperationalError causa un retry del task."""
@@ -449,7 +449,7 @@ class ProcessBulkEventsTaskTest(TestCase):
 
         events = [_evento_minimo(uuid='retry-001')]
         with patch.object(
-            StagingEvent.objects, 'bulk_create',
+            Event.objects, 'bulk_create',
             side_effect=OperationalError('connection lost'),
         ):
             with self.assertRaises(Exception):
@@ -465,8 +465,8 @@ class ProcessBulkEventsTaskTest(TestCase):
 class BulkEndpointBaseTestCase(TestCase):
     """Base con setup OAuth2 per i test funzionali del bulk endpoint."""
 
-    BULK_URL = '/api/v1/events/staging/bulk/'
-    BULK_STATUS_URL = '/api/v1/events/staging/bulk-status/'
+    BULK_URL = '/api/v1/events/bulk/'
+    BULK_STATUS_URL = '/api/v1/events/bulk-status/'
 
     @classmethod
     def setUpTestData(cls):
@@ -513,7 +513,7 @@ class BulkEndpointBaseTestCase(TestCase):
 
 
 class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
-    """Test funzionali: POST /api/v1/events/staging/bulk/?sync=true"""
+    """Test funzionali: POST /api/v1/events/bulk/?sync=true"""
 
     def _post_bulk_sync(self, payload, **kwargs):
         """Shortcut per POST al bulk endpoint in modalita' sincrona."""
@@ -570,7 +570,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
         self.assertEqual(resp.status_code, status.HTTP_201_CREATED)
         self.assertEqual(resp.data['created_count'], 1)
         self.assertEqual(resp.data['failed_count'], 0)
-        self.assertTrue(StagingEvent.objects.filter(uuid='func-single-001').exists())
+        self.assertTrue(Event.objects.filter(uuid='func-single-001').exists())
 
     def test_multipli_eventi_validi(self):
         """Multipli eventi validi vengono tutti creati con successo -> 201."""
@@ -592,7 +592,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
             'events': [_evento_scraping(uuid='func-nested-001')],
         })
         self.assertEqual(resp.status_code, status.HTTP_201_CREATED)
-        ev = StagingEvent.objects.get(uuid='func-nested-001')
+        ev = Event.objects.get(uuid='func-nested-001')
         self.assertEqual(ev.city_name, 'Milano')
         self.assertEqual(ev.location_name, 'Blue Note')
         self.assertEqual(str(ev.date_start), '2026-06-15')
@@ -652,9 +652,9 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
         self._post_bulk_sync({
             'events': [_evento_minimo(uuid='upsert-001', title='V2')],
         })
-        self.assertEqual(StagingEvent.objects.filter(uuid='upsert-001').count(), 1)
+        self.assertEqual(Event.objects.filter(uuid='upsert-001').count(), 1)
         self.assertEqual(
-            StagingEvent.objects.get(uuid='upsert-001').title, 'V2',
+            Event.objects.get(uuid='upsert-001').title, 'V2',
         )
 
     # --- Formato legacy ---
@@ -696,7 +696,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
         self.assertIn('failed_count', resp.data)
 
     def test_successful_events_serializzati_completi(self):
-        """Gli eventi nella risposta contengono tutti i campi del StagingEventSerializer."""
+        """Gli eventi nella risposta contengono tutti i campi del EventSerializer."""
         self.auth_write()
         resp = self._post_bulk_sync({
             'events': [_evento_scraping(uuid='ser-001')],
@@ -711,7 +711,7 @@ class BulkSyncEndpointTest(BulkEndpointBaseTestCase):
 
 
 class BulkAsyncEndpointTest(BulkEndpointBaseTestCase):
-    """Test funzionali: POST /api/v1/events/staging/bulk/ (async, default)."""
+    """Test funzionali: POST /api/v1/events/bulk/ (async, default)."""
 
     def test_async_returns_202(self):
         """POST bulk senza ?sync=true -> 202 Accepted."""
@@ -792,7 +792,7 @@ class BulkAsyncEndpointTest(BulkEndpointBaseTestCase):
 
 
 class BulkStatusEndpointTest(BulkEndpointBaseTestCase):
-    """Test funzionali: GET /api/v1/events/staging/bulk-status/{task_id}/"""
+    """Test funzionali: GET /api/v1/events/bulk-status/{task_id}/"""
 
     def test_status_pending(self):
         """GET bulk-status con task in attesa -> status PENDING, result None."""

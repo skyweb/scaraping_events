@@ -93,6 +93,7 @@ class IngestionSerializer(serializers.Serializer):
             }
 
     def create(self, validated_data):
+        """Crea un record ComuniIstatRawData estraendo i campi chiave dal JSON."""
         tipo = validated_data['tipo']
         data = validated_data['data']
         fields = self._extract_fields(tipo, data)

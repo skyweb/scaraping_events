@@ -112,13 +112,13 @@ class ArticoloSezione(models.Model):
 
 
 class EventoInSezione(models.Model):
-    """Bridge: collega una SezionePagina a un StagingEvent esistente."""
+    """Bridge: collega una SezionePagina a un Event esistente."""
     sezione = models.ForeignKey(
         SezionePagina, on_delete=models.CASCADE, related_name='eventi'
     )
     evento = models.ForeignKey(
-        'events.StagingEvent', on_delete=models.CASCADE,
-        verbose_name='Staging Event'
+        'events.Event', on_delete=models.CASCADE,
+        verbose_name='Evento'
     )
     ordine = models.IntegerField(default=0)
 
@@ -156,13 +156,13 @@ class SezioneEventi(models.Model):
 
 
 class EventoSelezionato(models.Model):
-    """Bridge: collega una SezioneEventi a un StagingEvent esistente."""
+    """Bridge: collega una SezioneEventi a un Event esistente."""
     sezione = models.ForeignKey(
         SezioneEventi, on_delete=models.CASCADE, related_name='eventi'
     )
     evento = models.ForeignKey(
-        'events.StagingEvent', on_delete=models.CASCADE,
-        verbose_name='Staging Event'
+        'events.Event', on_delete=models.CASCADE,
+        verbose_name='Evento'
     )
     ordine = models.IntegerField(default=0)
 

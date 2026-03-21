@@ -2,8 +2,8 @@ from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 
-# Schema DB: comuni_istat_ingestion
-SCHEMA = 'comuni_istat_ingestion"."'
+# Schema DB: comuni_italiani
+SCHEMA = 'comuni_italiani"."'
 
 
 # =============================================================================
@@ -38,6 +38,7 @@ class ComuniIstatRawData(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce tipo, nome e codice ISTAT del record grezzo."""
         nome = self.comune or self.provincia or self.regione
         return f"{self.tipo}: {nome} ({self.codice_istat})"
 
@@ -70,6 +71,7 @@ class Regione(models.Model):
         verbose_name_plural = 'Regioni'
 
     def __str__(self):
+        """Restituisce il nome della regione."""
         return self.nome
 
 
@@ -104,6 +106,7 @@ class Provincia(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce il nome della provincia con sigla, se disponibile."""
         return f"{self.nome} ({self.sigla})" if self.sigla else self.nome
 
 
@@ -139,6 +142,7 @@ class Comune(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce il nome del comune."""
         return self.nome
 
 
@@ -159,6 +163,7 @@ class ComuneFrazione(models.Model):
         verbose_name_plural = 'Frazioni'
 
     def __str__(self):
+        """Restituisce il nome della frazione."""
         return self.nome
 
 
@@ -175,12 +180,33 @@ class ComuneConfinante(models.Model):
         verbose_name_plural = 'Comuni confinanti'
 
     def __str__(self):
+        """Restituisce la descrizione del comune confinante."""
         return self.descrizione
+
+
+class Appartenenza(models.Model):
+    """Entità di appartenenza normalizzata (comunità montane, parchi, associazioni)."""
+    nome = models.CharField(max_length=500, unique=True)
+
+    class Meta:
+        db_table = f'{SCHEMA}appartenenze'
+        ordering = ['nome']
+        verbose_name = 'Appartenenza'
+        verbose_name_plural = 'Appartenenze'
+
+    def __str__(self):
+        """Restituisce il nome dell'appartenenza."""
+        return self.nome
 
 
 class ComuneAppartenenza(models.Model):
     """Appartenenze: comunità montane, parchi, associazioni."""
     comune = models.ForeignKey(Comune, on_delete=models.CASCADE, related_name='appartenenze')
+    appartenenza = models.ForeignKey(
+        Appartenenza, on_delete=models.CASCADE,
+        related_name='comuni_appartenenza',
+        blank=True, null=True,
+    )
     nome = models.CharField(max_length=500)
     ordine = models.SmallIntegerField(default=0)
 
@@ -191,6 +217,7 @@ class ComuneAppartenenza(models.Model):
         verbose_name_plural = 'Appartenenze'
 
     def __str__(self):
+        """Restituisce il nome dell'appartenenza del comune."""
         return self.nome
 
 
@@ -223,6 +250,7 @@ class ComunePuntoInteresse(models.Model):
         ]
 
     def __str__(self):
+        """Restituisce il tipo e il nome del punto di interesse."""
         return f"{self.get_tipo_display()}: {self.nome}"
 
 
@@ -239,6 +267,7 @@ class ComuneEvento(models.Model):
         verbose_name_plural = 'Eventi'
 
     def __str__(self):
+        """Restituisce il nome dell'evento."""
         return self.nome
 
 
@@ -255,6 +284,7 @@ class ComuneGemellaggio(models.Model):
         verbose_name_plural = 'Gemellaggi'
 
     def __str__(self):
+        """Restituisce il nome della città gemellata."""
         return self.citta
 
 
@@ -271,4 +301,5 @@ class ComuneCittadinoIllustre(models.Model):
         verbose_name_plural = 'Cittadini illustri'
 
     def __str__(self):
+        """Restituisce il nome del cittadino illustre."""
         return self.nome

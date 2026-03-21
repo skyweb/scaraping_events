@@ -4,7 +4,7 @@ import os
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
-from comuni_istat.models import ComuneItaliano, DenominazionePrecedente
+from comuni_istat.models import Comune, DenominazionePrecedente
 
 
 class Command(BaseCommand):
@@ -34,7 +34,7 @@ class Command(BaseCommand):
             self.stdout.write(self.style.WARNING("  Tabella svuotata"))
 
         self.stdout.write(self.style.WARNING("\n[2/3] Costruzione mappa comuni attuali..."))
-        comuni_map = dict(ComuneItaliano.objects.values_list('pro_com_t', 'id'))
+        comuni_map = dict(Comune.objects.values_list('pro_com_t', 'id'))
         self.stdout.write(f"  {len(comuni_map)} comuni attuali in mappa")
 
         self.stdout.write(self.style.WARNING("\n[3/3] Import denominazioni precedenti..."))

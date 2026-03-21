@@ -55,7 +55,7 @@ Panoramica dei microservizi che compongono la piattaforma Today Events.
 | `scraping` | Configurazione spider e categorie di scraping |
 | `cms` | CMS pagine città (sezioni, articoli, staging events) |
 | `comuni_istat` | Confini amministrativi ISTAT (regioni, province, comuni + PostGIS) |
-| `comuni_istat_ingestion` | Dati relazionali da scraping comuni-italiani.it |
+| `comuni_italiani` | Dati relazionali da scraping comuni-italiani.it |
 | `etl` | Storico esecuzioni ETL ed errori |
 
 **API principali:**

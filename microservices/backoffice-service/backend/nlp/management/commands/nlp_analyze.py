@@ -27,7 +27,7 @@ import time
 
 from django.core.management.base import BaseCommand
 
-from events.models import StagingEvent
+from events.models import Event
 from nlp.extractor import analyze_staging_event
 
 
@@ -46,7 +46,7 @@ class Command(BaseCommand):
         force = options["force"]
         dry_run = options["dry_run"]
 
-        qs = StagingEvent.objects.filter(description__isnull=False).exclude(description="")
+        qs = Event.objects.filter(description__isnull=False).exclude(description="")
 
         if source:
             qs = qs.filter(source=source)
@@ -85,7 +85,7 @@ class Command(BaseCommand):
                         # Salva in raw_data.nlp
                         raw = event.raw_data or {}
                         raw["nlp"] = entities
-                        StagingEvent.objects.filter(pk=event.pk).update(raw_data=raw)
+                        Event.objects.filter(pk=event.pk).update(raw_data=raw)
 
                 processed += 1
 

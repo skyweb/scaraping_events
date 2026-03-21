@@ -1,0 +1,3460 @@
+openapi: 3.0.3
+info:
+  title: Events Backoffice API
+  version: 1.0.0
+  description: "\n## API REST - Events Backoffice\n\nAPI per la gestione degli eventi,\
+    \ monitoraggio ETL e integrazione con servizi esterni.\n\n### Autenticazione\n\
+    \n- **API interne**: Session authentication (Django admin login)\n- **API esterne**\
+    \ (`/api/v1/events/`): OAuth2 Client Credentials via Keycloak (versionata)\n-\
+    \ **CMS** (`/api/cms/`): Pubblico, senza autenticazione\n- **Comuni ISTAT Ingestion**\
+    \ (`/api/comuni-istat/`): Session authentication\n\n#### OAuth2 Flow\n\n1. Crea\
+    \ un API Consumer dal Django admin (`/admin/api_consumers/apiconsumer/`)\n2. Ottieni\
+    \ un access token: `POST https://webservice.127.0.0.1.nip.io/auth/token` con `grant_type=client_credentials`\n\
+    3. Usa il token: `Authorization: Bearer <access_token>`\n\n### Permessi\n\nI permessi\
+    \ sono gestiti per risorsa e azione dalla matrice API Consumers:\n- `events:read`\
+    \ - Lettura staging events\n- `events:create` - Creazione staging events (singola\
+    \ e bulk)\n- `events:update` - Aggiornamento staging events\n- `events:delete`\
+    \ - Eliminazione staging events\n\n### Versioning\n\nLe API esterne sono versionate\
+    \ tramite URL path:\n- Versione corrente: **v1** → `/api/v1/events/staging/`\n\
+    - Endpoint info versione: `GET /api/version/` (senza autenticazione)\n- Header\
+    \ `X-API-Version` presente in ogni risposta API\n\nLe API interne (`/api/events/`,\
+    \ `/api/dashboard/`, ecc.) usano header versioning:\n- Header: `Accept: application/vnd.todayevents.v1+json`\n\
+    - Default: v1 (se header assente)\n    "
+paths:
+  /api/ai-transform/event/:
+    post:
+      operationId: api_ai_transform_event_create
+      description: |-
+        Trasforma un singolo evento inline in formato Schema.org/Event.
+
+        POST /api/ai-transform/event/
+
+        Senza 'model': ritorna parametri disponibili e quota rimanente.
+        Con 'model': esegue la trasformazione.
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/ai-transform/file/:
+    post:
+      operationId: api_ai_transform_file_create
+      description: |-
+        Trasforma eventi da un file JSON locale in formato Schema.org/Event.
+
+        POST /api/ai-transform/file/
+
+        Senza 'model': ritorna parametri disponibili e quota rimanente.
+        Con 'model': esegue la trasformazione.
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/ai-transform/models/:
+    get:
+      operationId: api_ai_transform_models_retrieve
+      description: |-
+        Lista modelli disponibili, parametri e quota rimanente.
+
+        GET /api/ai-transform/models/
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/cms/citta/:
+    get:
+      operationId: api_cms_citta_list
+      description: API readonly per le pagine città (pubblico, senza autenticazione).
+      summary: Lista pagine città attive
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - CMS
+      security:
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PaginaCittaList'
+              examples:
+                ListaCitta:
+                  value:
+                  - nome: Milano
+                    slug: milano
+                  summary: Lista citta
+          description: ''
+  /api/cms/citta/{slug}/:
+    get:
+      operationId: api_cms_citta_retrieve
+      description: API readonly per le pagine città (pubblico, senza autenticazione).
+      summary: Dettaglio pagina città con sezioni e articoli
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      tags:
+      - CMS
+      security:
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginaCittaDetail'
+              examples:
+                DettaglioCitta:
+                  value:
+                    nome: Milano
+                    slug: milano
+                    navigazione:
+                    - label: Eventi
+                      url: /eventi
+                    sezioni:
+                    - titolo: In evidenza
+                      colore: '#ff6b8a'
+                      link_vedi_tutti: /eventi/milano
+                      articoli:
+                      - titolo: Jazz al Blue Note
+                        immagine: https://...
+                        categoria: Musica
+                        colore_categoria: red
+                        url: /eventi/jazz
+                  summary: Dettaglio citta
+          description: ''
+  /api/comuni-istat/ingestion/:
+    post:
+      operationId: api_comuni_istat_ingestion_create
+      description: Riceve e salva un singolo record di scraping (regione/provincia/comune).
+      summary: Ingestione singolo record (regione/provincia/comune)
+      tags:
+      - Comuni ISTAT Ingestion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ingestion'
+            examples:
+              Comune:
+                value:
+                  tipo: comune
+                  data:
+                    codice_istat: '015146'
+                    nome: Milano
+                    regione: Lombardia
+                    provincia: Milano
+                    popolazione: 1396059
+                    superficie_kmq: 181.67
+              Regione:
+                value:
+                  tipo: regione
+                  data:
+                    codice_istat: '03'
+                    nome: Lombardia
+                    popolazione: 10027602
+                    num_province: 12
+                    num_comuni: 1506
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Ingestion'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Ingestion'
+        required: true
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComuniIstatRawData'
+              examples:
+                RecordISTAT:
+                  value:
+                    id: 1
+                    tipo: comune
+                    codice_istat: '015146'
+                    regione: Lombardia
+                    provincia: Milano
+                    comune: Milano
+                    created_at: '2026-03-20T10:00:00Z'
+                  summary: Record ISTAT
+          description: ''
+  /api/comuni-istat/ingestion/bulk/:
+    post:
+      operationId: api_comuni_istat_ingestion_bulk_create
+      description: Riceve e salva in batch una lista di record dello stesso tipo.
+      summary: Ingestione bulk record dello stesso tipo
+      tags:
+      - Comuni ISTAT Ingestion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkIngestion'
+            examples:
+              BulkComuni:
+                value:
+                  tipo: comune
+                  items:
+                  - codice_istat: '015146'
+                    nome: Milano
+                    regione: Lombardia
+                    provincia: Milano
+                  - codice_istat: '015146'
+                    nome: Monza
+                    regione: Lombardia
+                    provincia: Monza e della Brianza
+                summary: Bulk comuni
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/BulkIngestion'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/BulkIngestion'
+        required: true
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/dashboard/:
+    get:
+      operationId: api_dashboard_retrieve
+      description: 'Restituisce statistiche aggregate: totale eventi, eventi attivi,
+        distribuzione per citta''/sorgente, ultimi ETL runs e conteggio staging.'
+      summary: Statistiche dashboard
+      tags:
+      - Dashboard
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DashboardStats'
+              examples:
+                DashboardStatistiche:
+                  value:
+                    total_events: 12450
+                    active_events: 8320
+                    events_by_city:
+                      Milano: 2100
+                      Roma: 1850
+                      Torino: 980
+                      Bologna: 750
+                    events_by_source:
+                      city_today: 6500
+                      artribune: 1200
+                      zero_eu: 800
+                    recent_etl_runs:
+                    - id: 10
+                      run_type: etl_events_daily
+                      status: completed
+                      staging_count: 350
+                      started_at: '2026-03-20T06:00:00Z'
+                      duration_seconds: 1200.0
+                    staging_count: 420
+                  summary: Dashboard statistiche
+          description: ''
+  /api/etl-errors/:
+    get:
+      operationId: api_etl_errors_list
+      description: Recupera lo storico degli errori ETL con tipo, sorgente e messaggio.
+      summary: Lista ETL errors
+      parameters:
+      - in: query
+        name: error_type
+        schema:
+          type: string
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      - in: query
+        name: source
+        schema:
+          type: string
+      tags:
+      - ETL
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedEtlErrorList'
+              examples:
+                ErroreETL:
+                  value:
+                    count: 123
+                    next: http://api.example.org/accounts/?page=4
+                    previous: http://api.example.org/accounts/?page=2
+                    results:
+                    - id: 1
+                      etl_run: 1
+                      event_uuid: a1b2c3d4e5f6g7h8
+                      error_type: ValidationError
+                      error_message: Campo 'title' obbligatorio mancante
+                      raw_data:
+                        source: city_today
+                        url: https://...
+                      created_at: '2026-03-20T06:15:30Z'
+                  summary: Errore ETL
+          description: ''
+  /api/etl-errors/{id}/:
+    get:
+      operationId: api_etl_errors_retrieve
+      description: Recupera i dettagli di un singolo errore ETL.
+      summary: Dettaglio ETL error
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this ETL Error.
+        required: true
+      tags:
+      - ETL
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EtlError'
+              examples:
+                ErroreETL:
+                  value:
+                    id: 1
+                    etl_run: 1
+                    event_uuid: a1b2c3d4e5f6g7h8
+                    error_type: ValidationError
+                    error_message: Campo 'title' obbligatorio mancante
+                    raw_data:
+                      source: city_today
+                      url: https://...
+                    created_at: '2026-03-20T06:15:30Z'
+                  summary: Errore ETL
+          description: ''
+  /api/etl-runs/:
+    get:
+      operationId: api_etl_runs_list
+      description: Recupera lo storico delle esecuzioni ETL con durata, conteggi e
+        stato.
+      summary: Lista ETL runs
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - in: query
+        name: run_type
+        schema:
+          type: string
+      - in: query
+        name: source
+        schema:
+          type: string
+      - in: query
+        name: status
+        schema:
+          type: string
+      tags:
+      - ETL
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedEtlRunList'
+              examples:
+                ETLRunCompletata:
+                  value:
+                    count: 123
+                    next: http://api.example.org/accounts/?page=4
+                    previous: http://api.example.org/accounts/?page=2
+                    results:
+                    - id: 1
+                      run_type: etl_events_daily
+                      staging_count: 350
+                      inserted_count: 280
+                      updated_count: 70
+                      status: completed
+                      started_at: '2026-03-20T06:00:00Z'
+                      staging_completed_at: '2026-03-20T06:15:00Z'
+                      upsert_completed_at: '2026-03-20T06:20:00Z'
+                      duration_seconds: 1200.0
+                  summary: ETL run completata
+          description: ''
+  /api/etl-runs/{id}/:
+    get:
+      operationId: api_etl_runs_retrieve
+      description: Recupera i dettagli di una singola esecuzione ETL.
+      summary: Dettaglio ETL run
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this ETL Run.
+        required: true
+      tags:
+      - ETL
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EtlRun'
+              examples:
+                ETLRunCompletata:
+                  value:
+                    id: 1
+                    run_type: etl_events_daily
+                    staging_count: 350
+                    inserted_count: 280
+                    updated_count: 70
+                    status: completed
+                    started_at: '2026-03-20T06:00:00Z'
+                    staging_completed_at: '2026-03-20T06:15:00Z'
+                    upsert_completed_at: '2026-03-20T06:20:00Z'
+                    duration_seconds: 1200.0
+                  summary: ETL run completata
+          description: ''
+  /api/events/:
+    get:
+      operationId: api_events_list
+      description: Recupera la lista paginata degli eventi in produzione. Supporta
+        filtri, ricerca e ordinamento.
+      summary: Lista production events
+      parameters:
+      - in: query
+        name: city
+        schema:
+          type: string
+      - in: query
+        name: date_end
+        schema:
+          type: string
+          format: date
+      - in: query
+        name: date_start
+        schema:
+          type: string
+          format: date
+      - in: query
+        name: is_active
+        schema:
+          type: boolean
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      - in: query
+        name: source
+        schema:
+          type: string
+      tags:
+      - Production Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductionEventListList'
+              examples:
+                ListaEventi:
+                  value:
+                    count: 123
+                    next: http://api.example.org/accounts/?page=4
+                    previous: http://api.example.org/accounts/?page=2
+                    results:
+                    - id: 1
+                      uuid: a1b2c3d4e5f6g7h8
+                      title: Concerto Jazz al Blue Note
+                      city: Milano
+                      source: city_today
+                      date_start: '2026-04-15'
+                      date_end: '2026-04-15'
+                      is_active: true
+                      category:
+                      - Musica
+                      - Concerti
+                  summary: Lista eventi
+          description: ''
+    post:
+      operationId: api_events_create
+      description: Crea un nuovo evento in produzione.
+      summary: Crea production event
+      tags:
+      - Production Events
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductionEvent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductionEvent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductionEvent'
+        required: true
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductionEvent'
+              examples:
+                EventoProduzione:
+                  value:
+                    id: 1
+                    uuid: a1b2c3d4e5f6g7h8
+                    title: Concerto Jazz al Blue Note
+                    city: Milano
+                    source: city_today
+                    url: https://www.milanotoday.it/eventi/concerto-jazz.html
+                    description: Serata jazz con artisti internazionali
+                    category:
+                    - Musica
+                    - Concerti
+                    image_url: https://example.com/jazz.jpg
+                    location_name: Blue Note Milano
+                    location_address: Via Borsieri 37, Milano
+                    price: '25.00'
+                    date_start: '2026-04-15'
+                    date_end: '2026-04-15'
+                    time_start: '21:00'
+                    time_end: '23:30'
+                    is_active: true
+                    created_at: '2026-03-20T10:00:00Z'
+                    updated_at: '2026-03-20T10:00:00Z'
+                  summary: Evento produzione
+          description: ''
+  /api/events/{id}/:
+    get:
+      operationId: api_events_retrieve
+      description: Recupera tutti i dettagli di un singolo evento in produzione.
+      summary: Dettaglio production event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Production Event.
+        required: true
+      tags:
+      - Production Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductionEvent'
+              examples:
+                EventoProduzione:
+                  value:
+                    id: 1
+                    uuid: a1b2c3d4e5f6g7h8
+                    title: Concerto Jazz al Blue Note
+                    city: Milano
+                    source: city_today
+                    url: https://www.milanotoday.it/eventi/concerto-jazz.html
+                    description: Serata jazz con artisti internazionali
+                    category:
+                    - Musica
+                    - Concerti
+                    image_url: https://example.com/jazz.jpg
+                    location_name: Blue Note Milano
+                    location_address: Via Borsieri 37, Milano
+                    price: '25.00'
+                    date_start: '2026-04-15'
+                    date_end: '2026-04-15'
+                    time_start: '21:00'
+                    time_end: '23:30'
+                    is_active: true
+                    created_at: '2026-03-20T10:00:00Z'
+                    updated_at: '2026-03-20T10:00:00Z'
+                  summary: Evento produzione
+          description: ''
+    put:
+      operationId: api_events_update
+      description: Aggiorna completamente un evento in produzione.
+      summary: Aggiorna production event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Production Event.
+        required: true
+      tags:
+      - Production Events
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductionEvent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/ProductionEvent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ProductionEvent'
+        required: true
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductionEvent'
+              examples:
+                EventoProduzione:
+                  value:
+                    id: 1
+                    uuid: a1b2c3d4e5f6g7h8
+                    title: Concerto Jazz al Blue Note
+                    city: Milano
+                    source: city_today
+                    url: https://www.milanotoday.it/eventi/concerto-jazz.html
+                    description: Serata jazz con artisti internazionali
+                    category:
+                    - Musica
+                    - Concerti
+                    image_url: https://example.com/jazz.jpg
+                    location_name: Blue Note Milano
+                    location_address: Via Borsieri 37, Milano
+                    price: '25.00'
+                    date_start: '2026-04-15'
+                    date_end: '2026-04-15'
+                    time_start: '21:00'
+                    time_end: '23:30'
+                    is_active: true
+                    created_at: '2026-03-20T10:00:00Z'
+                    updated_at: '2026-03-20T10:00:00Z'
+                  summary: Evento produzione
+          description: ''
+    patch:
+      operationId: api_events_partial_update
+      description: Aggiorna parzialmente un evento in produzione.
+      summary: Aggiorna parzialmente production event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Production Event.
+        required: true
+      tags:
+      - Production Events
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProductionEvent'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedProductionEvent'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedProductionEvent'
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductionEvent'
+              examples:
+                EventoProduzione:
+                  value:
+                    id: 1
+                    uuid: a1b2c3d4e5f6g7h8
+                    title: Concerto Jazz al Blue Note
+                    city: Milano
+                    source: city_today
+                    url: https://www.milanotoday.it/eventi/concerto-jazz.html
+                    description: Serata jazz con artisti internazionali
+                    category:
+                    - Musica
+                    - Concerti
+                    image_url: https://example.com/jazz.jpg
+                    location_name: Blue Note Milano
+                    location_address: Via Borsieri 37, Milano
+                    price: '25.00'
+                    date_start: '2026-04-15'
+                    date_end: '2026-04-15'
+                    time_start: '21:00'
+                    time_end: '23:30'
+                    is_active: true
+                    created_at: '2026-03-20T10:00:00Z'
+                    updated_at: '2026-03-20T10:00:00Z'
+                  summary: Evento produzione
+          description: ''
+    delete:
+      operationId: api_events_destroy
+      description: Elimina un evento in produzione.
+      summary: Elimina production event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Production Event.
+        required: true
+      tags:
+      - Production Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/events/{id}/toggle_active/:
+    post:
+      operationId: api_events_toggle_active_create
+      description: Inverte lo stato `is_active` dell'evento specificato.
+      summary: Toggle attivo/inattivo
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Production Event.
+        required: true
+      tags:
+      - Production Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ToggleActiveResponse'
+          description: ''
+  /api/events/cities/:
+    get:
+      operationId: api_events_cities_list
+      description: Restituisce la lista delle citta' con il conteggio degli eventi
+        per ciascuna.
+      summary: Citta' disponibili
+      parameters:
+      - in: query
+        name: city
+        schema:
+          type: string
+      - in: query
+        name: date_end
+        schema:
+          type: string
+          format: date
+      - in: query
+        name: date_start
+        schema:
+          type: string
+          format: date
+      - in: query
+        name: is_active
+        schema:
+          type: boolean
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      - in: query
+        name: source
+        schema:
+          type: string
+      tags:
+      - Production Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCityCountList'
+          description: ''
+  /api/events/sources/:
+    get:
+      operationId: api_events_sources_list
+      description: Restituisce la lista delle sorgenti dati con il conteggio degli
+        eventi per ciascuna.
+      summary: Sorgenti disponibili
+      parameters:
+      - in: query
+        name: city
+        schema:
+          type: string
+      - in: query
+        name: date_end
+        schema:
+          type: string
+          format: date
+      - in: query
+        name: date_start
+        schema:
+          type: string
+          format: date
+      - in: query
+        name: is_active
+        schema:
+          type: boolean
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      - in: query
+        name: source
+        schema:
+          type: string
+      tags:
+      - Production Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedSourceCountList'
+          description: ''
+  /api/scraping/categories/:
+    get:
+      operationId: api_scraping_categories_list
+      description: Categorie uniche estratte da tutti gli eventi scrapati.
+      summary: Lista categorie eventi aggregate
+      parameters:
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - Scraping
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedScrapingCategoryList'
+          description: ''
+  /api/scraping/locations/:
+    get:
+      operationId: api_scraping_locations_list
+      description: Location uniche estratte da tutti gli eventi scrapati.
+      summary: Lista location eventi aggregate
+      parameters:
+      - in: query
+        name: city
+        schema:
+          type: string
+        description: Filtra per città
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - Scraping
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedScrapingLocationList'
+          description: ''
+  /api/scraping/locations/{location_name}/:
+    get:
+      operationId: api_scraping_locations_retrieve
+      description: Location uniche estratte da tutti gli eventi scrapati.
+      summary: Dettaglio location
+      parameters:
+      - in: path
+        name: location_name
+        schema:
+          type: string
+        description: A unique value identifying this Location.
+        required: true
+      tags:
+      - Scraping
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScrapingLocation'
+          description: ''
+  /api/scraping/websites/:
+    get:
+      operationId: api_scraping_websites_list
+      description: Portali web configurati per lo scraping eventi.
+      summary: Lista portali web scrapati
+      parameters:
+      - in: query
+        name: cms
+        schema:
+          type: string
+        description: Filtra per tipo CMS (drupal, wordpress, custom, api_rest)
+      - in: query
+        name: is_active
+        schema:
+          type: boolean
+        description: Filtra per stato attivo
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      tags:
+      - Scraping
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedScrapingWebsiteList'
+              examples:
+                WebsiteScraping:
+                  value:
+                    count: 123
+                    next: http://api.example.org/accounts/?page=4
+                    previous: http://api.example.org/accounts/?page=2
+                    results:
+                    - id: 1
+                      name: MilanoToday
+                      source_url: https://www.milanotoday.it
+                      spider_name: city_today
+                      cms: custom
+                      cms_display: Custom
+                      is_active: true
+                      notes: 50+ citta italiane
+                  summary: Website scraping
+          description: ''
+  /api/scraping/websites/{id}/:
+    get:
+      operationId: api_scraping_websites_retrieve
+      description: Portali web configurati per lo scraping eventi.
+      summary: Dettaglio portale web
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Website.
+        required: true
+      tags:
+      - Scraping
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScrapingWebsite'
+              examples:
+                WebsiteScraping:
+                  value:
+                    id: 1
+                    name: MilanoToday
+                    source_url: https://www.milanotoday.it
+                    spider_name: city_today
+                    cms: custom
+                    cms_display: Custom
+                    is_active: true
+                    notes: 50+ citta italiane
+                  summary: Website scraping
+          description: ''
+  /api/staging/:
+    get:
+      operationId: api_staging_list
+      description: Recupera la lista paginata degli eventi in staging (pre-validazione).
+      summary: Lista staging events
+      parameters:
+      - in: query
+        name: city_name
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      - in: query
+        name: source
+        schema:
+          type: string
+      tags:
+      - Staging Events (Internal)
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedStagingEventList'
+              examples:
+                StagingEvent:
+                  value:
+                    count: 123
+                    next: http://api.example.org/accounts/?page=4
+                    previous: http://api.example.org/accounts/?page=2
+                    results:
+                    - id: 42
+                      uuid: b2c3d4e5f6a7b8c9
+                      content_hash: f1e2d3c4b5a6f7e8
+                      source: puglia_culture
+                      title: Festival della Taranta
+                      city_name: Lecce
+                      location_name: Piazza Duomo
+                      location_address: Piazza del Duomo, Lecce
+                      location_coordinates:
+                        lat: 40.3516
+                        lng: 18.1718
+                      date_start: '2026-08-20T21:00:00Z'
+                      date_end: '2026-08-20T23:59:00Z'
+                      url: https://pugliaculture.it/eventi/taranta
+                      description: La notte della Taranta edizione 2026
+                      image_url: https://example.com/taranta.jpg
+                      price: Gratuito
+                      category:
+                      - Musica
+                      - Festival
+                      scraped_at: '2026-03-20T10:30:00Z'
+                      loaded_at: '2026-03-20T10:31:00Z'
+                      created_at: '2026-03-20T10:31:00Z'
+                  summary: Staging event
+          description: ''
+  /api/staging/{id}/:
+    get:
+      operationId: api_staging_retrieve
+      description: Recupera i dettagli di un singolo evento in staging.
+      summary: Dettaglio staging event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Staging Event.
+        required: true
+      tags:
+      - Staging Events (Internal)
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StagingEvent'
+              examples:
+                StagingEvent:
+                  value:
+                    id: 42
+                    uuid: b2c3d4e5f6a7b8c9
+                    content_hash: f1e2d3c4b5a6f7e8
+                    source: puglia_culture
+                    title: Festival della Taranta
+                    city_name: Lecce
+                    location_name: Piazza Duomo
+                    location_address: Piazza del Duomo, Lecce
+                    location_coordinates:
+                      lat: 40.3516
+                      lng: 18.1718
+                    date_start: '2026-08-20T21:00:00Z'
+                    date_end: '2026-08-20T23:59:00Z'
+                    url: https://pugliaculture.it/eventi/taranta
+                    description: La notte della Taranta edizione 2026
+                    image_url: https://example.com/taranta.jpg
+                    price: Gratuito
+                    category:
+                    - Musica
+                    - Festival
+                    scraped_at: '2026-03-20T10:30:00Z'
+                    loaded_at: '2026-03-20T10:31:00Z'
+                    created_at: '2026-03-20T10:31:00Z'
+                  summary: Staging event
+          description: ''
+  /api/v1/events/staging/:
+    get:
+      operationId: api_v1_events_staging_list
+      description: Recupera la lista di tutti gli staging events. Richiede permesso
+        `events:read`.
+      summary: Lista staging events
+      parameters:
+      - in: query
+        name: city_name
+        schema:
+          type: string
+      - name: ordering
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: search
+        required: false
+        in: query
+        description: A search term.
+        schema:
+          type: string
+      - in: query
+        name: source
+        schema:
+          type: string
+      - in: query
+        name: uuid
+        schema:
+          type: string
+      tags:
+      - Staging Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedStagingEventList'
+              examples:
+                StagingEvent:
+                  value:
+                    count: 123
+                    next: http://api.example.org/accounts/?page=4
+                    previous: http://api.example.org/accounts/?page=2
+                    results:
+                    - id: 42
+                      uuid: b2c3d4e5f6a7b8c9
+                      content_hash: f1e2d3c4b5a6f7e8
+                      source: puglia_culture
+                      title: Festival della Taranta
+                      city_name: Lecce
+                      location_name: Piazza Duomo
+                      location_address: Piazza del Duomo, Lecce
+                      location_coordinates:
+                        lat: 40.3516
+                        lng: 18.1718
+                      date_start: '2026-08-20T21:00:00Z'
+                      date_end: '2026-08-20T23:59:00Z'
+                      url: https://pugliaculture.it/eventi/taranta
+                      description: La notte della Taranta edizione 2026
+                      image_url: https://example.com/taranta.jpg
+                      price: Gratuito
+                      category:
+                      - Musica
+                      - Festival
+                      scraped_at: '2026-03-20T10:30:00Z'
+                      loaded_at: '2026-03-20T10:31:00Z'
+                      created_at: '2026-03-20T10:31:00Z'
+                  summary: Staging event
+          description: ''
+    post:
+      operationId: api_v1_events_staging_create
+      description: "\nCrea un nuovo staging event. Richiede permesso `events:create`.\n\
+        \n**Campi obbligatori:** `uuid`, `source`, `title`\n\nTutti gli altri campi\
+        \ sono opzionali. Il campo `uuid` deve essere univoco\nper sorgente (tipicamente\
+        \ un hash di title + date_start + location_name).\n        "
+      summary: Crea staging event
+      tags:
+      - Staging Events
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StagingEventScraping'
+            examples:
+              EventoCompleto:
+                value:
+                  uuid: a1b2c3d4e5f6
+                  content_hash: f6e5d4c3b2a1
+                  source: city_today
+                  url: https://www.example.com/eventi/concerto-jazz-milano
+                  title: Concerto Jazz al Blue Note
+                  description: Una serata di musica jazz dal vivo con artisti internazionali.
+                    Aperitivo dalle 19:30, concerto dalle 21:00.
+                  category:
+                  - musica
+                  - jazz
+                  - concerti
+                  - nightlife
+                  image_url: https://www.example.com/img/jazz-night.jpg
+                  city: milano
+                  location_name: Blue Note Milano
+                  location_address: Via Borsieri 37, 20159 Milano MI
+                  price: 25,00 EUR + prevendita
+                  website: https://www.bluenotemilano.com
+                  date_start: '2026-02-15'
+                  date_end: '2026-02-15'
+                  time_start: '21:00:00'
+                  time_end: '23:30:00'
+                  time_info: Apertura porte ore 19:30
+                  schedule: Venerdi e Sabato
+                  weekdays: fri,sat
+                  raw_data:
+                    original_id: '12345'
+                    scraped_from: city_today
+                    extra_field: valore originale
+                  scraped_at: '2026-02-05T14:30:00Z'
+                summary: Evento con tutti i campi compilati
+              EventoMinimo:
+                value:
+                  uuid: b2c3d4e5f6a1
+                  source: city_today
+                  title: Mercatino di Natale
+                  city: bologna
+                  date_start: '2026-12-01'
+                  date_end: '2026-12-24'
+                summary: Solo i campi obbligatori
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/StagingEventScraping'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/StagingEventScraping'
+        required: true
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StagingEventScraping'
+          description: ''
+  /api/v1/events/staging/{id}/:
+    get:
+      operationId: api_v1_events_staging_retrieve
+      description: Recupera i dettagli di un singolo staging event. Richiede permesso
+        `events:read`.
+      summary: Dettaglio staging event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Staging Event.
+        required: true
+      tags:
+      - Staging Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StagingEvent'
+              examples:
+                StagingEvent:
+                  value:
+                    id: 42
+                    uuid: b2c3d4e5f6a7b8c9
+                    content_hash: f1e2d3c4b5a6f7e8
+                    source: puglia_culture
+                    title: Festival della Taranta
+                    city_name: Lecce
+                    location_name: Piazza Duomo
+                    location_address: Piazza del Duomo, Lecce
+                    location_coordinates:
+                      lat: 40.3516
+                      lng: 18.1718
+                    date_start: '2026-08-20T21:00:00Z'
+                    date_end: '2026-08-20T23:59:00Z'
+                    url: https://pugliaculture.it/eventi/taranta
+                    description: La notte della Taranta edizione 2026
+                    image_url: https://example.com/taranta.jpg
+                    price: Gratuito
+                    category:
+                    - Musica
+                    - Festival
+                    scraped_at: '2026-03-20T10:30:00Z'
+                    loaded_at: '2026-03-20T10:31:00Z'
+                    created_at: '2026-03-20T10:31:00Z'
+                  summary: Staging event
+          description: ''
+    put:
+      operationId: api_v1_events_staging_update
+      description: Aggiorna completamente uno staging event. Richiede permesso `events:update`.
+      summary: Aggiorna staging event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Staging Event.
+        required: true
+      tags:
+      - Staging Events
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StagingEventScraping'
+            examples:
+              FormatoScraping(flat):
+                value:
+                  uuid: b2c3d4e5f6a7b8c9
+                  content_hash: f1e2d3c4b5a6f7e8
+                  source: puglia_culture
+                  title: Festival della Taranta
+                  stars: 4
+                  category:
+                  - Musica
+                  - Festival
+                  city:
+                    city_name: Lecce
+                    location_name: Piazza Duomo
+                    location_address: Piazza del Duomo, Lecce
+                    location_coordinates:
+                      lat: '40.3516'
+                      lng: '18.1718'
+                  dates:
+                    date_start: '2026-08-20'
+                    time_start: '21:00'
+                    date_end: '2026-08-20'
+                    time_end: '23:59'
+                    time_info: Dalle 21:00 a mezzanotte
+                  url: https://pugliaculture.it/eventi/taranta
+                  description: La notte della Taranta edizione 2026
+                  image_url: https://example.com/taranta.jpg
+                  price: Gratuito
+                  scraped_at: '2026-03-20 10:30:00'
+                summary: Formato scraping (flat)
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/StagingEventScraping'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/StagingEventScraping'
+        required: true
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StagingEventScraping'
+          description: ''
+    patch:
+      operationId: api_v1_events_staging_partial_update
+      description: Aggiorna parzialmente uno staging event. Richiede permesso `events:update`.
+      summary: Aggiorna parzialmente staging event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Staging Event.
+        required: true
+      tags:
+      - Staging Events
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedStagingEventScraping'
+            examples:
+              FormatoScraping(flat):
+                value:
+                  uuid: b2c3d4e5f6a7b8c9
+                  content_hash: f1e2d3c4b5a6f7e8
+                  source: puglia_culture
+                  title: Festival della Taranta
+                  stars: 4
+                  category:
+                  - Musica
+                  - Festival
+                  city:
+                    city_name: Lecce
+                    location_name: Piazza Duomo
+                    location_address: Piazza del Duomo, Lecce
+                    location_coordinates:
+                      lat: '40.3516'
+                      lng: '18.1718'
+                  dates:
+                    date_start: '2026-08-20'
+                    time_start: '21:00'
+                    date_end: '2026-08-20'
+                    time_end: '23:59'
+                    time_info: Dalle 21:00 a mezzanotte
+                  url: https://pugliaculture.it/eventi/taranta
+                  description: La notte della Taranta edizione 2026
+                  image_url: https://example.com/taranta.jpg
+                  price: Gratuito
+                  scraped_at: '2026-03-20 10:30:00'
+                summary: Formato scraping (flat)
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedStagingEventScraping'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedStagingEventScraping'
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StagingEventScraping'
+          description: ''
+    delete:
+      operationId: api_v1_events_staging_destroy
+      description: Elimina uno staging event specifico. Richiede permesso `events:delete`.
+      summary: Elimina staging event
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Staging Event.
+        required: true
+      tags:
+      - Staging Events
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/events/staging/bulk/:
+    post:
+      operationId: api_v1_events_staging_bulk_create
+      description: "\nCrea multipli staging events in una sola richiesta.\n\n**Richiede\
+        \ permesso `events:create`.**\n\n**Modalita':**\n- **Async (default):** Il\
+        \ batch viene processato in background tramite Celery.\n  Ritorna 202 Accepted\
+        \ con un `task_id` per monitorare lo stato.\n- **Sync (`?sync=true`):** Comportamento\
+        \ sincrono originale, processa tutto nella richiesta.\n        "
+      summary: Bulk create staging events
+      parameters:
+      - in: query
+        name: sync
+        schema:
+          type: boolean
+        description: 'Se true, processa il batch in modo sincrono (default: false)'
+      tags:
+      - Bulk Operations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkCreateRequest'
+            examples:
+              BulkConEventiCompleti:
+                value:
+                  events:
+                  - uuid: a1b2c3d4e5f6
+                    content_hash: f6e5d4c3b2a1
+                    source: city_today
+                    url: https://www.example.com/eventi/concerto-jazz-milano
+                    title: Concerto Jazz al Blue Note
+                    description: Una serata di musica jazz dal vivo con artisti internazionali.
+                    category:
+                    - musica
+                    - jazz
+                    - concerti
+                    image_url: https://www.example.com/img/jazz-night.jpg
+                    city: milano
+                    location_name: Blue Note Milano
+                    location_address: Via Borsieri 37, 20159 Milano MI
+                    price: 25,00 EUR
+                    website: https://www.bluenotemilano.com
+                    date_start: '2026-02-15'
+                    date_end: '2026-02-15'
+                    time_start: '21:00:00'
+                    time_end: '23:30:00'
+                    time_info: Apertura porte ore 19:30
+                    schedule: Venerdi e Sabato
+                    weekdays: fri,sat
+                    raw_data:
+                      original_id: '12345'
+                    scraped_at: '2026-02-05T14:30:00Z'
+                  - uuid: b2c3d4e5f6a1
+                    content_hash: a1f6e5d4c3b2
+                    source: city_today
+                    url: https://www.example.com/eventi/mostra-caravaggio-roma
+                    title: Mostra Caravaggio - Luci e Ombre
+                    description: Esposizione dedicata alle opere di Caravaggio con
+                      percorso multimediale.
+                    category:
+                    - arte
+                    - mostre
+                    - cultura
+                    image_url: https://www.example.com/img/caravaggio.jpg
+                    city: roma
+                    location_name: Palazzo delle Esposizioni
+                    location_address: Via Nazionale 194, 00184 Roma RM
+                    price: 15,00 EUR
+                    website: https://www.palazzoesposizioni.it
+                    date_start: '2026-02-01'
+                    date_end: '2026-04-30'
+                    time_start: '10:00:00'
+                    time_end: '20:00:00'
+                    time_info: Ultimo ingresso ore 19:00
+                    schedule: Da martedi a domenica
+                    weekdays: tue,wed,thu,fri,sat,sun
+                    raw_data:
+                      original_id: '67890'
+                    scraped_at: '2026-02-05T14:30:00Z'
+                summary: Due eventi con tutti i campi compilati
+              BulkConEventiMinimi:
+                value:
+                  events:
+                  - uuid: evt_001
+                    source: city_today
+                    title: Mercatino di Natale
+                    city: bologna
+                    date_start: '2026-12-01'
+                    date_end: '2026-12-24'
+                  - uuid: evt_002
+                    source: city_today
+                    title: Sagra del Tartufo
+                    city: firenze
+                    date_start: '2026-03-10'
+                    date_end: '2026-03-12'
+                summary: Due eventi con solo i campi obbligatori
+              BulkConEventiParzialmenteValidi:
+                value:
+                  events:
+                  - uuid: evt_003
+                    source: test_source
+                    title: Evento Valido di Prova
+                    city: milano
+                    date_start: '2026-03-01'
+                  - uuid: evt_004
+                    source: test_source
+                    city: roma
+                    date_start: '2026-03-02'
+                summary: Un evento valido e uno non valido
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/BulkCreateRequest'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/BulkCreateRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkProcessResponse'
+          description: ''
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkProcessResponse'
+          description: ''
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkAcceptedResponse'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkProcessResponse'
+          description: ''
+  /api/v1/events/staging/bulk-status/{task_id}/:
+    get:
+      operationId: api_v1_events_staging_bulk_status_retrieve
+      description: "\nControlla lo stato di un task di bulk create asincrono.\n\n\
+        **Richiede permesso `events:read`.**\n\n**Stati possibili:** PENDING, STARTED,\
+        \ SUCCESS, FAILURE\n        "
+      summary: Stato bulk task asincrono
+      parameters:
+      - in: path
+        name: task_id
+        schema:
+          type: string
+        description: ID del task Celery
+        required: true
+      tags:
+      - Bulk Operations
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkTaskStatusResponse'
+          description: ''
+  /api/v1/events/staging/clear_source/:
+    delete:
+      operationId: api_v1_events_staging_clear_source_destroy
+      description: "\nElimina tutti gli staging events di una specifica sorgente.\n\
+        \n**Richiede permesso `events:delete`.**\n\nUtile per pulire i dati prima\
+        \ di un nuovo import.\n        "
+      summary: Elimina eventi per sorgente
+      parameters:
+      - in: query
+        name: source
+        schema:
+          type: string
+        description: Nome della sorgente da eliminare
+        required: true
+        examples:
+          Esempio:
+            value: my_service
+      tags:
+      - Bulk Operations
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClearSourceResponse'
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+          description: ''
+  /api/version/:
+    get:
+      operationId: api_version_retrieve
+      description: Restituisce la versione semantica dell'API
+      summary: Versione API
+      tags:
+      - Sistema
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: 1.0.0
+                  commit:
+                    type: string
+                    example: 83bb319a
+                  api_versions:
+                    type: array
+                    items:
+                      type: string
+                    example:
+                    - v1
+                  default_version:
+                    type: string
+                    example: v1
+              examples:
+                ConCommitHash:
+                  value:
+                    version: 1.0.0
+                    commit: 83bb319a
+                    api_versions:
+                    - v1
+                    default_version: v1
+                  summary: Con commit hash
+                SenzaCommit(nonCompilatoDaGit):
+                  value:
+                    version: 1.0.0
+                    api_versions:
+                    - v1
+                    default_version: v1
+                  summary: Senza commit (non compilato da git)
+          description: ''
+  /api/waf/rules/:
+    get:
+      operationId: api_waf_rules_retrieve
+      description: Restituisce tutte le regole Coraza WAF attive su APISIX, divise
+        tra configurazione base e SecRule.
+      summary: Lista regole WAF
+      tags:
+      - WAF
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  enabled:
+                    type: boolean
+                  rules_count:
+                    type: integer
+                  config:
+                    type: array
+                    items:
+                      type: string
+                  rules:
+                    type: array
+                    items:
+                      type: string
+              examples:
+                WAFAttivoConRegole:
+                  value:
+                    enabled: true
+                    rules_count: 6
+                    config:
+                    - SecRuleEngine On
+                    - SecRequestBodyAccess On
+                    - SecAuditLog /dev/stdout
+                    rules:
+                    - SecRule ARGS|ARGS_NAMES "@rx (?i)(union.*select)" "id:1001,phase:2,deny,status:403,log,msg:SQL
+                      Injection detected"
+                    - SecRule ARGS|ARGS_NAMES "@rx (?i)(<script)" "id:1002,phase:2,deny,status:403,log,msg:XSS
+                      detected"
+                  summary: WAF attivo con regole
+          description: ''
+  /api/waf/rules/{rule_id}/delete/:
+    delete:
+      operationId: api_waf_rules_delete_destroy
+      description: Rimuove una regola WAF per ID (es. id:1001). La rimozione e' immediata.
+      summary: Rimuovi regola WAF
+      parameters:
+      - in: path
+        name: rule_id
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: rule_id
+        schema:
+          type: string
+        description: ID della regola (es. 1001)
+        required: true
+      tags:
+      - WAF
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  rules_count:
+                    type: integer
+          description: ''
+        '404':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+          description: ''
+  /api/waf/rules/add/:
+    post:
+      operationId: api_waf_rules_add_create
+      description: |
+        Aggiunge una nuova SecRule Coraza. La regola viene applicata immediatamente a tutto il traffico.
+
+        **Formato regola:**
+        ```
+        SecRule VARIABILE "@OPERATORE pattern" "id:NNNN,phase:N,deny,status:403,log,msg:Descrizione"
+        ```
+
+        **Variabili comuni:**
+        - `ARGS|ARGS_NAMES` — parametri query string e body
+        - `REQUEST_URI` — URL della richiesta
+        - `REQUEST_HEADERS:Header-Name` — header HTTP specifico
+        - `REQUEST_BODY` — corpo della richiesta
+
+        **Operatori:**
+        - `@rx` — regex
+        - `@contains` — contiene stringa
+        - `@eq` — uguale
+
+        **Fasi:**
+        - `phase:1` — request headers (prima del body)
+        - `phase:2` — request body
+        - `phase:3` — response headers
+        - `phase:4` — response body
+      summary: Aggiungi regola WAF
+      tags:
+      - WAF
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - rule
+              properties:
+                rule:
+                  type: string
+                  description: SecRule completa
+            examples:
+              BloccaSQLInjection:
+                value:
+                  rule: SecRule ARGS|ARGS_NAMES "@rx (?i)(union.*select|drop\s+table)"
+                    "id:2001,phase:2,deny,status:403,log,msg:Custom SQL Injection
+                    rule"
+                summary: Blocca SQL Injection
+              BloccaUser-AgentSpecifico:
+                value:
+                  rule: SecRule REQUEST_HEADERS:User-Agent "@rx (?i)(sqlmap|nikto|nmap)"
+                    "id:2002,phase:1,deny,status:403,log,msg:Scanner blocked"
+                summary: Blocca User-Agent specifico
+              BloccaUploadFilePericolosi:
+                value:
+                  rule: SecRule REQUEST_HEADERS:Content-Type "@rx (?i)(application/x-php|text/x-php)"
+                    "id:2003,phase:1,deny,status:403,log,msg:PHP upload blocked"
+                summary: Blocca upload file pericolosi
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  rules_count:
+                    type: integer
+          description: ''
+  /api/waf/rules/test/:
+    post:
+      operationId: api_waf_rules_test_create
+      description: Valida una SecRule senza applicarla. Verifica che la sintassi sia
+        corretta.
+      summary: Testa regola WAF
+      tags:
+      - WAF
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - rule
+              properties:
+                rule:
+                  type: string
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  rule:
+                    type: string
+          description: ''
+        '400':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  error:
+                    type: string
+          description: ''
+  /api/waf/toggle/:
+    post:
+      operationId: api_waf_toggle_create
+      description: Abilita o disabilita il WAF globalmente. Quando disabilitato, tutte
+        le regole restano salvate ma non vengono applicate.
+      summary: Stato WAF (enable/disable)
+      tags:
+      - WAF
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - enabled
+              properties:
+                enabled:
+                  type: boolean
+                  description: true=attiva, false=disattiva
+            examples:
+              AbilitaWAF:
+                value:
+                  enabled: true
+                summary: Abilita WAF
+              DisabilitaWAF:
+                value:
+                  enabled: false
+                summary: Disabilita WAF
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  enabled:
+                    type: boolean
+                  message:
+                    type: string
+          description: ''
+  /version/:
+    get:
+      operationId: version_retrieve
+      description: Restituisce la versione semantica dell'API
+      summary: Versione API
+      tags:
+      - Sistema
+      security:
+      - cookieAuth: []
+      - BearerAuth: []
+      - ApiKeyAuth: []
+      - SessionAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: 1.0.0
+                  commit:
+                    type: string
+                    example: 83bb319a
+                  api_versions:
+                    type: array
+                    items:
+                      type: string
+                    example:
+                    - v1
+                  default_version:
+                    type: string
+                    example: v1
+              examples:
+                ConCommitHash:
+                  value:
+                    version: 1.0.0
+                    commit: 83bb319a
+                    api_versions:
+                    - v1
+                    default_version: v1
+                  summary: Con commit hash
+                SenzaCommit(nonCompilatoDaGit):
+                  value:
+                    version: 1.0.0
+                    api_versions:
+                    - v1
+                    default_version: v1
+                  summary: Senza commit (non compilato da git)
+          description: ''
+components:
+  schemas:
+    BulkAcceptedResponse:
+      type: object
+      description: Serializer di risposta per il bulk async accettato (task_id, stato
+        e messaggio).
+      properties:
+        task_id:
+          type: string
+        status:
+          type: string
+        message:
+          type: string
+      required:
+      - message
+      - status
+      - task_id
+    BulkCreateRequest:
+      type: object
+      description: Serializer di richiesta per il bulk create (lista di eventi).
+      properties:
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/StagingEventScraping'
+      required:
+      - events
+    BulkIngestion:
+      type: object
+      description: Serializer per l'ingestion bulk di record dello stesso tipo
+      properties:
+        tipo:
+          $ref: '#/components/schemas/Tipo1c8Enum'
+        items:
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
+          minItems: 1
+      required:
+      - items
+      - tipo
+    BulkProcessResponse:
+      type: object
+      description: 'Serializer per la risposta bulk: eventi creati, falliti e conteggi.'
+      properties:
+        successful_events:
+          type: array
+          items:
+            $ref: '#/components/schemas/StagingEvent'
+          description: List of events that were successfully created/updated.
+        failed_events:
+          type: array
+          items:
+            $ref: '#/components/schemas/FailedEvent'
+          description: List of events that failed to save, with their errors.
+        created_count:
+          type: integer
+          description: Number of events successfully created.
+        failed_count:
+          type: integer
+          description: Number of events that failed to save.
+      required:
+      - created_count
+      - failed_count
+      - failed_events
+      - successful_events
+    BulkTaskStatusResponse:
+      type: object
+      description: Serializer di risposta per lo stato di un task bulk asincrono.
+      properties:
+        task_id:
+          type: string
+        status:
+          type: string
+        result:
+          nullable: true
+      required:
+      - status
+      - task_id
+    CityCount:
+      type: object
+      description: Serializer per il conteggio eventi per città.
+      properties:
+        city:
+          type: string
+        count:
+          type: integer
+      required:
+      - city
+      - count
+    CityNested:
+      type: object
+      description: Dati città annidati nel formato scraping.
+      properties:
+        city_name:
+          type: string
+          nullable: true
+          maxLength: 100
+        location_name:
+          type: string
+          nullable: true
+          maxLength: 255
+        location_address:
+          type: string
+          nullable: true
+          maxLength: 500
+        location_coordinates:
+          type: object
+          additionalProperties: {}
+          nullable: true
+    ClearSourceResponse:
+      type: object
+      description: Serializer di risposta per la cancellazione per sorgente (conteggio
+        e nome sorgente).
+      properties:
+        deleted:
+          type: integer
+        source:
+          type: string
+      required:
+      - deleted
+      - source
+    CmsEnum:
+      enum:
+      - drupal
+      - wordpress
+      - custom
+      - api_rest
+      - api_graphql
+      - liferay
+      - strapi
+      - directus
+      - angular_spa
+      - aem
+      - orchard
+      - pimcore
+      type: string
+      description: |-
+        * `drupal` - Drupal
+        * `wordpress` - WordPress
+        * `custom` - Custom
+        * `api_rest` - API REST
+        * `api_graphql` - API GraphQL
+        * `liferay` - Liferay
+        * `strapi` - Strapi
+        * `directus` - Directus
+        * `angular_spa` - Angular SPA
+        * `aem` - Adobe AEM
+        * `orchard` - Orchard CMS
+        * `pimcore` - Pimcore
+    ComuniIstatRawData:
+      type: object
+      description: Serializer per la risposta (output)
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        tipo:
+          $ref: '#/components/schemas/ComuniIstatRawDataTipoEnum'
+        codice_istat:
+          type: string
+          maxLength: 10
+        regione:
+          type: string
+          maxLength: 100
+        provincia:
+          type: string
+          nullable: true
+          maxLength: 100
+        comune:
+          type: string
+          nullable: true
+          maxLength: 100
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - codice_istat
+      - created_at
+      - id
+      - regione
+      - tipo
+    ComuniIstatRawDataTipoEnum:
+      enum:
+      - regione
+      - provincia
+      - comune
+      type: string
+      description: |-
+        * `regione` - Regione
+        * `provincia` - Provincia
+        * `comune` - Comune
+    DashboardStats:
+      type: object
+      description: Statistiche per la dashboard
+      properties:
+        total_events:
+          type: integer
+        active_events:
+          type: integer
+        events_by_city:
+          type: object
+          additionalProperties: {}
+        events_by_source:
+          type: object
+          additionalProperties: {}
+        recent_etl_runs:
+          type: array
+          items:
+            $ref: '#/components/schemas/EtlRun'
+        staging_count:
+          type: integer
+      required:
+      - active_events
+      - events_by_city
+      - events_by_source
+      - recent_etl_runs
+      - staging_count
+      - total_events
+    DatesNested:
+      type: object
+      description: Dati date annidati nel formato scraping.
+      properties:
+        date_start:
+          type: string
+          nullable: true
+          maxLength: 30
+        date_end:
+          type: string
+          nullable: true
+          maxLength: 30
+        time_start:
+          type: string
+          nullable: true
+          maxLength: 10
+        time_end:
+          type: string
+          nullable: true
+          maxLength: 10
+        time_info:
+          type: string
+          nullable: true
+          maxLength: 500
+    ErrorResponse:
+      type: object
+      description: Serializer generico per le risposte di errore con campo 'error'.
+      properties:
+        error:
+          type: string
+      required:
+      - error
+    EtlError:
+      type: object
+      description: Serializer per gli errori ETL con tipo, sorgente e messaggio.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        error_type:
+          type: string
+          maxLength: 50
+        source:
+          type: string
+          nullable: true
+          maxLength: 50
+        json_file:
+          type: string
+          nullable: true
+          maxLength: 255
+        error_message:
+          type: string
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - error_type
+      - id
+    EtlRun:
+      type: object
+      description: Serializer per le esecuzioni ETL con durata calcolata in secondi.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        duration_seconds:
+          type: string
+          readOnly: true
+        run_type:
+          type: string
+          maxLength: 50
+        source:
+          type: string
+          nullable: true
+          maxLength: 50
+        status:
+          type: string
+          maxLength: 20
+        staging_count:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        inserted_count:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        updated_count:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        started_at:
+          type: string
+          format: date-time
+          readOnly: true
+        staging_completed_at:
+          type: string
+          format: date-time
+          nullable: true
+        upsert_completed_at:
+          type: string
+          format: date-time
+          nullable: true
+      required:
+      - duration_seconds
+      - id
+      - run_type
+      - started_at
+    FailedEvent:
+      type: object
+      description: Serializer per un evento fallito nella risposta bulk (dati originali,
+        errori e indice).
+      properties:
+        original_data:
+          description: The original event data that failed to save.
+        errors:
+          description: Detailed validation errors for the event.
+        index:
+          type: integer
+          description: Index of the event in the original request list.
+      required:
+      - errors
+      - index
+      - original_data
+    Ingestion:
+      type: object
+      description: Serializer per l'ingestion di un singolo record
+      properties:
+        tipo:
+          $ref: '#/components/schemas/Tipo1c8Enum'
+        data:
+          type: object
+          additionalProperties: {}
+      required:
+      - data
+      - tipo
+    PaginaCittaDetail:
+      type: object
+      properties:
+        nome:
+          type: string
+          maxLength: 100
+        slug:
+          type: string
+          maxLength: 50
+          pattern: ^[-a-zA-Z0-9_]+$
+        navigazione:
+          type: array
+          items:
+            $ref: '#/components/schemas/TabNavigazione'
+          readOnly: true
+        sezioni:
+          type: string
+          readOnly: true
+      required:
+      - navigazione
+      - nome
+      - sezioni
+    PaginaCittaList:
+      type: object
+      properties:
+        nome:
+          type: string
+          maxLength: 100
+        slug:
+          type: string
+          maxLength: 50
+          pattern: ^[-a-zA-Z0-9_]+$
+      required:
+      - nome
+    PaginatedCityCountList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/CityCount'
+    PaginatedEtlErrorList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/EtlError'
+    PaginatedEtlRunList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/EtlRun'
+    PaginatedProductionEventListList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductionEventList'
+    PaginatedScrapingCategoryList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScrapingCategory'
+    PaginatedScrapingLocationList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScrapingLocation'
+    PaginatedScrapingWebsiteList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScrapingWebsite'
+    PaginatedSourceCountList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/SourceCount'
+    PaginatedStagingEventList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/StagingEvent'
+    PatchedProductionEvent:
+      type: object
+      description: Serializer completo per gli eventi in produzione (tutti i campi).
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        uuid:
+          type: string
+          maxLength: 32
+        content_hash:
+          type: string
+          nullable: true
+          maxLength: 32
+        source:
+          type: string
+          maxLength: 50
+        url:
+          type: string
+          nullable: true
+        title:
+          type: string
+        description:
+          type: string
+          nullable: true
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+          maxLength: 100
+        location_name:
+          type: string
+          nullable: true
+          maxLength: 255
+        location_address:
+          type: string
+          nullable: true
+        price:
+          type: string
+          nullable: true
+        website:
+          type: string
+          nullable: true
+        date_start:
+          type: string
+          format: date
+          nullable: true
+        date_end:
+          type: string
+          format: date
+          nullable: true
+        time_start:
+          type: string
+          format: time
+          nullable: true
+        time_end:
+          type: string
+          format: time
+          nullable: true
+        time_info:
+          type: string
+          nullable: true
+        schedule:
+          type: string
+          nullable: true
+        weekdays:
+          type: string
+          nullable: true
+        raw_data:
+          nullable: true
+        scraped_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        is_active:
+          type: boolean
+    PatchedStagingEventScraping:
+      type: object
+      description: |-
+        Formato event scraping — struttura definita in templates.json.
+
+        Struttura attesa:
+            {
+              "uuid": "...",
+              "content_hash": "...",
+              "source": "puglia_culture",
+              "title": "...",
+              "stars": 3,
+              "category": ["teatro", "..."],
+              "section": { "teatro": { "rassegna": "...", "cast": "..." } },
+              "city": {
+                "city_id": null,
+                "city_name": "...",
+                "location_name": "...",
+                "location_address": "...",
+                "location_coordinates": { "lat": "...", "lng": "..." }
+              },
+              "dates": {
+                "date_start": "YYYY-MM-DD",
+                "time_start": "HH:MM",
+                "date_end": "YYYY-MM-DD",
+                "time_end": "HH:MM",
+                "time_info": "..."
+              },
+              "url": "...",
+              "description": "...",
+              "image_url": "...",
+              "price": "...",
+              "scraped_at": "YYYY-MM-DD HH:MM:SS"
+            }
+      properties:
+        uuid:
+          type: string
+          maxLength: 64
+        content_hash:
+          type: string
+          nullable: true
+          maxLength: 64
+        source:
+          type: string
+          maxLength: 50
+        title:
+          type: string
+          maxLength: 1000
+        stars:
+          type: integer
+          nullable: true
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+        city:
+          allOf:
+          - $ref: '#/components/schemas/CityNested'
+          nullable: true
+        dates:
+          allOf:
+          - $ref: '#/components/schemas/DatesNested'
+          nullable: true
+        url:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        price:
+          type: string
+          nullable: true
+        scraped_at:
+          type: string
+          format: date-time
+          nullable: true
+        raw_data:
+          nullable: true
+    ProductionEvent:
+      type: object
+      description: Serializer completo per gli eventi in produzione (tutti i campi).
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        uuid:
+          type: string
+          maxLength: 32
+        content_hash:
+          type: string
+          nullable: true
+          maxLength: 32
+        source:
+          type: string
+          maxLength: 50
+        url:
+          type: string
+          nullable: true
+        title:
+          type: string
+        description:
+          type: string
+          nullable: true
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+          maxLength: 100
+        location_name:
+          type: string
+          nullable: true
+          maxLength: 255
+        location_address:
+          type: string
+          nullable: true
+        price:
+          type: string
+          nullable: true
+        website:
+          type: string
+          nullable: true
+        date_start:
+          type: string
+          format: date
+          nullable: true
+        date_end:
+          type: string
+          format: date
+          nullable: true
+        time_start:
+          type: string
+          format: time
+          nullable: true
+        time_end:
+          type: string
+          format: time
+          nullable: true
+        time_info:
+          type: string
+          nullable: true
+        schedule:
+          type: string
+          nullable: true
+        weekdays:
+          type: string
+          nullable: true
+        raw_data:
+          nullable: true
+        scraped_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        is_active:
+          type: boolean
+      required:
+      - created_at
+      - id
+      - source
+      - title
+      - updated_at
+      - uuid
+    ProductionEventList:
+      type: object
+      description: Serializer leggero per liste
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        uuid:
+          type: string
+          maxLength: 32
+        title:
+          type: string
+        city:
+          type: string
+          nullable: true
+          maxLength: 100
+        source:
+          type: string
+          maxLength: 50
+        date_start:
+          type: string
+          format: date
+          nullable: true
+        date_end:
+          type: string
+          format: date
+          nullable: true
+        is_active:
+          type: boolean
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+      required:
+      - id
+      - source
+      - title
+      - uuid
+    ScrapingCategory:
+      type: object
+      description: Serializer per le categorie aggregate (nome e conteggio eventi).
+      properties:
+        categoria:
+          type: string
+          maxLength: 255
+        count:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+      required:
+      - categoria
+    ScrapingLocation:
+      type: object
+      description: Serializer per le location aggregate (nome, città e conteggio eventi).
+      properties:
+        location_name:
+          type: string
+          maxLength: 255
+        city_name:
+          type: string
+          nullable: true
+          maxLength: 100
+        count:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+      required:
+      - location_name
+    ScrapingWebsite:
+      type: object
+      description: Serializer per i portali web scrapati con label CMS leggibile.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          title: Nome portale
+          maxLength: 255
+        source_url:
+          type: string
+          format: uri
+          title: URL base
+          maxLength: 500
+        spider_name:
+          type: string
+          title: Nome spider
+          description: 'Nome del file spider Scrapy (es: in_lombardia)'
+          maxLength: 100
+        cms:
+          $ref: '#/components/schemas/CmsEnum'
+        cms_display:
+          type: string
+          readOnly: true
+        is_active:
+          type: boolean
+          title: Attivo
+        notes:
+          type: string
+          title: Note
+      required:
+      - cms_display
+      - id
+      - name
+      - source_url
+      - spider_name
+    SourceCount:
+      type: object
+      description: Serializer per il conteggio eventi per sorgente.
+      properties:
+        source:
+          type: string
+        count:
+          type: integer
+      required:
+      - count
+      - source
+    StagingEvent:
+      type: object
+      description: Serializer completo per gli staging events con coordinate come
+        {lat, lng}.
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        location_coordinates:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          maxLength: 32
+        content_hash:
+          type: string
+          nullable: true
+          maxLength: 32
+        source:
+          type: string
+          maxLength: 50
+        title:
+          type: string
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+        city_name:
+          type: string
+          nullable: true
+          maxLength: 100
+        location_name:
+          type: string
+          nullable: true
+          maxLength: 255
+        location_address:
+          type: string
+          nullable: true
+        date_start:
+          type: string
+          format: date-time
+          nullable: true
+        date_end:
+          type: string
+          format: date-time
+          nullable: true
+        url:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        price:
+          type: string
+          nullable: true
+        raw_data:
+          nullable: true
+        schema_org:
+          nullable: true
+        batch_file:
+          type: string
+          nullable: true
+          maxLength: 255
+        scraped_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - created_at
+      - id
+      - location_coordinates
+      - source
+      - title
+      - uuid
+    StagingEventScraping:
+      type: object
+      description: |-
+        Formato event scraping — struttura definita in templates.json.
+
+        Struttura attesa:
+            {
+              "uuid": "...",
+              "content_hash": "...",
+              "source": "puglia_culture",
+              "title": "...",
+              "stars": 3,
+              "category": ["teatro", "..."],
+              "section": { "teatro": { "rassegna": "...", "cast": "..." } },
+              "city": {
+                "city_id": null,
+                "city_name": "...",
+                "location_name": "...",
+                "location_address": "...",
+                "location_coordinates": { "lat": "...", "lng": "..." }
+              },
+              "dates": {
+                "date_start": "YYYY-MM-DD",
+                "time_start": "HH:MM",
+                "date_end": "YYYY-MM-DD",
+                "time_end": "HH:MM",
+                "time_info": "..."
+              },
+              "url": "...",
+              "description": "...",
+              "image_url": "...",
+              "price": "...",
+              "scraped_at": "YYYY-MM-DD HH:MM:SS"
+            }
+      properties:
+        uuid:
+          type: string
+          maxLength: 64
+        content_hash:
+          type: string
+          nullable: true
+          maxLength: 64
+        source:
+          type: string
+          maxLength: 50
+        title:
+          type: string
+          maxLength: 1000
+        stars:
+          type: integer
+          nullable: true
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+        city:
+          allOf:
+          - $ref: '#/components/schemas/CityNested'
+          nullable: true
+        dates:
+          allOf:
+          - $ref: '#/components/schemas/DatesNested'
+          nullable: true
+        url:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        price:
+          type: string
+          nullable: true
+        scraped_at:
+          type: string
+          format: date-time
+          nullable: true
+        raw_data:
+          nullable: true
+      required:
+      - source
+      - title
+      - uuid
+    TabNavigazione:
+      type: object
+      properties:
+        label:
+          type: string
+          maxLength: 50
+        url:
+          type: string
+          maxLength: 200
+      required:
+      - label
+      - url
+    Tipo1c8Enum:
+      enum:
+      - regione
+      - provincia
+      - comune
+      type: string
+      description: |-
+        * `regione` - regione
+        * `provincia` - provincia
+        * `comune` - comune
+    ToggleActiveResponse:
+      type: object
+      description: Serializer di risposta per il toggle attivo/inattivo di un evento.
+      properties:
+        is_active:
+          type: boolean
+      required:
+      - is_active
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
+servers:
+- url: https://webservice.127.0.0.1.nip.io
+  description: API pubblica (APISIX)
+- url: https://backoffice.127.0.0.1.nip.io
+  description: Backoffice (APISIX)
+- url: http://localhost:8000
+  description: Local (Django diretto)
+tags:
+- name: Dashboard
+  description: Statistiche aggregate e panoramica
+- name: Production Events
+  description: Eventi validati in produzione
+- name: Staging Events (Internal)
+  description: Eventi in staging (sola lettura interna)
+- name: ETL
+  description: Monitoraggio esecuzioni e errori ETL
+- name: Staging Events
+  description: API esterna v1 - gestione staging events
+- name: Bulk Operations
+  description: Operazioni massive (bulk create, clear source)
+- name: CMS
+  description: 'Pagine città CMS: sezioni, articoli, eventi'
+- name: Comuni ISTAT Ingestion
+  description: Ingestione dati scraping comuni-italiani.it (raw JSON)

@@ -5,7 +5,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from django.db import connection
 
-from comuni_istat.models import ComuneItaliano, ComuneSoppresso
+from comuni_istat.models import Comune, ComuneSoppresso
 
 
 class Command(BaseCommand):
@@ -44,10 +44,10 @@ class Command(BaseCommand):
             ComuneSoppresso.objects.all().delete()
             self.stdout.write(self.style.WARNING("  Tabella svuotata"))
 
-        # 3. Mappa pro_com_t → id di ComuneItaliano per il collegamento FK
+        # 3. Mappa pro_com_t → id di Comune per il collegamento FK
         self.stdout.write(self.style.WARNING("\n[2/3] Costruzione mappa comuni attuali..."))
         comuni_map = dict(
-            ComuneItaliano.objects.values_list('pro_com_t', 'id')
+            Comune.objects.values_list('pro_com_t', 'id')
         )
         self.stdout.write(f"  {len(comuni_map)} comuni attuali in mappa")
 

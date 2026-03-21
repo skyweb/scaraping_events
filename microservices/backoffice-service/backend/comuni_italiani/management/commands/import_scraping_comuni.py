@@ -12,7 +12,7 @@ import os
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
-from comuni_istat_ingestion.models import (
+from comuni_italiani.models import (
     Regione, Provincia, Comune,
     ComuneFrazione, ComuneConfinante, ComuneAppartenenza,
     ComunePuntoInteresse, ComuneEvento, ComuneGemellaggio,

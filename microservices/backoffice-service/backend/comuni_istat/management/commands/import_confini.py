@@ -102,9 +102,9 @@ class Command(BaseCommand):
         SELECT cod_rip, cod_reg, cod_prov, cod_cm, cod_uts, den_prov, den_cm, den_uts, sigla, tipo_uts, geom, shape_area, shape_leng
         FROM comuni_istat.province_import;
 
-        -- Comuni (con calcolo centroide)
-        INSERT INTO comuni_istat.comuni (cod_rip, cod_reg, cod_prov, cod_cm, cod_uts, pro_com, pro_com_t, comune, comune_a, cc_uts, geom, centroid, shape_area, shape_length)
-        SELECT cod_rip, cod_reg, cod_prov, cod_cm, cod_uts, pro_com, pro_com_t, comune, comune_a, cc_uts, geom, ST_Centroid(geom), shape_area, shape_leng
+        -- Comuni (con calcolo centroide + attivo default true)
+        INSERT INTO comuni_istat.comuni (cod_rip, cod_reg, cod_prov, cod_cm, cod_uts, pro_com, pro_com_t, comune, comune_a, cc_uts, geom, centroid, shape_area, shape_length, attivo)
+        SELECT cod_rip, cod_reg, cod_prov, cod_cm, cod_uts, pro_com, pro_com_t, comune, comune_a, cc_uts, geom, ST_Centroid(geom), shape_area, shape_leng, true
         FROM comuni_istat.comuni_import;
 
         -- Elimina tabelle temporanee

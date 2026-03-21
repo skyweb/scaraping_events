@@ -20,10 +20,10 @@ def nlp_analyze_events(self, source: str = None, force: bool = False, limit: int
         force: ri-analizza anche eventi già processati
         limit: numero massimo di eventi (0 = tutti)
     """
-    from events.models import StagingEvent
+    from events.models import Event
     from nlp.extractor import analyze_staging_event
 
-    qs = StagingEvent.objects.filter(description__isnull=False).exclude(description="")
+    qs = Event.objects.filter(description__isnull=False).exclude(description="")
 
     if source:
         qs = qs.filter(source=source)
@@ -49,7 +49,7 @@ def nlp_analyze_events(self, source: str = None, force: bool = False, limit: int
             if entities:
                 raw = event.raw_data or {}
                 raw["nlp"] = entities
-                StagingEvent.objects.filter(pk=event.pk).update(raw_data=raw)
+                Event.objects.filter(pk=event.pk).update(raw_data=raw)
                 enriched += 1
             processed += 1
         except Exception as e:
