@@ -496,7 +496,7 @@ services:
       - ./services/apisix/config.yaml:/usr/local/apisix/conf/config.yaml
       - ./services/apisix/error-pages:/usr/local/apisix/error-pages:ro
       - ./services/apisix/wasm:/usr/local/apisix/wasm:ro
-      - ./services/traefik/certs:/certs:ro
+      - ./services/apisix/certs:/certs:ro
     depends_on:
       etcd:
         condition: service_healthy
@@ -512,7 +512,7 @@ services:
     command: sh /init-routes.sh
     volumes:
       - ./services/apisix/init-routes.sh:/init-routes.sh:ro
-      - ./services/traefik/certs:/certs:ro
+      - ./services/apisix/certs:/certs:ro
     environment:
       DOMAIN: ${DOMAIN:-127.0.0.1.nip.io}
       KEYCLOAK_BACKOFFICE_CLIENT_SECRET: ${KEYCLOAK_BACKOFFICE_CLIENT_SECRET:-CHANGE_ME_BACKOFFICE_SECRET}
