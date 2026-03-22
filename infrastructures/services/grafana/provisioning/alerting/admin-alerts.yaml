@@ -494,3 +494,100 @@ groups:
           severity: info
         annotations:
           summary: "Rate limit attivo — più di 1 req/s con status 429"
+
+  # -----------------------------------------------------------------
+  # Alloy (log pipeline)
+  # -----------------------------------------------------------------
+  - orgId: 1
+    name: alloy
+    folder: Infrastruttura
+    interval: 1m
+    rules:
+      - uid: alloy-down
+        title: "Alloy non raggiungibile"
+        condition: threshold
+        for: 2m
+        noDataState: Alerting
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'up{job="alloy"} == 0'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [0] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: critical
+        annotations:
+          summary: "Alloy (log collector) non raggiungibile da 2 minuti"
+          description: "Il servizio Alloy è down — i log non vengono raccolti."
+
+      - uid: alloy-high-memory
+        title: "Alloy memoria > 256MB"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'process_resident_memory_bytes{job="alloy"}'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [268435456] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Alloy utilizza più di 256MB di memoria"
+
+      - uid: alloy-loki-errors
+        title: "Alloy — errori push Loki"
+        condition: threshold
+        for: 5m
+        noDataState: OK
+        execErrState: Alerting
+        data:
+          - refId: query
+            relativeTimeRange: { from: 300, to: 0 }
+            datasourceUid: prometheus
+            model:
+              expr: 'sum(rate(loki_write_dropped_entries_total{job="alloy"}[5m]))'
+              refId: query
+          - refId: threshold
+            relativeTimeRange: { from: 0, to: 0 }
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: query
+              conditions:
+                - evaluator: { type: gt, params: [0] }
+                  operator: { type: and }
+                  reducer: { type: last }
+              refId: threshold
+        labels:
+          severity: warning
+        annotations:
+          summary: "Alloy sta perdendo log — push a Loki in errore"
+          description: "Entries dropped negli ultimi 5 minuti. Verificare la connessione Alloy → Loki."

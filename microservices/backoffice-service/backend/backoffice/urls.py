@@ -1,32 +1,13 @@
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path, include
 from django.conf import settings
-from django.http import HttpResponse
-from django.views.static import serve
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView
 
-from backoffice.views import admin_sso_logout, permission_denied_view, api_version_view, api_version_drf_view, scalar_view, services_dashboard, openapi_download_view
+from backoffice.views import admin_sso_logout, permission_denied_view, api_version_drf_view, scalar_view, scalar_public_view, services_dashboard, openapi_download_view
+from backoffice.report_views import report_dashboard, report_events, report_etl_runs, report_etl_errors
 from backoffice.waf_views import waf_rules_list, waf_rules_add, waf_rules_delete, waf_rules_test, waf_toggle
 
-# ... (rest of the file) ...
-
-handler403 = 'backoffice.views.permission_denied_view' # Set the custom 403 handler
-
-
-
-def serve_frontend(request, path=''):
-    """Serve React frontend index.html for SPA routing"""
-    index_path = settings.FRONTEND_DIR / 'index.html'
-    if index_path.exists():
-        with open(index_path, 'r') as f:
-            return HttpResponse(f.read(), content_type='text/html')
-    return HttpResponse('Frontend not found', status=404)
-
-
-def serve_frontend_assets(request, path):
-    """Serve frontend static assets (js, css, etc.)"""
-    return serve(request, path, document_root=settings.FRONTEND_DIR / 'assets')
-
+handler403 = 'backoffice.views.permission_denied_view'
 
 urlpatterns = [
     # Logout SSO: deve stare PRIMA di admin/ per intercettare /admin/logout/
@@ -41,11 +22,21 @@ urlpatterns = [
     path('api/scraping/', include('scraping.urls')),
     path('api/ai-transform/', include('ai_transform.urls')),
 
-    # API Documentation
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    # API Documentation — schema interno (tutti gli endpoint)
+    path('api/schema/', SpectacularAPIView.as_view(
+        custom_settings={'PREPROCESSING_HOOKS': ['backoffice.openapi.internal_endpoint_filter']},
+    ), name='schema'),
     path('docs/', scalar_view, name='scalar-docs'),
     path('docs/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
-    path('docs/schema/', SpectacularAPIView.as_view(), name='public-schema'),
+    path('docs/schema/', SpectacularAPIView.as_view(
+        custom_settings={'PREPROCESSING_HOOKS': ['backoffice.openapi.internal_endpoint_filter']},
+    ), name='internal-schema'),
+
+    # API Documentation — schema pubblico (/api/v1/events/, /version/)
+    path('docs/public/', scalar_public_view, name='scalar-public-docs'),
+    path('docs/public/schema/', SpectacularAPIView.as_view(
+        custom_settings={'PREPROCESSING_HOOKS': ['backoffice.openapi.public_endpoint_filter']},
+    ), name='public-schema'),
     path('docs/postman/', openapi_download_view, name='openapi-download'),
 
     # WAF management API
@@ -61,9 +52,11 @@ urlpatterns = [
     # Prometheus metrics (espone /metrics)
     path('', include('django_prometheus.urls')),
 
-    # Frontend React su /report
-    re_path(r'^report/assets/(?P<path>.*)$', serve_frontend_assets),
-    re_path(r'^report(?:/.*)?$', serve_frontend, name='frontend-report'),
+    # Report (Django templates)
+    path('report/', report_dashboard, name='report-dashboard'),
+    path('report/events/', report_events, name='report-events'),
+    path('report/etl-runs/', report_etl_runs, name='report-etl-runs'),
+    path('report/etl-errors/', report_etl_errors, name='report-etl-errors'),
 
     # Dashboard servizi (home — deve essere ultimo)
     path('', services_dashboard, name='services-dashboard'),

@@ -1,52 +1,108 @@
-# Infrastruttura Today Events — Documentazione Tecnica
+# Infrastruttura Today Events
 
 ## Panoramica
 
 ```
-Internet
+Browser (HTTPS *.127.0.0.1.nip.io)
    │
    ▼
-Traefik (TLS termination, edge routing)
+APISIX 3.15 (TLS termination, OIDC SSO, rate-limit, CORS, WAF, tracing)
+   │              │
+   │              └──► Keycloak 26 (IdP — SSO, OIDC, OAuth2)
+   │                       │
+   │                       └──► PostgreSQL 16 (db: keycloak)
+   ▼
+Django Backoffice (Unfold Admin, DRF API, Report)
+   │         │
+   │         ├──► PostgreSQL 16 + PostGIS (db: today_events)
+   │         └──► Redis 7 (cache, Celery broker)
+   ▼
+Celery Worker
    │
    ▼
-APISIX 3.11 (API Gateway — autenticazione, rate-limit, CORS, tracing)
-   │         │
-   │         └──► Keycloak 26 (IdP — SSO, token, JWKS)
-   │                  │
-   │                  └──► PostgreSQL (db: keycloak)
-   ▼
-Django Backoffice (PyJWT, SessionAuth)
-   │         │
-   │         └──► PostgreSQL (db: today_events)
-   │         └──► Redis (cache, Celery broker)
-   ▼
-Celery Worker / Beat
+Airflow 2.9 (orchestrazione DAG scraping)
    │
    ▼
 OpenTelemetry Collector
-   ├──► Grafana Tempo (distributed traces)
-   ├──► Prometheus (metrics)
-   └──► Loki + Promtail (logs)
-          └──► Grafana (dashboard unificata)
+   ├──► Grafana Tempo 2.9 (traces)
+   ├──► Prometheus (metriche)
+   └──► Loki 3.6 + Alloy 1.14 (log)
+          └──► Grafana 12.3 (dashboard unificata)
 ```
 
 ---
 
-## Componenti principali
+## Servizi
 
-| Servizio | Immagine | Porta interna | Dominio dev |
+### Applicazione
+
+| Servizio | Immagine | Porta | Dominio dev |
 |---|---|---|---|
-| Traefik | traefik:v3.x | 80, 443 | traefik.127.0.0.1.nip.io |
-| APISIX | apache/apisix:3.11.0 | 9080 | gateway.127.0.0.1.nip.io |
-| etcd | coreos/etcd:v3.5.17 | 2379 | — |
-| Keycloak | keycloak/keycloak:26.0 | 8080 | keycloak.127.0.0.1.nip.io |
-| PostgreSQL | postgres:16 | 5432 | — |
-| Django Backoffice | custom (python:3.11-slim) | 8000 | backoffice.127.0.0.1.nip.io |
-| Frontend | custom (node:20-alpine) | 3000 | frontend.127.0.0.1.nip.io |
-| Redis | redis:7 | 6379 | — |
-| MinIO | minio/minio | 9000 | minio.127.0.0.1.nip.io |
-| Grafana | grafana/grafana | 3000 | grafana.127.0.0.1.nip.io |
-| Jaeger | jaegertracing/all-in-one | 16686 | jaeger.127.0.0.1.nip.io |
+| Django Backoffice | custom (`python:3.11-slim`) | 8000 | `backoffice.${DOMAIN}` |
+| Celery Worker | stessa immagine backoffice | — | — |
+| Flower | `mher/flower:2.0` | 5555 | `flower.${DOMAIN}` |
+| Airflow Webserver | `apache/airflow:2.9.2` | 8080 | `airflow.${DOMAIN}` |
+| Airflow Scheduler | `apache/airflow:2.9.2` | — | — |
+
+### Autenticazione
+
+| Servizio | Immagine | Porta | Dominio dev |
+|---|---|---|---|
+| Keycloak | `quay.io/keycloak/keycloak:26.0` | 8080 | `auth.${DOMAIN}` |
+
+### Infrastruttura
+
+| Servizio | Immagine | Porta | Dominio dev |
+|---|---|---|---|
+| APISIX | `apache/apisix:3.15.0-ubuntu` | 9443 (HTTPS) | `*.${DOMAIN}` (entry point unico) |
+| APISIX Dashboard | `apache/apisix-dashboard:3.0.1-alpine` | 9000 | `apisix-dashboard.${DOMAIN}` |
+| etcd | `quay.io/coreos/etcd:v3.5.17` | 2379 | — |
+| PostgreSQL + PostGIS | `imresamu/postgis:16-3.4` | 5432 | — |
+| Redis | `redis:7-alpine` | 6379 | — |
+| MinIO | `minio/minio:RELEASE.2025-04-22` | 9000/9001 | `minio.${DOMAIN}` |
+| Mailpit | `axllent/mailpit:latest` | 8025 | `mail.${DOMAIN}` |
+| Harbor Registry | compose separato | 443 | `registry.${DOMAIN}` |
+
+### Observability
+
+| Servizio | Immagine | Porta | Descrizione |
+|---|---|---|---|
+| Grafana | `grafana/grafana:12.3.0` | 3001 | Dashboard unificata (log, metriche, traces) |
+| Prometheus | `prom/prometheus:v2.53.0` | 9090 | Metriche time-series |
+| Loki | `grafana/loki:3.6.7` | 3100 | Log backend |
+| Alloy | `grafana/alloy:1.14.1` | 12345 | Log collector (sostituto Promtail) |
+| Tempo | `grafana/tempo:2.9.0` | 3200 | Trace backend |
+| OTel Collector | `otel/opentelemetry-collector-contrib:0.104.0` | 4317 (gRPC), 4318 (HTTP) | Raccolta e routing telemetry OTLP |
+| Redis Exporter | `oliver006/redis_exporter:latest` | 9121 | Metriche Redis → Prometheus |
+| Celery Exporter | `danihodovic/celery-exporter:latest` | 9808 | Metriche Celery → Prometheus |
+
+---
+
+## APISIX — API Gateway (entry point unico)
+
+APISIX è l'unico servizio esposto su HTTPS. Gestisce TLS termination con certificato wildcard mkcert (`*.127.0.0.1.nip.io`), autenticazione OIDC via Keycloak, rate-limiting, CORS, WAF (Coraza) e tracing.
+
+Le route sono inizializzate da `services/apisix/init-routes.sh` all'avvio del container `apisix-init`.
+
+### Route principali
+
+| Host | Path | Auth | Upstream |
+|---|---|---|---|
+| `backoffice.${DOMAIN}` | `/admin/*` | OIDC SSO | Django (:8000) |
+| `backoffice.${DOMAIN}` | `/api/v1/events/*` | JWT Bearer | Django (:8000) |
+| `backoffice.${DOMAIN}` | `/api/*`, `/docs/*`, `/report/*` | Nessuna / Session | Django (:8000) |
+| `webservice.${DOMAIN}` | `/api/external/*` | JWT Bearer (M2M) | Django (:8000) |
+| `grafana.${DOMAIN}` | `/*` | OIDC SSO (auth proxy) | Grafana (:3001) |
+| `airflow.${DOMAIN}` | `/*` | OIDC SSO (auth proxy + roles) | Airflow (:8080) |
+| `prometheus.${DOMAIN}` | `/*` | OIDC SSO | Prometheus (:9090) |
+| `flower.${DOMAIN}` | `/*` | OIDC SSO | Flower (:5555) |
+| `auth.${DOMAIN}` | `/*` | Nessuna | Keycloak (:8080) |
+| `apisix-dashboard.${DOMAIN}` | `/*` | OIDC SSO | APISIX Dashboard (:9000) |
+| `minio.${DOMAIN}` | `/*` | Nessuna (auth interna) | MinIO (:9001) |
+| `registry.${DOMAIN}` | `/*` | Nessuna (auth interna Harbor) | Harbor (:443) |
+| `mail.${DOMAIN}` | `/*` | Nessuna (solo dev) | Mailpit (:8025) |
+
+Plugin abilitati: `openid-connect`, `jwt-auth`, `consumer-restriction`, `limit-count`, `cors`, `prometheus`, `opentelemetry`, `proxy-rewrite`, `response-rewrite`, `serverless-pre-function`, `serverless-post-function`.
 
 ---
 
@@ -54,308 +110,224 @@ OpenTelemetry Collector
 
 ### Realm: `today-events`
 
-Il realm centralizza tutta l'autenticazione. Non è possibile registrarsi autonomamente (`registrationAllowed: false`).
-
-### Client registrati
-
-| Client ID | Flow | Uso |
-|---|---|---|
-| `backoffice-admin` | Authorization Code (OIDC) | Browser SSO per Django Admin e API docs |
-| `scraper-service` | Client Credentials (M2M) | Scrapy → Backoffice API |
-| `airflow-service` | Client Credentials (M2M) | Airflow DAG → Backoffice API |
+Registrazione autonoma disabilitata (`registrationAllowed: false`). Social login configurabile (Google, GitHub).
 
 ### Ruoli realm
 
-| Ruolo | Assegnato a |
+| Ruolo | Descrizione |
 |---|---|
-| `admin` | Utenti amministratori (auto-assegnato ai login Google via mapper) |
-| `api-consumer` | Service accounts (scraper, airflow) |
+| `admin` | Amministratore completo (Django superuser, Airflow Admin) |
+| `web` | Accesso Django Admin (gruppo Redazione, permessi limitati) |
+| `monitoring` | Accesso Airflow (Viewer), Grafana, Prometheus, Flower |
+| `api-consumer` | Consumatore API esterne (client credentials) |
 
-### Scope custom
+### Client OIDC
 
-| Scope | Significato |
-|---|---|
-| `read` | Lettura eventi staging |
-| `write` | Scrittura eventi staging |
+| Client ID | Flow | Utilizzato da |
+|---|---|---|
+| `backoffice-admin` | Authorization Code | APISIX (SSO tutti i servizi web) |
+| `scraper-service` | Client Credentials (M2M) | Scraping service → API |
+| `minio-console` | Authorization Code | MinIO (OIDC login console) |
+| `harbor` | Authorization Code | Harbor Registry (OIDC login UI) |
+| `airflow-service` | Client Credentials (M2M) | Airflow DAG → API |
 
-### Identity Provider federato: Google
+### Utenti creati al primo avvio
 
-Keycloak federa Google OAuth2. Al login Google viene automaticamente assegnato il ruolo `admin` tramite un **identity provider mapper** (`hardcoded-role-idp-mapper`).
+| Utente | Password | Ruoli |
+|---|---|---|
+| `admin` | `admin_secret_2026` | `admin`, `web`, `monitoring` |
 
 ### Endpoint principali
 
 ```
-Token:    /realms/today-events/protocol/openid-connect/token
-JWKS:     /realms/today-events/protocol/openid-connect/certs
-Logout:   /realms/today-events/protocol/openid-connect/logout
-UserInfo: /realms/today-events/protocol/openid-connect/userinfo
 Discovery: /realms/today-events/.well-known/openid-configuration
+Token:     /realms/today-events/protocol/openid-connect/token
+JWKS:      /realms/today-events/protocol/openid-connect/certs
+UserInfo:  /realms/today-events/protocol/openid-connect/userinfo
+Logout:    /realms/today-events/protocol/openid-connect/logout
 ```
 
 ---
 
-## APISIX — API Gateway
+## Autenticazione — Flussi
 
-### Configurazione
+### SSO Browser (OIDC via APISIX)
 
-APISIX legge la config da **etcd** (prefisso `/apisix`). Le route sono inizializzate da `services/apisix/init-routes.sh` all'avvio.
+Tutti i servizi web (Django Admin, Grafana, Airflow, Prometheus, Flower, APISIX Dashboard) sono protetti dal plugin `openid-connect` di APISIX. Il flusso è descritto in dettaglio in [`docs/SSO.md`](SSO.md).
 
-Plugin abilitati: `openid-connect`, `jwt-auth`, `consumer-restriction`, `limit-count`, `cors`, `prometheus`, `opentelemetry`, `proxy-rewrite`, `response-rewrite`.
+### Client Credentials (M2M)
 
-### Route
-
-| ID | Path | Auth | Upstream |
-|---|---|---|---|
-| 100 | `/_internal/oidc-discovery` | nessuna | Keycloak (proxy + rewrite) |
-| 1 | `/admin/*` | OIDC browser SSO | Django Backoffice |
-| 2 | `/static/*` | nessuna | Django Backoffice |
-| 3 | `/api/public/*` | nessuna | Django Backoffice |
-| 4 | `/api/external/*` | JWT Bearer (M2M) | Django Backoffice |
-| 5 | `/api/*` | OIDC browser SSO | Django Backoffice |
-
-### Route 100 — OIDC Discovery proxy
-
-Questa route risolve un problema di rete: il plugin `openid-connect` di APISIX deve raggiungere il discovery endpoint di Keycloak, ma l'issuer pubblico nel token (`https://keycloak.domain`) non è raggiungibile dall'interno della rete Docker.
-
-La soluzione: APISIX chiama `/_internal/oidc-discovery` che proxya `keycloak:8080/realms/today-events/.well-known/openid-configuration`, poi il plugin **response-rewrite** sostituisce gli URL degli endpoint interni (`token_endpoint`, `userinfo_endpoint`, `jwks_uri`) con indirizzi `http://keycloak:8080`, lasciando inalterati `authorization_endpoint` e `issuer` (pubblici).
-
----
-
-## Flussi di autenticazione
-
-### 1. SSO Browser — Django Admin (`/admin/*`)
-
-Usato da: amministratori umani via browser.
+Usato da Scrapy spider e Airflow DAG per chiamare le API del backoffice.
 
 ```
-1. Browser → GET https://gateway.domain/admin/
+1. POST /realms/today-events/protocol/openid-connect/token
+   Body: grant_type=client_credentials&client_id=...&client_secret=...&scope=openid read write
+   ← { access_token: "<JWT>", expires_in: 36000 }
 
-2. APISIX (plugin openid-connect, client: backoffice-admin)
-   → Nessuna sessione → redirect:
-   GET https://keycloak.domain/realms/today-events/protocol/openid-connect/auth
-       ?client_id=backoffice-admin
-       &redirect_uri=https://gateway.domain/admin/callback
-       &response_type=code
-       &scope=openid profile email
-
-3. Keycloak mostra login page
-   → Utente sceglie "Login con Google"
-   → Keycloak federa a Google OAuth2
-   → Google restituisce profilo a Keycloak
-   → Keycloak emette authorization_code
-
-4. Browser → GET https://gateway.domain/admin/callback?code=<code>
-
-5. APISIX → POST keycloak:8080/realms/today-events/protocol/openid-connect/token
-             (code exchange, client_secret)
-           ← {access_token, id_token, refresh_token}
-
-6. APISIX:
-   - Salva sessione (cookie)
-   - Estrae claim email dall'id_token
-   - Aggiunge header: X-Auth-Request-Email: user@example.com
-   - Proxya la richiesta a Django: GET http://backoffice:8000/admin/
-
-7. Django — KeycloakAdminMiddleware:
-   - Legge HTTP_X_AUTH_REQUEST_EMAIL
-   - Cerca User.objects.get(email=email, is_active=True)
-   - Verifica is_staff=True
-   - Chiama login(request, user) → crea sessione Django
-   - Se utente non trovato o non staff → 403 (sso_access_denied.html)
-
-8. Browser accede all'admin con sessione Django attiva
-```
-
-**Logout:**
-```
-Browser → GET https://gateway.domain/admin/logout/
-Django  → cancella sessione Django
-        → redirect a:
-          keycloak:8080/realms/today-events/protocol/openid-connect/logout
-          ?post_logout_redirect_uri=https://backoffice.domain/admin/
-          &client_id=backoffice-admin
-Keycloak → invalida sessione SSO
-         → redirect a /admin/ (richiederà nuovo login)
-```
-
----
-
-### 2. Client Credentials — Scraping Service (M2M)
-
-Usato da: Scrapy spider via `ApiPipeline`.
-
-```
-1. Scrapy open_spider()
-   → POST http://keycloak:8080/realms/today-events/protocol/openid-connect/token
-     Content-Type: application/x-www-form-urlencoded
-     Body:
-       grant_type=client_credentials
-       &client_id=scraper-service
-       &client_secret=<secret>
-       &scope=openid read write
-   ← {
-       "access_token": "<JWT>",
-       "token_type": "Bearer",
-       "expires_in": 36000,
-       "scope": "openid read write"
-     }
-
-2. Scrapy processa item → buffer
-   Quando buffer >= batch_size (default: 50):
-
-3. POST https://gateway.domain/api/external/v1/staging/bulk/
+2. POST https://webservice.${DOMAIN}/api/external/v1/staging/bulk/
    Authorization: Bearer <JWT>
-   Content-Type: application/json
-   Body: {"events": [...], "spider": "spider_name"}
 
-4. APISIX Route 4 (api/external/*):
-   - Plugin jwt-auth: decodifica JWT, verifica firma con JWKS
-   - Plugin consumer-restriction: verifica consumer autorizzato
-   - Proxya a Django: POST http://backoffice:8000/api/external/v1/staging/bulk/
-
-5. Django — KeycloakJWTAuthentication:
-   - Estrae Bearer token da Authorization header
-   - Decodifica header JWT → legge kid
-   - Scarica/usa cache JWKS da keycloak:8080/.../certs (TTL 5min)
-   - Valida firma RS256, issuer, audience, expiry
-   - Estrae: sub, realm_access.roles, scope, azp
-   - Restituisce (user_or_keycloak_user, auth_info)
-
-6. Django view verifica permessi (HasKeycloakScope / HasKeycloakRole)
-   → 201 Created (sync) o 202 Accepted (async, task_id)
-
-7. Se 401: Scrapy refresha il token e ritenta
+3. APISIX → verifica JWT (JWKS) → proxy a Django
+   Django → KeycloakJWTAuthentication (PyJWT, RS256, cache JWKS 5min)
 ```
 
 ---
 
-### 3. Client Credentials — Airflow (M2M)
+## Database PostgreSQL
 
-Stesso flusso di Scrapy con client `airflow-service`. I DAG Airflow ottengono il token Keycloak prima di chiamare le API del backoffice.
+Tutti i servizi condividono lo stesso container PostgreSQL su database separati:
 
-```
-Configurazione Airflow:
-  KEYCLOAK_TOKEN_URL: http://keycloak:8080/realms/today-events/.../token
-  API_CLIENT_ID:     airflow-service
-  API_CLIENT_SECRET: <secret>
-```
+| Database | Usato da |
+|---|---|
+| `today_events` | Django Backoffice, Airflow (metadata) |
+| `keycloak` | Keycloak (sessioni, realm, client) |
+| `harbor` | Harbor Docker Registry |
 
----
+Creati automaticamente da `services/postgres/init.d/02-databases.sql` al primo avvio.
 
-## Validazione JWT in Django
+### Redis
 
-`KeycloakJWTAuthentication` (DRF backend) in `backoffice/authentication.py`:
-
-```
-Authorization: Bearer <token>
-       │
-       ▼
-Decodifica header JWT → kid
-       │
-       ▼
-Cache JWKS (5 min TTL)  ──miss──► GET keycloak:8080/realms/today-events/.../certs
-       │
-       ▼
-Valida con PyJWT:
-  - algoritmo: RS256
-  - issuer: http://keycloak:8080/realms/today-events
-  - audience: account
-  - expiry (exp claim)
-       │
-       ├─ errore ──► 401 AuthenticationFailed
-       │
-       ▼
-Estrae payload:
-  - sub          → user identifier
-  - realm_access.roles → ["admin", "api-consumer", ...]
-  - scope        → ["openid", "read", "write"]
-  - azp          → authorized party (client_id chiamante)
-       │
-       ▼
-Cerca User Django con username=sub
-  - trovato  → restituisce User Django reale
-  - non trovato → restituisce KeycloakUser fittizio (is_authenticated=True)
-       │
-       ▼
-request.auth = {roles, scope, azp, sub}
-```
-
-### Permission classes DRF
-
-```python
-# Verifica ruolo (OR — almeno uno)
-class HasKeycloakRole(BasePermission):
-    required_roles = ["admin"]
-
-# Verifica scope (AND — tutti)
-class HasKeycloakScope(BasePermission):
-    required_scopes = ["read", "write"]
-```
-
----
-
-## Struttura database PostgreSQL
-
-Tutti i servizi condividono lo stesso container PostgreSQL ma su database separati:
-
-| Database | Owner | Usato da |
-|---|---|---|
-| `today_events` | events | Django Backoffice, Airflow (metadata) |
-| `keycloak` | events | Keycloak (sessioni, realm, client) |
-| `n8n` | events | n8n workflow automation |
-| `harbor` | events | Harbor Docker Registry |
-| `backstage` | events | Backstage developer portal |
+| DB | Usato da |
+|---|---|
+| 0 | Airflow Celery broker |
+| 1 | Django Celery broker |
+| 2 | Django cache |
 
 ---
 
 ## Observability
 
-Ogni componente invia span OpenTelemetry al collector (`otel-collector:4317`):
+### Pipeline
 
-| Sorgente | Span emessi |
+| Tipo | Flusso |
 |---|---|
-| Keycloak (`KC_TRACING_ENABLED=true`) | token_issued, login, logout |
-| APISIX (plugin opentelemetry) | route match, upstream latency, consumer |
-| Django (opentelemetry-instrumentation-django) | view, ORM query, middleware |
-| Celery (opentelemetry-instrumentation-celery) | task execution, retry |
+| **Traces** | App (OTLP) → OTel Collector → Tempo → Grafana |
+| **Metriche** | App (Prometheus endpoint) → Prometheus scrape → Grafana |
+| **Log** | Container Docker → Alloy → Loki → Grafana |
 
-**Pipeline traces:** OTel Collector → **Grafana Tempo** (storage) → **Grafana** (UI)
+### Prometheus scrape jobs
 
-**Pipeline metrics:** APISIX Prometheus endpoint + Django django-prometheus → **Prometheus** → **Grafana**
+| Job | Target |
+|---|---|
+| `otel-collector` | `otel-collector:8889` |
+| `django` | `backoffice:8000` |
+| `redis` | `redis-exporter:9121` |
+| `celery` | `celery-exporter:9808` |
+| `apisix` | `apisix:9091` |
+| `keycloak` | `keycloak:9000` |
+| `keycloak-metrics-spi` | `keycloak:8080` |
+| `alloy` | `alloy:12345` |
 
-**Pipeline logs:** Promtail raccoglie log Docker → **Loki** → **Grafana**
+### Grafana datasources
+
+| Datasource | Tipo | Default |
+|---|---|---|
+| Prometheus | Metriche | Si |
+| Loki | Log | No |
+| Tempo | Traces | No |
+
+### Grafana dashboards provisionate
+
+| Cartella | Dashboard |
+|---|---|
+| health | `services-health`, `service-detail`, `sla-uptime` |
+| application | `django-prometheus`, `django-logs`, `celery-exporter`, `events-pipeline`, `business-kpi`, `api-usage`, `api-consumers`, `airflow-dags` |
+| infrastructure | `redis-exporter`, `coraza-waf`, `harbor-registry`, `tempo-traces`, `alloy-logs` |
+| (root) | `apisix`, `keycloak` |
+
+### Instrumentazione OpenTelemetry
+
+| Service Name | Container |
+|---|---|
+| `backoffice-django` | `dev-backoffice` |
+| `backoffice-celery-worker` | `dev-backoffice-celery-worker` |
+
+Instrumentazioni: Django (HTTP), Celery (task), Requests (outbound), SQLAlchemy (DB), Redis (cache).
+Log correlation: `otelTraceID`, `otelSpanID`, `otelServiceName` iniettati in ogni log record.
+
+### Alerting (Grafana provisioned)
+
+| Gruppo | Alert |
+|---|---|
+| service-health | Servizio non raggiungibile |
+| django | Admin errors 5xx, Error rate > 5%, Latenza P95 > 2s |
+| redis | Memoria > 85%, Connessioni > 100 |
+| celery | Task in errore, Coda > 50 task |
+| apisix | Error rate > 5%, Latenza P95 > 3s |
+| keycloak | Login falliti > 0.5/s, JVM heap > 85% |
+| coraza-waf | Attacchi rilevati > 10/5min, Rate limit 429 |
+| alloy | Non raggiungibile, Memoria > 256MB, Errori push Loki |
 
 ---
 
-## Avvio stack di sviluppo
+## Avvio
 
 ```bash
 cd infrastructures
+
+# Stack completo (tutti i servizi)
 make up
+
+# Solo core (senza observability e airflow)
+make up-core
+
+# Gruppi individuali
+make up-observability
+make up-airflow
+make up-harbor
 ```
 
-Al primo avvio su volume Postgres vuoto, lo script `services/postgres/init.d/02-databases.sql` crea automaticamente i database `keycloak`, `n8n`, `harbor`, `backstage`.
+### Accesso dev
 
-Se il volume esiste già (upgrade), crearli manualmente:
-```bash
-docker compose exec -T postgres psql -U events -d today_events -c "
-  CREATE DATABASE keycloak OWNER events;
-  CREATE DATABASE backstage OWNER events;
-"
-```
-
-Django esegue `migrate` automaticamente all'avvio tramite `entrypoint.sh`.
-
-Servizi disponibili:
-
-| URL | Servizio | Credenziali dev |
+| URL | Servizio | Credenziali |
 |---|---|---|
-| https://frontend.127.0.0.1.nip.io | Frontend React | — |
-| https://backoffice.127.0.0.1.nip.io/admin/ | Django Admin (via SSO) | admin / admin (Keycloak) |
-| https://gateway.127.0.0.1.nip.io | API Gateway APISIX | — |
-| https://keycloak.127.0.0.1.nip.io | Keycloak Admin | admin / admin_secret_2026 |
-| https://apisix-dashboard.127.0.0.1.nip.io | APISIX Dashboard | admin / admin |
-| https://grafana.127.0.0.1.nip.io | Grafana | admin / admin |
-| https://jaeger.127.0.0.1.nip.io | Jaeger Traces | — |
-| https://minio.127.0.0.1.nip.io | MinIO Console | minioadmin / minioadmin_secret_2026 |
-| https://traefik.127.0.0.1.nip.io | Traefik Dashboard | — |
+| `https://backoffice.${DOMAIN}/admin/` | Django Admin | SSO Keycloak (`admin` / `admin_secret_2026`) |
+| `https://backoffice.${DOMAIN}/report/` | Report Dashboard | SSO (login required) |
+| `https://backoffice.${DOMAIN}/docs/` | API Docs (interno) | — |
+| `https://backoffice.${DOMAIN}/docs/public/` | API Docs (pubblico) | — |
+| `https://auth.${DOMAIN}/` | Keycloak Admin Console | `admin` / `admin_secret_2026` (realm master) |
+| `https://grafana.${DOMAIN}/` | Grafana | SSO Keycloak (auto sign-up) |
+| `https://airflow.${DOMAIN}/` | Airflow | SSO Keycloak (ruolo `admin` o `monitoring`) |
+| `https://prometheus.${DOMAIN}/` | Prometheus | SSO Keycloak |
+| `https://flower.${DOMAIN}/` | Flower | SSO Keycloak |
+| `https://apisix-dashboard.${DOMAIN}/` | APISIX Dashboard | SSO Keycloak |
+| `https://minio.${DOMAIN}/` | MinIO Console | `minioadmin` / `minio_secret_2026` |
+| `https://registry.${DOMAIN}/` | Harbor Registry | Auth interna Harbor |
+| `https://mail.${DOMAIN}/` | Mailpit | Nessuna (solo dev) |
+
+`DOMAIN` si configura in `infrastructures/.env` (default: `127.0.0.1.nip.io`).
+
+---
+
+## Struttura directory
+
+```
+infrastructures/
+├── docker-compose.dev.yml        # Stack dev completo
+├── .env                          # Variabili d'ambiente
+├── Makefile                      # Comandi rapidi (make up, make logs-*, ...)
+├── logs/                         # Log runtime
+├── OCI/                          # Infrastruttura Oracle Cloud (Kubernetes)
+│   ├── ansible/                  # Playbook Ansible
+│   └── k8s/                      # Manifest e Helm values
+└── services/                     # Configurazioni per servizio
+    ├── airflow/                  # DAG, plugin, webserver_config.py
+    ├── alloy/                    # config.alloy (log collector)
+    ├── apisix/                   # config.yaml, init-routes.sh, certs/
+    ├── grafana/                  # provisioning/, dashboards/, templates/
+    ├── harbor/                   # docker-compose.yml, cosign keys
+    ├── keycloak/                 # realm-today-events.json, themes/
+    ├── loki/                     # loki-config.yaml
+    ├── otel-collector/           # otel-collector-config.yaml
+    ├── postgres/                 # init.d/ (extensions, databases), sql/
+    ├── prometheus/               # prometheus.yml, alert-rules.yml
+    ├── redis/                    # (config default)
+    └── tempo/                    # tempo-config.yaml
+```
+
+---
+
+## Rete Docker
+
+Tutti i servizi sono sulla rete bridge `dev-network` (external).
+Il compose Harbor (`services/harbor/docker-compose.yml`) e Scrapyd (`microservices/scraping-service/docker-compose.yml`) condividono la stessa rete.

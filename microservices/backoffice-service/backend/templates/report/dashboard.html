@@ -1,0 +1,97 @@
+{% extends "report/base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <h3>{{ total_events|default:"0" }}</h3>
+    <p>Eventi Totali</p>
+  </div>
+  <div class="stat-card">
+    <h3>{{ active_events|default:"0" }}</h3>
+    <p>Eventi Attivi</p>
+  </div>
+  <div class="stat-card">
+    <h3>{{ staging_count|default:"0" }}</h3>
+    <p>In Staging</p>
+  </div>
+  <div class="stat-card">
+    <h3>{{ cities_count|default:"0" }}</h3>
+    <p>Città</p>
+  </div>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <h2>Eventi per Città</h2>
+    <table>
+      <thead>
+        <tr><th>Città</th><th>Eventi</th></tr>
+      </thead>
+      <tbody>
+        {% for city, count in events_by_city.items %}
+        <tr>
+          <td>{{ city|default:"N/D" }}</td>
+          <td>{{ count }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="2" class="empty-state">Nessun dato</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Eventi per Sorgente</h2>
+    <table>
+      <thead>
+        <tr><th>Sorgente</th><th>Eventi</th></tr>
+      </thead>
+      <tbody>
+        {% for source, count in events_by_source.items %}
+        <tr>
+          <td>{{ source }}</td>
+          <td>{{ count }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="2" class="empty-state">Nessun dato</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ultimi ETL Runs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Sorgente</th>
+        <th>Stato</th>
+        <th>Staging</th>
+        <th>Inseriti</th>
+        <th>Aggiornati</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for run in recent_etl_runs %}
+      <tr>
+        <td>{{ run.run_type }}</td>
+        <td>{{ run.source|default:"N/D" }}</td>
+        <td><span class="badge badge-{{ run.status }}">{{ run.status }}</span></td>
+        <td>{{ run.staging_count }}</td>
+        <td>{{ run.inserted_count }}</td>
+        <td>{{ run.updated_count }}</td>
+        <td>{{ run.started_at|date:"d/m/Y H:i" }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="7" class="empty-state">Nessun ETL run</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

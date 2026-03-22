@@ -16,7 +16,7 @@ from unfold.admin import ModelAdmin
 logger = logging.getLogger(__name__)
 
 from django.conf import settings
-from .models import ScrapingCategory, ScrapingLocation, ScrapingWebsite
+from .models import Category, Location, ScrapingWebsite
 from events.admin_utils import format_date_italian, format_datetime_italian, render_event_status_chip
 
 
@@ -38,15 +38,15 @@ class CategoryFilter(admin.SimpleListFilter):
         return queryset
 
 
-@admin.register(ScrapingCategory)
-class ScrapingCategoryAdmin(ModelAdmin):
+@admin.register(Category)
+class CategoryAdmin(ModelAdmin):
     """Admin per le categorie aggregate dallo scraping (vista PostgreSQL, sola lettura)."""
     list_display = ['categoria', 'count']
     ordering = ['categoria']
 
 
-@admin.register(ScrapingLocation)
-class ScrapingLocationAdmin(ModelAdmin):
+@admin.register(Location)
+class LocationAdmin(ModelAdmin):
     """Admin per le location aggregate con dettaglio eventi correlati."""
     list_display = ['location_name', 'city', 'total_count']
     list_display_links = ['location_name']

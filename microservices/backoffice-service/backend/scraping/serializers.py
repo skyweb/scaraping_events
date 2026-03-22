@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
 
-from .models import ScrapingWebsite, ScrapingCategory, ScrapingLocation
+from .models import ScrapingWebsite, Category, Location
 
 
 @extend_schema_serializer(
@@ -32,15 +32,15 @@ class ScrapingWebsiteSerializer(serializers.ModelSerializer):
         ]
 
 
-class ScrapingCategorySerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     """Serializer per le categorie aggregate (nome e conteggio eventi)."""
     class Meta:
-        model = ScrapingCategory
+        model = Category
         fields = ['categoria', 'count']
 
 
-class ScrapingLocationSerializer(serializers.ModelSerializer):
+class LocationSerializer(serializers.ModelSerializer):
     """Serializer per le location aggregate (nome, città e conteggio eventi)."""
     class Meta:
-        model = ScrapingLocation
-        fields = ['location_name', 'city_name', 'count']
+        model = Location
+        fields = ['location_name', 'city', 'count']

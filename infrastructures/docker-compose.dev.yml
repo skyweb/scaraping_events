@@ -92,7 +92,7 @@ services:
     working_dir: /app/backend
     environment:
       POSTGRES_HOST: postgres
-      POSTGRES_PORT: 5432
+      POSTGRES_PORT: ${POSTGRES_PORT}
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -106,10 +106,10 @@ services:
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@django}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin}
-      CORS_ALLOWED_ORIGINS: "https://frontend.${DOMAIN},http://localhost:3000"
-      CSRF_TRUSTED_ORIGINS: "https://frontend.${DOMAIN},https://backoffice.${DOMAIN},http://localhost:3000"
-      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
-      CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:redis_secret_2026@redis:6379/2}
+      CORS_ALLOWED_ORIGINS: "https://backoffice.${DOMAIN}"
+      CSRF_TRUSTED_ORIGINS: "https://backoffice.${DOMAIN}"
+      CELERY_BROKER_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/1
+      CACHE_REDIS_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/2
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
       OTEL_SERVICE_NAME: backoffice-django
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
@@ -145,7 +145,7 @@ services:
     working_dir: /app/backend
     environment:
       POSTGRES_HOST: postgres
-      POSTGRES_PORT: 5432
+      POSTGRES_PORT: ${POSTGRES_PORT}
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -153,8 +153,8 @@ services:
       DJANGO_DEBUG: "True"
       EMAIL_HOST: smtp
       EMAIL_PORT: "1025"
-      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
-      CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:redis_secret_2026@redis:6379/2}
+      CELERY_BROKER_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/1
+      CACHE_REDIS_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/2
       OTEL_ENABLED: ${OTEL_ENABLED:-true}
       OTEL_SERVICE_NAME: backoffice-celery-worker
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
@@ -193,7 +193,7 @@ services:
 
   # Loki (log backend)
   loki:
-    image: grafana/loki:3.1.0
+    image: grafana/loki:3.6.7
     container_name: dev-loki
     restart: unless-stopped
     command: -config.file=/etc/loki/loki-config.yaml
@@ -212,14 +212,14 @@ services:
         aliases:
           - loki
 
-  # Promtail (log collector da Docker)
-  promtail:
-    image: grafana/promtail:3.1.0
-    container_name: dev-promtail
+  # Grafana Alloy (log collector — sostituto di Promtail EOL)
+  alloy:
+    image: grafana/alloy:1.14.1
+    container_name: dev-alloy
     restart: unless-stopped
-    command: -config.file=/etc/promtail/promtail-config.yaml
+    command: run /etc/alloy/config.alloy
     volumes:
-      - ./services/promtail/promtail-config.yaml:/etc/promtail/promtail-config.yaml:ro
+      - ./services/alloy/config.alloy:/etc/alloy/config.alloy:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
     depends_on:
@@ -230,7 +230,7 @@ services:
 
   # Grafana (UI unificata: log, metriche, traces)
   grafana:
-    image: grafana/grafana:11.1.0
+    image: grafana/grafana:12.3.0
     container_name: dev-grafana
     restart: unless-stopped
     environment:
@@ -269,7 +269,7 @@ services:
 
   # Grafana Tempo — trace backend (riceve trace via OTel Collector)
   tempo:
-    image: grafana/tempo:2.6.1
+    image: grafana/tempo:2.9.0
     container_name: dev-tempo
     restart: unless-stopped
     command: ["-config.file=/etc/tempo/tempo-config.yaml"]
@@ -294,6 +294,11 @@ services:
     env_file:
       - .env
     environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CELERY__BROKER_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/0
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}
       AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
     volumes:
@@ -327,6 +332,11 @@ services:
     env_file:
       - .env
     environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CELERY__BROKER_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/0
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}
       AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: "True"
       AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
@@ -366,6 +376,11 @@ services:
     env_file:
       - .env
     environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CELERY__BROKER_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/0
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}
       AIRFLOW__WEBSERVER__BASE_URL: https://airflow.${DOMAIN}
       # SMTP via Mailpit
       AIRFLOW__SMTP__SMTP_HOST: smtp
@@ -374,8 +389,7 @@ services:
       AIRFLOW__SMTP__SMTP_SSL: "False"
       AIRFLOW__SMTP__SMTP_MAIL_FROM: "airflow@${DOMAIN}"
       SCRAPY_IMAGE: ${SCRAPY_IMAGE:-registry.${DOMAIN}/today-events/scraping-service:latest}
-      SCRAPY_SRC_PATH: ${SCRAPY_SRC_PATH:-}
-      SCRAPY_DATA_PATH: ${SCRAPY_DATA_PATH:-}
+      PROJECT_ROOT: ${PROJECT_ROOT:-}
       # Airflow Connection per Harbor registry (docker pull autenticato)
       AIRFLOW_CONN_HARBOR_REGISTRY: docker://${HARBOR_ROBOT_USER}:${HARBOR_ROBOT_SECRET}@registry.${DOMAIN}
     command: scheduler

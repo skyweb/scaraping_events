@@ -77,23 +77,48 @@ class KeycloakAdminMiddleware:
             ).render()
 
         User = get_user_model()
-        user = User.objects.filter(email=email, is_active=True).first()
+        kc_username = userinfo.get("preferred_username", "").strip() or email.split("@")[0]
+
+        # Cerca per preferred_username di Keycloak (attivo o disattivato)
+        user = User.objects.filter(username=kc_username).first()
+        # Fallback: cerca per email
+        if user is None:
+            user = User.objects.filter(email=email).first()
+
+        if user is not None:
+            # Riattiva se disattivato, assicura is_staff
+            changed = False
+            if not user.is_active:
+                user.is_active = True
+                changed = True
+            if not user.is_staff:
+                user.is_staff = True
+                changed = True
+            if changed:
+                user.save(update_fields=["is_active", "is_staff"])
+                sso_logger.info(
+                    "SSO riattivazione utente",
+                    extra={"email": email, "username": user.username},
+                )
 
         if user is None:
             # Auto-provisioning: crea utente Django da Keycloak
-            # Solo il ruolo "admin" ottiene is_superuser (OWASP A01:2021 — Privilege Escalation)
+            # Username da preferred_username Keycloak (con fallback suffisso numerico)
+            username = self._unique_username(User, kc_username)
             is_superuser = "admin" in set(roles)
-            user = User.objects.create_user(
-                username=email,
+            user = User(
+                username=username,
                 email=email,
                 first_name=userinfo.get("given_name", ""),
                 last_name=userinfo.get("family_name", ""),
                 is_staff=True,
                 is_superuser=is_superuser,
             )
+            user.set_unusable_password()
+            user.save()
             sso_logger.info(
                 "SSO auto-provisioning utente",
-                extra={"email": email, "roles": roles, "is_superuser": is_superuser},
+                extra={"email": email, "username": username, "roles": roles, "is_superuser": is_superuser},
             )
 
             # Ruolo "web" → gruppo "Redazione" con permessi limitati
@@ -115,6 +140,16 @@ class KeycloakAdminMiddleware:
             extra={"email": email, "user": user.get_username(), "roles": roles},
         )
         return self.get_response(request)
+
+    @staticmethod
+    def _unique_username(user_model, base: str) -> str:
+        """Genera uno username unico: prova 'base', poi 'base-1', 'base-2', ecc."""
+        if not user_model.objects.filter(username=base).exists():
+            return base
+        n = 1
+        while user_model.objects.filter(username=f"{base}-{n}").exists():
+            n += 1
+        return f"{base}-{n}"
 
     @classmethod
     def _get_or_create_redazione_group(cls) -> Group:

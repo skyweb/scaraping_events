@@ -28,7 +28,7 @@ NC    := \033[0m
 # =============================================================================
 
 .PHONY: help \
-        up up-all down restart ps logs build pull \
+        up down restart ps logs build pull \
         up-core up-observability up-airflow \
         logs-backoffice logs-celery logs-db logs-redis \
         logs-grafana logs-loki logs-airflow \
@@ -47,19 +47,30 @@ NC    := \033[0m
 # Stack completo
 # =============================================================================
 
-up: ## Avvia lo stack di sviluppo (core + gateway + observability + minio)
-	@echo "$(GREEN)Avvio stack dev...$(NC)"
-	$(COMPOSE) up --build -d \
-	    postgres redis \
-	    etcd apisix apisix-init apisix-dashboard keycloak \
-	    backoffice minio \
-	    otel-collector tempo loki promtail grafana
+up: up-harbor ## Avvia TUTTI i servizi (incluso Harbor, Airflow, Observability)
+	@echo "$(GREEN)Avvio stack completo...$(NC)"
+	$(COMPOSE) up --build -d
 	@echo ""
-	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC) Django Admin"
-	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC) APISIX Dashboard"
-	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)             Keycloak"
-	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)          Grafana"
-	@echo "$(CYAN)  https://minio.$(DOMAIN)/$(NC)            MinIO Console"
+	@echo "$(GREEN)  Applicazione$(NC)"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC)         Django Admin"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/report/$(NC)        Report"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/docs/$(NC)          API Docs (interno)"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/docs/public/$(NC)   API Docs (pubblico)"
+	@echo "$(CYAN)  https://flower.$(DOMAIN)/$(NC)                   Flower (Celery)"
+	@echo ""
+	@echo "$(GREEN)  Autenticazione$(NC)"
+	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)                     Keycloak"
+	@echo ""
+	@echo "$(GREEN)  Infrastruttura$(NC)"
+	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC)         APISIX Dashboard"
+	@echo "$(CYAN)  https://mail.$(DOMAIN)/$(NC)                     Mailpit"
+	@echo "$(CYAN)  https://minio.$(DOMAIN)/$(NC)                    MinIO Console"
+	@echo "$(CYAN)  https://registry.$(DOMAIN)/$(NC)                 Harbor Registry"
+	@echo ""
+	@echo "$(GREEN)  Observability$(NC)"
+	@echo "$(CYAN)  https://grafana.$(DOMAIN)/$(NC)                  Grafana"
+	@echo "$(CYAN)  https://prometheus.$(DOMAIN)/$(NC)               Prometheus"
+	@echo "$(CYAN)  https://airflow.$(DOMAIN)/$(NC)                  Airflow"
 	@echo ""
 
 down: ## Ferma e rimuove tutti i container (i volumi restano)
@@ -88,12 +99,10 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 # Avvio per gruppo
 # =============================================================================
 #
-#   up          = core + gateway + observability + app (stack sviluppo quotidiano)
-#   up-all      = tutti i servizi
-#
+#   up          = tutti i servizi (core + observability + airflow + harbor)
 #   Gruppi individuali:
-#     up-core         stack base (postgres, redis, gateway, app, celery, harbor)
-#     up-observability monitoring (prometheus, otel, tempo, loki, grafana, esportatori)
+#     up-core         stack base (postgres, redis, gateway, app, celery, harbor, mailpit)
+#     up-observability monitoring (prometheus, otel, tempo, loki, alloy, grafana, esportatori)
 #     up-airflow      orchestrazione DAG (airflow)
 #
 
@@ -105,27 +114,37 @@ up-core: up-harbor ## Stack base (postgres, redis, gateway, app, celery, harbor)
 	    backoffice minio \
 	    backoffice-celery-worker flower \
 	    mailpit
+	@echo ""
+	@echo "$(GREEN)  Applicazione$(NC)"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC)         Django Admin"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/report/$(NC)        Report"
+	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/docs/$(NC)          API Docs"
+	@echo "$(CYAN)  https://flower.$(DOMAIN)/$(NC)                   Flower (Celery)"
+	@echo ""
+	@echo "$(GREEN)  Autenticazione$(NC)"
+	@echo "$(CYAN)  https://auth.$(DOMAIN)/$(NC)                     Keycloak"
+	@echo ""
+	@echo "$(GREEN)  Infrastruttura$(NC)"
+	@echo "$(CYAN)  https://apisix-dashboard.$(DOMAIN)/$(NC)         APISIX Dashboard"
+	@echo "$(CYAN)  https://mail.$(DOMAIN)/$(NC)                     Mailpit"
+	@echo "$(CYAN)  https://minio.$(DOMAIN)/$(NC)                    MinIO Console"
+	@echo "$(CYAN)  https://registry.$(DOMAIN)/$(NC)                 Harbor Registry"
+	@echo ""
 
 up-harbor: ## Avvia Harbor Registry (compose separato)
 	@echo "$(GREEN)Avvio Harbor Registry...$(NC)"
 	docker compose -p infrastructures -f services/harbor/docker-compose.yml up -d
 
-up-observability: ## Monitoring (prometheus, otel, tempo, loki, promtail, grafana, esportatori)
+up-observability: ## Monitoring (prometheus, otel, tempo, loki, alloy, grafana, esportatori)
 	@echo "$(GREEN)Avvio observability...$(NC)"
 	$(COMPOSE) up -d prometheus otel-collector tempo \
-	    loki promtail grafana \
+	    loki alloy grafana \
 	    redis-exporter celery-exporter
 
 up-airflow: ## Orchestrazione DAG (airflow webserver + scheduler)
 	@echo "$(GREEN)Avvio Airflow...$(NC)"
 	$(COMPOSE) up -d airflow-init airflow-webserver airflow-scheduler
 
-up-all: up-harbor ## Avvia TUTTI i servizi (incluso Harbor)
-	@echo "$(GREEN)Avvio stack completo...$(NC)"
-	$(COMPOSE) up --build -d
-	@echo ""
-	@echo "$(CYAN)  Tutti i servizi avviati.$(NC)"
-	@echo ""
 
 # =============================================================================
 # Log per servizio
@@ -146,8 +165,8 @@ logs-redis: ## Logs Redis (follow)
 logs-grafana: ## Logs Grafana (follow)
 	$(COMPOSE) logs -f grafana
 
-logs-loki: ## Logs Loki + Promtail (follow)
-	$(COMPOSE) logs -f loki promtail
+logs-loki: ## Logs Loki + Alloy (follow)
+	$(COMPOSE) logs -f loki alloy
 
 logs-airflow: ## Logs Airflow webserver + scheduler (follow)
 	$(COMPOSE) logs -f airflow-webserver airflow-scheduler

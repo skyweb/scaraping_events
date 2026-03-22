@@ -1,0 +1,69 @@
+{% extends "report/base.html" %}
+{% block title %}ETL Runs{% endblock %}
+
+{% block content %}
+<h1>ETL Runs</h1>
+
+<form method="get" class="filters">
+  <select name="status" onchange="this.form.submit()">
+    <option value="">Tutti gli stati</option>
+    <option value="success" {% if selected_status == "success" %}selected{% endif %}>Success</option>
+    <option value="running" {% if selected_status == "running" %}selected{% endif %}>Running</option>
+    <option value="failed" {% if selected_status == "failed" %}selected{% endif %}>Failed</option>
+  </select>
+  <noscript><button type="submit">Filtra</button></noscript>
+</form>
+
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tipo</th>
+        <th>Sorgente</th>
+        <th>Stato</th>
+        <th>Staging</th>
+        <th>Inseriti</th>
+        <th>Aggiornati</th>
+        <th>Durata</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for run in page_obj %}
+      <tr>
+        <td>{{ run.id }}</td>
+        <td>{{ run.run_type }}</td>
+        <td>{{ run.source|default:"N/D" }}</td>
+        <td><span class="badge badge-{{ run.status }}">{{ run.status }}</span></td>
+        <td>{{ run.staging_count }}</td>
+        <td>{{ run.inserted_count }}</td>
+        <td>{{ run.updated_count }}</td>
+        <td>{% if run.duration %}{{ run.duration }}s{% else %}N/D{% endif %}</td>
+        <td>{{ run.started_at|date:"d/m/Y H:i" }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="9" class="empty-state">Nessun ETL run trovato</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if page_obj.has_other_pages %}
+  <div class="pagination">
+    {% if page_obj.has_previous %}
+    <a href="?{{ query_string }}&page={{ page_obj.previous_page_number }}">Precedente</a>
+    {% else %}
+    <span class="disabled">Precedente</span>
+    {% endif %}
+
+    <span class="current">Pagina {{ page_obj.number }} di {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+    <a href="?{{ query_string }}&page={{ page_obj.next_page_number }}">Successiva</a>
+    {% else %}
+    <span class="disabled">Successiva</span>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

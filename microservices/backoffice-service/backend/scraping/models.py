@@ -2,13 +2,13 @@
 Modelli per le viste aggregate dello scraping (categorie e location)
 e per la gestione dei siti web scrapati.
 
-I modelli ScrapingCategory e ScrapingLocation sono collegati a viste
+I modelli Category e Location sono collegati a viste
 PostgreSQL (managed=False). ScrapingWebsite è una tabella gestita.
 """
 from django.db import models
 
 
-class ScrapingCategory(models.Model):
+class Category(models.Model):
     """Categorie uniche estratte dagli eventi — vista aggregata su v_categorie."""
     categoria = models.CharField(max_length=255, primary_key=True)
     count = models.IntegerField(default=0)
@@ -25,7 +25,7 @@ class ScrapingCategory(models.Model):
         return self.categoria
 
 
-class ScrapingLocation(models.Model):
+class Location(models.Model):
     """Location uniche estratte dagli eventi — vista aggregata su v_locations."""
     location_name = models.CharField(max_length=255, primary_key=True)
     city = models.CharField(max_length=100, blank=True, null=True, db_column='city')
@@ -40,8 +40,8 @@ class ScrapingLocation(models.Model):
 
     def __str__(self) -> str:
         """Rappresentazione testuale: nome location con eventuale città tra parentesi."""
-        if self.city_name:
-            return f"{self.location_name} ({self.city_name})"
+        if self.city:
+            return f"{self.location_name} ({self.city})"
         return self.location_name or ''
 
 

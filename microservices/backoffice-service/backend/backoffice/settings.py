@@ -156,9 +156,6 @@ STORAGES = {
     },
 }
 
-# Frontend build directory
-FRONTEND_DIR = BASE_DIR / 'staticfiles' / 'frontend'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Form Renderer

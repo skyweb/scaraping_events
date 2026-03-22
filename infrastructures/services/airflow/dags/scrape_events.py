@@ -53,10 +53,10 @@ DOCKER_NETWORK = os.getenv('DOCKER_NETWORK', 'dev-network')
 DOCKER_URL = os.getenv('DOCKER_URL', 'unix://var/run/docker.sock')
 # Airflow Connection per registry privato (Harbor)
 REGISTRY_CONN_ID = os.getenv('REGISTRY_CONN_ID', 'harbor_registry')
-# Volume mount per codice sorgente Scrapy (dev: codice montato, prod: incluso nell'immagine)
-SCRAPY_SRC_PATH = os.getenv('SCRAPY_SRC_PATH', '')  # es. /Users/.../scraping-service/src
-# Volume mount per output dati (batch JSON, log)
-SCRAPY_DATA_PATH = os.getenv('SCRAPY_DATA_PATH', '')  # es. /Users/.../scraping-service/data
+# Root del progetto — i path Scrapy vengono derivati automaticamente
+PROJECT_ROOT = os.getenv('PROJECT_ROOT', '')
+SCRAPY_SRC_PATH = os.path.join(PROJECT_ROOT, 'microservices', 'scraping-service', 'src') if PROJECT_ROOT else ''
+SCRAPY_DATA_PATH = os.path.join(PROJECT_ROOT, 'microservices', 'scraping-service', 'data') if PROJECT_ROOT else ''
 
 CITIES_TODAY = [
     'milano', 'torino', 'genova', 'venezia', 'bologna', 'verona', 'treviso', 'trento', 'udine', 'pordenone',

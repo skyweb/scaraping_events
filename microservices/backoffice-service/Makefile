@@ -4,7 +4,6 @@
 # Variables
 # =============================================================================
 BACKEND_DIR := backend
-FRONTEND_DIR := frontend
 VENV := $(BACKEND_DIR)/venv
 PYTHON := $(shell pwd)/$(VENV)/bin/python3
 PIP := $(shell pwd)/$(VENV)/bin/pip3
@@ -22,7 +21,7 @@ COMPOSE_DEV := docker compose -f $(INFRA_DIR)/docker-compose.dev.yml --env-file 
 GREEN := \033[0;32m
 NC := \033[0m
 
-.PHONY: help build-frontend \
+.PHONY: help \
         dev dev-build dev-up dev-down dev-restart dev-logs dev-shell \
         dev-migrate dev-makemigrations dev-superuser dev-collectstatic \
         dev-ps dev-oauth2 dev-import-comuni build build-no-cache clean
@@ -40,9 +39,6 @@ help:
 	@echo "    collectstatic    Raccoglie file statici"
 	@echo "    shell-django     Apre Django shell"
 	@echo "    check-db         Verifica connessione DB e conta record"
-	@echo ""
-	@echo "  Frontend:"
-	@echo "    build-frontend   Compila il frontend React (Vite build)"
 	@echo ""
 	@echo "  Docker Compose Dev (postgres, redis, django, celery, nginx):"
 	@echo "    dev              Build + avvia tutto lo stack dev in background"
@@ -67,21 +63,6 @@ help:
 	@echo "  Cleanup:"
 	@echo "    clean            Rimuove file temporanei e stack dev"
 	@echo ""
-
-# =============================================================================
-# Frontend
-# =============================================================================
-
-build-frontend:
-	@echo "$(GREEN)Compilazione Frontend React...$(NC)"
-	@if [ ! -d $(FRONTEND_DIR)/node_modules ]; then \
-		echo "$(GREEN)Installazione dipendenze npm...$(NC)"; \
-		cd $(FRONTEND_DIR) && npm install; \
-	fi
-	cd $(FRONTEND_DIR) && npm run build
-	@echo "$(GREEN)Copia build nel Backend...$(NC)"
-	mkdir -p $(BACKEND_DIR)/staticfiles/frontend
-	cp -r $(FRONTEND_DIR)/dist/* $(BACKEND_DIR)/staticfiles/frontend/
 
 # =============================================================================
 # Docker Compose Development
@@ -205,7 +186,6 @@ build-no-cache:
 
 clean:
 	@echo "$(GREEN)Pulizia...$(NC)"
-	rm -rf $(FRONTEND_DIR)/dist
 	rm -rf $(BACKEND_DIR)/__pycache__
 	rm -rf $(BACKEND_DIR)/**/__pycache__
 	-$(COMPOSE_DEV) down -v 2>/dev/null

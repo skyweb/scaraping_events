@@ -1,0 +1,198 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "links": [],
+  "panels": [
+    {
+      "title": "Alloy — Stato",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 0, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "options": { "1": { "text": "UP", "color": "green" }, "0": { "text": "DOWN", "color": "red" } }, "type": "value" }
+          ],
+          "thresholds": { "steps": [{ "color": "red", "value": null }, { "color": "green", "value": 1 }] }
+        }
+      },
+      "targets": [
+        { "expr": "up{job=\"alloy\"}", "legendFormat": "Alloy", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Alloy — Uptime",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 4, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      },
+      "targets": [
+        { "expr": "time() - process_start_time_seconds{job=\"alloy\"}", "legendFormat": "Uptime", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Alloy — Memoria RSS",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 8, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "bytes",
+          "thresholds": { "steps": [{ "color": "green", "value": null }, { "color": "yellow", "value": 134217728 }, { "color": "red", "value": 268435456 }] }
+        }
+      },
+      "targets": [
+        { "expr": "process_resident_memory_bytes{job=\"alloy\"}", "legendFormat": "RSS", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Alloy — CPU",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 12, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "thresholds": { "steps": [{ "color": "green", "value": null }, { "color": "yellow", "value": 0.5 }, { "color": "red", "value": 0.8 }] }
+        }
+      },
+      "targets": [
+        { "expr": "rate(process_cpu_seconds_total{job=\"alloy\"}[5m])", "legendFormat": "CPU", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Alloy — Goroutines",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 16, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "go_goroutines{job=\"alloy\"}", "legendFormat": "Goroutines", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Alloy — Target attivi",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 20, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [
+        { "expr": "alloy_component_dependencies_wait_seconds_count{job=\"alloy\"}", "legendFormat": "Components", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Log inviati a Loki (rate/s)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 15, "lineWidth": 2 },
+          "unit": "ops"
+        }
+      },
+      "targets": [
+        { "expr": "sum(rate(loki_write_sent_entries_total{job=\"alloy\"}[5m]))", "legendFormat": "entries/s", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Bytes inviati a Loki (rate/s)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 4 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 15, "lineWidth": 2 },
+          "unit": "Bps"
+        }
+      },
+      "targets": [
+        { "expr": "sum(rate(loki_write_sent_bytes_total{job=\"alloy\"}[5m]))", "legendFormat": "bytes/s", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Errori push Loki",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 12 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 15, "lineWidth": 2, "drawStyle": "bars" },
+          "color": { "mode": "fixed", "fixedColor": "red" },
+          "unit": "short"
+        }
+      },
+      "targets": [
+        { "expr": "sum(rate(loki_write_dropped_entries_total{job=\"alloy\"}[5m]))", "legendFormat": "dropped/s", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Memoria Alloy nel tempo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 12 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 15, "lineWidth": 2 },
+          "unit": "bytes"
+        }
+      },
+      "targets": [
+        { "expr": "process_resident_memory_bytes{job=\"alloy\"}", "legendFormat": "RSS", "refId": "A" },
+        { "expr": "go_memstats_heap_inuse_bytes{job=\"alloy\"}", "legendFormat": "Heap in use", "refId": "B" }
+      ]
+    },
+    {
+      "title": "Volume log per container (top 10)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 20 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "fieldConfig": {
+        "defaults": {
+          "custom": { "fillOpacity": 30, "lineWidth": 1, "stacking": { "mode": "normal" } },
+          "unit": "short"
+        }
+      },
+      "targets": [
+        { "expr": "topk(10, sum by (container_name) (count_over_time({container_name=~\"dev-.*\"}[5m])))", "legendFormat": "{{container_name}}", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Log per livello (backoffice)",
+      "type": "piechart",
+      "gridPos": { "h": 8, "w": 8, "x": 0, "y": 28 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "targets": [
+        { "expr": "sum by (level) (count_over_time({container_name=~\"dev-backoffice.*\"} | json | level != \"\" [$__range]))", "legendFormat": "{{level}}", "refId": "A" }
+      ]
+    },
+    {
+      "title": "Errori recenti (tutti i container)",
+      "type": "logs",
+      "gridPos": { "h": 10, "w": 16, "x": 8, "y": 28 },
+      "datasource": { "type": "loki", "uid": "loki" },
+      "options": {
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLogMessage": true,
+        "enableLogDetails": true
+      },
+      "targets": [
+        { "expr": "{container_name=~\"dev-.*\"} |~ \"(?i)(error|exception|traceback|failed|critical)\"", "refId": "A" }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["infrastructure", "alloy", "logs"],
+  "templating": { "list": [] },
+  "time": { "from": "now-1h", "to": "now" },
+  "timepicker": {},
+  "timezone": "Europe/Rome",
+  "title": "Alloy — Log Pipeline",
+  "uid": "alloy-logs",
+  "version": 1
+}

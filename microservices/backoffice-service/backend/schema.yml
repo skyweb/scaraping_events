@@ -15,10 +15,10 @@ info:
     \ - Lettura staging events\n- `events:create` - Creazione staging events (singola\
     \ e bulk)\n- `events:update` - Aggiornamento staging events\n- `events:delete`\
     \ - Eliminazione staging events\n\n### Versioning\n\nLe API esterne sono versionate\
-    \ tramite URL path:\n- Versione corrente: **v1** → `/api/v1/events/staging/`\n\
-    - Endpoint info versione: `GET /api/version/` (senza autenticazione)\n- Header\
-    \ `X-API-Version` presente in ogni risposta API\n\nLe API interne (`/api/events/`,\
-    \ `/api/dashboard/`, ecc.) usano header versioning:\n- Header: `Accept: application/vnd.todayevents.v1+json`\n\
+    \ tramite URL path:\n- Versione corrente: **v1** → `/api/v1/events/`\n- Endpoint\
+    \ info versione: `GET /api/version/` (senza autenticazione)\n- Header `X-API-Version`\
+    \ presente in ogni risposta API\n\nLe API interne (`/api/events/`, `/api/dashboard/`,\
+    \ ecc.) usano header versioning:\n- Header: `Accept: application/vnd.todayevents.v1+json`\n\
     - Default: v1 (se header assente)\n    "
 paths:
   /api/ai-transform/event/:
@@ -533,12 +533,12 @@ paths:
         name: date_end
         schema:
           type: string
-          format: date
+          format: date-time
       - in: query
         name: date_start
         schema:
           type: string
-          format: date
+          format: date-time
       - in: query
         name: is_active
         schema:
@@ -565,6 +565,16 @@ paths:
         name: source
         schema:
           type: string
+      - in: query
+        name: status
+        schema:
+          type: string
+          enum:
+          - published
+          - staging
+        description: |-
+          * `staging` - Staging
+          * `published` - Pubblicato
       tags:
       - Production Events
       security:
@@ -577,7 +587,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PaginatedProductionEventListList'
+                $ref: '#/components/schemas/PaginatedEventListList'
               examples:
                 ListaEventi:
                   value:
@@ -608,13 +618,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ProductionEvent'
+              $ref: '#/components/schemas/Event'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/ProductionEvent'
+              $ref: '#/components/schemas/Event'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/ProductionEvent'
+              $ref: '#/components/schemas/Event'
         required: true
       security:
       - cookieAuth: []
@@ -626,7 +636,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductionEvent'
+                $ref: '#/components/schemas/Event'
               examples:
                 EventoProduzione:
                   value:
@@ -646,8 +656,6 @@ paths:
                     price: '25.00'
                     date_start: '2026-04-15'
                     date_end: '2026-04-15'
-                    time_start: '21:00'
-                    time_end: '23:30'
                     is_active: true
                     created_at: '2026-03-20T10:00:00Z'
                     updated_at: '2026-03-20T10:00:00Z'
@@ -663,7 +671,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Production Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
       - Production Events
@@ -677,7 +685,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductionEvent'
+                $ref: '#/components/schemas/Event'
               examples:
                 EventoProduzione:
                   value:
@@ -697,8 +705,6 @@ paths:
                     price: '25.00'
                     date_start: '2026-04-15'
                     date_end: '2026-04-15'
-                    time_start: '21:00'
-                    time_end: '23:30'
                     is_active: true
                     created_at: '2026-03-20T10:00:00Z'
                     updated_at: '2026-03-20T10:00:00Z'
@@ -713,7 +719,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Production Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
       - Production Events
@@ -721,13 +727,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ProductionEvent'
+              $ref: '#/components/schemas/Event'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/ProductionEvent'
+              $ref: '#/components/schemas/Event'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/ProductionEvent'
+              $ref: '#/components/schemas/Event'
         required: true
       security:
       - cookieAuth: []
@@ -739,7 +745,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductionEvent'
+                $ref: '#/components/schemas/Event'
               examples:
                 EventoProduzione:
                   value:
@@ -759,8 +765,6 @@ paths:
                     price: '25.00'
                     date_start: '2026-04-15'
                     date_end: '2026-04-15'
-                    time_start: '21:00'
-                    time_end: '23:30'
                     is_active: true
                     created_at: '2026-03-20T10:00:00Z'
                     updated_at: '2026-03-20T10:00:00Z'
@@ -775,7 +779,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Production Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
       - Production Events
@@ -783,13 +787,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PatchedProductionEvent'
+              $ref: '#/components/schemas/PatchedEvent'
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/PatchedProductionEvent'
+              $ref: '#/components/schemas/PatchedEvent'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/PatchedProductionEvent'
+              $ref: '#/components/schemas/PatchedEvent'
       security:
       - cookieAuth: []
       - BearerAuth: []
@@ -800,7 +804,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductionEvent'
+                $ref: '#/components/schemas/Event'
               examples:
                 EventoProduzione:
                   value:
@@ -820,8 +824,6 @@ paths:
                     price: '25.00'
                     date_start: '2026-04-15'
                     date_end: '2026-04-15'
-                    time_start: '21:00'
-                    time_end: '23:30'
                     is_active: true
                     created_at: '2026-03-20T10:00:00Z'
                     updated_at: '2026-03-20T10:00:00Z'
@@ -836,7 +838,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Production Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
       - Production Events
@@ -858,7 +860,7 @@ paths:
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Production Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
       - Production Events
@@ -889,12 +891,12 @@ paths:
         name: date_end
         schema:
           type: string
-          format: date
+          format: date-time
       - in: query
         name: date_start
         schema:
           type: string
-          format: date
+          format: date-time
       - in: query
         name: is_active
         schema:
@@ -921,6 +923,16 @@ paths:
         name: source
         schema:
           type: string
+      - in: query
+        name: status
+        schema:
+          type: string
+          enum:
+          - published
+          - staging
+        description: |-
+          * `staging` - Staging
+          * `published` - Pubblicato
       tags:
       - Production Events
       security:
@@ -950,12 +962,12 @@ paths:
         name: date_end
         schema:
           type: string
-          format: date
+          format: date-time
       - in: query
         name: date_start
         schema:
           type: string
-          format: date
+          format: date-time
       - in: query
         name: is_active
         schema:
@@ -982,6 +994,16 @@ paths:
         name: source
         schema:
           type: string
+      - in: query
+        name: status
+        schema:
+          type: string
+          enum:
+          - published
+          - staging
+        description: |-
+          * `staging` - Staging
+          * `published` - Pubblicato
       tags:
       - Production Events
       security:
@@ -1032,7 +1054,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PaginatedScrapingCategoryList'
+                $ref: '#/components/schemas/PaginatedCategoryList'
           description: ''
   /api/scraping/locations/:
     get:
@@ -1075,7 +1097,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PaginatedScrapingLocationList'
+                $ref: '#/components/schemas/PaginatedLocationList'
           description: ''
   /api/scraping/locations/{location_name}/:
     get:
@@ -1101,7 +1123,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ScrapingLocation'
+                $ref: '#/components/schemas/Location'
           description: ''
   /api/scraping/websites/:
     get:
@@ -1205,139 +1227,14 @@ paths:
                     notes: 50+ citta italiane
                   summary: Website scraping
           description: ''
-  /api/staging/:
+  /api/v1/events/:
     get:
-      operationId: api_staging_list
-      description: Recupera la lista paginata degli eventi in staging (pre-validazione).
-      summary: Lista staging events
+      operationId: api_v1_events_list
+      description: Recupera la lista di tutti gli eventi. Richiede permesso `events:read`.
+      summary: Lista eventi
       parameters:
       - in: query
-        name: city_name
-        schema:
-          type: string
-      - name: page
-        required: false
-        in: query
-        description: A page number within the paginated result set.
-        schema:
-          type: integer
-      - name: search
-        required: false
-        in: query
-        description: A search term.
-        schema:
-          type: string
-      - in: query
-        name: source
-        schema:
-          type: string
-      tags:
-      - Staging Events (Internal)
-      security:
-      - cookieAuth: []
-      - BearerAuth: []
-      - ApiKeyAuth: []
-      - SessionAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedStagingEventList'
-              examples:
-                StagingEvent:
-                  value:
-                    count: 123
-                    next: http://api.example.org/accounts/?page=4
-                    previous: http://api.example.org/accounts/?page=2
-                    results:
-                    - id: 42
-                      uuid: b2c3d4e5f6a7b8c9
-                      content_hash: f1e2d3c4b5a6f7e8
-                      source: puglia_culture
-                      title: Festival della Taranta
-                      city_name: Lecce
-                      location_name: Piazza Duomo
-                      location_address: Piazza del Duomo, Lecce
-                      location_coordinates:
-                        lat: 40.3516
-                        lng: 18.1718
-                      date_start: '2026-08-20T21:00:00Z'
-                      date_end: '2026-08-20T23:59:00Z'
-                      url: https://pugliaculture.it/eventi/taranta
-                      description: La notte della Taranta edizione 2026
-                      image_url: https://example.com/taranta.jpg
-                      price: Gratuito
-                      category:
-                      - Musica
-                      - Festival
-                      scraped_at: '2026-03-20T10:30:00Z'
-                      loaded_at: '2026-03-20T10:31:00Z'
-                      created_at: '2026-03-20T10:31:00Z'
-                  summary: Staging event
-          description: ''
-  /api/staging/{id}/:
-    get:
-      operationId: api_staging_retrieve
-      description: Recupera i dettagli di un singolo evento in staging.
-      summary: Dettaglio staging event
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: integer
-        description: A unique integer value identifying this Staging Event.
-        required: true
-      tags:
-      - Staging Events (Internal)
-      security:
-      - cookieAuth: []
-      - BearerAuth: []
-      - ApiKeyAuth: []
-      - SessionAuth: []
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/StagingEvent'
-              examples:
-                StagingEvent:
-                  value:
-                    id: 42
-                    uuid: b2c3d4e5f6a7b8c9
-                    content_hash: f1e2d3c4b5a6f7e8
-                    source: puglia_culture
-                    title: Festival della Taranta
-                    city_name: Lecce
-                    location_name: Piazza Duomo
-                    location_address: Piazza del Duomo, Lecce
-                    location_coordinates:
-                      lat: 40.3516
-                      lng: 18.1718
-                    date_start: '2026-08-20T21:00:00Z'
-                    date_end: '2026-08-20T23:59:00Z'
-                    url: https://pugliaculture.it/eventi/taranta
-                    description: La notte della Taranta edizione 2026
-                    image_url: https://example.com/taranta.jpg
-                    price: Gratuito
-                    category:
-                    - Musica
-                    - Festival
-                    scraped_at: '2026-03-20T10:30:00Z'
-                    loaded_at: '2026-03-20T10:31:00Z'
-                    created_at: '2026-03-20T10:31:00Z'
-                  summary: Staging event
-          description: ''
-  /api/v1/events/staging/:
-    get:
-      operationId: api_v1_events_staging_list
-      description: Recupera la lista di tutti gli staging events. Richiede permesso
-        `events:read`.
-      summary: Lista staging events
-      parameters:
-      - in: query
-        name: city_name
+        name: city
         schema:
           type: string
       - name: ordering
@@ -1367,7 +1264,7 @@ paths:
         schema:
           type: string
       tags:
-      - Staging Events
+      - Events
       security:
       - cookieAuth: []
       - BearerAuth: []
@@ -1378,53 +1275,49 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PaginatedStagingEventList'
+                $ref: '#/components/schemas/PaginatedEventList'
               examples:
-                StagingEvent:
+                EventoProduzione:
                   value:
                     count: 123
                     next: http://api.example.org/accounts/?page=4
                     previous: http://api.example.org/accounts/?page=2
                     results:
-                    - id: 42
-                      uuid: b2c3d4e5f6a7b8c9
-                      content_hash: f1e2d3c4b5a6f7e8
-                      source: puglia_culture
-                      title: Festival della Taranta
-                      city_name: Lecce
-                      location_name: Piazza Duomo
-                      location_address: Piazza del Duomo, Lecce
-                      location_coordinates:
-                        lat: 40.3516
-                        lng: 18.1718
-                      date_start: '2026-08-20T21:00:00Z'
-                      date_end: '2026-08-20T23:59:00Z'
-                      url: https://pugliaculture.it/eventi/taranta
-                      description: La notte della Taranta edizione 2026
-                      image_url: https://example.com/taranta.jpg
-                      price: Gratuito
+                    - id: 1
+                      uuid: a1b2c3d4e5f6g7h8
+                      title: Concerto Jazz al Blue Note
+                      city: Milano
+                      source: city_today
+                      url: https://www.milanotoday.it/eventi/concerto-jazz.html
+                      description: Serata jazz con artisti internazionali
                       category:
                       - Musica
-                      - Festival
-                      scraped_at: '2026-03-20T10:30:00Z'
-                      loaded_at: '2026-03-20T10:31:00Z'
-                      created_at: '2026-03-20T10:31:00Z'
-                  summary: Staging event
+                      - Concerti
+                      image_url: https://example.com/jazz.jpg
+                      location_name: Blue Note Milano
+                      location_address: Via Borsieri 37, Milano
+                      price: '25.00'
+                      date_start: '2026-04-15'
+                      date_end: '2026-04-15'
+                      is_active: true
+                      created_at: '2026-03-20T10:00:00Z'
+                      updated_at: '2026-03-20T10:00:00Z'
+                  summary: Evento produzione
           description: ''
     post:
-      operationId: api_v1_events_staging_create
-      description: "\nCrea un nuovo staging event. Richiede permesso `events:create`.\n\
-        \n**Campi obbligatori:** `uuid`, `source`, `title`\n\nTutti gli altri campi\
+      operationId: api_v1_events_create
+      description: "\nCrea un nuovo evento. Richiede permesso `events:create`.\n\n\
+        **Campi obbligatori:** `uuid`, `source`, `title`\n\nTutti gli altri campi\
         \ sono opzionali. Il campo `uuid` deve essere univoco\nper sorgente (tipicamente\
         \ un hash di title + date_start + location_name).\n        "
-      summary: Crea staging event
+      summary: Crea evento
       tags:
-      - Staging Events
+      - Events
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/StagingEventScraping'
+              $ref: '#/components/schemas/EventScraping'
             examples:
               EventoCompleto:
                 value:
@@ -1445,14 +1338,8 @@ paths:
                   location_name: Blue Note Milano
                   location_address: Via Borsieri 37, 20159 Milano MI
                   price: 25,00 EUR + prevendita
-                  website: https://www.bluenotemilano.com
                   date_start: '2026-02-15'
                   date_end: '2026-02-15'
-                  time_start: '21:00:00'
-                  time_end: '23:30:00'
-                  time_info: Apertura porte ore 19:30
-                  schedule: Venerdi e Sabato
-                  weekdays: fri,sat
                   raw_data:
                     original_id: '12345'
                     scraped_from: city_today
@@ -1470,10 +1357,10 @@ paths:
                 summary: Solo i campi obbligatori
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/StagingEventScraping'
+              $ref: '#/components/schemas/EventScraping'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/StagingEventScraping'
+              $ref: '#/components/schemas/EventScraping'
         required: true
       security:
       - cookieAuth: []
@@ -1485,23 +1372,22 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StagingEventScraping'
+                $ref: '#/components/schemas/EventScraping'
           description: ''
-  /api/v1/events/staging/{id}/:
+  /api/v1/events/{id}/:
     get:
-      operationId: api_v1_events_staging_retrieve
-      description: Recupera i dettagli di un singolo staging event. Richiede permesso
-        `events:read`.
-      summary: Dettaglio staging event
+      operationId: api_v1_events_retrieve
+      description: Recupera i dettagli di un singolo evento. Richiede permesso `events:read`.
+      summary: Dettaglio evento
       parameters:
       - in: path
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Staging Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
-      - Staging Events
+      - Events
       security:
       - cookieAuth: []
       - BearerAuth: []
@@ -1512,53 +1398,49 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StagingEvent'
+                $ref: '#/components/schemas/Event'
               examples:
-                StagingEvent:
+                EventoProduzione:
                   value:
-                    id: 42
-                    uuid: b2c3d4e5f6a7b8c9
-                    content_hash: f1e2d3c4b5a6f7e8
-                    source: puglia_culture
-                    title: Festival della Taranta
-                    city_name: Lecce
-                    location_name: Piazza Duomo
-                    location_address: Piazza del Duomo, Lecce
-                    location_coordinates:
-                      lat: 40.3516
-                      lng: 18.1718
-                    date_start: '2026-08-20T21:00:00Z'
-                    date_end: '2026-08-20T23:59:00Z'
-                    url: https://pugliaculture.it/eventi/taranta
-                    description: La notte della Taranta edizione 2026
-                    image_url: https://example.com/taranta.jpg
-                    price: Gratuito
+                    id: 1
+                    uuid: a1b2c3d4e5f6g7h8
+                    title: Concerto Jazz al Blue Note
+                    city: Milano
+                    source: city_today
+                    url: https://www.milanotoday.it/eventi/concerto-jazz.html
+                    description: Serata jazz con artisti internazionali
                     category:
                     - Musica
-                    - Festival
-                    scraped_at: '2026-03-20T10:30:00Z'
-                    loaded_at: '2026-03-20T10:31:00Z'
-                    created_at: '2026-03-20T10:31:00Z'
-                  summary: Staging event
+                    - Concerti
+                    image_url: https://example.com/jazz.jpg
+                    location_name: Blue Note Milano
+                    location_address: Via Borsieri 37, Milano
+                    price: '25.00'
+                    date_start: '2026-04-15'
+                    date_end: '2026-04-15'
+                    is_active: true
+                    created_at: '2026-03-20T10:00:00Z'
+                    updated_at: '2026-03-20T10:00:00Z'
+                  summary: Evento produzione
           description: ''
     put:
-      operationId: api_v1_events_staging_update
-      description: Aggiorna completamente uno staging event. Richiede permesso `events:update`.
-      summary: Aggiorna staging event
+      operationId: api_v1_events_update
+      description: Aggiorna completamente un evento. Richiede permesso `events:update`.
+      summary: Aggiorna evento
       parameters:
       - in: path
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Staging Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
-      - Staging Events
+      - Events
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/StagingEventScraping'
+              $ref: '#/components/schemas/EventScraping'
             examples:
               FormatoScraping(flat):
                 value:
@@ -1571,7 +1453,7 @@ paths:
                   - Musica
                   - Festival
                   city:
-                    city_name: Lecce
+                    city: Lecce
                     location_name: Piazza Duomo
                     location_address: Piazza del Duomo, Lecce
                     location_coordinates:
@@ -1579,10 +1461,7 @@ paths:
                       lng: '18.1718'
                   dates:
                     date_start: '2026-08-20'
-                    time_start: '21:00'
                     date_end: '2026-08-20'
-                    time_end: '23:59'
-                    time_info: Dalle 21:00 a mezzanotte
                   url: https://pugliaculture.it/eventi/taranta
                   description: La notte della Taranta edizione 2026
                   image_url: https://example.com/taranta.jpg
@@ -1591,10 +1470,10 @@ paths:
                 summary: Formato scraping (flat)
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/StagingEventScraping'
+              $ref: '#/components/schemas/EventScraping'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/StagingEventScraping'
+              $ref: '#/components/schemas/EventScraping'
         required: true
       security:
       - cookieAuth: []
@@ -1606,26 +1485,26 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StagingEventScraping'
+                $ref: '#/components/schemas/EventScraping'
           description: ''
     patch:
-      operationId: api_v1_events_staging_partial_update
-      description: Aggiorna parzialmente uno staging event. Richiede permesso `events:update`.
-      summary: Aggiorna parzialmente staging event
+      operationId: api_v1_events_partial_update
+      description: Aggiorna parzialmente un evento. Richiede permesso `events:update`.
+      summary: Aggiorna parzialmente evento
       parameters:
       - in: path
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Staging Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
-      - Staging Events
+      - Events
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PatchedStagingEventScraping'
+              $ref: '#/components/schemas/PatchedEventScraping'
             examples:
               FormatoScraping(flat):
                 value:
@@ -1638,7 +1517,7 @@ paths:
                   - Musica
                   - Festival
                   city:
-                    city_name: Lecce
+                    city: Lecce
                     location_name: Piazza Duomo
                     location_address: Piazza del Duomo, Lecce
                     location_coordinates:
@@ -1646,10 +1525,7 @@ paths:
                       lng: '18.1718'
                   dates:
                     date_start: '2026-08-20'
-                    time_start: '21:00'
                     date_end: '2026-08-20'
-                    time_end: '23:59'
-                    time_info: Dalle 21:00 a mezzanotte
                   url: https://pugliaculture.it/eventi/taranta
                   description: La notte della Taranta edizione 2026
                   image_url: https://example.com/taranta.jpg
@@ -1658,10 +1534,10 @@ paths:
                 summary: Formato scraping (flat)
           application/x-www-form-urlencoded:
             schema:
-              $ref: '#/components/schemas/PatchedStagingEventScraping'
+              $ref: '#/components/schemas/PatchedEventScraping'
           multipart/form-data:
             schema:
-              $ref: '#/components/schemas/PatchedStagingEventScraping'
+              $ref: '#/components/schemas/PatchedEventScraping'
       security:
       - cookieAuth: []
       - BearerAuth: []
@@ -1672,21 +1548,21 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StagingEventScraping'
+                $ref: '#/components/schemas/EventScraping'
           description: ''
     delete:
-      operationId: api_v1_events_staging_destroy
-      description: Elimina uno staging event specifico. Richiede permesso `events:delete`.
-      summary: Elimina staging event
+      operationId: api_v1_events_destroy
+      description: Elimina un evento specifico. Richiede permesso `events:delete`.
+      summary: Elimina evento
       parameters:
       - in: path
         name: id
         schema:
           type: integer
-        description: A unique integer value identifying this Staging Event.
+        description: A unique integer value identifying this Evento.
         required: true
       tags:
-      - Staging Events
+      - Events
       security:
       - cookieAuth: []
       - BearerAuth: []
@@ -1695,9 +1571,9 @@ paths:
       responses:
         '204':
           description: No response body
-  /api/v1/events/staging/bulk/:
+  /api/v1/events/bulk/:
     post:
-      operationId: api_v1_events_staging_bulk_create
+      operationId: api_v1_events_bulk_create
       description: "\nCrea multipli staging events in una sola richiesta.\n\n**Richiede\
         \ permesso `events:create`.**\n\n**Modalita':**\n- **Async (default):** Il\
         \ batch viene processato in background tramite Celery.\n  Ritorna 202 Accepted\
@@ -1736,14 +1612,8 @@ paths:
                     location_name: Blue Note Milano
                     location_address: Via Borsieri 37, 20159 Milano MI
                     price: 25,00 EUR
-                    website: https://www.bluenotemilano.com
                     date_start: '2026-02-15'
                     date_end: '2026-02-15'
-                    time_start: '21:00:00'
-                    time_end: '23:30:00'
-                    time_info: Apertura porte ore 19:30
-                    schedule: Venerdi e Sabato
-                    weekdays: fri,sat
                     raw_data:
                       original_id: '12345'
                     scraped_at: '2026-02-05T14:30:00Z'
@@ -1763,14 +1633,8 @@ paths:
                     location_name: Palazzo delle Esposizioni
                     location_address: Via Nazionale 194, 00184 Roma RM
                     price: 15,00 EUR
-                    website: https://www.palazzoesposizioni.it
                     date_start: '2026-02-01'
                     date_end: '2026-04-30'
-                    time_start: '10:00:00'
-                    time_end: '20:00:00'
-                    time_info: Ultimo ingresso ore 19:00
-                    schedule: Da martedi a domenica
-                    weekdays: tue,wed,thu,fri,sat,sun
                     raw_data:
                       original_id: '67890'
                     scraped_at: '2026-02-05T14:30:00Z'
@@ -1841,9 +1705,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/BulkProcessResponse'
           description: ''
-  /api/v1/events/staging/bulk-status/{task_id}/:
+  /api/v1/events/bulk-status/{task_id}/:
     get:
-      operationId: api_v1_events_staging_bulk_status_retrieve
+      operationId: api_v1_events_bulk_status_retrieve
       description: "\nControlla lo stato di un task di bulk create asincrono.\n\n\
         **Richiede permesso `events:read`.**\n\n**Stati possibili:** PENDING, STARTED,\
         \ SUCCESS, FAILURE\n        "
@@ -1869,9 +1733,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/BulkTaskStatusResponse'
           description: ''
-  /api/v1/events/staging/clear_source/:
+  /api/v1/events/clear_source/:
     delete:
-      operationId: api_v1_events_staging_clear_source_destroy
+      operationId: api_v1_events_clear_source_destroy
       description: "\nElimina tutti gli staging events di una specifica sorgente.\n\
         \n**Richiede permesso `events:delete`.**\n\nUtile per pulire i dati prima\
         \ di un nuovo import.\n        "
@@ -2293,7 +2157,7 @@ components:
         events:
           type: array
           items:
-            $ref: '#/components/schemas/StagingEventScraping'
+            $ref: '#/components/schemas/EventScraping'
       required:
       - events
     BulkIngestion:
@@ -2318,7 +2182,7 @@ components:
         successful_events:
           type: array
           items:
-            $ref: '#/components/schemas/StagingEvent'
+            $ref: '#/components/schemas/Event'
           description: List of events that were successfully created/updated.
         failed_events:
           type: array
@@ -2349,6 +2213,19 @@ components:
       required:
       - status
       - task_id
+    Category:
+      type: object
+      description: Serializer per le categorie aggregate (nome e conteggio eventi).
+      properties:
+        categoria:
+          type: string
+          maxLength: 255
+        count:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+      required:
+      - categoria
     CityCount:
       type: object
       description: Serializer per il conteggio eventi per città.
@@ -2502,18 +2379,6 @@ components:
           type: string
           nullable: true
           maxLength: 30
-        time_start:
-          type: string
-          nullable: true
-          maxLength: 10
-        time_end:
-          type: string
-          nullable: true
-          maxLength: 10
-        time_info:
-          type: string
-          nullable: true
-          maxLength: 500
     ErrorResponse:
       type: object
       description: Serializer generico per le risposte di errore con campo 'error'.
@@ -2600,6 +2465,246 @@ components:
       - id
       - run_type
       - started_at
+    Event:
+      type: object
+      description: Serializer completo per gli eventi (tutti i campi).
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        location_coordinates:
+          type: string
+          readOnly: true
+        uuid:
+          type: string
+          maxLength: 32
+        content_hash:
+          type: string
+          nullable: true
+          maxLength: 32
+        source:
+          type: string
+          maxLength: 50
+        title:
+          type: string
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+        city:
+          type: string
+          nullable: true
+          maxLength: 100
+        location_name:
+          type: string
+          nullable: true
+          maxLength: 255
+        location_address:
+          type: string
+          nullable: true
+        date_start:
+          type: string
+          format: date-time
+          nullable: true
+        date_end:
+          type: string
+          format: date-time
+          nullable: true
+        url:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        price:
+          type: string
+          nullable: true
+        raw_data:
+          nullable: true
+        schema_org:
+          nullable: true
+        batch_file:
+          type: string
+          nullable: true
+          maxLength: 255
+        rank_score:
+          type: number
+          format: double
+          description: Score calcolato automaticamente
+        boost:
+          type: integer
+          maximum: 32767
+          minimum: -32768
+          description: Override manuale redazione (-10..+10)
+        created_by:
+          type: string
+          nullable: true
+          description: Username di chi ha creato l'evento
+          maxLength: 150
+        updated_by:
+          type: string
+          nullable: true
+          description: Username di chi ha modificato l'evento
+          maxLength: 150
+        deleted_by:
+          type: string
+          nullable: true
+          description: Username di chi ha disattivato l'evento (soft delete)
+          maxLength: 150
+        deleted_at:
+          type: string
+          format: date-time
+          nullable: true
+        scraped_at:
+          type: string
+          format: date-time
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        is_active:
+          type: boolean
+      required:
+      - created_at
+      - id
+      - location_coordinates
+      - source
+      - title
+      - updated_at
+      - uuid
+    EventList:
+      type: object
+      description: Serializer leggero per liste
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        uuid:
+          type: string
+          maxLength: 32
+        title:
+          type: string
+        city:
+          type: string
+          nullable: true
+          maxLength: 100
+        source:
+          type: string
+          maxLength: 50
+        date_start:
+          type: string
+          format: date-time
+          nullable: true
+        date_end:
+          type: string
+          format: date-time
+          nullable: true
+        is_active:
+          type: boolean
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+      required:
+      - id
+      - source
+      - title
+      - uuid
+    EventScraping:
+      type: object
+      description: |-
+        Formato event scraping — struttura definita in templates.json.
+
+        Struttura attesa:
+            {
+              "uuid": "...",
+              "content_hash": "...",
+              "source": "puglia_culture",
+              "title": "...",
+              "stars": 3,
+              "category": ["teatro", "..."],
+              "section": { "teatro": { "rassegna": "...", "cast": "..." } },
+              "city": {
+                "city_id": null,
+                "city_name": "...",
+                "location_name": "...",
+                "location_address": "...",
+                "location_coordinates": { "lat": "...", "lng": "..." }
+              },
+              "dates": {
+                "date_start": "YYYY-MM-DD",
+                "date_end": "YYYY-MM-DD",
+              },
+              "url": "...",
+              "description": "...",
+              "image_url": "...",
+              "price": "...",
+              "scraped_at": "YYYY-MM-DD HH:MM:SS"
+            }
+      properties:
+        uuid:
+          type: string
+          maxLength: 64
+        content_hash:
+          type: string
+          nullable: true
+          maxLength: 64
+        source:
+          type: string
+          maxLength: 50
+        title:
+          type: string
+          maxLength: 1000
+        stars:
+          type: integer
+          nullable: true
+        category:
+          type: array
+          items:
+            type: string
+          nullable: true
+        city:
+          allOf:
+          - $ref: '#/components/schemas/CityNested'
+          nullable: true
+        dates:
+          allOf:
+          - $ref: '#/components/schemas/DatesNested'
+          nullable: true
+        url:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        price:
+          type: string
+          nullable: true
+        scraped_at:
+          type: string
+          format: date-time
+          nullable: true
+        raw_data:
+          nullable: true
+      required:
+      - source
+      - title
+      - uuid
     FailedEvent:
       type: object
       description: Serializer per un evento fallito nella risposta bulk (dati originali,
@@ -2628,6 +2733,23 @@ components:
       required:
       - data
       - tipo
+    Location:
+      type: object
+      description: Serializer per le location aggregate (nome, città e conteggio eventi).
+      properties:
+        location_name:
+          type: string
+          maxLength: 255
+        city:
+          type: string
+          nullable: true
+          maxLength: 100
+        count:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+      required:
+      - location_name
     PaginaCittaDetail:
       type: object
       properties:
@@ -2662,6 +2784,26 @@ components:
           pattern: ^[-a-zA-Z0-9_]+$
       required:
       - nome
+    PaginatedCategoryList:
+      type: object
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
     PaginatedCityCountList:
       type: object
       properties:
@@ -2722,7 +2864,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/EtlRun'
-    PaginatedProductionEventListList:
+    PaginatedEventList:
       type: object
       properties:
         count:
@@ -2741,8 +2883,8 @@ components:
         results:
           type: array
           items:
-            $ref: '#/components/schemas/ProductionEventList'
-    PaginatedScrapingCategoryList:
+            $ref: '#/components/schemas/Event'
+    PaginatedEventListList:
       type: object
       properties:
         count:
@@ -2761,8 +2903,8 @@ components:
         results:
           type: array
           items:
-            $ref: '#/components/schemas/ScrapingCategory'
-    PaginatedScrapingLocationList:
+            $ref: '#/components/schemas/EventList'
+    PaginatedLocationList:
       type: object
       properties:
         count:
@@ -2781,7 +2923,7 @@ components:
         results:
           type: array
           items:
-            $ref: '#/components/schemas/ScrapingLocation'
+            $ref: '#/components/schemas/Location'
     PaginatedScrapingWebsiteList:
       type: object
       properties:
@@ -2822,32 +2964,15 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/SourceCount'
-    PaginatedStagingEventList:
+    PatchedEvent:
       type: object
-      properties:
-        count:
-          type: integer
-          example: 123
-        next:
-          type: string
-          nullable: true
-          format: uri
-          example: http://api.example.org/accounts/?page=4
-        previous:
-          type: string
-          nullable: true
-          format: uri
-          example: http://api.example.org/accounts/?page=2
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/StagingEvent'
-    PatchedProductionEvent:
-      type: object
-      description: Serializer completo per gli eventi in produzione (tutti i campi).
+      description: Serializer completo per gli eventi (tutti i campi).
       properties:
         id:
           type: integer
+          readOnly: true
+        location_coordinates:
+          type: string
           readOnly: true
         uuid:
           type: string
@@ -2859,22 +2984,15 @@ components:
         source:
           type: string
           maxLength: 50
-        url:
-          type: string
-          nullable: true
         title:
           type: string
-        description:
-          type: string
-          nullable: true
         category:
           type: array
           items:
             type: string
           nullable: true
-        image_url:
-          type: string
-          nullable: true
+        status:
+          $ref: '#/components/schemas/StatusEnum'
         city:
           type: string
           nullable: true
@@ -2886,38 +3004,61 @@ components:
         location_address:
           type: string
           nullable: true
-        price:
-          type: string
-          nullable: true
-        website:
-          type: string
-          nullable: true
         date_start:
           type: string
-          format: date
+          format: date-time
           nullable: true
         date_end:
           type: string
-          format: date
+          format: date-time
           nullable: true
-        time_start:
-          type: string
-          format: time
-          nullable: true
-        time_end:
-          type: string
-          format: time
-          nullable: true
-        time_info:
+        url:
           type: string
           nullable: true
-        schedule:
+        description:
           type: string
           nullable: true
-        weekdays:
+        image_url:
+          type: string
+          nullable: true
+        price:
           type: string
           nullable: true
         raw_data:
+          nullable: true
+        schema_org:
+          nullable: true
+        batch_file:
+          type: string
+          nullable: true
+          maxLength: 255
+        rank_score:
+          type: number
+          format: double
+          description: Score calcolato automaticamente
+        boost:
+          type: integer
+          maximum: 32767
+          minimum: -32768
+          description: Override manuale redazione (-10..+10)
+        created_by:
+          type: string
+          nullable: true
+          description: Username di chi ha creato l'evento
+          maxLength: 150
+        updated_by:
+          type: string
+          nullable: true
+          description: Username di chi ha modificato l'evento
+          maxLength: 150
+        deleted_by:
+          type: string
+          nullable: true
+          description: Username di chi ha disattivato l'evento (soft delete)
+          maxLength: 150
+        deleted_at:
+          type: string
+          format: date-time
           nullable: true
         scraped_at:
           type: string
@@ -2933,7 +3074,7 @@ components:
           readOnly: true
         is_active:
           type: boolean
-    PatchedStagingEventScraping:
+    PatchedEventScraping:
       type: object
       description: |-
         Formato event scraping — struttura definita in templates.json.
@@ -2956,10 +3097,7 @@ components:
               },
               "dates": {
                 "date_start": "YYYY-MM-DD",
-                "time_start": "HH:MM",
                 "date_end": "YYYY-MM-DD",
-                "time_end": "HH:MM",
-                "time_info": "..."
               },
               "url": "...",
               "description": "...",
@@ -3015,173 +3153,6 @@ components:
           nullable: true
         raw_data:
           nullable: true
-    ProductionEvent:
-      type: object
-      description: Serializer completo per gli eventi in produzione (tutti i campi).
-      properties:
-        id:
-          type: integer
-          readOnly: true
-        uuid:
-          type: string
-          maxLength: 32
-        content_hash:
-          type: string
-          nullable: true
-          maxLength: 32
-        source:
-          type: string
-          maxLength: 50
-        url:
-          type: string
-          nullable: true
-        title:
-          type: string
-        description:
-          type: string
-          nullable: true
-        category:
-          type: array
-          items:
-            type: string
-          nullable: true
-        image_url:
-          type: string
-          nullable: true
-        city:
-          type: string
-          nullable: true
-          maxLength: 100
-        location_name:
-          type: string
-          nullable: true
-          maxLength: 255
-        location_address:
-          type: string
-          nullable: true
-        price:
-          type: string
-          nullable: true
-        website:
-          type: string
-          nullable: true
-        date_start:
-          type: string
-          format: date
-          nullable: true
-        date_end:
-          type: string
-          format: date
-          nullable: true
-        time_start:
-          type: string
-          format: time
-          nullable: true
-        time_end:
-          type: string
-          format: time
-          nullable: true
-        time_info:
-          type: string
-          nullable: true
-        schedule:
-          type: string
-          nullable: true
-        weekdays:
-          type: string
-          nullable: true
-        raw_data:
-          nullable: true
-        scraped_at:
-          type: string
-          format: date-time
-          nullable: true
-        created_at:
-          type: string
-          format: date-time
-          readOnly: true
-        updated_at:
-          type: string
-          format: date-time
-          readOnly: true
-        is_active:
-          type: boolean
-      required:
-      - created_at
-      - id
-      - source
-      - title
-      - updated_at
-      - uuid
-    ProductionEventList:
-      type: object
-      description: Serializer leggero per liste
-      properties:
-        id:
-          type: integer
-          readOnly: true
-        uuid:
-          type: string
-          maxLength: 32
-        title:
-          type: string
-        city:
-          type: string
-          nullable: true
-          maxLength: 100
-        source:
-          type: string
-          maxLength: 50
-        date_start:
-          type: string
-          format: date
-          nullable: true
-        date_end:
-          type: string
-          format: date
-          nullable: true
-        is_active:
-          type: boolean
-        category:
-          type: array
-          items:
-            type: string
-          nullable: true
-      required:
-      - id
-      - source
-      - title
-      - uuid
-    ScrapingCategory:
-      type: object
-      description: Serializer per le categorie aggregate (nome e conteggio eventi).
-      properties:
-        categoria:
-          type: string
-          maxLength: 255
-        count:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-      required:
-      - categoria
-    ScrapingLocation:
-      type: object
-      description: Serializer per le location aggregate (nome, città e conteggio eventi).
-      properties:
-        location_name:
-          type: string
-          maxLength: 255
-        city_name:
-          type: string
-          nullable: true
-          maxLength: 100
-        count:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-      required:
-      - location_name
     ScrapingWebsite:
       type: object
       description: Serializer per i portali web scrapati con label CMS leggibile.
@@ -3231,174 +3202,14 @@ components:
       required:
       - count
       - source
-    StagingEvent:
-      type: object
-      description: Serializer completo per gli staging events con coordinate come
-        {lat, lng}.
-      properties:
-        id:
-          type: integer
-          readOnly: true
-        location_coordinates:
-          type: string
-          readOnly: true
-        uuid:
-          type: string
-          maxLength: 32
-        content_hash:
-          type: string
-          nullable: true
-          maxLength: 32
-        source:
-          type: string
-          maxLength: 50
-        title:
-          type: string
-        category:
-          type: array
-          items:
-            type: string
-          nullable: true
-        city_name:
-          type: string
-          nullable: true
-          maxLength: 100
-        location_name:
-          type: string
-          nullable: true
-          maxLength: 255
-        location_address:
-          type: string
-          nullable: true
-        date_start:
-          type: string
-          format: date-time
-          nullable: true
-        date_end:
-          type: string
-          format: date-time
-          nullable: true
-        url:
-          type: string
-          nullable: true
-        description:
-          type: string
-          nullable: true
-        image_url:
-          type: string
-          nullable: true
-        price:
-          type: string
-          nullable: true
-        raw_data:
-          nullable: true
-        schema_org:
-          nullable: true
-        batch_file:
-          type: string
-          nullable: true
-          maxLength: 255
-        scraped_at:
-          type: string
-          format: date-time
-          nullable: true
-        created_at:
-          type: string
-          format: date-time
-          readOnly: true
-      required:
-      - created_at
-      - id
-      - location_coordinates
-      - source
-      - title
-      - uuid
-    StagingEventScraping:
-      type: object
+    StatusEnum:
+      enum:
+      - staging
+      - published
+      type: string
       description: |-
-        Formato event scraping — struttura definita in templates.json.
-
-        Struttura attesa:
-            {
-              "uuid": "...",
-              "content_hash": "...",
-              "source": "puglia_culture",
-              "title": "...",
-              "stars": 3,
-              "category": ["teatro", "..."],
-              "section": { "teatro": { "rassegna": "...", "cast": "..." } },
-              "city": {
-                "city_id": null,
-                "city_name": "...",
-                "location_name": "...",
-                "location_address": "...",
-                "location_coordinates": { "lat": "...", "lng": "..." }
-              },
-              "dates": {
-                "date_start": "YYYY-MM-DD",
-                "time_start": "HH:MM",
-                "date_end": "YYYY-MM-DD",
-                "time_end": "HH:MM",
-                "time_info": "..."
-              },
-              "url": "...",
-              "description": "...",
-              "image_url": "...",
-              "price": "...",
-              "scraped_at": "YYYY-MM-DD HH:MM:SS"
-            }
-      properties:
-        uuid:
-          type: string
-          maxLength: 64
-        content_hash:
-          type: string
-          nullable: true
-          maxLength: 64
-        source:
-          type: string
-          maxLength: 50
-        title:
-          type: string
-          maxLength: 1000
-        stars:
-          type: integer
-          nullable: true
-        category:
-          type: array
-          items:
-            type: string
-          nullable: true
-        city:
-          allOf:
-          - $ref: '#/components/schemas/CityNested'
-          nullable: true
-        dates:
-          allOf:
-          - $ref: '#/components/schemas/DatesNested'
-          nullable: true
-        url:
-          type: string
-          nullable: true
-        description:
-          type: string
-          nullable: true
-        image_url:
-          type: string
-          nullable: true
-        price:
-          type: string
-          nullable: true
-        scraped_at:
-          type: string
-          format: date-time
-          nullable: true
-        raw_data:
-          nullable: true
-      required:
-      - source
-      - title
-      - uuid
+        * `staging` - Staging
+        * `published` - Pubblicato
     TabNavigazione:
       type: object
       properties:
@@ -3444,10 +3255,8 @@ servers:
 tags:
 - name: Dashboard
   description: Statistiche aggregate e panoramica
-- name: Production Events
-  description: Eventi validati in produzione
-- name: Staging Events (Internal)
-  description: Eventi in staging (sola lettura interna)
+- name: Events
+  description: Eventi (pubblicati e staging)
 - name: ETL
   description: Monitoraggio esecuzioni e errori ETL
 - name: Staging Events

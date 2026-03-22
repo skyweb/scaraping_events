@@ -1,6 +1,6 @@
 # Service Backoffice - Today Events
 
-Questo servizio gestisce il pannello di amministrazione per Today Events, composto da un backend Django e un frontend React/Vite.
+Questo servizio gestisce il pannello di amministrazione per Today Events, basato su Django (Unfold admin, DRF API, Celery).
 
 ## Prerequisiti
 
@@ -36,8 +36,8 @@ $ docker-compose up -d
 
 ## Accesso ai Servizi
 
-- **Frontend (Backoffice UI):** [http://localhost:3000](http://localhost:3000)
-- **Backend API:** [http://localhost:8000](http://localhost:8000)
+- **Report:** [http://localhost:8000/report/](http://localhost:8000/report/)
+- **API:** [http://localhost:8000](http://localhost:8000)
 - **Django Admin:** [http://localhost:8000/admin](http://localhost:8000/admin)
 
 ## API Documentation
@@ -115,10 +115,6 @@ Vedere i log del backend:
 docker logs -f dev-backoffice
 ```
 
-Vedere i log del frontend:
-```bash
-docker logs -f backoffice-frontend-dev
-```
 #### Management Command: `import_scraping_comuni`
 
 Importa i JSON generati dallo spider `comuni_spider` nelle tabelle relazionali.

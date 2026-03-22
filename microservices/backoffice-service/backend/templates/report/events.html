@@ -1,0 +1,86 @@
+{% extends "report/base.html" %}
+{% block title %}Eventi{% endblock %}
+
+{% block content %}
+<h1>Eventi</h1>
+
+<form method="get" class="filters">
+  <input type="text" name="search" value="{{ search }}" placeholder="Cerca...">
+  <select name="city" onchange="this.form.submit()">
+    <option value="">Tutte le città</option>
+    {% for c in cities %}
+    <option value="{{ c.city }}" {% if c.city == selected_city %}selected{% endif %}>{{ c.city }} ({{ c.count }})</option>
+    {% endfor %}
+  </select>
+  <select name="source" onchange="this.form.submit()">
+    <option value="">Tutte le sorgenti</option>
+    {% for s in sources %}
+    <option value="{{ s.source }}" {% if s.source == selected_source %}selected{% endif %}>{{ s.source }} ({{ s.count }})</option>
+    {% endfor %}
+  </select>
+  <select name="is_active" onchange="this.form.submit()">
+    <option value="">Tutti</option>
+    <option value="true" {% if selected_is_active == "true" %}selected{% endif %}>Attivi</option>
+    <option value="false" {% if selected_is_active == "false" %}selected{% endif %}>Inattivi</option>
+  </select>
+  <noscript><button type="submit">Filtra</button></noscript>
+</form>
+
+<div class="card">
+  <p style="margin-bottom:15px" class="text-muted">{{ page_obj.paginator.count }} eventi trovati</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Titolo</th>
+        <th>Città</th>
+        <th>Sorgente</th>
+        <th>Data Inizio</th>
+        <th>Data Fine</th>
+        <th>Stato</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for event in page_obj %}
+      <tr>
+        <td class="text-truncate">{{ event.title }}</td>
+        <td>{{ event.city|default:"N/D" }}</td>
+        <td>{{ event.source }}</td>
+        <td>{{ event.date_start|date:"d/m/Y"|default:"N/D" }}</td>
+        <td>{{ event.date_end|date:"d/m/Y"|default:"N/D" }}</td>
+        <td>
+          {% if event.is_active %}
+          <span class="badge badge-active">Attivo</span>
+          {% else %}
+          <span class="badge badge-inactive">Inattivo</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="6" class="empty-state">Nessun evento trovato</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if page_obj.has_other_pages %}
+  <div class="pagination">
+    {% if page_obj.has_previous %}
+    <a href="?{{ query_string }}&page=1">Prima</a>
+    <a href="?{{ query_string }}&page={{ page_obj.previous_page_number }}">Precedente</a>
+    {% else %}
+    <span class="disabled">Prima</span>
+    <span class="disabled">Precedente</span>
+    {% endif %}
+
+    <span class="current">Pagina {{ page_obj.number }} di {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+    <a href="?{{ query_string }}&page={{ page_obj.next_page_number }}">Successiva</a>
+    <a href="?{{ query_string }}&page={{ page_obj.paginator.num_pages }}">Ultima</a>
+    {% else %}
+    <span class="disabled">Successiva</span>
+    <span class="disabled">Ultima</span>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

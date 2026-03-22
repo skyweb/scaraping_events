@@ -2,11 +2,11 @@ from rest_framework import mixins, viewsets
 from rest_framework.permissions import IsAuthenticated
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter
 
-from .models import ScrapingWebsite, ScrapingCategory, ScrapingLocation
+from .models import ScrapingWebsite, Category, Location
 from .serializers import (
     ScrapingWebsiteSerializer,
-    ScrapingCategorySerializer,
-    ScrapingLocationSerializer,
+    CategorySerializer,
+    LocationSerializer,
 )
 
 
@@ -46,10 +46,10 @@ class ScrapingWebsiteViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, v
         tags=["Scraping"],
     ),
 )
-class ScrapingCategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+class CategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     """Categorie uniche estratte da tutti gli eventi scrapati."""
-    queryset = ScrapingCategory.objects.all()
-    serializer_class = ScrapingCategorySerializer
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated]
 
 
@@ -66,10 +66,10 @@ class ScrapingCategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
         tags=["Scraping"],
     ),
 )
-class ScrapingLocationViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class LocationViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     """Location uniche estratte da tutti gli eventi scrapati."""
-    queryset = ScrapingLocation.objects.all()
-    serializer_class = ScrapingLocationSerializer
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):

@@ -1,5 +1,4 @@
 import os
-from pathlib import Path
 
 from django.conf import settings
 from django.contrib.auth import logout as auth_logout
@@ -124,18 +123,27 @@ def services_dashboard(request):
     return render(request, 'dashboard/services.html')
 
 
-def scalar_view(request):
-    """Scalar API Reference UI — punta allo schema OpenAPI generato da drf-spectacular."""
-    html = """<!DOCTYPE html>
+def _scalar_html(title: str, schema_url: str) -> str:
+    """Genera HTML per Scalar API Reference con schema URL configurabile."""
+    return f"""<!DOCTYPE html>
 <html>
 <head>
-    <title>Events Backoffice API</title>
+    <title>{title}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <script id="api-reference" data-url="/docs/schema/"></script>
+    <script id="api-reference" data-url="{schema_url}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
 </body>
 </html>"""
-    return HttpResponse(html, content_type="text/html")
+
+
+def scalar_view(request):
+    """Scalar API Reference UI — schema interno (tutti gli endpoint)."""
+    return HttpResponse(_scalar_html("Events Backoffice API - Internal", "/docs/schema/"), content_type="text/html")
+
+
+def scalar_public_view(request):
+    """Scalar API Reference UI — schema pubblico (/api/v1/events/, /version/)."""
+    return HttpResponse(_scalar_html("Events API - Public", "/docs/public/schema/"), content_type="text/html")

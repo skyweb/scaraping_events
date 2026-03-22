@@ -1,0 +1,62 @@
+// Grafana Alloy — raccolta log container Docker, filtra solo dev-*
+
+discovery.docker "containers" {
+  host = "unix:///var/run/docker.sock"
+  refresh_interval = "5s"
+  filter {
+    name   = "name"
+    values = ["dev-*"]
+  }
+}
+
+discovery.relabel "docker" {
+  targets = discovery.docker.containers.targets
+
+  // Usa il nome container come label
+  rule {
+    source_labels = ["__meta_docker_container_name"]
+    regex         = "/?(.*)"
+    target_label  = "container_name"
+  }
+
+  // Usa il nome del servizio compose come label
+  rule {
+    source_labels = ["__meta_docker_container_label_com_docker_compose_service"]
+    target_label  = "compose_service"
+  }
+}
+
+loki.source.docker "default" {
+  host       = "unix:///var/run/docker.sock"
+  targets    = discovery.relabel.docker.output
+  forward_to = [loki.process.docker.receiver]
+}
+
+loki.process "docker" {
+  // Parsing JSON dai container Django/Celery — estrae level e logger come label
+  stage.match {
+    selector = "{container_name=~\"dev-backoffice.*\"}"
+
+    stage.json {
+      expressions = {
+        level  = "level",
+        logger = "logger",
+      }
+    }
+
+    stage.labels {
+      values = {
+        level  = "",
+        logger = "",
+      }
+    }
+  }
+
+  forward_to = [loki.write.loki.receiver]
+}
+
+loki.write "loki" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}

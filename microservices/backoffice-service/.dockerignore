@@ -11,12 +11,6 @@
 .vscode
 .idea
 
-# Frontend
-frontend/node_modules
-frontend/dist
-frontend/.env
-frontend/.env.*
-
 # Backend
 backend/staticfiles
 backend/*.sqlite3

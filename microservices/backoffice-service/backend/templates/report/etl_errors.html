@@ -1,0 +1,63 @@
+{% extends "report/base.html" %}
+{% block title %}ETL Errors{% endblock %}
+
+{% block content %}
+<h1>ETL Errors</h1>
+
+<form method="get" class="filters">
+  <select name="error_type" onchange="this.form.submit()">
+    <option value="">Tutti i tipi</option>
+    <option value="missing_required_fields" {% if selected_error_type == "missing_required_fields" %}selected{% endif %}>Missing Required Fields</option>
+    <option value="invalid_json" {% if selected_error_type == "invalid_json" %}selected{% endif %}>Invalid JSON</option>
+    <option value="db_insert_error" {% if selected_error_type == "db_insert_error" %}selected{% endif %}>DB Insert Error</option>
+  </select>
+  <noscript><button type="submit">Filtra</button></noscript>
+</form>
+
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tipo Errore</th>
+        <th>Sorgente</th>
+        <th>File JSON</th>
+        <th>Messaggio</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for err in page_obj %}
+      <tr>
+        <td>{{ err.id }}</td>
+        <td><span class="badge badge-error">{{ err.error_type }}</span></td>
+        <td>{{ err.source|default:"N/D" }}</td>
+        <td class="text-truncate-sm">{{ err.json_file|default:"N/D" }}</td>
+        <td class="text-truncate">{{ err.error_message|default:"N/D" }}</td>
+        <td>{{ err.created_at|date:"d/m/Y H:i" }}</td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="6"><p class="empty-state">Nessun errore trovato</p></td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% if page_obj.has_other_pages %}
+  <div class="pagination">
+    {% if page_obj.has_previous %}
+    <a href="?{{ query_string }}&page={{ page_obj.previous_page_number }}">Precedente</a>
+    {% else %}
+    <span class="disabled">Precedente</span>
+    {% endif %}
+
+    <span class="current">Pagina {{ page_obj.number }} di {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+    <a href="?{{ query_string }}&page={{ page_obj.next_page_number }}">Successiva</a>
+    {% else %}
+    <span class="disabled">Successiva</span>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -714,10 +714,47 @@ put "/routes/305" "{
     }
 }" "airflow static (no auth)"
 
-# --- Airflow (auth proxy: X-Auth-Request-Email per AUTH_REMOTE_USER) ---
-oidc_route_grafana 207 "airflow-sso" \
-    "airflow.${DOMAIN}" 9 \
-    "https://airflow.${DOMAIN}/callback"
+# --- Airflow (auth proxy: X-Auth-Request-Email + X-Auth-Request-Roles) ---
+put "/routes/207" "{
+    \"name\": \"airflow-sso\",
+    \"host\": \"airflow.${DOMAIN}\",
+    \"uri\": \"/*\",
+    \"upstream_id\": \"9\",
+    \"enable_websocket\": true,
+    \"plugins\": {
+        \"openid-connect\": {
+            \"client_id\": \"backoffice-admin\",
+            \"client_secret\": \"${KC_SECRET}\",
+            \"discovery\": \"${DISCOVERY_URL}\",
+            \"issuer\": \"${KC_PUBLIC}\",
+            \"scope\": \"openid profile email roles\",
+            \"bearer_only\": false,
+            \"realm\": \"today-events\",
+            \"redirect_uri\": \"https://airflow.${DOMAIN}/callback\",
+            \"logout_path\": \"/sso-logout\",
+            \"post_logout_redirect_uri\": \"https://airflow.${DOMAIN}/\",
+            \"set_userinfo_header\": true,
+            \"set_id_token_header\": true,
+            \"set_access_token_header\": true,
+            \"access_token_in_authorization_header\": false,
+            \"ssl_verify\": false,
+            \"session\": {
+                \"secret\": \"apisix-session-secret-dev-32char!\"
+            }
+        },
+        \"serverless-post-function\": {
+            \"phase\": \"rewrite\",
+            \"functions\": [\"return function(conf, ctx) local cjson = require('cjson.safe'); local h = ngx.req.get_headers()['X-Userinfo']; if h then local decoded = ngx.decode_base64(h); if decoded then local d = cjson.decode(decoded); if d then if d.email then ngx.req.set_header('X-Auth-Request-Email', d.email) end; local roles = d.realm_access and d.realm_access.roles; if not roles then local t = ngx.req.get_headers()['X-Id-Token']; if t then local td = ngx.decode_base64(t); if td then local tt = cjson.decode(td); if tt and tt.realm_access then roles = tt.realm_access.roles end end end end; if roles then ngx.req.set_header('X-Auth-Request-Roles', table.concat(roles, ',')) end end end end\"]
+        },
+        \"proxy-rewrite\": {
+            \"headers\": {
+                \"set\": {
+                    \"X-Forwarded-Proto\": \"https\"
+                }
+            }
+        }
+    }
+}" "airflow-sso (email + roles)"
 
 # --- APISIX Dashboard ---
 oidc_route 208 "apisix-dashboard-sso" \
