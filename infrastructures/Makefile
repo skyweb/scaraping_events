@@ -28,7 +28,7 @@ NC    := \033[0m
 # =============================================================================
 
 .PHONY: help \
-        up down restart ps logs build pull \
+        up down restart ps logs build pull ensure-network \
         up-core up-observability up-airflow \
         logs-backoffice logs-celery logs-db logs-redis \
         logs-grafana logs-loki logs-airflow \
@@ -47,9 +47,10 @@ NC    := \033[0m
 # Stack completo
 # =============================================================================
 
-up: up-harbor ## Avvia TUTTI i servizi (incluso Harbor, Airflow, Observability)
+up: ensure-network ## Avvia TUTTI i servizi (incluso Harbor, Airflow, Observability)
 	@echo "$(GREEN)Avvio stack completo...$(NC)"
 	$(COMPOSE) up --build -d
+	@$(MAKE) up-harbor
 	@echo ""
 	@echo "$(GREEN)  Applicazione$(NC)"
 	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC)         Django Admin"
@@ -106,7 +107,7 @@ pull: ## Aggiorna tutte le immagini Docker Hub
 #     up-airflow      orchestrazione DAG (airflow)
 #
 
-up-core: up-harbor ## Stack base (postgres, redis, gateway, app, celery, harbor)
+up-core: ## Stack base (postgres, redis, gateway, app, celery, harbor)
 	@echo "$(GREEN)Avvio core...$(NC)"
 	$(COMPOSE) up --build -d \
 	    postgres redis \
@@ -114,6 +115,7 @@ up-core: up-harbor ## Stack base (postgres, redis, gateway, app, celery, harbor)
 	    backoffice minio \
 	    backoffice-celery-worker flower \
 	    mailpit
+	@$(MAKE) up-harbor
 	@echo ""
 	@echo "$(GREEN)  Applicazione$(NC)"
 	@echo "$(CYAN)  https://backoffice.$(DOMAIN)/admin/$(NC)         Django Admin"
@@ -131,9 +133,13 @@ up-core: up-harbor ## Stack base (postgres, redis, gateway, app, celery, harbor)
 	@echo "$(CYAN)  https://registry.$(DOMAIN)/$(NC)                 Harbor Registry"
 	@echo ""
 
-up-harbor: ## Avvia Harbor Registry (compose separato)
+up-harbor: ensure-network ## Avvia Harbor Registry (compose separato)
 	@echo "$(GREEN)Avvio Harbor Registry...$(NC)"
 	docker compose -p infrastructures -f services/harbor/docker-compose.yml up -d
+
+ensure-network: ## Crea la rete dev-network se non esiste
+	@docker network inspect dev-network >/dev/null 2>&1 || \
+		(echo "$(GREEN)Creazione rete dev-network...$(NC)" && docker network create dev-network)
 
 up-observability: ## Monitoring (prometheus, otel, tempo, loki, alloy, grafana, esportatori)
 	@echo "$(GREEN)Avvio observability...$(NC)"

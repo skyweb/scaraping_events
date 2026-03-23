@@ -90,6 +90,12 @@ extraScrapeConfigs: |
     metrics_path: /metrics
     scrape_interval: 15s
 
+  - job_name: alloy
+    static_configs:
+      - targets: ['alloy.monitoring.svc:12345']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
   # Metriche container/pod da kubelet cAdvisor di ogni nodo
   - job_name: kubelet-cadvisor
     scheme: https

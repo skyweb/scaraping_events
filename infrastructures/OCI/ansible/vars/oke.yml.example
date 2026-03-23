@@ -22,17 +22,10 @@ namespaces:
   - devs
   - monitoring
   - clusters
-  - traefik
   - cert-manager
   - linkerd
   - linkerd-viz
   - wireguard
-
-# Traefik Ingress Controller
-install_traefik: true
-traefik_http_nodeport: 30080
-traefik_https_nodeport: 30443
-traefik_dashboard_nodeport: 30090
 
 # cert-manager
 install_cert_manager: true
@@ -66,9 +59,6 @@ install_harbor: true
 harbor_storage_size: "50Gi"
 harbor_oidc_endpoint: "https://auth.oci.santocaruso.eu/realms/today-events"
 harbor_oidc_client_id: "harbor"
-
-# Backstage (Spotify Developer Portal)
-install_backstage: true
 
 # Airflow (DAG Orchestration)
 install_airflow: true
@@ -112,7 +102,6 @@ kyverno_enforcement_mode: "Audit"
 kyverno_excluded_namespaces:
   - kube-system
   - clusters
-  - traefik
   - cert-manager
   - monitoring
   - database
@@ -161,8 +150,8 @@ argocd_target_revision: "main"
 # Quando abilitato, micro-gw (IP stabile) inoltra traffico TCP grezzo
 # (porte 80/443) a Traefik nel cluster K8s via firewalld DNAT.
 # Traefik gestisce TLS (Let's Encrypt ACME) e L7 routing.
-# Flusso: DNS → micro-gw (firewalld DNAT) → k8s NodePort → Traefik (TLS + L7)
-# Vantaggi: IP stabile, no duplicazione config (solo IngressRoute K8s).
+# Flusso: DNS → micro-gw (firewalld DNAT) → k8s NodePort → APISIX (TLS + L7)
+# Vantaggi: IP stabile, no duplicazione config.
 install_reverse_proxy: true
 
 # =============================================================================
@@ -195,13 +184,5 @@ base_domain: "oci.santocaruso.eu"
 # dashboard_subdomain: "dashboard"    # dashboard.example.com → K8s Dashboard
 # auth_subdomain: "auth"              # auth.example.com      → OAuth2 Proxy callback
 
-# --- Autenticazione servizi senza auth nativa ---
-# OAuth2 Proxy (Google SSO)
-
-install_oauth2_proxy: true
-oauth2_proxy_allowed_emails:
-  - "santo.caruso@gmail.com"
-  - "santo.caruso@altrama.com"
-# Google Cloud Console: Credentials → OAuth 2.0 Client ID (tipo: Web application)
-# Authorized redirect URI: https://auth.<base_domain>/oauth2/callback
-# I secret (client_id, client_secret, cookie_secret) → in oke-vault.yml
+# --- Autenticazione ---
+# SSO gestito da APISIX plugin openid-connect + Keycloak (vedi docs/SSO.md)

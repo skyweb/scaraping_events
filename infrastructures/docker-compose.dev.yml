@@ -178,9 +178,9 @@ services:
     image: mher/flower:2.0
     container_name: dev-flower
     restart: unless-stopped
-    command: celery flower --broker=${CELERY_BROKER_URL} --persistent=True --db=/data/flower.db
+    command: celery flower --broker=redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/1 --persistent=True --db=/data/flower.db
     environment:
-      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CELERY_BROKER_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/1
     volumes:
       - flower-dev-data:/data
     depends_on:
@@ -422,7 +422,7 @@ services:
     image: danihodovic/celery-exporter:latest
     container_name: dev-celery-exporter
     environment:
-      CE_BROKER_URL: ${CELERY_BROKER_URL}
+      CE_BROKER_URL: redis://:${REDIS_PASSWORD}@redis:${REDIS_PORT}/1
     depends_on:
       redis:
         condition: service_healthy

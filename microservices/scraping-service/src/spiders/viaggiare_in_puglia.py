@@ -30,7 +30,7 @@ class ViaggiareInPugliaSpider(BaseEventSpider):
 
     custom_settings = {
         **DEFAULT_CRAWL_SETTINGS,
-        "DOWNLOAD_DELAY": 2.0,
+        "DOWNLOAD_DELAY": 1.5,
     }
 
     def __init__(self, max_pages: str = "5", *args, **kwargs):

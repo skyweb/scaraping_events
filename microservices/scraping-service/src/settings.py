@@ -38,25 +38,26 @@ ROBOTSTXT_OBEY = os.getenv("SCRAPY_ROBOTSTXT_OBEY", "True").lower() == "true"
 # =============================================================================
 
 # Numero massimo di richieste concorrenti
-CONCURRENT_REQUESTS = int(os.getenv("SCRAPY_CONCURRENT_REQUESTS", "8"))
+CONCURRENT_REQUESTS = int(os.getenv("SCRAPY_CONCURRENT_REQUESTS", "4"))
 
 # Richieste concorrenti per dominio
 CONCURRENT_REQUESTS_PER_DOMAIN = int(
     os.getenv("SCRAPY_CONCURRENT_REQUESTS_PER_DOMAIN", "2")
 )
 
-# Delay tra richieste (secondi)
-DOWNLOAD_DELAY = float(os.getenv("SCRAPY_DOWNLOAD_DELAY", "1.0"))
+# Delay tra richieste (secondi) — valore "gentile" per siti piccoli
+DOWNLOAD_DELAY = float(os.getenv("SCRAPY_DOWNLOAD_DELAY", "2.0"))
+RANDOMIZE_DOWNLOAD_DELAY = True
 
 # =============================================================================
 # AUTOTHROTTLE (throttling automatico)
 # =============================================================================
 
 AUTOTHROTTLE_ENABLED = os.getenv("SCRAPY_AUTOTHROTTLE_ENABLED", "True").lower() == "true"
-AUTOTHROTTLE_START_DELAY = float(os.getenv("SCRAPY_AUTOTHROTTLE_START_DELAY", "1.0"))
-AUTOTHROTTLE_MAX_DELAY = float(os.getenv("SCRAPY_AUTOTHROTTLE_MAX_DELAY", "10.0"))
+AUTOTHROTTLE_START_DELAY = float(os.getenv("SCRAPY_AUTOTHROTTLE_START_DELAY", "2.0"))
+AUTOTHROTTLE_MAX_DELAY = float(os.getenv("SCRAPY_AUTOTHROTTLE_MAX_DELAY", "30.0"))
 AUTOTHROTTLE_TARGET_CONCURRENCY = float(
-    os.getenv("SCRAPY_AUTOTHROTTLE_TARGET_CONCURRENCY", "2.0")
+    os.getenv("SCRAPY_AUTOTHROTTLE_TARGET_CONCURRENCY", "1.0")
 )
 AUTOTHROTTLE_DEBUG = os.getenv("SCRAPY_AUTOTHROTTLE_DEBUG", "False").lower() == "true"
 

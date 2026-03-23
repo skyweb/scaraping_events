@@ -2,7 +2,7 @@
 # Monitoring Stack completo per OKE
 # Installa tutti i componenti di observability usando i file in k8s/monitoring/
 #
-# Componenti: Prometheus, Loki, Promtail, Tempo, Grafana, OTEL Collector
+# Componenti: Prometheus, Loki, Alloy, Tempo, Grafana, OTEL Collector
 # Manifest: redis-exporter, celery-exporter, IngressRoute (Kustomize)
 #
 # Prerequisiti:
@@ -159,19 +159,19 @@
       changed_when: false
 
     # =========================================================================
-    # Helm — Promtail
+    # Helm — Alloy (sostituto Promtail — EOL marzo 2026)
     # =========================================================================
-    - name: Installa Promtail via Helm
+    - name: Installa Alloy via Helm
       ansible.builtin.command: >
-        helm upgrade --install promtail grafana/promtail
+        helm upgrade --install alloy grafana/alloy
         --namespace monitoring
-        -f {{ monitoring_k8s_dir }}/promtail-values.yml
-      register: promtail_result
-      changed_when: "'STATUS: deployed' in promtail_result.stdout"
+        -f {{ monitoring_k8s_dir }}/alloy-values.yml
+      register: alloy_result
+      changed_when: "'STATUS: deployed' in alloy_result.stdout"
 
-    - name: Attendi Promtail ready
+    - name: Attendi Alloy ready
       ansible.builtin.command: >
-        kubectl rollout status daemonset promtail
+        kubectl rollout status daemonset alloy
         --namespace monitoring --timeout=180s
       changed_when: false
 
@@ -299,13 +299,13 @@
           - "--- Componenti Helm ---"
           - "Prometheus:      installato"
           - "Loki:            installato"
-          - "Promtail:        installato"
+          - "Alloy:           installato (sostituto Promtail)"
           - "Tempo:           {{ 'installato' if (install_tempo | default(false)) else 'saltato' }}"
           - "Grafana:         {{ 'installato — https://grafana.oci.santocaruso.eu' if (install_grafana | default(false)) else 'saltato' }}"
           - "OTEL Collector:  installato"
           - ""
           - "--- Manifest Kustomize ---"
-          - "redis-exporter, celery-exporter, IngressRoute (prometheus, alertmanager, loki, grafana, dashboard, traefik)"
+          - "redis-exporter, celery-exporter, APISIX routes (prometheus, grafana)"
           - ""
           - "--- Pods ---"
           - "{{ pods_result.stdout }}"

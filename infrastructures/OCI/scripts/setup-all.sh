@@ -79,26 +79,27 @@ fi
 PLAYBOOKS=(
     # --- Fase 1: Infrastruttura base ---
     "post-cluster-setup.yml|1. Infrastruttura base (namespace, cert-manager, metrics-server, dashboard)"
-    "traefik-setup.yml|2. Traefik Ingress Controller (CRD, Helm, NodePort)"
     # --- Fase 2: Database ---
-    "database-setup.yml|3. PostgreSQL (Secret, Kustomize, StatefulSet)"
+    "database-setup.yml|2. PostgreSQL + Redis (Secret, Kustomize, StatefulSet)"
     # --- Fase 3: Observability ---
-    "monitoring-setup.yml|4. Monitoring (Prometheus, Grafana, Loki, Tempo, OTEL)"
-    # --- Fase 4: Servizi applicativi ---
-    "linkerd-setup.yml|5. Linkerd Service Mesh"
-    "kong-setup.yml|6. Kong API Gateway + Konga"
-    "minio-setup.yml|7. MinIO Object Storage"
-    "backstage-setup.yml|8. Backstage Developer Portal"
-    "airflow-setup.yml|9. Apache Airflow"
-    "harbor-setup.yml|10. Harbor Docker Registry"
-    # --- Fase 5: Security & CI/CD ---
-    #"security-setup.yml|11. Security (Kyverno)"
-    "ci-setup.yml|12. CI/CD (ArgoCD, Tekton)"
-    "backup-setup.yml|13. Backup (Velero)"
-    # --- Fase 6: Domain, proxy, VPN ---
-    "domain-setup.yml|14. HTTPS sottodomini (OAuth2 Proxy, IngressRoute)"
-    "reverse-proxy-setup.yml|15. Reverse proxy (firewalld DNAT su micro-gw)"
-    "wireguard-setup.yml|16. WireGuard VPN (micro-gw)"
+    "monitoring-setup.yml|3. Monitoring (Prometheus, Grafana, Loki, Alloy, Tempo, OTEL)"
+    # --- Fase 4: Gateway + Auth ---
+    "apisix-keycloak-setup.yml|4. APISIX Gateway + Keycloak (OIDC SSO)"
+    # --- Fase 5: Servizi applicativi ---
+    "apps-setup.yml|5. Django Backoffice + Celery"
+    "minio-setup.yml|6. MinIO Object Storage"
+    "airflow-setup.yml|7. Apache Airflow"
+    "scraping-setup.yml|8. Scraping Service (pod templates)"
+    "harbor-setup.yml|9. Harbor Docker Registry"
+    # --- Fase 6: Service Mesh ---
+    "linkerd-setup.yml|10. Linkerd Service Mesh"
+    # --- Fase 7: CI/CD & Security ---
+    "ci-setup.yml|11. CI/CD (ArgoCD, Tekton)"
+    "backup-setup.yml|12. Backup (Velero)"
+    #"security-setup.yml|13. Security (Kyverno)"
+    # --- Fase 8: Network ---
+    "reverse-proxy-setup.yml|14. Reverse proxy (firewalld DNAT su micro-gw)"
+    "wireguard-setup.yml|15. WireGuard VPN (micro-gw)"
 )
 
 TOTAL=${#PLAYBOOKS[@]}

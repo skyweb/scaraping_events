@@ -20,6 +20,7 @@ import re
 import scrapy
 
 from spiders.base import BaseEventSpider
+from spiders.utils import DEFAULT_CRAWL_SETTINGS
 
 
 class ArtribuneSpider(BaseEventSpider):
@@ -37,8 +38,8 @@ class ArtribuneSpider(BaseEventSpider):
     allowed_domains = ["artribune.com"]
 
     custom_settings = {
-        "CONCURRENT_REQUESTS": 2,
-        "DOWNLOAD_DELAY": 1.0,
+        **DEFAULT_CRAWL_SETTINGS,
+        "DOWNLOAD_DELAY": 2.0,
     }
 
     def __init__(

@@ -41,7 +41,7 @@ class BaseEventSpider(scrapy.Spider, ABC):
     # Settings di default per tutti gli spider
     custom_settings = {
         "CONCURRENT_REQUESTS_PER_DOMAIN": 2,
-        "DOWNLOAD_DELAY": 1.0,
+        "DOWNLOAD_DELAY": 2.0,
         "RANDOMIZE_DOWNLOAD_DELAY": True,
     }
 

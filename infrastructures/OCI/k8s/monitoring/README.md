@@ -1,7 +1,7 @@
 # Monitoring Stack - K8s Manifests
 
 Observability stack per il cluster OKE. Comprende Helm values files per chart complessi
-e manifest K8s nativi per deployment semplici e IngressRoute.
+e manifest K8s nativi per deployment semplici e route APISIX.
 
 ## Prerequisiti
 
@@ -34,8 +34,8 @@ helm upgrade --install prometheus prometheus-community/prometheus \
 helm upgrade --install loki grafana/loki \
   -n monitoring -f loki-values.yml
 
-helm upgrade --install promtail grafana/promtail \
-  -n monitoring -f promtail-values.yml
+helm upgrade --install alloy grafana/alloy \
+  -n monitoring -f alloy-values.yml
 
 helm upgrade --install tempo grafana/tempo \
   -n monitoring -f tempo-values.yml
@@ -49,16 +49,15 @@ helm upgrade --install otel-collector open-telemetry/opentelemetry-collector \
 
 ## Manifest Nativi (Kustomize)
 
-Applica deployment, service e IngressRoute:
+Applica deployment, service e route APISIX:
 
 ```bash
 kubectl apply -k .
 ```
 
 Risorse incluse:
-- **redis-exporter**: Deployment + Service (porta 9121), metriche Redis per Prometheus
-- **celery-exporter**: Deployment + Service (porta 9808), metriche Celery per Prometheus
-- **IngressRoute**: prometheus, alertmanager, loki, grafana, K8s Dashboard, Traefik Dashboard
+- **monitoring-apisix-routes**: Route APISIX per Prometheus, Grafana (SSO via Keycloak)
+- **dashboard-apisix-route**: Route APISIX per K8s Dashboard
 
 ## Verifica
 
@@ -69,39 +68,21 @@ kubectl get pods -n monitoring
 # Services
 kubectl get svc -n monitoring
 
-# IngressRoute
-kubectl get ingressroute -n monitoring
-kubectl get ingressroute -n traefik
-
 # Helm releases
 helm list -n monitoring
 ```
-
-## Accesso Grafana
-
-- URL: `https://grafana.oci.santocaruso.eu`
-- User: `admin`
-- Password: valore in `grafana-secret`
-
-Datasource pre-configurati (provisioning automatico):
-- **Prometheus** — metriche (default)
-- **Loki** — log
-- **Tempo** — traces (con link a Loki e Prometheus)
-
-Per esplorare i traces: Grafana → Explore → seleziona datasource **Tempo**.
 
 ## Componenti
 
 | Componente | Tipo | Accesso |
 |---|---|---|
-| Prometheus | Helm chart | prometheus.oci.santocaruso.eu |
-| Alertmanager | Helm chart (sub-chart) | alertmanager.oci.santocaruso.eu |
-| Loki | Helm chart (SingleBinary) | loki.oci.santocaruso.eu |
-| Promtail | Helm chart (DaemonSet) | interno (log shipper) |
+| Prometheus | Helm chart | prometheus.${DOMAIN} |
+| Alertmanager | Helm chart (sub-chart) | interno |
+| Loki | Helm chart (SingleBinary) | interno (log backend) |
+| Alloy | Helm chart (DaemonSet) | interno (log collector, metriche su :12345) |
 | OTEL Collector | Helm chart (DaemonSet) | interno (OTLP receiver) |
 | Tempo | Helm chart (SingleBinary) | interno (trace backend) |
-| Grafana | Helm chart | grafana.oci.santocaruso.eu |
+| Grafana | Helm chart | grafana.${DOMAIN} |
+| PostgreSQL Exporter | Helm chart | interno (ClusterIP) |
 | Redis Exporter | K8s Deployment | interno (ClusterIP :9121) |
 | Celery Exporter | K8s Deployment | interno (ClusterIP :9808) |
-| K8s Dashboard | IngressRoute only | dashboard.oci.santocaruso.eu |
-| Traefik Dashboard | IngressRoute only | traefik.oci.santocaruso.eu |
