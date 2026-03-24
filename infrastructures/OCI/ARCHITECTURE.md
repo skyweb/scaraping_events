@@ -166,15 +166,16 @@ Piattaforma di aggregazione eventi che raccoglie dati da 50+ fonti italiane (Zer
                          | staging_events   |
                          | (UPSERT by uuid) |
                          +--------+---------+
-                                  | ETL
+                                  | publish (status=published)
                                   v
                          +------------------+
-                         | production_events|
-                         | (validated,final)|
+                         | events           |
+                         | (status field)   |
+                         | staging|published|
                          +------------------+
                                   |
                                   v
-                         Frontend React / API consumers
+                         API consumers / Frontend
 ```
 
 ### Struttura Evento (Scrapy -> API)

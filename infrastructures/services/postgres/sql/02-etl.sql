@@ -57,14 +57,15 @@ RETURNS INT AS $$
 DECLARE
     v_count INT;
 BEGIN
-    UPDATE events_data.production_events p
+    UPDATE events_data.events p
     SET is_active = FALSE, updated_at = CURRENT_TIMESTAMP
     WHERE p.source = p_source
+      AND p.status = 'published'
       AND (p_city IS NULL OR p.city = p_city)
       AND p.is_active = TRUE
       AND NOT EXISTS (
-          SELECT 1 FROM events_data.staging_events s
-          WHERE s.uuid = p.uuid
+          SELECT 1 FROM events_data.events s
+          WHERE s.uuid = p.uuid AND s.status = 'staging'
       );
 
     GET DIAGNOSTICS v_count = ROW_COUNT;
