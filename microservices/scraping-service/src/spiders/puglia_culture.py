@@ -119,7 +119,6 @@ class PugliaCultureSpider(BaseEventSpider):
                 detail_url,
                 callback=self.parse_event_detail,
                 meta={
-                    "event_id": str(event.get("id", "")),
                     "image_url_api": image_url,
                     "title_api": self.clean_text(title_rendered),
                     "cpt": cpt,
@@ -199,8 +198,6 @@ class PugliaCultureSpider(BaseEventSpider):
         if contatti_html:
             section_data["info_e_contatti"] = contatti_html
 
-        slug = response.meta.get("slug") or self.slug_from_url(response.url)
-
         uuid = self.generate_uuid(title, date_start, location_name)
         content_hash = self.generate_content_hash(description)
 
@@ -229,7 +226,6 @@ class PugliaCultureSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "event_id": response.meta.get("event_id", slug),
                 "category": response.meta.get("cpt", "evento"),
             },
         )

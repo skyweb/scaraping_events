@@ -144,7 +144,6 @@ class LoveVdaSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "event_id": slug,
                 "category": "evento",
                 "source": self.source_name,
             },

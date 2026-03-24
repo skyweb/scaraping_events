@@ -180,7 +180,6 @@ class BorghiItaliaSpider(BaseEventSpider):
                 description = self.clean_text(description)
 
         # ── Hash e Item ───────────────────────────────────────────────────
-        slug = self.slug_from_url(response.url)
         uuid = self.generate_uuid(title, date_start or "", location_name or "")
         content_hash = self.generate_content_hash(description or "", "", orari or "")
 
@@ -209,7 +208,6 @@ class BorghiItaliaSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "event_id": slug,
                 "category": "evento",
                 "source": self.source_name,
             },

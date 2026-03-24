@@ -407,10 +407,8 @@ class CityTodaySpider(BaseEventSpider):
             raw_detail.get("descrizione") or "", price or "", "",
         )
 
-        # URL e slug
+        # URL sorgente
         url = response.meta["url"]
-        url_path = url.rstrip("/")
-        event_id = url_path.split("/")[-1].replace(".html", "")
 
         # Costruisci EventItem con struttura nested
         item = self.create_item(
@@ -441,7 +439,6 @@ class CityTodaySpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": url,
-                "event_id": event_id,
                 "category": category_value or "evento",
                 "source": self.source_name,
                 "city_key": response.meta.get("city_key"),

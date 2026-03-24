@@ -116,7 +116,6 @@ class SuedtirolSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "event_id": response.css("section.sdt-pdp-event::attr(data-id)").get() or self.slug_from_url(response.url),
                 "category": "evento",
                 "source": self.source_name,
             },

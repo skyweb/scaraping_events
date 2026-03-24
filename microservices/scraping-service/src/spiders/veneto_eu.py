@@ -83,7 +83,6 @@ class VenetoEuSpider(BaseEventSpider):
         if date_end == date_start:
             date_end = None
 
-        event_id = str(event.get("id", ""))
         uuid = self.generate_uuid(title, date_start or "", city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 

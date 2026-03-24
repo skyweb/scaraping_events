@@ -142,8 +142,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
 
         # URL pagina evento
         url = event.get("link", "")
-        slug = event.get("slug", "")
-
         return {
             "wp_id": event.get("id"),
             "title": title,
@@ -185,7 +183,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
 
         # Hash
         title = api_data["title"]
-        slug = api_data["slug"]
         uuid = self.generate_uuid(title or "", date_start or "", city or location_name or "")
         content_hash = self.generate_content_hash(api_data["description"] or "", "", "")
 
@@ -216,7 +213,6 @@ class LaMiaLiguriaSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": api_data["url"],
-                "event_id": str(api_data["wp_id"]),
                 "category": category_value or "evento",
                 "source": self.source_name,
             },

@@ -160,10 +160,7 @@ class ZeroEuSpider(BaseEventSpider):
         # Dati base dall'API
         api_data = {}
 
-        api_data["event_id"] = str(data.get("id", ""))
         api_data["url"] = data.get("link")
-        api_data["slug"] = data.get("slug")
-
         # Titolo
         api_data["title"] = self.clean_text(data.get("name", {}).get("plain"))
 
@@ -303,7 +300,6 @@ class ZeroEuSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": d.get("url") or "",
-                "event_id": d.get("event_id") or "",
                 "category": d["category"][0] if d.get("category") else "evento",
                 "source": self.source_name,
             },

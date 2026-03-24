@@ -316,7 +316,6 @@ class InLombardiaSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "event_id": slug,
                 "category": category[0] if category else "evento",
                 "source": self.source_name,
             },

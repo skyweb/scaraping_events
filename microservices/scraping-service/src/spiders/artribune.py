@@ -260,9 +260,6 @@ class ArtribuneSpider(BaseEventSpider):
             if price_text:
                 price = self.clean_text(price_text)
 
-        # Slug
-        slug = (url or response.url).rstrip("/").split("/")[-1] or "evento"
-
         # Hash
         uuid = self.generate_uuid(title or "", date_start or "", location_name or "")
         content_hash = self.generate_content_hash(description or "", price or "", "")
@@ -294,7 +291,6 @@ class ArtribuneSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": url or response.url,
-                "event_id": slug,
                 "category": category[0] if category else "evento",
                 "source": self.source_name,
             },

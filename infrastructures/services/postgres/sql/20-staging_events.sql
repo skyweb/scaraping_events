@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS events_data.staging_events (
     id SERIAL PRIMARY KEY,
 
     -- ID e Hashing
-    event_id VARCHAR(255),             -- ID originale della fonte (slug dall'URL)
     uuid VARCHAR(16) UNIQUE NOT NULL,  -- Hash interno (titolo + data + location)
     content_hash VARCHAR(16),          -- Hash del contenuto per rilevare modifiche
 
@@ -51,7 +50,6 @@ CREATE TABLE IF NOT EXISTS events_data.staging_events (
 
 -- Commenti
 COMMENT ON TABLE events_data.staging_events IS 'Tabella staging per eventi temporanei dallo scraping, prima della validazione.';
-COMMENT ON COLUMN events_data.staging_events.event_id IS 'ID originale dalla fonte (es. slug dall URL).';
 COMMENT ON COLUMN events_data.staging_events.uuid IS 'Hash univoco interno (titolo + data_start + location_name).';
 COMMENT ON COLUMN events_data.staging_events.content_hash IS 'Hash del contenuto per rilevare modifiche.';
 COMMENT ON COLUMN events_data.staging_events.source IS 'Codice della fonte dati (es. city_today).';

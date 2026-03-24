@@ -6,7 +6,7 @@ Struttura:
     uuid        — Hash univoco per deduplicazione (titolo + data + location)
     title       — Titolo dell'evento
     data        — Dict con contenuto, date, location, dettagli
-    meta        — Dict metadati (url, slug, event_id, ...)
+    meta        — Dict metadati (url, source, content_hash, ...)
 """
 
 import scrapy
@@ -21,4 +21,4 @@ class EventItem(scrapy.Item):
 
     # Blocchi annidati
     data = scrapy.Field()           # contenuto, date, location, dettagli
-    meta = scrapy.Field()           # url, slug, event_id ...
+    meta = scrapy.Field()           # url, source, content_hash ...

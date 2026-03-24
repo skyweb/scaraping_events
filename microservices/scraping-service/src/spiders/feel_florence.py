@@ -144,9 +144,6 @@ class FeelFlorenceSpider(BaseEventSpider):
             response.css(".field--name-field-emails a::text").get()
         )
 
-        # Slug
-        slug = response.url.rstrip("/").split("/")[-1] or "evento"
-
         # Hash
         uuid = self.generate_uuid(title, date_start or "", location_name or city or "Firenze")
         content_hash = self.generate_content_hash(description or "", price or "", "")
@@ -178,7 +175,6 @@ class FeelFlorenceSpider(BaseEventSpider):
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "event_id": slug,
                 "category": categories[0] if categories else "evento",
                 "source": self.source_name,
             },
