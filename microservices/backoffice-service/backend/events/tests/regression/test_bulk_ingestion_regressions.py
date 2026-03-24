@@ -7,6 +7,7 @@ from events.tests.helpers import event_scraping_payload
 
 class BulkIngestionRegressionTest(TestCase):
     def test_upsert_by_uuid_does_not_duplicate_event(self):
+        """Verifica che l'upsert tramite UUID aggiorni l'evento invece di crearne di inavvertiti doppioni."""
         payload = event_scraping_payload(uuid="dup-001", title="Versione 1")
 
         serializer = EventScrapingSerializer(data=payload)
@@ -22,6 +23,7 @@ class BulkIngestionRegressionTest(TestCase):
         self.assertEqual(Event.objects.get(uuid="dup-001").title, "Versione 2")
 
     def test_nested_spider_format_preserves_batch_file(self):
+        """Verifica che, con payload a struttura nidificata da spider, i metadati come il batch file originale rimangano intatti."""
         payload = {
             "uuid": "nested-001",
             "title": "Evento spider",

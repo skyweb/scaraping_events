@@ -31,12 +31,14 @@ class ExternalViewHelpersTest(TestCase):
         cache.delete(CACHE_VERSION_KEY)
 
     def test_get_cache_version_initializes_counter(self):
+        """Verifica che in prima battuta il contatore che stabilisce la versione della cache sia inizializzato alla base originaria."""
         version = _get_cache_version()
 
         self.assertEqual(version, 1)
         self.assertEqual(cache.get(CACHE_VERSION_KEY), 1)
 
     def test_invalidate_external_cache_increments_counter(self):
+        """Verifica che lo svecchiamento o invalidazione cache induca un incremento progressivo sul contatore della medesima."""
         cache.set(CACHE_VERSION_KEY, 1, timeout=None)
 
         _invalidate_external_cache()
@@ -44,12 +46,14 @@ class ExternalViewHelpersTest(TestCase):
         self.assertEqual(cache.get(CACHE_VERSION_KEY), 2)
 
     def test_invalidate_external_cache_resets_counter_when_missing(self):
+        """Verifica che in caso di smarrimento o mancanza contenziosa, rimpiazzi l'incremento ricominciando dalla soglia unita minima."""
         with patch("django.core.cache.cache.incr", side_effect=ValueError):
             _invalidate_external_cache()
 
         self.assertEqual(cache.get(CACHE_VERSION_KEY), 1)
 
     def test_plan_field_filter_mixin_invalidates_cache_after_create_update_destroy(self):
+        """Verifica che il mixin determini d'ufficio un'invalidazione ad ogni variazione distruttiva od alterativa sul ciclo vitale dell'evento."""
         view = DummyPlanLifecycleView()
         serializer = MagicMock()
         instance = MagicMock()

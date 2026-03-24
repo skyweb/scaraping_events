@@ -10,6 +10,7 @@ from events.tests.helpers import ExternalAPITestCase, event_minimal_payload
 
 class ExternalEventCRUDTest(ExternalAPITestCase):
     def test_list_events(self):
+        """Verifica che gli eventi vengano correttamente restituiti da una richiesta lista."""
         self.create_event(uuid="list-001")
         self.create_event(uuid="list-002", title="Evento 2")
         self.authenticate_consumer(actions=("read",))
@@ -20,6 +21,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertGreaterEqual(response.data["count"], 2)
 
     def test_list_can_filter_by_city(self):
+        """Verifica che la lista degli eventi possa essere filtrata per città."""
         self.create_event(uuid="city-001", city="Roma")
         self.create_event(uuid="city-002", city="Milano")
         self.authenticate_consumer(actions=("read",))
@@ -31,6 +33,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(response.data["results"][0]["uuid"], "city-001")
 
     def test_list_can_filter_by_source(self):
+        """Verifica che la lista degli eventi possa essere filtrata per sorgente di provenienza."""
         self.create_event(uuid="source-001", source="source-a")
         self.create_event(uuid="source-002", source="source-b")
         self.authenticate_consumer(actions=("read",))
@@ -42,6 +45,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(response.data["results"][0]["uuid"], "source-002")
 
     def test_list_can_search(self):
+        """Verifica le funzionalità di ricerca testuale sui titoli degli eventi."""
         self.create_event(uuid="search-001", title="Concerto Jazz al Blue Note")
         self.create_event(uuid="search-002", title="Mostra Rinascimentale")
         self.authenticate_consumer(actions=("read",))
@@ -53,6 +57,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(response.data["results"][0]["uuid"], "search-001")
 
     def test_list_can_order_by_city(self):
+        """Verifica che la lista degli eventi possa essere ordinata correttamente in base alla città."""
         self.create_event(uuid="order-001", city="Roma")
         self.create_event(uuid="order-002", city="Milano")
         self.authenticate_consumer(actions=("read",))
@@ -64,6 +69,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(uuids, ["order-002", "order-001"])
 
     def test_create_event(self):
+        """Verifica che i permessi di creazione lascino creare correttamente un nuovo evento."""
         self.authenticate_consumer(actions=("read", "create"))
 
         response = self.client.post(
@@ -77,6 +83,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(event.created_by, "enterprise-consumer")
 
     def test_retrieve_event(self):
+        """Verifica che il dettaglio di un evento possa essere richiamato per ID."""
         event = self.create_event(uuid="retrieve-001")
         self.authenticate_consumer(actions=("read",))
 
@@ -86,6 +93,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(response.data["uuid"], "retrieve-001")
 
     def test_soft_delete_event(self):
+        """Verifica che l'eliminazione di un evento imposti is_active=False ed aggiorni il campo deleted_by (Soft Delete)."""
         event = self.create_event(uuid="crud-delete-001")
         self.authenticate_consumer(actions=("read", "delete"))
 
@@ -97,6 +105,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(event.deleted_by, "enterprise-consumer")
 
     def test_update_event_sets_updated_by(self):
+        """Verifica che l'aggiornamento di un evento registri correttamente il consumer come responsabile(Updated_by)."""
         event = self.create_event(uuid="crud-update-001", title="Titolo iniziale")
         self.authenticate_consumer(actions=("read", "update"))
 
@@ -112,6 +121,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(event.updated_by, "enterprise-consumer")
 
     def test_clear_source_deletes_matching_events_only(self):
+        """Verifica che la funzione clear_source elimini rigorosamente soltanto gli eventi inerenti alla fonte indicata."""
         self.create_event(uuid="clear-001", source="source-to-clear")
         self.create_event(uuid="clear-002", source="source-to-clear")
         self.create_event(uuid="keep-001", source="source-to-keep")
@@ -126,6 +136,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertTrue(Event.objects.filter(uuid="keep-001").exists())
 
     def test_clear_source_requires_source_parameter(self):
+        """Verifica che il parametro sorgente debba essere presente affinché clear_source continui l'azione decisa."""
         self.authenticate_consumer(actions=("read", "delete"))
 
         response = self.client.delete("/api/v1/events/clear_source/")
@@ -134,6 +145,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(response.data["error"], "source parameter is required")
 
     def test_free_plan_receives_reduced_fields(self):
+        """Verifica che coloro limitati dal piano free visualizzino un numero di campi ridotto."""
         event = self.create_event(uuid="plan-free-001")
         self.authenticate_consumer(plan="free", actions=("read",))
 
@@ -143,6 +155,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(sorted(response.data.keys()), sorted(["id", "uuid", "title", "city", "date_start", "date_end", "category", "source"]))
 
     def test_get_caller_username_uses_authenticated_user_when_auth_payload_missing(self):
+        """Verifica che in mancanza del payload dell'auth, ci si riferisca quantomeno al profilo utente loggato qualora esista."""
         request = APIRequestFactory().get("/api/v1/events/")
         user = create_staff_user(username="direct-caller")
         request.user = user
@@ -153,6 +166,7 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         self.assertEqual(view._get_caller_username(), user.username)
 
     def test_get_caller_username_returns_empty_for_anonymous_request(self):
+        """Verifica che senza utente loggato, per richieste anonime ritorni un campo vuoto."""
         request = APIRequestFactory().get("/api/v1/events/")
         request.user = AnonymousUser()
 

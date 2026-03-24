@@ -8,6 +8,7 @@ from events.tests.factories import create_api_consumer, create_event, create_sta
 
 
 def event_scraping_payload(**overrides) -> dict:
+    """Genera un payload tipico proveniente da una passata di scraping completa, per i test mock."""
     data = {
         "uuid": "bulk-test-001",
         "content_hash": "hash001",
@@ -35,6 +36,7 @@ def event_scraping_payload(**overrides) -> dict:
 
 
 def event_legacy_payload(**overrides) -> dict:
+    """Genera un payload emulante il vecchio formato strutturale per i test di retrocompatibilità."""
     data = {
         "title": "Mostra Caravaggio",
         "source": "test_legacy",
@@ -69,6 +71,7 @@ def event_legacy_payload(**overrides) -> dict:
 
 
 def event_minimal_payload(**overrides) -> dict:
+    """Genera un payload stringato ed essenziale, con la dotazione minima per esser ritenuto ammissibile."""
     data = {
         "uuid": "bulk-min-001",
         "source": "test_spider",
@@ -91,6 +94,7 @@ class ExternalAPITestCase(TestCase):
         plan: str = "enterprise",
         actions: tuple[str, ...] = ("read", "create", "update", "delete"),
     ):
+        """Autentica un consumatore in ambito test aggiungendovi header dedicati."""
         consumer = create_api_consumer(username=username, plan=plan, actions=actions)
         self.client.credentials(
             HTTP_X_CONSUMER_PLAN=plan,
@@ -99,9 +103,11 @@ class ExternalAPITestCase(TestCase):
         return consumer
 
     def clear_auth(self):
+        """Azzera brutalmente i parametri di autenticazione dell'API client."""
         self.client.credentials()
 
     def create_event(self, **overrides):
+        """Instanzia un evento passando alla factory gli overwrite richiesti in maniera opzionale."""
         return create_event(**overrides)
 
 
@@ -114,7 +120,9 @@ class InternalAPITestCase(TestCase):
         self.client.force_login(self.user)
 
     def create_event(self, **overrides):
+        """Genera per vie traverse (factory) un nuovo evento configurabile ad hoc per questo tipo di test."""
         return create_event(**overrides)
 
     def create_staging_event(self, **overrides):
+        """Crea un evento forzando lo status in stato embrionale o d'attesa (Staging)."""
         return create_event(status=Event.Status.STAGING, **overrides)

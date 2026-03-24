@@ -9,10 +9,12 @@ from events.tests.factories import create_event
 
 class EventModelTest(TestCase):
     def test_string_representation_uses_status_title_and_city(self):
+        """Verifica che la rappresentazione testuale dell'evento usi lo stato, il titolo e la città."""
         event = create_event(title="Festival", city="Torino", status=Event.Status.PUBLISHED)
         self.assertEqual(str(event), "[Pubblicato] Festival - Torino")
 
     def test_compute_rank_score_rewards_completeness_and_future_date(self):
+        """Verifica che il calcolo del rank score premi un evento molto dettagliato e con data nel futuro."""
         now = timezone.now()
         event = create_event(
             source="borghi_italia",
@@ -31,6 +33,7 @@ class EventModelTest(TestCase):
         self.assertGreater(event.compute_rank_score(), 70)
 
     def test_compute_rank_score_returns_zero_for_past_event_without_extra_data(self):
+        """Verifica che il rank score crolli ai minimi per eventi ormai scaduti e poveri di dettagli extra."""
         now = timezone.now()
         event = create_event(
             description=None,

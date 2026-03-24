@@ -6,6 +6,7 @@ from events.tests.helpers import event_legacy_payload
 
 class EventLegacySerializerTest(TestCase):
     def test_legacy_payload_is_normalized(self):
+        """Verifica che il payload legacy subisca normalizzazione ed essenzializzazione in dati standardizzati."""
         serializer = EventLegacySerializer(data=event_legacy_payload())
         self.assertTrue(serializer.is_valid(), serializer.errors)
 
@@ -17,6 +18,7 @@ class EventLegacySerializerTest(TestCase):
         self.assertEqual(len(serializer.validated_data["content_hash"]), 32)
 
     def test_csv_category_is_split(self):
+        """Verifica che una stringa in formato testuale/CSV di categorie del passato venga elaborata e separata."""
         payload = event_legacy_payload()
         payload["list"]["category"] = "arte, mostre, cultura"
         serializer = EventLegacySerializer(data=payload)
@@ -25,6 +27,7 @@ class EventLegacySerializerTest(TestCase):
         self.assertEqual(serializer.validated_data["category"], ["arte", "mostre", "cultura"])
 
     def test_required_fields_are_enforced(self):
+        """Verifica che i campi cruciali (titolo, sorgente) vengano resi esplicitamente obbligatori in salvataggio."""
         serializer = EventLegacySerializer(data={})
         self.assertFalse(serializer.is_valid())
         self.assertIn("title", serializer.errors)

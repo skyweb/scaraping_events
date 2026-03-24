@@ -22,6 +22,7 @@ def create_api_consumer(
     plan: str = "enterprise",
     actions: tuple[str, ...] = ("read", "create", "update", "delete"),
 ) -> ApiConsumer:
+    """Crea e restituisce un'utenza consumer API ai fini dei test."""
     return ApiConsumer.objects.create(
         username=username,
         plan=plan,
@@ -32,6 +33,7 @@ def create_api_consumer(
 
 
 def create_staff_user(username: str = "staff") -> User:
+    """Crea un utente interno con permessi di tipo staff."""
     return User.objects.create_user(
         username=username,
         password="testpass123",
@@ -40,6 +42,7 @@ def create_staff_user(username: str = "staff") -> User:
 
 
 def create_event(**overrides) -> Event:
+    """Modella e restituisce un evento fittizio di base, validante e coerente."""
     now = timezone.now()
     defaults = {
         "uuid": "event-001",

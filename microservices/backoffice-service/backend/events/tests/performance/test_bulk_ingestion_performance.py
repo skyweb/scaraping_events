@@ -8,6 +8,7 @@ from events.tests.helpers import event_minimal_payload
 
 class BulkIngestionPerformanceTest(TestCase):
     def test_bulk_task_keeps_query_count_bounded(self):
+        """Verifica che l'ingestione massiva limiti ed ottimizzi il numero massimo di query effettuate (escludendo il problema n+1)."""
         events = [
             event_minimal_payload(uuid=f"perf-{index:03d}", title=f"Evento {index}")
             for index in range(25)
