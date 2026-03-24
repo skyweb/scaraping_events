@@ -49,8 +49,33 @@ deployment:
 
 nginx_config:
   http_server_configuration_snippet: |
-    error_page 502 503 504 /50x.html;
+    error_page 400 /400.html;
+    error_page 401 /401.html;
+    error_page 403 /403.html;
     error_page 404 /50x.html;
+    error_page 429 /429.html;
+    error_page 500 /500.html;
+    error_page 502 503 504 /50x.html;
+    location = /400.html {
+      root /usr/local/apisix/error-pages;
+      internal;
+    }
+    location = /401.html {
+      root /usr/local/apisix/error-pages;
+      internal;
+    }
+    location = /403.html {
+      root /usr/local/apisix/error-pages;
+      internal;
+    }
+    location = /429.html {
+      root /usr/local/apisix/error-pages;
+      internal;
+    }
+    location = /500.html {
+      root /usr/local/apisix/error-pages;
+      internal;
+    }
     location = /50x.html {
       root /usr/local/apisix/error-pages;
       internal;

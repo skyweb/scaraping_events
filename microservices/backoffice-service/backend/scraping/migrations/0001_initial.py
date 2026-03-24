@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'Categorie',
                 'db_table': 'events_data"."v_categorie',
                 'ordering': ['categoria'],
-                'managed': False,
+                'managed': True,
             },
         ),
         migrations.CreateModel(
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'Locations',
                 'db_table': 'events_data"."v_locations',
                 'ordering': ['location_name'],
-                'managed': False,
+                'managed': True,
             },
         ),
         migrations.CreateModel(

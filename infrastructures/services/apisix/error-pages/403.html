@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesso negato — Today Events</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <style>
+    :root {
+      --te-primary: #ff6b8a;
+      --te-primary-dark: #e5556f;
+      --te-gradient-start: #ff6b8a;
+      --te-gradient-end: #ff3d6e;
+      --te-bg: #ffffff;
+      --te-text-dark: #2d3436;
+      --te-text-muted: #636e72;
+      --te-border: #e0e0e0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--te-bg);
+      color: var(--te-text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background: linear-gradient(135deg, var(--te-gradient-start), var(--te-gradient-end));
+      padding: 24px 40px;
+      color: #fff;
+    }
+    .header h1 { font-size: 18px; font-weight: 700; }
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 80px 20px 40px;
+    }
+    .card { text-align: center; max-width: 560px; }
+    .icon-wrap {
+      width: 100px; height: 100px;
+      margin: 0 auto 28px;
+      background: linear-gradient(135deg, rgba(255,107,138,0.1), rgba(255,61,110,0.1));
+      border: 1px solid rgba(255,107,138,0.2);
+      border-radius: 24px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .icon-wrap .material-symbols-outlined { font-size: 48px; color: var(--te-primary); }
+    .card h2 { font-size: 28px; font-weight: 700; margin-bottom: 10px; color: var(--te-text-dark); }
+    .error-code {
+      display: inline-block;
+      background: rgba(255,107,138,0.08);
+      border: 1px solid rgba(255,107,138,0.2);
+      border-radius: 8px;
+      padding: 6px 16px;
+      font-size: 15px; font-weight: 600;
+      color: var(--te-primary-dark);
+      margin-bottom: 20px;
+    }
+    .card p { font-size: 16px; color: var(--te-text-muted); line-height: 1.7; margin-bottom: 32px; }
+    .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 12px 28px; border-radius: 24px;
+      font-size: 15px; font-weight: 600;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+    .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+    .btn .material-symbols-outlined { font-size: 18px; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--te-gradient-start), var(--te-gradient-end));
+      color: #fff;
+    }
+    .btn-ghost {
+      background: transparent; color: var(--te-text-muted);
+      border: 1px solid var(--te-border);
+    }
+    .footer {
+      text-align: center; padding: 20px;
+      font-size: 12px; color: var(--te-text-muted);
+      border-top: 1px solid var(--te-border);
+    }
+  </style>
+</head>
+<body>
+  <div class="header"><h1>Today Events</h1></div>
+  <div class="content">
+    <div class="card">
+      <div class="icon-wrap">
+        <span class="material-symbols-outlined">block</span>
+      </div>
+      <span class="error-code">403</span>
+      <h2>Accesso negato</h2>
+      <p>
+        Non hai i permessi necessari per accedere a questa risorsa.<br>
+        Contatta l'amministratore se ritieni si tratti di un errore.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" id="home-link" href="/">
+          <span class="material-symbols-outlined">home</span>
+          Dashboard
+        </a>
+        <a class="btn btn-ghost" onclick="history.back(); return false;" href="#">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Indietro
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Today Events &mdash; Piattaforma gestione eventi</div>
+  <script>
+    var proto = window.location.protocol;
+    var domain = window.location.hostname.replace(/^[^.]+\./, '');
+    document.getElementById('home-link').href = proto + '//backoffice.' + domain + '/';
+  </script>
+</body>
+</html>
