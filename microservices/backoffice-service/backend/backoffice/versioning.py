@@ -9,7 +9,7 @@ Se l'header non è presente o non matcha, usa la versione di default (v1).
 
 import re
 
-from rest_framework.versioning import BaseVersioning
+from rest_framework.versioning import AcceptHeaderVersioning
 
 
 _VENDOR_RE = re.compile(
@@ -17,7 +17,7 @@ _VENDOR_RE = re.compile(
 )
 
 
-class VendorHeaderVersioning(BaseVersioning):
+class VendorHeaderVersioning(AcceptHeaderVersioning):
     """Versioning via Accept header con media type vendor."""
 
     def determine_version(self, request, *args, **kwargs):

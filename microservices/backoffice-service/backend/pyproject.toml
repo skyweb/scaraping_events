@@ -1,0 +1,51 @@
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+exclude = '''
+/(
+    migrations
+  | \.git
+  | \.venv
+  | staticfiles
+  | media
+)/
+'''
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+exclude = [
+    "migrations",
+    ".git",
+    ".venv",
+    "staticfiles",
+    "media",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "DJ",  # flake8-django
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",   # line too long (handled by black)
+    "DJ001",  # avoid using null=True on string-based fields — intentional in this project
+]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "backoffice",
+    "events",
+    "etl",
+    "scraping",
+    "cms",
+    "comuni_istat",
+    "comuni_italiani",
+    "ai_transform",
+    "nlp",
+    "api_consumers",
+]

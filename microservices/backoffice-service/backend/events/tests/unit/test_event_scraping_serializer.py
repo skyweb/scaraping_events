@@ -48,3 +48,25 @@ class EventScrapingSerializerTest(TestCase):
 
         self.assertEqual(serializer.validated_data["raw_data"]["uuid"], payload["uuid"])
         self.assertEqual(serializer.validated_data["raw_data"]["title"], payload["title"])
+
+    def test_partial_update_does_not_require_uuid_source_and_title(self):
+        serializer = EventScrapingSerializer(data={"description": "Test update"}, partial=True)
+        serializer.is_valid(raise_exception=True)
+
+        self.assertEqual(serializer.validated_data["description"], "Test update")
+        self.assertNotIn("uuid", serializer.validated_data)
+
+    def test_update_applies_validated_fields_to_instance(self):
+        from events.tests.factories import create_event
+
+        event = create_event(uuid="serializer-update-001", title="Titolo iniziale")
+        serializer = EventScrapingSerializer(
+            instance=event,
+            data={"title": "Titolo nuovo", "description": "Descrizione nuova"},
+            partial=True,
+        )
+        serializer.is_valid(raise_exception=True)
+        updated = serializer.save()
+
+        self.assertEqual(updated.title, "Titolo nuovo")
+        self.assertEqual(updated.description, "Descrizione nuova")

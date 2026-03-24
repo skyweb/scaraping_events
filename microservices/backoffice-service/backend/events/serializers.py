@@ -318,11 +318,8 @@ class EventScrapingSerializer(serializers.Serializer):
 
         location_coordinates = _parse_point(city.get('location_coords') or {})
 
-        return {
-            'uuid': validated['uuid'],
+        normalized = {
             'content_hash': validated.get('content_hash') or None,
-            'source': validated['source'],
-            'title': validated['title'],
             'url': validated.get('url') or None,
             'description': validated.get('description') or None,
             'image_url': validated.get('image_url') or None,
@@ -339,12 +336,30 @@ class EventScrapingSerializer(serializers.Serializer):
             'batch_file': validated.get('_batch_file'),
         }
 
+        if 'uuid' in validated:
+            normalized['uuid'] = validated['uuid']
+        if 'source' in validated:
+            normalized['source'] = validated['source']
+        if 'title' in validated:
+            normalized['title'] = validated['title']
+
+        return normalized
+
     def create(self, validated_data):
         """Upsert su uuid."""
         validated_data.pop('_batch_file', None)
         uuid = validated_data.pop('uuid')
         Event.objects.update_or_create(uuid=uuid, defaults=validated_data)
         return Event.objects.get(uuid=uuid)
+
+    def update(self, instance, validated_data):
+        """Aggiorna l'istanza esistente supportando PATCH/PUT."""
+        validated_data.pop('_batch_file', None)
+        validated_data.pop('uuid', None)
+        for field, value in validated_data.items():
+            setattr(instance, field, value)
+        instance.save()
+        return instance
 
 
 class EventLegacySerializer(serializers.Serializer):

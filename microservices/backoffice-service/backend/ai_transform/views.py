@@ -8,6 +8,7 @@ import json
 import logging
 from pathlib import Path
 
+from drf_spectacular.utils import OpenApiExample, extend_schema
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -21,6 +22,14 @@ from ai_transform.gemini import (
     get_provider,
     transform_batch,
     transform_event,
+)
+from ai_transform.serializers import (
+    AITransformErrorSerializer,
+    AITransformFileRequestSerializer,
+    AITransformFileResponseSerializer,
+    AITransformModelsInfoSerializer,
+    AITransformSingleRequestSerializer,
+    AITransformSingleResponseSerializer,
 )
 
 logger = logging.getLogger(__name__)
@@ -64,6 +73,27 @@ def _models_info() -> dict:
     }
 
 
+@extend_schema(
+    request=AITransformFileRequestSerializer,
+    responses={
+        200: AITransformFileResponseSerializer,
+        400: AITransformErrorSerializer,
+        403: AITransformErrorSerializer,
+        404: AITransformErrorSerializer,
+    },
+    examples=[
+        OpenApiExample(
+            "Transform file request",
+            value={
+                "model": "gemini-2.5-flash",
+                "file_path": "events/sample.json",
+                "thinking": False,
+                "limit": 10,
+            },
+            request_only=True,
+        ),
+    ],
+)
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def transform_file_view(request):
@@ -130,6 +160,30 @@ def transform_file_view(request):
     })
 
 
+@extend_schema(
+    request=AITransformSingleRequestSerializer,
+    responses={
+        200: AITransformSingleResponseSerializer,
+        400: AITransformErrorSerializer,
+        429: AITransformErrorSerializer,
+        500: AITransformErrorSerializer,
+    },
+    examples=[
+        OpenApiExample(
+            "Transform single event request",
+            value={
+                "model": "gemini-2.5-flash",
+                "thinking": False,
+                "event": {
+                    "title": "Concerto Jazz",
+                    "city": "Milano",
+                    "date_start": "2026-06-15",
+                },
+            },
+            request_only=True,
+        ),
+    ],
+)
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def transform_single_view(request):
@@ -172,6 +226,9 @@ def transform_single_view(request):
         return Response({"error": str(e)}, status=500)
 
 
+@extend_schema(
+    responses={200: AITransformModelsInfoSerializer},
+)
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
 def models_view(request):

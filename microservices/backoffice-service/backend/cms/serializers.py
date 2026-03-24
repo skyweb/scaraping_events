@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
+from drf_spectacular.utils import extend_schema_field, extend_schema_serializer, OpenApiExample
 
 from .models import PaginaCitta, TabNavigazione, SezionePagina, ArticoloSezione, SezioneEventi
 
@@ -106,7 +106,8 @@ class PaginaCittaDetailSerializer(serializers.ModelSerializer):
         model = PaginaCitta
         fields = ['nome', 'slug', 'navigazione', 'sezioni']
 
-    def get_sezioni(self, obj):
+    @extend_schema_field(serializers.JSONField())
+    def get_sezioni(self, obj) -> list[dict]:
         """Restituisce sezioni manuali + sezioni eventi attive, ordinate per ordine."""
         # Sezioni manuali (con articoli + staging events)
         sezioni_manuali = list(

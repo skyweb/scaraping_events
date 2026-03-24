@@ -24,7 +24,12 @@ NC := \033[0m
 .PHONY: help \
         dev dev-build dev-up dev-down dev-restart dev-logs dev-shell \
         dev-migrate dev-makemigrations dev-superuser dev-collectstatic \
-        dev-ps dev-oauth2 dev-import-comuni build build-no-cache clean
+        dev-ps dev-oauth2 dev-import-comuni \
+        test-events test-events-unit test-events-models test-events-db \
+        test-events-api-internal test-events-api-public test-events-security \
+        test-events-regression test-events-performance test-events-api-table \
+        coverage-events coverage-events-html coverage-events-report coverage-events-erase \
+        build build-no-cache clean
 
 help:
 	@echo "$(GREEN)Comandi disponibili per Service Events:$(NC)"
@@ -55,6 +60,22 @@ help:
 	@echo "    dev-collectstatic  Raccoglie file statici dentro il container"
 	@echo "    dev-oauth2       Crea/mostra credenziali OAuth2 per lo scraper"
 	@echo "    dev-import-comuni  Importa JSON scraping comuni nel DB (richiede DATA_DIR)"
+	@echo ""
+	@echo "  Test Events (dentro container dev):"
+	@echo "    test-events              Esegue tutta la suite events"
+	@echo "    test-events-unit         Esegue solo unit test"
+	@echo "    test-events-models       Esegue solo model test"
+	@echo "    test-events-db           Esegue solo database/bulk task test"
+	@echo "    test-events-api-internal Esegue solo API interne"
+	@echo "    test-events-api-public   Esegue solo API pubbliche"
+	@echo "    test-events-security     Esegue solo security test"
+	@echo "    test-events-regression   Esegue solo regression test"
+	@echo "    test-events-performance  Esegue solo performance test"
+	@echo "    test-events-api-table    Esegue API public con runner tabellare"
+	@echo "    coverage-events         Esegue coverage della suite events"
+	@echo "    coverage-events-report  Mostra report coverage testuale"
+	@echo "    coverage-events-html    Genera report coverage HTML"
+	@echo "    coverage-events-erase   Pulisce i dati coverage"
 	@echo ""
 	@echo "  Docker Production:"
 	@echo "    build            Build immagine Docker produzione"
@@ -165,6 +186,67 @@ dev-import-comuni: ## Importa JSON scraping comuni nel DB (--flush opzionale)
 	@echo "$(GREEN)Pulizia file temporanei nel container...$(NC)"
 	$(COMPOSE_DEV) exec backoffice rm -rf $(CONTAINER_IMPORT_PATH)
 	@echo "$(GREEN)Importazione completata.$(NC)"
+
+# =============================================================================
+# Test suite events
+# =============================================================================
+
+test-events:
+	@echo "$(GREEN)Esecuzione suite events completa...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests
+
+test-events-unit:
+	@echo "$(GREEN)Esecuzione unit test events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.unit
+
+test-events-models:
+	@echo "$(GREEN)Esecuzione model test events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.models
+
+test-events-db:
+	@echo "$(GREEN)Esecuzione database test events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.database
+
+test-events-api-internal:
+	@echo "$(GREEN)Esecuzione API interne events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.api.internal
+
+test-events-api-public:
+	@echo "$(GREEN)Esecuzione API pubbliche events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.api.public
+
+test-events-security:
+	@echo "$(GREEN)Esecuzione security test events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.security
+
+test-events-regression:
+	@echo "$(GREEN)Esecuzione regression test events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.regression
+
+test-events-performance:
+	@echo "$(GREEN)Esecuzione performance test events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.performance
+
+test-events-api-table:
+	@echo "$(GREEN)Esecuzione API public events con runner tabellare...$(NC)"
+	$(COMPOSE_DEV) exec backoffice python manage.py test events.tests.api.public --testrunner events.tests.runner.TableTestRunner
+
+coverage-events:
+	@echo "$(GREEN)Esecuzione coverage suite events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice coverage run --rcfile=/app/backend/.coveragerc manage.py test events.tests
+
+coverage-events-report:
+	@echo "$(GREEN)Report coverage suite events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice coverage report --rcfile=/app/backend/.coveragerc -m
+
+coverage-events-html:
+	@echo "$(GREEN)Generazione coverage HTML suite events...$(NC)"
+	$(COMPOSE_DEV) exec backoffice coverage html --rcfile=/app/backend/.coveragerc
+	@echo "$(GREEN)Report HTML disponibile in backend/htmlcov/index.html$(NC)"
+
+coverage-events-erase:
+	@echo "$(GREEN)Pulizia dati coverage...$(NC)"
+	$(COMPOSE_DEV) exec backoffice coverage erase
 
 # =============================================================================
 # Docker Production

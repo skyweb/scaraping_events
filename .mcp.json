@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "django-docker": {
+      "command": "/opt/homebrew/bin/python3.11",
+      "args": ["/Users/skyweb/Sites/dev/scaraping_events/tools/mcp_django.py"],
+      "description": "Django management commands and Scrapy spiders via docker exec"
+    },
+    "terraform": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "hashicorp/terraform-mcp-server:latest"],
+      "description": "HashiCorp Terraform MCP server (official)"
+    }
+  }
+}

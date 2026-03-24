@@ -286,6 +286,11 @@ Le API interne (`/api/events/`, `/api/dashboard/`, ecc.) usano header versioning
             },
         }
     },
+    'ENUM_NAME_OVERRIDES': {
+        'ComuniIstatTipoEnum': 'comuni_italiani.models.ComuniIstatRawData.TIPO_CHOICES',
+        'IngestionTipoEnum': ['regione', 'provincia', 'comune'],
+        'ComunePuntoInteresseTipoEnum': 'comuni_italiani.models.ComunePuntoInteresse.TIPO_CHOICES',
+    },
     'TAGS': [
         {'name': 'Dashboard', 'description': 'Statistiche aggregate e panoramica'},
         {'name': 'Events', 'description': 'Eventi (pubblicati e staging)'},

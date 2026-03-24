@@ -5,7 +5,7 @@ from django.contrib.auth.models import AnonymousUser
 from events.models import Event
 from events.views import ExternalEventViewSet
 from events.tests.factories import create_staff_user
-from events.tests.helpers import ExternalAPITestCase, event_minimal_payload, event_scraping_payload
+from events.tests.helpers import ExternalAPITestCase, event_minimal_payload
 
 
 class ExternalEventCRUDTest(ExternalAPITestCase):
@@ -100,15 +100,9 @@ class ExternalEventCRUDTest(ExternalAPITestCase):
         event = self.create_event(uuid="crud-update-001", title="Titolo iniziale")
         self.authenticate_consumer(actions=("read", "update"))
 
-        payload = event_scraping_payload(
-            uuid="crud-update-001",
-            source=event.source,
-            title="Titolo aggiornato",
-        )
-
         response = self.client.patch(
             f"/api/v1/events/{event.pk}/",
-            data=payload,
+            data={"title": "Titolo aggiornato"},
             format="json",
         )
 
