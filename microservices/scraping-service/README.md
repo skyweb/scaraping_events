@@ -49,7 +49,6 @@ Progetto Scrapy per lo scraping di eventi da diverse fonti italiane.
 | `comune_lucca` | Lucca | comune.lucca.it |
 | `feel_florence` | Firenze | feelflorence.it |
 | `turismo_roma` | Roma | turismoroma.it |
-| `visit_naples` | Napoli | visitnaples.eu |
 
 ## Quick Start
 
@@ -274,11 +273,6 @@ Gli eventi vengono estratti con la seguente struttura:
 
 | Variabile | Descrizione | Default |
 |-----------|-------------|---------|
-| `POSTGRES_HOST` | Host database | `localhost` |
-| `POSTGRES_PORT` | Porta database | `5432` |
-| `POSTGRES_DB` | Nome database | `today_events` |
-| `POSTGRES_USER` | Utente database | `events` |
-| `POSTGRES_PASSWORD` | Password database | - |
 | `SCRAPY_LOG_LEVEL` | Livello log | `INFO` |
 | `SCRAPY_CONCURRENT_REQUESTS` | Richieste concorrenti | `8` |
 | `SCRAPY_CONCURRENT_REQUESTS_PER_DOMAIN` | Richieste concorrenti per dominio | `2` |

@@ -94,11 +94,6 @@ ESEMPI:
     -d cities=milano
 
 VARIABILI D'AMBIENTE:
-  POSTGRES_HOST      Host PostgreSQL (default: localhost)
-  POSTGRES_PORT      Porta PostgreSQL (default: 5432)
-  POSTGRES_DB        Database (default: events)
-  POSTGRES_USER      Utente (default: postgres)
-  POSTGRES_PASSWORD  Password (default: postgres)
   SCRAPY_LOG_LEVEL   Livello log (default: INFO)
 
 EOF

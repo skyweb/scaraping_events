@@ -139,6 +139,20 @@ class Event(models.Model):
         return round(score, 2)
 
 
+class Category(models.Model):
+    """Tassonomia ufficiale delle categorie eventi (editabile da admin)."""
+    name = models.CharField(max_length=100, unique=True, verbose_name='Nome')
+
+    class Meta:
+        db_table = 'events_data"."categories'
+        ordering = ['name']
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorie'
+
+    def __str__(self) -> str:
+        return self.name
+
+
 # Alias per retrocompatibilità temporanea
 StagingEvent = Event
 ProductionEvent = Event

@@ -153,6 +153,7 @@ class TurismoRomaSpider(BaseEventSpider):
         contatti = informazioni.get("contatti", {})
 
         # Slug
+        slug = response.url.rstrip("/").split("/")[-1] or "evento"
 
         # Hash
         uuid = self.generate_uuid(title, date_start or "", location_name or "Roma")

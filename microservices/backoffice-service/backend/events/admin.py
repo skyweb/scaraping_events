@@ -21,7 +21,7 @@ from django_celery_results.models import TaskResult
 from django_celery_results.admin import TaskResultAdmin as BaseTaskResultAdmin
 from rest_framework_tracking.models import APIRequestLog
 
-from .models import Event
+from .models import Event, Category
 from .admin_mixins import EventDisplayMixin
 from .admin_utils import format_datetime_italian, render_chip, render_json_preview
 from comuni_istat.models import Comune
@@ -656,3 +656,11 @@ class CustomAPIRequestLogAdmin(ModelAdmin):
             stats['max_ms'] or 0,
         )
         return super().changelist_view(request, extra_context=extra_context)
+
+
+@admin.register(Category)
+class CategoryAdmin(ModelAdmin):
+    """Tassonomia ufficiale delle categorie eventi."""
+    list_display = ['name']
+    search_fields = ['name']
+    ordering = ['name']
