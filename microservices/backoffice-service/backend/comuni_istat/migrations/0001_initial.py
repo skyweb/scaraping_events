@@ -12,6 +12,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('comuni_italiani', '0001_initial'),
+        ('events', '0000_create_schemas'),
     ]
 
     operations = [

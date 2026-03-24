@@ -292,7 +292,7 @@
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": true,
       "protocol": "openid-connect",
-      "secret": "CHANGE_ME_BACKOFFICE_SECRET",
+      "secret": "change_me_backoffice_oidc_secret",
       "redirectUris": [
         "https://backoffice.127.0.0.1.nip.io/*",
         "https://grafana.127.0.0.1.nip.io/*",
@@ -400,7 +400,7 @@
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
-      "secret": "CHANGE_ME_SCRAPER_SECRET",
+      "secret": "scraper_secret_2026",
       "redirectUris": [],
       "webOrigins": [],
       "notBefore": 0,
@@ -469,7 +469,7 @@
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": true,
       "protocol": "openid-connect",
-      "secret": "CHANGE_ME_MINIO_SECRET",
+      "secret": "change_me_minio_oidc_secret",
       "redirectUris": [
         "https://minio.127.0.0.1.nip.io/*"
       ],
@@ -528,7 +528,7 @@
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": true,
       "protocol": "openid-connect",
-      "secret": "CHANGE_ME_HARBOR_SECRET",
+      "secret": "change_me_harbor_oidc_secret",
       "redirectUris": [
         "https://registry.127.0.0.1.nip.io/*"
       ],
@@ -585,7 +585,7 @@
       "alwaysDisplayInConsole": false,
       "frontchannelLogout": false,
       "protocol": "openid-connect",
-      "secret": "CHANGE_ME_AIRFLOW_SECRET",
+      "secret": "airflow_secret_2026",
       "redirectUris": [],
       "webOrigins": [],
       "notBefore": 0,

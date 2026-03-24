@@ -161,7 +161,7 @@ class EventAdmin(EventDisplayMixin, ModelAdmin):
         css = {
             'all': ('events/css/admin_custom.css',)
         }
-        js = ('events/js/tab_persist.js', 'events/js/row_inactive.js')
+        js = ('events/js/tab_persist.js', 'events/js/row_inactive.js', 'events/js/location_map.js')
 
     list_display = ['image_thumbnail', 'title', 'event_status_chip', 'status_chip', 'category_list', 'city', 'source', 'is_active_chip', 'created_at']
     list_display_links = ['title']
@@ -316,25 +316,13 @@ class EventAdmin(EventDisplayMixin, ModelAdmin):
             return "-"
         lat = obj.location_coordinates.y
         lng = obj.location_coordinates.x
-        map_id = f"map-staging-{obj.pk}"
+        location_name = (obj.location_name or "").replace('"', "&quot;")
         return mark_safe(
-            f'<div id="{map_id}" style="height:300px;width:100%;border-radius:0.5rem;margin-top:0.5rem;"></div>'
-            f'<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />'
-            f'<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>'
-            f'<script>'
-            f'(function() {{'
-            f'  function initMap() {{'
-            f'    if (typeof L === "undefined") {{ setTimeout(initMap, 100); return; }}'
-            f'    var map = L.map("{map_id}").setView([{lat}, {lng}], 15);'
-            f'    L.tileLayer("https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png", {{'
-            f'      attribution: "&copy; OpenStreetMap"'
-            f'    }}).addTo(map);'
-            f'    L.marker([{lat}, {lng}]).addTo(map);'
-            f'    setTimeout(function() {{ map.invalidateSize(); }}, 200);'
-            f'  }}'
-            f'  initMap();'
-            f'}})();'
-            f'</script>'
+            f'<div id="map-event-location"'
+            f' style="height:70vh;width:100%;border-radius:8px;margin-top:8px;"'
+            f' data-lat="{lat}"'
+            f' data-lng="{lng}"'
+            f' data-location-name="{location_name}"></div>'
         )
     location_map_preview.short_description = "Mappa"
 

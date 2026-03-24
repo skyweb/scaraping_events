@@ -2,7 +2,9 @@ import hashlib
 from datetime import datetime
 
 from django.contrib.gis.geos import Point
-from drf_spectacular.utils import extend_schema_serializer, OpenApiExample
+from django.utils import timezone
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import extend_schema_serializer, extend_schema_field, OpenApiExample
 from rest_framework import serializers
 
 from .models import Event
@@ -73,7 +75,8 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = '__all__'
 
-    def get_location_coordinates(self, obj):
+    @extend_schema_field(OpenApiTypes.OBJECT)
+    def get_location_coordinates(self, obj) -> dict[str, float] | None:
         """Converte il PointField GeoDjango in dizionario {lat, lng}."""
         if obj.location_coordinates:
             return {'lat': obj.location_coordinates.y, 'lng': obj.location_coordinates.x}
@@ -147,11 +150,11 @@ class EventBulkResponseSerializer(serializers.ModelSerializer):
 
 
 def _parse_point(coords: dict) -> Point | None:
-    """Converte {lat, lng} in Point GeoDjango. Restituisce None se le coordinate non sono valide."""
+    """Converte {lat, lng} in Point GeoDjango. Restituisce None se le coordinate non sono valide o sono (0, 0)."""
     try:
         lat = float(coords.get('lat') or 0)
         lng = float(coords.get('lng') or 0)
-        if lat is not None and lng is not None:
+        if lat and lng:
             return Point(lng, lat, srid=4326)  # Point(x=lng, y=lat)
     except (ValueError, TypeError):
         pass
@@ -163,7 +166,7 @@ class CityNestedSerializer(serializers.Serializer):
     city_name = serializers.CharField(max_length=100, required=False, allow_blank=True, allow_null=True)
     location_name = serializers.CharField(max_length=255, required=False, allow_blank=True, allow_null=True)
     location_address = serializers.CharField(max_length=500, required=False, allow_blank=True, allow_null=True)
-    location_coordinates = serializers.DictField(required=False, allow_null=True)
+    location_coords = serializers.DictField(required=False, allow_null=True)
 
 
 class DatesNestedSerializer(serializers.Serializer):
@@ -257,7 +260,10 @@ class EventScrapingSerializer(serializers.Serializer):
         value = value.strip()
         for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M"):
             try:
-                return datetime.strptime(value, fmt)
+                parsed = datetime.strptime(value, fmt)
+                if timezone.is_naive(parsed):
+                    return timezone.make_aware(parsed, timezone.get_current_timezone())
+                return parsed
             except ValueError:
                 continue
         return None
@@ -310,8 +316,7 @@ class EventScrapingSerializer(serializers.Serializer):
         city = validated.get('city') or {}
         dates = validated.get('dates') or {}
 
-        # Coordinate
-        location_coordinates = _parse_point(city.get('location_coordinates') or {})
+        location_coordinates = _parse_point(city.get('location_coords') or {})
 
         return {
             'uuid': validated['uuid'],
@@ -411,8 +416,8 @@ class EventLegacySerializer(serializers.Serializer):
             'location_name': location_name,
             'location_address': where.get('location_address') or None,
             'location_coordinates': location_coordinates,
-            'date_start': when.get('date_start') or None,
-            'date_end': when.get('date_end') or None,
+            'date_start': EventScrapingSerializer._parse_datetime(when.get('date_start')),
+            'date_end': EventScrapingSerializer._parse_datetime(when.get('date_end')),
         }
 
         # Genera uuid: title + date_start + location_name
@@ -460,7 +465,8 @@ class EtlRunSerializer(serializers.ModelSerializer):
         model = EtlRun
         fields = '__all__'
 
-    def get_duration_seconds(self, obj):
+    @extend_schema_field(OpenApiTypes.FLOAT)
+    def get_duration_seconds(self, obj) -> float | None:
         """Calcola la durata totale dell'ETL in secondi (da started_at a upsert_completed_at)."""
         if obj.upsert_completed_at and obj.started_at:
             return (obj.upsert_completed_at - obj.started_at).total_seconds()

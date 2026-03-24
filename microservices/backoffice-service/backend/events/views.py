@@ -438,6 +438,7 @@ class ExternalEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     """
 
     queryset = Event.objects.all()
+    serializer_class = EventSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['city', 'source', 'uuid']
     search_fields = ['title', 'description', 'location_name']
@@ -465,7 +466,7 @@ class ExternalEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
         """Restituisce il serializer scraping per le scritture, quello standard per le letture."""
         if self.action in ['create', 'update', 'partial_update', 'bulk_create']:
             return EventScrapingSerializer
-        return EventSerializer
+        return super().get_serializer_class()
 
     def perform_create(self, serializer):
         """Salva l'evento con il username di chi lo ha creato."""

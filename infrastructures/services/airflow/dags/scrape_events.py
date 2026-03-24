@@ -80,7 +80,7 @@ CITIES_TOURISM = {
     'lucca': {'spider': 'comune_lucca', 'args': ['-a', 'max_pages=10']},
     'firenze': {'spider': 'feel_florence', 'args': ['-a', 'max_pages=10']},
     'roma': {'spider': 'turismo_roma', 'args': ['-a', 'max_pages=5']},
-    'napoli': {'spider': 'visit_naples', 'args': ['-a', 'max_pages=5']},
+
 }
 
 ALL_CITIES = sorted(list(set(CITIES_TODAY + CITIES_ZERO + list(CITIES_TOURISM.keys()))))

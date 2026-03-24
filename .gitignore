@@ -1,6 +1,13 @@
 # OS
 .DS_Store
 
+# Scrapy
+twistd.pid
+
+# SSH / OCI keys
+privatekey
+publickey
+
 # IDEs and editors
 .idea/
 .vscode/

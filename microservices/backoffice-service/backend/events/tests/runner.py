@@ -3,7 +3,7 @@ Custom test runner che produce output tabellare per i test API.
 
 Uso:
     docker exec -w /app/backend events-backoffice \
-      python manage.py test events.tests.test_staging_api \
+      python manage.py test events.tests.api.public \
       --testrunner events.tests.runner.TableTestRunner
 """
 import unittest
@@ -111,7 +111,7 @@ class TableTestResult(unittest.TextTestResult):
 
         stream.write('\n')
         stream.write(f'{BOLD}{"=" * total_width}{RESET}\n')
-        stream.write(f'{BOLD}  REPORT TEST API - Staging Events{RESET}\n')
+        stream.write(f'{BOLD}  REPORT TEST API - Events{RESET}\n')
         stream.write(f'{BOLD}{"=" * total_width}{RESET}\n')
         stream.write(f'{BOLD}{fmt_row(headers)}{RESET}\n')
         stream.write(f'{sep}\n')

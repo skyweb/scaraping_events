@@ -10,6 +10,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
+        ('events', '0000_create_schemas'),
     ]
 
     operations = [
