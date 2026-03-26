@@ -150,8 +150,11 @@
   <script>
     var proto = window.location.protocol;
     var domain = window.location.hostname.replace(/^[^.]+\./, '');
-    document.getElementById('login-link').href = proto + '//backoffice.' + domain + '/admin/';
-    document.getElementById('home-link').href = proto + '//backoffice.' + domain + '/';
+    var backofficeBase = proto + '//backoffice.' + domain;
+    // Passa per sso-logout per forzare la cancellazione del session cookie APISIX,
+    // poi Keycloak redirige a post_logout_redirect_uri (home) e da lì si fa login pulito.
+    document.getElementById('login-link').href = backofficeBase + '/admin/sso-logout';
+    document.getElementById('home-link').href = backofficeBase + '/';
   </script>
 </body>
 </html>
