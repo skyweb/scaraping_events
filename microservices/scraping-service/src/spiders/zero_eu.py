@@ -193,8 +193,8 @@ class ZeroEuSpider(BaseEventSpider):
         if coords and isinstance(coords, dict):
             if coords.get("lat") and coords.get("lng"):
                 api_data["location_coords"] = {
-                    "lat": float(coords["lat"]),
-                    "lng": float(coords["lng"]),
+                    "type": "Point",
+                    "coordinates": [float(coords["lng"]), float(coords["lat"])],
                 }
 
         # Arricchisci da _embedded
@@ -281,7 +281,8 @@ class ZeroEuSpider(BaseEventSpider):
             data={
                 "description": description,
                 "category": d.get("category", []),
-                "image_url": d.get("image_url"),
+                "cover_url": d.get("image_url"),
+                "price": price,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": d.get("date_end") or "",
@@ -292,9 +293,6 @@ class ZeroEuSpider(BaseEventSpider):
                     "location_name": location_name,
                     "location_address": d.get("location_address"),
                     "location_coords": d.get("location_coords"),
-                },
-                "section": {
-                    "price": price,
                 },
             },
             meta={

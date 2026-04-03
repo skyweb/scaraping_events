@@ -116,7 +116,7 @@ class FeelFlorenceSpider(BaseEventSpider):
         categories = []
         for cat_el in response.css(".field--name-field-subcategories .field__item"):
             cat = self.clean_text(cat_el.xpath("string()").get())
-            if cat:
+            if cat and cat not in categories:
                 categories.append(cat)
 
         # Comune
@@ -129,6 +129,7 @@ class FeelFlorenceSpider(BaseEventSpider):
         date_start = appointment.get("date_start")
         date_end = appointment.get("date_end")
         date_display = appointment.get("date_display", "")
+        orari = appointment.get("orari")
         price = appointment.get("price")
         location_name = appointment.get("location_name")
 
@@ -154,30 +155,39 @@ class FeelFlorenceSpider(BaseEventSpider):
             data={
                 "description": description,
                 "category": categories,
-                "image_url": image_url,
+                "cover_url": image_url,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
                     "date_display": date_display,
+                    "orari": orari,
                 },
                 "city": {
                     "city_name": city or "Firenze",
                     "location_name": location_name,
                     "location_address": None,
                 },
-                "section": {
-                    "price": price,
-                    "website": website,
-                    "phone": phone,
-                    "email": email,
-                },
+                "contacts": [
+                    {
+                        "label": "Sito web",
+                        "value": website
+                    },
+                    {
+                        "label": "Telefono",
+                        "value": phone
+                    },
+                    {
+                        "label": "Email",
+                        "value": email
+                    }
+                ],
+                "price": price
             },
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "category": categories[0] if categories else "evento",
                 "source": self.source_name,
-            },
+            }
         )
 
         yield item
@@ -188,6 +198,7 @@ class FeelFlorenceSpider(BaseEventSpider):
             "date_start": None,
             "date_end": None,
             "date_display": "",
+            "orari": None,
             "price": None,
             "location_name": None,
         }
@@ -197,12 +208,21 @@ class FeelFlorenceSpider(BaseEventSpider):
         if not appointments:
             return result
 
+        # date_display: HTML del blocco opening-hours__content (data + time slot)
+        opening_hours_html = appointments.css(".opening-hours__content").get()
+        if opening_hours_html:
+            result["date_display"] = opening_hours_html
+
+        # orari: HTML raw del blocco appointment (titolo + descrizione con orari dettagliati)
+        result["orari"] = appointments.get()
+
         # Date dalla season-header (formato DD/MM/YYYY - DD/MM/YYYY)
         season_text = self.clean_text(
             appointments.css(".field--name-field-opening-hours .season-header div").xpath("string()").get()
         )
+        if not season_text:
+            season_text = appointments.css(".opening-hours__label").xpath("string()").get()
         if season_text:
-            result["date_display"] = season_text
             dates = re.findall(r"(\d{2}/\d{2}/\d{4})", season_text)
             if dates:
                 result["date_start"] = self.parse_date_dmy(dates[0])

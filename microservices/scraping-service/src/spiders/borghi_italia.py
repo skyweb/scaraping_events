@@ -189,20 +189,18 @@ class BorghiItaliaSpider(BaseEventSpider):
             data={
                 "description": description,
                 "category": ["evento"],
-                "image_url": image_url,
+                "cover_url": image_url,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
                     "date_display": date_display,
+                    "orari": orari,
                 },
                 "city": {
                     "city_name": location_name,
                     "location_name": location_name,
                     "location_address": location_address,
                     "region": region,
-                },
-                "section": {
-                    "orari": orari,
                 },
             },
             meta={

@@ -155,13 +155,16 @@ class YesMilanoSpider(BaseEventSpider):
         uuid = self.generate_uuid(title, date_start or "", location_name or "Milano")
         content_hash = self.generate_content_hash(description or "", ticket_info or "", "")
 
+        contacts = [v for v in [phone, email, website, buy_url] if v]
+
         item = self.create_item(
             uuid=uuid,
             title=title,
             data={
                 "description": description,
                 "category": [],
-                "image_url": image_url,
+                "cover_url": image_url,
+                "price": ticket_info,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
@@ -172,13 +175,7 @@ class YesMilanoSpider(BaseEventSpider):
                     "location_name": location_name,
                     "location_address": location_address,
                 },
-                "section": {
-                    "price": ticket_info,
-                    "buy_url": buy_url,
-                    "phone": phone,
-                    "email": email,
-                    "website": website,
-                },
+                "contacts": contacts or None,
             },
             meta={
                 "content_hash": content_hash,

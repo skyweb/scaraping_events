@@ -57,12 +57,12 @@ class TurismoRomaSpider(BaseEventSpider):
         self._seen_urls: set[str] = set()
 
     def start_requests(self):
-        """Avvia il listing per ogni categoria dalla pagina 0."""
+        """Avvia il listing per ogni categoria dalla pagina"""
         for category in self.CATEGORIES:
             yield scrapy.Request(
-                f"{self.BASE_URL}/it/tipo-evento/{category}?page=0",
+                f"{self.BASE_URL}/it/tipo-evento/{category}?page=1",
                 callback=self._parse_listing,
-                meta={"page": 0, "category": category},
+                meta={"page": 1, "category": category},
             )
 
     def _parse_listing(self, response):
@@ -134,23 +134,18 @@ class TurismoRomaSpider(BaseEventSpider):
             response.css('span[itemprop="streetAddress"]::text').get()
         )
 
-        # Venue dal link /it/luoghi/
-        if not location_name:
-            location_name = self.clean_text(
-                response.css('.field-name-field-sedi-08 a::text').get()
-            )
+
 
         # Coordinate (POINT WKT o variabili JS)
         location_coords = self._extract_coords(response)
 
-        # Blocco #informazioni: quando, dove, contatti, orari
         informazioni = self._extract_informazioni(response)
 
-        # Orari (già estratti sopra, ma anche nel blocco informazioni)
-        orari = informazioni.get("orari")
+        # Contatti dal blocco informazioni (estratti a livello data, non dentro section)
+        contacts = informazioni.pop("contatti", None)
 
-        # Contatti dal blocco informazioni
-        contatti = informazioni.get("contatti", {})
+        # Orari (estratti dentro dates, non dentro section)
+        orari = informazioni.pop("orari", None)
 
         # Hash
         uuid = self.generate_uuid(title, date_start or "", location_name or "Roma")
@@ -162,30 +157,26 @@ class TurismoRomaSpider(BaseEventSpider):
             data={
                 "description": description,
                 "category": [listing_category],
-                "image_url": image_url,
+                "cover_url": image_url,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
                     "date_display": date_display or "",
+                    "orari": orari,
                 },
                 "city": {
                     "city_name": "Roma",
-                    "location_name": location_name,
+                    "location_name": (informazioni.get("dove") or {}).get("nome"),
                     "location_address": location_address,
                     "location_coords": location_coords,
+                    "location_url": ("https://www.turismoroma.it" + url) if (url := (informazioni.get("dove") or {}).get("url")) else None,
                 },
-                "section": {
-                    "informazioni": informazioni,
-                    "orari": orari,
-                    "phone": contatti.get("phone"),
-                    "email": contatti.get("email"),
-                    "website": contatti.get("website"),
-                },
+                "contacts": contacts,
+
             },
             meta={
                 "content_hash": content_hash,
                 "url": response.url,
-                "category": listing_category,
                 "source": self.source_name,
             },
         )
@@ -251,58 +242,17 @@ class TurismoRomaSpider(BaseEventSpider):
 
         return None
 
-    def _extract_contatti(self, response) -> dict:
-        """Estrae contatti dalla sezione contatti (double-field)."""
-        contatti: dict[str, Optional[str]] = {"phone": None, "email": None, "website": None}
-
-        contatti_section = response.css(".field-name-field-contatti-08 .field-item")
-        if not contatti_section:
-            return contatti
-
-        for item in contatti_section.css(".field-item"):
-            label = self.clean_text(item.css(".double-field-first::text").get())
-            value_el = item.css(".double-field-second")
-            if not label or not value_el:
-                continue
-
-            label_lower = label.lower()
-
-            if "sito" in label_lower or "web" in label_lower:
-                contatti["website"] = value_el.css("a::attr(href)").get()
-            elif "telefon" in label_lower or "tel" in label_lower:
-                contatti["phone"] = self.clean_text(value_el.xpath("string()").get())
-            elif "email" in label_lower or "mail" in label_lower:
-                contatti["email"] = self.clean_text(value_el.xpath("string()").get())
-
-        return contatti
-
     def _extract_informazioni(self, response) -> dict:
-        """Estrae il blocco #informazioni strutturato: quando, dove, contatti, orari.
+        """Estrae il blocco #informazioni strutturato: dove, contatti, orari.
 
         Mappa i campi Drupal field-name-field-*-08 in un dict JSON:
         {
-            "quando": {"display": "dal 21 Novembre 2025 al 12 Aprile 2026", ...},
             "dove": {"nome": "Museo del Corso", "indirizzo": "VIA ...", "url": "/it/luoghi/..."},
-            "contatti": {"website": "...", "phone": "...", "email": "...", "entries": [...]},
+            "contatti": [{"label": "Telefono", "value": "06 ...", "url": null}, ...],
             "orari": "testo orari...",
-            "orari_dettaglio": ["Mercoledì – Venerdì: 11.00 – 19.00", ...]
         }
         """
         info: dict = {}
-
-        # --- Quando ---
-        periodo_el = response.css(".field-name-field-periodo-08 .field-item")
-        if periodo_el:
-            quando = {"display": self.clean_text(periodo_el.xpath("string()").get())}
-            start_text = self.clean_text(periodo_el.css("span.date-display-start::text").get())
-            end_text = self.clean_text(periodo_el.css("span.date-display-end::text").get())
-            if start_text:
-                clean_start = re.sub(r"^(dal|al)\s+", "", start_text, flags=re.IGNORECASE).strip()
-                quando["data_inizio_raw"] = clean_start
-            if end_text:
-                clean_end = re.sub(r"^(dal|al)\s+", "", end_text, flags=re.IGNORECASE).strip()
-                quando["data_fine_raw"] = clean_end
-            info["quando"] = quando
 
         # --- Dove ---
         sede_el = response.css(".field-name-field-sedi-08")
@@ -330,7 +280,7 @@ class TurismoRomaSpider(BaseEventSpider):
         # --- Contatti ---
         contatti_el = response.css(".field-name-field-contatti-08")
         if contatti_el:
-            contatti: dict = {"entries": []}
+            contatti: list = []
             for item_el in contatti_el.css(".field-item .container-inline"):
                 label = self.clean_text(item_el.css(".double-field-first::text").get())
                 value_text = self.clean_text(item_el.css(".double-field-second").xpath("string()").get())
@@ -344,25 +294,10 @@ class TurismoRomaSpider(BaseEventSpider):
                 if value_href:
                     entry["url"] = value_href
                 if entry:
-                    contatti["entries"].append(entry)
+                    contatti.append(entry)
 
-                # Mappa ai campi standard
-                if label:
-                    label_lower = label.lower()
-                    if "sito" in label_lower or "web" in label_lower:
-                        contatti["website"] = value_href or value_text
-                    elif "telefon" in label_lower or "tel" in label_lower:
-                        contatti["phone"] = value_text
-                    elif "email" in label_lower or "mail" in label_lower:
-                        contatti["email"] = value_text
-                    elif "facebook" in label_lower:
-                        contatti["facebook"] = value_href or value_text
-                    elif "instagram" in label_lower:
-                        contatti["instagram"] = value_href or value_text
-
-            if not contatti["entries"]:
-                del contatti["entries"]
-            info["contatti"] = contatti
+            if contatti:
+                info["contatti"] = contatti
 
         # --- Orari ---
         orari_el = response.css(".field-name-field-orario-08 .field-item")
@@ -374,7 +309,5 @@ class TurismoRomaSpider(BaseEventSpider):
                 if p_text:
                     orari_paragraphs.append(p_text)
             info["orari"] = orari_text
-            if orari_paragraphs:
-                info["orari_dettaglio"] = orari_paragraphs
 
         return info

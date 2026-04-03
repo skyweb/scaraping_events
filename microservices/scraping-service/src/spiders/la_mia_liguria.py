@@ -186,6 +186,13 @@ class LaMiaLiguriaSpider(BaseEventSpider):
         uuid = self.generate_uuid(title or "", date_start or "", city or location_name or "")
         content_hash = self.generate_content_hash(api_data["description"] or "", "", "")
 
+        # Contatti
+        contacts = [v for v in [
+            contatti.get("website"),
+            contatti.get("raw"),
+            contatti.get("phone"),
+        ] if v]
+
         # Costruzione EventItem
         item = self.create_item(
             uuid=uuid,
@@ -193,7 +200,7 @@ class LaMiaLiguriaSpider(BaseEventSpider):
             data={
                 "description": api_data["description"],
                 "category": categories,
-                "image_url": image_url,
+                "cover_url": image_url,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
@@ -204,11 +211,7 @@ class LaMiaLiguriaSpider(BaseEventSpider):
                     "location_name": location_name,
                     "location_address": None,
                 },
-                "section": {
-                    "website": contatti.get("website"),
-                    "contatti": contatti.get("raw"),
-                    "phone": contatti.get("phone"),
-                },
+                "contacts": contacts or None,
             },
             meta={
                 "content_hash": content_hash,

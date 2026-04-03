@@ -136,14 +136,14 @@ class VeneziaUnicaSpider(BaseEventSpider):
             lat = poi_attrs.get("latitude")
             lng = poi_attrs.get("longitude")
             if lat and lng:
-                location_coords = {"lat": float(lat), "lng": float(lng)}
+                location_coords = {"type": "Point", "coordinates": [float(lng), float(lat)]}
 
         # Coordinate dirette sull'evento (fallback)
         if not location_coords:
             lat = attrs.get("latitude")
             lng = attrs.get("longitude")
             if lat and lng:
-                location_coords = {"lat": float(lat), "lng": float(lng)}
+                location_coords = {"type": "Point", "coordinates": [float(lng), float(lat)]}
 
         # Hash
         uuid = self.generate_uuid(title, date_start or "", location_name or "Venezia")
@@ -158,21 +158,17 @@ class VeneziaUnicaSpider(BaseEventSpider):
                 "image_url": image_url,
                 "dates": {
                     "date_start": date_start or "",
-                    "date_end": date_end or "",
-                    "date_display": "",
+                    "date_end": date_end or ""
                 },
                 "city": {
                     "city_name": "Venezia",
                     "location_name": location_name,
-                    "location_address": None,
                     "location_coords": location_coords,
-                },
-                "section": {},
+                }
             },
             meta={
                 "content_hash": content_hash,
                 "url": f"https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/{slug}",
-                "category": categories[0] if categories else "evento",
                 "source": self.source_name,
             },
         )

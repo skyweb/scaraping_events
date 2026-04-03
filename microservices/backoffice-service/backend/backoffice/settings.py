@@ -370,6 +370,12 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Cache TTL per API esterne (secondi)
 API_CACHE_TTL = int(os.environ.get('API_CACHE_TTL', 60 * 60))  # default 1 ora
 
+# =============================================================================
+# MONGODB (dual-write opzionale dal bulk ingestion)
+# =============================================================================
+MONGODB_URI = os.environ.get('MONGODB_URI', '')
+MONGODB_DB = os.environ.get('MONGODB_DB', 'today_events')
+
 # APISIX Admin API (per sincronizzazione API consumers)
 APISIX_ADMIN_URL = os.environ.get('APISIX_ADMIN_URL', 'http://apisix:9180/apisix/admin')
 APISIX_ADMIN_KEY = os.environ.get('APISIX_ADMIN_KEY', 'apisix-dev-admin-key')

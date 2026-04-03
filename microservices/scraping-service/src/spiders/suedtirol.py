@@ -97,10 +97,17 @@ class SuedtirolSpider(BaseEventSpider):
         uuid = self.generate_uuid(title, date_start or "", city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
+        # Section: solo dati non ricollocabili
+        section = {}
+        if calendar:
+            section["calendar"] = calendar
+        if da_sapere:
+            section["da_sapere"] = da_sapere
+
         yield self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": description, "category": [], "image_url": image_url,
+                "description": description, "category": [], "cover_url": image_url,
                 "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": ""},
                 "city": {
                     "city_name": city,
@@ -108,10 +115,7 @@ class SuedtirolSpider(BaseEventSpider):
                     "location_address": location_address,
                     "location_coords": location_coords,
                 },
-                "section": {
-                    "calendar": calendar or None,
-                    "da_sapere": da_sapere or None,
-                },
+                **({"section": section} if section else {}),
             },
             meta={
                 "content_hash": content_hash,
@@ -180,7 +184,7 @@ class SuedtirolSpider(BaseEventSpider):
                     lat = map_el.attrib.get("data-lat")
                     lon = map_el.attrib.get("data-lon")
                     if lat and lon:
-                        da_sapere["_location_coords"] = {"lat": float(lat), "lng": float(lon)}
+                        da_sapere["_location_coords"] = {"type": "Point", "coordinates": [float(lon), float(lat)]}
 
                 # Nome luogo e indirizzo
                 loc_name = self.clean_text(body.css(".sdt-font-text-s-bold.sdt-title::text").get())

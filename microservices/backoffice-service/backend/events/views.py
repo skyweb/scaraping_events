@@ -17,7 +17,6 @@ from etl.models import EtlRun, EtlError
 from .serializers import (
     EventSerializer,
     EventListSerializer,
-    EventBulkResponseSerializer,
     EventScrapingSerializer,
     EventLegacySerializer,
     EtlRunSerializer,
@@ -435,6 +434,11 @@ class ExternalEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     - `events:create` - Creazione singola e bulk (POST)
     - `events:update` - Aggiornamento (PUT, PATCH)
     - `events:delete` - Eliminazione (DELETE)
+
+    ## Storage
+
+    Le letture (list/retrieve) vengono da MongoDB (`staging_events`).
+    Le scritture (bulk, create, update, delete) scrivono su Postgres + MongoDB.
     """
 
     queryset = Event.objects.all()
@@ -444,6 +448,8 @@ class ExternalEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
     search_fields = ['title', 'description', 'location_name']
     ordering_fields = ['created_at', 'date_start', 'city', 'rank_score', 'boost']
     ordering = ['-boost', '-rank_score', '-created_at']
+    # retrieve usa uuid al posto dell'int pk
+    lookup_field = 'uuid'
 
     def get_permissions(self):
         """Associa ogni azione al permesso richiesto (es. events:read, events:create)."""
@@ -493,6 +499,57 @@ class ExternalEventViewSet(PlanFieldFilterMixin, viewsets.ModelViewSet):
         if user and user.is_authenticated:
             return user.get_username()
         return ''
+
+    # ------------------------------------------------------------------
+    # Letture da MongoDB
+    # ------------------------------------------------------------------
+
+    def list(self, request, *args, **kwargs):
+        """Lista eventi letta da MongoDB con filtri, ricerca e paginazione."""
+        from events.mongo_repository import list_events
+
+        params = {
+            'city': request.query_params.get('city'),
+            'source': request.query_params.get('source'),
+            'status': request.query_params.get('status'),
+            'search': request.query_params.get('search'),
+        }
+        if 'is_active' in request.query_params:
+            params['is_active'] = request.query_params['is_active']
+        if 'date_start' in request.query_params:
+            params['date_start'] = request.query_params['date_start']
+        if 'date_end' in request.query_params:
+            params['date_end'] = request.query_params['date_end']
+
+        ordering = request.query_params.get('ordering', '-boost,-rank_score,-ingested_at')
+        try:
+            page = max(1, int(request.query_params.get('page', 1)))
+        except ValueError:
+            page = 1
+        try:
+            page_size = min(200, max(1, int(request.query_params.get('page_size', 20))))
+        except ValueError:
+            page_size = 20
+
+        events, total = list_events(params, ordering=ordering, page=page, page_size=page_size)
+
+        return Response({
+            'count': total,
+            'page': page,
+            'page_size': page_size,
+            'results': events,
+        })
+
+    def retrieve(self, request, *args, **kwargs):
+        """Dettaglio evento letto da MongoDB per uuid."""
+        from rest_framework.exceptions import NotFound
+        from events.mongo_repository import get_event
+
+        uuid = kwargs.get(self.lookup_field)
+        doc = get_event(uuid)
+        if doc is None:
+            raise NotFound(detail=f'Evento con uuid={uuid} non trovato.')
+        return Response(doc)
 
     @extend_schema(
         summary="Bulk create staging events",
@@ -652,7 +709,7 @@ Crea multipli staging events in una sola richiesta.
                     event['meta'] = meta
 
         if sync_mode:
-            response = self._bulk_sync(events_data, span)
+            response = self._bulk_sync(events_data, span, spider_name=spider_name)
             _invalidate_external_cache()
             return response
 
@@ -683,55 +740,40 @@ Crea multipli staging events in una sola richiesta.
             status=status.HTTP_202_ACCEPTED,
         )
 
-    def _bulk_sync(self, events_data, span=None):
+    def _bulk_sync(self, events_data, span=None, spider_name: str = 'unknown'):
         """Logica sincrona per il bulk create.
 
-        Rileva il formato automaticamente:
-        - Formato event scraping (con 'uuid', 'city', 'dates'): usa EventScrapingSerializer
-        - Formato legacy (nested con 'details'): usa EventLegacySerializer
+        Valida ogni item, poi scrive su MongoDB.
+        Postgres non viene coinvolto.
         """
         from opentelemetry.trace import StatusCode
+        from events.mongo_repository import validated_data_to_doc, upsert_events
 
         if span is None:
             span = trace.get_current_span()
 
-        successful_events = []
+        valid_docs = []
         failed_events = []
 
         for index, item_data in enumerate(events_data):
             event_uuid = item_data.get('uuid', f'index_{index}')
 
-            # Rileva formato in base alla struttura delle chiavi
             if 'details' in item_data:
                 serializer = EventLegacySerializer(data=item_data)
             else:
                 serializer = EventScrapingSerializer(data=item_data)
 
             if serializer.is_valid():
-                try:
-                    instance = serializer.save()
-                    successful_events.append(instance)
-                    span.add_event("event.created", attributes={
-                        "event.uuid": str(instance.uuid),
-                        "event.title": str(instance.title)[:80],
-                        "event.index": index,
-                    })
-                except Exception as e:
-                    failed_events.append({
-                        'original_data': item_data,
-                        'errors': {'non_field_errors': [str(e)]},
-                        'index': index
-                    })
-                    span.add_event("event.save_failed", attributes={
-                        "event.uuid": event_uuid,
-                        "event.index": index,
-                        "event.error": str(e)[:200],
-                    })
+                valid_docs.append(validated_data_to_doc(serializer.validated_data, spider_name))
+                span.add_event("event.validated", attributes={
+                    "event.uuid": event_uuid,
+                    "event.index": index,
+                })
             else:
                 failed_events.append({
                     'original_data': item_data,
                     'errors': serializer.errors,
-                    'index': index
+                    'index': index,
                 })
                 span.add_event("event.validation_failed", attributes={
                     "event.uuid": event_uuid,
@@ -739,46 +781,58 @@ Crea multipli staging events in una sola richiesta.
                     "event.errors": str(serializer.errors)[:200],
                 })
 
-        span.set_attribute("bulk.created_count", len(successful_events))
+        created_count = 0
+        if valid_docs:
+            try:
+                created_count = upsert_events(valid_docs)
+                for doc in valid_docs:
+                    span.add_event("event.created", attributes={
+                        "event.uuid": doc["uuid"],
+                        "event.title": str(doc.get("title", ""))[:80],
+                    })
+            except Exception as exc:
+                for doc in valid_docs:
+                    failed_events.append({
+                        'original_data': {},
+                        'errors': {'non_field_errors': [str(exc)]},
+                        'index': None,
+                    })
+                span.add_event("bulk.mongo_write_failed", attributes={"error": str(exc)[:200]})
+
+        span.set_attribute("bulk.created_count", created_count)
         span.set_attribute("bulk.failed_count", len(failed_events))
 
         if failed_events:
             span.set_status(StatusCode.ERROR, f"{len(failed_events)} eventi falliti su {len(events_data)}")
-            # Log errori individuali nel trace DB
             failed_uuids = [e.get('original_data', {}).get('uuid', '?') for e in failed_events]
             log_trace_event(
                 'bulk.partial_failure',
                 f'{len(failed_events)} eventi falliti su {len(events_data)}',
                 level='error',
                 metadata={
-                    'created_count': len(successful_events),
+                    'created_count': created_count,
                     'failed_count': len(failed_events),
                     'failed_uuids': failed_uuids[:20],
-                    'failed_details': [{
-                        'uuid': e.get('original_data', {}).get('uuid', '?'),
-                        'index': e.get('index'),
-                        'errors': str(e.get('errors', ''))[:200],
-                    } for e in failed_events[:10]],
                 },
             )
         else:
             log_trace_event(
                 'bulk.completed',
-                f'{len(successful_events)} eventi creati (sync)',
-                metadata={'created_count': len(successful_events)},
+                f'{created_count} eventi scritti su MongoDB (sync)',
+                metadata={'created_count': created_count},
             )
 
-        if successful_events and not failed_events:
+        if created_count > 0 and not failed_events:
             status_code = status.HTTP_201_CREATED
-        elif not successful_events and failed_events:
+        elif created_count == 0 and failed_events:
             status_code = status.HTTP_400_BAD_REQUEST
         else:
             status_code = status.HTTP_200_OK
 
         return Response({
-            'successful_events': EventBulkResponseSerializer(successful_events, many=True).data,
+            'successful_events': [{'uuid': d['uuid'], 'title': d['title']} for d in valid_docs],
             'failed_events': failed_events,
-            'created_count': len(successful_events),
+            'created_count': created_count,
             'failed_count': len(failed_events),
         }, status=status_code)
 
@@ -862,8 +916,14 @@ Utile per pulire i dati prima di un nuovo import.
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        deleted_count, _ = Event.objects.filter(source=source).delete()
+        from backoffice.mongodb import get_collection
+        col = get_collection("staging_events")
+        if col is not None:
+            result = col.delete_many({"source": source})
+            deleted_count = result.deleted_count
+        else:
+            deleted_count = 0
         return Response({
             'deleted': deleted_count,
-            'source': source
+            'source': source,
         })

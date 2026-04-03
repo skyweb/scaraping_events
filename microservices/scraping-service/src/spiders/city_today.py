@@ -417,29 +417,28 @@ class CityTodaySpider(BaseEventSpider):
             data={
                 "description": raw_detail.get("descrizione"),
                 "category": [category_value] if category_value else [],
-                "image_url": raw_detail.get("image") or raw_list.get("image"),
+                "cover_url": raw_detail.get("image") or raw_list.get("image"),
+                "price": price,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
-                    "date_display": raw_list.get("date") or "",
+                    "date_display": quando["raw_text"]
                 },
                 "city": {
                     "city_name": city_name,
                     "location_name": location_name,
                     "location_address": dove.get("address"),
                 },
-                "section": {
-                    "price": price,
-                    "website": altre_info.get("website"),
-                    "quando_raw": quando.get("raw_text"),
-                    "dove_raw": dove.get("raw_text"),
-                    "altre_info_raw": altre_info.get("raw_text"),
-                },
+                "contacts": [
+                    {
+                        "label": "Sito Web",
+                        "value": altre_info["website"]
+                    }
+                ],
             },
             meta={
                 "content_hash": content_hash,
                 "url": url,
-                "category": category_value or "evento",
                 "source": self.source_name,
                 "city_key": response.meta.get("city_key"),
             },

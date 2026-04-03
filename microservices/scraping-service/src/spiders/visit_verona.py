@@ -86,9 +86,8 @@ class VisitVeronaSpider(BaseEventSpider):
         yield self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": description, "category": [], "image_url": image_url,
+                "description": description, "category": [], "cover_url": image_url,
                 "dates": {"date_start": "", "date_end": "", "date_display": date_text or ""},
                 "city": {"city_name": "Verona", "location_name": location, "location_address": None},
-                "section": {},
             },
         )

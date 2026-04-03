@@ -208,7 +208,7 @@ class PugliaCultureSpider(BaseEventSpider):
                 # Contenuto
                 "description": description,
                 "category": category,
-                "image_url": image_url,
+                "cover_url": image_url,
                 # Date e orari
                 "dates": {
                     "date_start": date_start or "",

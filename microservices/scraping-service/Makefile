@@ -166,15 +166,16 @@ crawl: ## Lancia uno spider dal container: make crawl SPIDER=puglia_culture ARGS
 	@echo "$(GREEN)Lancio spider: $(SPIDER)$(NC)"
 	$(DOCKER_EXEC) scrapy crawl $(SPIDER) $(ARGS)
 
-test: ## Test rapido spider (1 risultato, 1 pagina, no API, formato batch): make test [SPIDER=puglia_culture]
-	@echo "$(GREEN)Test spider: $(SPIDER) (max_results=1, max_pages=1, no API)$(NC)"
+test: ## Test rapido spider (3 risultati, 1 pagina, salva JSON locale): make test [SPIDER=puglia_culture]
+	@echo "$(GREEN)Test spider: $(SPIDER) (max_results=3, max_pages=1, output JSON)$(NC)"
 	@mkdir -p data/output
 	$(DOCKER_EXEC) scrapy crawl $(SPIDER) \
 		-a max_pages=1 \
-		-s CLOSESPIDER_ITEMCOUNT=1 \
+		-s CLOSESPIDER_ITEMCOUNT=3 \
 		-s 'ITEM_PIPELINES={"pipelines.ValidationPipeline": 100, "pipelines.BatchExportPipeline": 200}' \
 		$(ARGS)
-	@echo "$(GREEN)Output: data/output/batch/$(NC)"
+	@echo "$(GREEN)File salvato in: data/output/batch/$(SPIDER)_*$(NC)"
+	@ls -t data/output/batch/$(SPIDER)_*.json 2>/dev/null | head -1 | xargs -I{} echo "$(GREEN)→ {}$(NC)"
 
 
 # =============================================================================

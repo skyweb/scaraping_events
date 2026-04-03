@@ -330,7 +330,6 @@ class BatchExportPipeline:
 
         payload = {
             "spider": self.spider_name,
-            "category": category,
             "batch": batch_num,
             "count": len(items),
             "sent_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -378,6 +377,7 @@ class ApiPipeline(BatchExportPipeline):
         batch_size: int = 50,
         timeout: int = 30,
         storage_backend: str = "local",
+        sync_mode: bool = False,
     ):
         super().__init__(batch_size=batch_size, storage_backend=storage_backend)
         self.base_url = base_url.rstrip("/")
@@ -385,6 +385,7 @@ class ApiPipeline(BatchExportPipeline):
         self.client_secret = client_secret
         self.token_url = token_url
         self.timeout = timeout
+        self.sync_mode = sync_mode
 
         self.access_token: Optional[str] = None
         self.session = self._create_session()
@@ -402,6 +403,7 @@ class ApiPipeline(BatchExportPipeline):
             batch_size=crawler.settings.getint("API_BATCH_SIZE", 50),
             timeout=crawler.settings.getint("API_TIMEOUT", 30),
             storage_backend=crawler.settings.get("STORAGE_BACKEND", "local"),
+            sync_mode=crawler.settings.getbool("API_SYNC", False),
         )
 
     def _create_session(self) -> requests.Session:
@@ -521,7 +523,7 @@ class ApiPipeline(BatchExportPipeline):
                 span.set_attribute("batch.error", "token_failure")
                 return False
 
-        bulk_url = f"{self.base_url}/api/v1/events/bulk/"
+        bulk_url = f"{self.base_url}/api/v1/events/bulk/" + ("?sync=true" if self.sync_mode else "")
 
         try:
             payload = {"events": events, "spider": self.spider_name}
@@ -538,9 +540,9 @@ class ApiPipeline(BatchExportPipeline):
 
             span.set_attribute("http.status_code", response.status_code)
 
-            if response.status_code == 201:
+            if response.status_code in (200, 201):
                 result = response.json()
-                logger.info(f"Batch inviato (sync): {result.get('created_count', 0)} eventi creati")
+                logger.info(f"Batch inviato (sync): {result.get('created_count', 0)} eventi scritti su MongoDB")
                 return True
 
             elif response.status_code == 202:

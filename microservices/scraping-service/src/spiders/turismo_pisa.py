@@ -99,9 +99,8 @@ class TurismoPisaSpider(BaseEventSpider):
             uuid=uuid, title=title,
             data={
                 "description": description, "category": [category] if category else [],
-                "image_url": image_url,
+                "cover_url": image_url,
                 "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": ""},
                 "city": {"city_name": "Pisa", "location_name": location, "location_address": None},
-                "section": {},
             },
         )

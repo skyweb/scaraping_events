@@ -72,14 +72,21 @@ class BasilicataTuristicaSpider(BaseEventSpider):
         location_name = self.clean_text(response.css(".em-event-location::text").get())
 
         uuid = self.generate_uuid(title, date_start or "", location_name or "")
-        content_hash = self.generate_content_hash(description or "", "", "")
 
         yield self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": description, "category": [], "image_url": image_url,
-                "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": date_text or ""},
-                "city": {"city_name": None, "location_name": location_name, "location_address": None},
-                "section": {"orari": time_text},
+                "description": description, "category": [], "cover_url": image_url,
+                "dates": {
+                    "date_start": date_start or "",
+                    "date_end": date_end or "",
+                    "date_display": date_text or "",
+                    "orari": time_text
+                },
+                "city": {
+                    "city_name": None,
+                    "location_name": location_name,
+                    "location_address": None
+                },
             },
         )

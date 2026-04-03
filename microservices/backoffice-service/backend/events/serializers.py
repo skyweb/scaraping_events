@@ -268,82 +268,43 @@ class EventScrapingSerializer(serializers.Serializer):
                 continue
         return None
 
-    @staticmethod
-    def _flatten_spider_format(nested: dict) -> dict:
-        """
-        Converte il formato nested degli spider (uuid, title, meta, data)
-        nel formato flat atteso dal serializer.
-        """
-        meta = nested.get("meta") or {}
-        event_data = nested.get("data") or {}
-        section = event_data.get("section") or {}
-
-        flat = {
-            "uuid": nested.get("uuid"),
-            "title": nested.get("title"),
-            "content_hash": meta.get("content_hash"),
-            "source": meta.get("source"),
-            "url": meta.get("url"),
-            "scraped_at": meta.get("scraped_at"),
-            "description": event_data.get("description"),
-            "category": event_data.get("category"),
-            "image_url": event_data.get("image_url"),
-            "city": event_data.get("city"),
-            "dates": event_data.get("dates"),
-            "price": section.get("price"),
-            # raw_data = intero blocco "data" originale dello spider
-            "raw_data": event_data,
-        }
-
-        return flat
-
     def to_internal_value(self, data):
-        """Converte il formato nested dello spider in flat e normalizza campi (coordinate, date, batch_file)."""
-        # Salva il JSON originale del POST prima di qualsiasi trasformazione
-        raw_data = dict(data) if isinstance(data, dict) else data
+        """Legge direttamente il formato nested spider (uuid, title, meta, data)."""
+        event_data = data.get("data") or {}
+        meta = data.get("meta") or {}
+        city = event_data.get("city") or {}
+        raw_coords = city.get("location_coords") or {}
 
-        # Estrai batch_file: prima da meta (nuovo formato), poi da _batch_file (legacy)
-        batch_file = (data.get('meta') or {}).get('batch_file') or data.pop('_batch_file', None)
+        geojson_coords = None
+        try:
+            lat, lng = float(raw_coords.get("lat") or 0), float(raw_coords.get("lng") or 0)
+            if lat and lng:
+                geojson_coords = {"type": "Point", "coordinates": [lng, lat]}
+        except (TypeError, ValueError):
+            pass
 
-        # Supporto formato nested spider (uuid, title, meta, data)
-        # Trasforma in formato flat atteso dal serializer
-        if "meta" in data and "data" in data:
-            data = self._flatten_spider_format(data)
-
-        validated = super().to_internal_value(data)
-        validated['_batch_file'] = batch_file
-
-        city = validated.get('city') or {}
-        dates = validated.get('dates') or {}
-
-        location_coordinates = _parse_point(city.get('location_coords') or {})
-
-        normalized = {
-            'content_hash': validated.get('content_hash') or None,
-            'url': validated.get('url') or None,
-            'description': validated.get('description') or None,
-            'image_url': validated.get('image_url') or None,
-            'price': validated.get('price') or None,
-            'scraped_at': validated.get('scraped_at'),
-            'category': [c for c in (validated.get('category') or []) if c] or None,
-            'city': city.get('city_name') or None,
-            'location_name': city.get('location_name') or None,
-            'location_address': city.get('location_address') or None,
-            'location_coordinates': location_coordinates,
-            'date_start': self._parse_datetime(dates.get('date_start')),
-            'date_end': self._parse_datetime(dates.get('date_end')),
-            'raw_data': raw_data,
-            'batch_file': validated.get('_batch_file'),
+        return {
+            'source': meta.get('source'),
+            'uuid': data.get('uuid'),
+            'content_hash': meta.get('content_hash') or None,
+            'title': data.get('title'),
+            'category': [c for c in (event_data.get('category') or []) if c] or None,
+            'cover_url': event_data.get('cover_url') or None,
+            'url': meta.get('url') or None,
+            'description': event_data.get('description') or None,
+            'city': {
+                'city_name': city.get('city_name'),
+                'location_name': city.get('location_name'),
+                'location_address': city.get('location_address'),
+                'location_url': city.get('location_url'),
+                'location_coords': geojson_coords,
+            },
+            'dates': event_data.get("dates") or {},
+            'contacts': event_data.get('contacts'),
+            'raw_data': data,
+            'scraped_at': meta.get('scraped_at'),
+            'batch_file': meta.get('batch_file'),
         }
-
-        if 'uuid' in validated:
-            normalized['uuid'] = validated['uuid']
-        if 'source' in validated:
-            normalized['source'] = validated['source']
-        if 'title' in validated:
-            normalized['title'] = validated['title']
-
-        return normalized
 
     def create(self, validated_data):
         """Upsert su uuid."""
@@ -637,6 +598,3 @@ class ToggleActiveResponseSerializer(serializers.Serializer):
 StagingEventSerializer = EventSerializer
 StagingEventBulkResponseSerializer = EventBulkResponseSerializer
 StagingEventScrapingSerializer = EventScrapingSerializer
-StagingEventLegacySerializer = EventLegacySerializer
-ProductionEventSerializer = EventSerializer
-ProductionEventListSerializer = EventListSerializer

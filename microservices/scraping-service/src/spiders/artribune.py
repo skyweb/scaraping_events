@@ -264,6 +264,11 @@ class ArtribuneSpider(BaseEventSpider):
         uuid = self.generate_uuid(title or "", date_start or "", location_name or "")
         content_hash = self.generate_content_hash(description or "", price or "", "")
 
+        # Section: solo artisti (non ricollocabile altrove)
+        section = {}
+        if artisti:
+            section["artisti"] = artisti
+
         # Costruzione EventItem con struttura nested
         item = self.create_item(
             uuid=uuid,
@@ -271,22 +276,20 @@ class ArtribuneSpider(BaseEventSpider):
             data={
                 "description": description,
                 "category": category,
-                "image_url": image_url,
+                "cover_url": image_url,
+                "price": price,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
                     "date_display": date_display,
+                    "orari": orari,
                 },
                 "city": {
                     "city_name": city,
                     "location_name": location_name,
                     "location_address": location_address,
                 },
-                "section": {
-                    "price": price,
-                    "orari": orari,
-                    "artisti": artisti,
-                },
+                **({"section": section} if section else {}),
             },
             meta={
                 "content_hash": content_hash,

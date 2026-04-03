@@ -116,30 +116,39 @@ class LoveVdaSpider(BaseEventSpider):
         uuid = self.generate_uuid(title, date_start or "", location_name or city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
+        # Contatti
+        contacts = [v for v in [
+            contatti.get("nome"),
+            contatti.get("indirizzo"),
+            contatti.get("website"),
+        ] if v]
+
+        # Section: solo dati non ricollocabili
+        section = {}
+        if orari.get("raw"):
+            section["orari_costi_raw"] = orari["raw"]
+        if gallery:
+            section["gallery"] = gallery
+
         yield self.create_item(
             uuid=uuid, title=title,
             data={
                 "description": description,
                 "category": [],
-                "image_url": image_url,
+                "cover_url": image_url,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
                     "date_display": date_text or "",
+                    "orari": orari.get("orari"),
                 },
                 "city": {
                     "city_name": city,
                     "location_name": location_name,
                     "location_address": None,
                 },
-                "section": {
-                    "orari": orari.get("orari"),
-                    "orari_costi_raw": orari.get("raw"),
-                    "contatti_nome": contatti.get("nome"),
-                    "contatti_indirizzo": contatti.get("indirizzo"),
-                    "website": contatti.get("website"),
-                    "gallery": gallery or None,
-                },
+                "contacts": contacts or None,
+                **({"section": section} if section else {}),
             },
             meta={
                 "content_hash": content_hash,

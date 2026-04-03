@@ -70,6 +70,41 @@ def event_legacy_payload(**overrides) -> dict:
     return data
 
 
+def puglia_culture_payload(**overrides) -> dict:
+    """Genera un payload nel formato nested prodotto dallo spider puglia_culture."""
+    data = {
+        "uuid": "puglia-test-001",
+        "title": "Spettacolo di Prova - Teatro Paisiello",
+        "data": {
+            "description": "Uno spettacolo teatrale di prova nel cuore del Salento.",
+            "category": ["teatro", "spettacolo"],
+            "image_url": "https://www.pugliaculture.it/img/spettacolo.jpg",
+            "dates": {
+                "date_start": "2026-04-15 21:00",
+                "date_end": "2026-04-15 23:00",
+                "date_display": "",
+            },
+            "city": {
+                "city_name": "Lecce",
+                "location_name": "Teatro Paisiello",
+            },
+            "section": {
+                "casting": "<div>Regia: Mario Rossi</div>",
+                "info_e_costi": "Biglietti: 15 EUR",
+            },
+        },
+        "meta": {
+            "content_hash": "deadbeef1234",
+            "url": "https://www.pugliaculture.it/spettacolo/prova",
+            "category": "spettacolo",
+            "source": "puglia_culture",
+            "scraped_at": "2026-04-01T10:00:00Z",
+        },
+    }
+    data.update(overrides)
+    return data
+
+
 def event_minimal_payload(**overrides) -> dict:
     """Genera un payload stringato ed essenziale, con la dotazione minima per esser ritenuto ammissibile."""
     data = {

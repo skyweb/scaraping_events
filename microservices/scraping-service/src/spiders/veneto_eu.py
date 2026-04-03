@@ -73,7 +73,7 @@ class VenetoEuSpider(BaseEventSpider):
         lat = coords.get("latitude") or event.get("latitude")
         lng = coords.get("longitude") or event.get("longitude")
         if lat and lng:
-            location_coords = {"lat": float(lat), "lng": float(lng)}
+            location_coords = {"type": "Point", "coordinates": [float(lng), float(lat)]}
 
         categories = [c.get("label", "") for c in (event.get("categories") or []) if c.get("label")]
         website = event.get("website")
@@ -86,12 +86,14 @@ class VenetoEuSpider(BaseEventSpider):
         uuid = self.generate_uuid(title, date_start or "", city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
+        contacts = [v for v in [website, phone, email] if v]
+
         return self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": description, "category": categories, "image_url": image_url,
+                "description": description, "category": categories, "cover_url": image_url,
                 "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": ""},
                 "city": {"city_name": city, "location_name": event.get("site"), "location_address": address, "location_coords": location_coords},
-                "section": {"website": website, "phone": phone, "email": email},
+                "contacts": contacts or None,
             },
         )

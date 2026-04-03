@@ -148,15 +148,20 @@ class TurismoTorinoSpider(BaseEventSpider):
         uuid = self.generate_uuid(title, date_display or "", city or "")
         content_hash = self.generate_content_hash(description or "", "", "")
 
+        # Section: tipologie non ricollocabili altrove
+        section = {}
+        if tipologie:
+            section["tipologie"] = tipologie
+
         return self.create_item(
             uuid=uuid, title=title,
             data={
                 "description": description,
                 "category": categories if isinstance(categories, list) else [categories] if categories else [],
-                "image_url": image_url,
+                "cover_url": image_url,
                 "dates": {"date_start": "", "date_end": "", "date_display": date_display},
                 "city": {"city_name": city, "location_name": None, "location_address": None},
-                "section": {"tipologie": tipologie or None},
+                **({"section": section} if section else {}),
             },
             meta={
                 "content_hash": content_hash,

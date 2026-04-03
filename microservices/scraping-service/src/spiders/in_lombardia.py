@@ -254,8 +254,8 @@ class InLombardiaSpider(BaseEventSpider):
         location_coords = None
         if geo.get("latitude") and geo.get("longitude"):
             location_coords = {
-                "lat": float(geo["latitude"]),
-                "lng": float(geo["longitude"]),
+                "type": "Point",
+                "coordinates": [float(geo["longitude"]), float(geo["latitude"])],
             }
 
         # ── Immagine ───────────────────────────────────────────────────────────
@@ -281,6 +281,21 @@ class InLombardiaSpider(BaseEventSpider):
         dove_parts = [location_name, location_address]
         dove_raw = ", ".join(p for p in dove_parts if p) or None
 
+        # Contatti
+        contacts = [v for v in [
+            contatti.get("raw"),
+            contatti.get("phone"),
+            contatti.get("website"),
+            section_extra.get("facebook"),
+        ] if v]
+
+        # Section: solo allegati e altri_link
+        section = {}
+        if section_extra.get("allegati"):
+            section["allegati"] = section_extra["allegati"]
+        if section_extra.get("altri_link"):
+            section["altri_link"] = section_extra["altri_link"]
+
         # Costruzione EventItem con struttura nested
         item = self.create_item(
             uuid=uuid,
@@ -288,11 +303,13 @@ class InLombardiaSpider(BaseEventSpider):
             data={
                 "description": description,
                 "category": category,
-                "image_url": image_url,
+                "cover_url": image_url,
+                "price": price,
                 "dates": {
                     "date_start": date_start or "",
                     "date_end": date_end or "",
                     "date_display": date_display or "",
+                    "orari": section_extra.get("orari"),
                 },
                 "city": {
                     "city_name": city,
@@ -300,18 +317,8 @@ class InLombardiaSpider(BaseEventSpider):
                     "location_address": location_address,
                     "location_coords": location_coords,
                 },
-                "section": {
-                    "quando": quando_html.get("display"),
-                    "dove": dove_raw,
-                    "orari": section_extra.get("orari"),
-                    "price": price,
-                    "contatti": contatti.get("raw"),
-                    "phone": contatti.get("phone"),
-                    "website": contatti.get("website"),
-                    "facebook": section_extra.get("facebook"),
-                    "allegati": section_extra.get("allegati"),
-                    "altri_link": section_extra.get("altri_link"),
-                },
+                "contacts": contacts or None,
+                **({"section": section} if section else {}),
             },
             meta={
                 "content_hash": content_hash,

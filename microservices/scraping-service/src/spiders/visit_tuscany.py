@@ -114,15 +114,19 @@ class VisitTuscanySpider(BaseEventSpider):
                 else:
                     section.setdefault("extra", []).append(text)
 
+        orari = section.pop("orari", None)
+        price = section.pop("price", None)
+
         uuid = self.generate_uuid(title, when or "", city or "")
         content_hash = self.generate_content_hash("", "", "")
 
         return self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": None, "category": [], "image_url": image_url,
-                "dates": {"date_start": "", "date_end": "", "date_display": when or ""},
+                "description": None, "category": [], "cover_url": image_url,
+                "dates": {"date_start": "", "date_end": "", "date_display": when or "", "orari": orari},
                 "city": {"city_name": city, "location_name": None, "location_address": None},
-                "section": section,
+                "price": price,
+                **({"section": section} if section else {}),
             },
         )

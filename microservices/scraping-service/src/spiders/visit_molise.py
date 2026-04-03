@@ -143,15 +143,13 @@ class VisitMoliseSpider(BaseEventSpider):
         location_coords = None
         geo = content.get("geoRef")
         if isinstance(geo, dict) and geo.get("latitude"):
-            location_coords = {"lat": float(geo["latitude"]), "lng": float(geo["longitude"])}
+            location_coords = {"type": "Point", "coordinates": [float(geo["longitude"]), float(geo["latitude"])]}
 
-        section = {}
-        if content.get("sitoWeb"):
-            section["website"] = content["sitoWeb"]
-        if content.get("telefono"):
-            section["phone"] = content["telefono"]
-        if content.get("email"):
-            section["email"] = content["email"]
+        contacts = [v for v in [
+            content.get("sitoWeb"),
+            content.get("telefono"),
+            content.get("email"),
+        ] if v]
 
         if date_end == date_start:
             date_end = None
@@ -162,9 +160,9 @@ class VisitMoliseSpider(BaseEventSpider):
         return self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": description, "category": categories, "image_url": image_url,
+                "description": description, "category": categories, "cover_url": image_url,
                 "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": ""},
                 "city": {"city_name": city, "location_name": None, "location_address": None, "location_coords": location_coords},
-                "section": section or None,
+                "contacts": contacts or None,
             },
         )

@@ -165,9 +165,9 @@ class ComuneLuccaSpider(BaseEventSpider):
         yield self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": description, "category": categories, "image_url": image_url,
+                "description": description, "category": categories, "cover_url": image_url,
+                "price": price,
                 "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": date_text or ""},
                 "city": {"city_name": "Lucca", "location_name": None, "location_address": None},
-                "section": {"price": price} if price else {},
             },
         )

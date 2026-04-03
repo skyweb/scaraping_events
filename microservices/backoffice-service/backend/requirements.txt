@@ -21,6 +21,9 @@ django-prometheus==2.4.1
 Pillow>=10.0.0
 python-json-logger==2.0.7
 
+# MongoDB
+pymongo==4.10.1
+
 # NLP
 spacy>=3.7
 

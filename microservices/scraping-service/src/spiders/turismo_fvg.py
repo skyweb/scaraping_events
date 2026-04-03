@@ -95,9 +95,8 @@ class TurismoFvgSpider(BaseEventSpider):
         yield self.create_item(
             uuid=uuid, title=title,
             data={
-                "description": description, "category": [], "image_url": image_url,
+                "description": description, "category": [], "cover_url": image_url,
                 "dates": {"date_start": date_start or "", "date_end": date_end or "", "date_display": date_text or ""},
                 "city": {"city_name": city, "location_name": location_name, "location_address": None},
-                "section": {},
             },
         )
