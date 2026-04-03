@@ -169,7 +169,7 @@ class FeelFlorenceSpider(BaseEventSpider):
                 },
                 "contacts": [
                     {
-                        "label": "Sito web",
+                        "label": "website",
                         "value": website
                     },
                     {

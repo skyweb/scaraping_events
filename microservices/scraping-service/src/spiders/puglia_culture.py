@@ -328,7 +328,7 @@ class PugliaCultureSpider(BaseEventSpider):
         """
         return response.css("div.event_costi").get()
 
-    # Domini da escludere nella ricerca del sito web esterno
+    # Domini da escludere nella ricerca del website esterno
     _EXCLUDED_DOMAINS = (
         "iubenda.com", "facebook.com", "instagram.com", "youtube.com",
         "twitter.com", "x.com", "linkedin.com", "google.com",

@@ -44,6 +44,36 @@ MESI_IT: dict[str, int] = {
 }
 
 
+_ALLOWED_HTML_TAGS = frozenset({"p", "br", "strong", "em", "b", "i", "ul", "ol", "li", "a", "h2", "h3", "h4"})
+
+
+def sanitize_html(html_content: str) -> Optional[str]:
+    """
+    Pulisce HTML mantenendo solo tag essenziali (p, br, strong, em, a, liste, heading).
+
+    Rimuove: div, script, style, commenti, attributi data-*, class, slot pubblicitari.
+    Usata da spider che conservano HTML nella descrizione (es. city_today).
+    """
+    text = re.sub(r"<!--.*?-->", "", html_content, flags=re.DOTALL)
+    text = re.sub(r"<script[^>]*>.*?</script>", "", text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<style[^>]*>.*?</style>", "", text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<div[^>]*data-move[^>]*>.*?</div>\s*</div>\s*</div>", "", text, flags=re.DOTALL)
+    text = re.sub(r'<div[^>]*class="slot[^"]*"[^>]*>.*?</div>', "", text, flags=re.DOTALL)
+
+    def _replace_tag(match: re.Match) -> str:
+        tag_name = match.group(1).lower().split()[0]
+        if tag_name.lstrip("/") in _ALLOWED_HTML_TAGS:
+            if tag_name == "a":
+                href = re.search(r'href="([^"]*)"', match.group(0))
+                return f'<a href="{href.group(1)}">' if href else "<a>"
+            return f"<{tag_name}>"
+        return ""
+
+    text = re.sub(r"<(/?\w[^>]*)>", _replace_tag, text)
+    text = re.sub(r"\n\s*\n+", "\n", text).strip()
+    return text if text else None
+
+
 def parse_italian_date_time(text: str) -> tuple[Optional[str], Optional[str]]:
     """
     Converte una stringa data/ora italiana in (YYYY-MM-DD, HH:MM).

@@ -30,13 +30,13 @@ Parametri:
 import html as html_lib
 import re
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Optional, Tuple
 
 import scrapy
 from scrapy import Selector
 
 from spiders.base import BaseEventSpider
-from spiders.utils import DEFAULT_CRAWL_SETTINGS
+from spiders.utils import DEFAULT_CRAWL_SETTINGS, sanitize_html
 
 
 # =============================================================================
@@ -298,21 +298,14 @@ class CityTodaySpider(BaseEventSpider):
             "image": None,
             "category": None,
             "title": None,
-            "stars": None,
             "date": None,
-            "location": None,
         }
 
         raw_list["title"] = card.xpath('.//*[contains(@class, "heading")]/text()').get()
         raw_list["category"] = card.xpath('.//*[contains(@class, "kicker")]/text()').get()
         raw_list["image"] = card.css("img::attr(src)").get()
 
-        # Stelle/rating
-        stars_count = len(card.css("svg.c-rating.c-rating--filled").getall())
-        if stars_count > 0:
-            raw_list["stars"] = stars_count
-
-        # Data e location
+        # Data
         details_list = card.css("ul.c-card__list-details li.c-card__item-details")
         for detail_item in details_list:
             use_elem = detail_item.css("use")
@@ -322,8 +315,6 @@ class CityTodaySpider(BaseEventSpider):
 
                 if "calendar" in href_str:
                     raw_list["date"] = detail_item.css("span.u-label-07::text").get()
-                elif "map-pin" in href_str:
-                    raw_list["location"] = detail_item.css("span.u-label-07::text").get()
 
         return raw_list
 
@@ -339,8 +330,7 @@ class CityTodaySpider(BaseEventSpider):
         if not raw_list["image"]:
             raw_list["image"] = lazy_selector.css("img::attr(src)").get()
 
-        # Date e location da lazy
-        if not raw_list["date"] or not raw_list["location"]:
+        if not raw_list["date"]:
             lazy_details = lazy_selector.css("ul.c-card__list-details li.c-card__item-details")
             for detail_item in lazy_details:
                 use_elem = detail_item.css("use")
@@ -348,20 +338,14 @@ class CityTodaySpider(BaseEventSpider):
                     href_val = use_elem.xpath("@*").getall()
                     href_str = " ".join(href_val) if href_val else ""
 
-                    if "calendar" in href_str and not raw_list["date"]:
+                    if "calendar" in href_str:
                         raw_list["date"] = detail_item.css("span.u-label-07::text").get()
-                    elif "map-pin" in href_str and not raw_list["location"]:
-                        raw_list["location"] = detail_item.css("span.u-label-07::text").get()
+                        break
 
         return raw_list
 
     def parse_event_detail(self, response):
-        """
-        Parsa la pagina dettaglio evento.
-
-        Produce un EventItem con struttura nested (data, meta)
-        compatibile con puglia_culture e la pipeline BatchExport.
-        """
+        """Parsa la pagina dettaglio evento."""
         raw_list = response.meta["raw_list"]
 
         # Estrai dati dal dettaglio
@@ -373,7 +357,7 @@ class CityTodaySpider(BaseEventSpider):
             "dove": self._extract_dove(response, info_grid),
             "quando": self._extract_quando(response, info_grid),
             "prezzo": self._extract_prezzo(response, info_grid),
-            "altre_informazioni": self._extract_altre_info(response, info_grid),
+            "website": self._extract_website(response, info_grid),
             "descrizione": self._extract_descrizione(response),
             "image": response.css("figure.l-entry__media img::attr(src)").get()
             or response.xpath('//meta[@property="og:image"]/@content').get(),
@@ -397,9 +381,8 @@ class CityTodaySpider(BaseEventSpider):
         date_start = quando.get("date_start")
         date_end = quando.get("date_end")
 
-        # Prezzo e altre info
         price = raw_detail.get("prezzo")
-        altre_info = raw_detail.get("altre_informazioni") or {}
+        website = raw_detail.get("website")
 
         # Hash
         uuid = self.generate_uuid(title or "", date_start or "", location_name or "")
@@ -429,18 +412,13 @@ class CityTodaySpider(BaseEventSpider):
                     "location_name": location_name,
                     "location_address": dove.get("address"),
                 },
-                "contacts": [
-                    {
-                        "label": "Sito Web",
-                        "value": altre_info["website"]
-                    }
-                ],
+                "contacts": [{"label": "Sito Web", "value": website}] if website else None,
             },
             meta={
                 "content_hash": content_hash,
                 "url": url,
                 "source": self.source_name,
-                "city_key": response.meta.get("city_key"),
+                "city": response.meta.get("city_key"),
             },
         )
 
@@ -448,7 +426,7 @@ class CityTodaySpider(BaseEventSpider):
 
     def _extract_dove(self, response, info_grid) -> dict:
         """Estrae sezione 'Dove'."""
-        dove = {"raw_text": None, "name": None, "address": None}
+        dove: dict[str, str | None] = {"name": None, "address": None}
 
         location_section = info_grid.xpath('.//span[contains(text(), "Dove")]/parent::div')
         if not location_section:
@@ -457,11 +435,6 @@ class CityTodaySpider(BaseEventSpider):
             )
 
         if location_section:
-            # Escludi lo span label "Dove" dal testo raw
-            raw_parts = location_section.xpath(".//*[not(self::span[contains(@class,'heading')] or self::span[text()='Dove'])]//text()").getall()
-            if not raw_parts:
-                raw_parts = location_section.xpath(".//p//text()").getall()
-            dove["raw_text"] = self.clean_text(" ".join(raw_parts))
             dove["name"] = self.clean_text(location_section.css("a.o-link-primary::text").get())
 
             address = location_section.xpath('.//p//a[@href="#map"]/text()').get()
@@ -475,7 +448,7 @@ class CityTodaySpider(BaseEventSpider):
 
     def _extract_quando(self, response, info_grid) -> dict:
         """Estrae sezione 'Quando' con orari."""
-        quando = {"raw_text": None, "date_start": None, "date_end": None, "schedule": None}
+        quando: dict[str, str | None] = {"raw_text": None, "date_start": None, "date_end": None}
 
         date_section = info_grid.xpath('.//span[contains(text(), "Quando")]/parent::div')
         if not date_section:
@@ -512,8 +485,6 @@ class CityTodaySpider(BaseEventSpider):
                 elif quando["date_start"]:
                     quando["date_end"] = quando["date_start"]
 
-            quando["schedule"] = self.clean_text(date_section.css("span.u-label-011::text").get())
-
         return quando
 
     def _extract_prezzo(self, response, info_grid) -> Optional[str]:
@@ -544,29 +515,18 @@ class CityTodaySpider(BaseEventSpider):
 
         return None
 
-    def _extract_altre_info(self, response, info_grid) -> dict:
-        """Estrae sezione 'Altre informazioni'."""
-        altre_info = {"raw_text": None, "website": None}
-
+    def _extract_website(self, response, info_grid) -> Optional[str]:
+        """Estrae il sito web dalla sezione 'Altre informazioni'."""
         other_section = info_grid.xpath('.//span[contains(text(), "Altre informazioni")]/parent::div')
         if not other_section:
             other_section = response.xpath(
                 '//span[contains(text(), "Altre informazioni")]/parent::div[contains(@class, "l-grid__item")]'
             )
-
         if other_section:
-            raw_text = self.clean_text(other_section.xpath("string()").get())
-            if raw_text and raw_text.startswith("Altre informazioni"):
-                raw_text = self.clean_text(raw_text[18:])
-            altre_info["raw_text"] = raw_text
             website = other_section.css("a::attr(href)").get()
             if website and website.startswith("http"):
-                altre_info["website"] = website
-
-        return altre_info
-
-    # Tag HTML da preservare nella descrizione
-    _ALLOWED_TAGS = {"p", "br", "strong", "em", "b", "i", "ul", "ol", "li", "a", "h2", "h3", "h4"}
+                return website
+        return None
 
     def _extract_descrizione(self, response) -> Optional[str]:
         """Estrae la descrizione pulendo l'HTML e mantenendo solo tag essenziali."""
@@ -586,47 +546,4 @@ class CityTodaySpider(BaseEventSpider):
             if any_content:
                 content = "".join(any_content.xpath("node()").getall())
 
-        if not content:
-            return None
-
-        return self._sanitize_html(content)
-
-    def _sanitize_html(self, html_content: str) -> Optional[str]:
-        """
-        Pulisce HTML mantenendo solo tag essenziali (p, br, strong, em, a, liste, heading).
-
-        Rimuove: div, script, style, commenti, attributi data-*, class, slot pubblicitari.
-        """
-        # Rimuovi commenti HTML
-        text = re.sub(r"<!--.*?-->", "", html_content, flags=re.DOTALL)
-        # Rimuovi tag script e style con contenuto
-        text = re.sub(r"<script[^>]*>.*?</script>", "", text, flags=re.DOTALL | re.IGNORECASE)
-        text = re.sub(r"<style[^>]*>.*?</style>", "", text, flags=re.DOTALL | re.IGNORECASE)
-        # Rimuovi div con attributi data-move, slot, ads
-        text = re.sub(r"<div[^>]*data-move[^>]*>.*?</div>\s*</div>\s*</div>", "", text, flags=re.DOTALL)
-        text = re.sub(r'<div[^>]*class="slot[^"]*"[^>]*>.*?</div>', "", text, flags=re.DOTALL)
-
-        # Rimuovi tag non consentiti ma mantieni il contenuto
-        def _replace_tag(match: re.Match) -> str:
-            tag_name = match.group(1).lower().split()[0]
-            if tag_name.lstrip("/") in self._ALLOWED_TAGS:
-                # Tag consentito: rimuovi tutti gli attributi tranne href (per <a>)
-                if tag_name == "a":
-                    href = re.search(r'href="([^"]*)"', match.group(0))
-                    if href:
-                        return f'<a href="{href.group(1)}">'
-                    return "<a>"
-                # Per tag di chiusura o tag senza attributi
-                if tag_name.startswith("/"):
-                    return f"<{tag_name}>"
-                return f"<{tag_name}>"
-            # Tag non consentito: rimuovi il tag, tieni il contenuto
-            return ""
-
-        text = re.sub(r"<(/?\w[^>]*)>", _replace_tag, text)
-
-        # Pulisci righe vuote multiple
-        text = re.sub(r"\n\s*\n+", "\n", text)
-        text = text.strip()
-
-        return text if text else None
+        return sanitize_html(content) if content else None
